@@ -1,0 +1,79 @@
+server:
+  servlet:
+    context-path: /api
+
+management:
+  health:
+    mail:
+      enabled: false
+
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/dbname?replicaSet=rs0
+      database: dbname
+  mail:
+    host: MAIL-HOST
+    port: 0
+    username: USER_XXX
+    password: PASSWORD
+    protocol: PROTOCOL
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+  security:
+    oauth2:
+      client:
+        registration:
+          office365:
+            client-id: ${office365.client-id}
+            client-secret: ${office365.client-secret}
+            scope: ${office365.scope}
+            authorization-grant-type: ${office365.authorization-grant-type}
+        provider:
+          office365:
+            token-uri: ${office365.token-uri}
+            authorization-uri: ${office365.authorization-uri}
+            user-info-uri: ${office365.user-info-uri}
+
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
+    com:
+      bookevhotel:
+        core: DEBUG
+
+regex:
+  email: EMAIL_CHECK_REGEX
+  password: PASSWORD_CHECK_REGEX
+  activationCode: ACTIVATION_CODE_REGEX
+
+weblink:
+  allowedOrigin: http://localhost:5173
+
+jwt:
+  secret: JWT_SECRET
+  timeToLiveInMillis: 360000
+
+office365:
+  client-id: client-id
+  client-secret: client-secret
+  scope: scope
+  authorization-grant-type: authorization-grant-type
+  token-uri: token-uri
+  authorization-uri: authorization-uri
+  user-info-uri: user-info-uri

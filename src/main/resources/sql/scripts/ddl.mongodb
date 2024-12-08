@@ -1,0 +1,680 @@
+use qorva;
+
+db.Companies.drop();
+db.Users.drop();
+db.JobsPosts.drop();
+db.CVs.drop();
+db.CVScreeningReports.drop();
+db.AIPrompts.drop();
+
+db.createCollection("Companies", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "Companies",
+      required: ["id", "name", "createdAt", "lastUpdatedAt"],
+      properties: {
+        id: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        name: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        lastUpdatedAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        }
+      }
+    }
+  }
+});
+
+db.createCollection("Users", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "Users",
+      required: ["id", "firstName", "lastName", "email", "encryptedPassword", "accountStatus", "createdAt", "lastUpdatedAt"],
+      properties: {
+        _id: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        firstName: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        lastName: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        email: {
+          bsonType: "string",
+          pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+          description: "must be a valid email address and is required"
+        },
+        encryptedPassword: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        accountStatus: {
+          bsonType: "string",
+          enum: ["ACTIVE", "INACTIVE", "TRIAL_PERIOD", "LOCKED"],
+          description: "must be a string representing the status and is required"
+        },
+        companyId: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        lastUpdatedAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        }
+      }
+    }
+  }
+});
+
+db.createCollection("JobsPosts", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "JobsPosts",
+      required: ["id", "title", "description", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      properties: {
+        id: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        title: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        description: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        lastUpdatedAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        createdBy: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        lastUpdatedBy: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        }
+      }
+    }
+  }
+});
+
+db.createCollection("CVs", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "CVs",
+      required: ["id", "companyId", "personalInformation", "createdAt", "lastUpdatedAt"],
+      properties: {
+        id: {
+          bsonType: "objectId",
+          description: "must be a string and is required"
+        },
+        companyId: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        personalInformation: {
+          bsonType: "object",
+          required: ["name", "contact", "role", "availability", "summary"],
+          properties: {
+            name: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            },
+            contact: {
+              bsonType: "object",
+              required: ["phone", "email", "socialLinks"],
+              properties: {
+                phone: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                },
+                email: {
+                  bsonType: "string",
+                  pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+                  description: "must be a valid email address and is required"
+                },
+                socialLinks: {
+                  bsonType: "object",
+                  properties: {
+                    linkedin: {
+                      bsonType: "string",
+                      description: "must be a string"
+                    },
+                    github: {
+                      bsonType: "string",
+                      description: "must be a string"
+                    },
+                    website: {
+                      bsonType: "string",
+                      description: "must be a string"
+                    }
+                  }
+                }
+              }
+            },
+            role: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            },
+            availability: {
+              bsonType: "object",
+              required: ["interviews", "startDate"],
+              properties: {
+                interviews: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                },
+                startDate: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                }
+              }
+            },
+            summary: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            }
+          }
+        },
+        keySkills: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            required: ["category", "skills"],
+            properties: {
+              category: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              skills: {
+                bsonType: "array",
+                items: {
+                  bsonType: "string"
+                },
+                description: "must be an array of strings and is required"
+              }
+            }
+          }
+        },
+        profiles: {
+          bsonType: "object",
+          required: ["areasOfExpertise", "keyResponsibilities"],
+          properties: {
+            areasOfExpertise: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            },
+            keyResponsibilities: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            }
+          }
+        },
+        workExperience: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            required: ["company", "website", "location", "from", "to", "position", "activities"],
+            properties: {
+              company: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              website: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              location: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              from: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              to: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              position: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              activities: {
+                bsonType: "array",
+                items: {
+                  bsonType: "object",
+                  required: ["project", "tasks"],
+                  properties: {
+                    project: {
+                      bsonType: "string",
+                      description: "must be a string and is required"
+                    },
+                    tasks: {
+                      bsonType: "array",
+                      items: {
+                        bsonType: "string"
+                      },
+                      description: "must be an array of strings and is required"
+                    }
+                  }
+                }
+              },
+              achievements: {
+                bsonType: "array",
+                items: {
+                  bsonType: "string"
+                },
+                description: "must be an array of strings"
+              },
+              toolsAndTechnologies: {
+                bsonType: "array",
+                items: {
+                  bsonType: "string"
+                },
+                description: "must be an array of strings"
+              }
+            }
+          }
+        },
+        education: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            required: ["year", "institution", "degree", "fieldOfStudy"],
+            properties: {
+              year: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              institution: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              degree: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              fieldOfStudy: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              achievements: {
+                bsonType: "array",
+                items: {
+                  bsonType: "string"
+                },
+                description: "must be an array of strings"
+              }
+            }
+          }
+        },
+        certifications: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            required: ["title", "institution", "year"],
+            properties: {
+              title: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              institution: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              year: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              description: {
+                bsonType: "string",
+                description: "must be a string"
+              }
+            }
+          }
+        },
+        skillsAndQualifications: {
+          bsonType: "object",
+          required: ["technicalSkills", "softSkills", "languages"],
+          properties: {
+            technicalSkills: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            },
+            softSkills: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            },
+            languages: {
+              bsonType: "array",
+              items: {
+                bsonType: "object",
+                required: ["language", "proficiency"],
+                properties: {
+                  language: {
+                    bsonType: "string",
+                    description: "must be a string and is required"
+                  },
+                  proficiency: {
+                    bsonType: "object",
+                    required: ["read", "written", "spoken"],
+                    properties: {
+                      read: {
+                        bsonType: "string",
+                        description: "must be a string and is required"
+                      },
+                      written: {
+                        bsonType: "string",
+                        description: "must be a string and is required"
+                      },
+                      spoken: {
+                        bsonType: "string",
+                        description: "must be a string and is required"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        projectsAndAchievements: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            required: ["title", "description", "date"],
+            properties: {
+              title: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              description: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              date: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              impact: {
+                bsonType: "string",
+                description: "must be a string"
+              }
+            }
+          }
+        },
+        interestsAndHobbies: {
+          bsonType: "array",
+          items: {
+            bsonType: "string"
+          },
+          description: "must be an array of strings and is required"
+        },
+        references: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            required: ["name", "position", "company", "contact"],
+            properties: {
+              name: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              position: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              company: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              contact: {
+                bsonType: "object",
+                required: ["phone", "email"],
+                properties: {
+                  phone: {
+                    bsonType: "string",
+                    description: "must be a string and is required"
+                  },
+                  email: {
+                    bsonType: "string",
+                    pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+                    description: "must be a valid email address and is required"
+                  }
+                }
+              }
+            }
+          }
+        },
+        attachment: {
+          bsonType: "binData",
+          description: "can be null or binary data for file attachment"
+        },
+        tags: {
+          bsonType: "array",
+          items: {
+            bsonType: "string"
+          },
+          description: "must be an array of strings and is required"
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        lastUpdatedAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        }
+      }
+    }
+  }
+});
+
+db.createCollection("CVScreeningReports", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "CVScreeningReports",
+      required: [
+        "job_title",
+        "candidate_name",
+        "skills_match",
+        "exceeds_requirements",
+        "lacking_skills",
+        "experience_alignment",
+        "overall_summary",
+        "interview_questions"
+      ],
+      properties: {
+        job_title: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        candidate_name: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        skills_match: {
+          bsonType: "object",
+          required: ["summary", "degree_of_match"],
+          properties: {
+            summary: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            },
+            degree_of_match: {
+              bsonType: "string",
+              description: "must be a string representing a percentage and is required"
+            }
+          }
+        },
+        exceeds_requirements: {
+          bsonType: "object",
+          required: ["summary"],
+          properties: {
+            summary: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            }
+          }
+        },
+        lacking_skills: {
+          bsonType: "object",
+          required: ["summary"],
+          properties: {
+            summary: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            }
+          }
+        },
+        experience_alignment: {
+          bsonType: "object",
+          required: ["summary"],
+          properties: {
+            summary: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            }
+          }
+        },
+        overall_summary: {
+          bsonType: "object",
+          required: ["summary", "score", "points_for_improvement"],
+          properties: {
+            summary: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            },
+            score: {
+              bsonType: "string",
+              description: "must be a string representing a score and is required"
+            },
+            points_for_improvement: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            }
+          }
+        },
+        interview_questions: {
+          bsonType: "object",
+          required: [
+            "skills_based_questions",
+            "strength_based_questions",
+            "gap_exploration_questions"
+          ],
+          properties: {
+            skills_based_questions: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            },
+            strength_based_questions: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            },
+            gap_exploration_questions: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            }
+          }
+        }
+      }
+    }
+  }
+});
+
+db.createCollection("AIPrompts", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "AIPrompts",
+      required: ["id", "prompt", "description", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      properties: {
+        id: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        prompt: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        description: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        lastUpdatedAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        createdBy: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        lastUpdatedBy: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        }
+      }
+    }
+  }
+});
+
+
+

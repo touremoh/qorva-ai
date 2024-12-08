@@ -1,0 +1,58 @@
+spring:
+  data:
+    mongodb:
+      uri: ${SPRING_DATA_MONGO_URL}
+      database: ${SPRING_DATA_MONGO_DATABASE_NAME}
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  security:
+    oauth2:
+      client:
+        registration:
+          office365:
+            client-id: ${office365.client-id}
+            client-secret: ${office365.client-secret}
+            scope: ${office365.scope}
+            authorization-grant-type: ${office365.authorization-grant-type}
+        provider:
+          office365:
+            token-uri: ${office365.token-uri}
+            authorization-uri: ${office365.authorization-uri}
+            user-info-uri: ${office365.user-info-uri}
+
+logging:
+  level:
+    root: INFO
+    com:
+      bookevhotel:
+        core: INFO
+
+regex:
+  email: ${EMAIL_CHECK_REGEX}
+  password: ${PASSWORD_CHECK_REGEX}
+  activationCode: ${ACTIVATION_CODE_REGEX}
+
+weblink:
+  allowedOrigin: ${ALLOWED_ORIGIN}
+
+jwt:
+  secret: ${JWT_SECRET}
+  timeToLiveInMillis: 360000
+
+office365:
+  client-id: ${OFFICE_365.CLIENT_ID}
+  client-secret: ${OFFICE_365.CLIENT_SECRET}
+  scope: ${OFFICE_365.SCOPE}
+  authorization-grant-type: ${OFFICE_365.AUTH_GRANT_TYPE}
+  token-uri: ${OFFICE_365.TOKEN_URI}
+  authorization-uri: ${OFFICE_365.AUTH_URI}
+  user-info-uri: ${OFFICE_365.USER_INFO_URI}
