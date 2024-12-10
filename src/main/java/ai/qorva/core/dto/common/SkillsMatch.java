@@ -11,5 +11,5 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class SkillsMatch {
     private String summary;
-    private String degreeOfMatch;
+    private Integer degreeOfMatch;
 }

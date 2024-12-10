@@ -38,4 +38,11 @@ public enum QorvaErrorsEnum {
 		}
 		return null;
 	}
+
+	public static QorvaErrorsEnum getByCode(Integer code) {
+		if (code == null) {
+			return null;
+		}
+		return getByCode(String.valueOf(code));
+	}
 }

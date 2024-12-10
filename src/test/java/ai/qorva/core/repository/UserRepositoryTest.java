@@ -2,11 +2,12 @@ package ai.qorva.core.repository;
 
 import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.UserRepository;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 
 import java.util.List;
 import java.util.Optional;
@@ -75,13 +76,15 @@ class UserRepositoryTest extends AbstractRepositoryTest<User> {
         user2.setEmail("user2@example.com");
 
         when(mongoTemplate.find(any(), eq(User.class))).thenReturn(List.of(user1, user2));
+        when(mongoTemplate.count(any(), eq(User.class))).thenReturn(2L);
 
-        List<User> result = repository.findMany(0, 2);
+        Page<User> result = repository.findMany(0, 2);
 
-        assertEquals(2, result.size());
-        assertEquals("user1@example.com", result.get(0).getEmail());
-        assertEquals("user2@example.com", result.get(1).getEmail());
+        assertEquals(2, result.getTotalElements());
+        assertEquals("user1@example.com", result.getContent().get(0).getEmail());
+        assertEquals("user2@example.com", result.getContent().get(1).getEmail());
         verify(mongoTemplate, times(1)).find(any(), eq(User.class));
+        verify(mongoTemplate, times(1)).count(any(), eq(User.class));
     }
 
     @Test
@@ -94,11 +97,11 @@ class UserRepositoryTest extends AbstractRepositoryTest<User> {
 
         when(mongoTemplate.find(any(), eq(User.class))).thenReturn(List.of(user1, user2));
 
-        List<User> result = repository.findManyByIds(ids);
+        Page<User> result = repository.findManyByIds(ids);
 
-        assertEquals(2, result.size());
-        assertEquals("id1", result.get(0).getId());
-        assertEquals("id2", result.get(1).getId());
+        assertEquals(2, result.getTotalElements());
+        assertEquals("id1", result.getContent().get(0).getId());
+        assertEquals("id2", result.getContent().get(1).getId());
         verify(mongoTemplate, times(1)).find(any(), eq(User.class));
     }
 

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty.Access;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AIPromptDTO extends AbstractQorvaDTO {
+    private String id;
     private String prompt;
     private String description;
     private String createdBy;

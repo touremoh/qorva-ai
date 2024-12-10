@@ -3,8 +3,10 @@ package ai.qorva.core.mapper;
 import ai.qorva.core.dao.entity.QorvaEntity;
 import ai.qorva.core.dto.QorvaDTO;
 import ai.qorva.core.exception.QorvaException;
+import org.bson.types.ObjectId;
 
 import java.lang.reflect.Field;
+import java.util.Objects;
 
 public interface AbstractQorvaMapper<E extends QorvaEntity, D extends QorvaDTO> {
 
@@ -21,6 +23,27 @@ public interface AbstractQorvaMapper<E extends QorvaEntity, D extends QorvaDTO> 
 	 * @return an entity
 	 */
 	E map(D o);
+
+	/**
+	 * Convert the primary key from string type to ObjectId
+	 * @param id primary key to convert
+	 * @return converted objectId
+	 */
+	default ObjectId stringToObjectId(String id) {
+		if (Objects.nonNull(id)) {
+			return new ObjectId(id);
+		}
+		return null;
+	}
+
+	/**
+	 * Convert the primary key ObjectId from object to string
+	 * @param id primary key to convert
+	 * @return the converted primary key in string format
+	 */
+	default String objectIdToString(ObjectId id) {
+		return Objects.nonNull(id) ? id.toString() : null;
+	}
 
 
 	default void merge(D target, D source) throws QorvaException {

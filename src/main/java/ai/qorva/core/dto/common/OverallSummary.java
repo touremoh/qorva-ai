@@ -13,6 +13,6 @@ import java.util.List;
 @AllArgsConstructor
 public class OverallSummary {
     private String summary;
-    private String score;
+    private Integer score;
     private List<String> pointsForImprovement;
 }

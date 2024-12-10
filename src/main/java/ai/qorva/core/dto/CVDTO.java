@@ -18,6 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CVDTO extends AbstractQorvaDTO {
+    private String id;
     private String companyId;
     private PersonalInformation personalInformation;
     private List<KeySkill> keySkills;

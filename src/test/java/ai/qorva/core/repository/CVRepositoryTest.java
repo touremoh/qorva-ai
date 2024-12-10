@@ -7,6 +7,7 @@ import com.mongodb.client.result.UpdateResult;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import org.springframework.data.domain.Page;
 import org.springframework.data.mongodb.core.query.Query;
 
 import java.util.List;
@@ -71,18 +72,20 @@ class CVRepositoryTest extends AbstractRepositoryTest<CV> {
     @Test
     void testFindMany() {
         CV cv1 = new CV();
-        cv1.setCompanyId("companyId1");
+        cv1.setCompanyId("CompanyId1");
         CV cv2 = new CV();
-        cv2.setCompanyId("companyId2");
+        cv2.setCompanyId("CompanyId2");
 
-        when(mongoTemplate.find(any(Query.class), eq(CV.class))).thenReturn(List.of(cv1, cv2));
+        when(mongoTemplate.find(any(), eq(CV.class))).thenReturn(List.of(cv1, cv2));
+        when(mongoTemplate.count(any(), eq(CV.class))).thenReturn(2L);
 
-        List<CV> result = repository.findMany(0, 2);
+        Page<CV> result = repository.findMany(0, 2);
 
-        assertEquals(2, result.size());
-        assertEquals("companyId1", result.get(0).getCompanyId());
-        assertEquals("companyId2", result.get(1).getCompanyId());
-        verify(mongoTemplate, times(1)).find(any(Query.class), eq(CV.class));
+        assertEquals(2, result.getTotalElements());
+        assertEquals("CompanyId1", result.getContent().get(0).getCompanyId());
+        assertEquals("CompanyId2", result.getContent().get(1).getCompanyId());
+        verify(mongoTemplate, times(1)).find(any(), eq(CV.class));
+        verify(mongoTemplate, times(1)).count(any(), eq(CV.class));
     }
 
     @Test
@@ -93,14 +96,14 @@ class CVRepositoryTest extends AbstractRepositoryTest<CV> {
         CV cv2 = new CV();
         cv2.setId("id2");
 
-        when(mongoTemplate.find(any(Query.class), eq(CV.class))).thenReturn(List.of(cv1, cv2));
+        when(mongoTemplate.find(any(), eq(CV.class))).thenReturn(List.of(cv1, cv2));
 
-        List<CV> result = repository.findManyByIds(ids);
+        Page<CV> result = repository.findManyByIds(ids);
 
-        assertEquals(2, result.size());
-        assertEquals("id1", result.get(0).getId());
-        assertEquals("id2", result.get(1).getId());
-        verify(mongoTemplate, times(1)).find(any(Query.class), eq(CV.class));
+        assertEquals(2, result.getTotalElements());
+        assertEquals("id1", result.getContent().get(0).getId());
+        assertEquals("id2", result.getContent().get(1).getId());
+        verify(mongoTemplate, times(1)).find(any(), eq(CV.class));
     }
 
     @Test

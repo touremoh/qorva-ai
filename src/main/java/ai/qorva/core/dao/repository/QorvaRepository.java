@@ -1,6 +1,8 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.QorvaEntity;
+import org.springframework.data.domain.Page;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -8,7 +10,7 @@ public interface QorvaRepository<T extends QorvaEntity> {
 
     /**
      * Find one document by its type.
-     * 
+     *
      * @param id The ID of the document.
      * @return An optional containing the document if found, or empty otherwise.
      */
@@ -24,7 +26,7 @@ public interface QorvaRepository<T extends QorvaEntity> {
 
     /**
      * Create one document.
-     * 
+     *
      * @param entity The document to create.
      * @return The created document.
      */
@@ -32,25 +34,25 @@ public interface QorvaRepository<T extends QorvaEntity> {
 
     /**
      * Find many documents by type with pagination.
-     * 
+     *
      * @param pageNumber The page number.
-     * @param pageSize The number of items per page.
-     * @return A list of documents for the given page.
+     * @param pageSize   The number of items per page.
+     * @return A pageable object containing the documents for the given page.
      */
-    List<T> findMany(int pageNumber, int pageSize);
+    Page<T> findMany(int pageNumber, int pageSize);
 
     /**
      * Find many documents by their IDs.
-     * 
+     *
      * @param ids The list of document IDs.
-     * @return A list of documents matching the IDs.
+     * @return A pageable object containing the documents matching the IDs.
      */
-    List<T> findManyByIds(List<String> ids);
+    Page<T> findManyByIds(List<String> ids);
 
     /**
      * Update one document.
-     * 
-     * @param id The ID of the document to update.
+     *
+     * @param id     The ID of the document to update.
      * @param entity The updated document data.
      * @return The updated document.
      */
@@ -58,7 +60,7 @@ public interface QorvaRepository<T extends QorvaEntity> {
 
     /**
      * Delete one document by its ID.
-     * 
+     *
      * @param id The ID of the document to delete.
      * @return True if the document was deleted, false otherwise.
      */
@@ -66,7 +68,7 @@ public interface QorvaRepository<T extends QorvaEntity> {
 
     /**
      * Check if a document exists by its data.
-     * 
+     *
      * @param entity The document data to check for existence.
      * @return True if a matching document exists, false otherwise.
      */

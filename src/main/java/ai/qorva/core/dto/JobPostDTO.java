@@ -14,6 +14,8 @@ import com.fasterxml.jackson.annotation.JsonProperty.Access;
 @NoArgsConstructor
 @AllArgsConstructor
 public class JobPostDTO extends AbstractQorvaDTO {
+    private String id;
+    private String companyId;
     private String title;
     private String description;
     private String createdBy;

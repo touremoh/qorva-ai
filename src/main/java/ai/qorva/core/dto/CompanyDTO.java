@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty.Access;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CompanyDTO extends AbstractQorvaDTO {
+    private String id;
     private String name;
 
     @JsonProperty(access = Access.READ_ONLY)

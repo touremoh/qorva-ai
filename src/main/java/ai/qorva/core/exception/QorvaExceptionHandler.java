@@ -22,7 +22,7 @@ public class QorvaExceptionHandler extends ResponseEntityExceptionHandler {
 	 */
 	@ExceptionHandler(value = {QorvaException.class})
 	protected ResponseEntity<Object> handleQorvaException(QorvaException ex) {
-		QorvaErrorsEnum errorEnum = QorvaErrorsEnum.getByCode(ex.getHttpStatusCode().toString());
+		QorvaErrorsEnum errorEnum = QorvaErrorsEnum.getByCode(ex.getHttpStatusCode());
 
 		var response = QorvaErrorResponse.builder()
 			.message(

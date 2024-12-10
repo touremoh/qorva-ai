@@ -15,6 +15,8 @@ import com.fasterxml.jackson.annotation.JsonProperty.Access;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CVScreeningReportDTO extends AbstractQorvaDTO {
+    private String id;
+    private String companyId;
     private String jobTitle;
     private String candidateName;
     private SkillsMatch skillsMatch;

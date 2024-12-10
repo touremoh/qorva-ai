@@ -7,6 +7,7 @@ import com.mongodb.client.result.UpdateResult;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import org.springframework.data.domain.Page;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 
@@ -70,39 +71,39 @@ class AIPromptRepositoryTest extends AbstractRepositoryTest<AIPrompt> {
 
     @Test
     void testFindMany() {
-        AIPrompt aiPrompt1 = new AIPrompt();
-        aiPrompt1.setPrompt("Prompt 1");
-        AIPrompt aiPrompt2 = new AIPrompt();
-        aiPrompt2.setPrompt("Prompt 2");
+        AIPrompt prompt1 = new AIPrompt();
+        prompt1.setPrompt("Prompt 1");
+        AIPrompt prompt2 = new AIPrompt();
+        prompt2.setPrompt("Prompt 2");
 
-        when(mongoTemplate.find(any(Query.class), eq(AIPrompt.class)))
-            .thenReturn(List.of(aiPrompt1, aiPrompt2));
+        when(mongoTemplate.find(any(), eq(AIPrompt.class))).thenReturn(List.of(prompt1, prompt2));
+        when(mongoTemplate.count(any(), eq(AIPrompt.class))).thenReturn(2L);
 
-        List<AIPrompt> result = repository.findMany(0, 2);
+        Page<AIPrompt> result = repository.findMany(0, 2);
 
-        assertEquals(2, result.size());
-        assertEquals("Prompt 1", result.get(0).getPrompt());
-        assertEquals("Prompt 2", result.get(1).getPrompt());
-        verify(mongoTemplate, times(1)).find(any(Query.class), eq(AIPrompt.class));
+        assertEquals(2, result.getTotalElements());
+        assertEquals("Prompt 1", result.getContent().get(0).getPrompt());
+        assertEquals("Prompt 2", result.getContent().get(1).getPrompt());
+        verify(mongoTemplate, times(1)).find(any(), eq(AIPrompt.class));
+        verify(mongoTemplate, times(1)).count(any(), eq(AIPrompt.class));
     }
 
     @Test
     void testFindManyByIds() {
         List<String> ids = List.of("id1", "id2");
-        AIPrompt aiPrompt1 = new AIPrompt();
-        aiPrompt1.setId("id1");
-        AIPrompt aiPrompt2 = new AIPrompt();
-        aiPrompt2.setId("id2");
+        AIPrompt prompt1 = new AIPrompt();
+        prompt1.setId("id1");
+        AIPrompt prompt2 = new AIPrompt();
+        prompt2.setId("id2");
 
-        when(mongoTemplate.find(any(Query.class), eq(AIPrompt.class)))
-            .thenReturn(List.of(aiPrompt1, aiPrompt2));
+        when(mongoTemplate.find(any(), eq(AIPrompt.class))).thenReturn(List.of(prompt1, prompt2));
 
-        List<AIPrompt> result = repository.findManyByIds(ids);
+        Page<AIPrompt> result = repository.findManyByIds(ids);
 
-        assertEquals(2, result.size());
-        assertEquals("id1", result.get(0).getId());
-        assertEquals("id2", result.get(1).getId());
-        verify(mongoTemplate, times(1)).find(any(Query.class), eq(AIPrompt.class));
+        assertEquals(2, result.getTotalElements());
+        assertEquals("id1", result.getContent().get(0).getId());
+        assertEquals("id2", result.getContent().get(1).getId());
+        verify(mongoTemplate, times(1)).find(any(), eq(AIPrompt.class));
     }
 
     @Test

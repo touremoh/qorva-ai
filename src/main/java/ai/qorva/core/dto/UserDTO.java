@@ -14,12 +14,14 @@ import com.fasterxml.jackson.annotation.JsonProperty.Access;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDTO extends AbstractQorvaDTO {
+    private String id;
     private String firstName;
     private String lastName;
     private String email;
 
     @JsonProperty(access = Access.WRITE_ONLY)
     private String rawPassword;
+    private String encryptedPassword;
 
     private String accountStatus;
     private String companyId;

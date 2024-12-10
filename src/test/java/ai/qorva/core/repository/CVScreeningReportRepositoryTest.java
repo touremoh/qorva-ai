@@ -2,11 +2,12 @@ package ai.qorva.core.repository;
 
 import ai.qorva.core.dao.entity.CVScreeningReport;
 import ai.qorva.core.dao.repository.CVScreeningReportRepository;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
+import org.bson.types.ObjectId;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 import java.util.Optional;
@@ -32,7 +33,7 @@ class CVScreeningReportRepositoryTest extends AbstractRepositoryTest<CVScreening
 
         when(mongoTemplate.findById(id, CVScreeningReport.class)).thenReturn(report);
 
-        Optional<CVScreeningReport> result = repository.findOneById(id);
+        Optional<CVScreeningReport> result = repository.findOneById(id.toString());
 
         assertTrue(result.isPresent());
         assertEquals(id, result.get().getId());
@@ -42,46 +43,48 @@ class CVScreeningReportRepositoryTest extends AbstractRepositoryTest<CVScreening
     @Test
     void testFindOneByData() {
         CVScreeningReport report = new CVScreeningReport();
-        report.setJobTitle("Data Analyst");
+        report.setCandidateName("John Doe");
 
         when(mongoTemplate.findOne(any(), eq(CVScreeningReport.class))).thenReturn(report);
 
         Optional<CVScreeningReport> result = repository.findOneByData(report);
 
         assertTrue(result.isPresent());
-        assertEquals("Data Analyst", result.get().getJobTitle());
+        assertEquals("John Doe", result.get().getCandidateName());
         verify(mongoTemplate, times(1)).findOne(any(), eq(CVScreeningReport.class));
     }
 
     @Test
     void testCreateOne() {
         CVScreeningReport report = new CVScreeningReport();
-        report.setJobTitle("Data Scientist");
+        report.setCandidateName("John Doe");
 
         when(mongoTemplate.insert(report)).thenReturn(report);
 
         CVScreeningReport result = repository.createOne(report);
 
         assertNotNull(result);
-        assertEquals("Data Scientist", result.getJobTitle());
+        assertEquals("John Doe", result.getCandidateName());
         verify(mongoTemplate, times(1)).insert(report);
     }
 
     @Test
     void testFindMany() {
         CVScreeningReport report1 = new CVScreeningReport();
-        report1.setJobTitle("Analyst");
+        report1.setCandidateName("John Doe");
         CVScreeningReport report2 = new CVScreeningReport();
-        report2.setJobTitle("Engineer");
+        report2.setCandidateName("Jane Smith");
 
         when(mongoTemplate.find(any(), eq(CVScreeningReport.class))).thenReturn(List.of(report1, report2));
+        when(mongoTemplate.count(any(), eq(CVScreeningReport.class))).thenReturn(2L);
 
-        List<CVScreeningReport> result = repository.findMany(0, 2);
+        Page<CVScreeningReport> result = repository.findMany(0, 2);
 
-        assertEquals(2, result.size());
-        assertEquals("Analyst", result.get(0).getJobTitle());
-        assertEquals("Engineer", result.get(1).getJobTitle());
+        assertEquals(2, result.getTotalElements());
+        assertEquals("John Doe", result.getContent().get(0).getCandidateName());
+        assertEquals("Jane Smith", result.getContent().get(1).getCandidateName());
         verify(mongoTemplate, times(1)).find(any(), eq(CVScreeningReport.class));
+        verify(mongoTemplate, times(1)).count(any(), eq(CVScreeningReport.class));
     }
 
     @Test
@@ -94,34 +97,28 @@ class CVScreeningReportRepositoryTest extends AbstractRepositoryTest<CVScreening
 
         when(mongoTemplate.find(any(), eq(CVScreeningReport.class))).thenReturn(List.of(report1, report2));
 
-        List<CVScreeningReport> result = repository.findManyByIds(ids);
+        Page<CVScreeningReport> result = repository.findManyByIds(ids);
 
-        assertEquals(2, result.size());
-        assertEquals("id1", result.get(0).getId());
-        assertEquals("id2", result.get(1).getId());
+        assertEquals(2, result.getTotalElements());
+        assertEquals("id1", result.getContent().get(0).getId());
+        assertEquals("id2", result.getContent().get(1).getId());
         verify(mongoTemplate, times(1)).find(any(), eq(CVScreeningReport.class));
     }
 
     @Test
     void testUpdateOne() {
         String id = "testId";
-
-        CVScreeningReport originalReport = new CVScreeningReport();
-        originalReport.setId(id);
-        originalReport.setJobTitle("Original Title");
-
         CVScreeningReport updatedReport = new CVScreeningReport();
-        updatedReport.setJobTitle("Updated Title");
+        updatedReport.setCandidateName("Updated Name");
 
-        when(mongoTemplate.findOne(any(), eq(CVScreeningReport.class))).thenReturn(originalReport);
-        when(mongoTemplate.updateFirst(any(), any(), eq(CVScreeningReport.class)))
-            .thenReturn(mock(UpdateResult.class));
+        when(mongoTemplate.findOne(any(), eq(CVScreeningReport.class))).thenReturn(updatedReport);
+        when(mongoTemplate.updateFirst(any(), any(), eq(CVScreeningReport.class))).thenReturn(mock(UpdateResult.class));
         when(mongoTemplate.findById(id, CVScreeningReport.class)).thenReturn(updatedReport);
 
         Optional<CVScreeningReport> result = repository.updateOne(id, updatedReport);
 
         assertTrue(result.isPresent());
-        assertEquals("Updated Title", result.get().getJobTitle());
+        assertEquals("Updated Name", result.get().getCandidateName());
         verify(mongoTemplate, times(1)).updateFirst(any(), any(), eq(CVScreeningReport.class));
         verify(mongoTemplate, times(1)).findById(id, CVScreeningReport.class);
     }
@@ -130,24 +127,13 @@ class CVScreeningReportRepositoryTest extends AbstractRepositoryTest<CVScreening
     void testDeleteOneById() {
         String id = "testId";
 
-        when(mongoTemplate.remove(any(), eq(CVScreeningReport.class))).thenReturn(mock(DeleteResult.class));
+        DeleteResult deleteResult = mock(DeleteResult.class);
+        when(deleteResult.getDeletedCount()).thenReturn(1L);
+        when(mongoTemplate.remove(any(), eq(CVScreeningReport.class))).thenReturn(deleteResult);
 
         boolean result = repository.deleteOneById(id);
 
-        assertFalse(result); // Assuming delete result mock returns 0 deletions
+        assertTrue(result);
         verify(mongoTemplate, times(1)).remove(any(), eq(CVScreeningReport.class));
-    }
-
-    @Test
-    void testExistsByData() {
-        CVScreeningReport report = new CVScreeningReport();
-        report.setJobTitle("Test Job");
-
-        when(mongoTemplate.exists(any(), eq(CVScreeningReport.class))).thenReturn(true);
-
-        boolean exists = repository.existsByData(report);
-
-        assertTrue(exists);
-        verify(mongoTemplate, times(1)).exists(any(), eq(CVScreeningReport.class));
     }
 }

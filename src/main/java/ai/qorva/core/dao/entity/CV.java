@@ -1,16 +1,15 @@
 package ai.qorva.core.dao.entity;
 
 import ai.qorva.core.dto.common.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.mongodb.core.mapping.MongoId;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.FieldType;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.bson.types.Binary;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.Instant;
 import java.util.List;
@@ -22,34 +21,21 @@ import java.util.List;
 @Document(collection = "CVs")
 public class CV implements QorvaEntity {
 
-    @MongoId(FieldType.OBJECT_ID)
+    @Id
     private String id;
 
-    @MongoId(FieldType.OBJECT_ID)
     private String companyId;
-
     private PersonalInformation personalInformation;
-
     private List<KeySkill> keySkills;
-
     private Profiles profiles;
-
     private List<WorkExperience> workExperience;
-
     private List<Education> education;
-
     private List<Certification> certifications;
-
     private SkillsAndQualifications skillsAndQualifications;
-
     private List<ProjectAndAchievement> projectsAndAchievements;
-
     private List<String> interestsAndHobbies;
-
     private List<Reference> references;
-
     private Binary attachment;
-
     private List<String> tags;
 
     @CreatedDate

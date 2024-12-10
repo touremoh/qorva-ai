@@ -1,14 +1,13 @@
 package ai.qorva.core.dao.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.mongodb.core.mapping.MongoId;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.time.Instant;
 
@@ -19,11 +18,11 @@ import java.time.Instant;
 @Document(collection = "AIPrompts")
 public class AIPrompt implements QorvaEntity {
 
-    @MongoId(FieldType.OBJECT_ID)
+    @Id
     private String id;
 
+    private String name;
     private String prompt;
-
     private String description;
 
     @CreatedDate
@@ -32,9 +31,6 @@ public class AIPrompt implements QorvaEntity {
     @LastModifiedDate
     private Instant lastUpdatedAt;
 
-    @MongoId(FieldType.OBJECT_ID)
     private String createdBy;
-
-    @MongoId(FieldType.OBJECT_ID)
     private String lastUpdatedBy;
 }

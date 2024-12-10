@@ -12,7 +12,7 @@ db.createCollection("Companies", {
     $jsonSchema: {
       bsonType: "object",
       title: "Companies",
-      required: ["id", "name", "createdAt", "lastUpdatedAt"],
+      required: ["name", "createdAt", "lastUpdatedAt"],
       properties: {
         id: {
           bsonType: "objectId",
@@ -40,12 +40,8 @@ db.createCollection("Users", {
     $jsonSchema: {
       bsonType: "object",
       title: "Users",
-      required: ["id", "firstName", "lastName", "email", "encryptedPassword", "accountStatus", "createdAt", "lastUpdatedAt"],
+      required: ["firstName", "lastName", "email", "encryptedPassword", "accountStatus", "createdAt", "lastUpdatedAt"],
       properties: {
-        _id: {
-          bsonType: "objectId",
-          description: "must be a valid ObjectId and is required"
-        },
         firstName: {
           bsonType: "string",
           description: "must be a string and is required"
@@ -90,12 +86,8 @@ db.createCollection("JobsPosts", {
     $jsonSchema: {
       bsonType: "object",
       title: "JobsPosts",
-      required: ["id", "title", "description", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      required: ["title", "description", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
       properties: {
-        id: {
-          bsonType: "objectId",
-          description: "must be a valid ObjectId and is required"
-        },
         title: {
           bsonType: "string",
           description: "must be a string and is required"
@@ -103,6 +95,10 @@ db.createCollection("JobsPosts", {
         description: {
           bsonType: "string",
           description: "must be a string and is required"
+        },
+        companyId: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
         },
         createdAt: {
           bsonType: "date",
@@ -130,12 +126,8 @@ db.createCollection("CVs", {
     $jsonSchema: {
       bsonType: "object",
       title: "CVs",
-      required: ["id", "companyId", "personalInformation", "createdAt", "lastUpdatedAt"],
+      required: ["companyId", "personalInformation", "createdAt", "lastUpdatedAt"],
       properties: {
-        id: {
-          bsonType: "objectId",
-          description: "must be a string and is required"
-        },
         companyId: {
           bsonType: "objectId",
           description: "must be a valid ObjectId and is required"
@@ -517,39 +509,43 @@ db.createCollection("CVScreeningReports", {
       bsonType: "object",
       title: "CVScreeningReports",
       required: [
-        "job_title",
-        "candidate_name",
-        "skills_match",
-        "exceeds_requirements",
-        "lacking_skills",
-        "experience_alignment",
-        "overall_summary",
-        "interview_questions"
+        "jobTitle",
+        "candidateName",
+        "skillsMatch",
+        "exceedsRequirements",
+        "lackingSkills",
+        "experienceAlignment",
+        "overallSummary",
+        "interviewQuestions"
       ],
       properties: {
-        job_title: {
+        companyId: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        jobTitle: {
           bsonType: "string",
           description: "must be a string and is required"
         },
-        candidate_name: {
+        candidateName: {
           bsonType: "string",
           description: "must be a string and is required"
         },
-        skills_match: {
+        skillsMatch: {
           bsonType: "object",
-          required: ["summary", "degree_of_match"],
+          required: ["summary", "degreeOfMatch"],
           properties: {
             summary: {
               bsonType: "string",
               description: "must be a string and is required"
             },
-            degree_of_match: {
-              bsonType: "string",
-              description: "must be a string representing a percentage and is required"
+            degreeOfMatch: {
+              bsonType: "int",
+              description: "must be a int representing a percentage and is required"
             }
           }
         },
-        exceeds_requirements: {
+        exceedsRequirements: {
           bsonType: "object",
           required: ["summary"],
           properties: {
@@ -559,7 +555,7 @@ db.createCollection("CVScreeningReports", {
             }
           }
         },
-        lacking_skills: {
+        lackingSkills: {
           bsonType: "object",
           required: ["summary"],
           properties: {
@@ -569,7 +565,7 @@ db.createCollection("CVScreeningReports", {
             }
           }
         },
-        experience_alignment: {
+        experienceAlignment: {
           bsonType: "object",
           required: ["summary"],
           properties: {
@@ -579,19 +575,19 @@ db.createCollection("CVScreeningReports", {
             }
           }
         },
-        overall_summary: {
+        overallSummary: {
           bsonType: "object",
-          required: ["summary", "score", "points_for_improvement"],
+          required: ["summary", "score", "pointsForImprovement"],
           properties: {
             summary: {
               bsonType: "string",
               description: "must be a string and is required"
             },
             score: {
-              bsonType: "string",
-              description: "must be a string representing a score and is required"
+              bsonType: "int",
+              description: "must be a int representing a score and is required"
             },
-            points_for_improvement: {
+            pointsForImprovement: {
               bsonType: "array",
               items: {
                 bsonType: "string"
@@ -600,29 +596,29 @@ db.createCollection("CVScreeningReports", {
             }
           }
         },
-        interview_questions: {
+        interviewQuestions: {
           bsonType: "object",
           required: [
-            "skills_based_questions",
-            "strength_based_questions",
-            "gap_exploration_questions"
+            "skillsBasedQuestions",
+            "strengthBasedQuestions",
+            "gapExplorationQuestions"
           ],
           properties: {
-            skills_based_questions: {
+            skillsBasedQuestions: {
               bsonType: "array",
               items: {
                 bsonType: "string"
               },
               description: "must be an array of strings and is required"
             },
-            strength_based_questions: {
+            strengthBasedQuestions: {
               bsonType: "array",
               items: {
                 bsonType: "string"
               },
               description: "must be an array of strings and is required"
             },
-            gap_exploration_questions: {
+            gapExplorationQuestions: {
               bsonType: "array",
               items: {
                 bsonType: "string"
@@ -641,12 +637,8 @@ db.createCollection("AIPrompts", {
     $jsonSchema: {
       bsonType: "object",
       title: "AIPrompts",
-      required: ["id", "prompt", "description", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      required: ["prompt", "description", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
       properties: {
-        id: {
-          bsonType: "objectId",
-          description: "must be a valid ObjectId and is required"
-        },
         prompt: {
           bsonType: "string",
           description: "must be a string and is required"
@@ -675,6 +667,3 @@ db.createCollection("AIPrompts", {
     }
   }
 });
-
-
-
