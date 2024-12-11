@@ -8,6 +8,8 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.time.Instant;
 
@@ -21,7 +23,9 @@ public class User implements QorvaEntity {
     @Id
     private String id;
 
+    @Field(targetType = FieldType.OBJECT_ID)
     private String companyId;
+
     private String firstName;
     private String lastName;
     private String email;

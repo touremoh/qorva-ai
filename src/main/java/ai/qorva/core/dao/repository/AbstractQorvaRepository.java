@@ -1,6 +1,7 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.QorvaEntity;
+import org.bson.types.ObjectId;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -82,7 +83,7 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
         Assert.notEmpty(ids, "IDs list must not be empty");
 
         // Build query
-        Query query = new Query(Criteria.where("id").in(ids));
+        Query query = new Query(Criteria.where("_id").in(ids));
 
         // Execute query
         List<T> results = mongoTemplate.find(query, entityClass);
@@ -101,13 +102,13 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
         Query query = new Query(Criteria.where("_id").is(id));
 
         // Execute query
-        mongoTemplate.updateFirst(query, this.mapFieldUpdateOne(entity), entityClass);
+        mongoTemplate.updateFirst(query, this.mapFieldsUpdateOne(entity), entityClass);
 
         // Yield results
         return findOneById(id);
     }
 
-    protected Update mapFieldUpdateOne(T entity) {
+    protected Update mapFieldsUpdateOne(T entity) {
         return new Update();
     }
 
@@ -119,7 +120,7 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
         Assert.notNull(id, "ID must not be null");
 
         // Build query
-        Query query = new Query(Criteria.where("id").is(id));
+        Query query = new Query(Criteria.where("_id").is(id));
 
         // Execute query and render results
         return mongoTemplate.remove(query, entityClass).getDeletedCount() > 0;
@@ -131,7 +132,7 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
         Assert.notNull(entity, "Entity must not be null");
 
         // Build query
-        Query query = new Query(Criteria.byExample(entity));
+        Query query = buildQueryFindOneByData(entity);
 
         // Execute query and render results
         return mongoTemplate.exists(query, entityClass);

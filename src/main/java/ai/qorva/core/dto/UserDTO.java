@@ -21,6 +21,8 @@ public class UserDTO extends AbstractQorvaDTO {
 
     @JsonProperty(access = Access.WRITE_ONLY)
     private String rawPassword;
+
+    @JsonProperty(access = Access.WRITE_ONLY)
     private String encryptedPassword;
 
     private String accountStatus;

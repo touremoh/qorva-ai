@@ -10,82 +10,96 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.util.StringUtils;
 
 import java.time.Instant;
+import java.util.Objects;
+
+import static java.util.Objects.isNull;
 
 @Repository
 public class UserRepository extends AbstractQorvaRepository<User> {
+
+    // Constants for field names
+    private static final String FIELD_ID = "_id";
+    private static final String FIELD_COMPANY_ID = "companyId";
+    private static final String FIELD_FIRST_NAME = "firstName";
+    private static final String FIELD_LAST_NAME = "lastName";
+    private static final String FIELD_EMAIL = "email";
+    private static final String FIELD_ENCRYPTED_PASSWORD = "encryptedPassword";
+    private static final String FIELD_ACCOUNT_STATUS = "accountStatus";
+    private static final String FIELD_CREATED_AT = "createdAt";
+    private static final String FIELD_LAST_UPDATED_AT = "lastUpdatedAt";
+
     public UserRepository(MongoTemplate mongoTemplate) {
         super(mongoTemplate, User.class);
     }
 
     @Override
     protected Query buildQueryFindOneByData(User user) {
-        if (user == null) {
+        if (isNull(user)) {
             throw new IllegalArgumentException("User object must not be null");
         }
 
         Query query = new Query();
 
-        // Add criteria for each non-null field
         if (StringUtils.hasText(user.getId())) {
-            query.addCriteria(Criteria.where("id").is(new ObjectId(user.getId())));
+            query.addCriteria(Criteria.where(FIELD_ID).is(new ObjectId(user.getId())));
         }
 
         if (StringUtils.hasText(user.getCompanyId())) {
-            query.addCriteria(Criteria.where("companyId").is(new ObjectId(user.getCompanyId())));
+            query.addCriteria(Criteria.where(FIELD_COMPANY_ID).is(new ObjectId(user.getCompanyId())));
         }
 
         if (StringUtils.hasText(user.getFirstName())) {
-            query.addCriteria(Criteria.where("firstName").is(user.getFirstName()));
+            query.addCriteria(Criteria.where(FIELD_FIRST_NAME).is(user.getFirstName()));
         }
 
         if (StringUtils.hasText(user.getLastName())) {
-            query.addCriteria(Criteria.where("lastName").is(user.getLastName()));
+            query.addCriteria(Criteria.where(FIELD_LAST_NAME).is(user.getLastName()));
         }
 
         if (StringUtils.hasText(user.getEmail())) {
-            query.addCriteria(Criteria.where("email").is(user.getEmail()));
+            query.addCriteria(Criteria.where(FIELD_EMAIL).is(user.getEmail()));
         }
 
         if (StringUtils.hasText(user.getEncryptedPassword())) {
-            query.addCriteria(Criteria.where("encryptedPassword").is(user.getEncryptedPassword()));
+            query.addCriteria(Criteria.where(FIELD_ENCRYPTED_PASSWORD).is(user.getEncryptedPassword()));
         }
 
         if (StringUtils.hasText(user.getAccountStatus())) {
-            query.addCriteria(Criteria.where("accountStatus").is(user.getAccountStatus()));
+            query.addCriteria(Criteria.where(FIELD_ACCOUNT_STATUS).is(user.getAccountStatus()));
         }
 
-        if (user.getCreatedAt() != null) {
-            query.addCriteria(Criteria.where("createdAt").is(user.getCreatedAt()));
+        if (Objects.nonNull(user.getCreatedAt())) {
+            query.addCriteria(Criteria.where(FIELD_CREATED_AT).is(user.getCreatedAt()));
         }
 
-        if (user.getLastUpdatedAt() != null) {
-            query.addCriteria(Criteria.where("lastUpdatedAt").is(user.getLastUpdatedAt()));
+        if (Objects.nonNull(user.getLastUpdatedAt())) {
+            query.addCriteria(Criteria.where(FIELD_LAST_UPDATED_AT).is(user.getLastUpdatedAt()));
         }
 
         return query;
     }
 
     @Override
-    protected Update mapFieldUpdateOne(User entity) {
-        var update = super.mapFieldUpdateOne(entity);
+    protected Update mapFieldsUpdateOne(User entity) {
+        var update = super.mapFieldsUpdateOne(entity);
 
-        if (entity.getFirstName() != null) {
-            update.set("firstName", entity.getFirstName());
+        if (StringUtils.hasText(entity.getFirstName())) {
+            update.set(FIELD_FIRST_NAME, entity.getFirstName());
         }
-        if (entity.getLastName() != null) {
-            update.set("lastName", entity.getLastName());
+        if (StringUtils.hasText(entity.getLastName())) {
+            update.set(FIELD_LAST_NAME, entity.getLastName());
         }
-        if (entity.getEmail() != null) {
-            update.set("email", entity.getEmail());
+        if (StringUtils.hasText(entity.getEmail())) {
+            update.set(FIELD_EMAIL, entity.getEmail());
         }
-        if (entity.getEncryptedPassword() != null) {
-            update.set("encryptedPassword", entity.getEncryptedPassword());
+        if (StringUtils.hasText(entity.getEncryptedPassword())) {
+            update.set(FIELD_ENCRYPTED_PASSWORD, entity.getEncryptedPassword());
         }
-        if (entity.getAccountStatus() != null) {
-            update.set("accountStatus", entity.getAccountStatus());
+        if (StringUtils.hasText(entity.getAccountStatus())) {
+            update.set(FIELD_ACCOUNT_STATUS, entity.getAccountStatus());
         }
 
-        update.set("lastUpdatedAt", Instant.now());
+        update.set(FIELD_LAST_UPDATED_AT, Instant.now());
 
         return update;
     }

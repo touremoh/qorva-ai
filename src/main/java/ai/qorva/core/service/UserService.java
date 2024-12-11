@@ -9,6 +9,7 @@ import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.AbstractQorvaMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -43,7 +44,7 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		}
 
 		// Check if user does not exist
-		if (this.existsByData(userDTO)) {
+		if (this.existsByData(UserDTO.builder().email(userDTO.getEmail()).build())) {
 			log.error("Trying to create an existing user {}", userDTO);
 			throw new QorvaException(
 				"Unable to create an existing user",
