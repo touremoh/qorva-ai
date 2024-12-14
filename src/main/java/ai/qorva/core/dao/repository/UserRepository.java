@@ -18,8 +18,6 @@ import static java.util.Objects.isNull;
 public class UserRepository extends AbstractQorvaRepository<User> {
 
     // Constants for field names
-    private static final String FIELD_ID = "_id";
-    private static final String FIELD_COMPANY_ID = "companyId";
     private static final String FIELD_FIRST_NAME = "firstName";
     private static final String FIELD_LAST_NAME = "lastName";
     private static final String FIELD_EMAIL = "email";
@@ -33,19 +31,17 @@ public class UserRepository extends AbstractQorvaRepository<User> {
     }
 
     @Override
-    protected Query buildQueryFindOneByData(User user) {
+    protected Query buildQueryFindOneByData(String companyId, User user) {
         if (isNull(user)) {
             throw new IllegalArgumentException("User object must not be null");
         }
 
         Query query = new Query();
 
+        query.addCriteria(Criteria.where(FIELD_COMPANY_ID).is(companyId));
+
         if (StringUtils.hasText(user.getId())) {
             query.addCriteria(Criteria.where(FIELD_ID).is(new ObjectId(user.getId())));
-        }
-
-        if (StringUtils.hasText(user.getCompanyId())) {
-            query.addCriteria(Criteria.where(FIELD_COMPANY_ID).is(new ObjectId(user.getCompanyId())));
         }
 
         if (StringUtils.hasText(user.getFirstName())) {

@@ -33,7 +33,7 @@ public class ApplicationUserDetailsService implements UserDetailsService {
 			userToFind.setEmail(email);
 
 			// Find user by email
-			var userFound = this.userRepository.findOneByData(userToFind);
+			var userFound = this.userRepository.findOneByData(userToFind.getCompanyId(), userToFind);
 
 			// Check if user was found
 			if (userFound.isEmpty()) {

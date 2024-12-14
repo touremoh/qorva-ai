@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.Objects;
@@ -48,6 +49,8 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
 
             // Render results
             return renderFindOneById(entity);
+        } catch (QorvaException e) {
+            throw e;
         } catch (Exception e) {
             throw wrapException(e, "Error finding resource by ID: " + id);
         }
@@ -66,14 +69,14 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     @Override
-    public D findOneByData(D input) throws QorvaException {
+    public D findOneByData(String companyId, D input) throws QorvaException {
         try {
             // Pre Process
-            preProcessFindOneByData(input);
+            preProcessFindOneByData(companyId, input);
 
             // Process
             E entity = repository
-                .findOneByData(mapper.map(input))
+                .findOneByData(companyId, mapper.map(input))
                 .orElseThrow(() -> new QorvaException(
                     RESOURCE_NOT_FOUND.getMessage(),
                     RESOURCE_NOT_FOUND.getHttpStatus().value(),
@@ -85,13 +88,16 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
 
             // Render results
             return renderFindOneByData(entity);
+        } catch (QorvaException e) {
+            throw e;
         } catch (Exception e) {
             throw wrapException(e, "Error finding resource by data");
         }
     }
 
-    protected void preProcessFindOneByData(D input) {
-        Assert.notNull(input, "Input Data must not be null");
+    protected void preProcessFindOneByData(String companyId, D input) {
+        Assert.isTrue(StringUtils.hasText(companyId), "Company ID must not be null");
+        Assert.notNull(input,"Input Data must not be null");
     }
 
     protected void postProcessFindOneByData(E entity) {
@@ -116,6 +122,8 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
 
             // Render results
             return renderCreateOne(savedEntity);
+        } catch (QorvaException e) {
+            throw e;
         } catch (Exception e) {
             throw wrapException(e, "Error creating resource");
         }
@@ -134,25 +142,28 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     @Override
-    public Page<D> findMany(int pageNumber, int pageSize) throws QorvaException {
+    public Page<D> findMany(String companyId, int pageNumber, int pageSize) throws QorvaException {
         try {
             // Pre Process
-            preProcessFindMany(pageNumber, pageSize);
+            preProcessFindMany(companyId,  pageNumber, pageSize);
 
             // Process
-            Page<E> entities = repository.findMany(pageNumber, pageSize);
+            Page<E> entities = repository.findMany(companyId, pageNumber, pageSize);
 
             // Post Process
             postProcessFindMany(entities);
 
             // Render Results
             return renderFindMany(entities);
+        } catch (QorvaException e) {
+            throw e;
         } catch (Exception e) {
             throw wrapException(e, "Error finding resources with pagination");
         }
     }
 
-    protected void preProcessFindMany(int pageNumber, int pageSize) {
+    protected void preProcessFindMany(String companyId, int pageNumber, int pageSize) throws QorvaException {
+        Assert.isTrue(StringUtils.hasText(companyId), "Company ID must not be null");
         Assert.isTrue(pageNumber >= 0, "Page number must be greater than or equal to 0");
         Assert.isTrue(pageSize > 0, "Page size must be greater than 0");
     }
@@ -192,7 +203,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         // Optional subclass-specific pre-processing
     }
 
-    protected void postProcessFindManyByIds(Page<E> entities) {
+    protected void postProcessFindManyByIds(Page<E> entities) throws QorvaException {
         // Optional subclass-specific post-processing
     }
 
@@ -224,6 +235,8 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
 
             // Render results
             return renderUpdateOne(updatedEntity);
+        } catch (QorvaException e) {
+            throw e;
         } catch (Exception e) {
             throw wrapException(e, "Error updating resource with ID: " + id);
         }
@@ -279,13 +292,13 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     @Override
-    public boolean existsByData(D input) throws QorvaException {
+    public boolean existsByData(String companyId, D input) throws QorvaException {
         try {
             // Pre Process
-            preProcessExistsByData(input);
+            preProcessExistsByData(companyId, input);
 
             // Process
-            boolean exists = repository.existsByData(mapper.map(input));
+            boolean exists = repository.existsByData(companyId, mapper.map(input));
 
             // Post Process
             postProcessExistsByData(input, exists);
@@ -297,8 +310,9 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         }
     }
 
-    protected void preProcessExistsByData(D input) {
+    protected void preProcessExistsByData(String companyId, D input) {
         Assert.notNull(input, "Input Data must not be null");
+        Assert.isTrue(StringUtils.hasText(companyId), "Company ID must not be null");
     }
 
     protected void postProcessExistsByData(D input, boolean exists) {

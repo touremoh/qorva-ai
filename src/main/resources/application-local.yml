@@ -18,6 +18,7 @@ spring:
     port: 0
     username: USER_XXX
     password: PASSWORD
+    from: FROM_EMAIL
     protocol: PROTOCOL
     properties:
       mail:

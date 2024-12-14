@@ -19,6 +19,9 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
     protected final MongoTemplate mongoTemplate;
     protected final Class<T> entityClass;
 
+    protected static final String FIELD_ID = "_id";
+    protected static final String FIELD_COMPANY_ID = "companyId";
+
     protected AbstractQorvaRepository(MongoTemplate mongoTemplate, Class<T> entityClass) {
         this.mongoTemplate = mongoTemplate;
         this.entityClass = entityClass;
@@ -34,19 +37,20 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
     }
 
     @Override
-    public Optional<T> findOneByData(T entity) {
+    public Optional<T> findOneByData(String companyId, T entity) {
         // Check parameters
         Assert.notNull(entity, "Entity must not be null");
+        Assert.notNull(companyId, "Company ID must not be null");
 
         // Build the query
-        Query query = buildQueryFindOneByData(entity);
+        Query query = buildQueryFindOneByData(companyId, entity);
 
         // Execute the query
         return Optional.ofNullable(mongoTemplate.findOne(query, entityClass));
     }
 
-    protected Query buildQueryFindOneByData(T entity) {
-        return new Query(Criteria.byExample(entity));
+    protected Query buildQueryFindOneByData(String companyId, T entity) {
+        return new Query(Criteria.byExample(entity).and(FIELD_COMPANY_ID).is(companyId));
     }
 
     @Override
@@ -59,13 +63,14 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
     }
 
     @Override
-    public Page<T> findMany(int pageNumber, int pageSize) {
+    public Page<T> findMany(String companyId, int pageNumber, int pageSize) {
         // Check parameters
+        Assert.notNull(companyId, "Company ID must not be null");
         Assert.isTrue(pageNumber >= 0, "Page number must be greater than or equal to 0");
         Assert.isTrue(pageSize > 0, "Page size must be greater than 0");
 
         // Build the query
-        Query query = new Query().skip((long) pageNumber * pageSize).limit(pageSize);
+        Query query = new Query(Criteria.where(FIELD_COMPANY_ID).is(companyId)).skip((long) pageNumber * pageSize).limit(pageSize);
 
         // Execute the query
         List<T> results = mongoTemplate.find(query, entityClass);
@@ -83,7 +88,7 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
         Assert.notEmpty(ids, "IDs list must not be empty");
 
         // Build query
-        Query query = new Query(Criteria.where("_id").in(ids));
+        Query query = new Query(Criteria.where(FIELD_ID).in(ids));
 
         // Execute query
         List<T> results = mongoTemplate.find(query, entityClass);
@@ -99,7 +104,7 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
         Assert.notNull(entity, "Entity must not be null");
 
         // Build query
-        Query query = new Query(Criteria.where("_id").is(id));
+        Query query = new Query(Criteria.where(FIELD_ID).is(id));
 
         // Execute query
         mongoTemplate.updateFirst(query, this.mapFieldsUpdateOne(entity), entityClass);
@@ -120,19 +125,20 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
         Assert.notNull(id, "ID must not be null");
 
         // Build query
-        Query query = new Query(Criteria.where("_id").is(id));
+        Query query = new Query(Criteria.where(FIELD_ID).is(id));
 
         // Execute query and render results
         return mongoTemplate.remove(query, entityClass).getDeletedCount() > 0;
     }
 
     @Override
-    public boolean existsByData(T entity) {
+    public boolean existsByData(String companyId, T entity) {
         // Check parameters
         Assert.notNull(entity, "Entity must not be null");
+        Assert.notNull(companyId, "Company ID must not be null");
 
         // Build query
-        Query query = buildQueryFindOneByData(entity);
+        Query query = buildQueryFindOneByData(companyId, entity);
 
         // Execute query and render results
         return mongoTemplate.exists(query, entityClass);

@@ -26,8 +26,8 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     }
 
     @PostMapping("/search")
-    public ResponseEntity<QorvaRequestResponse> findOneByData(@RequestBody D data) throws QorvaException {
-        return BuildApiResponse.from(service.findOneByData(data));
+    public ResponseEntity<QorvaRequestResponse> findOneByData(@RequestHeader String companyId, @RequestBody D data) throws QorvaException {
+        return BuildApiResponse.from(service.findOneByData(companyId, data));
     }
 
     @PostMapping
@@ -36,9 +36,11 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     }
 
     @GetMapping
-    public ResponseEntity<QorvaRequestResponse> findMany(@RequestParam(defaultValue = "0") int pageNumber,
-                                      @RequestParam(defaultValue = "100") int pageSize) throws QorvaException {
-        return BuildApiResponse.from(service.findMany(pageNumber, pageSize));
+    public ResponseEntity<QorvaRequestResponse> findMany(
+            @RequestHeader String companyId,
+            @RequestParam(defaultValue = "0") int pageNumber,
+            @RequestParam(defaultValue = "100") int pageSize) throws QorvaException {
+        return BuildApiResponse.from(service.findMany(companyId, pageNumber, pageSize));
     }
 
     @PostMapping("/ids")
@@ -58,7 +60,7 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     }
 
     @PostMapping("/exists")
-    public ResponseEntity<QorvaRequestResponse> existsByData(@RequestBody D data) throws QorvaException {
-        return BuildApiResponse.from(service.existsByData(data));
+    public ResponseEntity<QorvaRequestResponse> existsByData(@RequestHeader String companyId, @RequestBody D data) throws QorvaException {
+        return BuildApiResponse.from(service.existsByData(companyId, data));
     }
 }

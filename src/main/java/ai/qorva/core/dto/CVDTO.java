@@ -8,15 +8,14 @@ import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
+import lombok.experimental.SuperBuilder;
 import org.bson.types.Binary;
 
 import java.util.List;
 
 @Getter
 @Setter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@SuperBuilder
 public class CVDTO extends AbstractQorvaDTO {
     private String id;
     private String companyId;

@@ -20,11 +20,12 @@ public interface QorvaService<D extends QorvaDTO> {
     /**
      * Find one record by its data.
      *
+     * @param companyId The ID of the company that owns the data
      * @param input The data of the record.
      * @return The record.
      * @throws QorvaException if the record is not found.
      */
-    D findOneByData(D input) throws QorvaException;
+    D findOneByData(String companyId, D input) throws QorvaException;
 
     /**
      * Create one record.
@@ -43,7 +44,7 @@ public interface QorvaService<D extends QorvaDTO> {
      * @return A pageable list of records.
      * @throws QorvaException if an error occurs during retrieval.
      */
-    Page<D> findMany(int pageNumber, int pageSize) throws QorvaException;
+    Page<D> findMany(String companyId, int pageNumber, int pageSize) throws QorvaException;
 
     /**
      * Find many records by their IDs.
@@ -79,5 +80,5 @@ public interface QorvaService<D extends QorvaDTO> {
      * @return True if the record exists, false otherwise.
      * @throws QorvaException if an error occurs during the check.
      */
-    boolean existsByData(D input) throws QorvaException;
+    boolean existsByData(String companyId, D input) throws QorvaException;
 }

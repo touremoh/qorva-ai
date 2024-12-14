@@ -19,10 +19,11 @@ public interface QorvaRepository<T extends QorvaEntity> {
     /**
      * Find one document by its type.
      *
+     * @param companyId Filter out by companyId.
      * @param entity The data of the document.
      * @return An optional containing the document if found, or empty otherwise.
      */
-    Optional<T> findOneByData(T entity);
+    Optional<T> findOneByData(String companyId, T entity);
 
     /**
      * Create one document.
@@ -35,11 +36,12 @@ public interface QorvaRepository<T extends QorvaEntity> {
     /**
      * Find many documents by type with pagination.
      *
+     * @param companyId Filter out by companyId to avoid returning data from other companies
      * @param pageNumber The page number.
      * @param pageSize   The number of items per page.
      * @return A pageable object containing the documents for the given page.
      */
-    Page<T> findMany(int pageNumber, int pageSize);
+    Page<T> findMany(String companyId, int pageNumber, int pageSize);
 
     /**
      * Find many documents by their IDs.
@@ -47,7 +49,7 @@ public interface QorvaRepository<T extends QorvaEntity> {
      * @param ids The list of document IDs.
      * @return A pageable object containing the documents matching the IDs.
      */
-    Page<T> findManyByIds(List<String> ids);
+    Page<T> findManyByIds( List<String> ids);
 
     /**
      * Update one document.
@@ -69,8 +71,9 @@ public interface QorvaRepository<T extends QorvaEntity> {
     /**
      * Check if a document exists by its data.
      *
+     * @param companyId Filter out by companyId to avoid returning data from other companies
      * @param entity The document data to check for existence.
      * @return True if a matching document exists, false otherwise.
      */
-    boolean existsByData(T entity);
+    boolean existsByData(String companyId, T entity);
 }
