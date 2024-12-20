@@ -40,7 +40,6 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
     public Optional<T> findOneByData(String companyId, T entity) {
         // Check parameters
         Assert.notNull(entity, "Entity must not be null");
-        Assert.notNull(companyId, "Company ID must not be null");
 
         // Build the query
         Query query = buildQueryFindOneByData(companyId, entity);
@@ -50,7 +49,11 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
     }
 
     protected Query buildQueryFindOneByData(String companyId, T entity) {
-        return new Query(Criteria.byExample(entity).and(FIELD_COMPANY_ID).is(companyId));
+        var criteria = Criteria.byExample(entity);
+        if (companyId != null) {
+            criteria.and(FIELD_COMPANY_ID).is(companyId);
+        }
+        return new Query(criteria);
     }
 
     @Override

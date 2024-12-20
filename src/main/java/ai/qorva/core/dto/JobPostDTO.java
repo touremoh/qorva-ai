@@ -12,6 +12,8 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @Setter
 @SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public class JobPostDTO extends AbstractQorvaDTO {
     private String id;
     private String companyId;

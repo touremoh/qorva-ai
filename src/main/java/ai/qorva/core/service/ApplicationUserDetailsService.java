@@ -1,9 +1,7 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.repository.UserRepository;
-import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.enums.UserStatusEnum;
-import ai.qorva.core.exception.QorvaException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.User;
@@ -13,7 +11,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 @Service
 public class ApplicationUserDetailsService implements UserDetailsService {
@@ -33,7 +30,7 @@ public class ApplicationUserDetailsService implements UserDetailsService {
 			userToFind.setEmail(email);
 
 			// Find user by email
-			var userFound = this.userRepository.findOneByData(userToFind.getCompanyId(), userToFind);
+			var userFound = this.userRepository.findOneByData(null, userToFind);
 
 			// Check if user was found
 			if (userFound.isEmpty()) {

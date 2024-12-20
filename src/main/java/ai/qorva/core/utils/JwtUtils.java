@@ -54,6 +54,11 @@ public class JwtUtils {
 	}
 
 	public JwtDTO generateAndBuildToken(UserDetails userDetails, JwtConfig jwtConfig) {
-		return JwtDTO.builder().accessToken(JwtUtils.generateToken(userDetails, jwtConfig)).build();
+		var accessToken = generateToken(userDetails, jwtConfig);
+		return JwtDTO.builder()
+					 .accessToken(accessToken)
+					 .expiresIn(extractExpiration(accessToken, jwtConfig.getSecretKey()).getTime())
+					 .tokenType("Bearer")
+					 .build();
 	}
 }

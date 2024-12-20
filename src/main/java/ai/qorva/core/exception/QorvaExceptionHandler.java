@@ -4,7 +4,9 @@ import ai.qorva.core.dto.QorvaErrorResponse;
 import ai.qorva.core.enums.QorvaErrorsEnum;
 import org.mapstruct.ap.internal.util.Strings;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -26,7 +28,7 @@ public class QorvaExceptionHandler extends ResponseEntityExceptionHandler {
 
 		var response = QorvaErrorResponse.builder()
 			.message(
-				Strings.isNotEmpty(ex.getMessage())
+				StringUtils.hasText(ex.getMessage())
 					? ex.getMessage()
 					: (Objects.nonNull(errorEnum) ? errorEnum.getMessage() : "An unexpected error occurred.")
 			)

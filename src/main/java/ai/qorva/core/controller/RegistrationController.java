@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/register")
+@CrossOrigin(origins = "${weblink.allowedOrigin}")
 public class RegistrationController {
 
 	private final UserRegistrationService registrationService;

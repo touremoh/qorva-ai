@@ -49,12 +49,7 @@ public class SecurityConfig {
 				.requestMatchers(
 					"/register/**",
 					"/auth/login",
-					"/auth/token/validate",
-
-					"/users/**",
-					"/cv/**",
-					"/jobs/**",
-					"/reports/**"
+					"/auth/token/validate"
 				).permitAll() // Publicly accessible routes
 				.anyRequest().authenticated()
 			)

@@ -30,16 +30,16 @@ public class AuthenticationService {
 		this.jwtConfig = jwtConfig;
 	}
 
-	public JwtDTO authenticate(UserDTO hotelUserDTO) throws QorvaException {
+	public JwtDTO authenticate(UserDTO userDTO) throws QorvaException {
 		try {
 			// Authenticate by email and password
-			this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(hotelUserDTO.getEmail(), hotelUserDTO.getRawPassword()));
+			this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userDTO.getEmail(), userDTO.getRawPassword()));
 
 			// Get the user details using the custom user details service
-			UserDetails userDetails = this.userDetailsService.loadUserByUsername(hotelUserDTO.getEmail());
+			UserDetails userDetails = this.userDetailsService.loadUserByUsername(userDTO.getEmail());
 
 			// Generate a JWT and return it
-			return JwtDTO.builder().accessToken(JwtUtils.generateToken(userDetails, jwtConfig)).build();
+			return JwtUtils.generateAndBuildToken(userDetails, jwtConfig);
 		} catch (AuthenticationException e) {
 			throw new QorvaException("Authentication failed", e);
 		}

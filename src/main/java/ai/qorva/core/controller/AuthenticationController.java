@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin(origins = "${weblink.allowedOrigin}")
 public class AuthenticationController {
 
 	private final AuthenticationService authenticationService;

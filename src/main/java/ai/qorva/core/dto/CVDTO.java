@@ -16,6 +16,8 @@ import java.util.List;
 @Getter
 @Setter
 @SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CVDTO extends AbstractQorvaDTO {
     private String id;
     private String companyId;

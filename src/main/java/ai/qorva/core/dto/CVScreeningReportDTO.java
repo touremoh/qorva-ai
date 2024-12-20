@@ -13,6 +13,8 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @Setter
 @SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CVScreeningReportDTO extends AbstractQorvaDTO {
     private String id;
     private String companyId;

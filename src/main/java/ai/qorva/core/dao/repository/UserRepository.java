@@ -38,7 +38,9 @@ public class UserRepository extends AbstractQorvaRepository<User> {
 
         Query query = new Query();
 
-        query.addCriteria(Criteria.where(FIELD_COMPANY_ID).is(companyId));
+        if (StringUtils.hasText(companyId)) {
+            query.addCriteria(Criteria.where(FIELD_COMPANY_ID).is(companyId));
+        }
 
         if (StringUtils.hasText(user.getId())) {
             query.addCriteria(Criteria.where(FIELD_ID).is(new ObjectId(user.getId())));

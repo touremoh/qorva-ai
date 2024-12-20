@@ -47,7 +47,7 @@ class CVScreeningReportRepositoryTest extends AbstractRepositoryTest<CVScreening
 
         when(mongoTemplate.findOne(any(), eq(CVScreeningReport.class))).thenReturn(report);
 
-        Optional<CVScreeningReport> result = repository.findOneByData(report);
+        Optional<CVScreeningReport> result = repository .findOneByData(report);
 
         assertTrue(result.isPresent());
         assertEquals("John Doe", result.get().getCandidateName());
