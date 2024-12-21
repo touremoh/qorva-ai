@@ -8,6 +8,8 @@ import ai.qorva.core.mapper.AbstractQorvaMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
@@ -28,6 +30,20 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         this.repository = repository;
         this.mapper = mapper;
 	}
+
+    protected String getAuthenticatedUsername() {
+        var principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        if (principal instanceof UserDetails) {
+            return ((UserDetails) principal).getUsername();
+        } else {
+            return principal.toString();
+        }
+    }
+
+    public String getAuthenticatedCompanyId() {
+        return (String) SecurityContextHolder.getContext().getAuthentication().getDetails();
+    }
 
     @Override
     public D findOneById(String id) throws QorvaException {
@@ -142,13 +158,16 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     @Override
-    public Page<D> findMany(String companyId, int pageNumber, int pageSize) throws QorvaException {
+    public Page<D> findMany(int pageNumber, int pageSize) throws QorvaException {
         try {
+            // Get companyId
+            var companyId = this.getAuthenticatedCompanyId();
+
             // Pre Process
-            preProcessFindMany(companyId,  pageNumber, pageSize);
+            preProcessFindMany(pageNumber, pageSize);
 
             // Process
-            Page<E> entities = repository.findMany(companyId, pageNumber, pageSize);
+            Page<E> entities = this.repository.findMany(companyId, pageNumber, pageSize);
 
             // Post Process
             postProcessFindMany(entities);
@@ -162,8 +181,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         }
     }
 
-    protected void preProcessFindMany(String companyId, int pageNumber, int pageSize) throws QorvaException {
-        Assert.isTrue(StringUtils.hasText(companyId), "Company ID must not be null");
+    protected void preProcessFindMany(int pageNumber, int pageSize) throws QorvaException {
         Assert.isTrue(pageNumber >= 0, "Page number must be greater than or equal to 0");
         Assert.isTrue(pageSize > 0, "Page size must be greater than 0");
     }
@@ -283,7 +301,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         }
     }
 
-    protected void preProcessDeleteOneById(String id) {
+    protected void preProcessDeleteOneById(String id) throws QorvaException {
         Assert.notNull(id, "id must not be null");
     }
 

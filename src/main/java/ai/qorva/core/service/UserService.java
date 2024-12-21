@@ -2,11 +2,13 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.QorvaRepository;
+import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.enums.UserStatusEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.AbstractQorvaMapper;
+import ai.qorva.core.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -17,17 +19,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.util.Objects;
+import java.util.Optional;
 
 @Slf4j
 @Service
 public class UserService extends AbstractQorvaService<UserDTO, User> {
 
 	private final PasswordEncoder passwordEncoder;
+	private final UserRepository userRepository;
 
 	@Autowired
-	public UserService(QorvaRepository<User> repository, AbstractQorvaMapper<User, UserDTO> mapper, PasswordEncoder passwordEncoder) {
+	public UserService(UserRepository repository, UserMapper mapper, PasswordEncoder passwordEncoder) {
 		super(repository, mapper);
 		this.passwordEncoder = passwordEncoder;
+		this.userRepository = repository;
 	}
 
 	@Override
@@ -80,5 +85,15 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 
 		// If user found then merge source with target
 		this.mapper.merge(userDTO, userFound);
+	}
+
+	public UserDTO findOneByEmail(String email) throws QorvaException {
+		var optionalUser = this.userRepository.findOneByEmail(email);
+
+		if (optionalUser.isEmpty()) {
+			log.error("User {} not found", email);
+			throw new QorvaException("User not found with username: "+email);
+		}
+		return this.mapper.map(optionalUser.get());
 	}
 }

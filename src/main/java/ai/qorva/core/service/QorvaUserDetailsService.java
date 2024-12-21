@@ -1,6 +1,7 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.repository.UserRepository;
+import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.enums.UserStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
@@ -11,26 +12,23 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
-public class ApplicationUserDetailsService implements UserDetailsService {
+public class QorvaUserDetailsService implements UserDetailsService {
 
 	private final UserRepository userRepository;
 
 	@Autowired
-	public ApplicationUserDetailsService(UserRepository userRepository) {
+	public QorvaUserDetailsService(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}
 
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		try {
-			// Set up userDTO
-			var userToFind = new ai.qorva.core.dao.entity.User();
-			userToFind.setEmail(email);
-
 			// Find user by email
-			var userFound = this.userRepository.findOneByData(null, userToFind);
+			var userFound = this.userRepository.findOneByEmail(email);
 
 			// Check if user was found
 			if (userFound.isEmpty()) {
@@ -56,5 +54,9 @@ public class ApplicationUserDetailsService implements UserDetailsService {
 
 	private boolean isAccountLocked(ai.qorva.core.dao.entity.User user) {
 		return user.getAccountStatus().equals(UserStatusEnum.LOCKED.getValue());
+	}
+
+	public Optional<ai.qorva.core.dao.entity.User> getCurrentUserByEmail(String email) {
+		return this.userRepository.findOneByEmail(email);
 	}
 }

@@ -5,8 +5,6 @@ import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.QorvaService;
 import ai.qorva.core.utils.BuildApiResponse;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,10 +35,9 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
 
     @GetMapping
     public ResponseEntity<QorvaRequestResponse> findMany(
-            @RequestHeader String companyId,
             @RequestParam(defaultValue = "0") int pageNumber,
             @RequestParam(defaultValue = "100") int pageSize) throws QorvaException {
-        return BuildApiResponse.from(service.findMany(companyId, pageNumber, pageSize));
+        return BuildApiResponse.from(service.findMany(pageNumber, pageSize));
     }
 
     @PostMapping("/ids")

@@ -1,6 +1,6 @@
 package ai.qorva.core.config;
 
-import ai.qorva.core.service.ApplicationUserDetailsService;
+import ai.qorva.core.service.QorvaUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,10 +22,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
 
 	private final JwtConfig jwtConfig;
-	private final ApplicationUserDetailsService userDetailsService;
+	private final QorvaUserDetailsService userDetailsService;
 
 	@Autowired
-	public SecurityConfig(JwtConfig jwtConfig, ApplicationUserDetailsService userDetailsService) {
+	public SecurityConfig(JwtConfig jwtConfig, QorvaUserDetailsService userDetailsService) {
 		this.jwtConfig = jwtConfig;
 		this.userDetailsService = userDetailsService;
 	}

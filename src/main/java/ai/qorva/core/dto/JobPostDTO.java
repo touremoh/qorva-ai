@@ -9,6 +9,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import lombok.experimental.SuperBuilder;
 
+import java.time.Instant;
+
 @Getter
 @Setter
 @SuperBuilder
@@ -23,8 +25,8 @@ public class JobPostDTO extends AbstractQorvaDTO {
     private String lastUpdatedBy;
 
     @JsonProperty(access = Access.READ_ONLY)
-    private String createdAt;
+    private Instant createdAt;
 
     @JsonProperty(access = Access.READ_ONLY)
-    private String lastUpdatedAt;
+    private Instant lastUpdatedAt;
 }

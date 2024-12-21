@@ -1,7 +1,8 @@
 package ai.qorva.core.config;
 
-import ai.qorva.core.service.ApplicationUserDetailsService;
+import ai.qorva.core.service.QorvaUserDetailsService;
 import ai.qorva.core.utils.JwtUtils;
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -22,42 +23,39 @@ import java.util.Objects;
 public class JwtRequestFilter extends OncePerRequestFilter {
 
 	private final JwtConfig jwtConfig;
-	private final ApplicationUserDetailsService userDetailsService;
+	private final QorvaUserDetailsService userDetailsService;
 
 	@Autowired
-	public JwtRequestFilter(ApplicationUserDetailsService userDetailsService, JwtConfig jwtConfig) {
+	public JwtRequestFilter(QorvaUserDetailsService userDetailsService, JwtConfig jwtConfig) {
 		this.userDetailsService = userDetailsService;
 		this.jwtConfig = jwtConfig;
 	}
 
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
-		final String authorizationHeader = request.getHeader("Authorization");
+		String authorizationHeader = request.getHeader("Authorization");
 
-		String email = null;
-		String jwt = null;
+		if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
+			String token = authorizationHeader.substring(7); // Remove "Bearer " prefix
+			Claims claims = JwtUtils.extractAllClaims(token, jwtConfig.getSecretKey());
 
-		if (Objects.nonNull(authorizationHeader) && authorizationHeader.startsWith("Bearer ")) {
-			jwt = authorizationHeader.substring(7);
-			try {
-				email = JwtUtils.extractUsername(jwt, jwtConfig.getSecretKey());
-			} catch (ExpiredJwtException e) {
-				response.setHeader("Error during authentication", "Token has expired");
-				chain.doFilter(request, response);
-				return;
-			}
-		}
+			String username = claims.getSubject();
+			String companyId = claims.get("companyId", String.class);
 
-		if (Objects.nonNull(email) && Objects.isNull(SecurityContextHolder.getContext().getAuthentication())) {
-			UserDetails userDetails = this.userDetailsService.loadUserByUsername(email);
-			if (Boolean.TRUE.equals(JwtUtils.isTokenValid(jwt, userDetails, jwtConfig.getSecretKey()))) {
-				UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
-					userDetails,
-					null,
-					userDetails.getAuthorities()
-				);
-				authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-				SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+			if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+				UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+
+				if (Boolean.TRUE.equals(JwtUtils.isTokenValid(token, userDetails, jwtConfig.getSecretKey()))) {
+					var authentication = new UsernamePasswordAuthenticationToken(
+						userDetails,
+						null,
+						userDetails.getAuthorities()
+					);
+
+					// Include companyId in the authentication details
+					authentication.setDetails(companyId);
+					SecurityContextHolder.getContext().setAuthentication(authentication);
+				}
 			}
 		}
 		chain.doFilter(request, response);

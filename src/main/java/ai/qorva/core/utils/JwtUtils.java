@@ -20,6 +20,10 @@ public class JwtUtils {
 		return extractClaim(token, Claims::getSubject, jwtSecret);
 	}
 
+	public String extractCompanyId(String token, String jwtSecret) {
+		return extractClaim(token, claims -> claims.get("companyId", String.class), jwtSecret);
+	}
+
 	public Date extractExpiration(String token, String jwtSecret) {
 		return extractClaim(token, Claims::getExpiration, jwtSecret);
 	}
@@ -29,7 +33,7 @@ public class JwtUtils {
 		return claimsResolver.apply(claims);
 	}
 
-	private Claims extractAllClaims(String token, String jwtSecret) {
+	public Claims extractAllClaims(String token, String jwtSecret) {
 		return Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
 	}
 
@@ -37,15 +41,20 @@ public class JwtUtils {
 		return extractExpiration(token, jwtSecret).before(new Date());
 	}
 
-	public String generateToken(UserDetails userDetails, JwtConfig jwtConfig) {
+	public String generateToken(UserDetails userDetails, JwtConfig jwtConfig, String companyId) {
 		Map<String, Object> claims = new HashMap<>();
+		claims.put("companyId", companyId); // Add companyId to claims
 		return createToken(claims, userDetails.getUsername(), jwtConfig);
 	}
 
 	private String createToken(Map<String, Object> claims, String subject, JwtConfig jwtConfig) {
-		return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
+		return Jwts.builder()
+			.setClaims(claims)
+			.setSubject(subject)
+			.setIssuedAt(new Date(System.currentTimeMillis()))
 			.setExpiration(new Date(System.currentTimeMillis() + jwtConfig.getTimeToLiveInMillis()))
-			.signWith(SignatureAlgorithm.HS256, jwtConfig.getSecretKey()).compact();
+			.signWith(SignatureAlgorithm.HS256, jwtConfig.getSecretKey())
+			.compact();
 	}
 
 	public Boolean isTokenValid(String token, UserDetails userDetails, String jwtSecret) {
@@ -53,12 +62,12 @@ public class JwtUtils {
 		return (username.equals(userDetails.getUsername()) && !isTokenExpired(token, jwtSecret));
 	}
 
-	public JwtDTO generateAndBuildToken(UserDetails userDetails, JwtConfig jwtConfig) {
-		var accessToken = generateToken(userDetails, jwtConfig);
+	public JwtDTO generateAndBuildToken(UserDetails userDetails, JwtConfig jwtConfig, String companyId) {
+		var accessToken = generateToken(userDetails, jwtConfig, companyId);
 		return JwtDTO.builder()
-					 .accessToken(accessToken)
-					 .expiresIn(extractExpiration(accessToken, jwtConfig.getSecretKey()).getTime())
-					 .tokenType("Bearer")
-					 .build();
+			.accessToken(accessToken)
+			.expiresIn(extractExpiration(accessToken, jwtConfig.getSecretKey()).getTime())
+			.tokenType("Bearer")
+			.build();
 	}
 }

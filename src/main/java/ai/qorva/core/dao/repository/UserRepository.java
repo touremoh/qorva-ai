@@ -11,6 +11,7 @@ import org.springframework.util.StringUtils;
 
 import java.time.Instant;
 import java.util.Objects;
+import java.util.Optional;
 
 import static java.util.Objects.isNull;
 
@@ -100,5 +101,9 @@ public class UserRepository extends AbstractQorvaRepository<User> {
         update.set(FIELD_LAST_UPDATED_AT, Instant.now());
 
         return update;
+    }
+
+    public Optional<User> findOneByEmail(String email) {
+        return Optional.ofNullable(this.mongoTemplate.findOne(new Query(Criteria.where(FIELD_EMAIL).is(email)), User.class));
     }
 }

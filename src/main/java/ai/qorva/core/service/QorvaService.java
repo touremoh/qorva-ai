@@ -44,7 +44,7 @@ public interface QorvaService<D extends QorvaDTO> {
      * @return A pageable list of records.
      * @throws QorvaException if an error occurs during retrieval.
      */
-    Page<D> findMany(String companyId, int pageNumber, int pageSize) throws QorvaException;
+    Page<D> findMany(int pageNumber, int pageSize) throws QorvaException;
 
     /**
      * Find many records by their IDs.
