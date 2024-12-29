@@ -10,6 +10,8 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.time.Instant;
 import java.util.List;
@@ -24,7 +26,9 @@ public class CV implements QorvaEntity {
     @Id
     private String id;
 
+    @Field(targetType = FieldType.OBJECT_ID)
     private String companyId;
+
     private PersonalInformation personalInformation;
     private List<KeySkill> keySkills;
     private Profiles profiles;

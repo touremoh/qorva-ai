@@ -3,6 +3,7 @@ package ai.qorva.core.service;
 import ai.qorva.core.dao.entity.JobPost;
 import ai.qorva.core.dao.repository.JobPostRepository;
 import ai.qorva.core.dto.JobPostDTO;
+import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.JobPostMapper;
@@ -33,6 +34,7 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
         jobPost.setCompanyId(userInfo.getCompanyId());
         jobPost.setCreatedBy(userInfo.getId());
         jobPost.setLastUpdatedBy(userInfo.getId());
+        jobPost.setStatus(JobPostStatusEnum.OPEN.getStatus());
     }
 
     @Override

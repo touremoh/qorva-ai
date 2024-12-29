@@ -1,6 +1,6 @@
 package ai.qorva.core.dto.common;
 
-import com.microsoft.graph.models.Contact;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;

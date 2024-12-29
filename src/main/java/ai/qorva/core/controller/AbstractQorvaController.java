@@ -50,6 +50,11 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
         return BuildApiResponse.from(service.updateOne(id, data));
     }
 
+    @PatchMapping("/{id}")
+    public ResponseEntity<QorvaRequestResponse> patchOne(@PathVariable String id, @RequestBody D data) throws QorvaException {
+        return BuildApiResponse.from(service.updateOne(id, data));
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<QorvaRequestResponse> deleteOneById(@PathVariable String id) throws QorvaException {
         service.deleteOneById(id);

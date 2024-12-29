@@ -83,42 +83,47 @@ db.createCollection("Users", {
 
 db.createCollection("JobsPosts", {
   validator: {
-    $jsonSchema: {
-      bsonType: "object",
-      title: "JobsPosts",
-      required: ["title", "description", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
-      properties: {
-        title: {
-          bsonType: "string",
-          description: "must be a string and is required"
-        },
-        description: {
-          bsonType: "string",
-          description: "must be a string and is required"
-        },
-        companyId: {
-          bsonType: "objectId",
-          description: "must be a valid ObjectId and is required"
-        },
-        createdAt: {
-          bsonType: "date",
-          description: "must be a valid date and is required"
-        },
-        lastUpdatedAt: {
-          bsonType: "date",
-          description: "must be a valid date and is required"
-        },
-        createdBy: {
-          bsonType: "objectId",
-          description: "must be a valid ObjectId and is required"
-        },
-        lastUpdatedBy: {
-          bsonType: "objectId",
-          description: "must be a valid ObjectId and is required"
+      $jsonSchema: {
+        bsonType: "object",
+        title: "JobsPosts",
+        required: ["title", "description", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy", "status"],
+        properties: {
+          title: {
+            bsonType: "string",
+            description: "must be a string and is required"
+          },
+          description: {
+            bsonType: "string",
+            description: "must be a string and is required"
+          },
+          companyId: {
+            bsonType: "objectId",
+            description: "must be a valid ObjectId and is required"
+          },
+          createdAt: {
+            bsonType: "date",
+            description: "must be a valid date and is required"
+          },
+          lastUpdatedAt: {
+            bsonType: "date",
+            description: "must be a valid date and is required"
+          },
+          createdBy: {
+            bsonType: "objectId",
+            description: "must be a valid ObjectId and is required"
+          },
+          lastUpdatedBy: {
+            bsonType: "objectId",
+            description: "must be a valid ObjectId and is required"
+          },
+          status: {
+            bsonType: "string",
+            enum: ["open", "closed"],
+            description: "must be a string and can only be 'open' or 'closed'"
+          }
         }
       }
     }
-  }
 });
 
 db.createCollection("CVs", {

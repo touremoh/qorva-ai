@@ -9,6 +9,17 @@ management:
 
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
+  webflux:
+    timeout: 60s
+  ai:
+    openai:
+      api-key: API_KEY
+    chat:
+      client:
+        enabled: true
+
   data:
     mongodb:
       uri: mongodb://localhost:27017/dbname?replicaSet=rs0

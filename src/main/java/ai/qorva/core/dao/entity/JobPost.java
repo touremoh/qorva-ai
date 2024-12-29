@@ -25,6 +25,7 @@ public class JobPost implements QorvaEntity {
     private String companyId;
     private String title;
     private String description;
+    private String status;
 
     @CreatedDate
     private Instant createdAt;

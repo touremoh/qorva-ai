@@ -1,0 +1,105 @@
+{
+  "type": "object",
+  "properties": {
+    "jobTitle": {
+      "type": "string",
+      "description": "The title of the job for which the candidate is being screened; must be a string and is required"
+    },
+    "candidateName": {
+      "type": "string",
+      "description": "The name of the candidate being screened; must be a string and is required"
+    },
+    "skillsMatch": {
+      "type": "object",
+      "description": "Details about the candidate's skill match with the job requirements",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "A summary of how well the candidate's skills match the job; must be a string and is required"
+        },
+        "degreeOfMatch": {
+          "type": "integer",
+          "description": "A percentage representing the degree of match between the candidate's skills and the job requirements; must be an integer and is required"
+        }
+      }
+    },
+    "exceedsRequirements": {
+      "type": "object",
+      "description": "Details about how the candidate exceeds job requirements",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "A summary of how the candidate exceeds the job requirements; must be a string and is required"
+        }
+      }
+    },
+    "lackingSkills": {
+      "type": "object",
+      "description": "Details about the skills the candidate is lacking for the job",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "A summary of the skills the candidate is lacking; must be a string and is required"
+        }
+      }
+    },
+    "experienceAlignment": {
+      "type": "object",
+      "description": "Details about how the candidate's experience aligns with the job requirements",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "A summary of how the candidate's experience aligns with the job; must be a string and is required"
+        }
+      }
+    },
+    "overallSummary": {
+      "type": "object",
+      "description": "An overall summary of the screening report, including score and improvement points",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "A summary of the overall assessment; must be a string and is required"
+        },
+        "score": {
+          "type": "integer",
+          "description": "The overall score for the candidate's suitability; must be an integer and is required"
+        },
+        "pointsForImprovement": {
+          "type": "array",
+          "description": "A list of areas where the candidate can improve; must be an array of strings and is required",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "interviewQuestions": {
+      "type": "object",
+      "description": "Suggested interview questions based on the screening",
+      "properties": {
+        "skillsBasedQuestions": {
+          "type": "array",
+          "description": "10 questions based on the candidate's skills; must be an array of strings and is required",
+          "items": {
+            "type": "string"
+          }
+        },
+        "strengthBasedQuestions": {
+          "type": "array",
+          "description": "List of 10 questions based on the candidate's strengths; must be an array of strings and is required",
+          "items": {
+            "type": "string"
+          }
+        },
+        "gapExplorationQuestions": {
+          "type": "array",
+          "description": "List of 10 questions aimed at exploring gaps in the candidate's profile; must be an array of strings and is required",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

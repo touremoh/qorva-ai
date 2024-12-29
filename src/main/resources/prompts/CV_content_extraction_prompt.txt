@@ -1,0 +1,10 @@
+Your task is to thoroughly analyze the candidate CV enclosed in triple backticks and extract all relevant information, such as personal details, education, work experience, skills, and any other pertinent data.
+Present the extracted data in a structured JSON format matching the object structure provided in triple asterisks.
+If the CV does not contain any of the expected data, leave those fields unchanged in the output JSON.
+
+CV content:
+``` {cv_data} ```.
+
+Output format (JSON schema):
+*** {output_format} ***.
+

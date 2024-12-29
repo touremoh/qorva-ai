@@ -1,227 +1,428 @@
 db.runCommand({
-  collMod: "Hotels",
+  collMod: "JobsPosts",
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["hotelName", "location", "websiteLink"],
+      title: "JobsPosts",
+      required: ["title", "description", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy", "status"],
       properties: {
-        hotelName: {
+        title: {
           bsonType: "string",
-          description: "Name of the hotel"
+          description: "must be a string and is required"
         },
-        location: {
+        description: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        companyId: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        lastUpdatedAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        createdBy: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        lastUpdatedBy: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        status: {
+          bsonType: "string",
+          enum: ["open", "closed"],
+          description: "must be a string and can only be 'open' or 'closed'"
+        }
+      }
+    }
+  },
+  validationAction: "error"
+});
+
+// Add the new field to existing documents with a default value (optional)
+db.JobsPosts.updateMany(
+  { status: { $exists: false } },
+  { $set: { status: "open" } }
+);
+
+db.runCommand({
+  collMod: "CVs",
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "CVs",
+      required: ["companyId", "personalInformation", "createdAt", "lastUpdatedAt"],
+      properties: {
+        companyId: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        personalInformation: {
           bsonType: "object",
+          required: ["name"],
           properties: {
-            country: {
+            name: {
               bsonType: "string",
-              description: "Country of the hotel"
+              description: "must be a string and is required"
             },
-            stateOrProvince: {
-              bsonType: "string",
-              description: "State or province of the hotel"
+            contact: {
+              bsonType: "object",
+              required: ["phone", "email", "socialLinks"],
+              properties: {
+                phone: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                },
+                email: {
+                  bsonType: "string",
+                  pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+                  description: "must be a valid email address and is required"
+                },
+                socialLinks: {
+                  bsonType: "object",
+                  properties: {
+                    linkedin: {
+                      bsonType: "string",
+                      description: "must be a string"
+                    },
+                    github: {
+                      bsonType: "string",
+                      description: "must be a string"
+                    },
+                    website: {
+                      bsonType: "string",
+                      description: "must be a string"
+                    }
+                  }
+                }
+              }
             },
-            zipOrPostalCode: {
+            role: {
               bsonType: "string",
-              description: "Zip code or postal code of the hotel"
+              description: "must be a string and is required"
             },
-            city: {
-              bsonType: "string",
-              description: "City of the hotel"
+            availability: {
+              bsonType: "object",
+              required: ["interviews", "startDate"],
+              properties: {
+                interviews: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                },
+                startDate: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                }
+              }
             },
-            streetAddress: {
+            summary: {
               bsonType: "string",
-              description: "Street address of the hotel"
-            },
-            extendedAddress: {
-              bsonType: "string",
-              description: "Extended address of the hotel"
+              description: "must be a string and is required"
             }
-          },
-          description: "The address that will be shown on the invoice"
+          }
         },
-        websiteLink: {
-          bsonType: "string",
-          description: "Link of the website. This will be used as a call to action for visitor"
-        },
-        amenities: {
+        keySkills: {
           bsonType: "array",
-          description: "List of amenities provided by the hotel"
-        },
-        minPricePerNight: {
-           bsonType: "decimal",
-           description: "The minimum price the customer can expect to pay per room per night"
-        },
-        maxPricePerNight: {
-           bsonType: "decimal",
-           description: "The maximum price the customer can expect to pay per room per night"
-        },
-        chargingInformation: {
-          bsonType: "array",
-          description: "Array of charging information objects",
           items: {
             bsonType: "object",
             properties: {
-              connectorType: {
+              category: {
                 bsonType: "string",
-                description: "Type of plug used to connect the car"
+                description: "must be a string and is required"
               },
-              numberOfConnectors: {
-                bsonType: "int",
-                description: "Number of connectors open to customers"
-              },
-              maxPower: {
-                bsonType: "int",
-                description: "The maximum power expressed in kW the charging point can deliver"
-              },
-              availabilityTime: {
-                bsonType: "string",
-                description: "Time of the day the charger is open"
-              },
-              accessibility: {
-                bsonType: "string",
-                description: "Tells if the charger is open to the public or to customers"
-              },
-              chargingNetwork: {
-                bsonType: "string",
-                description: "Name of the charging network company, e.g., Tesla"
-              },
-              energyCost: {
-                bsonType: "object",
-                required: ["price", "priceUnit"],
-                properties: {
-                  price: {
-                    bsonType: "object",
-                    required: ["amount", "currency"],
-                    properties: {
-                      amount: {
-                        bsonType: "decimal",
-                        description: "Energy cost amount"
-                      },
-                      currency: {
-                        bsonType: "string",
-                        description: "Currency of the energy price"
-                      }
-                    },
-                    description: "Energy price details"
-                  },
-                  priceUnit: {
-                    bsonType: "string",
-                    description: "Unit for energy cost, e.g., kWh, min, day"
-                  }
+              skills: {
+                bsonType: "array",
+                items: {
+                  bsonType: "string"
                 },
-                description: "Cost of the energy"
+                description: "must be an array of strings and is required"
+              }
+            }
+          }
+        },
+        profiles: {
+          bsonType: "object",
+          properties: {
+            areasOfExpertise: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
               },
-              messageForCustomer: {
+              description: "must be an array of strings and is required"
+            },
+            keyResponsibilities: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            }
+          }
+        },
+        workExperience: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            properties: {
+              company: {
                 bsonType: "string",
-                description: "Additional information for customers"
+                description: "must be a string and is required"
               },
-              isDestinationCharger: {
-                bsonType: "bool",
-                description: "Indicates whether this is a destination charger or nearby charger"
+              website: {
+                bsonType: "string",
+                description: "must be a string and is required"
               },
-              chargerLocation: {
+              location: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              from: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              to: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              position: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              activities: {
+                bsonType: "array",
+                items: {
+                  bsonType: "object",
+                  required: ["project", "tasks"],
+                  properties: {
+                    project: {
+                      bsonType: "string",
+                      description: "must be a string and is required"
+                    },
+                    tasks: {
+                      bsonType: "array",
+                      items: {
+                        bsonType: "string"
+                      },
+                      description: "must be an array of strings and is required"
+                    }
+                  }
+                }
+              },
+              achievements: {
+                bsonType: "array",
+                items: {
+                  bsonType: "string"
+                },
+                description: "must be an array of strings"
+              },
+              toolsAndTechnologies: {
+                bsonType: "array",
+                items: {
+                  bsonType: "string"
+                },
+                description: "must be an array of strings"
+              }
+            }
+          }
+        },
+        education: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            properties: {
+              year: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              institution: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              degree: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              fieldOfStudy: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              achievements: {
+                bsonType: "array",
+                items: {
+                  bsonType: "string"
+                },
+                description: "must be an array of strings"
+              }
+            }
+          }
+        },
+        certifications: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            properties: {
+              title: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              institution: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              year: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              description: {
+                bsonType: "string",
+                description: "must be a string"
+              }
+            }
+          }
+        },
+        skillsAndQualifications: {
+          bsonType: "object",
+          properties: {
+            technicalSkills: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            },
+            softSkills: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            },
+            languages: {
+              bsonType: "array",
+              items: {
                 bsonType: "object",
+                required: ["language", "proficiency"],
                 properties: {
-                  country: {
+                  language: {
                     bsonType: "string",
-                    description: "Country of the charger location"
+                    description: "must be a string and is required"
                   },
-                  stateOrProvince: {
-                    bsonType: "string",
-                    description: "State or province of the charger location"
-                  },
-                  zipOrPostalCode: {
-                    bsonType: "string",
-                    description: "Zip code or postal code of the charger location"
-                  },
-                  city: {
-                    bsonType: "string",
-                    description: "City of the charger location"
-                  },
-                  streetAddress: {
-                    bsonType: "string",
-                    description: "Street address of the charger location"
-                  },
-                  extendedAddress: {
-                    bsonType: "string",
-                    description: "Extended address of the charger location"
+                  proficiency: {
+                    bsonType: "object",
+                    required: ["read", "written", "spoken"],
+                    properties: {
+                      read: {
+                        bsonType: "string",
+                        description: "must be a string and is required"
+                      },
+                      written: {
+                        bsonType: "string",
+                        description: "must be a string and is required"
+                      },
+                      spoken: {
+                        bsonType: "string",
+                        description: "must be a string and is required"
+                      }
+                    }
                   }
                 }
               }
             }
           }
         },
-        offers: {
+        projectsAndAchievements: {
           bsonType: "array",
-          description: "List of offers made by the hotel",
           items: {
             bsonType: "object",
-            description: "Offer details",
             properties: {
               title: {
                 bsonType: "string",
-                description: "Title of the offer"
+                description: "must be a string and is required"
               },
               description: {
                 bsonType: "string",
-                description: "Description of the offer"
+                description: "must be a string and is required"
               },
-              code: {
+              date: {
                 bsonType: "string",
-                description: "Offer code"
+                description: "must be a string and is required"
               },
-              startDate: {
+              impact: {
                 bsonType: "string",
-                description: "Start date of the offer"
-              },
-              endDate: {
-                bsonType: "string",
-                description: "End date of the offer"
+                description: "must be a string"
               }
             }
           }
         },
+        interestsAndHobbies: {
+          bsonType: "array",
+          items: {
+            bsonType: "string"
+          },
+          description: "must be an array of strings and is required"
+        },
+        references: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            properties: {
+              name: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              position: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              company: {
+                bsonType: "string",
+                description: "must be a string and is required"
+              },
+              contact: {
+                bsonType: "object",
+                required: ["phone", "email"],
+                properties: {
+                  phone: {
+                    bsonType: "string",
+                    description: "must be a string and is required"
+                  },
+                  email: {
+                    bsonType: "string",
+                    pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+                    description: "must be a valid email address and is required"
+                  }
+                }
+              }
+            }
+          }
+        },
+        attachment: {
+          bsonType: "binData",
+          description: "can be null or binary data for file attachment"
+        },
+        tags: {
+          bsonType: "array",
+          items: {
+            bsonType: "string"
+          },
+          description: "must be an array of strings and is required"
+        },
         createdAt: {
           bsonType: "date",
-          description: "Record creation date"
+          description: "must be a valid date and is required"
         },
         lastUpdatedAt: {
           bsonType: "date",
-          description: "Last record update date"
-        },
-        createdBy: {
-          bsonType: "objectId",
-          description: "ID of the creator"
-        },
-        lastUpdatedBy: {
-          bsonType: "objectId",
-          description: "ID of the last person who updated the record"
+          description: "must be a valid date and is required"
         }
       }
     }
-  }
-});
-
-db.runCommand({
-   collMod: "SearchKeywords",
-   validator: {
-      $jsonSchema: {
-         bsonType: "object",
-         required: [ "key", "values" ],
-         properties: {
-            key: {
-               bsonType: "string",
-               description: "must be a string and is required"
-            },
-            values: {
-               bsonType: ["array"],
-               items: {
-                  bsonType: "string",
-                  description: "Must be a list of strings"
-               },
-               description: "Must be an array of strings and is required"
-            }
-         }
-      }
-   }
+  },
+  validationAction: "error"
 });

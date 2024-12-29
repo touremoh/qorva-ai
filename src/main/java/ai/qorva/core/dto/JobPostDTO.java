@@ -23,6 +23,7 @@ public class JobPostDTO extends AbstractQorvaDTO {
     private String description;
     private String createdBy;
     private String lastUpdatedBy;
+    private String status;
 
     @JsonProperty(access = Access.READ_ONLY)
     private Instant createdAt;

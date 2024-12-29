@@ -18,6 +18,7 @@ public class JobPostRepository extends AbstractQorvaRepository<JobPost> {
     // Constants for field names;
     private static final String FIELD_TITLE = "title";
     private static final String FIELD_DESCRIPTION = "description";
+    private static final String FIELD_STATUS = "status";
     private static final String FIELD_CREATED_AT = "createdAt";
     private static final String FIELD_LAST_UPDATED_AT = "lastUpdatedAt";
     private static final String FIELD_CREATED_BY = "createdBy";
@@ -80,6 +81,10 @@ public class JobPostRepository extends AbstractQorvaRepository<JobPost> {
 
         if (StringUtils.hasText(entity.getDescription())) {
             update.set(FIELD_DESCRIPTION, entity.getDescription());
+        }
+
+        if (StringUtils.hasText(entity.getStatus())) {
+            update.set(FIELD_STATUS, entity.getStatus());
         }
 
         if (StringUtils.hasText(entity.getCompanyId())) {
