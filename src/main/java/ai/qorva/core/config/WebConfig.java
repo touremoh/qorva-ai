@@ -19,7 +19,7 @@ public class WebConfig implements WebMvcConfigurer {
 			    .allowedOrigins(this.allowedOrigin)
 
 			    // Accepted Http Request Methods
-			    .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS")
+			    .allowedMethods("*")
 
 			    // Allow properties in the header
 				.allowedHeaders("*")
