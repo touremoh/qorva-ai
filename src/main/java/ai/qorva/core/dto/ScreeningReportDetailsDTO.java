@@ -3,7 +3,6 @@ package ai.qorva.core.dto;
 import ai.qorva.core.dto.common.*;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -15,7 +14,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CVScreeningReportDTO extends AbstractQorvaDTO {
+public class ScreeningReportDetailsDTO extends AbstractQorvaDTO {
     private String id;
     private String companyId;
     private String jobTitle;

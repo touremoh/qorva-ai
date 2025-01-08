@@ -4,7 +4,8 @@ db.Companies.drop();
 db.Users.drop();
 db.JobsPosts.drop();
 db.CVs.drop();
-db.CVScreeningReports.drop();
+db.ScreeningReportDetails.drop();
+db.ScreeningReport.drop();
 db.AIPrompts.drop();
 
 db.createCollection("Companies", {
@@ -508,11 +509,11 @@ db.createCollection("CVs", {
   }
 });
 
-db.createCollection("CVScreeningReports", {
+db.createCollection("ScreeningReportDetails", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      title: "CVScreeningReports",
+      title: "ScreeningReportDetails",
       required: [
         "jobTitle",
         "candidateName",
@@ -631,6 +632,53 @@ db.createCollection("CVScreeningReports", {
               description: "must be an array of strings and is required"
             }
           }
+        }
+      }
+    }
+  }
+});
+
+db.createCollection("ScreeningReport", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "ScreeningReport",
+      required: [
+        "companyId",
+        "reportName",
+        "reportDetails",
+        "status",
+        "createdAt",
+        "lastUpdatedAt"
+      ],
+      properties: {
+        companyId: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        reportName: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        reportDetails: {
+          bsonType: "array",
+          items: {
+            bsonType: "string"
+          },
+          description: "must be an array of strings and is required"
+        },
+        status: {
+          bsonType: "string",
+          enum: ["TEMPORARY", "PERMANENT"],
+          description: "must be a string"
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        lastUpdatedAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
         }
       }
     }

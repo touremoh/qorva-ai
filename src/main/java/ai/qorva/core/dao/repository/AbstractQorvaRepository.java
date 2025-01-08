@@ -1,7 +1,6 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.QorvaEntity;
-import org.bson.types.ObjectId;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -73,7 +72,7 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
         Assert.isTrue(pageSize > 0, "Page size must be greater than 0");
 
         // Build the query
-        Query query = new Query(Criteria.where(FIELD_COMPANY_ID).is(companyId)).skip((long) pageNumber * pageSize).limit(pageSize);
+        Query query = buildQueryFindMany(companyId, pageNumber, pageSize);
 
         // Execute the query
         List<T> results = mongoTemplate.find(query, entityClass);
@@ -83,6 +82,10 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
 
         // Yield results
         return new PageImpl<>(results, PageRequest.of(pageNumber, pageSize), total);
+    }
+
+    protected Query buildQueryFindMany(String companyId, int pageNumber, int pageSize) {
+        return new Query(Criteria.where(FIELD_COMPANY_ID).is(companyId)).skip((long) pageNumber * pageSize).limit(pageSize);
     }
 
     @Override

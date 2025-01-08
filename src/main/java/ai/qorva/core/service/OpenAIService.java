@@ -1,10 +1,9 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dto.*;
-import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.dto.common.ReportDetails;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.bson.types.Binary;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.ai.openai.OpenAiChatOptions;
@@ -12,10 +11,7 @@ import org.springframework.ai.openai.api.ResponseFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Flux;
-
-import java.util.*;
 
 import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_O_MINI;
 
@@ -47,7 +43,7 @@ public class OpenAIService {
 		var cvOutputFormat = this.qorvaPromptContextHolder.getCvOutputFormat();
 
 		// Set temperate at 0.5 to reduce randomness
-		double temperature = 0.5;
+		double temperature = 0;
 
 		// Stream the CV extraction
 		return this.chatClient
@@ -69,41 +65,37 @@ public class OpenAIService {
 			.content();
 	}
 
-	public CVScreeningReportDTO match(String listOfCVs, String jobDescription, String language) {
-		var outputConverter = new BeanOutputConverter<>(CVScreeningReportOutputDTO.class);
-
-		// map content into CV DTO and return
-		var flux = this.streamReport(listOfCVs, jobDescription, language, outputConverter.getJsonSchema());
-
-		var content = String.join("", Objects.requireNonNull(flux.collectList().block()));
-
-		return this.mapper.map(outputConverter.convert(content));
-
-	}
-
-	protected Flux<String> streamReport(String listOfCVs, String jobDescription, String language, String jsonSchema) {
+	protected ReportDetails generateReport(String cvDetails, String jobDescription, String language) {
 		var reportGenerationPrompt = this.qorvaPromptContextHolder.getReportGenerationPrompt();
 		var reportOutputFormat = this.qorvaPromptContextHolder.getReportOutputFormat();
+		var outputConverter = new BeanOutputConverter<>(CVScreeningReportOutputDTO.class);
 
-		double temperature = 0.5;
+		// Lower the temperature to reduce randomness
+		double temperature = 0;
 
-		return this.chatClient.prompt()
+		// Call the API
+		var apiResponse = this.chatClient.prompt()
 			.options(OpenAiChatOptions
 				.builder()
 				.withModel(GPT_4_O_MINI)
-				.withResponseFormat(new ResponseFormat(ResponseFormat.Type.JSON_SCHEMA, jsonSchema))
+				.withResponseFormat(new ResponseFormat(ResponseFormat.Type.JSON_SCHEMA, outputConverter.getJsonSchema()))
 				.withTemperature(temperature)
-				.withMaxTokens(20000)
 				.build()
 			)
 			.user(u -> u
 				.text(reportGenerationPrompt)
-				.param("cv_data", listOfCVs)
+				.param("cv_data", cvDetails)
 				.param("job_description", jobDescription)
 				.param("output_format", reportOutputFormat)
 				.param("language", language)
 			)
 			.stream()
 			.content();
+
+		// Convert the API Response into String content
+		var content = apiResponse.reduce(String::concat).block();
+
+		// Map the string content into CVScreeningReportDTO and render results
+		return this.mapper.map(outputConverter.convert(content));
 	}
 }

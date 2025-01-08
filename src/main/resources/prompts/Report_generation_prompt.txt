@@ -1,6 +1,6 @@
-Your task is to thoroughly analyze the candidate CV enclosed in xml tag named QrvCVData in relation with the job description provided in xml tag named QrvJobDescription.
-Then translate the output content in the language specified in the xml tag named "QrvLang".
-Present the result in a  structured JSON format that matches the JSON object structure provided in xml tag named QrvOutputFormat.
+Your task is to analyze how strongly the candidate CV enclosed in xml tag named QrvCVData is in relation with the job description provided in xml tag named QrvJobDescription.
+Then translate the output content in the language identified with the language code in the xml tag named "QrvLang".
+Present the result in a structured JSON format that matches the JSON object structure provided in xml tag named QrvOutputFormat.
 
 CV content:
 <QrvCVData>

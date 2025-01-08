@@ -2,6 +2,7 @@ package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.CV;
 import org.bson.types.ObjectId;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
@@ -33,6 +34,14 @@ public class CVRepository extends AbstractQorvaRepository<CV> {
 
     public CVRepository(MongoTemplate mongoTemplate) {
         super(mongoTemplate, CV.class);
+    }
+
+    @Override
+    protected Query buildQueryFindMany(String companyId, int pageNumber, int pageSize) {
+        return new Query(Criteria.where(FIELD_COMPANY_ID).is(companyId))
+            .with(Sort.by(Sort.Direction.DESC, FIELD_LAST_UPDATED_AT)) // Add sorting by lastUpdateTimestamp in descending order
+            .skip((long) pageNumber * pageSize)
+            .limit(pageSize);
     }
 
     @Override

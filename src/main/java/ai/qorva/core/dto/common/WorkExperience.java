@@ -5,13 +5,14 @@ import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class WorkExperience {
+public class WorkExperience implements Serializable {
     private String company;
     private String website;
     private String location;

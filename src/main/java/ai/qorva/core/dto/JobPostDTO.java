@@ -30,4 +30,8 @@ public class JobPostDTO extends AbstractQorvaDTO {
 
     @JsonProperty(access = Access.READ_ONLY)
     private Instant lastUpdatedAt;
+
+    public String toJobTitleAndDescription() {
+        return "Job Title: " + getTitle() + "\n Description: " + getDescription();
+    }
 }

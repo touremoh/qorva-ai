@@ -5,11 +5,13 @@ import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Availability {
+public class Availability implements Serializable {
     private String interviews;
     private String startDate;
 }

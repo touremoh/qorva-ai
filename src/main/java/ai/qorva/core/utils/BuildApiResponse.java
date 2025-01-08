@@ -6,7 +6,6 @@ import lombok.experimental.UtilityClass;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import reactor.core.publisher.Flux;
 
 import java.time.Instant;
 
@@ -27,7 +26,16 @@ public class BuildApiResponse {
 	}
 
 	public ResponseEntity<QorvaRequestResponse> from(Boolean ok) {
-		return ResponseEntity.ok(buildResponse(ok));
+		return ResponseEntity.ok(buildBooleanResponse(ok));
+	}
+
+	private QorvaRequestResponse buildBooleanResponse(Boolean data) {
+		return QorvaRequestResponse
+			.builder()
+			.data(data)
+			.code(Boolean.TRUE.equals(data) ? HttpStatus.OK.value() : HttpStatus.BAD_REQUEST.value())
+			.timestamp(Instant.now())
+			.build();
 	}
 
 	private QorvaRequestResponse buildResponse(Object data) {

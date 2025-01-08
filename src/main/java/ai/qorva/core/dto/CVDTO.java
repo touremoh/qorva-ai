@@ -3,7 +3,6 @@ package ai.qorva.core.dto;
 import ai.qorva.core.dto.common.*;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import com.fasterxml.jackson.annotation.JsonProperty;

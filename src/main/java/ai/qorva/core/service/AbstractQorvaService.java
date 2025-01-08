@@ -186,7 +186,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         Assert.isTrue(pageSize > 0, "Page size must be greater than 0");
     }
 
-    protected void postProcessFindMany(Page<E> entities) {
+    protected void postProcessFindMany(Page<E> entities) throws QorvaException {
         // Optional subclass-specific post-processing
     }
 

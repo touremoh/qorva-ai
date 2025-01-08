@@ -426,3 +426,309 @@ db.runCommand({
   },
   validationAction: "error"
 });
+
+db.runCommand({
+  collMod: "ScreeningReportDetails",
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      description: "ScreeningReportDetails",
+      required: [
+        "jobTitle",
+        "candidateName",
+        "skillsMatch",
+        "exceedsRequirements",
+        "lackingSkills",
+        "experienceAlignment",
+        "overallSummary",
+        "interviewQuestions",
+        "createdAt",
+        "lastUpdatedAt"
+      ],
+      properties: {
+        companyId: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        jobTitle: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        candidateName: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        skillsMatch: {
+          bsonType: "object",
+          required: ["summary", "degreeOfMatch"],
+          properties: {
+            summary: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            },
+            degreeOfMatch: {
+              bsonType: "int",
+              description: "must be a int representing a percentage and is required"
+            }
+          }
+        },
+        exceedsRequirements: {
+          bsonType: "object",
+          required: ["summary"],
+          properties: {
+            summary: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            }
+          }
+        },
+        lackingSkills: {
+          bsonType: "object",
+          required: ["summary"],
+          properties: {
+            summary: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            }
+          }
+        },
+        experienceAlignment: {
+          bsonType: "object",
+          required: ["summary"],
+          properties: {
+            summary: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            }
+          }
+        },
+        overallSummary: {
+          bsonType: "object",
+          required: ["summary", "score", "pointsForImprovement"],
+          properties: {
+            summary: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            },
+            score: {
+              bsonType: "int",
+              description: "must be a int representing a score and is required"
+            },
+            pointsForImprovement: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            }
+          }
+        },
+        interviewQuestions: {
+          bsonType: "object",
+          required: [
+            "skillsBasedQuestions",
+            "strengthBasedQuestions",
+            "gapExplorationQuestions"
+          ],
+          properties: {
+            skillsBasedQuestions: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            },
+            strengthBasedQuestions: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            },
+            gapExplorationQuestions: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            }
+          }
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        lastUpdatedAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        }
+      }
+    }
+  },
+  validationAction: "error"
+});
+
+db.runCommand({
+  collMod: "ScreeningReports",
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "ScreeningReports",
+      required: [
+        "companyId",
+        "reportName",
+        "reportDetails",
+        "status",
+        "createdAt",
+        "lastUpdatedAt"
+      ],
+      properties: {
+        companyId: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        reportName: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        reportDetails: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            required: [
+              "jobTitle",
+              "candidateName",
+              "skillsMatch",
+              "exceedsRequirements",
+              "lackingSkills",
+              "experienceAlignment",
+              "overallSummary",
+              "interviewQuestions"
+            ],
+            properties: {
+                jobTitle: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                },
+                candidateName: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                },
+                skillsMatch: {
+                  bsonType: "object",
+                  required: ["summary", "degreeOfMatch"],
+                  properties: {
+                    summary: {
+                      bsonType: "string",
+                      description: "must be a string and is required"
+                    },
+                    degreeOfMatch: {
+                      bsonType: "int",
+                      description: "must be a int representing a percentage and is required"
+                    }
+                  }
+                },
+                exceedsRequirements: {
+                  bsonType: "object",
+                  required: ["summary"],
+                  properties: {
+                    summary: {
+                      bsonType: "string",
+                      description: "must be a string and is required"
+                    }
+                  }
+                },
+                lackingSkills: {
+                  bsonType: "object",
+                  required: ["summary"],
+                  properties: {
+                    summary: {
+                      bsonType: "string",
+                      description: "must be a string and is required"
+                    }
+                  }
+                },
+                experienceAlignment: {
+                  bsonType: "object",
+                  required: ["summary"],
+                  properties: {
+                    summary: {
+                      bsonType: "string",
+                      description: "must be a string and is required"
+                    }
+                  }
+                },
+                overallSummary: {
+                  bsonType: "object",
+                  required: ["summary", "score", "pointsForImprovement"],
+                  properties: {
+                    summary: {
+                      bsonType: "string",
+                      description: "must be a string and is required"
+                    },
+                    score: {
+                      bsonType: "int",
+                      description: "must be a int representing a score and is required"
+                    },
+                    pointsForImprovement: {
+                      bsonType: "array",
+                      items: {
+                        bsonType: "string"
+                      },
+                      description: "must be an array of strings and is required"
+                    }
+                  }
+                },
+                interviewQuestions: {
+                  bsonType: "object",
+                  required: [
+                    "skillsBasedQuestions",
+                    "strengthBasedQuestions",
+                    "gapExplorationQuestions"
+                  ],
+                  properties: {
+                    skillsBasedQuestions: {
+                      bsonType: "array",
+                      items: {
+                        bsonType: "string"
+                      },
+                      description: "must be an array of strings and is required"
+                    },
+                    strengthBasedQuestions: {
+                      bsonType: "array",
+                      items: {
+                        bsonType: "string"
+                      },
+                      description: "must be an array of strings and is required"
+                    },
+                    gapExplorationQuestions: {
+                      bsonType: "array",
+                      items: {
+                        bsonType: "string"
+                      },
+                      description: "must be an array of strings and is required"
+                    }
+                  }
+                }
+            }
+          },
+          description: "must be an array of strings and is required"
+        },
+        status: {
+          bsonType: "string",
+          enum: ["TEMPORARY", "PERMANENT"],
+          description: "must be a string"
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        lastUpdatedAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        }
+      }
+    }
+  }
+});
+
