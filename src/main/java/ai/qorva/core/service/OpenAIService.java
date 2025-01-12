@@ -42,7 +42,7 @@ public class OpenAIService {
 		// Get the output format
 		var cvOutputFormat = this.qorvaPromptContextHolder.getCvOutputFormat();
 
-		// Set temperate at 0.5 to reduce randomness
+		// Set temperate at 0 to reduce randomness
 		double temperature = 0;
 
 		// Stream the CV extraction

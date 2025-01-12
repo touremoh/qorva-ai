@@ -3,33 +3,33 @@
   "properties": {
     "jobTitle": {
       "type": "string",
-      "description": "The title of the job for which the candidate is being screened; must be a string and is required"
+      "description": "The title of the job for which the candidate is being screened"
     },
     "candidateName": {
       "type": "string",
-      "description": "The name of the candidate being screened; must be a string and is required"
+      "description": "The name of the candidate being screened"
     },
     "skillsMatch": {
       "type": "object",
-      "description": "Details about the candidate's skill match with the job requirements",
+      "description": "Details about the candidate's skills match with the job requirements",
       "properties": {
         "summary": {
           "type": "string",
-          "description": "A summary of how well the candidate's skills match the job; must be a string and is required"
+          "description": "A summary of how well the candidate's skills match the job requirements"
         },
         "degreeOfMatch": {
           "type": "integer",
-          "description": "A percentage representing the degree of match between the candidate's skills and the job requirements; must be an integer and is required"
+          "description": "A percentage representing the degree of match between the candidate's skills and the job requirements"
         }
       }
     },
     "exceedsRequirements": {
       "type": "object",
-      "description": "Details about how the candidate exceeds job requirements",
+      "description": "Details about how the candidate's skills and work experience exceeds job requirements (if not applicable say he skills are below the job requirements)",
       "properties": {
         "summary": {
           "type": "string",
-          "description": "A summary of how the candidate exceeds the job requirements; must be a string and is required"
+          "description": "A summary of how the candidate's skills and work experience exceeds the job requirements (if not applicable say he skills are below the job requirements)"
         }
       }
     },
@@ -39,17 +39,17 @@
       "properties": {
         "summary": {
           "type": "string",
-          "description": "A summary of the skills the candidate is lacking; must be a string and is required"
+          "description": "A summary of the skills the candidate is lacking with respect to the job requirements"
         }
       }
     },
     "experienceAlignment": {
       "type": "object",
-      "description": "Details about how the candidate's experience aligns with the job requirements",
+      "description": "Details about how the candidate's work experience aligns with the job requirements",
       "properties": {
         "summary": {
           "type": "string",
-          "description": "A summary of how the candidate's experience aligns with the job; must be a string and is required"
+          "description": "A summary of how the candidate's work experience aligns with the job"
         }
       }
     },
@@ -59,15 +59,15 @@
       "properties": {
         "summary": {
           "type": "string",
-          "description": "A summary of the overall assessment; must be a string and is required"
+          "description": "A summary of the overall assessment"
         },
         "score": {
           "type": "integer",
-          "description": "The overall score for the candidate's suitability; must be an integer and is required"
+          "description": "The overall score for the candidate's suitability"
         },
         "pointsForImprovement": {
           "type": "array",
-          "description": "A list of areas where the candidate can improve; must be an array of strings and is required",
+          "description": "A list of areas where the candidate can improve",
           "items": {
             "type": "string"
           }
