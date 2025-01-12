@@ -1,0 +1,18 @@
+db.CVs.createIndex({
+  "personalInformation.name": "text",
+  "personalInformation.contact.email": "text",
+  "personalInformation.role": "text",
+  tags: "text",
+  "keySkills.category": "text",
+  "keySkills.skills": "text",
+  "skillsAndQualifications.softSkills": "text",
+  "skillsAndQualifications.technicalSkills": "text",
+  "profiles.areasOfExpertise": "text"
+});
+
+
+db.ScreeningReports.createIndex({
+  reportName: "text",
+  "reportDetails.jobTitle": "text",
+  "reportDetails.candidateName": "text"
+});

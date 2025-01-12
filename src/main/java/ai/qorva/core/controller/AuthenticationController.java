@@ -6,11 +6,13 @@ import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.AuthenticationService;
 import ai.qorva.core.utils.BuildApiResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("/auth")
 @CrossOrigin(origins = "${weblink.allowedOrigin}")

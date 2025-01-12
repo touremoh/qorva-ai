@@ -13,6 +13,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.oauth2.jwt.JwtException;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 @Service
 public class AuthenticationService {
@@ -54,7 +55,7 @@ public class AuthenticationService {
 	}
 
 	public Boolean isTokenValid(String authorizationHeader) throws QorvaException {
-		if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
+		if (StringUtils.hasText(authorizationHeader) && authorizationHeader.startsWith("Bearer ")) {
 			String token = authorizationHeader.substring(7);
 			if (Boolean.TRUE.equals(JwtUtils.isTokenExpired(token, jwtConfig.getSecretKey()))) {
 				throw new QorvaException("Token has expired", HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
@@ -65,7 +66,7 @@ public class AuthenticationService {
 	}
 
 	public JwtDTO refreshToken(String authorizationHeader) throws QorvaException {
-		if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
+		if (StringUtils.hasText(authorizationHeader) && authorizationHeader.startsWith("Bearer ")) {
 			String token = authorizationHeader.substring(7);
 			try {
 				// Extract the username

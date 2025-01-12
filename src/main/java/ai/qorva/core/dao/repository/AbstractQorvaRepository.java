@@ -1,20 +1,27 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.QorvaEntity;
+import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.utils.QorvaUtils;
+import org.bson.Document;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
+import org.springframework.data.mongodb.core.query.*;
 import org.springframework.util.Assert;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+import static org.springframework.util.ObjectUtils.isEmpty;
+
 public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements QorvaRepository<T> {
 
+    private static final Logger log = LoggerFactory.getLogger(AbstractQorvaRepository.class);
     protected final MongoTemplate mongoTemplate;
     protected final Class<T> entityClass;
 
@@ -101,6 +108,30 @@ public abstract class AbstractQorvaRepository<T extends QorvaEntity> implements 
 
         // Yield results
         return new PageImpl<>(results, PageRequest.of(0, ids.size()), results.size());
+    }
+
+    @Override
+    public Page<T> findMany(String companyId, int pageNumber, int pageSize, String searchTerms) throws QorvaException {
+        // Check parameters
+        Assert.notNull(companyId, "Company ID must not be null");
+        Assert.isTrue(pageNumber >= 0, "Page number must be greater than or equal to 0");
+        Assert.isTrue(pageSize > 0, "Page size must be greater than 0");
+
+        // Build query criteria
+        var query = this.buildQueryFindManyByData(companyId, pageNumber, pageSize, searchTerms);
+
+        // Run query
+        List<T> results = mongoTemplate.find(query, entityClass);
+
+        // Render results
+        return new PageImpl<>(results, PageRequest.of(pageNumber, pageSize), results.size());
+    }
+
+    protected Query buildQueryFindManyByData(String companyId, int pageNumber, int pageSize, String searchTerms) {
+        return TextQuery
+            .queryText(TextCriteria.forDefaultLanguage().matching(searchTerms))
+            .addCriteria(Criteria.where(FIELD_COMPANY_ID).is(companyId))
+            .with(PageRequest.of(pageNumber, pageSize));
     }
 
     @Override

@@ -1,6 +1,7 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.QorvaEntity;
+import ai.qorva.core.exception.QorvaException;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -42,6 +43,18 @@ public interface QorvaRepository<T extends QorvaEntity> {
      * @return A pageable object containing the documents for the given page.
      */
     Page<T> findMany(String companyId, int pageNumber, int pageSize);
+
+
+    /**
+     * Find many records by criteria
+     * @param companyId The id of the company
+     * @param pageNumber The page to retrieve
+     * @param pageSize The size of the page to retrieve
+     * @param searchTerms Criteria of the search
+     * @return A pageable list of records.
+     * @throws QorvaException if an error occurs during retrieval.
+     */
+    Page<T> findMany(String companyId, int pageNumber, int pageSize, String searchTerms) throws QorvaException;
 
     /**
      * Find many documents by their IDs.

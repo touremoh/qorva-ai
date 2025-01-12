@@ -40,6 +40,15 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
         return BuildApiResponse.from(service.findMany(pageNumber, pageSize));
     }
 
+    @GetMapping("/search")
+    public ResponseEntity<QorvaRequestResponse> findMany(
+        @RequestParam(defaultValue = "0") int pageNumber,
+        @RequestParam(defaultValue = "100") int pageSize,
+        @RequestParam("searchTerms") String searchTerms
+    ) throws QorvaException {
+        return BuildApiResponse.from(service.findMany(pageNumber, pageSize, searchTerms));
+    }
+
     @PostMapping("/ids")
     public ResponseEntity<QorvaRequestResponse> findManyByIds(@RequestBody List<String> ids) throws QorvaException {
         return BuildApiResponse.from(service.findManyByIds(ids));

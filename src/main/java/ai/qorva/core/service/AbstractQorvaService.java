@@ -211,7 +211,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
             postProcessFindManyByIds(entities);
 
             // Render results
-            return renderFindManyByIds(entities);
+            return renderFindMany(entities);
         } catch (Exception e) {
             throw wrapException(e, "Error finding resources by IDs");
         }
@@ -225,12 +225,38 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         // Optional subclass-specific post-processing
     }
 
-    protected Page<D> renderFindManyByIds(Page<E> entities) {
-        // Map to DTO
-        List<D> foundDocuments = entities.getContent().stream().map(mapper::map).toList();
+    @Override
+    public Page<D> findMany(int pageNumber, int pageSize, String searchTerms) throws QorvaException {
+        try {
+            // Check search terms
+            if (!StringUtils.hasText(searchTerms)) {
+                return this.findMany(pageNumber, pageSize);
+            }
 
-        // Render results
-        return new PageImpl<>(foundDocuments);
+            // Get company ID
+            var companyId = this.getAuthenticatedCompanyId();
+
+            // Pre Process
+            preProcessFindManyByData(searchTerms);
+
+            // Process
+            Page<E> entities = repository.findMany(companyId, pageNumber, pageSize, searchTerms);
+
+            // Post Process
+            postProcessFindManyByData(entities);
+
+            // Render results
+            return renderFindMany(entities);
+        } catch (Exception e) {
+            throw wrapException(e, "Error finding resources by IDs");
+        }
+    }
+
+    protected void preProcessFindManyByData(String searchTerms) throws QorvaException {
+        Assert.notNull(searchTerms, "Search terms must not be null");
+    }
+    protected void postProcessFindManyByData(Page<E> entities) throws QorvaException {
+        log.debug("Post process findManyByData: {} elements found", entities.getContent().size());
     }
 
     @Override

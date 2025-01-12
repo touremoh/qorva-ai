@@ -2,7 +2,9 @@ package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.CV;
 import org.bson.types.ObjectId;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.index.TextIndexDefinition;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
@@ -32,6 +34,7 @@ public class CVRepository extends AbstractQorvaRepository<CV> {
     private static final String FIELD_CREATED_AT = "createdAt";
     private static final String FIELD_LAST_UPDATED_AT = "lastUpdatedAt";
 
+    @Autowired
     public CVRepository(MongoTemplate mongoTemplate) {
         super(mongoTemplate, CV.class);
     }

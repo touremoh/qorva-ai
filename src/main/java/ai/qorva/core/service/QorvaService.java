@@ -56,6 +56,17 @@ public interface QorvaService<D extends QorvaDTO> {
     Page<D> findManyByIds(List<String> ids) throws QorvaException;
 
     /**
+     * Find many records by criteria
+     *
+     * @param pageNumber The page to retrieve
+     * @param pageSize The size of the page to retrieve
+     * @param searchTerms Criteria of the search
+     * @return A pageable list of records.
+     * @throws QorvaException if an error occurs during retrieval.
+     */
+    Page<D> findMany(int pageNumber, int pageSize, String searchTerms) throws QorvaException;
+
+    /**
      * Update one record by ID.
      *
      * @param id    The ID of the record to update.
