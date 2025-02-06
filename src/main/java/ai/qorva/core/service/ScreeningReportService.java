@@ -16,6 +16,7 @@ import org.springframework.util.StringUtils;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -93,6 +94,14 @@ public class ScreeningReportService extends AbstractQorvaService<ScreeningReport
 
 	public ReportDetails getReport(String jobPost, String cvData, String languageCode, String companyId) {
 		log.info("CV Data: {}", cvData);
-		return this.openAIService.generateReport(cvData, jobPost, languageCode);
+
+		// Call OpenAI API to generate the report
+		var reportDetails = this.openAIService.generateReport(cvData, jobPost, languageCode);
+
+		// Generate a unique id for this report
+		reportDetails.setDetailsID(UUID.randomUUID().toString());
+
+		// render results
+		return reportDetails;
 	}
 }

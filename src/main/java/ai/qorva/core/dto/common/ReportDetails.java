@@ -12,6 +12,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ReportDetails implements Serializable {
+	private String detailsID;
 	private String jobTitle;
 	private String candidateName;
 	private SkillsMatch skillsMatch;

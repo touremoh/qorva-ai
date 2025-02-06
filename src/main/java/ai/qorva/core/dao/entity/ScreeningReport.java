@@ -1,7 +1,6 @@
 // Entity: ScreeningReport
 package ai.qorva.core.dao.entity;
 
-import ai.qorva.core.dto.ScreeningReportDetailsDTO;
 import ai.qorva.core.dto.common.ReportDetails;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
