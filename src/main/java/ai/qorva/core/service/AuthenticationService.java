@@ -2,9 +2,11 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dao.repository.UserRepository;
+import ai.qorva.core.dto.AuthResponse;
 import ai.qorva.core.dto.JwtDTO;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.mapper.UserMapper;
 import ai.qorva.core.utils.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,20 +23,22 @@ public class AuthenticationService {
 	private final UserRepository userRepository;
 	private final AuthenticationManager authenticationManager;
 	private final JwtConfig jwtConfig;
+	private final UserMapper userMapper;
 
 	@Autowired
 	public AuthenticationService(
 		QorvaUserDetailsService userDetailsService,
 		UserRepository userRepository,
 		AuthenticationManager authenticationManager,
-		JwtConfig jwtConfig) {
+		JwtConfig jwtConfig, UserMapper userMapper) {
 		this.userDetailsService = userDetailsService;
 		this.userRepository = userRepository;
 		this.authenticationManager = authenticationManager;
 		this.jwtConfig = jwtConfig;
+		this.userMapper = userMapper;
 	}
 
-	public JwtDTO authenticate(UserDTO userDTO) throws QorvaException {
+	public AuthResponse authenticate(UserDTO userDTO) throws QorvaException {
 		try {
 			// Authenticate user
 			this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userDTO.getEmail(), userDTO.getRawPassword()));
@@ -48,7 +52,10 @@ public class AuthenticationService {
 				.orElseThrow(() -> new QorvaException("User not found"));
 
 			// Generate a JWT including companyId
-			return JwtUtils.generateAndBuildToken(userDetails, jwtConfig, user.getCompanyId());
+			var jwt = JwtUtils.generateAndBuildToken(userDetails, jwtConfig, user.getCompanyId());
+
+			// Build AuthResponse
+			return new AuthResponse(jwt, this.userMapper.map(user));
 		} catch (Exception e) {
 			throw new QorvaException("Authentication failed", HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
 		}

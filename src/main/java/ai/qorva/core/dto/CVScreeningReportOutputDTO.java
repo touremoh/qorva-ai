@@ -1,8 +1,6 @@
 package ai.qorva.core.dto;
 
-import ai.qorva.core.dto.common.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.util.List;
 
 public record CVScreeningReportOutputDTO(
     @JsonProperty(required = true, value = "jobTitle") String jobTitle,

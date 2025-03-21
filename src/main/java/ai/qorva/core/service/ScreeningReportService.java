@@ -78,7 +78,7 @@ public class ScreeningReportService extends AbstractQorvaService<ScreeningReport
 		var companyId = this.getAuthenticatedCompanyId();
 
         // Build a report details list
-		var reportDetails = cvdtos.parallelStream().map(cvdto -> getReport(jobPost, QorvaUtils.toJSON(cvdto), languageCode, companyId)).toList();
+		var reportDetails = cvdtos.parallelStream().map(cvdto -> getReport(jobPost, cvdto, languageCode)).toList();
 
 		// Build the final report and persist it
 		var reportToSave = ScreeningReportDTO.builder()
@@ -92,14 +92,27 @@ public class ScreeningReportService extends AbstractQorvaService<ScreeningReport
 		return this.createOne(reportToSave);
     }
 
-	public ReportDetails getReport(String jobPost, String cvData, String languageCode, String companyId) {
-		log.info("CV Data: {}", cvData);
+	public ReportDetails getReport(String jobPost, CVDTO cvDto, String languageCode) {
+		log.debug("CV Data: {}", cvDto);
+
+		// To Json Object
+		var cvData = QorvaUtils.toJSON(cvDto);
 
 		// Call OpenAI API to generate the report
 		var reportDetails = this.openAIService.generateReport(cvData, jobPost, languageCode);
 
 		// Generate a unique id for this report
 		reportDetails.setDetailsID(UUID.randomUUID().toString());
+		reportDetails.setCandidateCVID(cvDto.getId());
+		reportDetails.setCandidateEmail(cvDto.getPersonalInformation().getContact().getEmail());
+		reportDetails.setCandidateName(cvDto.getPersonalInformation().getName());
+
+		if (StringUtils.hasText(cvDto.getPersonalInformation().getContact().getPhone())) {
+			reportDetails.setCandidatePhone(cvDto.getPersonalInformation().getContact().getPhone());
+		}
+		if (StringUtils.hasText(cvDto.getPersonalInformation().getRole())) {
+			reportDetails.setCandidateRole(cvDto.getPersonalInformation().getRole());
+		}
 
 		// render results
 		return reportDetails;

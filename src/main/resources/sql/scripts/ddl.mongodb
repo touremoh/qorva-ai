@@ -4,9 +4,7 @@ db.Companies.drop();
 db.Users.drop();
 db.JobsPosts.drop();
 db.CVs.drop();
-db.ScreeningReportDetails.drop();
 db.ScreeningReport.drop();
-db.AIPrompts.drop();
 
 db.createCollection("Companies", {
   validator: {

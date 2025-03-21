@@ -458,6 +458,10 @@ db.runCommand({
               "detailsID",
               "jobTitle",
               "candidateName",
+              "candidateEmail",
+              "candidatePhone",
+              "candidateCVID",
+              "candidateRole",
               "skillsMatch",
               "exceedsRequirements",
               "lackingSkills",
@@ -475,6 +479,22 @@ db.runCommand({
                   description: "must be a string and is required"
                 },
                 candidateName: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                },
+                candidateEmail: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                },
+                candidatePhone: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                },
+                candidateCVID: {
+                  bsonType: "string",
+                  description: "must be a string and is required"
+                },
+                candidateRole: {
                   bsonType: "string",
                   description: "must be a string and is required"
                 },

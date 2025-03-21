@@ -2,16 +2,12 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dto.AccountRegistrationDTO;
 import ai.qorva.core.dto.CompanyDTO;
-import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.AccountRegistrationMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-
-import java.time.Instant;
 
 @Slf4j
 @Service
