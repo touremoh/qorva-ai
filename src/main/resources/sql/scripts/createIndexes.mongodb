@@ -10,9 +10,4 @@ db.CVs.createIndex({
   "profiles.areasOfExpertise": "text"
 });
 
-
-db.ScreeningReports.createIndex({
-  reportName: "text",
-  "reportDetails.jobTitle": "text",
-  "reportDetails.candidateName": "text"
-});
+db.CVAnalysisUsage.createIndex({ companyId: 1, year: 1, month: 1 }, { unique: true });

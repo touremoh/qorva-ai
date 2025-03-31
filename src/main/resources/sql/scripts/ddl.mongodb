@@ -1,45 +1,20 @@
 use qorva;
 
-db.Companies.drop();
 db.Users.drop();
 db.JobsPosts.drop();
 db.CVs.drop();
-db.ScreeningReport.drop();
+db.Candidates.drop();
+db.InterviewQuestions.drop();
+db.CVAnalysisUsage.drop();
 
-db.createCollection("Companies", {
-  validator: {
-    $jsonSchema: {
-      bsonType: "object",
-      title: "Companies",
-      required: ["name", "createdAt", "lastUpdatedAt"],
-      properties: {
-        id: {
-          bsonType: "objectId",
-          description: "must be a valid ObjectId and is required"
-        },
-        name: {
-          bsonType: "string",
-          description: "must be a string and is required"
-        },
-        createdAt: {
-          bsonType: "date",
-          description: "must be a valid date and is required"
-        },
-        lastUpdatedAt: {
-          bsonType: "date",
-          description: "must be a valid date and is required"
-        }
-      }
-    }
-  }
-});
+
 
 db.createCollection("Users", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
       title: "Users",
-      required: ["firstName", "lastName", "email", "encryptedPassword", "accountStatus", "createdAt", "lastUpdatedAt"],
+      required: ["firstName", "lastName", "email", "encryptedPassword", "userAccountStatus", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy", "companyInfo"],
       properties: {
         firstName: {
           bsonType: "string",
@@ -58,14 +33,92 @@ db.createCollection("Users", {
           bsonType: "string",
           description: "must be a string and is required"
         },
-        accountStatus: {
+        userAccountStatus: {
           bsonType: "string",
-          enum: ["ACTIVE", "INACTIVE", "TRIAL_PERIOD", "LOCKED"],
+          enum: ["USER_ACTIVE", "USER_INACTIVE", "USER_LOCKED"],
           description: "must be a string representing the status and is required"
         },
-        companyId: {
-          bsonType: "objectId",
-          description: "must be a valid ObjectId and is required"
+        companyInfo: {
+          bsonType: "object",
+          required: ["name", "companyId", "createdAt", "lastUpdatedAt"],
+          properties: {
+            name: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            },
+            companyId: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            },
+            createdAt: {
+              bsonType: "date",
+              description: "must be a valid date and is required"
+            },
+            lastUpdatedAt: {
+              bsonType: "date",
+              description: "must be a valid date and is required"
+            }
+          },
+          description: "must be a valid Object and is required"
+        },
+        subscriptionInfo: {
+          bsonType: "object",
+          required: ["subscriptionPlan", "subscriptionStatus", "subscriptionId", "dashboardAccessType", "hasAiQuestion"],
+          properties: {
+            subscriptionPlan: {
+              bsonType: "string",
+              enum: ["FREEMIUM", "STARTER", "GROWTH", "PROFESSIONAL", "ENTERPRISE"],
+              description: "must be a string and is required"
+            },
+            billingCycle: {
+              bsonType: "string",
+              enum: ["MONTHLY","YEARLY"],
+              description: "must be a string and is required"
+            },
+            price: {
+              bsonType: "decimal",
+              description: "must be a decimal and is required"
+            },
+            subscriptionStatus: {
+              bsonType: "string",
+              enum: [
+                "FREE_TRIAL_PERIOD_ACTIVE",
+                "FREE_TRIAL_PERIOD_FINISHED",
+                "SUBSCRIPTION_ACTIVE",
+                "SUBSCRIPTION_EXPIRED",
+                "SUBSCRIPTION_LOCKED",
+                "CANCELLATION_GRACE_PERIOD_ACTIVE",
+                "CANCELLATION_GRACE_PERIOD_FINISHED"
+              ],
+              description: "must be a string and is required"
+            },
+            subscriptionId: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            },
+            dashboardAccessType: {
+              bsonType: "string",
+              enum: ["FULL", "LIMITED"],
+              description: "must be a string enum and is required"
+            },
+            hasAiQuestion: {
+              bsonType: "bool",
+              description: "must be a boolean and is required"
+            },
+            accountManager: {
+              bsonType: "string",
+              description: "must be a string and is required"
+            },
+            subscriptionStartDate: {
+              bsonType: "date",
+              description: "must be a valid date and is required"
+            },
+            subscriptionEndDate: {
+              bsonType: "date",
+              description: "must be a valid date and is required"
+            }
+          },
+          description: "holds subscription-specific details and is required"
         },
         createdAt: {
           bsonType: "date",
@@ -74,6 +127,14 @@ db.createCollection("Users", {
         lastUpdatedAt: {
           bsonType: "date",
           description: "must be a valid date and is required"
+        },
+        createdBy: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        lastUpdatedBy: {
+          bsonType: "string",
+          description: "must be a string and is required"
         }
       }
     }
@@ -133,8 +194,12 @@ db.createCollection("CVs", {
       required: ["companyId", "personalInformation", "createdAt", "lastUpdatedAt"],
       properties: {
         companyId: {
-          bsonType: "objectId",
+          bsonType: "string",
           description: "must be a valid ObjectId and is required"
+        },
+        candidateProfileSummary: {
+          bsonType: "string",
+          description: "must be a valid string and is required"
         },
         personalInformation: {
           bsonType: "object",
@@ -501,44 +566,153 @@ db.createCollection("CVs", {
         lastUpdatedAt: {
           bsonType: "date",
           description: "must be a valid date and is required"
+        },
+        createdBy: {
+          bsonType: "string",
+          description: "must be a valid string and is required"
+        },
+        lastUpdatedBy: {
+          bsonType: "string",
+          description: "must be a valid string and is required"
         }
       }
     }
   }
 });
 
-db.createCollection("ScreeningReport", {
+db.createCollection("Candidates", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      title: "ScreeningReport",
+      title: "Candidates",
       required: [
+        "jobPostId",
+        "candidateInfo",
         "companyId",
-        "reportName",
         "reportDetails",
         "status",
         "createdAt",
-        "lastUpdatedAt"
+        "lastUpdatedAt",
+        "createdBy",
+        "lastUpdatedBy"
       ],
       properties: {
-        companyId: {
+        jobPostId: {
           bsonType: "objectId",
           description: "must be a valid ObjectId and is required"
         },
-        reportName: {
+        candidateInfo: {
+          bsonType: "object",
+          required: ["candidateId", "candidateName", "nbYearsExperience", "skills"],
+          properties: {
+             candidateId: {
+               bsonType: "objectId",
+               description: "must be a valid ObjectId and is required"
+             },
+             candidateName: {
+               bsonType: "string",
+               description: "must be a valid string and is required"
+             },
+             nbYearsExperience: {
+               bsonType: "int",
+               description: "must be a valid int and is required"
+             },
+             skills: {
+                bsonType: "array",
+                items: {
+                  bsonType: "string"
+                },
+                description: "must be an array of strings and is required"
+             },
+             candidateProfileSummary: {
+                bsonType: "string",
+                description: "must be a valid string and is required"
+             }
+          },
+          description: "must be a valid object and is required"
+        },
+        companyId: {
           bsonType: "string",
-          description: "must be a string and is required"
+          description: "must be a valid string and is required"
         },
         reportDetails: {
-          bsonType: "array",
-          items: {
-            bsonType: "string"
-          },
-          description: "must be an array of strings and is required"
+          bsonType: "object",
+          required: ["skillsMatch", "exceedsRequirements", "lackingSkills", "experienceAlignment", "overallSummary"],
+          properties: {
+            skillsMatch: {
+              bsonType: "object",
+              description: "Details about the candidate's skills match with the job requirements",
+              properties: {
+                summary: {
+                  bsonType: "string",
+                  description: "A summary of how well the candidate's skills match the job requirements"
+                },
+                degreeOfMatch: {
+                  bsonType: "int",
+                  description: "A percentage representing the degree of match between the candidate's skills and the job requirements"
+                }
+              }
+            },
+            exceedsRequirements: {
+              bsonType: "object",
+              description: "Details about how the candidate's skills and work experience exceeds job requirements (if not applicable say he skills are below the job requirements)",
+              properties: {
+                  summary: {
+                  bsonType: "string",
+                  description: "A summary of how the candidate's skills and work experience exceeds the job requirements (if not applicable say he skills are below the job requirements)"
+                }
+              }
+            },
+            lackingSkills: {
+              bsonType: "object",
+              description: "Details about the skills the candidate is lacking for the job",
+              properties: {
+                summary: {
+                  bsonType: "string",
+                  description: "A summary of the skills the candidate is lacking with respect to the job requirements"
+                }
+              }
+            },
+            experienceAlignment: {
+              bsonType: "object",
+              description: "Details about how the candidate's work experience aligns with the job requirements",
+              properties: {
+                summary: {
+                  bsonType: "string",
+                  description: "A summary of how the candidate's work experience aligns with the job"
+                },
+                degreeOfMatch: {
+                  bsonType: "int",
+                  description: "A percentage representing the degree of match between the candidate's experience and the job requirements"
+                }
+              }
+            },
+            overallSummary: {
+              bsonType: "object",
+              description: "An overall summary of the screening report, including score and improvement points",
+              properties: {
+                summary: {
+                  bsonType: "string",
+                  description: "A summary of the overall assessment"
+                },
+                score: {
+                  bsonType: "int",
+                  description: "The overall score for the candidate's suitability"
+                },
+                pointsForImprovement: {
+                  bsonType: "array",
+                  description: "A list of areas where the candidate can improve",
+                  items: {
+                    bsonType: "string"
+                  }
+                }
+              }
+            }
+          }
         },
         status: {
           bsonType: "string",
-          enum: ["TEMPORARY", "PERMANENT"],
+          enum: ["NEW", "SHORTLIST", "INTERVIEW", "REJECT"],
           description: "must be a string"
         },
         createdAt: {
@@ -548,6 +722,215 @@ db.createCollection("ScreeningReport", {
         lastUpdatedAt: {
           bsonType: "date",
           description: "must be a valid date and is required"
+        },
+        createdBy: {
+            bsonType: "objectId",
+            description: "must be a valid ObjectId and is required"
+        },
+        lastUpdatedBy: {
+            bsonType: "objectId",
+            description: "must be a valid ObjectId and is required"
+        }
+      }
+    }
+  }
+});
+
+db.createCollection("InterviewQuestions", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "InterviewQuestions",
+      required: [
+        "companyId",
+        "jobPostId",
+        "candidateInfo",
+        "questionnaireDetails",
+        "createdAt",
+        "lastUpdatedAt",
+        "createdBy",
+        "lastUpdatedBy"
+      ],
+      properties: {
+        companyId: {
+          bsonType: "string",
+          description: "must be a valid ObjectId and is required"
+        },
+        jobPostId: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        candidateInfo: {
+          bsonType: "object",
+          required: ["candidateId", "candidateName", "nbYearsExperience", "skills", "candidateProfileSummary"],
+          properties: {
+            candidateId: {
+              bsonType: "objectId",
+              description: "must be a valid ObjectId and is required"
+            },
+            candidateName: {
+              bsonType: "string",
+              description: "must be a valid string and is required"
+            },
+            nbYearsExperience: {
+              bsonType: "int",
+              description: "must be a valid int and is required"
+            },
+            skills: {
+              bsonType: "array",
+              items: {
+                bsonType: "string"
+              },
+              description: "must be an array of strings and is required"
+            },
+            candidateProfileSummary: {
+              bsonType: "string",
+              description: "must be a valid string and is required"
+            }
+          },
+          description: "must be a valid object and is required"
+        },
+        questionnaireDetails: {
+          bsonType: "object",
+          required: ["interviewQuestions"],
+          properties: {
+            interviewQuestions: {
+              bsonType: "object",
+              description: "Suggested interview questions based on the screening",
+              required: ["skillsBasedQuestions", "strengthBasedQuestions", "gapExplorationQuestions"],
+              properties: {
+                skillsBasedQuestions: {
+                  bsonType: "array",
+                  description: "10 questions based on the candidate's skills; must be an array of strings and is required",
+                  items: {
+                    bsonType: "string"
+                  }
+                },
+                strengthBasedQuestions: {
+                  bsonType: "array",
+                  description: "List of 10 questions based on the candidate's strengths; must be an array of strings and is required",
+                  items: {
+                    bsonType: "string"
+                  }
+                },
+                gapExplorationQuestions: {
+                  bsonType: "array",
+                  description: "List of 10 questions aimed at exploring gaps in the candidate's profile; must be an array of strings and is required",
+                  items: {
+                    bsonType: "string"
+                  }
+                }
+              }
+            }
+          },
+          description: "must be an object and is required"
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        lastUpdatedAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        createdBy: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        },
+        lastUpdatedBy: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        }
+      }
+    }
+  }
+});
+
+db.createCollection("StripeEventLogs", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "StripeEventLogs",
+      required: [
+        "companyId",
+        "subscriptionId",
+        "eventType",
+        "metadataInfo",
+        "createdAt",
+        "createdBy"
+      ],
+      properties: {
+        companyId: {
+          bsonType: "string",
+          description: "must be a valid string and is required"
+        },
+        subscriptionId: {
+          bsonType: "string",
+          description: "must be a valid string and is required"
+        },
+        eventType: {
+          bsonType: "string",
+          description: "must be a valid string and is required"
+        },
+        additionalInfo: {
+          bsonType: "object",
+          additionalProperties: {
+            bsonType: "string"
+          },
+          description: "must be an object with string keys and string values"
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        createdBy: {
+          bsonType: "objectId",
+          description: "must be a valid ObjectId and is required"
+        }
+      }
+    }
+  }
+});
+
+db.createCollection("CVAnalysisUsage", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "CVAnalysisUsage",
+      required: ["companyId", "year", "month", "analysisCount"],
+      properties: {
+        companyId: {
+          bsonType: "objectId",
+          description: "The company performing the CV analysis"
+        },
+        year: {
+          bsonType: "int",
+          description: "The year the CV analyses were performed"
+        },
+        month: {
+          bsonType: "int",
+          minimum: 1,
+          maximum: 12,
+          description: "The month (1–12)"
+        },
+        analysisCount: {
+          bsonType: "int",
+          minimum: 0,
+          description: "The number of CVs analyzed in this month"
+        },
+        analysisMaxThreshold: {
+          bsonType: "int",
+          minimum: 0,
+          description: "The maximum number of CV to be analysed per month"
+        },
+        subscriptionTier: {
+          bsonType: "string",
+          enum: ["FREE_TRIAL", "STARTER", "GROWTH", "PROFESSIONAL", "ENTERPRISE"],
+          description: "The company’s subscription tier at that time"
+        },
+        updatedAt: {
+          bsonType: "date",
+          description: "When this document was last updated"
         }
       }
     }
