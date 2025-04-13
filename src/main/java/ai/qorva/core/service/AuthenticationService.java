@@ -46,13 +46,13 @@ public class AuthenticationService {
 			// Get the authenticated user's details
 			UserDetails userDetails = this.userDetailsService.loadUserByUsername(userDTO.getEmail());
 
-			// Retrieve the companyId from the database
+			// Retrieve the tenantId from the database
 			var user = this.userRepository
 				.findOneByEmail(userDTO.getEmail())
 				.orElseThrow(() -> new QorvaException("User not found"));
 
-			// Generate a JWT including companyId
-			var jwt = JwtUtils.generateAndBuildToken(userDetails, jwtConfig, user.getCompanyId());
+			// Generate a JWT including tenantId
+			var jwt = JwtUtils.generateAndBuildToken(userDetails, jwtConfig, user.getCompanyInfo().tenantId());
 
 			// Build AuthResponse
 			return new AuthResponse(jwt, this.userMapper.map(user));
@@ -82,13 +82,13 @@ public class AuthenticationService {
 				// Load user details to issue a new token
 				UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
 
-				// Retrieve the companyId from the database
+				// Retrieve the tenantId from the database
 				var user = this.userRepository
 					.findOneByEmail(username)
 					.orElseThrow(() -> new QorvaException("User not found"));
 
 				// Return the new access token
-				return JwtUtils.generateAndBuildToken(userDetails, this.jwtConfig, user.getCompanyId());
+				return JwtUtils.generateAndBuildToken(userDetails, this.jwtConfig, user.getCompanyInfo().tenantId());
 
 			} catch (JwtException ex) {
 				throw new QorvaException(ex.getMessage(), HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);

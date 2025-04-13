@@ -4,4 +4,5 @@ import java.io.Serializable;
 
 public interface QorvaEntity extends Serializable {
 	String getId();
+	String getTenantId();
 }

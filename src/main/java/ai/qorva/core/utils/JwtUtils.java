@@ -21,7 +21,7 @@ public class JwtUtils {
 	}
 
 	public String extractCompanyId(String token, String jwtSecret) {
-		return extractClaim(token, claims -> claims.get("companyId", String.class), jwtSecret);
+		return extractClaim(token, claims -> claims.get("tenantId", String.class), jwtSecret);
 	}
 
 	public Date extractExpiration(String token, String jwtSecret) {
@@ -43,7 +43,7 @@ public class JwtUtils {
 
 	public String generateToken(UserDetails userDetails, JwtConfig jwtConfig, String companyId) {
 		Map<String, Object> claims = new HashMap<>();
-		claims.put("companyId", companyId); // Add companyId to claims
+		claims.put("companyId", companyId); // Add tenantId to claims
 		return createToken(claims, userDetails.getUsername(), jwtConfig);
 	}
 

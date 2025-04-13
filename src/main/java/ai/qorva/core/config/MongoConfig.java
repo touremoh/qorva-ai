@@ -4,6 +4,10 @@ import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
+import org.springframework.ai.embedding.EmbeddingModel;
+import org.springframework.ai.openai.OpenAiEmbeddingModel;
+import org.springframework.ai.openai.api.OpenAiApi;
+import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +16,7 @@ import org.springframework.data.mongodb.MongoDatabaseFactory;
 import org.springframework.data.mongodb.MongoTransactionManager;
 import org.springframework.data.mongodb.config.EnableMongoAuditing;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.ai.vectorstore.MongoDBAtlasVectorStore;
 
 import java.time.OffsetDateTime;
 import java.util.Optional;
@@ -25,6 +30,12 @@ public class MongoConfig {
 
     @Value("${spring.data.mongodb.database}")
     protected String dbName;
+
+    @Value("${spring.data.ai.vectorstore.mongodb.initialize-schema}")
+    protected boolean initSchema;
+
+    @Value("${spring.ai.openai.api-key}")
+    protected String openAiAPIKey;
 
     @Bean
     public MongoClient mongo() {
@@ -49,5 +60,19 @@ public class MongoConfig {
     @Bean
     MongoTransactionManager transactionManager(MongoDatabaseFactory dbFactory) {
         return new MongoTransactionManager(dbFactory);
+    }
+
+    @Bean
+    public VectorStore mongodbVectorStore(MongoTemplate mongoTemplate, EmbeddingModel embeddingModel) {
+        return new MongoDBAtlasVectorStore(
+            mongoTemplate,
+            embeddingModel,
+            MongoDBAtlasVectorStore.MongoDBVectorStoreConfig.builder().build(), this.initSchema
+        );
+    }
+
+    @Bean
+    public EmbeddingModel embeddingModel() {
+        return new OpenAiEmbeddingModel(new OpenAiApi(this.openAiAPIKey));
     }
 }

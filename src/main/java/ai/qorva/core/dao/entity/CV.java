@@ -1,14 +1,13 @@
 package ai.qorva.core.dao.entity;
 
 import ai.qorva.core.dto.common.*;
+import ai.qorva.core.dto.common.Reference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.bson.types.Binary;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.annotation.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
@@ -27,7 +26,9 @@ public class CV implements QorvaEntity {
     private String id;
 
     @Field(targetType = FieldType.OBJECT_ID)
-    private String companyId;
+    private String tenantId;
+    private String candidateProfileSummary;
+    private int nbYearsOfExperience;
     private PersonalInformation personalInformation;
     private List<KeySkill> keySkills;
     private Profiles profiles;
@@ -46,4 +47,10 @@ public class CV implements QorvaEntity {
 
     @LastModifiedDate
     private Instant lastUpdatedAt;
+
+    @CreatedBy
+    private String createdBy;
+
+    @LastModifiedBy
+    private String lastUpdatedBy;
 }

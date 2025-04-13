@@ -3,6 +3,24 @@ spring:
     mongodb:
       uri: ${SPRING_DATA_MONGO_URL}
       database: ${SPRING_DATA_MONGO_DATABASE_NAME}
+  ai:
+    openai:
+      api-key: ${SPRING_AI_OPENAI_API_KEY}
+      embedding:
+        base-url: ${SPRING_AI_OPENAI_EMBEDDING_BASE_URL}
+        options:
+          model: ${SPRING_AI_OPENAI_EMBEDDING_MODEL}
+      chat:
+        embeddings-path: ${SPRING_AI_OPENAI_EMBEDDING_PATH}
+    model:
+      embedding: openai
+    vectorstore:
+      mongodb:
+        initialize-schema: true
+        collection-name: ${SPRING_AI_VECTOR_COLL_NAME}
+        vector-index-name: ${SPRING_AI_VECTOR_INDEX}
+        path-name: ${SPRING_AI_VECTOR_PATH_NAME}
+        metadata-fields-to-filter: ${SPRING_AI_VECTOR_METADATA_FIELDS}
   mail:
     host: ${MAIL_HOST}
     port: ${MAIL_PORT}
@@ -43,7 +61,7 @@ regex:
   activationCode: ${ACTIVATION_CODE_REGEX}
 
 weblink:
-  allowedOrigin: ${ALLOWED_ORIGIN}
+  allowedOrigins: ${ALLOWED_ORIGINS}
 
 jwt:
   secret: ${JWT_SECRET}

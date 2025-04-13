@@ -1,6 +1,14 @@
 {
   "type": "object",
   "properties": {
+    "candidateProfileSummary": {
+      "type": "string",
+      "description": "Summary of the candidate profile with quick highly of his experience and skill"
+    },
+    "nbYearsOfExperience": {
+      "type": "int",
+      "description": "Number of years of professional experience of the candidate"
+    },
     "personalInformation": {
       "type": "object",
       "description": "Details about the individual's personal information",

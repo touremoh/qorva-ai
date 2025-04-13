@@ -16,6 +16,15 @@ spring:
   ai:
     openai:
       api-key: API_KEY
+      embedding:
+        base-url: baseUrl
+        options:
+          model: embedding-model
+      chat:
+        embeddings-path: embedding-path
+    model:
+      embedding: openai
+
     chat:
       client:
         enabled: true
@@ -24,6 +33,14 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/dbname?replicaSet=rs0
       database: dbname
+    ai:
+      vectorstore:
+        mongodb:
+          initialize-schema: true
+          collection-name: custom_vector_store
+          vector-index-name: custom_vector_index
+          path-name: custom_embedding
+          metadata-fields-to-filter: fieldToFilter
   mail:
     host: MAIL-HOST
     port: 0
@@ -76,7 +93,7 @@ regex:
   activationCode: ACTIVATION_CODE_REGEX
 
 weblink:
-  allowedOrigin: http://localhost:5173
+  allowedOrigins: http://localhost:5173
 
 jwt:
   secret: JWT_SECRET

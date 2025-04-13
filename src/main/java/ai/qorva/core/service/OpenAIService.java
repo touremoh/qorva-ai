@@ -1,17 +1,26 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dto.*;
-import ai.qorva.core.dto.common.ReportDetails;
+import ai.qorva.core.dto.common.AIAnalysisReportDetails;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.converter.BeanOutputConverter;
+import org.springframework.ai.embedding.EmbeddingModel;
+import org.springframework.ai.embedding.EmbeddingRequest;
+import org.springframework.ai.embedding.EmbeddingResponse;
 import org.springframework.ai.openai.OpenAiChatOptions;
+import org.springframework.ai.openai.OpenAiEmbeddingOptions;
+import org.springframework.ai.openai.api.OpenAiApi;
 import org.springframework.ai.openai.api.ResponseFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_O_MINI;
 
@@ -21,18 +30,20 @@ public class OpenAIService {
 	private final QorvaPromptContextHolder qorvaPromptContextHolder;
 	private final OpenAIResultMapper mapper;
 	private final ChatClient chatClient;
+	private final EmbeddingModel embeddingModel;
 
 	@Value("${spring.ai.openai.api-key}")
 	private String apiKey;
 
 	@Autowired
-	public OpenAIService(QorvaPromptContextHolder qorvaPromptContextHolder, OpenAIResultMapper mapper, ChatClient chatClient) {
+	public OpenAIService(QorvaPromptContextHolder qorvaPromptContextHolder, OpenAIResultMapper mapper, ChatClient chatClient, EmbeddingModel embeddingModel) {
 		this.chatClient = chatClient;
 		this.qorvaPromptContextHolder = qorvaPromptContextHolder;
 		this.mapper = mapper;
+		this.embeddingModel = embeddingModel;
 	}
 
-	protected Flux<String> streamCVExtraction(String cvContent) {
+	public Flux<String> streamCVExtraction(String cvContent) {
 		// Create an output converter
 		var converter = new BeanOutputConverter<>(CVOutputDTO.class);
 
@@ -65,7 +76,7 @@ public class OpenAIService {
 			.content();
 	}
 
-	protected ReportDetails generateReport(String cvDetails, String jobDescription, String language) {
+	public AIAnalysisReportDetails generateReport(String cvDetails, String jobDescription) {
 		var reportGenerationPrompt = this.qorvaPromptContextHolder.getReportGenerationPrompt();
 		var reportOutputFormat = this.qorvaPromptContextHolder.getReportOutputFormat();
 		var outputConverter = new BeanOutputConverter<>(CVScreeningReportOutputDTO.class);
@@ -87,7 +98,6 @@ public class OpenAIService {
 				.param("cv_data", cvDetails)
 				.param("job_description", jobDescription)
 				.param("output_format", reportOutputFormat)
-				.param("language", language)
 			)
 			.stream()
 			.content();

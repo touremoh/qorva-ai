@@ -40,8 +40,8 @@ public class JobPostRepository extends AbstractQorvaRepository<JobPost> {
             query.addCriteria(Criteria.where(FIELD_ID).is(new ObjectId(jobPost.getId())));
         }
 
-        if (StringUtils.hasText(jobPost.getCompanyId())) {
-            query.addCriteria(Criteria.where(FIELD_COMPANY_ID).is(new ObjectId(jobPost.getCompanyId())));
+        if (StringUtils.hasText(jobPost.getTenantId())) {
+            query.addCriteria(Criteria.where(FIELD_TENANT_ID).is(new ObjectId(jobPost.getTenantId())));
         }
 
         if (StringUtils.hasText(jobPost.getTitle())) {
@@ -87,8 +87,8 @@ public class JobPostRepository extends AbstractQorvaRepository<JobPost> {
             update.set(FIELD_STATUS, entity.getStatus());
         }
 
-        if (StringUtils.hasText(entity.getCompanyId())) {
-            update.set(FIELD_COMPANY_ID, new ObjectId(entity.getCompanyId()));
+        if (StringUtils.hasText(entity.getTenantId())) {
+            update.set(FIELD_TENANT_ID, new ObjectId(entity.getTenantId()));
         }
 
         if (StringUtils.hasText(entity.getCreatedBy())) {

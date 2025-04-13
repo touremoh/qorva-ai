@@ -2,6 +2,7 @@ package ai.qorva.core.controller;
 
 import ai.qorva.core.dto.QorvaDTO;
 import ai.qorva.core.dto.QorvaRequestResponse;
+import ai.qorva.core.dto.request.FindManyRequestCriteria;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.QorvaService;
 import ai.qorva.core.utils.BuildApiResponse;
@@ -24,8 +25,8 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     }
 
     @PostMapping("/search")
-    public ResponseEntity<QorvaRequestResponse> findOneByData(@RequestHeader String companyId, @RequestBody D data) throws QorvaException {
-        return BuildApiResponse.from(service.findOneByData(companyId, data));
+    public ResponseEntity<QorvaRequestResponse> findOneByData(@RequestBody D requestData) throws QorvaException {
+        return BuildApiResponse.from(service.findOneByData(requestData));
     }
 
     @PostMapping
@@ -34,19 +35,13 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     }
 
     @GetMapping
-    public ResponseEntity<QorvaRequestResponse> findMany(
-            @RequestParam(defaultValue = "0") int pageNumber,
-            @RequestParam(defaultValue = "100") int pageSize) throws QorvaException {
-        return BuildApiResponse.from(service.findMany(pageNumber, pageSize));
+    public ResponseEntity<QorvaRequestResponse> findMany(FindManyRequestCriteria requestCriteria) throws QorvaException {
+        return BuildApiResponse.from(service.findManyByText(requestCriteria));
     }
 
     @GetMapping("/search")
-    public ResponseEntity<QorvaRequestResponse> findMany(
-        @RequestParam(defaultValue = "0") int pageNumber,
-        @RequestParam(defaultValue = "100") int pageSize,
-        @RequestParam("searchTerms") String searchTerms
-    ) throws QorvaException {
-        return BuildApiResponse.from(service.findMany(pageNumber, pageSize, searchTerms));
+    public ResponseEntity<QorvaRequestResponse> findManyByText(FindManyRequestCriteria requestCriteria) throws QorvaException {
+        return BuildApiResponse.from(service.findManyByText(requestCriteria));
     }
 
     @PostMapping("/ids")
@@ -71,7 +66,7 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     }
 
     @PostMapping("/exists")
-    public ResponseEntity<QorvaRequestResponse> existsByData(@RequestHeader String companyId, @RequestBody D data) throws QorvaException {
-        return BuildApiResponse.from(service.existsByData(companyId, data));
+    public ResponseEntity<QorvaRequestResponse> existsByData(@RequestBody D data) throws QorvaException {
+        return BuildApiResponse.from(service.existsByData(data));
     }
 }

@@ -4,7 +4,6 @@ import ai.qorva.core.dao.entity.CV;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.mongodb.core.index.TextIndexDefinition;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
@@ -19,6 +18,8 @@ import java.util.Objects;
 public class CVRepository extends AbstractQorvaRepository<CV> {
 
     // Constants for field names
+    private static final String FIELD_PROFILE_SUMMARY = "candidateProfileSummary";
+    private static final String FIELD_YEARS_EXPERIENCE = "nbYearsOfExperience";
     private static final String FIELD_PERSONAL_INFORMATION = "personalInformation";
     private static final String FIELD_KEY_SKILLS = "keySkills";
     private static final String FIELD_PROFILES = "profiles";
@@ -33,6 +34,8 @@ public class CVRepository extends AbstractQorvaRepository<CV> {
     private static final String FIELD_TAGS = "tags";
     private static final String FIELD_CREATED_AT = "createdAt";
     private static final String FIELD_LAST_UPDATED_AT = "lastUpdatedAt";
+    private static final String FIELD_CREATED_BY = "createdBy";
+    private static final String FIELD_LAST_UPDATED_BY = "lastUpdatedBy";
 
     @Autowired
     public CVRepository(MongoTemplate mongoTemplate) {
@@ -41,14 +44,14 @@ public class CVRepository extends AbstractQorvaRepository<CV> {
 
     @Override
     protected Query buildQueryFindMany(String companyId, int pageNumber, int pageSize) {
-        return new Query(Criteria.where(FIELD_COMPANY_ID).is(companyId))
-            .with(Sort.by(Sort.Direction.DESC, FIELD_LAST_UPDATED_AT)) // Add sorting by lastUpdateTimestamp in descending order
+        return new Query(Criteria.where(FIELD_TENANT_ID).is(companyId))
+            .with(Sort.by(Sort.Direction.DESC, FIELD_LAST_UPDATED_AT))
             .skip((long) pageNumber * pageSize)
             .limit(pageSize);
     }
 
     @Override
-    protected Query buildQueryFindOneByData(String companyId, CV cv) {
+    protected Query buildQueryFindOneByData(CV cv) {
         if (cv == null) {
             throw new IllegalArgumentException("CV object must not be null");
         }
@@ -59,28 +62,24 @@ public class CVRepository extends AbstractQorvaRepository<CV> {
             query.addCriteria(Criteria.where(FIELD_ID).is(new ObjectId(cv.getId())));
         }
 
-        if (StringUtils.hasText(cv.getCompanyId())) {
-            query.addCriteria(Criteria.where(FIELD_COMPANY_ID).is(new ObjectId(cv.getCompanyId())));
+        if (StringUtils.hasText(cv.getTenantId())) {
+            query.addCriteria(Criteria.where(FIELD_TENANT_ID).is(new ObjectId(cv.getTenantId())));
+        }
+
+        if (cv.getNbYearsOfExperience() > 0) {
+            query.addCriteria(Criteria.where(FIELD_YEARS_EXPERIENCE).is(cv.getNbYearsOfExperience()));
         }
 
         if (Objects.nonNull(cv.getPersonalInformation())) {
             query.addCriteria(Criteria.where(FIELD_PERSONAL_INFORMATION).is(cv.getPersonalInformation()));
         }
 
-        if (Objects.nonNull(cv.getKeySkills())) {
-            query.addCriteria(Criteria.where(FIELD_KEY_SKILLS).is(cv.getKeySkills()));
+        if (StringUtils.hasText(cv.getCreatedBy())) {
+            query.addCriteria(Criteria.where(FIELD_CREATED_BY).is(new ObjectId(cv.getCreatedBy())));
         }
 
-        if (Objects.nonNull(cv.getProfiles())) {
-            query.addCriteria(Criteria.where(FIELD_PROFILES).is(cv.getProfiles()));
-        }
-
-        if (Objects.nonNull(cv.getCreatedAt())) {
-            query.addCriteria(Criteria.where(FIELD_CREATED_AT).is(cv.getCreatedAt()));
-        }
-
-        if (Objects.nonNull(cv.getLastUpdatedAt())) {
-            query.addCriteria(Criteria.where(FIELD_LAST_UPDATED_AT).is(cv.getLastUpdatedAt()));
+        if (StringUtils.hasText(cv.getLastUpdatedBy())) {
+            query.addCriteria(Criteria.where(FIELD_LAST_UPDATED_BY).is(new ObjectId(cv.getLastUpdatedBy())));
         }
 
         return query;
@@ -89,6 +88,14 @@ public class CVRepository extends AbstractQorvaRepository<CV> {
     @Override
     protected Update mapFieldsUpdateOne(CV entity) {
         var update = super.mapFieldsUpdateOne(entity);
+
+        if (StringUtils.hasText(entity.getCandidateProfileSummary())) {
+            update.set(FIELD_PROFILE_SUMMARY, entity.getCandidateProfileSummary());
+        }
+
+        if (entity.getNbYearsOfExperience() >= 0) {
+            update.set(FIELD_YEARS_EXPERIENCE, entity.getNbYearsOfExperience());
+        }
 
         if (Objects.nonNull(entity.getPersonalInformation())) {
             update.set(FIELD_PERSONAL_INFORMATION, entity.getPersonalInformation());
@@ -136,6 +143,14 @@ public class CVRepository extends AbstractQorvaRepository<CV> {
 
         if (Objects.nonNull(entity.getTags())) {
             update.set(FIELD_TAGS, entity.getTags());
+        }
+
+        if (StringUtils.hasText(entity.getCreatedBy())) {
+            update.set(FIELD_CREATED_BY, new ObjectId(entity.getCreatedBy()));
+        }
+
+        if (StringUtils.hasText(entity.getLastUpdatedBy())) {
+            update.set(FIELD_LAST_UPDATED_BY, new ObjectId(entity.getLastUpdatedBy()));
         }
 
         update.set(FIELD_LAST_UPDATED_AT, Instant.now());

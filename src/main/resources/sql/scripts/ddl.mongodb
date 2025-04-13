@@ -3,7 +3,7 @@ use qorva;
 db.Users.drop();
 db.JobsPosts.drop();
 db.CVs.drop();
-db.Candidates.drop();
+db.JobApplications.drop();
 db.InterviewQuestions.drop();
 db.CVAnalysisUsage.drop();
 
@@ -40,13 +40,13 @@ db.createCollection("Users", {
         },
         companyInfo: {
           bsonType: "object",
-          required: ["name", "companyId", "createdAt", "lastUpdatedAt"],
+          required: ["name", "tenantId", "createdAt", "lastUpdatedAt"],
           properties: {
             name: {
               bsonType: "string",
               description: "must be a string and is required"
             },
-            companyId: {
+            tenantId: {
               bsonType: "string",
               description: "must be a string and is required"
             },
@@ -67,7 +67,7 @@ db.createCollection("Users", {
           properties: {
             subscriptionPlan: {
               bsonType: "string",
-              enum: ["FREEMIUM", "STARTER", "GROWTH", "PROFESSIONAL", "ENTERPRISE"],
+              enum: ["FREE_TRIAL", "STARTER", "GROWTH", "PROFESSIONAL", "ENTERPRISE"],
               description: "must be a string and is required"
             },
             billingCycle: {
@@ -146,7 +146,7 @@ db.createCollection("JobsPosts", {
       $jsonSchema: {
         bsonType: "object",
         title: "JobsPosts",
-        required: ["title", "description", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy", "status"],
+        required: ["title", "description", "tenantId", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy", "status"],
         properties: {
           title: {
             bsonType: "string",
@@ -156,7 +156,7 @@ db.createCollection("JobsPosts", {
             bsonType: "string",
             description: "must be a string and is required"
           },
-          companyId: {
+          tenantId: {
             bsonType: "objectId",
             description: "must be a valid ObjectId and is required"
           },
@@ -191,15 +191,19 @@ db.createCollection("CVs", {
     $jsonSchema: {
       bsonType: "object",
       title: "CVs",
-      required: ["companyId", "personalInformation", "createdAt", "lastUpdatedAt"],
+      required: ["tenantId", "candidateProfileSummary", "nbYearsOfExperience", "personalInformation", "createdAt", "lastUpdatedAt"],
       properties: {
-        companyId: {
+        tenantId: {
           bsonType: "string",
           description: "must be a valid ObjectId and is required"
         },
         candidateProfileSummary: {
           bsonType: "string",
           description: "must be a valid string and is required"
+        },
+        nbYearsOfExperience: {
+          bsonType: "int",
+          description: "must be a valid int and is required"
         },
         personalInformation: {
           bsonType: "object",
@@ -580,16 +584,16 @@ db.createCollection("CVs", {
   }
 });
 
-db.createCollection("Candidates", {
+db.createCollection("JobApplications", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      title: "Candidates",
+      title: "JobApplications",
       required: [
         "jobPostId",
         "candidateInfo",
-        "companyId",
-        "reportDetails",
+        "tenantId",
+        "aiAnalysisReportDetails",
         "status",
         "createdAt",
         "lastUpdatedAt",
@@ -631,11 +635,11 @@ db.createCollection("Candidates", {
           },
           description: "must be a valid object and is required"
         },
-        companyId: {
+        tenantId: {
           bsonType: "string",
           description: "must be a valid string and is required"
         },
-        reportDetails: {
+        aiAnalysisReportDetails: {
           bsonType: "object",
           required: ["skillsMatch", "exceedsRequirements", "lackingSkills", "experienceAlignment", "overallSummary"],
           properties: {
@@ -712,7 +716,7 @@ db.createCollection("Candidates", {
         },
         status: {
           bsonType: "string",
-          enum: ["NEW", "SHORTLIST", "INTERVIEW", "REJECT"],
+          enum: ["NEW", "SHORTLIST", "INTERVIEW", "REJECT", "OPEN", "CLOSE"],
           description: "must be a string"
         },
         createdAt: {
@@ -742,7 +746,7 @@ db.createCollection("InterviewQuestions", {
       bsonType: "object",
       title: "InterviewQuestions",
       required: [
-        "companyId",
+        "tenantId",
         "jobPostId",
         "candidateInfo",
         "questionnaireDetails",
@@ -752,7 +756,7 @@ db.createCollection("InterviewQuestions", {
         "lastUpdatedBy"
       ],
       properties: {
-        companyId: {
+        tenantId: {
           bsonType: "string",
           description: "must be a valid ObjectId and is required"
         },
@@ -762,7 +766,7 @@ db.createCollection("InterviewQuestions", {
         },
         candidateInfo: {
           bsonType: "object",
-          required: ["candidateId", "candidateName", "nbYearsExperience", "skills", "candidateProfileSummary"],
+          required: ["candidateId", "candidateName", "nbYearsOfExperience", "skills", "candidateProfileSummary"],
           properties: {
             candidateId: {
               bsonType: "objectId",
@@ -772,7 +776,7 @@ db.createCollection("InterviewQuestions", {
               bsonType: "string",
               description: "must be a valid string and is required"
             },
-            nbYearsExperience: {
+            nbYearsOfExperience: {
               bsonType: "int",
               description: "must be a valid int and is required"
             },
@@ -852,7 +856,7 @@ db.createCollection("StripeEventLogs", {
       bsonType: "object",
       title: "StripeEventLogs",
       required: [
-        "companyId",
+        "tenantId",
         "subscriptionId",
         "eventType",
         "metadataInfo",
@@ -860,7 +864,7 @@ db.createCollection("StripeEventLogs", {
         "createdBy"
       ],
       properties: {
-        companyId: {
+        tenantId: {
           bsonType: "string",
           description: "must be a valid string and is required"
         },
@@ -886,51 +890,6 @@ db.createCollection("StripeEventLogs", {
         createdBy: {
           bsonType: "objectId",
           description: "must be a valid ObjectId and is required"
-        }
-      }
-    }
-  }
-});
-
-db.createCollection("CVAnalysisUsage", {
-  validator: {
-    $jsonSchema: {
-      bsonType: "object",
-      title: "CVAnalysisUsage",
-      required: ["companyId", "year", "month", "analysisCount"],
-      properties: {
-        companyId: {
-          bsonType: "objectId",
-          description: "The company performing the CV analysis"
-        },
-        year: {
-          bsonType: "int",
-          description: "The year the CV analyses were performed"
-        },
-        month: {
-          bsonType: "int",
-          minimum: 1,
-          maximum: 12,
-          description: "The month (1–12)"
-        },
-        analysisCount: {
-          bsonType: "int",
-          minimum: 0,
-          description: "The number of CVs analyzed in this month"
-        },
-        analysisMaxThreshold: {
-          bsonType: "int",
-          minimum: 0,
-          description: "The maximum number of CV to be analysed per month"
-        },
-        subscriptionTier: {
-          bsonType: "string",
-          enum: ["FREE_TRIAL", "STARTER", "GROWTH", "PROFESSIONAL", "ENTERPRISE"],
-          description: "The company’s subscription tier at that time"
-        },
-        updatedAt: {
-          bsonType: "date",
-          description: "When this document was last updated"
         }
       }
     }

@@ -11,3 +11,26 @@ db.CVs.createIndex({
 });
 
 db.CVAnalysisUsage.createIndex({ companyId: 1, year: 1, month: 1 }, { unique: true });
+
+db.JobsPosts.createIndex({
+  title: "text",
+  description: "text"
+});
+
+
+// Compound vector index in Mongo Atlas
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "embedding": {
+        "type": "vector",
+        "dimensions": 3072,
+        "similarity": "cosine"
+      },
+      "companyId": {
+        "type": "string"
+      }
+    }
+  }
+}

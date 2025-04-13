@@ -5,18 +5,20 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.util.List;
+
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-	@Value("${weblink.allowedOrigin}")
-	private String allowedOrigin;
+	@Value("#{'${weblink.allowedOrigins}'.split(',')}")
+	private List<String> allowedOrigins;
 
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping("/api/**")
 
 			    // Only allowed origin will be accepted
-			    .allowedOrigins(this.allowedOrigin)
+			    .allowedOrigins(allowedOrigins.toArray(new String[0]))
 
 			    // Accepted Http Request Methods
 			    .allowedMethods("*")

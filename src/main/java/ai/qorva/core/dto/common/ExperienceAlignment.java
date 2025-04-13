@@ -11,4 +11,5 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class ExperienceAlignment {
     private String summary;
+    private Integer degreeOfMatch;
 }

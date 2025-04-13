@@ -16,6 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.util.matcher.RegexRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -54,8 +55,10 @@ public class SecurityConfig {
 				.requestMatchers(
 					"/register/**",
 					"/auth/login",
-					"/auth/token/validate"
+					"/auth/token/validate",
+					"/api/portal/jobs/**"
 				).permitAll() // Publicly accessible routes
+
 				.anyRequest().authenticated()
 			)
 

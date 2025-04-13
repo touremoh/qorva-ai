@@ -2,7 +2,6 @@ package ai.qorva.core.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -18,7 +17,7 @@ import java.time.Instant;
 @AllArgsConstructor
 public class JobPostDTO extends AbstractQorvaDTO {
     private String id;
-    private String companyId;
+    private String tenantId;
     private String title;
     private String description;
     private String createdBy;
@@ -32,6 +31,6 @@ public class JobPostDTO extends AbstractQorvaDTO {
     private Instant lastUpdatedAt;
 
     public String toJobTitleAndDescription() {
-        return "Job Title: " + getTitle() + "\n Description: " + getDescription();
+        return "Job Title: " + getTitle() + "\n Job Description: " + getDescription();
     }
 }

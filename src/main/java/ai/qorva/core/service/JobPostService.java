@@ -24,17 +24,17 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
 	}
 
     @Override
-    protected void preProcessCreateOne(JobPostDTO jobPost) throws QorvaException {
-        super.preProcessCreateOne(jobPost);
+    protected void preProcessCreateOne(JobPostDTO requestData) throws QorvaException {
+        super.preProcessCreateOne(requestData);
 
         // Get Authenticated User Info
         var userInfo = this.userService.findOneByEmail(this.getAuthenticatedUsername());
 
         // Set company id if not exists
-        jobPost.setCompanyId(userInfo.getCompanyId());
-        jobPost.setCreatedBy(userInfo.getId());
-        jobPost.setLastUpdatedBy(userInfo.getId());
-        jobPost.setStatus(JobPostStatusEnum.OPEN.getStatus());
+        requestData.setTenantId(userInfo.getCompanyInfo().tenantId());
+        requestData.setCreatedBy(userInfo.getId());
+        requestData.setLastUpdatedBy(userInfo.getId());
+        requestData.setStatus(JobPostStatusEnum.OPEN.getStatus());
     }
 
     @Override
@@ -65,7 +65,7 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
         var companyId = this.getAuthenticatedCompanyId();
 
         // Check if the user is deleting an owned resource
-        if (!jobPostToDelete.getCompanyId().equals(companyId)) {
+        if (!jobPostToDelete.getTenantId().equals(companyId)) {
             log.warn("Job post company id {} does not match authenticated company id {}", id, companyId);
             throw new QorvaException(
                 "Impossible to delete this resource",

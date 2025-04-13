@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public record CVOutputDTO(
+    @JsonProperty(required = true, value = "candidateProfileSummary") String candidateProfileSummary,
+    @JsonProperty(required = true, value = "nbYearsOfExperience") int nbYearsOfExperience,
     @JsonProperty(required = true, value = "personalInformation") PersonalInformation personalInformation,
     @JsonProperty(required = true, value = "keySkills") KeySkill[] keySkills,
     @JsonProperty(required = true, value = "profiles") Profiles profiles,

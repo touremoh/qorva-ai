@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import lombok.experimental.SuperBuilder;
 import org.bson.types.Binary;
 
+import java.time.Instant;
 import java.util.List;
 
 @Getter
@@ -19,7 +20,9 @@ import java.util.List;
 @AllArgsConstructor
 public class CVDTO extends AbstractQorvaDTO {
     private String id;
-    private String companyId;
+    private String tenantId;
+    private String candidateProfileSummary;
+    private int nbYearsOfExperience;
     private PersonalInformation personalInformation;
     private List<KeySkill> keySkills;
     private Profiles profiles;
@@ -34,8 +37,14 @@ public class CVDTO extends AbstractQorvaDTO {
     private List<String> tags;
 
     @JsonProperty(access = Access.READ_ONLY)
-    private String createdAt;
+    private Instant createdAt;
 
     @JsonProperty(access = Access.READ_ONLY)
-    private String lastUpdatedAt;
+    private Instant lastUpdatedAt;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private String createdBy;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private String lastUpdatedBy;
 }

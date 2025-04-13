@@ -4,4 +4,5 @@ import java.io.Serializable;
 
 public interface QorvaDTO extends Serializable {
 	String getId();
+	String getTenantId();
 }

@@ -1,6 +1,7 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.QorvaEntity;
+import ai.qorva.core.dto.request.FindManyRequestCriteria;
 import ai.qorva.core.exception.QorvaException;
 import org.springframework.data.domain.Page;
 
@@ -20,11 +21,10 @@ public interface QorvaRepository<T extends QorvaEntity> {
     /**
      * Find one document by its type.
      *
-     * @param companyId Filter out by companyId.
      * @param entity The data of the document.
      * @return An optional containing the document if found, or empty otherwise.
      */
-    Optional<T> findOneByData(String companyId, T entity);
+    Optional<T> findOneByData(T entity);
 
     /**
      * Create one document.
@@ -37,24 +37,19 @@ public interface QorvaRepository<T extends QorvaEntity> {
     /**
      * Find many documents by type with pagination.
      *
-     * @param companyId Filter out by companyId to avoid returning data from other companies
-     * @param pageNumber The page number.
-     * @param pageSize   The number of items per page.
+     * @param requestCriteria Filter out by tenantId to avoid returning data from other companies
      * @return A pageable object containing the documents for the given page.
      */
-    Page<T> findMany(String companyId, int pageNumber, int pageSize);
+    Page<T> findMany(FindManyRequestCriteria requestCriteria) throws QorvaException;
 
 
     /**
      * Find many records by criteria
-     * @param companyId The id of the company
-     * @param pageNumber The page to retrieve
-     * @param pageSize The size of the page to retrieve
-     * @param searchTerms Criteria of the search
+     * @param requestCriteria request criteria
      * @return A pageable list of records.
      * @throws QorvaException if an error occurs during retrieval.
      */
-    Page<T> findMany(String companyId, int pageNumber, int pageSize, String searchTerms) throws QorvaException;
+    Page<T> findManyByText(FindManyRequestCriteria requestCriteria) throws QorvaException;
 
     /**
      * Find many documents by their IDs.
@@ -84,9 +79,8 @@ public interface QorvaRepository<T extends QorvaEntity> {
     /**
      * Check if a document exists by its data.
      *
-     * @param companyId Filter out by companyId to avoid returning data from other companies
      * @param entity The document data to check for existence.
      * @return True if a matching document exists, false otherwise.
      */
-    boolean existsByData(String companyId, T entity);
+    boolean existsByData(T entity);
 }

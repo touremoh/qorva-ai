@@ -1,25 +1,20 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.User;
-import ai.qorva.core.dao.repository.QorvaRepository;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.UserDTO;
+import ai.qorva.core.dto.common.CompanyInfo;
 import ai.qorva.core.enums.QorvaErrorsEnum;
-import ai.qorva.core.enums.UserStatusEnum;
 import ai.qorva.core.exception.QorvaException;
-import ai.qorva.core.mapper.AbstractQorvaMapper;
 import ai.qorva.core.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.util.Objects;
-import java.util.Optional;
 
 @Slf4j
 @Service
@@ -36,12 +31,12 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 	}
 
 	@Override
-	protected void preProcessCreateOne(UserDTO userDTO) throws QorvaException {
-		super.preProcessCreateOne(userDTO);
+	protected void preProcessCreateOne(UserDTO requestData) throws QorvaException {
+		super.preProcessCreateOne(requestData);
 
 		// Check if company id is present (mandatory for every request)
-		if (!StringUtils.hasText(userDTO.getCompanyId())) {
-			log.error("Missing company id for user {}", userDTO);
+		if (Objects.nonNull(requestData.getCompanyInfo()) && !StringUtils.hasText(requestData.getCompanyInfo().tenantId())) {
+			log.error("Missing company id for user {}", requestData);
 			throw new QorvaException(
 				"User creation requires a company id",
 				HttpStatus.NOT_ACCEPTABLE.value(),
@@ -50,8 +45,12 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		}
 
 		// Check if user does not exist
-		if (this.existsByData(userDTO.getCompanyId(), UserDTO.builder().email(userDTO.getEmail()).build())) {
-			log.error("Trying to create an existing user {}", userDTO);
+		var userSearchCriteria = new UserDTO();
+		userSearchCriteria.setEmail(requestData.getEmail());
+		userSearchCriteria.setCompanyInfo(requestData.getCompanyInfo());
+
+		if (this.existsByData(userSearchCriteria)) {
+			log.error("Trying to create an existing user {}", requestData);
 			throw new QorvaException(
 				"Unable to create an existing user",
 				HttpStatus.NOT_ACCEPTABLE.value(),
@@ -60,10 +59,7 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		}
 
 		// Encode password
-		userDTO.setEncryptedPassword(this.passwordEncoder.encode(userDTO.getRawPassword()));
-
-		// Set status of the user
-		userDTO.setAccountStatus(UserStatusEnum.TRIAL_PERIOD.getValue());
+		requestData.setEncryptedPassword(this.passwordEncoder.encode(requestData.getRawPassword()));
 	}
 
 	@Override
