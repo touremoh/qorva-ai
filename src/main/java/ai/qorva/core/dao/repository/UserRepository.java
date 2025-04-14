@@ -40,15 +40,15 @@ public class UserRepository extends AbstractQorvaRepository<User> {
     }
 
     @Override
-    protected Query buildQueryFindOneByData(String tenantId, User user) {
+    protected Query buildQueryFindOneByData(User user) {
         if (isNull(user)) {
             throw new IllegalArgumentException("User object must not be null");
         }
 
         Query query = new Query();
 
-        if (StringUtils.hasText(tenantId)) {
-            query.addCriteria(Criteria.where(FIELD_COMPANY_ID).is(tenantId));
+        if (StringUtils.hasText(user.getTenantId())) {
+            query.addCriteria(Criteria.where(FIELD_COMPANY_ID).is(user.getTenantId()));
         }
 
         if (StringUtils.hasText(user.getId())) {

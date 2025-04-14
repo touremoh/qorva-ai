@@ -1,7 +1,7 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.repository.UserRepository;
-import ai.qorva.core.dto.UserDTO;
+import ai.qorva.core.enums.UserAccountStatus;
 import ai.qorva.core.enums.UserStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
@@ -12,7 +12,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Optional;
 
 @Service
 public class QorvaUserDetailsService implements UserDetailsService {
@@ -43,8 +42,8 @@ public class QorvaUserDetailsService implements UserDetailsService {
 					.builder()
 						.username(user.getEmail())
 						.password(user.getEncryptedPassword())
-						.disabled(user.getAccountStatus().equals(UserStatusEnum.INACTIVE.getValue()) || user.getAccountStatus().equals(UserStatusEnum.LOCKED.getValue()))
-						.accountLocked(isAccountLocked(user))
+						.disabled(isUserDisabled(user))
+						.accountLocked(isUserDisabled(user))
 						.authorities(new ArrayList<>())
 					.build();
 		} catch (AuthenticationException e) {
@@ -52,11 +51,8 @@ public class QorvaUserDetailsService implements UserDetailsService {
 		}
 	}
 
-	private boolean isAccountLocked(ai.qorva.core.dao.entity.User user) {
-		return user.getAccountStatus().equals(UserStatusEnum.LOCKED.getValue());
-	}
-
-	public Optional<ai.qorva.core.dao.entity.User> getCurrentUserByEmail(String email) {
-		return this.userRepository.findOneByEmail(email);
+	private boolean isUserDisabled(ai.qorva.core.dao.entity.User user) {
+		return user.getUserAccountStatus().equals(UserAccountStatus.USER_INACTIVE.getValue())
+			|| user.getUserAccountStatus().equals(UserAccountStatus.USER_LOCKED.getValue());
 	}
 }

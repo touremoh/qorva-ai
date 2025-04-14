@@ -1,6 +1,8 @@
 package ai.qorva.core.dao.repository;
 
+import ai.qorva.core.dao.entity.JobPost;
 import ai.qorva.core.dao.entity.QorvaEntity;
+import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dto.request.FindManyRequestCriteria;
 import ai.qorva.core.exception.QorvaException;
 import lombok.extern.slf4j.Slf4j;

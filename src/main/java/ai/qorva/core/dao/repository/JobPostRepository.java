@@ -29,7 +29,7 @@ public class JobPostRepository extends AbstractQorvaRepository<JobPost> {
     }
 
     @Override
-    protected Query buildQueryFindOneByData(String companyId, JobPost jobPost) {
+    protected Query buildQueryFindOneByData(JobPost jobPost) {
         if (jobPost == null) {
             throw new IllegalArgumentException("JobPost object must not be null");
         }
