@@ -1,20 +1,18 @@
 db.CVs.createIndex({
-  "personalInformation.name": "text",
-  "personalInformation.contact.email": "text",
-  "personalInformation.role": "text",
-  tags: "text",
-  "keySkills.category": "text",
-  "keySkills.skills": "text",
-  "skillsAndQualifications.softSkills": "text",
-  "skillsAndQualifications.technicalSkills": "text",
-  "profiles.areasOfExpertise": "text"
+    "personalInformation.name": "text",
+    "personalInformation.contact.email": "text",
+    "personalInformation.role": "text",
+    tags: "text",
+    "keySkills.category": "text",
+    "keySkills.skills": "text",
+    "skillsAndQualifications.softSkills": "text",
+    "skillsAndQualifications.technicalSkills": "text",
+    "profiles.areasOfExpertise": "text"
 });
 
-db.CVAnalysisUsage.createIndex({ companyId: 1, year: 1, month: 1 }, { unique: true });
-
 db.JobsPosts.createIndex({
-  title: "text",
-  description: "text"
+    title: "text",
+    description: "text"
 });
 
 
@@ -28,8 +26,14 @@ db.JobsPosts.createIndex({
         "dimensions": 3072,
         "similarity": "cosine"
       },
-      "companyId": {
+      "tenantId": {
         "type": "string"
+      },
+      "tags": {
+        "type": "array",
+        "elements": {
+          "type": "string"
+        }
       }
     }
   }
