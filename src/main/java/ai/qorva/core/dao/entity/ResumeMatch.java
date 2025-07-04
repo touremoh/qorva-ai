@@ -2,7 +2,10 @@ package ai.qorva.core.dao.entity;
 
 import ai.qorva.core.dto.common.AIAnalysisReportDetails;
 import ai.qorva.core.dto.common.CandidateInfo;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -14,8 +17,8 @@ import java.time.Instant;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "JobApplications")
-public class JobApplication implements QorvaEntity {
+@Document(collection = "ResumeMatches")
+public class ResumeMatch implements QorvaEntity {
 
     @Id
     private String id;
@@ -25,6 +28,7 @@ public class JobApplication implements QorvaEntity {
 
     private CandidateInfo candidateInfo;
 
+    @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
 
     private AIAnalysisReportDetails aiAnalysisReportDetails;
@@ -38,10 +42,8 @@ public class JobApplication implements QorvaEntity {
     private Instant lastUpdatedAt;
 
     @CreatedBy
-    @Field(targetType = FieldType.OBJECT_ID)
     private String createdBy;
 
     @LastModifiedBy
-    @Field(targetType = FieldType.OBJECT_ID)
     private String lastUpdatedBy;
 }

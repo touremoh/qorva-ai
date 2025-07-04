@@ -17,6 +17,8 @@ import org.springframework.security.oauth2.jwt.JwtException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.util.Optional;
+
 @Service
 public class AuthenticationService {
 	private final QorvaUserDetailsService userDetailsService;
@@ -47,17 +49,20 @@ public class AuthenticationService {
 			UserDetails userDetails = this.userDetailsService.loadUserByUsername(userDTO.getEmail());
 
 			// Retrieve the tenantId from the database
-			var user = this.userRepository
-				.findOneByEmail(userDTO.getEmail())
-				.orElseThrow(() -> new QorvaException("User not found"));
+			var user = Optional.ofNullable(this.userRepository.findByEmail(userDTO.getEmail()))
+				               .orElseThrow(() -> new QorvaException("User not found"));
 
 			// Generate a JWT including tenantId
-			var jwt = JwtUtils.generateAndBuildToken(userDetails, jwtConfig, user.getCompanyInfo().tenantId());
+			var jwt = JwtUtils.generateAndBuildToken(userDetails, jwtConfig, user.getTenantId());
 
 			// Build AuthResponse
 			return new AuthResponse(jwt, this.userMapper.map(user));
 		} catch (Exception e) {
-			throw new QorvaException("Authentication failed", HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+			throw new QorvaException(
+				"Authentication failed with message: " + e.getMessage(),
+				HttpStatus.UNAUTHORIZED.value(),
+				HttpStatus.UNAUTHORIZED
+			);
 		}
 	}
 
@@ -83,13 +88,11 @@ public class AuthenticationService {
 				UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
 
 				// Retrieve the tenantId from the database
-				var user = this.userRepository
-					.findOneByEmail(username)
-					.orElseThrow(() -> new QorvaException("User not found"));
+				var user = Optional.ofNullable(this.userRepository.findByEmail(username))
+					               .orElseThrow(() -> new QorvaException("User not found"));
 
 				// Return the new access token
-				return JwtUtils.generateAndBuildToken(userDetails, this.jwtConfig, user.getCompanyInfo().tenantId());
-
+				return JwtUtils.generateAndBuildToken(userDetails, this.jwtConfig, user.getTenantId());
 			} catch (JwtException ex) {
 				throw new QorvaException(ex.getMessage(), HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
 			}

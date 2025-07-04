@@ -2,7 +2,6 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.enums.UserAccountStatus;
-import ai.qorva.core.enums.UserStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.User;
@@ -12,6 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 @Service
 public class QorvaUserDetailsService implements UserDetailsService {
@@ -27,15 +27,12 @@ public class QorvaUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		try {
 			// Find user by email
-			var userFound = this.userRepository.findOneByEmail(email);
+			var user = this.userRepository.findByEmail(email);
 
 			// Check if user was found
-			if (userFound.isEmpty()) {
+			if (Objects.isNull(user)) {
 				throw new UsernameNotFoundException("User not found");
 			}
-
-			// get the found user
-			var user = userFound.get();
 
 			// Convert userDTO into Spring Security User
 			return User
@@ -43,7 +40,6 @@ public class QorvaUserDetailsService implements UserDetailsService {
 						.username(user.getEmail())
 						.password(user.getEncryptedPassword())
 						.disabled(isUserDisabled(user))
-						.accountLocked(isUserDisabled(user))
 						.authorities(new ArrayList<>())
 					.build();
 		} catch (AuthenticationException e) {

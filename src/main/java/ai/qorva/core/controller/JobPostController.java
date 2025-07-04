@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/jobs")
-@CrossOrigin(origins = "${weblink.allowedOrigin}")
+@CrossOrigin(origins = "${weblink.allowedOrigins}")
 public class JobPostController extends AbstractQorvaController<JobPostDTO> {
 
     @Autowired

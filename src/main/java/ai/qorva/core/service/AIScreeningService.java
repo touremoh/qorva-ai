@@ -1,50 +1,59 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dto.CVDTO;
-import ai.qorva.core.dto.JobApplicationDTO;
 import ai.qorva.core.dto.JobPostDTO;
+import ai.qorva.core.dto.ResumeMatchDTO;
 import ai.qorva.core.dto.common.CandidateInfo;
-import ai.qorva.core.dto.request.FindManyRequestCriteria;
-import ai.qorva.core.enums.MontlyUsageLimitCodeEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.utils.QorvaUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+
+import java.time.chrono.ChronoLocalDateTime;
+import java.util.List;
 import java.util.Objects;
 
 @Slf4j
 @Service
 public class AIScreeningService {
+
 	private final CVService cvService;
 	private final OpenAIService openAIService;
 	private final JobPostService jobPostService;
-	private final JobsApplicationService jobsApplicationService;
+	private final ResumeMatchService resumeMatchService;
 
 	@Autowired
-	public AIScreeningService(CVService cvService, OpenAIService openAIService, JobPostService jobPostService, JobsApplicationService jobsApplicationService) {
+	public AIScreeningService(CVService cvService, OpenAIService openAIService, JobPostService jobPostService, ResumeMatchService resumeMatchService) {
 		this.cvService = cvService;
 		this.openAIService = openAIService;
 		this.jobPostService = jobPostService;
-		this.jobsApplicationService = jobsApplicationService;
+		this.resumeMatchService = resumeMatchService;
 	}
 
-	public Page<JobApplicationDTO> startScreeningProcess(String jobPostId, String userId) throws QorvaException {
-		// Check if monthly usage limit was not reached before screening process start
-		var usageLimitStatus = this.jobsApplicationService.checkCVAnalysisMonthlyUsageLimit(userId);
-
-		if (MontlyUsageLimitCodeEnum.REACHED.getValue().equals(usageLimitStatus)) {
-			log.warn("User {} has reached monthly limit.", userId);
-			throw new QorvaException("User " + userId + " has reached monthly limit.", HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
-		}
-
+	public Page<ResumeMatchDTO> startScreeningProcess(String jobPostId) throws QorvaException {
 		// Get the job post
 		var jobPost = this.jobPostService.findOneById(jobPostId);
 
+		// Check if the job post was found
+		if (Objects.isNull(jobPost)) {
+			throw new QorvaException("Invalid jobPostId: " + jobPostId);
+		}
+
+		// Get the tenant
+		String tenantId = jobPost.getTenantId();
+
+		// Check if the monthly usage limit was not reached before the screening process starts
+		if (this.resumeMatchService.hasReachedMonthlyUsageLimit(tenantId)) {
+			log.warn("User {} has reached monthly limit.", tenantId);
+			throw new QorvaException("User " + tenantId + " has reached monthly limit.", HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+		}
+
 		// Perform similar search and extract results (List of CV IDs) => must be filter out by tenantId
-		var results = this.cvService.findCVsMatchingJobDescription(jobPost.toJobTitleAndDescription(), jobPost.getTenantId());
+		var results = this.cvService.findCVsMatchingJobDescription(jobPost.getEmbedding(), jobPost.getTenantId());
 
 		// Filter out the CVs that are not relevant for the screening process
 		var filteredCVs = results.stream()
@@ -58,35 +67,40 @@ public class AIScreeningService {
 			})
 			.toList();
 
-		// Finally, start the screening process
-		var newJobApplications = filteredCVs.parallelStream()
+		// Start the screening process
+		var resumeMatches = filteredCVs
+			.parallelStream()
 			.map(cvdto -> {
 				try {
 					var analysisDetails = this.openAIService.generateReport(QorvaUtils.toJSON(cvdto), jobPost.toJobTitleAndDescription());
-					return this.jobsApplicationService.createOne(jobPost, analysisDetails, cvdto);
+					return this.resumeMatchService.createOne(jobPost, analysisDetails, cvdto);
 				} catch (QorvaException e) {
 					throw new RuntimeException(e);
 				}
-			}).toList();
+			})
+			.toList();
 
-		// Save all
-		var savedApplications = this.jobsApplicationService.saveAll(newJobApplications);
 
-		// log new application saved
-		log.debug("{} new applications for job post {}", savedApplications.size(), jobPostId);
+		// Check if something was found before saving
+		if (!resumeMatches.isEmpty()) {
+			// Save all
+			var savedResumeMatches = this.resumeMatchService.saveAll(resumeMatches);
+			// log new application saved
+			log.debug("{} new applications for job post {}", savedResumeMatches.size(), jobPostId);
+		}
 
-		var criteria = new FindManyRequestCriteria();
-		criteria.setTenantId(jobPost.getTenantId());
-		criteria.setPageNumber(0);
-		criteria.setPageSize(25);
+		// Build search request
+		var searchCriteria = new ResumeMatchDTO();
+		searchCriteria.setTenantId(jobPost.getTenantId());
+		searchCriteria.setJobPostId(jobPostId);
 
 		// Return all job applications for company id and job post id sorted by AI Score Desc
-		return this.jobsApplicationService.findMany(criteria);
+		return this.resumeMatchService.findAll(searchCriteria, 0, 50);
 	}
 
 	protected boolean isCVRelevantToScreening(CVDTO cvdto, JobPostDTO jobPostDTO) throws QorvaException {
 		// Build criteria
-		var searchData = new JobApplicationDTO();
+		var searchData = new ResumeMatchDTO();
 		searchData.setTenantId(jobPostDTO.getTenantId());
 		searchData.setJobPostId(jobPostDTO.getId());
 
@@ -94,21 +108,26 @@ public class AIScreeningService {
 		candidateInfo.setCandidateId(cvdto.getId());
 		searchData.setCandidateInfo(candidateInfo);
 
-		// Find CV in Job Applications Pipeline
-		var jobApplication = this.jobsApplicationService.findOneByData(searchData);
+		try {
+			// Find CV in Resume Matches
+			var resumeMatchDTO = this.resumeMatchService.findOneByData(searchData);
 
-		// Check case where candidate not relevant
-		if (Objects.nonNull(jobApplication)) {
-			if (jobPostDTO.getLastUpdatedAt().isAfter(jobApplication.getLastUpdatedAt())
-				|| cvdto.getLastUpdatedAt().isAfter(jobApplication.getLastUpdatedAt())) {
+			// Check the case where a candidate not relevant
+			if (Objects.nonNull(resumeMatchDTO)) {
+				if (jobPostDTO.getLastUpdatedAt().isAfter(resumeMatchDTO.getLastUpdatedAt())
+					|| cvdto.getLastUpdatedAt().isAfter(resumeMatchDTO.getLastUpdatedAt())) {
 
-				// Remove that job application to a new one
-				this.jobsApplicationService.deleteOneById(jobApplication.getId());
+					// Remove that job application to a new one
+					this.resumeMatchService.deleteOneById(resumeMatchDTO.getId(), jobPostDTO.getTenantId());
 
-				// Return true for the system to take into account the CV
-				return true;
+					// Return true for the system to take into account the CV
+					return true;
+				}
+				return false;
 			}
-			return false;
+		} catch (QorvaException e) {
+			log.warn(e.getMessage());
+			return true;
 		}
 		return true;
 	}

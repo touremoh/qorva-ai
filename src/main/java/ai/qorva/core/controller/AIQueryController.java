@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/ai")
-@CrossOrigin(origins = "${weblink.allowedOrigin}")
+@CrossOrigin(origins = "${weblink.allowedOrigins}")
 public class AIQueryController {
+
 	private final AIScreeningService aiScreeningService;
 
 	@Autowired
@@ -19,22 +20,15 @@ public class AIQueryController {
 		this.aiScreeningService = aiScreeningService;
 	}
 
-	@GetMapping("/screening-process")
-	public ResponseEntity<QorvaRequestResponse> performCVScreening(
-		@RequestParam("userId") String userId,
-		@RequestParam("jobPostId") String jobPostId) throws QorvaException {
-		return BuildApiResponse.from(this.aiScreeningService.startScreeningProcess(jobPostId, userId));
+	@GetMapping("/screen-resumes")
+	public ResponseEntity<QorvaRequestResponse> performCVScreening(@RequestParam("jobPostId") String jobPostId) throws QorvaException {
+		return BuildApiResponse.from(this.aiScreeningService.startScreeningProcess(jobPostId));
 	}
 
-	@GetMapping("/interview-questions")
-	public ResponseEntity<QorvaRequestResponse> generateInterviewQuestions(
-		@RequestParam("userId") String userId,
-		@RequestParam("jobPostId") String jobPostId,
-		@RequestParam("candidateId") String candidateId
-
-	) throws QorvaException {
+	@GetMapping("/generate-interview-questions")
+	public ResponseEntity<QorvaRequestResponse> generateInterviewQuestions(@RequestParam("jobPostId") String jobPostId) throws QorvaException {
 		// TODO: change the call to this method
 		// TODO: interview questions must be generated in the language of the job description
-		return BuildApiResponse.from(this.aiScreeningService.startScreeningProcess(jobPostId, userId));
+		return BuildApiResponse.from(this.aiScreeningService.startScreeningProcess(jobPostId));
 	}
 }

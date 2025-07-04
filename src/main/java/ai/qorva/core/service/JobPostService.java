@@ -7,6 +7,7 @@ import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.JobPostMapper;
+import ai.qorva.core.qbe.JobPostQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,26 +16,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
 
-    private final UserService userService;
-
     @Autowired
-    public JobPostService(JobPostRepository repository, JobPostMapper mapper, UserService userService) {
-        super(repository, mapper);
-		this.userService = userService;
+    public JobPostService(JobPostRepository repository, JobPostMapper mapper, JobPostQueryBuilder queryBuilder) {
+        super(repository, mapper, queryBuilder);
 	}
 
     @Override
-    protected void preProcessCreateOne(JobPostDTO requestData) throws QorvaException {
-        super.preProcessCreateOne(requestData);
-
-        // Get Authenticated User Info
-        var userInfo = this.userService.findOneByEmail(this.getAuthenticatedUsername());
-
-        // Set company id if not exists
-        requestData.setTenantId(userInfo.getCompanyInfo().tenantId());
-        requestData.setCreatedBy(userInfo.getId());
-        requestData.setLastUpdatedBy(userInfo.getId());
-        requestData.setStatus(JobPostStatusEnum.OPEN.getStatus());
+    protected void preProcessCreateOne(JobPostDTO dto) throws QorvaException {
+        super.preProcessCreateOne(dto);
+        dto.setStatus(JobPostStatusEnum.OPEN.getStatus());
     }
 
     @Override
@@ -46,27 +36,18 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
 
         // Update jobPostDTO
         this.mapper.merge(jobPostDTO, foundJobPost);
-
-        // Get The Current User
-        var userInfo = this.userService.findOneByEmail(this.getAuthenticatedUsername());
-
-        // Update Last Updated By
-        jobPostDTO.setLastUpdatedBy(userInfo.getId());
     }
 
     @Override
-    protected void preProcessDeleteOneById(String id) throws QorvaException {
-        super.preProcessDeleteOneById(id);
+    protected void preProcessDeleteOneById(String id, String tenantId) throws QorvaException {
+        super.preProcessDeleteOneById(id, tenantId);
 
         // Find the resource before it get deleted
         var jobPostToDelete = this.findOneById(id);
 
-        // Get the authenticated company id
-        var companyId = this.getAuthenticatedCompanyId();
-
         // Check if the user is deleting an owned resource
-        if (!jobPostToDelete.getTenantId().equals(companyId)) {
-            log.warn("Job post company id {} does not match authenticated company id {}", id, companyId);
+        if (!jobPostToDelete.getTenantId().equals(tenantId)) {
+            log.warn("Job post company id {} does not match authenticated company id {}", id, tenantId);
             throw new QorvaException(
                 "Impossible to delete this resource",
                 QorvaErrorsEnum.FORBIDDEN.getHttpStatus().value(),

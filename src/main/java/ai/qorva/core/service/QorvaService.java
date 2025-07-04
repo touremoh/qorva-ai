@@ -1,7 +1,6 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dto.QorvaDTO;
-import ai.qorva.core.dto.request.FindManyRequestCriteria;
 import ai.qorva.core.exception.QorvaException;
 import org.springframework.data.domain.Page;
 
@@ -37,22 +36,24 @@ public interface QorvaService<D extends QorvaDTO> {
     D createOne(D input) throws QorvaException;
 
     /**
-     * Find many records with pagination.
+     * Persist multiple records at once.
      *
-     * @param requestCriteria request criteria.
-     * @return A pageable list of records.
-     * @throws QorvaException if an error occurs during retrieval.
+     * @param docs The data of the records to create.
+     * @return records.
+     * @throws QorvaException if an error occurs during creation.
      */
-    Page<D> findMany(FindManyRequestCriteria requestCriteria) throws QorvaException;
+    List<D> saveAll(List<D> docs) throws QorvaException;
 
     /**
-     * Find many records by criteria
+     * Find many records with pagination.
      *
-     * @param requestCriteria request criteria
+     * @param dto request criteria.
+     * @param pageSize request criteria.
+     * @param pageNumber request criteria.
      * @return A pageable list of records.
      * @throws QorvaException if an error occurs during retrieval.
      */
-    Page<D> findManyByText(FindManyRequestCriteria requestCriteria) throws QorvaException;
+    Page<D> findAll(D dto, int pageNumber, int pageSize) throws QorvaException;
 
     /**
      * Find many records by their IDs.
@@ -61,7 +62,7 @@ public interface QorvaService<D extends QorvaDTO> {
      * @return A pageable list of records.
      * @throws QorvaException if an error occurs during retrieval.
      */
-    Page<D> findManyByIds(List<String> ids) throws QorvaException;
+    List<D> findAllByIds(List<String> ids) throws QorvaException;
 
     /**
      * Update one record by ID.
@@ -77,9 +78,10 @@ public interface QorvaService<D extends QorvaDTO> {
      * Delete one record by ID.
      *
      * @param id The ID of the record to delete.
+     * @param tenantId The Tenant of the document
      * @throws QorvaException if the record is not found or an error occurs during deletion.
      */
-    void deleteOneById(String id) throws QorvaException;
+    void deleteOneById(String id, String tenantId) throws QorvaException;
 
     /**
      * Check if a record exists by its data.

@@ -18,8 +18,6 @@ public class SubscriptionInfo {
 
     private String subscriptionStatus;
     private String subscriptionId;
-    private String dashboardAccessType;
-    private boolean hasAiQuestion;
 
     private String accountManager;
     private Instant subscriptionStartDate;

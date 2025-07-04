@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public enum UserAccountStatus {
     USER_ACTIVE("USER_ACTIVE"),
-    USER_INACTIVE("USER_ACTIVE"),
+    USER_INACTIVE("USER_INACTIVE"),
     USER_LOCKED("USER_LOCKED");
 
 

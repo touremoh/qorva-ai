@@ -1,26 +1,19 @@
 package ai.qorva.core.service;
 
-import ai.qorva.core.dto.*;
+import ai.qorva.core.dto.CVOutputDTO;
+import ai.qorva.core.dto.CVScreeningReportOutputDTO;
+import ai.qorva.core.dto.QorvaPromptContextHolder;
 import ai.qorva.core.dto.common.AIAnalysisReportDetails;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.converter.BeanOutputConverter;
-import org.springframework.ai.embedding.EmbeddingModel;
-import org.springframework.ai.embedding.EmbeddingRequest;
-import org.springframework.ai.embedding.EmbeddingResponse;
 import org.springframework.ai.openai.OpenAiChatOptions;
-import org.springframework.ai.openai.OpenAiEmbeddingOptions;
-import org.springframework.ai.openai.api.OpenAiApi;
 import org.springframework.ai.openai.api.ResponseFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_O_MINI;
 
@@ -30,17 +23,15 @@ public class OpenAIService {
 	private final QorvaPromptContextHolder qorvaPromptContextHolder;
 	private final OpenAIResultMapper mapper;
 	private final ChatClient chatClient;
-	private final EmbeddingModel embeddingModel;
 
 	@Value("${spring.ai.openai.api-key}")
 	private String apiKey;
 
 	@Autowired
-	public OpenAIService(QorvaPromptContextHolder qorvaPromptContextHolder, OpenAIResultMapper mapper, ChatClient chatClient, EmbeddingModel embeddingModel) {
+	public OpenAIService(QorvaPromptContextHolder qorvaPromptContextHolder, OpenAIResultMapper mapper, ChatClient chatClient) {
 		this.chatClient = chatClient;
 		this.qorvaPromptContextHolder = qorvaPromptContextHolder;
 		this.mapper = mapper;
-		this.embeddingModel = embeddingModel;
 	}
 
 	public Flux<String> streamCVExtraction(String cvContent) {
@@ -62,9 +53,9 @@ public class OpenAIService {
 			.options(
 				OpenAiChatOptions
 					.builder()
-					.withModel(GPT_4_O_MINI)
-					.withResponseFormat(new ResponseFormat(ResponseFormat.Type.JSON_SCHEMA, converter.getJsonSchema()))
-					.withTemperature(temperature)
+					.model(GPT_4_O_MINI)
+					.responseFormat(new ResponseFormat(ResponseFormat.Type.JSON_SCHEMA, converter.getJsonSchema()))
+					.temperature(temperature)
 					.build()
 			)
 			.user(u -> u
@@ -88,9 +79,9 @@ public class OpenAIService {
 		var apiResponse = this.chatClient.prompt()
 			.options(OpenAiChatOptions
 				.builder()
-				.withModel(GPT_4_O_MINI)
-				.withResponseFormat(new ResponseFormat(ResponseFormat.Type.JSON_SCHEMA, outputConverter.getJsonSchema()))
-				.withTemperature(temperature)
+				.model(GPT_4_O_MINI)
+				.responseFormat(new ResponseFormat(ResponseFormat.Type.JSON_SCHEMA, outputConverter.getJsonSchema()))
+				.temperature(temperature)
 				.build()
 			)
 			.user(u -> u

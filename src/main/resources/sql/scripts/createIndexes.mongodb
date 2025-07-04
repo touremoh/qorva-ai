@@ -15,6 +15,17 @@ db.JobsPosts.createIndex({
     description: "text"
 });
 
+db.Users.createIndex(
+    {
+        email: 1,
+        "companyInfo.tenantId": 1
+        },
+    {
+        name: "unique_email_company_idx",
+        unique: true
+        }
+);
+
 
 // Compound vector index in Mongo Atlas
 {

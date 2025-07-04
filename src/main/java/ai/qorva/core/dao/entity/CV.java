@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.bson.types.Binary;
 import org.springframework.data.annotation.*;
+import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
@@ -29,6 +30,8 @@ public class CV implements QorvaEntity {
     private String tenantId;
     private String candidateProfileSummary;
     private int nbYearsOfExperience;
+
+    @TextIndexed(weight = 5)
     private PersonalInformation personalInformation;
     private List<KeySkill> keySkills;
     private Profiles profiles;
@@ -40,6 +43,11 @@ public class CV implements QorvaEntity {
     private List<String> interestsAndHobbies;
     private List<Reference> references;
     private Binary attachment;
+
+    @Field("score")
+    private Double score;
+
+    @TextIndexed
     private List<String> tags;
 
     @CreatedDate

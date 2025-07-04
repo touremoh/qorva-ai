@@ -37,7 +37,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 			Claims claims = JwtUtils.extractAllClaims(token, jwtConfig.getSecretKey());
 
 			String username = claims.getSubject();
-			String companyId = claims.get("tenantId", String.class);
+			String tenantId = claims.get("tenantId", String.class);
 
 			if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
 				UserDetails userDetails = userDetailsService.loadUserByUsername(username);
@@ -50,7 +50,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 					);
 
 					// Include tenantId in the authentication details
-					authentication.setDetails(companyId);
+					authentication.setDetails(tenantId);
 					SecurityContextHolder.getContext().setAuthentication(authentication);
 				}
 			}

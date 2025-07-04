@@ -1,6 +1,5 @@
 package ai.qorva.core.dto;
 
-import ai.qorva.core.dto.common.InterviewQuestions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record CVScreeningReportOutputDTO(
@@ -10,8 +9,7 @@ public record CVScreeningReportOutputDTO(
     @JsonProperty(required = true, value = "exceedsRequirements") ExceedsRequirements exceedsRequirements,
     @JsonProperty(required = true, value = "lackingSkills") LackingSkills lackingSkills,
     @JsonProperty(required = true, value = "experienceAlignment") ExperienceAlignment experienceAlignment,
-    @JsonProperty(required = true, value = "overallSummary") OverallSummary overallSummary,
-    @JsonProperty(required = true, value = "interviewQuestions") InterviewQuestions interviewQuestions) {
+    @JsonProperty(required = true, value = "overallSummary") OverallSummary overallSummary) {
 	public record SkillsMatch(
 		@JsonProperty(required = true, value = "summary") String summary,
 		@JsonProperty(required = true, value = "degreeOfMatch") int degreeOfMatch

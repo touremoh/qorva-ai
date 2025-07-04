@@ -1,0 +1,23 @@
+package ai.qorva.core.qbe;
+
+import ai.qorva.core.dao.entity.ResumeMatch;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ResumeMatchQueryBuilder implements QorvaQueryBuilder<ResumeMatch> {
+	@Override
+	public Example<ResumeMatch> exampleOf(ResumeMatch entity) {
+		var matcher = ExampleMatcher.matchingAll()
+			.withIgnoreNullValues()
+			.withMatcher("id", ExampleMatcher.GenericPropertyMatchers.exact())
+			.withMatcher("tenantId", ExampleMatcher.GenericPropertyMatchers.exact())
+			.withMatcher("jobPostId", ExampleMatcher.GenericPropertyMatchers.exact())
+//			.withMatcher("candidateInfo.candidateId", ExampleMatcher.GenericPropertyMatchers.exact())
+//			.withMatcher("candidateInfo.candidateName", ExampleMatcher.GenericPropertyMatchers.ignoreCase().contains())
+			;
+
+		return Example.of(entity, matcher);
+	}
+}

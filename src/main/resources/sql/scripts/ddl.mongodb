@@ -5,7 +5,7 @@ db.Tenants.drop();
 db.Users.drop();
 db.JobsPosts.drop();
 db.CVs.drop();
-db.JobApplications.drop();
+db.ResumeMatches.drop();
 db.InterviewQuestions.drop();
 db.StripeEventLogs.drop();
 
@@ -76,15 +76,7 @@ db.createCollection("Tenants", {
                     },
                 subscriptionInfo: {
                     bsonType: "object",
-                    required: [
-                        "subscriptionPlan",
-                        "billingCycle",
-                        "price",
-                        "subscriptionStatus",
-                        "subscriptionId",
-                        "subscriptionStartDate",
-                        "subscriptionEndDate"
-                        ],
+                    required: ["subscriptionPlan"],
                     properties: {
                         subscriptionPlan: {
                             bsonType: "string",
@@ -222,12 +214,12 @@ db.createCollection("JobsPosts", {
                     description: "must be a valid date and is required"
                     },
                 createdBy: {
-                    bsonType: "objectId",
-                    description: "must be a valid ObjectId and is required"
+                    bsonType: "string",
+                    description: "must be a valid string and is required"
                     },
                 lastUpdatedBy: {
-                    bsonType: "objectId",
-                    description: "must be a valid ObjectId and is required"
+                    bsonType: "string",
+                    description: "must be a valid string and is required"
                     },
                 status: {
                     bsonType: "string",
@@ -261,7 +253,7 @@ db.createCollection("CVs", {
                     },
                 personalInformation: {
                     bsonType: "object",
-                    required: ["name", "contact", "role", "availability", "summary"],
+                    required: ["name"],
                     properties: {
                         name: {
                             bsonType: "string",
@@ -269,7 +261,6 @@ db.createCollection("CVs", {
                             },
                         contact: {
                             bsonType: "object",
-                            required: ["phone", "email", "socialLinks"],
                             properties: {
                                 phone: {
                                     bsonType: "string",
@@ -305,7 +296,6 @@ db.createCollection("CVs", {
                             },
                         availability: {
                             bsonType: "object",
-                            required: ["interviews", "startDate"],
                             properties: {
                                 interviews: {
                                     bsonType: "string",
@@ -327,7 +317,6 @@ db.createCollection("CVs", {
                     bsonType: "array",
                     items: {
                         bsonType: "object",
-                        required: ["category", "skills"],
                         properties: {
                             category: {
                                 bsonType: "string",
@@ -345,7 +334,6 @@ db.createCollection("CVs", {
                     },
                 profiles: {
                     bsonType: "object",
-                    required: ["areasOfExpertise", "keyResponsibilities"],
                     properties: {
                         areasOfExpertise: {
                             bsonType: "array",
@@ -367,7 +355,6 @@ db.createCollection("CVs", {
                     bsonType: "array",
                     items: {
                         bsonType: "object",
-                        required: ["company", "website", "location", "from", "to", "position", "activities"],
                         properties: {
                             company: {
                                 bsonType: "string",
@@ -397,7 +384,6 @@ db.createCollection("CVs", {
                                 bsonType: "array",
                                 items: {
                                     bsonType: "object",
-                                    required: ["project", "tasks"],
                                     properties: {
                                         project: {
                                             bsonType: "string",
@@ -434,7 +420,6 @@ db.createCollection("CVs", {
                     bsonType: "array",
                     items: {
                         bsonType: "object",
-                        required: ["year", "institution", "degree", "fieldOfStudy"],
                         properties: {
                             year: {
                                 bsonType: "string",
@@ -466,7 +451,6 @@ db.createCollection("CVs", {
                     bsonType: "array",
                     items: {
                         bsonType: "object",
-                        required: ["title", "institution", "year"],
                         properties: {
                             title: {
                                 bsonType: "string",
@@ -489,7 +473,6 @@ db.createCollection("CVs", {
                     },
                 skillsAndQualifications: {
                     bsonType: "object",
-                    required: ["technicalSkills", "softSkills", "languages"],
                     properties: {
                         technicalSkills: {
                             bsonType: "array",
@@ -509,7 +492,6 @@ db.createCollection("CVs", {
                             bsonType: "array",
                             items: {
                                 bsonType: "object",
-                                required: ["language", "proficiency"],
                                 properties: {
                                     language: {
                                         bsonType: "string",
@@ -517,7 +499,6 @@ db.createCollection("CVs", {
                                         },
                                     proficiency: {
                                         bsonType: "object",
-                                        required: ["read", "written", "spoken"],
                                         properties: {
                                             read: {
                                                 bsonType: "string",
@@ -542,7 +523,6 @@ db.createCollection("CVs", {
                     bsonType: "array",
                     items: {
                         bsonType: "object",
-                        required: ["title", "description", "date"],
                         properties: {
                             title: {
                                 bsonType: "string",
@@ -574,7 +554,6 @@ db.createCollection("CVs", {
                     bsonType: "array",
                     items: {
                         bsonType: "object",
-                        required: ["name", "position", "company", "contact"],
                         properties: {
                             name: {
                                 bsonType: "string",
@@ -639,11 +618,11 @@ db.createCollection("CVs", {
     }
 );
 
-db.createCollection("JobApplications", {
+db.createCollection("ResumeMatches", {
     validator: {
         $jsonSchema: {
             bsonType: "object",
-            title: "JobApplications",
+            title: "ResumeMatches",
             required: [
                 "jobPostId",
                 "candidateInfo",
@@ -665,8 +644,8 @@ db.createCollection("JobApplications", {
                     required: ["candidateId", "candidateName", "nbYearsExperience", "skills"],
                     properties: {
                         candidateId: {
-                            bsonType: "objectId",
-                            description: "must be a valid ObjectId and is required"
+                            bsonType: "string",
+                            description: "must be a valid string and is required"
                             },
                         candidateName: {
                             bsonType: "string",

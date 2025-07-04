@@ -16,7 +16,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.security.web.util.matcher.RegexRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -53,10 +52,11 @@ public class SecurityConfig {
 			// Configure authorization for your endpoints
 			.authorizeHttpRequests(auth -> auth
 				.requestMatchers(
-					"/register/**",
+					"/registrations/**",
 					"/auth/login",
 					"/auth/token/validate",
-					"/api/portal/jobs/**"
+					"/portal/jobs/**",
+					"/stripe/webhook"
 				).permitAll() // Publicly accessible routes
 
 				.anyRequest().authenticated()

@@ -1,14 +1,14 @@
 package ai.qorva.core.dao.entity;
 
-import ai.qorva.core.dto.common.CompanyInfo;
-import ai.qorva.core.dto.common.SubscriptionInfo;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.*;
-import org.springframework.data.mongodb.core.index.CompoundIndex;
+import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.time.Instant;
 
@@ -17,7 +17,6 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "Users")
-@CompoundIndex(name = "unique_email_company_idx", def = "{'email': 1, 'companyInfo.tenantId': 1}", unique = true)
 public class User implements QorvaEntity {
 
     @Id
@@ -26,18 +25,15 @@ public class User implements QorvaEntity {
     private String firstName;
     private String lastName;
 
+    @TextIndexed(weight = 5)
     private String email;
+
     private String encryptedPassword;
-    private String userAccountStatus;
 
-    private CompanyInfo companyInfo;
-    private SubscriptionInfo subscriptionInfo;
+    private String userAccountStatus; // Expected: USER_ACTIVE, USER_INACTIVE, USER_LOCKED
 
-    @CreatedBy
-    private String createdBy;
-
-    @LastModifiedBy
-    private String lastUpdatedBy;
+    @Field(targetType = FieldType.OBJECT_ID)
+    private String tenantId;
 
     @CreatedDate
     private Instant createdAt;
@@ -45,7 +41,9 @@ public class User implements QorvaEntity {
     @LastModifiedDate
     private Instant lastUpdatedAt;
 
-    public String getTenantId() {
-        return this.getCompanyInfo().tenantId();
-    }
+    @CreatedBy
+    private String createdBy;
+
+    @LastModifiedBy
+    private String lastUpdatedBy;
 }

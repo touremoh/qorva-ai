@@ -23,6 +23,8 @@ public class JobPost implements QorvaEntity {
 
     private String title;
     private String description;
+
+    @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
     private String status;
 
@@ -33,10 +35,10 @@ public class JobPost implements QorvaEntity {
     private Instant lastUpdatedAt;
 
     @CreatedBy
-    @Field(targetType = FieldType.OBJECT_ID)
     private String createdBy;
 
     @LastModifiedBy
-    @Field(targetType = FieldType.OBJECT_ID)
     private String lastUpdatedBy;
+
+    private float[] embedding;
 }

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = "${weblink.allowedOrigin}")
+@CrossOrigin(origins = "${weblink.allowedOrigins}")
 public class AuthenticationController {
 
 	private final AuthenticationService authenticationService;
