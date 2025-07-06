@@ -38,4 +38,9 @@ public class CVController extends AbstractQorvaController<CVDTO> {
         @RequestParam int pageNumber) throws QorvaException {
         return BuildApiResponse.from(((CVService)this.service).searchAll(searchTerms, tenantId, pageSize, pageNumber));
     }
+
+    @GetMapping("/tags")
+    public ResponseEntity<QorvaRequestResponse> findAllTagsByTenantId(@RequestHeader String tenantId) {
+        return BuildApiResponse.from(((CVService)this.service).findAllTagsByTenantId(tenantId));
+    }
 }

@@ -29,7 +29,7 @@ public class CV implements QorvaEntity {
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
     private String candidateProfileSummary;
-    private int nbYearsOfExperience;
+    private Integer nbYearsOfExperience;
 
     @TextIndexed(weight = 5)
     private PersonalInformation personalInformation;

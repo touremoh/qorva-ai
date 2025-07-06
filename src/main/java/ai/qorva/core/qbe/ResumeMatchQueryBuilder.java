@@ -13,10 +13,7 @@ public class ResumeMatchQueryBuilder implements QorvaQueryBuilder<ResumeMatch> {
 			.withIgnoreNullValues()
 			.withMatcher("id", ExampleMatcher.GenericPropertyMatchers.exact())
 			.withMatcher("tenantId", ExampleMatcher.GenericPropertyMatchers.exact())
-			.withMatcher("jobPostId", ExampleMatcher.GenericPropertyMatchers.exact())
-//			.withMatcher("candidateInfo.candidateId", ExampleMatcher.GenericPropertyMatchers.exact())
-//			.withMatcher("candidateInfo.candidateName", ExampleMatcher.GenericPropertyMatchers.ignoreCase().contains())
-			;
+			.withMatcher("jobPostId", ExampleMatcher.GenericPropertyMatchers.exact());
 
 		return Example.of(entity, matcher);
 	}

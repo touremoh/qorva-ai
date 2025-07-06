@@ -5,7 +5,6 @@ import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.QorvaService;
 import ai.qorva.core.utils.BuildApiResponse;
-import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

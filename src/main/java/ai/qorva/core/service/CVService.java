@@ -4,6 +4,7 @@ import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVOutputDTO;
+import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.CVMapper;
 import ai.qorva.core.mapper.OpenAIResultMapper;
@@ -11,9 +12,7 @@ import ai.qorva.core.qbe.CVQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.ai.converter.BeanOutputConverter;
-import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
@@ -21,6 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -28,10 +28,6 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
     private final OpenAIService openAIService;
     private final OpenAIResultMapper openAIResultMapper;
-    protected final EmbeddingModel embeddingModel;
-
-    @Autowired
-    private MongoTemplate mongoTemplate;
 
     @Autowired
     public CVService(
@@ -39,13 +35,27 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 		CVMapper cvMapper,
 		CVQueryBuilder queryBuilder,
 		OpenAIService openAIService,
-		OpenAIResultMapper openAIResultMapper,
-        EmbeddingModel embeddingModel) {
+		OpenAIResultMapper openAIResultMapper) {
         super(repository, cvMapper, queryBuilder);
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
-		this.embeddingModel = embeddingModel;
 	}
+
+    @Override
+    protected void preProcessUpdateOne(String id, CVDTO cvdto) throws QorvaException {
+        super.preProcessUpdateOne(id, cvdto);
+
+        // Check if CV exists (find by ID)
+        var cvFound = Optional
+            .ofNullable(this.findOneById(id))
+            .orElseThrow(() -> {
+                log.warn("Unable to update CV. Resource {} not found", id);
+				return new QorvaException("Unable to update CV. CV not found");
+            });
+
+        // If cv was found, then merge the source with target
+        this.mapper.merge(cvdto, cvFound);
+    }
 
     public List<CVDTO> upload(List<MultipartFile> files, String tenantId) throws QorvaException {
         log.debug("CV Service - Starting file processing");
@@ -101,9 +111,13 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         return  this.createOne(cvDtoToPersist);
     }
 
-    public List<CVDTO> findCVsMatchingJobDescription(float[] vectorQuery, String tenantId) throws QorvaException {
+    public List<CVDTO> findCVsMatchingJobDescription(JobPostDTO jobPostDTO, List<String> tags) throws QorvaException {
         // Perform similarity search
-        var results = ((CVRepository) this.repository).similaritySearch(vectorQuery, new ObjectId(tenantId));
+        var results = ((CVRepository) this.repository).similaritySearch(
+            jobPostDTO.getEmbedding(),
+            new ObjectId(jobPostDTO.getTenantId()),
+            tags
+        );
 
         // Get the list of documents ids
         if (Objects.isNull(results) || results.isEmpty()) {
@@ -150,5 +164,9 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     }
     protected void postProcessSearchAll(List<CV> entities) throws QorvaException {
         log.debug("postProcessSearchAll: {} CV found", entities.size());
+    }
+
+    public List<String> findAllTagsByTenantId(String tenantId) {
+        return ((CVRepository)this.repository).findAllTagsByTenantId(new ObjectId(tenantId));
     }
 }

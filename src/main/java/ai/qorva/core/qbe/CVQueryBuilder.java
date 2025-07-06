@@ -10,14 +10,11 @@ public class CVQueryBuilder implements QorvaQueryBuilder<CV> {
 
 	@Override
 	public Example<CV> exampleOf(CV entity) {
-		var matcher = ExampleMatcher.matchingAll()
+		var matcher = ExampleMatcher.matching()
 			.withIgnoreNullValues()
 			.withMatcher("id", ExampleMatcher.GenericPropertyMatchers.exact())
 			.withMatcher("tenantId", ExampleMatcher.GenericPropertyMatchers.exact())
 			.withMatcher("candidateProfileSummary", ExampleMatcher.GenericPropertyMatchers.ignoreCase().contains())
-			.withMatcher("nbYearsOfExperience", ExampleMatcher.GenericPropertyMatchers.exact())
-			.withMatcher("personalInformation.name", ExampleMatcher.GenericPropertyMatchers.exact())
-			.withMatcher("personalInformation.role", ExampleMatcher.GenericPropertyMatchers.ignoreCase().contains())
 			.withMatcher("keySkills", ExampleMatcher.GenericPropertyMatchers.ignoreCase().contains())
 			.withMatcher("tags", ExampleMatcher.GenericPropertyMatchers.ignoreCase().contains());
 

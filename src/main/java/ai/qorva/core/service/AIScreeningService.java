@@ -34,7 +34,7 @@ public class AIScreeningService {
 		this.resumeMatchService = resumeMatchService;
 	}
 
-	public Page<ResumeMatchDTO> startScreeningProcess(String jobPostId) throws QorvaException {
+	public Page<ResumeMatchDTO> startScreeningProcess(String jobPostId, List<String> tags) throws QorvaException {
 		// Get the job post
 		var jobPost = this.jobPostService.findOneById(jobPostId);
 
@@ -53,7 +53,7 @@ public class AIScreeningService {
 		}
 
 		// Perform similar search and extract results (List of CV IDs) => must be filter out by tenantId
-		var results = this.cvService.findCVsMatchingJobDescription(jobPost.getEmbedding(), jobPost.getTenantId());
+		var results = this.cvService.findCVsMatchingJobDescription(jobPost, tags);
 
 		// Filter out the CVs that are not relevant for the screening process
 		var filteredCVs = results.stream()
@@ -95,7 +95,7 @@ public class AIScreeningService {
 		searchCriteria.setJobPostId(jobPostId);
 
 		// Return all job applications for company id and job post id sorted by AI Score Desc
-		return this.resumeMatchService.findAll(searchCriteria, 0, 50);
+		return this.resumeMatchService.findAll(searchCriteria, 0, 25);
 	}
 
 	protected boolean isCVRelevantToScreening(CVDTO cvdto, JobPostDTO jobPostDTO) throws QorvaException {

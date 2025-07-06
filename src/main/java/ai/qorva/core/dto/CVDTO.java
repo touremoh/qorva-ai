@@ -24,7 +24,7 @@ public class CVDTO extends AbstractQorvaDTO {
     private String id;
     private String tenantId;
     private String candidateProfileSummary;
-    private int nbYearsOfExperience;
+    private Integer nbYearsOfExperience;
     private PersonalInformation personalInformation;
     private List<KeySkill> keySkills;
     private Profiles profiles;
