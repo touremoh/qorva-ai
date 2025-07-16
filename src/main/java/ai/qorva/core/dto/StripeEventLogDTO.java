@@ -23,7 +23,7 @@ public class StripeEventLogDTO extends AbstractQorvaDTO {
     private String eventType;
     private String stripeCustomerId;
     private String stripeSubscriptionId;
-    // TODO new field needed. E.g: payment initiation status
+    private String eventStatus;
 
     @JsonProperty(access = Access.READ_ONLY)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")

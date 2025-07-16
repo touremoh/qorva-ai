@@ -1,6 +1,6 @@
 package ai.qorva.core.dao.entity;
 
-import ai.qorva.core.dto.common.SubscriptionInfo;
+import ai.qorva.core.dto.common.ProductPrice;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,16 +14,16 @@ import java.time.Instant;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "Tenants")
-public class Tenant implements QorvaEntity {
+@Document(collection = "ProductsReferences")
+public class ProductReference implements QorvaEntity {
 
     @Id
     private String id;
 
-    private String tenantName;
-    private String stripeCustomerId;
+    private String productName;
+    private String stripeProductId;
 
-    private SubscriptionInfo subscriptionInfo;
+    private ProductPrice price;
 
     @CreatedDate
     private Instant createdAt;

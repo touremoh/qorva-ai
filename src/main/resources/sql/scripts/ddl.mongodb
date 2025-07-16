@@ -60,11 +60,15 @@ db.createCollection("Tenants", {
         $jsonSchema: {
             bsonType: "object",
             title: "Tenants",
-            required: ["tenantName", "createdAt", "subscriptionInfo"],
+            required: ["tenantName", "createdAt"],
             properties: {
                 tenantName: {
                     bsonType: "string",
                     description: "Tenant name is required"
+                    },
+                stripeCustomerId: {
+                    bsonType: "string",
+                    description: "Stripe Customer ID is optional"
                     },
                 createdAt: {
                     bsonType: "date",
@@ -76,11 +80,10 @@ db.createCollection("Tenants", {
                     },
                 subscriptionInfo: {
                     bsonType: "object",
-                    required: ["subscriptionPlan"],
                     properties: {
                         subscriptionPlan: {
                             bsonType: "string",
-                            enum: ["FREE_TRIAL", "STARTER", "GROWTH", "PROFESSIONAL", "ENTERPRISE"],
+                            enum: ["STARTER", "GROWTH", "PROFESSIONAL", "ENTERPRISE"],
                             description: "e.g. STARTER"
                             },
                         billingCycle: {
@@ -920,3 +923,60 @@ db.createCollection("StripeEventLogs", {
         }
     }
 );
+
+db.createCollection("ProductsReferences", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "ProductsReferences",
+      required: [
+        "productName",
+        "stripeProductId",
+        "price",
+        "createdAt"
+      ],
+      properties: {
+        productName: {
+          bsonType: "string",
+          description: "must be a valid string and is required"
+        },
+        stripeProductId: {
+          bsonType: "string",
+          description: "must be a valid string and is required"
+        },
+        price: {
+          bsonType: "object",
+          required: [
+            "monthlyPriceId",
+            "annualPriceId",
+            "monthlyPrice",
+            "annuallyPrice"
+          ],
+          properties: {
+            monthlyPriceId: {
+              bsonType: "string",
+              description: "must be a valid string and is required"
+            },
+            monthlyPrice: {
+              bsonType: "number",
+              description: "must be a valid number and is required"
+            },
+            annualPriceId: {
+              bsonType: "string",
+              description: "must be a valid string and is required"
+            },
+            annuallyPrice: {
+              bsonType: "number",
+              description: "must be a valid number and is required"
+            }
+          },
+          description: "must be a valid object with monthly and annual price info"
+        },
+        createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        }
+      }
+    }
+  }
+});

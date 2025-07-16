@@ -1,7 +1,6 @@
 package ai.qorva.core.controller;
 
-import ai.qorva.core.dto.AccountRegistrationDTO;
-import ai.qorva.core.dto.QorvaRequestResponse;
+import ai.qorva.core.dto.*;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.UserRegistrationService;
 import ai.qorva.core.utils.BuildApiResponse;
@@ -28,15 +27,5 @@ public class RegistrationController {
 		@RequestHeader("Accept-Language") String languageCode
 	) throws QorvaException {
 		return BuildApiResponse.from(this.registrationService.createAccount(accountRegistrationDTO, languageCode));
-	}
-
-	@PatchMapping(path = "/subscription/start", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<QorvaRequestResponse> startSubscriptionProcess(@RequestParam String userId) throws QorvaException {
-		return BuildApiResponse.from(this.registrationService.startSubscriptionProcess(userId));
-	}
-
-	@PatchMapping(path = "/subscription/finalize", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<QorvaRequestResponse> finalizeSubscriptionProcess(@RequestParam String tenantId) throws QorvaException {
-		return BuildApiResponse.from(this.registrationService.finalizeSubscriptionProcess(tenantId));
 	}
 }

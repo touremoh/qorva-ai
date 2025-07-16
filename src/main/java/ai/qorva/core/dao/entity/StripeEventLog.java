@@ -29,12 +29,11 @@ public class StripeEventLog implements QorvaEntity {
     private String eventType;
     private String stripeCustomerId;
     private String stripeSubscriptionId;
-    // TODO new field needed. E.g: payment initiation status
+    private String eventStatus;
 
     @CreatedDate
     private Instant createdAt;
 
     @CreatedBy
-    @Field(targetType = FieldType.OBJECT_ID)
     private String createdBy;
 }

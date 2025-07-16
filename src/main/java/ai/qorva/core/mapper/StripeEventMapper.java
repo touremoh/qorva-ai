@@ -13,7 +13,7 @@ public interface StripeEventMapper extends AbstractQorvaMapper<StripeEventLog, S
 		var data = event.getData().getRawJsonObject();
 		var tenantId = data.get("tenantId").getAsString();
 		var stripeCustomerId = data.get("customer").getAsString();
-		var stripeSubscriptionId = data.get("subscriptionI").getAsString();
+		var stripeSubscriptionId = data.get("subscriptionId").getAsString();
 		// var paymentStatus = data.get("subscriptionI").getAsString();
 
 		var eventType = event.getType();

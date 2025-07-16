@@ -1,6 +1,6 @@
 package ai.qorva.core.dto;
 
-import ai.qorva.core.dto.common.SubscriptionInfo;
+import ai.qorva.core.dto.common.ProductPrice;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
@@ -17,11 +17,15 @@ import java.time.Instant;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class TenantDTO extends AbstractQorvaDTO {
+public class ProductReferenceDTO extends AbstractQorvaDTO {
+
     private String id;
-    private String tenantName;
-    private String stripeCustomerId;
-    private SubscriptionInfo subscriptionInfo;
+    private String tenantId;
+
+    private String productName;
+    private String stripeProductId;
+
+    private ProductPrice price;
 
     private String createdBy;
     private String lastUpdatedBy;
@@ -33,9 +37,4 @@ public class TenantDTO extends AbstractQorvaDTO {
     @JsonProperty(access = Access.READ_ONLY)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
     private Instant lastUpdatedAt;
-
-    @Override
-    public String getTenantId() {
-        return this.id;
-    }
 }
