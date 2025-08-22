@@ -30,5 +30,9 @@ public class StripeEventLogDTO extends AbstractQorvaDTO {
     private Instant createdAt;
 
     @JsonProperty(access = Access.READ_ONLY)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant lastUpdatedAt;
+
+    @JsonProperty(access = Access.READ_ONLY)
     private String createdBy;
 }

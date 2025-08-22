@@ -21,7 +21,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Slf4j
-public abstract class AbstractEmailService {
+public abstract class AbstractEmailService implements QorvaNotificationService {
 
 	protected final OAuth2TokenService oauth2TokenService;
 	protected static final String LEAD_NOTIF_TYPE = "LEAD";

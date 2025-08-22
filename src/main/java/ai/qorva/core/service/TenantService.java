@@ -3,6 +3,7 @@ package ai.qorva.core.service;
 import ai.qorva.core.dao.entity.Tenant;
 import ai.qorva.core.dao.repository.TenantRepository;
 import ai.qorva.core.dto.TenantDTO;
+import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.TenantMapper;
 import ai.qorva.core.qbe.TenantQueryBuilder;
@@ -11,8 +12,10 @@ import io.jsonwebtoken.lang.Strings;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import java.util.Objects;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -54,5 +57,22 @@ public class TenantService extends AbstractQorvaService<TenantDTO,Tenant> {
 			dto.setSubscriptionInfo(newSubscriptionInfo);
 		}
 		this.mapper.merge(dto, foundTenant);
+	}
+
+	// override preProcessFindOneByData to include tenantId
+	@Override
+	protected void preProcessFindOneByData(TenantDTO dto) {
+		if (!Strings.hasText(dto.getTenantId())
+			&& !Strings.hasText(dto.getStripeCustomerId())
+			&& Objects.isNull(dto.getSubscriptionInfo())) {
+			log.warn("At least one of these fields must not be empty: Tenant id, Stripe customer id, SubscriptionInfo");
+			throw new RuntimeException("Tenant id, Stripe customer id, SubscriptionInfo is empty while trying to find one by data");
+		}
+	}
+
+	@Override
+	protected void preProcessDeleteOneById(String id, String tenantId) throws QorvaException {
+		// Check if a resource exists
+		Optional.ofNullable(this.findOneById(id)).orElseThrow(() -> new QorvaException("Resource not found with id: " + id));
 	}
 }

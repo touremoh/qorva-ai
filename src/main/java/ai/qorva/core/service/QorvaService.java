@@ -92,4 +92,12 @@ public interface QorvaService<D extends QorvaDTO> {
      */
 
     boolean existsByData(D requestData) throws QorvaException;
+
+    /**
+     * Count all records.
+     *
+     * @param tenantId The Tenant of the document
+     * @return The number of records.
+     */
+    long countAll(String tenantId) throws QorvaException;
 }

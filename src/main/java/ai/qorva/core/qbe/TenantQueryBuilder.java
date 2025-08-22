@@ -12,7 +12,9 @@ public class TenantQueryBuilder implements QorvaQueryBuilder<Tenant> {
 		var matcher = ExampleMatcher.matchingAll()
 			.withIgnoreNullValues()
 			.withMatcher("id", ExampleMatcher.GenericPropertyMatchers.exact())
-			.withMatcher("tenantName", ExampleMatcher.GenericPropertyMatchers.ignoreCase().exact());
+			.withMatcher("tenantName", ExampleMatcher.GenericPropertyMatchers.ignoreCase().exact())
+			.withMatcher("stripeCustomerId", ExampleMatcher.GenericPropertyMatchers.exact())
+			;
 
 		return Example.of(entity, matcher);
 	}

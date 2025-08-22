@@ -13,15 +13,26 @@ spring:
     allow-bean-definition-overriding: true
   webflux:
     timeout: 60s
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/dbname?replicaSet=rs0
+      database: dbname
+
   ai:
+    vectorstore:
+      mongodb:
+        initialize-schema: false
+        collection-name: CVs
+        index-name: CVsSearchIndex
+        path-name: embedding
+
     openai:
       api-key: API_KEY
       embedding:
-        base-url: baseUrl
+        base-url: https://api.openai.com
         options:
-          model: embedding-model
-      chat:
-        embeddings-path: embedding-path
+          model: 'text-embedding-3-large'
     model:
       embedding: openai
 
@@ -29,18 +40,6 @@ spring:
       client:
         enabled: true
 
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/dbname?replicaSet=rs0
-      database: dbname
-    ai:
-      vectorstore:
-        mongodb:
-          initialize-schema: true
-          collection-name: custom_vector_store
-          vector-index-name: custom_vector_index
-          path-name: custom_embedding
-          metadata-fields-to-filter: fieldToFilter
   mail:
     host: MAIL-HOST
     port: 0
@@ -107,3 +106,14 @@ office365:
   token-uri: token-uri
   authorization-uri: authorization-uri
   user-info-uri: user-info-uri
+
+stripe:
+  secret-key: SECRET_KEY
+  webhook:
+    secret: STRIPE_WEBHOOK_SECRET
+  session:
+    return-url: RETURN_URL
+
+qorva:
+  notifications:
+    enabled: false

@@ -5,6 +5,7 @@ import ai.qorva.core.enums.EmailTitlesEnum;
 import ai.qorva.core.exception.QorvaException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.HttpStatus;
 import org.springframework.mail.MailException;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ import java.time.LocalDate;
 
 @Slf4j
 @Service
+@ConditionalOnProperty(prefix = "qorva.notifications", name = "enabled", havingValue = "true", matchIfMissing = true)
 public class AccountCreationNotificationService extends AbstractEmailService {
 
 	@Autowired
@@ -21,7 +23,7 @@ public class AccountCreationNotificationService extends AbstractEmailService {
 		super(oauth2TokenService);
 	}
 
-	public void sendNotification(UserDTO receiver, String languageCode) throws QorvaException {
+	public void send(UserDTO receiver, String languageCode) throws QorvaException {
 		try {
 			// Load the HTML template from file
 			String htmlTemplate = loadHtmlTemplate("templates/account-activation-template.html");

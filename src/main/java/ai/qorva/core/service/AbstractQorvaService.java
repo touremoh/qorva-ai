@@ -3,18 +3,20 @@ package ai.qorva.core.service;
 import ai.qorva.core.dao.entity.QorvaEntity;
 import ai.qorva.core.dao.repository.QorvaRepository;
 import ai.qorva.core.dto.QorvaDTO;
+import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.AbstractQorvaMapper;
 import ai.qorva.core.qbe.QorvaQueryBuilder;
+import io.jsonwebtoken.lang.Strings;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.*;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 import static ai.qorva.core.enums.QorvaErrorsEnum.RESOURCE_NOT_FOUND;
 
@@ -116,6 +118,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     @Override
+    @Transactional
     public D createOne(D requestData) throws QorvaException {
         try {
             // Pre Process
@@ -150,6 +153,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     @Override
+    @Transactional
     public List<D> saveAll(List<D> docs) throws QorvaException {
         // Pre Persist All
         preSaveAll(docs);
@@ -221,7 +225,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
 
     protected Page<E> processFindAll(D dto, int pageSize, int pageNumber) throws QorvaException {
         var queryExample = this.queryBuilder.exampleOf(this.mapper.map(dto));
-        var pageable = Pageable.ofSize(pageSize).withPage(pageNumber);
+        var pageable = PageRequest.of(pageNumber, pageSize, Sort.by("lastUpdatedAt").descending());
         return this.repository.findAll(queryExample, pageable);
     }
 
@@ -269,6 +273,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     @Override
+    @Transactional
     public D updateOne(String id, D requestData) throws QorvaException {
         try {
             // Pre Process
@@ -322,6 +327,19 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     protected void preProcessDeleteOneById(String id, String tenantId) throws QorvaException {
         Assert.notNull(id, "id must not be null");
         Assert.notNull(tenantId, "Tenant id must not be null");
+
+        // Check if a resource exists
+        var entity = Optional.ofNullable(this.findOneById(id)).orElseThrow(() -> new QorvaException("Resource not found with id: " + id));
+
+        // Check if the resource belongs to the tenant
+        if (!entity.getTenantId().equals(tenantId)) {
+            log.warn("Resource {} does not belong to tenant {}", id, tenantId);
+            throw new QorvaException(
+                "Impossible to delete this resource",
+                QorvaErrorsEnum.FORBIDDEN.getHttpStatus().value(),
+                QorvaErrorsEnum.FORBIDDEN.getHttpStatus()
+            );
+        }
     }
 
     protected void postProcessDeleteOneById(String id) {
@@ -359,5 +377,14 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     protected QorvaException wrapException(Exception e, String message) {
         log.error(message, e);
         return new QorvaException(message, e);
+    }
+
+    @Override
+    public long countAll(String tenantId) throws QorvaException {
+        if (!Strings.hasText(tenantId)) {
+            log.warn("Tenant ID is empty");
+            throw new QorvaException("Tenant ID is empty");
+        }
+        return this.repository.countAllByTenantId(tenantId);
     }
 }

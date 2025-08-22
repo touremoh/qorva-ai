@@ -1,7 +1,8 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.repository.UserRepository;
-import ai.qorva.core.enums.UserAccountStatus;
+import ai.qorva.core.dto.UserDTO;
+import ai.qorva.core.enums.UserStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.User;
@@ -26,10 +27,10 @@ public class QorvaUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		try {
-			// Find user by email
+			// Find the user by email
 			var user = this.userRepository.findByEmail(email);
 
-			// Check if user was found
+			// Check if the user was found
 			if (Objects.isNull(user)) {
 				throw new UsernameNotFoundException("User not found");
 			}
@@ -40,6 +41,8 @@ public class QorvaUserDetailsService implements UserDetailsService {
 						.username(user.getEmail())
 						.password(user.getEncryptedPassword())
 						.disabled(isUserDisabled(user))
+				        .accountExpired(user.getUserAccountStatus().equals(UserStatusEnum.DELETED.getValue()))
+						.accountLocked(user.getUserAccountStatus().equals(UserStatusEnum.LOCKED.getValue()))
 						.authorities(new ArrayList<>())
 					.build();
 		} catch (AuthenticationException e) {
@@ -48,7 +51,16 @@ public class QorvaUserDetailsService implements UserDetailsService {
 	}
 
 	private boolean isUserDisabled(ai.qorva.core.dao.entity.User user) {
-		return user.getUserAccountStatus().equals(UserAccountStatus.USER_INACTIVE.getValue())
-			|| user.getUserAccountStatus().equals(UserAccountStatus.USER_LOCKED.getValue());
+		return user.getUserAccountStatus().equals(UserStatusEnum.INACTIVE.getValue())
+			|| user.getUserAccountStatus().equals(UserStatusEnum.LOCKED.getValue())
+			|| user.getUserAccountStatus().equals(UserStatusEnum.DELETED.getValue());
+	}
+
+	public String extractTenantId(UserDetails userDetails) {
+		try {
+			return this.userRepository.findByEmail(userDetails.getUsername()).getTenantId();
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to extract tenant id from user details", e);
+		}
 	}
 }

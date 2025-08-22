@@ -1,8 +1,11 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.entity.ResumeMatch;
+import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dao.repository.ResumeMatchRepository;
 import ai.qorva.core.dto.CVDTO;
+import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.ResumeMatchDTO;
 import ai.qorva.core.dto.common.AIAnalysisReportDetails;
@@ -16,13 +19,15 @@ import ai.qorva.core.mapper.ResumeMatchMapper;
 import ai.qorva.core.qbe.ResumeMatchQueryBuilder;
 import ai.qorva.core.utils.QorvaUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import java.time.Instant;
-import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -81,6 +86,7 @@ public class ResumeMatchService extends AbstractQorvaService<ResumeMatchDTO, Res
 		var resumeMatchDTO = new ResumeMatchDTO();
 
 		resumeMatchDTO.setJobPostId(jobPostDto.getId());
+		resumeMatchDTO.setJobPostTitle(jobPostDto.getTitle());
 		resumeMatchDTO.setTenantId(jobPostDto.getTenantId());
 		resumeMatchDTO.setAiAnalysisReportDetails(reportDetails);
 		resumeMatchDTO.setStatus(ApplicationStatusEnum.NEW.getStatus());
@@ -113,17 +119,11 @@ public class ResumeMatchService extends AbstractQorvaService<ResumeMatchDTO, Res
 		// Get the info necessary subscription information
 		var planName = tenantDTO.getSubscriptionInfo().getSubscriptionPlan();
 
-		// Get the first day of the month
-		var startOfMonth = QorvaUtils.getFirstDayOfMonth();
-
-		// Get the last day of the month
-		var endOfMonth = QorvaUtils.getLastDayOfMonth();
-
 		// Count all CV analysis of the month
-		var nbCvAnalyzedInTheMonth = ((ResumeMatchRepository)repository).countByTenantIdAndCreatedAtBetween(tenantId, startOfMonth, endOfMonth);
+		var nbCvAnalyzedInTheMonth = this.countResumeMatchesInCurrentMonth(tenantId);
 
-		// Check if user has reached CV analysis monthly limit
-		return nbCvAnalyzedInTheMonth >= SubscriptionPlanEnum.valueOf(planName).getLimit()
+		// Check if the user has reached CV analysis monthly limit
+		return nbCvAnalyzedInTheMonth >= SubscriptionPlanEnum.valueOf(planName.toUpperCase()).getLimit()
 			? MontlyUsageLimitCodeEnum.REACHED.getValue()
 			: MontlyUsageLimitCodeEnum.NOT_REACHED.getValue();
 	}
@@ -140,5 +140,33 @@ public class ResumeMatchService extends AbstractQorvaService<ResumeMatchDTO, Res
 			throw new QorvaException("Could not find resume match for request data");
 		}
 		return this.mapper.map(response.get());
+	}
+
+	public long countResumeMatchesInCurrentMonth(String tenantId) {
+		// Get the first day of the month
+		var startOfMonth = QorvaUtils.getFirstDayOfMonth();
+
+		// Get the last day of the month
+		var endOfMonth = QorvaUtils.getLastDayOfMonth();
+
+		// Count all CV analysis of the month
+		return  ((ResumeMatchRepository)repository).countByTenantIdAndCreatedAtBetween(tenantId, startOfMonth, endOfMonth);
+	}
+
+	public Page<ResumeMatchDTO> searchAll(String tenantId, String searchTerms, int pageSize, int pageNumber) throws QorvaException {
+		try {
+
+			// Process
+			Page<ResumeMatch> entities = ((ResumeMatchRepository)this.repository).searchAll(searchTerms, tenantId, Pageable.ofSize(pageSize).withPage(pageNumber));
+
+			// Render results
+			return renderFindAll(entities);
+		} catch (Exception e) {
+			throw wrapException(e, "Error finding resources by IDs");
+		}
+	}
+
+	public List<DashboardData.ApplicationPerJobPostReport> getApplicationsPerJobPost(String tenantId) {
+		return ((ResumeMatchRepository)repository).getApplicationsPerJobPost(new ObjectId(tenantId));
 	}
 }

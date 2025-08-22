@@ -3,23 +3,25 @@ package ai.qorva.core.service;
 import ai.qorva.core.config.StripeProperties;
 import ai.qorva.core.dao.entity.StripeEventLog;
 import ai.qorva.core.dao.repository.StripeEventLogRepository;
+import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.*;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.StripeEventMapper;
 import ai.qorva.core.qbe.StripeEventLogQueryBuilder;
+import ai.qorva.core.service.handlers.*;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
-import com.stripe.model.Customer;
 import com.stripe.model.Event;
-import com.stripe.model.checkout.Session;
+import com.stripe.model.billingportal.Session;
+import com.stripe.param.billingportal.SessionCreateParams;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @Slf4j
@@ -28,13 +30,25 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 
 	protected static final String CUSTOMER_SUBSCRIPTION_CREATED = "customer.subscription.created";
 	protected static final String CUSTOMER_SUBSCRIPTION_UPDATED = "customer.subscription.updated";
-	protected static final String CUSTOMER_SUBSCRIPTION_PAUSED = "customer.subscription.paused";
 	protected static final String CUSTOMER_SUBSCRIPTION_DELETED = "customer.subscription.deleted";
+	protected static final String CUSTOMER_SUBSCRIPTION_PAUSED = "customer.subscription.paused";
+	protected static final String CUSTOMER_SUBSCRIPTION_RESUMED = "customer.subscription.resumed";
+	protected static final String CHECKOUT_SESSION_COMPLETED = "checkout.session.completed";
 
-
-	protected final UserService userService;
-	protected final TenantService tenantService;
 	protected final StripeProperties stripeProperties;
+
+	protected final StripeCheckoutSessionCompletedHandler checkoutSessionHandler;
+	protected final StripeSubscriptionCreatedHandler subscriptionCreatedHandler;
+	protected final StripeSubscriptionUpdatedHandler subscriptionUpdatedHandler;
+	protected final StripeSubscriptionDeletedHandler subscriptionDeletedHandler;
+	protected final StripeSubscriptionPausedHandler subscriptionPausedHandler;
+	protected final StripeSubscriptionResumedHandler subscriptionResumedHandler;
+
+	protected final UserRepository userRepository;
+	protected final TenantService tenantService;
+
+	@Value( "${stripe.session.return-url}")
+	private String stripeSessionReturnUrl;
 
 	@PostConstruct
 	public void init() {
@@ -42,72 +56,42 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 	}
 
 	@Autowired
-	protected StripeEventsService(StripeEventLogRepository repository, StripeEventMapper mapper, UserService userService, StripeEventLogQueryBuilder queryBuilder, TenantService tenantService, StripeProperties stripeProperties) {
+	protected StripeEventsService(
+		StripeEventLogRepository repository,
+		StripeEventMapper mapper,
+		StripeEventLogQueryBuilder queryBuilder,
+		StripeProperties stripeProperties,
+		StripeCheckoutSessionCompletedHandler checkoutSessionHandler,
+		StripeSubscriptionCreatedHandler subscriptionCreatedHandler,
+		StripeSubscriptionUpdatedHandler subscriptionUpdatedHandler,
+		StripeSubscriptionDeletedHandler subscriptionDeletedHandler,
+		StripeSubscriptionPausedHandler subscriptionPausedHandler,
+		StripeSubscriptionResumedHandler subscriptionResumedHandler,
+		UserRepository userRepository, TenantService tenantService
+	) {
+
 		super(repository, mapper, queryBuilder);
-		this.userService = userService;
-		this.tenantService = tenantService;
 		this.stripeProperties = stripeProperties;
-	}
-
-	public StripeCustomerDTO createCustomer(StripeCustomerDTO customerDTO) throws QorvaException {
-		Map<String, Object> params = new HashMap<>();
-		params.put("email", customerDTO.getEmail());
-		params.put("name", customerDTO.getName());
-		params.put("metadata", Map.of("tenantId", customerDTO.getTenantId()));
-
-		try {
-			customerDTO.setCustomerId(Customer.create(params).getId());
-		} catch (StripeException e) {
-			log.error("An error occurred while trying to create a stripe customer {}", e.getMessage());
-			throw new QorvaException("Stripe customer creation failed", e);
-		}
-		return customerDTO;
-	}
-
-	public CheckoutResponse createCheckoutSession(CheckoutRequest request) throws QorvaException {
-		var tenant = Optional.ofNullable(this.tenantService.findOneById(request.tenantId()))
-			                 .orElseThrow(() -> new QorvaException("Unable to start checkout session - Tenant not found"));
-
-		Map<String, Object> params = new HashMap<>();
-		params.put("customer", tenant.getStripeCustomerId());
-		params.put("payment_method_types", List.of("card"));
-		params.put("mode", "subscription");
-		params.put("line_items", List.of(Map.of("price", request.productId(), "quantity", 1)));
-		params.put("success_url", request.successUrl());
-		params.put("cancel_url", request.cancelUrl());
-
-		try {
-			// Create a checkout session
-			var session = Session.create(params);
-
-			// Persist the session info in the DB
-			var stripeEvent = new StripeEventLogDTO();
-			stripeEvent.setEventType("USER_SUBSCRIPTION");
-			stripeEvent.setEventStatus("SUBSCRIPTION_INITIATED");
-			stripeEvent.setStripeCustomerId(tenant.getStripeCustomerId());
-			stripeEvent.setTenantId(request.tenantId());
-			this.createOne(stripeEvent);
-
-			// Return the session id and the customer starting the payment
-			return new CheckoutResponse(session.getId(), session.getCustomer());
-		} catch (StripeException e) {
-			log.error("An error occurred while trying to create a stripe session {}", e.getMessage());
-			throw new QorvaException("Stripe session creation failed", e);
-		}
-	}
-
-	public StripeEventLogDTO closeCheckout(StripeEventLogDTO event) throws QorvaException {
-		return null;
+		this.checkoutSessionHandler = checkoutSessionHandler;
+		this.subscriptionCreatedHandler = subscriptionCreatedHandler;
+		this.subscriptionUpdatedHandler = subscriptionUpdatedHandler;
+		this.subscriptionDeletedHandler = subscriptionDeletedHandler;
+		this.subscriptionPausedHandler = subscriptionPausedHandler;
+		this.subscriptionResumedHandler = subscriptionResumedHandler;
+		this.userRepository = userRepository;
+		this.tenantService = tenantService;
 	}
 
 	public void handleEvent(Event event) throws QorvaException {
 		try {
 			// See events types here: https://docs.stripe.com/api/events/types
 			switch (event.getType()) {
-				case CUSTOMER_SUBSCRIPTION_CREATED -> handleSubscriptionCreated(event);
-				case CUSTOMER_SUBSCRIPTION_UPDATED -> handleSubscriptionUpdated(event);
-				case CUSTOMER_SUBSCRIPTION_PAUSED -> handleSubscriptionPaused(event);
-				case CUSTOMER_SUBSCRIPTION_DELETED -> handleSubscriptionDeleted(event);
+				case CUSTOMER_SUBSCRIPTION_CREATED -> this.subscriptionCreatedHandler.handle(event);
+				case CUSTOMER_SUBSCRIPTION_UPDATED -> this.subscriptionUpdatedHandler.handle(event);
+				case CUSTOMER_SUBSCRIPTION_DELETED -> this.subscriptionDeletedHandler.handle(event);
+				case CUSTOMER_SUBSCRIPTION_PAUSED -> this.subscriptionPausedHandler.handle(event);
+				case CUSTOMER_SUBSCRIPTION_RESUMED -> this.subscriptionResumedHandler.handle(event);
+				case CHECKOUT_SESSION_COMPLETED -> this.checkoutSessionHandler.handle(event);
 				default -> unhandledEvent(event);
 			}
 		} catch (QorvaException e) {
@@ -119,33 +103,30 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 		}
 	}
 
-	private void handleSubscriptionCreated(Event event) throws QorvaException {
-		log.debug("Handling subscription creation event: {}", event.getData());
-
-		// Map Stripe to Qorva Event
-		var eventData = ((StripeEventMapper)this.mapper).mapStripeEventToDTO(event);
-
-		// Find the tenantId of the event
-		var tenant = this.tenantService.findOneById(eventData.getTenantId());
-
-		// TODO Update the subscription plan
-
-		// Persist the event
-		this.createOne(eventData);
-	}
-
-	private void handleSubscriptionDeleted(Event event) {
-		log.debug("Subscription deleted: {}", event.getData());
-	}
-
-	private void handleSubscriptionPaused(Event event) {
-		log.debug("Subscription paused: {}", event.getData());
-	}
-
-	private void handleSubscriptionUpdated(Event event) {
-		log.debug("Subscription updated: {}", event.getData());
-	}
 	private void unhandledEvent(Event event) {
 		log.warn("Unhandled event: {}", event.getType());
+	}
+
+
+	public PortalSession buildStripePortalSessionUrl(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
+		// Get the logged user
+		var user = Optional.ofNullable(this.userRepository.findByEmail(userDetails.getUsername()))
+			               .orElseThrow(() -> new QorvaException("User not found"));
+
+		// Get the tenant id
+		var tenant = this.tenantService.findOneById(user.getTenantId());
+
+		// Build the url
+		SessionCreateParams params = SessionCreateParams.builder()
+			.setCustomer(tenant.getStripeCustomerId())
+			.setReturnUrl(this.stripeSessionReturnUrl)
+			.build();
+
+		try {
+			return new PortalSession(Session.create(params).getUrl());
+		} catch (StripeException e) {
+			log.error("Failed to create Stripe portal session", e);
+			throw new QorvaException("Failed to create Stripe portal session", e);
+		}
 	}
 }

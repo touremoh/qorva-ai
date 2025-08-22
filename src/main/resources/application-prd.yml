@@ -16,11 +16,10 @@ spring:
       embedding: openai
     vectorstore:
       mongodb:
-        initialize-schema: true
+        initialize-schema: false
         collection-name: ${SPRING_AI_VECTOR_COLL_NAME}
-        vector-index-name: ${SPRING_AI_VECTOR_INDEX}
+        index-name: ${SPRING_AI_VECTOR_INDEX}
         path-name: ${SPRING_AI_VECTOR_PATH_NAME}
-        metadata-fields-to-filter: ${SPRING_AI_VECTOR_METADATA_FIELDS}
   mail:
     host: ${MAIL_HOST}
     port: ${MAIL_PORT}
@@ -74,3 +73,14 @@ office365:
   token-uri: ${OFFICE_365.TOKEN_URI}
   authorization-uri: ${OFFICE_365.AUTH_URI}
   user-info-uri: ${OFFICE_365.USER_INFO_URI}
+
+stripe:
+  secret-key: SECRET_KEY
+  webhook:
+    secret: STRIPE_WEBHOOK_SECRET
+  session:
+    return-url: RETURN_URL
+
+qorva:
+  notifications:
+    enabled: false

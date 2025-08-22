@@ -44,6 +44,8 @@ public class CV implements QorvaEntity {
     private List<Reference> references;
     private Binary attachment;
 
+    private float[] embedding;
+
     @Field("score")
     private Double score;
 

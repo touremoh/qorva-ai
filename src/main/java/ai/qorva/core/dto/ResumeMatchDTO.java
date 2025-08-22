@@ -21,6 +21,7 @@ import java.time.Instant;
 public class ResumeMatchDTO extends AbstractQorvaDTO {
     private String id;
     private String jobPostId;
+    private String jobPostTitle;
     private CandidateInfo candidateInfo;
     private String tenantId;
     private AIAnalysisReportDetails aiAnalysisReportDetails;

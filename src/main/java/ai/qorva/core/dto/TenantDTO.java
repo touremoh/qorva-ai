@@ -38,4 +38,9 @@ public class TenantDTO extends AbstractQorvaDTO {
     public String getTenantId() {
         return this.id;
     }
+
+    @Override
+    public void setTenantId(String tenantId) {
+        this.id = tenantId;
+    }
 }

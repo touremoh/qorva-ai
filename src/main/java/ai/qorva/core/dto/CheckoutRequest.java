@@ -2,8 +2,8 @@ package ai.qorva.core.dto;
 
 public record CheckoutRequest(
 	String tenantId,
-    String productId,
 	String priceId,
+	String referenceType,
     String successUrl,
     String cancelUrl
 ) {}

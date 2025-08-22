@@ -1,7 +1,6 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.User;
-import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.enums.QorvaErrorsEnum;
@@ -64,7 +63,7 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 	protected void preProcessUpdateOne(String id, UserDTO userDTO) throws QorvaException {
 		super.preProcessUpdateOne(id, userDTO);
 
-		// Check if user exists (find by ID)
+		// Check if the user exists (find by ID)
 		var userFound = this.findOneById(id);
 
 		// If user found, update userDto empty field with the one from the db
@@ -77,7 +76,25 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 			);
 		}
 
-		// If user found then merge the source with target
+		// If user found then merge the source with the target
 		this.mapper.merge(userDTO, userFound);
+	}
+
+	public long updateUserAccountStatusByTenantId(String tenantId, String newStatus) {
+		return ((UserRepository) this.repository).updateUserAccountStatusByTenantId(tenantId, newStatus);
+	}
+
+	@Override
+	protected void preProcessFindOneByData(UserDTO requestData) {
+		if (!StringUtils.hasText(requestData.getEmail())
+			&& !StringUtils.hasText(requestData.getId())
+			&& !StringUtils.hasText(requestData.getTenantId())) {
+				throw new IllegalArgumentException("Either email or id or tenantId must be present");
+			}
+
+	}
+
+	public UserDTO findOneByEmail(String email) {
+		return this.mapper.map(((UserRepository)this.repository).findByEmail(email));
 	}
 }

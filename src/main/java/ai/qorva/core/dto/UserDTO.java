@@ -32,6 +32,9 @@ public class UserDTO extends AbstractQorvaDTO {
     private String userAccountStatus;
 
     @JsonProperty(access = Access.READ_ONLY)
+    private String subscriptionStatus;
+
+    @JsonProperty(access = Access.READ_ONLY)
     private String createdBy;
 
     @JsonProperty(access = Access.READ_ONLY)

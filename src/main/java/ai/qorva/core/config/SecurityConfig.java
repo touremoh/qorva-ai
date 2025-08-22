@@ -1,6 +1,7 @@
 package ai.qorva.core.config;
 
 import ai.qorva.core.service.QorvaUserDetailsService;
+import com.azure.core.http.HttpMethod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

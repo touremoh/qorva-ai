@@ -83,29 +83,22 @@ db.createCollection("Tenants", {
                     properties: {
                         subscriptionPlan: {
                             bsonType: "string",
-                            enum: ["STARTER", "GROWTH", "PROFESSIONAL", "ENTERPRISE"],
                             description: "e.g. STARTER"
                             },
                         billingCycle: {
                             bsonType: "string",
-                            enum: ["MONTHLY","YEARLY"],
                             description: "e.g. MONTHLY"
                             },
                         price: {
                             bsonType: "decimal",
                             description: "monthly or yearly price"
                             },
+                        priceId: {
+                            bsonType: "string",
+                            description: "price ID"
+                            },
                         subscriptionStatus: {
                             bsonType: "string",
-                            enum: [
-                                "FREE_TRIAL_PERIOD_ACTIVE",
-                                "FREE_TRIAL_PERIOD_FINISHED",
-                                "SUBSCRIPTION_ACTIVE",
-                                "SUBSCRIPTION_EXPIRED",
-                                "SUBSCRIPTION_LOCKED",
-                                "CANCELLATION_GRACE_PERIOD_ACTIVE",
-                                "CANCELLATION_GRACE_PERIOD_FINISHED"
-                                ],
                             description: "current status"
                             },
                         subscriptionId: {
@@ -159,7 +152,6 @@ db.createCollection("Users", {
                     },
                 userAccountStatus: {
                     bsonType: "string",
-                    enum: ["USER_ACTIVE", "USER_INACTIVE", "USER_LOCKED"],
                     description: "must be a string representing the status and is required"
                     },
                 tenantId: {
@@ -642,6 +634,10 @@ db.createCollection("ResumeMatches", {
                     bsonType: "objectId",
                     description: "must be a valid ObjectId and is required"
                     },
+                jobPostTitle: {
+                    bsonType: "string",
+                    description: "must be a valid string"
+                    },
                 candidateInfo: {
                     bsonType: "object",
                     required: ["candidateId", "candidateName", "nbYearsExperience", "skills"],
@@ -914,8 +910,12 @@ db.createCollection("StripeEventLogs", {
                     bsonType: "date",
                     description: "must be a valid date and is required"
                     },
+                lastUpdatedAt: {
+                     bsonType: "date",
+                     description: "must be a valid date and is required"
+                },
                 createdBy: {
-                    bsonType: "objectId",
+                    bsonType: "string",
                     description: "must be a valid ObjectId and is required"
                     }
                 }
@@ -973,6 +973,10 @@ db.createCollection("ProductsReferences", {
           description: "must be a valid object with monthly and annual price info"
         },
         createdAt: {
+          bsonType: "date",
+          description: "must be a valid date and is required"
+        },
+        lastUpdatedAt: {
           bsonType: "date",
           description: "must be a valid date and is required"
         }

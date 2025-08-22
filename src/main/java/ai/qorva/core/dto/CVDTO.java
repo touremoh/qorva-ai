@@ -12,7 +12,6 @@ import lombok.experimental.SuperBuilder;
 import org.bson.types.Binary;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -37,6 +36,9 @@ public class CVDTO extends AbstractQorvaDTO {
     private List<Reference> references;
     private Binary attachment;
     private List<String> tags;
+
+    @JsonProperty(access = Access.WRITE_ONLY)
+    private float[] embedding;
 
     @JsonProperty(access = Access.READ_ONLY)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")

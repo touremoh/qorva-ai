@@ -15,6 +15,11 @@ db.JobsPosts.createIndex({
     description: "text"
 });
 
+db.ResumeMatches.createIndex({
+    "candidateInfo.candidateName": "text",
+    "candidateInfo.skills": "text",
+});
+
 db.Users.createIndex(
     {
         email: 1,

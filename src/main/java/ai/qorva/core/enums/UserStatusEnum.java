@@ -7,6 +7,7 @@ public enum UserStatusEnum {
 	ACTIVE("ACTIVE"),
 	INACTIVE("INACTIVE"),
 	LOCKED("LOCKED"),
+	DELETED("DELETED"),
 	TRIAL_PERIOD("TRIAL_PERIOD");
 
 	UserStatusEnum(String value) {

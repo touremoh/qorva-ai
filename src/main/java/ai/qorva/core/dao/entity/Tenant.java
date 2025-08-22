@@ -22,6 +22,7 @@ public class Tenant implements QorvaEntity {
 
     private String tenantName;
     private String stripeCustomerId;
+    private String priceId;
 
     private SubscriptionInfo subscriptionInfo;
 

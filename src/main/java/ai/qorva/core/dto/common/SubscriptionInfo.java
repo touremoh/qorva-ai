@@ -15,6 +15,7 @@ public class SubscriptionInfo {
     private String subscriptionPlan;
     private String billingCycle;
     private Decimal128 price;
+    private String priceId;
 
     private String subscriptionStatus;
     private String subscriptionId;

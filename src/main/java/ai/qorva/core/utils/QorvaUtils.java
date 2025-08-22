@@ -21,6 +21,14 @@ import static org.springframework.util.ObjectUtils.isEmpty;
 @UtilityClass
 public class QorvaUtils {
 
+	public static float[] toFloatArray(List<Double> doubles) {
+		float[] floats = new float[doubles.size()];
+		for (int i = 0; i < doubles.size(); i++) {
+			floats[i] = doubles.get(i).floatValue(); // explicit cast
+		}
+		return floats;
+	}
+
 	public String toJSON(Object object) {
 		try {
 			ObjectMapper mapper = new ObjectMapper();

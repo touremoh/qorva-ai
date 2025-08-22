@@ -3,7 +3,6 @@ package ai.qorva.core.service;
 import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.AuthResponse;
-import ai.qorva.core.dto.JwtDTO;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.UserMapper;
@@ -26,18 +25,20 @@ public class AuthenticationService {
 	private final AuthenticationManager authenticationManager;
 	private final JwtConfig jwtConfig;
 	private final UserMapper userMapper;
+	private final TenantService tenantService;
 
 	@Autowired
 	public AuthenticationService(
 		QorvaUserDetailsService userDetailsService,
 		UserRepository userRepository,
 		AuthenticationManager authenticationManager,
-		JwtConfig jwtConfig, UserMapper userMapper) {
+		JwtConfig jwtConfig, UserMapper userMapper, TenantService tenantService) {
 		this.userDetailsService = userDetailsService;
 		this.userRepository = userRepository;
 		this.authenticationManager = authenticationManager;
 		this.jwtConfig = jwtConfig;
 		this.userMapper = userMapper;
+		this.tenantService = tenantService;
 	}
 
 	public AuthResponse authenticate(UserDTO userDTO) throws QorvaException {
@@ -52,11 +53,19 @@ public class AuthenticationService {
 			var user = Optional.ofNullable(this.userRepository.findByEmail(userDTO.getEmail()))
 				               .orElseThrow(() -> new QorvaException("User not found"));
 
+			// Get the tenant status from the database and the subscription plan
+			var tenant = Optional.ofNullable(this.tenantService.findOneById(user.getTenantId()))
+				                 .orElseThrow(() -> new QorvaException("Tenant not found"));
+
 			// Generate a JWT including tenantId
-			var jwt = JwtUtils.generateAndBuildToken(userDetails, jwtConfig, user.getTenantId());
+			var jwt = JwtUtils.generateAndBuildToken(userDetails, jwtConfig, tenant);
+
+			// Add subscription status to the JWT
+			var authenticatedUserInfo = this.userMapper.map(user);
+			authenticatedUserInfo.setSubscriptionStatus(tenant.getSubscriptionInfo().getSubscriptionStatus());
 
 			// Build AuthResponse
-			return new AuthResponse(jwt, this.userMapper.map(user));
+			return new AuthResponse(jwt, authenticatedUserInfo);
 		} catch (Exception e) {
 			throw new QorvaException(
 				"Authentication failed with message: " + e.getMessage(),
@@ -77,7 +86,7 @@ public class AuthenticationService {
 		return false;
 	}
 
-	public JwtDTO refreshToken(String authorizationHeader) throws QorvaException {
+	public AuthResponse refreshToken(String authorizationHeader) throws QorvaException {
 		if (StringUtils.hasText(authorizationHeader) && authorizationHeader.startsWith("Bearer ")) {
 			String token = authorizationHeader.substring(7);
 			try {
@@ -91,8 +100,19 @@ public class AuthenticationService {
 				var user = Optional.ofNullable(this.userRepository.findByEmail(username))
 					               .orElseThrow(() -> new QorvaException("User not found"));
 
+				// Get the tenant status from the database and the subscription plan
+				var tenant = Optional.ofNullable(this.tenantService.findOneById(user.getTenantId()))
+					                 .orElseThrow(() -> new QorvaException("Tenant not found"));
+
+				// Add subscription status to the JWT
+				var authenticatedUserInfo = this.userMapper.map(user);
+				authenticatedUserInfo.setSubscriptionStatus(tenant.getSubscriptionInfo().getSubscriptionStatus());
+
 				// Return the new access token
-				return JwtUtils.generateAndBuildToken(userDetails, this.jwtConfig, user.getTenantId());
+				var jwt = JwtUtils.generateAndBuildToken(userDetails, this.jwtConfig, tenant);
+
+				// return results
+				return new AuthResponse(jwt, authenticatedUserInfo);
 			} catch (JwtException ex) {
 				throw new QorvaException(ex.getMessage(), HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
 			}

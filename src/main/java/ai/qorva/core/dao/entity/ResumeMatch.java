@@ -26,6 +26,8 @@ public class ResumeMatch implements QorvaEntity {
     @Field(targetType = FieldType.OBJECT_ID)
     private String jobPostId;
 
+    private String jobPostTitle;
+
     private CandidateInfo candidateInfo;
 
     @Field(targetType = FieldType.OBJECT_ID)

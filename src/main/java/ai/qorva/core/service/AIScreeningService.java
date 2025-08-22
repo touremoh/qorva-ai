@@ -4,16 +4,18 @@ import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.ResumeMatchDTO;
 import ai.qorva.core.dto.common.CandidateInfo;
+import ai.qorva.core.dto.events.CVScreeningEvent;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.utils.QorvaUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.http.HttpStatus;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.event.TransactionPhase;
+import org.springframework.transaction.event.TransactionalEventListener;
 
-import java.time.chrono.ChronoLocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
@@ -23,24 +25,28 @@ public class AIScreeningService {
 
 	private final CVService cvService;
 	private final OpenAIService openAIService;
-	private final JobPostService jobPostService;
 	private final ResumeMatchService resumeMatchService;
+	private final EmbeddingModel embeddingModel;
 
 	@Autowired
-	public AIScreeningService(CVService cvService, OpenAIService openAIService, JobPostService jobPostService, ResumeMatchService resumeMatchService) {
+	public AIScreeningService(CVService cvService, OpenAIService openAIService, ResumeMatchService resumeMatchService, EmbeddingModel embeddingModel) {
 		this.cvService = cvService;
 		this.openAIService = openAIService;
-		this.jobPostService = jobPostService;
 		this.resumeMatchService = resumeMatchService;
+		this.embeddingModel = embeddingModel;
 	}
 
-	public Page<ResumeMatchDTO> startScreeningProcess(String jobPostId, List<String> tags) throws QorvaException {
-		// Get the job post
-		var jobPost = this.jobPostService.findOneById(jobPostId);
+	@Async
+	@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
+	public void startScreeningProcess(CVScreeningEvent event) throws QorvaException {
+		log.info("CV Screening event received for job post {}", event.jobPost().getId());
 
-		// Check if the job post was found
-		if (Objects.isNull(jobPost)) {
-			throw new QorvaException("Invalid jobPostId: " + jobPostId);
+		// Get the job post
+		var jobPost = event.jobPost();
+
+		// Check if the job post has an embedding vector
+		if (Objects.isNull(jobPost.getEmbedding()) || jobPost.getEmbedding().length == 0) {
+			jobPost.setEmbedding(this.embeddingModel.embed(jobPost.toJobTitleAndDescription()));
 		}
 
 		// Get the tenant
@@ -53,7 +59,7 @@ public class AIScreeningService {
 		}
 
 		// Perform similar search and extract results (List of CV IDs) => must be filter out by tenantId
-		var results = this.cvService.findCVsMatchingJobDescription(jobPost, tags);
+		var results = this.cvService.findCVsMatchingJobDescription(jobPost);
 
 		// Filter out the CVs that are not relevant for the screening process
 		var filteredCVs = results.stream()
@@ -86,16 +92,8 @@ public class AIScreeningService {
 			// Save all
 			var savedResumeMatches = this.resumeMatchService.saveAll(resumeMatches);
 			// log new application saved
-			log.debug("{} new applications for job post {}", savedResumeMatches.size(), jobPostId);
+			log.debug("{} new applications for job post {}", savedResumeMatches.size(), jobPost.getId());
 		}
-
-		// Build search request
-		var searchCriteria = new ResumeMatchDTO();
-		searchCriteria.setTenantId(jobPost.getTenantId());
-		searchCriteria.setJobPostId(jobPostId);
-
-		// Return all job applications for company id and job post id sorted by AI Score Desc
-		return this.resumeMatchService.findAll(searchCriteria, 0, 25);
 	}
 
 	protected boolean isCVRelevantToScreening(CVDTO cvdto, JobPostDTO jobPostDTO) throws QorvaException {

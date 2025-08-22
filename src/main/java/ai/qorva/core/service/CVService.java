@@ -4,7 +4,10 @@ import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVOutputDTO;
+import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
+import ai.qorva.core.dto.events.CVScreeningEvent;
+import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.CVMapper;
 import ai.qorva.core.mapper.OpenAIResultMapper;
@@ -12,8 +15,13 @@ import ai.qorva.core.qbe.CVQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.ai.converter.BeanOutputConverter;
+import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
@@ -28,6 +36,9 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
     private final OpenAIService openAIService;
     private final OpenAIResultMapper openAIResultMapper;
+    private final ApplicationEventPublisher publisher;
+    private final JobPostService jobPostService;
+    private final EmbeddingModel embeddingModel;
 
     @Autowired
     public CVService(
@@ -35,10 +46,16 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 		CVMapper cvMapper,
 		CVQueryBuilder queryBuilder,
 		OpenAIService openAIService,
-		OpenAIResultMapper openAIResultMapper) {
+		OpenAIResultMapper openAIResultMapper,
+		ApplicationEventPublisher publisher,
+        JobPostService jobPostService,
+        EmbeddingModel embeddingModel) {
         super(repository, cvMapper, queryBuilder);
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
+		this.publisher = publisher;
+		this.jobPostService = jobPostService;
+		this.embeddingModel = embeddingModel;
 	}
 
     @Override
@@ -53,10 +70,11 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 				return new QorvaException("Unable to update CV. CV not found");
             });
 
-        // If cv was found, then merge the source with target
+        // If cv was found, then merge the source with the target
         this.mapper.merge(cvdto, cvFound);
     }
 
+    @Transactional
     public List<CVDTO> upload(List<MultipartFile> files, String tenantId) throws QorvaException {
         log.debug("CV Service - Starting file processing");
 
@@ -65,7 +83,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
             throw new QorvaException("Only up to 10 files are allowed");
         }
 
-        return files
+        var processFiles = files
                 .parallelStream()
                 .map(file -> {
                     try {
@@ -77,6 +95,13 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
                 })
                 .filter(Objects::nonNull)
                 .toList();
+
+        log.debug("CV Service - CV saved in database - Triggering CV screening for all job post");
+
+        publishCVUpsertEvents(tenantId);
+
+        log.debug("CV Service - File upload completed");
+        return processFiles;
     }
 
     public CVDTO processFile(MultipartFile file, String tenantId) throws RuntimeException, QorvaException {
@@ -86,6 +111,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         log.debug("Processing file: {}", file.getOriginalFilename());
         return extractCVData(fileContent, tenantId);
     }
+
 
     private CVDTO extractCVData(String cvContent, String tenantId) throws QorvaException {
         // Check CV Content exists
@@ -107,16 +133,18 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         var cvDtoToPersist = this.openAIResultMapper.map(outputDTO);
         cvDtoToPersist.setTenantId(tenantId);
 
+        // Create a vector embedding for the CV
+        cvDtoToPersist.setEmbedding(this.embeddingModel.embed(cvContent));
+
         // Persist and return
-        return  this.createOne(cvDtoToPersist);
+        return  createOne(cvDtoToPersist);
     }
 
-    public List<CVDTO> findCVsMatchingJobDescription(JobPostDTO jobPostDTO, List<String> tags) throws QorvaException {
+    public List<CVDTO> findCVsMatchingJobDescription(JobPostDTO jobPostDTO) throws QorvaException {
         // Perform similarity search
         var results = ((CVRepository) this.repository).similaritySearch(
             jobPostDTO.getEmbedding(),
-            new ObjectId(jobPostDTO.getTenantId()),
-            tags
+            new ObjectId(jobPostDTO.getTenantId())
         );
 
         // Get the list of documents ids
@@ -126,22 +154,19 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         }
 
         // Get documents IDs
-		var ids = results.stream().map(cv -> {
-            log.debug("CV Score: {}", cv.getScore());
-            return cv.getId();
-        }).toList();
+		var ids = results.stream().map(CV::getId).toList();
 
         // Find the CVs for those ids
         return this.findAllByIds(ids);
     }
 
-    public List<CVDTO> searchAll(String tenantId, String searchTerms, int pageSize, int pageNumber) throws QorvaException {
+    public Page<CVDTO> searchAll(String tenantId, String searchTerms, int pageSize, int pageNumber) throws QorvaException {
         try {
             // Pre Process
             preProcessSearchAll(tenantId, searchTerms, pageSize, pageNumber);
 
             // Process
-            List<CV> entities = ((CVRepository)this.repository).searchAll(searchTerms);
+            Page<CV> entities = ((CVRepository)this.repository).searchAll(searchTerms, tenantId, Pageable.ofSize(pageSize).withPage(pageNumber));
 
             // Post Process
             postProcessSearchAll(entities);
@@ -162,11 +187,33 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
             throw new QorvaException("Tenant ID must not be null or  empty");
         }
     }
-    protected void postProcessSearchAll(List<CV> entities) throws QorvaException {
-        log.debug("postProcessSearchAll: {} CV found", entities.size());
+
+    protected void postProcessSearchAll(Page<CV> entities) throws QorvaException {
+        log.debug("postProcessSearchAll: {} CV found", entities.getContent().size());
     }
 
     public List<String> findAllTagsByTenantId(String tenantId) {
         return ((CVRepository)this.repository).findAllTagsByTenantId(new ObjectId(tenantId));
+    }
+
+    public List<DashboardData.SkillReport> getSkillReportByTenantId(String tenantId) {
+        return ((CVRepository)this.repository).getSkillReportByTenantId(new ObjectId(tenantId));
+    }
+
+    public void publishCVUpsertEvents(String tenantId) throws QorvaException {
+        int pageSize = 25;
+        int pageNumber = 0;
+        var searchCriteria = JobPostDTO.builder().tenantId(tenantId).status(JobPostStatusEnum.OPEN.getStatus()).build();
+        long totalCount = this.jobPostService.countAll(tenantId);
+
+        if (totalCount > 0) {
+            int totalPages = totalCount % pageSize == 0 ? (int) (totalCount / pageSize) : (int) (totalCount / pageSize) + 1;
+            do {
+                var jobPosts = this.jobPostService.findAll(searchCriteria, pageNumber, pageSize);
+                for (JobPostDTO jobPost : jobPosts.getContent()) {
+                    this.publisher.publishEvent(new CVScreeningEvent(jobPost));
+                }
+            } while (++pageNumber < totalPages);
+        }
     }
 }

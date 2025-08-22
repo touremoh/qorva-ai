@@ -2,26 +2,44 @@ package ai.qorva.core.utils;
 
 import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dto.JwtDTO;
+import ai.qorva.core.dto.TenantDTO;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.experimental.UtilityClass;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.util.StringUtils;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.function.Function;
 
 @UtilityClass
 public class JwtUtils {
 
+	String TENANT_ID = "tenantId";
+	String SUBSCRIPTION_PLAN = "subscriptionPlan";
+	String SUBSCRIPTION_STATUS = "subscriptionStatus";
+
+	public String extractToken(String bearerToken) {
+		if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
+			return bearerToken.substring(7);
+		}
+		return null;
+	}
+
 	public String extractUsername(String token, String jwtSecret) {
 		return extractClaim(token, Claims::getSubject, jwtSecret);
 	}
 
-	public String extractCompanyId(String token, String jwtSecret) {
-		return extractClaim(token, claims -> claims.get("tenantId", String.class), jwtSecret);
+	public String extractTenantId(String token, String jwtSecret) {
+		return extractClaim(token, claims -> claims.get(TENANT_ID, String.class), jwtSecret);
+	}
+
+	public String extractSubscriptionPlan(String token, String jwtSecret) {
+		return extractClaim(token, claims -> claims.get(SUBSCRIPTION_PLAN, String.class), jwtSecret);
 	}
 
 	public Date extractExpiration(String token, String jwtSecret) {
@@ -41,9 +59,15 @@ public class JwtUtils {
 		return extractExpiration(token, jwtSecret).before(new Date());
 	}
 
-	public String generateToken(UserDetails userDetails, JwtConfig jwtConfig, String companyId) {
+	public String generateToken(UserDetails userDetails, JwtConfig jwtConfig, TenantDTO tenantDTO) {
 		Map<String, Object> claims = new HashMap<>();
-		claims.put("companyId", companyId); // Add tenantId to claims
+		claims.put(TENANT_ID, tenantDTO.getId());
+
+		var subscriptionInfo = tenantDTO.getSubscriptionInfo();
+		if (Objects.nonNull(subscriptionInfo) && StringUtils.hasText(subscriptionInfo.getSubscriptionPlan())) {
+			claims.put(SUBSCRIPTION_PLAN, subscriptionInfo.getSubscriptionPlan());
+			claims.put(SUBSCRIPTION_STATUS, subscriptionInfo.getSubscriptionStatus());
+		}
 		return createToken(claims, userDetails.getUsername(), jwtConfig);
 	}
 
@@ -62,8 +86,8 @@ public class JwtUtils {
 		return (username.equals(userDetails.getUsername()) && !isTokenExpired(token, jwtSecret));
 	}
 
-	public JwtDTO generateAndBuildToken(UserDetails userDetails, JwtConfig jwtConfig, String companyId) {
-		var accessToken = generateToken(userDetails, jwtConfig, companyId);
+	public JwtDTO generateAndBuildToken(UserDetails userDetails, JwtConfig jwtConfig, TenantDTO tenantDTO) {
+		var accessToken = generateToken(userDetails, jwtConfig, tenantDTO);
 		return JwtDTO.builder()
 			.accessToken(accessToken)
 			.expiresIn(extractExpiration(accessToken, jwtConfig.getSecretKey()).getTime())
