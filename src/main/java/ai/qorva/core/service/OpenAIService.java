@@ -1,9 +1,8 @@
 package ai.qorva.core.service;
 
-import ai.qorva.core.dto.CVOutputDTO;
-import ai.qorva.core.dto.CVScreeningReportOutputDTO;
-import ai.qorva.core.dto.QorvaPromptContextHolder;
+import ai.qorva.core.dto.*;
 import ai.qorva.core.dto.common.AIAnalysisReportDetails;
+import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
@@ -14,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
+
+import java.util.Objects;
 
 import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_O_MINI;
 
@@ -98,5 +99,40 @@ public class OpenAIService {
 
 		// Map the string content into CVScreeningReportDTO and render results
 		return this.mapper.map(outputConverter.convert(content));
+	}
+
+	public ChatResult chatCompletions(String userMessage) throws QorvaException {
+		var outputConverter = new BeanOutputConverter<>(OpenAIChatResponse.class);
+
+		var response = this.chatClient.prompt()
+			.options(OpenAiChatOptions
+				.builder()
+				.model(GPT_4_O_MINI)
+				.responseFormat(structuredFormat(outputConverter.getJsonSchema()))
+				.temperature(0.2)
+				.build()
+			)
+			.user(u -> u.text(userMessage))
+			.call()
+			.content();
+
+		// convert the response into ChatResponseDTO
+		if (Objects.isNull(response)) {
+			throw new QorvaException("Something went wrong. Please try again later");
+		}
+
+		return this.mapper.map(outputConverter.convert(response));
+	}
+
+	private ResponseFormat structuredFormat(String schemaJson) {
+		var jsonSchema = ResponseFormat.JsonSchema.builder()
+			.name("OpenAIChatResponse")
+			.schema(schemaJson)
+			.strict(true)
+			.build();
+		return ResponseFormat.builder()
+			.type(ResponseFormat.Type.JSON_SCHEMA)
+			.jsonSchema(jsonSchema)
+			.build();
 	}
 }

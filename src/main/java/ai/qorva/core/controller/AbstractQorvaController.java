@@ -37,7 +37,8 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     }
 
     @PostMapping("/search")
-    public ResponseEntity<QorvaRequestResponse> findOneByData(@RequestBody D requestData) throws QorvaException {
+    public ResponseEntity<QorvaRequestResponse> findOneByData(@RequestHeader("Authorization") String authorizationHeader, @RequestBody D requestData) throws QorvaException {
+        requestData.setTenantId(JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey()));
         return BuildApiResponse.from(this.service.findOneByData(requestData));
     }
 

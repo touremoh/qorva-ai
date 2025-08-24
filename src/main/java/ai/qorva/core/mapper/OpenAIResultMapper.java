@@ -1,8 +1,6 @@
 package ai.qorva.core.mapper;
 
-import ai.qorva.core.dto.CVDTO;
-import ai.qorva.core.dto.CVOutputDTO;
-import ai.qorva.core.dto.CVScreeningReportOutputDTO;
+import ai.qorva.core.dto.*;
 import ai.qorva.core.dto.common.AIAnalysisReportDetails;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -19,4 +17,9 @@ public interface OpenAIResultMapper {
 
 
 	AIAnalysisReportDetails map(CVScreeningReportOutputDTO data);
+
+	@Mapping(target = "promptTokens", expression = "java(java.lang.Long.valueOf(0))")
+	@Mapping(target = "completionTokens", expression = "java(java.lang.Long.valueOf(0))")
+	@Mapping(target = "model", expression = "java(org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_O_MINI.getValue())")
+	ChatResult map(OpenAIChatResponse data);
 }

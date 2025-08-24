@@ -1,8 +1,6 @@
 package ai.qorva.core.service;
 
-import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.entity.ResumeMatch;
-import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dao.repository.ResumeMatchRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.DashboardData;
@@ -132,8 +130,8 @@ public class ResumeMatchService extends AbstractQorvaService<ResumeMatchDTO, Res
 	public ResumeMatchDTO findOneByData(ResumeMatchDTO requestData) throws QorvaException {
 		var response =  ((ResumeMatchRepository)this.repository)
 			.findOneByTenantIdAndJobPostIdAndCandidateInfoCandidateId(
-				requestData.getTenantId(),
-				requestData.getJobPostId(),
+				new ObjectId(requestData.getTenantId()),
+				new ObjectId(requestData.getJobPostId()),
 				requestData.getCandidateInfo().getCandidateId()
 			);
 		if (response.isEmpty()) {

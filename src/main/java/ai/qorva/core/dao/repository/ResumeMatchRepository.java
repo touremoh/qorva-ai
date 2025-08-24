@@ -30,9 +30,10 @@ public interface ResumeMatchRepository extends QorvaRepository<ResumeMatch> {
 		Instant   endOfMonth
 	);
 
+	@Query(value = "{ 'tenantId': ?0, 'jobPostId': ?1, 'candidateInfo.candidateId': ?2 }")
 	Optional<ResumeMatch> findOneByTenantIdAndJobPostIdAndCandidateInfoCandidateId(
-		String tenantId,
-		String jobPostId,
+		ObjectId tenantId,
+		ObjectId jobPostId,
 		String candidateId
 	);
 

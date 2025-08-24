@@ -984,3 +984,86 @@ db.createCollection("ProductsReferences", {
     }
   }
 });
+
+// Chats
+db.createCollection("Chats", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "Chats",
+      required: ["tenantId", "title", "context", "participants", "createdAt", "createdBy", "status"],
+      properties: {
+        tenantId: { bsonType: "string", description: "Tenant identifier" },
+        title: { bsonType: "string" },
+        status: { enum: ["OPEN", "CLOSED", "ARCHIVED"] },
+        context: {
+          bsonType: "object",
+          required: ["cvId", "jobPostId"],
+          properties: {
+            cvId: { bsonType: "objectId" },
+            jobPostId: { bsonType: "objectId" },
+            resumeMatchId: { bsonType: ["objectId", "null"] }
+          }
+        },
+        participants: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            required: ["userId", "role"],
+            properties: {
+              userId: { bsonType: "objectId" },
+              role: { enum: ["OWNER", "COLLABORATOR", "VIEWER"] }
+            }
+          },
+          minItems: 1
+        },
+        metadata: {
+          bsonType: "object",
+          properties: {
+            language: { bsonType: "string" },
+            tags: { bsonType: "array", items: { bsonType: "string" } }
+          }
+        },
+        createdAt: { bsonType: "date" },
+        lastUpdatedAt: { bsonType: "date" },
+        createdBy: { bsonType: "string" },
+        lastUpdatedBy: { bsonType: "string" }
+      }
+    }
+  }
+});
+
+// ChatMessages
+db.createCollection("ChatMessages", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "ChatMessages",
+      required: ["tenantId", "chatId", "role", "content", "createdAt"],
+      properties: {
+        tenantId: { bsonType: "string" },
+        chatId: { bsonType: "objectId" },
+        role: { enum: ["SYSTEM", "USER", "ASSISTANT"] },
+        participantId: { bsonType: ["objectId", "null"], description: "null for assistant/system" },
+        content: { bsonType: "string" },
+        tokens: {
+          bsonType: "object",
+          properties: {
+            promptTokens: { bsonType: ["int", "long"] },
+            completionTokens: { bsonType: ["int", "long"] },
+            model: { bsonType: "string" }
+          }
+        },
+        createdAt: { bsonType: "date" },
+        metadata: {
+          bsonType: "object",
+          properties: {
+            citations: { bsonType: "array", items: { bsonType: "string" } },
+            unsafe: { bsonType: "bool" }
+          }
+        }
+      }
+    }
+  }
+});
+

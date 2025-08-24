@@ -31,6 +31,17 @@ db.Users.createIndex(
         }
 );
 
+// Indexes for Chats (multi-tenant + recency + ownership)
+db.Chats.createIndex({ tenantId: 1, "participants.userId": 1, status: 1, lastUpdatedAt: -1 });
+db.Chats.createIndex({ tenantId: 1, "context.cvId": 1 });
+db.Chats.createIndex({ tenantId: 1, "context.jobPostId": 1 });
+db.Chats.createIndex({ tenantId: 1, "context.resumeMatchId": 1 });
+db.Chats.createIndex({ tenantId: 1, title: "text", "metadata.tags": 1 });
+
+// Indexes for ChatMessages (fast timeline + multi-tenant)
+db.ChatMessages.createIndex({ tenantId: 1, chatId: 1, createdAt: 1 });
+db.ChatMessages.createIndex({ tenantId: 1, chatId: 1, role: 1, createdAt: 1 });
+
 
 // Compound vector index in Mongo Atlas
 {

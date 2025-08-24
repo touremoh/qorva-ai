@@ -44,10 +44,11 @@ public class CVController extends AbstractQorvaController<CVDTO> {
 
     @GetMapping("/search")
     public ResponseEntity<QorvaRequestResponse> searchAll(
-        @RequestHeader("tenantId") String tenantId,
+        @RequestHeader("Authorization") String authorizationHeader,
         @RequestParam("searchTerms") String searchTerms,
         @RequestParam("pageSize") int pageSize,
         @RequestParam("pageNumber") int pageNumber) throws QorvaException {
+        var tenantId = JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey());
         return BuildApiResponse.from(((CVService)this.service).searchAll(tenantId, searchTerms, pageSize, pageNumber));
     }
 
