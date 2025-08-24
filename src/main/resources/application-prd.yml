@@ -3,6 +3,7 @@ spring:
     mongodb:
       uri: ${SPRING_DATA_MONGO_URL}
       database: ${SPRING_DATA_MONGO_DATABASE_NAME}
+
   ai:
     openai:
       api-key: ${SPRING_AI_OPENAI_API_KEY}
@@ -10,8 +11,9 @@ spring:
         base-url: ${SPRING_AI_OPENAI_EMBEDDING_BASE_URL}
         options:
           model: ${SPRING_AI_OPENAI_EMBEDDING_MODEL}
-      chat:
-        embeddings-path: ${SPRING_AI_OPENAI_EMBEDDING_PATH}
+    chat:
+      client:
+        enabled: true
     model:
       embedding: openai
     vectorstore:
@@ -20,37 +22,47 @@ spring:
         collection-name: ${SPRING_AI_VECTOR_COLL_NAME}
         index-name: ${SPRING_AI_VECTOR_INDEX}
         path-name: ${SPRING_AI_VECTOR_PATH_NAME}
+
   mail:
     host: ${MAIL_HOST}
     port: ${MAIL_PORT}
     username: ${MAIL_USERNAME}
     password: ${MAIL_PASSWORD}
+    from: ${MAIL_FROM}
+    protocol: ${MAIL_PROTOCOL}
     properties:
       mail:
         smtp:
           auth: true
           starttls:
             enable: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
   security:
     oauth2:
       client:
         registration:
           office365:
-            client-id: ${office365.client-id}
-            client-secret: ${office365.client-secret}
-            scope: ${office365.scope}
-            authorization-grant-type: ${office365.authorization-grant-type}
+            client-id: ${OFFICE_365_CLIENT_ID}
+            client-secret: ${OFFICE_365_CLIENT_SECRET}
+            scope: ${OFFICE_365_SCOPE}
+            authorization-grant-type: ${OFFICE_365_AUTH_GRANT_TYPE}
         provider:
           office365:
-            token-uri: ${office365.token-uri}
-            authorization-uri: ${office365.authorization-uri}
-            user-info-uri: ${office365.user-info-uri}
+            token-uri: ${OFFICE_365_TOKEN_URI}
+            authorization-uri: ${OFFICE_365_AUTH_URI}
+            user-info-uri: ${OFFICE_365_USER_INFO_URI}
+
+server:
+  port: ${PORT:8080}   # Needed if using EB Java SE
 
 logging:
   level:
     root: INFO
-    com:
-      bookevhotel:
+    ai:
+      qorva:
         core: INFO
 
 regex:
@@ -65,22 +77,13 @@ jwt:
   secret: ${JWT_SECRET}
   timeToLiveInMillis: 360000
 
-office365:
-  client-id: ${OFFICE_365.CLIENT_ID}
-  client-secret: ${OFFICE_365.CLIENT_SECRET}
-  scope: ${OFFICE_365.SCOPE}
-  authorization-grant-type: ${OFFICE_365.AUTH_GRANT_TYPE}
-  token-uri: ${OFFICE_365.TOKEN_URI}
-  authorization-uri: ${OFFICE_365.AUTH_URI}
-  user-info-uri: ${OFFICE_365.USER_INFO_URI}
-
 stripe:
-  secret-key: SECRET_KEY
+  secret-key: ${STRIPE_SECRET_KEY}
   webhook:
-    secret: STRIPE_WEBHOOK_SECRET
+    secret: ${STRIPE_WEBHOOK_SECRET}
   session:
-    return-url: RETURN_URL
+    return-url: ${STRIPE_SESSION_URL}
 
 qorva:
   notifications:
-    enabled: false
+    enabled: ${QORVA_NOTIFICATION_ENABLED}

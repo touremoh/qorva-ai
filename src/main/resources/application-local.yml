@@ -82,8 +82,8 @@ logging:
           mongodb:
             core:
               MongoTemplate: DEBUG
-    com:
-      bookevhotel:
+    ai:
+      qorva:
         core: DEBUG
 
 regex:
