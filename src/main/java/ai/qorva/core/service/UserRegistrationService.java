@@ -73,6 +73,9 @@ public class UserRegistrationService {
 			throw new QorvaException("Account creation failed " + newAccountDTO.getEmail());
 		}
 
+		// Set subscription status
+		newUser.setSubscriptionStatus(companyInfo.getSubscriptionInfo().getSubscriptionStatus());
+
 		log.info("Account created successfully for user: {}", newUser);
 		return newUser;
 	}
