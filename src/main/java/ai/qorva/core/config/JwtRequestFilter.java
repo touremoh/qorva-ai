@@ -40,37 +40,39 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
 		String authorizationHeader = request.getHeader("Authorization");
 
-		if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
-			String token = authorizationHeader.substring(7); // Remove "Bearer " prefix
-			Claims claims = JwtUtils.extractAllClaims(token, jwtConfig.getSecretKey());
+		if (Strings.hasText(authorizationHeader) && authorizationHeader.startsWith("Bearer ")) {
+			String token = authorizationHeader.substring(7);
+			if (Strings.hasText(token) && !token.equals("null")) {
+				Claims claims = JwtUtils.extractAllClaims(token, jwtConfig.getSecretKey());
 
-			String username = claims.getSubject();
-			String tenantId = claims.get(TENANT_ID, String.class);
+				String username = claims.getSubject();
+				String tenantId = claims.get(TENANT_ID, String.class);
 
-            // then create UsernamePasswordAuthenticationToken with these authorities
-			if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-				UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+				// then create UsernamePasswordAuthenticationToken with these authorities
+				if (Strings.hasText(username) && SecurityContextHolder.getContext().getAuthentication() == null) {
+					UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
-				// Set the authorities for the user
-				var authorities = new ArrayList<GrantedAuthority>();
-				var subscriptionPlan = claims.get(SUBSCRIPTION_PLAN, String.class);
-				var subscriptionStatus = claims.get(SUBSCRIPTION_STATUS, String.class);
+					// Set the authorities for the user
+					var authorities = new ArrayList<GrantedAuthority>();
+					var subscriptionPlan = claims.get(SUBSCRIPTION_PLAN, String.class);
+					var subscriptionStatus = claims.get(SUBSCRIPTION_STATUS, String.class);
 
-				if (Strings.hasText(subscriptionPlan)) {
-					authorities.add(new SimpleGrantedAuthority(subscriptionPlan));
-					authorities.add(new SimpleGrantedAuthority(subscriptionStatus));
-				}
+					if (Strings.hasText(subscriptionPlan)) {
+						authorities.add(new SimpleGrantedAuthority(subscriptionPlan));
+						authorities.add(new SimpleGrantedAuthority(subscriptionStatus));
+					}
 
-				if (Boolean.TRUE.equals(JwtUtils.isTokenValid(token, userDetails, jwtConfig.getSecretKey()))) {
-					var authentication = new UsernamePasswordAuthenticationToken(
-						userDetails,
-						null,
-						authorities
-					);
+					if (Boolean.TRUE.equals(JwtUtils.isTokenValid(token, userDetails, jwtConfig.getSecretKey()))) {
+						var authentication = new UsernamePasswordAuthenticationToken(
+							userDetails,
+							null,
+							authorities
+						);
 
-					// Include tenantId in the authentication details
-					authentication.setDetails(tenantId);
-					SecurityContextHolder.getContext().setAuthentication(authentication);
+						// Include tenantId in the authentication details
+						authentication.setDetails(tenantId);
+						SecurityContextHolder.getContext().setAuthentication(authentication);
+					}
 				}
 			}
 		}

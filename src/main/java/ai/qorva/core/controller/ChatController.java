@@ -11,17 +11,26 @@ import ai.qorva.core.service.ChatService;
 import ai.qorva.core.utils.JwtUtils;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.*;
 import org.springframework.http.*;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("/chats")
 @RequiredArgsConstructor
+@PreAuthorize("hasAnyAuthority('Professional', 'Enterprise', 'FREE_TRIAL_PERIOD_ACTIVE')")
 public class ChatController {
 
     private final ChatService chatService;
     protected final JwtConfig jwtConfig;
+
+    @GetMapping("/allowed")
+    public ResponseEntity<Boolean> isChatPartOfSubscriptionPlan() {
+        return ResponseEntity.ok(true);
+    }
 
     @GetMapping
     public Page<ChatDTO> listChats(@RequestHeader("Authorization") String authorizationHeader,
