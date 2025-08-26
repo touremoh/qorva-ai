@@ -43,8 +43,8 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     }
 
     @PostMapping
-    public ResponseEntity<QorvaRequestResponse> createOne(@AuthenticationPrincipal UserDetails userDetails, @RequestBody D data) throws QorvaException {
-        data.setTenantId(this.userService.extractTenantId(userDetails));
+    public ResponseEntity<QorvaRequestResponse> createOne(@RequestHeader("Authorization") String authorizationHeader, @RequestBody D data) throws QorvaException {
+        data.setTenantId(JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey()));
         return BuildApiResponse.from(this.service.createOne(data));
     }
 

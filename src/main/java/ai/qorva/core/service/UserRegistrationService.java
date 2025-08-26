@@ -85,7 +85,7 @@ public class UserRegistrationService {
 		var userDTO = this.accountRegistrationMapper.map(newAccountDTO);
 
 		// Update User DTO
-		userDTO.setUserAccountStatus(UserStatusEnum.INACTIVE.getValue());
+		userDTO.setUserAccountStatus(UserStatusEnum.ACTIVE.getValue());
 		userDTO.setTenantId(companyInfo.getId());
 
 		// Persist user info

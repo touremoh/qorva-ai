@@ -51,16 +51,6 @@ public class QorvaUserDetailsService implements UserDetailsService {
 	}
 
 	private boolean isUserDisabled(ai.qorva.core.dao.entity.User user) {
-		return user.getUserAccountStatus().equals(UserStatusEnum.INACTIVE.getValue())
-			|| user.getUserAccountStatus().equals(UserStatusEnum.LOCKED.getValue())
-			|| user.getUserAccountStatus().equals(UserStatusEnum.DELETED.getValue());
-	}
-
-	public String extractTenantId(UserDetails userDetails) {
-		try {
-			return this.userRepository.findByEmail(userDetails.getUsername()).getTenantId();
-		} catch (Exception e) {
-			throw new RuntimeException("Failed to extract tenant id from user details", e);
-		}
+		return user.getUserAccountStatus().equals(UserStatusEnum.INACTIVE.getValue());
 	}
 }
