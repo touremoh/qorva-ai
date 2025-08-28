@@ -5,24 +5,16 @@ import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.requests.CVRequestMapper;
-import ai.qorva.core.mapper.requests.QorvaRequestMapper;
 import ai.qorva.core.service.CVService;
-import ai.qorva.core.service.QorvaService;
 import ai.qorva.core.service.QorvaUserDetailsService;
-import ai.qorva.core.service.UserService;
 import ai.qorva.core.utils.BuildApiResponse;
 import ai.qorva.core.utils.JwtUtils;
-import ai.qorva.core.utils.QorvaUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.security.Principal;
 import java.util.List;
 
 @Slf4j

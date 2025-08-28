@@ -10,8 +10,6 @@ import ai.qorva.core.service.QorvaUserDetailsService;
 import ai.qorva.core.utils.BuildApiResponse;
 import ai.qorva.core.utils.JwtUtils;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -10,6 +10,7 @@ import lombok.experimental.UtilityClass;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.util.StringUtils;
 
+import javax.crypto.SecretKey;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -30,32 +31,32 @@ public class JwtUtils {
 		return null;
 	}
 
-	public String extractUsername(String token, String jwtSecret) {
+	public String extractUsername(String token, SecretKey jwtSecret) {
 		return extractClaim(token, Claims::getSubject, jwtSecret);
 	}
 
-	public String extractTenantId(String token, String jwtSecret) {
+	public String extractTenantId(String token, SecretKey jwtSecret) {
 		return extractClaim(token, claims -> claims.get(TENANT_ID, String.class), jwtSecret);
 	}
 
-	public String extractSubscriptionPlan(String token, String jwtSecret) {
+	public String extractSubscriptionPlan(String token, SecretKey jwtSecret) {
 		return extractClaim(token, claims -> claims.get(SUBSCRIPTION_PLAN, String.class), jwtSecret);
 	}
 
-	public Date extractExpiration(String token, String jwtSecret) {
+	public Date extractExpiration(String token, SecretKey jwtSecret) {
 		return extractClaim(token, Claims::getExpiration, jwtSecret);
 	}
 
-	public <T> T extractClaim(String token, Function<Claims, T> claimsResolver, String jwtSecret) {
+	public <T> T extractClaim(String token, Function<Claims, T> claimsResolver, SecretKey jwtSecret) {
 		final Claims claims = extractAllClaims(token, jwtSecret);
 		return claimsResolver.apply(claims);
 	}
 
-	public Claims extractAllClaims(String token, String jwtSecret) {
+	public Claims extractAllClaims(String token, SecretKey jwtSecret) {
 		return Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
 	}
 
-	public Boolean isTokenExpired(String token, String jwtSecret) {
+	public Boolean isTokenExpired(String token, SecretKey jwtSecret) {
 		return extractExpiration(token, jwtSecret).before(new Date());
 	}
 
@@ -77,11 +78,11 @@ public class JwtUtils {
 			.setSubject(subject)
 			.setIssuedAt(new Date(System.currentTimeMillis()))
 			.setExpiration(new Date(System.currentTimeMillis() + jwtConfig.getTimeToLiveInMillis()))
-			.signWith(SignatureAlgorithm.HS256, jwtConfig.getSecretKey())
+			.signWith(SignatureAlgorithm.HS512, jwtConfig.getSecretKey())
 			.compact();
 	}
 
-	public Boolean isTokenValid(String token, UserDetails userDetails, String jwtSecret) {
+	public Boolean isTokenValid(String token, UserDetails userDetails, SecretKey jwtSecret) {
 		final String username = extractUsername(token, jwtSecret);
 		return (username.equals(userDetails.getUsername()) && !isTokenExpired(token, jwtSecret));
 	}
