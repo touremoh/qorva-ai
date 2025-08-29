@@ -43,25 +43,38 @@ db.ChatMessages.createIndex({ tenantId: 1, chatId: 1, createdAt: 1 });
 db.ChatMessages.createIndex({ tenantId: 1, chatId: 1, role: 1, createdAt: 1 });
 
 
-// Compound vector index in Mongo Atlas
+// Compound vector index for CVs collection in Mongo Atlas
 {
-  "mappings": {
-    "dynamic": false,
-    "fields": {
-      "embedding": {
-        "type": "vector",
-        "dimensions": 3072,
-        "similarity": "cosine"
-      },
-      "tenantId": {
-        "type": "string"
-      },
-      "tags": {
-        "type": "array",
-        "elements": {
-          "type": "string"
-        }
-      }
+  "fields": [
+    {
+      "numDimensions": 3072,
+      "path": "embedding",
+      "similarity": "cosine",
+      "type": "vector"
+    },
+    {
+      "path": "tenantId",
+      "type": "filter"
+    },
+    {
+      "path": "tags",
+      "type": "filter"
     }
-  }
+  ]
+}
+
+// Vector search index for job posts JobPostIndex
+{
+  "fields": [
+    {
+      "numDimensions": 3072,
+      "path": "embedding",
+      "similarity": "cosine",
+      "type": "vector"
+    },
+    {
+      "path": "tenantId",
+      "type": "filter"
+    }
+  ]
 }
