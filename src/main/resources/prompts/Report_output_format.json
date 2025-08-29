@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "properties": {
+    "skillsMatch": {
+      "type": "object",
+      "description": "Details about the candidate's skills match with the job requirements",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "A summary of how well the candidate's skills match the job requirements"
+        },
+        "degreeOfMatch": {
+          "type": "integer",
+          "description": "A percentage representing the degree of match between the candidate's skills and the job requirements"
+        }
+      }
+    },
+    "exceedsRequirements": {
+      "type": "object",
+      "description": "Details about how the candidate's skills and work experience exceeds job requirements (if not applicable say he skills are below the job requirements)",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "A summary of how the candidate's skills and work experience exceeds the job requirements (if not applicable say he skills are below the job requirements)"
+        }
+      }
+    },
+    "lackingSkills": {
+      "type": "object",
+      "description": "Details about the skills the candidate is lacking for the job",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "A summary of the skills the candidate is lacking with respect to the job requirements"
+        }
+      }
+    },
+    "experienceAlignment": {
+      "type": "object",
+      "description": "Details about how the candidate's work experience aligns with the job requirements",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "A summary of how the candidate's work experience aligns with the job"
+        },
+        "degreeOfMatch": {
+          "type": "integer",
+          "description": "A percentage representing the degree of match between the candidate's experience and the job requirements"
+        }
+      }
+    },
+    "overallSummary": {
+      "type": "object",
+      "description": "An overall summary of the screening report, including score and improvement points",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "A summary of the overall assessment"
+        },
+        "score": {
+          "type": "integer",
+          "description": "The overall score for the candidate's suitability"
+        },
+        "pointsForImprovement": {
+          "type": "array",
+          "description": "A list of areas where the candidate can improve",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

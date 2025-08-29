@@ -1,0 +1,346 @@
+{
+  "type": "object",
+  "properties": {
+    "candidateProfileSummary": {
+      "type": "string",
+      "description": "Summary of the candidate profile with quick highly of his experience and skill"
+    },
+    "nbYearsOfExperience": {
+      "type": "int",
+      "description": "Number of years of professional experience of the candidate"
+    },
+    "personalInformation": {
+      "type": "object",
+      "description": "Details about the individual's personal information",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the individual"
+        },
+        "contact": {
+          "type": "object",
+          "description": "Contact details for the individual",
+          "properties": {
+            "email": {
+              "type": "string",
+              "description": "Individual's email address"
+            },
+            "phone": {
+              "type": "string",
+              "description": "Phone number"
+            },
+            "address": {
+              "type": "string",
+              "description": "Physical address"
+            }
+          }
+        },
+        "role": {
+          "type": "string",
+          "description": "Current job title or role of the individual"
+        },
+        "availability": {
+          "type": "object",
+          "description": "Details about the individual's availability",
+          "properties": {
+            "startDate": {
+              "type": "string",
+              "description": "Start date of availability"
+            },
+            "endDate": {
+              "type": "string",
+              "description": "End date of availability"
+            },
+            "type": {
+              "type": "string",
+              "description": "Type of availability (e.g., full-time, part-time)"
+            }
+          }
+        },
+        "summary": {
+          "type": "string",
+          "description": "Brief summary of the individual's professional background"
+        }
+      }
+    },
+    "keySkills": {
+      "type": "array",
+      "description": "List of the individual's key skills grouped by category",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "Category of skills"
+          },
+          "skills": {
+            "type": "array",
+            "description": "Specific skills under this category",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "profiles": {
+      "type": "object",
+      "description": "Details about the individual's expertise and responsibilities",
+      "properties": {
+        "areasOfExpertise": {
+          "type": "array",
+          "description": "List of areas of expertise",
+          "items": {
+            "type": "string"
+          }
+        },
+        "keyResponsibilities": {
+          "type": "array",
+          "description": "Key responsibilities held in previous roles",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "workExperience": {
+      "type": "array",
+      "description": "List of the individual's past work experiences",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": {
+            "type": "string",
+            "description": "Name of the company"
+          },
+          "website": {
+            "type": "string",
+            "description": "Company's website URL"
+          },
+          "location": {
+            "type": "string",
+            "description": "Location of the company"
+          },
+          "from": {
+            "type": "string",
+            "description": "Start date of the employment period"
+          },
+          "to": {
+            "type": "string",
+            "description": "End date of the employment period"
+          },
+          "position": {
+            "type": "string",
+            "description": "Job title held in this role"
+          },
+          "activities": {
+            "type": "array",
+            "description": "List of activities performed during this role",
+            "items": {
+              "type": "object",
+              "properties": {
+                "project": {
+                  "type": "string",
+                  "description": "Name or description of the project"
+                },
+                "tasks": {
+                  "type": "array",
+                  "description": "Tasks performed under this project",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "achievements": {
+            "type": "array",
+            "description": "List of achievements in this role",
+            "items": {
+              "type": "string"
+            }
+          },
+          "toolsAndTechnologies": {
+            "type": "array",
+            "description": "Tools and technologies used in this role",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "description": "Details of the individual's educational background",
+      "items": {
+        "type": "object",
+        "properties": {
+          "year": {
+            "type": "string",
+            "description": "Year of graduation or completion"
+          },
+          "institution": {
+            "type": "string",
+            "description": "Name of the educational institution"
+          },
+          "degree": {
+            "type": "string",
+            "description": "Degree obtained"
+          },
+          "fieldOfStudy": {
+            "type": "string",
+            "description": "Field of study or major"
+          },
+          "achievements": {
+            "type": "array",
+            "description": "Academic achievements or awards",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "description": "List of certifications obtained",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title of the certification"
+          },
+          "institution": {
+            "type": "string",
+            "description": "Name of the certifying institution"
+          },
+          "year": {
+            "type": "string",
+            "description": "Year the certification was obtained"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the certification"
+          }
+        }
+      }
+    },
+    "skillsAndQualifications": {
+      "type": "object",
+      "description": "Details about the individual's skills and qualifications",
+      "properties": {
+        "technicalSkills": {
+          "type": "array",
+          "description": "List of technical skills",
+          "items": {
+            "type": "string"
+          }
+        },
+        "softSkills": {
+          "type": "array",
+          "description": "List of soft skills",
+          "items": {
+            "type": "string"
+          }
+        },
+        "languages": {
+          "type": "array",
+          "description": "List of languages known and proficiency levels",
+          "items": {
+            "type": "object",
+            "properties": {
+              "language": {
+                "type": "string",
+                "description": "Name of the language"
+              },
+              "proficiency": {
+                "type": "string",
+                "description": "Proficiency level (e.g., Beginner, Intermediate, Fluent)"
+              }
+            }
+          }
+        }
+      }
+    },
+    "projectsAndAchievements": {
+      "type": "array",
+      "description": "List of projects and achievements",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title of the project or achievement"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the project or achievement"
+          },
+          "date": {
+            "type": "string",
+            "description": "Date of the project or achievement"
+          },
+          "impact": {
+            "type": "string",
+            "description": "Impact or significance of the project or achievement"
+          }
+        }
+      }
+    },
+    "interestsAndHobbies": {
+      "type": "array",
+      "description": "List of personal interests and hobbies",
+      "items": {
+        "type": "string"
+      }
+    },
+    "references": {
+      "type": "array",
+      "description": "List of professional references",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the reference"
+          },
+          "position": {
+            "type": "string",
+            "description": "Position or role of the reference"
+          },
+          "company": {
+            "type": "string",
+            "description": "Company where the reference works"
+          },
+          "contact": {
+            "type": "object",
+            "description": "Contact details for the reference",
+            "properties": {
+              "email": {
+                "type": "string",
+                "description": "Email address of the reference"
+              },
+              "phone": {
+                "type": "string",
+                "description": "Phone number of the reference"
+              },
+              "address": {
+                "type": "string",
+                "description": "Physical address of the reference"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "Tags associated with the CV for categorization or searching",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
