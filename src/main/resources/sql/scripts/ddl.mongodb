@@ -8,6 +8,8 @@ db.CVs.drop();
 db.ResumeMatches.drop();
 db.InterviewQuestions.drop();
 db.StripeEventLogs.drop();
+db.Chats.drop();
+db.ChatMessages.drop();
 
 
 db.createCollection("DemoRequestors", {
