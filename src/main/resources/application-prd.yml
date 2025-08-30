@@ -56,7 +56,7 @@ spring:
             user-info-uri: ${OFFICE_365_USER_INFO_URI}
 
 server:
-  port: ${PORT:8080}   # Needed if using EB Java SE
+  port: 8080 # Expected port from App Runner
 
 logging:
   level:
