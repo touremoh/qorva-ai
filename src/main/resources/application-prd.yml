@@ -75,7 +75,7 @@ weblink:
 
 jwt:
   secret: ${JWT_SECRET}
-  timeToLiveInMillis: 360000
+  timeToLiveInMillis: ${JWT_TIME_TO_LIVE_IN_MILLIS:3600000}
 
 stripe:
   secret-key: ${STRIPE_SECRET_KEY}
