@@ -9,7 +9,7 @@ management:
         include: health,info
   health:
     mail:
-      enabled: false
+      enabled: true
 
 
 spring:
