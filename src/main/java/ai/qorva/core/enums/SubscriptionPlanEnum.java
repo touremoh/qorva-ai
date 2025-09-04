@@ -8,9 +8,9 @@ import static java.lang.Integer.MAX_VALUE;
 public enum SubscriptionPlanEnum {
     FREE_TRIAL("FREE_TRIAL", MAX_VALUE),
     STARTER("Starter", 500),
-    GROWTH("Growth", 2000),
-    PROFESSIONAL("Professional", 5000),
-    ENTERPRISE("Enterprise", MAX_VALUE);
+    SCOUT("Scout", 2000),
+    MATCHMAKER("Matchmaker", 5000),
+    VISIONARY("Visionary", MAX_VALUE);
 
     SubscriptionPlanEnum(String name, Integer limit) {
         this.name = name;
