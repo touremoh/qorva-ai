@@ -10,9 +10,10 @@ import ai.qorva.core.mapper.StripeEventMapper;
 import ai.qorva.core.service.TenantService;
 import ai.qorva.core.utils.SubscriptionStatusHelper;
 import com.stripe.exception.StripeException;
-import com.stripe.model.Event;
 import com.stripe.model.Product;
+import com.stripe.model.StripeObject;
 import com.stripe.model.Subscription;
+import com.stripe.model.checkout.Session;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.Decimal128;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,16 +40,15 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 	}
 
 	@Override
-	public void handle(Event event) throws QorvaException {
-		log.debug("Handling checkout session completed: {}", event.getData());
+	public void handle(StripeObject obj) throws QorvaException {
+		log.info("Handling checkout session completed");
 
-		// Get the event payload
-		var parsedEvent = this.evtMapper.mapStripeEventToEventCheckoutSessionCompleted(event);
+		Session session = (Session) obj;
 
-		var customerId = parsedEvent.getCustomer();
-		var subscriptionId = parsedEvent.getSubscription();
-		var tenantId = parsedEvent.getClientReferenceId();
-		var customerEmail = parsedEvent.getCustomerEmail();
+		var customerId = session.getCustomer();
+		var subscriptionId = session.getSubscription();
+		var tenantId = session.getClientReferenceId();
+		var customerEmail = session.getCustomerEmail();
 
 		// Find the user by email
 		var user = this.userRepository.findByEmail(customerEmail);
@@ -106,12 +106,12 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 
 		// Persist stripe event logs
 		var eventLog = new StripeEventLogDTO();
-		eventLog.setEventType(event.getType());
+		eventLog.setEventType("checkout.session.completed");
 		eventLog.setEventStatus(subscriptionStatus);
 		eventLog.setStripeCustomerId(customerId);
 		eventLog.setStripeSubscriptionId(subscriptionId);
 		eventLog.setTenantId(tenantId);
-		eventLog.setEventStatus(parsedEvent.getStatus());
+		eventLog.setEventStatus(session.getStatus());
 
 		this.repository.save(this.evtMapper.map(eventLog));
 

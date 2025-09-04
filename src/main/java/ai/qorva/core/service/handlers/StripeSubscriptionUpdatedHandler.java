@@ -8,8 +8,8 @@ import ai.qorva.core.mapper.StripeEventMapper;
 import ai.qorva.core.service.TenantService;
 import ai.qorva.core.utils.SubscriptionStatusHelper;
 import com.stripe.exception.StripeException;
-import com.stripe.model.Event;
 import com.stripe.model.Product;
+import com.stripe.model.StripeObject;
 import com.stripe.model.Subscription;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.Decimal128;
@@ -34,19 +34,19 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 	}
 
 	@Override
-	public void handle(Event event) throws QorvaException {
-		log.debug("Handling subscription update event: {}", event.getData());
+	public void handle(StripeObject obj) throws QorvaException {
+		log.info("Handling subscription update event");
 
 		// Parse the event
-		var parsedEvent = this.evtMapper.mapStripeEventToEventSubscriptionUpdated(event);
-		var subscription = parsedEvent.getData().getObject();
+		var sub = (Subscription) obj;
 
 		// Get the relevant fields from the event: subscription ID, customer ID, status, product ID.
-		var subscriptionId = subscription.getId();
-		var customerId = subscription.getCustomer();
-		var subscriptionStatus = SubscriptionStatusHelper.subscriptionFromCode(subscription.getStatus());
-		var productId = subscription.getPlan().getProduct();
-		var priceId = subscription.getPlan().getId();
+		var subscriptionId = sub.getId();
+		var customerId = sub.getCustomer();
+		var subscriptionStatus = SubscriptionStatusHelper.subscriptionFromCode(sub.getStatus());
+		var subItem = sub.getItems().getData().getFirst();
+		var productId = subItem.getPrice().getProduct();
+		var priceId = subItem.getPrice().getId();
 
 		try {
 			// Get the tenant ID for the customer
@@ -76,13 +76,13 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 				// Update tenant in database
 				log.debug("Updating tenant in database: {}", tenantDTO);
 				this.tenantService.updateOne(tenantDTO.getTenantId(), tenantDTO);
-				this.persistEventInDb(tenantDTO, event, subscriptionId, customerId, subscriptionStatus);
+				this.persistEventInDb(tenantDTO, subscriptionId, customerId, subscriptionStatus);
 			} else {
 				// Check if it's a status change
 				var currentSubscriptionStatus = tenantDTO.getSubscriptionInfo().getSubscriptionStatus();
 				if (!currentSubscriptionStatus.equals(subscriptionStatus)) {
 					log.debug("Subscription status changed from {} to {}", currentSubscriptionStatus, subscriptionStatus);
-					this.persistEventInDb(tenantDTO, event, subscriptionId, customerId, subscriptionStatus);
+					this.persistEventInDb(tenantDTO, subscriptionId, customerId, subscriptionStatus);
 				}
 			}
 		} catch (QorvaException e) {
@@ -94,10 +94,10 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 		}
 	}
 
-	protected void persistEventInDb(TenantDTO tenantDTO, Event event, String subscriptionId, String customerId, String subscriptionStatus) {
+	protected void persistEventInDb(TenantDTO tenantDTO, String subscriptionId, String customerId, String subscriptionStatus) {
 		// Persist stripe event logs
 		var eventLog = new StripeEventLogDTO();
-		eventLog.setEventType(event.getType());
+		eventLog.setEventType("customer.subscription.updated");
 		eventLog.setEventStatus(subscriptionStatus);
 		eventLog.setStripeCustomerId(customerId);
 		eventLog.setStripeSubscriptionId(subscriptionId);

@@ -2,7 +2,7 @@ package ai.qorva.core.service.handlers;
 
 import ai.qorva.core.dao.repository.StripeEventLogRepository;
 import ai.qorva.core.service.TenantService;
-import com.stripe.model.Event;
+import com.stripe.model.StripeObject;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +21,7 @@ public class StripeSubscriptionPausedHandler implements StripeEventHandler {
 	}
 
 	@Override
-	public void handle(Event event) {
-		log.debug("Handling subscription created event: {}", event.getData());
+	public void handle(StripeObject obj) {
+		log.info("Handling subscription created event");
 	}
 }

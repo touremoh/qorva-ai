@@ -1,8 +1,8 @@
 package ai.qorva.core.service.handlers;
 
 import ai.qorva.core.exception.QorvaException;
-import com.stripe.model.Event;
+import com.stripe.model.StripeObject;
 
 public interface StripeEventHandler {
-	void handle(Event event) throws QorvaException;
+	void handle(StripeObject obj) throws QorvaException;
 }

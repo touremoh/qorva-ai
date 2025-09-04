@@ -12,6 +12,8 @@ import ai.qorva.core.service.handlers.*;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Event;
+import com.stripe.model.EventDataObjectDeserializer;
+import com.stripe.model.StripeObject;
 import com.stripe.model.billingportal.Session;
 import com.stripe.param.billingportal.SessionCreateParams;
 import jakarta.annotation.PostConstruct;
@@ -82,15 +84,21 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 		this.tenantService = tenantService;
 	}
 
-	public void handleEvent(Event event) throws QorvaException {
+	public String handleEvent(Event event) throws QorvaException {
 		try {
-			// See events types here: https://docs.stripe.com/api/events/types
+			EventDataObjectDeserializer deserializer = event.getDataObjectDeserializer();
+			Optional<? extends StripeObject> opt = deserializer.getObject();
+
+			if (opt.isEmpty()) {
+				log.warn("Unable to deserialize data.object for type={}", event.getType());
+				return "ignore";
+			}
 			switch (event.getType()) {
-				case CUSTOMER_SUBSCRIPTION_CREATED -> this.subscriptionCreatedHandler.handle(event);
-				case CUSTOMER_SUBSCRIPTION_UPDATED -> this.subscriptionUpdatedHandler.handle(event);
-				case CUSTOMER_SUBSCRIPTION_DELETED -> this.subscriptionDeletedHandler.handle(event);
-				case CUSTOMER_SUBSCRIPTION_PAUSED -> this.subscriptionPausedHandler.handle(event);
-				case CUSTOMER_SUBSCRIPTION_RESUMED -> this.subscriptionResumedHandler.handle(event);
+				case CUSTOMER_SUBSCRIPTION_CREATED -> this.subscriptionCreatedHandler.handle(opt.get());
+				case CUSTOMER_SUBSCRIPTION_UPDATED -> this.subscriptionUpdatedHandler.handle(opt.get());
+				case CUSTOMER_SUBSCRIPTION_DELETED -> this.subscriptionDeletedHandler.handle(opt.get());
+				case CUSTOMER_SUBSCRIPTION_PAUSED -> this.subscriptionPausedHandler.handle(opt.get());
+				case CUSTOMER_SUBSCRIPTION_RESUMED -> this.subscriptionResumedHandler.handle(opt.get());
 				case CHECKOUT_SESSION_COMPLETED -> this.checkoutSessionHandler.handle(event);
 				default -> unhandledEvent(event);
 			}
@@ -101,6 +109,7 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 			log.error("Unhandled exception while handling event: {}", event.getId(), e);
 			throw new QorvaException("Unhandled exception while handling event: " + event.getId(), e);
 		}
+		return "success";
 	}
 
 	private void unhandledEvent(Event event) {
