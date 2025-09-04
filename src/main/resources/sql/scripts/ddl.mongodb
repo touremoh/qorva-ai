@@ -1002,9 +1002,9 @@ db.createCollection("Chats", {
           bsonType: "object",
           required: ["cvId", "jobPostId"],
           properties: {
-            cvId: { bsonType: "objectId" },
-            jobPostId: { bsonType: "objectId" },
-            resumeMatchId: { bsonType: ["objectId", "null"] }
+            cvId: { bsonType: "string" },
+            jobPostId: { bsonType: "string" },
+            resumeMatchId: { bsonType: ["string"] }
           }
         },
         participants: {
