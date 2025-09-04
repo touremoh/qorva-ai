@@ -99,7 +99,7 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 				case CUSTOMER_SUBSCRIPTION_DELETED -> this.subscriptionDeletedHandler.handle(opt.get());
 				case CUSTOMER_SUBSCRIPTION_PAUSED -> this.subscriptionPausedHandler.handle(opt.get());
 				case CUSTOMER_SUBSCRIPTION_RESUMED -> this.subscriptionResumedHandler.handle(opt.get());
-				case CHECKOUT_SESSION_COMPLETED -> this.checkoutSessionHandler.handle(event);
+				case CHECKOUT_SESSION_COMPLETED -> this.checkoutSessionHandler.handle(opt.get());
 				default -> unhandledEvent(event);
 			}
 		} catch (QorvaException e) {
