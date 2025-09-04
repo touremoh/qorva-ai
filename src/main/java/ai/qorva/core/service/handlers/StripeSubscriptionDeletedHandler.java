@@ -3,14 +3,14 @@ package ai.qorva.core.service.handlers;
 import ai.qorva.core.dao.repository.StripeEventLogRepository;
 import ai.qorva.core.dto.StripeEventLogDTO;
 import ai.qorva.core.dto.TenantDTO;
-import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.enums.UserStatusEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.StripeEventMapper;
 import ai.qorva.core.service.TenantService;
 import ai.qorva.core.service.UserService;
 import ai.qorva.core.utils.SubscriptionStatusHelper;
-import com.stripe.model.Event;
+import com.stripe.model.StripeObject;
+import com.stripe.model.Subscription;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,18 +40,17 @@ public class StripeSubscriptionDeletedHandler implements StripeEventHandler {
 	}
 
 	@Override
-	public void handle(Event event) throws QorvaException {
-		log.debug("Handling subscription deletion event: {}", event.getData());
+	public void handle(StripeObject obj) throws QorvaException {
+		log.info("Handling subscription deletion event");
 
 		// Parse the event
-		var parsedEvent = this.evtMapper.mapStripeEventToEventSubscriptionDeleted(event);
+		Subscription sub = (Subscription) obj;
 
 		// Extract the relevant fields from the event
-		var eventType = event.getType();
-		var stripeCustomerId = parsedEvent.getData().getObject().getCustomer();
-		var subscriptionId = parsedEvent.getData().getObject().getId();
-		var subscriptionStatus = parsedEvent.getData().getObject().getStatus();
-		var canceledAt = parsedEvent.getData().getObject().getCanceledAt();
+		var stripeCustomerId = sub.getCustomer();
+		var subscriptionId = sub.getId();
+		var subscriptionStatus = sub.getStatus();
+		var canceledAt = sub.getCanceledAt();
 
 		TenantDTO tenant;
 		try {
@@ -63,7 +62,7 @@ public class StripeSubscriptionDeletedHandler implements StripeEventHandler {
 
 		// Persist the event log
 		var eventLog = new StripeEventLogDTO();
-		eventLog.setEventType(eventType);
+		eventLog.setEventType("customer.subscription.deleted");
 		eventLog.setEventStatus(subscriptionStatus);
 		eventLog.setStripeCustomerId(stripeCustomerId);
 		eventLog.setStripeSubscriptionId(subscriptionId);

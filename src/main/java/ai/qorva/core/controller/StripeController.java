@@ -9,6 +9,8 @@ import ai.qorva.core.service.QorvaUserDetailsService;
 import ai.qorva.core.service.StripeEventsService;
 import com.stripe.exception.SignatureVerificationException;
 import com.stripe.model.Event;
+import com.stripe.model.EventDataObjectDeserializer;
+import com.stripe.model.StripeObject;
 import com.stripe.net.Webhook;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @Slf4j
 @RestController
@@ -36,8 +40,7 @@ public class StripeController extends AbstractQorvaController<StripeEventLogDTO>
 	public ResponseEntity<String> handleStripeEvent(@RequestBody String payload, @RequestHeader("Stripe-Signature") String sigHeader) {
 		try {
 			Event event = Webhook.constructEvent(payload, sigHeader, stripeWebhookSecret);
-			((StripeEventsService)this.service).handleEvent(event);
-			return ResponseEntity.ok("success");
+			return ResponseEntity.ok(((StripeEventsService)this.service).handleEvent(event));
 		} catch (SignatureVerificationException e) {
 			log.error("Stripe signature verification error", e);
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid signature");
