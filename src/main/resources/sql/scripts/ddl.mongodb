@@ -1013,7 +1013,7 @@ db.createCollection("Chats", {
             bsonType: "object",
             required: ["userId", "role"],
             properties: {
-              userId: { bsonType: "objectId" },
+              userId: { bsonType: "string" },
               role: { enum: ["OWNER", "COLLABORATOR", "VIEWER"] }
             }
           },
@@ -1044,9 +1044,9 @@ db.createCollection("ChatMessages", {
       required: ["tenantId", "chatId", "role", "content", "createdAt"],
       properties: {
         tenantId: { bsonType: "string" },
-        chatId: { bsonType: "objectId" },
+        chatId: { bsonType: "string" },
         role: { enum: ["SYSTEM", "USER", "ASSISTANT"] },
-        participantId: { bsonType: ["objectId", "null"], description: "null for assistant/system" },
+        participantId: { bsonType: "string", description: "null for assistant/system" },
         content: { bsonType: "string" },
         tokens: {
           bsonType: "object",
