@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/chats")
 @RequiredArgsConstructor
-@PreAuthorize("hasAnyAuthority('Matchmaker', 'Visionary', 'FREE_TRIAL_PERIOD_ACTIVE')")
+@PreAuthorize("hasAnyAuthority('Matchmaker', 'Visionary', 'FREE_TRIAL_PERIOD_ACTIVE', 'SO')")
 public class ChatController {
 
     private final ChatService chatService;
