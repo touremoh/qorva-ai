@@ -7,7 +7,7 @@ import static java.lang.Integer.MAX_VALUE;
 @Getter
 public enum SubscriptionPlanEnum {
     FREE_TRIAL("FREE_TRIAL", MAX_VALUE),
-    STARTER("Starter", 500),
+    SO("SO", MAX_VALUE),
     SCOUT("Scout", 2000),
     MATCHMAKER("Matchmaker", 5000),
     VISIONARY("Visionary", MAX_VALUE);
