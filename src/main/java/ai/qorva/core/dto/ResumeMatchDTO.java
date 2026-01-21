@@ -26,6 +26,7 @@ public class ResumeMatchDTO extends AbstractQorvaDTO {
     private String tenantId;
     private AIAnalysisReportDetails aiAnalysisReportDetails;
     private String status;
+    private String clientId;
 
     @JsonProperty(access = Access.READ_ONLY)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")

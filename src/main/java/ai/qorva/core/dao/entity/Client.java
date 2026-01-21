@@ -1,24 +1,27 @@
 package ai.qorva.core.dao.entity;
 
-import ai.qorva.core.dto.common.CandidateInfo;
-import ai.qorva.core.dto.common.QuestionnaireDetails;
+import ai.qorva.core.dto.common.ClientContact;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.time.Instant;
+import java.util.List;
+import java.util.Map;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document("InterviewQuestions")
-public class InterviewQuestions implements QorvaEntity {
+@Document(collection = "Clients")
+public class Client implements QorvaEntity {
 
     @Id
     private String id;
@@ -26,14 +29,23 @@ public class InterviewQuestions implements QorvaEntity {
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
 
-    @Field(targetType = FieldType.OBJECT_ID)
-    private String jobPostId;
+    private String clientCode;
 
-    private CandidateInfo candidateInfo;
-    private QuestionnaireDetails questionnaireDetails;
+    private String name;
 
+    private List<String> domains;
+
+    private List<ClientContact> contacts;
+
+    private Map<String, String> externalIds;
+
+    private String notes;
+
+    @CreatedDate
     private Instant createdAt;
-    private Instant lastUpdatedAt;
-    private String createdBy;
-    private String lastUpdatedBy;
+
+    @LastModifiedDate
+    private Instant updatedAt;
+
+    private Instant archivedAt;
 }

@@ -22,6 +22,7 @@ import java.util.List;
 public class CVDTO extends AbstractQorvaDTO {
     private String id;
     private String tenantId;
+    private String clientId;
     private String candidateProfileSummary;
     private Integer nbYearsOfExperience;
     private PersonalInformation personalInformation;

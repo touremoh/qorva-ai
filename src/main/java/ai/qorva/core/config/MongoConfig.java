@@ -1,5 +1,6 @@
 package ai.qorva.core.config;
 
+import io.mongock.runner.springboot.EnableMongock;
 import org.springframework.ai.document.MetadataMode;
 import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.ai.openai.OpenAiEmbeddingModel;
@@ -22,6 +23,7 @@ import java.util.Optional;
 import static org.springframework.ai.openai.api.OpenAiApi.EmbeddingModel.TEXT_EMBEDDING_3_LARGE;
 
 @Configuration
+@EnableMongock // For MongoDB migration
 @EnableMongoAuditing(dateTimeProviderRef = "auditingDateTimeProvider")
 public class MongoConfig {
 

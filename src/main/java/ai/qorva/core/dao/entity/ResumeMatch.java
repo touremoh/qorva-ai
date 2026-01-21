@@ -2,6 +2,7 @@ package ai.qorva.core.dao.entity;
 
 import ai.qorva.core.dto.common.AIAnalysisReportDetails;
 import ai.qorva.core.dto.common.CandidateInfo;
+import ai.qorva.core.dto.common.LackingSkills;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,6 +37,9 @@ public class ResumeMatch implements QorvaEntity {
     private AIAnalysisReportDetails aiAnalysisReportDetails;
 
     private String status;
+
+    @Field(targetType = FieldType.OBJECT_ID)
+    private String clientId;
 
     @CreatedDate
     private Instant createdAt;

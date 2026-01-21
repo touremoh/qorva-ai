@@ -1,5 +1,6 @@
 package ai.qorva.core.dao.entity;
 
+import ai.qorva.core.dto.common.UserPermission;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.time.Instant;
+import java.util.List;
 
 @Getter
 @Setter
@@ -34,6 +36,8 @@ public class User implements QorvaEntity {
 
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
+
+    List<UserPermission> permissions;
 
     @CreatedDate
     private Instant createdAt;

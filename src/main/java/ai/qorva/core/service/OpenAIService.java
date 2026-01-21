@@ -16,7 +16,7 @@ import reactor.core.publisher.Flux;
 
 import java.util.Objects;
 
-import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_O_MINI;
+import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.*;
 
 @Slf4j
 @Service
@@ -54,7 +54,7 @@ public class OpenAIService {
 			.options(
 				OpenAiChatOptions
 					.builder()
-					.model(GPT_4_O_MINI)
+					.model(GPT_5_MINI)
 					.responseFormat(new ResponseFormat(ResponseFormat.Type.JSON_SCHEMA, converter.getJsonSchema()))
 					.temperature(temperature)
 					.build()
@@ -80,7 +80,7 @@ public class OpenAIService {
 		var apiResponse = this.chatClient.prompt()
 			.options(OpenAiChatOptions
 				.builder()
-				.model(GPT_4_O_MINI)
+				.model(GPT_5_MINI)
 				.responseFormat(new ResponseFormat(ResponseFormat.Type.JSON_SCHEMA, outputConverter.getJsonSchema()))
 				.temperature(temperature)
 				.build()
@@ -107,7 +107,7 @@ public class OpenAIService {
 		var response = this.chatClient.prompt()
 			.options(OpenAiChatOptions
 				.builder()
-				.model(GPT_4_O_MINI)
+				.model(GPT_5_CHAT_LATEST)
 				.responseFormat(structuredFormat(outputConverter.getJsonSchema()))
 				.temperature(0.2)
 				.build()

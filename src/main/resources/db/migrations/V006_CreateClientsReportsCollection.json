@@ -1,0 +1,95 @@
+{
+  "collMod": "ClientsReports",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "required": ["tenantId", "clientId", "title", "positionTitle",  "createdAt"],
+      "additionalProperties": false,
+      "properties": {
+        "tenantId": { "bsonType": "objectId", "description": "Tenant/agency partition key" },
+        "clientId": { "bsonType": "objectId", "description": "Client company id" },
+
+        "reportType": { "bsonType": "string", "maxLength": 160, "description": "Type of report" },
+        "title": { "bsonType": "string", "minLength": 3, "maxLength": 160 },
+        "positionTitle": { "bsonType": "string", "minLength": 1, "maxLength": 250 },
+        "preparedFor": { "bsonType": "string", "minLength": 1, "maxLength": 250 },
+        "preparedByUserId": { "bsonType": "objectId" },
+
+        "branding": {
+          "bsonType": "object",
+          "additionalProperties": false,
+          "properties": {
+            "logoUrl": { "bsonType": "string", "description": "Public or signed URL" },
+            "primaryColor": { "bsonType": "string", "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$" },
+            "secondaryColor": { "bsonType": "string", "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$" },
+            "accentColor": { "bsonType": "string", "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$" },
+            "footerText": { "bsonType": "string", "maxLength": 400 }
+          }
+        },
+
+        "shortlist": {
+          "bsonType": "array",
+          "minItems": 0,
+          "items": {
+            "bsonType": "object",
+            "required": ["candidateName", "fitScore", "experienceSnapshot"],
+            "additionalProperties": false,
+            "properties": {
+              "candidateId": { "bsonType": "objectId" },
+              "candidateName": { "bsonType": "string", "minLength": 1, "maxLength": 160 },
+
+              "fitScore": { "bsonType": "int", "minimum": 0, "maximum": 100 },
+
+              "strengths": {
+                "bsonType": "array",
+                "items": { "bsonType": "string", "maxLength": 80 },
+                "maxItems": 20
+              },
+              "experienceSnapshot": { "bsonType": "string", "minLength": 1, "maxLength": 300 },
+
+              "resume": {
+                "bsonType": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "cvId": { "bsonType": "objectId" },
+                  "downloadUrl": { "bsonType": "string", "pattern": "^(http|https)://" }
+                }
+              }
+            }
+          }
+        },
+
+        "metrics": {
+          "bsonType": "object",
+          "required": ["totalAnalyzed", "shortlistedCount", "topFitScore", "averageFitScore"],
+          "additionalProperties": false,
+          "properties": {
+            "totalAnalyzed": { "bsonType": "int", "minimum": 0 },
+            "shortlistedCount": { "bsonType": "int", "minimum": 0 },
+            "topFitScore": { "bsonType": "int", "minimum": 0, "maximum": 100 },
+            "averageFitScore": { "bsonType": "double", "minimum": 0.0, "maximum": 100.0 }
+          }
+        },
+
+        "files": {
+          "bsonType": "object",
+          "additionalProperties": false,
+          "properties": {
+            "pdfUrl": { "bsonType": "string", "pattern": "^(http|https)://" },
+            "htmlUrl": { "bsonType": "string", "pattern": "^(http|https)://" },
+            "storageProvider": { "enum": ["S3", "GCS", "AZURE_BLOB", "LOCAL"] },
+            "sha256": { "bsonType": "string", "pattern": "^[A-Fa-f0-9]{64}$" },
+            "fileSizeBytes": { "bsonType": "long", "minimum": 0 }
+          }
+        },
+
+        "status": { "enum": ["GENERATED", "SENT", "VIEWED", "EXPIRED", "ARCHIVED"] },
+        "createdAt": { "bsonType": "date" },
+        "updatedAt": { "bsonType": "date" },
+        "version": { "bsonType": "int", "minimum": 1, "description": "Increment on regeneration" },
+
+        "notes": { "bsonType": "string", "maxLength": 1000 }
+      }
+    }
+  }
+}

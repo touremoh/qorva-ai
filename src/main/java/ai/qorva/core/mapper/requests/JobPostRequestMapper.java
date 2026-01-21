@@ -10,5 +10,6 @@ import java.util.Map;
 public interface JobPostRequestMapper extends QorvaRequestMapper<JobPostDTO> {
 	@Override
 	@Mapping(target = "embedding", ignore = true)
+	@Mapping(target = "scoringRules", ignore = true)
 	JobPostDTO toDto(Map<String, String> params);
 }

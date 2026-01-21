@@ -117,3 +117,6 @@ stripe:
 qorva:
   notifications:
     enabled: false
+
+mongock:
+  migration-scan-package: ai.qorva.core.migrations

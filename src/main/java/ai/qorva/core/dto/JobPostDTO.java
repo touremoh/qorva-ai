@@ -1,5 +1,6 @@
 package ai.qorva.core.dto;
 
+import ai.qorva.core.dto.common.ScoringRules;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
@@ -19,6 +20,8 @@ import java.time.Instant;
 public class JobPostDTO extends AbstractQorvaDTO {
     private String id;
     private String tenantId;
+    private String clientId;
+    private ScoringRules scoringRules;
     private String title;
     private String description;
     private String createdBy;

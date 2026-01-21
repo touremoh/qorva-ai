@@ -1,5 +1,6 @@
 package ai.qorva.core.dao.entity;
 
+import ai.qorva.core.dto.common.ScoringRules;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,6 +28,11 @@ public class JobPost implements QorvaEntity {
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
     private String status;
+
+    @Field(targetType = FieldType.OBJECT_ID)
+    private String clientId;
+
+    private ScoringRules scoringRules;
 
     @CreatedDate
     private Instant createdAt;

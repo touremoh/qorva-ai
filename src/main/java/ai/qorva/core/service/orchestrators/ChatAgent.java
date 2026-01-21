@@ -33,7 +33,10 @@ public class ChatAgent {
         // Compose prompt with system preamble and condensed history
         String prompt = PromptComposer.compose(ctx, history);
 
-        ChatResult result = openAIService.chatCompletions(prompt); // stick to your configured model
+        // stick to the configured model
+        // TODO : implements a retry mechanism if LLM fails
+        // TODO : Surround with try-catch and set the response as failed if LLM fails
+        ChatResult result = openAIService.chatCompletions(prompt);
 
         return ChatMessage.builder()
                 .tenantId(chat.getTenantId())

@@ -1,0 +1,73 @@
+{
+    "collMod": "Users",
+    "validator": {
+        "$jsonSchema": {
+            "bsonType": "object",
+            "title": "Users",
+            "required": ["firstName", "lastName", "email", "encryptedPassword", "userAccountStatus", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy", "tenantId"],
+            "properties": {
+                "firstName": {
+                    "bsonType": "string",
+                    "description": "must be a string and is required"
+                },
+                "lastName": {
+                    "bsonType": "string",
+                    "description": "must be a string and is required"
+                },
+                "email": {
+                    "bsonType": "string",
+                    "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+                    "description": "must be a valid email address and is required"
+                },
+                "encryptedPassword": {
+                    "bsonType": "string",
+                    "description": "must be a string and is required"
+                },
+                "userAccountStatus": {
+                    "bsonType": "string",
+                    "description": "must be a string representing the status and is required"
+                },
+                "tenantId": {
+                    "bsonType": "objectId",
+                    "description": "must be a valid ObjectId and is required"
+                },
+                "createdAt": {
+                    "bsonType": "date",
+                    "description": "must be a valid date and is required"
+                },
+                "lastUpdatedAt": {
+                    "bsonType": "date",
+                    "description": "must be a valid date and is required"
+                },
+                "createdBy": {
+                    "bsonType": "string",
+                    "description": "must be a string and is required"
+                },
+                "lastUpdatedBy": {
+                    "bsonType": "string",
+                    "description": "must be a string and is required"
+                },
+                "permissions": {
+                    "bsonType": "array",
+                    "items": {
+                        "bsonType": "object",
+                        "properties": {
+                            "role": {
+                                "bsonType": "string",
+                                "description": "must be a string and is required"
+                            },
+                            "action": {
+                                "bsonType": "string",
+                                "description": "must be a string and is required"
+                            },
+                            "permission": {
+                                "bsonType": "string",
+                                "description": "must be a string and is required"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,182 @@
+{
+  "collMod": "ResumeMatches",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "ResumeMatches",
+      "required": [
+        "jobPostId",
+        "candidateInfo",
+        "tenantId",
+        "aiAnalysisReportDetails",
+        "status",
+        "createdAt",
+        "lastUpdatedAt",
+        "createdBy",
+        "lastUpdatedBy"
+      ],
+      "properties": {
+        "jobPostId": {
+          "bsonType": "objectId",
+          "description": "must be a valid ObjectId and is required"
+        },
+        "jobPostTitle": {
+          "bsonType": "string",
+          "description": "must be a valid string"
+        },
+        "candidateInfo": {
+          "bsonType": "object",
+          "required": ["candidateId", "candidateName", "nbYearsExperience", "skills"],
+          "properties": {
+            "candidateId": {
+              "bsonType": "string",
+              "description": "must be a valid string and is required"
+            },
+            "candidateName": {
+              "bsonType": "string",
+              "description": "must be a valid string and is required"
+            },
+            "nbYearsExperience": {
+              "bsonType": "int",
+              "description": "must be a valid int and is required"
+            },
+            "skills": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              },
+              "description": "must be an array of strings and is required"
+            },
+            "candidateProfileSummary": {
+              "bsonType": "string",
+              "description": "must be a valid string and is required"
+            }
+          },
+          "description": "must be a valid object and is required"
+        },
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "must be a valid objectId and is required"
+        },
+        "clientId": {
+          "bsonType": "objectId",
+          "description": "must be a valid ObjectId and is required"
+        },
+        "aiAnalysisReportDetails": {
+          "bsonType": "object",
+          "required": ["skillsMatch", "exceedsRequirements", "lackingSkills", "experienceAlignment", "overallSummary"],
+          "properties": {
+            "skillsMatch": {
+              "bsonType": "object",
+              "description": "Details about the candidate's skills match with the job requirements",
+              "properties": {
+                "skills": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "string"
+                  },
+                  "description": "must be an array of strings and is required"
+                },
+                "degreeOfMatch": {
+                  "bsonType": "int",
+                  "description": "A percentage representing the degree of match between the candidate's skills and the job requirements"
+                },
+                "summary": {
+                  "bsonType": "string",
+                  "description": "A summary of how well the candidate's skills match the job requirements"
+                }
+              }
+            },
+            "lackingSkills": {
+              "bsonType": "object",
+              "description": "Details about the skills the candidate is lacking for the job",
+              "properties": {
+                "skills": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "string"
+                  },
+                  "description": "must be an array of strings and is required"
+                },
+                "summary": {
+                  "bsonType": "string",
+                  "description": "A summary of the skills the candidate is lacking with respect to the job requirements"
+                }
+              }
+            },
+            "exceedsRequirements": {
+              "bsonType": "object",
+              "description": "Details about how the candidate's skills and work experience exceeds job requirements (if not applicable say he skills are below the job requirements)",
+              "properties": {
+                "summary": {
+                  "bsonType": "string",
+                  "description": "A summary of how the candidate's skills and work experience exceeds the job requirements (if not applicable say he skills are below the job requirements)"
+                }
+              }
+            },
+            "experienceAlignment": {
+              "bsonType": "object",
+              "description": "Details about how the candidate's work experience aligns with the job requirements",
+              "properties": {
+                "summary": {
+                  "bsonType": "string",
+                  "description": "A summary of how the candidate's work experience aligns with the job"
+                },
+                "degreeOfMatch": {
+                  "bsonType": "int",
+                  "description": "A percentage representing the degree of match between the candidate's experience and the job requirements"
+                }
+              }
+            },
+            "overallSummary": {
+              "bsonType": "object",
+              "description": "An overall summary of the screening report, including score and improvement points",
+              "properties": {
+                "score": {
+                  "bsonType": "int",
+                  "description": "The overall score for the candidate's suitability"
+                },
+                "pointsForImprovement": {
+                  "bsonType": "array",
+                  "description": "A list of areas where the candidate can improve",
+                  "items": {
+                    "bsonType": "string"
+                  }
+                },
+                "scoreExplanation": {
+                  "bsonType": "string",
+                  "description": "Explain the reason this score was given"
+                },
+                "summary": {
+                  "bsonType": "string",
+                  "description": "A summary of the overall assessment"
+                }
+              }
+            }
+          }
+        },
+        "status": {
+          "bsonType": "string",
+          "enum": ["NEW", "SHORTLIST", "INTERVIEW", "REJECT", "OPEN", "CLOSE"],
+          "description": "must be a string"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a valid date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a valid date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a valid string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a valid string and is required"
+        }
+      }
+    }
+  }
+}
