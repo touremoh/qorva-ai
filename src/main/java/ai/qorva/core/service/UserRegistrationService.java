@@ -7,6 +7,7 @@ import ai.qorva.core.dto.common.SubscriptionInfo;
 import ai.qorva.core.enums.SubscriptionStatus;
 import ai.qorva.core.enums.UserStatusEnum;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.helpers.UserAuthoritiesHelper;
 import ai.qorva.core.mapper.AccountRegistrationMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.ObjectProvider;
@@ -87,6 +88,7 @@ public class UserRegistrationService {
 		// Update User DTO
 		userDTO.setUserAccountStatus(UserStatusEnum.ACTIVE.getValue());
 		userDTO.setTenantId(companyInfo.getId());
+		userDTO.setAuthorities(UserAuthoritiesHelper.createAuthorities());
 
 		// Persist user info
 		return this.userService.createOne(userDTO);

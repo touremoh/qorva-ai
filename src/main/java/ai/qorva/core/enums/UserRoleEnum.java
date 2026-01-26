@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public enum UserRoleEnum {
-	OWNER("OWNER"),
-	MAINTAINER("MAINTAINER");
+	ACCOUNT_OWNER("ACCOUNT_OWNER"),
+	ACCOUNT_MANAGER("ACCOUNT_MANAGER");
 
 	UserRoleEnum(String value) {
 		this.value = value;

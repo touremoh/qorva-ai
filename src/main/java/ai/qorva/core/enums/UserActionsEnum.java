@@ -1,0 +1,42 @@
+package ai.qorva.core.enums;
+
+import lombok.Getter;
+
+@Getter
+public enum UserActionsEnum {
+	// Dashboard
+	READ_DASHBOARD("READ_DASHBOARD"),
+
+	// CV
+	CREATE_CV("CREATE_CV"),
+	READ_CV("READ_CV"),
+	UPDATE_CV("UPDATE_CV"),
+	DELETE_CV("DELETE_CV"),
+
+	// Jobs
+	CREATE_JOB("CREATE_JOB"),
+	READ_JOB("READ_JOB"),
+	UPDATE_JOB("UPDATE_JOB"),
+	DELETE_JOB("DELETE_JOB"),
+
+	// Reports
+	CREATE_REPORT("CREATE_REPORT"),
+	READ_REPORT("READ_REPORT"),
+	UPDATE_REPORT("UPDATE_REPORT"),
+	DELETE_REPORT("DELETE_REPORT"),
+
+	// Chat
+	CREATE_CHAT("CREATE_CHAT"),
+	READ_CHAT("READ_CHAT"),
+	UPDATE_CHAT("UPDATE_CHAT"),
+	DELETE_CHAT("DELETE_CHAT"),
+
+	// Billing
+	UPDATE_SUBSCRIPTION("UPDATE_SUBSCRIPTION"),
+	CANCEL_SUBSCRIPTION("CANCEL_SUBSCRIPTION");
+
+	UserActionsEnum(String value) {
+		this.value = value;
+	}
+	private final String value;
+}

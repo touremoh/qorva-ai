@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class UserPermission {
+public class UserAuthority {
 	String role;
 	String action;
 	String permission;

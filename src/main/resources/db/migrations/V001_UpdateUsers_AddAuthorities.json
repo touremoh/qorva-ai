@@ -47,7 +47,7 @@
                     "bsonType": "string",
                     "description": "must be a string and is required"
                 },
-                "permissions": {
+                "authorities": {
                     "bsonType": "array",
                     "items": {
                         "bsonType": "object",

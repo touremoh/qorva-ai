@@ -1,6 +1,6 @@
 package ai.qorva.core.dao.entity;
 
-import ai.qorva.core.dto.common.UserPermission;
+import ai.qorva.core.dto.common.UserAuthority;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,7 +37,7 @@ public class User implements QorvaEntity {
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
 
-    List<UserPermission> permissions;
+    List<UserAuthority> authorities;
 
     @CreatedDate
     private Instant createdAt;

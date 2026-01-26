@@ -1,5 +1,6 @@
 package ai.qorva.core.dto;
 
+import ai.qorva.core.dto.common.UserAuthority;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
@@ -10,6 +11,7 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.time.Instant;
+import java.util.List;
 
 @Getter
 @Setter
@@ -33,6 +35,8 @@ public class UserDTO extends AbstractQorvaDTO {
 
     @JsonProperty(access = Access.READ_ONLY)
     private String subscriptionStatus;
+
+    List<UserAuthority> authorities;
 
     @JsonProperty(access = Access.READ_ONLY)
     private String createdBy;
