@@ -3,9 +3,15 @@ package ai.qorva.core.service.handlers;
 import ai.qorva.core.dao.repository.StripeEventLogRepository;
 import ai.qorva.core.dto.StripeEventLogDTO;
 import ai.qorva.core.dto.TenantDTO;
+import ai.qorva.core.dto.UserDTO;
+import ai.qorva.core.dto.common.UserAuthority;
+import ai.qorva.core.enums.SubscriptionPlanEnum;
+import ai.qorva.core.enums.UserActionsEnum;
+import ai.qorva.core.enums.UserPermissionEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.StripeEventMapper;
 import ai.qorva.core.service.TenantService;
+import ai.qorva.core.service.UserService;
 import ai.qorva.core.utils.SubscriptionStatusHelper;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Product;
@@ -17,18 +23,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Service
 public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 
 	private final TenantService tenantService;
+	private final UserService userService;
 	private final StripeEventLogRepository repository;
 	private final StripeEventMapper evtMapper;
 
 	@Autowired
-	public StripeSubscriptionUpdatedHandler(TenantService tenantService, StripeEventLogRepository repository, StripeEventMapper evtMapper) {
+	public StripeSubscriptionUpdatedHandler(TenantService tenantService, UserService userService, StripeEventLogRepository repository, StripeEventMapper evtMapper) {
 		this.tenantService = tenantService;
+		this.userService = userService;
 		this.repository = repository;
 		this.evtMapper = evtMapper;
 	}
@@ -76,6 +86,7 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 				// Update tenant in database
 				log.debug("Updating tenant in database: {}", tenantDTO);
 				this.tenantService.updateOne(tenantDTO.getTenantId(), tenantDTO);
+				this.updateUsersAuthorities(tenantDTO.getTenantId(), newPlan);
 				this.persistEventInDb(tenantDTO, subscriptionId, customerId, subscriptionStatus);
 			} else {
 				// Check if it's a status change
@@ -107,5 +118,35 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 		var savedEventLog = this.repository.save(this.evtMapper.map(eventLog));
 
 		log.debug("Saved event log to database: {}", savedEventLog);
+	}
+
+	protected void updateUsersAuthorities(String tenantId, String newSubscriptionPlan) throws QorvaException {
+		// find users
+		var users = this.userService.findAll(UserDTO.builder().tenantId(tenantId).build(), 0, 100).toList();
+
+		// get the right permission
+		var permission = newSubscriptionPlan.equals(SubscriptionPlanEnum.STARTER.getName())
+			? UserPermissionEnum.NOT_ALLOWED.getValue()
+			: UserPermissionEnum.ALLOWED.getValue();
+
+		// update
+		updateChatFeaturePermission(users, permission);
+	}
+
+	protected void updateChatFeaturePermission(List<UserDTO> users, String newPermission) throws QorvaException {
+		for (var user : users) {
+			var authorities = user.getAuthorities();
+			var newAuthorities = new ArrayList<UserAuthority>();
+			for (var authority : authorities) {
+				if (authority.getAction().contains("CHAT")) {
+					authority.setPermission(newPermission);
+				}
+				newAuthorities.add(authority);
+			}
+			// set new authorities for user
+			user.setAuthorities(newAuthorities);
+			// save
+			this.userService.updateOne(user.getId(), user);
+		}
 	}
 }

@@ -1,0 +1,275 @@
+use qorva;
+
+db.Companies.insertMany([
+  { name: "Tech Innovators Ltd", createdAt: new Date(), lastUpdatedAt: new Date() },
+  { name: "Green Solutions Inc.", createdAt: new Date(), lastUpdatedAt: new Date() },
+  { name: "NextGen Enterprises", createdAt: new Date(), lastUpdatedAt: new Date() },
+  { name: "Future Tech Co.", createdAt: new Date(), lastUpdatedAt: new Date() },
+  { name: "AI Pioneers", createdAt: new Date(), lastUpdatedAt: new Date() },
+  { name: "Quantum Corp.", createdAt: new Date(), lastUpdatedAt: new Date() },
+  { name: "Innovatech", createdAt: new Date(), lastUpdatedAt: new Date() },
+  { name: "Cloud Solutions", createdAt: new Date(), lastUpdatedAt: new Date() },
+  { name: "Smart Systems", createdAt: new Date(), lastUpdatedAt: new Date() },
+  { name: "EcoFuture", createdAt: new Date(), lastUpdatedAt: new Date() }
+]);
+
+db.Users.insertMany([
+  { firstName: "Alice", lastName: "Smith", email: "alice.smith@example.com", encryptedPassword: "password123", accountStatus: "ACTIVE", companyId: ObjectId(), createdAt: new Date(), lastUpdatedAt: new Date() },
+  { firstName: "Bob", lastName: "Johnson", email: "bob.johnson@example.com", encryptedPassword: "password123", accountStatus: "ACTIVE", companyId: ObjectId(), createdAt: new Date(), lastUpdatedAt: new Date() },
+  { firstName: "Charlie", lastName: "Brown", email: "charlie.brown@example.com", encryptedPassword: "password123", accountStatus: "TRIAL_PERIOD", companyId: ObjectId(), createdAt: new Date(), lastUpdatedAt: new Date() },
+  { firstName: "Diana", lastName: "Prince", email: "diana.prince@example.com", encryptedPassword: "password123", accountStatus: "INACTIVE", companyId: ObjectId(), createdAt: new Date(), lastUpdatedAt: new Date() },
+  { firstName: "Eve", lastName: "Adams", email: "eve.adams@example.com", encryptedPassword: "password123", accountStatus: "ACTIVE", companyId: ObjectId(), createdAt: new Date(), lastUpdatedAt: new Date() },
+  { firstName: "Frank", lastName: "Miller", email: "frank.miller@example.com", encryptedPassword: "password123", accountStatus: "LOCKED", companyId: ObjectId(), createdAt: new Date(), lastUpdatedAt: new Date() },
+  { firstName: "Grace", lastName: "Hopper", email: "grace.hopper@example.com", encryptedPassword: "password123", accountStatus: "TRIAL_PERIOD", companyId: ObjectId(), createdAt: new Date(), lastUpdatedAt: new Date() },
+  { firstName: "Hank", lastName: "Hill", email: "hank.hill@example.com", encryptedPassword: "password123", accountStatus: "ACTIVE", companyId: ObjectId(), createdAt: new Date(), lastUpdatedAt: new Date() },
+  { firstName: "Ivy", lastName: "Clark", email: "ivy.clark@example.com", encryptedPassword: "password123", accountStatus: "ACTIVE", companyId: ObjectId(), createdAt: new Date(), lastUpdatedAt: new Date() },
+  { firstName: "Jack", lastName: "White", email: "jack.white@example.com", encryptedPassword: "password123", accountStatus: "ACTIVE", companyId: ObjectId(), createdAt: new Date(), lastUpdatedAt: new Date() }
+]);
+
+db.JobsPosts.insertMany([
+  {
+    companyId: ObjectId(),
+    title: "Data Scientist",
+    description: "Analyze datasets and build predictive models.",
+    createdAt: new Date(),
+    lastUpdatedAt: new Date(),
+    createdBy: ObjectId(),
+    lastUpdatedBy: ObjectId()
+  },
+  {
+    companyId: ObjectId(),
+    title: "Frontend Developer",
+    description: "Develop responsive web interfaces using modern frameworks.",
+    createdAt: new Date(),
+    lastUpdatedAt: new Date(),
+    createdBy: ObjectId(),
+    lastUpdatedBy: ObjectId()
+  },
+  {
+    companyId: ObjectId(),
+    title: "Backend Developer",
+    description: "Build and maintain server-side logic for high-traffic applications.",
+    createdAt: new Date(),
+    lastUpdatedAt: new Date(),
+    createdBy: ObjectId(),
+    lastUpdatedBy: ObjectId()
+  },
+  {
+    companyId: ObjectId(),
+    title: "UX Designer",
+    description: "Enhance user experience with intuitive designs.",
+    createdAt: new Date(),
+    lastUpdatedAt: new Date(),
+    createdBy: ObjectId(),
+    lastUpdatedBy: ObjectId()
+  },
+  {
+    companyId: ObjectId(),
+    title: "DevOps Engineer",
+    description: "Automate CI/CD pipelines and ensure system reliability.",
+    createdAt: new Date(),
+    lastUpdatedAt: new Date(),
+    createdBy: ObjectId(),
+    lastUpdatedBy: ObjectId()
+  },
+  {
+    companyId: ObjectId(),
+    title: "Product Manager",
+    description: "Drive product vision and ensure alignment with stakeholders.",
+    createdAt: new Date(),
+    lastUpdatedAt: new Date(),
+    createdBy: ObjectId(),
+    lastUpdatedBy: ObjectId()
+  },
+  // Add at least 15 unique job posts with varied titles, descriptions, and metadata.
+]);
+
+db.CVScreeningReports.insertMany([
+  {
+    companyId: ObjectId(),
+    jobTitle: "Frontend Developer",
+    candidateName: "Alice Johnson",
+    skillsMatch: { summary: "Excellent JavaScript skills.", degreeOfMatch: 85 },
+    exceedsRequirements: { summary: "Strong in React.js" },
+    lackingSkills: { summary: "Limited experience in Angular." },
+    experienceAlignment: { summary: "Matches job requirements well." },
+    overallSummary: {
+      summary: "Great fit.",
+      score: 90,
+      pointsForImprovement: ["Learn Angular.", "Participate in more hackathons."]
+    },
+    interviewQuestions: {
+      skillsBasedQuestions: ["What is a React hook?", "How do you manage state in Redux?"],
+      strengthBasedQuestions: ["How do you handle deadlines under pressure?"],
+      gapExplorationQuestions: ["What experience do you have with Angular?"]
+    }
+  },
+  {
+    companyId: ObjectId(),
+    jobTitle: "Backend Developer",
+    candidateName: "John Doe",
+    skillsMatch: { summary: "Solid understanding of RESTful APIs.", degreeOfMatch: 80 },
+    exceedsRequirements: { summary: "Extensive experience with Spring Boot." },
+    lackingSkills: { summary: "Limited exposure to message queues like RabbitMQ." },
+    experienceAlignment: { summary: "Strong alignment with backend-focused roles." },
+    overallSummary: {
+      summary: "Good candidate.",
+      score: 85,
+      pointsForImprovement: ["Learn RabbitMQ.", "Work on advanced caching strategies."]
+    },
+    interviewQuestions: {
+      skillsBasedQuestions: ["What is dependency injection?", "Explain database indexing."],
+      strengthBasedQuestions: ["Can you share a time you optimized a query for performance?"],
+      gapExplorationQuestions: ["What are your experiences with RabbitMQ?"]
+    }
+  },
+  {
+    companyId: ObjectId(),
+    jobTitle: "Data Scientist",
+    candidateName: "Jane Smith",
+    skillsMatch: { summary: "Proficient in Python and ML algorithms.", degreeOfMatch: 88 },
+    exceedsRequirements: { summary: "Expert in statistical modeling." },
+    lackingSkills: { summary: "Limited exposure to cloud platforms." },
+    experienceAlignment: { summary: "Fits well with the job requirements." },
+    overallSummary: {
+      summary: "Very strong candidate.",
+      score: 92,
+      pointsForImprovement: ["Familiarize with AWS or GCP services.", "Improve collaboration skills."]
+    },
+    interviewQuestions: {
+      skillsBasedQuestions: ["What is overfitting?", "Explain PCA."],
+      strengthBasedQuestions: ["How do you approach exploratory data analysis?"],
+      gapExplorationQuestions: ["Have you deployed models on cloud platforms?"]
+    }
+  },
+  {
+    companyId: ObjectId(),
+    jobTitle: "Fullstack Developer",
+    candidateName: "Chris Evans",
+    skillsMatch: { summary: "Good balance between frontend and backend.", degreeOfMatch: 82 },
+    exceedsRequirements: { summary: "Capable of handling both UI/UX and backend logic." },
+    lackingSkills: { summary: "Needs improvement in CI/CD pipelines." },
+    experienceAlignment: { summary: "Well-aligned for fullstack roles." },
+    overallSummary: {
+      summary: "Versatile developer.",
+      score: 84,
+      pointsForImprovement: ["Deepen CI/CD knowledge.", "Optimize frontend performance."]
+    },
+    interviewQuestions: {
+      skillsBasedQuestions: ["How do you manage state in a complex application?", "Explain microservices."],
+      strengthBasedQuestions: ["Describe your approach to solving UI bottlenecks."],
+      gapExplorationQuestions: ["What tools have you used for CI/CD?"]
+    }
+  },
+  {
+    companyId: ObjectId(),
+    jobTitle: "DevOps Engineer",
+    candidateName: "Emily Davis",
+    skillsMatch: { summary: "Highly skilled in automation tools.", degreeOfMatch: 90 },
+    exceedsRequirements: { summary: "Expert in Kubernetes and Docker." },
+    lackingSkills: { summary: "Limited experience in serverless architectures." },
+    experienceAlignment: { summary: "Extensive alignment with DevOps roles." },
+    overallSummary: {
+      summary: "Outstanding DevOps Engineer.",
+      score: 91,
+      pointsForImprovement: ["Gain experience with AWS Lambda.", "Enhance monitoring practices."]
+    },
+    interviewQuestions: {
+      skillsBasedQuestions: ["Explain infrastructure as code.", "What is the role of a reverse proxy?"],
+      strengthBasedQuestions: ["How do you handle production incidents?"],
+      gapExplorationQuestions: ["Have you deployed serverless functions before?"]
+    }
+  },
+  {
+    companyId: ObjectId(),
+    jobTitle: "QA Engineer",
+    candidateName: "Ryan Smith",
+    skillsMatch: { summary: "Strong understanding of testing strategies.", degreeOfMatch: 78 },
+    exceedsRequirements: { summary: "Good knowledge of automated testing." },
+    lackingSkills: { summary: "Limited exposure to performance testing." },
+    experienceAlignment: { summary: "Matches well for quality assurance roles." },
+    overallSummary: {
+      summary: "Reliable QA Engineer.",
+      score: 80,
+      pointsForImprovement: ["Expand performance testing skills.", "Learn advanced test case design."]
+    },
+    interviewQuestions: {
+      skillsBasedQuestions: ["What is regression testing?", "Explain boundary value analysis."],
+      strengthBasedQuestions: ["How do you approach debugging?"],
+      gapExplorationQuestions: ["What experience do you have with performance testing?"]
+    }
+  }
+]);
+
+db.CVs.insertMany([
+  {
+    id: ObjectId(),
+    companyId: ObjectId(),
+    personalInformation: {
+      name: "John Doe",
+      contact: {
+        phone: "123-456-7890",
+        email: "john.doe@example.com",
+        socialLinks: { linkedin: "linkedin.com/johndoe", github: "github.com/johndoe" }
+      },
+      role: "Software Engineer",
+      availability: { interviews: "Next Week", startDate: "2024-01-01" },
+      summary: "Experienced engineer with expertise in backend development."
+    },
+    createdAt: new Date(),
+    lastUpdatedAt: new Date()
+  },
+  {
+    id: ObjectId(),
+    companyId: ObjectId(),
+    personalInformation: {
+      name: "Alice Smith",
+      contact: {
+        phone: "987-654-3210",
+        email: "alice.smith@example.com",
+        socialLinks: { linkedin: "linkedin.com/alicesmith", github: "github.com/alicesmith" }
+      },
+      role: "Data Scientist",
+      availability: { interviews: "Tomorrow", startDate: "2024-02-15" },
+      summary: "Skilled in data modeling and statistical analysis."
+    },
+    createdAt: new Date(),
+    lastUpdatedAt: new Date()
+  },
+  {
+    id: ObjectId(),
+    companyId: ObjectId(),
+    personalInformation: {
+      name: "Bob Taylor",
+      contact: {
+        phone: "555-555-5555",
+        email: "bob.taylor@example.com",
+        socialLinks: { linkedin: "linkedin.com/bobtaylor" }
+      },
+      role: "UX Designer",
+      availability: { interviews: "Next Week", startDate: "2024-03-10" },
+      summary: "Expert in user-centric design and usability testing."
+    },
+    createdAt: new Date(),
+    lastUpdatedAt: new Date()
+  },
+  // Add more diverse CVs with roles like Frontend Developer, QA Engineer, etc.
+  {
+    id: ObjectId(),
+    companyId: ObjectId(),
+    personalInformation: {
+      name: "Diana Prince",
+      contact: {
+        phone: "222-333-4444",
+        email: "diana.prince@example.com",
+        socialLinks: { linkedin: "linkedin.com/dianaprince", github: "github.com/dianaprince" }
+      },
+      role: "Frontend Developer",
+      availability: { interviews: "Today", startDate: "2024-01-20" },
+      summary: "Focused on creating interactive user interfaces using React.js."
+    },
+    createdAt: new Date(),
+    lastUpdatedAt: new Date()
+  },
+  // Repeat structure for 15+ CV entries with unique values.
+]);

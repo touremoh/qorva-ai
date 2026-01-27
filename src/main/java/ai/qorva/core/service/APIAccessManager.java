@@ -6,7 +6,7 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import static ai.qorva.core.enums.UserAuthoritiesEnum.ALLOWED;
+import static ai.qorva.core.enums.UserPermissionEnum.ALLOWED;
 import static java.util.Optional.ofNullable;
 
 @Service("accessManager")

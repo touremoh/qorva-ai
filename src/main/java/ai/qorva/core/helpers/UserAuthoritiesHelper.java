@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static ai.qorva.core.enums.UserActionsEnum.READ_DASHBOARD;
-import static ai.qorva.core.enums.UserAuthoritiesEnum.ALLOWED;
+import static ai.qorva.core.enums.UserPermissionEnum.ALLOWED;
 import static ai.qorva.core.enums.UserRoleEnum.ACCOUNT_OWNER;
 
 @UtilityClass

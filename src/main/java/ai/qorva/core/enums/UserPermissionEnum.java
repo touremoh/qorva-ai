@@ -3,11 +3,11 @@ package ai.qorva.core.enums;
 import lombok.Getter;
 
 @Getter
-public enum UserAuthoritiesEnum {
+public enum UserPermissionEnum {
 	ALLOWED("ALLOWED"),
   	NOT_ALLOWED("NOT_ALLOWED");
 
-	UserAuthoritiesEnum(String value) {
+	UserPermissionEnum(String value) {
 		this.value = value;
 	}
 
