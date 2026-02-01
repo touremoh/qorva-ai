@@ -1,0 +1,357 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #e9eef3;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2a37;
+}
+
+/* A4 canvas for PDF. OpenHTMLtoPDF respects @page. */
+.page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    background: #ffffff;
+
+    /* Replace unsupported CSS Grid with table layout (supported) */
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+/* -------- Left Panel -------- */
+.left {
+    background: #123a52;
+    color: #ffffff;
+    padding: 18mm 10mm 12mm 10mm;
+
+    /* Table cell column */
+    display: table-cell;
+    width: 50mm;
+    vertical-align: top;
+}
+
+/* -------- Right Content -------- */
+.right {
+    padding: 16mm 14mm 12mm 14mm;
+
+    /* Table cell column */
+    display: table-cell;
+    width: auto;
+    vertical-align: top;
+}
+
+/* Center avatar without flex */
+.avatar-wrap {
+    text-align: center;
+    margin-bottom: 12mm;
+}
+
+.avatar {
+    width: 42mm;
+    height: 42mm;
+    border-radius: 50%;
+    overflow: hidden;
+
+    /* Fix invalid border shorthand from rgba-only to proper border */
+    border: 2.2mm solid #f2f2f2;
+
+    box-sizing: border-box;
+    background: #e9eef3;
+
+    /* allow centering when used in a centered container */
+    display: inline-block;
+}
+
+/* object-fit isn't supported; this may stretch but will render consistently */
+.avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.left-section {
+    margin-top: 0;
+    margin-bottom: 10mm;
+}
+
+.left-title {
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0 0 4mm 0;
+}
+
+.left-divider {
+    height: 1px;
+    background: #dbe4ea;
+    margin: 0 0 5mm 0;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+ * Replace li grid with a simple float layout:
+ * icon column + text column.
+ */
+.contact-list li {
+    margin: 0 0 4.2mm 0;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.ico {
+    width: 6mm;
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* the text next to the icon */
+.contact-list li span + span {
+    display: block;
+    margin-left: 10mm; /* 6mm icon + ~4mm gap */
+    color: #f2f5f8;
+}
+
+.left-subtitle {
+    font-weight: 700;
+    font-size: 11px;
+    margin: 0 0 2mm 0;
+    color: #f2f5f8;
+}
+
+.left-small {
+    font-size: 14px;
+    line-height: 1.45;
+    margin: 0;
+    color: #e7edf3;
+}
+
+.bullets {
+    margin: 2mm 0 0 0;
+    padding-left: 4mm;
+}
+
+.bullets li {
+    margin: 1.2mm 0;
+    font-size: 12px;
+    color: #e7edf3;
+}
+
+.pill-list {
+    margin: 2mm 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pill-list li {
+    margin: 2mm 0;
+    font-size: 14px;
+    color: #e7edf3;
+}
+
+/* -------- Right side content -------- */
+.header {
+    margin-bottom: 10mm;
+}
+
+.name {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.name .first {
+    font-weight: 800;
+    color: #2f3b49;
+}
+
+.role {
+    margin-top: 2mm;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6b7280;
+    font-weight: 700;
+}
+
+.header-accent {
+    width: 14mm;
+    height: 1.2mm;
+    background: #123a52;
+    margin-top: 4mm;
+}
+
+.section {
+    margin-top: 8mm;
+}
+
+.section-title {
+    margin: 0 0 3mm 0;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #123a52;
+}
+
+.section-divider {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 0 0 4mm 0;
+}
+
+.profile-text {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: #4b5563;
+}
+
+/* -------- Experience timeline -------- */
+.timeline {
+    margin-top: 2mm;
+
+    border-left: 2px dotted #01315f;
+
+    /* Space between the line and your content */
+    padding-left: 10mm;
+
+    /* Small offset from the section divider, optional */
+    margin-left: 5mm;
+}
+
+.job {
+    position: relative;
+    padding: 0 0 6mm 0;
+}
+
+.job:last-child { padding-bottom: 0; }
+
+
+.job .dot {
+    position: absolute;
+
+    /* Move dot back into the border area:
+       padding-left (10mm) + half dot size (~1.6mm) */
+    left: -12mm;
+    top: 2mm;
+
+    width: 3.2mm;
+    height: 3.2mm;
+
+    background: #ffffff;
+    border: 2px solid #01315f;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Replace job-head grid with a table row */
+.job-head {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.company {
+    display: table-cell;
+    font-size: 13px;
+    font-weight: 800;
+    color: #1f2a37;
+    margin: 0;
+    vertical-align: baseline;
+}
+
+.period {
+    display: table-cell;
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: right;
+    vertical-align: baseline;
+}
+
+.job-role {
+    margin: 1mm 0 2mm 0;
+    font-size: 12.5px;
+    color: #6b7280;
+    font-weight: 700;
+}
+
+.job-bullets {
+    margin: 0;
+    padding-left: 5mm;
+    color: #4b5563;
+    font-size: 12.5px;
+    line-height: 1.6;
+}
+
+.job-bullets li { margin: 1.2mm 0; }
+
+/* -------- References -------- */
+/*
+ * Replace refs grid with float-based 2 columns.
+ * This works as long as referenceItems produces block children.
+ */
+.refs {
+    width: 100%;
+    overflow: hidden; /* contain floats */
+}
+
+.refs > * {
+    float: left;
+    width: 48%;
+}
+
+.refs > *:nth-child(2n) {
+    float: right;
+}
+
+.ref-name {
+    margin: 0;
+    font-weight: 800;
+    color: #1f2a37;
+    font-size: 12.5px;
+}
+
+.ref-title {
+    margin: 1mm 0 2mm 0;
+    color: #6b7280;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.ref-meta {
+    margin: 0;
+    font-size: 12px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* -------- Helpers -------- */
+.muted { color: #6b7280; }
+.nowrap { white-space: nowrap; }
+
+/* Optional: screen-only preview bits. Note: box-shadow is ignored in PDF anyway. */
+@media screen {
+    body { padding: 18px; }
+}

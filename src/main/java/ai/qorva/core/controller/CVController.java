@@ -11,6 +11,8 @@ import ai.qorva.core.utils.BuildApiResponse;
 import ai.qorva.core.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -47,5 +49,16 @@ public class CVController extends AbstractQorvaController<CVDTO> {
     @GetMapping("/tags")
     public ResponseEntity<QorvaRequestResponse> findAllTagsByTenantId(@RequestHeader("Authorization") String authorizationHeader) {
         return BuildApiResponse.from(((CVService)this.service).findAllTagsByTenantId(JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey())));
+    }
+
+    @GetMapping(value = "/{id}/pdf", produces = MediaType.APPLICATION_PDF_VALUE)
+    public ResponseEntity<byte[]> getCVInPdfFormat(@PathVariable("id") String cvId, @RequestParam(defaultValue = "en") String lang) throws QorvaException {
+        byte[] pdfBytes = ((CVService)this.service).generateCVInPdfFormat(cvId, lang);
+
+        return ResponseEntity.ok()
+            .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=cv-" + cvId + ".pdf")
+            .contentType(MediaType.APPLICATION_PDF)
+            .contentLength(pdfBytes.length)
+            .body(pdfBytes);
     }
 }

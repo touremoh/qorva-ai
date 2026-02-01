@@ -9,6 +9,7 @@ import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.events.CVScreeningEvent;
 import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.helpers.PDFGenerator;
 import ai.qorva.core.mapper.CVMapper;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.qbe.CVQueryBuilder;
@@ -215,5 +216,13 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
                 }
             } while (++pageNumber < totalPages);
         }
+    }
+
+    public byte[] generateCVInPdfFormat(String cvId, String languageCode) throws QorvaException {
+        // Find CV by ID
+        var cvData = this.findOneById(cvId);
+
+        // Generate PDF
+        return PDFGenerator.generateCV(cvData, languageCode);
     }
 }

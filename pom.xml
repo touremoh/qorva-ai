@@ -218,6 +218,17 @@
             <artifactId>mongodb-springdata-v4-driver</artifactId>
             <version>${mongock.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.github.openhtmltopdf</groupId>
+            <artifactId>openhtmltopdf-pdfbox</artifactId>
+            <version>1.1.37</version>
+        </dependency>
+        <dependency>
+            <groupId>org.owasp.encoder</groupId>
+            <artifactId>encoder</artifactId>
+            <version>1.4.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>

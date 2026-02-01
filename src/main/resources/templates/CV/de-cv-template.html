@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resume - {{FULL_NAME}}</title>
+    <link rel="stylesheet" href="css/cv-template-styles.css">
+</head>
+
+<body>
+<div class="page">
+
+    <!-- LEFT PANEL -->
+    <aside class="left">
+        <section class="left-section">
+            <div class="left-title">Kontakt</div>
+            <div class="left-divider"></div>
+
+            <ul class="contact-list">
+                <li>
+                    <span class="ico">☎</span>
+                    <span class="nowrap">{{phone}}</span>
+                </li>
+                <li>
+                    <span class="ico">✉</span>
+                    <span>{{email}}</span>
+                </li>
+                <li>
+                    <span class="ico">⌂</span>
+                    <span>{{addressLine}}</span>
+                </li>
+                <li>
+                    <span class="ico">🌐</span>
+                    <span>{{website}}</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="left-section">
+            <div class="left-title">Ausbildung</div>
+            <div class="left-divider"></div>
+
+            <!-- Education item 1 -->
+            {{educationItems}}
+        </section>
+
+        <section class="left-section">
+            <div class="left-title">Skills</div>
+            <div class="left-divider"></div>
+
+            <ul class="pill-list">
+                {{skillsItems}}
+            </ul>
+        </section>
+
+        <section class="left-section">
+            <div class="left-title">Languages</div>
+            <div class="left-divider"></div>
+
+            <ul class="pill-list">
+                {{langaugesItems}}
+            </ul>
+        </section>
+    </aside>
+
+    <!-- RIGHT CONTENT -->
+    <main class="right">
+
+        <!-- Header -->
+        <header class="header">
+            <h1 class="name">
+                <span class="first">{{firstName}}</span>
+                <span class="last">{{lastName}}</span>
+            </h1>
+            <div class="role">{{jobTitle}}</div>
+            <div class="header-accent"></div>
+        </header>
+
+        <!-- Profile -->
+        <section class="section">
+            <div class="section-title">Profile</div>
+            <div class="section-divider"></div>
+            <p class="profile-text">
+                {{profileSummary}}
+            </p>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="section">
+            <div class="section-title">Work Experience</div>
+            <div class="section-divider"></div>
+            <div class="timeline">
+                {{workExperienceItems}}
+            </div>
+        </section>
+
+        <!-- Reference -->
+        <section class="section">
+            <div class="section-title">Reference</div>
+            <div class="section-divider"></div>
+
+            <div class="refs">
+                {{referenceItems}}
+            </div>
+        </section>
+
+    </main>
+</div>
+</body>
+</html>

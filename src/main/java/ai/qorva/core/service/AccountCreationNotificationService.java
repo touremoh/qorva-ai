@@ -26,7 +26,7 @@ public class AccountCreationNotificationService extends AbstractEmailService {
 	public void send(UserDTO receiver, String languageCode) throws QorvaException {
 		try {
 			// Load the HTML template from file
-			String htmlTemplate = loadHtmlTemplate("templates/account-activation-template.html");
+			String htmlTemplate = loadHtmlTemplate("templates/emails/account-activation-template.html");
 
 			// Get the template content
 			String templateContent = loadHtmlTemplate("templates/"+languageCode+"_notification_content.html");
