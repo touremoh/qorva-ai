@@ -33,14 +33,6 @@
         </section>
 
         <section class="left-section">
-            <div class="left-title">Education</div>
-            <div class="left-divider"></div>
-
-            <!-- Education item 1 -->
-            {{educationItems}}
-        </section>
-
-        <section class="left-section">
             <div class="left-title">Skills</div>
             <div class="left-divider"></div>
 
@@ -56,6 +48,16 @@
             <ul class="pill-list">
                 {{languagesItems}}
             </ul>
+        </section>
+
+        <!-- Reference -->
+        <section class="left-section">
+            <div class="left-title">Reference</div>
+            <div class="left-divider"></div>
+
+            <div class="pill-list">
+                {{referenceItems}}
+            </div>
         </section>
     </aside>
 
@@ -89,13 +91,19 @@
             </div>
         </section>
 
-        <!-- Reference -->
         <section class="section">
-            <div class="section-title">Reference</div>
+            <div class="section-title">Education</div>
             <div class="section-divider"></div>
+            <div class="timeline">
+                {{educationItems}}
+            </div>
+        </section>
 
-            <div class="refs">
-                {{referenceItems}}
+        <section class="section">
+            <div class="section-title">Certifications</div>
+            <div class="section-divider"></div>
+            <div class="timeline">
+                {{certificationItems}}
             </div>
         </section>
 

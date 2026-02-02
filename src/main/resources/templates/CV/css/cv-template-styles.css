@@ -16,7 +16,7 @@ body {
 /* A4 canvas for PDF. OpenHTMLtoPDF respects @page. */
 .page {
     width: 210mm;
-    height: 297mm;
+    min-height: 297mm;
     margin: 0;
     background: #ffffff;
 
@@ -44,7 +44,6 @@ body {
 
     /* Table cell column */
     display: table-cell;
-    width: auto;
     vertical-align: top;
 }
 
@@ -237,15 +236,15 @@ body {
     margin-left: 5mm;
 }
 
-.job {
+.article-bloc {
     position: relative;
     padding: 0 0 6mm 0;
 }
 
-.job:last-child { padding-bottom: 0; }
+.article-bloc:last-child { padding-bottom: 0; }
 
 
-.job .dot {
+.article-bloc .dot {
     position: absolute;
 
     /* Move dot back into the border area:
@@ -263,13 +262,13 @@ body {
 }
 
 /* Replace job-head grid with a table row */
-.job-head {
+.article-bloc-head {
     display: table;
     width: 100%;
     table-layout: fixed;
 }
 
-.company {
+.institution {
     display: table-cell;
     font-size: 13px;
     font-weight: 800;
@@ -297,7 +296,7 @@ body {
     font-weight: 700;
 }
 
-.job-bullets {
+.article-bloc-bullets {
     margin: 0;
     padding-left: 5mm;
     color: #4b5563;
@@ -305,7 +304,7 @@ body {
     line-height: 1.6;
 }
 
-.job-bullets li { margin: 1.2mm 0; }
+.article-bloc-bullets li { margin: 1.2mm 0; }
 
 /* -------- References -------- */
 /*

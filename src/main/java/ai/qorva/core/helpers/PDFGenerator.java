@@ -5,6 +5,7 @@ import ai.qorva.core.dto.common.*;
 import ai.qorva.core.exception.QorvaException;
 import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
 import lombok.experimental.UtilityClass;
+import org.owasp.encoder.Encode;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.ByteArrayOutputStream;
@@ -16,7 +17,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.function.Function;
-import org.owasp.encoder.Encode;
 
 import static java.util.Optional.ofNullable;
 
@@ -54,6 +54,7 @@ public class PDFGenerator {
 		replacements.put("{{referenceItems}}", getReferenceItems(data.getReferences()));
 		replacements.put("{{languagesItems}}", getLanguagesItems(Objects.nonNull(data.getSkillsAndQualifications()) ? data.getSkillsAndQualifications().getLanguages() : List.of()));
 		replacements.put("{{skillsItems}}", getSkillsItems(data.getKeySkills()));
+		replacements.put("{{certificationItems}}", getCertificationItems(data.getCertifications()));
 
 		String finalHtml = applyReplacements(templateHtml, replacements);
 
@@ -257,5 +258,28 @@ public class PDFGenerator {
 			strLanguageItems.append(languageComponent);
 		});
 		return strLanguageItems.toString();
+	}
+
+	private String getCertificationItems(List<Certification> certificateItems) {
+		if (Objects.isNull(certificateItems) || certificateItems.isEmpty()) return "";
+
+		var strCertificateItems = new StringBuilder();
+
+		Function<Certification, String> getCertificateInstitution = (certificate) -> {
+			if (certificate.getInstitution() == null || certificate.getInstitution().isEmpty()) {
+				return certificate.getTitle();
+			}
+			return certificate.getInstitution();
+		};
+		certificateItems.forEach(certification -> {
+			var certificationComponent = getComponent("certification-item.html");
+			certificationComponent = certificationComponent.replace("{{certificateTitle}}", escapeHtml(certification.getTitle()));
+			certificationComponent = certificationComponent.replace("{{certificateInstitution}}", escapeHtml(getCertificateInstitution.apply(certification)));
+			certificationComponent = certificationComponent.replace("{{certificateYear}}", escapeHtml(certification.getYear()));
+			certificationComponent = certificationComponent.replace("{{certificateDescription}}", escapeHtml(certification.getDescription()));
+
+			strCertificateItems.append(certificationComponent);
+		});
+		return strCertificateItems.toString();
 	}
 }
