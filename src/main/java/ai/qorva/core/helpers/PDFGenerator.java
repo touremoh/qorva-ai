@@ -42,10 +42,6 @@ public class PDFGenerator {
 				var contact = personInfo.getContact();
 				replacements.put("{{phone}}", escapeHtml(contact.getPhone()));
 				replacements.put("{{email}}", escapeHtml(contact.getEmail()));
-
-				if (Objects.nonNull(contact.getSocialLinks())) {
-					replacements.put("{{website}}", escapeHtml(contact.getSocialLinks().getWebsite()));
-				}
 			}
 		});
 

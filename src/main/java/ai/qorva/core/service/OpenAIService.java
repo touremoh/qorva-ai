@@ -12,6 +12,8 @@ import org.springframework.ai.openai.api.ResponseFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
+import org.springframework.web.reactive.function.client.WebClientResponseException;
 import reactor.core.publisher.Flux;
 
 import java.util.Objects;
@@ -35,7 +37,7 @@ public class OpenAIService {
 		this.mapper = mapper;
 	}
 
-	public Flux<String> streamCVExtraction(String cvContent) {
+	public String streamCVExtraction(String cvContent) {
 		// Create an output converter
 		var converter = new BeanOutputConverter<>(CVOutputDTO.class);
 
@@ -45,27 +47,39 @@ public class OpenAIService {
 		// Get the output format
 		var cvOutputFormat = this.qorvaPromptContextHolder.getCvOutputFormat();
 
-		// Set temperate at 0 to reduce randomness
-		double temperature = 0;
+		try {
+			// Stream the CV extraction
+			return this.chatClient
+				.prompt()
+				.options(
+					OpenAiChatOptions.builder()
+						.model(GPT_5_MINI)
+						.responseFormat(ResponseFormat
+							.builder()
+							.type(ResponseFormat.Type.JSON_SCHEMA)
+							.jsonSchema(ResponseFormat.JsonSchema
+								.builder()
+								.name("cv_parser")
+								.schema(converter.getJsonSchema())
+								.strict(Boolean.TRUE)
+								.build())
+							.build()
+						)
+						.temperature(1.0)
+						.build()
+				)
+				.user(u -> u
+					.text(promptTemplate)
+					.param("cv_data", cvContent)
+					.param("output_format", cvOutputFormat)
+				)
+				.call()
+				.content();
 
-		// Stream the CV extraction
-		return this.chatClient
-			.prompt()
-			.options(
-				OpenAiChatOptions
-					.builder()
-					.model(GPT_5_MINI)
-					.responseFormat(new ResponseFormat(ResponseFormat.Type.JSON_SCHEMA, converter.getJsonSchema()))
-					.temperature(temperature)
-					.build()
-			)
-			.user(u -> u
-				.text(promptTemplate)
-				.param("cv_data", cvContent)
-				.param("output_format", cvOutputFormat)
-			)
-			.stream()
-			.content();
+		} catch (Exception e) {
+			log.error("Error while extracting CV from the content: {}", e.getMessage());
+			return null;
+		}
 	}
 
 	public AIAnalysisReportDetails generateReport(String cvDetails, String jobDescription) {
@@ -73,16 +87,22 @@ public class OpenAIService {
 		var reportOutputFormat = this.qorvaPromptContextHolder.getReportOutputFormat();
 		var outputConverter = new BeanOutputConverter<>(CVScreeningReportOutputDTO.class);
 
-		// Lower the temperature to reduce randomness
-		double temperature = 0;
-
 		// Call the API
 		var apiResponse = this.chatClient.prompt()
-			.options(OpenAiChatOptions
-				.builder()
+			.options(OpenAiChatOptions.builder()
 				.model(GPT_5_MINI)
-				.responseFormat(new ResponseFormat(ResponseFormat.Type.JSON_SCHEMA, outputConverter.getJsonSchema()))
-				.temperature(temperature)
+				.responseFormat(ResponseFormat
+					.builder()
+					.type(ResponseFormat.Type.JSON_SCHEMA)
+					.jsonSchema(ResponseFormat.JsonSchema
+						.builder()
+						.name("report_generation")
+						.schema(outputConverter.getJsonSchema())
+						.strict(Boolean.TRUE)
+						.build())
+					.build()
+				)
+				.temperature(1.0)
 				.build()
 			)
 			.user(u -> u
@@ -91,25 +111,35 @@ public class OpenAIService {
 				.param("job_description", jobDescription)
 				.param("output_format", reportOutputFormat)
 			)
-			.stream()
+			.call()
 			.content();
 
-		// Convert the API Response into String content
-		var content = apiResponse.reduce(String::concat).block();
+		// Assert response is not null
+		Assert.notNull(apiResponse, "API response cannot be null");
+
 
 		// Map the string content into CVScreeningReportDTO and render results
-		return this.mapper.map(outputConverter.convert(content));
+		return this.mapper.map(outputConverter.convert(apiResponse));
 	}
 
 	public ChatResult chatCompletions(String userMessage) throws QorvaException {
 		var outputConverter = new BeanOutputConverter<>(OpenAIChatResponse.class);
 
 		var response = this.chatClient.prompt()
-			.options(OpenAiChatOptions
-				.builder()
+			.options(OpenAiChatOptions.builder()
 				.model(GPT_5_CHAT_LATEST)
-				.responseFormat(structuredFormat(outputConverter.getJsonSchema()))
-				.temperature(0.2)
+				.responseFormat(ResponseFormat
+					.builder()
+					.type(ResponseFormat.Type.JSON_SCHEMA)
+					.jsonSchema(ResponseFormat.JsonSchema
+						.builder()
+						.name("chat_completion")
+						.schema(outputConverter.getJsonSchema())
+						.strict(Boolean.TRUE)
+						.build())
+					.build()
+				)
+				.temperature(1.0)
 				.build()
 			)
 			.user(u -> u.text(userMessage))
@@ -122,17 +152,5 @@ public class OpenAIService {
 		}
 
 		return this.mapper.map(outputConverter.convert(response));
-	}
-
-	private ResponseFormat structuredFormat(String schemaJson) {
-		var jsonSchema = ResponseFormat.JsonSchema.builder()
-			.name("OpenAIChatResponse")
-			.schema(schemaJson)
-			.strict(true)
-			.build();
-		return ResponseFormat.builder()
-			.type(ResponseFormat.Type.JSON_SCHEMA)
-			.jsonSchema(jsonSchema)
-			.build();
 	}
 }

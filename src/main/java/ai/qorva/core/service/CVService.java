@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
@@ -30,6 +31,9 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 @Slf4j
 @Service
@@ -97,11 +101,20 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
                 .filter(Objects::nonNull)
                 .toList();
 
+        if (processFiles.isEmpty()) {
+            throw new QorvaException(
+                "CV Service - No files processed",
+                HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                HttpStatus.INTERNAL_SERVER_ERROR
+            );
+        }
+
         log.debug("CV Service - CV saved in database - Triggering CV screening for all job post");
 
         publishCVUpsertEvents(tenantId);
 
         log.debug("CV Service - File upload completed");
+
         return processFiles;
     }
 
@@ -121,9 +134,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
             throw new QorvaException("CV Service - CV Content is empty");
         }
         var outputConverter = new BeanOutputConverter<>(CVOutputDTO.class);
-        String content = this.openAIService.streamCVExtraction(cvContent)
-            .reduce(String::concat)
-            .block();
+        var content = this.openAIService.streamCVExtraction(cvContent);
 
         if (!StringUtils.hasText(content)) {
             log.warn("CV content extraction failed");

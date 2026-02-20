@@ -30,7 +30,7 @@
         <java.version>23</java.version>
         <lombok.version>1.18.42</lombok.version>
         <mapstruct.version>1.6.3</mapstruct.version>
-        <spring-ai.version>1.1.0-M1</spring-ai.version>
+        <spring-ai.version>1.0.3</spring-ai.version>
         <mongock.version>5.5.1</mongock.version>
     </properties>
 
@@ -228,6 +228,11 @@
             <artifactId>encoder</artifactId>
             <version>1.4.0</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 
