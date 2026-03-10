@@ -13,12 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
-import org.springframework.web.reactive.function.client.WebClientResponseException;
-import reactor.core.publisher.Flux;
 
 import java.util.Objects;
 
-import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.*;
+import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_5_CHAT_LATEST;
+import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_5_MINI;
 
 @Slf4j
 @Service

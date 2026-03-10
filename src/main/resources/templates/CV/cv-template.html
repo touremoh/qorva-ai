@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{{header-title}} - {{FULL_NAME}}</title>
+        <link rel="stylesheet" href="css/cv-template-styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
+
+    <body>
+        <div class="page">
+            <!-- LEFT PANEL -->
+            <aside class="left">
+                <section class="left-section">
+                    <div class="left-title">{{title-contact}}</div>
+                    <div class="left-divider"></div>
+
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span class="nowrap">{{phone}}</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span class="nowrap">{{email}}</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="left-section">
+                    <div class="left-title">{{title-skills}}</div>
+                    <div class="left-divider"></div>
+
+                    <ul class="pill-list">
+                        {{skillsItems}}
+                    </ul>
+                </section>
+
+                <section class="left-section">
+                    <div class="left-title">{{title-languages}}</div>
+                    <div class="left-divider"></div>
+
+                    <ul class="pill-list">
+                        {{languagesItems}}
+                    </ul>
+                </section>
+
+                <!-- Reference -->
+                <section class="left-section">
+                    <div class="left-title">{{title-references}}</div>
+                    <div class="left-divider"></div>
+
+                    <div class="pill-list">
+                        {{referenceItems}}
+                    </div>
+                </section>
+            </aside>
+
+            <!-- RIGHT CONTENT -->
+            <main class="right">
+                <!-- Header -->
+                <header class="header">
+                    <h1 class="name">
+                        <span class="first">{{fullName}}</span>
+                    </h1>
+                    <div class="role">{{jobTitle}}</div>
+                    <div class="header-accent"></div>
+                </header>
+
+                <!-- Profile -->
+                <section class="section">
+                    <div class="section-title">{{title-profile}}</div>
+                    <div class="section-divider"></div>
+                    <p class="profile-text">
+                        {{profileSummary}}
+                    </p>
+                </section>
+
+                <!-- Work Experience -->
+                <section class="section">
+                    <div class="section-title">{{title-work-experience}}</div>
+                    <div class="section-divider"></div>
+                    <div class="timeline">
+                        {{workExperienceItems}}
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-title">{{title-education}}</div>
+                    <div class="section-divider"></div>
+                    <div class="timeline">
+                        {{educationItems}}
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-title">{{title-certifications}}</div>
+                    <div class="section-divider"></div>
+                    <div class="timeline">
+                        {{certificationItems}}
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div id="toFill"></div>
+    </body>
+</html>

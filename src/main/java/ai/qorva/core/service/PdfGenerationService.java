@@ -1,12 +1,14 @@
-package ai.qorva.core.helpers;
+package ai.qorva.core.service;
 
+import ai.qorva.core.config.CVTemplateProperties;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.common.*;
 import ai.qorva.core.exception.QorvaException;
 import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
-import lombok.experimental.UtilityClass;
 import org.owasp.encoder.Encode;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -20,18 +22,38 @@ import java.util.function.Function;
 
 import static java.util.Optional.ofNullable;
 
-@UtilityClass
-public class PDFGenerator {
+@Service
+public class PdfGenerationService {
+
+	private final CVTemplateProperties cvTemplateProperties;
+	private final String templateHtml;
+
+	@Autowired
+	public PdfGenerationService(CVTemplateProperties cvTemplateProperties) {
+		this.cvTemplateProperties = cvTemplateProperties;
+		this.templateHtml = readClasspathUtf8("templates/CV/cv-template.html");
+	}
 
 	public byte[] generateCV(CVDTO data, String languageCode) throws QorvaException {
 		Objects.requireNonNull(languageCode, "language is required");
 		Objects.requireNonNull(data, "CV data is required");
 
-		String templatePath = "templates/CV/" + languageCode + "-cv-template.html";
-		String templateHtml = readClasspathUtf8(templatePath);
-
 		Map<String, String> replacements = new LinkedHashMap<>();
 
+		// Translation-based replacements
+		var translations = this.cvTemplateProperties.getLanguageSectionTitles(languageCode);
+
+		replacements.put("{{header-title}}", escapeHtml(translations.getOrDefault("header-title", "Resume")));
+		replacements.put("{{title-contact}}", escapeHtml(translations.getOrDefault("title-contact", "Contact")));
+		replacements.put("{{title-skills}}", escapeHtml(translations.getOrDefault("title-skills", "Skills")));
+		replacements.put("{{title-languages}}", escapeHtml(translations.getOrDefault("title-languages", "Languages")));
+		replacements.put("{{title-references}}", escapeHtml(translations.getOrDefault("title-references", "References")));
+		replacements.put("{{title-profile}}", escapeHtml(translations.getOrDefault("title-profile", "Profile")));
+		replacements.put("{{title-work-experience}}", escapeHtml(translations.getOrDefault("title-work-experience", "Work Experience")));
+		replacements.put("{{title-education}}", escapeHtml(translations.getOrDefault("title-education", "Education")));
+		replacements.put("{{title-certifications}}", escapeHtml(translations.getOrDefault("title-certifications", "Certifications")));
+
+		// Values based replacements
 		ofNullable(data.getPersonalInformation()).ifPresent(personInfo -> {
 			replacements.put("{{FULL_NAME}}", escapeHtml(personInfo.getName()));
 			replacements.put("{{fullName}}", escapeHtml(personInfo.getName()));

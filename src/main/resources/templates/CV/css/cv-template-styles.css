@@ -2,6 +2,7 @@
     size: A4;
     margin: 0;
 }
+
 html, body {
     height: 100%;
 }
@@ -19,8 +20,6 @@ body {
     min-height: 297mm;
     margin: 0;
     background: #ffffff;
-
-    /* Replace unsupported CSS Grid with table layout (supported) */
     display: table;
     table-layout: fixed;
     border-collapse: collapse;
@@ -31,20 +30,18 @@ body {
     background: #123a52;
     color: #ffffff;
     padding: 18mm 10mm 12mm 10mm;
-
-    /* Table cell column */
     display: table-cell;
     width: 50mm;
     vertical-align: top;
+    margin-bottom: 0;
 }
 
 /* -------- Right Content -------- */
 .right {
     padding: 16mm 14mm 12mm 14mm;
-
-    /* Table cell column */
     display: table-cell;
     vertical-align: top;
+    margin-bottom: 0;
 }
 
 /* Center avatar without flex */

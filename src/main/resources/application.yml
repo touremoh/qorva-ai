@@ -16,3 +16,77 @@ management:
 spring:
   application:
     name: qorva-ai
+
+templates:
+  cv:
+    translations:
+      de:
+        header-title: Lebenslauf
+        title-contact: Kontaktdaten
+        title-skills: Kompetenzen
+        title-languages: Sprachkenntnisse
+        title-references: Referenzen
+        title-profile: Profil
+        title-work-experience: Berufserfahrung
+        title-education: Ausbildung
+        title-certifications: Zertifikate
+      en:
+        header-title: Resume
+        title-contact: Contact
+        title-skills: Skills
+        title-languages: Languages
+        title-references: References
+        title-profile: Profile
+        title-work-experience: Work Experience
+        title-education: Education
+        title-certifications: Certifications
+      es:
+        header-title: Currículum
+        title-contact: Contacto
+        title-skills: Competencias
+        title-languages: Idiomas
+        title-references: Referencias
+        title-profile: Perfil
+        title-work-experience: Experiencia profesional
+        title-education: Formación académica
+        title-certifications: Certificaciones
+      fr:
+        header-title: CV
+        title-contact: Coordonnées
+        title-skills: Compétences
+        title-languages: Langues
+        title-references: Références
+        title-profile: Profil
+        title-work-experience: Expérience professionnelle
+        title-education: Formation
+        title-certifications: Certifications
+      it:
+        header-title: Curriculum Vitae
+        title-contact: Contatti
+        title-skills: Competenze
+        title-languages: Lingue
+        title-references: Referenze
+        title-profile: Profilo
+        title-work-experience: Esperienza professionale
+        title-education: Formazione
+        title-certifications: Certificazioni
+      nl:
+        header-title: Curriculum Vitae
+        title-contact: Contactgegevens
+        title-skills: Vaardigheden
+        title-languages: Talen
+        title-references: Referenties
+        title-profile: Profiel
+        title-work-experience: Werkervaring
+        title-education: Opleiding
+        title-certifications: Certificeringen
+      pt:
+        header-title: Currículo
+        title-contact: Contactos
+        title-skills: Competências
+        title-languages: Idiomas
+        title-references: Referências
+        title-profile: Perfil
+        title-work-experience: Experiência profissional
+        title-education: Formação
+        title-certifications: Certificações

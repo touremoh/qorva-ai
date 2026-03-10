@@ -9,7 +9,6 @@ import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.events.CVScreeningEvent;
 import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.exception.QorvaException;
-import ai.qorva.core.helpers.PDFGenerator;
 import ai.qorva.core.mapper.CVMapper;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.qbe.CVQueryBuilder;
@@ -32,9 +31,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
-
 @Slf4j
 @Service
 public class CVService extends AbstractQorvaService<CVDTO, CV> {
@@ -44,6 +40,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final ApplicationEventPublisher publisher;
     private final JobPostService jobPostService;
     private final EmbeddingModel embeddingModel;
+    private final PdfGenerationService pdfGenerator;
 
     @Autowired
     public CVService(
@@ -53,14 +50,16 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 		OpenAIService openAIService,
 		OpenAIResultMapper openAIResultMapper,
 		ApplicationEventPublisher publisher,
-        JobPostService jobPostService,
-        EmbeddingModel embeddingModel) {
+		JobPostService jobPostService,
+		EmbeddingModel embeddingModel,
+        PdfGenerationService pdfGenerator) {
         super(repository, cvMapper, queryBuilder);
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
 		this.publisher = publisher;
 		this.jobPostService = jobPostService;
 		this.embeddingModel = embeddingModel;
+		this.pdfGenerator = pdfGenerator;
 	}
 
     @Override
@@ -234,6 +233,6 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         var cvData = this.findOneById(cvId);
 
         // Generate PDF
-        return PDFGenerator.generateCV(cvData, languageCode);
+        return this.pdfGenerator.generateCV(cvData, languageCode);
     }
 }
