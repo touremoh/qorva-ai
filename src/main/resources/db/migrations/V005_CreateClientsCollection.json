@@ -4,7 +4,6 @@
     "$jsonSchema": {
       "bsonType": "object",
       "required": ["tenantId", "name", "createdAt", "updatedAt"],
-      "additionalProperties": false,
       "properties": {
         "tenantId": {
           "oneOf": [
@@ -32,7 +31,6 @@
           "maxItems": 100,
           "items": {
             "bsonType": "object",
-            "additionalProperties": false,
             "properties": {
               "contactId": {
                 "oneOf": [

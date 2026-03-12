@@ -14,7 +14,7 @@ public class ClientQueryBuilder implements QorvaQueryBuilder<Client> {
 			.withMatcher("id", ExampleMatcher.GenericPropertyMatchers.exact())
 			.withMatcher("tenantId", ExampleMatcher.GenericPropertyMatchers.exact())
 			.withMatcher("clientCode", ExampleMatcher.GenericPropertyMatchers.ignoreCase().exact())
-			.withMatcher("name", ExampleMatcher.GenericPropertyMatchers.ignoreCase().exact());
+			.withMatcher("name", ExampleMatcher.GenericPropertyMatchers.ignoreCase().contains());
 
 		return Example.of(entity, matcher);
 	}

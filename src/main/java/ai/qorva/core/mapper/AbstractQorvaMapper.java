@@ -23,6 +23,6 @@ public interface AbstractQorvaMapper<E extends QorvaEntity, D extends QorvaDTO> 
 
 
 	default void merge(D target, D source) throws QorvaException {
-		QorvaUtils.merge(target, source);
+		QorvaUtils.patchLeft(target, source);
 	}
 }

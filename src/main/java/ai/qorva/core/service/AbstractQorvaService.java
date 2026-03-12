@@ -62,7 +62,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     protected void preProcessFindOneById(String id) {
-        Assert.notNull(id, "id must not be null");
+        Objects.requireNonNull(id, "id must not be null");
     }
 
     protected void postProcessFindOneById(E entity) {

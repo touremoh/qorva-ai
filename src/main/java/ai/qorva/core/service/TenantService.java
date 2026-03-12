@@ -3,7 +3,6 @@ package ai.qorva.core.service;
 import ai.qorva.core.dao.entity.Tenant;
 import ai.qorva.core.dao.repository.TenantRepository;
 import ai.qorva.core.dto.TenantDTO;
-import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.TenantMapper;
 import ai.qorva.core.qbe.TenantQueryBuilder;
@@ -12,7 +11,6 @@ import io.jsonwebtoken.lang.Strings;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.Assert;
 
 import java.util.Objects;
 import java.util.Optional;
@@ -53,7 +51,7 @@ public class TenantService extends AbstractQorvaService<TenantDTO,Tenant> {
 		if (Objects.isNull(newSubscriptionInfo)) {
 			dto.setSubscriptionInfo(oldSubscriptionInfo);
 		} else {
-			QorvaUtils.merge(newSubscriptionInfo, oldSubscriptionInfo);
+			QorvaUtils.patchLeft(newSubscriptionInfo, oldSubscriptionInfo);
 			dto.setSubscriptionInfo(newSubscriptionInfo);
 		}
 		this.mapper.merge(dto, foundTenant);

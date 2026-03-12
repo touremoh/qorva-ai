@@ -49,7 +49,7 @@ public class QorvaUtils {
 			.toList();
 	}
 
-	public void merge(Object target, Object source) throws QorvaException {
+	public void patchLeft(Object target, Object source) throws QorvaException {
 		if (Objects.isNull(target) || Objects.isNull(source)) {
 			throw new QorvaException("Target and source objects must not be null.");
 		}
