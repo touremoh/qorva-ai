@@ -36,7 +36,7 @@ public class ChatController {
     }
 
     @GetMapping
-    @PreAuthorize("@accessManager.checkActionAllowed(authentication, 'READ_CHAT')")
+    @PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_CHAT')")
     public Page<ChatDTO> listChats(@RequestHeader("Authorization") String authorizationHeader,
                                    @RequestParam(defaultValue = "0") int page,
                                    @RequestParam(defaultValue = "25") int size) throws QorvaException {
@@ -47,7 +47,7 @@ public class ChatController {
     }
 
     @PostMapping
-    @PreAuthorize("@accessManager.checkActionAllowed(authentication, 'CREATE_CHAT')")
+    @PreAuthorize("@accessManager.hasAuthority(authentication, 'START_CHAT')")
     public ResponseEntity<ChatDTO> createChat(@RequestHeader("Authorization") String authorizationHeader,
                                               @RequestBody @Valid CreateChatRequest req) throws QorvaException {
         req.setTenantId(JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey()));
@@ -56,13 +56,13 @@ public class ChatController {
     }
 
     @GetMapping("/{chatId}")
-    @PreAuthorize("@accessManager.checkActionAllowed(authentication, 'READ_CHAT')")
+    @PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_CHAT')")
     public ChatDTO getChat(@PathVariable String chatId, @RequestHeader("Authorization") String authorizationHeader) throws QorvaException {
         return chatService.getChat(JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey()), chatId);
     }
 
     @PostMapping("/{chatId}/messages")
-    @PreAuthorize("@accessManager.checkActionAllowed(authentication, 'UPDATE_CHAT')")
+    @PreAuthorize("@accessManager.hasAuthority(authentication, 'REPLY_MESSAGE')")
     public ChatMessageDTO postUserMessage(@PathVariable String chatId,
                                           @RequestHeader("Authorization") String authorizationHeader,
                                           @RequestBody @Valid PostUserMessageRequest req) throws QorvaException {
@@ -72,7 +72,7 @@ public class ChatController {
     }
 
     @GetMapping("/{chatId}/messages")
-    @PreAuthorize("@accessManager.checkActionAllowed(authentication, 'READ_CHAT')")
+    @PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_MESSAGE')")
     public Page<ChatMessageDTO> getMessages(@RequestHeader("Authorization") String authorizationHeader,
                                             @PathVariable String chatId,
                                             @RequestParam(defaultValue = "0") int page,
@@ -83,7 +83,7 @@ public class ChatController {
     }
 
     @PostMapping("/{chatId}/close")
-    @PreAuthorize("@accessManager.checkActionAllowed(authentication, 'UPDATE_CHAT')")
+    @PreAuthorize("@accessManager.hasAuthority(authentication, 'DELETE_CHAT')")
     public ResponseEntity<Void> close(@PathVariable String chatId,
                                       @RequestHeader("Authorization") String authorizationHeader) throws QorvaException {
         String tenantId = JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey());

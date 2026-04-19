@@ -48,7 +48,7 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
 
     @GetMapping(path = "/{tenantId}", produces = "application/json")
     public ResponseEntity<QorvaRequestResponse> findAll(
-        @PathVariable("tenantId") String tenantId,
+		@PathVariable String tenantId,
         @RequestParam(name = "pageSize", defaultValue = "50") int pageSize,
         @RequestParam(name = "pageNumber", defaultValue = "0") int pageNumber
     ) throws QorvaException {

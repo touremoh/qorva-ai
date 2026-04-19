@@ -16,8 +16,7 @@ import org.springframework.util.Assert;
 
 import java.util.Objects;
 
-import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_5_CHAT_LATEST;
-import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_5_MINI;
+import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.*;
 
 @Slf4j
 @Service
@@ -52,7 +51,7 @@ public class OpenAIService {
 				.prompt()
 				.options(
 					OpenAiChatOptions.builder()
-						.model(GPT_5_MINI)
+						.model(GPT_4_1_MINI)
 						.responseFormat(ResponseFormat
 							.builder()
 							.type(ResponseFormat.Type.JSON_SCHEMA)

@@ -6,7 +6,6 @@ import ai.qorva.core.dto.ClientDTO;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.ClientMapper;
 import ai.qorva.core.qbe.ClientQueryBuilder;
-import ai.qorva.core.utils.QorvaUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +21,7 @@ public class ClientService extends AbstractQorvaService<ClientDTO, Client> {
 	}
 
 	@Override
-	protected void preProcessUpdateOne(String id, ClientDTO clientDTO) throws QorvaException {
+	protected void preProcessUpdateOne(String id, ClientDTO newClient) throws QorvaException {
 		log.info("Updating client {}", id);
 
 		// The client ID must not be null or empty
@@ -31,14 +30,14 @@ public class ClientService extends AbstractQorvaService<ClientDTO, Client> {
 		}
 
 		// The client cannot be null
-		if (Objects.isNull(clientDTO)) {
+		if (Objects.isNull(newClient)) {
 			throw new QorvaException("Client cannot be null");
 		}
 
 		// Get the client by id and update it
-		var clientEntity = this.findOneById(id);
+		var currentClient = this.findOneById(id);
 
 		// Update client entity with data from dto
-		QorvaUtils.patchLeft(clientDTO, clientEntity);
+		mapper.merge(newClient, currentClient);
 	}
 }

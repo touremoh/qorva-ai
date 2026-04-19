@@ -22,7 +22,7 @@ public class AIQueryController {
 	}
 
 	@PostMapping("/chat")
-	@PreAuthorize("@accessManager.checkActionAllowed(authentication, 'CREATE_CHAT')")
+	@PreAuthorize("@accessManager.hasAuthority(authentication, 'CREATE_CHAT')")
 	public ResponseEntity<ChatResponse> chat(@RequestBody ChatRequest chatRequest) throws QorvaException {
 		throw new QorvaException("Not yet implemented");
 	}

@@ -6,6 +6,7 @@ import ai.qorva.core.service.DashboardService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -27,6 +28,7 @@ public class DashboardController {
 	}
 
 	@GetMapping(path = "/data", produces = "application/json")
+	@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_DASHBOARD')")
 	public ResponseEntity<DashboardData> getDashboardData(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
 		return ResponseEntity.ok(this.dashboardService.getDashboardData(userDetails));
 	}

@@ -45,16 +45,7 @@ public class ClientReportDTO extends AbstractQorvaDTO {
 
     private ClientReportStatus status;
 
-    @CreatedDate
-    private Instant createdAt;
-
-    @LastModifiedDate
-    private Instant updatedAt;
-
     private Integer version;
-
-    @Version
-    private Long mongoVersion;
 
     private String notes;
 }

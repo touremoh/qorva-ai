@@ -11,11 +11,11 @@ import static java.util.Optional.ofNullable;
 
 @Service("accessManager")
 @RequiredArgsConstructor
-public class APIAccessManager {
+public class QorvaApiAccessManager {
 
 	private final UserService userService;
 
-	public boolean checkActionAllowed(@AuthenticationPrincipal Authentication authentication, String action) {
+	public boolean hasAuthority(@AuthenticationPrincipal Authentication authentication, String action) {
 		// Get user details
 		UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 

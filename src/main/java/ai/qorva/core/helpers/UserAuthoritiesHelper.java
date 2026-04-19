@@ -7,7 +7,7 @@ import lombok.experimental.UtilityClass;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ai.qorva.core.enums.UserActionsEnum.READ_DASHBOARD;
+import static ai.qorva.core.enums.UserActionsEnum.VIEW_DASHBOARD;
 import static ai.qorva.core.enums.UserPermissionEnum.ALLOWED;
 import static ai.qorva.core.enums.UserRoleEnum.ACCOUNT_OWNER;
 
@@ -16,32 +16,42 @@ public class UserAuthoritiesHelper {
 	public List<UserAuthority> createAuthorities() {
 		var authorities = new ArrayList<UserAuthority>();
 
-		// READ_DASHBOARD
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), READ_DASHBOARD.getValue(), ALLOWED.getValue()));
+		// DASHBOARD
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), VIEW_DASHBOARD.getValue(), ALLOWED.getValue()));
 
 		// CV
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.CREATE_CV.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.READ_CV.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.UPDATE_CV.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.ADD_CV.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_CV.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.MODIFY_CV.getValue(), ALLOWED.getValue()));
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.DELETE_CV.getValue(), ALLOWED.getValue()));
 
 		// Jobs
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.CREATE_JOB.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.READ_JOB.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.UPDATE_JOB.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.ADD_JOB.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_JOB.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.MODIFY_JOB.getValue(), ALLOWED.getValue()));
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.DELETE_JOB.getValue(), ALLOWED.getValue()));
 
 		// Reports
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.CREATE_REPORT.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.READ_REPORT.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.UPDATE_REPORT.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.GENERATE_REPORT.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_REPORT.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.MODIFY_REPORT.getValue(), ALLOWED.getValue()));
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.DELETE_REPORT.getValue(), ALLOWED.getValue()));
 
 		// Chat
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.CREATE_CHAT.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.READ_CHAT.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.UPDATE_CHAT.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.START_CHAT.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_CHAT.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_MESSAGE.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.REPLY_MESSAGE.getValue(), ALLOWED.getValue()));
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.DELETE_CHAT.getValue(), ALLOWED.getValue()));
+
+		// Clients
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.ADD_CLIENT.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_CLIENT.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.MODIFY_CLIENT.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.DELETE_CLIENT.getValue(), ALLOWED.getValue()));
+
+		// ATS Export Reports
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.ATS_REPORT_EXPORT.getValue(), ALLOWED.getValue()));
 
 		// Billing
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.UPDATE_SUBSCRIPTION.getValue(), ALLOWED.getValue()));
