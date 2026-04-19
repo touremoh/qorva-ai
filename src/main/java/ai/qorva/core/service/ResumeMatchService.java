@@ -165,6 +165,10 @@ public class ResumeMatchService extends AbstractQorvaService<ResumeMatchDTO, Res
 	}
 
 	public List<DashboardData.ApplicationPerJobPostReport> getApplicationsPerJobPost(String tenantId) {
-		return ((ResumeMatchRepository)repository).getApplicationsPerJobPost(new ObjectId(tenantId));
+		return ((ResumeMatchRepository) repository).getApplicationsPerJobPost(new ObjectId(tenantId));
+	}
+
+	public List<DashboardData.TopCandidatesPerJobReport> getTopCandidatesPerJobPost(String tenantId) {
+		return ((ResumeMatchRepository) repository).getTopCandidatesPerJobPost(new ObjectId(tenantId));
 	}
 }

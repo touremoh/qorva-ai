@@ -37,65 +37,53 @@ public class DashboardService {
 	}
 
 	public DashboardData getDashboardData(UserDetails userDetails) throws QorvaException {
-		// Find the user info
 		var userInfo = Optional.ofNullable(this.userService.findOneByData(UserDTO.builder().email(userDetails.getUsername()).build()))
-			                   .orElseThrow(() -> new QorvaException("User not found"));
+			.orElseThrow(() -> new QorvaException("User not found"));
 
-		// Find tenant info
 		var tenantInfo = this.tenantService.findOneById(userInfo.getTenantId());
-
-		// Get subscription status
 		var subscriptionStatus = tenantInfo.getSubscriptionInfo().getSubscriptionStatus();
+		var tenantId = userInfo.getTenantId();
 
-		// Get total CVs
 		var totalCvs = CompletableFuture.supplyAsync(() -> {
-			try {
-				return this.cvService.countAll(userInfo.getTenantId());
-			} catch (QorvaException e) {
-				throw new RuntimeException(e);
-			}
+			try { return this.cvService.countAll(tenantId); }
+			catch (QorvaException e) { throw new RuntimeException(e); }
 		}, dashboardExecutor);
 
-		// Get total job posts
 		var totalJobPosts = CompletableFuture.supplyAsync(() -> {
-			try {
-				return this.jobPostService.countAll(userInfo.getTenantId());
-			} catch (QorvaException e) {
-				throw new RuntimeException(e);
-			}
+			try { return this.jobPostService.countAll(tenantId); }
+			catch (QorvaException e) { throw new RuntimeException(e); }
 		}, dashboardExecutor);
 
-		// Get total resume matches
 		var totalResumeMatches = CompletableFuture.supplyAsync(() -> {
-			try {
-				return this.resumeMatchService.countAll(userInfo.getTenantId());
-			} catch (QorvaException e) {
-				throw new RuntimeException(e);
-			}
+			try { return this.resumeMatchService.countAll(tenantId); }
+			catch (QorvaException e) { throw new RuntimeException(e); }
 		}, dashboardExecutor);
 
-		// Get total users
 		var totalUsers = CompletableFuture.supplyAsync(() -> {
-			try {
-				return this.userService.countAll(userInfo.getTenantId());
-			} catch (QorvaException e) {
-				throw new RuntimeException(e);
-			}
+			try { return this.userService.countAll(tenantId); }
+			catch (QorvaException e) { throw new RuntimeException(e); }
 		}, dashboardExecutor);
 
-		// Get total resumes processed in the current month
-		var totalResumesProcessedInCurrentMonth = CompletableFuture.supplyAsync(() ->
-			this.resumeMatchService.countResumeMatchesInCurrentMonth(userInfo.getTenantId()),
+		var totalResumesProcessedInCurrentMonth = CompletableFuture.supplyAsync(
+			() -> this.resumeMatchService.countResumeMatchesInCurrentMonth(tenantId),
 			dashboardExecutor
 		);
 
-		// Get skill reports
-		var skillReports = CompletableFuture.supplyAsync(() -> this.cvService.getSkillReportByTenantId(userInfo.getTenantId()), dashboardExecutor);
+		var skillReports = CompletableFuture.supplyAsync(
+			() -> this.cvService.getSkillReportByTenantId(tenantId),
+			dashboardExecutor
+		);
 
-		// Get Job posts reports
-		var jobPostReports = CompletableFuture.supplyAsync(() -> this.resumeMatchService.getApplicationsPerJobPost(userInfo.getTenantId()), dashboardExecutor);
+		var jobPostReports = CompletableFuture.supplyAsync(
+			() -> this.resumeMatchService.getApplicationsPerJobPost(tenantId),
+			dashboardExecutor
+		);
 
-		// timeouts & graceful fallbacks
+		var topCandidatesPerJob = CompletableFuture.supplyAsync(
+			() -> this.resumeMatchService.getTopCandidatesPerJobPost(tenantId),
+			dashboardExecutor
+		);
+
 		totalCvs.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		totalJobPosts.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		totalUsers.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
@@ -103,6 +91,7 @@ public class DashboardService {
 		totalResumesProcessedInCurrentMonth.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		skillReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 		jobPostReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
+		topCandidatesPerJob.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 
 		CompletableFuture.allOf(
 			totalCvs,
@@ -111,10 +100,10 @@ public class DashboardService {
 			totalResumeMatches,
 			totalResumesProcessedInCurrentMonth,
 			skillReports,
-			jobPostReports
+			jobPostReports,
+			topCandidatesPerJob
 		).join();
 
-		// Build the dashboard data
 		return new DashboardData(
 			subscriptionStatus,
 			totalCvs.join(),
@@ -123,7 +112,8 @@ public class DashboardService {
 			totalResumeMatches.join(),
 			totalResumesProcessedInCurrentMonth.join(),
 			skillReports.join(),
-			jobPostReports.join()
+			jobPostReports.join(),
+			topCandidatesPerJob.join()
 		);
 	}
 }

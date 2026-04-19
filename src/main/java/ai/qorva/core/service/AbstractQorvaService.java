@@ -7,6 +7,7 @@ import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.AbstractQorvaMapper;
 import ai.qorva.core.qbe.QorvaQueryBuilder;
+import ai.qorva.core.security.TenantContextHolder;
 import io.jsonwebtoken.lang.Strings;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
@@ -34,13 +35,49 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
 		this.queryBuilder = queryBuilder;
 	}
 
+    // -------------------------------------------------------------------------
+    // Tenant context helper
+    // -------------------------------------------------------------------------
+
+    /**
+     * Returns the tenant ID of the current request, or {@code null} when there is no
+     * authenticated context (e.g. login, registration, Stripe webhook).
+     */
+    protected String getCurrentTenantId() {
+        return TenantContextHolder.getTenantId();
+    }
+
+    /**
+     * Enforces tenant ownership when a tenant context is present.
+     * If no context exists (public/system flows such as login or webhook processing),
+     * the check is skipped — Spring Security already protects those routes at the HTTP layer.
+     */
+    protected void assertBelongsToCurrentTenant(E entity) throws QorvaException {
+        var currentTenantId = getCurrentTenantId();
+        if (!Strings.hasText(currentTenantId)) {
+            // No authenticated context — public or internal/system call; skip ownership check.
+            return;
+        }
+        if (!currentTenantId.equals(entity.getTenantId())) {
+            log.warn("Cross-tenant access attempt: resource {} belongs to tenant {} but current tenant is {}",
+                entity.getId(), entity.getTenantId(), currentTenantId);
+            throw new QorvaException(
+                QorvaErrorsEnum.FORBIDDEN.getMessage(),
+                QorvaErrorsEnum.FORBIDDEN.getHttpStatus().value(),
+                QorvaErrorsEnum.FORBIDDEN.getHttpStatus()
+            );
+        }
+    }
+
+    // -------------------------------------------------------------------------
+    // findOneById
+    // -------------------------------------------------------------------------
+
     @Override
     public D findOneById(String id) throws QorvaException {
         try {
-            // PreProcess
             preProcessFindOneById(id);
 
-            // Process
             E entity = this.repository
                 .findById(new ObjectId(id))
                 .orElseThrow(() -> new QorvaException(
@@ -49,10 +86,10 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
                     RESOURCE_NOT_FOUND.getHttpStatus())
                 );
 
-            // Post Process
-            postProcessFindOneById(entity);
+            // Tenant isolation: reject if entity belongs to a different tenant
+            assertBelongsToCurrentTenant(entity);
 
-            // Render results
+            postProcessFindOneById(entity);
             return renderFindOneById(entity);
         } catch (QorvaException e) {
             throw e;
@@ -66,26 +103,22 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     protected void postProcessFindOneById(E entity) {
-        // Optional subclass-specific post-processing
     }
 
     protected D renderFindOneById(E entity) {
         return mapper.map(entity);
     }
 
+    // -------------------------------------------------------------------------
+    // findOneByData
+    // -------------------------------------------------------------------------
+
     @Override
     public D findOneByData(D requestData) throws QorvaException {
         try {
-            // Pre Process
             preProcessFindOneByData(requestData);
-
-            // Process
             E entity = this.processOneByData(requestData);
-
-            // Post Process
             postProcessFindOneByData(entity);
-
-            // Render results
             return renderFindOneByData(entity);
         } catch (QorvaException e) {
             throw e;
@@ -95,8 +128,8 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     protected void preProcessFindOneByData(D requestData) {
-        Assert.notNull(requestData,"Request Data must not be null");
-        Assert.notNull(requestData.getTenantId(),"Tenant ID must not be null");
+        Assert.notNull(requestData, "Request Data must not be null");
+        Assert.notNull(requestData.getTenantId(), "Tenant ID must not be null");
     }
 
     protected E processOneByData(D dto) throws QorvaException {
@@ -110,27 +143,23 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     protected void postProcessFindOneByData(E entity) {
-        // Optional subclass-specific post-processing
     }
 
     protected D renderFindOneByData(E entity) {
         return mapper.map(entity);
     }
 
+    // -------------------------------------------------------------------------
+    // createOne
+    // -------------------------------------------------------------------------
+
     @Override
     @Transactional
     public D createOne(D requestData) throws QorvaException {
         try {
-            // Pre Process
             preProcessCreateOne(requestData);
-
-            // Process
             E savedEntity = this.repository.insert(this.mapper.map(requestData));
-
-            // Post Process
             postProcessCreateOne(savedEntity);
-
-            // Render results
             return renderCreateOne(savedEntity);
         } catch (QorvaException e) {
             throw e;
@@ -145,26 +174,22 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     protected void postProcessCreateOne(E entity) {
-        // Optional subclass-specific post-processing
     }
 
     protected D renderCreateOne(E entity) {
         return mapper.map(entity);
     }
 
+    // -------------------------------------------------------------------------
+    // saveAll
+    // -------------------------------------------------------------------------
+
     @Override
     @Transactional
     public List<D> saveAll(List<D> docs) throws QorvaException {
-        // Pre Persist All
         preSaveAll(docs);
-
-        // Persist All
         var entities = saveAllDocuments(docs);
-
-        // Post Persist All
         postSaveAll(entities);
-
-        // Render Results
         return renderSaveAll(entities);
     }
 
@@ -191,19 +216,16 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         return entities.stream().map(mapper::map).toList();
     }
 
+    // -------------------------------------------------------------------------
+    // findAll
+    // -------------------------------------------------------------------------
+
     @Override
     public Page<D> findAll(D dto, int pageNumber, int pageSize) throws QorvaException {
         try {
-            // Pre Process
             preProcessFindAll(dto, pageSize, pageNumber);
-
-            // Process
             Page<E> entities = this.processFindAll(dto, pageSize, pageNumber);
-
-            // Post Process
             postProcessFindAll(entities);
-
-            // Render Results
             return renderFindAll(entities);
         } catch (QorvaException e) {
             throw e;
@@ -216,11 +238,11 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         Assert.notNull(dto, "Request Criteria must not be null");
 
         if (Objects.isNull(dto.getTenantId()) || dto.getTenantId().isEmpty()) {
-            throw new QorvaException("Tenant ID must not be null or  empty");
+            throw new QorvaException("Tenant ID must not be null or empty");
         }
 
         Assert.isTrue(pageNumber >= 0, "Page number must be greater than or equal to 0");
-        Assert.isTrue(pageSize > 0, "Page size must be greater than 0");
+        Assert.isTrue(pageSize > 0 && pageSize <= 100, "Page size must be between 1 and 100");
     }
 
     protected Page<E> processFindAll(D dto, int pageSize, int pageNumber) throws QorvaException {
@@ -230,62 +252,57 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     protected void postProcessFindAll(Page<E> entities) throws QorvaException {
-        // Optional subclass-specific post-processing
     }
 
     protected Page<D> renderFindAll(Page<E> entities) {
-        // Map results from entities to dto
         List<D> foundDocuments = entities.getContent().stream().map(mapper::map).toList();
-
-        // Render results
         return new PageImpl<>(foundDocuments, entities.getPageable(), entities.getTotalElements());
     }
+
+    // -------------------------------------------------------------------------
+    // findAllByIds  (tenant-scoped)
+    // -------------------------------------------------------------------------
 
     @Override
     public List<D> findAllByIds(List<String> ids) throws QorvaException {
         try {
-            // Pre Process
             preProcessFindAllByIds(ids);
-
-            // Process
-            List<E> entities = this.repository.findByIdIn(ids);
-
-            // Post Process
+            var tenantId = getCurrentTenantId();
+            // When a tenant context is present, filter by tenant; otherwise fall back to unfiltered
+            // (public/system callers — Spring Security already restricts which routes reach here).
+            List<E> entities = Strings.hasText(tenantId)
+                ? this.repository.findByIdInAndTenantId(ids, tenantId)
+                : this.repository.findByIdIn(ids);
             postProcessFindAllByIds(entities);
-
-            // Render results
             return renderFindAll(entities);
+        } catch (QorvaException e) {
+            throw e;
         } catch (Exception e) {
             throw wrapException(e, "Error finding resources by IDs");
         }
     }
 
     protected void preProcessFindAllByIds(List<String> ids) {
-        // Optional subclass-specific pre-processing
     }
 
     protected void postProcessFindAllByIds(List<E> entities) throws QorvaException {
-        // Optional subclass-specific post-processing
     }
 
     protected List<D> renderFindAll(List<E> entities) {
-        return  entities.stream().map(mapper::map).toList();
+        return entities.stream().map(mapper::map).toList();
     }
+
+    // -------------------------------------------------------------------------
+    // updateOne  (tenant ownership verified before save)
+    // -------------------------------------------------------------------------
 
     @Override
     @Transactional
     public D updateOne(String id, D requestData) throws QorvaException {
         try {
-            // Pre Process
             preProcessUpdateOne(id, requestData);
-
-            // Process
             E updatedEntity = this.repository.save(mapper.map(requestData));
-
-            // Post Process
             postProcessUpdateOne(updatedEntity);
-
-            // Render results
             return renderUpdateOne(updatedEntity);
         } catch (QorvaException e) {
             throw e;
@@ -295,30 +312,42 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     protected void preProcessUpdateOne(String id, D requestData) throws QorvaException {
-        // Check for null data
         Assert.notNull(id, "id must not be null");
         Assert.notNull(requestData, "Input Data must not be null");
+
+        // Fetch existing entity and verify tenant ownership before allowing the update
+        E existing = this.repository
+            .findById(new ObjectId(id))
+            .orElseThrow(() -> new QorvaException(
+                RESOURCE_NOT_FOUND.getMessage(),
+                RESOURCE_NOT_FOUND.getHttpStatus().value(),
+                RESOURCE_NOT_FOUND.getHttpStatus())
+            );
+        assertBelongsToCurrentTenant(existing);
+
+        // Prevent the caller from overriding the tenantId on the saved document
+        requestData.setTenantId(existing.getTenantId());
     }
 
     protected void postProcessUpdateOne(E entity) {
-        // Optional subclass-specific post-processing
     }
 
     protected D renderUpdateOne(E entity) {
         return mapper.map(entity);
     }
 
+    // -------------------------------------------------------------------------
+    // deleteOneById  (tenant ownership already verified)
+    // -------------------------------------------------------------------------
+
     @Override
     public void deleteOneById(String id, String tenantId) throws QorvaException {
         try {
-            // Pre Process
             preProcessDeleteOneById(id, tenantId);
-
-            // Process
             this.repository.deleteById(new ObjectId(id));
-
-            // Post Process
             postProcessDeleteOneById(id);
+        } catch (QorvaException e) {
+            throw e;
         } catch (Exception e) {
             throw wrapException(e, "Error deleting resource with ID: " + id);
         }
@@ -328,10 +357,11 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         Assert.notNull(id, "id must not be null");
         Assert.notNull(tenantId, "Tenant id must not be null");
 
-        // Check if a resource exists
-        var entity = Optional.ofNullable(this.findOneById(id)).orElseThrow(() -> new QorvaException("Resource not found with id: " + id));
+        var entity = Optional.ofNullable(this.findOneById(id))
+            .orElseThrow(() -> new QorvaException("Resource not found with id: " + id));
 
-        // Check if the resource belongs to the tenant
+        // findOneById already calls assertBelongsToCurrentTenant, but we also guard here
+        // via the explicit tenantId parameter for callers that supply it directly.
         if (!entity.getTenantId().equals(tenantId)) {
             log.warn("Resource {} does not belong to tenant {}", id, tenantId);
             throw new QorvaException(
@@ -343,41 +373,37 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     protected void postProcessDeleteOneById(String id) {
-        // Optional subclass-specific post-processing
     }
+
+    // -------------------------------------------------------------------------
+    // existsByData
+    // -------------------------------------------------------------------------
 
     @Override
     public boolean existsByData(D requestData) throws QorvaException {
         try {
-            // Pre Process
             preProcessExistsByData(requestData);
-
-            // Process
             boolean exists = this.repository.exists(this.queryBuilder.exampleOf(mapper.map(requestData)));
-
-            // Post Process
             postProcessExistsByData(requestData, exists);
-
-            // Render results
             return exists;
+        } catch (QorvaException e) {
+            throw e;
         } catch (Exception e) {
             throw wrapException(e, "Error checking existence of resource");
         }
     }
 
-    protected void preProcessExistsByData(D requestData) {
+    protected void preProcessExistsByData(D requestData) throws QorvaException {
         Assert.notNull(requestData, "Input Data must not be null");
         Assert.notNull(requestData.getTenantId(), "Tenant ID must not be null");
     }
 
     protected void postProcessExistsByData(D input, boolean exists) {
-        // Optional subclass-specific post-processing
     }
 
-    protected QorvaException wrapException(Exception e, String message) {
-        log.error(message, e);
-        return new QorvaException(message, e);
-    }
+    // -------------------------------------------------------------------------
+    // countAll
+    // -------------------------------------------------------------------------
 
     @Override
     public long countAll(String tenantId) throws QorvaException {
@@ -386,5 +412,14 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
             throw new QorvaException("Tenant ID is empty");
         }
         return this.repository.countAllByTenantId(tenantId);
+    }
+
+    // -------------------------------------------------------------------------
+    // Helpers
+    // -------------------------------------------------------------------------
+
+    protected QorvaException wrapException(Exception e, String message) {
+        log.error(message, e);
+        return new QorvaException(message, e);
     }
 }

@@ -1,14 +1,10 @@
 package ai.qorva.core.controller;
 
-import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dto.ClientReportDTO;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.requests.ClientReportRequestMapper;
-import ai.qorva.core.mapper.requests.QorvaRequestMapper;
 import ai.qorva.core.service.ClientReportService;
-import ai.qorva.core.service.QorvaService;
-import ai.qorva.core.service.QorvaUserDetailsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
@@ -32,8 +28,8 @@ import java.util.Map;
 public class ClientReportController extends AbstractQorvaController<ClientReportDTO> {
 
 	@Autowired
-	protected ClientReportController(ClientReportService service, ClientReportRequestMapper requestMapper, QorvaUserDetailsService userService, JwtConfig jwtConfig) {
-		super(service, requestMapper, userService, jwtConfig);
+	protected ClientReportController(ClientReportService service, ClientReportRequestMapper requestMapper) {
+		super(service, requestMapper);
 	}
 
 	@GetMapping(value = "/download", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -59,26 +55,20 @@ public class ClientReportController extends AbstractQorvaController<ClientReport
 
 	@Override
 	@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_REPORT')")
-	public ResponseEntity<QorvaRequestResponse> findOneByData(String authorizationHeader, ClientReportDTO requestData) throws QorvaException {
-		return super.findOneByData(authorizationHeader, requestData);
+	public ResponseEntity<QorvaRequestResponse> findOneByData(ClientReportDTO requestData) throws QorvaException {
+		return super.findOneByData(requestData);
 	}
 
 	@Override
 	@PreAuthorize("@accessManager.hasAuthority(authentication, 'GENERATE_REPORT')")
-	public ResponseEntity<QorvaRequestResponse> createOne(String authorizationHeader, ClientReportDTO data) throws QorvaException {
-		return super.createOne(authorizationHeader, data);
+	public ResponseEntity<QorvaRequestResponse> createOne(ClientReportDTO data) throws QorvaException {
+		return super.createOne(data);
 	}
 
 	@Override
 	@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_REPORT')")
-	public ResponseEntity<QorvaRequestResponse> findAll(String tenantId, int pageSize, int pageNumber) throws QorvaException {
-		return super.findAll(tenantId, pageSize, pageNumber);
-	}
-
-	@Override
-	@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_REPORT')")
-	public ResponseEntity<QorvaRequestResponse> findAll(String authorizationHeader, Map<String, String> params) throws QorvaException {
-		return super.findAll(authorizationHeader, params);
+	public ResponseEntity<QorvaRequestResponse> findAll(Map<String, String> params) throws QorvaException {
+		return super.findAll(params);
 	}
 
 	@Override
@@ -101,8 +91,8 @@ public class ClientReportController extends AbstractQorvaController<ClientReport
 
 	@Override
 	@PreAuthorize("@accessManager.hasAuthority(authentication, 'DELETE_REPORT')")
-	public ResponseEntity<QorvaRequestResponse> deleteOneById(String id, String authorizationHeader) throws QorvaException {
-		return super.deleteOneById(id, authorizationHeader);
+	public ResponseEntity<QorvaRequestResponse> deleteOneById(String id) throws QorvaException {
+		return super.deleteOneById(id);
 	}
 
 	@Override

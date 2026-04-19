@@ -10,17 +10,15 @@ import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.helpers.UserAuthoritiesHelper;
 import ai.qorva.core.mapper.AccountRegistrationMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
-
-import java.util.concurrent.atomic.AtomicBoolean;
 
 @Slf4j
 @Service
 public class UserRegistrationService {
+
 	private final UserService userService;
 	private final TenantService tenantService;
 	private final AccountRegistrationMapper accountRegistrationMapper;
@@ -39,80 +37,55 @@ public class UserRegistrationService {
 		this.notifier = notifier;
 	}
 
-	@Transactional
+	/**
+	 * Creates a new tenant + user account, then attempts to send a welcome email.
+	 * Email failure is non-fatal: the account is always persisted. A failed email is logged
+	 * for manual retry or monitoring, but never causes a rollback.
+	 */
 	public UserDTO createAccount(AccountRegistrationDTO newAccountDTO, String languageCode) throws QorvaException {
-		log.info("Creating new account for user: {} - language {}", newAccountDTO, languageCode);
+		log.info("Creating new account for user: {} – language: {}", newAccountDTO.getEmail(), languageCode);
 
-		var companyInfo = this.createCompanyInfo(newAccountDTO, languageCode);
+		var companyInfo = createCompanyInfo(newAccountDTO, languageCode);
+		var newUser = createNewUser(newAccountDTO, companyInfo);
 
-		// Create user
-		var newUser =  this.createNewUser(newAccountDTO, companyInfo);
-
-		// Send email checker
-		AtomicBoolean emailSent = new AtomicBoolean(false);
-
-		// Send email to notify the user of his account creation
-		this.notifier.ifAvailable(accountCreationNotificationSender -> {
+		// Best-effort email: log failure but never roll back the account
+		notifier.ifAvailable(sender -> {
 			try {
-				accountCreationNotificationSender.send(newUser, languageCode);
-				emailSent.set(true);
+				sender.send(newUser, languageCode);
+				log.info("Welcome email sent to {}", newUser.getEmail());
 			} catch (QorvaException e) {
-				log.error("Failed to send email to user {}", newUser.getEmail(), e);
-				try {
-					var userId = newUser.getId();
-					var tenantId = newUser.getTenantId();
-					this.userService.deleteOneById(userId, tenantId);
-					this.tenantService.deleteOneById(tenantId, tenantId);
-				} catch (QorvaException ex) {
-					log.error("Failed to delete user {} and tenant {}", newUser.getEmail(), newUser.getTenantId(), ex);
-				}
+				log.error("Failed to send welcome email to {} – account created successfully, email will need manual retry",
+					newUser.getEmail(), e);
 			}
 		});
 
-		if (!emailSent.get()) {
-			log.warn("Account creation failed {}", newUser.getEmail());
-			throw new QorvaException("Account creation failed " + newAccountDTO.getEmail());
-		}
-
-		// Set subscription status
 		newUser.setSubscriptionStatus(companyInfo.getSubscriptionInfo().getSubscriptionStatus());
-
-		log.info("Account created successfully for user: {}", newUser);
+		log.info("Account created successfully for user: {}", newUser.getEmail());
 		return newUser;
 	}
 
 	protected UserDTO createNewUser(AccountRegistrationDTO newAccountDTO, TenantDTO companyInfo) throws QorvaException {
-		// Build user info
-		var userDTO = this.accountRegistrationMapper.map(newAccountDTO);
-
-		// Update User DTO
+		var userDTO = accountRegistrationMapper.map(newAccountDTO);
 		userDTO.setUserAccountStatus(UserStatusEnum.ACTIVE.getValue());
 		userDTO.setTenantId(companyInfo.getId());
 		userDTO.setAuthorities(UserAuthoritiesHelper.createAuthorities());
-
-		// Persist user info
-		return this.userService.createOne(userDTO);
+		return userService.createOne(userDTO);
 	}
 
 	protected TenantDTO createCompanyInfo(AccountRegistrationDTO newAccountDTO, String languageCode) throws QorvaException {
-		// Set language code
 		newAccountDTO.setLanguageCode(languageCode);
 
-		// Get the organization name (or take the name of user)
 		final String companyName = StringUtils.hasText(newAccountDTO.getCompanyName())
 			? newAccountDTO.getCompanyName()
 			: newAccountDTO.getFirstName() + " " + newAccountDTO.getLastName();
 
-		// Subscription info
 		var subscriptionInfo = new SubscriptionInfo();
 		subscriptionInfo.setSubscriptionStatus(SubscriptionStatus.SUBSCRIPTION_INCOMPLETE.getValue());
 
-		// Create an organization
 		var tenantDTO = new TenantDTO();
 		tenantDTO.setTenantName(companyName);
 		tenantDTO.setSubscriptionInfo(subscriptionInfo);
 
-		// Persist company Info
-		return this.tenantService.createOne(tenantDTO);
+		return tenantService.createOne(tenantDTO);
 	}
 }

@@ -1,14 +1,11 @@
 package ai.qorva.core.controller;
 
-import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.requests.CVRequestMapper;
 import ai.qorva.core.service.CVService;
-import ai.qorva.core.service.QorvaUserDetailsService;
 import ai.qorva.core.utils.BuildApiResponse;
-import ai.qorva.core.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -26,34 +23,32 @@ import java.util.List;
 public class CVController extends AbstractQorvaController<CVDTO> {
 
     @Autowired
-    public CVController(CVService service, CVRequestMapper requestMapper, QorvaUserDetailsService userService, JwtConfig jwtConfig) {
-        super(service, requestMapper, userService, jwtConfig);
+    public CVController(CVService service, CVRequestMapper requestMapper) {
+        super(service, requestMapper);
 	}
 
     @PostMapping(value = "/upload")
-    public ResponseEntity<List<CVDTO>> uploadFiles(@RequestHeader("Authorization") String authorizationHeader, @RequestParam("files") List<MultipartFile> files) throws QorvaException {
+    public ResponseEntity<List<CVDTO>> uploadFiles(@RequestParam("files") List<MultipartFile> files) throws QorvaException {
         log.info("Received {} files", files.size());
-        return ResponseEntity.ok(((CVService) service).upload(files, JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey())));
+        return ResponseEntity.ok(((CVService) service).upload(files, currentTenantId()));
     }
 
     @GetMapping("/search")
     public ResponseEntity<QorvaRequestResponse> searchAll(
-        @RequestHeader("Authorization") String authorizationHeader,
         @RequestParam("searchTerms") String searchTerms,
         @RequestParam("pageSize") int pageSize,
         @RequestParam("pageNumber") int pageNumber) throws QorvaException {
-        var tenantId = JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey());
-        return BuildApiResponse.from(((CVService)this.service).searchAll(tenantId, searchTerms, pageSize, pageNumber));
+        return BuildApiResponse.from(((CVService) this.service).searchAll(currentTenantId(), searchTerms, pageSize, pageNumber));
     }
 
     @GetMapping("/tags")
-    public ResponseEntity<QorvaRequestResponse> findAllTagsByTenantId(@RequestHeader("Authorization") String authorizationHeader) {
-        return BuildApiResponse.from(((CVService)this.service).findAllTagsByTenantId(JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey())));
+    public ResponseEntity<QorvaRequestResponse> findAllTagsByTenantId() {
+        return BuildApiResponse.from(((CVService) this.service).findAllTagsByTenantId(currentTenantId()));
     }
 
     @GetMapping(value = "/{id}/pdf", produces = MediaType.APPLICATION_PDF_VALUE)
     public ResponseEntity<byte[]> getCVInPdfFormat(@PathVariable("id") String cvId, @RequestParam(defaultValue = "en") String lang) throws QorvaException {
-        byte[] pdfBytes = ((CVService)this.service).generateCVInPdfFormat(cvId, lang);
+        byte[] pdfBytes = ((CVService) this.service).generateCVInPdfFormat(cvId, lang);
 
         return ResponseEntity.ok()
             .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=cv-" + cvId + ".pdf")

@@ -1,14 +1,12 @@
 package ai.qorva.core.controller;
 
-
-import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dto.ChatDTO;
 import ai.qorva.core.dto.ChatMessageDTO;
 import ai.qorva.core.dto.request.CreateChatRequest;
 import ai.qorva.core.dto.request.PostUserMessageRequest;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.ChatService;
-import ai.qorva.core.utils.JwtUtils;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,6 +17,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
@@ -28,7 +27,14 @@ import org.springframework.web.bind.annotation.*;
 public class ChatController {
 
     private final ChatService chatService;
-    protected final JwtConfig jwtConfig;
+
+    private String currentTenantId() {
+        return TenantContextHolder.getTenantId();
+    }
+
+    private String currentUsername() {
+        return SecurityContextHolder.getContext().getAuthentication().getName();
+    }
 
     @GetMapping("/allowed")
     public ResponseEntity<Boolean> isChatPartOfSubscriptionPlan() {
@@ -37,58 +43,47 @@ public class ChatController {
 
     @GetMapping
     @PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_CHAT')")
-    public Page<ChatDTO> listChats(@RequestHeader("Authorization") String authorizationHeader,
-                                   @RequestParam(defaultValue = "0") int page,
+    public Page<ChatDTO> listChats(@RequestParam(defaultValue = "0") int page,
                                    @RequestParam(defaultValue = "25") int size) throws QorvaException {
-        String tenantId = JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey());
-        String username = JwtUtils.extractUsername(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey());
         Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "lastUpdatedAt"));
-        return chatService.listChats(tenantId, username, pageable);
+        return chatService.listChats(currentTenantId(), currentUsername(), pageable);
     }
 
     @PostMapping
     @PreAuthorize("@accessManager.hasAuthority(authentication, 'START_CHAT')")
-    public ResponseEntity<ChatDTO> createChat(@RequestHeader("Authorization") String authorizationHeader,
-                                              @RequestBody @Valid CreateChatRequest req) throws QorvaException {
-        req.setTenantId(JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey()));
-        String username = JwtUtils.extractUsername(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey());
-        return ResponseEntity.status(HttpStatus.CREATED).body(chatService.createChat(req, username));
+    public ResponseEntity<ChatDTO> createChat(@RequestBody @Valid CreateChatRequest req) throws QorvaException {
+        req.setTenantId(currentTenantId());
+        return ResponseEntity.status(HttpStatus.CREATED).body(chatService.createChat(req, currentUsername()));
     }
 
     @GetMapping("/{chatId}")
     @PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_CHAT')")
-    public ChatDTO getChat(@PathVariable String chatId, @RequestHeader("Authorization") String authorizationHeader) throws QorvaException {
-        return chatService.getChat(JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey()), chatId);
+    public ChatDTO getChat(@PathVariable String chatId) throws QorvaException {
+        return chatService.getChat(currentTenantId(), chatId);
     }
 
     @PostMapping("/{chatId}/messages")
     @PreAuthorize("@accessManager.hasAuthority(authentication, 'REPLY_MESSAGE')")
     public ChatMessageDTO postUserMessage(@PathVariable String chatId,
-                                          @RequestHeader("Authorization") String authorizationHeader,
                                           @RequestBody @Valid PostUserMessageRequest req) throws QorvaException {
-        req.setTenantId(JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey()));
-        req.setUsername(JwtUtils.extractUsername(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey()));
+        req.setTenantId(currentTenantId());
+        req.setUsername(currentUsername());
         return chatService.postUserMessage(req.getTenantId(), chatId, req);
     }
 
     @GetMapping("/{chatId}/messages")
     @PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_MESSAGE')")
-    public Page<ChatMessageDTO> getMessages(@RequestHeader("Authorization") String authorizationHeader,
-                                            @PathVariable String chatId,
+    public Page<ChatMessageDTO> getMessages(@PathVariable String chatId,
                                             @RequestParam(defaultValue = "0") int page,
                                             @RequestParam(defaultValue = "50") int size) throws QorvaException {
-        String tenantId = JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey());
         Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.ASC, "createdAt"));
-        return chatService.getMessages(tenantId, chatId, pageable);
+        return chatService.getMessages(currentTenantId(), chatId, pageable);
     }
 
     @PostMapping("/{chatId}/close")
     @PreAuthorize("@accessManager.hasAuthority(authentication, 'DELETE_CHAT')")
-    public ResponseEntity<Void> close(@PathVariable String chatId,
-                                      @RequestHeader("Authorization") String authorizationHeader) throws QorvaException {
-        String tenantId = JwtUtils.extractTenantId(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey());
-        String username = JwtUtils.extractUsername(JwtUtils.extractToken(authorizationHeader), this.jwtConfig.getSecretKey());
-        chatService.closeChat(tenantId, chatId, username);
+    public ResponseEntity<Void> close(@PathVariable String chatId) throws QorvaException {
+        chatService.closeChat(currentTenantId(), chatId, currentUsername());
         return ResponseEntity.noContent().build();
     }
 }

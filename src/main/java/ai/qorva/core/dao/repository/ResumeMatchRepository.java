@@ -50,4 +50,32 @@ public interface ResumeMatchRepository extends QorvaRepository<ResumeMatch> {
 		"{ '$sort': { 'totalMatch': -1 } }"
 	})
 	List<DashboardData.ApplicationPerJobPostReport> getApplicationsPerJobPost(ObjectId tenantId);
+
+	/**
+	 * Returns the top 5 candidates per job posting, ranked by overall score descending.
+	 * Pipeline:
+	 *  1. Filter by tenant
+	 *  2. Sort by score desc so $push preserves ranking
+	 *  3. Group by jobPostId, collecting all candidates
+	 *  4. Slice to the first 5 per group
+	 */
+	@Aggregation(pipeline = {
+		"{ '$match': { 'tenantId': ?0 } }",
+		"{ '$sort': { 'aiAnalysisReportDetails.overallSummary.score': -1 } }",
+		"{ '$group': { " +
+			"'_id': '$jobPostId', " +
+			"'jobPostTitle': { '$first': '$jobPostTitle' }, " +
+			"'topCandidates': { '$push': { " +
+				"'candidateId': '$candidateInfo.candidateId', " +
+				"'candidateName': '$candidateInfo.candidateName', " +
+				"'score': '$aiAnalysisReportDetails.overallSummary.score' " +
+			"} } " +
+		"} }",
+		"{ '$project': { " +
+			"'jobPostTitle': 1, " +
+			"'topCandidates': { '$slice': [ '$topCandidates', 5 ] }, " +
+			"'_id': 0 " +
+		"} }"
+	})
+	List<DashboardData.TopCandidatesPerJobReport> getTopCandidatesPerJobPost(ObjectId tenantId);
 }

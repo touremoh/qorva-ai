@@ -46,7 +46,8 @@ public interface CVRepository extends QorvaRepository<CV> {
 		"{ '$unwind': '$keySkills.skills' }",
 		"{ '$group': { '_id': '$keySkills.skills', 'totalMatch': { '$sum': 1 } } }",
 		"{ '$project': { 'skill': '$_id', 'totalMatch': 1, '_id': 0 } }",
-		"{ '$sort': { 'totalMatch': -1 } }"
+		"{ '$sort': { 'totalMatch': -1 } }",
+		"{ '$limit': 10 }"
 	})
 	List<DashboardData.SkillReport> getSkillReportByTenantId(ObjectId tenantId);
 

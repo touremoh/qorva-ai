@@ -36,6 +36,8 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 	protected static final String CUSTOMER_SUBSCRIPTION_PAUSED = "customer.subscription.paused";
 	protected static final String CUSTOMER_SUBSCRIPTION_RESUMED = "customer.subscription.resumed";
 	protected static final String CHECKOUT_SESSION_COMPLETED = "checkout.session.completed";
+	protected static final String INVOICE_PAYMENT_FAILED = "invoice.payment_failed";
+	protected static final String INVOICE_PAYMENT_SUCCEEDED = "invoice.payment_succeeded";
 
 	protected final StripeProperties stripeProperties;
 
@@ -45,6 +47,8 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 	protected final StripeSubscriptionDeletedHandler subscriptionDeletedHandler;
 	protected final StripeSubscriptionPausedHandler subscriptionPausedHandler;
 	protected final StripeSubscriptionResumedHandler subscriptionResumedHandler;
+	protected final StripeInvoicePaymentFailedHandler invoicePaymentFailedHandler;
+	protected final StripeInvoicePaymentSucceededHandler invoicePaymentSucceededHandler;
 
 	protected final UserRepository userRepository;
 	protected final TenantService tenantService;
@@ -69,9 +73,10 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 		StripeSubscriptionDeletedHandler subscriptionDeletedHandler,
 		StripeSubscriptionPausedHandler subscriptionPausedHandler,
 		StripeSubscriptionResumedHandler subscriptionResumedHandler,
+		StripeInvoicePaymentFailedHandler invoicePaymentFailedHandler,
+		StripeInvoicePaymentSucceededHandler invoicePaymentSucceededHandler,
 		UserRepository userRepository, TenantService tenantService
 	) {
-
 		super(repository, mapper, queryBuilder);
 		this.stripeProperties = stripeProperties;
 		this.checkoutSessionHandler = checkoutSessionHandler;
@@ -80,6 +85,8 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 		this.subscriptionDeletedHandler = subscriptionDeletedHandler;
 		this.subscriptionPausedHandler = subscriptionPausedHandler;
 		this.subscriptionResumedHandler = subscriptionResumedHandler;
+		this.invoicePaymentFailedHandler = invoicePaymentFailedHandler;
+		this.invoicePaymentSucceededHandler = invoicePaymentSucceededHandler;
 		this.userRepository = userRepository;
 		this.tenantService = tenantService;
 	}
@@ -100,6 +107,8 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 				case CUSTOMER_SUBSCRIPTION_PAUSED -> this.subscriptionPausedHandler.handle(opt.get());
 				case CUSTOMER_SUBSCRIPTION_RESUMED -> this.subscriptionResumedHandler.handle(opt.get());
 				case CHECKOUT_SESSION_COMPLETED -> this.checkoutSessionHandler.handle(event);
+				case INVOICE_PAYMENT_FAILED -> this.invoicePaymentFailedHandler.handle(opt.get());
+				case INVOICE_PAYMENT_SUCCEEDED -> this.invoicePaymentSucceededHandler.handle(opt.get());
 				default -> unhandledEvent(event);
 			}
 		} catch (QorvaException e) {

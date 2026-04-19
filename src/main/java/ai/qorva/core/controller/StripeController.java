@@ -1,16 +1,12 @@
 package ai.qorva.core.controller;
 
-import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dto.PortalSession;
 import ai.qorva.core.dto.StripeEventLogDTO;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.requests.StripeEventRequestMapper;
-import ai.qorva.core.service.QorvaUserDetailsService;
 import ai.qorva.core.service.StripeEventsService;
 import com.stripe.exception.SignatureVerificationException;
 import com.stripe.model.Event;
-import com.stripe.model.EventDataObjectDeserializer;
-import com.stripe.model.StripeObject;
 import com.stripe.net.Webhook;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +17,6 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @Slf4j
 @RestController
 @RequestMapping("/stripe")
@@ -32,15 +26,15 @@ public class StripeController extends AbstractQorvaController<StripeEventLogDTO>
 	protected String stripeWebhookSecret;
 
 	@Autowired
-	public StripeController(StripeEventsService service, StripeEventRequestMapper requestMapper, QorvaUserDetailsService userService, JwtConfig jwtConfig) {
-		super(service, requestMapper, userService, jwtConfig);
+	public StripeController(StripeEventsService service, StripeEventRequestMapper requestMapper) {
+		super(service, requestMapper);
 	}
 
 	@PostMapping("/webhook")
 	public ResponseEntity<String> handleStripeEvent(@RequestBody String payload, @RequestHeader("Stripe-Signature") String sigHeader) {
 		try {
 			Event event = Webhook.constructEvent(payload, sigHeader, stripeWebhookSecret);
-			return ResponseEntity.ok(((StripeEventsService)this.service).handleEvent(event));
+			return ResponseEntity.ok(((StripeEventsService) this.service).handleEvent(event));
 		} catch (SignatureVerificationException e) {
 			log.error("Stripe signature verification error", e);
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid signature");
@@ -52,6 +46,6 @@ public class StripeController extends AbstractQorvaController<StripeEventLogDTO>
 
 	@PostMapping("/portal-session")
 	public ResponseEntity<PortalSession> createPortalSession(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
-		return ResponseEntity.ok(((StripeEventsService)this.service).buildStripePortalSessionUrl(userDetails));
+		return ResponseEntity.ok(((StripeEventsService) this.service).buildStripePortalSessionUrl(userDetails));
 	}
 }

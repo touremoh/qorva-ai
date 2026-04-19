@@ -1,10 +1,10 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.repository.UserRepository;
-import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.enums.UserStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Service
 public class QorvaUserDetailsService implements UserDetailsService {
@@ -35,6 +36,14 @@ public class QorvaUserDetailsService implements UserDetailsService {
 				throw new UsernameNotFoundException("User not found");
 			}
 
+			// Map custom UserAuthority list to Spring GrantedAuthority using "ACTION:PERMISSION" format
+			var grantedAuthorities = user.getAuthorities() != null
+				? user.getAuthorities().stream()
+					.filter(ua -> ua.getAction() != null && ua.getPermission() != null)
+					.map(ua -> new SimpleGrantedAuthority(ua.getAction() + ":" + ua.getPermission()))
+					.collect(Collectors.toCollection(ArrayList::new))
+				: new ArrayList<SimpleGrantedAuthority>();
+
 			// Convert userDTO into Spring Security User
 			return User
 					.builder()
@@ -43,7 +52,7 @@ public class QorvaUserDetailsService implements UserDetailsService {
 						.disabled(isUserDisabled(user))
 				        .accountExpired(user.getUserAccountStatus().equals(UserStatusEnum.DELETED.getValue()))
 						.accountLocked(user.getUserAccountStatus().equals(UserStatusEnum.LOCKED.getValue()))
-						.authorities(new ArrayList<>())
+						.authorities(grantedAuthorities)
 					.build();
 		} catch (AuthenticationException e) {
 			throw new UsernameNotFoundException("An error occurred while trying to find the user", e);
