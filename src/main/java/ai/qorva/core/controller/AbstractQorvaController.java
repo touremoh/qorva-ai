@@ -49,7 +49,7 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     public ResponseEntity<QorvaRequestResponse> findAll(@RequestParam Map<String, String> params) throws QorvaException {
         var data = this.requestMapper.toDto(params);
         var pageNumber = Integer.parseInt(params.getOrDefault("pageNumber", "0"));
-        var pageSize = Integer.parseInt(params.getOrDefault("pageSize", "50"));
+        var pageSize = Integer.parseInt(params.getOrDefault("pageSize", "25"));
         data.setTenantId(currentTenantId());
         return BuildApiResponse.from(this.service.findAll(data, pageNumber, pageSize));
     }
