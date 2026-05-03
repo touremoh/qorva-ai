@@ -11,7 +11,7 @@ import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.CVMapper;
 import ai.qorva.core.mapper.OpenAIResultMapper;
-import ai.qorva.core.qbe.CVQueryBuilder;
+import ai.qorva.core.dao.querybuilder.CVQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.ai.converter.BeanOutputConverter;
@@ -28,6 +28,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -214,13 +215,18 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     public void publishCVUpsertEvents(String tenantId) throws QorvaException {
         int pageSize = 25;
         int pageNumber = 0;
-        var searchCriteria = JobPostDTO.builder().tenantId(tenantId).status(JobPostStatusEnum.OPEN.getStatus()).build();
         long totalCount = this.jobPostService.countAll(tenantId);
 
         if (totalCount > 0) {
             int totalPages = totalCount % pageSize == 0 ? (int) (totalCount / pageSize) : (int) (totalCount / pageSize) + 1;
             do {
-                var jobPosts = this.jobPostService.findAll(searchCriteria, pageNumber, pageSize);
+                var params = Map.of(
+                    "tenantId", tenantId,
+                    "status", JobPostStatusEnum.OPEN.getStatus(),
+                    "pageNumber", String.valueOf(pageNumber),
+                    "pageSize", String.valueOf(pageSize)
+                );
+                var jobPosts = this.jobPostService.findAll(params);
                 for (JobPostDTO jobPost : jobPosts.getContent()) {
                     this.publisher.publishEvent(new CVScreeningEvent(jobPost));
                 }

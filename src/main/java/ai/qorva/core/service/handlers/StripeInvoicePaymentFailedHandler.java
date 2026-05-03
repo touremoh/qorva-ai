@@ -46,7 +46,7 @@ public class StripeInvoicePaymentFailedHandler implements StripeEventHandler {
 
 		TenantDTO tenant;
 		try {
-			tenant = tenantService.findOneByData(TenantDTO.builder().stripeCustomerId(stripeCustomerId).build());
+			tenant = tenantService.findOneByCriteria(TenantDTO.builder().stripeCustomerId(stripeCustomerId).build());
 		} catch (QorvaException e) {
 			log.warn("Failed to retrieve tenant for customer {}", stripeCustomerId);
 			throw new QorvaException("Failed to retrieve tenant for customer " + stripeCustomerId, e);

@@ -44,12 +44,6 @@ public class UserAuthoritiesHelper {
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.REPLY_MESSAGE.getValue(), ALLOWED.getValue()));
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.DELETE_CHAT.getValue(), ALLOWED.getValue()));
 
-		// Clients
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.ADD_CLIENT.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_CLIENT.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.MODIFY_CLIENT.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.DELETE_CLIENT.getValue(), ALLOWED.getValue()));
-
 		// ATS Export Reports
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.ATS_REPORT_EXPORT.getValue(), ALLOWED.getValue()));
 

@@ -7,7 +7,7 @@ import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.enums.SubscriptionPlanEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.UserMapper;
-import ai.qorva.core.qbe.UserQueryBuilder;
+import ai.qorva.core.dao.querybuilder.UserQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -49,9 +49,6 @@ public class CV implements QorvaEntity {
     @Field("score")
     private Double score;
 
-    @Field(targetType = FieldType.OBJECT_ID)
-    private String clientId;
-
     @TextIndexed
     private List<String> tags;
 

@@ -54,7 +54,7 @@ public class StripeSubscriptionDeletedHandler implements StripeEventHandler {
 
 		TenantDTO tenant;
 		try {
-			tenant = this.tenantService.findOneByData(TenantDTO.builder().stripeCustomerId(stripeCustomerId).build());
+			tenant = this.tenantService.findOneByCriteria(TenantDTO.builder().stripeCustomerId(stripeCustomerId).build());
 		} catch (QorvaException e) {
 			log.warn("Failed to retrieve tenant details for customer {}", stripeCustomerId);
 			throw new QorvaException("Failed to retrieve tenant details for customer " + stripeCustomerId, e);

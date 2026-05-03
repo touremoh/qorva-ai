@@ -1,6 +1,7 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.QorvaEntity;
+import ai.qorva.core.dao.specifications.QorvaRepositorySpecification;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
@@ -10,7 +11,7 @@ import java.util.Collection;
 import java.util.List;
 
 @NoRepositoryBean
-public interface QorvaRepository<E extends QorvaEntity> extends MongoRepository<E, ObjectId> {
+public interface QorvaRepository<E extends QorvaEntity> extends MongoRepository<E, ObjectId>, QorvaRepositorySpecification<E> {
 
 	/** @deprecated Use {@link #findByIdInAndTenantId} to enforce tenant isolation. */
 	@Deprecated

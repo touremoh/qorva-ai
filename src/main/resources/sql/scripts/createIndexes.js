@@ -42,19 +42,6 @@ db.Chats.createIndex({ tenantId: 1, title: "text", "metadata.tags": 1 });
 db.ChatMessages.createIndex({ tenantId: 1, chatId: 1, createdAt: 1 });
 db.ChatMessages.createIndex({ tenantId: 1, chatId: 1, role: 1, createdAt: 1 });
 
-// Uniqueness per tenant
-db.Clients.createIndex(
-  { tenantId: 1, clientCode: 1 },
-  { unique: true, name: "uq_tenant_clientCode" }
-);
-
-// Common filters
-db.Clients.createIndex({ tenantId: 1, name: 1 }, { name: "ix_tenant_name" });
-db.Clients.createIndex({ tenantId: 1, segment: 1, status: 1 }, { name: "ix_tenant_segment_status" });
-db.Clients.createIndex({ tenantId: 1, "domains": 1 }, { name: "ix_tenant_domains" });
-db.Clients.createIndex({ tenantId: 1, updatedAt: -1 }, { name: "ix_tenant_updatedAt_desc" });
-
-
 // Compound vector index for CVs collection in Mongo Atlas
 {
   "fields": [

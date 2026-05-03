@@ -20,7 +20,6 @@ import java.time.Instant;
 public class JobPostDTO extends AbstractQorvaDTO {
     private String id;
     private String tenantId;
-    private String clientId;
     private ScoringRules scoringRules;
     private String title;
     private String description;

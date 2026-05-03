@@ -14,7 +14,7 @@ import ai.qorva.core.enums.MontlyUsageLimitCodeEnum;
 import ai.qorva.core.enums.SubscriptionPlanEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.ResumeMatchMapper;
-import ai.qorva.core.qbe.ResumeMatchQueryBuilder;
+import ai.qorva.core.dao.querybuilder.ResumeMatchQueryBuilder;
 import ai.qorva.core.utils.QorvaUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
@@ -127,12 +127,12 @@ public class ResumeMatchService extends AbstractQorvaService<ResumeMatchDTO, Res
 	}
 
 	@Override
-	public ResumeMatchDTO findOneByData(ResumeMatchDTO requestData) throws QorvaException {
+	public ResumeMatchDTO findOneByCriteria(ResumeMatchDTO searchCriteria) throws QorvaException {
 		var response =  ((ResumeMatchRepository)this.repository)
 			.findOneByTenantIdAndJobPostIdAndCandidateInfoCandidateId(
-				new ObjectId(requestData.getTenantId()),
-				new ObjectId(requestData.getJobPostId()),
-				requestData.getCandidateInfo().getCandidateId()
+				new ObjectId(searchCriteria.getTenantId()),
+				new ObjectId(searchCriteria.getJobPostId()),
+				searchCriteria.getCandidateInfo().getCandidateId()
 			);
 		if (response.isEmpty()) {
 			throw new QorvaException("Could not find resume match for request data");

@@ -1,17 +1,17 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.CV;
+import ai.qorva.core.dao.specifications.QorvaRepositorySpecification;
 import ai.qorva.core.dto.DashboardData;
 import org.bson.types.ObjectId;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.Aggregation;
 import org.springframework.data.mongodb.repository.Query;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+
 public interface CVRepository extends QorvaRepository<CV> {
 
 	@Query(value = "{ '$text': { $search: ?0 }, 'tenantId': ?1 }")

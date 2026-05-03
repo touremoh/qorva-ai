@@ -5,6 +5,7 @@ import ai.qorva.core.exception.QorvaException;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
+import java.util.Map;
 
 public interface QorvaService<D extends QorvaDTO> {
 
@@ -20,11 +21,11 @@ public interface QorvaService<D extends QorvaDTO> {
     /**
      * Find one record by its data.
      *
-     * @param requestData The ID of the company that owns the data
+     * @param searchCriteria The ID of the company that owns the data
      * @return The record.
      * @throws QorvaException if the record is not found.
      */
-    D findOneByData(D requestData) throws QorvaException;
+    D findOneByCriteria(D searchCriteria) throws QorvaException;
 
     /**
      * Create one record.
@@ -47,13 +48,11 @@ public interface QorvaService<D extends QorvaDTO> {
     /**
      * Find many records with pagination.
      *
-     * @param dto request criteria.
-     * @param pageSize request criteria.
-     * @param pageNumber request criteria.
+     * @param params request criteria including filters, pageNumber, and pageSize.
      * @return A pageable list of records.
      * @throws QorvaException if an error occurs during retrieval.
      */
-    Page<D> findAll(D dto, int pageNumber, int pageSize) throws QorvaException;
+    Page<D> findAll(Map<String, String> params) throws QorvaException;
 
     /**
      * Find many records by their IDs.

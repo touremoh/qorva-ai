@@ -3,7 +3,6 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.exception.QorvaException;
-import ai.qorva.core.mapper.requests.CVRequestMapper;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.utils.BuildApiResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -23,8 +22,8 @@ import java.util.List;
 public class CVController extends AbstractQorvaController<CVDTO> {
 
     @Autowired
-    public CVController(CVService service, CVRequestMapper requestMapper) {
-        super(service, requestMapper);
+    public CVController(CVService service) {
+        super(service);
 	}
 
     @PostMapping(value = "/upload")

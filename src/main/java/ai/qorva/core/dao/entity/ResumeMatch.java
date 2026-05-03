@@ -38,9 +38,6 @@ public class ResumeMatch implements QorvaEntity {
 
     private String status;
 
-    @Field(targetType = FieldType.OBJECT_ID)
-    private String clientId;
-
     @CreatedDate
     private Instant createdAt;
 

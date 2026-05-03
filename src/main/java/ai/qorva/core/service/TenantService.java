@@ -5,7 +5,7 @@ import ai.qorva.core.dao.repository.TenantRepository;
 import ai.qorva.core.dto.TenantDTO;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.TenantMapper;
-import ai.qorva.core.qbe.TenantQueryBuilder;
+import ai.qorva.core.dao.querybuilder.TenantQueryBuilder;
 import ai.qorva.core.utils.QorvaUtils;
 import io.jsonwebtoken.lang.Strings;
 import lombok.extern.slf4j.Slf4j;

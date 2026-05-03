@@ -29,9 +29,6 @@ public class JobPost implements QorvaEntity {
     private String tenantId;
     private String status;
 
-    @Field(targetType = FieldType.OBJECT_ID)
-    private String clientId;
-
     private ScoringRules scoringRules;
 
     @CreatedDate

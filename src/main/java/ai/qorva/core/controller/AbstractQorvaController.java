@@ -3,7 +3,6 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.QorvaDTO;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.exception.QorvaException;
-import ai.qorva.core.mapper.requests.QorvaRequestMapper;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.QorvaService;
 import ai.qorva.core.utils.BuildApiResponse;
@@ -16,11 +15,9 @@ import java.util.Map;
 public abstract class AbstractQorvaController<D extends QorvaDTO> {
 
     protected final QorvaService<D> service;
-    protected final QorvaRequestMapper<D> requestMapper;
 
-    protected AbstractQorvaController(QorvaService<D> service, QorvaRequestMapper<D> requestMapper) {
+    protected AbstractQorvaController(QorvaService<D> service) {
         this.service = service;
-        this.requestMapper = requestMapper;
     }
 
     /** Returns the tenant ID of the currently authenticated request from the thread-local context. */
@@ -36,7 +33,7 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     @PostMapping("/search")
     public ResponseEntity<QorvaRequestResponse> findOneByData(@RequestBody D requestData) throws QorvaException {
         requestData.setTenantId(currentTenantId());
-        return BuildApiResponse.from(this.service.findOneByData(requestData));
+        return BuildApiResponse.from(this.service.findOneByCriteria(requestData));
     }
 
     @PostMapping
@@ -47,11 +44,9 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
 
     @GetMapping(produces = "application/json")
     public ResponseEntity<QorvaRequestResponse> findAll(@RequestParam Map<String, String> params) throws QorvaException {
-        var data = this.requestMapper.toDto(params);
-        var pageNumber = Integer.parseInt(params.getOrDefault("pageNumber", "0"));
-        var pageSize = Integer.parseInt(params.getOrDefault("pageSize", "25"));
-        data.setTenantId(currentTenantId());
-        return BuildApiResponse.from(this.service.findAll(data, pageNumber, pageSize));
+        var mutableParams = new java.util.HashMap<>(params);
+        mutableParams.put("tenantId", currentTenantId());
+        return BuildApiResponse.from(this.service.findAll(mutableParams));
     }
 
     @PostMapping("/ids")

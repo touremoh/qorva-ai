@@ -7,7 +7,7 @@ import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.*;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.StripeEventMapper;
-import ai.qorva.core.qbe.StripeEventLogQueryBuilder;
+import ai.qorva.core.dao.querybuilder.StripeEventLogQueryBuilder;
 import ai.qorva.core.service.handlers.*;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;

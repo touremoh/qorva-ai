@@ -6,7 +6,6 @@ import ai.qorva.core.dto.TenantDTO;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.dto.common.UserAuthority;
 import ai.qorva.core.enums.SubscriptionPlanEnum;
-import ai.qorva.core.enums.UserActionsEnum;
 import ai.qorva.core.enums.UserPermissionEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.StripeEventMapper;
@@ -25,6 +24,7 @@ import org.springframework.stereotype.Service;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @Service
@@ -60,7 +60,7 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 
 		try {
 			// Get the tenant ID for the customer
-			var tenantDTO = this.tenantService.findOneByData(TenantDTO.builder().stripeCustomerId(customerId).build());
+			var tenantDTO = this.tenantService.findOneByCriteria(TenantDTO.builder().stripeCustomerId(customerId).build());
 
 			// Check if it's a product change
 			var product = Product.retrieve(productId);
@@ -122,7 +122,7 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 
 	protected void updateUsersAuthorities(String tenantId, String newSubscriptionPlan) throws QorvaException {
 		// find users
-		var users = this.userService.findAll(UserDTO.builder().tenantId(tenantId).build(), 0, 100).toList();
+		var users = this.userService.findAll(Map.of("tenantId", tenantId, "pageSize", "100", "pageNumber", "0")).toList();
 
 		// get the right permission
 		var permission = newSubscriptionPlan.equals(SubscriptionPlanEnum.STARTER.getName())

@@ -3,7 +3,6 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.ResumeMatchDTO;
 import ai.qorva.core.exception.QorvaException;
-import ai.qorva.core.mapper.requests.ResumeMatchRequestMapper;
 import ai.qorva.core.service.ResumeMatchService;
 import ai.qorva.core.utils.BuildApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,8 @@ import org.springframework.web.bind.annotation.*;
 public class ResumeMatchController extends AbstractQorvaController<ResumeMatchDTO> {
 
 	@Autowired
-	public ResumeMatchController(ResumeMatchService service, ResumeMatchRequestMapper requestMapper) {
-		super(service, requestMapper);
+	public ResumeMatchController(ResumeMatchService service) {
+		super(service);
 	}
 
 	@GetMapping("/check/monthly-usage")

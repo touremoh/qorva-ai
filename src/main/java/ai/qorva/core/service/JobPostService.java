@@ -7,7 +7,7 @@ import ai.qorva.core.dto.events.CVScreeningEvent;
 import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.JobPostMapper;
-import ai.qorva.core.qbe.JobPostQueryBuilder;
+import ai.qorva.core.dao.querybuilder.JobPostQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.beans.factory.annotation.Autowired;

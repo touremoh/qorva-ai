@@ -3,7 +3,6 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.PortalSession;
 import ai.qorva.core.dto.StripeEventLogDTO;
 import ai.qorva.core.exception.QorvaException;
-import ai.qorva.core.mapper.requests.StripeEventRequestMapper;
 import ai.qorva.core.service.StripeEventsService;
 import com.stripe.exception.SignatureVerificationException;
 import com.stripe.model.Event;
@@ -26,8 +25,8 @@ public class StripeController extends AbstractQorvaController<StripeEventLogDTO>
 	protected String stripeWebhookSecret;
 
 	@Autowired
-	public StripeController(StripeEventsService service, StripeEventRequestMapper requestMapper) {
-		super(service, requestMapper);
+	public StripeController(StripeEventsService service) {
+		super(service);
 	}
 
 	@PostMapping("/webhook")

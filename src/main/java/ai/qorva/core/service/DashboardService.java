@@ -37,7 +37,7 @@ public class DashboardService {
 	}
 
 	public DashboardData getDashboardData(UserDetails userDetails) throws QorvaException {
-		var userInfo = Optional.ofNullable(this.userService.findOneByData(UserDTO.builder().email(userDetails.getUsername()).build()))
+		var userInfo = Optional.ofNullable(this.userService.findOneByCriteria(UserDTO.builder().email(userDetails.getUsername()).build()))
 			.orElseThrow(() -> new QorvaException("User not found"));
 
 		var tenantInfo = this.tenantService.findOneById(userInfo.getTenantId());

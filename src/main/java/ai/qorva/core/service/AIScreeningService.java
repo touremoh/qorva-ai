@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.event.TransactionPhase;
 import org.springframework.transaction.event.TransactionalEventListener;
 
-import java.util.List;
 import java.util.Objects;
 
 @Slf4j
@@ -108,7 +107,7 @@ public class AIScreeningService {
 
 		try {
 			// Find CV in Resume Matches
-			var resumeMatchDTO = this.resumeMatchService.findOneByData(searchData);
+			var resumeMatchDTO = this.resumeMatchService.findOneByCriteria(searchData);
 
 			// Check the case where a candidate not relevant
 			if (Objects.nonNull(resumeMatchDTO)) {

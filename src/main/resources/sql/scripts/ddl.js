@@ -11,9 +11,6 @@ db.InterviewQuestions.drop();
 db.StripeEventLogs.drop();
 db.Chats.drop();
 db.ChatMessages.drop();
-db.Clients.drop();
-db.ClientReports.drop();
-
 // This must be deleted
 db.createCollection("DemoPartners", {
     validator: {
@@ -224,10 +221,6 @@ db.createCollection("JobsPosts", {
                     bsonType: "objectId",
                     description: "must be a valid ObjectId and is required"
                 },
-                clientId: {
-                    bsonType: "objectId",
-                    description: "must be a valid ObjectId and is required"
-                },
                 createdAt: {
                     bsonType: "date",
                     description: "must be a valid date and is required"
@@ -374,10 +367,6 @@ db.createCollection("CVs", {
             required: ["tenantId", "candidateProfileSummary", "nbYearsOfExperience", "personalInformation", "createdAt", "lastUpdatedAt"],
             properties: {
                 tenantId: {
-                    bsonType: "objectId",
-                    description: "must be a valid ObjectId and is required"
-                    },
-               clientId: {
                     bsonType: "objectId",
                     description: "must be a valid ObjectId and is required"
                     },
@@ -832,10 +821,6 @@ db.createCollection("ResumeMatches", {
                     bsonType: "objectId",
                     description: "must be a valid objectId and is required"
                     },
-               clientId: {
-                    bsonType: "objectId",
-                    description: "must be a valid ObjectId and is required"
-                    },
                 aiAnalysisReportDetails: {
                     bsonType: "object",
                     required: ["skillsMatch", "exceedsRequirements", "lackingSkills", "experienceAlignment", "overallSummary"],
@@ -1233,183 +1218,3 @@ db.createCollection("ChatMessages", {
 });
 
 
-// Clients collection (multi-tenant)
-db.createCollection("Clients", {
-  validator: {
-    $jsonSchema: {
-      bsonType: "object",
-      required: ["tenantId", "name", "createdAt", "updatedAt"],
-      additionalProperties: false,
-      properties: {
-        // Multi-tenant scope (accept ObjectId or 24-hex string)
-        tenantId: {
-          oneOf: [
-            { bsonType: "objectId" },
-            { bsonType: "string"}
-          ],
-          description: "Owning tenant/agency"
-        },
-
-        // Short, unique per-tenant identifier (e.g., ACME, LUX-NATIXIS)
-        clientCode: {
-          bsonType: "string",
-          description: "Unique per tenant"
-        },
-
-        // Display/official names
-        name: { bsonType: "string", minLength: 2, maxLength: 256 },
-
-        // Email/web domains to auto-resolve employer from candidate emails
-        domains: {
-          bsonType: "array",
-          items: { bsonType: "string" },
-          uniqueItems: true
-        },
-
-        // Contacts (client-side stakeholders)
-        contacts: {
-          bsonType: "array",
-          maxItems: 100,
-          items: {
-            bsonType: "object",
-            additionalProperties: false,
-            properties: {
-              contactId: {
-                oneOf: [
-                  { bsonType: "objectId" },
-                  { bsonType: "string" }
-                ]
-              },
-              firstName: { bsonType: "string", maxLength: 100 },
-              lastName: { bsonType: "string", maxLength: 100 },
-              email: { bsonType: "string"},
-              phone: { bsonType: "string", maxLength: 30 },
-              role: { bsonType: "string", maxLength: 120 },
-              isPrimary: { bsonType: "bool" }
-            }
-          }
-        },
-
-        // External system IDs (ATS/CRM/ERP)
-        externalIds: {
-          bsonType: "object",
-          additionalProperties: { bsonType: "string", maxLength: 128 }
-        },
-
-        notes: { bsonType: "string", maxLength: 4000 },
-
-        // Audit
-        createdAt: { bsonType: "date" },
-        updatedAt: { bsonType: "date" },
-        archivedAt: { bsonType: "date" }
-      }
-    }
-  },
-  validationLevel: "moderate",
-  validationAction: "error"
-});
-
-db.createCollection("ClientReports", {
-  validator: {
-    $jsonSchema: {
-      bsonType: "object",
-      required: ["tenantId", "clientId", "title", "positionTitle",  "createdAt"],
-      additionalProperties: false,
-      properties: {
-        // Multitenancy & ownership
-        tenantId: { bsonType: "objectId", description: "Tenant/agency partition key" },
-        clientId: { bsonType: "objectId", description: "Client company id" },
-
-        // Identity & classification
-        reportType: { bsonType: "string", maxLength: 160, description: "Type of report" }, // "SHORTLIST", "FULL", "SUMMARY"
-        title: { bsonType: "string", minLength: 3, maxLength: 160 },
-        positionTitle: { bsonType: "string", minLength: 1, maxLength: 250 },
-        preparedFor: { bsonType: "string", minLength: 1, maxLength: 250 },
-        preparedByUserId: { bsonType: "objectId" },
-
-        // Branding block (client-styled)
-        branding: {
-          bsonType: "object",
-          additionalProperties: false,
-          properties: {
-            logoUrl: { bsonType: "string", description: "Public or signed URL" },
-            primaryColor: { bsonType: "string", pattern: "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$" },
-            secondaryColor: { bsonType: "string", pattern: "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$" },
-            accentColor: { bsonType: "string", pattern: "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$" },
-            footerText: { bsonType: "string", maxLength: 400 }
-          }
-        },
-
-        // Shortlist array (candidates)
-        shortlist: {
-          bsonType: "array",
-          minItems: 0,
-          items: {
-            bsonType: "object",
-            required: ["candidateName", "fitScore", "experienceSnapshot"],
-            additionalProperties: false,
-            properties: {
-              // Link to internal candidate if exists
-              candidateId: { bsonType: "objectId" },
-              candidateName: { bsonType: "string", minLength: 1, maxLength: 160 },
-
-              fitScore: { bsonType: "int", minimum: 0, maximum: 100 },
-
-              strengths: {
-                bsonType: "array",
-                items: { bsonType: "string", maxLength: 80 },
-                maxItems: 20
-              },
-              experienceSnapshot: { bsonType: "string", minLength: 1, maxLength: 300 },
-
-              // Resume / CV references
-              resume: {
-                bsonType: "object",
-                additionalProperties: false,
-                properties: {
-                  cvId: { bsonType: "objectId" },
-                  downloadUrl: { bsonType: "string", pattern: "^(http|https)://" } // e.g., S3 signed URL or CDN
-                }
-              }
-            }
-          }
-        },
-
-        // Aggregated metrics for the report
-        metrics: {
-          bsonType: "object",
-          required: ["totalAnalyzed", "shortlistedCount", "topFitScore", "averageFitScore"],
-          additionalProperties: false,
-          properties: {
-            totalAnalyzed: { bsonType: "int", minimum: 0 },
-            shortlistedCount: { bsonType: "int", minimum: 0 },
-            topFitScore: { bsonType: "int", minimum: 0, maximum: 100 },
-            averageFitScore: { bsonType: "double", minimum: 0.0, maximum: 100.0 }
-          }
-        },
-
-        // Generated file artifacts (PDF/HTML)
-        files: {
-          bsonType: "object",
-          additionalProperties: false,
-          properties: {
-            pdfUrl: { bsonType: "string", pattern: "^(http|https)://" },
-            htmlUrl: { bsonType: "string", pattern: "^(http|https)://" },
-            storageProvider: { enum: ["S3", "GCS", "AZURE_BLOB", "LOCAL"] },
-            sha256: { bsonType: "string", pattern: "^[A-Fa-f0-9]{64}$" }, // optional integrity check
-            fileSizeBytes: { bsonType: "long", minimum: 0 }
-          }
-        },
-
-        // Lifecycle & audit
-        status: { enum: ["GENERATED", "SENT", "VIEWED", "EXPIRED", "ARCHIVED"] },
-        createdAt: { bsonType: "date" },
-        updatedAt: { bsonType: "date" },
-        version: { bsonType: "int", minimum: 1, description: "Increment on regeneration" },
-
-        // Optional free-form notes (kept small)
-        notes: { bsonType: "string", maxLength: 1000 }
-      }
-    }
-  }
-});

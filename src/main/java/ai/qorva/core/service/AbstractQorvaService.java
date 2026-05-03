@@ -6,7 +6,7 @@ import ai.qorva.core.dto.QorvaDTO;
 import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.AbstractQorvaMapper;
-import ai.qorva.core.qbe.QorvaQueryBuilder;
+import ai.qorva.core.dao.querybuilder.QorvaQueryBuilder;
 import ai.qorva.core.security.TenantContextHolder;
 import io.jsonwebtoken.lang.Strings;
 import lombok.extern.slf4j.Slf4j;
@@ -14,8 +14,10 @@ import org.bson.types.ObjectId;
 import org.springframework.data.domain.*;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
+import org.springframework.data.domain.ExampleMatcher;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -114,10 +116,10 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     // -------------------------------------------------------------------------
 
     @Override
-    public D findOneByData(D requestData) throws QorvaException {
+    public D findOneByCriteria(D searchCriteria) throws QorvaException {
         try {
-            preProcessFindOneByData(requestData);
-            E entity = this.processOneByData(requestData);
+            preProcessFindOneByData(searchCriteria);
+            E entity = this.processOneByData(searchCriteria);
             postProcessFindOneByData(entity);
             return renderFindOneByData(entity);
         } catch (QorvaException e) {
@@ -133,8 +135,10 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     }
 
     protected E processOneByData(D dto) throws QorvaException {
+        var entity = this.mapper.map(dto);
+        var example = Example.of(entity, ExampleMatcher.matching().withIgnoreNullValues());
         return this.repository
-            .findOne(this.queryBuilder.exampleOf(this.mapper.map(dto)))
+            .findOne(example)
             .orElseThrow(() -> new QorvaException(
                 RESOURCE_NOT_FOUND.getMessage(),
                 RESOURCE_NOT_FOUND.getHttpStatus().value(),
@@ -221,10 +225,10 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     // -------------------------------------------------------------------------
 
     @Override
-    public Page<D> findAll(D dto, int pageNumber, int pageSize) throws QorvaException {
+    public Page<D> findAll(Map<String, String> params) throws QorvaException {
         try {
-            preProcessFindAll(dto, pageSize, pageNumber);
-            Page<E> entities = this.processFindAll(dto, pageSize, pageNumber);
+            preProcessFindAll(params);
+            Page<E> entities = processFindAll(params);
             postProcessFindAll(entities);
             return renderFindAll(entities);
         } catch (QorvaException e) {
@@ -234,21 +238,23 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         }
     }
 
-    protected void preProcessFindAll(D dto, int pageSize, int pageNumber) throws QorvaException {
-        Assert.notNull(dto, "Request Criteria must not be null");
-
-        if (Objects.isNull(dto.getTenantId()) || dto.getTenantId().isEmpty()) {
+    protected void preProcessFindAll(Map<String, String> params) throws QorvaException {
+        Assert.notNull(params, "Request params must not be null");
+        String tenantId = params.get("tenantId");
+        if (tenantId == null || tenantId.isBlank()) {
             throw new QorvaException("Tenant ID must not be null or empty");
         }
-
+        int pageNumber = Integer.parseInt(params.getOrDefault("pageNumber", "0"));
+        int pageSize = Integer.parseInt(params.getOrDefault("pageSize", "25"));
         Assert.isTrue(pageNumber >= 0, "Page number must be greater than or equal to 0");
         Assert.isTrue(pageSize > 0 && pageSize <= 100, "Page size must be between 1 and 100");
     }
 
-    protected Page<E> processFindAll(D dto, int pageSize, int pageNumber) throws QorvaException {
-        var queryExample = this.queryBuilder.exampleOf(this.mapper.map(dto));
+    protected Page<E> processFindAll(Map<String, String> params) throws QorvaException {
+        int pageNumber = Integer.parseInt(params.getOrDefault("pageNumber", "0"));
+        int pageSize = Integer.parseInt(params.getOrDefault("pageSize", "25"));
         var pageable = PageRequest.of(pageNumber, pageSize, Sort.by("lastUpdatedAt").descending());
-        return this.repository.findAll(queryExample, pageable);
+        return this.repository.findAll(this.queryBuilder.buildQuery(params), pageable);
     }
 
     protected void postProcessFindAll(Page<E> entities) throws QorvaException {
@@ -383,7 +389,9 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     public boolean existsByData(D requestData) throws QorvaException {
         try {
             preProcessExistsByData(requestData);
-            boolean exists = this.repository.exists(this.queryBuilder.exampleOf(mapper.map(requestData)));
+            var entity = this.mapper.map(requestData);
+            var example = Example.of(entity, ExampleMatcher.matching().withIgnoreNullValues());
+            boolean exists = this.repository.exists(example);
             postProcessExistsByData(requestData, exists);
             return exists;
         } catch (QorvaException e) {
