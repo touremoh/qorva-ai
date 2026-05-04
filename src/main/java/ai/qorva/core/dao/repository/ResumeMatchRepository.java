@@ -16,7 +16,10 @@ import java.util.Optional;
 @Repository
 public interface ResumeMatchRepository extends QorvaRepository<ResumeMatch> {
 
-	@Query(value = "{ '$text': { $search: ?0 }, 'tenantId': ?1 }")
+	@Query(value = "{ '$text': { '$search': ?0 }, 'tenantId': ?1, 'jobPostId': ?2 }")
+	Page<ResumeMatch> searchAll(String searchTerms, String tenantId, String jobPostId, Pageable pageable);
+
+	@Query(value = "{ '$text': { '$search': ?0 }, 'tenantId': ?1 }")
 	Page<ResumeMatch> searchAll(String searchTerms, String tenantId, Pageable pageable);
 
 

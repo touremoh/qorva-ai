@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/resume-matches")
 @CrossOrigin(origins = "${weblink.allowedOrigins}")
@@ -25,10 +27,8 @@ public class ResumeMatchController extends AbstractQorvaController<ResumeMatchDT
 	}
 
 	@GetMapping("/search")
-	public ResponseEntity<QorvaRequestResponse> searchAll(
-		@RequestParam("searchTerms") String searchTerms,
-		@RequestParam("pageSize") int pageSize,
-		@RequestParam("pageNumber") int pageNumber) throws QorvaException {
-		return BuildApiResponse.from(((ResumeMatchService) this.service).searchAll(currentTenantId(), searchTerms, pageSize, pageNumber));
+	public ResponseEntity<QorvaRequestResponse> searchAll(@RequestParam Map<String, String> params) throws QorvaException {
+		params.put("tenantId", currentTenantId());
+		return BuildApiResponse.from(((ResumeMatchService) this.service).searchAll(params));
 	}
 }

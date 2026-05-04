@@ -21,14 +21,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
 
 @Slf4j
 @Service
@@ -154,14 +153,24 @@ public class ResumeMatchService extends AbstractQorvaService<ResumeMatchDTO, Res
 		return  ((ResumeMatchRepository)repository).countByTenantIdAndCreatedAtBetween(tenantId, startOfMonth, endOfMonth);
 	}
 
-	public Page<ResumeMatchDTO> searchAll(String tenantId, String searchTerms, int pageSize, int pageNumber) throws QorvaException {
+	public Page<ResumeMatchDTO> searchAll(Map<String, String> params) throws QorvaException {
 		try {
 
+			// Get parameters
+			var searchTerms = params.get("searchTerms");
+			var tenantId = params.get("tenantId");
+			var jobPostId = params.get("jobPostId");
+			int pageSize = Integer.parseInt(params.get("pageSize"));
+			int pageNumber = Integer.parseInt(params.get("pageNumber"));
+			var pageable = PageRequest.of(pageNumber, pageSize, Sort.by("lastUpdatedAt").descending());
+
 			// Process
-			Page<ResumeMatch> entities = ((ResumeMatchRepository)this.repository).searchAll(searchTerms, tenantId, Pageable.ofSize(pageSize).withPage(pageNumber));
+			Page<ResumeMatch> results = (jobPostId == null || jobPostId.isBlank())
+				? ((ResumeMatchRepository)repository).searchAll(searchTerms, tenantId, pageable)
+				: ((ResumeMatchRepository)repository).searchAll(searchTerms, tenantId, jobPostId, pageable);
 
 			// Render results
-			return renderFindAll(entities);
+			return renderFindAll(results);
 		} catch (Exception e) {
 			throw wrapException(e, "Error finding resources by IDs");
 		}
