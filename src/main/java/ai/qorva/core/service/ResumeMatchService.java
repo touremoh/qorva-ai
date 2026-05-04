@@ -1,6 +1,7 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.ResumeMatch;
+import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.ResumeMatchRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.DashboardData;
@@ -34,12 +35,14 @@ import java.util.UUID;
 public class ResumeMatchService extends AbstractQorvaService<ResumeMatchDTO, ResumeMatch> {
 	protected final UserService userService;
 	protected final TenantService tenantService;
+	protected final ChatsRepository chatsRepository;
 
 	@Autowired
-	public ResumeMatchService(ResumeMatchRepository repository, ResumeMatchMapper mapper, ResumeMatchQueryBuilder queryBuilder, UserService userService, TenantService tenantService) {
+	public ResumeMatchService(ResumeMatchRepository repository, ResumeMatchMapper mapper, ResumeMatchQueryBuilder queryBuilder, UserService userService, TenantService tenantService, ChatsRepository chatsRepository) {
 		super(repository, mapper, queryBuilder);
 		this.userService = userService;
 		this.tenantService = tenantService;
+		this.chatsRepository = chatsRepository;
 	}
 
 	@Override
@@ -170,5 +173,21 @@ public class ResumeMatchService extends AbstractQorvaService<ResumeMatchDTO, Res
 
 	public List<DashboardData.TopCandidatesPerJobReport> getTopCandidatesPerJobPost(String tenantId) {
 		return ((ResumeMatchRepository) repository).getTopCandidatesPerJobPost(new ObjectId(tenantId));
+	}
+
+	@Override
+	protected void postProcessDeleteOneById(String id, String tenantId) throws QorvaException {
+		log.info("Deleted Resume Match with ID: {}", id);
+
+		var existing = this.findOneById(id);
+
+		if (existing == null) {
+			throw new QorvaException("Resume Match with ID " + id + " not found");
+		}
+
+		// Delete chat associated with this Report
+		var countDeletedChats = this.chatsRepository.deleteByTenantIdAndContextResumeMatchId(tenantId, id);
+
+		log.info("Deleted {} chats associated with Resume Match ID: {}", countDeletedChats, id);
 	}
 }

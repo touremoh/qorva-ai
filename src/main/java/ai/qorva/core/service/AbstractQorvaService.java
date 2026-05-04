@@ -159,12 +159,12 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
 
     @Override
     @Transactional
-    public D createOne(D requestData) throws QorvaException {
+    public D createOne(D newResource) throws QorvaException {
         try {
-            preProcessCreateOne(requestData);
-            E savedEntity = this.repository.insert(this.mapper.map(requestData));
-            postProcessCreateOne(savedEntity);
-            return renderCreateOne(savedEntity);
+            preProcessCreateOne(newResource);
+            E inserted = this.repository.insert(this.mapper.map(newResource));
+            postProcessCreateOne(inserted);
+            return renderCreateOne(inserted);
         } catch (QorvaException e) {
             throw e;
         } catch (Exception e) {
@@ -304,10 +304,10 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
 
     @Override
     @Transactional
-    public D updateOne(String id, D requestData) throws QorvaException {
+    public D updateOne(String id, D newResource) throws QorvaException {
         try {
-            preProcessUpdateOne(id, requestData);
-            E updatedEntity = this.repository.save(mapper.map(requestData));
+            preProcessUpdateOne(id, newResource);
+            E updatedEntity = this.repository.save(mapper.map(newResource));
             postProcessUpdateOne(updatedEntity);
             return renderUpdateOne(updatedEntity);
         } catch (QorvaException e) {
@@ -317,9 +317,9 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         }
     }
 
-    protected void preProcessUpdateOne(String id, D requestData) throws QorvaException {
+    protected void preProcessUpdateOne(String id, D newResource) throws QorvaException {
         Assert.notNull(id, "id must not be null");
-        Assert.notNull(requestData, "Input Data must not be null");
+        Assert.notNull(newResource, "Input Data must not be null");
 
         // Fetch existing entity and verify tenant ownership before allowing the update
         E existing = this.repository
@@ -332,7 +332,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         assertBelongsToCurrentTenant(existing);
 
         // Prevent the caller from overriding the tenantId on the saved document
-        requestData.setTenantId(existing.getTenantId());
+        newResource.setTenantId(existing.getTenantId());
     }
 
     protected void postProcessUpdateOne(E entity) {
@@ -351,7 +351,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         try {
             preProcessDeleteOneById(id, tenantId);
             this.repository.deleteById(new ObjectId(id));
-            postProcessDeleteOneById(id);
+            postProcessDeleteOneById(id, tenantId);
         } catch (QorvaException e) {
             throw e;
         } catch (Exception e) {
@@ -378,7 +378,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         }
     }
 
-    protected void postProcessDeleteOneById(String id) {
+    protected void postProcessDeleteOneById(String id, String tenantId) throws QorvaException {
     }
 
     // -------------------------------------------------------------------------

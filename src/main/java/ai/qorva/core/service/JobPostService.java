@@ -1,9 +1,11 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.JobPost;
+import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.JobPostRepository;
+import ai.qorva.core.dao.repository.ResumeMatchRepository;
 import ai.qorva.core.dto.JobPostDTO;
-import ai.qorva.core.dto.events.CVScreeningEvent;
+import ai.qorva.core.dto.events.NewJobPostEvent;
 import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.JobPostMapper;
@@ -20,13 +22,17 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
 
     private final ApplicationEventPublisher publisher;
     private final EmbeddingModel embeddingModel;
+    private final ResumeMatchRepository resumeMatchRepository;
+    private final ChatsRepository chatsRepository;
 
     @Autowired
-    public JobPostService(JobPostRepository repository, JobPostMapper mapper, JobPostQueryBuilder queryBuilder, ApplicationEventPublisher publisher, EmbeddingModel embeddingModel) {
+    public JobPostService(JobPostRepository repository, JobPostMapper mapper, JobPostQueryBuilder queryBuilder, ApplicationEventPublisher publisher, EmbeddingModel embeddingModel, ResumeMatchRepository resumeMatchRepository, ChatsRepository chatsRepository) {
         super(repository, mapper, queryBuilder);
 		this.publisher = publisher;
 		this.embeddingModel = embeddingModel;
-	}
+		this.resumeMatchRepository = resumeMatchRepository;
+		this.chatsRepository = chatsRepository;
+    }
 
     @Override
     protected void preProcessCreateOne(JobPostDTO dto) throws QorvaException {
@@ -40,26 +46,43 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
     @Override
     protected void postProcessCreateOne(JobPost entity) {
         log.debug("JobPost created with ID: {}", entity.getId());
-        this.publisher.publishEvent(new CVScreeningEvent(this.mapper.map(entity)));
+        this.publisher.publishEvent(new NewJobPostEvent(this.mapper.map(entity)));
     }
 
     @Override
-    protected void preProcessUpdateOne(String id, JobPostDTO jobPostDTO) throws QorvaException {
-        super.preProcessUpdateOne(id, jobPostDTO);
+    protected void preProcessUpdateOne(String id, JobPostDTO newJobPost) throws QorvaException {
+        super.preProcessUpdateOne(id, newJobPost);
 
         // Find user by id
-        var foundJobPost = this.findOneById(id);
+        var existingJobPost = this.findOneById(id);
 
-        // Update jobPostDTO
-        this.mapper.merge(jobPostDTO, foundJobPost);
+        // Update newJobPost
+        this.mapper.merge(newJobPost, existingJobPost);
 
         // Create a vector embedding for the job post
-        jobPostDTO.setEmbedding(this.embeddingModel.embed(jobPostDTO.toJobTitleAndDescription()));
+        newJobPost.setEmbedding(this.embeddingModel.embed(newJobPost.toJobTitleAndDescription()));
     }
 
     @Override
     protected void postProcessUpdateOne(JobPost entity) {
         log.info("JobPost updated with ID: {}", entity.getId());
-        this.publisher.publishEvent(new CVScreeningEvent(this.mapper.map(entity)));
+        this.publisher.publishEvent(new NewJobPostEvent(this.mapper.map(entity)));
+    }
+
+    @Override
+    protected void postProcessDeleteOneById(String id, String tenantId) {
+        log.info("JobPost deleted with ID: {}", id);
+
+        // Delete all CV report for this job post
+        var countDeletedReports = this.resumeMatchRepository.deleteByTenantIdAndJobPostId(tenantId, id);
+
+        // Delete all CV report for this job post
+        log.info("Deleted {} CV report for job post {}", countDeletedReports, id);
+
+        // Delete all chat for this job post
+        var countDeletedChats = this.chatsRepository.deleteByTenantIdAndContextJobPostId(tenantId, id);
+
+        // Delete all chat for this job post
+        log.info("Deleted {} chats for job post {}", countDeletedChats, id);
     }
 }

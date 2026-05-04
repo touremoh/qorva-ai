@@ -4,7 +4,7 @@ import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.ResumeMatchDTO;
 import ai.qorva.core.dto.common.CandidateInfo;
-import ai.qorva.core.dto.events.CVScreeningEvent;
+import ai.qorva.core.dto.events.NewJobPostEvent;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.utils.QorvaUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -37,7 +37,7 @@ public class AIScreeningService {
 
 	@Async
 	@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
-	public void startScreeningProcess(CVScreeningEvent event) throws QorvaException {
+	public void startScreeningProcess(NewJobPostEvent event) throws QorvaException {
 		log.info("CV Screening event received for job post {}", event.jobPost().getId());
 
 		// Get the job post
@@ -58,10 +58,10 @@ public class AIScreeningService {
 		}
 
 		// Perform similar search and extract results (List of CV IDs) => must be filter out by tenantId
-		var results = this.cvService.findCVsMatchingJobDescription(jobPost);
+		var matchingCVs = this.cvService.findCVsMatchingJobDescription(jobPost);
 
 		// Filter out the CVs that are not relevant for the screening process
-		var filteredCVs = results.stream()
+		var filteredCVs = matchingCVs.stream()
 			.filter(cvdto -> {
 				try {
 					return isCVRelevantToScreening(cvdto, jobPost);
@@ -111,9 +111,7 @@ public class AIScreeningService {
 
 			// Check the case where a candidate not relevant
 			if (Objects.nonNull(resumeMatchDTO)) {
-				if (jobPostDTO.getLastUpdatedAt().isAfter(resumeMatchDTO.getLastUpdatedAt())
-					|| cvdto.getLastUpdatedAt().isAfter(resumeMatchDTO.getLastUpdatedAt())) {
-
+				if (resumeMatchIsOlderThanJobPostOrCV(cvdto, jobPostDTO, resumeMatchDTO)) {
 					// Remove that job application to a new one
 					this.resumeMatchService.deleteOneById(resumeMatchDTO.getId(), jobPostDTO.getTenantId());
 
@@ -127,5 +125,10 @@ public class AIScreeningService {
 			return true;
 		}
 		return true;
+	}
+
+
+	protected boolean resumeMatchIsOlderThanJobPostOrCV(CVDTO cv, JobPostDTO jobPost, ResumeMatchDTO resumeMatch) {
+		return resumeMatch.getLastUpdatedAt().isBefore(jobPost.getLastUpdatedAt()) || resumeMatch.getLastUpdatedAt().isBefore(cv.getLastUpdatedAt());
 	}
 }

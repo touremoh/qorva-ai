@@ -2,11 +2,13 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.repository.CVRepository;
+import ai.qorva.core.dao.repository.ChatsRepository;
+import ai.qorva.core.dao.repository.ResumeMatchRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVOutputDTO;
 import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
-import ai.qorva.core.dto.events.CVScreeningEvent;
+import ai.qorva.core.dto.events.NewJobPostEvent;
 import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.CVMapper;
@@ -35,6 +37,7 @@ import java.util.Optional;
 @Slf4j
 @Service
 public class CVService extends AbstractQorvaService<CVDTO, CV> {
+    private final CVMapper cvMapper;
 
     private final OpenAIService openAIService;
     private final OpenAIResultMapper openAIResultMapper;
@@ -42,18 +45,21 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final JobPostService jobPostService;
     private final EmbeddingModel embeddingModel;
     private final PdfGenerationService pdfGenerator;
+    private final ResumeMatchRepository resumeMatchRepository;
+    private final ChatsRepository chatsRepository;
 
     @Autowired
     public CVService(
 		CVRepository repository,
-		CVMapper cvMapper,
-		CVQueryBuilder queryBuilder,
-		OpenAIService openAIService,
-		OpenAIResultMapper openAIResultMapper,
-		ApplicationEventPublisher publisher,
-		JobPostService jobPostService,
-		EmbeddingModel embeddingModel,
-        PdfGenerationService pdfGenerator) {
+	    CVMapper cvMapper,
+	    CVQueryBuilder queryBuilder,
+	    OpenAIService openAIService,
+	    OpenAIResultMapper openAIResultMapper,
+	    ApplicationEventPublisher publisher,
+	    JobPostService jobPostService,
+	    EmbeddingModel embeddingModel,
+	    PdfGenerationService pdfGenerator,
+	    CVMapper cVMapper, ResumeMatchRepository resumeMatchRepository, ChatsRepository chatsRepository) {
         super(repository, cvMapper, queryBuilder);
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
@@ -61,14 +67,17 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 		this.jobPostService = jobPostService;
 		this.embeddingModel = embeddingModel;
 		this.pdfGenerator = pdfGenerator;
-	}
+        this.cvMapper = cVMapper;
+		this.resumeMatchRepository = resumeMatchRepository;
+		this.chatsRepository = chatsRepository;
+    }
 
     @Override
-    protected void preProcessUpdateOne(String id, CVDTO cvdto) throws QorvaException {
-        super.preProcessUpdateOne(id, cvdto);
+    protected void preProcessUpdateOne(String id, CVDTO newCV) throws QorvaException {
+        super.preProcessUpdateOne(id, newCV);
 
         // Check if CV exists (find by ID)
-        var cvFound = Optional
+        var existingCV = Optional
             .ofNullable(this.findOneById(id))
             .orElseThrow(() -> {
                 log.warn("Unable to update CV. Resource {} not found", id);
@@ -76,7 +85,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
             });
 
         // If cv was found, then merge the source with the target
-        this.mapper.merge(cvdto, cvFound);
+        this.mapper.merge(newCV, existingCV);
     }
 
     @Transactional
@@ -154,22 +163,19 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
     public List<CVDTO> findCVsMatchingJobDescription(JobPostDTO jobPostDTO) throws QorvaException {
         // Perform similarity search
-        var results = ((CVRepository) this.repository).similaritySearch(
+        var matchingCVs = ((CVRepository) this.repository).similaritySearch(
             jobPostDTO.getEmbedding(),
             new ObjectId(jobPostDTO.getTenantId())
         );
 
         // Get the list of documents ids
-        if (Objects.isNull(results) || results.isEmpty()) {
+        if (Objects.isNull(matchingCVs) || matchingCVs.isEmpty()) {
             log.warn("CV Service - CVs matching job description not found");
             return List.of();
         }
 
-        // Get documents IDs
-		var ids = results.stream().map(CV::getId).toList();
-
-        // Find the CVs for those ids
-        return this.findAllByIds(ids);
+        // Get the corresponding DTOs
+		return matchingCVs.stream().map(cvMapper::map).toList();
     }
 
     public Page<CVDTO> searchAll(String tenantId, String searchTerms, int pageSize, int pageNumber) throws QorvaException {
@@ -228,7 +234,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
                 );
                 var jobPosts = this.jobPostService.findAll(params);
                 for (JobPostDTO jobPost : jobPosts.getContent()) {
-                    this.publisher.publishEvent(new CVScreeningEvent(jobPost));
+                    this.publisher.publishEvent(new NewJobPostEvent(jobPost));
                 }
             } while (++pageNumber < totalPages);
         }
@@ -240,5 +246,20 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
         // Generate PDF
         return this.pdfGenerator.generateCV(cvData, languageCode);
+    }
+
+    @Override
+    protected void postProcessDeleteOneById(String id, String tenantId) throws QorvaException {
+        log.info("Deleted CV with ID: {}", id);
+
+        // Delete Reports associated with this CV
+        var countDeletedReports = this.resumeMatchRepository.deleteByTenantIdAndCandidateInfoCandidateId(tenantId, id);
+
+        log.info("Deleted {} reports associated with CV ID: {}", countDeletedReports, id);
+
+        // Delete chat associated with this CV
+        var countDeletedChats = this.chatsRepository.deleteByTenantIdAndContextCvId(tenantId, id);
+
+        log.info("Deleted {} chats associated with CV ID: {}", countDeletedChats, id);
     }
 }

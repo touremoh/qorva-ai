@@ -78,4 +78,17 @@ public interface ResumeMatchRepository extends QorvaRepository<ResumeMatch> {
 		"} }"
 	})
 	List<DashboardData.TopCandidatesPerJobReport> getTopCandidatesPerJobPost(ObjectId tenantId);
+
+	/**
+	 * Deletes all resume matches for a given tenant and job post.
+	 */
+	long deleteByTenantIdAndJobPostId(String tenantId, String jobPostId);
+
+	/**
+	 * Deletes all resume matches for a given tenant and candidate.
+	 * @param tenantId
+	 * @param candidateId
+	 * @return
+	 */
+	long deleteByTenantIdAndCandidateInfoCandidateId(String tenantId, String candidateId);
 }

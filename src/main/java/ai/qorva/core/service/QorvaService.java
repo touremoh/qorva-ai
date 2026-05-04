@@ -30,11 +30,11 @@ public interface QorvaService<D extends QorvaDTO> {
     /**
      * Create one record.
      *
-     * @param input The data of the record to create.
+     * @param newResource The data of the record to create.
      * @return The created record.
      * @throws QorvaException if an error occurs during creation.
      */
-    D createOne(D input) throws QorvaException;
+    D createOne(D newResource) throws QorvaException;
 
     /**
      * Persist multiple records at once.
@@ -67,11 +67,11 @@ public interface QorvaService<D extends QorvaDTO> {
      * Update one record by ID.
      *
      * @param id    The ID of the record to update.
-     * @param input The updated data of the record.
+     * @param newResource The updated data of the record.
      * @return The updated record.
      * @throws QorvaException if the record is not found or an error occurs during update.
      */
-    D updateOne(String id, D input) throws QorvaException;
+    D updateOne(String id, D newResource) throws QorvaException;
 
     /**
      * Delete one record by ID.
