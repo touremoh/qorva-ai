@@ -4,6 +4,7 @@ import ai.qorva.core.dto.common.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
+import java.time.Year;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,7 +24,7 @@ public class CVDTO extends AbstractQorvaDTO {
     private String id;
     private String tenantId;
     private String candidateProfileSummary;
-    private Integer nbYearsOfExperience;
+    private Integer careerStartYear;
     private PersonalInformation personalInformation;
     private List<KeySkill> keySkills;
     private Profiles profiles;
@@ -36,6 +37,11 @@ public class CVDTO extends AbstractQorvaDTO {
     private List<Reference> references;
     private Binary attachment;
     private List<String> tags;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    public Integer getNbYearsOfExperience() {
+        return careerStartYear == null ? null : Year.now().getValue() - careerStartYear;
+    }
 
     @JsonProperty(access = Access.WRITE_ONLY)
     private float[] embedding;

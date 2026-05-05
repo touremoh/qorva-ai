@@ -129,7 +129,7 @@ public class ChatService {
         // Build a conversation window (trim if long)
         List<ChatMessage> context = buildConversationWindow(tenantId, chatId);
 
-        // Call LLM (gpt-4o-mini) with CV + Job + ResumeMatch context
+        // Call LLM with CV + Job + ResumeMatch context
         ChatMessage assistant = agent.answer(chat, context);
 
         assistant = chatMessagesRepository.save(assistant);

@@ -3,9 +3,11 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.QorvaDTO;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.security.LanguageContextHolder;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.QorvaService;
 import ai.qorva.core.utils.BuildApiResponse;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,9 +22,12 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
         this.service = service;
     }
 
-    /** Returns the tenant ID of the currently authenticated request from the thread-local context. */
     protected String currentTenantId() {
         return TenantContextHolder.getTenantId();
+    }
+
+    protected String currentLanguage() {
+        return LanguageContextHolder.getLanguage();
     }
 
     @GetMapping("/{id}")
@@ -37,7 +42,10 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     }
 
     @PostMapping
-    public ResponseEntity<QorvaRequestResponse> createOne(@RequestBody D data) throws QorvaException {
+    public ResponseEntity<QorvaRequestResponse> createOne(
+            @RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language,
+            @RequestBody D data) throws QorvaException {
+        LanguageContextHolder.setLanguage(language);
         data.setTenantId(currentTenantId());
         return BuildApiResponse.from(this.service.createOne(data));
     }
@@ -56,13 +64,20 @@ public abstract class AbstractQorvaController<D extends QorvaDTO> {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<QorvaRequestResponse> updateOne(@PathVariable String id, @RequestBody D data) throws QorvaException {
-        // preProcessUpdateOne in the service will verify ownership and set tenantId from the existing entity
+    public ResponseEntity<QorvaRequestResponse> updateOne(
+            @RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language,
+            @PathVariable String id,
+            @RequestBody D data) throws QorvaException {
+        LanguageContextHolder.setLanguage(language);
         return BuildApiResponse.from(this.service.updateOne(id, data));
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<QorvaRequestResponse> patchOne(@PathVariable String id, @RequestBody D data) throws QorvaException {
+    public ResponseEntity<QorvaRequestResponse> patchOne(
+            @RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language,
+            @PathVariable String id,
+            @RequestBody D data) throws QorvaException {
+        LanguageContextHolder.setLanguage(language);
         return BuildApiResponse.from(this.service.updateOne(id, data));
     }
 

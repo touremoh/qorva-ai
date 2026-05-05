@@ -11,10 +11,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.event.TransactionPhase;
-import org.springframework.transaction.event.TransactionalEventListener;
 
 import java.util.Objects;
 
@@ -36,12 +35,15 @@ public class AIScreeningService {
 	}
 
 	@Async
-	@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
+	@EventListener
 	public void startScreeningProcess(NewJobPostEvent event) throws QorvaException {
 		log.info("CV Screening event received for job post {}", event.jobPost().getId());
 
 		// Get the job post
 		var jobPost = event.jobPost();
+
+		// Get the language code for the report
+		var reportLanguage = jobPost.getLanguageCode();
 
 		// Check if the job post has an embedding vector
 		if (Objects.isNull(jobPost.getEmbedding()) || jobPost.getEmbedding().length == 0) {
@@ -77,7 +79,7 @@ public class AIScreeningService {
 			.parallelStream()
 			.map(cvdto -> {
 				try {
-					var analysisDetails = this.openAIService.generateReport(QorvaUtils.toJSON(cvdto), jobPost.toJobTitleAndDescription());
+					var analysisDetails = this.openAIService.generateReport(QorvaUtils.toJSON(cvdto), jobPost.toJobTitleAndDescription(), reportLanguage, jobPost.getScoringRules());
 					return this.resumeMatchService.createOne(jobPost, analysisDetails, cvdto);
 				} catch (QorvaException e) {
 					throw new RuntimeException(e);

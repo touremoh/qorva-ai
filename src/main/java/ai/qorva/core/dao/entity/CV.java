@@ -14,6 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.time.Instant;
+import java.time.Year;
 import java.util.List;
 
 @Getter
@@ -29,7 +30,11 @@ public class CV implements QorvaEntity {
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
     private String candidateProfileSummary;
-    private Integer nbYearsOfExperience;
+    private Integer careerStartYear;
+
+    public Integer getNbYearsOfExperience() {
+        return careerStartYear == null ? null : Year.now().getValue() - careerStartYear;
+    }
 
     @TextIndexed(weight = 5)
     private PersonalInformation personalInformation;

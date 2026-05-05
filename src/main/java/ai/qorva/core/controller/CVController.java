@@ -13,6 +13,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import ai.qorva.core.security.LanguageContextHolder;
+import org.springframework.http.HttpHeaders;
+
 import java.util.List;
 
 @Slf4j
@@ -27,7 +30,10 @@ public class CVController extends AbstractQorvaController<CVDTO> {
 	}
 
     @PostMapping(value = "/upload")
-    public ResponseEntity<List<CVDTO>> uploadFiles(@RequestParam("files") List<MultipartFile> files) throws QorvaException {
+    public ResponseEntity<List<CVDTO>> uploadFiles(
+            @RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language,
+            @RequestParam("files") List<MultipartFile> files) throws QorvaException {
+        LanguageContextHolder.setLanguage(language);
         log.info("Received {} files", files.size());
         return ResponseEntity.ok(((CVService) service).upload(files, currentTenantId()));
     }

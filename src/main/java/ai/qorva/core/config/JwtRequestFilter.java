@@ -1,6 +1,7 @@
 package ai.qorva.core.config;
 
 import ai.qorva.core.enums.SubscriptionStatus;
+import ai.qorva.core.security.LanguageContextHolder;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.QorvaUserDetailsService;
 import ai.qorva.core.utils.JwtUtils;
@@ -98,6 +99,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 			chain.doFilter(request, response);
 		} finally {
 			TenantContextHolder.clear();
+			LanguageContextHolder.clear();
 		}
 	}
 

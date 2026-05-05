@@ -5,9 +5,9 @@
       "type": "string",
       "description": "Summary of the candidate profile with quick highly of his experience and skill"
     },
-    "nbYearsOfExperience": {
-      "type": "int",
-      "description": "Number of years of professional experience of the candidate"
+    "careerStartYear": {
+      "type": "integer",
+      "description": "The year the candidate started their professional career (e.g. 2015). Used to compute years of experience dynamically."
     },
     "personalInformation": {
       "type": "object",

@@ -158,7 +158,6 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     // -------------------------------------------------------------------------
 
     @Override
-    @Transactional
     public D createOne(D newResource) throws QorvaException {
         try {
             preProcessCreateOne(newResource);
@@ -303,7 +302,6 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     // -------------------------------------------------------------------------
 
     @Override
-    @Transactional
     public D updateOne(String id, D newResource) throws QorvaException {
         try {
             preProcessUpdateOne(id, newResource);

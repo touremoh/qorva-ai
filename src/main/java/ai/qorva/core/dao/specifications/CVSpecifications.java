@@ -3,6 +3,7 @@ package ai.qorva.core.dao.specifications;
 import ai.qorva.core.dao.entity.CV;
 import org.springframework.data.mongodb.core.query.Criteria;
 
+import java.time.Year;
 import java.util.Collection;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -54,10 +55,11 @@ public final class CVSpecifications {
 		return () -> Criteria.where("personalInformation.role").regex(keyword, "i");
 	}
 
-	public static MongoSpecification<CV> hasMinYearOfExperience(Integer experience) {
-		if (experience == null || experience < 0) {
+	public static MongoSpecification<CV> hasMinYearOfExperience(Integer minYears) {
+		if (minYears == null || minYears < 0) {
 			return MongoSpecifications.empty();
 		}
-		return () -> Criteria.where("nbYearsOfExperience").gte(experience);
+		int latestAllowedStartYear = Year.now().getValue() - minYears;
+		return () -> Criteria.where("careerStartYear").lte(latestAllowedStartYear);
 	}
 }

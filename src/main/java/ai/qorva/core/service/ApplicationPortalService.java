@@ -2,6 +2,7 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.security.LanguageContextHolder;
 import ai.qorva.core.utils.QorvaUtils;
 import io.jsonwebtoken.lang.Strings;
 import lombok.extern.slf4j.Slf4j;
@@ -39,7 +40,7 @@ public class ApplicationPortalService {
 		var cvDto = this.cvService.processFile(application, jobPostDto.getTenantId());
 
 		// Generate JobApplication vs Job Post AI-matching score
-		var reportDetails = this.openAIService.generateReport(QorvaUtils.toJSON(cvDto), jobPostDto.toJobTitleAndDescription());
+		var reportDetails = this.openAIService.generateReport(QorvaUtils.toJSON(cvDto), jobPostDto.toJobTitleAndDescription(), LanguageContextHolder.getLanguage(), jobPostDto.getScoringRules());
 
 		// Save the newly generated report in the db
 		var response =this.jobsApplicationService.createOne(jobPostDto, reportDetails, cvDto);

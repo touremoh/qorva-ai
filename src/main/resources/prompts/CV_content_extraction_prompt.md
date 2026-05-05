@@ -12,7 +12,7 @@ If any expected field is missing from the CV, retain the original value in the o
 
 Next, generate a concise summary of the candidate's profile and assign it to the `candidateProfileSummary` field.
 
-Then, calculate the total number of years of professional experience and assign it to the `nbYearsOfExperience` field.
+Then, identify the year the candidate started their professional career (i.e. the start year of their earliest work experience) and assign it as a 4-digit integer to the `careerStartYear` field.
 
 Finally, add the default tag `All` to the field named `tags` to help create a general category.
 
@@ -21,5 +21,7 @@ CV Content:
 
 Expected Output Format (JSON Schema):
 ***{output_format}***
+
+The output language is the same as the CV content's language (e.g., English if the CV is written in English or French if the CV is written in French).
 
 Before rendering the final result, double-check that all requirements have been fully and accurately met.

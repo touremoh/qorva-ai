@@ -14,6 +14,7 @@ import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.CVMapper;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.dao.querybuilder.CVQueryBuilder;
+import ai.qorva.core.security.LanguageContextHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.ai.converter.BeanOutputConverter;
@@ -234,6 +235,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
                 );
                 var jobPosts = this.jobPostService.findAll(params);
                 for (JobPostDTO jobPost : jobPosts.getContent()) {
+                    jobPost.setLanguageCode(LanguageContextHolder.getLanguage());
                     this.publisher.publishEvent(new NewJobPostEvent(jobPost));
                 }
             } while (++pageNumber < totalPages);
