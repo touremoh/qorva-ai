@@ -3,46 +3,41 @@ package ai.qorva.core.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record CVScreeningReportOutputDTO(
-    @JsonProperty(required = true, value = "jobTitle") String jobTitle,
-    @JsonProperty(required = true, value = "candidateName") String candidateName,
     @JsonProperty(required = true, value = "skillsMatch") SkillsMatch skillsMatch,
-    @JsonProperty(required = true, value = "exceedsRequirements") ExceedsRequirements exceedsRequirements,
-    @JsonProperty(required = true, value = "lackingSkills") LackingSkills lackingSkills,
-    @JsonProperty(required = true, value = "experienceAlignment") ExperienceAlignment experienceAlignment,
-    @JsonProperty(required = true, value = "overallSummary") OverallSummary overallSummary) {
-	public record SkillsMatch(
-		@JsonProperty(required = true, value = "summary") String summary,
-		@JsonProperty(required = true, value = "degreeOfMatch") int degreeOfMatch
-	) {}
+    @JsonProperty(required = true, value = "experienceMatch") ExperienceMatch experienceMatch,
+    @JsonProperty(required = true, value = "locationMatch") LocationMatch locationMatch,
+    @JsonProperty(required = true, value = "industryMatch") IndustryMatch industryMatch,
+    @JsonProperty(required = true, value = "missingSkills") MissingSkills missingSkills,
+    @JsonProperty(required = true, value = "finalScore") FinalScore finalScore) {
 
-	public record ExceedsRequirements(
-		@JsonProperty(required = true, value = "summary") String summary
-	) {}
+    public record SkillsMatch(
+        @JsonProperty(required = true, value = "score") double score,
+        @JsonProperty(required = true, value = "scoreExplanation") String scoreExplanation,
+        @JsonProperty(required = true, value = "matchingSkills") String[] matchingSkills
+    ) {}
 
-	public record LackingSkills(
-		@JsonProperty(required = true, value = "summary") String summary
-	) {}
+    public record ExperienceMatch(
+        @JsonProperty(required = true, value = "score") double score,
+        @JsonProperty(required = true, value = "scoreExplanation") String scoreExplanation
+    ) {}
 
-	public record ExperienceAlignment(
-		@JsonProperty(required = true, value = "summary") String summary,
-		@JsonProperty(required = true, value = "degreeOfMatch") int degreeOfMatch
-	) {}
+    public record LocationMatch(
+        @JsonProperty(required = true, value = "score") double score,
+        @JsonProperty(required = true, value = "scoreExplanation") String scoreExplanation
+    ) {}
 
-	public record OverallSummary(
-		@JsonProperty(required = true, value = "summary") String summary,
-		@JsonProperty(required = true, value = "score") int score,
-		@JsonProperty(required = true, value = "pointsForImprovement") String[] pointsForImprovement
-	) {}
+    public record IndustryMatch(
+        @JsonProperty(required = true, value = "score") double score,
+        @JsonProperty(required = true, value = "scoreExplanation") String scoreExplanation
+    ) {}
 
-//	public record InterviewQuestions(
-//		@JsonProperty(required = true, value = "skillsBasedQuestions") String[] skillsBasedQuestions,
-//		@JsonProperty(required = true, value = "strengthBasedQuestions") String[] strengthBasedQuestions,
-//		@JsonProperty(required = true, value = "gapExplorationQuestions") String[] gapExplorationQuestions
-//	) {}
+    public record MissingSkills(
+        @JsonProperty(required = true, value = "summary") String summary,
+        @JsonProperty(required = true, value = "skills") String[] skills
+    ) {}
+
+    public record FinalScore(
+        @JsonProperty(required = true, value = "score") double score,
+        @JsonProperty(required = true, value = "scoreExplanation") String scoreExplanation
+    ) {}
 }
-
-
-
-
-
-

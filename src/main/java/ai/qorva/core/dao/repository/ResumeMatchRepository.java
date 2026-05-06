@@ -64,14 +64,14 @@ public interface ResumeMatchRepository extends QorvaRepository<ResumeMatch> {
 	 */
 	@Aggregation(pipeline = {
 		"{ '$match': { 'tenantId': ?0 } }",
-		"{ '$sort': { 'aiAnalysisReportDetails.overallSummary.score': -1 } }",
+		"{ '$sort': { 'aiAnalysisReportDetails.finalScore.score': -1 } }",
 		"{ '$group': { " +
 			"'_id': '$jobPostId', " +
 			"'jobPostTitle': { '$first': '$jobPostTitle' }, " +
 			"'topCandidates': { '$push': { " +
 				"'candidateId': '$candidateInfo.candidateId', " +
 				"'candidateName': '$candidateInfo.candidateName', " +
-				"'score': '$aiAnalysisReportDetails.overallSummary.score' " +
+				"'score': '$aiAnalysisReportDetails.finalScore.score' " +
 			"} } " +
 		"} }",
 		"{ '$project': { " +

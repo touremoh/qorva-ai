@@ -6,14 +6,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class SkillsMatch implements Serializable {
+public class ExperienceMatch implements Serializable {
     private Double score;
     private String scoreExplanation;
-    private List<String> matchingSkills;
 }

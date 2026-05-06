@@ -12,10 +12,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AIAnalysisReportDetails implements Serializable {
-	private String detailsID;
-	private SkillsMatch skillsMatch;
-	private ExceedsRequirements exceedsRequirements;
-	private LackingSkills lackingSkills;
-	private ExperienceAlignment experienceAlignment;
-	private OverallSummary overallSummary;
+    private String detailsID;
+    private SkillsMatch skillsMatch;
+    private ExperienceMatch experienceMatch;
+    private LocationMatch locationMatch;
+    private IndustryMatch industryMatch;
+    private MissingSkills missingSkills;
+    private FinalScore finalScore;
 }

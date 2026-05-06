@@ -12,8 +12,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class SkillsMatch implements Serializable {
-    private Double score;
-    private String scoreExplanation;
-    private List<String> matchingSkills;
+public class MissingSkills implements Serializable {
+    private String summary;
+    private List<String> skills;
 }
