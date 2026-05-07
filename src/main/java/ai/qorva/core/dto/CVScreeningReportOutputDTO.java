@@ -33,8 +33,13 @@ public record CVScreeningReportOutputDTO(
 
     public record MissingSkills(
         @JsonProperty(required = true, value = "summary") String summary,
-        @JsonProperty(required = true, value = "skills") String[] skills
-    ) {}
+        @JsonProperty(required = true, value = "skills") SkillEntry[] skills
+    ) {
+        public record SkillEntry(
+            @JsonProperty(required = true, value = "skill") String skill,
+            @JsonProperty(required = true, value = "importance") String importance
+        ) {}
+    }
 
     public record FinalScore(
         @JsonProperty(required = true, value = "score") double score,

@@ -2,6 +2,7 @@ package ai.qorva.core.mapper;
 
 import ai.qorva.core.dto.*;
 import ai.qorva.core.dto.common.AIAnalysisReportDetails;
+import ai.qorva.core.dto.common.MissingSkills;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -17,6 +18,8 @@ public interface OpenAIResultMapper {
 
 
 	AIAnalysisReportDetails map(CVScreeningReportOutputDTO data);
+
+	MissingSkills.SkillEntry map(CVScreeningReportOutputDTO.MissingSkills.SkillEntry entry);
 
 	@Mapping(target = "promptTokens", expression = "java(java.lang.Long.valueOf(0))")
 	@Mapping(target = "completionTokens", expression = "java(java.lang.Long.valueOf(0))")

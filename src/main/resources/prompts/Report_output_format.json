@@ -70,13 +70,24 @@
       "properties": {
         "summary": {
           "type": "string",
-          "description": "Clear explanation of the missing skills and their impact on the candidacy"
+          "description": "Plain business-language explanation of which skills are missing and how they affect the candidate's suitability"
         },
         "skills": {
           "type": "array",
-          "description": "List of missing skills with their importance level, e.g. 'Spring Boot (mandatory)', 'AI/ML (nice to have)'",
+          "description": "List of missing skills, each with a name and its importance level",
           "items": {
-            "type": "string"
+            "type": "object",
+            "properties": {
+              "skill": {
+                "type": "string",
+                "description": "Name of the missing skill"
+              },
+              "importance": {
+                "type": "string",
+                "enum": ["MANDATORY", "IMPORTANT", "NICE_TO_HAVE"],
+                "description": "How critical this skill is for the role"
+              }
+            }
           }
         }
       }

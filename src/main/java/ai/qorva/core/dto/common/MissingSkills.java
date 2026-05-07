@@ -14,5 +14,14 @@ import java.util.List;
 @AllArgsConstructor
 public class MissingSkills implements Serializable {
     private String summary;
-    private List<String> skills;
+    private List<SkillEntry> skills;
+
+    @Getter
+    @Setter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class SkillEntry implements Serializable {
+        private String skill;
+        private String importance;
+    }
 }
