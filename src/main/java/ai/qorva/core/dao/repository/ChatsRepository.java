@@ -13,6 +13,9 @@ public interface ChatsRepository extends QorvaRepository<Chat> {
     @Query(value = "{ 'tenantId': ?0, 'participants.userId': ?1 }")
     Page<Chat> findByTenantAndParticipant(String tenantId, String userId, Pageable pageable);
 
+    @Query(value = "{ 'tenantId': ?0, 'participants.userId': ?1, 'status': ?2 }")
+    Page<Chat> findByTenantAndParticipantAndStatus(String tenantId, String userId, String status, Pageable pageable);
+
     @Query(value = "{ 'tenantId': ?0, 'status': ?1 }")
     Page<Chat> findByTenantAndStatus(String tenantId, ChatStatus status, Pageable pageable);
 

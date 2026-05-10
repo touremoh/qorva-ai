@@ -93,8 +93,11 @@ public class ChatService {
         return chatMapper.map(chat);
     }
 
-    public Page<ChatDTO> listChats(String tenantId, String username, Pageable pageable) throws QorvaException {
+    public Page<ChatDTO> listChats(String tenantId, String username, ChatStatus status, Pageable pageable) throws QorvaException {
         var userId = ofNullable(userRepository.findByEmail(username)).orElseThrow(() -> new QorvaException("User not found")).getId();
+        if (status != null) {
+            return chatsRepository.findByTenantAndParticipantAndStatus(tenantId, userId, status.name(), pageable).map(chatMapper::map);
+        }
         return chatsRepository.findByTenantAndParticipant(tenantId, userId, pageable).map(chatMapper::map);
     }
 
@@ -151,15 +154,23 @@ public class ChatService {
     }
 
     @Transactional
-    public void closeChat(String tenantId, String chatId, String username) throws QorvaException {
-        // find the user id of the actor
-        var actor = ofNullable(userRepository.findByEmail(username)).orElseThrow(() -> new QorvaException("Chat actor not found")).getId();
-
+    public void deleteChat(String tenantId, String chatId) throws QorvaException {
         Chat chat = ofNullable(chatsRepository.findOneByTenantAndId(tenantId, chatId))
             .orElseThrow(() -> new QorvaException("Chat not found"));
-        chat.setStatus(ChatStatus.CLOSED);
+        long deleted = chatMessagesRepository.deleteByTenantIdAndChatId(tenantId, chatId);
+        chatsRepository.delete(chat);
+        log.debug("Deleted chat {} with {} messages", chatId, deleted);
+    }
+
+    @Transactional
+    public ChatDTO updateStatus(String tenantId, String chatId, ChatStatus status, String username) throws QorvaException {
+        var actor = ofNullable(userRepository.findByEmail(username)).orElseThrow(() -> new QorvaException("Chat actor not found")).getId();
+        Chat chat = ofNullable(chatsRepository.findOneByTenantAndId(tenantId, chatId))
+            .orElseThrow(() -> new QorvaException("Chat not found"));
+        chat.setStatus(status);
         chat.setLastUpdatedBy(actor);
-        chatsRepository.save(chat);
+        chat.setLastUpdatedAt(Instant.now());
+        return chatMapper.map(chatsRepository.save(chat));
     }
 
     // ------- Helpers -------

@@ -17,6 +17,8 @@ public interface ChatMessagesRepository extends QorvaRepository<ChatMessage> {
 
     long countByTenantIdAndChatId(String tenantId, String chatId);
 
+    long deleteByTenantIdAndChatId(String tenantId, String chatId);
+
     @Query(value = "{ 'tenantId': ?0, 'chatId': ?1 }", sort = "{ 'createdAt': 1 }", fields = "{ 'content': 1, 'role': 1 }")
     Iterable<ChatMessage> streamForContext(String tenantId, String chatId);
 }

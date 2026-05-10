@@ -4,6 +4,7 @@ import ai.qorva.core.dto.ChatDTO;
 import ai.qorva.core.dto.ChatMessageDTO;
 import ai.qorva.core.dto.request.CreateChatRequest;
 import ai.qorva.core.dto.request.PostUserMessageRequest;
+import ai.qorva.core.enums.ChatStatus;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.ChatService;
@@ -44,9 +45,10 @@ public class ChatController {
     @GetMapping
     @PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_CHAT')")
     public Page<ChatDTO> listChats(@RequestParam(defaultValue = "0") int page,
-                                   @RequestParam(defaultValue = "25") int size) throws QorvaException {
+                                   @RequestParam(defaultValue = "25") int size,
+                                   @RequestParam(required = false) ChatStatus status) throws QorvaException {
         Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "lastUpdatedAt"));
-        return chatService.listChats(currentTenantId(), currentUsername(), pageable);
+        return chatService.listChats(currentTenantId(), currentUsername(), status, pageable);
     }
 
     @PostMapping
@@ -80,10 +82,17 @@ public class ChatController {
         return chatService.getMessages(currentTenantId(), chatId, pageable);
     }
 
-    @PostMapping("/{chatId}/close")
+    @DeleteMapping("/{chatId}")
     @PreAuthorize("@accessManager.hasAuthority(authentication, 'DELETE_CHAT')")
-    public ResponseEntity<Void> close(@PathVariable String chatId) throws QorvaException {
-        chatService.closeChat(currentTenantId(), chatId, currentUsername());
+    public ResponseEntity<Void> deleteChat(@PathVariable String chatId) throws QorvaException {
+        chatService.deleteChat(currentTenantId(), chatId);
         return ResponseEntity.noContent().build();
+    }
+
+    @PatchMapping("/{chatId}/status")
+    @PreAuthorize("@accessManager.hasAuthority(authentication, 'MODIFY_CHAT')")
+    public ResponseEntity<ChatDTO> updateStatus(@PathVariable String chatId,
+                                                @RequestParam ChatStatus status) throws QorvaException {
+        return ResponseEntity.ok(chatService.updateStatus(currentTenantId(), chatId, status, currentUsername()));
     }
 }
