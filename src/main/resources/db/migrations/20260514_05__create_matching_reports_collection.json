@@ -1,0 +1,180 @@
+{
+  "collMod": "matching_reports",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "matching_reports",
+      "required": ["jobPostId", "tenantId", "status", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      "properties": {
+        "jobPostId": {
+          "bsonType": "objectId",
+          "description": "must be a valid ObjectId and is required"
+        },
+        "jobPostTitle": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "must be a valid ObjectId and is required"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "candidateInfo": {
+          "bsonType": "object",
+          "description": "candidate identification and summary",
+          "properties": {
+            "candidateId": { "bsonType": "string" },
+            "candidateName": { "bsonType": "string" },
+            "nbYearsExperience": { "bsonType": "int" },
+            "candidateProfileSummary": { "bsonType": "string" },
+            "skills": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            }
+          }
+        },
+        "matchingReportDetails": {
+          "bsonType": "object",
+          "description": "AI-generated screening report",
+          "properties": {
+            "detailsID": { "bsonType": "string" },
+            "skillsMatch": {
+              "bsonType": "object",
+              "properties": {
+                "score": { "bsonType": "double" },
+                "scoreSummary": { "bsonType": "string" },
+                "matchingSkills": {
+                  "bsonType": "array",
+                  "items": { "bsonType": "string" }
+                }
+              }
+            },
+            "experienceMatch": {
+              "bsonType": "object",
+              "properties": {
+                "score": { "bsonType": "double" },
+                "scoreSummary": { "bsonType": "string" }
+              }
+            },
+            "locationMatch": {
+              "bsonType": "object",
+              "properties": {
+                "score": { "bsonType": "double" },
+                "scoreSummary": { "bsonType": "string" }
+              }
+            },
+            "industryMatch": {
+              "bsonType": "object",
+              "properties": {
+                "score": { "bsonType": "double" },
+                "scoreSummary": { "bsonType": "string" }
+              }
+            },
+            "missingSkills": {
+              "bsonType": "object",
+              "properties": {
+                "summary": { "bsonType": "string" },
+                "skills": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "object",
+                    "properties": {
+                      "skill": { "bsonType": "string" },
+                      "importance": { "bsonType": "string" }
+                    }
+                  }
+                }
+              }
+            },
+            "decisionSummary": {
+              "bsonType": "object",
+              "properties": {
+                "reportHeadline": { "bsonType": "string" },
+                "finalScore": { "bsonType": "double" },
+                "detailedSummary": { "bsonType": "string" },
+                "shortVerdict": { "bsonType": "string" },
+                "recommendation": {
+                  "bsonType": "string",
+                  "enum": ["strong_interview", "interview", "may_be", "reject"],
+                  "description": "must be a valid recommendation value"
+                },
+                "confidenceLevel": {
+                  "bsonType": "string",
+                  "enum": ["low", "medium", "high"],
+                  "description": "must be a valid confidence level"
+                }
+              }
+            },
+            "strengths": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "title": { "bsonType": "string" },
+                  "evidence": { "bsonType": "string" },
+                  "importance": {
+                    "bsonType": "string",
+                    "enum": ["low", "medium", "high"],
+                    "description": "must be a valid importance level"
+                  }
+                }
+              }
+            },
+            "weaknesses": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "title": { "bsonType": "string" },
+                  "evidence": { "bsonType": "string" },
+                  "severity": {
+                    "bsonType": "string",
+                    "enum": ["low", "medium", "high"],
+                    "description": "must be a valid severity level"
+                  }
+                }
+              }
+            },
+            "redFlags": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "title": { "bsonType": "string" },
+                  "evidence": { "bsonType": "string" },
+                  "severity": {
+                    "bsonType": "string",
+                    "enum": ["low", "medium", "high"],
+                    "description": "must be a valid severity level"
+                  },
+                  "suggestedInterviewQuestion": { "bsonType": "string" }
+                }
+              }
+            }
+          }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

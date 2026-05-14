@@ -1,7 +1,6 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.CV;
-import ai.qorva.core.dao.specifications.QorvaRepositorySpecification;
 import ai.qorva.core.dto.DashboardData;
 import org.bson.types.ObjectId;
 import org.springframework.data.domain.Page;
@@ -19,11 +18,11 @@ public interface CVRepository extends QorvaRepository<CV> {
 
 	@Aggregation(pipeline = {
 		"{ $vectorSearch: { " +
-			"index: 'CVsSearchIndex', " +
+			"index: 'cvs_search_index', " +
 			"queryVector: ?0, " +
 			"path: 'embedding', " +
-			"numCandidates: 800, " +     // increased recall
-			"limit: 100, " +
+			"numCandidates: 500, " +     // increased recall
+			"limit: 50, " +
 			"filter: { tenantId: { $eq: ?1 } } " +
 			"} }",
 		"{ $addFields: { score: { $meta: 'vectorSearchScore' } } }",

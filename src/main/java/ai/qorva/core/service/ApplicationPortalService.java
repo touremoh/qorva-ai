@@ -18,10 +18,10 @@ public class ApplicationPortalService {
 	private final CVService cvService;
 	private final JobPostService jobPostService;
 	private final OpenAIService openAIService;
-	protected final ResumeMatchService jobsApplicationService;
+	protected final MatchingReportService jobsApplicationService;
 
 	@Autowired
-	public ApplicationPortalService(CVService cvService, JobPostService jobPostService, OpenAIService openAIService, ResumeMatchService jobsApplicationService) {
+	public ApplicationPortalService(CVService cvService, JobPostService jobPostService, OpenAIService openAIService, MatchingReportService jobsApplicationService) {
 		this.cvService = cvService;
 		this.jobPostService = jobPostService;
 		this.openAIService = openAIService;

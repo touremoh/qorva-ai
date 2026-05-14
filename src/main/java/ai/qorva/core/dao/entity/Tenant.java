@@ -14,7 +14,7 @@ import java.time.Instant;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "Tenants")
+@Document(collection = "tenants")
 public class Tenant implements QorvaEntity {
 
     @Id

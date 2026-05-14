@@ -33,6 +33,10 @@ public enum UserActionsEnum {
 	MODIFY_CHAT("MODIFY_CHAT"),
 	DELETE_CHAT("DELETE_CHAT"),
 
+	// Users
+	VIEW_USERS("VIEW_USERS"),
+	MANAGE_USERS("MANAGE_USERS"),
+
 	// ATS Export Reports
 	ATS_REPORT_EXPORT("ATS_REPORT_EXPORT"),
 

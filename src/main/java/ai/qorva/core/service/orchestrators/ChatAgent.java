@@ -28,7 +28,7 @@ public class ChatAgent {
         ScreeningContext ctx = contextProvider.load(
                 chat.getContext().getCvId(),
                 chat.getContext().getJobPostId(),
-                chat.getContext().getResumeMatchId());
+                chat.getContext().getMatchingReportId());
 
         // Compose prompt with system preamble and condensed history
         String prompt = PromptComposer.compose(ctx, history);

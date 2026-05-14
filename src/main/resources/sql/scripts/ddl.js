@@ -1,7 +1,5 @@
 use qorva;
 
-db.DemoRequestors.drop();
-db.DemoPartners.drop();
 db.Tenants.drop();
 db.Users.drop();
 db.JobsPosts.drop();
@@ -11,51 +9,6 @@ db.InterviewQuestions.drop();
 db.StripeEventLogs.drop();
 db.Chats.drop();
 db.ChatMessages.drop();
-// This must be deleted
-db.createCollection("DemoPartners", {
-    validator: {
-        $jsonSchema: {
-            bsonType: "object",
-            title: "DemoRequestors",
-            required: ["tenantId", "email"],
-            properties: {
-                tenantId: {
-                    bsonType: "string",
-                    description: "must be a valid objectId and is required"
-                    },
-                email: {
-                    bsonType: "string",
-                    description: "must be a valid string and is required"
-                    },
-                firstName: {
-                    bsonType: "string",
-                    description: "must be a valid string"
-                    },
-                lastName: {
-                    bsonType: "string",
-                    description: "must be a valid string"
-                    },
-                organizationName: {
-                    bsonType: "string",
-                    description: "must be a valid string"
-                    },
-                organizationSize: {
-                    bsonType: "string",
-                    description: "must be a valid string (eg: 1-10)"
-                    },
-                nbApplicationsPerMonth: {
-                    bsonType: "number",
-                    description: "must be a valid number"
-                    },
-                createdAt: {
-                    bsonType: "date",
-                    description: "must be a valid date and is required"
-                    }
-                }
-            }
-        }
-
-});
 
 db.createCollection("Tenants", {
     validator: {

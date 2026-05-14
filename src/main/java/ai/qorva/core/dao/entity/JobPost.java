@@ -16,7 +16,7 @@ import java.time.Instant;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "JobsPosts")
+@Document(collection = "job_posts")
 public class JobPost implements QorvaEntity {
 
     @Id

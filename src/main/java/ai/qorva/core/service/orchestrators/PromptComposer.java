@@ -15,8 +15,8 @@ public class PromptComposer {
         sb.append("CONTEXT:\n");
         sb.append("CV:\n").append(ctx.cvText()).append("\n\n");
         sb.append("JOB DESCRIPTION:\n").append(ctx.jobText()).append("\n\n");
-        if (Strings.hasText(ctx.resumeMatchText())) {
-            sb.append("RESUME MATCH ANALYSIS:\n").append(ctx.resumeMatchText()).append("\n\n");
+        if (Strings.hasText(ctx.matchingReportText())) {
+            sb.append("RESUME MATCH ANALYSIS:\n").append(ctx.matchingReportText()).append("\n\n");
         }
 
         sb.append("HISTORY:\n");

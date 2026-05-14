@@ -15,12 +15,12 @@ import java.util.List;
 
 @Getter @Setter @Builder
 @NoArgsConstructor @AllArgsConstructor
-@Document("Chats")
+@Document("chats")
 @CompoundIndexes({
     @CompoundIndex(name="tenant_user_status_updated_idx", def="{'tenantId':1,'participants.userId':1,'status':1,'lastUpdatedAt':-1}"),
     @CompoundIndex(name="tenant_cv_idx", def="{'tenantId':1,'context.cvId':1}"),
     @CompoundIndex(name="tenant_job_idx", def="{'tenantId':1,'context.jobPostId':1}"),
-    @CompoundIndex(name="tenant_resumeMatch_idx", def="{'tenantId':1,'context.resumeMatchId':1}")
+    @CompoundIndex(name="tenant_matching_report_idx", def="{'tenantId':1,'context.matchingReportId':1}")
 })
 public class Chat implements QorvaEntity {
     @Id

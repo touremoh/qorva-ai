@@ -9,6 +9,7 @@ import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.UserMapper;
 import ai.qorva.core.dao.querybuilder.UserQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -116,6 +117,22 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		this.mapper.merge(userDTO, userFound);
 	}
 
+	public void updatePassword(String tenantId, String userId, String currentPassword, String newPassword) throws QorvaException {
+		var user = repository.findById(new ObjectId(userId))
+			.orElseThrow(() -> new QorvaException("User not found", HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+
+		if (!tenantId.equals(user.getTenantId())) {
+			throw new QorvaException("User not found", HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+		}
+
+		if (!passwordEncoder.matches(currentPassword, user.getEncryptedPassword())) {
+			throw new QorvaException("Current password is incorrect", HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+		}
+
+		user.setEncryptedPassword(passwordEncoder.encode(newPassword));
+		repository.save(user);
+	}
+
 	public long updateUserAccountStatusByTenantId(String tenantId, String newStatus) {
 		return ((UserRepository) this.repository).updateUserAccountStatusByTenantId(tenantId, newStatus);
 	}
@@ -127,9 +144,5 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 			&& !StringUtils.hasText(requestData.getTenantId())) {
 			throw new IllegalArgumentException("Either email or id or tenantId must be present");
 		}
-	}
-
-	public UserDTO findOneByEmail(String email) {
-		return this.mapper.map(((UserRepository) this.repository).findByEmail(email));
 	}
 }

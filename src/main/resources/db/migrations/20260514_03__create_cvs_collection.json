@@ -1,0 +1,253 @@
+{
+  "collMod": "cvs",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "cvs",
+      "required": ["tenantId", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      "properties": {
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "must be a valid ObjectId and is required"
+        },
+        "candidateProfileSummary": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "careerStartYear": {
+          "bsonType": "int",
+          "description": "must be an integer representing the year the candidate started their career"
+        },
+        "personalInformation": {
+          "bsonType": "object",
+          "description": "candidate personal details",
+          "properties": {
+            "name": { "bsonType": "string" },
+            "role": { "bsonType": "string" },
+            "summary": { "bsonType": "string" },
+            "contact": {
+              "bsonType": "object",
+              "properties": {
+                "phone": { "bsonType": "string" },
+                "email": { "bsonType": "string" },
+                "socialLinks": {
+                  "bsonType": "object",
+                  "properties": {
+                    "linkedin": { "bsonType": "string" },
+                    "github": { "bsonType": "string" },
+                    "website": { "bsonType": "string" }
+                  }
+                }
+              }
+            },
+            "availability": {
+              "bsonType": "object",
+              "properties": {
+                "interviews": { "bsonType": "string" },
+                "startDate": { "bsonType": "string" }
+              }
+            }
+          }
+        },
+        "keySkills": {
+          "bsonType": "array",
+          "description": "list of skill categories with their skills",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "category": { "bsonType": "string" },
+              "skills": {
+                "bsonType": "array",
+                "items": { "bsonType": "string" }
+              }
+            }
+          }
+        },
+        "profiles": {
+          "bsonType": "object",
+          "description": "candidate areas of expertise and key responsibilities",
+          "properties": {
+            "areasOfExpertise": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            },
+            "keyResponsibilities": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            }
+          }
+        },
+        "workExperience": {
+          "bsonType": "array",
+          "description": "list of work experience entries",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "company": { "bsonType": "string" },
+              "website": { "bsonType": "string" },
+              "location": { "bsonType": "string" },
+              "from": { "bsonType": "string" },
+              "to": { "bsonType": "string" },
+              "position": { "bsonType": "string" },
+              "activities": {
+                "bsonType": "array",
+                "items": {
+                  "bsonType": "object",
+                  "properties": {
+                    "project": { "bsonType": "string" },
+                    "tasks": {
+                      "bsonType": "array",
+                      "items": { "bsonType": "string" }
+                    }
+                  }
+                }
+              },
+              "achievements": {
+                "bsonType": "array",
+                "items": { "bsonType": "string" }
+              },
+              "toolsAndTechnologies": {
+                "bsonType": "array",
+                "items": { "bsonType": "string" }
+              }
+            }
+          }
+        },
+        "education": {
+          "bsonType": "array",
+          "description": "list of education entries",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "year": { "bsonType": "string" },
+              "institution": { "bsonType": "string" },
+              "degree": { "bsonType": "string" },
+              "fieldOfStudy": { "bsonType": "string" },
+              "achievements": {
+                "bsonType": "array",
+                "items": { "bsonType": "string" }
+              }
+            }
+          }
+        },
+        "certifications": {
+          "bsonType": "array",
+          "description": "list of certifications",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "title": { "bsonType": "string" },
+              "institution": { "bsonType": "string" },
+              "year": { "bsonType": "string" },
+              "description": { "bsonType": "string" }
+            }
+          }
+        },
+        "skillsAndQualifications": {
+          "bsonType": "object",
+          "description": "technical skills, soft skills, and languages",
+          "properties": {
+            "technicalSkills": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            },
+            "softSkills": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            },
+            "languages": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "language": { "bsonType": "string" },
+                  "proficiency": {
+                    "bsonType": "object",
+                    "properties": {
+                      "read": { "bsonType": "string" },
+                      "written": { "bsonType": "string" },
+                      "spoken": { "bsonType": "string" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "projectsAndAchievements": {
+          "bsonType": "array",
+          "description": "list of projects and achievements",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "title": { "bsonType": "string" },
+              "description": { "bsonType": "string" },
+              "date": { "bsonType": "string" },
+              "impact": { "bsonType": "string" }
+            }
+          }
+        },
+        "interestsAndHobbies": {
+          "bsonType": "array",
+          "description": "list of interests and hobbies",
+          "items": { "bsonType": "string" }
+        },
+        "references": {
+          "bsonType": "array",
+          "description": "list of professional references",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "name": { "bsonType": "string" },
+              "position": { "bsonType": "string" },
+              "company": { "bsonType": "string" },
+              "contact": {
+                "bsonType": "object",
+                "properties": {
+                  "phone": { "bsonType": "string" },
+                  "email": { "bsonType": "string" }
+                }
+              }
+            }
+          }
+        },
+        "attachment": {
+          "bsonType": "binData",
+          "description": "binary attachment (original CV file)"
+        },
+        "embedding": {
+          "bsonType": "array",
+          "description": "vector embedding for semantic search",
+          "items": { "bsonType": "double" }
+        },
+        "score": {
+          "bsonType": "double",
+          "description": "relevance score"
+        },
+        "tags": {
+          "bsonType": "array",
+          "description": "searchable tags",
+          "items": { "bsonType": "string" }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

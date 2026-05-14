@@ -93,6 +93,8 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 				var currentSubscriptionStatus = tenantDTO.getSubscriptionInfo().getSubscriptionStatus();
 				if (!currentSubscriptionStatus.equals(subscriptionStatus)) {
 					log.debug("Subscription status changed from {} to {}", currentSubscriptionStatus, subscriptionStatus);
+					tenantDTO.getSubscriptionInfo().setSubscriptionStatus(subscriptionStatus);
+					this.tenantService.updateOne(tenantDTO.getTenantId(), tenantDTO);
 					this.persistEventInDb(tenantDTO, subscriptionId, customerId, subscriptionStatus);
 				}
 			}

@@ -1,0 +1,76 @@
+{
+  "collMod": "users",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "users",
+      "required": ["firstName", "lastName", "email", "encryptedPassword", "userAccountStatus", "tenantId", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      "properties": {
+        "firstName": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastName": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "email": {
+          "bsonType": "string",
+          "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+          "description": "must be a valid email address and is required"
+        },
+        "encryptedPassword": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "userAccountStatus": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "must be a valid ObjectId and is required"
+        },
+        "authorities": {
+          "bsonType": "array",
+          "description": "list of role-based authorities",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "role": {
+                "bsonType": "string",
+                "description": "must be a string"
+              },
+              "action": {
+                "bsonType": "string",
+                "description": "must be a string"
+              },
+              "permission": {
+                "bsonType": "string",
+                "description": "must be a string"
+              }
+            }
+          }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

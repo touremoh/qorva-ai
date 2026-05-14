@@ -38,10 +38,10 @@ public class QorvaConfig {
 			var cvOutputFormat = this.readFile("CV_output_format.json");
 
 			// Get Report generation message
-			var reportGenerationPrompt = this.readFile("Report_generation_prompt.md");
+			var reportGenerationPrompt = this.readFile("Matching_report_generation_prompt.md");
 
 			// Get report output format
-			var reportOutputFormat = this.readFile("Report_output_format.json");
+			var reportOutputFormat = this.readFile("Matching_report_response_format.json");
 
 			// Build and render results
 			return QorvaPromptContextHolder

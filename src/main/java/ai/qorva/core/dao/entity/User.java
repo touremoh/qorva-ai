@@ -18,7 +18,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "Users")
+@Document(collection = "users")
 public class User implements QorvaEntity {
 
     @Id

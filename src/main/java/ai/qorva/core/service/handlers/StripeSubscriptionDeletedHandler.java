@@ -52,23 +52,28 @@ public class StripeSubscriptionDeletedHandler implements StripeEventHandler {
 		var subscriptionStatus = sub.getStatus();
 		var canceledAt = sub.getCanceledAt();
 
-		TenantDTO tenant;
+		TenantDTO tenant = null;
 		try {
 			tenant = this.tenantService.findOneByCriteria(TenantDTO.builder().stripeCustomerId(stripeCustomerId).build());
 		} catch (QorvaException e) {
-			log.warn("Failed to retrieve tenant details for customer {}", stripeCustomerId);
-			throw new QorvaException("Failed to retrieve tenant details for customer " + stripeCustomerId, e);
+			log.warn("Tenant not found for Stripe customer {} during subscription.deleted — event will be logged without tenantId", stripeCustomerId);
 		}
 
-		// Persist the event log
+		// Persist the event log (with or without tenantId)
 		var eventLog = new StripeEventLogDTO();
 		eventLog.setEventType("customer.subscription.deleted");
 		eventLog.setEventStatus(subscriptionStatus);
 		eventLog.setStripeCustomerId(stripeCustomerId);
 		eventLog.setStripeSubscriptionId(subscriptionId);
-		eventLog.setTenantId(tenant.getTenantId());
-
+		if (tenant != null) {
+			eventLog.setTenantId(tenant.getTenantId());
+		}
 		this.repository.save(this.evtMapper.map(eventLog));
+
+		if (tenant == null) {
+			log.info("Subscription deleted for unknown customer {} — no tenant to update.", stripeCustomerId);
+			return;
+		}
 
 		// Update the tenant's subscription info (cancellation status and canceled at)
 		tenant.getSubscriptionInfo().setSubscriptionStatus(SubscriptionStatusHelper.subscriptionFromCode(subscriptionStatus));

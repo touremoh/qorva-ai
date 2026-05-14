@@ -1,0 +1,134 @@
+{
+  "collMod": "job_posts",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "job_posts",
+      "required": ["title", "tenantId", "status", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      "properties": {
+        "title": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "must be a valid ObjectId and is required"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "scoringRules": {
+          "bsonType": "object",
+          "description": "AI screening scoring configuration",
+          "properties": {
+            "skills": {
+              "bsonType": "array",
+              "description": "list of skill requirements",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "name": { "bsonType": "string" },
+                  "importance": {
+                    "bsonType": "string",
+                    "enum": ["mandatory", "important", "nice_to_have"],
+                    "description": "must be a valid string and is required"
+                  },
+                  "weight": { "bsonType": "double" },
+                  "minYearsOfExperience": { "bsonType": "int" },
+                  "exactSkillOnly": { "bsonType": "bool" }
+                }
+              }
+            },
+            "experienceRequirements": {
+              "bsonType": "object",
+              "properties": {
+                "minYearsOfExperience": { "bsonType": "int" },
+                "minRelevantYears": { "bsonType": "int" },
+                "seniorityLevel": {
+                    "bsonType": "string",
+                    "enum": ["junior", "mid", "senior"],
+                    "description": "must be a valid string"
+                  }
+              }
+            },
+            "locationPreferences": {
+              "bsonType": "object",
+              "properties": {
+                "allowedLocations": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "string",
+                    "description": "must be a string and is required"
+                  }
+                },
+                "remoteAllowed": {
+                  "bsonType": "bool",
+                  "description": "must be a boolean and is required"
+                },
+                "strictness": {
+                  "bsonType": "string",
+                  "enum": ["strict", "medium", "relaxed"],
+                  "description": "must be a valid string and is required"
+                }
+              }
+            },
+            "industryPreferences": {
+              "bsonType": "object",
+              "properties": {
+                "preferredIndustries": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "string",
+                    "description": "must be a string and is required"
+                  }
+                },
+                "strictness": {
+                  "bsonType": "string",
+                  "enum": ["strict", "medium", "relaxed"],
+                  "description": "must be a valid string and is required"
+                }
+              }
+            },
+            "scoringWeight": {
+              "bsonType": "object",
+              "properties": {
+                "skills": { "bsonType": "double" },
+                "experience": { "bsonType": "double" },
+                "location": { "bsonType": "double" },
+                "industry": { "bsonType": "double" }
+              }
+            }
+          }
+        },
+        "embedding": {
+          "bsonType": "array",
+          "description": "vector embedding for semantic search",
+          "items": { "bsonType": "double" }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

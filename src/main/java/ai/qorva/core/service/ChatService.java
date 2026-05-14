@@ -59,7 +59,7 @@ public class ChatService {
                 .context(ChatContext.builder()
                         .cvId(req.getCvId())
                         .jobPostId(req.getJobPostId())
-                        .resumeMatchId(req.getResumeMatchId())
+                        .matchingReportId(req.getMatchingReportId())
                         .build())
                 .participants(req.getParticipants().stream()
                         .map(p -> Participant.builder()
@@ -181,11 +181,11 @@ public class ChatService {
             You are Qorva AI, an assistant that answers questions about a candidate's CV in relation to a job post and a resume match analysis.
             Use ONLY the provided context and conversation history. If unsure, say so.
             The chat language is the user's language.
-            Context IDs: cvId=%s, jobPostId=%s, resumeMatchId=%s.
+            Context IDs: cvId=%s, jobPostId=%s, matchingReportId=%s.
             """.formatted(
                 chat.getContext().getCvId(),
                 chat.getContext().getJobPostId(),
-                chat.getContext().getResumeMatchId()
+                chat.getContext().getMatchingReportId()
         );
     }
 

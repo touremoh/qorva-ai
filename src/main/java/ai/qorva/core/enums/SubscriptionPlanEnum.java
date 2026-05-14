@@ -11,8 +11,8 @@ import static java.lang.Integer.MAX_VALUE;
 public enum SubscriptionPlanEnum {
     FREE_TRIAL("FREE_TRIAL", MAX_VALUE, 1),
     STARTER("Starter", 500, 3),
-    GROWTH("Growth", 2000, 10),
-    PROFESSIONAL("Professional", 5000, 25),
+    PRO("Pro", 2000, 10),
+    SCALE("Scale", 6000, 25),
     ENTERPRISE("Enterprise", MAX_VALUE, MAX_VALUE);
 
     SubscriptionPlanEnum(String name, Integer limit, Integer maxSeats) {

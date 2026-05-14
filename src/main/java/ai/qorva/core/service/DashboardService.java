@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class DashboardService {
 	private final UserService userService;
-	private final ResumeMatchService resumeMatchService;
+	private final MatchingReportService matchingReportService;
 	private final JobPostService jobPostService;
 	private final CVService cvService;
 	private final TenantService tenantService;
@@ -27,9 +27,9 @@ public class DashboardService {
 	private static final int TIMEOUT_SECONDS = 15;
 
 	@Autowired
-	public DashboardService(UserService userService, ResumeMatchService resumeMatchService, JobPostService jobPostService, CVService cvService, TenantService tenantService, ExecutorService dashboardExecutor) {
+	public DashboardService(UserService userService, MatchingReportService matchingReportService, JobPostService jobPostService, CVService cvService, TenantService tenantService, ExecutorService dashboardExecutor) {
 		this.userService = userService;
-		this.resumeMatchService = resumeMatchService;
+		this.matchingReportService = matchingReportService;
 		this.jobPostService = jobPostService;
 		this.cvService = cvService;
 		this.tenantService = tenantService;
@@ -54,8 +54,8 @@ public class DashboardService {
 			catch (QorvaException e) { throw new RuntimeException(e); }
 		}, dashboardExecutor);
 
-		var totalResumeMatches = CompletableFuture.supplyAsync(() -> {
-			try { return this.resumeMatchService.countAll(tenantId); }
+		var totalMatchingReports = CompletableFuture.supplyAsync(() -> {
+			try { return this.matchingReportService.countAll(tenantId); }
 			catch (QorvaException e) { throw new RuntimeException(e); }
 		}, dashboardExecutor);
 
@@ -65,7 +65,7 @@ public class DashboardService {
 		}, dashboardExecutor);
 
 		var totalResumesProcessedInCurrentMonth = CompletableFuture.supplyAsync(
-			() -> this.resumeMatchService.countResumeMatchesInCurrentMonth(tenantId),
+			() -> this.matchingReportService.countMatchingReportInCurrentMonth(tenantId),
 			dashboardExecutor
 		);
 
@@ -75,19 +75,19 @@ public class DashboardService {
 		);
 
 		var jobPostReports = CompletableFuture.supplyAsync(
-			() -> this.resumeMatchService.getApplicationsPerJobPost(tenantId),
+			() -> this.matchingReportService.getApplicationsPerJobPost(tenantId),
 			dashboardExecutor
 		);
 
 		var topCandidatesPerJob = CompletableFuture.supplyAsync(
-			() -> this.resumeMatchService.getTopCandidatesPerJobPost(tenantId),
+			() -> this.matchingReportService.getTopCandidatesPerJobPost(tenantId),
 			dashboardExecutor
 		);
 
 		totalCvs.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		totalJobPosts.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		totalUsers.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
-		totalResumeMatches.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
+		totalMatchingReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		totalResumesProcessedInCurrentMonth.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		skillReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 		jobPostReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
@@ -97,7 +97,7 @@ public class DashboardService {
 			totalCvs,
 			totalJobPosts,
 			totalUsers,
-			totalResumeMatches,
+			totalMatchingReports,
 			totalResumesProcessedInCurrentMonth,
 			skillReports,
 			jobPostReports,
@@ -109,7 +109,7 @@ public class DashboardService {
 			totalCvs.join(),
 			totalJobPosts.join(),
 			totalUsers.join(),
-			totalResumeMatches.join(),
+			totalMatchingReports.join(),
 			totalResumesProcessedInCurrentMonth.join(),
 			skillReports.join(),
 			jobPostReports.join(),

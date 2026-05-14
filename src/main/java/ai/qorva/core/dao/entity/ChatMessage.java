@@ -13,7 +13,7 @@ import java.util.List;
 
 @Getter @Setter @Builder
 @NoArgsConstructor @AllArgsConstructor
-@Document("ChatMessages")
+@Document("chat_messages")
 @CompoundIndex(name="tenant_chat_time_idx", def="{'tenantId':1,'chatId':1,'createdAt':1}")
 public class ChatMessage implements QorvaEntity {
     @Id

@@ -1,0 +1,198 @@
+{
+  "type": "object",
+  "properties": {
+    "skillsMatch": {
+      "type": "object",
+      "description": "Assessment of how well the candidate's skills match the job requirements",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score from 0 to 100 representing the degree of skills match"
+        },
+        "scoreSummary": {
+          "type": "string",
+          "description": "Clear business-language explanation of why the candidate received this skills score"
+        },
+        "matchingSkills": {
+          "type": "array",
+          "description": "List of skills the candidate has that actually match the job requirements",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "experienceMatch": {
+      "type": "object",
+      "description": "Assessment of how well the candidate's experience aligns with the job requirements",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score from 0 to 100 representing the degree of experience match"
+        },
+        "scoreSummary": {
+          "type": "string",
+          "description": "Clear business-language explanation of why the candidate received this experience score"
+        }
+      }
+    },
+    "locationMatch": {
+      "type": "object",
+      "description": "Assessment of whether the candidate's location matches the job location preferences",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score from 0 to 100 representing the degree of location match"
+        },
+        "scoreSummary": {
+          "type": "string",
+          "description": "Clear business-language explanation of why the candidate received this location score"
+        }
+      }
+    },
+    "industryMatch": {
+      "type": "object",
+      "description": "Assessment of how well the candidate's industry background matches the job preferences",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score from 0 to 100 representing the degree of industry match"
+        },
+        "scoreSummary": {
+          "type": "string",
+          "description": "Clear business-language explanation of why the candidate received this industry score"
+        }
+      }
+    },
+    "missingSkills": {
+      "type": "object",
+      "description": "Details about the skills the candidate is lacking for this role",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "Plain business-language explanation of which skills are missing and how they affect the candidate's suitability"
+        },
+        "skills": {
+          "type": "array",
+          "description": "List of missing skills, each with a name and its importance level",
+          "items": {
+            "type": "object",
+            "properties": {
+              "skill": {
+                "type": "string",
+                "description": "Name of the missing skill"
+              },
+              "importance": {
+                "type": "string",
+                "enum": ["MANDATORY", "IMPORTANT", "NICE_TO_HAVE"],
+                "description": "How critical this skill is for the role"
+              }
+            }
+          }
+        }
+      }
+    },
+    "decisionSummary": {
+      "type": "object",
+      "description": "The overall hiring decision and confidence assessment for this candidate",
+      "properties": {
+        "reportHeadline": {
+          "type": "string",
+          "description": "A short, punchy one-line headline summarising the candidate's fit (e.g. 'Strong backend engineer, weak on cloud ownership')"
+        },
+        "finalScore": {
+          "type": "number",
+          "description": "Final overall score from 0 to 100 computed using the scoring weights"
+        },
+        "detailedSummary": {
+          "type": "string",
+          "description": "A thorough business-language summary of the candidate's overall fit, covering strengths, weaknesses, gaps, and context"
+        },
+        "shortVerdict": {
+          "type": "string",
+          "description": "A concise 1-2 sentence verdict suitable for a recruiter dashboard card"
+        },
+        "recommendation": {
+          "type": "string",
+          "enum": ["strong_interview", "interview", "may_be", "reject"],
+          "description": "Hiring recommendation: strong_interview = prioritise, interview = worth meeting, may_be = borderline, reject = not suitable"
+        },
+        "confidenceLevel": {
+          "type": "string",
+          "enum": ["low", "medium", "high"],
+          "description": "Confidence in the recommendation based on the completeness and clarity of the candidate's profile"
+        }
+      }
+    },
+    "strengths": {
+      "type": "array",
+      "description": "Key strengths that make this candidate stand out for the role",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Short label for the strength (e.g. 'Strong Java/Spring Boot experience')"
+          },
+          "evidence": {
+            "type": "string",
+            "description": "Specific evidence from the CV supporting this strength"
+          },
+          "importance": {
+            "type": "string",
+            "enum": ["low", "medium", "high"],
+            "description": "How much this strength matters for the role"
+          }
+        }
+      }
+    },
+    "weaknesses": {
+      "type": "array",
+      "description": "Notable gaps or weaknesses relative to the job requirements",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Short label for the weakness (e.g. 'Limited AWS ownership')"
+          },
+          "evidence": {
+            "type": "string",
+            "description": "Specific evidence from the CV illustrating this weakness"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high"],
+            "description": "How significantly this weakness impacts the candidate's suitability"
+          }
+        }
+      }
+    },
+    "redFlags": {
+      "type": "array",
+      "description": "Concerns that warrant follow-up during an interview",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Short label for the red flag (e.g. 'Frequent job changes')"
+          },
+          "evidence": {
+            "type": "string",
+            "description": "Specific evidence from the CV that raised this concern"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high"],
+            "description": "How serious this red flag is"
+          },
+          "suggestedInterviewQuestion": {
+            "type": "string",
+            "description": "A suggested interview question to probe this concern"
+          }
+        }
+      }
+    }
+  }
+}

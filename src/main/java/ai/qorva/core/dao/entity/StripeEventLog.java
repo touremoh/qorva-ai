@@ -18,7 +18,7 @@ import java.time.Instant;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document("StripeEventLogs")
+@Document("stripe_event_logs")
 public class StripeEventLog implements QorvaEntity {
 
     @Id

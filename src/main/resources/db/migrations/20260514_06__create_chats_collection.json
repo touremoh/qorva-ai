@@ -1,0 +1,77 @@
+{
+  "collMod": "chats",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "chats",
+      "required": ["tenantId", "status", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      "properties": {
+        "tenantId": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "status": {
+          "bsonType": "string",
+          "enum": ["OPEN", "CLOSED", "ARCHIVED"],
+          "description": "must be one of OPEN, CLOSED, ARCHIVED and is required"
+        },
+        "context": {
+          "bsonType": "object",
+          "description": "linked CV, job post, and resume match identifiers",
+          "properties": {
+            "cvId": { "bsonType": "string" },
+            "jobPostId": { "bsonType": "string" },
+            "matchingReportId": { "bsonType": "string" }
+          }
+        },
+        "participants": {
+          "bsonType": "array",
+          "description": "list of chat participants",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "userId": { "bsonType": "string" },
+              "role": {
+                "bsonType": "string",
+                "enum": ["OWNER", "COLLABORATOR", "VIEWER"]
+              }
+            }
+          }
+        },
+        "metadata": {
+          "bsonType": "object",
+          "description": "chat language and tags",
+          "properties": {
+            "language": { "bsonType": "string" },
+            "tags": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            }
+          }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

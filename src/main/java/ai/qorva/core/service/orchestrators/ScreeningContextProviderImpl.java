@@ -4,7 +4,7 @@ import ai.qorva.core.dto.ScreeningContext;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.service.JobPostService;
-import ai.qorva.core.service.ResumeMatchService;
+import ai.qorva.core.service.MatchingReportService;
 import ai.qorva.core.utils.QorvaUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,11 +16,11 @@ import java.util.Objects;
 public class ScreeningContextProviderImpl implements ScreeningContextProvider {
 
 	private final CVService cvService;
-	private final ResumeMatchService resumeMatchService;
+	private final MatchingReportService matchingReportService;
 	private final JobPostService jobpostService;
 
 	@Override
-	public ScreeningContext load(String cvId, String jobPostId, String resumeMatchId) throws QorvaException {
+	public ScreeningContext load(String cvId, String jobPostId, String matchingReportId) throws QorvaException {
 		// Get the job post info
 		var jobPostDTO = jobpostService.findOneById(jobPostId);
 
@@ -34,16 +34,16 @@ public class ScreeningContextProviderImpl implements ScreeningContextProvider {
 		var jobPostText = QorvaUtils.toJSON(jobPostDTO);
 
 		// Check if resume match id is provided
-		String resumeMatchText = null;
+		String matchingReportText = null;
 
-		if (Objects.nonNull(resumeMatchId) && !resumeMatchId.isEmpty()) {
+		if (Objects.nonNull(matchingReportId) && !matchingReportId.isEmpty()) {
 			// Get the resume match info
-			var resumeMatchDTO = resumeMatchService.findOneById(resumeMatchId);
+			var matchingReportDTO = matchingReportService.findOneById(matchingReportId);
 
 			// Convert resume match to JSON
-			resumeMatchText = QorvaUtils.toJSON(resumeMatchDTO);
+			matchingReportText = QorvaUtils.toJSON(matchingReportDTO);
 		}
 		// Build the context
-		return new ScreeningContext(jobPostText, cvText, resumeMatchText);
+		return new ScreeningContext(jobPostText, cvText, matchingReportText);
 	}
 }

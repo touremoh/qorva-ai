@@ -1,8 +1,8 @@
 package ai.qorva.core.service.orchestrators;
 
-import ai.qorva.core.dto.CVScreeningReportOutputDTO;
+import ai.qorva.core.dto.MatchingReportResponse;
 import ai.qorva.core.dto.QorvaPromptContextHolder;
-import ai.qorva.core.dto.common.AIAnalysisReportDetails;
+import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.dto.common.ScoringRules;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.utils.QorvaUtils;
@@ -27,8 +27,8 @@ public class ReportGenerationAgent {
 	private final QorvaPromptContextHolder promptContextHolder;
 	private final OpenAIResultMapper mapper;
 
-	public AIAnalysisReportDetails generate(String cvDetails, String jobDescription, String languageCode, ScoringRules scoringRules) {
-		var outputConverter = new BeanOutputConverter<>(CVScreeningReportOutputDTO.class);
+	public MatchingReportDetails generate(String cvDetails, String jobDescription, String languageCode, ScoringRules scoringRules) {
+		var outputConverter = new BeanOutputConverter<>(MatchingReportResponse.class);
 		var reportGenerationPrompt = promptContextHolder.getReportGenerationPrompt();
 		var reportOutputFormat = promptContextHolder.getReportOutputFormat();
 		var scoringRulesJson = scoringRules != null ? QorvaUtils.toJSON(scoringRules) : "";

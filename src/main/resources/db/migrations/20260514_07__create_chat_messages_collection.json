@@ -1,0 +1,59 @@
+{
+  "collMod": "chat_messages",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "chat_messages",
+      "required": ["tenantId", "chatId", "role", "content", "createdAt"],
+      "properties": {
+        "tenantId": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "chatId": {
+          "bsonType": "string",
+          "description": "reference to chats._id, must be a string and is required"
+        },
+        "role": {
+          "bsonType": "string",
+          "enum": ["SYSTEM", "USER", "ASSISTANT"],
+          "description": "must be one of SYSTEM, USER, ASSISTANT and is required"
+        },
+        "participantId": {
+          "bsonType": "string",
+          "description": "user participant identifier, null for SYSTEM and ASSISTANT messages"
+        },
+        "content": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "tokens": {
+          "bsonType": "object",
+          "description": "token usage for AI-generated messages",
+          "properties": {
+            "promptTokens": { "bsonType": "long" },
+            "completionTokens": { "bsonType": "long" },
+            "model": { "bsonType": "string" }
+          }
+        },
+        "metadata": {
+          "bsonType": "object",
+          "description": "message metadata",
+          "properties": {
+            "citations": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            },
+            "unsafe": { "bsonType": "bool" }
+          }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

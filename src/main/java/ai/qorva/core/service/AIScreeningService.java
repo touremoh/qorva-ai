@@ -2,7 +2,7 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.JobPostDTO;
-import ai.qorva.core.dto.ResumeMatchDTO;
+import ai.qorva.core.dto.MatchingReportDTO;
 import ai.qorva.core.dto.common.CandidateInfo;
 import ai.qorva.core.dto.events.NewJobPostEvent;
 import ai.qorva.core.exception.QorvaException;
@@ -23,14 +23,14 @@ public class AIScreeningService {
 
 	private final CVService cvService;
 	private final OpenAIService openAIService;
-	private final ResumeMatchService resumeMatchService;
+	private final MatchingReportService matchingReportService;
 	private final EmbeddingModel embeddingModel;
 
 	@Autowired
-	public AIScreeningService(CVService cvService, OpenAIService openAIService, ResumeMatchService resumeMatchService, EmbeddingModel embeddingModel) {
+	public AIScreeningService(CVService cvService, OpenAIService openAIService, MatchingReportService matchingReportService, EmbeddingModel embeddingModel) {
 		this.cvService = cvService;
 		this.openAIService = openAIService;
-		this.resumeMatchService = resumeMatchService;
+		this.matchingReportService = matchingReportService;
 		this.embeddingModel = embeddingModel;
 	}
 
@@ -54,7 +54,7 @@ public class AIScreeningService {
 		String tenantId = jobPost.getTenantId();
 
 		// Check if the monthly usage limit was not reached before the screening process starts
-		if (this.resumeMatchService.hasReachedMonthlyUsageLimit(tenantId)) {
+		if (this.matchingReportService.hasReachedMonthlyUsageLimit(tenantId)) {
 			log.warn("User {} has reached monthly limit.", tenantId);
 			throw new QorvaException("User " + tenantId + " has reached monthly limit.", HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
 		}
@@ -75,12 +75,12 @@ public class AIScreeningService {
 			.toList();
 
 		// Start the screening process
-		var resumeMatches = filteredCVs
+		var matchingReports = filteredCVs
 			.parallelStream()
 			.map(cvdto -> {
 				try {
 					var analysisDetails = this.openAIService.generateReport(QorvaUtils.toJSON(cvdto), jobPost.toJobTitleAndDescription(), reportLanguage, jobPost.getScoringRules());
-					return this.resumeMatchService.createOne(jobPost, analysisDetails, cvdto);
+					return this.matchingReportService.createOne(jobPost, analysisDetails, cvdto);
 				} catch (QorvaException e) {
 					throw new RuntimeException(e);
 				}
@@ -89,17 +89,17 @@ public class AIScreeningService {
 
 
 		// Check if something was found before saving
-		if (!resumeMatches.isEmpty()) {
+		if (!matchingReports.isEmpty()) {
 			// Save all
-			var savedResumeMatches = this.resumeMatchService.saveAll(resumeMatches);
+			var persistedMatchingReports = this.matchingReportService.saveAll(matchingReports);
 			// log new application saved
-			log.debug("{} new applications for job post {}", savedResumeMatches.size(), jobPost.getId());
+			log.debug("{} new applications for job post {}", persistedMatchingReports.size(), jobPost.getId());
 		}
 	}
 
 	protected boolean isCVRelevantToScreening(CVDTO cvdto, JobPostDTO jobPostDTO) throws QorvaException {
 		// Build criteria
-		var searchData = new ResumeMatchDTO();
+		var searchData = new MatchingReportDTO();
 		searchData.setTenantId(jobPostDTO.getTenantId());
 		searchData.setJobPostId(jobPostDTO.getId());
 
@@ -109,13 +109,13 @@ public class AIScreeningService {
 
 		try {
 			// Find CV in Resume Matches
-			var resumeMatchDTO = this.resumeMatchService.findOneByCriteria(searchData);
+			var matchingReport = this.matchingReportService.findOneByCriteria(searchData);
 
 			// Check the case where a candidate not relevant
-			if (Objects.nonNull(resumeMatchDTO)) {
-				if (resumeMatchIsOlderThanJobPostOrCV(cvdto, jobPostDTO, resumeMatchDTO)) {
+			if (Objects.nonNull(matchingReport)) {
+				if (matchingReportIsOlderThanJobPostOrCV(cvdto, jobPostDTO, matchingReport)) {
 					// Remove that job application to a new one
-					this.resumeMatchService.deleteOneById(resumeMatchDTO.getId(), jobPostDTO.getTenantId());
+					this.matchingReportService.deleteOneById(matchingReport.getId(), jobPostDTO.getTenantId());
 
 					// Return true for the system to take into account the CV
 					return true;
@@ -130,7 +130,7 @@ public class AIScreeningService {
 	}
 
 
-	protected boolean resumeMatchIsOlderThanJobPostOrCV(CVDTO cv, JobPostDTO jobPost, ResumeMatchDTO resumeMatch) {
-		return resumeMatch.getLastUpdatedAt().isBefore(jobPost.getLastUpdatedAt()) || resumeMatch.getLastUpdatedAt().isBefore(cv.getLastUpdatedAt());
+	protected boolean matchingReportIsOlderThanJobPostOrCV(CVDTO cv, JobPostDTO jobPost, MatchingReportDTO matchingReportDTO) {
+		return matchingReportDTO.getLastUpdatedAt().isBefore(jobPost.getLastUpdatedAt()) || matchingReportDTO.getLastUpdatedAt().isBefore(cv.getLastUpdatedAt());
 	}
 }

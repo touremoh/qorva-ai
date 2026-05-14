@@ -2,7 +2,7 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dto.ChatResult;
 import ai.qorva.core.dto.OpenAIChatResponse;
-import ai.qorva.core.dto.common.AIAnalysisReportDetails;
+import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.dto.common.ScoringRules;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.OpenAIResultMapper;
@@ -34,7 +34,7 @@ public class OpenAIService {
 		return cvExtractionAgent.extract(cvContent);
 	}
 
-	public AIAnalysisReportDetails generateReport(String cvDetails, String jobDescription, String languageCode, ScoringRules scoringRules) {
+	public MatchingReportDetails generateReport(String cvDetails, String jobDescription, String languageCode, ScoringRules scoringRules) {
 		return reportGenerationAgent.generate(cvDetails, jobDescription, languageCode, scoringRules);
 	}
 

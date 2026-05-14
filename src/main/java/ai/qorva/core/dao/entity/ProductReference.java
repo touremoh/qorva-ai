@@ -14,7 +14,7 @@ import java.time.Instant;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "ProductsReferences")
+@Document(collection = "stripe_product_references")
 public class ProductReference implements QorvaEntity {
 
     @Id

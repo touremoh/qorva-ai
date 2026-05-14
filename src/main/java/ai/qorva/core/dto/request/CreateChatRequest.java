@@ -16,7 +16,7 @@ public class CreateChatRequest {
     private String title;
     private String cvId;
     private String jobPostId;
-    private String resumeMatchId;
+    private String matchingReportId;
 
     @NotEmpty
     private List<Participant> participants;

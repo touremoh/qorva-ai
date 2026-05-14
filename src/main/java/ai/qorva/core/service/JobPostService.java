@@ -3,7 +3,7 @@ package ai.qorva.core.service;
 import ai.qorva.core.dao.entity.JobPost;
 import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.JobPostRepository;
-import ai.qorva.core.dao.repository.ResumeMatchRepository;
+import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.events.NewJobPostEvent;
 import ai.qorva.core.enums.JobPostStatusEnum;
@@ -24,15 +24,15 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
 
     private final ApplicationEventPublisher publisher;
     private final EmbeddingModel embeddingModel;
-    private final ResumeMatchRepository resumeMatchRepository;
+    private final MatchingReportRepository matchingReportRepository;
     private final ChatsRepository chatsRepository;
 
     @Autowired
-    public JobPostService(JobPostRepository repository, JobPostMapper mapper, JobPostQueryBuilder queryBuilder, ApplicationEventPublisher publisher, EmbeddingModel embeddingModel, ResumeMatchRepository resumeMatchRepository, ChatsRepository chatsRepository) {
+    public JobPostService(JobPostRepository repository, JobPostMapper mapper, JobPostQueryBuilder queryBuilder, ApplicationEventPublisher publisher, EmbeddingModel embeddingModel, MatchingReportRepository matchingReportRepository, ChatsRepository chatsRepository) {
         super(repository, mapper, queryBuilder);
 		this.publisher = publisher;
 		this.embeddingModel = embeddingModel;
-		this.resumeMatchRepository = resumeMatchRepository;
+		this.matchingReportRepository = matchingReportRepository;
 		this.chatsRepository = chatsRepository;
     }
 
@@ -91,7 +91,7 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
         log.info("JobPost deleted with ID: {}", id);
 
         // Delete all CV report for this job post
-        var countDeletedReports = this.resumeMatchRepository.deleteByTenantIdAndJobPostId(tenantId, id);
+        var countDeletedReports = this.matchingReportRepository.deleteByTenantIdAndJobPostId(tenantId, id);
 
         // Delete all CV report for this job post
         log.info("Deleted {} CV report for job post {}", countDeletedReports, id);

@@ -23,8 +23,8 @@ spring:
     vectorstore:
       mongodb:
         initialize-schema: false
-        collection-name: CVs
-        index-name: CVsSearchIndex
+        collection-name: cvs
+        index-name: cvs_search_index
         path-name: embedding
 
     openai:

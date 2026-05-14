@@ -21,7 +21,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "CVs")
+@Document(collection = "cvs")
 public class CV implements QorvaEntity {
 
     @Id

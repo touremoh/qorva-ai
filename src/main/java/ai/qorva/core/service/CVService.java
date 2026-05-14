@@ -3,7 +3,7 @@ package ai.qorva.core.service;
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dao.repository.ChatsRepository;
-import ai.qorva.core.dao.repository.ResumeMatchRepository;
+import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVOutputDTO;
 import ai.qorva.core.dto.DashboardData;
@@ -46,21 +46,21 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final JobPostService jobPostService;
     private final EmbeddingModel embeddingModel;
     private final PdfGenerationService pdfGenerator;
-    private final ResumeMatchRepository resumeMatchRepository;
+    private final MatchingReportRepository matchingReportRepository;
     private final ChatsRepository chatsRepository;
 
     @Autowired
     public CVService(
-		CVRepository repository,
-	    CVMapper cvMapper,
-	    CVQueryBuilder queryBuilder,
-	    OpenAIService openAIService,
-	    OpenAIResultMapper openAIResultMapper,
-	    ApplicationEventPublisher publisher,
-	    JobPostService jobPostService,
-	    EmbeddingModel embeddingModel,
-	    PdfGenerationService pdfGenerator,
-	    CVMapper cVMapper, ResumeMatchRepository resumeMatchRepository, ChatsRepository chatsRepository) {
+        CVRepository repository,
+        CVMapper cvMapper,
+        CVQueryBuilder queryBuilder,
+        OpenAIService openAIService,
+        OpenAIResultMapper openAIResultMapper,
+        ApplicationEventPublisher publisher,
+        JobPostService jobPostService,
+        EmbeddingModel embeddingModel,
+        PdfGenerationService pdfGenerator,
+        CVMapper cVMapper, MatchingReportRepository matchingReportRepository, ChatsRepository chatsRepository) {
         super(repository, cvMapper, queryBuilder);
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
@@ -69,7 +69,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 		this.embeddingModel = embeddingModel;
 		this.pdfGenerator = pdfGenerator;
         this.cvMapper = cVMapper;
-		this.resumeMatchRepository = resumeMatchRepository;
+		this.matchingReportRepository = matchingReportRepository;
 		this.chatsRepository = chatsRepository;
     }
 
@@ -93,9 +93,9 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     public List<CVDTO> upload(List<MultipartFile> files, String tenantId) throws QorvaException {
         log.debug("CV Service - Starting file processing");
 
-        if (files.size() > 10) {
-            log.error("CV Service - Exceeded the maximum of 10 files");
-            throw new QorvaException("Only up to 10 files are allowed");
+        if (files.size() > 100) {
+            log.error("CV Service - Exceeded the maximum of 100 files");
+            throw new QorvaException("Only up to 100 files are allowed");
         }
 
         var processFiles = files
@@ -255,7 +255,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         log.info("Deleted CV with ID: {}", id);
 
         // Delete Reports associated with this CV
-        var countDeletedReports = this.resumeMatchRepository.deleteByTenantIdAndCandidateInfoCandidateId(tenantId, id);
+        var countDeletedReports = this.matchingReportRepository.deleteByTenantIdAndCandidateInfoCandidateId(tenantId, id);
 
         log.info("Deleted {} reports associated with CV ID: {}", countDeletedReports, id);
 

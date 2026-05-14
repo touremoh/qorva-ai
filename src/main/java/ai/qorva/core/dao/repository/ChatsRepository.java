@@ -41,8 +41,8 @@ public interface ChatsRepository extends QorvaRepository<Chat> {
     /**
      * Deletes chats associated with a specific tenant and context resume match ID.
      * @param tenantId The tenant ID.
-     * @param contextResumeMatchId The context resume match ID.
+     * @param contextMatchingReportId The context resume match ID.
      * @return The number of deleted chats.
      */
-    long deleteByTenantIdAndContextResumeMatchId(String tenantId, String contextResumeMatchId);
+    long deleteByTenantIdAndContextMatchingReportId(String tenantId, String contextMatchingReportId);
 }

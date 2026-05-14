@@ -1,0 +1,48 @@
+{
+  "collMod": "stripe_product_references",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "stripe_product_references",
+      "required": ["productName", "stripeProductId", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      "properties": {
+        "productName": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "stripeProductId": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "price": {
+          "bsonType": "object",
+          "description": "monthly and annual pricing details",
+          "properties": {
+            "monthlyPriceId": { "bsonType": "string" },
+            "annualPriceId": { "bsonType": "string" },
+            "monthlyPrice": { "bsonType": "decimal" },
+            "annuallyPrice": { "bsonType": "decimal" }
+          }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

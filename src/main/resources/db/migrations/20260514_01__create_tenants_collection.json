@@ -1,0 +1,84 @@
+{
+  "collMod": "tenants",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "tenants",
+      "required": ["tenantName", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      "properties": {
+        "tenantName": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "stripeCustomerId": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "priceId": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "subscriptionInfo": {
+          "bsonType": "object",
+          "description": "Subscription plan and billing details",
+          "properties": {
+            "subscriptionPlan": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "billingCycle": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "price": {
+              "bsonType": "decimal",
+              "description": "must be a decimal"
+            },
+            "priceId": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "subscriptionStatus": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "subscriptionId": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "accountManager": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "subscriptionStartDate": {
+              "bsonType": "date",
+              "description": "must be a date"
+            },
+            "subscriptionEndDate": {
+              "bsonType": "date",
+              "description": "must be a date"
+            }
+          }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}
