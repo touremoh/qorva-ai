@@ -13,5 +13,5 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class ExperienceMatch implements Serializable {
     private Double score;
-    private String scoreExplanation;
+    private String scoreSummary;
 }

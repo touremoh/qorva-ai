@@ -4,41 +4,74 @@
     "$jsonSchema": {
       "bsonType": "object",
       "title": "stripe_product_references",
-      "required": ["productName", "stripeProductId", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      "required": ["stripeProductId", "name", "active", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
       "properties": {
-        "productName": {
-          "bsonType": "string",
-          "description": "must be a string and is required"
-        },
         "stripeProductId": {
           "bsonType": "string",
-          "description": "must be a string and is required"
+          "description": "Stripe product ID — unique identifier from Stripe"
         },
-        "price": {
+        "name": {
+          "bsonType": "string",
+          "description": "Product name as defined in Stripe"
+        },
+        "description": {
+          "bsonType": "string"
+        },
+        "active": {
+          "bsonType": "bool",
+          "description": "Whether the product is currently active in Stripe"
+        },
+        "metadata": {
           "bsonType": "object",
-          "description": "monthly and annual pricing details",
-          "properties": {
-            "monthlyPriceId": { "bsonType": "string" },
-            "annualPriceId": { "bsonType": "string" },
-            "monthlyPrice": { "bsonType": "decimal" },
-            "annuallyPrice": { "bsonType": "decimal" }
+          "description": "Key-value metadata copied from Stripe"
+        },
+        "prices": {
+          "bsonType": "array",
+          "description": "All prices associated with this product",
+          "items": {
+            "bsonType": "object",
+            "required": ["stripePriceId", "currency", "active"],
+            "properties": {
+              "stripePriceId": {
+                "bsonType": "string",
+                "description": "Stripe price ID"
+              },
+              "currency": {
+                "bsonType": "string",
+                "description": "ISO 4217 currency code, e.g. usd"
+              },
+              "interval": {
+                "bsonType": ["string", "null"],
+                "description": "Billing interval: month, year, week, day; null for one-time"
+              },
+              "intervalCount": {
+                "bsonType": ["int", "null"],
+                "description": "Number of intervals between billings"
+              },
+              "unitAmount": {
+                "bsonType": ["long", "null"],
+                "description": "Price in the smallest currency unit (cents)"
+              },
+              "nickname": {
+                "bsonType": ["string", "null"]
+              },
+              "active": {
+                "bsonType": "bool"
+              }
+            }
           }
         },
         "createdAt": {
-          "bsonType": "date",
-          "description": "must be a date and is required"
+          "bsonType": "date"
         },
         "lastUpdatedAt": {
-          "bsonType": "date",
-          "description": "must be a date and is required"
+          "bsonType": "date"
         },
         "createdBy": {
-          "bsonType": "string",
-          "description": "must be a string and is required"
+          "bsonType": "string"
         },
         "lastUpdatedBy": {
-          "bsonType": "string",
-          "description": "must be a string and is required"
+          "bsonType": "string"
         }
       }
     }

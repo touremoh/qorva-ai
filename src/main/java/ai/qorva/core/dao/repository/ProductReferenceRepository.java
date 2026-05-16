@@ -10,15 +10,10 @@ public interface ProductReferenceRepository extends QorvaRepository<ProductRefer
 	@Aggregation(pipeline = {
 		"{ $match: { stripeProductId: ?0 }}"
 	})
-	ProductReference findByProductId(String productId);
+	ProductReference findByStripeProductId(String productId);
 
 	@Aggregation(pipeline = {
-		"{ $match: { 'price.monthlyPriceId': ?0 }}"
+		"{ $match: { 'prices.stripePriceId': ?0 }}"
 	})
-	ProductReference findByMonthlyPriceId(String priceId);
-
-	@Aggregation(pipeline = {
-		"{ $match: { 'price.annualPriceId': ?0 }}"
-	})
-	ProductReference findByYearlyPriceId(String priceId);
+	ProductReference findByStripePriceId(String priceId);
 }

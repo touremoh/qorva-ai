@@ -13,5 +13,5 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class LocationMatch implements Serializable {
     private Double score;
-    private String scoreExplanation;
+    private String scoreSummary;
 }

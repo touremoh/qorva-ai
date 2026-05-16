@@ -9,9 +9,7 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface ProductReferenceMapper extends AbstractQorvaMapper<ProductReference, ProductReferenceDTO> {
 
-	@Mapping(target = "tenantId",  ignore = true)
 	ProductReferenceDTO map(ProductReference o);
 
-	@InheritInverseConfiguration
 	ProductReference map(ProductReferenceDTO o);
 }

@@ -16,6 +16,8 @@ import com.stripe.model.EventDataObjectDeserializer;
 import com.stripe.model.Customer;
 import com.stripe.model.Invoice;
 import com.stripe.model.PaymentMethod;
+import com.stripe.model.Price;
+import com.stripe.model.Product;
 import com.stripe.model.SetupIntent;
 import com.stripe.model.StripeObject;
 import com.stripe.model.Subscription;
@@ -53,6 +55,10 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 	protected static final String CUSTOMER_UPDATED = "customer.updated";
 	protected static final String CUSTOMER_DELETED = "customer.deleted";
 	protected static final String PAYMENT_METHOD_ATTACHED = "payment_method.attached";
+	protected static final String PRODUCT_CREATED = "product.created";
+	protected static final String PRODUCT_UPDATED = "product.updated";
+	protected static final String PRICE_CREATED = "price.created";
+	protected static final String PRICE_UPDATED = "price.updated";
 
 	protected final StripeProperties stripeProperties;
 
@@ -73,6 +79,10 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 	protected final StripeCustomerUpdatedHandler customerUpdatedHandler;
 	protected final StripeCustomerDeletedHandler customerDeletedHandler;
 	protected final StripePaymentMethodAttachedHandler paymentMethodAttachedHandler;
+	protected final StripeProductCreatedHandler productCreatedHandler;
+	protected final StripeProductUpdatedHandler productUpdatedHandler;
+	protected final StripePriceCreatedHandler priceCreatedHandler;
+	protected final StripePriceUpdatedHandler priceUpdatedHandler;
 
 	protected final UserRepository userRepository;
 	protected final TenantService tenantService;
@@ -108,6 +118,10 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 		StripeCustomerUpdatedHandler customerUpdatedHandler,
 		StripeCustomerDeletedHandler customerDeletedHandler,
 		StripePaymentMethodAttachedHandler paymentMethodAttachedHandler,
+		StripeProductCreatedHandler productCreatedHandler,
+		StripeProductUpdatedHandler productUpdatedHandler,
+		StripePriceCreatedHandler priceCreatedHandler,
+		StripePriceUpdatedHandler priceUpdatedHandler,
 		UserRepository userRepository, TenantService tenantService
 	) {
 		super(repository, mapper, queryBuilder);
@@ -129,6 +143,10 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 		this.customerUpdatedHandler = customerUpdatedHandler;
 		this.customerDeletedHandler = customerDeletedHandler;
 		this.paymentMethodAttachedHandler = paymentMethodAttachedHandler;
+		this.productCreatedHandler = productCreatedHandler;
+		this.productUpdatedHandler = productUpdatedHandler;
+		this.priceCreatedHandler = priceCreatedHandler;
+		this.priceUpdatedHandler = priceUpdatedHandler;
 		this.userRepository = userRepository;
 		this.tenantService = tenantService;
 	}
@@ -155,6 +173,10 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 				case CUSTOMER_UPDATED -> this.customerUpdatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
 				case CUSTOMER_DELETED -> this.customerDeletedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
 				case PAYMENT_METHOD_ATTACHED -> this.paymentMethodAttachedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
+				case PRODUCT_CREATED -> this.productCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
+				case PRODUCT_UPDATED -> this.productUpdatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
+				case PRICE_CREATED -> this.priceCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
+				case PRICE_UPDATED -> this.priceUpdatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
 				default -> log.debug("Ignoring unhandled Stripe event type={}", event.getType());
 			}
 		} catch (QorvaException e) {
@@ -205,6 +227,8 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 				 CUSTOMER_UPDATED,
 				 CUSTOMER_DELETED -> Customer.class;
 			case PAYMENT_METHOD_ATTACHED -> PaymentMethod.class;
+			case PRODUCT_CREATED, PRODUCT_UPDATED -> Product.class;
+			case PRICE_CREATED, PRICE_UPDATED -> Price.class;
 			default -> null;
 		};
 	}
