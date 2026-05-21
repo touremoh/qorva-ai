@@ -11,24 +11,10 @@ import org.springframework.data.mongodb.repository.Query;
 import java.util.List;
 
 
-public interface CVRepository extends QorvaRepository<CV> {
+public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepository {
 
 	@Query(value = "{ '$text': { $search: ?0 }, 'tenantId': ?1 }")
 	Page<CV> searchAll(String searchTerms, String tenantId, Pageable pageable);
-
-	@Aggregation(pipeline = {
-		"{ $vectorSearch: { " +
-			"index: 'cvs_search_index', " +
-			"queryVector: ?0, " +
-			"path: 'embedding', " +
-			"numCandidates: 500, " +     // increased recall
-			"limit: 50, " +
-			"filter: { tenantId: { $eq: ?1 } } " +
-			"} }",
-		"{ $addFields: { score: { $meta: 'vectorSearchScore' } } }",
-		"{ $match: { score: { $gte: 0.4 } } }", // lowered threshold
-	})
-	List<CV> similaritySearch(float[] queryEmbedding, ObjectId tenantId);
 
 	@Aggregation(pipeline = {
 		"{ $match: { tenantId: ?0 }}",

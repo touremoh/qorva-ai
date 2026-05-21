@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Slf4j
@@ -24,6 +25,10 @@ public class ProductReferenceService {
 	public ProductReferenceService(ProductReferenceRepository repository, ProductReferenceMapper mapper) {
 		this.repository = repository;
 		this.mapper = mapper;
+	}
+
+	public List<ProductReferenceDTO> findAllActive() {
+		return repository.findAllByActiveTrue().stream().map(mapper::map).toList();
 	}
 
 	public ProductReferenceDTO findByStripeProductId(String productId) throws QorvaException {

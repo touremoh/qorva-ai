@@ -23,6 +23,10 @@ import java.util.List;
 public class CVDTO extends AbstractQorvaDTO {
     private String id;
     private String tenantId;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private String applicantNumber;
+
     private String candidateProfileSummary;
     private Integer careerStartYear;
     private PersonalInformation personalInformation;
@@ -35,6 +39,7 @@ public class CVDTO extends AbstractQorvaDTO {
     private List<ProjectAndAchievement> projectsAndAchievements;
     private List<String> interestsAndHobbies;
     private List<Reference> references;
+    private SalaryExpectation salaryExpectation;
     private Binary attachment;
     private List<String> tags;
 

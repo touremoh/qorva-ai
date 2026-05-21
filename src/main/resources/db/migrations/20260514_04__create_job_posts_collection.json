@@ -102,6 +102,18 @@
                 "location": { "bsonType": "double" },
                 "industry": { "bsonType": "double" }
               }
+            },
+            "filterOpenToWork": {
+              "bsonType": "bool",
+              "description": "when true, exclude candidates not open to work"
+            },
+            "excludedAvailabilityStatuses": {
+              "bsonType": "array",
+              "description": "availability status values to exclude from candidate matching",
+              "items": {
+                "bsonType": "string",
+                "enum": ["activelyLooking", "openButNotSearching", "notAvailable", "freelanceOnly"]
+              }
             }
           }
         },

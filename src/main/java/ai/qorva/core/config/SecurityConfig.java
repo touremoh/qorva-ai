@@ -56,7 +56,7 @@ public class SecurityConfig {
 					"/auth/login",
 					"/auth/token/validate",
 					"/portal/jobs/**",
-					"/stripe/webhook",
+					"/stripe/**",
 					"/actuator/**"
 				).permitAll() // Publicly accessible routes
 

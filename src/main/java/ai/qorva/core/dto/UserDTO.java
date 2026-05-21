@@ -25,6 +25,7 @@ public class UserDTO extends AbstractQorvaDTO {
     private String lastName;
     private String email;
     private String tenantId;
+    private TenantDTO tenant;
 
     @JsonProperty(access = Access.WRITE_ONLY)
     private String rawPassword;
@@ -32,9 +33,7 @@ public class UserDTO extends AbstractQorvaDTO {
     @JsonProperty(access = Access.WRITE_ONLY)
     private String encryptedPassword;
     private String userAccountStatus;
-
-    @JsonProperty(access = Access.READ_ONLY)
-    private String subscriptionStatus;
+    private String communicationLanguage;
 
     List<UserAuthority> authorities;
 

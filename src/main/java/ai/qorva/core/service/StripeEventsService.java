@@ -86,8 +86,9 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 
 	protected final UserRepository userRepository;
 	protected final TenantService tenantService;
+	protected final StripeEventLogRepository stripeEventLogRepository;
 
-	@Value( "${stripe.session.return-url}")
+	@Value("${stripe.session.return-url}")
 	private String stripeSessionReturnUrl;
 
 	@PostConstruct
@@ -122,10 +123,12 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 		StripeProductUpdatedHandler productUpdatedHandler,
 		StripePriceCreatedHandler priceCreatedHandler,
 		StripePriceUpdatedHandler priceUpdatedHandler,
-		UserRepository userRepository, TenantService tenantService
+		UserRepository userRepository,
+		TenantService tenantService
 	) {
 		super(repository, mapper, queryBuilder);
 		this.stripeProperties = stripeProperties;
+		this.stripeEventLogRepository = repository;
 		this.checkoutSessionHandler = checkoutSessionHandler;
 		this.subscriptionCreatedHandler = subscriptionCreatedHandler;
 		this.subscriptionUpdatedHandler = subscriptionUpdatedHandler;
@@ -152,31 +155,37 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 	}
 
 	public String handleEvent(Event event) throws QorvaException {
+		// Step 9: idempotency — ignore duplicate events
+		if (stripeEventLogRepository.existsByStripeEventId(event.getId())) {
+			log.info("Duplicate Stripe event id={} type={}, skipping", event.getId(), event.getType());
+			return "duplicate";
+		}
+
 		try {
 			Optional<StripeObject> opt = resolveStripeObject(event);
 
 			switch (event.getType()) {
-				case CUSTOMER_SUBSCRIPTION_CREATED -> this.subscriptionCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case CUSTOMER_SUBSCRIPTION_UPDATED -> this.subscriptionUpdatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case CUSTOMER_SUBSCRIPTION_DELETED -> this.subscriptionDeletedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case CUSTOMER_SUBSCRIPTION_PAUSED -> this.subscriptionPausedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case CUSTOMER_SUBSCRIPTION_RESUMED -> this.subscriptionResumedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case CHECKOUT_SESSION_COMPLETED -> this.checkoutSessionHandler.handle(event);
-				case INVOICE_PAYMENT_FAILED -> this.invoicePaymentFailedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case INVOICE_PAYMENT_SUCCEEDED -> this.invoicePaymentSucceededHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case INVOICE_PAID -> this.invoicePaidHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case INVOICE_FINALIZED -> this.invoiceFinalizedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case INVOICE_CREATED -> this.invoiceCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case SETUP_INTENT_CREATED -> this.setupIntentCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case SETUP_INTENT_SUCCEEDED -> this.setupIntentSucceededHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case CUSTOMER_CREATED -> this.customerCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case CUSTOMER_UPDATED -> this.customerUpdatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case CUSTOMER_DELETED -> this.customerDeletedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case PAYMENT_METHOD_ATTACHED -> this.paymentMethodAttachedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case PRODUCT_CREATED -> this.productCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case PRODUCT_UPDATED -> this.productUpdatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case PRICE_CREATED -> this.priceCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
-				case PRICE_UPDATED -> this.priceUpdatedHandler.handle(opt.orElseThrow(() -> missingObject(event)));
+				case CUSTOMER_SUBSCRIPTION_CREATED -> subscriptionCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case CUSTOMER_SUBSCRIPTION_UPDATED -> subscriptionUpdatedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case CUSTOMER_SUBSCRIPTION_DELETED -> subscriptionDeletedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case CUSTOMER_SUBSCRIPTION_PAUSED -> subscriptionPausedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case CUSTOMER_SUBSCRIPTION_RESUMED -> subscriptionResumedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case CHECKOUT_SESSION_COMPLETED -> checkoutSessionHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case INVOICE_PAYMENT_FAILED -> invoicePaymentFailedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case INVOICE_PAYMENT_SUCCEEDED -> invoicePaymentSucceededHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case INVOICE_PAID -> invoicePaidHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case INVOICE_FINALIZED -> invoiceFinalizedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case INVOICE_CREATED -> invoiceCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case SETUP_INTENT_CREATED -> setupIntentCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case SETUP_INTENT_SUCCEEDED -> setupIntentSucceededHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case CUSTOMER_CREATED -> customerCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case CUSTOMER_UPDATED -> customerUpdatedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case CUSTOMER_DELETED -> customerDeletedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case PAYMENT_METHOD_ATTACHED -> paymentMethodAttachedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case PRODUCT_CREATED -> productCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case PRODUCT_UPDATED -> productUpdatedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case PRICE_CREATED -> priceCreatedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
+				case PRICE_UPDATED -> priceUpdatedHandler.handle(opt.orElseThrow(() -> missingObject(event)), event.getId());
 				default -> log.debug("Ignoring unhandled Stripe event type={}", event.getType());
 			}
 		} catch (QorvaException e) {
@@ -187,6 +196,20 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 			throw new QorvaException("Unhandled exception while handling event: " + event.getId(), e);
 		}
 		return "success";
+	}
+
+	// Step 10: return current subscription status for the authenticated user
+	public SubscriptionStatusResponseDTO getSubscriptionStatus(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
+		var user = Optional.ofNullable(userRepository.findByEmail(userDetails.getUsername()))
+			.orElseThrow(() -> new QorvaException("User not found"));
+		var tenant = tenantService.findOneById(user.getTenantId());
+		var info = tenant.getSubscriptionInfo();
+		return new SubscriptionStatusResponseDTO(
+			info.getSubscriptionStatus(),
+			info.getSubscriptionPlan(),
+			info.getCurrentPeriodEnd(),
+			info.getCancelAtPeriodEnd()
+		);
 	}
 
 	private Optional<StripeObject> resolveStripeObject(Event event) {
@@ -216,6 +239,7 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 				 CUSTOMER_SUBSCRIPTION_DELETED,
 				 CUSTOMER_SUBSCRIPTION_PAUSED,
 				 CUSTOMER_SUBSCRIPTION_RESUMED -> Subscription.class;
+			case CHECKOUT_SESSION_COMPLETED -> com.stripe.model.checkout.Session.class;
 			case INVOICE_PAYMENT_FAILED,
 				 INVOICE_PAYMENT_SUCCEEDED,
 				 INVOICE_PAID,
@@ -238,19 +262,14 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 		return new QorvaException("Could not deserialize Stripe event object for type=" + event.getType());
 	}
 
-
 	public PortalSession buildStripePortalSessionUrl(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
-		// Get the logged user
-		var user = Optional.ofNullable(this.userRepository.findByEmail(userDetails.getUsername()))
-			               .orElseThrow(() -> new QorvaException("User not found"));
+		var user = Optional.ofNullable(userRepository.findByEmail(userDetails.getUsername()))
+			.orElseThrow(() -> new QorvaException("User not found"));
+		var tenant = tenantService.findOneById(user.getTenantId());
 
-		// Get the tenant id
-		var tenant = this.tenantService.findOneById(user.getTenantId());
-
-		// Build the url
 		SessionCreateParams params = SessionCreateParams.builder()
 			.setCustomer(tenant.getStripeCustomerId())
-			.setReturnUrl(this.stripeSessionReturnUrl)
+			.setReturnUrl(stripeSessionReturnUrl)
 			.build();
 
 		try {

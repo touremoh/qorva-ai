@@ -17,7 +17,8 @@ public record CVOutputDTO(
     @JsonProperty(required = true, value = "projectsAndAchievements") ProjectAndAchievement[] projectsAndAchievements,
     @JsonProperty(required = true, value = "interestsAndHobbies") String[] interestsAndHobbies,
     @JsonProperty(required = true, value = "references") Reference[] references,
-    @JsonProperty(required = true, value = "tags") String[] tags) {
+    @JsonProperty(required = true, value = "tags") String[] tags,
+    @JsonProperty("salaryExpectation") SalaryExpectation salaryExpectation) {
 
     public record PersonalInformation(
         @JsonProperty(required = true, value = "name") String name,
@@ -34,9 +35,21 @@ public record CVOutputDTO(
     }
 
     public record Availability(
-        @JsonProperty(required = true, value = "startDate") String startDate,
-        @JsonProperty(required = true, value = "endDate") String endDate,
-        @JsonProperty(required = true, value = "type") String type) {
+        @JsonProperty("openToWork") Boolean openToWork,
+        @JsonProperty("status") String status,
+        @JsonProperty("availableFrom") String availableFrom,
+        @JsonProperty("noticePeriodDays") Integer noticePeriodDays,
+        @JsonProperty("interviewAvailability") String[] interviewAvailability,
+        @JsonProperty("preferredWorkTypes") String[] preferredWorkTypes,
+        @JsonProperty("preferredContractTypes") String[] preferredContractTypes,
+        @JsonProperty("willingToRelocate") Boolean willingToRelocate,
+        @JsonProperty("remoteOnly") Boolean remoteOnly) {
+    }
+
+    public record SalaryExpectation(
+        @JsonProperty("currency") String currency,
+        @JsonProperty("min") Integer min,
+        @JsonProperty("max") Integer max) {
     }
 
     public record KeySkill(

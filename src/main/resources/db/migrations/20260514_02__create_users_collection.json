@@ -27,6 +27,10 @@
           "bsonType": "string",
           "description": "must be a string and is required"
         },
+        "communicationLanguage": {
+          "bsonType": "string",
+          "description": "language code used for email notifications (e.g. en, fr)"
+        },
         "tenantId": {
           "bsonType": "objectId",
           "description": "must be a valid ObjectId and is required"

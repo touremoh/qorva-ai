@@ -19,6 +19,7 @@ import com.stripe.model.Subscription;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.Decimal128;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -36,7 +37,12 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 	private final StripeEventMapper evtMapper;
 
 	@Autowired
-	public StripeSubscriptionUpdatedHandler(TenantService tenantService, UserService userService, StripeEventLogRepository repository, StripeEventMapper evtMapper) {
+	public StripeSubscriptionUpdatedHandler(
+		TenantService tenantService,
+		UserService userService,
+		StripeEventLogRepository repository,
+		StripeEventMapper evtMapper
+	) {
 		this.tenantService = tenantService;
 		this.userService = userService;
 		this.repository = repository;
@@ -45,12 +51,14 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 
 	@Override
 	public void handle(StripeObject obj) throws QorvaException {
-		log.info("Handling subscription update event");
+		handle(obj, null);
+	}
 
-		// Parse the event
+	@Override
+	public void handle(StripeObject obj, String eventId) throws QorvaException {
+		log.info("Handling customer.subscription.updated eventId={}", eventId);
+
 		var sub = (Subscription) obj;
-
-		// Get the relevant fields from the event: subscription ID, customer ID, status, product ID.
 		var subscriptionId = sub.getId();
 		var customerId = sub.getCustomer();
 		var subscriptionStatus = SubscriptionStatusHelper.subscriptionFromCode(sub.getStatus());
@@ -59,80 +67,90 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 		var priceId = subItem.getPrice().getId();
 
 		try {
-			// Get the tenant ID for the customer
-			var tenantDTO = this.tenantService.findOneByCriteria(TenantDTO.builder().stripeCustomerId(customerId).build());
-
-			// Check if it's a product change
+			var tenantDTO = tenantService.findOneByCriteria(TenantDTO.builder().stripeCustomerId(customerId).build());
 			var product = Product.retrieve(productId);
 			var currentPlan = tenantDTO.getSubscriptionInfo().getSubscriptionPlan();
 			var currentPriceId = tenantDTO.getSubscriptionInfo().getPriceId();
 			var newPlan = product.getName();
-			if (!priceId.equals(currentPriceId) || !newPlan.equals(currentPlan)) {
-				log.debug("Subscription product changed from {} to {}", currentPlan, newPlan);
 
-				var subscriptionInfo = tenantDTO.getSubscriptionInfo();
+			if (!priceId.equals(currentPriceId) || !newPlan.equals(currentPlan)) {
+				log.debug("Subscription product changed from {} to {} for customer {}", currentPlan, newPlan, customerId);
+
 				var subscriptionDetails = Subscription.retrieve(subscriptionId);
-				var subscriptionAmount = new Decimal128(subscriptionDetails.getItems().getData().getFirst().getPlan().getAmount());
+				var detailItem = subscriptionDetails.getItems().getData().getFirst();
+				var subscriptionInfo = tenantDTO.getSubscriptionInfo();
 
 				subscriptionInfo.setSubscriptionId(subscriptionId);
 				subscriptionInfo.setSubscriptionStatus(subscriptionStatus);
-				subscriptionInfo.setSubscriptionStartDate(Instant.ofEpochMilli(subscriptionDetails.getStartDate()));
+				subscriptionInfo.setSubscriptionStartDate(Instant.ofEpochSecond(subscriptionDetails.getStartDate()));
 				subscriptionInfo.setSubscriptionPlan(newPlan);
-				subscriptionInfo.setBillingCycle(subscriptionDetails.getItems().getData().getFirst().getPlan().getInterval());
-				subscriptionInfo.setPrice(subscriptionAmount);
+				subscriptionInfo.setBillingCycle(detailItem.getPlan().getInterval());
+				subscriptionInfo.setPrice(new Decimal128(detailItem.getPlan().getAmount()));
 				subscriptionInfo.setPriceId(priceId);
+				subscriptionInfo.setPlanCode(priceId);
+				subscriptionInfo.setCurrentPeriodStart(detailItem.getCurrentPeriodStart() != null
+					? Instant.ofEpochSecond(detailItem.getCurrentPeriodStart()) : null);
+				subscriptionInfo.setCurrentPeriodEnd(detailItem.getCurrentPeriodEnd() != null
+					? Instant.ofEpochSecond(detailItem.getCurrentPeriodEnd()) : null);
+				subscriptionInfo.setCancelAtPeriodEnd(subscriptionDetails.getCancelAtPeriodEnd());
 				tenantDTO.setSubscriptionInfo(subscriptionInfo);
 
-				// Update tenant in database
-				log.debug("Updating tenant in database: {}", tenantDTO);
-				this.tenantService.updateOne(tenantDTO.getTenantId(), tenantDTO);
-				this.updateUsersAuthorities(tenantDTO.getTenantId(), newPlan);
-				this.persistEventInDb(tenantDTO, subscriptionId, customerId, subscriptionStatus);
+				tenantService.updateOne(tenantDTO.getTenantId(), tenantDTO);
+				updateUsersAuthorities(tenantDTO.getTenantId(), newPlan);
+				persistEventInDb(tenantDTO, subscriptionId, customerId, subscriptionStatus, eventId);
+
 			} else {
-				// Check if it's a status change
-				var currentSubscriptionStatus = tenantDTO.getSubscriptionInfo().getSubscriptionStatus();
-				if (!currentSubscriptionStatus.equals(subscriptionStatus)) {
-					log.debug("Subscription status changed from {} to {}", currentSubscriptionStatus, subscriptionStatus);
-					tenantDTO.getSubscriptionInfo().setSubscriptionStatus(subscriptionStatus);
-					this.tenantService.updateOne(tenantDTO.getTenantId(), tenantDTO);
-					this.persistEventInDb(tenantDTO, subscriptionId, customerId, subscriptionStatus);
+				var currentStatus = tenantDTO.getSubscriptionInfo().getSubscriptionStatus();
+				if (!currentStatus.equals(subscriptionStatus)) {
+					log.debug("Subscription status changed from {} to {} for customer {}", currentStatus, subscriptionStatus, customerId);
+
+					var subscriptionInfo = tenantDTO.getSubscriptionInfo();
+					subscriptionInfo.setSubscriptionStatus(subscriptionStatus);
+					subscriptionInfo.setCurrentPeriodStart(subItem.getCurrentPeriodStart() != null
+						? Instant.ofEpochSecond(subItem.getCurrentPeriodStart()) : null);
+					subscriptionInfo.setCurrentPeriodEnd(subItem.getCurrentPeriodEnd() != null
+						? Instant.ofEpochSecond(subItem.getCurrentPeriodEnd()) : null);
+					subscriptionInfo.setCancelAtPeriodEnd(sub.getCancelAtPeriodEnd());
+					tenantDTO.setSubscriptionInfo(subscriptionInfo);
+
+					tenantService.updateOne(tenantDTO.getTenantId(), tenantDTO);
+					persistEventInDb(tenantDTO, subscriptionId, customerId, subscriptionStatus, eventId);
 				}
 			}
 		} catch (QorvaException e) {
-			log.error("Failed to retrieve tenant details for customer {}", customerId);
-			throw new QorvaException("Failed to retrieve tenant details for customer " + customerId, e);
+			log.error("Failed to handle subscription update for customer {}", customerId, e);
+			throw new QorvaException("Failed to handle subscription update for customer " + customerId, e);
 		} catch (StripeException e) {
-			log.error("Failed to retrieve product details for product id {}", productId);
-			throw new QorvaException("Failed to retrieve product details for product id " + productId, e);
+			log.error("Stripe API error for product {} customer {}", productId, customerId, e);
+			throw new QorvaException("Stripe API error for productId=" + productId, e);
 		}
 	}
 
-	protected void persistEventInDb(TenantDTO tenantDTO, String subscriptionId, String customerId, String subscriptionStatus) {
-		// Persist stripe event logs
+	protected void persistEventInDb(TenantDTO tenantDTO, String subscriptionId, String customerId,
+		String subscriptionStatus, String eventId) {
 		var eventLog = new StripeEventLogDTO();
+		eventLog.setStripeEventId(eventId);
 		eventLog.setEventType("customer.subscription.updated");
 		eventLog.setEventStatus(subscriptionStatus);
 		eventLog.setStripeCustomerId(customerId);
 		eventLog.setStripeSubscriptionId(subscriptionId);
 		eventLog.setTenantId(tenantDTO.getTenantId());
-
-		// Persist the event log
-		var savedEventLog = this.repository.save(this.evtMapper.map(eventLog));
-
-		log.debug("Saved event log to database: {}", savedEventLog);
+		repository.save(evtMapper.map(eventLog));
+		log.debug("Saved subscription.updated event log for tenant={}", tenantDTO.getTenantId());
 	}
 
 	protected void updateUsersAuthorities(String tenantId, String newSubscriptionPlan) throws QorvaException {
-		// find users
-		var users = this.userService.findAll(Map.of("tenantId", tenantId, "pageSize", "100", "pageNumber", "0")).toList();
-
-		// get the right permission
 		var permission = newSubscriptionPlan.equals(SubscriptionPlanEnum.STARTER.getName())
 			? UserPermissionEnum.NOT_ALLOWED.getValue()
 			: UserPermissionEnum.ALLOWED.getValue();
 
-		// update
-		updateChatFeaturePermission(users, permission);
+		int pageNumber = 0;
+		Page<UserDTO> page;
+		do {
+			page = userService.findAll(Map.of("tenantId", tenantId, "pageSize", "25", "pageNumber", String.valueOf(pageNumber)));
+			updateChatFeaturePermission(page.getContent(), permission);
+			pageNumber++;
+		} while (page.hasNext());
 	}
 
 	protected void updateChatFeaturePermission(List<UserDTO> users, String newPermission) throws QorvaException {
@@ -145,10 +163,8 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 				}
 				newAuthorities.add(authority);
 			}
-			// set new authorities for user
 			user.setAuthorities(newAuthorities);
-			// save
-			this.userService.updateOne(user.getId(), user);
+			userService.updateOne(user.getId(), user);
 		}
 	}
 }

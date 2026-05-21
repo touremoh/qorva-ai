@@ -62,7 +62,7 @@ public class StripeInvoicePaymentFailedHandler implements StripeEventHandler {
 		repository.save(evtMapper.map(eventLog));
 
 		// Update the tenant's subscription status to payment failed
-		tenant.getSubscriptionInfo().setSubscriptionStatus(SubscriptionStatus.SUBSCRIPTION_PAYMENT_FAILED.getValue());
+		tenant.getSubscriptionInfo().setSubscriptionStatus(SubscriptionStatus.PAST_DUE.getValue());
 		tenantService.updateOne(tenant.getId(), tenant);
 
 		log.info("Payment failed for customer {}. Subscription status set to PAYMENT_FAILED.", stripeCustomerId);

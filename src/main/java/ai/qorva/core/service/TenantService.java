@@ -26,12 +26,12 @@ public class TenantService extends AbstractQorvaService<TenantDTO,Tenant> {
 
 	@Override
 	protected void preProcessCreateOne(TenantDTO dto) throws QorvaException {
-		// Check tenant name was provided
 		if (!Strings.hasText(dto.getTenantName())) {
 			throw new QorvaException("Tenant name is null or empty");
 		}
-
-		// Check subscription info was provided
+		if (!Strings.hasText(dto.getOrganizationId())) {
+			throw new QorvaException("organizationId is null or empty");
+		}
 		if (Objects.isNull(dto.getSubscriptionInfo())) {
 			throw new QorvaException("SubscriptionInfo is null or empty");
 		}
@@ -57,14 +57,14 @@ public class TenantService extends AbstractQorvaService<TenantDTO,Tenant> {
 		this.mapper.merge(dto, foundTenant);
 	}
 
-	// override preProcessFindOneByData to include tenantId
 	@Override
 	protected void preProcessFindOneByData(TenantDTO dto) {
 		if (!Strings.hasText(dto.getTenantId())
 			&& !Strings.hasText(dto.getStripeCustomerId())
+			&& !Strings.hasText(dto.getOrganizationId())
 			&& Objects.isNull(dto.getSubscriptionInfo())) {
-			log.warn("At least one of these fields must not be empty: Tenant id, Stripe customer id, SubscriptionInfo");
-			throw new RuntimeException("Tenant id, Stripe customer id, SubscriptionInfo is empty while trying to find one by data");
+			log.warn("At least one of these fields must not be empty: tenantId, stripeCustomerId, organizationId, subscriptionInfo");
+			throw new RuntimeException("No search criteria provided while trying to find tenant by data");
 		}
 	}
 

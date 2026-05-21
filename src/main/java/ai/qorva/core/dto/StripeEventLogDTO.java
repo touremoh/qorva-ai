@@ -20,6 +20,7 @@ public class StripeEventLogDTO extends AbstractQorvaDTO {
 
     private String id;
     private String tenantId;
+    private String stripeEventId;
     private String eventType;
     private String stripeCustomerId;
     private String stripeSubscriptionId;

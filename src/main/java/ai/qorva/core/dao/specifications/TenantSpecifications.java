@@ -17,4 +17,9 @@ public final class TenantSpecifications {
 		if (stripeCustomerId == null || stripeCustomerId.isBlank()) return MongoSpecifications.empty();
 		return () -> Criteria.where("stripeCustomerId").is(stripeCustomerId);
 	}
+
+	public static MongoSpecification<Tenant> organizationIdEquals(String organizationId) {
+		if (organizationId == null || organizationId.isBlank()) return MongoSpecifications.empty();
+		return () -> Criteria.where("organizationId").is(organizationId);
+	}
 }

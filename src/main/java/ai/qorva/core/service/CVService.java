@@ -31,9 +31,11 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -71,6 +73,12 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         this.cvMapper = cVMapper;
 		this.matchingReportRepository = matchingReportRepository;
 		this.chatsRepository = chatsRepository;
+    }
+
+    @Override
+    protected void preProcessCreateOne(CVDTO dto) throws QorvaException {
+        super.preProcessCreateOne(dto);
+        dto.setApplicantNumber(UUID.randomUUID().toString().toUpperCase(Locale.ROOT));
     }
 
     @Override
@@ -163,10 +171,15 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     }
 
     public List<CVDTO> findCVsMatchingJobDescription(JobPostDTO jobPostDTO) throws QorvaException {
-        // Perform similarity search
+        var rules = jobPostDTO.getScoringRules();
+        Boolean filterOpenToWork = rules != null ? rules.getFilterOpenToWork() : null;
+        var excludedStatuses = rules != null ? rules.getExcludedAvailabilityStatuses() : null;
+
         var matchingCVs = ((CVRepository) this.repository).similaritySearch(
             jobPostDTO.getEmbedding(),
-            new ObjectId(jobPostDTO.getTenantId())
+            new ObjectId(jobPostDTO.getTenantId()),
+            filterOpenToWork,
+            excludedStatuses
         );
 
         // Get the list of documents ids

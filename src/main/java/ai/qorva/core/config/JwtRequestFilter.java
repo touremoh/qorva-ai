@@ -35,8 +35,8 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
 	/** Subscription statuses that block access to the application. */
 	private static final Set<String> BLOCKED_STATUSES = Set.of(
-		SubscriptionStatus.SUBSCRIPTION_CANCELLED.getValue(),
-		SubscriptionStatus.SUBSCRIPTION_EXPIRED.getValue()
+		SubscriptionStatus.CANCELED.getValue(),
+		SubscriptionStatus.PAST_DUE.getValue()
 	);
 
 	/** URI prefixes that bypass subscription enforcement (auth, webhook, public portal). */

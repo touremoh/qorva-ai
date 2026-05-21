@@ -62,7 +62,7 @@ public class AuthenticationService {
 
 			// Add subscription status to the JWT
 			var authenticatedUserInfo = this.userMapper.map(user);
-			authenticatedUserInfo.setSubscriptionStatus(tenant.getSubscriptionInfo().getSubscriptionStatus());
+			authenticatedUserInfo.setTenant(tenant);
 
 			// Build AuthResponse
 			return new AuthResponse(jwt, authenticatedUserInfo);
@@ -106,7 +106,7 @@ public class AuthenticationService {
 
 				// Add subscription status to the JWT
 				var authenticatedUserInfo = this.userMapper.map(user);
-				authenticatedUserInfo.setSubscriptionStatus(tenant.getSubscriptionInfo().getSubscriptionStatus());
+				authenticatedUserInfo.setTenant(tenant);
 
 				// Return the new access token
 				var jwt = JwtUtils.generateAndBuildToken(userDetails, this.jwtConfig, tenant);

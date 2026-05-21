@@ -40,20 +40,59 @@
           "description": "Current job title or role of the individual"
         },
         "availability": {
-          "type": "object",
-          "description": "Details about the individual's availability",
+          "bsonType": "object",
+          "description": "candidate work availability and hiring preferences",
           "properties": {
-            "startDate": {
-              "type": "string",
-              "description": "Start date of availability"
+            "openToWork": {
+              "bsonType": "bool",
+              "description": "whether the candidate is actively open to new opportunities"
             },
-            "endDate": {
-              "type": "string",
-              "description": "End date of availability"
+            "status": {
+              "bsonType": "string",
+              "enum": [
+                "activelyLooking",
+                "openButNotSearching",
+                "notAvailable",
+                "freelanceOnly"
+              ],
+              "description": "candidate job seeking status"
             },
-            "type": {
-              "type": "string",
-              "description": "Type of availability (e.g., full-time, part-time)"
+            "availableFrom": {
+              "bsonType": "date",
+              "description": "earliest candidate start date"
+            },
+            "noticePeriodDays": {
+              "bsonType": "int",
+              "description": "notice period in days before candidate can start"
+            },
+            "interviewAvailability": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              },
+              "description": "preferred interview time slots"
+            },
+            "preferredWorkTypes": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              },
+              "description": "preferred work arrangement"
+            },
+            "preferredContractTypes": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              },
+              "description": "preferred contract types"
+            },
+            "willingToRelocate": {
+              "bsonType": "bool",
+              "description": "whether the candidate is willing to relocate"
+            },
+            "remoteOnly": {
+              "bsonType": "bool",
+              "description": "whether the candidate only wants remote work"
             }
           }
         },

@@ -63,8 +63,8 @@ public class StripeInvoicePaymentSucceededHandler implements StripeEventHandler 
 
 		// Restore subscription to active (in case it was previously flagged as payment_failed)
 		var info = tenant.getSubscriptionInfo();
-		if (SubscriptionStatus.SUBSCRIPTION_PAYMENT_FAILED.getValue().equals(info.getSubscriptionStatus())) {
-			info.setSubscriptionStatus(SubscriptionStatus.SUBSCRIPTION_ACTIVE.getValue());
+		if (SubscriptionStatus.PAST_DUE.getValue().equals(info.getSubscriptionStatus())) {
+			info.setSubscriptionStatus(SubscriptionStatus.ACTIVE.getValue());
 			tenantService.updateOne(tenant.getId(), tenant);
 			log.info("Payment recovered for customer {}. Subscription restored to ACTIVE.", stripeCustomerId);
 		} else {

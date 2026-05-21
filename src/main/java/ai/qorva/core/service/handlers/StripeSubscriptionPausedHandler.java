@@ -44,12 +44,12 @@ public class StripeSubscriptionPausedHandler implements StripeEventHandler {
 			throw new QorvaException("Failed to retrieve tenant for customer " + stripeCustomerId, e);
 		}
 
-		tenant.getSubscriptionInfo().setSubscriptionStatus(SubscriptionStatus.SUBSCRIPTION_LOCKED.getValue());
+		tenant.getSubscriptionInfo().setSubscriptionStatus(SubscriptionStatus.PAUSED.getValue());
 		tenantService.updateOne(tenant.getTenantId(), tenant);
 
 		var eventLog = new StripeEventLogDTO();
 		eventLog.setEventType("customer.subscription.paused");
-		eventLog.setEventStatus(SubscriptionStatus.SUBSCRIPTION_LOCKED.getValue());
+		eventLog.setEventStatus(SubscriptionStatus.PAUSED.getValue());
 		eventLog.setStripeCustomerId(stripeCustomerId);
 		eventLog.setStripeSubscriptionId(subscriptionId);
 		eventLog.setTenantId(tenant.getTenantId());

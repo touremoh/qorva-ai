@@ -4,6 +4,7 @@ import ai.qorva.core.dao.repository.StripeEventLogRepository;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.StripeEventLogDTO;
 import ai.qorva.core.dto.common.SubscriptionInfo;
+import ai.qorva.core.enums.SubscriptionStatus;
 import ai.qorva.core.enums.UserStatusEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.StripeEventMapper;
@@ -19,8 +20,11 @@ import org.bson.types.Decimal128;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.bson.types.ObjectId;
+
 import java.time.Instant;
 import java.util.Objects;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -32,7 +36,12 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 	private final UserRepository userRepository;
 
 	@Autowired
-	public StripeCheckoutSessionCompletedHandler(TenantService tenantService, StripeEventLogRepository repository, StripeEventMapper evtMapper, UserRepository userRepository) {
+	public StripeCheckoutSessionCompletedHandler(
+		TenantService tenantService,
+		StripeEventLogRepository repository,
+		StripeEventMapper evtMapper,
+		UserRepository userRepository
+	) {
 		this.tenantService = tenantService;
 		this.repository = repository;
 		this.evtMapper = evtMapper;
@@ -41,80 +50,93 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 
 	@Override
 	public void handle(StripeObject obj) throws QorvaException {
-		log.info("Handling checkout session completed");
+		handle(obj, null);
+	}
+
+	@Override
+	public void handle(StripeObject obj, String eventId) throws QorvaException {
+		log.info("Handling checkout.session.completed eventId={}", eventId);
 
 		Session session = (Session) obj;
 
 		var customerId = session.getCustomer();
 		var subscriptionId = session.getSubscription();
 		var tenantId = session.getClientReferenceId();
-		var customerEmail = session.getCustomerEmail();
+		var userId = session.getMetadata() != null ? session.getMetadata().get("userId") : null;
 
-		// Find the user by email
-		var user = this.userRepository.findByEmail(customerEmail);
-
-		// Check if the user was found
-		if (Objects.isNull(user)) {
-			log.warn("User not found for email {}", customerEmail);
-			throw new QorvaException("User not found for email " + customerEmail);
-		}
-
-		// Get subscription details
+		// Get subscription details from Stripe
 		Subscription subscriptionDetails;
 		try {
 			subscriptionDetails = Subscription.retrieve(subscriptionId);
 		} catch (StripeException e) {
-			log.error("Failed to retrieve subscription details for subscription id {}", subscriptionId);
-			throw new QorvaException("Failed to retrieve subscription details for subscription id " + subscriptionId, e);
+			log.error("Failed to retrieve subscription {} for tenant {}", subscriptionId, tenantId, e);
+			throw new QorvaException("Failed to retrieve subscription details for subscriptionId=" + subscriptionId, e);
 		}
 
-		var productId = subscriptionDetails.getItems().getData().getFirst().getPlan().getProduct();
-		var subscriptionAmount = new Decimal128(subscriptionDetails.getItems().getData().getFirst().getPlan().getAmount());
-		var billingCycle = subscriptionDetails.getItems().getData().getFirst().getPlan().getInterval();
+		var subItem = subscriptionDetails.getItems().getData().getFirst();
+		var productId = subItem.getPlan().getProduct();
 		var subscriptionStatus = SubscriptionStatusHelper.subscriptionFromCode(subscriptionDetails.getStatus());
+		var billingCycle = subItem.getPlan().getInterval();
+		var subscriptionAmount = new Decimal128(subItem.getPlan().getAmount());
+		var currentPeriodStart = subItem.getCurrentPeriodStart() != null
+			? Instant.ofEpochSecond(subItem.getCurrentPeriodStart()) : null;
+		var currentPeriodEnd = subItem.getCurrentPeriodEnd() != null
+			? Instant.ofEpochSecond(subItem.getCurrentPeriodEnd()) : null;
+		var cancelAtPeriodEnd = subscriptionDetails.getCancelAtPeriodEnd();
 
 		String subscriptionPlan = "";
 		try {
 			subscriptionPlan = Product.retrieve(productId).getName();
 		} catch (StripeException e) {
-			log.error("Failed to retrieve product details for product id {}", productId);
-			throw new QorvaException("Failed to retrieve product details for product id " + productId, e);
+			log.error("Failed to retrieve product {} for tenant {}", productId, tenantId, e);
+			throw new QorvaException("Failed to retrieve product details for productId=" + productId, e);
 		}
 
 		var subscriptionInfo = new SubscriptionInfo();
 		subscriptionInfo.setSubscriptionId(subscriptionId);
 		subscriptionInfo.setSubscriptionStatus(subscriptionStatus);
-		subscriptionInfo.setSubscriptionStartDate(Instant.now());
+		subscriptionInfo.setSubscriptionStartDate(Instant.ofEpochSecond(subscriptionDetails.getStartDate()));
 		subscriptionInfo.setSubscriptionPlan(subscriptionPlan);
 		subscriptionInfo.setBillingCycle(billingCycle);
 		subscriptionInfo.setPrice(subscriptionAmount);
-		subscriptionInfo.setPriceId(subscriptionDetails.getItems().getData().getFirst().getPlan().getId());
+		subscriptionInfo.setPriceId(subItem.getPlan().getId());
+		subscriptionInfo.setPlanCode(subItem.getPlan().getId());
+		subscriptionInfo.setCurrentPeriodStart(currentPeriodStart);
+		subscriptionInfo.setCurrentPeriodEnd(currentPeriodEnd);
+		subscriptionInfo.setCancelAtPeriodEnd(cancelAtPeriodEnd);
 
-		// Update the user's subscription info
-		var tenant = this.tenantService.findOneById(tenantId);
-
-		// Update the tenant's subscription info'
+		// Update tenant subscription info and stripeCustomerId
+		var tenant = tenantService.findOneById(tenantId);
 		tenant.setSubscriptionInfo(subscriptionInfo);
 		tenant.setStripeCustomerId(customerId);
+		tenantService.updateOne(tenantId, tenant);
 
-		// Save the tenant
-		this.tenantService.updateOne(tenantId, tenant);
+		// Activate user account
+		activateUser(userId, session.getCustomerEmail());
 
-		// Update the user's subscription status'
-		user.setUserAccountStatus(UserStatusEnum.ACTIVE.getValue());
-		this.userRepository.save(user);
-
-		// Persist stripe event logs
+		// Persist event log
 		var eventLog = new StripeEventLogDTO();
+		eventLog.setStripeEventId(eventId);
 		eventLog.setEventType("checkout.session.completed");
 		eventLog.setEventStatus(subscriptionStatus);
 		eventLog.setStripeCustomerId(customerId);
 		eventLog.setStripeSubscriptionId(subscriptionId);
 		eventLog.setTenantId(tenantId);
-		eventLog.setEventStatus(session.getStatus());
+		repository.save(evtMapper.map(eventLog));
 
-		this.repository.save(this.evtMapper.map(eventLog));
+		log.info("Checkout completed for tenant={} subscriptionId={} status={}", tenantId, subscriptionId, subscriptionStatus);
+	}
 
-		log.debug("Completed checkout session for customer {} : subscription id: {}", customerEmail, subscriptionId);
+	private void activateUser(String userId, String customerEmail) {
+		var user = Optional.ofNullable(userId)
+			.flatMap(id -> userRepository.findById(new ObjectId(id)))
+			.orElseGet(() -> Objects.nonNull(customerEmail) ? userRepository.findByEmail(customerEmail) : null);
+
+		if (user == null) {
+			log.warn("Could not find user by userId={} or email={} – skipping activation", userId, customerEmail);
+			return;
+		}
+		user.setUserAccountStatus(UserStatusEnum.ACTIVE.getValue());
+		userRepository.save(user);
 	}
 }

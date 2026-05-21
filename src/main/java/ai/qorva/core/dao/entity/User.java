@@ -33,6 +33,7 @@ public class User implements QorvaEntity {
     private String encryptedPassword;
 
     private String userAccountStatus; // Expected: USER_ACTIVE, USER_INACTIVE, USER_LOCKED
+    private String communicationLanguage;
 
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;

@@ -14,6 +14,7 @@ public class TenantQueryBuilder implements QorvaQueryBuilder<Tenant> {
 	public MongoSpecification<Tenant> buildQuery(Map<String, String> params) {
 		return MongoSpecification
 			.where(TenantSpecifications.tenantNameContains(params.get("tenantName")))
-			.and(TenantSpecifications.stripeCustomerIdEquals(params.get("stripeCustomerId")));
+			.and(TenantSpecifications.stripeCustomerIdEquals(params.get("stripeCustomerId")))
+			.and(TenantSpecifications.organizationIdEquals(params.get("organizationId")));
 	}
 }

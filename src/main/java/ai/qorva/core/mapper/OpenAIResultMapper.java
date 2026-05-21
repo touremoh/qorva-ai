@@ -10,6 +10,7 @@ public interface OpenAIResultMapper {
 
 	@Mapping(target = "id", ignore = true)
 	@Mapping(target = "tenantId", ignore = true)
+	@Mapping(target = "applicantNumber", ignore = true)
 	@Mapping(target = "attachment", ignore = true)
 	@Mapping(target = "createdAt", ignore = true)
 	@Mapping(target = "lastUpdatedAt", ignore = true)

@@ -13,6 +13,15 @@ import org.springframework.context.annotation.Configuration;
 @NoArgsConstructor
 @AllArgsConstructor
 public class StripeProperties {
-	private String secretKey;
-	private StripeWebhookDto webhook;
+    private String secretKey;
+    private StripeWebhookDto webhook;
+    private CheckoutProperties checkout;
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class CheckoutProperties {
+        private String successUrl;
+        private String cancelUrl;
+    }
 }

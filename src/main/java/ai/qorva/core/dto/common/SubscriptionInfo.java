@@ -16,6 +16,7 @@ public class SubscriptionInfo {
     private String billingCycle;
     private Decimal128 price;
     private String priceId;
+    private String planCode;
 
     private String subscriptionStatus;
     private String subscriptionId;
@@ -23,4 +24,8 @@ public class SubscriptionInfo {
     private String accountManager;
     private Instant subscriptionStartDate;
     private Instant subscriptionEndDate;
+
+    private Instant currentPeriodStart;
+    private Instant currentPeriodEnd;
+    private Boolean cancelAtPeriodEnd;
 }

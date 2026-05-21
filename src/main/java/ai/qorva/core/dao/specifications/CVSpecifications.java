@@ -62,4 +62,11 @@ public final class CVSpecifications {
 		int latestAllowedStartYear = Year.now().getValue() - minYears;
 		return () -> Criteria.where("careerStartYear").lte(latestAllowedStartYear);
 	}
+
+	public static MongoSpecification<CV> applicantNumberEquals(String applicantNumber) {
+		if (applicantNumber == null || applicantNumber.isBlank()) {
+			return MongoSpecifications.empty();
+		}
+		return () -> Criteria.where("applicantNumber").is(applicantNumber);
+	}
 }

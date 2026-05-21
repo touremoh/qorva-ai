@@ -8,7 +8,8 @@ public enum UserStatusEnum {
 	INACTIVE("INACTIVE"),
 	LOCKED("LOCKED"),
 	DELETED("DELETED"),
-	TRIAL_PERIOD("TRIAL_PERIOD");
+	TRIAL_PERIOD("TRIAL_PERIOD"),
+	PENDING_SUBSCRIPTION("PENDING_SUBSCRIPTION");
 
 	UserStatusEnum(String value) {
 		this.value = value;

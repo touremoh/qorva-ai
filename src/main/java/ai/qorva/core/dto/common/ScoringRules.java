@@ -18,4 +18,6 @@ public class ScoringRules implements Serializable {
     private LocationPreferences locationPreferences;
     private IndustryPreferences industryPreferences;
     private ScoringWeight scoringWeight;
+    private Boolean filterOpenToWork;
+    private List<String> excludedAvailabilityStatuses;
 }

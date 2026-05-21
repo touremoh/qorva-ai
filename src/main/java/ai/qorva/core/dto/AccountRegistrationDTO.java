@@ -27,4 +27,7 @@ public class AccountRegistrationDTO {
 
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String languageCode;
+
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+	private String priceId;
 }

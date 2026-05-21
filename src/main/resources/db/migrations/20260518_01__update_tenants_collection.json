@@ -22,6 +22,18 @@
           "bsonType": "string",
           "description": "must be a string"
         },
+        "phoneNumber": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "contactEmail": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "websiteUrl": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
         "stripeCustomerId": {
           "bsonType": "string",
           "description": "must be a string"

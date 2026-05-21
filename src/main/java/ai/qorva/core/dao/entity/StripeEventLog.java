@@ -8,6 +8,7 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
@@ -26,6 +27,9 @@ public class StripeEventLog implements QorvaEntity {
 
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
+
+    @Indexed(unique = true, sparse = true)
+    private String stripeEventId;
 
     private String eventType;
     private String stripeCustomerId;

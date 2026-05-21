@@ -20,6 +20,12 @@ import java.time.Instant;
 public class TenantDTO extends AbstractQorvaDTO {
     private String id;
     private String tenantName;
+    private String organizationId;
+    private String companyAddress;
+    private String companyLogoUrl;
+    private String phoneNumber;
+    private String contactEmail;
+    private String websiteUrl;
     private String stripeCustomerId;
     private SubscriptionInfo subscriptionInfo;
 
