@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(origins = "${weblink.allowedOrigins}")
 public class UserController extends AbstractQorvaController<UserDTO> {
 
     private final UserService userService;

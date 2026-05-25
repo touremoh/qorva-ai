@@ -96,6 +96,11 @@ stripe:
     success-url: ${STRIPE_CHECKOUT_SUCCESS_URL}
     cancel-url: ${STRIPE_CHECKOUT_CANCEL_URL}
 
+aws:
+  s3:
+    bucket-name: ${AWS_S3_BUCKET_NAME}
+    region: ${AWS_S3_REGION}
+
 qorva:
   notifications:
     enabled: ${QORVA_NOTIFICATION_ENABLED}

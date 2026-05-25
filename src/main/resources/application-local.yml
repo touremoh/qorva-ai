@@ -163,3 +163,8 @@ qorva:
 
 mongock:
   migration-scan-package: ai.qorva.core.migrations
+
+aws:
+  s3:
+    bucket-name: BUCKET_NAME
+    region: REGION

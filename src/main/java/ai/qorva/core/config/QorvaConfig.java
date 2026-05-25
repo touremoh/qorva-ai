@@ -5,12 +5,15 @@ import ai.qorva.core.exception.QorvaException;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
+import software.amazon.awssdk.regions.Region;
+import software.amazon.awssdk.services.s3.S3Client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,8 +23,16 @@ import java.nio.charset.StandardCharsets;
 import static org.springframework.data.web.config.EnableSpringDataWebSupport.PageSerializationMode.VIA_DTO;
 
 @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO)
+@EnableConfigurationProperties(S3Properties.class)
 @Configuration
 public class QorvaConfig {
+
+	@Bean
+	S3Client s3Client(S3Properties s3Properties) {
+		return S3Client.builder()
+			.region(Region.of(s3Properties.getRegion()))
+			.build();
+	}
 
 	@Bean
 	ChatClient chatClient(ChatClient.Builder builder) {
