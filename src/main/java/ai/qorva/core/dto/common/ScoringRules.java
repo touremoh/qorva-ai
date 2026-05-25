@@ -19,5 +19,5 @@ public class ScoringRules implements Serializable {
     private IndustryPreferences industryPreferences;
     private ScoringWeight scoringWeight;
     private Boolean filterOpenToWork;
-    private List<String> excludedAvailabilityStatuses;
+    private List<String> availabilityStatuses;
 }

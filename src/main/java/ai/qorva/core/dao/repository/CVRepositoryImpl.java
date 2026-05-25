@@ -63,7 +63,7 @@ public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, Simil
 	}
 
 	@Override
-	public List<CV> similaritySearch(float[] queryEmbedding, ObjectId tenantId, Boolean filterOpenToWork, List<String> excludedStatuses) {
+	public List<CV> similaritySearch(float[] queryEmbedding, ObjectId tenantId, Boolean filterOpenToWork, List<String> includedStatuses) {
 		List<Double> vector = new ArrayList<>(queryEmbedding.length);
 		for (float f : queryEmbedding) {
 			vector.add((double) f);
@@ -89,8 +89,8 @@ public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, Simil
 		}
 
 		// Exclude documents whose status is in the exclusion list; missing field is included
-		if (excludedStatuses != null && !excludedStatuses.isEmpty()) {
-			matchCriteria.and("personalInformation.availability.status").nin(excludedStatuses);
+		if (includedStatuses != null && !includedStatuses.isEmpty()) {
+			matchCriteria.and("personalInformation.availability.status").in(includedStatuses);
 		}
 
 		return mongoTemplate.aggregate(

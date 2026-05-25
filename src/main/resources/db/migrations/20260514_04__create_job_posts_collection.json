@@ -107,15 +107,19 @@
               "bsonType": "bool",
               "description": "when true, exclude candidates not open to work"
             },
-            "excludedAvailabilityStatuses": {
+            "availabilityStatuses": {
               "bsonType": "array",
-              "description": "availability status values to exclude from candidate matching",
+              "description": "availability statuses used to filter candidates during matching",
               "items": {
                 "bsonType": "string",
                 "enum": ["activelyLooking", "openButNotSearching", "notAvailable", "freelanceOnly"]
               }
             }
           }
+        },
+        "matchingReportsNeeded": {
+          "bsonType": "bool",
+          "description": "when true, matching reports generation is enabled for this job post"
         },
         "embedding": {
           "bsonType": "array",

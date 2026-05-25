@@ -1,9 +1,6 @@
 package ai.qorva.core.dto;
 
 import lombok.Builder;
-import org.bson.types.ObjectId;
-import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.util.List;
 
@@ -14,7 +11,7 @@ public record DashboardData(
 	long totalJobsPosted,
 	long totalUsers,
 	long totalResumeAnalysis,
-	long totalResumesProcessedCurrentMonth,
+	UsageMonitoringDTO usageMonitoring,
 	List<SkillReport> skillsReport,
 	List<ApplicationPerJobPostReport> jobPostsReport,
 	List<TopCandidatesPerJobReport> topCandidatesPerJob

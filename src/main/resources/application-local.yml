@@ -120,6 +120,46 @@ stripe:
 qorva:
   notifications:
     enabled: false
+  products:
+    starter:
+      stripe-product-name: Starter
+      features:
+        seats: 1
+        limits:
+          screening-actions: 500
+          ai-resume-chats: 50
+          talent-intelligence-queries: 10
+        overage:
+          enabled: false
+          screening-action-price: 0.0
+          chat-price: 0.0
+          intelligence-query-price: 0.0
+    pro:
+      stripe-product-name: Pro
+      features:
+        seats: 5
+        limits:
+          screening-actions: 5000
+          ai-resume-chats: 150
+          talent-intelligence-queries: 25
+        overage:
+          enabled: true
+          screening-action-price: 0.02
+          chat-price: 0.10
+          intelligence-query-price: 0.50
+    scale:
+      stripe-product-name: Scale
+      features:
+        seats: 20
+        limits:
+          screening-actions: 15000
+          ai-resume-chats: 300
+          talent-intelligence-queries: 50
+        overage:
+          enabled: true
+          screening-action-price: 0.02
+          chat-price: 0.10
+          intelligence-query-price: 0.50
 
 mongock:
   migration-scan-package: ai.qorva.core.migrations

@@ -8,6 +8,7 @@ import ai.qorva.core.dto.common.TokenUsage;
 import ai.qorva.core.enums.ChatUserRole;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.OpenAIService;
+import ai.qorva.core.service.UsageMonitoringService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,7 @@ public class ChatAgent {
 
     private final ScreeningContextProvider contextProvider;
     private final OpenAIService openAIService;
+    private final UsageMonitoringService usageMonitoringService;
 
     public ChatMessage answer(Chat chat, List<ChatMessage> history) throws QorvaException {
         // Fetch domain context
@@ -37,6 +39,7 @@ public class ChatAgent {
         // TODO : implements a retry mechanism if LLM fails
         // TODO : Surround with try-catch and set the response as failed if LLM fails
         ChatResult result = openAIService.chatCompletions(prompt);
+        incrementUsageSilently(chat.getTenantId(), UsageMonitoringService.FeatureKey.AI_RESUME_CHATS);
 
         return ChatMessage.builder()
                 .tenantId(chat.getTenantId())
@@ -50,5 +53,13 @@ public class ChatAgent {
                         .build())
                 .createdAt(Instant.now())
                 .build();
+    }
+
+    private void incrementUsageSilently(String tenantId, UsageMonitoringService.FeatureKey key) {
+        try {
+            usageMonitoringService.incrementUsage(tenantId, key, 1);
+        } catch (Exception e) {
+            log.warn("Failed to increment {} usage for tenant={}", key, tenantId, e);
+        }
     }
 }

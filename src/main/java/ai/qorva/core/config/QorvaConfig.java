@@ -5,6 +5,8 @@ import ai.qorva.core.exception.QorvaException;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -70,6 +72,13 @@ public class QorvaConfig {
 			}
 			return content.toString().trim();
 		}
+	}
+
+	@Bean
+	public WebServerFactoryCustomizer<TomcatServletWebServerFactory> tomcatMultipartCustomizer() {
+		return factory -> factory.addConnectorCustomizers(
+			connector -> connector.setMaxPartCount(100)
+		);
 	}
 
 	@Bean

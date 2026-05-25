@@ -5,101 +5,93 @@ import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.JobPostRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dto.JobPostDTO;
-import ai.qorva.core.dto.events.NewJobPostEvent;
 import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.JobPostMapper;
 import ai.qorva.core.dao.querybuilder.JobPostQueryBuilder;
-import ai.qorva.core.security.LanguageContextHolder;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.ai.embedding.EmbeddingModel;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
+
+import java.util.List;
 
 @Slf4j
 @Service
 public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
 
-    private final ApplicationEventPublisher publisher;
-    private final EmbeddingModel embeddingModel;
     private final MatchingReportRepository matchingReportRepository;
     private final ChatsRepository chatsRepository;
 
     @Autowired
-    public JobPostService(JobPostRepository repository, JobPostMapper mapper, JobPostQueryBuilder queryBuilder, ApplicationEventPublisher publisher, EmbeddingModel embeddingModel, MatchingReportRepository matchingReportRepository, ChatsRepository chatsRepository) {
+    public JobPostService(JobPostRepository repository, JobPostMapper mapper, JobPostQueryBuilder queryBuilder, MatchingReportRepository matchingReportRepository, ChatsRepository chatsRepository) {
         super(repository, mapper, queryBuilder);
-		this.publisher = publisher;
-		this.embeddingModel = embeddingModel;
-		this.matchingReportRepository = matchingReportRepository;
-		this.chatsRepository = chatsRepository;
+        this.matchingReportRepository = matchingReportRepository;
+        this.chatsRepository = chatsRepository;
     }
 
     @Override
     protected void preProcessCreateOne(JobPostDTO dto) throws QorvaException {
         super.preProcessCreateOne(dto);
-
-        // Create a vector embedding for the job post
-        dto.setEmbedding(this.embeddingModel.embed(dto.toJobTitleAndDescription()));
         dto.setStatus(JobPostStatusEnum.OPEN.getStatus());
+        dto.setMatchingReportsNeeded(true);
     }
 
     @Override
     protected void postProcessCreateOne(JobPost entity) {
         log.debug("JobPost created with ID: {}", entity.getId());
-
-        var jobPostDTO = this.mapper.map(entity);
-
-        if (!StringUtils.hasText(jobPostDTO.getLanguageCode())) {
-            jobPostDTO.setLanguageCode(LanguageContextHolder.getLanguage());
-        }
-
-        this.publisher.publishEvent(new NewJobPostEvent(jobPostDTO));
     }
 
     @Override
     protected void preProcessUpdateOne(String id, JobPostDTO newJobPost) throws QorvaException {
-        // super fetches the entity, verifies tenant ownership, and sets tenantId on newJobPost
         super.preProcessUpdateOne(id, newJobPost);
 
-        // Fetch existing DTO to fill missing fields (PATCH semantics)
         var existingJobPost = this.findOneById(id);
-
-        // Update newJobPost
         this.mapper.merge(newJobPost, existingJobPost);
-
-        // Generate embedding (external API call — must run outside any transaction)
-        newJobPost.setEmbedding(this.embeddingModel.embed(newJobPost.toJobTitleAndDescription()));
+		newJobPost.setMatchingReportsNeeded(isJobPostOpen(newJobPost));
     }
 
     @Override
     protected void postProcessUpdateOne(JobPost entity) {
         log.info("JobPost updated with ID: {}", entity.getId());
-
-        var jobPostDTO = this.mapper.map(entity);
-
-        if (!StringUtils.hasText(jobPostDTO.getLanguageCode())) {
-            jobPostDTO.setLanguageCode(LanguageContextHolder.getLanguage());
-        }
-
-        this.publisher.publishEvent(new NewJobPostEvent(jobPostDTO));
     }
 
     @Override
     protected void postProcessDeleteOneById(String id, String tenantId) {
         log.info("JobPost deleted with ID: {}", id);
 
-        // Delete all CV report for this job post
         var countDeletedReports = this.matchingReportRepository.deleteByTenantIdAndJobPostId(tenantId, id);
-
-        // Delete all CV report for this job post
         log.info("Deleted {} CV report for job post {}", countDeletedReports, id);
 
-        // Delete all chat for this job post
         var countDeletedChats = this.chatsRepository.deleteByTenantIdAndContextJobPostId(tenantId, id);
-
-        // Delete all chat for this job post
         log.info("Deleted {} chats for job post {}", countDeletedChats, id);
+    }
+
+    public List<JobPostDTO> findJobPostsNeedingReports(String tenantId) {
+        return ((JobPostRepository) this.repository)
+            .findAllJobPostNeedingScreeningReports(tenantId, JobPostStatusEnum.OPEN.getStatus(), true)
+            .stream().map(mapper::map).toList();
+    }
+
+    public void markOpenJobPostsAsNeedingReports(String tenantId) {
+        var entities = ((JobPostRepository) this.repository)
+            .findAllJobPostNeedingScreeningReports(tenantId, JobPostStatusEnum.OPEN.getStatus(), false);
+
+        if (!entities.isEmpty()) {
+            entities.forEach(e -> e.setMatchingReportsNeeded(true));
+            this.repository.saveAll(entities);
+        }
+        log.debug("Marked {} open job posts as needing reports for tenant={}", entities.size(), tenantId);
+    }
+
+    public void clearMatchingReportsNeeded(String jobPostId) {
+        (this.repository).findById(new ObjectId(jobPostId)).ifPresent(e -> {
+            e.setMatchingReportsNeeded(false);
+            this.repository.save(e);
+        });
+    }
+
+    private boolean isJobPostOpen(JobPostDTO jobPostDTO) {
+        return JobPostStatusEnum.OPEN.getStatus().equals(jobPostDTO.getStatus());
     }
 }

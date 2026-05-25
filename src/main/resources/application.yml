@@ -16,6 +16,10 @@ management:
 spring:
   application:
     name: qorva-ai
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 500MB
 
 templates:
   cv:
@@ -90,3 +94,4 @@ templates:
         title-work-experience: Experiência profissional
         title-education: Formação
         title-certifications: Certificações
+

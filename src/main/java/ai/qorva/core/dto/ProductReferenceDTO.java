@@ -1,5 +1,6 @@
 package ai.qorva.core.dto;
 
+import ai.qorva.core.dto.common.ProductFeatures;
 import ai.qorva.core.dto.common.StripePrice;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -30,6 +31,7 @@ public class ProductReferenceDTO extends AbstractQorvaDTO {
     private Map<String, String> metadata;
 
     private List<StripePrice> prices;
+    private ProductFeatures features;
 
     @JsonProperty(access = Access.READ_ONLY)
     private String createdBy;

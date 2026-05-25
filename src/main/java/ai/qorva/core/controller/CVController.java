@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import ai.qorva.core.security.LanguageContextHolder;
-import org.springframework.http.HttpHeaders;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 import java.util.List;
 
@@ -30,6 +30,7 @@ public class CVController extends AbstractQorvaController<CVDTO> {
 	}
 
     @PostMapping(value = "/upload")
+    @PreAuthorize("@accessManager.hasNotExceededScreeningLimit()")
     public ResponseEntity<List<CVDTO>> uploadFiles(
             @RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language,
             @RequestParam("files") List<MultipartFile> files) throws QorvaException {

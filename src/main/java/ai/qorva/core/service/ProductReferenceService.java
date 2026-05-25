@@ -46,6 +46,7 @@ public class ProductReferenceService {
 			existing.setDescription(product.getDescription());
 			existing.setActive(product.isActive());
 			existing.setMetadata(product.getMetadata());
+			existing.setFeatures(product.getFeatures());
 			repository.save(existing);
 			log.info("Updated product reference stripeProductId={}", product.getStripeProductId());
 		} else {

@@ -23,7 +23,7 @@ public class MatchingReportController extends AbstractQorvaController<MatchingRe
 
 	@GetMapping("/check/monthly-usage")
 	public ResponseEntity<QorvaRequestResponse> checkCVAnalysisMonthlyUsageLimit() throws QorvaException {
-		return BuildApiResponse.from(((MatchingReportService) service).checkCVAnalysisMonthlyUsageLimit(currentTenantId()));
+		return null;
 	}
 
 	@GetMapping("/search")

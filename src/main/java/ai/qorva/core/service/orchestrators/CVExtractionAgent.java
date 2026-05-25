@@ -34,7 +34,7 @@ public class CVExtractionAgent {
 						.jsonSchema(ResponseFormat.JsonSchema.builder()
 							.name("cv_parser")
 							.schema(converter.getJsonSchema())
-							.strict(Boolean.TRUE)
+							.strict(Boolean.FALSE)
 							.build())
 						.build())
 					.temperature(1.0)

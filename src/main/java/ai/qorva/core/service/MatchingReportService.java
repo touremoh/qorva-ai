@@ -1,18 +1,19 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.MatchingReport;
+import ai.qorva.core.dao.querybuilder.MatchingReportQueryBuilder;
 import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
-import ai.qorva.core.dto.*;
-import ai.qorva.core.dto.common.MatchingReportDetails;
+import ai.qorva.core.dto.CVDTO;
+import ai.qorva.core.dto.DashboardData;
+import ai.qorva.core.dto.JobPostDTO;
+import ai.qorva.core.dto.MatchingReportDTO;
 import ai.qorva.core.dto.common.CandidateInfo;
 import ai.qorva.core.dto.common.KeySkill;
+import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.enums.ApplicationStatusEnum;
-import ai.qorva.core.enums.MontlyUsageLimitCodeEnum;
-import ai.qorva.core.enums.SubscriptionPlanEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.MatchingReportMapper;
-import ai.qorva.core.dao.querybuilder.MatchingReportQueryBuilder;
 import ai.qorva.core.utils.QorvaUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
@@ -74,6 +75,28 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 		this.mapper.merge(requestData, application);
 	}
 
+	public void upsertReport(JobPostDTO jobPost, MatchingReportDetails details, CVDTO cv) throws QorvaException {
+		var existing = ((MatchingReportRepository) this.repository)
+			.findOneByTenantIdAndJobPostIdAndCandidateInfoCandidateId(
+				new ObjectId(jobPost.getTenantId()),
+				new ObjectId(jobPost.getId()),
+				cv.getId()
+			);
+
+		if (existing.isPresent()) {
+			var existingDTO = this.mapper.map(existing.get());
+			if (existingDTO.getMatchingReportDetails() != null) {
+				details.setDetailsID(existingDTO.getMatchingReportDetails().getDetailsID());
+			}
+			var updateDto = new MatchingReportDTO();
+			updateDto.setTenantId(jobPost.getTenantId());
+			updateDto.setMatchingReportDetails(details);
+			this.updateOne(existingDTO.getId(), updateDto);
+		} else {
+			this.createOne(jobPost, details, cv);
+		}
+	}
+
 	public MatchingReportDTO createOne(JobPostDTO jobPostDto, MatchingReportDetails reportDetails, CVDTO cvDto) throws QorvaException {
 		// Set Report Details ID
 		reportDetails.setDetailsID(UUID.randomUUID().toString());
@@ -102,26 +125,6 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 
 		matchingReportDTO.setCandidateInfo(candidateInfo);
 		return this.createOne(matchingReportDTO);
-	}
-
-	public boolean hasReachedMonthlyUsageLimit(String tenantId) throws QorvaException {
-		return MontlyUsageLimitCodeEnum.REACHED.getValue().equals(this.checkCVAnalysisMonthlyUsageLimit(tenantId));
-	}
-
-	public String checkCVAnalysisMonthlyUsageLimit(String tenantId) throws QorvaException {
-
-		var tenantDTO = this.tenantService.findOneById(tenantId);
-
-		// Get the info necessary subscription information
-		var planName = tenantDTO.getSubscriptionInfo().getSubscriptionPlan();
-
-		// Count all CV analysis of the month
-		var nbCvAnalyzedInTheMonth = this.countMatchingReportInCurrentMonth(tenantId);
-
-		// Check if the user has reached CV analysis monthly limit
-		return nbCvAnalyzedInTheMonth >= SubscriptionPlanEnum.valueOf(planName.toUpperCase()).getLimit()
-			? MontlyUsageLimitCodeEnum.REACHED.getValue()
-			: MontlyUsageLimitCodeEnum.NOT_REACHED.getValue();
 	}
 
 	@Override

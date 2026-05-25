@@ -1,0 +1,72 @@
+{
+  "collMod": "usage_monitoring",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "usage_monitoring",
+      "required": ["tenantId", "currentPeriodStart", "currentPeriodEnd", "subscriptionTier", "createdAt", "lastUpdatedAt"],
+      "properties": {
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "Owning tenant — must be a valid ObjectId and is required"
+        },
+        "currentPeriodStart": {
+          "bsonType": "date",
+          "description": "Inclusive start of the billing period"
+        },
+        "currentPeriodEnd": {
+          "bsonType": "date",
+          "description": "Exclusive end of the billing period"
+        },
+        "subscriptionTier": {
+          "bsonType": "string",
+          "description": "Plan name at the time the period was initialized (e.g. Starter, Pro, Scale)"
+        },
+        "features": {
+          "bsonType": "object",
+          "description": "Per-feature consumption counters for the current billing period",
+          "properties": {
+            "screeningActions": {
+              "bsonType": "object",
+              "properties": {
+                "limit":      { "bsonType": ["int", "null"], "description": "Included units for the period" },
+                "consumed":   { "bsonType": ["int", "null"], "description": "Units consumed in the current period" },
+                "cumulative": { "bsonType": ["long", "null"], "description": "All-time total across all periods" }
+              }
+            },
+            "aiResumeChats": {
+              "bsonType": "object",
+              "properties": {
+                "limit":      { "bsonType": ["int", "null"] },
+                "consumed":   { "bsonType": ["int", "null"] },
+                "cumulative": { "bsonType": ["long", "null"] }
+              }
+            },
+            "talentIntelligenceQueries": {
+              "bsonType": "object",
+              "properties": {
+                "limit":      { "bsonType": ["int", "null"] },
+                "consumed":   { "bsonType": ["int", "null"] },
+                "cumulative": { "bsonType": ["long", "null"] }
+              }
+            }
+          }
+        },
+        "createdAt": {
+          "bsonType": "date"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date"
+        },
+        "createdBy": {
+          "bsonType": ["string", "null"]
+        },
+        "lastUpdatedBy": {
+          "bsonType": ["string", "null"]
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

@@ -5,33 +5,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public record CVOutputDTO(
-    @JsonProperty(required = true, value = "candidateProfileSummary") String candidateProfileSummary,
-    @JsonProperty(required = true, value = "careerStartYear") int careerStartYear,
-    @JsonProperty(required = true, value = "personalInformation") PersonalInformation personalInformation,
-    @JsonProperty(required = true, value = "keySkills") KeySkill[] keySkills,
-    @JsonProperty(required = true, value = "profiles") Profiles profiles,
-    @JsonProperty(required = true, value = "workExperience") WorkExperience[] workExperience,
-    @JsonProperty(required = true, value = "education") Education[] education,
-    @JsonProperty(required = true, value = "certifications") Certification[] certifications,
-    @JsonProperty(required = true, value = "skillsAndQualifications") SkillsAndQualifications skillsAndQualifications,
-    @JsonProperty(required = true, value = "projectsAndAchievements") ProjectAndAchievement[] projectsAndAchievements,
-    @JsonProperty(required = true, value = "interestsAndHobbies") String[] interestsAndHobbies,
-    @JsonProperty(required = true, value = "references") Reference[] references,
-    @JsonProperty(required = true, value = "tags") String[] tags,
+    @JsonProperty("candidateProfileSummary") String candidateProfileSummary,
+    @JsonProperty("careerStartYear") int careerStartYear,
+    @JsonProperty("personalInformation") PersonalInformation personalInformation,
+    @JsonProperty("keySkills") KeySkill[] keySkills,
+    @JsonProperty("profiles") Profiles profiles,
+    @JsonProperty("workExperience") WorkExperience[] workExperience,
+    @JsonProperty("education") Education[] education,
+    @JsonProperty("certifications") Certification[] certifications,
+    @JsonProperty("skillsAndQualifications") SkillsAndQualifications skillsAndQualifications,
+    @JsonProperty("projectsAndAchievements") ProjectAndAchievement[] projectsAndAchievements,
+    @JsonProperty("interestsAndHobbies") String[] interestsAndHobbies,
+    @JsonProperty("references") Reference[] references,
+    @JsonProperty("tags") String[] tags,
     @JsonProperty("salaryExpectation") SalaryExpectation salaryExpectation) {
 
     public record PersonalInformation(
-        @JsonProperty(required = true, value = "name") String name,
-        @JsonProperty(required = true, value = "contact") Contact contact,
-        @JsonProperty(required = true, value = "role") String role,
-        @JsonProperty(required = true, value = "availability") Availability availability,
-        @JsonProperty(required = true, value = "summary") String summary) {
+        @JsonProperty("name") String name,
+        @JsonProperty("contact") Contact contact,
+        @JsonProperty("role") String role,
+        @JsonProperty("availability") Availability availability,
+        @JsonProperty("summary") String summary) {
     }
 
     public record Contact(
-        @JsonProperty(required = true, value = "email") String email,
-        @JsonProperty(required = true, value = "phone") String phone,
-        @JsonProperty(required = true, value = "address") String address) {
+        @JsonProperty("email") String email,
+        @JsonProperty("phone") String phone,
+        @JsonProperty("address") String address) {
     }
 
     public record Availability(
@@ -53,72 +53,67 @@ public record CVOutputDTO(
     }
 
     public record KeySkill(
-        @JsonProperty(required = true, value = "category") String category,
-        @JsonProperty(required = true, value = "skills") String[] skills) {
+        @JsonProperty("category") String category,
+        @JsonProperty("skills") String[] skills) {
     }
 
     public record Profiles(
-        @JsonProperty(required = true, value = "areasOfExpertise") String[] areasOfExpertise,
-        @JsonProperty(required = true, value = "keyResponsibilities") String[] keyResponsibilities) {
+        @JsonProperty("areasOfExpertise") String[] areasOfExpertise,
+        @JsonProperty("keyResponsibilities") String[] keyResponsibilities) {
     }
 
     public record WorkExperience(
-        @JsonProperty(required = true, value = "company") String company,
-        @JsonProperty(required = true, value = "website") String website,
-        @JsonProperty(required = true, value = "location") String location,
-        @JsonProperty(required = true, value = "from") String from,
-        @JsonProperty(required = true, value = "to") String to,
-        @JsonProperty(required = true, value = "position") String position,
-        @JsonProperty(required = true, value = "activities") Activity[] activities,
-        @JsonProperty(required = true, value = "achievements") String[] achievements,
-        @JsonProperty(required = true, value = "toolsAndTechnologies") String[] toolsAndTechnologies) {
+        @JsonProperty("company") String company,
+        @JsonProperty("website") String website,
+        @JsonProperty("location") String location,
+        @JsonProperty("from") String from,
+        @JsonProperty("to") String to,
+        @JsonProperty("position") String position,
+        @JsonProperty("activities") Activity[] activities,
+        @JsonProperty("achievements") String[] achievements,
+        @JsonProperty("toolsAndTechnologies") String[] toolsAndTechnologies) {
         public record Activity(
-            @JsonProperty(required = true, value = "project") String project,
-            @JsonProperty(required = true, value = "tasks") String[] tasks
+            @JsonProperty("project") String project,
+            @JsonProperty("tasks") String[] tasks
         ) {}
     }
 
     public record Education(
-        @JsonProperty(required = true, value = "year") String year,
-        @JsonProperty(required = true, value = "institution") String institution,
-        @JsonProperty(required = true, value = "degree") String degree,
-        @JsonProperty(required = true, value = "fieldOfStudy") String fieldOfStudy,
-        @JsonProperty(required = true, value = "achievements") String[] achievements) {
+        @JsonProperty("year") String year,
+        @JsonProperty("institution") String institution,
+        @JsonProperty("degree") String degree,
+        @JsonProperty("fieldOfStudy") String fieldOfStudy,
+        @JsonProperty("achievements") String[] achievements) {
     }
 
     public record Certification(
-        @JsonProperty(required = true, value = "title") String title,
-        @JsonProperty(required = true, value = "institution") String institution,
-        @JsonProperty(required = true, value = "year") String year,
-        @JsonProperty(required = true, value = "description") String description) {
+        @JsonProperty("title") String title,
+        @JsonProperty("institution") String institution,
+        @JsonProperty("year") String year,
+        @JsonProperty("description") String description) {
     }
 
     public record SkillsAndQualifications(
-        @JsonProperty(required = true, value = "technicalSkills") String[] technicalSkills,
-        @JsonProperty(required = true, value = "softSkills") String[] softSkills,
-        @JsonProperty(required = true, value = "languages") Language[] languages) {
+        @JsonProperty("technicalSkills") String[] technicalSkills,
+        @JsonProperty("softSkills") String[] softSkills,
+        @JsonProperty("languages") Language[] languages) {
         public record Language(
-            @JsonProperty(required = true, value = "language") String language,
-            @JsonProperty(required = true, value = "proficiency") Proficiency proficiency) {
-            public record Proficiency(
-                @JsonProperty(required = true, value = "read") String read,
-                @JsonProperty(required = true, value = "written") String written,
-                @JsonProperty(required = true, value = "spoken") String spoken
-            ) { }
+            @JsonProperty("language") String language,
+            @JsonProperty("proficiency") String proficiency) {
         }
     }
 
     public record ProjectAndAchievement(
-        @JsonProperty(required = true, value = "title") String title,
-        @JsonProperty(required = true, value = "description") String description,
-        @JsonProperty(required = true, value = "date") String date,
-        @JsonProperty(required = true, value = "impact") String impact) {
+        @JsonProperty("title") String title,
+        @JsonProperty("description") String description,
+        @JsonProperty("date") String date,
+        @JsonProperty("impact") String impact) {
     }
 
     public record Reference(
-        @JsonProperty(required = true, value = "name") String name,
-        @JsonProperty(required = true, value = "position") String position,
-        @JsonProperty(required = true, value = "company") String company,
-        @JsonProperty(required = true, value = "contact") Contact contact) {
+        @JsonProperty("name") String name,
+        @JsonProperty("position") String position,
+        @JsonProperty("company") String company,
+        @JsonProperty("contact") Contact contact) {
     }
 }

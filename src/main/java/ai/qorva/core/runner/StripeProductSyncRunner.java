@@ -1,7 +1,9 @@
 package ai.qorva.core.runner;
 
+import ai.qorva.core.config.QorvaProductProperties;
 import ai.qorva.core.config.StripeProperties;
 import ai.qorva.core.dao.entity.ProductReference;
+import ai.qorva.core.dto.common.ProductFeatures;
 import ai.qorva.core.dto.common.StripePrice;
 import ai.qorva.core.service.ProductReferenceService;
 import com.stripe.Stripe;
@@ -26,11 +28,13 @@ public class StripeProductSyncRunner implements CommandLineRunner {
 
 	private final ProductReferenceService productReferenceService;
 	private final StripeProperties stripeProperties;
+	private final QorvaProductProperties productProperties;
 
 	@Autowired
-	public StripeProductSyncRunner(ProductReferenceService productReferenceService, StripeProperties stripeProperties) {
+	public StripeProductSyncRunner(ProductReferenceService productReferenceService, StripeProperties stripeProperties, QorvaProductProperties productProperties) {
 		this.productReferenceService = productReferenceService;
 		this.stripeProperties = stripeProperties;
+		this.productProperties = productProperties;
 	}
 
 	@Override
@@ -66,7 +70,21 @@ public class StripeProductSyncRunner implements CommandLineRunner {
 		ref.setDescription(product.getDescription());
 		ref.setActive(Boolean.TRUE.equals(product.getActive()));
 		ref.setMetadata(product.getMetadata());
+		ref.setFeatures(resolveFeatures(product.getName()));
 		productReferenceService.upsertProduct(ref);
+	}
+
+	private ProductFeatures resolveFeatures(String productName) {
+		if (productName == null) return null;
+		var plans = java.util.List.of(productProperties.getStarter(), productProperties.getPro(), productProperties.getScale());
+		return plans.stream()
+			.filter(p -> p.getStripeProductName() != null && p.getStripeProductName().equalsIgnoreCase(productName.trim()))
+			.map(QorvaProductProperties.ProductPlanConfig::getFeatures)
+			.findFirst()
+			.orElseGet(() -> {
+				log.warn("No feature config matched for Stripe product '{}' — features will not be set", productName);
+				return null;
+			});
 	}
 
 	private void syncPricesForProduct(String stripeProductId) throws StripeException {

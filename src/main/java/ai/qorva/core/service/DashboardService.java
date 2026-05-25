@@ -22,17 +22,19 @@ public class DashboardService {
 	private final JobPostService jobPostService;
 	private final CVService cvService;
 	private final TenantService tenantService;
+	private final UsageMonitoringService usageMonitoringService;
 	private final ExecutorService dashboardExecutor;
 
 	private static final int TIMEOUT_SECONDS = 15;
 
 	@Autowired
-	public DashboardService(UserService userService, MatchingReportService matchingReportService, JobPostService jobPostService, CVService cvService, TenantService tenantService, ExecutorService dashboardExecutor) {
+	public DashboardService(UserService userService, MatchingReportService matchingReportService, JobPostService jobPostService, CVService cvService, TenantService tenantService, UsageMonitoringService usageMonitoringService, ExecutorService dashboardExecutor) {
 		this.userService = userService;
 		this.matchingReportService = matchingReportService;
 		this.jobPostService = jobPostService;
 		this.cvService = cvService;
 		this.tenantService = tenantService;
+		this.usageMonitoringService = usageMonitoringService;
 		this.dashboardExecutor = dashboardExecutor;
 	}
 
@@ -64,8 +66,8 @@ public class DashboardService {
 			catch (QorvaException e) { throw new RuntimeException(e); }
 		}, dashboardExecutor);
 
-		var totalResumesProcessedInCurrentMonth = CompletableFuture.supplyAsync(
-			() -> this.matchingReportService.countMatchingReportInCurrentMonth(tenantId),
+		var usageMonitoring = CompletableFuture.supplyAsync(
+			() -> this.usageMonitoringService.findCurrentPeriodByTenantId(tenantId).orElse(null),
 			dashboardExecutor
 		);
 
@@ -88,7 +90,7 @@ public class DashboardService {
 		totalJobPosts.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		totalUsers.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		totalMatchingReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
-		totalResumesProcessedInCurrentMonth.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
+		usageMonitoring.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> null);
 		skillReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 		jobPostReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 		topCandidatesPerJob.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
@@ -98,7 +100,7 @@ public class DashboardService {
 			totalJobPosts,
 			totalUsers,
 			totalMatchingReports,
-			totalResumesProcessedInCurrentMonth,
+			usageMonitoring,
 			skillReports,
 			jobPostReports,
 			topCandidatesPerJob
@@ -110,7 +112,7 @@ public class DashboardService {
 			totalJobPosts.join(),
 			totalUsers.join(),
 			totalMatchingReports.join(),
-			totalResumesProcessedInCurrentMonth.join(),
+			usageMonitoring.join(),
 			skillReports.join(),
 			jobPostReports.join(),
 			topCandidatesPerJob.join()

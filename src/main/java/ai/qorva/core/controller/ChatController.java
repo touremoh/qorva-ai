@@ -65,7 +65,7 @@ public class ChatController {
     }
 
     @PostMapping("/{chatId}/messages")
-    @PreAuthorize("@accessManager.hasAuthority(authentication, 'REPLY_MESSAGE')")
+    @PreAuthorize("@accessManager.hasAuthority(authentication, 'REPLY_MESSAGE') and @accessManager.hasNotExceededChatLimit()")
     public ChatMessageDTO postUserMessage(@PathVariable String chatId,
                                           @RequestBody @Valid PostUserMessageRequest req) throws QorvaException {
         req.setTenantId(currentTenantId());

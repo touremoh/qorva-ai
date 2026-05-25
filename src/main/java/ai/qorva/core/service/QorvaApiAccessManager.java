@@ -2,6 +2,7 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.enums.SubscriptionStatus;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.security.TenantContextHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -27,10 +28,12 @@ public class QorvaApiAccessManager {
 	);
 
 	private final TenantService tenantService;
+	private final UsageMonitoringService usageMonitoringService;
 
 	@Autowired
-	public QorvaApiAccessManager(TenantService tenantService) {
+	public QorvaApiAccessManager(TenantService tenantService, UsageMonitoringService usageMonitoringService) {
 		this.tenantService = tenantService;
+		this.usageMonitoringService = usageMonitoringService;
 	}
 
 	public boolean hasAuthority(@AuthenticationPrincipal Authentication authentication, String action) {
@@ -40,6 +43,28 @@ public class QorvaApiAccessManager {
 		String expected = action + ":" + ALLOWED.getValue();
 		return authentication.getAuthorities().stream()
 			.anyMatch(a -> a.getAuthority().equals(expected));
+	}
+
+	public boolean hasNotExceededScreeningLimit() {
+		var tenantId = TenantContextHolder.getTenantId();
+		if (tenantId == null) return false;
+		try {
+			return !usageMonitoringService.hasExceededLimit(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS);
+		} catch (Exception e) {
+			log.warn("Could not verify screening limit for tenantId={}", tenantId, e);
+			return true;
+		}
+	}
+
+	public boolean hasNotExceededChatLimit() {
+		var tenantId = TenantContextHolder.getTenantId();
+		if (tenantId == null) return false;
+		try {
+			return !usageMonitoringService.hasExceededLimit(tenantId, UsageMonitoringService.FeatureKey.AI_RESUME_CHATS);
+		} catch (Exception e) {
+			log.warn("Could not verify chat limit for tenantId={}", tenantId, e);
+			return true;
+		}
 	}
 
 	/** Step 11: grants access only if the tenant's subscription is active or trialing. */

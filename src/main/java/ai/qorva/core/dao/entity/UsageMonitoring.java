@@ -1,6 +1,6 @@
 package ai.qorva.core.dao.entity;
 
-import ai.qorva.core.dto.common.ScoringRules;
+import ai.qorva.core.dto.common.UsageFeatures;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,21 +16,19 @@ import java.time.Instant;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "job_posts")
-public class JobPost implements QorvaEntity {
+@Document(collection = "usage_monitoring")
+public class UsageMonitoring implements QorvaEntity {
 
     @Id
     private String id;
 
-    private String title;
-    private String description;
-
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
-    private String status;
 
-    private ScoringRules scoringRules;
-    private Boolean matchingReportsNeeded;
+    private Instant currentPeriodStart;
+    private Instant currentPeriodEnd;
+    private String subscriptionTier;
+    private UsageFeatures features;
 
     @CreatedDate
     private Instant createdAt;
@@ -43,6 +41,4 @@ public class JobPost implements QorvaEntity {
 
     @LastModifiedBy
     private String lastUpdatedBy;
-
-    private float[] embedding;
 }

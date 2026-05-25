@@ -1,6 +1,6 @@
 package ai.qorva.core.dto;
 
-import ai.qorva.core.dto.common.ScoringRules;
+import ai.qorva.core.dto.common.UsageFeatures;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
@@ -17,19 +17,19 @@ import java.time.Instant;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class JobPostDTO extends AbstractQorvaDTO {
+public class UsageMonitoringDTO extends AbstractQorvaDTO {
+
     private String id;
     private String tenantId;
-    private ScoringRules scoringRules;
-    private Boolean matchingReportsNeeded;
-    private String title;
-    private String description;
-    private String createdBy;
-    private String lastUpdatedBy;
-    private String status;
 
-    @JsonProperty(access = Access.WRITE_ONLY)
-    private float[] embedding;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant currentPeriodStart;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant currentPeriodEnd;
+
+    private String subscriptionTier;
+    private UsageFeatures features;
 
     @JsonProperty(access = Access.READ_ONLY)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
@@ -39,7 +39,14 @@ public class JobPostDTO extends AbstractQorvaDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
     private Instant lastUpdatedAt;
 
-    public String toJobTitleAndDescription() {
-        return "Job Title: " + getTitle() + "\n Job Description: " + getDescription();
+    @JsonProperty(access = Access.READ_ONLY)
+    private String createdBy;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private String lastUpdatedBy;
+
+    @Override
+    public void setTenantId(String tenantId) {
+        this.tenantId = tenantId;
     }
 }

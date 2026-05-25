@@ -1,5 +1,6 @@
 package ai.qorva.core.dao.entity;
 
+import ai.qorva.core.dto.common.ProductFeatures;
 import ai.qorva.core.dto.common.StripePrice;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,6 +30,7 @@ public class ProductReference implements QorvaEntity {
     private Map<String, String> metadata;
 
     private List<StripePrice> prices;
+    private ProductFeatures features;
 
     @CreatedDate
     private Instant createdAt;

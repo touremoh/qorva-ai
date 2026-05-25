@@ -61,6 +61,47 @@
             }
           }
         },
+        "features": {
+          "bsonType": "object",
+          "description": "Plan feature configuration including seat count, usage limits, and overage pricing",
+          "properties": {
+            "seats": {
+              "bsonType": ["int", "null"],
+              "description": "Number of seats included in the plan"
+            },
+            "limits": {
+              "bsonType": "object",
+              "properties": {
+                "screeningActions": {
+                  "bsonType": ["int", "null"]
+                },
+                "aiResumeChats": {
+                  "bsonType": ["int", "null"]
+                },
+                "talentIntelligenceQueries": {
+                  "bsonType": ["int", "null"]
+                }
+              }
+            },
+            "overage": {
+              "bsonType": "object",
+              "properties": {
+                "enabled": {
+                  "bsonType": "bool"
+                },
+                "screeningActionPrice": {
+                  "bsonType": ["double", "null"]
+                },
+                "chatPrice": {
+                  "bsonType": ["double", "null"]
+                },
+                "intelligenceQueryPrice": {
+                  "bsonType": ["double", "null"]
+                }
+              }
+            }
+          }
+        },
         "createdAt": {
           "bsonType": "date"
         },
