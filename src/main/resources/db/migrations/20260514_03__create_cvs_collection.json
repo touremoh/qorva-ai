@@ -281,6 +281,71 @@
           "description": "searchable tags",
           "items": { "bsonType": "string" }
         },
+        "candidateClustering": {
+          "bsonType": "object",
+          "description": "semantic talent clustering information inferred from the candidate CV",
+          "properties": {
+            "primaryCluster": {
+              "bsonType": "string",
+              "description": "main talent cluster, e.g. AI & Machine Learning, DevOps & Platform Engineering"
+            },
+            "secondaryClusters": {
+              "bsonType": "array",
+              "description": "additional relevant talent clusters",
+              "items": { "bsonType": "string" }
+            },
+            "functionalExpertise": {
+              "bsonType": "array",
+              "description": "core professional expertise areas",
+              "items": { "bsonType": "string" }
+            },
+            "skillDepth": {
+              "bsonType": "string",
+              "enum": ["generalist", "specialist", "tShaped", "hybrid", "unknown"],
+              "description": "candidate expertise depth profile"
+            },
+            "businessImpact": {
+              "bsonType": "array",
+              "description": "measurable or qualitative business impact indicators",
+              "items": { "bsonType": "string" }
+            },
+            "industryDomains": {
+              "bsonType": "array",
+              "description": "industries where the candidate has experience",
+              "items": { "bsonType": "string" }
+            },
+            "environmentFit": {
+              "bsonType": "array",
+              "description": "best-fit work environments such as startup, enterprise, regulated enterprise, consulting, SaaS",
+              "items": { "bsonType": "string" }
+            },
+            "seniorityLevel": {
+              "bsonType": "string",
+              "enum": ["junior", "midLevel", "senior", "lead", "principal", "manager", "director", "executive", "unknown"],
+              "description": "estimated candidate seniority level"
+            },
+            "leadershipAndInfluence": {
+              "bsonType": "string",
+              "enum": ["none", "individualContributor", "teamLead", "crossFunctionalLeader", "strategicLeader", "executiveInfluence", "unknown"],
+              "description": "candidate leadership and stakeholder influence level"
+            },
+            "learningVelocity": {
+              "bsonType": "string",
+              "enum": ["low", "medium", "high", "veryHigh", "unknown"],
+              "description": "evidence of adaptability, upskilling, certifications, and career evolution"
+            },
+            "clusterConfidenceScore": {
+              "bsonType": "double",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "confidence score of the clustering analysis between 0 and 1"
+            },
+            "clusterReasoning": {
+              "bsonType": "string",
+              "description": "short explanation of why the candidate belongs to this cluster"
+            }
+          }
+        },
         "createdAt": {
           "bsonType": "date",
           "description": "must be a date and is required"

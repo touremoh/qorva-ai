@@ -17,4 +17,5 @@ public  class CandidateInfo {
     private int nbYearsExperience;
     private String candidateProfileSummary;
     private List<String> skills;
+    private CandidateClustering candidateClustering;
 }

@@ -40,6 +40,7 @@ public class CVDTO extends AbstractQorvaDTO {
     private List<String> interestsAndHobbies;
     private List<Reference> references;
     private SalaryExpectation salaryExpectation;
+    private CandidateClustering candidateClustering;
     private Binary attachment;
     private List<String> tags;
 

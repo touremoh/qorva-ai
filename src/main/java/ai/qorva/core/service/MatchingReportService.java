@@ -115,6 +115,7 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 		candidateInfo.setCandidateId(cvDto.getId());
 		candidateInfo.setNbYearsExperience(cvDto.getNbYearsOfExperience());
 		candidateInfo.setCandidateProfileSummary(cvDto.getCandidateProfileSummary());
+		candidateInfo.setCandidateClustering(cvDto.getCandidateClustering());
 
 		var skills = new ArrayList<String>();
 

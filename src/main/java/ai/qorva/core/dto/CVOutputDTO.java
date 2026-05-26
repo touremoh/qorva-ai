@@ -18,7 +18,8 @@ public record CVOutputDTO(
     @JsonProperty("interestsAndHobbies") String[] interestsAndHobbies,
     @JsonProperty("references") Reference[] references,
     @JsonProperty("tags") String[] tags,
-    @JsonProperty("salaryExpectation") SalaryExpectation salaryExpectation) {
+    @JsonProperty("salaryExpectation") SalaryExpectation salaryExpectation,
+    @JsonProperty("candidateClustering") CandidateClustering candidateClustering) {
 
     public record PersonalInformation(
         @JsonProperty("name") String name,
@@ -115,5 +116,20 @@ public record CVOutputDTO(
         @JsonProperty("position") String position,
         @JsonProperty("company") String company,
         @JsonProperty("contact") Contact contact) {
+    }
+
+    public record CandidateClustering(
+        @JsonProperty("primaryCluster") String primaryCluster,
+        @JsonProperty("secondaryClusters") String[] secondaryClusters,
+        @JsonProperty("functionalExpertise") String[] functionalExpertise,
+        @JsonProperty("skillDepth") String skillDepth,
+        @JsonProperty("businessImpact") String[] businessImpact,
+        @JsonProperty("industryDomains") String[] industryDomains,
+        @JsonProperty("environmentFit") String[] environmentFit,
+        @JsonProperty("seniorityLevel") String seniorityLevel,
+        @JsonProperty("leadershipAndInfluence") String leadershipAndInfluence,
+        @JsonProperty("learningVelocity") String learningVelocity,
+        @JsonProperty("clusterConfidenceScore") Double clusterConfidenceScore,
+        @JsonProperty("clusterReasoning") String clusterReasoning) {
     }
 }

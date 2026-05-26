@@ -380,6 +380,71 @@
       "items": {
         "type": "string"
       }
+    },
+    "candidateClustering": {
+      "type": "object",
+      "description": "Semantic talent clustering information inferred from the candidate CV",
+      "properties": {
+        "primaryCluster": {
+          "type": "string",
+          "description": "Main talent cluster, e.g. AI & Machine Learning, DevOps & Platform Engineering"
+        },
+        "secondaryClusters": {
+          "type": "array",
+          "description": "Additional relevant talent clusters",
+          "items": { "type": "string" }
+        },
+        "functionalExpertise": {
+          "type": "array",
+          "description": "Core professional expertise areas",
+          "items": { "type": "string" }
+        },
+        "skillDepth": {
+          "type": "string",
+          "enum": ["generalist", "specialist", "tShaped", "hybrid", "unknown"],
+          "description": "Candidate expertise depth profile"
+        },
+        "businessImpact": {
+          "type": "array",
+          "description": "Measurable or qualitative business impact indicators",
+          "items": { "type": "string" }
+        },
+        "industryDomains": {
+          "type": "array",
+          "description": "Industries where the candidate has experience",
+          "items": { "type": "string" }
+        },
+        "environmentFit": {
+          "type": "array",
+          "description": "Best-fit work environments such as startup, enterprise, regulated enterprise, consulting, SaaS",
+          "items": { "type": "string" }
+        },
+        "seniorityLevel": {
+          "type": "string",
+          "enum": ["junior", "midLevel", "senior", "lead", "principal", "manager", "director", "executive", "unknown"],
+          "description": "Estimated candidate seniority level"
+        },
+        "leadershipAndInfluence": {
+          "type": "string",
+          "enum": ["none", "individualContributor", "teamLead", "crossFunctionalLeader", "strategicLeader", "executiveInfluence", "unknown"],
+          "description": "Candidate leadership and stakeholder influence level"
+        },
+        "learningVelocity": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "veryHigh", "unknown"],
+          "description": "Evidence of adaptability, upskilling, certifications, and career evolution"
+        },
+        "clusterConfidenceScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Confidence score of the clustering analysis between 0 and 1"
+        },
+        "clusterReasoning": {
+          "type": "string",
+          "description": "Short explanation of why the candidate belongs to this cluster"
+        }
+      }
     }
   }
 }
