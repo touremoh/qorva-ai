@@ -26,7 +26,10 @@ import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.*;
+import java.util.List;
+import java.util.Locale;
+import java.util.Objects;
+import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;
 
@@ -95,15 +98,13 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     @Override
     protected void preProcessUpdateOne(String id, CVDTO newCV) throws QorvaException {
         super.preProcessUpdateOne(id, newCV);
+        this.mapper.merge(newCV, getExistingForUpdate());
+    }
 
-        var existingCV = Optional
-            .ofNullable(this.findOneById(id))
-            .orElseThrow(() -> {
-                log.warn("Unable to update CV. Resource {} not found", id);
-                return new QorvaException("Unable to update CV. CV not found");
-            });
-
-        this.mapper.merge(newCV, existingCV);
+    @Override
+    protected void postProcessUpdateOne(CV entity) {
+        // Since entity was update we've needed to relaunch the marching report again
+        this.jobPostService.markOpenJobPostsAsNeedingReports(entity.getTenantId());
     }
 
     public List<CVDTO> upload(List<MultipartFile> files, String tenantId) throws QorvaException {

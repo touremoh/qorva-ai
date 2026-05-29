@@ -61,18 +61,7 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 	@Override
 	protected void preProcessUpdateOne(String id, MatchingReportDTO requestData) throws QorvaException {
 		super.preProcessUpdateOne(id, requestData);
-
-		// Check if the user exists before creating one
-		var application = this.findOneById(id);
-
-		// Make sure we only update existing user
-		if (Objects.isNull(application)) {
-			log.warn("Job Application not found while trying to update");
-			throw new QorvaException("Job Application not found while trying to update");
-		}
-
-		// Merge objects
-		this.mapper.merge(requestData, application);
+		this.mapper.merge(requestData, getExistingForUpdate());
 	}
 
 	public void upsertReport(JobPostDTO jobPost, MatchingReportDetails details, CVDTO cv) throws QorvaException {

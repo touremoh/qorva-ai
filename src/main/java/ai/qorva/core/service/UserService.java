@@ -103,18 +103,7 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 	@Override
 	protected void preProcessUpdateOne(String id, UserDTO userDTO) throws QorvaException {
 		super.preProcessUpdateOne(id, userDTO);
-
-		var userFound = this.findOneById(id);
-		if (Objects.isNull(userFound)) {
-			log.error("User {} not found", id);
-			throw new QorvaException(
-				"Unable to update user with invalid id",
-				QorvaErrorsEnum.RESOURCE_NOT_FOUND.getHttpStatus().value(),
-				QorvaErrorsEnum.RESOURCE_NOT_FOUND.getHttpStatus()
-			);
-		}
-
-		this.mapper.merge(userDTO, userFound);
+		this.mapper.merge(userDTO, getExistingForUpdate());
 	}
 
 	public void updatePassword(String tenantId, String userId, String currentPassword, String newPassword) throws QorvaException {

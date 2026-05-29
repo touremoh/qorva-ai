@@ -45,10 +45,8 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
     @Override
     protected void preProcessUpdateOne(String id, JobPostDTO newJobPost) throws QorvaException {
         super.preProcessUpdateOne(id, newJobPost);
-
-        var existingJobPost = this.findOneById(id);
-        this.mapper.merge(newJobPost, existingJobPost);
-		newJobPost.setMatchingReportsNeeded(isJobPostOpen(newJobPost));
+        this.mapper.merge(newJobPost, getExistingForUpdate());
+        newJobPost.setMatchingReportsNeeded(isJobPostOpen(newJobPost));
     }
 
     @Override

@@ -12,7 +12,9 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import static org.springframework.util.ObjectUtils.isEmpty;
@@ -54,28 +56,30 @@ public class QorvaUtils {
 			throw new QorvaException("Target and source objects must not be null.");
 		}
 
-		Class<?> clazz = target.getClass();
-
-		// Iterate over all fields of the class
-		for (Field field : clazz.getDeclaredFields()) {
-			// Allow private fields to be accessed
+		for (Field field : target.getClass().getDeclaredFields()) {
 			field.setAccessible(true);
-
 			try {
-				// Get value of the field in target
 				Object targetValue = field.get(target);
-
-				// Get value of the field in source
 				Object sourceValue = field.get(source);
 
-				// Update only if the target field is null and the source field is not null
 				if (targetValue == null && sourceValue != null) {
-					field.set(target, sourceValue); // Set target field to source field value
+					field.set(target, sourceValue);
+				} else if (targetValue != null && sourceValue != null && isRecursable(field.getType())) {
+					patchLeft(targetValue, sourceValue);
 				}
 			} catch (IllegalAccessException e) {
 				throw new QorvaException("Could not access field: " + field.getName(), e);
 			}
 		}
+	}
+
+	private boolean isRecursable(Class<?> type) {
+		return !type.isPrimitive()
+			&& !type.isEnum()
+			&& !type.isArray()
+			&& !Collection.class.isAssignableFrom(type)
+			&& !Map.class.isAssignableFrom(type)
+			&& type.getPackageName().startsWith("ai.qorva");
 	}
 
 	public Instant getFirstDayOfMonth() {

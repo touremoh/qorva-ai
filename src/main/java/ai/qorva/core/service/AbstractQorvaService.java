@@ -31,11 +31,17 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     protected final AbstractQorvaMapper<E, D> mapper;
     protected final QorvaQueryBuilder<E> queryBuilder;
 
+    private final ThreadLocal<D> existingDTOForUpdate = new ThreadLocal<>();
+
     protected AbstractQorvaService(QorvaRepository<E> repository, AbstractQorvaMapper<E, D> mapper, QorvaQueryBuilder<E> queryBuilder) {
         this.repository = repository;
         this.mapper = mapper;
 		this.queryBuilder = queryBuilder;
 	}
+
+    protected D getExistingForUpdate() {
+        return existingDTOForUpdate.get();
+    }
 
     // -------------------------------------------------------------------------
     // Tenant context helper
@@ -312,6 +318,8 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
             throw e;
         } catch (Exception e) {
             throw wrapException(e, "Error updating resource with ID: " + id);
+        } finally {
+            existingDTOForUpdate.remove();
         }
     }
 
@@ -331,6 +339,9 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
 
         // Prevent the caller from overriding the tenantId on the saved document
         newResource.setTenantId(existing.getTenantId());
+
+        // Cache the existing DTO so child overrides can merge without a second DB round-trip
+        existingDTOForUpdate.set(renderFindOneById(existing));
     }
 
     protected void postProcessUpdateOne(E entity) {

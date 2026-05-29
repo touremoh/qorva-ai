@@ -6,7 +6,6 @@ import ai.qorva.core.dto.TenantDTO;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.TenantMapper;
 import ai.qorva.core.dao.querybuilder.TenantQueryBuilder;
-import ai.qorva.core.utils.QorvaUtils;
 import io.jsonwebtoken.lang.Strings;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,21 +39,7 @@ public class TenantService extends AbstractQorvaService<TenantDTO,Tenant> {
 	@Override
 	protected void preProcessUpdateOne(String id, TenantDTO dto) throws QorvaException {
 		super.preProcessUpdateOne(id, dto);
-
-		// Find the resource to update
-		var foundTenant = this.findOneById(id);
-
-		// Merge the new resource data into the existing one
-		var newSubscriptionInfo = dto.getSubscriptionInfo();
-		var oldSubscriptionInfo = foundTenant.getSubscriptionInfo();
-
-		if (Objects.isNull(newSubscriptionInfo)) {
-			dto.setSubscriptionInfo(oldSubscriptionInfo);
-		} else {
-			QorvaUtils.patchLeft(newSubscriptionInfo, oldSubscriptionInfo);
-			dto.setSubscriptionInfo(newSubscriptionInfo);
-		}
-		this.mapper.merge(dto, foundTenant);
+		this.mapper.merge(dto, getExistingForUpdate());
 	}
 
 	@Override
