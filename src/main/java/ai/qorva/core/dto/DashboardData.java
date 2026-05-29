@@ -14,8 +14,14 @@ public record DashboardData(
 	UsageMonitoringDTO usageMonitoring,
 	List<SkillReport> skillsReport,
 	List<ApplicationPerJobPostReport> jobPostsReport,
-	List<TopCandidatesPerJobReport> topCandidatesPerJob
+	List<TopCandidatesPerJobReport> topCandidatesPerJob,
+	List<ClusteringCategoryReport> skillDepthReport,
+	List<ClusteringCategoryReport> seniorityLevelReport,
+	List<ClusteringCategoryReport> leadershipReport,
+	List<ClusteringCategoryReport> learningVelocityReport
 ) {
+
+	public record ClusteringCategoryReport(String name, int count, double percentage) {}
 
 	public record ApplicationPerJobPostReport(String jobPostTitle, int totalMatch) {}
 

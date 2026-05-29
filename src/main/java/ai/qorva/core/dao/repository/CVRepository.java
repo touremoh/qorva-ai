@@ -36,4 +36,36 @@ public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepos
 	})
 	List<DashboardData.SkillReport> getSkillReportByTenantId(ObjectId tenantId);
 
+	@Aggregation(pipeline = {
+		"{ '$match': { 'tenantId': ?0, 'candidateClustering.skillDepth': { '$exists': true, '$ne': null } } }",
+		"{ '$group': { '_id': '$candidateClustering.skillDepth', 'count': { '$sum': 1 } } }",
+		"{ '$project': { 'name': '$_id', 'count': 1, 'percentage': { '$literal': 0.0 }, '_id': 0 } }",
+		"{ '$sort': { 'count': -1 } }"
+	})
+	List<DashboardData.ClusteringCategoryReport> getSkillDepthReportByTenantId(ObjectId tenantId);
+
+	@Aggregation(pipeline = {
+		"{ '$match': { 'tenantId': ?0, 'candidateClustering.seniorityLevel': { '$exists': true, '$ne': null } } }",
+		"{ '$group': { '_id': '$candidateClustering.seniorityLevel', 'count': { '$sum': 1 } } }",
+		"{ '$project': { 'name': '$_id', 'count': 1, 'percentage': { '$literal': 0.0 }, '_id': 0 } }",
+		"{ '$sort': { 'count': -1 } }"
+	})
+	List<DashboardData.ClusteringCategoryReport> getSeniorityLevelReportByTenantId(ObjectId tenantId);
+
+	@Aggregation(pipeline = {
+		"{ '$match': { 'tenantId': ?0, 'candidateClustering.leadershipAndInfluence': { '$exists': true, '$ne': null } } }",
+		"{ '$group': { '_id': '$candidateClustering.leadershipAndInfluence', 'count': { '$sum': 1 } } }",
+		"{ '$project': { 'name': '$_id', 'count': 1, 'percentage': { '$literal': 0.0 }, '_id': 0 } }",
+		"{ '$sort': { 'count': -1 } }"
+	})
+	List<DashboardData.ClusteringCategoryReport> getLeadershipReportByTenantId(ObjectId tenantId);
+
+	@Aggregation(pipeline = {
+		"{ '$match': { 'tenantId': ?0, 'candidateClustering.learningVelocity': { '$exists': true, '$ne': null } } }",
+		"{ '$group': { '_id': '$candidateClustering.learningVelocity', 'count': { '$sum': 1 } } }",
+		"{ '$project': { 'name': '$_id', 'count': 1, 'percentage': { '$literal': 0.0 }, '_id': 0 } }",
+		"{ '$sort': { 'count': -1 } }"
+	})
+	List<DashboardData.ClusteringCategoryReport> getLearningVelocityReportByTenantId(ObjectId tenantId);
+
 }

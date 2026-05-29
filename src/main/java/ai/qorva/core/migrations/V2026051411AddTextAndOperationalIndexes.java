@@ -38,7 +38,8 @@ public class V2026051411AddTextAndOperationalIndexes extends AbstractQorvaDbMigr
 				Indexes.text("keySkills.skills"),
 				Indexes.text("skillsAndQualifications.softSkills"),
 				Indexes.text("skillsAndQualifications.technicalSkills"),
-				Indexes.text("profiles.areasOfExpertise")
+				Indexes.text("profiles.areasOfExpertise"),
+				Indexes.text("applicantNumber")
 			),
 			new IndexOptions().name("cvs_text_search_idx")
 		);

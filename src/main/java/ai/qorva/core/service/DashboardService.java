@@ -76,6 +76,26 @@ public class DashboardService {
 			dashboardExecutor
 		);
 
+		var skillDepthReport = CompletableFuture.supplyAsync(
+			() -> this.cvService.getSkillDepthReportByTenantId(tenantId),
+			dashboardExecutor
+		);
+
+		var seniorityLevelReport = CompletableFuture.supplyAsync(
+			() -> this.cvService.getSeniorityLevelReportByTenantId(tenantId),
+			dashboardExecutor
+		);
+
+		var leadershipReport = CompletableFuture.supplyAsync(
+			() -> this.cvService.getLeadershipReportByTenantId(tenantId),
+			dashboardExecutor
+		);
+
+		var learningVelocityReport = CompletableFuture.supplyAsync(
+			() -> this.cvService.getLearningVelocityReportByTenantId(tenantId),
+			dashboardExecutor
+		);
+
 		var jobPostReports = CompletableFuture.supplyAsync(
 			() -> this.matchingReportService.getApplicationsPerJobPost(tenantId),
 			dashboardExecutor
@@ -92,6 +112,10 @@ public class DashboardService {
 		totalMatchingReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		usageMonitoring.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> null);
 		skillReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
+		skillDepthReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
+		seniorityLevelReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
+		leadershipReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
+		learningVelocityReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 		jobPostReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 		topCandidatesPerJob.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 
@@ -102,6 +126,10 @@ public class DashboardService {
 			totalMatchingReports,
 			usageMonitoring,
 			skillReports,
+			skillDepthReport,
+			seniorityLevelReport,
+			leadershipReport,
+			learningVelocityReport,
 			jobPostReports,
 			topCandidatesPerJob
 		).join();
@@ -115,7 +143,11 @@ public class DashboardService {
 			usageMonitoring.join(),
 			skillReports.join(),
 			jobPostReports.join(),
-			topCandidatesPerJob.join()
+			topCandidatesPerJob.join(),
+			skillDepthReport.join(),
+			seniorityLevelReport.join(),
+			leadershipReport.join(),
+			learningVelocityReport.join()
 		);
 	}
 }

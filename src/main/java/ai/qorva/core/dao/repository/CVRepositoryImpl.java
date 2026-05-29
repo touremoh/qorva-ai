@@ -73,8 +73,8 @@ public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, Simil
 			.append("index", "cvs_search_index")
 			.append("queryVector", vector)
 			.append("path", "embedding")
-			.append("numCandidates", 500)
-			.append("limit", 50)
+			.append("numCandidates", 1000)
+			.append("limit", 20)
 			.append("filter", new Document("tenantId", new Document("$eq", tenantId)));
 
 		AggregationOperation vectorSearch = ctx -> new Document("$vectorSearch", vectorSearchDoc);

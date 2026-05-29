@@ -1,4 +1,4 @@
-db.CVs.createIndex({
+db.cvs.createIndex({
     "personalInformation.name": "text",
     "personalInformation.contact.email": "text",
     "personalInformation.role": "text",
@@ -7,20 +7,21 @@ db.CVs.createIndex({
     "keySkills.skills": "text",
     "skillsAndQualifications.softSkills": "text",
     "skillsAndQualifications.technicalSkills": "text",
-    "profiles.areasOfExpertise": "text"
+    "profiles.areasOfExpertise": "text",
+    "applicantNumber": "text"
 });
 
-db.JobsPosts.createIndex({
+db.job_posts.createIndex({
     title: "text",
     description: "text"
 });
 
-db.ResumeMatches.createIndex({
+db.match_reports.createIndex({
     "candidateInfo.candidateName": "text",
     "candidateInfo.skills": "text",
 });
 
-db.Users.createIndex(
+db.users.createIndex(
     {
         email: 1,
         "companyInfo.tenantId": 1
@@ -32,15 +33,15 @@ db.Users.createIndex(
 );
 
 // Indexes for Chats (multi-tenant + recency + ownership)
-db.Chats.createIndex({ tenantId: 1, "participants.userId": 1, status: 1, lastUpdatedAt: -1 });
-db.Chats.createIndex({ tenantId: 1, "context.cvId": 1 });
-db.Chats.createIndex({ tenantId: 1, "context.jobPostId": 1 });
-db.Chats.createIndex({ tenantId: 1, "context.resumeMatchId": 1 });
-db.Chats.createIndex({ tenantId: 1, title: "text", "metadata.tags": 1 });
+db.chats.createIndex({ tenantId: 1, "participants.userId": 1, status: 1, lastUpdatedAt: -1 });
+db.chats.createIndex({ tenantId: 1, "context.cvId": 1 });
+db.chats.createIndex({ tenantId: 1, "context.jobPostId": 1 });
+db.chats.createIndex({ tenantId: 1, "context.resumeMatchId": 1 });
+db.chats.createIndex({ tenantId: 1, title: "text", "metadata.tags": 1 });
 
 // Indexes for ChatMessages (fast timeline + multi-tenant)
-db.ChatMessages.createIndex({ tenantId: 1, chatId: 1, createdAt: 1 });
-db.ChatMessages.createIndex({ tenantId: 1, chatId: 1, role: 1, createdAt: 1 });
+db.chat_messages.createIndex({ tenantId: 1, chatId: 1, createdAt: 1 });
+db.chat_messages.createIndex({ tenantId: 1, chatId: 1, role: 1, createdAt: 1 });
 
 // Compound vector index for CVs collection in Mongo Atlas
 {

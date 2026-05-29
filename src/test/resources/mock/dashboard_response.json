@@ -1,0 +1,111 @@
+{
+  "subscriptionStatus": "active",
+  "totalCVs": 142,
+  "totalJobsPosted": 18,
+  "totalUsers": 5,
+  "totalResumeAnalysis": 87,
+  "usageMonitoring": {
+    "id": "664f1a2b3c4d5e6f7a8b9c0d",
+    "tenantId": "663e2b3c4d5e6f7a8b9c0d1e",
+    "currentPeriodStart": "2026-05-01T00:00:00Z",
+    "currentPeriodEnd": "2026-05-31T23:59:59Z",
+    "subscriptionTier": "pro",
+    "features": {
+      "screeningActions": {
+        "limit": 200,
+        "consumed": 87,
+        "cumulative": 412
+      },
+      "aiResumeChats": {
+        "limit": 500,
+        "consumed": 134,
+        "cumulative": 891
+      },
+      "talentIntelligenceQueries": {
+        "limit": 100,
+        "consumed": 23,
+        "cumulative": 156
+      }
+    },
+    "createdAt": "2026-01-15T08:00:00Z",
+    "lastUpdatedAt": "2026-05-28T14:32:00Z",
+    "createdBy": "system",
+    "lastUpdatedBy": "system"
+  },
+  "skillsReport": [
+    { "skill": "Java",        "totalMatch": 54 },
+    { "skill": "Python",      "totalMatch": 41 },
+    { "skill": "React",       "totalMatch": 38 },
+    { "skill": "Spring Boot", "totalMatch": 33 },
+    { "skill": "SQL",         "totalMatch": 29 },
+    { "skill": "AWS",         "totalMatch": 22 },
+    { "skill": "Docker",      "totalMatch": 19 },
+    { "skill": "TypeScript",  "totalMatch": 17 },
+    { "skill": "Kubernetes",  "totalMatch": 12 },
+    { "skill": "GraphQL",     "totalMatch":  9 }
+  ],
+  "jobPostsReport": [
+    { "jobPostTitle": "Senior Backend Engineer", "totalMatch": 34 },
+    { "jobPostTitle": "Frontend Developer",      "totalMatch": 28 },
+    { "jobPostTitle": "Data Engineer",           "totalMatch": 21 },
+    { "jobPostTitle": "DevOps Engineer",         "totalMatch":  4 }
+  ],
+  "topCandidatesPerJob": [
+    {
+      "jobPostTitle": "Senior Backend Engineer",
+      "topCandidates": [
+        { "candidateId": "664a1b2c3d4e5f6a7b8c9d0e", "candidateName": "Alice Martin", "score": 94 },
+        { "candidateId": "664a1b2c3d4e5f6a7b8c9d0f", "candidateName": "Bob Chen",     "score": 88 },
+        { "candidateId": "664a1b2c3d4e5f6a7b8c9d10", "candidateName": "Carla Diaz",   "score": 82 }
+      ]
+    },
+    {
+      "jobPostTitle": "Frontend Developer",
+      "topCandidates": [
+        { "candidateId": "664a1b2c3d4e5f6a7b8c9d11", "candidateName": "David Nguyen", "score": 91 },
+        { "candidateId": "664a1b2c3d4e5f6a7b8c9d12", "candidateName": "Eva Rossi",    "score": 85 }
+      ]
+    },
+    {
+      "jobPostTitle": "Data Engineer",
+      "topCandidates": [
+        { "candidateId": "664a1b2c3d4e5f6a7b8c9d13", "candidateName": "Frank Okafor", "score": 89 },
+        { "candidateId": "664a1b2c3d4e5f6a7b8c9d14", "candidateName": "Grace Kim",    "score": 76 }
+      ]
+    }
+  ],
+  "skillDepthReport": [
+    { "name": "specialist", "count": 61, "percentage": 43.0 },
+    { "name": "tShaped",    "count": 38, "percentage": 26.8 },
+    { "name": "generalist", "count": 27, "percentage": 19.0 },
+    { "name": "hybrid",     "count": 12, "percentage":  8.5 },
+    { "name": "unknown",    "count":  4, "percentage":  2.8 }
+  ],
+  "seniorityLevelReport": [
+    { "name": "senior",    "count": 48, "percentage": 33.8 },
+    { "name": "midLevel",  "count": 37, "percentage": 26.1 },
+    { "name": "junior",    "count": 22, "percentage": 15.5 },
+    { "name": "lead",      "count": 18, "percentage": 12.7 },
+    { "name": "principal", "count":  8, "percentage":  5.6 },
+    { "name": "manager",   "count":  5, "percentage":  3.5 },
+    { "name": "director",  "count":  2, "percentage":  1.4 },
+    { "name": "executive", "count":  1, "percentage":  0.7 },
+    { "name": "unknown",   "count":  1, "percentage":  0.7 }
+  ],
+  "leadershipReport": [
+    { "name": "individualContributor",  "count": 58, "percentage": 40.8 },
+    { "name": "teamLead",               "count": 31, "percentage": 21.8 },
+    { "name": "none",                   "count": 24, "percentage": 16.9 },
+    { "name": "crossFunctionalLeader",  "count": 17, "percentage": 12.0 },
+    { "name": "strategicLeader",        "count":  8, "percentage":  5.6 },
+    { "name": "executiveInfluence",     "count":  3, "percentage":  2.1 },
+    { "name": "unknown",                "count":  1, "percentage":  0.7 }
+  ],
+  "learningVelocityReport": [
+    { "name": "high",     "count": 55, "percentage": 38.7 },
+    { "name": "medium",   "count": 48, "percentage": 33.8 },
+    { "name": "veryHigh", "count": 27, "percentage": 19.0 },
+    { "name": "low",      "count":  9, "percentage":  6.3 },
+    { "name": "unknown",  "count":  3, "percentage":  2.1 }
+  ]
+}

@@ -230,6 +230,30 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         return ((CVRepository) this.repository).getSkillReportByTenantId(new ObjectId(tenantId));
     }
 
+    public List<DashboardData.ClusteringCategoryReport> getSkillDepthReportByTenantId(String tenantId) {
+        return withPercentages(((CVRepository) this.repository).getSkillDepthReportByTenantId(new ObjectId(tenantId)));
+    }
+
+    public List<DashboardData.ClusteringCategoryReport> getSeniorityLevelReportByTenantId(String tenantId) {
+        return withPercentages(((CVRepository) this.repository).getSeniorityLevelReportByTenantId(new ObjectId(tenantId)));
+    }
+
+    public List<DashboardData.ClusteringCategoryReport> getLeadershipReportByTenantId(String tenantId) {
+        return withPercentages(((CVRepository) this.repository).getLeadershipReportByTenantId(new ObjectId(tenantId)));
+    }
+
+    public List<DashboardData.ClusteringCategoryReport> getLearningVelocityReportByTenantId(String tenantId) {
+        return withPercentages(((CVRepository) this.repository).getLearningVelocityReportByTenantId(new ObjectId(tenantId)));
+    }
+
+    private List<DashboardData.ClusteringCategoryReport> withPercentages(List<DashboardData.ClusteringCategoryReport> raw) {
+        int total = raw.stream().mapToInt(DashboardData.ClusteringCategoryReport::count).sum();
+        if (total == 0) return raw;
+        return raw.stream()
+            .map(r -> new DashboardData.ClusteringCategoryReport(r.name(), r.count(), Math.round((double) r.count() / total * 1000.0) / 10.0))
+            .toList();
+    }
+
     public byte[] generateCVInPdfFormat(String cvId, String languageCode) throws QorvaException {
         var cvData = this.findOneById(cvId);
         return this.pdfGenerator.generateCV(cvData, languageCode);
