@@ -57,6 +57,9 @@ public class UserAuthoritiesHelper {
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.UPDATE_SUBSCRIPTION.getValue(), ALLOWED.getValue()));
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.CANCEL_SUBSCRIPTION.getValue(), ALLOWED.getValue()));
 
+		// Library Insights
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_LIBRARY_INSIGHTS.getValue(), ALLOWED.getValue()));
+
 		return authorities;
 	}
 

@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface SimilaritySearchRepository {
 
-    List<CV> similaritySearch(float[] queryEmbedding, ObjectId tenantId, Boolean filterOpenToWork, List<String> excludedStatuses);
+    List<CV> similaritySearch(float[] queryEmbedding, ObjectId tenantId, Boolean filterOpenToWork, List<String> excludedStatuses, int limit);
 }

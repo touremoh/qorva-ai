@@ -187,7 +187,8 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
             jobPostDTO.getEmbedding(),
             new ObjectId(jobPostDTO.getTenantId()),
             filterOpenToWork,
-            includedStatuses
+            includedStatuses,
+            20
         );
 
         if (Objects.isNull(matchingCVs) || matchingCVs.isEmpty()) {

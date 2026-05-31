@@ -42,7 +42,10 @@ public enum UserActionsEnum {
 
 	// Billing
 	UPDATE_SUBSCRIPTION("UPDATE_SUBSCRIPTION"),
-	CANCEL_SUBSCRIPTION("CANCEL_SUBSCRIPTION");
+	CANCEL_SUBSCRIPTION("CANCEL_SUBSCRIPTION"),
+
+	// Library Insights
+	VIEW_LIBRARY_INSIGHTS("VIEW_LIBRARY_INSIGHTS");
 
 	UserActionsEnum(String value) {
 		this.value = value;

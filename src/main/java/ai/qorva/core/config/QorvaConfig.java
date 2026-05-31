@@ -56,6 +56,11 @@ public class QorvaConfig {
 			// Get report output format
 			var reportOutputFormat = this.readFile("Matching_report_response_format.json");
 
+			// Get Library Insights prompts
+			var intentClassifierPrompt = this.readFile("Intent_classifier_prompt.md");
+			var entityExtractorPrompt = this.readFile("Entity_extractor_prompt.md");
+			var insightAnswerGeneratorPrompt = this.readFile("Insight_answer_generator_prompt.md");
+
 			// Build and render results
 			return QorvaPromptContextHolder
 				.builder()
@@ -63,6 +68,9 @@ public class QorvaConfig {
 				.cvOutputFormat(cvOutputFormat)
 				.reportGenerationPrompt(reportGenerationPrompt)
 				.reportOutputFormat(reportOutputFormat)
+				.intentClassifierPrompt(intentClassifierPrompt)
+				.entityExtractorPrompt(entityExtractorPrompt)
+				.insightAnswerGeneratorPrompt(insightAnswerGeneratorPrompt)
 				.build();
 		} catch (IOException e) {
 			throw new QorvaException("Unable to read file", e);

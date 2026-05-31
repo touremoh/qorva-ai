@@ -14,4 +14,7 @@ public class QorvaPromptContextHolder implements Serializable {
 	private String cvOutputFormat;
 	private String reportGenerationPrompt;
 	private String reportOutputFormat;
+	private String intentClassifierPrompt;
+	private String entityExtractorPrompt;
+	private String insightAnswerGeneratorPrompt;
 }

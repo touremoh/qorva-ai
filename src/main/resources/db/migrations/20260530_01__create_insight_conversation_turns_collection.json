@@ -1,0 +1,95 @@
+{
+  "collMod": "insight_conversation_turns",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "insight_conversation_turns",
+      "required": ["conversationId", "tenantId", "initiatedBy", "question", "intent", "response", "createdAt"],
+      "properties": {
+        "conversationId": {
+          "bsonType": "string",
+          "description": "UUID grouping multiple turns into a single conversation session"
+        },
+        "title": {
+          "bsonType": ["string", "null"],
+          "description": "AI-generated conversation title; set on the first turn only, null on subsequent turns"
+        },
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "Owning tenant — must be a valid ObjectId and is required"
+        },
+        "initiatedBy": {
+          "bsonType": "string",
+          "description": "Email of the user who asked the question — used for per-user history segregation"
+        },
+        "question": {
+          "bsonType": "string",
+          "description": "The original natural-language question asked by the user"
+        },
+        "intent": {
+          "bsonType": "string",
+          "description": "The classified intent resolved from the question"
+        },
+        "response": {
+          "bsonType": "object",
+          "description": "The full insight response returned to the user",
+          "properties": {
+            "conversationId": { "bsonType": "string" },
+            "intent":         { "bsonType": "string" },
+            "answerText":     { "bsonType": "string" },
+            "totalCandidateCount": { "bsonType": "long" },
+            "disclaimer":     { "bsonType": ["string", "null"] },
+            "followUpQuestions": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            },
+            "candidates": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "id":             { "bsonType": "string" },
+                  "name":           { "bsonType": "string" },
+                  "currentRole":    { "bsonType": ["string", "null"] },
+                  "topSkills":      { "bsonType": "array", "items": { "bsonType": "string" } },
+                  "seniorityLevel": { "bsonType": ["string", "null"] },
+                  "matchScore":     { "bsonType": ["double", "null"] },
+                  "locationHint":   { "bsonType": ["string", "null"] }
+                }
+              }
+            },
+            "metrics": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "label": { "bsonType": "string" },
+                  "value": { "bsonType": "string" },
+                  "unit":  { "bsonType": ["string", "null"] }
+                }
+              }
+            },
+            "charts": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "chartType": { "bsonType": "string" },
+                  "title":     { "bsonType": "string" },
+                  "labels":    { "bsonType": "array", "items": { "bsonType": "string" } },
+                  "values":    { "bsonType": "array" }
+                }
+              }
+            }
+          }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Timestamp of when the turn was persisted"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}
