@@ -1,5 +1,6 @@
 package ai.qorva.core.config;
 
+import ai.qorva.core.dto.InsightIntent;
 import ai.qorva.core.dto.QorvaPromptContextHolder;
 import ai.qorva.core.exception.QorvaException;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -19,6 +20,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.Map;
 
 import static org.springframework.data.web.config.EnableSpringDataWebSupport.PageSerializationMode.VIA_DTO;
 
@@ -58,8 +60,14 @@ public class QorvaConfig {
 
 			// Get Library Insights prompts
 			var intentClassifierPrompt = this.readFile("Intent_classifier_prompt.md");
-			var entityExtractorPrompt = this.readFile("Entity_extractor_prompt.md");
 			var insightAnswerGeneratorPrompt = this.readFile("Insight_answer_generator_prompt.md");
+			var entityExtractorPrompts = Map.of(
+				InsightIntent.TALENT_POOL_INTELLIGENCE, this.readFile("Entity_extractor_TALENT_POOL_INTELLIGENCE.md"),
+				InsightIntent.SKILL_GAP_ANALYSIS,       this.readFile("Entity_extractor_SKILL_GAP_ANALYSIS.md"),
+				InsightIntent.CANDIDATE_RANKING,        this.readFile("Entity_extractor_CANDIDATE_RANKING.md"),
+				InsightIntent.CANDIDATE_REDISCOVERY,    this.readFile("Entity_extractor_CANDIDATE_REDISCOVERY.md"),
+				InsightIntent.TALENT_CLUSTERING,        this.readFile("Entity_extractor_TALENT_CLUSTERING.md")
+			);
 
 			// Build and render results
 			return QorvaPromptContextHolder
@@ -69,7 +77,7 @@ public class QorvaConfig {
 				.reportGenerationPrompt(reportGenerationPrompt)
 				.reportOutputFormat(reportOutputFormat)
 				.intentClassifierPrompt(intentClassifierPrompt)
-				.entityExtractorPrompt(entityExtractorPrompt)
+				.entityExtractorPrompts(entityExtractorPrompts)
 				.insightAnswerGeneratorPrompt(insightAnswerGeneratorPrompt)
 				.build();
 		} catch (IOException e) {

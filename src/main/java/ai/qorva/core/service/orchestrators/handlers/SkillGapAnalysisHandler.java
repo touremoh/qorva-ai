@@ -18,43 +18,107 @@ public class SkillGapAnalysisHandler implements InsightHandler {
 	private final CVInsightRepository cvInsightRepository;
 
 	@Override
-	public InsightHandlerResult handle(ExtractedFilters filters, ObjectId tenantId) {
-		List<SkillFrequencyResult> skillReport = cvInsightRepository.getSkillFrequencyReport(tenantId, filters, 50);
+	public InsightHandlerResult handle(CVQueryParams params, ObjectId tenantId) {
+		// Skills are the analysis subject, not a population gate — strip them from the
+		// population criteria so the frequency report covers the full relevant pool.
+		CVQueryParams populationParams = params.withoutSkills();
 
-		List<String> rareSkills = skillReport.stream()
-			.filter(sr -> sr.count() <= 2)
-			.map(SkillFrequencyResult::skill)
-			.collect(Collectors.toList());
+		long totalCandidates = cvInsightRepository.countCandidatesByFilters(tenantId, populationParams);
+		List<String> requestedSkills = params.skills() != null ? params.skills() : List.of();
 
-		List<String> missingSkills = List.of();
-		if (filters.skills() != null && !filters.skills().isEmpty()) {
-			Set<String> presentSkills = skillReport.stream()
-				.map(sr -> sr.skill().toLowerCase())
-				.collect(Collectors.toSet());
-			missingSkills = filters.skills().stream()
-				.filter(requested -> !presentSkills.contains(requested.toLowerCase()))
-				.collect(Collectors.toList());
+		if (requestedSkills.isEmpty()) {
+			return handleDiscoveryMode(tenantId, populationParams, totalCandidates);
 		}
+		return handleCheckMode(tenantId, populationParams, requestedSkills, totalCandidates);
+	}
+
+	/**
+	 * Discovery mode: no specific skill domain given (e.g. "what certifications are rare?").
+	 * Fetches the actual low-frequency tail from the DB and lets the LLM interpret the results.
+	 */
+	private InsightHandlerResult handleDiscoveryMode(ObjectId tenantId, CVQueryParams populationParams, long totalCandidates) {
+		int rareThreshold = (int) Math.max(3, totalCandidates * 0.10);
+		List<SkillFrequencyResult> rareReport = cvInsightRepository.getRareSkillsReport(tenantId, populationParams, rareThreshold, 100);
+
+		List<String> rareSkills = rareReport.stream().map(SkillFrequencyResult::skill).collect(Collectors.toList());
+
+		List<ChartDataDTO> charts = rareReport.isEmpty() ? List.of() : List.of(
+			new ChartDataDTO("bar", "Rare Skills Distribution",
+				rareReport.stream().map(SkillFrequencyResult::skill).toList(),
+				rareReport.stream().map(sr -> (Number) sr.count()).toList())
+		);
 
 		List<InsightMetricDTO> metrics = List.of(
-			new InsightMetricDTO("Rare Skills (≤2 candidates)", String.valueOf(rareSkills.size()), "skills"),
+			new InsightMetricDTO("Total Candidates Analyzed", String.valueOf(totalCandidates), "candidates"),
+			new InsightMetricDTO("Rare Skills Found (<10% of pool)", String.valueOf(rareSkills.size()), "skills")
+		);
+
+		Map<String, Object> rawData = new LinkedHashMap<>();
+		rawData.put("totalCandidatesInPool", totalCandidates);
+		rawData.put("rareSkills", rareSkills);
+		rawData.put("rareSkillDetails", rareReport.stream()
+			.collect(Collectors.toMap(SkillFrequencyResult::skill, SkillFrequencyResult::count, (a, b) -> a, LinkedHashMap::new)));
+
+		return new InsightHandlerResult(List.of(), totalCandidates, metrics, charts, rawData);
+	}
+
+	/**
+	 * Check mode: a specific skill domain was given (e.g. "is cloud-native underrepresented?").
+	 * Entity extractor has expanded the concept to concrete tokens — check each one's representation.
+	 */
+	private InsightHandlerResult handleCheckMode(ObjectId tenantId, CVQueryParams populationParams, List<String> requestedSkills, long totalCandidates) {
+		List<SkillFrequencyResult> skillReport = cvInsightRepository.getSkillFrequencyReport(tenantId, populationParams, 50);
+
+		Set<String> presentSkillsLower = skillReport.stream()
+			.map(sr -> sr.skill().toLowerCase())
+			.collect(Collectors.toSet());
+
+		List<String> missingSkills = requestedSkills.stream()
+			.filter(requested -> {
+				String reqLower = requested.toLowerCase();
+				return presentSkillsLower.stream()
+					.noneMatch(present -> present.contains(reqLower) || reqLower.contains(present));
+			})
+			.collect(Collectors.toList());
+
+		Map<String, Long> requestedSkillRepresentation = new LinkedHashMap<>();
+		for (String requested : requestedSkills) {
+			String reqLower = requested.toLowerCase();
+			long count = skillReport.stream()
+				.filter(sr -> {
+					String skillLower = sr.skill().toLowerCase();
+					return skillLower.contains(reqLower) || reqLower.contains(skillLower);
+				})
+				.mapToLong(SkillFrequencyResult::count)
+				.max()
+				.orElse(0L);
+			requestedSkillRepresentation.put(requested, count);
+		}
+
+		int rareThreshold = (int) Math.max(3, totalCandidates * 0.10);
+		List<String> rareSkills = requestedSkillRepresentation.entrySet().stream()
+			.filter(e -> e.getValue() > 0 && e.getValue() <= rareThreshold)
+			.map(Map.Entry::getKey)
+			.collect(Collectors.toList());
+
+		List<ChartDataDTO> charts = skillReport.isEmpty() ? List.of() : List.of(
+			new ChartDataDTO("bar", "Skill Frequency Distribution",
+				skillReport.stream().map(SkillFrequencyResult::skill).toList(),
+				skillReport.stream().map(sr -> (Number) sr.count()).toList())
+		);
+
+		List<InsightMetricDTO> metrics = List.of(
+			new InsightMetricDTO("Total Candidates Analyzed", String.valueOf(totalCandidates), "candidates"),
+			new InsightMetricDTO("Rare Skills (<10% of pool)", String.valueOf(rareSkills.size()), "skills"),
 			new InsightMetricDTO("Missing Requested Skills", String.valueOf(missingSkills.size()), "skills")
 		);
 
-		List<String> chartLabels = new ArrayList<>();
-		List<Number> chartValues = new ArrayList<>();
-		for (SkillFrequencyResult sr : skillReport) {
-			chartLabels.add(sr.skill());
-			chartValues.add(sr.count());
-		}
-		List<ChartDataDTO> charts = chartLabels.isEmpty() ? List.of() :
-			List.of(new ChartDataDTO("bar", "Skill Frequency Distribution", chartLabels, chartValues));
+		Map<String, Object> rawData = new LinkedHashMap<>();
+		rawData.put("totalCandidatesInPool", totalCandidates);
+		rawData.put("rareSkills", rareSkills);
+		rawData.put("missingSkills", missingSkills);
+		rawData.put("requestedSkillRepresentation", requestedSkillRepresentation);
 
-		Map<String, Object> rawData = Map.of(
-			"rareSkills", rareSkills,
-			"missingSkills", missingSkills
-		);
-
-		return new InsightHandlerResult(List.of(), skillReport.size(), metrics, charts, rawData);
+		return new InsightHandlerResult(List.of(), totalCandidates, metrics, charts, rawData);
 	}
 }

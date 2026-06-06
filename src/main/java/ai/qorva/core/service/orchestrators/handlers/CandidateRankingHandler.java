@@ -20,8 +20,8 @@ public class CandidateRankingHandler implements InsightHandler {
 	private final ResumeVectorSearchService vectorSearchService;
 
 	@Override
-	public InsightHandlerResult handle(ExtractedFilters filters, ObjectId tenantId) {
-		var cvs = vectorSearchService.search(filters, tenantId);
+	public InsightHandlerResult handle(CVQueryParams params, ObjectId tenantId) {
+		var cvs = vectorSearchService.search(params, tenantId);
 
 		List<CandidateCardDTO> candidates = cvs.stream()
 			.sorted(Comparator.comparingDouble(cv -> -(cv.getScore() != null ? cv.getScore() : 0.0)))

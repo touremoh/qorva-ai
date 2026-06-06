@@ -22,7 +22,7 @@ public class TalentClusteringHandler implements InsightHandler {
 	private final CVInsightRepository cvInsightRepository;
 
 	@Override
-	public InsightHandlerResult handle(ExtractedFilters filters, ObjectId tenantId) {
+	public InsightHandlerResult handle(CVQueryParams params, ObjectId tenantId) {
 		List<ChartDataDTO> charts = new ArrayList<>();
 		List<InsightMetricDTO> metrics = new ArrayList<>();
 		Map<String, Object> rawData = new HashMap<>();

@@ -1,6 +1,6 @@
 package ai.qorva.core.service.orchestrators;
 
-import ai.qorva.core.dto.ExtractedFilters;
+import ai.qorva.core.dto.CVQueryParams;
 import ai.qorva.core.dto.InsightIntent;
 import ai.qorva.core.dto.QorvaPromptContextHolder;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -24,18 +24,16 @@ public class InsightEntityExtractor {
 	private final QorvaPromptContextHolder promptContextHolder;
 	private final ObjectMapper objectMapper;
 
-	public ExtractedFilters extract(String question, InsightIntent intent) {
+	public CVQueryParams extract(String question, InsightIntent intent) {
 		if (intent == InsightIntent.GENERAL_RECRUITING_QUESTION) {
-			return ExtractedFilters.empty();
+			return CVQueryParams.empty();
 		}
 
-		var converter = new BeanOutputConverter<>(ExtractedFilters.class);
-		var promptTemplate = promptContextHolder.getEntityExtractorPrompt();
+		var converter = new BeanOutputConverter<>(CVQueryParams.class);
+		var promptTemplate = promptContextHolder.getEntityExtractorPrompt(intent);
 
 		try {
-			String renderedPrompt = promptTemplate
-				.replace("{{question}}", question)
-				.replace("{{intent}}", intent.name());
+			String renderedPrompt = promptTemplate.replace("{{question}}", question);
 
 			String content = chatClient.prompt()
 				.options(OpenAiChatOptions.builder()
@@ -54,10 +52,10 @@ public class InsightEntityExtractor {
 				.call()
 				.content();
 
-			return objectMapper.readValue(content, ExtractedFilters.class);
+			return objectMapper.readValue(content, CVQueryParams.class);
 		} catch (Exception e) {
-			log.error("Error extracting entities from question, using empty filters: {}", e.getMessage());
-			return ExtractedFilters.empty();
+			log.error("Error extracting entities from question, using empty params: {}", e.getMessage());
+			return CVQueryParams.empty();
 		}
 	}
 }

@@ -19,8 +19,8 @@ public class CandidateRediscoveryHandler implements InsightHandler {
 	private final ResumeVectorSearchService vectorSearchService;
 
 	@Override
-	public InsightHandlerResult handle(ExtractedFilters filters, ObjectId tenantId) {
-		var cvs = vectorSearchService.search(filters, tenantId);
+	public InsightHandlerResult handle(CVQueryParams params, ObjectId tenantId) {
+		var cvs = vectorSearchService.search(params, tenantId);
 
 		List<CandidateCardDTO> candidates = cvs.stream()
 			.map(CandidateCardMapper::toCard)

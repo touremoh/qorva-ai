@@ -4,6 +4,7 @@ import ai.qorva.core.dto.*;
 import ai.qorva.core.service.orchestrators.InsightAnswerGenerator;
 import ai.qorva.core.service.orchestrators.InsightEntityExtractor;
 import ai.qorva.core.service.orchestrators.InsightIntentClassifier;
+import ai.qorva.core.service.orchestrators.QuestionTranslatorService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
@@ -23,6 +24,7 @@ public class LibraryInsightsService {
 	private final InsightAnswerGenerator answerGenerator;
 	private final UsageMonitoringService usageMonitoringService;
 	private final InsightConversationService conversationService;
+	private final QuestionTranslatorService questionTranslator;
 
 	public InsightResponseDTO  ask(InsightRequestDTO request, String tenantId, String userId) {
 		String conversationId = request.conversationId() != null
@@ -32,9 +34,29 @@ public class LibraryInsightsService {
 		try {
 			ObjectId tenantObjectId = new ObjectId(tenantId);
 
-			InsightIntent intent = intentClassifier.classify(request.question());
-			ExtractedFilters filters = entityExtractor.extract(request.question(), intent);
-			InsightHandlerResult result = insightRouter.route(intent).handle(filters, tenantObjectId);
+			// Translate to English for classification and extraction; original kept for answer generation
+			String englishQuestion = questionTranslator.toEnglish(request.question());
+
+			log.info("Translated question to English: {}. Original: {}", englishQuestion, request.question());
+
+			InsightIntent intent = intentClassifier.classify(englishQuestion);
+			CVQueryParams params = entityExtractor.extract(englishQuestion, intent);
+
+			if (params.needsClarification()) {
+				// Translate clarification back only when the original question wasn't English
+				boolean needsTranslation = !englishQuestion.trim().equalsIgnoreCase(request.question().trim());
+				String clarificationText = needsTranslation
+					? questionTranslator.matchLanguageOf(params.clarificationQuestion(), request.question())
+					: params.clarificationQuestion();
+				InsightResponseDTO clarification = new InsightResponseDTO(
+					conversationId, intent, clarificationText,
+					List.of(), 0, List.of(), List.of(), List.of(), null
+				);
+				conversationService.saveTurn(conversationId, tenantId, userId, null, request.question(), intent, clarification);
+				return clarification;
+			}
+
+			InsightHandlerResult result = insightRouter.route(intent).handle(params, tenantObjectId);
 			AnswerGenerationResult answer = answerGenerator.generate(result, intent, request.question());
 
 			usageMonitoringService.incrementUsage(tenantId, UsageMonitoringService.FeatureKey.TALENT_INTELLIGENCE_QUERIES, 1);

@@ -2,7 +2,7 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.repository.CVRepository;
-import ai.qorva.core.dto.ExtractedFilters;
+import ai.qorva.core.dto.CVQueryParams;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
@@ -25,10 +25,10 @@ public class ResumeVectorSearchService {
 	private static final int DEFAULT_LIMIT = 10;
 	private static final int POOL_ANALYSIS_LIMIT = 500;
 
-	public List<CV> search(ExtractedFilters filters, ObjectId tenantId) {
+	public List<CV> search(CVQueryParams params, ObjectId tenantId) {
 		try {
-			int limit = (filters != null && filters.limit() != null) ? filters.limit() : DEFAULT_LIMIT;
-			String queryString = buildQueryString(filters);
+			int limit = (params != null && params.limit() != null) ? params.limit() : DEFAULT_LIMIT;
+			String queryString = buildQueryString(params);
 			float[] embedding = embeddingModel.embed(queryString);
 			return cvRepository.similaritySearch(embedding, tenantId, null, List.of(), limit);
 		} catch (Exception e) {
@@ -37,9 +37,9 @@ public class ResumeVectorSearchService {
 		}
 	}
 
-	public List<CV> searchForPoolAnalysis(ExtractedFilters filters, ObjectId tenantId) {
+	public List<CV> searchForPoolAnalysis(CVQueryParams params, ObjectId tenantId) {
 		try {
-			String queryString = buildQueryString(filters);
+			String queryString = buildQueryString(params);
 			float[] embedding = embeddingModel.embed(queryString);
 			return cvRepository.similaritySearch(embedding, tenantId, null, List.of(), POOL_ANALYSIS_LIMIT);
 		} catch (Exception e) {
@@ -48,20 +48,21 @@ public class ResumeVectorSearchService {
 		}
 	}
 
-	private String buildQueryString(ExtractedFilters filters) {
-		if (filters == null) {
+	private String buildQueryString(CVQueryParams params) {
+		if (params == null) {
 			return "recruiting professional";
 		}
 
 		List<String> parts = new ArrayList<>();
 		Stream.of(
-			filters.roles(),
-			filters.skills(),
-			filters.seniority() != null ? List.of(filters.seniority()) : List.<String>of(),
-			filters.skillDepth() != null ? List.of(filters.skillDepth()) : List.<String>of(),
-			filters.leadershipLevel() != null ? List.of(filters.leadershipLevel()) : List.<String>of(),
-			filters.location() != null ? List.of(filters.location()) : List.<String>of(),
-			filters.industries()
+			params.roles(),
+			params.skills(),
+			params.industries(),
+			params.languages(),
+			params.seniority() != null ? List.of(params.seniority()) : List.<String>of(),
+			params.skillDepth() != null ? List.of(params.skillDepth()) : List.<String>of(),
+			params.leadershipLevel() != null ? List.of(params.leadershipLevel()) : List.<String>of(),
+			params.location() != null ? List.of(params.location()) : List.<String>of()
 		).filter(l -> l != null && !l.isEmpty()).flatMap(Collection::stream).forEach(parts::add);
 
 		String query = String.join(" ", parts);

@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.Map;
 
 @Getter
 @Setter
@@ -15,6 +16,11 @@ public class QorvaPromptContextHolder implements Serializable {
 	private String reportGenerationPrompt;
 	private String reportOutputFormat;
 	private String intentClassifierPrompt;
-	private String entityExtractorPrompt;
+	private Map<InsightIntent, String> entityExtractorPrompts;
 	private String insightAnswerGeneratorPrompt;
+
+	public String getEntityExtractorPrompt(InsightIntent intent) {
+		if (entityExtractorPrompts == null) return "";
+		return entityExtractorPrompts.getOrDefault(intent, "");
+	}
 }
