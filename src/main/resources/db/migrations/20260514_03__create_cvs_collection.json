@@ -346,6 +346,27 @@
             }
           }
         },
+        "searchIndex": {
+          "bsonType": "object",
+          "description": "English-normalized search fields used exclusively by the talent intelligence query engine. Always in English regardless of CV language.",
+          "properties": {
+            "roles": {
+              "bsonType": "array",
+              "description": "English-normalized role titles, functional expertise areas, and talent cluster labels",
+              "items": { "bsonType": "string" }
+            },
+            "skills": {
+              "bsonType": "array",
+              "description": "English-normalized skill names, technologies, tools, certifications, and domain areas",
+              "items": { "bsonType": "string" }
+            },
+            "industries": {
+              "bsonType": "array",
+              "description": "English-normalized industry sector labels",
+              "items": { "bsonType": "string" }
+            }
+          }
+        },
         "createdAt": {
           "bsonType": "date",
           "description": "must be a date and is required"

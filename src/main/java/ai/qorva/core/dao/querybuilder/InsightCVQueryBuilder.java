@@ -10,6 +10,7 @@ import java.time.Year;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -17,12 +18,12 @@ import java.util.stream.Collectors;
  * Builds MongoDB Criteria from CVQueryParams using a dimension-based, multi-field approach.
  *
  * Each dimension is an OR across semantically related fields; all dimensions are AND'd together.
+ * All text matching targets the English-normalized searchIndex fields, ensuring correct behavior
+ * for multilingual CVs regardless of the CV's original language.
  *
- * Skill dimension  → keySkills.skills | technicalSkills | softSkills | areasOfExpertise | functionalExpertise | workExperience[].toolsAndTechnologies | education[].fieldOfStudy
- * Role  dimension  → personalInformation.role | primaryCluster | secondaryClusters | areasOfExpertise | functionalExpertise | workExperience[].position
- *
- * areasOfExpertise and functionalExpertise are intentionally included in BOTH dimensions because
- * they are hybrid fields that describe both what a candidate can do (skill) and what they are (role).
+ * Skill dimension  → searchIndex.skills | searchIndex.roles (technology in a role title implies the skill)
+ * Role  dimension  → searchIndex.roles
+ * Industry filter  → searchIndex.industries
  */
 @Slf4j
 @Component
@@ -44,8 +45,35 @@ public class InsightCVQueryBuilder {
 		"mid", "staff", "principal", "intern", "head", "director"
 	);
 
+	// Maps umbrella industry terms (lowercase) to their stored-level sector labels.
+	// Used to expand both `industries` (OR across all variants) and each entry of
+	// `requiredIndustries` (OR within one required sector group, AND'd across groups).
+	private static final Map<String, List<String>> INDUSTRY_EXPANSION = Map.ofEntries(
+		Map.entry("financial services", List.of("Fintech", "FinTech", "Banking", "Insurance", "Finance", "Financial Services", "Financial Technology")),
+		Map.entry("finance",            List.of("Fintech", "FinTech", "Banking", "Insurance", "Finance", "Financial Services", "Financial Technology")),
+		Map.entry("healthcare",         List.of("Healthcare", "Health", "Medical", "Pharma", "Pharmaceutical", "Bioinformatics", "Life Sciences")),
+		Map.entry("health",             List.of("Healthcare", "Health", "Medical", "Pharma", "Pharmaceutical")),
+		Map.entry("retail",             List.of("Retail", "E-Commerce", "eCommerce", "Consumer Goods")),
+		Map.entry("e-commerce",         List.of("E-Commerce", "eCommerce", "Retail", "Consumer Goods")),
+		Map.entry("energy",             List.of("Energy", "Oil & Gas", "Renewables", "Utilities", "Clean Energy")),
+		Map.entry("manufacturing",      List.of("Manufacturing", "Industrial", "Automotive", "Aerospace")),
+		Map.entry("media",              List.of("Media", "Entertainment", "Gaming", "Publishing", "Broadcasting")),
+		Map.entry("entertainment",      List.of("Entertainment", "Media", "Gaming", "Publishing")),
+		Map.entry("logistics",          List.of("Logistics", "Supply Chain", "Transportation", "Shipping")),
+		Map.entry("supply chain",       List.of("Supply Chain", "Logistics", "Transportation", "Shipping")),
+		Map.entry("education",          List.of("Education", "EdTech", "E-Learning", "Academia")),
+		Map.entry("telecommunications", List.of("Telecommunications", "Telecom", "Networks", "Telco")),
+		Map.entry("telecom",            List.of("Telecom", "Telecommunications", "Networks", "Telco")),
+		Map.entry("technology",         List.of("Technology", "Software", "IT", "SaaS", "Tech")),
+		Map.entry("public sector",      List.of("Government", "Public Sector", "Defense", "NGO", "Public Administration")),
+		Map.entry("government",         List.of("Government", "Public Sector", "Defense", "NGO")),
+		Map.entry("real estate",        List.of("Real Estate", "PropTech", "Property")),
+		Map.entry("consulting",         List.of("Consulting", "Professional Services", "Advisory")),
+		Map.entry("professional services", List.of("Professional Services", "Consulting", "Advisory"))
+	);
+
 	// Degree-level regex patterns keyed by normalized value
-	private static final java.util.Map<String, String> DEGREE_PATTERNS = java.util.Map.of(
+	private static final Map<String, String> DEGREE_PATTERNS = Map.of(
 		"bachelor",  "bachelor|BSc|B\\.S\\.|B\\.A\\.|undergraduate|licenc|licens",
 		"master",    "master|MSc|M\\.S\\.|M\\.A\\.|graduate|magistere",
 		"phd",       "ph\\.?d\\.?|doctorat|doctora|DPhil|D\\.Phil",
@@ -63,25 +91,21 @@ public class InsightCVQueryBuilder {
 			return new Criteria().andOperator(conditions.toArray(new Criteria[0]));
 		}
 
-		// Skill and role dimensions are OR'd together: matching either is sufficient.
-		// AND semantics would reject profiles with French job titles (e.g. "Développeur Node.js")
-		// that satisfy the skill dimension but not the English role phrases.
-		List<Criteria> techCriteria = new ArrayList<>();
+		// When skills are specified, they are the hard AND constraint.
+		// skillDimension already searches personalInformation.role and workExperience.position,
+		// so non-English titles like "Développeur Java" match \bJava\b without a role fallback.
+		// Roles are only used as the primary filter when no skills are specified (role-only queries).
 		if (params.skills() != null && !params.skills().isEmpty()) {
-			techCriteria.add(skillDimension(params.skills()));
-		}
-		if (params.roles() != null && !params.roles().isEmpty()) {
-			techCriteria.add(roleDimension(params.roles()));
-		}
-		if (!techCriteria.isEmpty()) {
-			conditions.add(techCriteria.size() == 1
-				? techCriteria.get(0)
-				: new Criteria().orOperator(techCriteria.toArray(new Criteria[0])));
+			conditions.add(skillDimension(params.skills()));
+		} else if (params.roles() != null && !params.roles().isEmpty()) {
+			conditions.add(roleDimension(params.roles()));
 		}
 
 		if (params.industries() != null && !params.industries().isEmpty()) {
 			List<Criteria> ic = params.industries().stream()
-				.map(ind -> Criteria.where("candidateClustering.industryDomains").regex(escape(ind), "i"))
+				.flatMap(ind -> expandIndustry(ind).stream())
+				.distinct()
+				.map(v -> Criteria.where("searchIndex.industries").regex(escape(v), "i"))
 				.collect(Collectors.toList());
 			conditions.add(new Criteria().orOperator(ic.toArray(new Criteria[0])));
 		}
@@ -139,70 +163,67 @@ public class InsightCVQueryBuilder {
 			conditions.add(Criteria.where("tags").in(params.tags()));
 		}
 
+		// requiredSkills: each skill is a separate AND — candidate must have ALL of them
+		if (params.requiredSkills() != null && !params.requiredSkills().isEmpty()) {
+			params.requiredSkills().forEach(skill -> conditions.add(skillDimension(List.of(skill))));
+		}
+
+		// requiredIndustries: each sector group is AND'd; umbrella terms expand to OR within each group
+		if (params.requiredIndustries() != null && !params.requiredIndustries().isEmpty()) {
+			params.requiredIndustries().forEach(ind -> {
+				List<Criteria> variantCriteria = expandIndustry(ind).stream()
+					.map(v -> Criteria.where("searchIndex.industries").regex(escape(v), "i"))
+					.collect(Collectors.toList());
+				conditions.add(variantCriteria.size() == 1
+					? variantCriteria.get(0)
+					: new Criteria().orOperator(variantCriteria.toArray(new Criteria[0])));
+			});
+		}
+
 		return new Criteria().andOperator(conditions.toArray(new Criteria[0]));
 	}
 
 	/**
-	 * Skill dimension: OR across all skill-bearing fields.
+	 * Skill dimension: OR across English-normalized search fields.
 	 * Uses word-boundary regex so "Node.js" doesn't bleed into "Vue.js".
+	 * searchIndex.roles is included because a technology present in a role title implies the skill
+	 * (e.g., "Node.js Developer" → candidate has Node.js).
 	 */
 	private Criteria skillDimension(List<String> skills) {
 		List<Criteria> perTerm = skills.stream().map(skill -> {
 			String pattern = "\\b" + escape(skill) + "\\b";
 			return new Criteria().orOperator(
-				Criteria.where("keySkills.skills").regex(pattern, "i"),
-				Criteria.where("skillsAndQualifications.technicalSkills").regex(pattern, "i"),
-				Criteria.where("skillsAndQualifications.softSkills").regex(pattern, "i"),
-				Criteria.where("profiles.areasOfExpertise").regex(pattern, "i"),
-				Criteria.where("candidateClustering.functionalExpertise").regex(pattern, "i"),
-				Criteria.where("workExperience.toolsAndTechnologies").regex(pattern, "i"),
-				Criteria.where("education.fieldOfStudy").regex(pattern, "i"),
-				// A technology in a job title implies the skill (e.g. "Node.js Developer" → has Node.js)
-				Criteria.where("personalInformation.role").regex(pattern, "i"),
-				Criteria.where("workExperience.position").regex(pattern, "i")
+				Criteria.where("searchIndex.skills").regex(pattern, "i"),
+				Criteria.where("searchIndex.roles").regex(pattern, "i")
 			);
 		}).collect(Collectors.toList());
-		// At least ONE skill term must match somewhere in the skill fields
 		return new Criteria().orOperator(perTerm.toArray(new Criteria[0]));
 	}
 
 	/**
-	 * Role dimension: OR across all role/title/cluster fields.
+	 * Role dimension: matches against the English-normalized searchIndex.roles field.
 	 * Uses substring regex (no word boundary) — role phrases are often substrings of longer titles.
-	 * Includes areasOfExpertise and functionalExpertise as hybrid fields.
-	 * Includes workExperience[].position to capture career history and transitions.
 	 *
 	 * For multi-word role phrases, also extracts domain qualifier tokens (e.g. "backend" from
-	 * "backend engineer") and searches for them with word-boundary regex. This handles titles
-	 * like "Backend Node.js Developer" that don't contain the full phrase as a substring.
+	 * "backend engineer") and searches for them with word-boundary regex. This handles stored
+	 * values like "Backend Node.js Developer" that don't contain the full phrase as a substring.
 	 */
 	private Criteria roleDimension(List<String> roles) {
 		List<Criteria> perTerm = roles.stream().map(role -> {
 			String pattern = escape(role);
-			List<Criteria> termFields = new ArrayList<>(Arrays.asList(
-				Criteria.where("personalInformation.role").regex(pattern, "i"),
-				Criteria.where("candidateClustering.primaryCluster").regex(pattern, "i"),
-				Criteria.where("candidateClustering.secondaryClusters").regex(pattern, "i"),
-				Criteria.where("profiles.areasOfExpertise").regex(pattern, "i"),
-				Criteria.where("candidateClustering.functionalExpertise").regex(pattern, "i"),
-				Criteria.where("workExperience.position").regex(pattern, "i")
+			List<Criteria> termFields = new ArrayList<>(List.of(
+				Criteria.where("searchIndex.roles").regex(pattern, "i")
 			));
 
 			// For multi-word phrases, also match on domain qualifier tokens individually.
-			// Covers all 6 role fields + keySkills.skills (domain tags like "Backend Development").
 			List<String> words = Arrays.asList(role.toLowerCase().split("[\\s\\-]+"));
 			if (words.size() > 1) {
 				words.stream()
 					.filter(w -> DOMAIN_QUALIFIERS.contains(w) && !ROLE_STOPWORDS.contains(w))
 					.forEach(qualifier -> {
 						String qp = "\\b" + escape(qualifier) + "\\b";
-						termFields.add(Criteria.where("personalInformation.role").regex(qp, "i"));
-						termFields.add(Criteria.where("candidateClustering.primaryCluster").regex(qp, "i"));
-						termFields.add(Criteria.where("candidateClustering.secondaryClusters").regex(qp, "i"));
-						termFields.add(Criteria.where("profiles.areasOfExpertise").regex(qp, "i"));
-						termFields.add(Criteria.where("candidateClustering.functionalExpertise").regex(qp, "i"));
-						termFields.add(Criteria.where("workExperience.position").regex(qp, "i"));
-						termFields.add(Criteria.where("keySkills.skills").regex(qp, "i"));
+						termFields.add(Criteria.where("searchIndex.roles").regex(qp, "i"));
+						termFields.add(Criteria.where("searchIndex.skills").regex(qp, "i"));
 					});
 			}
 
@@ -214,6 +235,11 @@ public class InsightCVQueryBuilder {
 	/** Escapes MongoDB regex metacharacters in a literal search term. */
 	static String escape(String term) {
 		return term.replaceAll("([.+*?^${}()|\\[\\]\\\\])", "\\\\$1");
+	}
+
+	/** Returns stored-level sector labels for an industry term, falling back to the term itself. */
+	private List<String> expandIndustry(String industry) {
+		return INDUSTRY_EXPANSION.getOrDefault(industry.toLowerCase().trim(), List.of(industry));
 	}
 
 	private static String degreePattern(String normalized) {

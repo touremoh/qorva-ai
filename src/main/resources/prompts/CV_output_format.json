@@ -445,6 +445,27 @@
           "description": "Short explanation of why the candidate belongs to this cluster"
         }
       }
+    },
+    "searchIndex": {
+      "type": "object",
+      "description": "English-normalized search fields used exclusively by the talent intelligence query engine. ALWAYS in English regardless of CV language.",
+      "properties": {
+        "roles": {
+          "type": "array",
+          "description": "English-normalized role titles aggregated from: personalInformation.role, ALL workExperience[*].position entries (entire career history), candidateClustering.primaryCluster, candidateClustering.secondaryClusters, candidateClustering.functionalExpertise, profiles.areasOfExpertise. Include common title variants (e.g. both 'Project Manager' and 'Program Manager'). MUST be in English.",
+          "items": { "type": "string" }
+        },
+        "skills": {
+          "type": "array",
+          "description": "English-normalized skills aggregated from: keySkills[*].skills, skillsAndQualifications.technicalSkills, skillsAndQualifications.softSkills, ALL workExperience[*].toolsAndTechnologies (entire career history), profiles.areasOfExpertise, candidateClustering.functionalExpertise, education[*].fieldOfStudy, and skills implied by role titles. MUST be in English.",
+          "items": { "type": "string" }
+        },
+        "industries": {
+          "type": "array",
+          "description": "English-normalized industry sector labels aggregated from: candidateClustering.industryDomains (translated to English), and industries inferred from all workExperience[*] entries. Use standard English labels (e.g. 'Banking', 'Financial Services', 'Healthcare'). MUST be in English.",
+          "items": { "type": "string" }
+        }
+      }
     }
   }
 }

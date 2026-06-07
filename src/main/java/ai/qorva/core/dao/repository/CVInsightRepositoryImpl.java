@@ -84,16 +84,17 @@ public class CVInsightRepositoryImpl implements CVInsightRepository {
 	}
 
 	@Override
-	public List<ClusterBucket> getClusterDistributionReport(ObjectId tenantId, String clusterDimension) {
+	public List<ClusterBucket> getClusterDistributionReport(ObjectId tenantId, CVQueryParams params, String clusterDimension) {
 		if (!ALLOWED_CLUSTER_DIMENSIONS.contains(clusterDimension)) {
 			throw new IllegalArgumentException("Unknown cluster dimension: " + clusterDimension);
 		}
 
 		String fieldPath = "candidateClustering." + clusterDimension;
 
+		Criteria filterCriteria = queryBuilder.build(tenantId, params);
+		Criteria fieldExistsCriteria = Criteria.where(fieldPath).exists(true).ne(null);
 		AggregationOperation matchOp = Aggregation.match(
-			Criteria.where("tenantId").is(tenantId)
-				.and(fieldPath).exists(true).ne(null)
+			new Criteria().andOperator(filterCriteria, fieldExistsCriteria)
 		);
 		AggregationOperation groupOp = ctx -> new Document("$group",
 			new Document("_id", "$" + fieldPath)

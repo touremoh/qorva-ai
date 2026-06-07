@@ -54,6 +54,7 @@ public class CV implements QorvaEntity {
     private List<Reference> references;
     private SalaryExpectation salaryExpectation;
     private CandidateClustering candidateClustering;
+    private SearchIndex searchIndex;
     private Binary attachment;
 
     private float[] embedding;

@@ -58,13 +58,45 @@ CLUSTERING PRIORITIES:
 
 Focus on actual capability, organizational value, and measurable impact rather than only job titles or years of experience.
 
+5. Populate the `searchIndex` object with English-normalized values for the talent intelligence query engine. This field is used exclusively for structured search and MUST ALWAYS be in English regardless of the CV's language — even if the rest of the output is in French, Dutch, or another language.
+
+   **`searchIndex.roles`** — Aggregate English-normalized role titles from ALL of the following sources:
+   - `personalInformation.role` (current role title)
+   - Every `workExperience[*].position` entry across the candidate's **entire career history** — iterate over all jobs, not just the most recent one. This is critical for career transitions: a candidate who was "Java Developer" for 5 years then became "Engineering Manager" must appear in both.
+   - `candidateClustering.primaryCluster` and `candidateClustering.secondaryClusters`
+   - `candidateClustering.functionalExpertise`
+   - `profiles.areasOfExpertise`
+
+   Include common English title variants a recruiter might search for (e.g., if the CV has "Chef de projet", add both "Project Manager" and "Program Manager"; if "Ontwikkelaar", add "Developer" and "Software Engineer").
+
+   **`searchIndex.skills`** — Aggregate English-normalized skill names from ALL of the following sources:
+   - `keySkills[*].skills` (all skill categories)
+   - `skillsAndQualifications.technicalSkills` and `skillsAndQualifications.softSkills`
+   - Every `workExperience[*].toolsAndTechnologies` entry across the **entire career history** — include tools from all jobs, not just the current one
+   - `profiles.areasOfExpertise` and `candidateClustering.functionalExpertise`
+   - `education[*].fieldOfStudy`
+   - Skills implied by role titles (e.g., "Node.js Developer" → include "Node.js"; "Data Scientist" → include "Python", "machine learning")
+
+   **`searchIndex.industries`** — Aggregate English-normalized industry sector labels from ALL of the following sources:
+   - `candidateClustering.industryDomains` (translated to English if not already)
+   - Industries inferred from every `workExperience[*].company` and associated context across the candidate's full career history
+
+   Use standard English sector vocabulary (e.g., "Banking", "Financial Services", "Healthcare", "Retail", "Logistics") regardless of the language the industry was written in on the CV.
+
+   **Rules for `searchIndex` — non-negotiable:**
+   - **Always English. No exceptions.** Never output French, Dutch, German, Spanish, or any other language in this field.
+   - Iterate over the **full career history** for roles, tools, and industries — not just the most recent position.
+   - Include all meaningful role variants a recruiter might type (e.g., both "Project Manager" and "Program Manager", both "Frontend Developer" and "Front-End Developer").
+   - Do not include generic interpersonal terms like "Teamwork" or "Communication" in `searchIndex.skills`.
+   - `searchIndex` is a machine-search layer only — the display fields (`keySkills`, `candidateClustering`, `profiles`) stay in the CV's original language.
+
 CV Content:
 ```{cv_data}```
 
 Expected Output JSON Schema:
 ***{output_format}***
 
-The output language must match the CV language.
+The output language must match the CV language, with one exception: the `searchIndex` field (see instruction 5) MUST always be populated in English regardless of the CV's language.
 
 Before returning the final JSON:
 - Validate schema consistency

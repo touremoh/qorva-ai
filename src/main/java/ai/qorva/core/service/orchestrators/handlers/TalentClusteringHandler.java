@@ -28,20 +28,25 @@ public class TalentClusteringHandler implements InsightHandler {
 		Map<String, Object> rawData = new HashMap<>();
 
 		for (String dimension : CLUSTER_DIMENSIONS) {
-			List<ClusterBucket> buckets = cvInsightRepository.getClusterDistributionReport(tenantId, dimension);
+			List<ClusterBucket> buckets = cvInsightRepository.getClusterDistributionReport(tenantId, params, dimension);
 			if (buckets.isEmpty()) {
 				continue;
 			}
 
+			long total = buckets.stream().mapToLong(ClusterBucket::count).sum();
 			List<String> labels = buckets.stream().map(ClusterBucket::name).collect(Collectors.toList());
-			List<Number> values = buckets.stream().map(ClusterBucket::count).collect(Collectors.toList());
+			List<Number> values = buckets.stream()
+				.map(b -> (Number) Math.round(b.count() * 100.0 / total))
+				.collect(Collectors.toList());
 			charts.add(new ChartDataDTO("pie", dimension + " Distribution", labels, values));
 
 			ClusterBucket topBucket = buckets.get(0);
+			long topPercent = Math.round(topBucket.count() * 100.0 / total);
 			metrics.add(new InsightMetricDTO(
-				"Top " + dimension,
-				topBucket.name() + " (" + topBucket.count() + ")",
-				"candidates"
+				dimension,
+				topBucket.name(),
+				String.valueOf(topBucket.count()),
+				topPercent + "%"
 			));
 
 			rawData.put(dimension, buckets);

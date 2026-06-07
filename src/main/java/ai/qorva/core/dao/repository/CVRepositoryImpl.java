@@ -66,7 +66,7 @@ public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, Simil
 	}
 
 	@Override
-	public List<CV> similaritySearch(float[] queryEmbedding, ObjectId tenantId, Boolean filterOpenToWork, List<String> includedStatuses, int limit) {
+	public List<CV> similaritySearch(float[] queryEmbedding, ObjectId tenantId, Boolean filterOpenToWork, List<String> includedStatuses, int limit, Criteria postFilter) {
 		List<Double> vector = new ArrayList<>(queryEmbedding.length);
 		for (float f : queryEmbedding) {
 			vector.add((double) f);
@@ -88,17 +88,20 @@ public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, Simil
 		AggregationOperation addScore = ctx -> new Document("$addFields",
 			new Document("score", new Document("$meta", "vectorSearchScore")));
 
-		Criteria matchCriteria = Criteria.where("score").gte(0.4);
+		List<Criteria> matchConditions = new ArrayList<>();
+		matchConditions.add(Criteria.where("score").gte(0.5));
 
-		// Exclude documents where openToWork is explicitly false; missing field is included
 		if (Boolean.TRUE.equals(filterOpenToWork)) {
-			matchCriteria.and("personalInformation.availability.openToWork").ne(false);
+			matchConditions.add(Criteria.where("personalInformation.availability.openToWork").ne(false));
+		}
+		if (includedStatuses != null && !includedStatuses.isEmpty()) {
+			matchConditions.add(Criteria.where("personalInformation.availability.status").in(includedStatuses));
+		}
+		if (postFilter != null) {
+			matchConditions.add(postFilter);
 		}
 
-		// Exclude documents whose status is in the exclusion list; missing field is included
-		if (includedStatuses != null && !includedStatuses.isEmpty()) {
-			matchCriteria.and("personalInformation.availability.status").in(includedStatuses);
-		}
+		Criteria matchCriteria = new Criteria().andOperator(matchConditions.toArray(new Criteria[0]));
 
 		return mongoTemplate.aggregate(
 			Aggregation.newAggregation(CV.class, vectorSearch, addScore, Aggregation.match(matchCriteria), Aggregation.limit(limit)),

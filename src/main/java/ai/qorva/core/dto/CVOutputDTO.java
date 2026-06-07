@@ -19,7 +19,8 @@ public record CVOutputDTO(
     @JsonProperty("references") Reference[] references,
     @JsonProperty("tags") String[] tags,
     @JsonProperty("salaryExpectation") SalaryExpectation salaryExpectation,
-    @JsonProperty("candidateClustering") CandidateClustering candidateClustering) {
+    @JsonProperty("candidateClustering") CandidateClustering candidateClustering,
+    @JsonProperty("searchIndex") SearchIndex searchIndex) {
 
     public record PersonalInformation(
         @JsonProperty("name") String name,
@@ -116,6 +117,12 @@ public record CVOutputDTO(
         @JsonProperty("position") String position,
         @JsonProperty("company") String company,
         @JsonProperty("contact") Contact contact) {
+    }
+
+    public record SearchIndex(
+        @JsonProperty("roles") String[] roles,
+        @JsonProperty("skills") String[] skills,
+        @JsonProperty("industries") String[] industries) {
     }
 
     public record CandidateClustering(

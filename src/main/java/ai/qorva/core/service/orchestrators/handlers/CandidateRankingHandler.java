@@ -1,5 +1,6 @@
 package ai.qorva.core.service.orchestrators.handlers;
 
+import ai.qorva.core.dao.repository.CVInsightRepository;
 import ai.qorva.core.dto.*;
 import ai.qorva.core.service.ResumeVectorSearchService;
 import lombok.RequiredArgsConstructor;
@@ -18,10 +19,33 @@ import java.util.stream.Collectors;
 public class CandidateRankingHandler implements InsightHandler {
 
 	private final ResumeVectorSearchService vectorSearchService;
+	private final CVInsightRepository cvInsightRepository;
+
+	private static final int DEFAULT_LIMIT = 10;
 
 	@Override
 	public InsightHandlerResult handle(CVQueryParams params, ObjectId tenantId) {
-		var cvs = vectorSearchService.search(params, tenantId);
+		long poolCount = cvInsightRepository.countCandidatesByFilters(tenantId, params);
+
+		if (poolCount == 0) {
+			return new InsightHandlerResult(List.of(), 0L,
+				List.of(new InsightMetricDTO("Total Matching Profiles", "0", "profiles")),
+				List.of(), Map.of());
+		}
+
+		int requestedLimit = params.limit() != null ? params.limit() : DEFAULT_LIMIT;
+		int effectiveLimit = (int) Math.min(requestedLimit, poolCount);
+
+		CVQueryParams adjustedParams = new CVQueryParams(
+			params.skills(), params.roles(), params.industries(), params.languages(),
+			params.companies(), params.degreeLevels(), params.institutions(),
+			params.seniority(), params.skillDepth(), params.leadershipLevel(),
+			params.openToWork(), params.availabilityStatus(), params.location(),
+			params.minYearsExperience(), params.tags(), effectiveLimit,
+			params.requiredSkills(), params.requiredIndustries(), null
+		);
+
+		var cvs = vectorSearchService.search(adjustedParams, tenantId);
 
 		List<CandidateCardDTO> candidates = cvs.stream()
 			.sorted(Comparator.comparingDouble(cv -> -(cv.getScore() != null ? cv.getScore() : 0.0)))
@@ -29,9 +53,10 @@ public class CandidateRankingHandler implements InsightHandler {
 			.collect(Collectors.toList());
 
 		List<InsightMetricDTO> metrics = List.of(
-			new InsightMetricDTO("Top Candidates Found", String.valueOf(candidates.size()), "profiles")
+			new InsightMetricDTO("Total Matching Profiles", String.valueOf(poolCount), "profiles"),
+			new InsightMetricDTO("Shown in Ranking", String.valueOf(candidates.size()), "candidates")
 		);
 
-		return new InsightHandlerResult(candidates, candidates.size(), metrics, List.of(), Map.of());
+		return new InsightHandlerResult(candidates, poolCount, metrics, List.of(), Map.of());
 	}
 }

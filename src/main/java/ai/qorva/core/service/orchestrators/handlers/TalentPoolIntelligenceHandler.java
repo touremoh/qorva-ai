@@ -19,13 +19,29 @@ public class TalentPoolIntelligenceHandler implements InsightHandler {
 
 	private final CVInsightRepository cvInsightRepository;
 
+	private boolean hasFilters(CVQueryParams params) {
+		return (params.skills() != null && !params.skills().isEmpty())
+			|| (params.requiredSkills() != null && !params.requiredSkills().isEmpty())
+			|| (params.roles() != null && !params.roles().isEmpty())
+			|| (params.industries() != null && !params.industries().isEmpty())
+			|| (params.requiredIndustries() != null && !params.requiredIndustries().isEmpty())
+			|| params.seniority() != null
+			|| params.location() != null
+			|| params.skillDepth() != null
+			|| params.leadershipLevel() != null
+			|| params.minYearsExperience() != null
+			|| params.openToWork() != null
+			|| params.availabilityStatus() != null
+			|| (params.languages() != null && !params.languages().isEmpty())
+			|| (params.companies() != null && !params.companies().isEmpty())
+			|| (params.degreeLevels() != null && !params.degreeLevels().isEmpty())
+			|| (params.institutions() != null && !params.institutions().isEmpty());
+	}
+
 	@Override
 	public InsightHandlerResult handle(CVQueryParams params, ObjectId tenantId) {
-		boolean hasTerms = (params.skills() != null && !params.skills().isEmpty())
-			|| (params.roles() != null && !params.roles().isEmpty());
-
-		if (!hasTerms) {
-			log.warn("TalentPoolIntelligenceHandler – no skill or role terms in params, returning empty result");
+		if (!hasFilters(params)) {
+			log.warn("TalentPoolIntelligenceHandler – no filters in params, returning empty result");
 			return new InsightHandlerResult(List.of(), 0L,
 				List.of(new InsightMetricDTO("Total Matching Candidates", "0", "candidates")),
 				List.of(), Map.of());

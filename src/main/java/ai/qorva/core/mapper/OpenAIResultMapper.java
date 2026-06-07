@@ -2,9 +2,13 @@ package ai.qorva.core.mapper;
 
 import ai.qorva.core.dto.*;
 import ai.qorva.core.dto.common.*;
+import org.mapstruct.AfterMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
 import org.springframework.util.StringUtils;
+
+import java.util.Set;
 
 @Mapper(componentModel = "spring")
 public interface OpenAIResultMapper {
@@ -34,6 +38,20 @@ public interface OpenAIResultMapper {
 	@Mapping(target = "completionTokens", expression = "java(java.lang.Long.valueOf(0))")
 	@Mapping(target = "model", expression = "java(org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_5_CHAT_LATEST.getValue())")
 	ChatResult map(OpenAIChatResponse data);
+
+	Set<String> VALID_AVAILABILITY_STATUSES = Set.of(
+		"activelyLooking", "openButNotSearching", "notAvailable", "freelanceOnly"
+	);
+
+	@AfterMapping
+	default void sanitizeEnumFields(@MappingTarget CVDTO target) {
+		if (target.getPersonalInformation() == null) return;
+		Availability availability = target.getPersonalInformation().getAvailability();
+		if (availability == null) return;
+		if (availability.getStatus() != null && !VALID_AVAILABILITY_STATUSES.contains(availability.getStatus())) {
+			availability.setStatus(null);
+		}
+	}
 
 	default ai.qorva.core.dto.common.Proficiency mapProficiency(String level) {
 		if (!StringUtils.hasText(level)) return null;

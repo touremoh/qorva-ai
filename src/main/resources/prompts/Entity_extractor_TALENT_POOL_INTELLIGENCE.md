@@ -18,13 +18,26 @@ Your task: the recruiter is asking a **quantitative question** about how many ca
 ## Field definitions
 
 ### `skills` — array of strings
-Technical skills, technologies, tools, certifications, methodologies, or domain areas mentioned.
+Skills, domain expertise, certifications, tools, methodologies, or professional areas — technical and non-technical alike (OR semantics — matching any one is sufficient).
 
 When the user says "experience in X", "background in X", "knowledge of X", treat X as a skill — unless X is an industry:
 - "Node.js experience" → `skills: ["Node.js"]`
 - "background in machine learning" → `skills: ["machine learning", "ML"]`
+- "IFRS knowledge" → `skills: ["IFRS", "accounting standards"]`
+- "Salesforce experience" → `skills: ["Salesforce", "CRM"]`
 - "banking experience" → `skills: []`, `industries: ["Banking"]`
 - "fintech background" → `skills: []`, `industries: ["Fintech"]`
+
+### `requiredSkills` — array of strings
+Skills the candidate MUST have ALL of (AND semantics). Use only when the user explicitly says "both X and Y", "X AND Y", or "combine X with Y" for skills. A single skill always goes in `skills`, never here.
+
+- "both React and TypeScript" → `requiredSkills: ["React", "TypeScript"]`, `skills: []`
+- "React AND TypeScript AND Node.js" → `requiredSkills: ["React", "TypeScript", "Node.js"]`, `skills: []`
+- "React developers with TypeScript experience" → `requiredSkills: ["React", "TypeScript"]`, `skills: []`
+- "React or TypeScript developers" → `skills: ["React", "TypeScript"]`, `requiredSkills: []`
+- "React developers" → `skills: ["React"]`, `requiredSkills: []`
+
+Return `[]` if not applicable.
 
 ### `roles` — array of strings
 Job titles expanded to cover common title variants in the database.
@@ -47,6 +60,15 @@ General expansion examples (no specific technology):
 - "data scientist" → `["data scientist", "machine learning engineer", "ML engineer", "AI engineer"]`
 - "full-stack developer" → `["full-stack developer", "fullstack developer", "full stack engineer"]`
 - "backend developer" → `["backend developer", "back-end developer", "server-side developer", "API developer"]`
+
+Non-tech role expansion examples:
+- "account manager" → `["account manager", "key account manager", "sales executive", "business development manager"]`
+- "HR business partner" → `["HR business partner", "HRBP", "human resources manager", "people partner"]`
+- "financial analyst" → `["financial analyst", "FP&A analyst", "business analyst", "finance manager"]`
+- "procurement specialist" → `["procurement specialist", "buyer", "sourcing specialist", "purchasing manager"]`
+- "marketing manager" → `["marketing manager", "brand manager", "digital marketing manager", "growth manager"]`
+- "legal counsel" → `["legal counsel", "in-house counsel", "corporate lawyer", "compliance officer"]`
+- "project manager" → `["project manager", "program manager", "delivery manager", "PMO analyst"]`
 
 ### `seniority` — string or null
 | What the user says | Normalized value |
@@ -88,7 +110,7 @@ City, country, region, or remote/on-site preference: `"Belgium"`, `"remote"`, `"
 Return `null` if not mentioned.
 
 ### `industries` — array of strings
-Business sectors: `["Banking", "Healthcare", "Fintech", "Cybersecurity", "Retail"]`.
+Any business sector, vertical, or market domain where the candidate has worked (OR semantics — matching any one is sufficient). Accept any term the user mentions — e-commerce, gaming, logistics, manufacturing, insurance are all valid. Normalize to Title Case. You are not limited to a predefined list. The system automatically expands umbrella terms to their stored-level variants (e.g., "financial services" → Fintech, Banking, Insurance).
 
 **Disambiguation**: Only extract `industries` when the industry describes the **candidate's own background or experience**:
 - ✓ "with banking experience" → `["Banking"]`
@@ -101,6 +123,17 @@ When industry describes the **client, project, or engagement** the candidate wou
 - ✗ "for our banking customer" → `[]`
 
 Return `[]` if not mentioned.
+
+### `requiredIndustries` — array of strings
+Industries the candidate MUST have experience in ALL of (AND semantics). Use only when the user says "both X and Y industries", "X AND Y background", or explicitly combines two industry terms with AND. Output the term as the user stated it — the system handles expansion to stored-level variants.
+
+- "worked in both healthcare and fintech" → `requiredIndustries: ["Healthcare", "Fintech"]`, `industries: []`
+- "healthcare AND banking background" → `requiredIndustries: ["Healthcare", "Banking"]`, `industries: []`
+- "healthcare AND financial services background" → `requiredIndustries: ["Healthcare", "Financial Services"]`, `industries: []`
+- "healthcare or pharma background" → `industries: ["Healthcare", "Pharma"]`, `requiredIndustries: []`
+- "healthcare experience" → `industries: ["Healthcare"]`, `requiredIndustries: []`
+
+Return `[]` if not applicable.
 
 ### `minYearsExperience` — integer or null
 Only populate when explicitly stated: "at least 8 years", "10 years of experience".
@@ -165,6 +198,8 @@ Return `[]` if not mentioned.
   "minYearsExperience": null,
   "tags": [],
   "limit": null,
+  "requiredSkills": [],
+  "requiredIndustries": [],
   "clarificationQuestion": null
 }
 ```
@@ -307,6 +342,38 @@ Return `[]` if not mentioned.
 
 ---
 
+**Question:** "How many senior financial analysts with IFRS experience do we have in Belgium?"
+
+```json
+{
+  "skills": ["IFRS", "accounting standards", "financial reporting"],
+  "roles": ["financial analyst", "FP&A analyst", "business analyst", "finance manager"],
+  "seniority": "senior",
+  "location": "Belgium",
+  "industries": [],
+  "languages": [], "companies": [], "degreeLevels": [], "institutions": [],
+  "skillDepth": null, "leadershipLevel": null, "openToWork": null, "availabilityStatus": null,
+  "minYearsExperience": null, "tags": [], "limit": null
+}
+```
+
+---
+
+**Question:** "How many HR business partners with Workday experience do we have?"
+
+```json
+{
+  "skills": ["Workday", "HRIS", "HR management"],
+  "roles": ["HR business partner", "HRBP", "human resources manager", "people partner"],
+  "seniority": null, "location": null, "industries": [],
+  "languages": [], "companies": [], "degreeLevels": [], "institutions": [],
+  "skillDepth": null, "leadershipLevel": null, "openToWork": null, "availabilityStatus": null,
+  "minYearsExperience": null, "tags": [], "limit": null
+}
+```
+
+---
+
 ---
 
 ## Clarification rule
@@ -319,5 +386,7 @@ Examples of too-vague questions and what to set:
 - "What candidates do we have?" → `"clarificationQuestion": "To give you a useful answer, could you narrow down what you're looking for? For example: a specific technology, a seniority level, a location, or an industry."`
 
 If the question contains at least one concrete filter (a technology, role, seniority, location, industry, etc.), set `clarificationQuestion` to `null` and proceed with normal extraction.
+
+**Important**: Set `clarificationQuestion` only when ALL fields (`skills`, `requiredSkills`, `roles`, `industries`, `requiredIndustries`, `seniority`, `location`, and all others) are empty/null simultaneously. If even one field has a concrete value, set `clarificationQuestion` to `null` and proceed — partial ambiguity about one aspect of the question is not a reason to ask for clarification.
 
 User question: {{question}}

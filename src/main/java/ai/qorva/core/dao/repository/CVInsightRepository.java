@@ -15,5 +15,5 @@ public interface CVInsightRepository {
 
 	List<SkillFrequencyResult> getRareSkillsReport(ObjectId tenantId, CVQueryParams params, int maxCount, int limit);
 
-	List<ClusterBucket> getClusterDistributionReport(ObjectId tenantId, String clusterDimension);
+	List<ClusterBucket> getClusterDistributionReport(ObjectId tenantId, CVQueryParams params, String clusterDimension);
 }

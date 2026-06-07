@@ -1,12 +1,14 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.CV;
+import ai.qorva.core.dao.querybuilder.InsightCVQueryBuilder;
 import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dto.CVQueryParams;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.ai.embedding.EmbeddingModel;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -21,29 +23,19 @@ public class ResumeVectorSearchService {
 
 	private final CVRepository cvRepository;
 	private final EmbeddingModel embeddingModel;
+	private final InsightCVQueryBuilder queryBuilder;
 
 	private static final int DEFAULT_LIMIT = 10;
-	private static final int POOL_ANALYSIS_LIMIT = 500;
 
 	public List<CV> search(CVQueryParams params, ObjectId tenantId) {
 		try {
 			int limit = (params != null && params.limit() != null) ? params.limit() : DEFAULT_LIMIT;
 			String queryString = buildQueryString(params);
 			float[] embedding = embeddingModel.embed(queryString);
-			return cvRepository.similaritySearch(embedding, tenantId, null, List.of(), limit);
+			Criteria postFilter = (params != null) ? queryBuilder.build(tenantId, params) : null;
+			return cvRepository.similaritySearch(embedding, tenantId, null, List.of(), limit, postFilter);
 		} catch (Exception e) {
 			log.error("Error performing vector search: {}", e.getMessage());
-			return List.of();
-		}
-	}
-
-	public List<CV> searchForPoolAnalysis(CVQueryParams params, ObjectId tenantId) {
-		try {
-			String queryString = buildQueryString(params);
-			float[] embedding = embeddingModel.embed(queryString);
-			return cvRepository.similaritySearch(embedding, tenantId, null, List.of(), POOL_ANALYSIS_LIMIT);
-		} catch (Exception e) {
-			log.error("Error performing pool analysis vector search: {}", e.getMessage());
 			return List.of();
 		}
 	}
@@ -57,7 +49,9 @@ public class ResumeVectorSearchService {
 		Stream.of(
 			params.roles(),
 			params.skills(),
+			params.requiredSkills(),
 			params.industries(),
+			params.requiredIndustries(),
 			params.languages(),
 			params.seniority() != null ? List.of(params.seniority()) : List.<String>of(),
 			params.skillDepth() != null ? List.of(params.skillDepth()) : List.<String>of(),
