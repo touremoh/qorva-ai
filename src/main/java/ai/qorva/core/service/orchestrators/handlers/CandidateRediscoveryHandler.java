@@ -27,7 +27,7 @@ public class CandidateRediscoveryHandler implements InsightHandler {
 			.collect(Collectors.toList());
 
 		List<InsightMetricDTO> metrics = List.of(
-			new InsightMetricDTO("Rediscovered Profiles", String.valueOf(candidates.size()), "profiles")
+			new InsightMetricDTO("REDISCOVERED_PROFILES", String.valueOf(candidates.size()), "UNIT_PROFILES")
 		);
 
 		return new InsightHandlerResult(candidates, candidates.size(), metrics, List.of(), Map.of());

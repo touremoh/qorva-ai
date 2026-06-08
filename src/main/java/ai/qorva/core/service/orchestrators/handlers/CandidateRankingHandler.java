@@ -29,7 +29,7 @@ public class CandidateRankingHandler implements InsightHandler {
 
 		if (poolCount == 0) {
 			return new InsightHandlerResult(List.of(), 0L,
-				List.of(new InsightMetricDTO("Total Matching Profiles", "0", "profiles")),
+				List.of(new InsightMetricDTO("TOTAL_MATCHING_PROFILES", "0", "UNIT_PROFILES")),
 				List.of(), Map.of());
 		}
 
@@ -53,8 +53,8 @@ public class CandidateRankingHandler implements InsightHandler {
 			.collect(Collectors.toList());
 
 		List<InsightMetricDTO> metrics = List.of(
-			new InsightMetricDTO("Total Matching Profiles", String.valueOf(poolCount), "profiles"),
-			new InsightMetricDTO("Shown in Ranking", String.valueOf(candidates.size()), "candidates")
+			new InsightMetricDTO("TOTAL_MATCHING_PROFILES", String.valueOf(poolCount), "UNIT_PROFILES"),
+			new InsightMetricDTO("SHOWN_IN_RANKING", String.valueOf(candidates.size()), "UNIT_CANDIDATES")
 		);
 
 		return new InsightHandlerResult(candidates, poolCount, metrics, List.of(), Map.of());

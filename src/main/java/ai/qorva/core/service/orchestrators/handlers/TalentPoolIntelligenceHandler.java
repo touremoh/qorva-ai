@@ -43,7 +43,7 @@ public class TalentPoolIntelligenceHandler implements InsightHandler {
 		if (!hasFilters(params)) {
 			log.warn("TalentPoolIntelligenceHandler – no filters in params, returning empty result");
 			return new InsightHandlerResult(List.of(), 0L,
-				List.of(new InsightMetricDTO("Total Matching Candidates", "0", "candidates")),
+				List.of(new InsightMetricDTO("TOTAL_MATCHING_CANDIDATES", "0", "UNIT_CANDIDATES")),
 				List.of(), Map.of());
 		}
 
@@ -51,13 +51,13 @@ public class TalentPoolIntelligenceHandler implements InsightHandler {
 		List<SkillFrequencyResult> topSkills = cvInsightRepository.getSkillFrequencyReport(tenantId, params, TOP_SKILLS_LIMIT);
 
 		List<InsightMetricDTO> metrics = List.of(
-			new InsightMetricDTO("Total Matching Candidates", String.valueOf(count), "candidates")
+			new InsightMetricDTO("TOTAL_MATCHING_CANDIDATES", String.valueOf(count), "UNIT_CANDIDATES")
 		);
 
 		List<ChartDataDTO> charts = topSkills.isEmpty() ? List.of() : List.of(
 			new ChartDataDTO(
 				"bar",
-				"Top Skills in Pool",
+				"CHART_TITLE_TOP_SKILLS_IN_POOL",
 				topSkills.stream().map(SkillFrequencyResult::skill).toList(),
 				topSkills.stream().map(sr -> (Number) sr.count()).toList()
 			)

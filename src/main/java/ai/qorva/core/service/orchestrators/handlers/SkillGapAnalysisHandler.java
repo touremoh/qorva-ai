@@ -43,14 +43,14 @@ public class SkillGapAnalysisHandler implements InsightHandler {
 		List<String> rareSkills = rareReport.stream().map(SkillFrequencyResult::skill).collect(Collectors.toList());
 
 		List<ChartDataDTO> charts = rareReport.isEmpty() ? List.of() : List.of(
-			new ChartDataDTO("bar", "Rare Skills Distribution",
+			new ChartDataDTO("bar", "CHART_TITLE_RARE_SKILLS_DISTRIBUTION",
 				rareReport.stream().map(SkillFrequencyResult::skill).toList(),
 				rareReport.stream().map(sr -> (Number) sr.count()).toList())
 		);
 
 		List<InsightMetricDTO> metrics = List.of(
-			new InsightMetricDTO("Total Candidates Analyzed", String.valueOf(totalCandidates), "candidates"),
-			new InsightMetricDTO("Rare Skills Found (<10% of pool)", String.valueOf(rareSkills.size()), "skills")
+			new InsightMetricDTO("TOTAL_CANDIDATES_ANALYZED", String.valueOf(totalCandidates), "UNIT_CANDIDATES"),
+			new InsightMetricDTO("RARE_SKILLS_FOUND", String.valueOf(rareSkills.size()), "UNIT_SKILLS")
 		);
 
 		Map<String, Object> rawData = new LinkedHashMap<>();
@@ -102,15 +102,15 @@ public class SkillGapAnalysisHandler implements InsightHandler {
 			.collect(Collectors.toList());
 
 		List<ChartDataDTO> charts = skillReport.isEmpty() ? List.of() : List.of(
-			new ChartDataDTO("bar", "Skill Frequency Distribution",
+			new ChartDataDTO("bar", "CHART_TITLE_SKILL_FREQUENCY_DISTRIBUTION",
 				skillReport.stream().map(SkillFrequencyResult::skill).toList(),
 				skillReport.stream().map(sr -> (Number) sr.count()).toList())
 		);
 
 		List<InsightMetricDTO> metrics = List.of(
-			new InsightMetricDTO("Total Candidates Analyzed", String.valueOf(totalCandidates), "candidates"),
-			new InsightMetricDTO("Rare Skills (<10% of pool)", String.valueOf(rareSkills.size()), "skills"),
-			new InsightMetricDTO("Missing Requested Skills", String.valueOf(missingSkills.size()), "skills")
+			new InsightMetricDTO("TOTAL_CANDIDATES_ANALYZED", String.valueOf(totalCandidates), "UNIT_CANDIDATES"),
+			new InsightMetricDTO("RARE_SKILLS", String.valueOf(rareSkills.size()), "UNIT_SKILLS"),
+			new InsightMetricDTO("MISSING_REQUESTED_SKILLS", String.valueOf(missingSkills.size()), "UNIT_SKILLS")
 		);
 
 		Map<String, Object> rawData = new LinkedHashMap<>();
