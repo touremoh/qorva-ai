@@ -66,7 +66,8 @@ public class QorvaConfig {
 				InsightIntent.SKILL_GAP_ANALYSIS,       this.readFile("Entity_extractor_SKILL_GAP_ANALYSIS.md"),
 				InsightIntent.CANDIDATE_RANKING,        this.readFile("Entity_extractor_CANDIDATE_RANKING.md"),
 				InsightIntent.CANDIDATE_REDISCOVERY,    this.readFile("Entity_extractor_CANDIDATE_REDISCOVERY.md"),
-				InsightIntent.TALENT_CLUSTERING,        this.readFile("Entity_extractor_TALENT_CLUSTERING.md")
+				InsightIntent.TALENT_CLUSTERING,        this.readFile("Entity_extractor_TALENT_CLUSTERING.md"),
+				InsightIntent.SKILLS_DISTRIBUTION,      this.readFile("Entity_extractor_SKILLS_DISTRIBUTION.md")
 			);
 
 			// Build and render results

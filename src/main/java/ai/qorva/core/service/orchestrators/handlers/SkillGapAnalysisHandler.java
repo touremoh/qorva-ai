@@ -19,16 +19,18 @@ public class SkillGapAnalysisHandler implements InsightHandler {
 
 	@Override
 	public InsightHandlerResult handle(CVQueryParams params, ObjectId tenantId) {
-		// Skills are the analysis subject, not a population gate — strip them from the
-		// population criteria so the frequency report covers the full relevant pool.
-		CVQueryParams populationParams = params.withoutSkills();
-
-		long totalCandidates = cvInsightRepository.countCandidatesByFilters(tenantId, populationParams);
 		List<String> requestedSkills = params.skills() != null ? params.skills() : List.of();
 
 		if (requestedSkills.isEmpty()) {
-			return handleDiscoveryMode(tenantId, populationParams, totalCandidates);
+			// Discovery mode: skills (if any) narrow the population, not the analysis subject.
+			long totalCandidates = cvInsightRepository.countCandidatesByFilters(tenantId, params);
+			return handleDiscoveryMode(tenantId, params, totalCandidates);
 		}
+
+		// Check mode: skills are the analysis subject — strip them from the population
+		// so the frequency report is not self-filtered.
+		CVQueryParams populationParams = params.withoutSkills();
+		long totalCandidates = cvInsightRepository.countCandidatesByFilters(tenantId, populationParams);
 		return handleCheckMode(tenantId, populationParams, requestedSkills, totalCandidates);
 	}
 
@@ -38,14 +40,15 @@ public class SkillGapAnalysisHandler implements InsightHandler {
 	 */
 	private InsightHandlerResult handleDiscoveryMode(ObjectId tenantId, CVQueryParams populationParams, long totalCandidates) {
 		int rareThreshold = (int) Math.max(3, totalCandidates * 0.10);
-		List<SkillFrequencyResult> rareReport = cvInsightRepository.getRareSkillsReport(tenantId, populationParams, rareThreshold, 100);
+		List<SkillFrequencyResult> topReport  = cvInsightRepository.getSkillFrequencyReport(tenantId, populationParams, 20);
+		List<SkillFrequencyResult> rareReport = cvInsightRepository.getRareSkillsReport(tenantId, populationParams, rareThreshold, 50);
 
 		List<String> rareSkills = rareReport.stream().map(SkillFrequencyResult::skill).collect(Collectors.toList());
 
-		List<ChartDataDTO> charts = rareReport.isEmpty() ? List.of() : List.of(
-			new ChartDataDTO("bar", "CHART_TITLE_RARE_SKILLS_DISTRIBUTION",
-				rareReport.stream().map(SkillFrequencyResult::skill).toList(),
-				rareReport.stream().map(sr -> (Number) sr.count()).toList())
+		List<ChartDataDTO> charts = topReport.isEmpty() ? List.of() : List.of(
+			new ChartDataDTO("bar", "CHART_TITLE_SKILL_FREQUENCY_DISTRIBUTION",
+				topReport.stream().map(SkillFrequencyResult::skill).toList(),
+				topReport.stream().map(sr -> (Number) sr.count()).toList())
 		);
 
 		List<InsightMetricDTO> metrics = List.of(
@@ -55,6 +58,8 @@ public class SkillGapAnalysisHandler implements InsightHandler {
 
 		Map<String, Object> rawData = new LinkedHashMap<>();
 		rawData.put("totalCandidatesInPool", totalCandidates);
+		rawData.put("topSkills", topReport.stream()
+			.collect(Collectors.toMap(SkillFrequencyResult::skill, SkillFrequencyResult::count, (a, b) -> a, LinkedHashMap::new)));
 		rawData.put("rareSkills", rareSkills);
 		rawData.put("rareSkillDetails", rareReport.stream()
 			.collect(Collectors.toMap(SkillFrequencyResult::skill, SkillFrequencyResult::count, (a, b) -> a, LinkedHashMap::new)));

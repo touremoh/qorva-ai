@@ -111,4 +111,25 @@ public class CVInsightRepositoryImpl implements CVInsightRepository {
 			ClusterBucket.class
 		).getMappedResults();
 	}
+
+	@Override
+	public List<SkillFrequencyResult> getSkillIndexFrequencyReport(ObjectId tenantId, CVQueryParams params, int limit) {
+		AggregationOperation matchOp = Aggregation.match(queryBuilder.build(tenantId, params));
+		AggregationOperation unwindOp = Aggregation.unwind("searchIndex.skills");
+		AggregationOperation groupOp = ctx -> new Document("$group",
+			new Document("_id", "$searchIndex.skills")
+				.append("count", new Document("$sum", 1)));
+		AggregationOperation projectOp = ctx -> new Document("$project",
+			new Document("skill", "$_id")
+				.append("count", 1)
+				.append("_id", 0));
+		AggregationOperation sortOp = Aggregation.sort(Sort.Direction.DESC, "count");
+		AggregationOperation limitOp = Aggregation.limit(limit);
+
+		return mongoTemplate.aggregate(
+			Aggregation.newAggregation(matchOp, unwindOp, groupOp, projectOp, sortOp, limitOp),
+			CV.class,
+			SkillFrequencyResult.class
+		).getMappedResults();
+	}
 }
