@@ -20,6 +20,10 @@ import java.time.Instant;
 public class JobPostDTO extends AbstractQorvaDTO {
     private String id;
     private String tenantId;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private String jobReference;
+
     private ScoringRules scoringRules;
     private Boolean matchingReportsNeeded;
     private String title;

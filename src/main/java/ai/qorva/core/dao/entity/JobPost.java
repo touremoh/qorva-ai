@@ -22,6 +22,7 @@ public class JobPost implements QorvaEntity {
     @Id
     private String id;
 
+    private String jobReference;
     private String title;
     private String description;
 

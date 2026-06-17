@@ -29,19 +29,18 @@ public class V2026051411AddTextAndOperationalIndexes extends AbstractQorvaDbMigr
 
 	private void createCvsTextIndex(MongoDatabase db) {
 		db.getCollection("cvs").createIndex(
-			Indexes.compoundIndex(
-				Indexes.text("personalInformation.name"),
-				Indexes.text("personalInformation.contact.email"),
-				Indexes.text("personalInformation.role"),
-				Indexes.text("tags"),
-				Indexes.text("keySkills.category"),
-				Indexes.text("keySkills.skills"),
-				Indexes.text("skillsAndQualifications.softSkills"),
-				Indexes.text("skillsAndQualifications.technicalSkills"),
-				Indexes.text("profiles.areasOfExpertise"),
-				Indexes.text("profiles.keyResponsibilities"),
-				Indexes.text("applicantNumber")
-			),
+			new Document(TENANT_ID, 1)
+				.append("personalInformation.name", "text")
+				.append("personalInformation.contact.email", "text")
+				.append("personalInformation.role", "text")
+				.append("tags", "text")
+				.append("keySkills.category", "text")
+				.append("keySkills.skills", "text")
+				.append("skillsAndQualifications.softSkills", "text")
+				.append("skillsAndQualifications.technicalSkills", "text")
+				.append("profiles.areasOfExpertise", "text")
+				.append("profiles.keyResponsibilities", "text")
+				.append("applicantNumber", "text"),
 			new IndexOptions().name("cvs_text_search_idx")
 		);
 		log.info("V20260514_11 – cvs text search index created");
@@ -49,10 +48,9 @@ public class V2026051411AddTextAndOperationalIndexes extends AbstractQorvaDbMigr
 
 	private void createJobPostsTextIndex(MongoDatabase db) {
 		db.getCollection("job_posts").createIndex(
-			Indexes.compoundIndex(
-				Indexes.text("title"),
-				Indexes.text("description")
-			),
+			new Document(TENANT_ID, 1)
+				.append("title", "text")
+				.append("description", "text"),
 			new IndexOptions().name("job_posts_text_search_idx")
 		);
 		log.info("V20260514_11 – job_posts text search index created");
@@ -60,10 +58,9 @@ public class V2026051411AddTextAndOperationalIndexes extends AbstractQorvaDbMigr
 
 	private void createMatchingReportsTextIndex(MongoDatabase db) {
 		db.getCollection("matching_reports").createIndex(
-			Indexes.compoundIndex(
-				Indexes.text("candidateInfo.candidateName"),
-				Indexes.text("candidateInfo.skills")
-			),
+			new Document(TENANT_ID, 1)
+				.append("candidateInfo.candidateName", "text")
+				.append("candidateInfo.skills", "text"),
 			new IndexOptions().name("matching_reports_text_search_idx")
 		);
 		log.info("V20260514_11 – matching_reports text search index created");
@@ -108,10 +105,16 @@ public class V2026051411AddTextAndOperationalIndexes extends AbstractQorvaDbMigr
 			new IndexOptions().name("chats_tenant_matching_report_idx")
 		);
 
-		// Compound text index: tenantId prefix + title full-text + metadata.tags filter
+		// Text index on title; metadata.tags is an array field so cannot be a non-text key in a text compound index
 		chats.createIndex(
-			new Document(TENANT_ID, 1).append("title", "text").append("metadata.tags", 1),
+			new Document(TENANT_ID, 1).append("title", "text"),
 			new IndexOptions().name("chats_text_search_idx")
+		);
+
+		// Separate multikey index for tag-based filtering
+		chats.createIndex(
+			Indexes.compoundIndex(Indexes.ascending(TENANT_ID), Indexes.ascending("metadata.tags")),
+			new IndexOptions().name("chats_tenant_tags_idx")
 		);
 
 		log.info("V20260514_11 – chats indexes created");
@@ -154,6 +157,7 @@ public class V2026051411AddTextAndOperationalIndexes extends AbstractQorvaDbMigr
 		try { db.getCollection("chats").dropIndex("chats_tenant_job_idx"); } catch (Exception ignored) {}
 		try { db.getCollection("chats").dropIndex("chats_tenant_matching_report_idx"); } catch (Exception ignored) {}
 		try { db.getCollection("chats").dropIndex("chats_text_search_idx"); } catch (Exception ignored) {}
+		try { db.getCollection("chats").dropIndex("chats_tenant_tags_idx"); } catch (Exception ignored) {}
 		try { db.getCollection("chat_messages").dropIndex("chat_messages_timeline_idx"); } catch (Exception ignored) {}
 		try { db.getCollection("chat_messages").dropIndex("chat_messages_role_timeline_idx"); } catch (Exception ignored) {}
 	}

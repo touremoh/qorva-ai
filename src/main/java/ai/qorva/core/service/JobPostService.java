@@ -15,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Locale;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -33,6 +35,7 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
     @Override
     protected void preProcessCreateOne(JobPostDTO dto) throws QorvaException {
         super.preProcessCreateOne(dto);
+        dto.setJobReference(UUID.randomUUID().toString().toUpperCase(Locale.ROOT));
         dto.setStatus(JobPostStatusEnum.OPEN.getStatus());
         dto.setMatchingReportsNeeded(true);
     }

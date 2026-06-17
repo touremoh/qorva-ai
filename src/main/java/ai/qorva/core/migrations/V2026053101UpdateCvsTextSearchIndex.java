@@ -2,11 +2,11 @@ package ai.qorva.core.migrations;
 
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.IndexOptions;
-import com.mongodb.client.model.Indexes;
 import io.mongock.api.annotations.ChangeUnit;
 import io.mongock.api.annotations.Execution;
 import io.mongock.api.annotations.RollbackExecution;
 import lombok.extern.slf4j.Slf4j;
+import org.bson.Document;
 import org.springframework.stereotype.Component;
 
 @Slf4j
@@ -26,27 +26,26 @@ public class V2026053101UpdateCvsTextSearchIndex extends AbstractQorvaDbMigratio
 		}
 
 		cvs.createIndex(
-			Indexes.compoundIndex(
-				Indexes.text("candidateProfileSummary"),
-				Indexes.text("personalInformation.name"),
-				Indexes.text("personalInformation.contact.email"),
-				Indexes.text("personalInformation.role"),
-				Indexes.text("tags"),
-				Indexes.text("keySkills.category"),
-				Indexes.text("keySkills.skills"),
-				Indexes.text("skillsAndQualifications.softSkills"),
-				Indexes.text("skillsAndQualifications.technicalSkills"),
-				Indexes.text("profiles.areasOfExpertise"),
-				Indexes.text("applicantNumber"),
-				Indexes.text("candidateClustering.primaryCluster"),
-				Indexes.text("candidateClustering.secondaryClusters"),
-				Indexes.text("candidateClustering.functionalExpertise"),
-				Indexes.text("candidateClustering.industryDomains"),
-				Indexes.text("candidateClustering.environmentFit"),
-				Indexes.text("candidateClustering.clusterReasoning"),
-				Indexes.text("candidateClustering.seniorityLevel"),
-				Indexes.text("candidateClustering.leadershipAndInfluence")
-			),
+			new Document("tenantId", 1)
+				.append("candidateProfileSummary", "text")
+				.append("personalInformation.name", "text")
+				.append("personalInformation.contact.email", "text")
+				.append("personalInformation.role", "text")
+				.append("tags", "text")
+				.append("keySkills.category", "text")
+				.append("keySkills.skills", "text")
+				.append("skillsAndQualifications.softSkills", "text")
+				.append("skillsAndQualifications.technicalSkills", "text")
+				.append("profiles.areasOfExpertise", "text")
+				.append("applicantNumber", "text")
+				.append("candidateClustering.primaryCluster", "text")
+				.append("candidateClustering.secondaryClusters", "text")
+				.append("candidateClustering.functionalExpertise", "text")
+				.append("candidateClustering.industryDomains", "text")
+				.append("candidateClustering.environmentFit", "text")
+				.append("candidateClustering.clusterReasoning", "text")
+				.append("candidateClustering.seniorityLevel", "text")
+				.append("candidateClustering.leadershipAndInfluence", "text"),
 			new IndexOptions().name("cvs_text_search_idx")
 		);
 

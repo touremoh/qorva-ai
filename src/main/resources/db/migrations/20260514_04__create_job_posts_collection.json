@@ -6,6 +6,10 @@
       "title": "job_posts",
       "required": ["title", "tenantId", "status", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
       "properties": {
+        "jobReference": {
+          "bsonType": "string",
+          "description": "unique job reference identifier, generated on creation"
+        },
         "title": {
           "bsonType": "string",
           "description": "must be a string and is required"
