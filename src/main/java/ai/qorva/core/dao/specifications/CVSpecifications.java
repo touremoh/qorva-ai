@@ -69,4 +69,11 @@ public final class CVSpecifications {
 		}
 		return () -> Criteria.where("applicantNumber").is(applicantNumber);
 	}
+
+	public static MongoSpecification<CV> applicantNumberIn(List<String> applicantNumbers) {
+		if (applicantNumbers == null || applicantNumbers.isEmpty()) {
+			return MongoSpecifications.empty();
+		}
+		return () -> Criteria.where("applicantNumber").in(applicantNumbers);
+	}
 }

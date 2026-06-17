@@ -42,7 +42,8 @@ public class CandidateRankingHandler implements InsightHandler {
 			params.seniority(), params.skillDepth(), params.leadershipLevel(),
 			params.openToWork(), params.availabilityStatus(), params.location(),
 			params.minYearsExperience(), params.tags(), effectiveLimit,
-			params.requiredSkills(), params.requiredIndustries(), null
+			params.requiredSkills(), params.requiredIndustries(), null,
+			params.applicantNumbers(), params.jobPostReference()
 		);
 
 		var cvs = vectorSearchService.search(adjustedParams, tenantId);

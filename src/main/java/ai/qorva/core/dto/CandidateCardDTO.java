@@ -4,6 +4,7 @@ import java.util.List;
 
 public record CandidateCardDTO(
         String id,
+        String applicantNumber,
         String name,
         String currentRole,
         List<String> topSkills,

@@ -50,7 +50,7 @@ public class LibraryInsightsService {
 					: params.clarificationQuestion();
 				InsightResponseDTO clarification = new InsightResponseDTO(
 					conversationId, intent, clarificationText,
-					List.of(), 0, List.of(), List.of(), List.of(), null
+					List.of(), 0, List.of(), List.of(), List.of(), null, null
 				);
 				conversationService.saveTurn(conversationId, tenantId, userId, null, request.question(), intent, clarification);
 				return clarification;
@@ -70,7 +70,8 @@ public class LibraryInsightsService {
 				result.metrics(),
 				result.charts(),
 				answer.followUpQuestions() != null ? answer.followUpQuestions() : List.of(),
-				answer.disclaimer()
+				answer.disclaimer(),
+				result.rawData().isEmpty() ? null : result.rawData()
 			);
 
 			// Title is only set on the first turn of a new conversation
@@ -84,7 +85,7 @@ public class LibraryInsightsService {
 				conversationId,
 				InsightIntent.GENERAL_RECRUITING_QUESTION,
 				"I was unable to process your request at this time. Please try again.",
-				List.of(), 0, List.of(), List.of(), List.of(), null
+				List.of(), 0, List.of(), List.of(), List.of(), null, null
 			);
 		}
 	}

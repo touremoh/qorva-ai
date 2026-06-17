@@ -21,6 +21,7 @@ public class InsightRouter {
 		CandidateRediscoveryHandler rediscovery,
 		TalentClusteringHandler clustering,
 		SkillsDistributionHandler skillsDistribution,
+		CandidateComparisonHandler comparison,
 		GeneralRecruitingChatHandler general
 	) {
 		this.fallback = general;
@@ -31,6 +32,7 @@ public class InsightRouter {
 			Map.entry(InsightIntent.CANDIDATE_REDISCOVERY, rediscovery),
 			Map.entry(InsightIntent.TALENT_CLUSTERING, clustering),
 			Map.entry(InsightIntent.SKILLS_DISTRIBUTION, skillsDistribution),
+			Map.entry(InsightIntent.CANDIDATE_COMPARISON, comparison),
 			Map.entry(InsightIntent.GENERAL_RECRUITING_QUESTION, general)
 		);
 	}

@@ -11,6 +11,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,5 +51,14 @@ public class LibraryInsightsController {
 		String userId = SecurityContextHolder.getContext().getAuthentication().getName();
 		List<InsightConversationTurnDTO> history = conversationService.getHistory(conversationId, tenantId, userId);
 		return ResponseEntity.ok(history);
+	}
+
+	@DeleteMapping("/conversations/{conversationId}")
+	//@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_LIBRARY_INSIGHTS')")
+	public ResponseEntity<Void> deleteConversation(@PathVariable String conversationId) {
+		String tenantId = TenantContextHolder.getTenantId();
+		String userId = SecurityContextHolder.getContext().getAuthentication().getName();
+		conversationService.deleteConversation(conversationId, tenantId, userId);
+		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 	}
 }

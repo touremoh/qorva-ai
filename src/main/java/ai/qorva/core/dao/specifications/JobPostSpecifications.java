@@ -27,4 +27,9 @@ public final class JobPostSpecifications {
 		if (createdBy == null || createdBy.isBlank()) return MongoSpecifications.empty();
 		return () -> Criteria.where("createdBy").is(createdBy);
 	}
+
+	public static MongoSpecification<JobPost> jobReferenceEquals(String jobReference) {
+		if (jobReference == null || jobReference.isBlank()) return MongoSpecifications.empty();
+		return () -> Criteria.where("jobReference").is(jobReference);
+	}
 }

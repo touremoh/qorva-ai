@@ -36,6 +36,7 @@ class CandidateCardMapper {
 
 		return new CandidateCardDTO(
 			id,
+			cv.getApplicantNumber(),
 			name != null ? name : "Unknown",
 			role != null ? role : "Unknown",
 			topSkills,

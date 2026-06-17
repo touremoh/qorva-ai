@@ -46,6 +46,10 @@ public class InsightConversationService {
             .collect(Collectors.toList());
     }
 
+    public void deleteConversation(String conversationId, String tenantId, String initiatedBy) {
+        repository.deleteByConversationIdAndTenantIdAndInitiatedBy(conversationId, tenantId, initiatedBy);
+    }
+
     public List<InsightConversationSummaryDTO> getAllConversations(String tenantId, String initiatedBy) {
         List<InsightConversationTurn> allTurns =
             repository.findByTenantIdAndInitiatedByOrderByCreatedAtAsc(tenantId, initiatedBy);
@@ -96,6 +100,7 @@ public class InsightConversationService {
             r != null ? r.charts() : List.of(),
             r != null ? r.followUpQuestions() : List.of(),
             r != null ? r.disclaimer() : null,
+            r != null ? r.rawData() : null,
             t.getCreatedAt()
         );
     }

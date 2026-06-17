@@ -1,6 +1,7 @@
 package ai.qorva.core.dto;
 
 import java.util.List;
+import java.util.Map;
 
 public record InsightResponseDTO(
         String conversationId,
@@ -11,5 +12,6 @@ public record InsightResponseDTO(
         List<InsightMetricDTO> metrics,
         List<ChartDataDTO> charts,
         List<String> followUpQuestions,
-        String disclaimer
+        String disclaimer,
+        Map<String, Object> rawData
 ) {}

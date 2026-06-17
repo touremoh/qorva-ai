@@ -13,4 +13,6 @@ public interface InsightConversationTurnRepository extends MongoRepository<Insig
     List<InsightConversationTurn> findByConversationIdAndTenantIdAndInitiatedByOrderByCreatedAtAsc(String conversationId, String tenantId, String initiatedBy);
 
     List<InsightConversationTurn> findByTenantIdAndInitiatedByOrderByCreatedAtAsc(String tenantId, String initiatedBy);
+
+    void deleteByConversationIdAndTenantIdAndInitiatedBy(String conversationId, String tenantId, String initiatedBy);
 }

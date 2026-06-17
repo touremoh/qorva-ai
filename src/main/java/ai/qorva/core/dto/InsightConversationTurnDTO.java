@@ -2,6 +2,7 @@ package ai.qorva.core.dto;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Map;
 
 public record InsightConversationTurnDTO(
         String id,
@@ -16,5 +17,6 @@ public record InsightConversationTurnDTO(
         List<ChartDataDTO> charts,
         List<String> followUpQuestions,
         String disclaimer,
+        Map<String, Object> rawData,
         Instant createdAt
 ) {}

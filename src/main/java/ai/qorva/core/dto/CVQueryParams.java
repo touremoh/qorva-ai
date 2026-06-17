@@ -21,14 +21,16 @@ public record CVQueryParams(
 		Integer limit,
 		List<String> requiredSkills,     // → each skill is a separate AND condition (all must match)
 		List<String> requiredIndustries, // → each industry is a separate AND condition (all must match)
-		String clarificationQuestion     // non-null = question too broad; skip query, ask user this instead
+		String clarificationQuestion,    // non-null = question too broad; skip query, ask user this instead
+		List<String> applicantNumbers,   // → specific candidate refs for comparison (applicantNumber.in)
+		String jobPostReference          // → specific job post ref for candidate-vs-job comparison
 ) {
 
 	public static CVQueryParams empty() {
 		return new CVQueryParams(
 			List.of(), List.of(), List.of(), List.of(), List.of(), List.of(), List.of(),
 			null, null, null, null, null, null, null, List.of(), null,
-			List.of(), List.of(), null
+			List.of(), List.of(), null, List.of(), null
 		);
 	}
 
@@ -36,7 +38,8 @@ public record CVQueryParams(
 		return new CVQueryParams(
 			List.of(), roles, industries, languages, companies, degreeLevels, institutions,
 			seniority, skillDepth, leadershipLevel, openToWork, availabilityStatus,
-			location, minYearsExperience, tags, limit, List.of(), requiredIndustries, null
+			location, minYearsExperience, tags, limit, List.of(), requiredIndustries, null,
+			applicantNumbers, jobPostReference
 		);
 	}
 
