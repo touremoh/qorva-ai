@@ -46,6 +46,8 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final ChatsRepository chatsRepository;
     private final UsageMonitoringService usageMonitoringService;
 
+    private static final int DEFAULT_MATCH_LIMIT = 10;
+
     @Autowired
     public CVService(
         CVRepository repository,
@@ -188,7 +190,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
             new ObjectId(jobPostDTO.getTenantId()),
             filterOpenToWork,
             includedStatuses,
-            20
+            DEFAULT_MATCH_LIMIT
         );
 
         if (Objects.isNull(matchingCVs) || matchingCVs.isEmpty()) {
