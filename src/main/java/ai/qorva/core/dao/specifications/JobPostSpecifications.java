@@ -17,6 +17,10 @@ public final class JobPostSpecifications {
 		if (title == null || title.isBlank()) return MongoSpecifications.empty();
 		return () -> Criteria.where("title").regex(title, "i");
 	}
+	public static MongoSpecification<JobPost> descriptionContains(String description) {
+		if (description == null || description.isBlank()) return MongoSpecifications.empty();
+		return () -> Criteria.where("description").regex(description, "i");
+	}
 
 	public static MongoSpecification<JobPost> statusEquals(String status) {
 		if (status == null || status.isBlank()) return MongoSpecifications.empty();

@@ -9,10 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -31,5 +28,14 @@ public class DashboardController {
 	@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_DASHBOARD')")
 	public ResponseEntity<DashboardData> getDashboardData(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
 		return ResponseEntity.ok(this.dashboardService.getDashboardData(userDetails));
+	}
+
+	@GetMapping(path = "/top-candidates", produces = "application/json")
+	@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_DASHBOARD')")
+	public ResponseEntity<DashboardData.TopCandidatesPage> getTopCandidatesPerJobPost(
+		@AuthenticationPrincipal UserDetails userDetails,
+		@RequestParam(defaultValue = "0") int pageNumber,
+		@RequestParam(defaultValue = "5") int pageSize) throws QorvaException {
+		return ResponseEntity.ok(this.dashboardService.getTopCandidatesPerJobPost(userDetails, pageNumber, pageSize));
 	}
 }

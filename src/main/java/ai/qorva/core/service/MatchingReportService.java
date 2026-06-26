@@ -177,8 +177,16 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 		return ((MatchingReportRepository) repository).getApplicationsPerJobPost(new ObjectId(tenantId));
 	}
 
-	public List<DashboardData.TopCandidatesPerJobReport> getTopCandidatesPerJobPost(String tenantId) {
-		return ((MatchingReportRepository) repository).getTopCandidatesPerJobPost(new ObjectId(tenantId));
+	public DashboardData.TopCandidatesPage getTopCandidatesPerJobPost(String tenantId, int page, int pageSize) {
+		var pageable = PageRequest.of(page, pageSize);
+		var repo = (MatchingReportRepository) repository;
+		var slice = repo.getTopCandidatesPerJobPost(new ObjectId(tenantId), pageable);
+		var countResult = repo.countDistinctJobPosts(new ObjectId(tenantId));
+		long total = countResult != null ? countResult.total() : 0L;
+		int totalPages = pageSize == 0 ? 0 : (int) Math.ceil((double) total / pageSize);
+		return new DashboardData.TopCandidatesPage(
+			slice.getContent(), page, pageSize, total, totalPages, slice.hasNext()
+		);
 	}
 
 	@Override

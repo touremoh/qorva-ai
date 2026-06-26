@@ -38,6 +38,12 @@ public class DashboardService {
 		this.dashboardExecutor = dashboardExecutor;
 	}
 
+	public DashboardData.TopCandidatesPage getTopCandidatesPerJobPost(UserDetails userDetails, int page, int pageSize) throws QorvaException {
+		var userInfo = Optional.ofNullable(this.userService.findOneByCriteria(UserDTO.builder().email(userDetails.getUsername()).build()))
+			.orElseThrow(() -> new QorvaException("User not found"));
+		return this.matchingReportService.getTopCandidatesPerJobPost(userInfo.getTenantId(), page, pageSize);
+	}
+
 	public DashboardData getDashboardData(UserDetails userDetails) throws QorvaException {
 		var userInfo = Optional.ofNullable(this.userService.findOneByCriteria(UserDTO.builder().email(userDetails.getUsername()).build()))
 			.orElseThrow(() -> new QorvaException("User not found"));
@@ -101,11 +107,6 @@ public class DashboardService {
 			dashboardExecutor
 		);
 
-		var topCandidatesPerJob = CompletableFuture.supplyAsync(
-			() -> this.matchingReportService.getTopCandidatesPerJobPost(tenantId),
-			dashboardExecutor
-		);
-
 		totalCvs.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		totalJobPosts.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		totalUsers.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
@@ -117,7 +118,6 @@ public class DashboardService {
 		leadershipReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 		learningVelocityReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 		jobPostReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
-		topCandidatesPerJob.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 
 		CompletableFuture.allOf(
 			totalCvs,
@@ -130,8 +130,7 @@ public class DashboardService {
 			seniorityLevelReport,
 			leadershipReport,
 			learningVelocityReport,
-			jobPostReports,
-			topCandidatesPerJob
+			jobPostReports
 		).join();
 
 		return new DashboardData(
@@ -143,7 +142,6 @@ public class DashboardService {
 			usageMonitoring.join(),
 			skillReports.join(),
 			jobPostReports.join(),
-			topCandidatesPerJob.join(),
 			skillDepthReport.join(),
 			seniorityLevelReport.join(),
 			leadershipReport.join(),

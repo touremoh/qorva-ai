@@ -15,6 +15,7 @@ public class JobPostQueryBuilder implements QorvaQueryBuilder<JobPost> {
 		return MongoSpecification
 			.where(JobPostSpecifications.tenantIdEquals(params.get("tenantId")))
 			.and(JobPostSpecifications.titleContains(params.get("title")))
+			.and(JobPostSpecifications.descriptionContains(params.get("description")))
 			.and(JobPostSpecifications.statusEquals(params.get("status")))
 			.and(JobPostSpecifications.createdByEquals(params.get("createdBy")));
 	}

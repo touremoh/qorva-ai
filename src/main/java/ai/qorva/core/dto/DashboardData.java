@@ -14,7 +14,6 @@ public record DashboardData(
 	UsageMonitoringDTO usageMonitoring,
 	List<SkillReport> skillsReport,
 	List<ApplicationPerJobPostReport> jobPostsReport,
-	List<TopCandidatesPerJobReport> topCandidatesPerJob,
 	List<ClusteringCategoryReport> skillDepthReport,
 	List<ClusteringCategoryReport> seniorityLevelReport,
 	List<ClusteringCategoryReport> leadershipReport,
@@ -22,6 +21,8 @@ public record DashboardData(
 ) {
 
 	public record ClusteringCategoryReport(String name, int count, double percentage) {}
+
+	public record JobPostCount(long total) {}
 
 	public record ApplicationPerJobPostReport(String jobPostTitle, int totalMatch) {}
 
@@ -32,10 +33,18 @@ public record DashboardData(
 		List<TopCandidate> topCandidates
 	) {}
 
-
 	public record TopCandidate(
 		String candidateId,
 		String candidateName,
 		Integer score
+	) {}
+
+	public record TopCandidatesPage(
+		List<TopCandidatesPerJobReport> content,
+		int pageNumber,
+		int pageSize,
+		long totalElements,
+		int totalPages,
+		boolean hasNext
 	) {}
 }

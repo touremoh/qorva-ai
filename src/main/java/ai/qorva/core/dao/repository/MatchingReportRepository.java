@@ -5,6 +5,7 @@ import ai.qorva.core.dto.DashboardData;
 import org.bson.types.ObjectId;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
 import org.springframework.data.mongodb.repository.Aggregation;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -80,7 +81,14 @@ public interface MatchingReportRepository extends QorvaRepository<MatchingReport
 			"'_id': 0 " +
 		"} }"
 	})
-	List<DashboardData.TopCandidatesPerJobReport> getTopCandidatesPerJobPost(ObjectId tenantId);
+	Slice<DashboardData.TopCandidatesPerJobReport> getTopCandidatesPerJobPost(ObjectId tenantId, Pageable pageable);
+
+	@Aggregation(pipeline = {
+		"{ '$match': { 'tenantId': ?0 } }",
+		"{ '$group': { '_id': '$jobPostId' } }",
+		"{ '$group': { '_id': null, 'total': { '$sum': 1 } } }"
+	})
+	DashboardData.JobPostCount countDistinctJobPosts(ObjectId tenantId);
 
 	/**
 	 * Deletes all resume matches for a given tenant and job post.
