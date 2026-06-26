@@ -1,6 +1,7 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.CV;
+import ai.qorva.core.dto.CVDuplicatesData;
 import ai.qorva.core.dto.DashboardData;
 import org.bson.types.ObjectId;
 import org.springframework.data.domain.Page;
@@ -67,5 +68,29 @@ public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepos
 		"{ '$sort': { 'count': -1 } }"
 	})
 	List<DashboardData.ClusteringCategoryReport> getLearningVelocityReportByTenantId(ObjectId tenantId);
+
+	@Aggregation(pipeline = {
+		"{ '$match': { 'tenantId': ?0, 'personalInformation.contact.email': { '$exists': true, '$ne': null, '$gt': '' } } }",
+		"{ '$group': { '_id': '$personalInformation.contact.email', " +
+			"'cvs': { '$push': { 'cvId': { '$toString': '$_id' }, 'name': '$personalInformation.name', " +
+				"'email': '$personalInformation.contact.email', 'phone': '$personalInformation.contact.phone', 'createdAt': '$createdAt' } }, " +
+			"'count': { '$sum': 1 } } }",
+		"{ '$match': { 'count': { '$gt': 1 } } }",
+		"{ '$project': { 'matchValue': '$_id', 'cvs': 1, 'count': 1, '_id': 0 } }",
+		"{ '$sort': { 'count': -1 } }"
+	})
+	List<CVDuplicatesData.DuplicateAggResult> findEmailDuplicates(ObjectId tenantId);
+
+	@Aggregation(pipeline = {
+		"{ '$match': { 'tenantId': ?0, 'personalInformation.contact.phone': { '$exists': true, '$ne': null, '$gt': '' } } }",
+		"{ '$group': { '_id': '$personalInformation.contact.phone', " +
+			"'cvs': { '$push': { 'cvId': { '$toString': '$_id' }, 'name': '$personalInformation.name', " +
+				"'email': '$personalInformation.contact.email', 'phone': '$personalInformation.contact.phone', 'createdAt': '$createdAt' } }, " +
+			"'count': { '$sum': 1 } } }",
+		"{ '$match': { 'count': { '$gt': 1 } } }",
+		"{ '$project': { 'matchValue': '$_id', 'cvs': 1, 'count': 1, '_id': 0 } }",
+		"{ '$sort': { 'count': -1 } }"
+	})
+	List<CVDuplicatesData.DuplicateAggResult> findPhoneDuplicates(ObjectId tenantId);
 
 }

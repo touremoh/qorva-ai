@@ -1,6 +1,7 @@
 package ai.qorva.core.controller;
 
 import ai.qorva.core.dto.CVDTO;
+import ai.qorva.core.dto.CVDuplicatesData;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.CVService;
@@ -45,6 +46,13 @@ public class CVController extends AbstractQorvaController<CVDTO> {
         @RequestParam("pageSize") int pageSize,
         @RequestParam("pageNumber") int pageNumber) throws QorvaException {
         return BuildApiResponse.from(((CVService) this.service).searchAll(currentTenantId(), searchTerms, pageSize, pageNumber));
+    }
+
+    @GetMapping("/duplicates")
+    public ResponseEntity<CVDuplicatesData.DuplicatesPage> findDuplicates(
+        @RequestParam(defaultValue = "0") int pageNumber,
+        @RequestParam(defaultValue = "20") int pageSize) {
+        return ResponseEntity.ok(((CVService) service).findDuplicates(currentTenantId(), pageNumber, pageSize));
     }
 
     @GetMapping("/tags")

@@ -6,6 +6,7 @@ import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dto.CVDTO;
+import ai.qorva.core.dto.CVDuplicatesData;
 import ai.qorva.core.dto.CVOutputDTO;
 import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
@@ -26,6 +27,7 @@ import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
@@ -269,6 +271,28 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         } catch (Exception e) {
             log.warn("Failed to increment {} usage for tenant={}", key, tenantId, e);
         }
+    }
+
+    public CVDuplicatesData.DuplicatesPage findDuplicates(String tenantId, int page, int pageSize) {
+        var repo = (CVRepository) repository;
+        var emailGroups = repo.findEmailDuplicates(new ObjectId(tenantId)).stream()
+            .map(r -> new CVDuplicatesData.DuplicateGroup("EMAIL", r.matchValue(), r.count(), r.cvs()))
+            .toList();
+        var phoneGroups = repo.findPhoneDuplicates(new ObjectId(tenantId)).stream()
+            .map(r -> new CVDuplicatesData.DuplicateGroup("PHONE", r.matchValue(), r.count(), r.cvs()))
+            .toList();
+
+        var all = new ArrayList<CVDuplicatesData.DuplicateGroup>(emailGroups.size() + phoneGroups.size());
+        all.addAll(emailGroups);
+        all.addAll(phoneGroups);
+
+        long total = all.size();
+        int totalPages = pageSize == 0 ? 0 : (int) Math.ceil((double) total / pageSize);
+        int fromIdx = page * pageSize;
+        int toIdx = (int) Math.min(fromIdx + pageSize, total);
+        var content = fromIdx >= total ? List.<CVDuplicatesData.DuplicateGroup>of() : all.subList(fromIdx, toIdx);
+
+        return new CVDuplicatesData.DuplicatesPage(content, page, pageSize, total, totalPages, toIdx < total);
     }
 
     @Override
