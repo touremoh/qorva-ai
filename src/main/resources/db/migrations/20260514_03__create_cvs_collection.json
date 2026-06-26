@@ -34,6 +34,20 @@
               "properties": {
                 "phone": { "bsonType": "string" },
                 "email": { "bsonType": "string" },
+                "address": {
+                  "bsonType": "object",
+                  "description": "Structured physical address of the candidate",
+                  "properties": {
+                    "streetNumber": { "bsonType": "string" },
+                    "streetName": { "bsonType": "string" },
+                    "streetType": { "bsonType": "string" },
+                    "unit": { "bsonType": "string" },
+                    "city": { "bsonType": "string" },
+                    "state": { "bsonType": "string" },
+                    "zipCode": { "bsonType": "string" },
+                    "country": { "bsonType": "string" }
+                  }
+                },
                 "socialLinks": {
                   "bsonType": "object",
                   "properties": {

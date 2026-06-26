@@ -14,5 +14,6 @@ import java.io.Serializable;
 public class Contact implements Serializable {
     private String phone;
     private String email;
+    private Address address;
     private SocialLinks socialLinks;
 }

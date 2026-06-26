@@ -30,8 +30,42 @@
               "description": "Phone number"
             },
             "address": {
-              "type": "string",
-              "description": "Physical address"
+              "type": "object",
+              "description": "Structured physical address extracted from the CV. All fields are optional.",
+              "properties": {
+                "streetNumber": {
+                  "type": "string",
+                  "description": "Street or building number (e.g. '14025')"
+                },
+                "streetName": {
+                  "type": "string",
+                  "description": "Name of the street (e.g. 'Charles')"
+                },
+                "streetType": {
+                  "type": "string",
+                  "description": "Type of the street abbreviation (e.g. 'Ln', 'Ave', 'Blvd')"
+                },
+                "unit": {
+                  "type": "string",
+                  "description": "Apartment, suite, or floor (e.g. 'Floor 2', 'Apt 3B')"
+                },
+                "city": {
+                  "type": "string",
+                  "description": "City or municipality (e.g. 'Springfield Gardens')"
+                },
+                "state": {
+                  "type": "string",
+                  "description": "State, province, or region code (e.g. 'NY', 'IDF')"
+                },
+                "zipCode": {
+                  "type": "string",
+                  "description": "Postal or ZIP code (e.g. '11413-2693')"
+                },
+                "country": {
+                  "type": "string",
+                  "description": "Country name or ISO 3166-1 alpha-2 code (e.g. 'United States', 'FR')"
+                }
+              }
             }
           }
         },

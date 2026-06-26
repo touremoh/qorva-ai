@@ -33,7 +33,18 @@ public record CVOutputDTO(
     public record Contact(
         @JsonProperty("email") String email,
         @JsonProperty("phone") String phone,
-        @JsonProperty("address") String address) {
+        @JsonProperty("address") Address address) {
+    }
+
+    public record Address(
+        @JsonProperty("streetNumber") String streetNumber,
+        @JsonProperty("streetName") String streetName,
+        @JsonProperty("streetType") String streetType,
+        @JsonProperty("unit") String unit,
+        @JsonProperty("city") String city,
+        @JsonProperty("state") String state,
+        @JsonProperty("zipCode") String zipCode,
+        @JsonProperty("country") String country) {
     }
 
     public record Availability(

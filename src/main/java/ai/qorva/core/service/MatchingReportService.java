@@ -4,6 +4,8 @@ import ai.qorva.core.dao.entity.MatchingReport;
 import ai.qorva.core.dao.querybuilder.MatchingReportQueryBuilder;
 import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
+import ai.qorva.core.dao.specifications.MatchingReportSpecifications;
+import ai.qorva.core.dao.specifications.MongoSpecification;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
@@ -163,6 +165,12 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 		} catch (Exception e) {
 			throw wrapException(e, "Error finding resources by IDs");
 		}
+	}
+
+	public List<MatchingReportDTO> findAllForExport(String tenantId, String jobPostId) {
+		var spec = MongoSpecification.where(MatchingReportSpecifications.tenantIdEquals(tenantId))
+			.and(MatchingReportSpecifications.jobPostIdEquals(jobPostId));
+		return renderFindAll(this.repository.findAll(spec));
 	}
 
 	public List<DashboardData.ApplicationPerJobPostReport> getApplicationsPerJobPost(String tenantId) {
