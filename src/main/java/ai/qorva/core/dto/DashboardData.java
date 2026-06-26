@@ -11,7 +11,6 @@ public record DashboardData(
 	long totalJobsPosted,
 	long totalUsers,
 	long totalResumeAnalysis,
-	UsageMonitoringDTO usageMonitoring,
 	List<SkillReport> skillsReport,
 	List<ApplicationPerJobPostReport> jobPostsReport,
 	List<ClusteringCategoryReport> skillDepthReport,

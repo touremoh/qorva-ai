@@ -133,17 +133,6 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 		return this.mapper.map(response.get());
 	}
 
-	public long countMatchingReportInCurrentMonth(String tenantId) {
-		// Get the first day of the month
-		var startOfMonth = QorvaUtils.getFirstDayOfMonth();
-
-		// Get the last day of the month
-		var endOfMonth = QorvaUtils.getLastDayOfMonth();
-
-		// Count all CV analysis of the month
-		return  ((MatchingReportRepository)repository).countByTenantIdAndCreatedAtBetween(tenantId, startOfMonth, endOfMonth);
-	}
-
 	public Page<MatchingReportDTO> searchAll(Map<String, String> params) throws QorvaException {
 		try {
 

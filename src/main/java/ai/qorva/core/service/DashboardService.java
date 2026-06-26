@@ -72,11 +72,6 @@ public class DashboardService {
 			catch (QorvaException e) { throw new RuntimeException(e); }
 		}, dashboardExecutor);
 
-		var usageMonitoring = CompletableFuture.supplyAsync(
-			() -> this.usageMonitoringService.findCurrentPeriodByTenantId(tenantId).orElse(null),
-			dashboardExecutor
-		);
-
 		var skillReports = CompletableFuture.supplyAsync(
 			() -> this.cvService.getSkillReportByTenantId(tenantId),
 			dashboardExecutor
@@ -111,7 +106,6 @@ public class DashboardService {
 		totalJobPosts.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		totalUsers.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
 		totalMatchingReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
-		usageMonitoring.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> null);
 		skillReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 		skillDepthReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
 		seniorityLevelReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
@@ -124,7 +118,6 @@ public class DashboardService {
 			totalJobPosts,
 			totalUsers,
 			totalMatchingReports,
-			usageMonitoring,
 			skillReports,
 			skillDepthReport,
 			seniorityLevelReport,
@@ -139,7 +132,6 @@ public class DashboardService {
 			totalJobPosts.join(),
 			totalUsers.join(),
 			totalMatchingReports.join(),
-			usageMonitoring.join(),
 			skillReports.join(),
 			jobPostReports.join(),
 			skillDepthReport.join(),
