@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class StripeProperties {
     private String secretKey;
     private StripeWebhookDto webhook;
-    private CheckoutProperties checkout;
+    private CheckoutProperties checkout = new CheckoutProperties();
 
     @Data
     @NoArgsConstructor

@@ -1,0 +1,66 @@
+{
+  "collMod": "pending_email_notifications",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "pending_email_notifications",
+      "required": ["userId", "notificationType", "languageCode", "status", "attempts", "maxAttempts", "createdAt"],
+      "properties": {
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "Owning tenant ObjectId"
+        },
+        "userId": {
+          "bsonType": "string",
+          "description": "Target user ObjectId as hex string"
+        },
+        "notificationType": {
+          "bsonType": "string",
+          "description": "EmailNotificationType enum value — SUBSCRIPTION_WELCOME | SUBSCRIPTION_UPDATED | SUBSCRIPTION_RENEWAL | USER_ADDED"
+        },
+        "languageCode": {
+          "bsonType": "string",
+          "description": "ISO 639-1 language code (en, fr, de, es, it, nl, pt)"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "PendingEmailStatus enum value — PENDING | PROCESSING | SENT | FAILED"
+        },
+        "payload": {
+          "bsonType": ["object", "null"],
+          "description": "Optional extra context as key-value pairs"
+        },
+        "attempts": {
+          "bsonType": "int",
+          "description": "Number of send attempts made so far"
+        },
+        "maxAttempts": {
+          "bsonType": "int",
+          "description": "Maximum allowed attempts before the record is permanently marked FAILED"
+        },
+        "lastError": {
+          "bsonType": ["string", "null"],
+          "description": "Truncated error message from the most recent failed attempt"
+        },
+        "processedAt": {
+          "bsonType": ["date", "null"],
+          "description": "Timestamp of the final SENT or FAILED state transition"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Timestamp when the notification was enqueued"
+        },
+        "lastUpdatedAt": {
+          "bsonType": ["date", "null"],
+          "description": "Timestamp of the most recent document update"
+        },
+        "createdBy": {
+          "bsonType": ["string", "null"],
+          "description": "Principal that created the record"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

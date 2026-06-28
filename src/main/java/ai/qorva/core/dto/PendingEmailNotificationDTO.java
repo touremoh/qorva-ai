@@ -1,0 +1,47 @@
+package ai.qorva.core.dto;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
+
+import java.time.Instant;
+import java.util.Map;
+
+@Getter
+@Setter
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
+public class PendingEmailNotificationDTO extends AbstractQorvaDTO {
+
+    private String id;
+    private String tenantId;
+    private String userId;
+    private String notificationType;
+    private String status;
+    private Map<String, String> payload;
+
+    private int attempts;
+    private int maxAttempts;
+    private String lastError;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant processedAt;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant createdAt;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant lastUpdatedAt;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private String createdBy;
+}

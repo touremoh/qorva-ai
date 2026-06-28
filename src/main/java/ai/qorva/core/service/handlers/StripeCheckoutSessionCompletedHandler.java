@@ -4,13 +4,12 @@ import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.StripeEventLogRepository;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.StripeEventLogDTO;
-import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.dto.common.SubscriptionInfo;
+import ai.qorva.core.enums.EmailNotificationType;
 import ai.qorva.core.enums.UserStatusEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.StripeEventMapper;
-import ai.qorva.core.mapper.UserMapper;
-import ai.qorva.core.service.SubscriptionWelcomeNotificationService;
+import ai.qorva.core.service.PendingEmailNotificationService;
 import ai.qorva.core.service.TenantService;
 import ai.qorva.core.utils.SubscriptionStatusHelper;
 import com.stripe.exception.StripeException;
@@ -21,7 +20,6 @@ import com.stripe.model.checkout.Session;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.Decimal128;
 import org.bson.types.ObjectId;
-import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,8 +35,7 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 	private final StripeEventLogRepository repository;
 	private final StripeEventMapper evtMapper;
 	private final UserRepository userRepository;
-	private final UserMapper userMapper;
-	private final ObjectProvider<SubscriptionWelcomeNotificationService> welcomeNotifier;
+	private final PendingEmailNotificationService pendingEmailService;
 
 	@Autowired
 	public StripeCheckoutSessionCompletedHandler(
@@ -46,15 +43,13 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 		StripeEventLogRepository repository,
 		StripeEventMapper evtMapper,
 		UserRepository userRepository,
-		UserMapper userMapper,
-		ObjectProvider<SubscriptionWelcomeNotificationService> welcomeNotifier
+		PendingEmailNotificationService pendingEmailService
 	) {
 		this.tenantService = tenantService;
 		this.repository = repository;
 		this.evtMapper = evtMapper;
 		this.userRepository = userRepository;
-		this.userMapper = userMapper;
-		this.welcomeNotifier = welcomeNotifier;
+		this.pendingEmailService = pendingEmailService;
 	}
 
 	@Override
@@ -73,7 +68,6 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 		var tenantId = session.getClientReferenceId();
 		var userId = session.getMetadata() != null ? session.getMetadata().get("userId") : null;
 
-		// Get subscription details from Stripe
 		Subscription subscriptionDetails;
 		try {
 			subscriptionDetails = Subscription.retrieve(subscriptionId);
@@ -114,27 +108,12 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 		subscriptionInfo.setCurrentPeriodEnd(currentPeriodEnd);
 		subscriptionInfo.setCancelAtPeriodEnd(cancelAtPeriodEnd);
 
-		// Update tenant subscription info and stripeCustomerId
 		var tenant = tenantService.findOneById(tenantId);
 		tenant.setSubscriptionInfo(subscriptionInfo);
 		tenant.setStripeCustomerId(customerId);
 		tenantService.updateOne(tenantId, tenant);
 
-		// Activate user account and send subscription welcome email
-		activateUser(userId, session.getCustomerEmail()).ifPresent(user -> {
-			UserDTO userDTO = userMapper.map(user);
-			welcomeNotifier.ifAvailable(svc -> {
-				try {
-					String lang = user.getCommunicationLanguage() != null ? user.getCommunicationLanguage() : "en";
-					svc.send(userDTO, subscriptionInfo, lang);
-				} catch (QorvaException e) {
-					log.error("Failed to send subscription welcome email to tenantId={} – subscription active, email needs manual retry",
-						tenantId, e);
-				}
-			});
-		});
-
-		// Persist event log
+		// Persist event log before activation so idempotency is guaranteed
 		var eventLog = new StripeEventLogDTO();
 		eventLog.setStripeEventId(eventId);
 		eventLog.setEventType("checkout.session.completed");
@@ -143,6 +122,12 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 		eventLog.setStripeSubscriptionId(subscriptionId);
 		eventLog.setTenantId(tenantId);
 		repository.save(evtMapper.map(eventLog));
+
+		// Activate user and enqueue welcome email
+		activateUser(userId, session.getCustomerEmail()).ifPresent(user -> {
+			String lang = user.getCommunicationLanguage() != null ? user.getCommunicationLanguage() : "en";
+			pendingEmailService.createPending(tenantId, user.getId(), EmailNotificationType.SUBSCRIPTION_WELCOME, lang);
+		});
 
 		log.info("Checkout completed for tenant={} subscriptionId={} status={}", tenantId, subscriptionId, subscriptionStatus);
 	}
