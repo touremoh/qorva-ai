@@ -5,6 +5,7 @@ import ai.qorva.core.dto.*;
 import ai.qorva.core.dto.common.SubscriptionInfo;
 import ai.qorva.core.enums.SubscriptionStatus;
 import ai.qorva.core.enums.UserStatusEnum;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.helpers.UserAuthoritiesHelper;
 import ai.qorva.core.mapper.AccountRegistrationMapper;
@@ -106,7 +107,7 @@ public class UserRegistrationService {
 
 		var tenant = tenantService.findOneById(dto.getTenantId());
 		if (tenant == null || !StringUtils.hasText(tenant.getStripeCustomerId())) {
-			throw new QorvaException("No Stripe customer found for tenant: " + dto.getTenantId());
+			throw new QorvaException(QorvaErrorCodes.BILLING_NO_STRIPE_CUSTOMER);
 		}
 
 		var checkoutUrl = createCheckoutSession(dto.getPriceId(), tenant.getStripeCustomerId(), dto.getTenantId(), dto.getUserId());
@@ -117,7 +118,7 @@ public class UserRegistrationService {
 
 	private ProductReferenceDTO resolveProductByPriceId(String priceId) throws QorvaException {
 		if (!StringUtils.hasText(priceId)) {
-			throw new QorvaException("priceId is required");
+			throw new QorvaException(QorvaErrorCodes.BILLING_PRICE_ID_REQUIRED);
 		}
 		var product = Optional.ofNullable(productReferenceService.findByStripePriceId(priceId))
 			   .orElseThrow(() -> new QorvaException("Product not found for priceId: " + priceId));
@@ -136,7 +137,7 @@ public class UserRegistrationService {
 			return Customer.create(params);
 		} catch (StripeException e) {
 			log.error("Failed to create Stripe customer for email {}", dto.getEmail(), e);
-			throw new QorvaException("Failed to create Stripe customer", e);
+			throw new QorvaException(QorvaErrorCodes.BILLING_CUSTOMER_CREATION_FAILED, e);
 		}
 	}
 
@@ -160,7 +161,7 @@ public class UserRegistrationService {
 			return Session.create(params).getUrl();
 		} catch (StripeException e) {
 			log.error("Failed to create Stripe checkout session for tenant {}", tenantId, e);
-			throw new QorvaException("Failed to create Stripe checkout session", e);
+			throw new QorvaException(QorvaErrorCodes.BILLING_CHECKOUT_FAILED, e);
 		}
 	}
 

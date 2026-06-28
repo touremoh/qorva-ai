@@ -10,26 +10,48 @@ public class QorvaException extends Exception {
 	private HttpStatus status;
 	private Integer httpStatusCode;
 	private String message;
+	/** Optional MessageFormat args for parameterised message keys (e.g. "{0}" in properties files). */
+	private Object[] params;
 
-	public QorvaException(String message) {
-		super(message);
+	public QorvaException(String messageKey) {
+		super(messageKey);
 	}
 
-	public QorvaException(String message, Integer httpStatusCode, HttpStatus status) {
-		super(message);
+	/** Use for messages that require runtime arguments, e.g. a filename. */
+	public QorvaException(String messageKey, Object... params) {
+		super(messageKey);
+		this.params = params;
+	}
+
+	public QorvaException(String messageKey, Integer httpStatusCode, HttpStatus status) {
+		super(messageKey);
 		this.httpStatusCode = httpStatusCode;
-		this.message = message;
+		this.message = messageKey;
 		this.status = status;
 	}
 
-	public QorvaException(String message, Throwable cause) {
-		super(message, cause);
+	public QorvaException(String messageKey, Integer httpStatusCode, HttpStatus status, Object... params) {
+		super(messageKey);
+		this.httpStatusCode = httpStatusCode;
+		this.message = messageKey;
+		this.status = status;
+		this.params = params;
 	}
 
-	public QorvaException(String message, Throwable cause, Integer httpStatusCode, HttpStatus status) {
-		super(message, cause);
+	public QorvaException(String messageKey, Throwable cause) {
+		super(messageKey, cause);
+	}
+
+	/** Use when a cause must be preserved AND the message key takes runtime arguments. */
+	public QorvaException(String messageKey, Throwable cause, Object... params) {
+		super(messageKey, cause);
+		this.params = params;
+	}
+
+	public QorvaException(String messageKey, Throwable cause, Integer httpStatusCode, HttpStatus status) {
+		super(messageKey, cause);
 		this.httpStatusCode = httpStatusCode;
-		this.message = message;
+		this.message = messageKey;
 		this.status = status;
 	}
 }

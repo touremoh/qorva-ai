@@ -14,9 +14,9 @@ import ai.qorva.core.dto.common.CandidateInfo;
 import ai.qorva.core.dto.common.KeySkill;
 import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.enums.ApplicationStatusEnum;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.MatchingReportMapper;
-import ai.qorva.core.utils.QorvaUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,13 +50,13 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 		// Check the job post id is present
 		if (!StringUtils.hasText(dto.getJobPostId())) {
 			log.warn("Job post id is empty while creating Job Application");
-			throw new QorvaException("Job post id cannot be empty in Job Application");
+			throw new QorvaException(QorvaErrorCodes.REPORT_JOB_ID_REQUIRED);
 		}
 
 		// Check candidate info
 		if (Objects.isNull(dto.getCandidateInfo())) {
 			log.warn("Candidate info is empty while creating Job Application");
-			throw new QorvaException("Candidate info cannot be empty in job application");
+			throw new QorvaException(QorvaErrorCodes.REPORT_CANDIDATE_INFO_REQUIRED);
 		}
 	}
 
@@ -128,7 +128,7 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 				searchCriteria.getCandidateInfo().getCandidateId()
 			);
 		if (response.isEmpty()) {
-			throw new QorvaException("Could not find resume match for request data");
+			throw new QorvaException(QorvaErrorCodes.REPORT_RESUME_MATCH_NOT_FOUND);
 		}
 		return this.mapper.map(response.get());
 	}
@@ -185,7 +185,7 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 		var existing = this.findOneById(id);
 
 		if (existing == null) {
-			throw new QorvaException("Resume Match with ID " + id + " not found");
+			throw new QorvaException(QorvaErrorCodes.REPORT_MATCH_NOT_FOUND_BY_ID, id);
 		}
 
 		// Delete chat associated with this Report

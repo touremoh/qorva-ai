@@ -4,6 +4,7 @@ import ai.qorva.core.dto.ChatResult;
 import ai.qorva.core.dto.OpenAIChatResponse;
 import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.dto.common.ScoringRules;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.service.orchestrators.CVExtractionAgent;
@@ -59,7 +60,7 @@ public class OpenAIService {
 			.content();
 
 		if (Objects.isNull(response)) {
-			throw new QorvaException("Something went wrong. Please try again later");
+			throw new QorvaException(QorvaErrorCodes.AI_REQUEST_FAILED);
 		}
 
 		return mapper.map(outputConverter.convert(response));

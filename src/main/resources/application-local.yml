@@ -124,11 +124,11 @@ qorva:
     starter:
       stripe-product-name: Starter
       features:
-        seats: 1
+        seats: 2
         limits:
-          screening-actions: 500
-          ai-resume-chats: 50
-          talent-intelligence-queries: 10
+          screening-actions: 1000
+          ai-resume-chats: 300
+          talent-intelligence-queries: 500
         overage:
           enabled: false
           screening-action-price: 0.0
@@ -140,8 +140,8 @@ qorva:
         seats: 5
         limits:
           screening-actions: 5000
-          ai-resume-chats: 150
-          talent-intelligence-queries: 25
+          ai-resume-chats: 700
+          talent-intelligence-queries: 1500
         overage:
           enabled: true
           screening-action-price: 0.02
@@ -150,11 +150,11 @@ qorva:
     scale:
       stripe-product-name: Scale
       features:
-        seats: 20
+        seats: 10
         limits:
-          screening-actions: 15000
-          ai-resume-chats: 300
-          talent-intelligence-queries: 50
+          screening-actions: 12000
+          ai-resume-chats: 2000
+          talent-intelligence-queries: 4000
         overage:
           enabled: true
           screening-action-price: 0.02

@@ -1,27 +1,35 @@
 package ai.qorva.core.enums;
 
+import ai.qorva.core.exception.QorvaErrorCodes;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
 @Getter
 public enum QorvaErrorsEnum {
 
-	RESOURCE_NOT_FOUND("404", HttpStatus.NOT_FOUND, "The requested resource was not found."),
-	BAD_REQUEST("400", HttpStatus.BAD_REQUEST, "Invalid request parameters."),
-	UNAUTHORIZED("401", HttpStatus.UNAUTHORIZED, "Unauthorized access to the resource."),
-	FORBIDDEN("403", HttpStatus.FORBIDDEN, "Access to the resource is forbidden."),
-	INTERNAL_SERVER_ERROR("500", HttpStatus.INTERNAL_SERVER_ERROR, "An unexpected error occurred."),
-	CONFLICT("409", HttpStatus.CONFLICT, "The request could not be processed due to a conflict."),
-	VALIDATION_ERROR("422", HttpStatus.UNPROCESSABLE_ENTITY, "One or more fields failed validation.");
+	RESOURCE_NOT_FOUND("404", HttpStatus.NOT_FOUND, QorvaErrorCodes.HTTP_NOT_FOUND),
+	BAD_REQUEST("400", HttpStatus.BAD_REQUEST, QorvaErrorCodes.HTTP_BAD_REQUEST),
+	UNAUTHORIZED("401", HttpStatus.UNAUTHORIZED, QorvaErrorCodes.HTTP_UNAUTHORIZED),
+	FORBIDDEN("403", HttpStatus.FORBIDDEN, QorvaErrorCodes.HTTP_FORBIDDEN),
+	INTERNAL_SERVER_ERROR("500", HttpStatus.INTERNAL_SERVER_ERROR, QorvaErrorCodes.HTTP_UNEXPECTED),
+	CONFLICT("409", HttpStatus.CONFLICT, QorvaErrorCodes.HTTP_CONFLICT),
+	VALIDATION_ERROR("422", HttpStatus.UNPROCESSABLE_ENTITY, QorvaErrorCodes.HTTP_VALIDATION);
 
 	private final String code;
 	private final HttpStatus httpStatus;
-	private final String message;
+	/** Message key — resolved via MessageSource in the exception handler. */
+	private final String messageKey;
 
-	QorvaErrorsEnum(String code, HttpStatus httpStatus, String message) {
+	QorvaErrorsEnum(String code, HttpStatus httpStatus, String messageKey) {
 		this.code = code;
 		this.httpStatus = httpStatus;
-		this.message = message;
+		this.messageKey = messageKey;
+	}
+
+	/** @deprecated Use {@link #getMessageKey()} and resolve via MessageSource. */
+	@Deprecated
+	public String getMessage() {
+		return messageKey;
 	}
 
 	/**

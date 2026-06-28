@@ -4,6 +4,7 @@ import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.AuthResponse;
 import ai.qorva.core.dto.UserDTO;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.UserMapper;
 import ai.qorva.core.utils.JwtUtils;
@@ -51,11 +52,11 @@ public class AuthenticationService {
 
 			// Retrieve the tenantId from the database
 			var user = Optional.ofNullable(this.userRepository.findByEmail(userDTO.getEmail()))
-				               .orElseThrow(() -> new QorvaException("User not found"));
+				               .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
 
 			// Get the tenant status from the database and the subscription plan
 			var tenant = Optional.ofNullable(this.tenantService.findOneById(user.getTenantId()))
-				                 .orElseThrow(() -> new QorvaException("Tenant not found"));
+				                 .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
 
 			// Generate a JWT including tenantId
 			var jwt = JwtUtils.generateAndBuildToken(userDetails, jwtConfig, tenant);
@@ -67,11 +68,7 @@ public class AuthenticationService {
 			// Build AuthResponse
 			return new AuthResponse(jwt, authenticatedUserInfo);
 		} catch (Exception e) {
-			throw new QorvaException(
-				"Authentication failed with message: " + e.getMessage(),
-				HttpStatus.UNAUTHORIZED.value(),
-				HttpStatus.UNAUTHORIZED
-			);
+			throw new QorvaException(QorvaErrorCodes.AUTH_FAILED, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
 		}
 	}
 
@@ -79,7 +76,7 @@ public class AuthenticationService {
 		if (StringUtils.hasText(authorizationHeader) && authorizationHeader.startsWith("Bearer ")) {
 			String token = authorizationHeader.substring(7);
 			if (Boolean.TRUE.equals(JwtUtils.isTokenExpired(token, jwtConfig.getSecretKey()))) {
-				throw new QorvaException("Token has expired", HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+				throw new QorvaException(QorvaErrorCodes.AUTH_TOKEN_EXPIRED, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
 			}
 			return true;
 		}
@@ -98,11 +95,11 @@ public class AuthenticationService {
 
 				// Retrieve the tenantId from the database
 				var user = Optional.ofNullable(this.userRepository.findByEmail(username))
-					               .orElseThrow(() -> new QorvaException("User not found"));
+					               .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
 
 				// Get the tenant status from the database and the subscription plan
 				var tenant = Optional.ofNullable(this.tenantService.findOneById(user.getTenantId()))
-					                 .orElseThrow(() -> new QorvaException("Tenant not found"));
+					                 .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
 
 				// Add subscription status to the JWT
 				var authenticatedUserInfo = this.userMapper.map(user);
@@ -114,9 +111,9 @@ public class AuthenticationService {
 				// return results
 				return new AuthResponse(jwt, authenticatedUserInfo);
 			} catch (JwtException ex) {
-				throw new QorvaException(ex.getMessage(), HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+				throw new QorvaException(QorvaErrorCodes.AUTH_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
 			}
 		}
-		throw new QorvaException("Invalid token", HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+		throw new QorvaException(QorvaErrorCodes.AUTH_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
 	}
 }

@@ -1,6 +1,7 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.config.S3Properties;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -38,10 +39,10 @@ public class S3StorageService {
             );
         } catch (IOException e) {
             log.error("S3 - Failed to read logo file for tenant {}: {}", tenantId, e.getMessage());
-            throw new QorvaException("Failed to upload company logo", e);
+            throw new QorvaException(QorvaErrorCodes.COMPANY_LOGO_UPLOAD_FAILED, e);
         } catch (Exception e) {
             log.error("S3 - Failed to upload logo for tenant {}: {}", tenantId, e.getMessage());
-            throw new QorvaException("Failed to upload company logo", e);
+            throw new QorvaException(QorvaErrorCodes.COMPANY_LOGO_UPLOAD_FAILED, e);
         }
 
         var url = "https://" + s3Properties.getBucketName()
@@ -66,10 +67,10 @@ public class S3StorageService {
             var contentType = response.response().contentType();
             return new LogoData(response.asByteArray(), contentType != null ? contentType : "image/jpeg");
         } catch (NoSuchKeyException e) {
-            throw new QorvaException("Company logo not found");
+            throw new QorvaException(QorvaErrorCodes.COMPANY_LOGO_NOT_FOUND);
         } catch (Exception e) {
             log.error("S3 - Failed to fetch logo key {}: {}", key, e.getMessage());
-            throw new QorvaException("Failed to fetch company logo", e);
+            throw new QorvaException(QorvaErrorCodes.COMPANY_LOGO_FETCH_FAILED, e);
         }
     }
 

@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import static ai.qorva.core.exception.QorvaErrorCodes.AUTH_USER_LOOKUP_FAILED;
+
 @Service
 public class QorvaUserDetailsService implements UserDetailsService {
 
@@ -33,7 +35,7 @@ public class QorvaUserDetailsService implements UserDetailsService {
 
 			// Check if the user was found
 			if (Objects.isNull(user)) {
-				throw new UsernameNotFoundException("User not found");
+				throw new UsernameNotFoundException("error.auth.user_not_found");
 			}
 
 			// Map custom UserAuthority list to Spring GrantedAuthority using "ACTION:PERMISSION" format
@@ -55,7 +57,7 @@ public class QorvaUserDetailsService implements UserDetailsService {
 						.authorities(grantedAuthorities)
 					.build();
 		} catch (AuthenticationException e) {
-			throw new UsernameNotFoundException("An error occurred while trying to find the user", e);
+			throw new UsernameNotFoundException(AUTH_USER_LOOKUP_FAILED, e);
 		}
 	}
 

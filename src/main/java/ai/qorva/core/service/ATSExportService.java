@@ -3,6 +3,7 @@ package ai.qorva.core.service;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.MatchingReportDTO;
 import ai.qorva.core.dto.common.*;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.csv.CSVFormat;
@@ -63,7 +64,7 @@ public class ATSExportService {
 
         List<MatchingReportDTO> reports = new ArrayList<>(matchingReportService.findAllForExport(tenantId, jobPostId));
         if (reports.isEmpty()) {
-            throw new QorvaException("No matching reports found for job post: " + jobPostId);
+            throw new QorvaException(QorvaErrorCodes.REPORT_NO_REPORTS_FOR_JOB);
         }
 
         reports.sort(Comparator.comparingDouble(
@@ -108,7 +109,7 @@ public class ATSExportService {
 
         } catch (Exception e) {
             log.error("Error generating ATS CSV export for jobPostId={}", jobPostId, e);
-            throw new QorvaException("Failed to generate CSV export: " + e.getMessage());
+            throw new QorvaException(QorvaErrorCodes.REPORT_CSV_EXPORT_FAILED, e);
         }
     }
 

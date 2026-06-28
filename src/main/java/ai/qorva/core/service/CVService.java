@@ -12,6 +12,7 @@ import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.common.Availability;
 import ai.qorva.core.dto.common.PersonalInformation;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.CVMapper;
 import ai.qorva.core.mapper.OpenAIResultMapper;
@@ -116,7 +117,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
         if (files.size() > 100) {
             log.error("CV Service - Exceeded the maximum of 100 files");
-            throw new QorvaException("Only up to 100 files are allowed");
+            throw new QorvaException(QorvaErrorCodes.CV_MAX_FILES_EXCEEDED);
         }
 
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
@@ -137,11 +138,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
                 .toList();
 
             if (processedFiles.isEmpty()) {
-                throw new QorvaException(
-                    "CV Service - No files processed",
-                    HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                    HttpStatus.INTERNAL_SERVER_ERROR
-                );
+                throw new QorvaException(QorvaErrorCodes.CV_NO_FILES_PROCESSED, HttpStatus.INTERNAL_SERVER_ERROR.value(), HttpStatus.INTERNAL_SERVER_ERROR);
             }
 
             log.debug("CV Service - {} CVs saved - Marking open job posts as needing reports", processedFiles.size());
@@ -163,14 +160,14 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private CVDTO extractCVData(String cvContent, String tenantId) throws QorvaException {
         if (!StringUtils.hasText(cvContent)) {
             log.warn("CV Service - CV Content is empty");
-            throw new QorvaException("CV Service - CV Content is empty");
+            throw new QorvaException(QorvaErrorCodes.CV_CONTENT_EMPTY);
         }
         var outputConverter = new BeanOutputConverter<>(CVOutputDTO.class);
         var content = this.openAIService.streamCVExtraction(cvContent);
 
         if (!StringUtils.hasText(content)) {
             log.warn("CV content extraction failed");
-            throw new QorvaException("CV content extraction failed");
+            throw new QorvaException(QorvaErrorCodes.CV_EXTRACTION_FAILED);
         }
 
         incrementUsageSilently(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS);

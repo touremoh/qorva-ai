@@ -1,10 +1,14 @@
 package ai.qorva.core.config;
 
+import ai.qorva.core.dto.QorvaErrorResponse;
 import ai.qorva.core.enums.SubscriptionStatus;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.security.LanguageContextHolder;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.QorvaUserDetailsService;
 import ai.qorva.core.utils.JwtUtils;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.lang.Strings;
 import jakarta.servlet.FilterChain;
@@ -12,18 +16,23 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 @Configuration
@@ -46,11 +55,15 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
 	private final JwtConfig jwtConfig;
 	private final QorvaUserDetailsService userDetailsService;
+	private final MessageSource messageSource;
+	private final ObjectMapper objectMapper;
 
 	@Autowired
-	public JwtRequestFilter(QorvaUserDetailsService userDetailsService, JwtConfig jwtConfig) {
+	public JwtRequestFilter(QorvaUserDetailsService userDetailsService, JwtConfig jwtConfig, MessageSource messageSource, ObjectMapper objectMapper) {
 		this.userDetailsService = userDetailsService;
 		this.jwtConfig = jwtConfig;
+		this.messageSource = messageSource;
+		this.objectMapper = objectMapper;
 	}
 
 	@Override
@@ -87,9 +100,8 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
 							// Subscription enforcement: block cancelled/expired tenants on non-exempt paths
 							if (isSubscriptionBlocked(subscriptionStatus, request.getRequestURI())) {
-								response.setStatus(HttpServletResponse.SC_PAYMENT_REQUIRED);
-								response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-								response.getWriter().write("{\"error\":\"Your subscription is not active. Please renew your plan.\"}");
+								writeErrorResponse(response, request, HttpServletResponse.SC_PAYMENT_REQUIRED,
+									QorvaErrorCodes.AUTH_SUBSCRIPTION_INACTIVE);
 								return;
 							}
 						}
@@ -108,5 +120,38 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 			return false;
 		}
 		return SUBSCRIPTION_EXEMPT_PREFIXES.stream().noneMatch(requestUri::startsWith);
+	}
+
+	private void writeErrorResponse(HttpServletResponse response, HttpServletRequest request,
+	                                int statusCode, String errorCode) throws IOException {
+		Locale locale = resolveLocale(request);
+		String message = messageSource.getMessage(errorCode, null, locale);
+
+		var errorResponse = QorvaErrorResponse.builder()
+			.errorCode(errorCode)
+			.message(message)
+			.status(HttpStatus.valueOf(statusCode))
+			.code(statusCode)
+			.timestamp(LocalDateTime.now())
+			.build();
+
+		response.setStatus(statusCode);
+		response.setContentType(MediaType.APPLICATION_JSON_VALUE);
+
+		ObjectMapper mapper = objectMapper.copy().registerModule(new JavaTimeModule());
+		response.getWriter().write(mapper.writeValueAsString(errorResponse));
+	}
+
+	private Locale resolveLocale(HttpServletRequest request) {
+		String lang = request.getHeader("Accept-Language");
+		if (!StringUtils.hasText(lang)) {
+			return Locale.ENGLISH;
+		}
+		try {
+			String tag = lang.split(",")[0].trim().split(";")[0].trim();
+			return Locale.forLanguageTag(tag);
+		} catch (Exception e) {
+			return Locale.ENGLISH;
+		}
 	}
 }

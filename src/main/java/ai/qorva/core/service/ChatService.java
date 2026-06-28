@@ -14,6 +14,7 @@ import ai.qorva.core.dto.request.CreateChatRequest;
 import ai.qorva.core.dto.request.PostUserMessageRequest;
 import ai.qorva.core.enums.ChatStatus;
 import ai.qorva.core.enums.ChatUserRole;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.ChatMapper;
 import ai.qorva.core.mapper.ChatMessageMapper;
@@ -46,11 +47,11 @@ public class ChatService {
     @Transactional
     public ChatDTO createChat(CreateChatRequest req, String username) throws QorvaException {
         if (req.getParticipants().stream().noneMatch(p -> "OWNER".equalsIgnoreCase(p.getRole().name()))) {
-            throw new QorvaException("At least one OWNER participant is required");
+            throw new QorvaException(QorvaErrorCodes.CHAT_OWNER_REQUIRED);
         }
 
         // find the user id of the actor
-        var userId = ofNullable(userRepository.findByEmail(username)).orElseThrow(() -> new QorvaException("Chat actor not found")).getId();
+        var userId = ofNullable(userRepository.findByEmail(username)).orElseThrow(() -> new QorvaException(QorvaErrorCodes.CHAT_ACTOR_NOT_FOUND)).getId();
 
         Chat chat = Chat.builder()
                 .tenantId(req.getTenantId())
@@ -94,7 +95,7 @@ public class ChatService {
     }
 
     public Page<ChatDTO> listChats(String tenantId, String username, ChatStatus status, Pageable pageable) throws QorvaException {
-        var userId = ofNullable(userRepository.findByEmail(username)).orElseThrow(() -> new QorvaException("User not found")).getId();
+        var userId = ofNullable(userRepository.findByEmail(username)).orElseThrow(() -> new QorvaException(QorvaErrorCodes.USER_NOT_FOUND)).getId();
         if (status != null) {
             return chatsRepository.findByTenantAndParticipantAndStatus(tenantId, userId, status.name(), pageable).map(chatMapper::map);
         }
@@ -110,7 +111,7 @@ public class ChatService {
     @Transactional
     public ChatMessageDTO postUserMessage(String tenantId, String chatId, PostUserMessageRequest req) throws QorvaException {
         // Get the userId
-        var userId = ofNullable(userRepository.findByEmail(req.getUsername())).orElseThrow(() -> new QorvaException("User not found")).getId();
+        var userId = ofNullable(userRepository.findByEmail(req.getUsername())).orElseThrow(() -> new QorvaException(QorvaErrorCodes.USER_NOT_FOUND)).getId();
 
         // Get the chat
         Chat chat = ofNullable(chatsRepository.findOneByTenantAndId(tenantId, chatId))
@@ -146,7 +147,7 @@ public class ChatService {
 
     public Page<ChatMessageDTO> getMessages(String tenantId, String chatId, Pageable pageable) throws QorvaException {
         if (chatsRepository.findOneByTenantAndId(tenantId, chatId) == null) {
-            throw new QorvaException("Chat not found");
+            throw new QorvaException(QorvaErrorCodes.CHAT_NOT_FOUND);
         }
         return chatMessagesRepository
             .findPageByTenantAndChatIdExcludingSystemMessage(tenantId, chatId, ChatUserRole.SYSTEM.name(), pageable)
@@ -164,7 +165,7 @@ public class ChatService {
 
     @Transactional
     public ChatDTO updateStatus(String tenantId, String chatId, ChatStatus status, String username) throws QorvaException {
-        var actor = ofNullable(userRepository.findByEmail(username)).orElseThrow(() -> new QorvaException("Chat actor not found")).getId();
+        var actor = ofNullable(userRepository.findByEmail(username)).orElseThrow(() -> new QorvaException(QorvaErrorCodes.CHAT_ACTOR_NOT_FOUND)).getId();
         Chat chat = ofNullable(chatsRepository.findOneByTenantAndId(tenantId, chatId))
             .orElseThrow(() -> new QorvaException("Chat not found"));
         chat.setStatus(status);

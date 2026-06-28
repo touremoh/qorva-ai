@@ -5,6 +5,7 @@ import ai.qorva.core.dao.entity.StripeEventLog;
 import ai.qorva.core.dao.repository.StripeEventLogRepository;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.*;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.StripeEventMapper;
 import ai.qorva.core.dao.querybuilder.StripeEventLogQueryBuilder;
@@ -276,7 +277,7 @@ public class StripeEventsService extends AbstractQorvaService<StripeEventLogDTO,
 			return new PortalSession(Session.create(params).getUrl());
 		} catch (StripeException e) {
 			log.error("Failed to create Stripe portal session", e);
-			throw new QorvaException("Failed to create Stripe portal session", e);
+			throw new QorvaException(QorvaErrorCodes.BILLING_PORTAL_FAILED, e);
 		}
 	}
 }

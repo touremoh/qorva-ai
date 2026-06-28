@@ -1,7 +1,9 @@
 package ai.qorva.core.config;
 
 import ai.qorva.core.service.QorvaUserDetailsService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -24,11 +26,15 @@ public class SecurityConfig {
 
 	private final JwtConfig jwtConfig;
 	private final QorvaUserDetailsService userDetailsService;
+	private final MessageSource messageSource;
+	private final ObjectMapper objectMapper;
 
 	@Autowired
-	public SecurityConfig(JwtConfig jwtConfig, QorvaUserDetailsService userDetailsService) {
+	public SecurityConfig(JwtConfig jwtConfig, QorvaUserDetailsService userDetailsService, MessageSource messageSource, ObjectMapper objectMapper) {
 		this.jwtConfig = jwtConfig;
 		this.userDetailsService = userDetailsService;
+		this.messageSource = messageSource;
+		this.objectMapper = objectMapper;
 	}
 
 	@Bean
@@ -74,6 +80,6 @@ public class SecurityConfig {
 
 	@Bean
 	public JwtRequestFilter jwtRequestFilter() {
-		return new JwtRequestFilter(userDetailsService, jwtConfig);
+		return new JwtRequestFilter(userDetailsService, jwtConfig, messageSource, objectMapper);
 	}
 }

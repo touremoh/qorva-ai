@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @Builder
 public class QorvaErrorResponse implements Serializable {
 	protected HttpStatus status;
+	protected String errorCode;
 	protected String message;
 	protected Integer code;
 	protected Object data;

@@ -34,8 +34,9 @@ public class UsageMonitoringScheduler {
         this.productReferenceService = productReferenceService;
     }
 
-    @Scheduled(cron = "0 0 * * * *")
+    @Scheduled(cron = "0 0/5 * * * *")
     public void initializeUsageMonitoringPeriods() {
+        log.info("Usage monitoring check: initializing usage monitoring periods");
         var statuses = List.of(
             SubscriptionStatus.ACTIVE.getValue(),
             SubscriptionStatus.TRIALING.getValue()

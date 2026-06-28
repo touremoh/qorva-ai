@@ -5,6 +5,7 @@ import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.enums.SubscriptionPlanEnum;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.UserMapper;
 import ai.qorva.core.dao.querybuilder.UserQueryBuilder;
@@ -40,22 +41,14 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 
 		if (!StringUtils.hasText(dto.getTenantId())) {
 			log.error("Missing company id for user {}", dto);
-			throw new QorvaException(
-				"User creation requires a company id",
-				HttpStatus.NOT_ACCEPTABLE.value(),
-				HttpStatus.NOT_ACCEPTABLE
-			);
+			throw new QorvaException(QorvaErrorCodes.USER_COMPANY_ID_REQUIRED, HttpStatus.NOT_ACCEPTABLE.value(), HttpStatus.NOT_ACCEPTABLE);
 		}
 
 		// Prevent duplicate accounts
 		var userFound = ((UserRepository) repository).findByEmail(dto.getEmail());
 		if (Optional.ofNullable(userFound).isPresent()) {
 			log.error("Trying to create an existing user {}", dto);
-			throw new QorvaException(
-				"User already exists",
-				HttpStatus.NOT_ACCEPTABLE.value(),
-				HttpStatus.NOT_ACCEPTABLE
-			);
+			throw new QorvaException(QorvaErrorCodes.USER_ALREADY_EXISTS, HttpStatus.NOT_ACCEPTABLE.value(), HttpStatus.NOT_ACCEPTABLE);
 		}
 
 		// Seat-limit enforcement based on subscription plan
@@ -87,11 +80,7 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 			long currentUsers = countAll(tenantId);
 			if (currentUsers >= maxSeats) {
 				log.warn("Tenant {} has reached the seat limit ({}) for plan {}", tenantId, maxSeats, planName);
-				throw new QorvaException(
-					"Seat limit reached for your subscription plan. Please upgrade to add more users.",
-					HttpStatus.PAYMENT_REQUIRED.value(),
-					HttpStatus.PAYMENT_REQUIRED
-				);
+				throw new QorvaException(QorvaErrorCodes.USER_SEAT_LIMIT_REACHED, HttpStatus.PAYMENT_REQUIRED.value(), HttpStatus.PAYMENT_REQUIRED);
 			}
 		} catch (QorvaException e) {
 			throw e;
@@ -111,11 +100,11 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 			.orElseThrow(() -> new QorvaException("User not found", HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
 
 		if (!tenantId.equals(user.getTenantId())) {
-			throw new QorvaException("User not found", HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+			throw new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
 		}
 
 		if (!passwordEncoder.matches(currentPassword, user.getEncryptedPassword())) {
-			throw new QorvaException("Current password is incorrect", HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+			throw new QorvaException(QorvaErrorCodes.USER_PASSWORD_INCORRECT, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
 		}
 
 		user.setEncryptedPassword(passwordEncoder.encode(newPassword));
