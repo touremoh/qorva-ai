@@ -1,13 +1,16 @@
 package ai.qorva.core.service.handlers;
 
+import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.StripeEventLogRepository;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.StripeEventLogDTO;
+import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.dto.common.SubscriptionInfo;
-import ai.qorva.core.enums.SubscriptionStatus;
 import ai.qorva.core.enums.UserStatusEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.StripeEventMapper;
+import ai.qorva.core.mapper.UserMapper;
+import ai.qorva.core.service.SubscriptionWelcomeNotificationService;
 import ai.qorva.core.service.TenantService;
 import ai.qorva.core.utils.SubscriptionStatusHelper;
 import com.stripe.exception.StripeException;
@@ -17,10 +20,10 @@ import com.stripe.model.Subscription;
 import com.stripe.model.checkout.Session;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.Decimal128;
+import org.bson.types.ObjectId;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import org.bson.types.ObjectId;
 
 import java.time.Instant;
 import java.util.Objects;
@@ -34,18 +37,24 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 	private final StripeEventLogRepository repository;
 	private final StripeEventMapper evtMapper;
 	private final UserRepository userRepository;
+	private final UserMapper userMapper;
+	private final ObjectProvider<SubscriptionWelcomeNotificationService> welcomeNotifier;
 
 	@Autowired
 	public StripeCheckoutSessionCompletedHandler(
 		TenantService tenantService,
 		StripeEventLogRepository repository,
 		StripeEventMapper evtMapper,
-		UserRepository userRepository
+		UserRepository userRepository,
+		UserMapper userMapper,
+		ObjectProvider<SubscriptionWelcomeNotificationService> welcomeNotifier
 	) {
 		this.tenantService = tenantService;
 		this.repository = repository;
 		this.evtMapper = evtMapper;
 		this.userRepository = userRepository;
+		this.userMapper = userMapper;
+		this.welcomeNotifier = welcomeNotifier;
 	}
 
 	@Override
@@ -111,8 +120,19 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 		tenant.setStripeCustomerId(customerId);
 		tenantService.updateOne(tenantId, tenant);
 
-		// Activate user account
-		activateUser(userId, session.getCustomerEmail());
+		// Activate user account and send subscription welcome email
+		activateUser(userId, session.getCustomerEmail()).ifPresent(user -> {
+			UserDTO userDTO = userMapper.map(user);
+			welcomeNotifier.ifAvailable(svc -> {
+				try {
+					String lang = user.getCommunicationLanguage() != null ? user.getCommunicationLanguage() : "en";
+					svc.send(userDTO, subscriptionInfo, lang);
+				} catch (QorvaException e) {
+					log.error("Failed to send subscription welcome email to tenantId={} – subscription active, email needs manual retry",
+						tenantId, e);
+				}
+			});
+		});
 
 		// Persist event log
 		var eventLog = new StripeEventLogDTO();
@@ -127,16 +147,17 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 		log.info("Checkout completed for tenant={} subscriptionId={} status={}", tenantId, subscriptionId, subscriptionStatus);
 	}
 
-	private void activateUser(String userId, String customerEmail) {
+	private Optional<User> activateUser(String userId, String customerEmail) {
 		var user = Optional.ofNullable(userId)
 			.flatMap(id -> userRepository.findById(new ObjectId(id)))
 			.orElseGet(() -> Objects.nonNull(customerEmail) ? userRepository.findByEmail(customerEmail) : null);
 
 		if (user == null) {
 			log.warn("Could not find user by userId={} or email={} – skipping activation", userId, customerEmail);
-			return;
+			return Optional.empty();
 		}
 		user.setUserAccountStatus(UserStatusEnum.ACTIVE.getValue());
 		userRepository.save(user);
+		return Optional.of(user);
 	}
 }

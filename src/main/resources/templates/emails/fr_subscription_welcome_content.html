@@ -1,0 +1,34 @@
+<div class="email-container">
+    <div class="email-header">
+        <img src="{{logo_url}}" alt="Qorva AI" />
+    </div>
+    <div class="email-content">
+        <p class="greeting">Bonjour {{first_name}},</p>
+        <p>Votre abonnement <strong>{{plan_name}}</strong> sur <strong>{{app_name}}</strong> est maintenant actif. Vous êtes prêt à recruter plus intelligemment.</p>
+
+        <table class="plan-card" cellpadding="0" cellspacing="0">
+            <tr class="plan-card-header"><td colspan="2">Résumé de votre abonnement</td></tr>
+            <tbody class="plan-card-body">
+                <tr><td class="plan-label">Formule</td><td class="plan-value plan-value-green">{{plan_name}}</td></tr>
+                <tr><td class="plan-label">Facturation</td><td class="plan-value">{{billing_cycle}}</td></tr>
+                <tr><td class="plan-label">Prochain renouvellement</td><td class="plan-value">{{next_billing_date}}</td></tr>
+            </tbody>
+        </table>
+
+        <p class="features-title">Ce qui est inclus dans votre abonnement :</p>
+        <ul class="features-list">
+            <li>Tri de CV et mise en correspondance des candidats par IA</li>
+            <li>Assistant de chat pour une analyse approfondie des candidats</li>
+            <li>Requêtes de talent intelligence pour identifier les meilleurs profils</li>
+        </ul>
+
+        <div class="btn-wrapper">
+            <a href="https://app.qorva.ai" class="btn">Accéder au tableau de bord</a>
+        </div>
+
+        <p class="support-line">Des questions ? Contactez-nous à <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
+    </div>
+    <div class="email-footer">
+        <p>&copy; {{current_year}} {{app_name}}. Tous droits réservés.</p>
+    </div>
+</div>

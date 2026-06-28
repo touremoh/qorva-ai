@@ -1,0 +1,34 @@
+<div class="email-container">
+    <div class="email-header">
+        <img src="{{logo_url}}" alt="Qorva AI" />
+    </div>
+    <div class="email-content">
+        <p class="greeting">Hallo {{first_name}},</p>
+        <p>Uw <strong>{{plan_name}}</strong>-abonnement op <strong>{{app_name}}</strong> is nu actief. U bent klaar om slimmer te werven.</p>
+
+        <table class="plan-card" cellpadding="0" cellspacing="0">
+            <tr class="plan-card-header"><td colspan="2">Abonnement samenvatting</td></tr>
+            <tbody class="plan-card-body">
+                <tr><td class="plan-label">Abonnement</td><td class="plan-value plan-value-green">{{plan_name}}</td></tr>
+                <tr><td class="plan-label">Facturering</td><td class="plan-value">{{billing_cycle}}</td></tr>
+                <tr><td class="plan-label">Volgende vernieuwing</td><td class="plan-value">{{next_billing_date}}</td></tr>
+            </tbody>
+        </table>
+
+        <p class="features-title">Wat is inbegrepen in uw abonnement:</p>
+        <ul class="features-list">
+            <li>AI-gestuurde cv-screening en kandidaatmatching</li>
+            <li>Resume chat-assistent voor diepgaande kandidaatanalyse</li>
+            <li>Talent intelligence-queries om topprofielen te identificeren</li>
+        </ul>
+
+        <div class="btn-wrapper">
+            <a href="https://app.qorva.ai" class="btn">Naar het Dashboard</a>
+        </div>
+
+        <p class="support-line">Vragen? Neem contact met ons op via <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
+    </div>
+    <div class="email-footer">
+        <p>&copy; {{current_year}} {{app_name}}. Alle rechten voorbehouden.</p>
+    </div>
+</div>

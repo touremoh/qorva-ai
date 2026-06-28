@@ -19,7 +19,6 @@ import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.Decimal128;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -35,7 +34,6 @@ public class UserRegistrationService {
 	private final TenantService tenantService;
 	private final ProductReferenceService productReferenceService;
 	private final AccountRegistrationMapper accountRegistrationMapper;
-	private final ObjectProvider<QorvaNotificationService> notifier;
 	private final StripeProperties stripeProperties;
 
 	@Autowired
@@ -44,14 +42,12 @@ public class UserRegistrationService {
 		TenantService tenantService,
 		ProductReferenceService productReferenceService,
 		AccountRegistrationMapper accountRegistrationMapper,
-		ObjectProvider<QorvaNotificationService> notifier,
 		StripeProperties stripeProperties
 	) {
 		this.userService = userService;
 		this.tenantService = tenantService;
 		this.productReferenceService = productReferenceService;
 		this.accountRegistrationMapper = accountRegistrationMapper;
-		this.notifier = notifier;
 		this.stripeProperties = stripeProperties;
 	}
 
@@ -85,17 +81,6 @@ public class UserRegistrationService {
 		// Step 5: create Stripe checkout session
 		var checkoutUrl = createCheckoutSession(dto.getPriceId(), stripeCustomer.getId(), tenant.getId(), user.getId());
 		log.info("Checkout session created for tenant: {}", tenant.getId());
-
-		// This must be moved out after the subscription is created
-		notifier.ifAvailable(sender -> {
-			try {
-				sender.send(user, languageCode);
-				log.info("Welcome email sent to {}", user.getEmail());
-			} catch (QorvaException e) {
-				log.error("Failed to send welcome email to {} – account created, email needs manual retry",
-					user.getEmail(), e);
-			}
-		});
 
 		return new RegistrationResponseDTO(checkoutUrl, tenant.getId(), user.getId());
 	}

@@ -7,32 +7,46 @@ import org.springframework.http.HttpStatus;
 @Getter
 public enum EmailTitlesEnum {
 
-	EN_REGISTRATION_SUCCESS("en", "Welcome to Qorva: Registration Successful"),
-	FR_REGISTRATION_SUCCESS("fr", "Bienvenue chez Qorva : Inscription réussie"),
-	DE_REGISTRATION_SUCCESS("de", "Willkommen bei Qorva: Registrierung erfolgreich"),
-	IT_REGISTRATION_SUCCESS("it", "Benvenuto su Qorva: Registrazione completata"),
-	ES_REGISTRATION_SUCCESS("es", "Bienvenido a Qorva: Registro exitoso"),
-	PT_REGISTRATION_SUCCESS("pt", "Bem-vindo ao Qorva: Registro bem-sucedido"),
-	NL_REGISTRATION_SUCCESS("nl", "Welkom bij Qorva: Registratie geslaagd");
+	EN_REGISTRATION_SUCCESS("en", "registration", "Welcome to Qorva: Registration Successful"),
+	FR_REGISTRATION_SUCCESS("fr", "registration", "Bienvenue chez Qorva : Inscription réussie"),
+	DE_REGISTRATION_SUCCESS("de", "registration", "Willkommen bei Qorva: Registrierung erfolgreich"),
+	IT_REGISTRATION_SUCCESS("it", "registration", "Benvenuto su Qorva: Registrazione completata"),
+	ES_REGISTRATION_SUCCESS("es", "registration", "Bienvenido a Qorva: Registro exitoso"),
+	PT_REGISTRATION_SUCCESS("pt", "registration", "Bem-vindo ao Qorva: Registro bem-sucedido"),
+	NL_REGISTRATION_SUCCESS("nl", "registration", "Welkom bij Qorva: Registratie geslaagd"),
 
-	EmailTitlesEnum(String languageCode, String emailTitle) {
+	EN_SUBSCRIPTION_WELCOME("en", "subscription", "Your Qorva AI subscription is active"),
+	FR_SUBSCRIPTION_WELCOME("fr", "subscription", "Votre abonnement Qorva AI est actif"),
+	DE_SUBSCRIPTION_WELCOME("de", "subscription", "Ihr Qorva AI-Abonnement ist aktiv"),
+	IT_SUBSCRIPTION_WELCOME("it", "subscription", "Il tuo abbonamento Qorva AI è attivo"),
+	ES_SUBSCRIPTION_WELCOME("es", "subscription", "Tu suscripción a Qorva AI está activa"),
+	PT_SUBSCRIPTION_WELCOME("pt", "subscription", "A sua subscrição Qorva AI está ativa"),
+	NL_SUBSCRIPTION_WELCOME("nl", "subscription", "Uw Qorva AI-abonnement is actief");
+
+	EmailTitlesEnum(String languageCode, String emailType, String emailTitle) {
 		this.languageCode = languageCode;
+		this.emailType = emailType;
 		this.emailTitle = emailTitle;
 	}
 
 	public static String getEmailTitle(String languageCode) throws QorvaException {
+		return getEmailTitle(languageCode, "registration");
+	}
+
+	public static String getEmailTitle(String languageCode, String emailType) throws QorvaException {
 		for (EmailTitlesEnum e : EmailTitlesEnum.values()) {
-			if (e.getLanguageCode().equals(languageCode)) {
+			if (e.getLanguageCode().equals(languageCode) && e.emailType.equals(emailType)) {
 				return e.getEmailTitle();
 			}
 		}
 		throw new QorvaException(
-			"Unknown language code " + languageCode,
+			"Unknown language code " + languageCode + " or email type " + emailType,
 			HttpStatus.INTERNAL_SERVER_ERROR.value(),
 			HttpStatus.INTERNAL_SERVER_ERROR
 		);
 	}
 
 	private final String languageCode;
+	private final String emailType;
 	private final String emailTitle;
 }

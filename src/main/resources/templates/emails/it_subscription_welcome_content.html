@@ -1,0 +1,34 @@
+<div class="email-container">
+    <div class="email-header">
+        <img src="{{logo_url}}" alt="Qorva AI" />
+    </div>
+    <div class="email-content">
+        <p class="greeting">Ciao {{first_name}},</p>
+        <p>Il tuo abbonamento <strong>{{plan_name}}</strong> su <strong>{{app_name}}</strong> è ora attivo. Sei pronto per assumere in modo più intelligente.</p>
+
+        <table class="plan-card" cellpadding="0" cellspacing="0">
+            <tr class="plan-card-header"><td colspan="2">Riepilogo abbonamento</td></tr>
+            <tbody class="plan-card-body">
+                <tr><td class="plan-label">Piano</td><td class="plan-value plan-value-green">{{plan_name}}</td></tr>
+                <tr><td class="plan-label">Fatturazione</td><td class="plan-value">{{billing_cycle}}</td></tr>
+                <tr><td class="plan-label">Prossimo rinnovo</td><td class="plan-value">{{next_billing_date}}</td></tr>
+            </tbody>
+        </table>
+
+        <p class="features-title">Cosa è incluso nel tuo abbonamento:</p>
+        <ul class="features-list">
+            <li>Screening CV e abbinamento candidati tramite IA</li>
+            <li>Assistente chat per un'analisi approfondita dei candidati</li>
+            <li>Talent intelligence per individuare i migliori profili</li>
+        </ul>
+
+        <div class="btn-wrapper">
+            <a href="https://app.qorva.ai" class="btn">Vai alla Dashboard</a>
+        </div>
+
+        <p class="support-line">Domande? Contattaci a <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
+    </div>
+    <div class="email-footer">
+        <p>&copy; {{current_year}} {{app_name}}. Tutti i diritti riservati.</p>
+    </div>
+</div>

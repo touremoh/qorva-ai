@@ -2,6 +2,7 @@ package ai.qorva.core.scheduler;
 
 import ai.qorva.core.dao.entity.Tenant;
 import ai.qorva.core.dao.repository.TenantRepository;
+import ai.qorva.core.dto.common.FeatureLimits;
 import ai.qorva.core.dto.common.ProductFeatures;
 import ai.qorva.core.enums.SubscriptionStatus;
 import ai.qorva.core.exception.QorvaException;
@@ -92,6 +93,11 @@ public class UsageMonitoringScheduler {
             }
         }
 
+        int cycleMultiplier = "year".equalsIgnoreCase(sub.getBillingCycle()) ? 12 : 1;
+        if (cycleMultiplier > 1) {
+            features = scaleFeatures(features, cycleMultiplier);
+        }
+
         usageMonitoringService.initializePeriod(
             tenant.getId(),
             sub.getSubscriptionPlan(),
@@ -100,5 +106,22 @@ public class UsageMonitoringScheduler {
             features
         );
         return true;
+    }
+
+    private ProductFeatures scaleFeatures(ProductFeatures source, int multiplier) {
+        if (source == null || source.getLimits() == null) {
+            return source;
+        }
+        var base = source.getLimits();
+        var scaledLimits = FeatureLimits.builder()
+            .screeningActions(base.getScreeningActions() != null ? base.getScreeningActions() * multiplier : null)
+            .aiResumeChats(base.getAiResumeChats() != null ? base.getAiResumeChats() * multiplier : null)
+            .talentIntelligenceQueries(base.getTalentIntelligenceQueries() != null ? base.getTalentIntelligenceQueries() * multiplier : null)
+            .build();
+        return ProductFeatures.builder()
+            .seats(source.getSeats())
+            .limits(scaledLimits)
+            .overage(source.getOverage())
+            .build();
     }
 }

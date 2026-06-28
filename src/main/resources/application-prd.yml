@@ -104,6 +104,8 @@ aws:
 qorva:
   notifications:
     enabled: ${QORVA_NOTIFICATION_ENABLED}
+  assets:
+    logo-url: ${QORVA_ASSETS_LOGO_URL}
   products:
     starter:
       stripe-product-name: ${QORVA_PRODUCT_STARTER_NAME}

@@ -16,7 +16,7 @@ import java.time.LocalDate;
 @Slf4j
 @Service
 @ConditionalOnProperty(prefix = "qorva.notifications", name = "enabled", havingValue = "true", matchIfMissing = true)
-public class AccountCreationNotificationService extends AbstractEmailService {
+public class AccountCreationNotificationService extends AbstractEmailService implements QorvaNotificationService {
 
 	@Autowired
 	public AccountCreationNotificationService(OAuth2TokenService oauth2TokenService) {

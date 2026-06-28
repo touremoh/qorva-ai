@@ -1,5 +1,6 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.exception.QorvaException;
 import com.microsoft.graph.models.*;
 import com.microsoft.graph.serviceclient.GraphServiceClient;
@@ -21,7 +22,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Slf4j
-public abstract class AbstractEmailService implements QorvaNotificationService {
+public abstract class AbstractEmailService {
 
 	protected final OAuth2TokenService oauth2TokenService;
 	protected static final String LEAD_NOTIF_TYPE = "LEAD";
@@ -92,4 +93,6 @@ public abstract class AbstractEmailService implements QorvaNotificationService {
 			return reader.lines().collect(Collectors.joining(System.lineSeparator()));
 		}
 	}
+
+	public abstract void send(UserDTO user, String languageCode) throws QorvaException;
 }

@@ -118,8 +118,10 @@ stripe:
     cancel-url: http://localhost:5173/billing/cancel
 
 qorva:
+  assets:
+    logo-url: QORVA_ASSETS_LOGO_URL
   notifications:
-    enabled: false
+    enabled: true
   products:
     starter:
       stripe-product-name: Starter
