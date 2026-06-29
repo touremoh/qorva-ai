@@ -1,13 +1,26 @@
 <div class="email-container">
-    <div class="email-header">
-        <img src="{{logo_url}}" alt="Qorva AI" />
-    </div>
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #0A1628;">
+        <tr>
+            <td align="center" style="padding: 28px 40px;">
+                <img src="{{logo_url}}" alt="Qorva AI" width="160" height="42" border="0"
+                     style="display: block; border: 0; height: auto; max-height: 42px; max-width: 160px; width: auto;" />
+            </td>
+        </tr>
+    </table>
+
     <div class="email-content">
         <p class="greeting">Hallo {{first_name}},</p>
         <p>Uw <strong>{{plan_name}}</strong>-abonnement op <strong>{{app_name}}</strong> is nu actief. U bent klaar om slimmer te werven.</p>
 
         <table class="plan-card" cellpadding="0" cellspacing="0">
-            <tr class="plan-card-header"><td colspan="2">Abonnement samenvatting</td></tr>
+            <tr>
+                <td colspan="2" style="background-color: #72BB53; height: 4px; padding: 0; line-height: 4px; font-size: 0; mso-line-height-rule: exactly;"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color: #0A1628; padding: 14px 20px;">
+                    <span style="color: #72BB53; font-size: 13px; margin-right: 8px;">&#9632;</span><span style="color: #FFFFFF; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px;">Abonnement samenvatting</span>
+                </td>
+            </tr>
             <tbody class="plan-card-body">
                 <tr><td class="plan-label">Abonnement</td><td class="plan-value plan-value-green">{{plan_name}}</td></tr>
                 <tr><td class="plan-label">Facturering</td><td class="plan-value">{{billing_cycle}}</td></tr>
@@ -15,16 +28,24 @@
             </tbody>
         </table>
 
+        <div class="trial-notice" style="background-color: #F0F9EC; border-left: 4px solid #72BB53; border-radius: 6px; padding: 14px 18px; margin: 24px 0;">
+            <p style="font-size: 13px; color: #2D5016; margin: 0; line-height: 1.7;">U bevindt zich momenteel in een <strong>gratis proefperiode van 7 dagen</strong>. Er worden geen kosten in rekening gebracht totdat uw proefperiode afloopt. Annuleer uw abonnement vóór het einde van de proefperiode om kosten te vermijden.</p>
+        </div>
+
         <p class="features-title">Wat is inbegrepen in uw abonnement:</p>
         <ul class="features-list">
-            <li>AI-gestuurde cv-screening en kandidaatmatching</li>
-            <li>Resume chat-assistent voor diepgaande kandidaatanalyse</li>
             <li>Talent intelligence-queries om topprofielen te identificeren</li>
+            <li>Resume chat-assistent voor diepgaande kandidaatanalyse</li>
+            <li>AI-gestuurde cv-screening en kandidaatmatching</li>
         </ul>
 
-        <div class="btn-wrapper">
-            <a href="https://app.qorva.ai" class="btn">Naar het Dashboard</a>
-        </div>
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin: 32px 0 28px;">
+            <tr>
+                <td align="center">
+                    <a href="https://app.qorva.ai" style="display: inline-block; padding: 14px 44px; background-color: #72BB53; color: #FFFFFF; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 15px; letter-spacing: 0.3px; mso-padding-alt: 0; text-align: center;">Naar het Dashboard</a>
+                </td>
+            </tr>
+        </table>
 
         <p class="support-line">Vragen? Neem contact met ons op via <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
     </div>

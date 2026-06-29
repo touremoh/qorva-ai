@@ -58,6 +58,8 @@ public class SubscriptionWelcomeNotificationService extends AbstractEmailService
             String nextBillingDate = sub.getCurrentPeriodEnd() != null
                 ? DATE_FMT.format(sub.getCurrentPeriodEnd()) : "-";
 
+            log.info("Sending subscription welcome notification to user: {}", logoUrl);
+
             content = content
                 .replace("{{logo_url}}", logoUrl)
                 .replace("{{first_name}}", user.getFirstName())
