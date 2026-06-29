@@ -21,7 +21,15 @@ public enum EmailTitlesEnum {
 	IT_SUBSCRIPTION_WELCOME("it", "subscription", "Il tuo abbonamento Qorva AI è attivo"),
 	ES_SUBSCRIPTION_WELCOME("es", "subscription", "Tu suscripción a Qorva AI está activa"),
 	PT_SUBSCRIPTION_WELCOME("pt", "subscription", "A sua subscrição Qorva AI está ativa"),
-	NL_SUBSCRIPTION_WELCOME("nl", "subscription", "Uw Qorva AI-abonnement is actief");
+	NL_SUBSCRIPTION_WELCOME("nl", "subscription", "Uw Qorva AI-abonnement is actief"),
+
+	EN_USER_ADDED("en", "user_added", "You've been added to Qorva AI"),
+	FR_USER_ADDED("fr", "user_added", "Vous avez été ajouté à Qorva AI"),
+	DE_USER_ADDED("de", "user_added", "Sie wurden zu Qorva AI hinzugefügt"),
+	IT_USER_ADDED("it", "user_added", "Sei stato aggiunto a Qorva AI"),
+	ES_USER_ADDED("es", "user_added", "Has sido añadido a Qorva AI"),
+	PT_USER_ADDED("pt", "user_added", "Foi adicionado ao Qorva AI"),
+	NL_USER_ADDED("nl", "user_added", "U bent toegevoegd aan Qorva AI");
 
 	EmailTitlesEnum(String languageCode, String emailType, String emailTitle) {
 		this.languageCode = languageCode;

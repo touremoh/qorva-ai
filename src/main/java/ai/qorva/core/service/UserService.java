@@ -3,8 +3,11 @@ package ai.qorva.core.service;
 import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.UserDTO;
+import ai.qorva.core.dto.request.AddUserRequest;
+import ai.qorva.core.enums.EmailNotificationType;
 import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.enums.SubscriptionPlanEnum;
+import ai.qorva.core.enums.UserStatusEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.UserMapper;
@@ -17,6 +20,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.security.SecureRandom;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -24,15 +29,22 @@ import java.util.Optional;
 @Service
 public class UserService extends AbstractQorvaService<UserDTO, User> {
 
+	private static final String TEMP_PASSWORD_CHARS =
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$!";
+	private static final int TEMP_PASSWORD_LENGTH = 12;
+
 	private final PasswordEncoder passwordEncoder;
 	private final TenantService tenantService;
+	private final PendingEmailNotificationService pendingEmailNotificationService;
 
 	@Autowired
 	public UserService(UserRepository repository, UserMapper mapper, PasswordEncoder passwordEncoder,
-	                   UserQueryBuilder queryBuilder, TenantService tenantService) {
+	                   UserQueryBuilder queryBuilder, TenantService tenantService,
+	                   PendingEmailNotificationService pendingEmailNotificationService) {
 		super(repository, mapper, queryBuilder);
 		this.passwordEncoder = passwordEncoder;
 		this.tenantService = tenantService;
+		this.pendingEmailNotificationService = pendingEmailNotificationService;
 	}
 
 	@Override
@@ -67,14 +79,13 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 
 			var plan = SubscriptionPlanEnum.fromName(planName);
 			if (plan.isEmpty()) {
-				// Unknown plan – allow creation but log a warning
 				log.warn("Unknown subscription plan '{}' for tenant {} – skipping seat limit check", planName, tenantId);
 				return;
 			}
 
 			int maxSeats = plan.get().getMaxSeats();
 			if (maxSeats == Integer.MAX_VALUE) {
-				return; // Unlimited seats
+				return;
 			}
 
 			long currentUsers = countAll(tenantId);
@@ -87,6 +98,53 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		} catch (Exception e) {
 			log.warn("Could not verify seat limit for tenant {} – allowing creation", tenantId, e);
 		}
+	}
+
+	public UserDTO addUser(String tenantId, AddUserRequest request) throws QorvaException {
+		String lang = StringUtils.hasText(request.getCommunicationLanguage())
+			? request.getCommunicationLanguage() : "en";
+
+		String companyName = resolveCompanyName(tenantId);
+		String tempPassword = generateTemporaryPassword();
+
+		var userDTO = new UserDTO();
+		userDTO.setTenantId(tenantId);
+		userDTO.setFirstName(request.getFirstName());
+		userDTO.setLastName(request.getLastName());
+		userDTO.setEmail(request.getEmail());
+		userDTO.setRawPassword(tempPassword);
+		userDTO.setAuthorities(request.getAuthorities());
+		userDTO.setUserAccountStatus(UserStatusEnum.ACTIVE.getValue());
+		userDTO.setCommunicationLanguage(lang);
+
+		var created = createOne(userDTO);
+
+		pendingEmailNotificationService.createPending(
+			tenantId, created.getId(), EmailNotificationType.USER_ADDED, lang,
+			Map.of("temporaryPassword", tempPassword, "companyName", companyName)
+		);
+
+		log.info("User invited: tenantId={} email={}", tenantId, request.getEmail());
+		return created;
+	}
+
+	private String resolveCompanyName(String tenantId) {
+		try {
+			var tenant = tenantService.findOneById(tenantId);
+			return tenant.getTenantName() != null ? tenant.getTenantName() : "";
+		} catch (Exception e) {
+			log.warn("Could not retrieve tenant name for tenantId={}", tenantId);
+			return "";
+		}
+	}
+
+	private String generateTemporaryPassword() {
+		var random = new SecureRandom();
+		var sb = new StringBuilder(TEMP_PASSWORD_LENGTH);
+		for (int i = 0; i < TEMP_PASSWORD_LENGTH; i++) {
+			sb.append(TEMP_PASSWORD_CHARS.charAt(random.nextInt(TEMP_PASSWORD_CHARS.length())));
+		}
+		return sb.toString();
 	}
 
 	@Override
