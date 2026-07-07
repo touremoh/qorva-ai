@@ -44,7 +44,6 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final OpenAIService openAIService;
     private final OpenAIResultMapper openAIResultMapper;
     private final JobPostService jobPostService;
-    private final PdfGenerationService pdfGenerator;
     private final MatchingReportRepository matchingReportRepository;
     private final ChatsRepository chatsRepository;
     private final UsageMonitoringService usageMonitoringService;
@@ -59,7 +58,6 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         OpenAIService openAIService,
         OpenAIResultMapper openAIResultMapper,
         JobPostService jobPostService,
-        PdfGenerationService pdfGenerator,
         CVMapper cVMapper,
         MatchingReportRepository matchingReportRepository,
         ChatsRepository chatsRepository,
@@ -68,7 +66,6 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
         this.jobPostService = jobPostService;
-        this.pdfGenerator = pdfGenerator;
         this.cvMapper = cVMapper;
         this.matchingReportRepository = matchingReportRepository;
         this.chatsRepository = chatsRepository;
@@ -255,11 +252,6 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         return raw.stream()
             .map(r -> new DashboardData.ClusteringCategoryReport(r.name(), r.count(), Math.round((double) r.count() / total * 1000.0) / 10.0))
             .toList();
-    }
-
-    public byte[] generateCVInPdfFormat(String cvId, String languageCode) throws QorvaException {
-        var cvData = this.findOneById(cvId);
-        return this.pdfGenerator.generateCV(cvData, languageCode);
     }
 
     private void incrementUsageSilently(String tenantId, UsageMonitoringService.FeatureKey key) {

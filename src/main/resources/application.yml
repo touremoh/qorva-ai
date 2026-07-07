@@ -25,77 +25,49 @@ spring:
     encoding: UTF-8
     use-code-as-default-message: true
 
-templates:
-  cv:
-    translations:
-      de:
-        header-title: Lebenslauf
-        title-contact: Kontaktdaten
-        title-skills: Kompetenzen
-        title-languages: Sprachkenntnisse
-        title-references: Referenzen
-        title-profile: Profil
-        title-work-experience: Berufserfahrung
-        title-education: Ausbildung
-        title-certifications: Zertifikate
-      en:
-        header-title: Resume
-        title-contact: Contact
-        title-skills: Skills
-        title-languages: Languages
-        title-references: References
-        title-profile: Profile
-        title-work-experience: Work Experience
-        title-education: Education
-        title-certifications: Certifications
-      es:
-        header-title: Currículum
-        title-contact: Contacto
-        title-skills: Competencias
-        title-languages: Idiomas
-        title-references: Referencias
-        title-profile: Perfil
-        title-work-experience: Experiencia profesional
-        title-education: Formación académica
-        title-certifications: Certificaciones
-      fr:
-        header-title: CV
-        title-contact: Coordonnées
-        title-skills: Compétences
-        title-languages: Langues
-        title-references: Références
-        title-profile: Profil
-        title-work-experience: Expérience professionnelle
-        title-education: Formation
-        title-certifications: Certifications
-      it:
-        header-title: Curriculum Vitae
-        title-contact: Contatti
-        title-skills: Competenze
-        title-languages: Lingue
-        title-references: Referenze
-        title-profile: Profilo
-        title-work-experience: Esperienza professionale
-        title-education: Formazione
-        title-certifications: Certificazioni
-      nl:
-        header-title: Curriculum Vitae
-        title-contact: Contactgegevens
-        title-skills: Vaardigheden
-        title-languages: Talen
-        title-references: Referenties
-        title-profile: Profiel
-        title-work-experience: Werkervaring
-        title-education: Opleiding
-        title-certifications: Certificeringen
-      pt:
-        header-title: Currículo
-        title-contact: Contactos
-        title-skills: Competências
-        title-languages: Idiomas
-        title-references: Referências
-        title-profile: Perfil
-        title-work-experience: Experiência profissional
-        title-education: Formação
-        title-certifications: Certificações
+mongock:
+  migration-scan-package: ai.qorva.core.migrations
+
+qorva:
+  products:
+    starter:
+      stripe-product-name: Starter
+      features:
+        seats: 2
+        limits:
+          screening-actions: 1000
+          ai-resume-chats: 300
+          talent-intelligence-queries: 500
+        overage:
+          enabled: false
+          screening-action-price: 0.0
+          chat-price: 0.0
+          intelligence-query-price: 0.0
+    pro:
+      stripe-product-name: Pro
+      features:
+        seats: 5
+        limits:
+          screening-actions: 5000
+          ai-resume-chats: 700
+          talent-intelligence-queries: 1500
+        overage:
+          enabled: true
+          screening-action-price: 0.02
+          chat-price: 0.10
+          intelligence-query-price: 0.50
+    scale:
+      stripe-product-name: Scale
+      features:
+        seats: 10
+        limits:
+          screening-actions: 12000
+          ai-resume-chats: 2000
+          talent-intelligence-queries: 4000
+        overage:
+          enabled: true
+          screening-action-price: 0.02
+          chat-price: 0.10
+          intelligence-query-price: 0.50
+
 
