@@ -19,6 +19,7 @@ import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.Decimal128;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -63,6 +64,30 @@ public class UserRegistrationService {
 	public RegistrationResponseDTO createAccount(AccountRegistrationDTO dto, String languageCode) throws QorvaException {
 		log.info("Starting registration for user: {} – language: {}", dto.getEmail(), languageCode);
 
+		// Guard: detect re-registration before creating any new resources
+		var existingUser = userService.findByEmail(dto.getEmail());
+		if (existingUser != null) {
+			if (UserStatusEnum.PENDING_SUBSCRIPTION.getValue().equals(existingUser.getUserAccountStatus())) {
+				TenantDTO existingTenant = null;
+				try {
+					existingTenant = tenantService.findOneById(existingUser.getTenantId());
+				} catch (Exception ignored) {}
+
+				if (existingTenant != null) {
+					return resumePendingRegistration(existingUser, existingTenant, dto);
+				}
+				// Orphan user whose tenant was already cleaned up – remove it and fall through
+				log.warn("Orphan PENDING_SUBSCRIPTION user {} has no tenant – removing for re-registration", existingUser.getId());
+				try {
+					userService.deleteOneById(existingUser.getId(), existingUser.getTenantId());
+				} catch (Exception ex) {
+					log.error("Failed to remove orphan user {} during re-registration", existingUser.getId(), ex);
+				}
+			} else {
+				throw new QorvaException(QorvaErrorCodes.USER_ALREADY_EXISTS, HttpStatus.NOT_ACCEPTABLE.value(), HttpStatus.NOT_ACCEPTABLE);
+			}
+		}
+
 		TenantDTO tenant = null;
 		UserDTO user = null;
 
@@ -95,6 +120,21 @@ public class UserRegistrationService {
 			cleanupFailedRegistration(tenant, user);
 			throw new QorvaException("Registration failed", e);
 		}
+	}
+
+	private RegistrationResponseDTO resumePendingRegistration(UserDTO existingUser, TenantDTO existingTenant, AccountRegistrationDTO dto) throws QorvaException {
+		log.info("Resuming pending registration for user {} on tenant {}", existingUser.getId(), existingTenant.getId());
+
+		if (!StringUtils.hasText(existingTenant.getStripeCustomerId())) {
+			var stripeCustomer = createStripeCustomer(dto, existingTenant.getId());
+			existingTenant.setStripeCustomerId(stripeCustomer.getId());
+			tenantService.updateOne(existingTenant.getId(), existingTenant);
+			log.info("Stripe customer created: {} for tenant: {}", stripeCustomer.getId(), existingTenant.getId());
+		}
+
+		var checkoutUrl = createCheckoutSession(dto.getPriceId(), existingTenant.getStripeCustomerId(), existingTenant.getId(), existingUser.getId());
+		log.info("Renewed checkout session for pending user: {}", existingUser.getId());
+		return new RegistrationResponseDTO(checkoutUrl, existingTenant.getId(), existingUser.getId());
 	}
 
 	private void cleanupFailedRegistration(TenantDTO tenant, UserDTO user) {

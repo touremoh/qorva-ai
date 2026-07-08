@@ -169,6 +169,11 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		repository.save(user);
 	}
 
+	public UserDTO findByEmail(String email) {
+		var entity = ((UserRepository) this.repository).findByEmail(email);
+		return entity != null ? mapper.map(entity) : null;
+	}
+
 	public long updateUserAccountStatusByTenantId(String tenantId, String newStatus) {
 		return ((UserRepository) this.repository).updateUserAccountStatusByTenantId(tenantId, newStatus);
 	}
