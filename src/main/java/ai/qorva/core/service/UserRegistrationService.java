@@ -63,26 +63,66 @@ public class UserRegistrationService {
 	public RegistrationResponseDTO createAccount(AccountRegistrationDTO dto, String languageCode) throws QorvaException {
 		log.info("Starting registration for user: {} – language: {}", dto.getEmail(), languageCode);
 
-		// Step 2: validate priceId against known product references
-		var product = resolveProductByPriceId(dto.getPriceId());
+		TenantDTO tenant = null;
+		UserDTO user = null;
 
-		// Step 3: create tenant with PENDING_SUBSCRIPTION status
-		var tenant = createCompanyInfo(dto, languageCode, product, dto.getPriceId());
+		try {
+			// Step 2: validate priceId against known product references
+			var product = resolveProductByPriceId(dto.getPriceId());
 
-		// Step 3: create user as PENDING_SUBSCRIPTION
-		var user = createNewUser(dto, tenant);
+			// Step 3: create tenant with PENDING_SUBSCRIPTION status
+			tenant = createCompanyInfo(dto, languageCode, product, dto.getPriceId());
 
-		// Step 4: create Stripe customer and update tenant with stripeCustomerId
-		var stripeCustomer = createStripeCustomer(dto, tenant.getId());
-		tenant.setStripeCustomerId(stripeCustomer.getId());
-		tenantService.updateOne(tenant.getId(), tenant);
-		log.info("Stripe customer created: {} for tenant: {}", stripeCustomer.getId(), tenant.getId());
+			// Step 3: create user as PENDING_SUBSCRIPTION
+			user = createNewUser(dto, tenant);
 
-		// Step 5: create Stripe checkout session
-		var checkoutUrl = createCheckoutSession(dto.getPriceId(), stripeCustomer.getId(), tenant.getId(), user.getId());
-		log.info("Checkout session created for tenant: {}", tenant.getId());
+			// Step 4: create Stripe customer and update tenant with stripeCustomerId
+			var stripeCustomer = createStripeCustomer(dto, tenant.getId());
+			tenant.setStripeCustomerId(stripeCustomer.getId());
+			tenantService.updateOne(tenant.getId(), tenant);
+			log.info("Stripe customer created: {} for tenant: {}", stripeCustomer.getId(), tenant.getId());
 
-		return new RegistrationResponseDTO(checkoutUrl, tenant.getId(), user.getId());
+			// Step 5: create Stripe checkout session
+			var checkoutUrl = createCheckoutSession(dto.getPriceId(), stripeCustomer.getId(), tenant.getId(), user.getId());
+			log.info("Checkout session created for tenant: {}", tenant.getId());
+
+			return new RegistrationResponseDTO(checkoutUrl, tenant.getId(), user.getId());
+
+		} catch (QorvaException e) {
+			cleanupFailedRegistration(tenant, user);
+			throw e;
+		} catch (Exception e) {
+			cleanupFailedRegistration(tenant, user);
+			throw new QorvaException("Registration failed", e);
+		}
+	}
+
+	private void cleanupFailedRegistration(TenantDTO tenant, UserDTO user) {
+		if (tenant == null) {
+			return;
+		}
+		log.warn("Registration failed – initiating cleanup for tenant: {}", tenant.getId());
+
+		if (user != null) {
+			try {
+				userService.deleteOneById(user.getId(), user.getTenantId());
+				log.info("Cleaned up user {} during failed registration", user.getId());
+			} catch (Exception ex) {
+				log.error("Failed to delete user {} during registration cleanup", user.getId(), ex);
+			}
+		}
+
+		try {
+			long remainingUsers = userService.countAll(tenant.getId());
+			if (remainingUsers == 0) {
+				tenantService.deleteOneById(tenant.getId(), tenant.getId());
+				log.info("Cleaned up tenant {} during failed registration", tenant.getId());
+			} else {
+				log.warn("Skipping tenant {} deletion – {} user(s) still registered", tenant.getId(), remainingUsers);
+			}
+		} catch (Exception ex) {
+			log.error("Failed to delete tenant {} during registration cleanup", tenant.getId(), ex);
+		}
 	}
 
 	public RegistrationResponseDTO renewCheckoutSession(CheckoutSessionRequestDTO dto) throws QorvaException {
