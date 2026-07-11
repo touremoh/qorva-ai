@@ -11,7 +11,7 @@ RUN mvn -q -DskipTests package
 FROM amazoncorretto:23.0.0-alpine3.20
 WORKDIR /app
 # Copy the built jar
-COPY --from=build ~/workspace/qorva/qorva-ai/target/qorva-ai-2.0.3.jar app.jar
+COPY --from=build ~/workspace/qorva/qorva-ai/target/qorva-ai-2.0.4.jar app.jar
 # Spring Boot defaults to 8080; App Runner's default container port is 8080
 EXPOSE 8080
 ENTRYPOINT ["java","-XX:+UseZGC","-jar","/app/app.jar"]
