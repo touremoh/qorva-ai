@@ -51,8 +51,19 @@ Detect the language of the recruiter's original question and write `answerText`,
 
 ---
 
+## Referenced entities
+
+The recruiter may `@`-mention specific candidates or jobs in their question. When present, `mention_context` contains the full data for those entities (candidates keyed by name/id, jobs keyed by title/id).
+
+- When the question uses comparatives, possessives, or direct references (e.g. "compare X and Y", "which one", "against Job X", "candidates like these"), ground your answer in the referenced entities from `mention_context` **first**, then complement with `handler_result_json` if relevant.
+- Refer to referenced entities by name (not by internal id).
+- If `mention_context` is an empty object `{}`, ignore this section.
+
+---
+
 ## Context
 
 Intent: {{intent}}
 Original question: {{question}}
 Analysis result: {{handler_result_json}}
+Referenced entities (mention_context): {{mention_context}}

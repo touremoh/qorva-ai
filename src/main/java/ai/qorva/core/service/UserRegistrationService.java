@@ -211,6 +211,7 @@ public class UserRegistrationService {
 			SessionCreateParams params = SessionCreateParams.builder()
 				.setMode(SessionCreateParams.Mode.SUBSCRIPTION)
 				.setCustomer(stripeCustomerId)
+				.setAllowPromotionCodes(true)
 				.addLineItem(SessionCreateParams.LineItem.builder()
 					.setPrice(priceId)
 					.setQuantity(1L)

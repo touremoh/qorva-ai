@@ -10,6 +10,7 @@ import ai.qorva.core.dao.specifications.MongoSpecification;
 import ai.qorva.core.dto.*;
 import ai.qorva.core.dto.common.Certification;
 import ai.qorva.core.dto.common.SkillRequirement;
+import ai.qorva.core.service.orchestrators.MentionResolver;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
@@ -28,27 +29,38 @@ public class CandidateComparisonHandler implements InsightHandler {
 
     @Override
     public InsightHandlerResult handle(CVQueryParams params, ObjectId tenantId) {
-        List<String> applicantNumbers = params.applicantNumbers();
+        return handle(params, tenantId, null);
+    }
 
-        if (applicantNumbers == null || applicantNumbers.size() < 2) {
-            return clarificationResult("Please provide at least 2 candidate reference numbers (applicantNumber) to compare. For example: 'Compare REF-001 and REF-002'.");
-        }
-
+    @Override
+    public InsightHandlerResult handle(CVQueryParams params, ObjectId tenantId, MentionResolver.ResolvedMentions mentions) {
         String tenantIdStr = tenantId.toHexString();
 
-        List<CV> cvs = cvRepository.findAll(
-            MongoSpecification.where(CVSpecifications.tenantIdEquals(tenantIdStr))
-                .and(CVSpecifications.applicantNumberIn(applicantNumbers))
-        );
-
-        if (cvs.size() < 2) {
-            return clarificationResult(
-                "Could not find enough candidates with the provided reference numbers. Please verify the references and try again."
+        // Resolve candidates: prefer @-mentioned candidates over LLM-extracted applicantNumbers
+        List<CV> cvs;
+        if (mentions != null && mentions.candidates().size() >= 2) {
+            cvs = mentions.candidates();
+        } else {
+            List<String> applicantNumbers = params.applicantNumbers();
+            if (applicantNumbers == null || applicantNumbers.size() < 2) {
+                return clarificationResult("Please provide at least 2 candidates to compare — either @-mention them by name or use their reference numbers (e.g. 'Compare REF-001 and REF-002').");
+            }
+            cvs = cvRepository.findAll(
+                MongoSpecification.where(CVSpecifications.tenantIdEquals(tenantIdStr))
+                    .and(CVSpecifications.applicantNumberIn(applicantNumbers))
             );
+            if (cvs.size() < 2) {
+                return clarificationResult(
+                    "Could not find enough candidates with the provided reference numbers. Please verify the references and try again."
+                );
+            }
         }
 
+        // Resolve job post: prefer @-mentioned job over LLM-extracted jobPostReference
         Map<String, Object> jobPostSnapshot = null;
-        if (params.jobPostReference() != null && !params.jobPostReference().isBlank()) {
+        if (mentions != null && !mentions.jobs().isEmpty()) {
+            jobPostSnapshot = buildJobPostSnapshot(mentions.jobs().get(0));
+        } else if (params.jobPostReference() != null && !params.jobPostReference().isBlank()) {
             Optional<JobPost> jobPost = jobPostRepository.findOne(
                 MongoSpecification.where(JobPostSpecifications.tenantIdEquals(tenantIdStr))
                     .and(JobPostSpecifications.jobReferenceEquals(params.jobPostReference()))

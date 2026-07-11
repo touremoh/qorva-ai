@@ -4,6 +4,7 @@ import ai.qorva.core.dto.*;
 import ai.qorva.core.service.orchestrators.InsightAnswerGenerator;
 import ai.qorva.core.service.orchestrators.InsightEntityExtractor;
 import ai.qorva.core.service.orchestrators.InsightIntentClassifier;
+import ai.qorva.core.service.orchestrators.MentionResolver;
 import ai.qorva.core.service.orchestrators.QuestionTranslatorService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,6 +26,7 @@ public class LibraryInsightsService {
 	private final UsageMonitoringService usageMonitoringService;
 	private final InsightConversationService conversationService;
 	private final QuestionTranslatorService questionTranslator;
+	private final MentionResolver mentionResolver;
 
 	public InsightResponseDTO  ask(InsightRequestDTO request, String tenantId, String userId) {
 		String conversationId = request.conversationId() != null
@@ -56,8 +58,9 @@ public class LibraryInsightsService {
 				return clarification;
 			}
 
-			InsightHandlerResult result = insightRouter.route(intent).handle(params, tenantObjectId);
-			AnswerGenerationResult answer = answerGenerator.generate(result, intent, request.question());
+			MentionResolver.ResolvedMentions resolvedMentions = mentionResolver.resolve(request.mentionsOrEmpty(), tenantId);
+			InsightHandlerResult result = insightRouter.route(intent).handle(params, tenantObjectId, resolvedMentions);
+			AnswerGenerationResult answer = answerGenerator.generate(result, intent, request.question(), resolvedMentions);
 
 			usageMonitoringService.incrementUsage(tenantId, UsageMonitoringService.FeatureKey.TALENT_INTELLIGENCE_QUERIES, 1);
 
