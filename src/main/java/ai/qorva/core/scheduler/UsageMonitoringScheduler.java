@@ -37,14 +37,14 @@ public class UsageMonitoringScheduler {
 
     @Scheduled(cron = "0 0/5 * * * *")
     public void initializeUsageMonitoringPeriods() {
-        log.info("Usage monitoring check: initializing usage monitoring periods");
+        log.debug("Usage monitoring check: initializing usage monitoring periods");
         var statuses = List.of(
             SubscriptionStatus.ACTIVE.getValue(),
             SubscriptionStatus.TRIALING.getValue()
         );
 
         var tenants = tenantRepository.findAllBySubscriptionStatusIn(statuses);
-        log.info("Usage monitoring check: {} active/trialing tenant(s) found", tenants.size());
+        log.debug("Usage monitoring check: {} active/trialing tenant(s) found", tenants.size());
 
         int initialized = 0;
         int skipped = 0;
@@ -63,7 +63,7 @@ public class UsageMonitoringScheduler {
             }
         }
 
-        log.info("Usage monitoring check complete: initialized={} skipped={} failed={}", initialized, skipped, failed);
+        log.debug("Usage monitoring check complete: initialized={} skipped={} failed={}", initialized, skipped, failed);
     }
 
     /**

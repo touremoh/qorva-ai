@@ -244,6 +244,10 @@
             <artifactId>s3</artifactId>
             <version>2.29.6</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents.client5</groupId>
+            <artifactId>httpclient5</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

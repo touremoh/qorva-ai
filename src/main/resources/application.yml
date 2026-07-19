@@ -24,6 +24,14 @@ spring:
     basename: messages/errors
     encoding: UTF-8
     use-code-as-default-message: true
+  ai:
+    retry:
+      max-attempts: 3
+      backoff:
+        initial-interval: 1s
+        multiplier: 2
+        max-interval: 10s
+      on-client-errors: false
 
 mongock:
   migration-scan-package: ai.qorva.core.migrations

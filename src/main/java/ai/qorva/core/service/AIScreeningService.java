@@ -2,6 +2,7 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.JobPostDTO;
+import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.utils.QorvaUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -11,10 +12,14 @@ import org.springframework.stereotype.Service;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Semaphore;
 
 @Slf4j
 @Service
 public class AIScreeningService {
+
+	private static final int MAX_CONCURRENT_OPENAI_CALLS = 40;
+	private final Semaphore openAiCallLimiter = new Semaphore(MAX_CONCURRENT_OPENAI_CALLS);
 
 	private final CVService cvService;
 	private final OpenAIService openAIService;
@@ -83,14 +88,28 @@ public class AIScreeningService {
 	}
 
 	private void processCandidate(CVDTO cv, JobPostDTO jobPost, String tenantId, String languageCode) throws QorvaException {
-		var analysisDetails = this.openAIService.generateReport(
-			QorvaUtils.toJSON(cv),
-			jobPost.toJobTitleAndDescription(),
-			languageCode,
-			jobPost.getScoringRules()
-		);
+		var analysisDetails = generateReportWithLimit(cv, jobPost, languageCode);
 		incrementUsageSilently(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS);
 		this.matchingReportService.upsertReport(jobPost, analysisDetails, cv);
+	}
+
+	private MatchingReportDetails generateReportWithLimit(CVDTO cv, JobPostDTO jobPost, String languageCode) throws QorvaException {
+		try {
+			this.openAiCallLimiter.acquire();
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+			throw new QorvaException("Interrupted while waiting to generate report for candidate " + cv.getId(), e);
+		}
+		try {
+			return this.openAIService.generateReport(
+				QorvaUtils.toJSON(cv),
+				jobPost.toJobTitleAndDescription(),
+				languageCode,
+				jobPost.getScoringRules()
+			);
+		} finally {
+			this.openAiCallLimiter.release();
+		}
 	}
 
 	private void incrementUsageSilently(String tenantId, UsageMonitoringService.FeatureKey key) {
