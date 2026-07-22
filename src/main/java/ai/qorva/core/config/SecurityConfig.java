@@ -61,6 +61,7 @@ public class SecurityConfig {
 					"/registrations/**",
 					"/auth/login",
 					"/auth/token/validate",
+					"/auth/password/**",
 					"/portal/jobs/**",
 					"/stripe/**",
 					"/actuator/**"

@@ -44,7 +44,7 @@ public class ChatController {
     }
 
     @GetMapping
-    @PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_CHAT')")
+    @PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_CHAT')")
     public Page<ChatDTO> listChats(@RequestParam(defaultValue = "0") int page,
                                    @RequestParam(defaultValue = "25") int size,
                                    @RequestParam(required = false) ChatStatus status) throws QorvaException {
@@ -53,20 +53,20 @@ public class ChatController {
     }
 
     @PostMapping
-    @PreAuthorize("@accessManager.hasAuthority(authentication, 'START_CHAT')")
+    @PreAuthorize("@accessManager.hasPermission(authentication, 'START_CHAT')")
     public ResponseEntity<ChatDTO> createChat(@RequestBody @Valid CreateChatRequest req) throws QorvaException {
         req.setTenantId(currentTenantId());
         return ResponseEntity.status(HttpStatus.CREATED).body(chatService.createChat(req, currentUsername()));
     }
 
     @GetMapping("/{chatId}")
-    @PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_CHAT')")
+    @PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_CHAT')")
     public ChatDTO getChat(@PathVariable String chatId) throws QorvaException {
         return chatService.getChat(currentTenantId(), chatId);
     }
 
     @PostMapping("/{chatId}/messages")
-    @PreAuthorize("@accessManager.hasAuthority(authentication, 'REPLY_MESSAGE') and @accessManager.hasNotExceededChatLimit()")
+    @PreAuthorize("@accessManager.hasPermission(authentication, 'REPLY_MESSAGE') and @accessManager.hasNotExceededChatLimit()")
     public ChatMessageDTO postUserMessage(@PathVariable String chatId,
                                           @RequestBody @Valid PostUserMessageRequest req) throws QorvaException {
         req.setTenantId(currentTenantId());
@@ -75,7 +75,7 @@ public class ChatController {
     }
 
     @GetMapping("/{chatId}/messages")
-    @PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_MESSAGE')")
+    @PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_MESSAGE')")
     public Page<ChatMessageDTO> getMessages(@PathVariable String chatId,
                                             @RequestParam(defaultValue = "0") int page,
                                             @RequestParam(defaultValue = "50") int size) throws QorvaException {
@@ -84,14 +84,14 @@ public class ChatController {
     }
 
     @DeleteMapping("/{chatId}")
-    @PreAuthorize("@accessManager.hasAuthority(authentication, 'DELETE_CHAT')")
+    @PreAuthorize("@accessManager.hasPermission(authentication, 'DELETE_CHAT')")
     public ResponseEntity<Void> deleteChat(@PathVariable String chatId) throws QorvaException {
         chatService.deleteChat(currentTenantId(), chatId);
         return ResponseEntity.noContent().build();
     }
 
     @PatchMapping("/{chatId}/status")
-    @PreAuthorize("@accessManager.hasAuthority(authentication, 'MODIFY_CHAT')")
+    @PreAuthorize("@accessManager.hasPermission(authentication, 'MODIFY_CHAT')")
     public ResponseEntity<ChatDTO> updateStatus(@PathVariable String chatId,
                                                 @RequestParam ChatStatus status) throws QorvaException {
         return ResponseEntity.ok(chatService.updateStatus(currentTenantId(), chatId, status, currentUsername()));

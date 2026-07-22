@@ -93,6 +93,7 @@ regex:
 
 weblink:
   allowedOrigins: http://localhost:5173,http://localhost:5174
+  appBaseUrl: http://localhost:5173
 
 jwt:
   secret: JWT_SECRET
@@ -122,6 +123,11 @@ qorva:
     logo-url: QORVA_ASSETS_LOGO_URL
   notifications:
     enabled: true
+  demo-seed:
+    enabled: true
+    prefix: demo-seed
+    version: v1
+    fallback-language: en
 
 aws:
   s3:

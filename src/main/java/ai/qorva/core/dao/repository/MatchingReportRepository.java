@@ -102,4 +102,7 @@ public interface MatchingReportRepository extends QorvaRepository<MatchingReport
 	 * @return
 	 */
 	long deleteByTenantIdAndCandidateInfoCandidateId(String tenantId, String candidateId);
+
+	/** Deletes every matching report belonging to a tenant (used when purging demo data on upgrade). */
+	long deleteByTenantId(String tenantId);
 }

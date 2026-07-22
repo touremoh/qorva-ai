@@ -17,6 +17,9 @@ public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepos
 	@Query(value = "{ '$text': { $search: ?0 }, 'tenantId': ?1 }")
 	Page<CV> searchAll(String searchTerms, String tenantId, Pageable pageable);
 
+	/** Deletes every CV belonging to a tenant (used when purging demo data on upgrade). */
+	long deleteByTenantId(String tenantId);
+
 	@Aggregation(pipeline = {
 		"{ $match: { tenantId: ?0 }}",
 		"{ $unwind: '$tags' }",

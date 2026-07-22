@@ -21,6 +21,8 @@ public class TenantDTO extends AbstractQorvaDTO {
     private String id;
     private String tenantName;
     private String organizationId;
+    private String recruitmentType;
+    private String organizationSize;
     private String companyAddress;
     private String companyLogoUrl;
     private String phoneNumber;

@@ -18,6 +18,10 @@ import org.springframework.security.access.prepost.PreAuthorize;
 
 import java.util.List;
 
+/*
+ * Write endpoints are authority-gated so demo users (who lack ADD_CV/MODIFY_CV/DELETE_CV) cannot mutate data.
+ */
+
 @Slf4j
 @RestController
 @RequestMapping("/cvs")
@@ -30,13 +34,49 @@ public class CVController extends AbstractQorvaController<CVDTO> {
 	}
 
     @PostMapping(value = "/upload")
-    @PreAuthorize("@accessManager.hasNotExceededScreeningLimit()")
+    @PreAuthorize("@accessManager.hasPermission(authentication,'ADD_CV') and @accessManager.hasNotExceededScreeningLimit()")
     public ResponseEntity<List<CVDTO>> uploadFiles(
             @RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language,
             @RequestParam("files") List<MultipartFile> files) throws QorvaException {
         LanguageContextHolder.setLanguage(language);
         log.info("Received {} files", files.size());
         return ResponseEntity.ok(((CVService) service).upload(files, currentTenantId()));
+    }
+
+    @Override
+    @PostMapping
+    @PreAuthorize("@accessManager.hasPermission(authentication,'ADD_CV')")
+    public ResponseEntity<QorvaRequestResponse> createOne(
+            @RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language,
+            @RequestBody CVDTO data) throws QorvaException {
+        return super.createOne(language, data);
+    }
+
+    @Override
+    @PutMapping("/{id}")
+    @PreAuthorize("@accessManager.hasPermission(authentication,'MODIFY_CV')")
+    public ResponseEntity<QorvaRequestResponse> updateOne(
+            @RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language,
+            @PathVariable String id,
+            @RequestBody CVDTO data) throws QorvaException {
+        return super.updateOne(language, id, data);
+    }
+
+    @Override
+    @PatchMapping("/{id}")
+    @PreAuthorize("@accessManager.hasPermission(authentication,'MODIFY_CV')")
+    public ResponseEntity<QorvaRequestResponse> patchOne(
+            @RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language,
+            @PathVariable String id,
+            @RequestBody CVDTO data) throws QorvaException {
+        return super.patchOne(language, id, data);
+    }
+
+    @Override
+    @DeleteMapping("/{id}")
+    @PreAuthorize("@accessManager.hasPermission(authentication,'DELETE_CV')")
+    public ResponseEntity<QorvaRequestResponse> deleteOneById(@PathVariable String id) throws QorvaException {
+        return super.deleteOneById(id);
     }
 
     @GetMapping("/search")

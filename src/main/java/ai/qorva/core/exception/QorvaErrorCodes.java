@@ -11,6 +11,8 @@ public final class QorvaErrorCodes {
     public static final String AUTH_SUBSCRIPTION_INACTIVE = "error.auth.subscription_inactive";
     public static final String AUTH_USER_NOT_FOUND        = "error.auth.user_not_found";
     public static final String AUTH_USER_LOOKUP_FAILED    = "error.auth.user_lookup_failed";
+    public static final String AUTH_SET_PASSWORD_TOKEN_INVALID = "error.auth.set_password_token_invalid";
+    public static final String AUTH_SET_PASSWORD_TOKEN_USED    = "error.auth.set_password_token_used";
 
     // access
     public static final String ACCESS_FORBIDDEN    = "error.access.forbidden";

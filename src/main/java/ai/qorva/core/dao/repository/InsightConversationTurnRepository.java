@@ -15,4 +15,7 @@ public interface InsightConversationTurnRepository extends MongoRepository<Insig
     List<InsightConversationTurn> findByTenantIdAndInitiatedByOrderByCreatedAtAsc(String tenantId, String initiatedBy);
 
     void deleteByConversationIdAndTenantIdAndInitiatedBy(String conversationId, String tenantId, String initiatedBy);
+
+    /** Deletes every insight conversation turn belonging to a tenant (used when purging demo data on upgrade). */
+    long deleteByTenantId(String tenantId);
 }

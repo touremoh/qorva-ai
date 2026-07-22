@@ -18,6 +18,10 @@ import java.util.Base64;
 public class JwtConfig {
 
 	private long timeToLiveInMillis = 3600000L;
+
+	/** TTL for single-use set-password tokens. Default 72h. */
+	private long setPasswordTtlInMillis = 259200000L;
+
 	private String secret; // b64 Secret key
 
 	private SecretKey secretKey;

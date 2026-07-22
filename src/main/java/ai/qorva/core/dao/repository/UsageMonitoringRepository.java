@@ -12,4 +12,7 @@ public interface UsageMonitoringRepository extends QorvaRepository<UsageMonitori
     Optional<UsageMonitoring> findByTenantIdAndCurrentPeriodStartLessThanEqualAndCurrentPeriodEndGreaterThan(
         String tenantId, Instant periodStart, Instant periodEnd
     );
+
+    /** Deletes usage monitoring for a tenant (used when purging demo data on upgrade). */
+    long deleteByTenantId(String tenantId);
 }

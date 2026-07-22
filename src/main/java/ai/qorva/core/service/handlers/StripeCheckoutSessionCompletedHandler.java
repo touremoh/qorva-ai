@@ -8,7 +8,9 @@ import ai.qorva.core.dto.common.SubscriptionInfo;
 import ai.qorva.core.enums.EmailNotificationType;
 import ai.qorva.core.enums.UserStatusEnum;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.helpers.UserAuthoritiesHelper;
 import ai.qorva.core.mapper.StripeEventMapper;
+import ai.qorva.core.service.DemoDataPurgeService;
 import ai.qorva.core.service.PendingEmailNotificationService;
 import ai.qorva.core.service.TenantService;
 import ai.qorva.core.utils.SubscriptionStatusHelper;
@@ -36,6 +38,7 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 	private final StripeEventMapper evtMapper;
 	private final UserRepository userRepository;
 	private final PendingEmailNotificationService pendingEmailService;
+	private final DemoDataPurgeService demoDataPurgeService;
 
 	@Autowired
 	public StripeCheckoutSessionCompletedHandler(
@@ -43,13 +46,15 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 		StripeEventLogRepository repository,
 		StripeEventMapper evtMapper,
 		UserRepository userRepository,
-		PendingEmailNotificationService pendingEmailService
+		PendingEmailNotificationService pendingEmailService,
+		DemoDataPurgeService demoDataPurgeService
 	) {
 		this.tenantService = tenantService;
 		this.repository = repository;
 		this.evtMapper = evtMapper;
 		this.userRepository = userRepository;
 		this.pendingEmailService = pendingEmailService;
+		this.demoDataPurgeService = demoDataPurgeService;
 	}
 
 	@Override
@@ -123,8 +128,8 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 		eventLog.setTenantId(tenantId);
 		repository.save(evtMapper.map(eventLog));
 
-		// Activate user and enqueue welcome email
-		activateUser(userId, session.getCustomerEmail()).ifPresent(user -> {
+		// Activate user (upgrading from demo purges sample data + grants full access) and enqueue welcome email
+		activateUser(tenantId, userId, session.getCustomerEmail()).ifPresent(user -> {
 			String lang = user.getCommunicationLanguage() != null ? user.getCommunicationLanguage() : "en";
 			pendingEmailService.createPending(tenantId, user.getId(), EmailNotificationType.SUBSCRIPTION_WELCOME, lang);
 		});
@@ -132,7 +137,7 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 		log.info("Checkout completed for tenant={} subscriptionId={} status={}", tenantId, subscriptionId, subscriptionStatus);
 	}
 
-	private Optional<User> activateUser(String userId, String customerEmail) {
+	private Optional<User> activateUser(String tenantId, String userId, String customerEmail) {
 		var user = Optional.ofNullable(userId)
 			.flatMap(id -> userRepository.findById(new ObjectId(id)))
 			.orElseGet(() -> Objects.nonNull(customerEmail) ? userRepository.findByEmail(customerEmail) : null);
@@ -141,8 +146,19 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 			log.warn("Could not find user by userId={} or email={} – skipping activation", userId, customerEmail);
 			return Optional.empty();
 		}
+
+		boolean wasDemo = UserStatusEnum.DEMO.getValue().equals(user.getUserAccountStatus());
 		user.setUserAccountStatus(UserStatusEnum.ACTIVE.getValue());
+		if (wasDemo) {
+			// Upgrade from demo → grant the full authority set
+			user.setAuthorities(UserAuthoritiesHelper.createAuthorities());
+		}
 		userRepository.save(user);
+
+		if (wasDemo) {
+			// All the tenant holds at this point is demo sample data — wipe it so the paid account starts clean.
+			demoDataPurgeService.purgeAll(tenantId);
+		}
 		return Optional.of(user);
 	}
 }

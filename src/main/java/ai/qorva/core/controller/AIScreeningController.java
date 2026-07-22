@@ -22,7 +22,7 @@ public class AIScreeningController {
 	}
 
 	@PostMapping("/start-screening")
-	@PreAuthorize("@accessManager.hasNotExceededScreeningLimit()")
+	@PreAuthorize("@accessManager.hasPermission(authentication,'GENERATE_REPORT') and @accessManager.hasNotExceededScreeningLimit()")
 	public ResponseEntity<Void> startScreening(
 		@RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language
 	) throws QorvaException {

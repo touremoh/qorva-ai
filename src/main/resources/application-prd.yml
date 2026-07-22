@@ -81,6 +81,7 @@ regex:
 
 weblink:
   allowedOrigins: ${ALLOWED_ORIGINS}
+  appBaseUrl: ${APP_BASE_URL}
 
 jwt:
   secret: ${JWT_SECRET}
@@ -106,3 +107,9 @@ qorva:
     enabled: ${QORVA_NOTIFICATION_ENABLED}
   assets:
     logo-url: ${QORVA_ASSETS_LOGO_URL}
+  demo-seed:
+    enabled: true
+    bucket: ${AWS_S3_BUCKET_NAME}
+    prefix: demo-seed
+    version: v1
+    fallback-language: en

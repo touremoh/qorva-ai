@@ -25,13 +25,13 @@ public class DashboardController {
 	}
 
 	@GetMapping(path = "/data", produces = "application/json")
-	@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_DASHBOARD')")
+	@PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_DASHBOARD')")
 	public ResponseEntity<DashboardData> getDashboardData(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
 		return ResponseEntity.ok(this.dashboardService.getDashboardData(userDetails));
 	}
 
 	@GetMapping(path = "/top-candidates", produces = "application/json")
-	@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_DASHBOARD')")
+	@PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_DASHBOARD')")
 	public ResponseEntity<DashboardData.TopCandidatesPage> getTopCandidatesPerJobPost(
 		@AuthenticationPrincipal UserDetails userDetails,
 		@RequestParam(defaultValue = "0") int pageNumber,
