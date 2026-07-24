@@ -1,0 +1,457 @@
+[
+  {
+    "title": "Diretor-Geral (Country Manager), Portugal",
+    "description": "A Vindalta Group, uma plataforma de bens de consumo e indústria ligeira participada por private equity e com sede em Lisboa, procura um Diretor-Geral para liderar a operação em Portugal na sua próxima fase de crescimento.\n\nReportando ao CEO do grupo e ao conselho de investidores, assumirá a responsabilidade total pela conta de exploração (P&L) de um negócio com cerca de 160 milhões de euros de faturação e 600 colaboradores. Definirá e executará a estratégia comercial e operacional, impulsionará a expansão do EBITDA e liderará a equipa executiva que abrange vendas, operações, finanças e recursos humanos. Um mandato central é a transformação organizacional: profissionalizar o modelo operativo, afinar o go-to-market e preparar o negócio para uma saída bem-sucedida num horizonte de três a quatro anos.\n\nSerá o principal interlocutor do conselho de investidores, entregando um reporting claro, pacotes mensais de desempenho e um plano de criação de valor credível. Liderará também operações seletivas de M&A do tipo bolt-on, desde a originação até à diligência e integração.\n\nRequisitos: mais de 15 anos de liderança com responsabilidade prévia por P&L completo como Diretor-Geral, General Manager ou Country Manager, idealmente numa empresa de portefólio de private equity. Crescimento comprovado de EBITDA, gestão de stakeholders ao nível do conselho e experiência na execução de um plano de criação de valor são essenciais. Espera-se um MBA ou formação equivalente em liderança estratégica.\n\nValorizado: experiência nos setores de consumo ou indústria, historial de M&A buy-and-build e exposição a um processo de saída.\n\nFunção executiva baseada em Lisboa, com deslocações regulares às unidades no país.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "P&L Ownership",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Strategic Leadership",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Board Reporting",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Organizational Transformation",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Mergers and Acquisitions",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.11,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MBA",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 15,
+        "minRelevantYears": 10,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "Porto",
+          "Aveiro",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Private Equity",
+          "Consumer Goods",
+          "Manufacturing"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.4,
+        "experience": 0.35,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Chief Operating Officer (COO)",
+    "description": "A Nortavia Industries, um grupo industrial de média dimensão com unidades produtivas no norte de Portugal, procura um Chief Operating Officer para liderar a excelência operacional em toda a organização.\n\nComo membro do Comité Executivo e reportando ao CEO, será responsável por operações, cadeia de abastecimento, produção, qualidade e engenharia de processos, gerindo um orçamento operacional superior a 90 milhões de euros e uma equipa de mais de 800 pessoas. O seu mandato é escalar a capacidade produtiva, elevar a produtividade e conduzir uma transformação Lean profunda em várias fábricas.\n\nLiderará a implementação de metodologias de melhoria contínua (Lean, Six Sigma), otimizará o custo unitário e a fiabilidade de entrega (OTIF) e modernizará a operação através de iniciativas de Industry 4.0 e digitalização de fábrica. Trabalhará em estreita articulação com o CFO na gestão de capital investido e com o conselho na definição da estratégia industrial de longo prazo.\n\nRequisitos: mais de 14 anos de experiência em liderança operacional industrial, com passagem comprovada por funções de VP Operations ou COO. Domínio de gestão de operações multi-site, transformação Lean, planeamento de capacidade e gestão de P&L operacional. Forte capacidade de gestão de stakeholders e de liderança de equipas de grande dimensão. Formação em engenharia e MBA são altamente valorizados.\n\nValorizado: experiência em ambientes participados por private equity, integração pós-fusão de operações e implementação de sistemas MES/ERP.\n\nFunção presencial baseada no Porto, com presença regular nas unidades fabris.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Operations Management",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "P&L Ownership",
+          "importance": "mandatory",
+          "weight": 0.16,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Lean Manufacturing",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Supply Chain Management",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Organizational Transformation",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Six Sigma",
+          "importance": "nice_to_have",
+          "weight": 0.12,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 14,
+        "minRelevantYears": 10,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Porto",
+          "Braga",
+          "Guimarães",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Industrial",
+          "Private Equity"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Diretor Financeiro (CFO)",
+    "description": "A Lumavest Partners, uma sociedade gestora de participações e serviços financeiros sediada em Lisboa, procura um Diretor Financeiro (CFO) para integrar o Comité Executivo e liderar a função financeira do grupo.\n\nReportando ao CEO e ao conselho de administração, assumirá a responsabilidade global por finanças, controlo de gestão, tesouraria, fiscalidade, relação com investidores e risco. Será o guardião da disciplina financeira e do plano de criação de valor, entregando reporting rigoroso ao conselho, previsões fiáveis e uma alocação de capital criteriosa.\n\nLiderará processos de fundraising e refinanciamento, gerirá a relação com bancos e auditores e conduzirá operações de M&A do lado financeiro, incluindo modelação, diligência e integração. Será também responsável por elevar a maturidade da função através da implementação de FP&A moderno, automação de reporting e reforço dos controlos internos em conformidade com IFRS.\n\nRequisitos: mais de 15 anos de experiência financeira sénior, com pelo menos 5 anos como CFO ou Diretor Financeiro. Domínio comprovado de IFRS, FP&A, tesouraria, gestão de M&A e relação com investidores e conselho. Sólida experiência de liderança de equipas financeiras e de gestão de stakeholders. Qualificação contabilística (ACCA, ROC ou equivalente) e MBA são fortemente valorizados.\n\nValorizado: experiência prévia em private equity ou empresas participadas, exposição a mercados de capitais e processos de saída (IPO ou trade sale).\n\nFunção baseada em Lisboa, com modelo híbrido e deslocações pontuais.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Financial Planning and Analysis",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "P&L Ownership",
+          "importance": "mandatory",
+          "weight": 0.16,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Mergers and Acquisitions",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Treasury Management",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Investor Relations",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MBA",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 15,
+        "minRelevantYears": 10,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "Cascais",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Financial Services",
+          "Private Equity",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.4,
+        "experience": 0.35,
+        "location": 0.05,
+        "industry": 0.2
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  },
+  {
+    "title": "Chief Technology Officer (CTO)",
+    "description": "A Baltoro Tech, uma empresa de software B2B SaaS em rápido crescimento com equipas em Lisboa e São Paulo, procura um Chief Technology Officer para liderar a estratégia tecnológica e de produto à escala.\n\nComo membro da equipa executiva e reportando ao CEO, será responsável por engenharia, arquitetura, plataforma e segurança, liderando mais de 120 engenheiros distribuídos por várias equipas. O seu mandato é escalar a plataforma para suportar crescimento internacional, elevar a fiabilidade e a velocidade de entrega e alinhar o roadmap tecnológico com os objetivos de negócio e de criação de valor.\n\nDefinirá a visão de arquitetura cloud-native, conduzirá a modernização da plataforma, reforçará as práticas de DevOps e SRE e estabelecerá uma cultura de engenharia de excelência. Será também responsável por governança de dados, cibersegurança e conformidade, bem como pela avaliação tecnológica em processos de M&A e por decisões de build-versus-buy. Trabalhará em estreita colaboração com Produto para garantir uma execução coesa da estratégia.\n\nRequisitos: mais de 14 anos em engenharia de software, com passagem comprovada por funções de CTO ou VP Engineering em ambientes SaaS de escala. Domínio de arquitetura cloud (AWS ou equivalente), liderança de organizações de engenharia de grande dimensão, escalabilidade de plataforma e gestão de stakeholders executivos. Sólida capacidade de pensamento estratégico e de reporting ao conselho.\n\nValorizado: experiência em internacionalização, hipercrescimento suportado por private equity ou venture capital, e liderança durante due diligence técnica.\n\nFunção híbrida baseada em Lisboa, com colaboração regular com a equipa no Brasil.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Technology Strategy",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Engineering Leadership",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Cloud Architecture",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Software as a Service",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Cybersecurity",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "DevOps",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 14,
+        "minRelevantYears": 9,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "Porto",
+          "São Paulo",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Software",
+          "Private Equity"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.05,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Chief Commercial Officer (CCO)",
+    "description": "A Sendara Consumer, uma empresa de bens de consumo com marcas líderes no mercado ibérico e sede em Lisboa, procura um Chief Commercial Officer para liderar a agenda de crescimento comercial do grupo.\n\nComo membro do Comité Executivo e reportando ao CEO, será responsável por vendas, marketing, gestão de contas-chave e revenue management, com responsabilidade direta pela conta de exploração comercial superior a 200 milhões de euros. O seu mandato é acelerar o crescimento rentável, expandir para novos canais e mercados e profissionalizar a organização comercial num contexto de criação de valor.\n\nDefinirá a estratégia go-to-market, otimizará a política de pricing e promoções, liderará a expansão internacional e reforçará as parcerias com os principais retalhistas e distribuidores. Conduzirá a transformação da função comercial através de dados e digital, estabelecendo métricas claras de desempenho e uma cultura de accountability. Trabalhará em estreita articulação com Operações e Finanças para garantir margens e execução, e apresentará regularmente ao conselho o progresso do plano comercial.\n\nRequisitos: mais de 14 anos de experiência comercial sénior, com passagem comprovada por funções de Chief Commercial Officer, VP Sales ou Diretor Comercial. Domínio de estratégia go-to-market, gestão de P&L comercial, key account management e revenue management. Forte capacidade de liderança de equipas comerciais de grande dimensão e de gestão de stakeholders ao nível do conselho. MBA é valorizado.\n\nValorizado: experiência em bens de consumo de grande rotação (FMCG), expansão internacional e ambientes participados por private equity.\n\nFunção baseada em Lisboa, com deslocações regulares a mercados e clientes.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Go-to-Market Strategy",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "P&L Ownership",
+          "importance": "mandatory",
+          "weight": 0.17,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Sales Leadership",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Key Account Management",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Revenue Management",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "nice_to_have",
+          "weight": 0.11,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MBA",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 14,
+        "minRelevantYears": 9,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "Porto",
+          "Coimbra",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Consumer Goods",
+          "Retail",
+          "Private Equity"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  }
+]

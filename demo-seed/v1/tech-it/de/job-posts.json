@@ -1,0 +1,159 @@
+[
+  {
+    "title": "Senior Backend Engineer (Java/Spring Boot)",
+    "description": "Für unser Produktteam in Berlin suchen wir eine erfahrene Senior Backend Engineer:in, die unsere cloud-native Microservice-Plattform maßgeblich weiterentwickelt.\n\nDeine Mission: Du entwirfst, baust und betreibst skalierbare Services, die täglich mehrere Millionen Anfragen verarbeiten. Du bist verantwortlich für die technische Qualität, von der API-Modellierung über Datenkonsistenz bis hin zu Observability und Performance.\n\nDeine Aufgaben:\n- Design und Implementierung von REST- und Event-getriebenen Services mit Java 21 und Spring Boot\n- Modellierung von Domänen und Datenzugriff mit PostgreSQL sowie Caching-Strategien\n- Ausbau unserer CI/CD-Pipelines und Deployment auf Kubernetes (AWS EKS)\n- Mentoring von Kolleg:innen und Mitgestaltung unserer Engineering-Standards\n\nDein Profil:\n- Mindestens 6 Jahre Erfahrung in der Backend-Entwicklung mit Java und Spring\n- Fundierte Kenntnisse in relationalen Datenbanken, Nachrichtensystemen (Kafka) und verteilten Systemen\n- Sicherer Umgang mit Docker, Kubernetes und einer großen Cloud-Plattform\n- Erfahrung mit Test-Driven Development und sauberer Softwarearchitektur\n\nNice-to-have: Erfahrung mit Kafka Streams, gRPC oder Domain-Driven Design.\n\nArbeitsmodell: Hybrid mit Büro in Berlin, bis zu drei Tage Remote pro Woche. Wir bieten ein modernes Tech-Setup, ein starkes Team und viel Gestaltungsspielraum.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Java", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Spring Boot", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "PostgreSQL", "importance": "important", "weight": 0.15, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Kubernetes", "importance": "important", "weight": 0.15, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Kafka", "importance": "important", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Docker", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 3, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Berlin", "Hamburg", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "SaaS", "Information Technology"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Data Engineer (Python/Airflow)",
+    "description": "Wir bauen die Datenplattform unseres Unternehmens in München neu auf und suchen dafür eine Data Engineer:in, die Freude an sauberen, zuverlässigen Datenpipelines hat.\n\nDeine Mission: Du sorgst dafür, dass Daten aus Dutzenden Quellen zuverlässig, nachvollziehbar und in hoher Qualität in unser Data Warehouse fließen. Analytics- und Data-Science-Teams verlassen sich auf die Pipelines, die du baust.\n\nDeine Aufgaben:\n- Entwurf und Betrieb von Batch- und Streaming-Pipelines mit Python und Apache Airflow\n- Modellierung und Optimierung von Datenmodellen im Data Warehouse (Snowflake/BigQuery)\n- Aufbau von dbt-Transformationen und Sicherstellung von Datenqualität und Tests\n- Zusammenarbeit mit Analytics- und Produktteams zur Definition von Datenverträgen\n\nDein Profil:\n- 3 bis 5 Jahre Erfahrung im Data Engineering oder in der Backend-nahen Datenverarbeitung\n- Sehr gute Python-Kenntnisse und fundiertes SQL\n- Praktische Erfahrung mit Airflow, dbt und mindestens einem Cloud-Data-Warehouse\n- Verständnis für ETL/ELT-Muster, Partitionierung und Idempotenz\n\nNice-to-have: Erfahrung mit Spark, Kafka oder Infrastructure-as-Code.\n\nArbeitsmodell: Hybrid in München, flexible Remote-Anteile. Du erwartet ein datengetriebenes Umfeld mit kurzen Entscheidungswegen.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Python", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Apache Airflow", "importance": "important", "weight": 0.2, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "dbt", "importance": "important", "weight": 0.15, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Snowflake", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Apache Spark", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["München", "Frankfurt", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Information Technology", "SaaS", "Data Analytics"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Senior DevOps / Site Reliability Engineer (Kubernetes/AWS)",
+    "description": "Zur Verstärkung unseres Platform-Teams in Frankfurt suchen wir eine Senior DevOps / SRE, die unsere Cloud-Infrastruktur zuverlässig, sicher und skalierbar hält.\n\nDeine Mission: Du bist die treibende Kraft hinter unserer Plattform-Reliability. Du automatisierst, was sich automatisieren lässt, und ermöglichst unseren Entwicklungsteams, schnell und sicher zu liefern.\n\nDeine Aufgaben:\n- Betrieb und Weiterentwicklung unserer Kubernetes-Cluster auf AWS (EKS)\n- Infrastructure-as-Code mit Terraform sowie Aufbau von GitOps-Workflows\n- Design und Pflege von CI/CD-Pipelines, Monitoring und Alerting (Prometheus, Grafana)\n- Definition von SLOs, Incident-Response und kontinuierliche Verbesserung der Zuverlässigkeit\n\nDein Profil:\n- Mindestens 6 Jahre Erfahrung im Bereich DevOps, SRE oder Platform Engineering\n- Tiefes Verständnis von Kubernetes, Containern und Netzwerken\n- Sehr gute Kenntnisse in Terraform und einer großen Cloud-Plattform (bevorzugt AWS)\n- Erfahrung mit Observability-Stacks und einer Skriptsprache wie Python oder Go\n\nNice-to-have: Erfahrung mit Service Meshes, Security-Hardening oder Kostenoptimierung.\n\nArbeitsmodell: Remote-first innerhalb der DACH-Region mit gelegentlichen Treffen in Frankfurt oder Zürich. On-Call-Rotation mit fairer Vergütung.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Kubernetes", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Terraform", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Docker", "importance": "important", "weight": 0.1, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Prometheus", "importance": "important", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Python", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Go", "importance": "nice_to_have", "weight": 0.07, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Frankfurt", "Zürich", "Wien", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Information Technology", "Cloud Computing", "SaaS"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.05, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Technical Product Manager (B2B SaaS)",
+    "description": "Wir suchen eine Technical Product Manager:in in Hamburg, die unsere B2B-SaaS-Plattform gemeinsam mit Engineering und Design zum nächsten Level bringt.\n\nDeine Mission: Du verantwortest einen Produktbereich end-to-end, von der Discovery über die Priorisierung bis zum Launch. Du übersetzt Kundenbedürfnisse in eine klare, umsetzbare Roadmap und triffst datenbasierte Entscheidungen.\n\nDeine Aufgaben:\n- Definition von Produktvision, Strategie und Roadmap für deinen Bereich\n- Enge Zusammenarbeit mit Engineering, Design, Sales und Customer Success\n- Durchführung von Discovery-Interviews und Auswertung von Produktanalytics\n- Schreiben klarer User Stories und Priorisierung des Backlogs anhand von Impact\n\nDein Profil:\n- 3 bis 5 Jahre Erfahrung als Product Manager, idealerweise in einem technischen B2B-SaaS-Umfeld\n- Gutes technisches Verständnis für APIs, Datenmodelle und Systemgrenzen\n- Sicherer Umgang mit Produktanalytics-Tools und Experimentation (A/B-Testing)\n- Ausgeprägte Kommunikationsfähigkeit auf Deutsch und Englisch\n\nNice-to-have: Erfahrung mit SQL, agilen Methoden oder Platform-Produkten.\n\nArbeitsmodell: Hybrid in Hamburg mit flexiblen Remote-Tagen. Ein interdisziplinäres Team, das Ownership und Kundennähe lebt.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Management", "importance": "mandatory", "weight": 0.3, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "important", "weight": 0.2, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Agile Methodologies", "importance": "important", "weight": 0.15, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Roadmapping", "importance": "important", "weight": 0.15, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "A/B Testing", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Hamburg", "Berlin", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["SaaS", "Software", "Information Technology"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Junior Frontend Developer (React/TypeScript)",
+    "description": "Für unser wachsendes Produktteam in Wien suchen wir eine motivierte Junior Frontend Developer:in, die mit uns moderne, nutzerfreundliche Weboberflächen baut.\n\nDeine Mission: Du setzt gemeinsam mit erfahrenen Kolleg:innen Features um, die täglich von tausenden Nutzer:innen verwendet werden. Du lernst schnell, achtest auf Qualität und wächst mit jeder Aufgabe.\n\nDeine Aufgaben:\n- Entwicklung responsiver UI-Komponenten mit React und TypeScript\n- Anbindung von REST-APIs und sauberes State-Management\n- Umsetzung von Designs aus Figma in pixelgenaue, barrierearme Interfaces\n- Schreiben von Unit- und Komponententests sowie Teilnahme an Code-Reviews\n\nDein Profil:\n- Erste praktische Erfahrung (0 bis 2 Jahre) in der Frontend-Entwicklung, gerne aus Praktikum, Werkstudium oder eigenen Projekten\n- Solide Grundlagen in JavaScript, HTML und CSS\n- Erste Berührungspunkte mit React und idealerweise TypeScript\n- Lernbereitschaft, Teamgeist und ein Auge für gutes UI\n\nNice-to-have: Erfahrung mit Testing-Libraries, Git-Workflows oder Design-Systemen.\n\nArbeitsmodell: Hybrid in Wien mit strukturiertem Onboarding und Mentoring. Wir investieren aktiv in deine Weiterentwicklung.",
+    "scoringRules": {
+      "skills": [
+        { "name": "React", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "JavaScript", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "TypeScript", "importance": "important", "weight": 0.2, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "CSS", "importance": "important", "weight": 0.15, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "HTML", "importance": "important", "weight": 0.1, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Git", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Wien", "Graz", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "SaaS", "Information Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.2, "location": 0.15, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

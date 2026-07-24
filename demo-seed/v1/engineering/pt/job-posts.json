@@ -1,0 +1,453 @@
+[
+  {
+    "title": "Engenheiro de Projeto Mecânico (SolidWorks/ANSYS)",
+    "description": "Empresa de engenharia industrial sediada no Porto, com projetos de bens de equipamento e linhas de produção para clientes europeus, procura um Engenheiro de Projeto Mecânico para reforçar a equipa de desenvolvimento de produto.\n\nMissão:\nConceber e detalhar conjuntos mecânicos, desde o conceito até à documentação de fabrico, garantindo desempenho, custo e fabricabilidade.\n\nResponsabilidades:\n- Desenvolver modelação 3D e desenhos de fabrico em SolidWorks, com aplicação de GD&T.\n- Realizar cálculos estruturais e análises por elementos finitos (FEA) em ANSYS.\n- Selecionar materiais, tolerâncias e processos de fabrico em articulação com produção.\n- Acompanhar protótipos, ensaios e validação em conformidade com normas ISO e diretiva de máquinas.\n- Colaborar com fornecedores e com a equipa de qualidade na resolução de não conformidades.\n\nRequisitos obrigatórios:\n- 3 a 5 anos de experiência em projeto mecânico industrial.\n- Domínio de SolidWorks e desenho técnico segundo normas ISO/GD&T.\n- Experiência prática em FEA (ANSYS ou equivalente).\n\nValorizamos (nice-to-have):\n- Conhecimentos de AutoCAD para layouts 2D e experiência com PDM.\n\nSenioridade: Intermédia. Localização: Porto, regime híbrido com presença em fábrica.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "SolidWorks",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ANSYS",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GD&T",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Finite Element Analysis",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Mechanical Design",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AutoCAD",
+          "importance": "nice_to_have",
+          "weight": 0.35,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "PDM",
+          "importance": "nice_to_have",
+          "weight": 0.3,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Porto",
+          "Braga",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Industrial Equipment",
+          "Manufacturing",
+          "Mechanical Engineering"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Engenheiro Civil Estrutural Sénior (Eurocódigos/ETABS)",
+    "description": "Gabinete de projeto de estruturas em Lisboa, com portefólio em edifícios de habitação, obras de arte e reabilitação, procura um Engenheiro Civil Estrutural Sénior para liderar o dimensionamento de projetos complexos.\n\nMissão:\nConduzir o projeto estrutural de betão armado e estruturas metálicas, garantindo segurança, economia e conformidade regulamentar.\n\nResponsabilidades:\n- Modelar e dimensionar estruturas em ETABS e STAAD.Pro segundo os Eurocódigos.\n- Elaborar memórias de cálculo, pormenores e mapas de quantidades.\n- Coordenar equipas de projetistas e rever entregas técnicas.\n- Articular com arquitetura, fundações e fiscalização em obra.\n- Assegurar o cumprimento dos Eurocódigos (EC2, EC3, EC8) e da regulamentação sísmica.\n\nRequisitos obrigatórios:\n- 6+ anos de experiência em projeto de estruturas.\n- Domínio de ETABS e dimensionamento segundo os Eurocódigos.\n- Experiência em betão armado e estruturas metálicas.\n\nValorizamos (nice-to-have):\n- Experiência com STAAD.Pro, Revit (BIM estrutural) e projeto sísmico avançado.\n\nSenioridade: Sénior. Localização: Lisboa, regime híbrido com deslocações a obra.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "ETABS",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Eurocode",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Structural Analysis",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Reinforced Concrete Design",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "STAAD.Pro",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Steel Structures Design",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Revit",
+          "importance": "nice_to_have",
+          "weight": 0.35,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Seismic Design",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "Setúbal",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Construction",
+          "Civil Engineering",
+          "Architecture and Engineering"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Engenheiro Eletrotécnico de Projeto (AutoCAD/ETAP)",
+    "description": "Empresa de engenharia de instalações e energia em Coimbra, com projetos de instalações elétricas de baixa e média tensão para edifícios e indústria, procura um Engenheiro Eletrotécnico de Projeto.\n\nMissão:\nDesenvolver projetos de instalações elétricas e de sistemas de distribuição, assegurando fiabilidade e conformidade regulamentar.\n\nResponsabilidades:\n- Elaborar esquemas unifilares, quadros e projetos de instalações em AutoCAD.\n- Realizar estudos de curto-circuito, seletividade e queda de tensão em ETAP.\n- Dimensionar cablagem, proteções e sistemas de terra segundo as normas IEC.\n- Especificar equipamentos de média e baixa tensão e coordenar com fornecedores.\n- Acompanhar comissionamento e ensaios em obra.\n\nRequisitos obrigatórios:\n- 3 a 5 anos de experiência em projeto de instalações elétricas.\n- Domínio de AutoCAD e das normas IEC aplicáveis.\n- Experiência em cálculo elétrico (curto-circuito, seletividade).\n\nValorizamos (nice-to-have):\n- Experiência com ETAP, sistemas fotovoltaicos e integração de SCADA.\n\nSenioridade: Intermédia. Localização: Coimbra, regime híbrido com visitas a obra.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "AutoCAD",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Electrical Design",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IEC Standards",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ETAP",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Low Voltage Systems",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Photovoltaic Systems",
+          "importance": "nice_to_have",
+          "weight": 0.35,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SCADA",
+          "importance": "nice_to_have",
+          "weight": 0.3,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Coimbra",
+          "Aveiro",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Energy",
+          "Electrical Engineering",
+          "Construction"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Engenheiro de Processo Júnior (Lean/Six Sigma)",
+    "description": "Unidade fabril do setor automóvel em Braga procura um Engenheiro de Processo Júnior para integrar a equipa de melhoria contínua e apoiar a otimização das linhas de produção.\n\nMissão:\nApoiar a análise e melhoria dos processos produtivos, contribuindo para ganhos de produtividade, qualidade e redução de desperdício.\n\nResponsabilidades:\n- Recolher e analisar dados de produção (tempos de ciclo, OEE, refugo).\n- Apoiar iniciativas de Lean Manufacturing e projetos Six Sigma (DMAIC).\n- Elaborar instruções de trabalho, balanceamentos de linha e estudos de tempos.\n- Colaborar com qualidade na análise de causa raiz e ações corretivas.\n- Registar dados e movimentos em SAP e reportar indicadores.\n\nRequisitos obrigatórios:\n- 0 a 2 anos de experiência em ambiente industrial (estágio relevante conta).\n- Conhecimentos de Lean Manufacturing e ferramentas de melhoria contínua.\n- Boa capacidade analítica e domínio de Excel.\n\nValorizamos (nice-to-have):\n- Certificação Six Sigma (Yellow/Green Belt) e experiência com SAP.\n\nSenioridade: Júnior. Localização: Braga, presencial em fábrica.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Lean Manufacturing",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Six Sigma",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Process Improvement",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Root Cause Analysis",
+          "importance": "important",
+          "weight": 0.55,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP",
+          "importance": "nice_to_have",
+          "weight": 0.35,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Time Study",
+          "importance": "important",
+          "weight": 0.5,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Braga",
+          "Guimarães",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Automotive",
+          "Manufacturing",
+          "Industrial Engineering"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.2,
+        "location": 0.15,
+        "industry": 0.2
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Engenheiro Mecânico de AVAC / HVAC (Revit MEP)",
+    "description": "Consultora de engenharia MEP com escritório em Lisboa e projetos internacionais, incluindo uma operação em São Paulo (Brasil), procura um Engenheiro Mecânico de AVAC para o desenvolvimento de projetos de climatização em edifícios de serviços e hospitalares.\n\nMissão:\nConceber e dimensionar sistemas de AVAC (aquecimento, ventilação e ar condicionado) eficientes e conformes com a regulamentação térmica.\n\nResponsabilidades:\n- Calcular cargas térmicas e dimensionar equipamentos de climatização e ventilação.\n- Desenvolver projeto em Revit MEP e coordenar em ambiente BIM com as restantes especialidades.\n- Especificar UTAs, chillers, condutas e redes hidráulicas.\n- Realizar estudos de eficiência energética e conforto térmico.\n- Acompanhar comissionamento e resolver interferências em obra.\n\nRequisitos obrigatórios:\n- 3 a 5 anos de experiência em projeto de AVAC.\n- Experiência com cálculo de cargas térmicas e dimensionamento de sistemas.\n- Domínio de Revit MEP e de AutoCAD.\n\nValorizamos (nice-to-have):\n- Conhecimentos de simulação energética e de normas ASHRAE.\n\nSenioridade: Intermédia. Localização: Lisboa, regime híbrido; disponibilidade para coordenação com a equipa de São Paulo.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "HVAC Design",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Revit MEP",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Thermal Load Calculation",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AutoCAD",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "BIM",
+          "importance": "important",
+          "weight": 0.55,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ASHRAE Standards",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Energy Simulation",
+          "importance": "nice_to_have",
+          "weight": 0.35,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "São Paulo",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "MEP Engineering",
+          "Construction",
+          "Building Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  }
+]

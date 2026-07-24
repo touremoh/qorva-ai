@@ -1,0 +1,187 @@
+[
+  {
+    "title": "Registered Nurse - Intensive Care Unit (ICU)",
+    "description": "St. Aldwyn's NHS Foundation Trust is recruiting an experienced Registered Nurse to join the adult Intensive Care Unit at our Manchester teaching hospital. You will deliver high-acuity, evidence-based care to critically ill patients, working within a 24-bed unit that manages ventilated, post-surgical, and multi-organ-failure cases.\n\nYou will assess, plan, and evaluate individualised care, manage invasive monitoring and mechanical ventilation, titrate vasoactive infusions, and respond to rapidly deteriorating patients as part of the outreach and arrest team. You will act as a mentor to junior nurses and student placements, contribute to clinical governance and audit, and maintain meticulous documentation in line with NMC standards and Trust protocols.\n\nWe are looking for a compassionate, resilient practitioner with strong critical-care competencies, excellent communication with families and the wider multidisciplinary team, and a commitment to patient safety and infection control.\n\nRequired: current NMC registration, 5+ years of post-registration nursing with at least 3 years in critical care, ILS/ALS certification, and a completed critical-care course (or equivalent). Nice-to-have: mentorship qualification and experience with renal replacement therapy.\n\nThis is a senior, onsite role based in Manchester on a rotating shift pattern including nights and weekends. We offer NHS pension, structured CPD, and a clear pathway toward Band 6/7 progression.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Critical Care Nursing", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "NMC Registration", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 5, "exactSkillOnly": true },
+        { "name": "Mechanical Ventilation", "importance": "mandatory", "weight": 0.16, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Advanced Life Support", "importance": "important", "weight": 0.12, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Patient Assessment", "importance": "important", "weight": 0.1, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Clinical Documentation", "importance": "nice_to_have", "weight": 0.07, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Renal Replacement Therapy", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 5,
+        "minRelevantYears": 3,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Manchester", "Salford", "Stockport", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Hospitals & Clinics", "Healthcare"],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Bioanalytical Scientist (LC-MS/MS)",
+    "description": "Cambridge BioAnalytics, a growing UK contract research organisation supporting pharmaceutical and biotech clients, is hiring a Bioanalytical Scientist to join our regulated bioanalysis laboratory in Cambridge. You will develop, validate, and run LC-MS/MS assays quantifying small molecules and biomarkers in biological matrices to support preclinical and clinical drug-development programmes.\n\nYou will prepare samples, operate and troubleshoot triple-quadrupole instrumentation, perform method validation to regulatory acceptance criteria, and analyse data in Analyst and Watson LIMS. You will author validation and study reports, maintain equipment logs, and ensure all work is conducted under GLP and applicable GCLP standards with rigorous documentation and data integrity (ALCOA+).\n\nWe want a detail-oriented scientist who thrives in a regulated environment, communicates results clearly, and contributes to continuous method improvement.\n\nRequired: a life-sciences degree (chemistry, biochemistry, or pharmacology), 3-4 years of hands-on LC-MS/MS bioanalysis, method validation experience, and a solid understanding of GLP/GCLP and FDA/EMA bioanalytical guidance. Nice-to-have: ligand-binding assays, immunoassay platforms, and pharmacokinetic data interpretation.\n\nThis is a mid-level, onsite laboratory role based in Cambridge with standard daytime hours and occasional study-driven flexibility. We offer strong scientific mentorship and exposure to a broad client portfolio.",
+    "scoringRules": {
+      "skills": [
+        { "name": "LC-MS/MS", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Bioanalytical Method Validation", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GLP", "importance": "mandatory", "weight": 0.16, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Pharmacokinetics", "importance": "important", "weight": 0.12, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Data Integrity", "importance": "important", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Ligand Binding Assays", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "LIMS", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Cambridge", "Stevenage", "London", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Pharmaceuticals", "Biotechnology", "Contract Research Organization"],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Regulatory Affairs Specialist (CMC/Submissions)",
+    "description": "Shannon Therapeutics, a mid-size specialty pharmaceutical company with its regulatory hub in Dublin, is seeking a Regulatory Affairs Specialist to support marketing authorisations and lifecycle maintenance across the EU and international markets.\n\nYou will compile and quality-check regulatory submissions in eCTD format, prepare and manage variations, renewals, and CMC updates, and coordinate responses to health-authority questions from the EMA and national competent authorities. You will maintain submission timelines and tracking, liaise with cross-functional teams in quality, manufacturing, and clinical, and help ensure compliance with EMA and FDA requirements as well as ICH guidelines.\n\nWe want a well-organised, deadline-driven professional with a sharp eye for regulatory detail and clear written communication.\n\nRequired: a life-sciences or pharmacy degree, 3-5 years in regulatory affairs, hands-on eCTD/submission experience, and working knowledge of EMA procedures, variations classification, and ICH guidelines (Q, S, E series). Nice-to-have: CMC/module 3 authoring, RIM system experience (e.g. Veeva Vault), and exposure to FDA submissions.\n\nThis is a mid-level role based in Dublin with a hybrid arrangement (three days onsite). We offer international regulatory exposure, structured development, and a collaborative quality culture.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Regulatory Submissions", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "eCTD", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "EMA Regulations", "importance": "mandatory", "weight": 0.16, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "ICH Guidelines", "importance": "important", "weight": 0.14, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "CMC Regulatory Writing", "importance": "important", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "FDA Regulations", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Veeva Vault RIM", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Dublin", "Cork", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Pharmaceuticals", "Biotechnology", "Medical Devices"],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Medical Science Liaison - Oncology",
+    "description": "Meridian Oncology, a US biopharmaceutical company advancing targeted cancer therapies, is hiring a field-based Medical Science Liaison to cover the Northeast territory from our Boston medical affairs organisation. You will serve as a credible scientific partner to key opinion leaders, academic centres, and treatment networks across the oncology community.\n\nYou will develop and maintain peer-to-peer relationships with hematology-oncology KOLs, communicate complex clinical and mechanistic data, respond to unsolicited medical-information requests, and gather field insights that shape medical strategy and evidence-generation plans. You will support investigator-initiated studies, deliver scientific presentations, and represent the company at congresses, always operating within compliance and off-label communication boundaries.\n\nWe are looking for a scientifically fluent, relationship-driven professional comfortable with heavy travel and independent territory management.\n\nRequired: an advanced degree (PharmD, PhD, or MD), 6+ years in oncology or a related therapeutic area (with MSL or clinical experience), deep understanding of clinical-trial design and oncology treatment paradigms, and strong knowledge of pharmacovigilance and compliant scientific exchange. Nice-to-have: hematologic malignancy expertise, HEOR literacy, and existing KOL relationships in the Northeast.\n\nThis is a senior, remote field role based in the Boston metro area with approximately 60% travel across the territory.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Medical Affairs", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Oncology Therapeutic Knowledge", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "KOL Engagement", "importance": "mandatory", "weight": 0.16, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Clinical Trial Design", "importance": "important", "weight": 0.12, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Scientific Communication", "importance": "important", "weight": 0.1, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Pharmacovigilance", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "HEOR", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 4,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Boston", "New York", "Philadelphia", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Pharmaceuticals", "Biotechnology"],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Clinical Research Associate (CRA) - Junior",
+    "description": "Halcyon Clinical, a UK-based contract research organisation running Phase II-III studies for pharmaceutical sponsors, is hiring a junior Clinical Research Associate to join our monitoring team, home-based in the London area with regular site travel.\n\nYou will monitor clinical-trial sites to verify protocol compliance, patient safety, and data quality. Under the guidance of senior CRAs, you will conduct site initiation, routine monitoring, and close-out visits, perform source-data verification, review the investigator site file and informed-consent processes, and track query resolution in the EDC. You will support site relationships, escalate protocol deviations, and ensure trials are conducted in line with ICH-GCP and applicable regulatory requirements.\n\nWe are looking for an organised, personable early-career professional who is meticulous with documentation and comfortable with frequent travel.\n\nRequired: a life-sciences or nursing degree, 1-2 years in a clinical research setting (CTA, in-house CRA, or study coordinator), a working knowledge of ICH-GCP, and familiarity with clinical-trial processes. Nice-to-have: EDC systems (e.g. Medidata Rave), risk-based monitoring exposure, and prior site-facing experience.\n\nThis is a junior, home-based role covering sites across Southern England, with a structured mentoring programme and a clear path to full CRA accreditation.",
+    "scoringRules": {
+      "skills": [
+        { "name": "ICH-GCP", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Clinical Trial Monitoring", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Source Data Verification", "importance": "important", "weight": 0.16, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Clinical Trial Regulations", "importance": "important", "weight": 0.12, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "EDC Systems", "importance": "important", "weight": 0.1, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Protocol Compliance", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Risk-Based Monitoring", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 1,
+        "minRelevantYears": 1,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["London", "Reading", "Southampton", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Contract Research Organization", "Pharmaceuticals", "Biotechnology"],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.2,
+        "location": 0.15,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

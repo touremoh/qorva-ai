@@ -1,0 +1,419 @@
+[
+  {
+    "title": "Financial Accountant (Hauptbuchhaltung) (m/w/d)",
+    "description": "Für unser Finanzteam in Frankfurt am Main suchen wir eine engagierte Financial Accountant:in, die unsere Haupt- und Nebenbuchhaltung mitverantwortet und unsere Monats- sowie Jahresabschlüsse vorantreibt.\n\nDeine Mission: Du sorgst für korrekte, termingerechte und regelkonforme Abschlüsse nach HGB und IFRS und bist erste Ansprechperson für buchhalterische Fragestellungen im Konzern.\n\nDeine Aufgaben:\n- Eigenverantwortliche Erstellung der Monats-, Quartals- und Jahresabschlüsse nach HGB und IFRS\n- Kontenabstimmung, Anlagenbuchhaltung sowie Abgrenzungs- und Rückstellungsthemen\n- Mitarbeit an der Intercompany-Abstimmung und Konsolidierung\n- Weiterentwicklung von Prozessen in SAP FICO und Optimierung des Kontenplans\n- Ansprechpartner:in für Wirtschaftsprüfer:innen und Steuerberater:innen\n\nDein Profil:\n- Abgeschlossenes betriebswirtschaftliches Studium oder Weiterbildung zum/zur Bilanzbuchhalter:in\n- Mindestens 4 Jahre Erfahrung in der Finanzbuchhaltung eines Industrie- oder Dienstleistungsunternehmens\n- Sichere Kenntnisse in der Bilanzierung nach HGB und idealerweise IFRS\n- Fundierte Praxis in SAP FICO sowie sehr gute Excel-Kenntnisse\n\nNice-to-have: Erfahrung mit Konsolidierungstools und Konzernrechnungslegung.\n\nArbeitsmodell: Hybrid mit Büro in Frankfurt am Main, bis zu zwei Tage Remote pro Woche. Wir bieten ein kollegiales Umfeld, moderne Systeme und echte Entwicklungsperspektiven.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "SAP FICO",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "HGB",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Financial Reporting",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Consolidation",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 4,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Frankfurt am Main",
+          "Wiesbaden",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Professional Services",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "FP&A Analyst (Financial Planning & Analysis) (m/w/d)",
+    "description": "Für unser wachsendes Technologieunternehmen in München suchen wir eine analytisch starke FP&A Analyst:in, die unser Management mit belastbaren Zahlen, Forecasts und Entscheidungsvorlagen unterstützt.\n\nDeine Mission: Du bist die Schnittstelle zwischen Zahlen und Strategie. Du baust Planungsmodelle, analysierst Abweichungen und machst finanzielle Zusammenhänge für Fachbereiche greifbar.\n\nDeine Aufgaben:\n- Erstellung und Weiterentwicklung des jährlichen Budgets sowie rollierender Forecasts\n- Aufbau und Pflege von Finanzmodellen zur Umsatz-, Kosten- und Cash-Planung\n- Monatliches Reporting inklusive Plan-Ist-Abweichungsanalysen und Kommentierung\n- Entwicklung von Dashboards und KPIs in Power BI für Management und Fachbereiche\n- Business-Partnering mit Vertrieb, Marketing und Operations\n\nDein Profil:\n- Abgeschlossenes Studium in Finance, Controlling, Wirtschaftswissenschaften oder vergleichbar\n- Mindestens 2 Jahre Erfahrung im Controlling oder FP&A, gerne aus einem dynamischen Umfeld\n- Sehr gute Kenntnisse in Financial Modeling und fortgeschrittenes Excel\n- Erfahrung mit BI-Tools wie Power BI und idealerweise Planungssoftware wie Anaplan\n\nNice-to-have: Kenntnisse in SQL und Erfahrung in einem SaaS- oder Scale-up-Umfeld.\n\nArbeitsmodell: Hybrid mit modernem Büro in München, flexible Remote-Anteile. Wir bieten steile Lernkurven, direkten Zugang zum Management und viel Eigenverantwortung.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Financial Modeling",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Budgeting and Forecasting",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Anaplan",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SQL",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "München",
+          "Stuttgart",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "SaaS",
+          "Professional Services"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Internal Auditor / Risk & Compliance Analyst (m/w/d)",
+    "description": "Für die Konzernrevision einer international tätigen Versicherungsgruppe in Zürich suchen wir eine sorgfältige Internal Auditor:in mit Fokus auf Risiko und Compliance.\n\nDeine Mission: Du prüfst Prozesse, Kontrollen und Systeme, deckst Risiken auf und lieferst dem Management umsetzbare Empfehlungen zur Stärkung des internen Kontrollsystems.\n\nDeine Aufgaben:\n- Planung und Durchführung risikoorientierter Prüfungen in Finanz- und Geschäftsprozessen\n- Beurteilung der Wirksamkeit des internen Kontrollsystems und der SOX-relevanten Kontrollen\n- Durchführung von Datenanalysen zur Aufdeckung von Auffälligkeiten mit ACL und Excel\n- Erstellung aussagekräftiger Prüfberichte sowie Nachverfolgung der Maßnahmen\n- Zusammenarbeit mit Fachbereichen, externen Prüfer:innen und Compliance\n\nDein Profil:\n- Abgeschlossenes Studium in Wirtschaftswissenschaften, Finance oder Wirtschaftsprüfung\n- Mindestens 3 Jahre Erfahrung in der internen Revision, Wirtschaftsprüfung oder im Risikomanagement\n- Kenntnisse in SOX, internen Kontrollen und risikoorientierten Prüfmethoden\n- Analytisches Denkvermögen und Erfahrung mit Datenanalyse-Tools wie ACL\n\nNice-to-have: Zertifizierungen wie CIA oder CISA sowie Erfahrung in der Versicherungsbranche.\n\nArbeitsmodell: Hybrid mit Büro in Zürich, bis zu zwei Tage Remote pro Woche. Wir bieten ein internationales Umfeld, spannende Prüfungsthemen und klare Weiterentwicklungspfade.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Internal Audit",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SOX",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Risk Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Internal Controls",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ACL",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Zürich",
+          "Basel",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Insurance",
+          "Banking",
+          "Professional Services"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.35,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Tax Manager (Steuern & Treasury) (m/w/d)",
+    "description": "Für die Konzernzentrale eines produzierenden Unternehmens in Wien suchen wir eine erfahrene Tax Manager:in, die unsere steuerlichen Themen verantwortet und eng mit dem Treasury zusammenarbeitet.\n\nDeine Mission: Du steuerst die Steuerstrategie der Gruppe, sicherst Compliance in mehreren Ländern und optimierst gemeinsam mit dem Treasury Liquidität und Konzernfinanzierung.\n\nDeine Aufgaben:\n- Verantwortung für die laufende Steuerberatung, Steuererklärungen und Betriebsprüfungen\n- Ermittlung und Verbuchung latenter Steuern nach IFRS sowie tax reporting im Konzern\n- Betreuung von Verrechnungspreisen und internationalen Steuerfragestellungen\n- Zusammenarbeit mit dem Treasury bei Cash-Management, Hedging und Konzernfinanzierung\n- Ansprechpartner:in für Finanzbehörden, Steuerberater:innen und Wirtschaftsprüfer:innen\n\nDein Profil:\n- Abgeschlossenes Studium mit Schwerpunkt Steuern oder Steuerberaterexamen\n- Mindestens 6 Jahre Erfahrung im Steuerbereich, idealerweise mit Treasury-Berührungspunkten\n- Fundierte Kenntnisse im nationalen und internationalen Steuerrecht sowie in IFRS\n- Sicherer Umgang mit SAP und gängigen Tax- und Treasury-Systemen\n\nNice-to-have: Erfahrung mit Transfer Pricing und Treasury-Management-Systemen.\n\nArbeitsmodell: Hybrid mit Büro in Wien, flexible Remote-Anteile. Wir bieten eine verantwortungsvolle Schlüsselrolle mit internationalem Bezug und direkter Anbindung an die Finanzleitung.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Tax Compliance",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Transfer Pricing",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Treasury Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Cash Management",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Wien",
+          "Linz",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Professional Services",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  },
+  {
+    "title": "Financial Controller (m/w/d)",
+    "description": "Für ein etabliertes Bankinstitut in Hamburg suchen wir eine durchsetzungsstarke Financial Controller:in, die unsere Finanzsteuerung verantwortet und das Management mit belastbaren Analysen unterstützt.\n\nDeine Mission: Du bist Sparringspartner:in für die Geschäftsführung, verantwortest das Controlling-System und sorgst für Transparenz über Ergebnis, Kosten und Profitabilität.\n\nDeine Aufgaben:\n- Verantwortung für das operative und strategische Controlling sowie das Management-Reporting\n- Steuerung des Budget- und Forecast-Prozesses in Zusammenarbeit mit den Fachbereichen\n- Analyse von Kostenstellen, Deckungsbeiträgen und Profitabilität einzelner Geschäftsfelder\n- Weiterentwicklung von Reporting-Strukturen und Aufbau von Dashboards in Power BI\n- Sicherstellung der Abstimmung zwischen Controlling und Rechnungswesen nach IFRS\n\nDein Profil:\n- Abgeschlossenes Studium in Finance, Controlling oder Wirtschaftswissenschaften\n- Mindestens 7 Jahre Erfahrung im Controlling, davon Erfahrung in einer führenden Rolle\n- Sehr gute Kenntnisse in Financial Modeling, IFRS und modernen Reporting-Tools\n- Sicherer Umgang mit SAP FICO und Business-Intelligence-Werkzeugen wie Power BI\n\nNice-to-have: Erfahrung im Finanzdienstleistungssektor sowie mit Planungssoftware wie Anaplan.\n\nArbeitsmodell: Hybrid mit Büro in Hamburg, bis zu zwei Tage Remote pro Woche. Wir bieten eine gestaltende Führungsaufgabe mit hoher Sichtbarkeit und langfristiger Perspektive.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Controlling",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 7,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Financial Modeling",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP FICO",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Anaplan",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Hamburg",
+          "Bremen",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Banking",
+          "Insurance",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  }
+]

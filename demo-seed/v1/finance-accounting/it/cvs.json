@@ -1,0 +1,5834 @@
+[
+ {
+  "candidateProfileSummary": "Contabile con cinque anni di esperienza nella contabilità generale e nel ciclo passivo e attivo. Solida padronanza di SAP FICO ed Excel avanzato applicati alle chiusure mensili. Precisa e affidabile nella riconciliazione dei conti e nella predisposizione delle scritture.",
+  "careerStartYear": 2021,
+  "personalInformation": {
+   "name": "Martina Colombo",
+   "role": "Contabile generale",
+   "summary": "Contabile orientata al dettaglio, appassionata di automazione delle riconciliazioni e miglioramento dei processi amministrativi.",
+   "contact": {
+    "phone": "+39 340 118 7742",
+    "email": "martina.colombo@example.com",
+    "address": {
+     "streetNumber": "22",
+     "streetName": "Torino",
+     "streetType": "Via",
+     "city": "Milano",
+     "state": "Lombardia",
+     "zipCode": "20123",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/martinacolombo"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-08-15",
+    "noticePeriodDays": 30,
+    "interviewAvailability": [
+     "Lunedì mattina",
+     "Giovedì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Contabilità",
+    "skills": [
+     "Contabilità generale",
+     "Ciclo passivo",
+     "Ciclo attivo",
+     "Riconciliazioni bancarie"
+    ]
+   },
+   {
+    "category": "Sistemi ERP",
+    "skills": [
+     "SAP FICO",
+     "QuickBooks"
+    ]
+   },
+   {
+    "category": "Strumenti",
+    "skills": [
+     "Microsoft Excel",
+     "Pivot table",
+     "PowerQuery"
+    ]
+   },
+   {
+    "category": "Principi contabili",
+    "skills": [
+     "OIC",
+     "IFRS"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Contabilità generale",
+    "Chiusure mensili",
+    "Ciclo passivo e attivo",
+    "Riconciliazioni"
+   ],
+   "keyResponsibilities": [
+    "Registrazione delle scritture contabili",
+    "Gestione fatture fornitori e clienti",
+    "Riconciliazione dei conti bancari",
+    "Supporto alla chiusura di mese"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Amplifon",
+    "website": "https://www.amplifon.com",
+    "location": "Milano, Italia",
+    "from": "2023-03",
+    "to": "Present",
+    "position": "Contabile generale",
+    "activities": [
+     {
+      "project": "Chiusure mensili gruppo",
+      "tasks": [
+       "Predisposizione delle scritture di rettifica",
+       "Riconciliazione dei conti intercompany",
+       "Gestione del ciclo passivo su SAP FICO"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ridotto i tempi di chiusura mensile di due giorni lavorativi",
+     "Automatizzato la riconciliazione bancaria con PowerQuery"
+    ],
+    "toolsAndTechnologies": [
+     "SAP FICO",
+     "Microsoft Excel",
+     "PowerQuery"
+    ]
+   },
+   {
+    "company": "Chiesi Farmaceutici",
+    "website": "https://www.chiesi.com",
+    "location": "Parma, Italia",
+    "from": "2021-06",
+    "to": "2023-02",
+    "position": "Contabile junior",
+    "activities": [
+     {
+      "project": "Ciclo passivo fornitori",
+      "tasks": [
+       "Registrazione fatture fornitori",
+       "Gestione dello scadenzario pagamenti",
+       "Riconciliazione partite aperte"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ridotto le partite aperte scadute del 20%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP FICO",
+     "QuickBooks",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2021",
+    "institution": "Università Cattolica del Sacro Cuore",
+    "degree": "Laurea Triennale in Economia Aziendale",
+    "fieldOfStudy": "Amministrazione e controllo",
+    "achievements": [
+     "Tesi sui processi di chiusura contabile nelle PMI"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "SAP FICO Foundation",
+    "institution": "SAP",
+    "year": "2023",
+    "description": "Corso sui moduli di contabilità finanziaria e controlling di SAP."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP FICO",
+    "QuickBooks",
+    "Microsoft Excel",
+    "PowerQuery",
+    "OIC",
+    "IFRS"
+   ],
+   "softSkills": [
+    "Precisione",
+    "Affidabilità",
+    "Organizzazione"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "intermediate",
+      "written": "intermediate",
+      "spoken": "intermediate"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Automazione riconciliazioni bancarie",
+    "description": "Realizzazione di un modello PowerQuery per la riconciliazione automatica degli estratti conto.",
+    "date": "2024-04",
+    "impact": "Ridotto il tempo di riconciliazione mensile del 40%."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Pallavolo",
+   "Fotografia",
+   "Cucina vegetariana"
+  ],
+  "references": [
+   {
+    "name": "Luca Ferretti",
+    "position": "Responsabile Contabilità",
+    "company": "Amplifon",
+    "contact": {
+     "phone": "+39 340 552 1180",
+     "email": "luca.ferretti@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 30000,
+   "max": 38000
+  },
+  "candidateClustering": {
+   "primaryCluster": "General Accounting",
+   "secondaryClusters": [
+    "Accounts Payable",
+    "Month-End Close"
+   ],
+   "functionalExpertise": [
+    "General ledger",
+    "Accounts payable",
+    "Bank reconciliation"
+   ],
+   "skillDepth": "generalist",
+   "businessImpact": [
+    "Faster monthly close",
+    "Reduced overdue payables"
+   ],
+   "industryDomains": [
+    "Healthcare",
+    "Manufacturing"
+   ],
+   "environmentFit": [
+    "Corporate finance",
+    "Shared services"
+   ],
+   "seniorityLevel": "midLevel",
+   "leadershipAndInfluence": "individualContributor",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.86,
+   "clusterReasoning": "Profilo di contabilità generale con esperienza su SAP FICO e forte attitudine all'automazione dei processi di chiusura."
+  },
+  "searchIndex": {
+   "roles": [
+    "General Accountant",
+    "Accountant",
+    "Bookkeeper"
+   ],
+   "skills": [
+    "SAP FICO",
+    "QuickBooks",
+    "Excel",
+    "Bank Reconciliation",
+    "IFRS"
+   ],
+   "industries": [
+    "Healthcare",
+    "Manufacturing",
+    "Professional Services"
+   ]
+  },
+  "tags": [
+   "accounting",
+   "sap",
+   "general-ledger",
+   "month-end"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Contabile senior con oltre dieci anni di esperienza nella contabilità generale e nel bilancio civilistico. Esperto nella predisposizione del bilancio secondo principi OIC e IFRS e nella gestione delle chiusure di gruppo. Punto di riferimento per le riconciliazioni complesse e i rapporti con i revisori.",
+  "careerStartYear": 2015,
+  "personalInformation": {
+   "name": "Davide Ricci",
+   "role": "Contabile senior",
+   "summary": "Professionista della contabilità generale con forte esperienza nella reportistica statutaria e nel coordinamento delle chiusure.",
+   "contact": {
+    "phone": "+39 348 774 2210",
+    "email": "davide.ricci@example.com",
+    "address": {
+     "streetNumber": "9",
+     "streetName": "Garibaldi",
+     "streetType": "Corso",
+     "city": "Torino",
+     "state": "Piemonte",
+     "zipCode": "10122",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/davidericci"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-10-01",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Mercoledì pomeriggio",
+     "Venerdì mattina"
+    ],
+    "preferredWorkTypes": [
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Contabilità e bilancio",
+    "skills": [
+     "Contabilità generale",
+     "Bilancio civilistico",
+     "Nota integrativa",
+     "Chiusure di gruppo"
+    ]
+   },
+   {
+    "category": "Sistemi ERP",
+    "skills": [
+     "Oracle E-Business Suite",
+     "SAP FICO"
+    ]
+   },
+   {
+    "category": "Principi contabili",
+    "skills": [
+     "OIC",
+     "IFRS",
+     "US GAAP"
+    ]
+   },
+   {
+    "category": "Strumenti",
+    "skills": [
+     "Microsoft Excel",
+     "Hyperion Financial Management"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Contabilità generale",
+    "Bilancio statutario",
+    "Chiusure di gruppo",
+    "Riconciliazioni intercompany"
+   ],
+   "keyResponsibilities": [
+    "Predisposizione del bilancio civilistico",
+    "Coordinamento delle chiusure mensili e annuali",
+    "Gestione dei rapporti con i revisori",
+    "Riconciliazione delle partite intercompany"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Lavazza",
+    "website": "https://www.lavazza.com",
+    "location": "Torino, Italia",
+    "from": "2019-01",
+    "to": "Present",
+    "position": "Contabile senior",
+    "activities": [
+     {
+      "project": "Bilancio consolidato di gruppo",
+      "tasks": [
+       "Predisposizione delle scritture di consolidamento",
+       "Riconciliazione delle partite intercompany",
+       "Supporto alla nota integrativa"
+      ]
+     }
+    ],
+    "achievements": [
+     "Standardizzato il pacchetto di reporting per otto società controllate",
+     "Ridotto le rettifiche di audit del 30%"
+    ],
+    "toolsAndTechnologies": [
+     "Oracle E-Business Suite",
+     "Hyperion Financial Management",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Reply",
+    "website": "https://www.reply.com",
+    "location": "Torino, Italia",
+    "from": "2015-09",
+    "to": "2018-12",
+    "position": "Contabile",
+    "activities": [
+     {
+      "project": "Chiusure mensili",
+      "tasks": [
+       "Registrazione delle scritture di rettifica",
+       "Riconciliazione dei conti patrimoniali",
+       "Predisposizione dei report per la direzione"
+      ]
+     }
+    ],
+    "achievements": [
+     "Migliorato la qualità delle riconciliazioni riducendo le differenze del 25%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP FICO",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2015",
+    "institution": "Università degli Studi di Torino",
+    "degree": "Laurea Magistrale in Economia Aziendale",
+    "fieldOfStudy": "Amministrazione, finanza e controllo",
+    "achievements": [
+     "Tesi sul bilancio consolidato secondo principi IFRS"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Diploma IFRS",
+    "institution": "ACCA",
+    "year": "2020",
+    "description": "Certificazione internazionale sui principi contabili IFRS."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Oracle E-Business Suite",
+    "SAP FICO",
+    "Hyperion Financial Management",
+    "Excel",
+    "IFRS",
+    "OIC",
+    "US GAAP"
+   ],
+   "softSkills": [
+    "Rigore",
+    "Capacità analitiche",
+    "Gestione delle scadenze"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Armonizzazione del reporting di gruppo",
+    "description": "Definizione di un pacchetto di reporting standard per le controllate estere.",
+    "date": "2021-11",
+    "impact": "Ridotto i tempi di consolidamento di cinque giorni."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Ciclismo",
+   "Enologia",
+   "Scacchi"
+  ],
+  "references": [
+   {
+    "name": "Chiara Bianchi",
+    "position": "Group Accounting Manager",
+    "company": "Lavazza",
+    "contact": {
+     "phone": "+39 348 221 6640",
+     "email": "chiara.bianchi@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 46000,
+   "max": 56000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Financial Accounting",
+   "secondaryClusters": [
+    "Statutory Reporting",
+    "Consolidation"
+   ],
+   "functionalExpertise": [
+    "Financial accounting",
+    "Statutory reporting",
+    "Group consolidation"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Reduced audit adjustments",
+    "Faster consolidation"
+   ],
+   "industryDomains": [
+    "Consumer Goods",
+    "Technology"
+   ],
+   "environmentFit": [
+    "Corporate finance",
+    "Group functions"
+   ],
+   "seniorityLevel": "senior",
+   "leadershipAndInfluence": "individualContributor",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.9,
+   "clusterReasoning": "Contabile senior con solida esperienza nel bilancio statutario e nelle chiusure di gruppo secondo IFRS."
+  },
+  "searchIndex": {
+   "roles": [
+    "Senior Accountant",
+    "Financial Accountant",
+    "General Ledger Accountant"
+   ],
+   "skills": [
+    "Oracle",
+    "SAP FICO",
+    "Hyperion",
+    "IFRS",
+    "US GAAP",
+    "Consolidation"
+   ],
+   "industries": [
+    "Consumer Goods",
+    "Technology",
+    "Professional Services"
+   ]
+  },
+  "tags": [
+   "accounting",
+   "statutory-reporting",
+   "ifrs",
+   "consolidation"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Specialista di contabilità generale con dodici anni di esperienza in contesti multinazionali. Competente su NetSuite e US GAAP, con forte focus sulle chiusure mensili e sul reporting statutario. Abituata a lavorare in ambienti shared services ad alto volume.",
+  "careerStartYear": 2014,
+  "personalInformation": {
+   "name": "Federica Greco",
+   "role": "Specialista contabilità generale",
+   "summary": "Contabile senior specializzata in chiusure mensili e reporting secondo US GAAP in contesti internazionali.",
+   "contact": {
+    "phone": "+39 333 907 4521",
+    "email": "federica.greco@example.com",
+    "address": {
+     "streetNumber": "48",
+     "streetName": "Nazionale",
+     "streetType": "Via",
+     "city": "Roma",
+     "state": "Lazio",
+     "zipCode": "00184",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/federicagreco"
+    }
+   },
+   "availability": {
+    "openToWork": false,
+    "status": "notAvailable",
+    "availableFrom": "2027-01-15",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Martedì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "remote",
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Contabilità",
+    "skills": [
+     "Contabilità generale",
+     "Month-end close",
+     "Riconciliazioni",
+     "Reporting statutario"
+    ]
+   },
+   {
+    "category": "Sistemi ERP",
+    "skills": [
+     "NetSuite",
+     "SAP FICO"
+    ]
+   },
+   {
+    "category": "Principi contabili",
+    "skills": [
+     "US GAAP",
+     "IFRS",
+     "OIC"
+    ]
+   },
+   {
+    "category": "Strumenti",
+    "skills": [
+     "Microsoft Excel",
+     "BlackLine"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Contabilità generale",
+    "Chiusure mensili",
+    "Riconciliazioni conti",
+    "Reporting US GAAP"
+   ],
+   "keyResponsibilities": [
+    "Gestione del processo di chiusura mensile",
+    "Predisposizione delle riconciliazioni su BlackLine",
+    "Reporting secondo US GAAP",
+    "Supporto agli audit trimestrali"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Salesforce Italia",
+    "website": "https://www.salesforce.com",
+    "location": "Roma, Italia",
+    "from": "2018-04",
+    "to": "Present",
+    "position": "Specialista contabilità generale",
+    "activities": [
+     {
+      "project": "Chiusure mensili EMEA",
+      "tasks": [
+       "Gestione del calendario di chiusura",
+       "Riconciliazioni conti su BlackLine",
+       "Predisposizione dei flux report"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ridotto il ciclo di chiusura da sette a cinque giorni",
+     "Portato al 100% le riconciliazioni completate entro la scadenza"
+    ],
+    "toolsAndTechnologies": [
+     "NetSuite",
+     "BlackLine",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Enel",
+    "website": "https://www.enel.com",
+    "location": "Roma, Italia",
+    "from": "2014-10",
+    "to": "2018-03",
+    "position": "Contabile",
+    "activities": [
+     {
+      "project": "Contabilità fornitori e clienti",
+      "tasks": [
+       "Registrazione fatture",
+       "Riconciliazione partite",
+       "Supporto alle chiusure"
+      ]
+     }
+    ],
+    "achievements": [
+     "Automatizzato il caricamento massivo delle scritture"
+    ],
+    "toolsAndTechnologies": [
+     "SAP FICO",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2014",
+    "institution": "Sapienza Università di Roma",
+    "degree": "Laurea Magistrale in Economia",
+    "fieldOfStudy": "Contabilità e finanza",
+    "achievements": [
+     "Tesi sui principi US GAAP nelle società quotate"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "US GAAP Fundamentals",
+    "institution": "AICPA",
+    "year": "2019",
+    "description": "Corso sui principi contabili statunitensi US GAAP."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "NetSuite",
+    "SAP FICO",
+    "BlackLine",
+    "Excel",
+    "US GAAP",
+    "IFRS"
+   ],
+   "softSkills": [
+    "Metodo",
+    "Autonomia",
+    "Attenzione ai dettagli"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Implementazione BlackLine",
+    "description": "Migrazione delle riconciliazioni contabili sulla piattaforma BlackLine.",
+    "date": "2020-09",
+    "impact": "Riconciliazioni tracciate al 100% e riduzione degli errori del 35%."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Yoga",
+   "Viaggi",
+   "Lettura"
+  ],
+  "references": [
+   {
+    "name": "Marco Esposito",
+    "position": "Accounting Manager",
+    "company": "Salesforce Italia",
+    "contact": {
+     "phone": "+39 333 118 9902",
+     "email": "marco.esposito@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 47000,
+   "max": 57000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Financial Accounting",
+   "secondaryClusters": [
+    "Month-End Close",
+    "Account Reconciliation"
+   ],
+   "functionalExpertise": [
+    "General ledger",
+    "Month-end close",
+    "US GAAP reporting"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Shorter close cycle",
+    "Improved reconciliation compliance"
+   ],
+   "industryDomains": [
+    "Technology",
+    "Utilities"
+   ],
+   "environmentFit": [
+    "Shared services",
+    "Multinational finance"
+   ],
+   "seniorityLevel": "senior",
+   "leadershipAndInfluence": "individualContributor",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.88,
+   "clusterReasoning": "Specialista di contabilità generale con esperienza consolidata su NetSuite, BlackLine e chiusure US GAAP in contesti multinazionali."
+  },
+  "searchIndex": {
+   "roles": [
+    "General Ledger Accountant",
+    "Senior Accountant",
+    "Financial Accountant"
+   ],
+   "skills": [
+    "NetSuite",
+    "BlackLine",
+    "SAP FICO",
+    "US GAAP",
+    "IFRS",
+    "Month-End Close"
+   ],
+   "industries": [
+    "Technology",
+    "Utilities",
+    "Professional Services"
+   ]
+  },
+  "tags": [
+   "accounting",
+   "us-gaap",
+   "netsuite",
+   "blackline"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Responsabile contabilità con sedici anni di esperienza nella guida di team amministrativi e nella gestione del bilancio consolidato. Esperto di SAP e principi IFRS, ha condotto progetti di trasformazione dei processi di chiusura. Iscritto al Registro dei Revisori Legali.",
+  "careerStartYear": 2010,
+  "personalInformation": {
+   "name": "Alessandro Marchetti",
+   "role": "Responsabile contabilità",
+   "summary": "Accounting lead orientato ai processi, con esperienza nella guida di team e nell'ottimizzazione delle chiusure di gruppo.",
+   "contact": {
+    "phone": "+39 347 662 3390",
+    "email": "alessandro.marchetti@example.com",
+    "address": {
+     "streetNumber": "5",
+     "streetName": "Manzoni",
+     "streetType": "Via",
+     "city": "Milano",
+     "state": "Lombardia",
+     "zipCode": "20121",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/alessandromarchetti"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-11-01",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Lunedì pomeriggio",
+     "Mercoledì mattina"
+    ],
+    "preferredWorkTypes": [
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Contabilità e bilancio",
+    "skills": [
+     "Bilancio consolidato",
+     "Contabilità generale",
+     "Reporting statutario",
+     "Principi contabili"
+    ]
+   },
+   {
+    "category": "Gestione team",
+    "skills": [
+     "Coordinamento team",
+     "Gestione delle chiusure",
+     "Formazione"
+    ]
+   },
+   {
+    "category": "Sistemi ERP",
+    "skills": [
+     "SAP FICO",
+     "SAP S/4HANA",
+     "Hyperion Financial Management"
+    ]
+   },
+   {
+    "category": "Principi contabili",
+    "skills": [
+     "IFRS",
+     "OIC"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Bilancio consolidato",
+    "Gestione team contabilità",
+    "Ottimizzazione chiusure",
+    "Reporting statutario"
+   ],
+   "keyResponsibilities": [
+    "Coordinamento del team di contabilità generale",
+    "Supervisione delle chiusure mensili e annuali",
+    "Predisposizione del bilancio consolidato",
+    "Gestione dei rapporti con i revisori e il collegio sindacale"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Pirelli",
+    "website": "https://www.pirelli.com",
+    "location": "Milano, Italia",
+    "from": "2017-02",
+    "to": "Present",
+    "position": "Responsabile contabilità",
+    "activities": [
+     {
+      "project": "Chiusura e consolidato di gruppo",
+      "tasks": [
+       "Coordinamento di un team di sei contabili",
+       "Supervisione del bilancio consolidato IFRS",
+       "Gestione della relazione con i revisori"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ridotto i tempi di chiusura di gruppo da dieci a sei giorni",
+     "Guidato la migrazione a SAP S/4HANA per l'area finance"
+    ],
+    "toolsAndTechnologies": [
+     "SAP S/4HANA",
+     "Hyperion Financial Management",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Bracco",
+    "website": "https://www.bracco.com",
+    "location": "Milano, Italia",
+    "from": "2013-05",
+    "to": "2017-01",
+    "position": "Contabile senior",
+    "activities": [
+     {
+      "project": "Bilancio civilistico",
+      "tasks": [
+       "Predisposizione del bilancio",
+       "Riconciliazioni intercompany",
+       "Supporto alla nota integrativa"
+      ]
+     }
+    ],
+    "achievements": [
+     "Standardizzato le procedure di chiusura per le controllate"
+    ],
+    "toolsAndTechnologies": [
+     "SAP FICO",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Deloitte",
+    "website": "https://www.deloitte.com",
+    "location": "Milano, Italia",
+    "from": "2010-09",
+    "to": "2013-04",
+    "position": "Auditor",
+    "activities": [
+     {
+      "project": "Revisione bilanci",
+      "tasks": [
+       "Verifica delle poste di bilancio",
+       "Test sui controlli",
+       "Redazione delle carte di lavoro"
+      ]
+     }
+    ],
+    "achievements": [
+     "Gestito in autonomia la revisione di clienti mid-market"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "Audit software"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2010",
+    "institution": "Università Bocconi",
+    "degree": "Laurea Magistrale in Economia Aziendale",
+    "fieldOfStudy": "Amministrazione, finanza e controllo",
+    "achievements": [
+     "Laurea con lode"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Revisore Legale",
+    "institution": "Ministero dell'Economia e delle Finanze",
+    "year": "2016",
+    "description": "Iscrizione al Registro dei Revisori Legali."
+   },
+   {
+    "title": "Diploma IFRS",
+    "institution": "ACCA",
+    "year": "2018",
+    "description": "Certificazione internazionale sui principi contabili IFRS."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP S/4HANA",
+    "SAP FICO",
+    "Hyperion Financial Management",
+    "Excel",
+    "IFRS",
+    "OIC"
+   ],
+   "softSkills": [
+    "Leadership",
+    "Organizzazione",
+    "Comunicazione"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Migrazione a SAP S/4HANA",
+    "description": "Guida del team finance nel passaggio a SAP S/4HANA.",
+    "date": "2022-03",
+    "impact": "Ridotto i tempi di chiusura del 40% e migliorato la tracciabilità delle scritture."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Corsa",
+   "Vela",
+   "Cinema d'autore"
+  ],
+  "references": [
+   {
+    "name": "Silvia Rinaldi",
+    "position": "CFO",
+    "company": "Pirelli",
+    "contact": {
+     "phone": "+39 347 220 8891",
+     "email": "silvia.rinaldi@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 68000,
+   "max": 82000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Accounting Management",
+   "secondaryClusters": [
+    "Consolidation",
+    "Statutory Reporting"
+   ],
+   "functionalExpertise": [
+    "Group consolidation",
+    "Team leadership",
+    "Statutory reporting"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Faster group close",
+    "ERP migration delivery"
+   ],
+   "industryDomains": [
+    "Manufacturing",
+    "Pharmaceuticals"
+   ],
+   "environmentFit": [
+    "Corporate finance",
+    "Group functions"
+   ],
+   "seniorityLevel": "lead",
+   "leadershipAndInfluence": "teamLead",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.91,
+   "clusterReasoning": "Accounting lead con esperienza nella guida di team, nel consolidato IFRS e in progetti di trasformazione ERP."
+  },
+  "searchIndex": {
+   "roles": [
+    "Accounting Manager",
+    "Accounting Lead",
+    "Group Accountant"
+   ],
+   "skills": [
+    "SAP S/4HANA",
+    "SAP FICO",
+    "Hyperion",
+    "IFRS",
+    "Consolidation",
+    "Team Leadership"
+   ],
+   "industries": [
+    "Manufacturing",
+    "Pharmaceuticals",
+    "Professional Services"
+   ]
+  },
+  "tags": [
+   "accounting",
+   "lead",
+   "consolidation",
+   "sap-s4hana"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Direttore amministrativo con oltre diciassette anni di esperienza nella direzione delle funzioni contabili e nel bilancio di gruppi industriali. Esperta nella governance del reporting statutario e nella relazione con revisori e organi di controllo. Revisore Legale con solida esperienza in ambienti multinazionali.",
+  "careerStartYear": 2009,
+  "personalInformation": {
+   "name": "Valentina Costa",
+   "role": "Direttore amministrativo",
+   "summary": "Finance leader responsabile delle funzioni contabili e amministrative, orientata alla governance e alla compliance del reporting.",
+   "contact": {
+    "phone": "+39 335 448 2210",
+    "email": "valentina.costa@example.com",
+    "address": {
+     "streetNumber": "12",
+     "streetName": "Indipendenza",
+     "streetType": "Via",
+     "city": "Bologna",
+     "state": "Emilia-Romagna",
+     "zipCode": "40121",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/valentinacosta"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2027-01-01",
+    "noticePeriodDays": 120,
+    "interviewAvailability": [
+     "Giovedì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Direzione amministrativa",
+    "skills": [
+     "Governance contabile",
+     "Bilancio di gruppo",
+     "Reporting statutario",
+     "Compliance"
+    ]
+   },
+   {
+    "category": "Leadership",
+    "skills": [
+     "Gestione di funzioni",
+     "Budget di funzione",
+     "Change management"
+    ]
+   },
+   {
+    "category": "Sistemi ERP",
+    "skills": [
+     "SAP S/4HANA",
+     "Oracle",
+     "Hyperion Financial Management"
+    ]
+   },
+   {
+    "category": "Principi contabili",
+    "skills": [
+     "IFRS",
+     "OIC",
+     "US GAAP"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Direzione amministrativa",
+    "Bilancio consolidato",
+    "Governance del reporting",
+    "Relazioni con i revisori"
+   ],
+   "keyResponsibilities": [
+    "Direzione delle funzioni di contabilità e amministrazione",
+    "Supervisione del bilancio consolidato e civilistico",
+    "Gestione dei rapporti con revisori e collegio sindacale",
+    "Definizione delle policy contabili di gruppo"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Ducati Motor Holding",
+    "website": "https://www.ducati.com",
+    "location": "Bologna, Italia",
+    "from": "2018-01",
+    "to": "Present",
+    "position": "Direttore amministrativo",
+    "activities": [
+     {
+      "project": "Governance contabile di gruppo",
+      "tasks": [
+       "Direzione di un team di dodici persone",
+       "Definizione delle policy contabili IFRS",
+       "Supervisione delle chiusure e del bilancio consolidato"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ridotto i rilievi di audit del 50% in tre anni",
+     "Implementato un modello di reporting integrato per il gruppo"
+    ],
+    "toolsAndTechnologies": [
+     "SAP S/4HANA",
+     "Hyperion Financial Management",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Marposs",
+    "website": "https://www.marposs.com",
+    "location": "Bologna, Italia",
+    "from": "2013-03",
+    "to": "2017-12",
+    "position": "Responsabile contabilità",
+    "activities": [
+     {
+      "project": "Bilancio consolidato",
+      "tasks": [
+       "Coordinamento delle chiusure",
+       "Predisposizione del consolidato",
+       "Gestione dei revisori"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ridotto i tempi di chiusura di gruppo del 30%"
+    ],
+    "toolsAndTechnologies": [
+     "Oracle",
+     "Hyperion Financial Management"
+    ]
+   },
+   {
+    "company": "EY",
+    "website": "https://www.ey.com",
+    "location": "Milano, Italia",
+    "from": "2009-09",
+    "to": "2013-02",
+    "position": "Senior Auditor",
+    "activities": [
+     {
+      "project": "Revisione legale",
+      "tasks": [
+       "Pianificazione della revisione",
+       "Verifica delle poste di bilancio",
+       "Coordinamento del team di audit"
+      ]
+     }
+    ],
+    "achievements": [
+     "Gestito clienti industriali di grandi dimensioni"
+    ],
+    "toolsAndTechnologies": [
+     "Audit software",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2009",
+    "institution": "Università di Bologna",
+    "degree": "Laurea Magistrale in Economia e Commercio",
+    "fieldOfStudy": "Amministrazione e controllo",
+    "achievements": [
+     "Laurea con lode"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Revisore Legale",
+    "institution": "Ministero dell'Economia e delle Finanze",
+    "year": "2014",
+    "description": "Iscrizione al Registro dei Revisori Legali."
+   },
+   {
+    "title": "CPA",
+    "institution": "AICPA",
+    "year": "2016",
+    "description": "Certified Public Accountant, abilitazione contabile statunitense."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP S/4HANA",
+    "Oracle",
+    "Hyperion Financial Management",
+    "Excel",
+    "IFRS",
+    "US GAAP",
+    "OIC"
+   ],
+   "softSkills": [
+    "Leadership",
+    "Visione strategica",
+    "Negoziazione"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Modello di reporting integrato",
+    "description": "Disegno e implementazione di un modello di reporting unico per il gruppo.",
+    "date": "2021-06",
+    "impact": "Ridotto i rilievi di audit del 50% e migliorato la tempestività del reporting."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Golf",
+   "Arte contemporanea",
+   "Trekking"
+  ],
+  "references": [
+   {
+    "name": "Paolo Neri",
+    "position": "CFO",
+    "company": "Ducati Motor Holding",
+    "contact": {
+     "phone": "+39 335 771 0021",
+     "email": "paolo.neri@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 90000,
+   "max": 120000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Accounting Management",
+   "secondaryClusters": [
+    "Financial Reporting",
+    "Governance"
+   ],
+   "functionalExpertise": [
+    "Accounting leadership",
+    "Statutory reporting",
+    "Consolidation"
+   ],
+   "skillDepth": "hybrid",
+   "businessImpact": [
+    "Reduced audit findings",
+    "Reporting governance"
+   ],
+   "industryDomains": [
+    "Manufacturing",
+    "Automotive"
+   ],
+   "environmentFit": [
+    "Corporate finance",
+    "Group functions"
+   ],
+   "seniorityLevel": "director",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.93,
+   "clusterReasoning": "Direttore amministrativo con esperienza nella direzione delle funzioni contabili, nella governance del reporting e nel bilancio consolidato di gruppi industriali."
+  },
+  "searchIndex": {
+   "roles": [
+    "Finance Director",
+    "Chief Accountant",
+    "Head of Accounting"
+   ],
+   "skills": [
+    "SAP S/4HANA",
+    "Oracle",
+    "Hyperion",
+    "IFRS",
+    "US GAAP",
+    "Consolidation"
+   ],
+   "industries": [
+    "Manufacturing",
+    "Automotive",
+    "Professional Services"
+   ]
+  },
+  "tags": [
+   "accounting",
+   "director",
+   "governance",
+   "consolidation"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Analista FP&A con quattro anni di esperienza in budgeting, forecasting e reportistica direzionale. Solida padronanza di Power BI ed Excel avanzato per la costruzione di modelli e dashboard. Curiosa e orientata al business partnering con i reparti operativi.",
+  "careerStartYear": 2022,
+  "personalInformation": {
+   "name": "Simone Barbieri",
+   "role": "Analista FP&A",
+   "summary": "Analista di pianificazione finanziaria appassionato di data visualization e modelli di forecasting.",
+   "contact": {
+    "phone": "+39 342 556 1129",
+    "email": "simone.barbieri@example.com",
+    "address": {
+     "streetNumber": "31",
+     "streetName": "Dante",
+     "streetType": "Via",
+     "city": "Milano",
+     "state": "Lombardia",
+     "zipCode": "20121",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/simonebarbieri"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-08-01",
+    "noticePeriodDays": 30,
+    "interviewAvailability": [
+     "Lunedì mattina",
+     "Venerdì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Pianificazione",
+    "skills": [
+     "Budgeting",
+     "Forecasting",
+     "Analisi degli scostamenti"
+    ]
+   },
+   {
+    "category": "Business intelligence",
+    "skills": [
+     "Power BI",
+     "Tableau"
+    ]
+   },
+   {
+    "category": "Modellazione",
+    "skills": [
+     "Excel avanzato",
+     "Modelli finanziari",
+     "SQL"
+    ]
+   },
+   {
+    "category": "Reporting",
+    "skills": [
+     "Reporting direzionale",
+     "KPI",
+     "Dashboard"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Budgeting",
+    "Forecasting",
+    "Reporting direzionale",
+    "Analisi degli scostamenti"
+   ],
+   "keyResponsibilities": [
+    "Predisposizione del budget annuale",
+    "Aggiornamento dei forecast mensili",
+    "Analisi degli scostamenti budget-actual",
+    "Sviluppo di dashboard in Power BI"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Esselunga",
+    "website": "https://www.esselunga.it",
+    "location": "Milano, Italia",
+    "from": "2023-09",
+    "to": "Present",
+    "position": "Analista FP&A",
+    "activities": [
+     {
+      "project": "Reporting direzionale retail",
+      "tasks": [
+       "Analisi degli scostamenti per punto vendita",
+       "Sviluppo di dashboard Power BI",
+       "Supporto al ciclo di forecast mensile"
+      ]
+     }
+    ],
+    "achievements": [
+     "Automatizzato il reporting mensile riducendo il lavoro manuale del 50%",
+     "Introdotto una dashboard di margine per area"
+    ],
+    "toolsAndTechnologies": [
+     "Power BI",
+     "Excel",
+     "SQL"
+    ]
+   },
+   {
+    "company": "Luxottica",
+    "website": "https://www.luxottica.com",
+    "location": "Milano, Italia",
+    "from": "2022-05",
+    "to": "2023-08",
+    "position": "Junior Financial Analyst",
+    "activities": [
+     {
+      "project": "Supporto al budget",
+      "tasks": [
+       "Raccolta dati dai reparti",
+       "Costruzione di template di budget",
+       "Analisi delle vendite"
+      ]
+     }
+    ],
+    "achievements": [
+     "Standardizzato i template di raccolta budget"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "Power BI"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2022",
+    "institution": "Università Bocconi",
+    "degree": "Laurea Magistrale in Finance",
+    "fieldOfStudy": "Corporate finance",
+    "achievements": [
+     "Tesi sui modelli di forecasting nel retail"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Microsoft Power BI Data Analyst (PL-300)",
+    "institution": "Microsoft",
+    "year": "2024",
+    "description": "Certificazione sull'analisi e la visualizzazione dei dati con Power BI."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Power BI",
+    "Tableau",
+    "Excel",
+    "SQL"
+   ],
+   "softSkills": [
+    "Curiosità",
+    "Comunicazione",
+    "Problem solving"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Dashboard margine retail",
+    "description": "Sviluppo di una dashboard Power BI per il monitoraggio del margine per punto vendita.",
+    "date": "2024-10",
+    "impact": "Ridotto i tempi di analisi del margine del 60%."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Basket",
+   "Videogiochi strategici",
+   "Podcast di economia"
+  ],
+  "references": [
+   {
+    "name": "Elena Fontana",
+    "position": "FP&A Manager",
+    "company": "Esselunga",
+    "contact": {
+     "phone": "+39 342 118 5540",
+     "email": "elena.fontana@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 32000,
+   "max": 40000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Financial Planning & Analysis",
+   "secondaryClusters": [
+    "Management Reporting",
+    "Business Intelligence"
+   ],
+   "functionalExpertise": [
+    "Budgeting",
+    "Forecasting",
+    "Management reporting"
+   ],
+   "skillDepth": "generalist",
+   "businessImpact": [
+    "Reporting automation",
+    "Faster margin analysis"
+   ],
+   "industryDomains": [
+    "Retail",
+    "Consumer Goods"
+   ],
+   "environmentFit": [
+    "Corporate finance",
+    "Business partnering"
+   ],
+   "seniorityLevel": "midLevel",
+   "leadershipAndInfluence": "individualContributor",
+   "learningVelocity": "veryHigh",
+   "clusterConfidenceScore": 0.85,
+   "clusterReasoning": "Analista FP&A con solida base in budgeting e forecasting e forte competenza in Power BI per il reporting direzionale."
+  },
+  "searchIndex": {
+   "roles": [
+    "FP&A Analyst",
+    "Financial Analyst",
+    "Business Analyst"
+   ],
+   "skills": [
+    "Power BI",
+    "Tableau",
+    "Excel",
+    "SQL",
+    "Forecasting",
+    "Budgeting"
+   ],
+   "industries": [
+    "Retail",
+    "Consumer Goods",
+    "Manufacturing"
+   ]
+  },
+  "tags": [
+   "fpa",
+   "power-bi",
+   "forecasting",
+   "budgeting"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Senior FP&A Analyst con dieci anni di esperienza nella pianificazione finanziaria e nel business partnering. Esperta nella costruzione di modelli su Anaplan e nell'analisi dei driver di business. Abituata a supportare le decisioni del management con analisi rigorose.",
+  "careerStartYear": 2016,
+  "personalInformation": {
+   "name": "Giorgia Sanna",
+   "role": "Senior FP&A Analyst",
+   "summary": "Analista senior di pianificazione finanziaria specializzata in modelli Anaplan e business partnering commerciale.",
+   "contact": {
+    "phone": "+39 349 220 7741",
+    "email": "giorgia.sanna@example.com",
+    "address": {
+     "streetNumber": "7",
+     "streetName": "Vittorio Veneto",
+     "streetType": "Corso",
+     "city": "Milano",
+     "state": "Lombardia",
+     "zipCode": "20124",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/giorgiasanna"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-10-15",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Martedì pomeriggio",
+     "Giovedì mattina"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "remote"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Pianificazione",
+    "skills": [
+     "Budgeting",
+     "Rolling forecast",
+     "Long-term planning"
+    ]
+   },
+   {
+    "category": "Modellazione",
+    "skills": [
+     "Anaplan",
+     "Excel avanzato",
+     "SQL"
+    ]
+   },
+   {
+    "category": "Business partnering",
+    "skills": [
+     "Analisi dei driver",
+     "Supporto alle decisioni",
+     "Analisi di redditività"
+    ]
+   },
+   {
+    "category": "Business intelligence",
+    "skills": [
+     "Power BI",
+     "Tableau"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Pianificazione finanziaria",
+    "Business partnering",
+    "Modellazione Anaplan",
+    "Analisi di redditività"
+   ],
+   "keyResponsibilities": [
+    "Costruzione e manutenzione dei modelli Anaplan",
+    "Coordinamento del rolling forecast",
+    "Business partnering con l'area commerciale",
+    "Analisi della redditività per linea di prodotto"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Barilla",
+    "website": "https://www.barilla.com",
+    "location": "Milano, Italia",
+    "from": "2020-03",
+    "to": "Present",
+    "position": "Senior FP&A Analyst",
+    "activities": [
+     {
+      "project": "Modello di pianificazione commerciale",
+      "tasks": [
+       "Sviluppo del modello Anaplan per il forecast vendite",
+       "Analisi dei driver di margine",
+       "Business partnering con i direttori di area"
+      ]
+     }
+    ],
+    "achievements": [
+     "Migliorato l'accuratezza del forecast dal 82% al 93%",
+     "Ridotto il ciclo di budget di tre settimane"
+    ],
+    "toolsAndTechnologies": [
+     "Anaplan",
+     "Power BI",
+     "Excel",
+     "SQL"
+    ]
+   },
+   {
+    "company": "Whirlpool EMEA",
+    "website": "https://www.whirlpool.com",
+    "location": "Varese, Italia",
+    "from": "2016-09",
+    "to": "2020-02",
+    "position": "Financial Analyst",
+    "activities": [
+     {
+      "project": "Reporting di margine",
+      "tasks": [
+       "Analisi degli scostamenti",
+       "Reporting mensile di margine",
+       "Supporto al budget"
+      ]
+     }
+    ],
+    "achievements": [
+     "Automatizzato il reporting di margine su Power BI"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "Power BI",
+     "SAP"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2016",
+    "institution": "Università Cattolica del Sacro Cuore",
+    "degree": "Laurea Magistrale in Economia",
+    "fieldOfStudy": "Finanza aziendale",
+    "achievements": [
+     "Tesi sui modelli di forecasting rolling"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Anaplan Model Builder",
+    "institution": "Anaplan",
+    "year": "2021",
+    "description": "Certificazione sulla costruzione di modelli di pianificazione in Anaplan."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Anaplan",
+    "Power BI",
+    "Tableau",
+    "Excel",
+    "SQL",
+    "SAP"
+   ],
+   "softSkills": [
+    "Pensiero analitico",
+    "Comunicazione",
+    "Collaborazione"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Modello Anaplan di forecast vendite",
+    "description": "Progettazione di un modello Anaplan per il forecast delle vendite EMEA.",
+    "date": "2022-05",
+    "impact": "Accuratezza del forecast migliorata di 11 punti percentuali."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Running",
+   "Pittura",
+   "Cucina asiatica"
+  ],
+  "references": [
+   {
+    "name": "Roberto Galli",
+    "position": "Head of FP&A",
+    "company": "Barilla",
+    "contact": {
+     "phone": "+39 349 550 3312",
+     "email": "roberto.galli@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 50000,
+   "max": 62000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Financial Planning & Analysis",
+   "secondaryClusters": [
+    "Business Partnering",
+    "Financial Modeling"
+   ],
+   "functionalExpertise": [
+    "Financial planning",
+    "Anaplan modeling",
+    "Business partnering"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Improved forecast accuracy",
+    "Shorter budget cycle"
+   ],
+   "industryDomains": [
+    "Consumer Goods",
+    "Manufacturing"
+   ],
+   "environmentFit": [
+    "Corporate finance",
+    "Business partnering"
+   ],
+   "seniorityLevel": "senior",
+   "leadershipAndInfluence": "individualContributor",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.9,
+   "clusterReasoning": "Senior FP&A Analyst con forte specializzazione in modellazione Anaplan e business partnering commerciale."
+  },
+  "searchIndex": {
+   "roles": [
+    "Senior FP&A Analyst",
+    "Financial Analyst",
+    "Finance Business Partner"
+   ],
+   "skills": [
+    "Anaplan",
+    "Power BI",
+    "Tableau",
+    "SQL",
+    "Forecasting",
+    "SAP"
+   ],
+   "industries": [
+    "Consumer Goods",
+    "Manufacturing",
+    "Retail"
+   ]
+  },
+  "tags": [
+   "fpa",
+   "anaplan",
+   "business-partnering",
+   "forecasting"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Finance Business Partner con undici anni di esperienza a supporto delle funzioni operative e commerciali. Competente su Oracle Hyperion e Tableau per il reporting e l'analisi dei driver. Riconosciuto per la capacità di tradurre i numeri in decisioni concrete.",
+  "careerStartYear": 2015,
+  "personalInformation": {
+   "name": "Matteo Villa",
+   "role": "Finance Business Partner",
+   "summary": "Business partner finanziario orientato al supporto decisionale e all'analisi della redditività operativa.",
+   "contact": {
+    "phone": "+39 340 771 9920",
+    "email": "matteo.villa@example.com",
+    "address": {
+     "streetNumber": "18",
+     "streetName": "Roma",
+     "streetType": "Via",
+     "city": "Torino",
+     "state": "Piemonte",
+     "zipCode": "10121",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/matteovilla"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-11-01",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Mercoledì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Business partnering",
+    "skills": [
+     "Supporto decisionale",
+     "Analisi di redditività",
+     "Business case"
+    ]
+   },
+   {
+    "category": "Pianificazione",
+    "skills": [
+     "Budgeting",
+     "Forecasting",
+     "Cost control"
+    ]
+   },
+   {
+    "category": "Sistemi di reporting",
+    "skills": [
+     "Oracle Hyperion",
+     "Tableau"
+    ]
+   },
+   {
+    "category": "Modellazione",
+    "skills": [
+     "Excel avanzato",
+     "Modelli finanziari"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Business partnering",
+    "Analisi di redditività",
+    "Controllo dei costi",
+    "Reporting direzionale"
+   ],
+   "keyResponsibilities": [
+    "Supporto finanziario alle funzioni operative",
+    "Preparazione di business case per investimenti",
+    "Analisi della redditività per commessa",
+    "Coordinamento del forecast di funzione"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Iveco Group",
+    "website": "https://www.ivecogroup.com",
+    "location": "Torino, Italia",
+    "from": "2019-06",
+    "to": "Present",
+    "position": "Finance Business Partner",
+    "activities": [
+     {
+      "project": "Business partnering operations",
+      "tasks": [
+       "Analisi della redditività di stabilimento",
+       "Preparazione di business case per capex",
+       "Reporting di funzione su Hyperion"
+      ]
+     }
+    ],
+    "achievements": [
+     "Identificato risparmi di costo per 2,5 milioni di euro",
+     "Migliorato l'accuratezza del forecast di funzione del 12%"
+    ],
+    "toolsAndTechnologies": [
+     "Oracle Hyperion",
+     "Tableau",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Michelin Italia",
+    "website": "https://www.michelin.it",
+    "location": "Cuneo, Italia",
+    "from": "2015-09",
+    "to": "2019-05",
+    "position": "Financial Analyst",
+    "activities": [
+     {
+      "project": "Controllo dei costi industriali",
+      "tasks": [
+       "Analisi dei costi di produzione",
+       "Reporting di scostamento",
+       "Supporto al budget di stabilimento"
+      ]
+     }
+    ],
+    "achievements": [
+     "Introdotto un cruscotto di costo industriale"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Excel",
+     "Tableau"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2015",
+    "institution": "Politecnico di Torino",
+    "degree": "Laurea Magistrale in Ingegneria Gestionale",
+    "fieldOfStudy": "Finanza e controllo",
+    "achievements": [
+     "Tesi sul controllo dei costi industriali"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "CIMA Advanced Diploma in Management Accounting",
+    "institution": "CIMA",
+    "year": "2019",
+    "description": "Certificazione avanzata in management accounting."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Oracle Hyperion",
+    "Tableau",
+    "SAP",
+    "Excel"
+   ],
+   "softSkills": [
+    "Comunicazione",
+    "Pensiero critico",
+    "Orientamento al business"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Programma di riduzione costi industriali",
+    "description": "Analisi e implementazione di iniziative di riduzione dei costi di stabilimento.",
+    "date": "2021-09",
+    "impact": "Risparmi di costo per 2,5 milioni di euro su base annua."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Sci alpino",
+   "Fotografia di montagna",
+   "Cucina piemontese"
+  ],
+  "references": [
+   {
+    "name": "Anna Rizzo",
+    "position": "Plant Controller",
+    "company": "Iveco Group",
+    "contact": {
+     "phone": "+39 340 662 7781",
+     "email": "anna.rizzo@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 52000,
+   "max": 64000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Financial Planning & Analysis",
+   "secondaryClusters": [
+    "Business Partnering",
+    "Cost Control"
+   ],
+   "functionalExpertise": [
+    "Business partnering",
+    "Profitability analysis",
+    "Cost control"
+   ],
+   "skillDepth": "tShaped",
+   "businessImpact": [
+    "Cost savings identified",
+    "Improved forecast accuracy"
+   ],
+   "industryDomains": [
+    "Automotive",
+    "Manufacturing"
+   ],
+   "environmentFit": [
+    "Industrial finance",
+    "Business partnering"
+   ],
+   "seniorityLevel": "senior",
+   "leadershipAndInfluence": "crossFunctionalLeader",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.89,
+   "clusterReasoning": "Finance Business Partner con esperienza nel supporto alle operations e nell'analisi della redditività industriale."
+  },
+  "searchIndex": {
+   "roles": [
+    "Finance Business Partner",
+    "Senior Financial Analyst",
+    "Controller"
+   ],
+   "skills": [
+    "Oracle Hyperion",
+    "Tableau",
+    "SAP",
+    "Excel",
+    "Cost Control",
+    "Forecasting"
+   ],
+   "industries": [
+    "Automotive",
+    "Manufacturing",
+    "Industrial"
+   ]
+  },
+  "tags": [
+   "fpa",
+   "business-partner",
+   "hyperion",
+   "cost-control"
+  ]
+ },
+ {
+  "candidateProfileSummary": "FP&A Lead con quattordici anni di esperienza nella guida dei processi di pianificazione e nella gestione di team di analisti. Esperta nella progettazione di modelli Anaplan e nella definizione dei processi di budget e forecast. Riconosciuta per il supporto strategico al management.",
+  "careerStartYear": 2012,
+  "personalInformation": {
+   "name": "Cristina Lombardi",
+   "role": "FP&A Lead",
+   "summary": "Responsabile di pianificazione finanziaria orientata al disegno dei processi e alla guida di team di analisti.",
+   "contact": {
+    "phone": "+39 348 990 2214",
+    "email": "cristina.lombardi@example.com",
+    "address": {
+     "streetNumber": "26",
+     "streetName": "Nomentana",
+     "streetType": "Via",
+     "city": "Roma",
+     "state": "Lazio",
+     "zipCode": "00161",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/cristinalombardi"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-12-01",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Lunedì pomeriggio",
+     "Giovedì mattina"
+    ],
+    "preferredWorkTypes": [
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Pianificazione",
+    "skills": [
+     "Processi di budget",
+     "Rolling forecast",
+     "Piano strategico"
+    ]
+   },
+   {
+    "category": "Gestione team",
+    "skills": [
+     "Coordinamento analisti",
+     "Formazione",
+     "Governance del processo"
+    ]
+   },
+   {
+    "category": "Modellazione",
+    "skills": [
+     "Anaplan",
+     "Excel avanzato",
+     "SQL"
+    ]
+   },
+   {
+    "category": "Business intelligence",
+    "skills": [
+     "Power BI",
+     "Tableau"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Processi di pianificazione",
+    "Modellazione Anaplan",
+    "Gestione team FP&A",
+    "Reporting strategico"
+   ],
+   "keyResponsibilities": [
+    "Guida del processo di budget e forecast",
+    "Coordinamento di un team di analisti FP&A",
+    "Progettazione dei modelli di pianificazione Anaplan",
+    "Supporto strategico al comitato di direzione"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Leonardo",
+    "website": "https://www.leonardo.com",
+    "location": "Roma, Italia",
+    "from": "2018-01",
+    "to": "Present",
+    "position": "FP&A Lead",
+    "activities": [
+     {
+      "project": "Trasformazione del processo di pianificazione",
+      "tasks": [
+       "Coordinamento di un team di cinque analisti",
+       "Ridisegno del processo di budget su Anaplan",
+       "Supporto strategico al management"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ridotto il ciclo di budget da dodici a sette settimane",
+     "Migliorato l'accuratezza del forecast del 15%"
+    ],
+    "toolsAndTechnologies": [
+     "Anaplan",
+     "Power BI",
+     "Excel",
+     "SQL"
+    ]
+   },
+   {
+    "company": "TIM",
+    "website": "https://www.gruppotim.it",
+    "location": "Roma, Italia",
+    "from": "2015-04",
+    "to": "2017-12",
+    "position": "Senior FP&A Analyst",
+    "activities": [
+     {
+      "project": "Forecast di gruppo",
+      "tasks": [
+       "Coordinamento del forecast mensile",
+       "Analisi degli scostamenti",
+       "Reporting direzionale"
+      ]
+     }
+    ],
+    "achievements": [
+     "Standardizzato il pacchetto di reporting per il board"
+    ],
+    "toolsAndTechnologies": [
+     "Hyperion",
+     "Excel",
+     "Power BI"
+    ]
+   },
+   {
+    "company": "Accenture",
+    "website": "https://www.accenture.com",
+    "location": "Roma, Italia",
+    "from": "2012-09",
+    "to": "2015-03",
+    "position": "Financial Analyst",
+    "activities": [
+     {
+      "project": "Controllo di gestione clienti",
+      "tasks": [
+       "Analisi di redditività di commessa",
+       "Reporting mensile",
+       "Supporto al budget"
+      ]
+     }
+    ],
+    "achievements": [
+     "Sviluppato modelli di redditività di commessa"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "SAP"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2012",
+    "institution": "LUISS Guido Carli",
+    "degree": "Laurea Magistrale in Economia e Management",
+    "fieldOfStudy": "Finanza",
+    "achievements": [
+     "Laurea con lode"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Anaplan Solution Architect",
+    "institution": "Anaplan",
+    "year": "2020",
+    "description": "Certificazione sulla progettazione di soluzioni di pianificazione Anaplan."
+   },
+   {
+    "title": "CFA Level II",
+    "institution": "CFA Institute",
+    "year": "2017",
+    "description": "Superamento del secondo livello del programma CFA."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Anaplan",
+    "Hyperion",
+    "Power BI",
+    "Tableau",
+    "Excel",
+    "SQL",
+    "SAP"
+   ],
+   "softSkills": [
+    "Leadership",
+    "Pensiero strategico",
+    "Comunicazione"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Ridisegno del processo di budget",
+    "description": "Trasformazione del processo di budget di gruppo su piattaforma Anaplan.",
+    "date": "2020-11",
+    "impact": "Ciclo di budget ridotto del 40% e accuratezza del forecast migliorata del 15%."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Maratona",
+   "Teatro",
+   "Viaggi culturali"
+  ],
+  "references": [
+   {
+    "name": "Fabio Conti",
+    "position": "Group Head of FP&A",
+    "company": "Leonardo",
+    "contact": {
+     "phone": "+39 348 220 9910",
+     "email": "fabio.conti@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 70000,
+   "max": 85000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Financial Planning & Analysis",
+   "secondaryClusters": [
+    "Planning Process Design",
+    "Team Leadership"
+   ],
+   "functionalExpertise": [
+    "Planning process design",
+    "Anaplan modeling",
+    "Team leadership"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Shorter budget cycle",
+    "Improved forecast accuracy"
+   ],
+   "industryDomains": [
+    "Aerospace & Defense",
+    "Telecommunications"
+   ],
+   "environmentFit": [
+    "Corporate finance",
+    "Group functions"
+   ],
+   "seniorityLevel": "lead",
+   "leadershipAndInfluence": "teamLead",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.91,
+   "clusterReasoning": "FP&A Lead con esperienza nella guida di team, nel ridisegno dei processi di pianificazione e nella modellazione Anaplan."
+  },
+  "searchIndex": {
+   "roles": [
+    "FP&A Lead",
+    "FP&A Manager",
+    "Senior FP&A Analyst"
+   ],
+   "skills": [
+    "Anaplan",
+    "Hyperion",
+    "Power BI",
+    "SQL",
+    "Forecasting",
+    "Financial Modeling"
+   ],
+   "industries": [
+    "Aerospace & Defense",
+    "Telecommunications",
+    "Professional Services"
+   ]
+  },
+  "tags": [
+   "fpa",
+   "lead",
+   "anaplan",
+   "planning"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Head of FP&A con diciotto anni di esperienza nella direzione della pianificazione finanziaria di gruppi internazionali. Esperto nella definizione della strategia finanziaria, nei processi di forecast e nel supporto alle decisioni di investimento. CFA charterholder con solida esperienza in ambienti multinazionali.",
+  "careerStartYear": 2008,
+  "personalInformation": {
+   "name": "Francesco Rossi",
+   "role": "Head of FP&A",
+   "summary": "Finance leader responsabile della pianificazione finanziaria di gruppo, orientato alla strategia e al supporto agli investimenti.",
+   "contact": {
+    "phone": "+39 335 662 1180",
+    "email": "francesco.rossi@example.com",
+    "address": {
+     "streetNumber": "3",
+     "streetName": "Montenapoleone",
+     "streetType": "Via",
+     "city": "Milano",
+     "state": "Lombardia",
+     "zipCode": "20121",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/francescorossifpa"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2027-02-01",
+    "noticePeriodDays": 120,
+    "interviewAvailability": [
+     "Martedì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Direzione FP&A",
+    "skills": [
+     "Strategia finanziaria",
+     "Pianificazione di gruppo",
+     "Supporto agli investimenti",
+     "M&A modeling"
+    ]
+   },
+   {
+    "category": "Leadership",
+    "skills": [
+     "Gestione di team internazionali",
+     "Business partnering esecutivo",
+     "Change management"
+    ]
+   },
+   {
+    "category": "Sistemi",
+    "skills": [
+     "Anaplan",
+     "Oracle Hyperion",
+     "Power BI"
+    ]
+   },
+   {
+    "category": "Modellazione",
+    "skills": [
+     "Modelli di valutazione",
+     "Excel avanzato",
+     "Scenario analysis"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Direzione FP&A",
+    "Strategia finanziaria",
+    "Pianificazione di gruppo",
+    "Supporto a M&A"
+   ],
+   "keyResponsibilities": [
+    "Direzione della funzione FP&A di gruppo",
+    "Definizione dei processi di pianificazione strategica",
+    "Supporto finanziario alle decisioni di investimento e M&A",
+    "Presentazione dei risultati al comitato esecutivo"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Prysmian",
+    "website": "https://www.prysmian.com",
+    "location": "Milano, Italia",
+    "from": "2017-01",
+    "to": "Present",
+    "position": "Head of FP&A",
+    "activities": [
+     {
+      "project": "Pianificazione strategica di gruppo",
+      "tasks": [
+       "Direzione di un team internazionale di dieci analisti",
+       "Definizione del piano strategico triennale",
+       "Supporto finanziario alle operazioni di M&A"
+      ]
+     }
+    ],
+    "achievements": [
+     "Guidato la modellazione finanziaria di due acquisizioni strategiche",
+     "Ridotto il ciclo di forecast di gruppo del 30%"
+    ],
+    "toolsAndTechnologies": [
+     "Anaplan",
+     "Oracle Hyperion",
+     "Power BI"
+    ]
+   },
+   {
+    "company": "Danone Italia",
+    "website": "https://www.danone.com",
+    "location": "Milano, Italia",
+    "from": "2012-03",
+    "to": "2016-12",
+    "position": "FP&A Manager",
+    "activities": [
+     {
+      "project": "Pianificazione commerciale",
+      "tasks": [
+       "Coordinamento del budget commerciale",
+       "Analisi della redditività di categoria",
+       "Business partnering con il marketing"
+      ]
+     }
+    ],
+    "achievements": [
+     "Migliorato la marginalità di categoria del 3%"
+    ],
+    "toolsAndTechnologies": [
+     "Hyperion",
+     "Excel",
+     "SAP"
+    ]
+   },
+   {
+    "company": "Procter & Gamble",
+    "website": "https://www.pg.com",
+    "location": "Roma, Italia",
+    "from": "2008-09",
+    "to": "2012-02",
+    "position": "Financial Analyst",
+    "activities": [
+     {
+      "project": "Controllo di gestione brand",
+      "tasks": [
+       "Analisi della redditività di brand",
+       "Reporting mensile",
+       "Supporto al budget"
+      ]
+     }
+    ],
+    "achievements": [
+     "Sviluppato modelli di redditività per linea di prodotto"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "SAP"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2008",
+    "institution": "Università Bocconi",
+    "degree": "Laurea Magistrale in Economia Aziendale",
+    "fieldOfStudy": "Finanza",
+    "achievements": [
+     "Laurea con lode"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "CFA Charterholder",
+    "institution": "CFA Institute",
+    "year": "2013",
+    "description": "Chartered Financial Analyst, completamento dei tre livelli del programma CFA."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Anaplan",
+    "Oracle Hyperion",
+    "Power BI",
+    "Excel",
+    "SAP"
+   ],
+   "softSkills": [
+    "Leadership",
+    "Visione strategica",
+    "Comunicazione esecutiva"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Supporto finanziario a operazioni di M&A",
+    "description": "Modellazione finanziaria e due diligence a supporto di due acquisizioni strategiche.",
+    "date": "2020-04",
+    "impact": "Contribuito a operazioni per un valore complessivo superiore a 300 milioni di euro."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Vela d'altura",
+   "Jazz",
+   "Collezionismo di vini"
+  ],
+  "references": [
+   {
+    "name": "Laura Moretti",
+    "position": "Group CFO",
+    "company": "Prysmian",
+    "contact": {
+     "phone": "+39 335 110 4420",
+     "email": "laura.moretti@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 95000,
+   "max": 130000
+  },
+  "candidateClustering": {
+   "primaryCluster": "FP&A Leadership",
+   "secondaryClusters": [
+    "Strategic Planning",
+    "M&A Modeling"
+   ],
+   "functionalExpertise": [
+    "FP&A leadership",
+    "Strategic planning",
+    "M&A modeling"
+   ],
+   "skillDepth": "hybrid",
+   "businessImpact": [
+    "M&A deal support",
+    "Shorter forecast cycle"
+   ],
+   "industryDomains": [
+    "Manufacturing",
+    "Consumer Goods"
+   ],
+   "environmentFit": [
+    "Corporate finance",
+    "Executive team"
+   ],
+   "seniorityLevel": "director",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.94,
+   "clusterReasoning": "Head of FP&A con esperienza nella direzione della pianificazione di gruppo, nella strategia finanziaria e nel supporto a operazioni di M&A."
+  },
+  "searchIndex": {
+   "roles": [
+    "Head of FP&A",
+    "FP&A Director",
+    "Finance Director"
+   ],
+   "skills": [
+    "Anaplan",
+    "Hyperion",
+    "Power BI",
+    "Financial Modeling",
+    "M&A",
+    "Strategic Planning"
+   ],
+   "industries": [
+    "Manufacturing",
+    "Consumer Goods",
+    "Industrial"
+   ]
+  },
+  "tags": [
+   "fpa",
+   "director",
+   "strategy",
+   "m-and-a"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Internal Auditor con cinque anni di esperienza nella verifica dei controlli interni e nei test di conformità. Conosce il framework COSO e le metodologie di audit basate sul rischio. Metodico e curioso, con forte attenzione alla qualità della documentazione di lavoro.",
+  "careerStartYear": 2021,
+  "personalInformation": {
+   "name": "Alessia Ferraro",
+   "role": "Internal Auditor",
+   "summary": "Auditor interno orientato al rischio, appassionato di analisi dei processi e miglioramento dei controlli.",
+   "contact": {
+    "phone": "+39 342 118 4471",
+    "email": "alessia.ferraro@example.com",
+    "address": {
+     "streetNumber": "40",
+     "streetName": "Solferino",
+     "streetType": "Via",
+     "city": "Milano",
+     "state": "Lombardia",
+     "zipCode": "20121",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/alessiaferraro"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-08-15",
+    "noticePeriodDays": 30,
+    "interviewAvailability": [
+     "Lunedì mattina",
+     "Mercoledì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Audit",
+    "skills": [
+     "Audit basato sul rischio",
+     "Test dei controlli",
+     "Documentazione di lavoro"
+    ]
+   },
+   {
+    "category": "Framework",
+    "skills": [
+     "COSO",
+     "Controlli interni"
+    ]
+   },
+   {
+    "category": "Strumenti",
+    "skills": [
+     "Microsoft Excel",
+     "IDEA"
+    ]
+   },
+   {
+    "category": "Analisi",
+    "skills": [
+     "Analisi dei processi",
+     "Data analytics di base"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Audit interno",
+    "Controlli interni",
+    "Test di conformità",
+    "Analisi dei processi"
+   ],
+   "keyResponsibilities": [
+    "Esecuzione dei test sui controlli interni",
+    "Documentazione delle carte di lavoro",
+    "Analisi dei processi aziendali",
+    "Follow-up sulle raccomandazioni di audit"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Generali",
+    "website": "https://www.generali.com",
+    "location": "Milano, Italia",
+    "from": "2023-04",
+    "to": "Present",
+    "position": "Internal Auditor",
+    "activities": [
+     {
+      "project": "Audit dei processi assicurativi",
+      "tasks": [
+       "Esecuzione dei test sui controlli",
+       "Analisi dei processi di sottoscrizione",
+       "Redazione delle carte di lavoro"
+      ]
+     }
+    ],
+    "achievements": [
+     "Identificato tre carenze di controllo poi rimediate",
+     "Introdotto l'uso di IDEA per i test massivi"
+    ],
+    "toolsAndTechnologies": [
+     "IDEA",
+     "Excel",
+     "COSO"
+    ]
+   },
+   {
+    "company": "PwC",
+    "website": "https://www.pwc.com",
+    "location": "Milano, Italia",
+    "from": "2021-09",
+    "to": "2023-03",
+    "position": "Audit Associate",
+    "activities": [
+     {
+      "project": "Revisione bilanci",
+      "tasks": [
+       "Test sulle poste di bilancio",
+       "Verifica dei controlli",
+       "Supporto al team di revisione"
+      ]
+     }
+    ],
+    "achievements": [
+     "Gestito in autonomia sezioni di audit su clienti mid-market"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "Audit software"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2021",
+    "institution": "Università Bocconi",
+    "degree": "Laurea Magistrale in Economia",
+    "fieldOfStudy": "Amministrazione, finanza e controllo",
+    "achievements": [
+     "Tesi sui sistemi di controllo interno"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Internal Audit Foundation",
+    "institution": "IIA",
+    "year": "2023",
+    "description": "Corso introduttivo sulle metodologie di audit interno."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "IDEA",
+    "Excel",
+    "COSO"
+   ],
+   "softSkills": [
+    "Metodo",
+    "Curiosità",
+    "Integrità"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Adozione di IDEA per i test massivi",
+    "description": "Introduzione dello strumento IDEA per l'analisi dei dati nei test di audit.",
+    "date": "2024-06",
+    "impact": "Aumentata la copertura dei test dal 20% al 100% delle transazioni."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Nuoto",
+   "Escursionismo",
+   "Lettura di gialli"
+  ],
+  "references": [
+   {
+    "name": "Giovanni Marino",
+    "position": "Internal Audit Manager",
+    "company": "Generali",
+    "contact": {
+     "phone": "+39 342 550 9980",
+     "email": "giovanni.marino@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 34000,
+   "max": 42000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Internal Audit",
+   "secondaryClusters": [
+    "Internal Controls",
+    "Compliance Testing"
+   ],
+   "functionalExpertise": [
+    "Internal audit",
+    "Controls testing",
+    "Process analysis"
+   ],
+   "skillDepth": "generalist",
+   "businessImpact": [
+    "Control gaps remediated",
+    "Improved test coverage"
+   ],
+   "industryDomains": [
+    "Insurance",
+    "Professional Services"
+   ],
+   "environmentFit": [
+    "Assurance functions",
+    "Corporate audit"
+   ],
+   "seniorityLevel": "midLevel",
+   "leadershipAndInfluence": "individualContributor",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.85,
+   "clusterReasoning": "Internal Auditor con base solida nel framework COSO e nei test dei controlli, con esperienza in revisione esterna e audit interno."
+  },
+  "searchIndex": {
+   "roles": [
+    "Internal Auditor",
+    "Audit Associate",
+    "Controls Analyst"
+   ],
+   "skills": [
+    "COSO",
+    "IDEA",
+    "Excel",
+    "Internal Controls",
+    "Risk-Based Audit"
+   ],
+   "industries": [
+    "Insurance",
+    "Professional Services",
+    "Banking"
+   ]
+  },
+  "tags": [
+   "audit",
+   "coso",
+   "internal-controls",
+   "idea"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Senior Internal Auditor con dieci anni di esperienza in audit basato sul rischio e conformità SOX. Esperto nell'esecuzione di audit operativi e finanziari e nell'uso di strumenti di data analytics come ACL. Riconosciuto per la chiarezza dei report e per il rapporto costruttivo con l'auditee.",
+  "careerStartYear": 2016,
+  "personalInformation": {
+   "name": "Riccardo De Luca",
+   "role": "Senior Internal Auditor",
+   "summary": "Auditor senior specializzato in conformità SOX e audit operativi, con forte competenza in data analytics.",
+   "contact": {
+    "phone": "+39 349 771 2203",
+    "email": "riccardo.deluca@example.com",
+    "address": {
+     "streetNumber": "14",
+     "streetName": "Cavour",
+     "streetType": "Via",
+     "city": "Roma",
+     "state": "Lazio",
+     "zipCode": "00184",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/riccardodeluca"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-10-01",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Martedì mattina",
+     "Giovedì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "remote"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Audit",
+    "skills": [
+     "Audit operativo",
+     "Audit finanziario",
+     "Audit basato sul rischio"
+    ]
+   },
+   {
+    "category": "Compliance",
+    "skills": [
+     "SOX",
+     "COSO",
+     "Controlli interni"
+    ]
+   },
+   {
+    "category": "Data analytics",
+    "skills": [
+     "ACL",
+     "IDEA",
+     "SQL"
+    ]
+   },
+   {
+    "category": "Strumenti",
+    "skills": [
+     "Microsoft Excel",
+     "Power BI"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Audit interno",
+    "Conformità SOX",
+    "Audit operativo",
+    "Data analytics di audit"
+   ],
+   "keyResponsibilities": [
+    "Pianificazione ed esecuzione di audit operativi e finanziari",
+    "Testing dei controlli SOX",
+    "Analisi dei dati con ACL",
+    "Redazione dei report di audit per il comitato"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Ferrero",
+    "website": "https://www.ferrero.com",
+    "location": "Roma, Italia",
+    "from": "2020-02",
+    "to": "Present",
+    "position": "Senior Internal Auditor",
+    "activities": [
+     {
+      "project": "Programma SOX di gruppo",
+      "tasks": [
+       "Testing dei controlli chiave SOX",
+       "Analisi dei dati con ACL",
+       "Redazione dei report per l'audit committee"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ridotto le deficienze SOX del 40% in due cicli",
+     "Automatizzato i test di continuous auditing con ACL"
+    ],
+    "toolsAndTechnologies": [
+     "ACL",
+     "Excel",
+     "SOX",
+     "COSO"
+    ]
+   },
+   {
+    "company": "KPMG",
+    "website": "https://www.kpmg.com",
+    "location": "Roma, Italia",
+    "from": "2016-09",
+    "to": "2020-01",
+    "position": "Auditor",
+    "activities": [
+     {
+      "project": "Revisione legale",
+      "tasks": [
+       "Test sulle poste di bilancio",
+       "Valutazione dei controlli",
+       "Redazione delle carte di lavoro"
+      ]
+     }
+    ],
+    "achievements": [
+     "Gestito sezioni complesse su clienti quotati"
+    ],
+    "toolsAndTechnologies": [
+     "IDEA",
+     "Excel",
+     "Audit software"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2016",
+    "institution": "Sapienza Università di Roma",
+    "degree": "Laurea Magistrale in Economia",
+    "fieldOfStudy": "Revisione e controllo",
+    "achievements": [
+     "Tesi sui controlli interni e SOX"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "CIA (Certified Internal Auditor)",
+    "institution": "IIA",
+    "year": "2021",
+    "description": "Certificazione internazionale per gli auditor interni."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "ACL",
+    "IDEA",
+    "SQL",
+    "Excel",
+    "Power BI",
+    "SOX",
+    "COSO"
+   ],
+   "softSkills": [
+    "Rigore",
+    "Comunicazione",
+    "Pensiero critico"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Continuous auditing con ACL",
+    "description": "Implementazione di routine di continuous auditing sui controlli chiave.",
+    "date": "2022-03",
+    "impact": "Deficienze SOX ridotte del 40% e monitoraggio continuo dei controlli."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Calcio a cinque",
+   "Fotografia",
+   "Cucina romana"
+  ],
+  "references": [
+   {
+    "name": "Serena Costa",
+    "position": "Head of Internal Audit",
+    "company": "Ferrero",
+    "contact": {
+     "phone": "+39 349 220 6612",
+     "email": "serena.costa@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 50000,
+   "max": 60000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Internal Audit",
+   "secondaryClusters": [
+    "SOX Compliance",
+    "Audit Analytics"
+   ],
+   "functionalExpertise": [
+    "Internal audit",
+    "SOX compliance",
+    "Audit data analytics"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Reduced SOX deficiencies",
+    "Continuous auditing"
+   ],
+   "industryDomains": [
+    "Consumer Goods",
+    "Professional Services"
+   ],
+   "environmentFit": [
+    "Assurance functions",
+    "Corporate audit"
+   ],
+   "seniorityLevel": "senior",
+   "leadershipAndInfluence": "individualContributor",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.9,
+   "clusterReasoning": "Senior Internal Auditor con forte esperienza in conformità SOX, audit operativi e data analytics con ACL."
+  },
+  "searchIndex": {
+   "roles": [
+    "Senior Internal Auditor",
+    "Internal Auditor",
+    "SOX Analyst"
+   ],
+   "skills": [
+    "SOX",
+    "COSO",
+    "ACL",
+    "IDEA",
+    "SQL",
+    "Internal Controls"
+   ],
+   "industries": [
+    "Consumer Goods",
+    "Professional Services",
+    "Manufacturing"
+   ]
+  },
+  "tags": [
+   "audit",
+   "sox",
+   "acl",
+   "internal-controls"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Revisore contabile con tredici anni di esperienza nella revisione legale di bilanci secondo principi IFRS. Esperta nella gestione di team di revisione e nella relazione con i clienti quotati. Iscritta al Registro dei Revisori Legali e in possesso della qualifica ACCA.",
+  "careerStartYear": 2013,
+  "personalInformation": {
+   "name": "Elisa Fontana",
+   "role": "Revisore contabile senior",
+   "summary": "Revisore legale specializzata nella revisione di bilanci IFRS di gruppi quotati e nella gestione di team di audit.",
+   "contact": {
+    "phone": "+39 348 662 1109",
+    "email": "elisa.fontana@example.com",
+    "address": {
+     "streetNumber": "10",
+     "streetName": "Turati",
+     "streetType": "Via",
+     "city": "Milano",
+     "state": "Lombardia",
+     "zipCode": "20121",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/elisafontana"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-11-15",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Mercoledì mattina",
+     "Venerdì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Revisione",
+    "skills": [
+     "Revisione legale",
+     "Revisione IFRS",
+     "Verifica del bilancio consolidato"
+    ]
+   },
+   {
+    "category": "Gestione team",
+    "skills": [
+     "Coordinamento del team di audit",
+     "Pianificazione della revisione",
+     "Relazione con il cliente"
+    ]
+   },
+   {
+    "category": "Principi",
+    "skills": [
+     "IFRS",
+     "OIC",
+     "ISA"
+    ]
+   },
+   {
+    "category": "Strumenti",
+    "skills": [
+     "Audit software",
+     "Excel",
+     "IDEA"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Revisione legale",
+    "Revisione IFRS",
+    "Gestione team di audit",
+    "Reporting di revisione"
+   ],
+   "keyResponsibilities": [
+    "Pianificazione e coordinamento delle revisioni",
+    "Verifica dei bilanci consolidati IFRS",
+    "Gestione della relazione con i clienti quotati",
+    "Supervisione del team di audit junior"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Deloitte",
+    "website": "https://www.deloitte.com",
+    "location": "Milano, Italia",
+    "from": "2013-09",
+    "to": "Present",
+    "position": "Audit Manager",
+    "activities": [
+     {
+      "project": "Revisione di gruppi quotati",
+      "tasks": [
+       "Pianificazione della revisione",
+       "Coordinamento di team fino a otto persone",
+       "Verifica del bilancio consolidato IFRS"
+      ]
+     }
+    ],
+    "achievements": [
+     "Gestito il portafoglio di revisione di tre clienti quotati",
+     "Ridotto i tempi di revisione con l'uso di analytics"
+    ],
+    "toolsAndTechnologies": [
+     "Audit software",
+     "IDEA",
+     "Excel"
+    ]
+   },
+   {
+    "company": "BDO Italia",
+    "website": "https://www.bdo.it",
+    "location": "Milano, Italia",
+    "from": "2016-01",
+    "to": "2018-12",
+    "position": "Audit Senior",
+    "activities": [
+     {
+      "project": "Revisione mid-market",
+      "tasks": [
+       "Esecuzione delle procedure di revisione",
+       "Verifica delle poste di bilancio",
+       "Redazione della relazione di revisione"
+      ]
+     }
+    ],
+    "achievements": [
+     "Formato tre risorse junior sul campo"
+    ],
+    "toolsAndTechnologies": [
+     "Audit software",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2013",
+    "institution": "Università Bocconi",
+    "degree": "Laurea Magistrale in Economia Aziendale",
+    "fieldOfStudy": "Revisione contabile",
+    "achievements": [
+     "Laurea con lode"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Revisore Legale",
+    "institution": "Ministero dell'Economia e delle Finanze",
+    "year": "2018",
+    "description": "Iscrizione al Registro dei Revisori Legali."
+   },
+   {
+    "title": "ACCA",
+    "institution": "ACCA",
+    "year": "2019",
+    "description": "Association of Chartered Certified Accountants, qualifica contabile internazionale."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Audit software",
+    "IDEA",
+    "Excel",
+    "IFRS",
+    "OIC",
+    "ISA"
+   ],
+   "softSkills": [
+    "Leadership",
+    "Precisione",
+    "Gestione dello stress"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Introduzione di analytics nella revisione",
+    "description": "Adozione di strumenti di data analytics nelle procedure di revisione dei clienti quotati.",
+    "date": "2021-10",
+    "impact": "Ridotto i tempi di revisione del 20% e aumentata la copertura dei test."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Danza classica",
+   "Viaggi",
+   "Corsi di cucina"
+  ],
+  "references": [
+   {
+    "name": "Marco Bianchi",
+    "position": "Audit Partner",
+    "company": "Deloitte",
+    "contact": {
+     "phone": "+39 348 110 7740",
+     "email": "marco.bianchi@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 54000,
+   "max": 66000
+  },
+  "candidateClustering": {
+   "primaryCluster": "External Audit",
+   "secondaryClusters": [
+    "IFRS Audit",
+    "Audit Management"
+   ],
+   "functionalExpertise": [
+    "Statutory audit",
+    "IFRS audit",
+    "Audit team management"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Managed listed-client audits",
+    "Faster audit delivery"
+   ],
+   "industryDomains": [
+    "Professional Services",
+    "Banking"
+   ],
+   "environmentFit": [
+    "Audit firm",
+    "Assurance functions"
+   ],
+   "seniorityLevel": "senior",
+   "leadershipAndInfluence": "teamLead",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.9,
+   "clusterReasoning": "Revisore legale senior con esperienza nella revisione IFRS di gruppi quotati e nella gestione di team di audit."
+  },
+  "searchIndex": {
+   "roles": [
+    "Audit Manager",
+    "External Auditor",
+    "Senior Auditor"
+   ],
+   "skills": [
+    "IFRS",
+    "ISA",
+    "IDEA",
+    "Statutory Audit",
+    "Consolidation"
+   ],
+   "industries": [
+    "Professional Services",
+    "Banking",
+    "Insurance"
+   ]
+  },
+  "tags": [
+   "audit",
+   "external-audit",
+   "ifrs",
+   "revisore"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Risk Manager con quindici anni di esperienza nella gestione del rischio d'impresa e nel disegno dei sistemi di controllo interno. Esperto di framework COSO ERM e di conformità SOX in gruppi industriali. Riconosciuto per l'approccio integrato tra audit, rischio e compliance.",
+  "careerStartYear": 2011,
+  "personalInformation": {
+   "name": "Andrea Gallo",
+   "role": "Risk Manager",
+   "summary": "Specialista di enterprise risk management orientato all'integrazione tra rischio, controlli e compliance.",
+   "contact": {
+    "phone": "+39 347 220 3391",
+    "email": "andrea.gallo@example.com",
+    "address": {
+     "streetNumber": "21",
+     "streetName": "Po",
+     "streetType": "Via",
+     "city": "Torino",
+     "state": "Piemonte",
+     "zipCode": "10124",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/andreagallo"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-12-01",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Lunedì pomeriggio",
+     "Giovedì mattina"
+    ],
+    "preferredWorkTypes": [
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Risk management",
+    "skills": [
+     "Enterprise risk management",
+     "Risk assessment",
+     "Mappatura dei rischi"
+    ]
+   },
+   {
+    "category": "Controlli e compliance",
+    "skills": [
+     "SOX",
+     "COSO ERM",
+     "Controlli interni"
+    ]
+   },
+   {
+    "category": "Audit",
+    "skills": [
+     "Audit basato sul rischio",
+     "Continuous monitoring"
+    ]
+   },
+   {
+    "category": "Strumenti",
+    "skills": [
+     "ACL",
+     "Power BI",
+     "Excel"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Enterprise risk management",
+    "Sistemi di controllo interno",
+    "Conformità SOX",
+    "Risk assessment"
+   ],
+   "keyResponsibilities": [
+    "Disegno e manutenzione del framework ERM",
+    "Coordinamento del risk assessment di gruppo",
+    "Supervisione del programma SOX",
+    "Reporting dei rischi al comitato controllo e rischi"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Stellantis",
+    "website": "https://www.stellantis.com",
+    "location": "Torino, Italia",
+    "from": "2018-03",
+    "to": "Present",
+    "position": "Risk Manager",
+    "activities": [
+     {
+      "project": "Framework ERM di gruppo",
+      "tasks": [
+       "Disegno del modello di enterprise risk management",
+       "Coordinamento del risk assessment annuale",
+       "Supervisione dei controlli chiave SOX"
+      ]
+     }
+    ],
+    "achievements": [
+     "Implementato un cruscotto di rischio a livello di gruppo",
+     "Ridotto l'esposizione ai rischi operativi chiave"
+    ],
+    "toolsAndTechnologies": [
+     "COSO ERM",
+     "ACL",
+     "Power BI"
+    ]
+   },
+   {
+    "company": "Intesa Sanpaolo",
+    "website": "https://www.intesasanpaolo.com",
+    "location": "Torino, Italia",
+    "from": "2014-05",
+    "to": "2018-02",
+    "position": "Senior Internal Auditor",
+    "activities": [
+     {
+      "project": "Audit dei processi di credito",
+      "tasks": [
+       "Audit dei processi di erogazione del credito",
+       "Valutazione dei controlli",
+       "Reporting all'audit committee"
+      ]
+     }
+    ],
+    "achievements": [
+     "Identificato rischi di controllo poi rimediati"
+    ],
+    "toolsAndTechnologies": [
+     "ACL",
+     "Excel",
+     "SOX"
+    ]
+   },
+   {
+    "company": "Grant Thornton",
+    "website": "https://www.grantthornton.global",
+    "location": "Milano, Italia",
+    "from": "2011-09",
+    "to": "2014-04",
+    "position": "Auditor",
+    "activities": [
+     {
+      "project": "Revisione legale",
+      "tasks": [
+       "Test sui controlli",
+       "Verifica delle poste di bilancio",
+       "Redazione delle carte di lavoro"
+      ]
+     }
+    ],
+    "achievements": [
+     "Gestito clienti mid-market in autonomia"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "Audit software"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2011",
+    "institution": "Università degli Studi di Torino",
+    "degree": "Laurea Magistrale in Economia",
+    "fieldOfStudy": "Finanza e controllo",
+    "achievements": [
+     "Tesi sull'enterprise risk management"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "CRMA (Certification in Risk Management Assurance)",
+    "institution": "IIA",
+    "year": "2019",
+    "description": "Certificazione sulla gestione del rischio e assurance."
+   },
+   {
+    "title": "CIA (Certified Internal Auditor)",
+    "institution": "IIA",
+    "year": "2016",
+    "description": "Certificazione internazionale per gli auditor interni."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "COSO ERM",
+    "ACL",
+    "Power BI",
+    "Excel",
+    "SOX"
+   ],
+   "softSkills": [
+    "Pensiero sistemico",
+    "Leadership",
+    "Comunicazione"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Cruscotto di rischio di gruppo",
+    "description": "Disegno e implementazione di un cruscotto di enterprise risk management.",
+    "date": "2021-05",
+    "impact": "Migliorata la visibilità sui rischi chiave e la tempestività del reporting al comitato."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Alpinismo",
+   "Scacchi",
+   "Lettura di saggistica"
+  ],
+  "references": [
+   {
+    "name": "Paola Ferrari",
+    "position": "Chief Audit Executive",
+    "company": "Stellantis",
+    "contact": {
+     "phone": "+39 347 550 8820",
+     "email": "paola.ferrari@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 72000,
+   "max": 88000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Risk Management",
+   "secondaryClusters": [
+    "Enterprise Risk Management",
+    "Internal Audit"
+   ],
+   "functionalExpertise": [
+    "Enterprise risk management",
+    "Internal controls",
+    "SOX compliance"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Group risk dashboard",
+    "Reduced operational risk"
+   ],
+   "industryDomains": [
+    "Automotive",
+    "Banking"
+   ],
+   "environmentFit": [
+    "Risk functions",
+    "Corporate governance"
+   ],
+   "seniorityLevel": "principal",
+   "leadershipAndInfluence": "crossFunctionalLeader",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.91,
+   "clusterReasoning": "Risk Manager con esperienza nel disegno di framework ERM, nella conformità SOX e nell'audit basato sul rischio in gruppi industriali e bancari."
+  },
+  "searchIndex": {
+   "roles": [
+    "Risk Manager",
+    "Internal Audit Principal",
+    "Compliance Manager"
+   ],
+   "skills": [
+    "COSO",
+    "SOX",
+    "ACL",
+    "Enterprise Risk Management",
+    "Internal Controls"
+   ],
+   "industries": [
+    "Automotive",
+    "Banking",
+    "Manufacturing"
+   ]
+  },
+  "tags": [
+   "risk",
+   "erm",
+   "sox",
+   "audit"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Head of Internal Audit con diciassette anni di esperienza nella direzione delle funzioni di audit e nel governo del rischio. Esperta nella definizione del piano di audit basato sul rischio e nella relazione con il comitato controllo e rischi. In possesso delle certificazioni CIA e CISA.",
+  "careerStartYear": 2009,
+  "personalInformation": {
+   "name": "Silvia Marino",
+   "role": "Head of Internal Audit",
+   "summary": "Direttrice della funzione di audit interno orientata al governo del rischio e all'assurance sui controlli.",
+   "contact": {
+    "phone": "+39 335 118 7742",
+    "email": "silvia.marino@example.com",
+    "address": {
+     "streetNumber": "6",
+     "streetName": "della Spiga",
+     "streetType": "Via",
+     "city": "Milano",
+     "state": "Lombardia",
+     "zipCode": "20121",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/silviamarino"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2027-01-15",
+    "noticePeriodDays": 120,
+    "interviewAvailability": [
+     "Martedì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Direzione audit",
+    "skills": [
+     "Piano di audit basato sul rischio",
+     "Governance dell'audit",
+     "Assurance sui controlli"
+    ]
+   },
+   {
+    "category": "Rischio e compliance",
+    "skills": [
+     "Enterprise risk management",
+     "SOX",
+     "Compliance"
+    ]
+   },
+   {
+    "category": "Leadership",
+    "skills": [
+     "Gestione della funzione audit",
+     "Relazione con il comitato",
+     "Sviluppo del team"
+    ]
+   },
+   {
+    "category": "Strumenti",
+    "skills": [
+     "ACL",
+     "IDEA",
+     "Power BI"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Direzione audit interno",
+    "Piano di audit basato sul rischio",
+    "Governance del rischio",
+    "Assurance"
+   ],
+   "keyResponsibilities": [
+    "Definizione del piano di audit annuale basato sul rischio",
+    "Direzione della funzione di audit interno",
+    "Reporting al comitato controllo e rischi",
+    "Coordinamento con il collegio sindacale e i revisori"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "UniCredit",
+    "website": "https://www.unicredit.it",
+    "location": "Milano, Italia",
+    "from": "2017-01",
+    "to": "Present",
+    "position": "Head of Internal Audit",
+    "activities": [
+     {
+      "project": "Funzione di audit di gruppo",
+      "tasks": [
+       "Direzione di un team di quindici auditor",
+       "Definizione del piano di audit basato sul rischio",
+       "Reporting al comitato controllo e rischi"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ristrutturato la funzione introducendo data analytics diffusa",
+     "Aumentato la copertura di audit sui rischi chiave del 35%"
+    ],
+    "toolsAndTechnologies": [
+     "ACL",
+     "IDEA",
+     "Power BI"
+    ]
+   },
+   {
+    "company": "Mediobanca",
+    "website": "https://www.mediobanca.com",
+    "location": "Milano, Italia",
+    "from": "2013-02",
+    "to": "2016-12",
+    "position": "Internal Audit Manager",
+    "activities": [
+     {
+      "project": "Audit dei processi finanziari",
+      "tasks": [
+       "Coordinamento dei team di audit",
+       "Pianificazione degli interventi",
+       "Reporting al management"
+      ]
+     }
+    ],
+    "achievements": [
+     "Migliorato l'efficienza del ciclo di audit del 25%"
+    ],
+    "toolsAndTechnologies": [
+     "ACL",
+     "Excel"
+    ]
+   },
+   {
+    "company": "EY",
+    "website": "https://www.ey.com",
+    "location": "Milano, Italia",
+    "from": "2009-09",
+    "to": "2013-01",
+    "position": "Senior Auditor",
+    "activities": [
+     {
+      "project": "Revisione legale",
+      "tasks": [
+       "Pianificazione della revisione",
+       "Verifica delle poste di bilancio",
+       "Coordinamento del team junior"
+      ]
+     }
+    ],
+    "achievements": [
+     "Gestito clienti bancari di grandi dimensioni"
+    ],
+    "toolsAndTechnologies": [
+     "Audit software",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2009",
+    "institution": "Università Bocconi",
+    "degree": "Laurea Magistrale in Economia Aziendale",
+    "fieldOfStudy": "Revisione e controllo",
+    "achievements": [
+     "Laurea con lode"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "CIA (Certified Internal Auditor)",
+    "institution": "IIA",
+    "year": "2014",
+    "description": "Certificazione internazionale per gli auditor interni."
+   },
+   {
+    "title": "CISA (Certified Information Systems Auditor)",
+    "institution": "ISACA",
+    "year": "2016",
+    "description": "Certificazione sull'audit dei sistemi informativi."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "ACL",
+    "IDEA",
+    "Power BI",
+    "Excel",
+    "SOX",
+    "COSO ERM"
+   ],
+   "softSkills": [
+    "Leadership",
+    "Visione strategica",
+    "Comunicazione con il board"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Trasformazione della funzione di audit",
+    "description": "Ristrutturazione della funzione di audit con introduzione diffusa di data analytics.",
+    "date": "2020-06",
+    "impact": "Copertura di audit sui rischi chiave aumentata del 35%."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Equitazione",
+   "Opera lirica",
+   "Trekking"
+  ],
+  "references": [
+   {
+    "name": "Alberto Sala",
+    "position": "Chair of Audit Committee",
+    "company": "UniCredit",
+    "contact": {
+     "phone": "+39 335 662 0091",
+     "email": "alberto.sala@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 95000,
+   "max": 125000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Internal Audit Leadership",
+   "secondaryClusters": [
+    "Risk Governance",
+    "Assurance"
+   ],
+   "functionalExpertise": [
+    "Audit leadership",
+    "Risk-based audit planning",
+    "Governance"
+   ],
+   "skillDepth": "hybrid",
+   "businessImpact": [
+    "Audit function transformation",
+    "Increased risk coverage"
+   ],
+   "industryDomains": [
+    "Banking",
+    "Financial Services"
+   ],
+   "environmentFit": [
+    "Assurance functions",
+    "Corporate governance"
+   ],
+   "seniorityLevel": "director",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.93,
+   "clusterReasoning": "Head of Internal Audit con esperienza nella direzione della funzione di audit, nel piano basato sul rischio e nella relazione con il comitato controllo e rischi in ambito bancario."
+  },
+  "searchIndex": {
+   "roles": [
+    "Head of Internal Audit",
+    "Chief Audit Executive",
+    "Audit Director"
+   ],
+   "skills": [
+    "COSO",
+    "SOX",
+    "ACL",
+    "IDEA",
+    "Risk-Based Audit",
+    "Assurance"
+   ],
+   "industries": [
+    "Banking",
+    "Financial Services",
+    "Insurance"
+   ]
+  },
+  "tags": [
+   "audit",
+   "director",
+   "risk-governance",
+   "assurance"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Analista fiscale con tre anni di esperienza nella gestione dell'IVA e degli adempimenti dichiarativi. Solida conoscenza della normativa IVA nazionale e intracomunitaria e buona padronanza di Excel. Precisa e aggiornata sulle scadenze fiscali.",
+  "careerStartYear": 2023,
+  "personalInformation": {
+   "name": "Giulio Rizzo",
+   "role": "Analista fiscale",
+   "summary": "Analista fiscale junior orientato agli adempimenti IVA e dichiarativi, attento all'aggiornamento normativo.",
+   "contact": {
+    "phone": "+39 342 990 1178",
+    "email": "giulio.rizzo@example.com",
+    "address": {
+     "streetNumber": "17",
+     "streetName": "Washington",
+     "streetType": "Via",
+     "city": "Milano",
+     "state": "Lombardia",
+     "zipCode": "20146",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/giuliorizzo"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-08-01",
+    "noticePeriodDays": 30,
+    "interviewAvailability": [
+     "Lunedì mattina",
+     "Venerdì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Fiscalità",
+    "skills": [
+     "IVA nazionale",
+     "IVA intracomunitaria",
+     "Adempimenti dichiarativi"
+    ]
+   },
+   {
+    "category": "Compliance fiscale",
+    "skills": [
+     "Liquidazioni IVA",
+     "Esterometro",
+     "Intrastat"
+    ]
+   },
+   {
+    "category": "Sistemi",
+    "skills": [
+     "SAP",
+     "Excel"
+    ]
+   },
+   {
+    "category": "Normativa",
+    "skills": [
+     "Normativa IVA",
+     "Fatturazione elettronica"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "IVA",
+    "Adempimenti fiscali",
+    "Fatturazione elettronica",
+    "Compliance IVA"
+   ],
+   "keyResponsibilities": [
+    "Predisposizione delle liquidazioni IVA periodiche",
+    "Gestione degli adempimenti Intrastat",
+    "Controllo della fatturazione elettronica",
+    "Supporto alle dichiarazioni fiscali"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Campari Group",
+    "website": "https://www.camparigroup.com",
+    "location": "Milano, Italia",
+    "from": "2024-06",
+    "to": "Present",
+    "position": "Analista fiscale",
+    "activities": [
+     {
+      "project": "Compliance IVA di gruppo",
+      "tasks": [
+       "Predisposizione delle liquidazioni IVA",
+       "Gestione degli adempimenti Intrastat",
+       "Controllo della fatturazione elettronica"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ridotto gli errori negli adempimenti IVA introducendo un controllo automatico",
+     "Rispettato il 100% delle scadenze fiscali"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Excel"
+    ]
+   },
+   {
+    "company": "BDO Italia",
+    "website": "https://www.bdo.it",
+    "location": "Milano, Italia",
+    "from": "2023-02",
+    "to": "2024-05",
+    "position": "Tax Assistant",
+    "activities": [
+     {
+      "project": "Adempimenti fiscali clienti",
+      "tasks": [
+       "Predisposizione delle dichiarazioni IVA",
+       "Calcolo delle imposte",
+       "Supporto ai consulenti fiscali"
+      ]
+     }
+    ],
+    "achievements": [
+     "Gestito un portafoglio di quindici clienti PMI"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "Software fiscale"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2022",
+    "institution": "Università degli Studi di Milano-Bicocca",
+    "degree": "Laurea Magistrale in Economia",
+    "fieldOfStudy": "Diritto tributario",
+    "achievements": [
+     "Tesi sulla normativa IVA intracomunitaria"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Master in Diritto Tributario",
+    "institution": "Il Sole 24 Ore Business School",
+    "year": "2023",
+    "description": "Master specialistico in fiscalità d'impresa e IVA."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "Excel",
+    "Software fiscale"
+   ],
+   "softSkills": [
+    "Precisione",
+    "Aggiornamento normativo",
+    "Organizzazione"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "intermediate",
+      "written": "intermediate",
+      "spoken": "intermediate"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Controllo automatico degli adempimenti IVA",
+    "description": "Sviluppo di un file di controllo per la quadratura delle liquidazioni IVA.",
+    "date": "2025-03",
+    "impact": "Ridotti gli errori dichiarativi e rispettate tutte le scadenze."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Tennis",
+   "Fotografia urbana",
+   "Cucina siciliana"
+  ],
+  "references": [
+   {
+    "name": "Marta Longo",
+    "position": "Tax Manager",
+    "company": "Campari Group",
+    "contact": {
+     "phone": "+39 342 118 6650",
+     "email": "marta.longo@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 30000,
+   "max": 38000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Corporate Tax",
+   "secondaryClusters": [
+    "VAT Compliance",
+    "Tax Reporting"
+   ],
+   "functionalExpertise": [
+    "VAT compliance",
+    "Tax filings",
+    "E-invoicing"
+   ],
+   "skillDepth": "generalist",
+   "businessImpact": [
+    "Reduced filing errors",
+    "Met all deadlines"
+   ],
+   "industryDomains": [
+    "Consumer Goods",
+    "Professional Services"
+   ],
+   "environmentFit": [
+    "Tax functions",
+    "Corporate finance"
+   ],
+   "seniorityLevel": "midLevel",
+   "leadershipAndInfluence": "individualContributor",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.84,
+   "clusterReasoning": "Analista fiscale junior con solida base negli adempimenti IVA e dichiarativi e buona conoscenza di SAP."
+  },
+  "searchIndex": {
+   "roles": [
+    "Tax Analyst",
+    "Tax Assistant",
+    "VAT Specialist"
+   ],
+   "skills": [
+    "VAT",
+    "SAP",
+    "Excel",
+    "Tax Compliance",
+    "Intrastat"
+   ],
+   "industries": [
+    "Consumer Goods",
+    "Professional Services",
+    "Manufacturing"
+   ]
+  },
+  "tags": [
+   "tax",
+   "vat",
+   "compliance",
+   "sap"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Tax Specialist senior con nove anni di esperienza in fiscalità d'impresa e transfer pricing. Esperta nella gestione delle imposte dirette e indirette e nella predisposizione della documentazione di transfer pricing. Abituata a interfacciarsi con l'Agenzia delle Entrate e i consulenti esterni.",
+  "careerStartYear": 2017,
+  "personalInformation": {
+   "name": "Chiara Bruno",
+   "role": "Tax Specialist senior",
+   "summary": "Specialista fiscale senior con focus su imposte dirette, IVA e transfer pricing in contesti multinazionali.",
+   "contact": {
+    "phone": "+39 349 118 7743",
+    "email": "chiara.bruno@example.com",
+    "address": {
+     "streetNumber": "29",
+     "streetName": "Barberini",
+     "streetType": "Via",
+     "city": "Roma",
+     "state": "Lazio",
+     "zipCode": "00187",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/chiarabruno"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-10-15",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Martedì pomeriggio",
+     "Giovedì mattina"
+    ],
+    "preferredWorkTypes": [
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Fiscalità d'impresa",
+    "skills": [
+     "Imposte dirette",
+     "IVA",
+     "Tax provision"
+    ]
+   },
+   {
+    "category": "Transfer pricing",
+    "skills": [
+     "Documentazione transfer pricing",
+     "Analisi di comparabilità",
+     "Policy intercompany"
+    ]
+   },
+   {
+    "category": "Compliance",
+    "skills": [
+     "Dichiarazioni fiscali",
+     "Rapporti con l'Agenzia delle Entrate"
+    ]
+   },
+   {
+    "category": "Sistemi",
+    "skills": [
+     "SAP",
+     "Tax engine",
+     "Excel"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Fiscalità d'impresa",
+    "Transfer pricing",
+    "Tax compliance",
+    "Tax provision"
+   ],
+   "keyResponsibilities": [
+    "Predisposizione delle dichiarazioni fiscali",
+    "Gestione della documentazione di transfer pricing",
+    "Calcolo della tax provision per il bilancio",
+    "Supporto alle verifiche fiscali"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Eni",
+    "website": "https://www.eni.com",
+    "location": "Roma, Italia",
+    "from": "2021-01",
+    "to": "Present",
+    "position": "Tax Specialist senior",
+    "activities": [
+     {
+      "project": "Transfer pricing di gruppo",
+      "tasks": [
+       "Predisposizione del master file e del local file",
+       "Analisi di comparabilità",
+       "Supporto alle verifiche dell'Agenzia delle Entrate"
+      ]
+     }
+    ],
+    "achievements": [
+     "Chiuso positivamente una verifica su transfer pricing",
+     "Standardizzato la documentazione TP per le controllate estere"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Tax engine",
+     "Excel"
+    ]
+   },
+   {
+    "company": "EY",
+    "website": "https://www.ey.com",
+    "location": "Roma, Italia",
+    "from": "2017-09",
+    "to": "2020-12",
+    "position": "Tax Consultant",
+    "activities": [
+     {
+      "project": "Consulenza fiscale d'impresa",
+      "tasks": [
+       "Assistenza nelle dichiarazioni fiscali",
+       "Analisi di transfer pricing",
+       "Pareri fiscali per clienti corporate"
+      ]
+     }
+    ],
+    "achievements": [
+     "Gestito progetti di transfer pricing per gruppi multinazionali"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "Tax software"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2017",
+    "institution": "LUISS Guido Carli",
+    "degree": "Laurea Magistrale in Economia e Diritto d'Impresa",
+    "fieldOfStudy": "Diritto tributario",
+    "achievements": [
+     "Tesi sul transfer pricing e le linee guida OCSE"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Advanced Diploma in International Taxation (ADIT)",
+    "institution": "CIOT",
+    "year": "2021",
+    "description": "Certificazione internazionale in fiscalità internazionale e transfer pricing."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "Tax engine",
+    "Excel"
+   ],
+   "softSkills": [
+    "Rigore",
+    "Capacità analitiche",
+    "Comunicazione"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Documentazione transfer pricing di gruppo",
+    "description": "Standardizzazione del master file e dei local file per le controllate estere.",
+    "date": "2023-06",
+    "impact": "Ridotto il rischio fiscale e chiusa positivamente una verifica dell'Agenzia delle Entrate."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Pilates",
+   "Viaggi",
+   "Degustazioni"
+  ],
+  "references": [
+   {
+    "name": "Stefano Grassi",
+    "position": "Head of Tax",
+    "company": "Eni",
+    "contact": {
+     "phone": "+39 349 550 2201",
+     "email": "stefano.grassi@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 52000,
+   "max": 64000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Corporate Tax",
+   "secondaryClusters": [
+    "Transfer Pricing",
+    "Tax Compliance"
+   ],
+   "functionalExpertise": [
+    "Corporate tax",
+    "Transfer pricing",
+    "Tax provision"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Closed TP audit positively",
+    "Standardized TP documentation"
+   ],
+   "industryDomains": [
+    "Energy",
+    "Professional Services"
+   ],
+   "environmentFit": [
+    "Tax functions",
+    "Multinational finance"
+   ],
+   "seniorityLevel": "senior",
+   "leadershipAndInfluence": "individualContributor",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.9,
+   "clusterReasoning": "Tax Specialist senior con esperienza in fiscalità d'impresa e transfer pricing in gruppi multinazionali e in consulenza."
+  },
+  "searchIndex": {
+   "roles": [
+    "Senior Tax Specialist",
+    "Tax Consultant",
+    "Transfer Pricing Specialist"
+   ],
+   "skills": [
+    "Transfer Pricing",
+    "VAT",
+    "SAP",
+    "Tax Provision",
+    "OECD Guidelines"
+   ],
+   "industries": [
+    "Energy",
+    "Professional Services",
+    "Manufacturing"
+   ]
+  },
+  "tags": [
+   "tax",
+   "transfer-pricing",
+   "corporate-tax",
+   "compliance"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Treasury Analyst senior con dodici anni di esperienza nella gestione della liquidità e dei rapporti bancari. Esperto di cash management, cash pooling e gestione del rischio di cambio. Padronanza dei sistemi di tesoreria e forte attenzione all'ottimizzazione del capitale circolante.",
+  "careerStartYear": 2014,
+  "personalInformation": {
+   "name": "Lorenzo Ferretti",
+   "role": "Treasury Analyst senior",
+   "summary": "Specialista di tesoreria orientato alla gestione della liquidità, al cash pooling e alla copertura dei rischi finanziari.",
+   "contact": {
+    "phone": "+39 340 662 8891",
+    "email": "lorenzo.ferretti@example.com",
+    "address": {
+     "streetNumber": "8",
+     "streetName": "Melchiorre Gioia",
+     "streetType": "Via",
+     "city": "Milano",
+     "state": "Lombardia",
+     "zipCode": "20124",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/lorenzoferretti"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-11-01",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Mercoledì mattina",
+     "Venerdì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Tesoreria",
+    "skills": [
+     "Cash management",
+     "Cash pooling",
+     "Gestione della liquidità"
+    ]
+   },
+   {
+    "category": "Rischi finanziari",
+    "skills": [
+     "Copertura del rischio di cambio",
+     "Gestione del rischio di tasso"
+    ]
+   },
+   {
+    "category": "Rapporti bancari",
+    "skills": [
+     "Relazione con le banche",
+     "Gestione delle linee di credito"
+    ]
+   },
+   {
+    "category": "Sistemi",
+    "skills": [
+     "Kyriba",
+     "SAP",
+     "Excel"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Cash management",
+    "Gestione della liquidità",
+    "Copertura dei rischi finanziari",
+    "Capitale circolante"
+   ],
+   "keyResponsibilities": [
+    "Gestione della posizione di liquidità giornaliera",
+    "Coordinamento del cash pooling di gruppo",
+    "Esecuzione delle coperture di cambio",
+    "Ottimizzazione del capitale circolante"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Brembo",
+    "website": "https://www.brembo.com",
+    "location": "Bergamo, Italia",
+    "from": "2019-03",
+    "to": "Present",
+    "position": "Treasury Analyst senior",
+    "activities": [
+     {
+      "project": "Tesoreria di gruppo",
+      "tasks": [
+       "Gestione del cash pooling internazionale",
+       "Esecuzione delle coperture di cambio",
+       "Reporting della posizione di liquidità"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ridotto gli oneri finanziari del gruppo del 10%",
+     "Ottimizzato il capitale circolante liberando liquidità"
+    ],
+    "toolsAndTechnologies": [
+     "Kyriba",
+     "SAP",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Mapei",
+    "website": "https://www.mapei.com",
+    "location": "Milano, Italia",
+    "from": "2014-09",
+    "to": "2019-02",
+    "position": "Treasury Analyst",
+    "activities": [
+     {
+      "project": "Cash management",
+      "tasks": [
+       "Gestione dei pagamenti",
+       "Riconciliazione dei conti bancari",
+       "Monitoraggio della liquidità"
+      ]
+     }
+    ],
+    "achievements": [
+     "Automatizzato il reporting della posizione di cassa"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2014",
+    "institution": "Università Cattolica del Sacro Cuore",
+    "degree": "Laurea Magistrale in Economia",
+    "fieldOfStudy": "Finanza aziendale",
+    "achievements": [
+     "Tesi sulla gestione del rischio di cambio"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Certified Treasury Professional (CTP)",
+    "institution": "AFP",
+    "year": "2020",
+    "description": "Certificazione internazionale per i professionisti della tesoreria."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Kyriba",
+    "SAP",
+    "Excel"
+   ],
+   "softSkills": [
+    "Precisione",
+    "Gestione delle priorità",
+    "Negoziazione"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Ottimizzazione del cash pooling",
+    "description": "Ridisegno della struttura di cash pooling internazionale del gruppo.",
+    "date": "2022-04",
+    "impact": "Ridotti gli oneri finanziari del 10% e migliorata la visibilità sulla liquidità."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Mountain bike",
+   "Fotografia",
+   "Cucina lombarda"
+  ],
+  "references": [
+   {
+    "name": "Elena Vitali",
+    "position": "Group Treasurer",
+    "company": "Brembo",
+    "contact": {
+     "phone": "+39 340 118 3320",
+     "email": "elena.vitali@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 50000,
+   "max": 62000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Treasury",
+   "secondaryClusters": [
+    "Cash Management",
+    "Financial Risk Management"
+   ],
+   "functionalExpertise": [
+    "Cash management",
+    "Cash pooling",
+    "FX risk management"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Reduced financial charges",
+    "Improved working capital"
+   ],
+   "industryDomains": [
+    "Manufacturing",
+    "Automotive"
+   ],
+   "environmentFit": [
+    "Treasury functions",
+    "Corporate finance"
+   ],
+   "seniorityLevel": "senior",
+   "leadershipAndInfluence": "individualContributor",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.9,
+   "clusterReasoning": "Treasury Analyst senior con esperienza nel cash management, nel cash pooling internazionale e nella copertura dei rischi finanziari."
+  },
+  "searchIndex": {
+   "roles": [
+    "Senior Treasury Analyst",
+    "Treasury Analyst",
+    "Cash Manager"
+   ],
+   "skills": [
+    "Kyriba",
+    "SAP",
+    "Cash Management",
+    "Cash Pooling",
+    "FX Hedging"
+   ],
+   "industries": [
+    "Manufacturing",
+    "Automotive",
+    "Industrial"
+   ]
+  },
+  "tags": [
+   "treasury",
+   "cash-management",
+   "kyriba",
+   "fx"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Transfer Pricing Lead con quattordici anni di esperienza nella fiscalità internazionale e nel controlling fiscale di gruppi multinazionali. Esperto nella definizione delle policy intercompany e nella gestione dei contenziosi. Riconosciuto per l'approccio pratico alla gestione del rischio fiscale.",
+  "careerStartYear": 2012,
+  "personalInformation": {
+   "name": "Marco Serra",
+   "role": "Transfer Pricing Lead",
+   "summary": "Responsabile di transfer pricing e fiscalità internazionale orientato alla gestione del rischio e alla difesa in sede di verifica.",
+   "contact": {
+    "phone": "+39 348 220 1190",
+    "email": "marco.serra@example.com",
+    "address": {
+     "streetNumber": "11",
+     "streetName": "Verdi",
+     "streetType": "Via",
+     "city": "Milano",
+     "state": "Lombardia",
+     "zipCode": "20121",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/marcoserra"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-12-01",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Lunedì pomeriggio",
+     "Giovedì mattina"
+    ],
+    "preferredWorkTypes": [
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Fiscalità internazionale",
+    "skills": [
+     "Transfer pricing",
+     "Fiscalità internazionale",
+     "Linee guida OCSE"
+    ]
+   },
+   {
+    "category": "Gestione del rischio fiscale",
+    "skills": [
+     "Contenzioso fiscale",
+     "Advance Pricing Agreement",
+     "Tax governance"
+    ]
+   },
+   {
+    "category": "Controlling fiscale",
+    "skills": [
+     "Tax provision",
+     "Effective tax rate",
+     "Policy intercompany"
+    ]
+   },
+   {
+    "category": "Sistemi",
+    "skills": [
+     "SAP",
+     "Tax engine",
+     "Excel"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Transfer pricing",
+    "Fiscalità internazionale",
+    "Gestione del rischio fiscale",
+    "Controlling fiscale"
+   ],
+   "keyResponsibilities": [
+    "Definizione delle policy di transfer pricing di gruppo",
+    "Gestione dei contenziosi e delle verifiche fiscali",
+    "Coordinamento degli Advance Pricing Agreement",
+    "Monitoraggio dell'effective tax rate"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Luxottica",
+    "website": "https://www.luxottica.com",
+    "location": "Milano, Italia",
+    "from": "2018-02",
+    "to": "Present",
+    "position": "Transfer Pricing Lead",
+    "activities": [
+     {
+      "project": "Policy di transfer pricing di gruppo",
+      "tasks": [
+       "Definizione delle policy intercompany",
+       "Coordinamento di un Advance Pricing Agreement",
+       "Gestione delle verifiche fiscali internazionali"
+      ]
+     }
+    ],
+    "achievements": [
+     "Chiuso un APA con l'amministrazione fiscale riducendo l'incertezza",
+     "Ridotto l'esposizione fiscale su operazioni intercompany"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Tax engine",
+     "Excel"
+    ]
+   },
+   {
+    "company": "PwC",
+    "website": "https://www.pwc.com",
+    "location": "Milano, Italia",
+    "from": "2012-09",
+    "to": "2018-01",
+    "position": "Transfer Pricing Manager",
+    "activities": [
+     {
+      "project": "Consulenza transfer pricing",
+      "tasks": [
+       "Predisposizione della documentazione TP",
+       "Analisi di comparabilità",
+       "Assistenza nel contenzioso"
+      ]
+     }
+    ],
+    "achievements": [
+     "Gestito progetti TP per gruppi multinazionali di primo piano"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "Tax software"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2012",
+    "institution": "Università Bocconi",
+    "degree": "Laurea Magistrale in Economia e Legislazione d'Impresa",
+    "fieldOfStudy": "Diritto tributario",
+    "achievements": [
+     "Laurea con lode"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Dottore Commercialista",
+    "institution": "Ordine dei Dottori Commercialisti di Milano",
+    "year": "2015",
+    "description": "Abilitazione alla professione di Dottore Commercialista."
+   },
+   {
+    "title": "Advanced Diploma in International Taxation (ADIT)",
+    "institution": "CIOT",
+    "year": "2017",
+    "description": "Certificazione internazionale in fiscalità internazionale."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "Tax engine",
+    "Excel"
+   ],
+   "softSkills": [
+    "Pensiero strategico",
+    "Negoziazione",
+    "Comunicazione"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Advance Pricing Agreement di gruppo",
+    "description": "Negoziazione e chiusura di un APA con l'amministrazione fiscale.",
+    "date": "2021-09",
+    "impact": "Ridotta l'incertezza fiscale e stabilizzato l'effective tax rate di gruppo."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Vela",
+   "Lettura giuridica",
+   "Cucina ligure"
+  ],
+  "references": [
+   {
+    "name": "Giulia Ferrari",
+    "position": "Group Head of Tax",
+    "company": "Luxottica",
+    "contact": {
+     "phone": "+39 348 662 0012",
+     "email": "giulia.ferrari@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 72000,
+   "max": 88000
+  },
+  "candidateClustering": {
+   "primaryCluster": "International Tax",
+   "secondaryClusters": [
+    "Transfer Pricing",
+    "Tax Governance"
+   ],
+   "functionalExpertise": [
+    "Transfer pricing",
+    "International taxation",
+    "Tax risk management"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Closed APA",
+    "Reduced tax exposure"
+   ],
+   "industryDomains": [
+    "Consumer Goods",
+    "Professional Services"
+   ],
+   "environmentFit": [
+    "Tax functions",
+    "Multinational finance"
+   ],
+   "seniorityLevel": "lead",
+   "leadershipAndInfluence": "crossFunctionalLeader",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.91,
+   "clusterReasoning": "Transfer Pricing Lead con esperienza nella fiscalità internazionale, nella definizione delle policy intercompany e nella gestione dei contenziosi e degli APA."
+  },
+  "searchIndex": {
+   "roles": [
+    "Transfer Pricing Lead",
+    "International Tax Manager",
+    "Tax Manager"
+   ],
+   "skills": [
+    "Transfer Pricing",
+    "International Taxation",
+    "OECD Guidelines",
+    "SAP",
+    "Tax Provision"
+   ],
+   "industries": [
+    "Consumer Goods",
+    "Professional Services",
+    "Manufacturing"
+   ]
+  },
+  "tags": [
+   "tax",
+   "lead",
+   "transfer-pricing",
+   "international-tax"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Head of Tax & Treasury con sedici anni di esperienza nella direzione della fiscalità e della tesoreria di gruppi multinazionali. Esperta nella definizione della strategia fiscale, nella gestione del rischio finanziario e nei rapporti con le autorità fiscali e il sistema bancario. Dottore Commercialista e Revisore Legale.",
+  "careerStartYear": 2010,
+  "personalInformation": {
+   "name": "Beatrice Conti",
+   "role": "Head of Tax & Treasury",
+   "summary": "Direttrice fiscale e di tesoreria orientata alla strategia fiscale, alla gestione del rischio finanziario e alla governance.",
+   "contact": {
+    "phone": "+39 335 220 7781",
+    "email": "beatrice.conti@example.com",
+    "address": {
+     "streetNumber": "4",
+     "streetName": "Veneto",
+     "streetType": "Via",
+     "city": "Roma",
+     "state": "Lazio",
+     "zipCode": "00187",
+     "country": "Italia"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/beatriceconti"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2027-02-01",
+    "noticePeriodDays": 120,
+    "interviewAvailability": [
+     "Martedì pomeriggio"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Direzione fiscale",
+    "skills": [
+     "Strategia fiscale",
+     "Tax governance",
+     "Effective tax rate",
+     "Gestione del rischio fiscale"
+    ]
+   },
+   {
+    "category": "Direzione tesoreria",
+    "skills": [
+     "Gestione della liquidità di gruppo",
+     "Finanziamenti",
+     "Gestione del rischio finanziario"
+    ]
+   },
+   {
+    "category": "Leadership",
+    "skills": [
+     "Gestione di funzioni",
+     "Rapporti con banche e autorità fiscali",
+     "Change management"
+    ]
+   },
+   {
+    "category": "Sistemi",
+    "skills": [
+     "SAP",
+     "Kyriba",
+     "Tax engine"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Strategia fiscale",
+    "Direzione tesoreria",
+    "Gestione del rischio finanziario",
+    "Tax governance"
+   ],
+   "keyResponsibilities": [
+    "Direzione delle funzioni di fiscalità e tesoreria di gruppo",
+    "Definizione della strategia fiscale e della tax governance",
+    "Gestione dei rapporti con le autorità fiscali e le banche",
+    "Ottimizzazione della struttura finanziaria e del rischio di cambio"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Enel",
+    "website": "https://www.enel.com",
+    "location": "Roma, Italia",
+    "from": "2018-01",
+    "to": "Present",
+    "position": "Head of Tax & Treasury",
+    "activities": [
+     {
+      "project": "Strategia fiscale e finanziaria di gruppo",
+      "tasks": [
+       "Direzione di un team di quattordici persone tra tax e treasury",
+       "Definizione della strategia fiscale di gruppo",
+       "Gestione dei rapporti con le autorità fiscali e il sistema bancario"
+      ]
+     }
+    ],
+    "achievements": [
+     "Ridotto l'effective tax rate di gruppo di due punti percentuali",
+     "Rifinanziato il debito di gruppo riducendo il costo medio"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Kyriba",
+     "Tax engine"
+    ]
+   },
+   {
+    "company": "Terna",
+    "website": "https://www.terna.it",
+    "location": "Roma, Italia",
+    "from": "2014-03",
+    "to": "2017-12",
+    "position": "Tax Manager",
+    "activities": [
+     {
+      "project": "Fiscalità d'impresa",
+      "tasks": [
+       "Coordinamento degli adempimenti fiscali",
+       "Gestione delle verifiche",
+       "Supporto alla tax provision"
+      ]
+     }
+    ],
+    "achievements": [
+     "Chiuso positivamente due verifiche fiscali"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Deloitte",
+    "website": "https://www.deloitte.com",
+    "location": "Roma, Italia",
+    "from": "2010-09",
+    "to": "2014-02",
+    "position": "Tax Consultant",
+    "activities": [
+     {
+      "project": "Consulenza fiscale corporate",
+      "tasks": [
+       "Assistenza fiscale a gruppi corporate",
+       "Analisi di transfer pricing",
+       "Pareri fiscali"
+      ]
+     }
+    ],
+    "achievements": [
+     "Gestito progetti fiscali complessi per clienti multinazionali"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "Tax software"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2010",
+    "institution": "LUISS Guido Carli",
+    "degree": "Laurea Magistrale in Economia e Diritto d'Impresa",
+    "fieldOfStudy": "Diritto tributario",
+    "achievements": [
+     "Laurea con lode"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Dottore Commercialista",
+    "institution": "Ordine dei Dottori Commercialisti di Roma",
+    "year": "2013",
+    "description": "Abilitazione alla professione di Dottore Commercialista."
+   },
+   {
+    "title": "Revisore Legale",
+    "institution": "Ministero dell'Economia e delle Finanze",
+    "year": "2015",
+    "description": "Iscrizione al Registro dei Revisori Legali."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "Kyriba",
+    "Tax engine",
+    "Excel"
+   ],
+   "softSkills": [
+    "Leadership",
+    "Visione strategica",
+    "Negoziazione"
+   ],
+   "languages": [
+    {
+     "language": "Italiano",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglese",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Ottimizzazione fiscale e rifinanziamento del debito",
+    "description": "Ridisegno della strategia fiscale di gruppo e rifinanziamento del debito.",
+    "date": "2021-11",
+    "impact": "Effective tax rate ridotto di due punti e costo medio del debito abbassato."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Equitazione",
+   "Arte rinascimentale",
+   "Vela"
+  ],
+  "references": [
+   {
+    "name": "Giorgio Ricci",
+    "position": "Group CFO",
+    "company": "Enel",
+    "contact": {
+     "phone": "+39 335 118 0012",
+     "email": "giorgio.ricci@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 100000,
+   "max": 135000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Tax & Treasury Leadership",
+   "secondaryClusters": [
+    "Tax Strategy",
+    "Treasury Management"
+   ],
+   "functionalExpertise": [
+    "Tax strategy",
+    "Treasury management",
+    "Financial risk management"
+   ],
+   "skillDepth": "hybrid",
+   "businessImpact": [
+    "Reduced effective tax rate",
+    "Lower cost of debt"
+   ],
+   "industryDomains": [
+    "Utilities",
+    "Energy"
+   ],
+   "environmentFit": [
+    "Corporate finance",
+    "Executive team"
+   ],
+   "seniorityLevel": "director",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.94,
+   "clusterReasoning": "Head of Tax & Treasury con esperienza nella direzione delle funzioni fiscali e di tesoreria, nella strategia fiscale e nella gestione del rischio finanziario di gruppi multinazionali."
+  },
+  "searchIndex": {
+   "roles": [
+    "Head of Tax",
+    "Tax Director",
+    "Head of Treasury"
+   ],
+   "skills": [
+    "Tax Strategy",
+    "Transfer Pricing",
+    "Treasury Management",
+    "SAP",
+    "Kyriba"
+   ],
+   "industries": [
+    "Utilities",
+    "Energy",
+    "Professional Services"
+   ]
+  },
+  "tags": [
+   "tax",
+   "treasury",
+   "director",
+   "strategy"
+  ]
+ }
+]

@@ -1,0 +1,440 @@
+[
+  {
+    "title": "Infermiere di Terapia Intensiva (Rianimazione)",
+    "description": "L'Azienda Ospedaliero-Universitaria di Padova, ospedale ad alta specializzazione, ricerca un Infermiere da inserire nell'Unità di Terapia Intensiva e Rianimazione per adulti, all'interno di un'équipe multidisciplinare di area critica.\n\nRispondendo al Coordinatore Infermieristico di reparto, garantirai un'assistenza ad alta intensità basata sulle evidenze a pazienti critici: gestione della ventilazione meccanica invasiva, monitoraggio emodinamico, titolazione delle infusioni di farmaci vasoattivi e risposta tempestiva alle situazioni cliniche in rapida evoluzione. Completerai valutazioni infermieristiche accurate, manterrai una documentazione precisa sulla cartella clinica elettronica e tutelerai in ogni momento la dignità e la sicurezza del paziente.\n\nNel quotidiano collaborerai a stretto contatto con anestesisti-rianimatori, fisioterapisti e farmacisti durante i giri visita, sosterrai i familiari nei colloqui più difficili e affiancherai il personale junior e gli studenti in tirocinio.\n\nRichiesto: iscrizione all'Albo OPI in corso di validità, almeno 3 anni di esperienza post-abilitazione di cui 2 in area critica o alta dipendenza, competenza nella ventilazione meccanica e nell'ALS, solide capacità di valutazione clinica.\n\nGradito: certificazione da istruttore BLS-D/ALS, esperienza con la terapia sostitutiva renale continua (CVVH) e partecipazione a progetti di audit clinico o miglioramento della qualità.\n\nRuolo in presenza presso Padova, su turnazione ciclica (diurni e notturni), aperto a infermieri iscritti all'Albo del Veneto. Offriamo inquadramento CCNL Sanità, percorso di affiancamento strutturato e formazione continua finanziata.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Critical Care Nursing",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Nursing Registration",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": true
+        },
+        {
+          "name": "Mechanical Ventilation",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Advanced Life Support",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Patient Assessment",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Renal Replacement Therapy",
+          "importance": "nice_to_have",
+          "weight": 0.11,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 2,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Padova",
+          "Venezia",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Hospitals and Clinics",
+          "Healthcare",
+          "Medical Devices"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Ricercatore Bioanalitico (Bioanalytical Scientist)",
+    "description": "Un'azienda biotech in forte crescita con sede a Milano ricerca un Ricercatore Bioanalitico per il proprio laboratorio di sviluppo preclinico e di fase iniziale. La posizione è ideale per un profilo mid con solide competenze in cromatografia liquida accoppiata alla spettrometria di massa.\n\nAll'interno del team di DMPK/Bioanalisi, svilupperai e validerai metodi analitici LC-MS/MS per la quantificazione di piccole molecole e biomarcatori in matrici biologiche, a supporto di studi di farmacocinetica e tossicocinetica. Curerai la convalida dei metodi secondo le linee guida FDA ed EMA e opererai in un ambiente conforme alle Good Laboratory Practice (GLP).\n\nSarai responsabile dell'esecuzione dei run analitici, dell'elaborazione dei dati, del controllo qualità dei risultati e della stesura di report di studio e sezioni di metodo. Collaborerai con i team di chimica, farmacologia e affari regolatori per garantire dati robusti e tracciabili.\n\nRichiesto: laurea magistrale o dottorato in Chimica, Biologia o Farmacia, 3-5 anni di esperienza in bioanalisi regolamentata, padronanza di LC-MS/MS e della convalida dei metodi, conoscenza operativa della GLP e delle buone pratiche di documentazione.\n\nGradito: esperienza con saggi su grandi molecole (ELISA, immunoassay), familiarità con software come Analyst o MassHunter e nozioni di elaborazione statistica dei dati.\n\nRuolo ibrido con base a Milano (3 giorni in laboratorio). Offriamo un ambiente scientifico stimolante, strumentazione all'avanguardia e percorsi di crescita professionale.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "LC-MS/MS",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Bioanalytical Method Validation",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GLP",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": true
+        },
+        {
+          "name": "Pharmacokinetics",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Chromatography",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Immunoassay (ELISA)",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Scientific Data Analysis",
+          "importance": "nice_to_have",
+          "weight": 0.05,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Milano",
+          "Monza",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Biotechnology",
+          "Pharmaceuticals",
+          "CRO"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.2,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Responsabile Affari Regolatori (Regulatory Affairs Manager)",
+    "description": "Un'azienda farmaceutica di medie dimensioni con sede a Roma ricerca un Responsabile Affari Regolatori senior per guidare le attività di registrazione e mantenimento delle autorizzazioni all'immissione in commercio in Italia e in Europa.\n\nRiportando al Direttore Regulatory, sarai responsabile della predisposizione e del coordinamento dei dossier regolatori in formato eCTD, delle procedure autorizzative (centralizzata, decentrata e di mutuo riconoscimento) presso EMA e AIFA, e della gestione del ciclo di vita del prodotto (variazioni, rinnovi, risposte alle domande delle autorità).\n\nDefinirai le strategie regolatorie per nuovi prodotti e linee esistenti, valuterai l'impatto delle nuove normative e delle linee guida ICH, e garantirai la conformità dell'etichettatura e del materiale informativo. Coordinerai team interfunzionali (qualità, farmacovigilanza, medico, marketing) e agirai come referente principale nei confronti delle autorità competenti.\n\nRichiesto: laurea in materie scientifiche, almeno 7 anni di esperienza in affari regolatori nel settore farmaceutico, comprovata padronanza delle sottomissioni eCTD e delle procedure EMA/AIFA, solida conoscenza delle linee guida ICH e del quadro normativo europeo.\n\nGradito: esperienza con dispositivi medici (MDR), conoscenza dei processi di pricing e rimborso, capacità di people management.\n\nRuolo ibrido con base a Roma. Offriamo un pacchetto retributivo competitivo, responsabilità strategiche e un ambiente internazionale.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Regulatory Submissions",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "eCTD",
+          "importance": "mandatory",
+          "weight": 0.19,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": true
+        },
+        {
+          "name": "EMA Procedures",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ICH Guidelines",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Lifecycle Management",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Medical Device Regulation (MDR)",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "People Management",
+          "importance": "nice_to_have",
+          "weight": 0.06,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Roma",
+          "Latina",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "Medical Devices"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Medical Science Liaison - Oncologia",
+    "description": "Una multinazionale farmaceutica ricerca un Medical Science Liaison (MSL) dedicato all'area oncologica per il territorio del Nord Italia, con base a Bologna. Il ruolo unisce competenza scientifica e relazione sul campo, all'interno del dipartimento Medical Affairs.\n\nCome MSL sarai il punto di riferimento scientifico verso gli opinion leader (KOL) e i centri oncologici di riferimento: costruirai relazioni peer-to-peer, presenterai dati clinici ed evidenze scientifiche, raccoglierai insight dal campo e supporterai gli studi clinici e i programmi di ricerca sponsorizzati dall'investigatore.\n\nContribuirai alla strategia medica di area, fornirai formazione scientifica interna alle funzioni commerciali e di market access, e garantirai il rispetto delle normative di settore e del codice deontologico nelle interazioni con gli operatori sanitari.\n\nRichiesto: laurea avanzata in ambito life sciences (PharmD, PhD, MD o equivalente), 3-5 anni di esperienza in ruoli Medical Affairs o MSL, preferibilmente in oncologia, eccellente capacità di comunicazione scientifica e conoscenza delle Good Clinical Practice (ICH-GCP). Necessaria disponibilità a viaggiare frequentemente sul territorio.\n\nGradito: esperienza in immuno-oncologia o terapie mirate, network consolidato con i centri oncologici del Nord Italia, competenze in health economics.\n\nRuolo da campo (field-based) con base a Bologna e copertura del Nord Italia. Offriamo auto aziendale, formazione continua e un percorso di carriera in ambito medico.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Medical Affairs",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Oncology",
+          "importance": "mandatory",
+          "weight": 0.21,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "KOL Engagement",
+          "importance": "important",
+          "weight": 0.17,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Scientific Communication",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ICH-GCP",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Health Economics",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Bologna",
+          "Milano",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "Healthcare"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Clinical Research Associate (CRA) Junior",
+    "description": "Una CRO internazionale ricerca un Clinical Research Associate (CRA) junior da inserire nel team di monitoraggio clinico, con base a Torino e copertura dei centri sperimentali del Nord-Ovest.\n\nRiportando al Clinical Team Manager, monitorerai gli studi clinici assegnati garantendo la conduzione degli stessi nel rispetto del protocollo, delle Good Clinical Practice (ICH-GCP) e della normativa applicabile. Effettuerai visite di monitoraggio (di selezione, inizio, in corso e chiusura) presso i centri, verificherai i dati sorgente (source data verification), gestirai la documentazione del Trial Master File e supporterai i centri nella risoluzione delle query.\n\nCollaborerai con sperimentatori, study coordinator e data management per garantire qualità, integrità dei dati e sicurezza dei soggetti arruolati. Contribuirai inoltre alla gestione delle scorte di farmaco sperimentale e al reporting degli eventi avversi in ambito di farmacovigilanza.\n\nRichiesto: laurea in materie scientifiche (biologia, farmacia, biotecnologie, medicina o equivalente), 1-2 anni di esperienza come CRA o Clinical Trial Assistant, conoscenza delle ICH-GCP, buona padronanza dell'inglese e disponibilità a viaggiare sul territorio.\n\nGradito: esperienza con sistemi EDC (Electronic Data Capture), nozioni di pharmacovigilance e conoscenza del regolamento europeo sulle sperimentazioni cliniche (CTR).\n\nRuolo ibrido con base a Torino e trasferte presso i centri clinici. Offriamo un percorso di formazione strutturato, mentorship e concrete opportunità di crescita in ambito clinico.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "ICH-GCP",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trial Monitoring",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Source Data Verification",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Trial Master File",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Pharmacovigilance",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Electronic Data Capture (EDC)",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "English Proficiency",
+          "importance": "nice_to_have",
+          "weight": 0.06,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 1,
+        "minRelevantYears": 1,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Torino",
+          "Milano",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "CRO",
+          "Pharmaceuticals",
+          "Biotechnology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.2,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  }
+]

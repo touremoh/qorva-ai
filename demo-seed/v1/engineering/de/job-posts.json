@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Maschinenbau-Konstrukteur (m/w/d) – SolidWorks/CATIA",
+    "description": "Für unser Entwicklungszentrum im Großraum München suchen wir eine erfahrene Konstrukteur:in im Maschinenbau, die Baugruppen und Einzelteile für Sondermaschinen und Antriebstechnik verantwortet.\n\nDeine Mission: Du überführst Anforderungen aus dem Lastenheft in fertigungsgerechte 3D-Modelle und technische Zeichnungen. Von der ersten Konzeptidee bis zur Serienreife begleitest du das Produkt und arbeitest eng mit Fertigung, Einkauf und Qualitätssicherung zusammen.\n\nDeine Aufgaben:\n- Konstruktion von Baugruppen und Einzelteilen mit SolidWorks und CATIA V5\n- Erstellung normgerechter Fertigungszeichnungen inklusive Form- und Lagetoleranzen (GD&T) nach DIN/ISO\n- Auslegung von Bauteilen mittels FEM-Berechnungen (ANSYS) und Werkstoffauswahl\n- Pflege der Stücklisten und Konstruktionsdaten im PDM-System\n- Technische Abstimmung mit Lieferanten und Unterstützung bei Musterbau und Erstbemusterung\n\nDein Profil:\n- Abgeschlossenes Studium im Maschinenbau oder eine Technikerausbildung\n- Mindestens 4 Jahre Erfahrung in der mechanischen Konstruktion\n- Sicherer Umgang mit SolidWorks; CATIA-Kenntnisse von Vorteil\n- Fundiertes Verständnis von Fertigungsverfahren (Zerspanung, Blechbearbeitung, Guss)\n\nNice-to-have: Erfahrung mit Tolerierung nach GPS sowie Grundkenntnisse in der Antriebs- und Getriebetechnik.\n\nArbeitsmodell: Hybrid mit Standort in München, bis zu zwei Tage Homeoffice pro Woche.",
+    "scoringRules": {
+      "skills": [
+        { "name": "SolidWorks", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "CATIA", "importance": "important", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GD&T", "importance": "important", "weight": 0.15, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "ANSYS", "importance": "important", "weight": 0.15, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Mechanical Design", "importance": "mandatory", "weight": 0.15, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "PDM", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "DIN Standards", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 4, "minRelevantYears": 3, "seniorityLevel": "mid" },
+      "locationPreferences": { "allowedLocations": ["München", "Augsburg", "Onsite"], "remoteAllowed": false, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Mechanical Engineering", "Machinery", "Automotive"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Tragwerksplaner / Structural Engineer (m/w/d) – Eurocode/Revit",
+    "description": "Für unser Ingenieurbüro mit Projekten in Deutschland, Österreich und der Schweiz suchen wir eine:n erfahrene:n Tragwerksplaner:in, die anspruchsvolle Hoch- und Ingenieurbauprojekte verantwortet.\n\nDeine Mission: Du übernimmst die statische Berechnung und Bemessung von Tragwerken aus Stahlbeton, Stahl und Holz und führst Projekte von der Vorplanung bis zur Ausführungsplanung.\n\nDeine Aufgaben:\n- Statische Berechnung und Bemessung nach Eurocode (EC0–EC8)\n- Modellierung und Bewehrungsplanung mit Revit und AutoCAD im BIM-Prozess\n- Durchführung von Tragwerksanalysen mit ETABS und STAAD.Pro\n- Erstellung prüffähiger statischer Nachweise und technischer Berichte\n- Fachliche Abstimmung mit Architekt:innen, Prüfingenieur:innen und Bauleitung\n\nDein Profil:\n- Abgeschlossenes Bauingenieurstudium mit Schwerpunkt Konstruktiver Ingenieurbau\n- Mindestens 7 Jahre Berufserfahrung in der Tragwerksplanung\n- Sehr gute Kenntnisse der Eurocodes und der einschlägigen nationalen Anhänge\n- Sicherer Umgang mit Statiksoftware sowie mit Revit im BIM-Umfeld\n\nNice-to-have: Erfahrung mit Erdbebenbemessung, mit geotechnischen Nachweisen sowie mit dem Bauen im Bestand und der Sanierung denkmalgeschützter Tragwerke.\n\nArbeitsmodell: Hybrid mit Büro in Frankfurt am Main, mit gelegentlichen Baustellenterminen im gesamten DACH-Raum und flexiblen Arbeitszeiten.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Eurocode", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Revit", "importance": "important", "weight": 0.15, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "ETABS", "importance": "important", "weight": 0.15, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "STAAD.Pro", "importance": "important", "weight": 0.15, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "AutoCAD", "importance": "important", "weight": 0.1, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Reinforced Concrete Design", "importance": "mandatory", "weight": 0.15, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "BIM", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 3, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 7, "minRelevantYears": 6, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Frankfurt am Main", "Wien", "Zürich", "Onsite"], "remoteAllowed": false, "strictness": "strict" },
+      "industryPreferences": { "preferredIndustries": ["Civil Engineering", "Construction", "Architecture"], "strictness": "strict" },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Elektrokonstrukteur / Electrical Design Engineer (m/w/d) – EPLAN/ETAP",
+    "description": "Für unseren Standort in Stuttgart suchen wir eine:n Elektrokonstrukteur:in für die Planung elektrischer Anlagen im Maschinen- und Anlagenbau.\n\nDeine Mission: Du planst und dokumentierst Schaltanlagen und Steuerungssysteme und stellst die Einhaltung der geltenden Normen sicher. Du bist die Schnittstelle zwischen mechanischer Konstruktion, Automatisierung und Inbetriebnahme.\n\nDeine Aufgaben:\n- Erstellung von Stromlauf- und Schaltplänen mit EPLAN Electric P8 und AutoCAD Electrical\n- Auslegung und Nachweis elektrischer Netze mit ETAP (Lastfluss, Kurzschluss, Schutzkoordination)\n- Auswahl von Komponenten und Erstellung von Klemmen- und Kabelplänen\n- Spezifikation von Steuerungen (PLC) und Anbindung an SCADA-Systeme\n- Sicherstellung der Konformität nach IEC 60364 und DIN VDE\n\nDein Profil:\n- Abgeschlossenes Studium der Elektrotechnik oder eine vergleichbare Technikerausbildung\n- 4 bis 5 Jahre Erfahrung in der elektrischen Konstruktion und Anlagenplanung\n- Sehr gute EPLAN-Kenntnisse und ein sicheres Normenverständnis\n- Grundkenntnisse in Automatisierungstechnik (PLC/SPS) von Vorteil\n\nNice-to-have: Erfahrung mit Antriebsauslegung und Explosionsschutz (ATEX).\n\nArbeitsmodell: Hybrid mit Standort in Stuttgart, ein bis zwei Tage Homeoffice pro Woche.",
+    "scoringRules": {
+      "skills": [
+        { "name": "EPLAN", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "ETAP", "importance": "important", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "AutoCAD Electrical", "importance": "important", "weight": 0.15, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "PLC", "importance": "important", "weight": 0.15, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SCADA", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "IEC 60364", "importance": "important", "weight": 0.1, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Power Systems", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 4, "minRelevantYears": 4, "seniorityLevel": "mid" },
+      "locationPreferences": { "allowedLocations": ["Stuttgart", "Wien", "Onsite"], "remoteAllowed": false, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Electrical Engineering", "Automation", "Machinery"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Prozessingenieur / Lean Engineer (m/w/d) – Six Sigma",
+    "description": "Für unser Produktionswerk in Leipzig suchen wir eine:n motivierte:n Prozessingenieur:in am Berufseinstieg, die unsere Fertigungsprozesse analysiert und kontinuierlich verbessert.\n\nDeine Mission: Du sorgst dafür, dass unsere Produktionslinien effizienter, stabiler und verschwendungsärmer werden. Mit Methoden aus Lean und Six Sigma treibst du Verbesserungsprojekte direkt am Shopfloor voran.\n\nDeine Aufgaben:\n- Analyse und Optimierung von Fertigungsprozessen mit Lean-Methoden und Wertstromanalyse\n- Mitarbeit an Six-Sigma-Projekten zur Reduzierung von Ausschuss und Durchlaufzeiten\n- Pflege von Prozess- und Stammdaten im ERP-System (SAP)\n- Erstellung von Arbeits- und Prüfanweisungen sowie Unterstützung des Qualitätsmanagements nach ISO 9001\n- Begleitung von 5S- und Kaizen-Workshops in der Produktion\n\nDein Profil:\n- Abgeschlossenes Studium im Wirtschaftsingenieurwesen, Maschinenbau oder in der Produktionstechnik\n- Erste Praxiserfahrung durch Praktika oder Werkstudententätigkeit (0 bis 2 Jahre)\n- Grundkenntnisse in Lean Manufacturing und statistischer Prozessanalyse\n- Analytische Denkweise und Freude an der Arbeit direkt in der Fertigung\n\nNice-to-have: Six-Sigma-Zertifizierung (Yellow oder Green Belt) sowie erste SAP-Kenntnisse.\n\nArbeitsmodell: Vor Ort in Leipzig mit hoher Präsenz in der Produktion.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Lean Manufacturing", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Six Sigma", "importance": "important", "weight": 0.2, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Value Stream Mapping", "importance": "important", "weight": 0.15, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Process Optimization", "importance": "mandatory", "weight": 0.15, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "SAP", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "ISO 9001", "importance": "important", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Quality Management", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 0, "minRelevantYears": 0, "seniorityLevel": "junior" },
+      "locationPreferences": { "allowedLocations": ["Leipzig", "Onsite"], "remoteAllowed": false, "strictness": "strict" },
+      "industryPreferences": { "preferredIndustries": ["Manufacturing", "Industrial Engineering", "Automotive"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.45, "experience": 0.2, "location": 0.2, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "HVAC-Ingenieur / TGA-Fachplaner (m/w/d) – Revit MEP",
+    "description": "Für unser Planungsbüro für technische Gebäudeausrüstung mit Projekten in Deutschland und der Schweiz suchen wir eine:n erfahrene:n HVAC-Ingenieur:in für die Fachplanung von Heizungs-, Lüftungs- und Klimaanlagen.\n\nDeine Mission: Du planst energieeffiziente TGA-Anlagen für Gewerbe- und Industriebauten von der Konzeptphase bis zur Ausführungsplanung und stellst die Einhaltung der energetischen Vorgaben sicher.\n\nDeine Aufgaben:\n- Auslegung von Heizungs-, Lüftungs- und Klimasystemen (HVAC Design) inklusive Heiz- und Kühllastberechnung\n- Modellierung der Gewerke mit Revit MEP und AutoCAD im BIM-Prozess\n- Erstellung von Energiekonzepten und Nachweisen nach GEG sowie SIA-Normen für Schweizer Projekte\n- Auslegung von Kanal- und Rohrnetzen sowie Auswahl der Anlagentechnik\n- Fachliche Führung von Junior-Planer:innen und Abstimmung mit Architektur und Fachplanung\n\nDein Profil:\n- Abgeschlossenes Studium der Versorgungstechnik, Energietechnik oder des Maschinenbaus\n- Mindestens 6 Jahre Erfahrung in der TGA-/HVAC-Fachplanung\n- Sehr gute Kenntnisse in Revit MEP sowie in der Gebäudephysik\n- Fundiertes Wissen zu energetischen Vorschriften (GEG) und Normen im DACH-Raum\n\nNice-to-have: Erfahrung mit dynamischer Gebäudesimulation und Energy Modeling.\n\nArbeitsmodell: Hybrid mit Büro in Hamburg, gelegentliche Projekttermine in Basel.",
+    "scoringRules": {
+      "skills": [
+        { "name": "HVAC Design", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Revit MEP", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "AutoCAD", "importance": "important", "weight": 0.15, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Building Physics", "importance": "important", "weight": 0.15, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Load Calculation", "importance": "important", "weight": 0.1, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Energy Modeling", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "BIM", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 3, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 6, "minRelevantYears": 5, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Hamburg", "Basel", "Remote"], "remoteAllowed": true, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Building Services", "Construction", "Mechanical Engineering"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

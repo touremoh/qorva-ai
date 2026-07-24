@@ -1,0 +1,463 @@
+[
+  {
+    "title": "Amministratore Delegato / Country Manager Italia",
+    "description": "Gruppo industriale internazionale, controllato da un fondo di private equity, ricerca un Amministratore Delegato per guidare la filiale italiana con sede a Milano. Il candidato assumerà la piena responsabilità del conto economico (P&L) del Paese, con un fatturato di oltre 200 milioni di euro e più di 600 dipendenti.\n\nLa missione è consolidare la posizione di leadership sul mercato italiano, accelerare la crescita organica e per linee esterne, e completare un ambizioso piano di trasformazione organizzativa concordato con il consiglio di amministrazione.\n\nResponsabilità principali:\n- Definire e attuare la strategia di Paese in linea con gli obiettivi del gruppo e dello sponsor finanziario\n- Detenere la piena responsabilità di P&L, budget, cash flow e creazione di valore\n- Guidare il comitato esecutivo e sviluppare i talenti chiave della prima linea manageriale\n- Riferire periodicamente al board e agli investitori su risultati, rischi e opportunità\n- Identificare e negoziare operazioni di M&A e partnership strategiche\n- Rappresentare l'azienda presso istituzioni, clienti e stakeholder chiave\n\nRequisiti richiesti: consolidata esperienza in ruoli di General Management con responsabilità di P&L, comprovato track record di crescita e trasformazione, esperienza di reporting al board, MBA o formazione manageriale equivalente, eccellenti doti di leadership e stakeholder management.\n\nNice-to-have: esperienza in contesti partecipati da private equity e operazioni di M&A cross-border.\n\nModalità di lavoro ibrida con base a Milano e disponibilità a viaggiare a livello nazionale e internazionale.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "P&L Management",
+          "importance": "mandatory",
+          "weight": 0.95,
+          "minYearsOfExperience": 12,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "General Management",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 12,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Strategic Planning",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Board Reporting",
+          "importance": "important",
+          "weight": 0.75,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "M&A",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Organizational Transformation",
+          "importance": "nice_to_have",
+          "weight": 0.55,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MBA",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 15,
+        "minRelevantYears": 12,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Milano",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Private Equity Portfolio Companies",
+          "Industrial"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Chief Operating Officer (COO)",
+    "description": "Azienda manifatturiera in forte crescita, con stabilimenti in tutto il Nord Italia e sede direzionale a Bologna, ricerca un Chief Operating Officer per guidare l'intera macchina operativa. Il ruolo, membro del comitato esecutivo, risponde direttamente all'Amministratore Delegato.\n\nLa missione è portare l'organizzazione al livello successivo di efficienza e scalabilità, orchestrando produzione, supply chain, qualità e customer operations con una visione end-to-end.\n\nResponsabilità principali:\n- Definire e guidare la strategia operativa e i piani di trasformazione (Lean, digitalizzazione)\n- Detenere la responsabilità di P&L operativo, budget di stabilimento e obiettivi di produttività\n- Ottimizzare supply chain, capacità produttiva e livelli di servizio\n- Guidare i direttori di stabilimento e i responsabili di funzione lungo tutti i siti\n- Definire e monitorare KPI operativi, sicurezza e standard di qualità\n- Riferire al board su performance operative, rischi e piani di investimento\n\nRequisiti richiesti: solida esperienza in ruoli di Operations Leadership in ambito industriale, comprovata capacità di gestione P&L, track record di miglioramento operativo su larga scala, competenze in Lean Manufacturing e Supply Chain Management, eccellenti capacità di leadership e change management.\n\nNice-to-have: esperienza in contesti multi-sito internazionali e in progetti di trasformazione digitale della produzione.\n\nModalità di lavoro prevalentemente onsite con base a Bologna e frequenti trasferte presso gli stabilimenti.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Operations Management",
+          "importance": "mandatory",
+          "weight": 0.95,
+          "minYearsOfExperience": 12,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Supply Chain Management",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Lean Manufacturing",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "P&L Management",
+          "importance": "important",
+          "weight": 0.75,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Change Management",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Organizational Transformation",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "nice_to_have",
+          "weight": 0.5,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 14,
+        "minRelevantYears": 12,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Bologna",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Consumer",
+          "Industrial"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Chief Financial Officer (CFO)",
+    "description": "Gruppo di servizi finanziari in fase di espansione, con headquarter a Milano, ricerca un Chief Financial Officer per guidare l'intera funzione finance e affiancare l'Amministratore Delegato nelle scelte strategiche. Il ruolo è membro del comitato esecutivo e principale interlocutore del board sui temi economico-finanziari.\n\nLa missione è rafforzare la disciplina finanziaria, guidare la pianificazione strategica e preparare l'azienda a future operazioni straordinarie di finanza.\n\nResponsabilità principali:\n- Detenere la responsabilità di P&L, bilancio, tesoreria e gestione del capitale\n- Guidare pianificazione finanziaria, forecasting e financial planning & analysis (FP&A)\n- Presidiare reporting statutario e gestionale in conformità agli standard IFRS\n- Riferire a board, investitori e istituti di credito su risultati e piani di finanziamento\n- Coordinare operazioni di M&A, due diligence e integrazione post-acquisizione\n- Rafforzare governance, controllo interno e risk management\n\nRequisiti richiesti: consolidata esperienza in ruoli di Finance Leadership come CFO o Finance Director, solida padronanza dei principi contabili IFRS, comprovato track record in FP&A e operazioni di M&A, esperienza di reporting al board, laurea in discipline economico-finanziarie e preferibilmente MBA.\n\nNice-to-have: esperienza in contesti partecipati da private equity e in processi di quotazione o rifinanziamento.\n\nModalità di lavoro ibrida con base a Milano.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Financial Planning & Analysis",
+          "importance": "mandatory",
+          "weight": 0.95,
+          "minYearsOfExperience": 12,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "P&L Management",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 12,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "M&A",
+          "importance": "important",
+          "weight": 0.75,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Treasury Management",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Board Reporting",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Risk Management",
+          "importance": "nice_to_have",
+          "weight": 0.55,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MBA",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 15,
+        "minRelevantYears": 12,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Milano",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Financial Services",
+          "Private Equity Portfolio Companies",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  },
+  {
+    "title": "Chief Technology Officer (CTO)",
+    "description": "Scale-up tecnologica del settore SaaS B2B, con sede a Torino e team distribuito, ricerca un Chief Technology Officer per guidare l'intera organizzazione di engineering e prodotto in una fase di forte crescita internazionale. Il ruolo è membro del comitato esecutivo e riferisce direttamente al CEO.\n\nLa missione è scalare piattaforma, architettura e team tecnico mantenendo velocità di innovazione, affidabilità e sicurezza, e traducendo la strategia di business in una roadmap tecnologica sostenibile.\n\nResponsabilità principali:\n- Definire la visione e la strategia tecnologica allineandola agli obiettivi di business\n- Guidare architettura, sviluppo software, piattaforma cloud e sicurezza\n- Detenere la responsabilità del budget tecnologico e delle scelte di build vs buy\n- Costruire, far crescere e trattenere un'organizzazione di engineering di alto livello\n- Riferire al board su roadmap, rischi tecnologici e investimenti\n- Collaborare con Prodotto e Go-to-Market per accelerare la crescita\n\nRequisiti richiesti: consolidata esperienza in ruoli di Technology Leadership come CTO o VP Engineering, solida esperienza nella scalabilità di piattaforme cloud, comprovato track record nella costruzione di team, competenze di Software Architecture e Cloud Computing, forte capacità di stakeholder management e reporting al board.\n\nNice-to-have: esperienza in ambienti SaaS ad alta crescita e conoscenza di pratiche di Product Management.\n\nModalità di lavoro ibrida con base a Torino e team remoto internazionale.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Technology Strategy",
+          "importance": "mandatory",
+          "weight": 0.95,
+          "minYearsOfExperience": 12,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Software Architecture",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Cloud Computing",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Engineering Leadership",
+          "importance": "important",
+          "weight": 0.8,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Product Management",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Board Reporting",
+          "importance": "nice_to_have",
+          "weight": 0.5,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 14,
+        "minRelevantYears": 12,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Torino",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "SaaS",
+          "Private Equity Portfolio Companies"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.05,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Chief Commercial Officer (CCO)",
+    "description": "Azienda del settore consumer, parte di un portafoglio di private equity, con headquarter a Roma, ricerca un Chief Commercial Officer per guidare l'intera funzione commerciale a livello nazionale e internazionale. Il ruolo è membro del comitato esecutivo e riferisce all'Amministratore Delegato.\n\nLa missione è accelerare la crescita dei ricavi, ridisegnare la strategia go-to-market e costruire un'organizzazione commerciale scalabile e orientata ai risultati.\n\nResponsabilità principali:\n- Definire e guidare la strategia commerciale, di vendita e di marketing a livello di gruppo\n- Detenere la piena responsabilità del P&L commerciale e degli obiettivi di ricavo e marginalità\n- Sviluppare la strategia di pricing, canali e key account management\n- Guidare le direzioni vendite e marketing e sviluppare i talenti commerciali\n- Riferire al board su pipeline, forecast e piani di crescita\n- Presidiare partnership strategiche e sviluppo di nuovi mercati\n\nRequisiti richiesti: consolidata esperienza in ruoli di leadership commerciale come CCO, CRO o Sales Director, comprovato track record di crescita dei ricavi e responsabilità di P&L, solida competenza in Go-to-Market Strategy e Business Development, eccellenti doti di leadership e stakeholder management, formazione manageriale di livello MBA.\n\nNice-to-have: esperienza in contesti partecipati da private equity e in espansioni internazionali.\n\nModalità di lavoro ibrida con base a Roma e disponibilità a viaggiare.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Go-to-Market Strategy",
+          "importance": "mandatory",
+          "weight": 0.95,
+          "minYearsOfExperience": 12,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "P&L Management",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 12,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Business Development",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Sales Leadership",
+          "importance": "important",
+          "weight": 0.8,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Strategic Planning",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MBA",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 14,
+        "minRelevantYears": 12,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Roma",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Consumer",
+          "Private Equity Portfolio Companies",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  }
+]

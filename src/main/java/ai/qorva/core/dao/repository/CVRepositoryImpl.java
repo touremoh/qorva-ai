@@ -4,10 +4,12 @@ import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.specifications.MongoSpecification;
 import ai.qorva.core.dao.specifications.MongoSpecificationExecutorImpl;
 import ai.qorva.core.dao.specifications.QorvaRepositorySpecification;
+import ai.qorva.core.enums.QualityIssueKeyEnum;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -18,13 +20,16 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.TextCriteria;
 import org.springframework.stereotype.Repository;
 
+import java.time.Instant;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Repository
-public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, SimilaritySearchRepository, TextSearchRepository {
+public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, SimilaritySearchRepository, TextSearchRepository, CVQualityRepository {
 
 	private final MongoTemplate mongoTemplate;
 	private final MongoSpecificationExecutorImpl<CV> delegate;
@@ -122,6 +127,61 @@ public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, Simil
 		Query query = buildTextQuery(textTerms, industryTerms, tenantId);
 		if (query == null) return 0L;
 		return mongoTemplate.count(query, CV.class);
+	}
+
+	@Override
+	public Page<CV> findQualityIssueCVs(ObjectId tenantId, QualityIssueKeyEnum issueKey, Pageable pageable) {
+		Query query = new Query(Criteria.where("tenantId").is(tenantId))
+			.addCriteria(qualityIssueCriteria(issueKey));
+
+		long total = mongoTemplate.count(Query.of(query), CV.class);
+
+		query.with(pageable);
+		query.with(Sort.by(Sort.Direction.DESC, "lastUpdatedAt"));
+		// Slim projection — never ship attachment/rawText/embedding in drill-down pages.
+		query.fields()
+			.include("personalInformation.name")
+			.include("personalInformation.role")
+			.include("personalInformation.contact.email")
+			.include("personalInformation.contact.phone")
+			.include("contentDate")
+			.include("lastUpdatedAt");
+
+		List<CV> content = mongoTemplate.find(query, CV.class);
+		return new PageImpl<>(content, pageable, total);
+	}
+
+	private Criteria qualityIssueCriteria(QualityIssueKeyEnum issueKey) {
+		final String email = "personalInformation.contact.email";
+		final String phone = "personalInformation.contact.phone";
+		final String summary = "candidateProfileSummary";
+		final String confidence = "candidateClustering.clusterConfidenceScore";
+		// Must stay consistent with the bucket thresholds in CVRepository#getFreshnessBucketsByTenantId
+		final Instant outdatedCutoff = ZonedDateTime.now(ZoneOffset.UTC).minusMonths(18).toInstant();
+
+		return switch (issueKey) {
+			case MISSING_CONTACT -> new Criteria().andOperator(emptyField(email), emptyField(phone));
+			case MISSING_EMAIL -> emptyField(email);
+			case MISSING_PHONE -> emptyField(phone);
+			case NO_WORK_EXPERIENCE -> Criteria.where("workExperience.0").exists(false);
+			case NO_SKILLS -> Criteria.where("keySkills.0").exists(false);
+			case MISSING_SUMMARY -> emptyField(summary);
+			case OUTDATED -> Criteria.where("contentDate").lt(outdatedCutoff);
+			case UNKNOWN_FRESHNESS -> Criteria.where("contentDate").is(null);
+			case LOW_PARSE_CONFIDENCE -> new Criteria().orOperator(
+				Criteria.where(confidence).is(null),
+				Criteria.where(confidence).lt(0.5)
+			);
+			case DUPLICATES -> throw new IllegalArgumentException(
+				"DUPLICATES drill-down is served by the dedicated /cvs/duplicates endpoint");
+		};
+	}
+
+	private Criteria emptyField(String field) {
+		return new Criteria().orOperator(
+			Criteria.where(field).is(null),
+			Criteria.where(field).is("")
+		);
 	}
 
 	private Query buildTextQuery(List<String> textTerms, List<String> industryTerms, ObjectId tenantId) {

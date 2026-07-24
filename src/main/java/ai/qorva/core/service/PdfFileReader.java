@@ -10,6 +10,8 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.time.Instant;
+import java.util.Calendar;
 
 @Slf4j
 @NoArgsConstructor
@@ -27,6 +29,21 @@ public class PdfFileReader implements QorvaFileReader {
 		} catch (IOException e) {
 			log.error("Error reading file content: {}", file.getOriginalFilename(), e);
 			throw new QorvaException(QorvaErrorCodes.FILE_READ_FAILED, e, file.getOriginalFilename());
+		}
+	}
+
+	@Override
+	public Instant readDocumentDate(MultipartFile file) {
+		try (PDDocument pdfDocument = Loader.loadPDF(file.getBytes())) {
+			var info = pdfDocument.getDocumentInformation();
+			if (info == null) {
+				return null;
+			}
+			Calendar date = info.getModificationDate() != null ? info.getModificationDate() : info.getCreationDate();
+			return date != null ? date.toInstant() : null;
+		} catch (Exception e) {
+			log.debug("Could not read PDF metadata date from {}: {}", file.getOriginalFilename(), e.getMessage());
+			return null;
 		}
 	}
 }

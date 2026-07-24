@@ -431,8 +431,26 @@ db.runCommand({
                         }
                     },
                 attachment: {
-                    bsonType: "binData",
-                    description: "can be null or binary data for file attachment"
+                    bsonType: "object",
+                    description: "reference to the original CV file stored in S3",
+                    properties: {
+                        s3Key: { bsonType: "string" },
+                        fileName: { bsonType: "string" },
+                        contentType: { bsonType: "string" },
+                        sizeBytes: { bsonType: "long" }
+                    }
+                    },
+                rawText: {
+                    bsonType: "string",
+                    description: "raw text extracted from the uploaded file, kept for re-analysis"
+                    },
+                contentDate: {
+                    bsonType: "date",
+                    description: "best evidence of when the CV content was current (freshness signal)"
+                    },
+                contentDateSource: {
+                    bsonType: "string",
+                    description: "origin of contentDate: WORK_HISTORY | DOC_METADATA | VERIFIED | UNKNOWN"
                     },
                 fileStorageInfo: {
                     bsonType: "object",

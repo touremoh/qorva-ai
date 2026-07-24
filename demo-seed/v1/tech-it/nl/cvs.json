@@ -1,0 +1,3064 @@
+[
+  {
+    "candidateProfileSummary": "Ervaren backend engineer met een sterke focus op schaalbare Java-microservices en event-driven architecturen. Bouwt al meer dan tien jaar betrouwbare betaal- en API-platformen voor fintech en e-commerce. Combineert diepgaande technische kennis met pragmatische besluitvorming en mentorschap binnen het team.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Daan Vermeulen",
+      "role": "Senior Backend Engineer",
+      "summary": "Senior backend engineer gespecialiseerd in Java, Spring Boot en gedistribueerde systemen. Draait al jaren productiekritische betaalsystemen met hoge beschikbaarheid en pakt graag complexe schaalbaarheidsvraagstukken aan.",
+      "contact": {
+        "phone": "+31 6 24851937",
+        "email": "daan.vermeulen@example.com",
+        "address": {
+          "streetNumber": "142",
+          "streetName": "Overtoom",
+          "streetType": "straat",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipCode": "1054 HN",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/daanvermeulen",
+          "github": "https://github.com/daanvermeulen",
+          "website": "https://daanvermeulen.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["dinsdagmiddag", "donderdagochtend"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Backend-ontwikkeling", "skills": ["Java", "Spring Boot", "Kotlin", "REST", "gRPC"] },
+      { "category": "Data en berichtenverkeer", "skills": ["PostgreSQL", "Kafka", "Redis", "MongoDB"] },
+      { "category": "Cloud en werktuigen", "skills": ["AWS", "Docker", "Kubernetes", "Terraform"] },
+      { "category": "Kwaliteit en observability", "skills": ["JUnit", "Testcontainers", "Grafana", "Prometheus"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Microservices", "Betaalsystemen", "API-ontwerp", "Event-driven architectuur"],
+      "keyResponsibilities": ["Ontwerpen van schaalbare backend-services", "Bewaken van productiestabiliteit en SLA's", "Begeleiden van junior engineers", "Technische besluitvorming binnen het domein"]
+    },
+    "workExperience": [
+      {
+        "company": "Adyen",
+        "website": "https://www.adyen.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2020-02",
+        "to": "Present",
+        "position": "Senior Backend Engineer",
+        "activities": [
+          {
+            "project": "Betaalorkestratieplatform",
+            "tasks": ["Ontwerpen en bouwen van event-driven betaalservices met Kafka", "Optimaliseren van doorlooptijden onder piekbelasting", "Opzetten van idempotente verwerking voor transacties"]
+          }
+        ],
+        "achievements": ["Latentie van kernservice met 40% verlaagd", "Beschikbaarheid naar 99,98% gebracht"],
+        "toolsAndTechnologies": ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Kubernetes", "AWS"]
+      },
+      {
+        "company": "Mollie",
+        "website": "https://www.mollie.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2017-06",
+        "to": "2020-01",
+        "position": "Backend Engineer",
+        "activities": [
+          {
+            "project": "API-platform voor merchants",
+            "tasks": ["Ontwikkelen van publieke REST-API's", "Implementeren van rate limiting en authenticatie", "Verbeteren van testdekking"]
+          }
+        ],
+        "achievements": ["Nieuwe merchant-API succesvol gelanceerd", "Testdekking van 55% naar 85% verhoogd"],
+        "toolsAndTechnologies": ["Java", "Spring", "MySQL", "Redis", "Docker"]
+      },
+      {
+        "company": "Sqills",
+        "website": "https://www.sqills.com",
+        "location": "Enschede, Nederland",
+        "from": "2015-08",
+        "to": "2017-05",
+        "position": "Junior Software Engineer",
+        "activities": [
+          {
+            "project": "Ticketing-backend voor vervoer",
+            "tasks": ["Bouwen van reserveringsservices", "Schrijven van integratietests", "Ondersteunen van releases"]
+          }
+        ],
+        "achievements": ["Eerste zelfstandige microservice opgeleverd"],
+        "toolsAndTechnologies": ["Java", "Spring Boot", "PostgreSQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "Universiteit Twente",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Technische Informatica",
+        "achievements": ["Afgestudeerd met onderscheiding", "Scriptie over gedistribueerde consensusalgoritmen"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Certified Solutions Architect - Associate",
+        "institution": "Amazon Web Services",
+        "year": "2021",
+        "description": "Certificering voor het ontwerpen van schaalbare cloudarchitecturen op AWS."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Java", "Spring Boot", "Kotlin", "Kafka", "PostgreSQL", "Kubernetes", "AWS", "Terraform"],
+      "softSkills": ["Analytisch denken", "Mentorschap", "Duidelijke communicatie", "Eigenaarschap"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Migratie naar event-driven architectuur",
+        "description": "Leiding gegeven aan de overgang van een monoliet naar event-driven microservices voor betaalverwerking.",
+        "date": "2022",
+        "impact": "Doorvoer verdrievoudigd en storingen tijdens piekmomenten geëlimineerd."
+      }
+    ],
+    "interestsAndHobbies": ["Bouldering", "Open-sourcebijdragen", "Koffie branden"],
+    "references": [
+      {
+        "name": "Marloes Smit",
+        "position": "Engineering Manager",
+        "company": "Adyen",
+        "contact": { "phone": "+31 6 41209875", "email": "marloes.smit@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 75000, "max": 92000 },
+    "candidateClustering": {
+      "primaryCluster": "Backend Engineering",
+      "secondaryClusters": ["Distributed Systems", "Cloud Native"],
+      "functionalExpertise": ["Microservices", "Payment Systems", "API Design"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Verhoogde systeembeschikbaarheid", "Lagere latentie", "Snellere releases"],
+      "industryDomains": ["Fintech", "E-commerce"],
+      "environmentFit": ["scale-up", "SaaS", "enterprise"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Consistente loopbaan in backend engineering met diepe expertise in betaalsystemen en gedistribueerde architecturen."
+    },
+    "searchIndex": {
+      "roles": ["Backend Engineer", "Software Engineer", "Distributed Systems Engineer"],
+      "skills": ["Java", "Spring Boot", "Kotlin", "Kafka", "PostgreSQL", "Kubernetes", "AWS", "Microservices", "REST", "gRPC"],
+      "industries": ["Fintech", "E-commerce", "Payments"]
+    },
+    "tags": ["backend", "java", "microservices", "fintech", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Enthousiaste frontend engineer aan het begin van haar loopbaan met sterke vaardigheden in React en TypeScript. Bouwt toegankelijke, responsieve interfaces en leert snel nieuwe technologieën. Werkt graag nauw samen met designers en productmensen aan gebruiksvriendelijke webapplicaties.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Sanne de Vries",
+      "role": "Frontend Engineer",
+      "summary": "Junior frontend engineer met focus op React, TypeScript en toegankelijkheid. Enthousiast over design systems en pixel-perfecte, performante interfaces.",
+      "contact": {
+        "phone": "+31 6 38471290",
+        "email": "sanne.devries@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Oudegracht",
+          "streetType": "kade",
+          "unit": "B",
+          "city": "Utrecht",
+          "state": "Utrecht",
+          "zipCode": "3511 AB",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sannedevries",
+          "github": "https://github.com/sannedevries",
+          "website": "https://sannedevries.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["maandagochtend", "woensdagmiddag", "vrijdagochtend"],
+        "preferredWorkTypes": ["hybrid", "onsite"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Frontend-ontwikkeling", "skills": ["React", "TypeScript", "JavaScript", "HTML", "CSS"] },
+      { "category": "Styling en design systems", "skills": ["Tailwind CSS", "Storybook", "Figma"] },
+      { "category": "Werktuigen en testen", "skills": ["Vite", "Jest", "React Testing Library", "Git"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Componentenbibliotheken", "Toegankelijkheid", "Responsief ontwerp"],
+      "keyResponsibilities": ["Bouwen van herbruikbare UI-componenten", "Samenwerken met designers", "Verbeteren van toegankelijkheid en prestaties"]
+    },
+    "workExperience": [
+      {
+        "company": "Mendix",
+        "website": "https://www.mendix.com",
+        "location": "Rotterdam, Nederland",
+        "from": "2022-09",
+        "to": "Present",
+        "position": "Frontend Engineer",
+        "activities": [
+          {
+            "project": "Low-code editor UI",
+            "tasks": ["Ontwikkelen van React-componenten voor de editor", "Verbeteren van toegankelijkheid volgens WCAG", "Bijdragen aan het interne design system"]
+          }
+        ],
+        "achievements": ["Bijgedragen aan een herbruikbare componentenbibliotheek", "Toegankelijkheidsscore van kernpagina's verbeterd"],
+        "toolsAndTechnologies": ["React", "TypeScript", "Tailwind CSS", "Storybook", "Jest"]
+      },
+      {
+        "company": "Frontmen",
+        "website": "https://www.frontmen.nl",
+        "location": "Utrecht, Nederland",
+        "from": "2022-01",
+        "to": "2022-08",
+        "position": "Frontend Developer (stage)",
+        "activities": [
+          {
+            "project": "Klantwebsites",
+            "tasks": ["Bouwen van responsieve pagina's", "Ondersteunen van seniors bij feature-ontwikkeling"]
+          }
+        ],
+        "achievements": ["Eerste feature zelfstandig opgeleverd"],
+        "toolsAndTechnologies": ["React", "JavaScript", "CSS"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2022",
+        "institution": "Hogeschool Utrecht",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Informatica",
+        "achievements": ["Afstudeerproject over toegankelijke webcomponenten"]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": ["React", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Jest", "Git"],
+      "softSkills": ["Leergierig", "Samenwerken", "Oog voor detail", "Nieuwsgierig"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Toegankelijke componentenbibliotheek",
+        "description": "Meegebouwd aan een open interne bibliotheek met volledig toegankelijke React-componenten.",
+        "date": "2023",
+        "impact": "Ontwikkelsnelheid van teams verhoogd door herbruikbare, geteste componenten."
+      }
+    ],
+    "interestsAndHobbies": ["Illustratie", "Fietsen", "Front-endmeetups"],
+    "references": [
+      {
+        "name": "Bram Jacobs",
+        "position": "Lead Engineer",
+        "company": "Mendix",
+        "contact": { "phone": "+31 6 50931284", "email": "bram.jacobs@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 42000, "max": 52000 },
+    "candidateClustering": {
+      "primaryCluster": "Frontend Engineering",
+      "secondaryClusters": ["Web Accessibility", "Design Systems"],
+      "functionalExpertise": ["UI Development", "Accessibility", "Responsive Design"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Verbeterde toegankelijkheid", "Herbruikbare componenten"],
+      "industryDomains": ["Software", "SaaS"],
+      "environmentFit": ["scale-up", "SaaS", "startup"],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.82,
+      "clusterReasoning": "Beginnende frontend-loopbaan met duidelijke focus op React, TypeScript en toegankelijkheid."
+    },
+    "searchIndex": {
+      "roles": ["Frontend Engineer", "Frontend Developer", "UI Developer"],
+      "skills": ["React", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Accessibility", "Storybook", "Jest"],
+      "industries": ["Software", "SaaS"]
+    },
+    "tags": ["frontend", "react", "typescript", "accessibility", "junior"]
+  },
+  {
+    "candidateProfileSummary": "Veelzijdige full-stack lead met meer dan tien jaar ervaring in het bouwen en opschalen van webplatformen. Combineert diepgaande kennis van zowel frontend als backend met technisch leiderschap en architectuurbeslissingen. Bouwt aan sterke teams en betrouwbare, onderhoudbare systemen.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Bram Jacobs",
+      "role": "Lead Full-Stack Engineer",
+      "summary": "Full-stack lead die teams begeleidt bij het bouwen van end-to-end webapplicaties met Node.js, React en cloudinfrastructuur. Sterk in architectuur, code-kwaliteit en technisch mentorschap.",
+      "contact": {
+        "phone": "+31 6 45120983",
+        "email": "bram.jacobs@example.com",
+        "address": {
+          "streetNumber": "88",
+          "streetName": "Witte de Withstraat",
+          "streetType": "straat",
+          "city": "Rotterdam",
+          "state": "Zuid-Holland",
+          "zipCode": "3012 BS",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/bramjacobs",
+          "github": "https://github.com/bramjacobs",
+          "website": "https://bramjacobs.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["donderdagavond"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Frontend", "skills": ["React", "TypeScript", "Next.js", "Redux"] },
+      { "category": "Backend", "skills": ["Node.js", "NestJS", "GraphQL", "PostgreSQL"] },
+      { "category": "Cloud en DevOps", "skills": ["AWS", "Docker", "CI/CD", "Terraform"] },
+      { "category": "Leiderschap", "skills": ["Architectuur", "Code review", "Mentorschap"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Full-stack architectuur", "Technisch leiderschap", "Platformschaalbaarheid"],
+      "keyResponsibilities": ["Bepalen van technische richting", "Begeleiden van engineers", "Bewaken van architectuur en kwaliteit", "Afstemmen met product en stakeholders"]
+    },
+    "workExperience": [
+      {
+        "company": "Coolblue",
+        "website": "https://www.coolblue.nl",
+        "location": "Rotterdam, Nederland",
+        "from": "2019-04",
+        "to": "Present",
+        "position": "Lead Full-Stack Engineer",
+        "activities": [
+          {
+            "project": "Klantportaal en checkout",
+            "tasks": ["Aansturen van de architectuur van het klantportaal", "Begeleiden van een team van zes engineers", "Introduceren van GraphQL en modulaire services"]
+          }
+        ],
+        "achievements": ["Checkout-conversie meetbaar verbeterd", "Team-doorlooptijd van features gehalveerd"],
+        "toolsAndTechnologies": ["React", "Node.js", "GraphQL", "PostgreSQL", "AWS", "Docker"]
+      },
+      {
+        "company": "Bol.com",
+        "website": "https://www.bol.com",
+        "location": "Utrecht, Nederland",
+        "from": "2014-09",
+        "to": "2019-03",
+        "position": "Full-Stack Engineer",
+        "activities": [
+          {
+            "project": "Verkopersplatform",
+            "tasks": ["Bouwen van dashboardfunctionaliteit", "Ontwikkelen van REST-services", "Verbeteren van frontend-prestaties"]
+          }
+        ],
+        "achievements": ["Laadtijden van het dashboard met 50% verlaagd"],
+        "toolsAndTechnologies": ["React", "Node.js", "Java", "MySQL"]
+      },
+      {
+        "company": "Q42",
+        "website": "https://www.q42.nl",
+        "location": "Den Haag, Nederland",
+        "from": "2011-08",
+        "to": "2014-08",
+        "position": "Software Engineer",
+        "activities": [
+          {
+            "project": "Interactieve webprojecten",
+            "tasks": ["Bouwen van maatwerk webapplicaties", "Werken met diverse klant-stacks"]
+          }
+        ],
+        "achievements": ["Meerdere bekroonde projecten opgeleverd"],
+        "toolsAndTechnologies": ["JavaScript", "Node.js", "PostgreSQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "Technische Universiteit Delft",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Computer Science",
+        "achievements": ["Specialisatie in software-engineering"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Professional Scrum Master I",
+        "institution": "Scrum.org",
+        "year": "2018",
+        "description": "Certificering in agile teamwerk en Scrum-praktijken."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["React", "TypeScript", "Node.js", "NestJS", "GraphQL", "PostgreSQL", "AWS", "Docker", "Terraform"],
+      "softSkills": ["Leiderschap", "Coaching", "Besluitvaardigheid", "Stakeholdermanagement"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Duits", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Herbouw van het klantportaal",
+        "description": "Technisch leiderschap gegeven aan de volledige herbouw van het klantportaal naar een modulaire architectuur.",
+        "date": "2021",
+        "impact": "Snellere feature-levering en hogere klanttevredenheid."
+      }
+    ],
+    "interestsAndHobbies": ["Zeilen", "Mentoring van studenten", "Elektronica knutselen"],
+    "references": [
+      {
+        "name": "Esmée van Dijk",
+        "position": "Head of Product",
+        "company": "Coolblue",
+        "contact": { "phone": "+31 6 29418756", "email": "esmee.vandijk@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 88000, "max": 105000 },
+    "candidateClustering": {
+      "primaryCluster": "Full-Stack Engineering",
+      "secondaryClusters": ["Technical Leadership", "Web Platforms"],
+      "functionalExpertise": ["Full-Stack Development", "Software Architecture", "Team Leadership"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Hogere conversie", "Snellere feature-levering", "Verbeterde prestaties"],
+      "industryDomains": ["E-commerce", "Software"],
+      "environmentFit": ["scale-up", "enterprise", "SaaS"],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Brede full-stack ervaring gecombineerd met bewezen technisch leiderschap en architectuurverantwoordelijkheid."
+    },
+    "searchIndex": {
+      "roles": ["Lead Engineer", "Full-Stack Engineer", "Technical Lead"],
+      "skills": ["React", "TypeScript", "Node.js", "GraphQL", "PostgreSQL", "AWS", "Docker", "Software Architecture", "Team Leadership"],
+      "industries": ["E-commerce", "Software"]
+    },
+    "tags": ["full-stack", "lead", "node", "react", "architecture"]
+  },
+  {
+    "candidateProfileSummary": "Senior mobiele engineer met ruime ervaring in native en cross-platform ontwikkeling voor iOS en Android. Levert vloeiende, betrouwbare apps met een sterke focus op prestaties en gebruikerservaring. Werkt gestructureerd en denkt mee over productbeslissingen.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Fatima El Amrani",
+      "role": "Senior Mobile Engineer",
+      "summary": "Senior mobiele engineer gespecialiseerd in iOS (Swift) en cross-platform ontwikkeling met Flutter. Bouwt schaalbare, goed geteste apps met aandacht voor prestaties en toegankelijkheid.",
+      "contact": {
+        "phone": "+31 6 51290847",
+        "email": "fatima.elamrani@example.com",
+        "address": {
+          "streetNumber": "63",
+          "streetName": "Laan van Meerdervoort",
+          "streetType": "laan",
+          "city": "Den Haag",
+          "state": "Zuid-Holland",
+          "zipCode": "2517 AV",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/fatimaelamrani",
+          "github": "https://github.com/fatimaelamrani",
+          "website": "https://fatimaelamrani.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["dinsdagochtend", "woensdagmiddag"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent", "contract"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "iOS-ontwikkeling", "skills": ["Swift", "SwiftUI", "UIKit", "Combine"] },
+      { "category": "Cross-platform", "skills": ["Flutter", "Dart", "Kotlin Multiplatform"] },
+      { "category": "Kwaliteit en werktuigen", "skills": ["XCTest", "Fastlane", "CI/CD", "Git"] },
+      { "category": "Backend-integratie", "skills": ["REST", "GraphQL", "Firebase"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Native iOS", "Cross-platform apps", "App-prestaties", "Mobiele architectuur"],
+      "keyResponsibilities": ["Ontwikkelen van performante mobiele apps", "Bewaken van app-kwaliteit en releases", "Samenwerken met design en product"]
+    },
+    "workExperience": [
+      {
+        "company": "Blendle",
+        "website": "https://www.blendle.com",
+        "location": "Utrecht, Nederland",
+        "from": "2020-05",
+        "to": "Present",
+        "position": "Senior Mobile Engineer",
+        "activities": [
+          {
+            "project": "Nieuws-app",
+            "tasks": ["Herbouwen van de iOS-app met SwiftUI", "Verbeteren van opstart- en scrollprestaties", "Opzetten van geautomatiseerde releases met Fastlane"]
+          }
+        ],
+        "achievements": ["App-beoordeling naar 4,7 sterren verhoogd", "Opstarttijd met 35% verlaagd"],
+        "toolsAndTechnologies": ["Swift", "SwiftUI", "Combine", "Fastlane", "Firebase"]
+      },
+      {
+        "company": "Rabobank",
+        "website": "https://www.rabobank.nl",
+        "location": "Utrecht, Nederland",
+        "from": "2016-09",
+        "to": "2020-04",
+        "position": "Mobile Engineer",
+        "activities": [
+          {
+            "project": "Mobiel bankieren",
+            "tasks": ["Ontwikkelen van betaalfunctionaliteit in de app", "Implementeren van beveiligde authenticatie", "Verbeteren van testdekking"]
+          }
+        ],
+        "achievements": ["Nieuwe betaalflow succesvol uitgerold naar miljoenen gebruikers"],
+        "toolsAndTechnologies": ["Swift", "UIKit", "Kotlin", "REST"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "Universiteit van Amsterdam",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Informatica",
+        "achievements": ["Afstudeerproject over mobiele gebruikersinterfaces"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Google Associate Android Developer",
+        "institution": "Google",
+        "year": "2019",
+        "description": "Certificering voor professionele Android-ontwikkeling."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Swift", "SwiftUI", "UIKit", "Flutter", "Dart", "Kotlin", "Firebase", "REST", "GraphQL"],
+      "softSkills": ["Zorgvuldigheid", "Empathie voor gebruikers", "Samenwerken", "Doorzettingsvermogen"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Arabisch", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "SwiftUI-migratie",
+        "description": "De volledige nieuws-app gemigreerd van UIKit naar SwiftUI met behoud van functionaliteit.",
+        "date": "2022",
+        "impact": "Onderhoudslast verlaagd en ontwikkelsnelheid verhoogd."
+      }
+    ],
+    "interestsAndHobbies": ["Fotografie", "Hardlopen", "Koken"],
+    "references": [
+      {
+        "name": "Julia Kowalski",
+        "position": "Product Manager",
+        "company": "Blendle",
+        "contact": { "phone": "+31 6 47820193", "email": "julia.kowalski@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 70000, "max": 85000 },
+    "candidateClustering": {
+      "primaryCluster": "Mobile Engineering",
+      "secondaryClusters": ["iOS Development", "Cross-Platform Development"],
+      "functionalExpertise": ["Mobile Development", "App Performance", "Mobile Architecture"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Hogere app-beoordelingen", "Betere prestaties", "Snellere releases"],
+      "industryDomains": ["Fintech", "Media"],
+      "environmentFit": ["scale-up", "enterprise", "SaaS"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Sterke, aaneengesloten mobiele loopbaan met diepgang in iOS en cross-platform ontwikkeling."
+    },
+    "searchIndex": {
+      "roles": ["Mobile Engineer", "iOS Engineer", "Mobile Developer"],
+      "skills": ["Swift", "SwiftUI", "UIKit", "Flutter", "Dart", "Kotlin", "Firebase", "REST", "GraphQL", "CI/CD"],
+      "industries": ["Fintech", "Media"]
+    },
+    "tags": ["mobile", "ios", "swift", "flutter", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Gedreven QA-engineer en SDET met sterke automatiseringsvaardigheden en oog voor kwaliteit. Bouwt betrouwbare test-suites en CI-pijplijnen die vroeg fouten opsporen. Combineert een testmindset met een solide basis in softwareontwikkeling.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Lotte Peeters",
+      "role": "QA Engineer / SDET",
+      "summary": "QA-engineer op middenniveau gespecialiseerd in testautomatisering met Playwright en Cypress. Zorgt voor stabiele releases via robuuste geautomatiseerde tests en sterke CI-integratie.",
+      "contact": {
+        "phone": "+32 486 219 743",
+        "email": "lotte.peeters@example.com",
+        "address": {
+          "streetNumber": "19",
+          "streetName": "Meir",
+          "streetType": "straat",
+          "city": "Antwerpen",
+          "state": "Antwerpen",
+          "zipCode": "2000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/lottepeeters",
+          "github": "https://github.com/lottepeeters",
+          "website": "https://lottepeeters.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["maandagmiddag", "donderdagochtend"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Testautomatisering", "skills": ["Playwright", "Cypress", "Selenium", "Jest"] },
+      { "category": "Programmeren", "skills": ["TypeScript", "JavaScript", "Python"] },
+      { "category": "CI en werktuigen", "skills": ["GitHub Actions", "Docker", "Postman", "k6"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Testautomatisering", "End-to-end testen", "Kwaliteitsprocessen"],
+      "keyResponsibilities": ["Bouwen van geautomatiseerde test-suites", "Integreren van tests in CI/CD", "Bewaken van releasekwaliteit"]
+    },
+    "workExperience": [
+      {
+        "company": "Teamleader",
+        "website": "https://www.teamleader.eu",
+        "location": "Gent, België",
+        "from": "2022-03",
+        "to": "Present",
+        "position": "SDET",
+        "activities": [
+          {
+            "project": "End-to-end testplatform",
+            "tasks": ["Opzetten van een Playwright-testframework", "Integreren van tests in GitHub Actions", "Verminderen van flaky tests"]
+          }
+        ],
+        "achievements": ["Regressietijd van dagen naar uren teruggebracht", "Flaky tests met 70% verminderd"],
+        "toolsAndTechnologies": ["Playwright", "TypeScript", "GitHub Actions", "Docker"]
+      },
+      {
+        "company": "Unifly",
+        "website": "https://www.unifly.aero",
+        "location": "Antwerpen, België",
+        "from": "2020-06",
+        "to": "2022-02",
+        "position": "QA Engineer",
+        "activities": [
+          {
+            "project": "Dronebeheerplatform",
+            "tasks": ["Schrijven van geautomatiseerde en handmatige tests", "Rapporteren en opvolgen van bugs", "Opzetten van API-tests"]
+          }
+        ],
+        "achievements": ["Testdekking van kritieke flows sterk verhoogd"],
+        "toolsAndTechnologies": ["Cypress", "JavaScript", "Postman"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2020",
+        "institution": "Universiteit Antwerpen",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Toegepaste Informatica",
+        "achievements": ["Afstudeerproject over geautomatiseerd testen"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "ISTQB Certified Tester - Foundation Level",
+        "institution": "ISTQB",
+        "year": "2021",
+        "description": "Fundamentele certificering in softwaretesten."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Playwright", "Cypress", "Selenium", "TypeScript", "JavaScript", "Python", "GitHub Actions", "Docker"],
+      "softSkills": ["Nauwkeurigheid", "Kritisch denken", "Communicatie", "Volharding"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Frans", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Opzet testautomatiseringsplatform",
+        "description": "Van nul een end-to-end testplatform opgebouwd en geïntegreerd in de release-pijplijn.",
+        "date": "2023",
+        "impact": "Snellere, betrouwbaardere releases met minder productiebugs."
+      }
+    ],
+    "interestsAndHobbies": ["Klimmen", "Bordspellen", "Puzzelen"],
+    "references": [
+      {
+        "name": "Wouter Claes",
+        "position": "Data Scientist",
+        "company": "Teamleader",
+        "contact": { "phone": "+32 471 908 213", "email": "wouter.claes@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 48000, "max": 60000 },
+    "candidateClustering": {
+      "primaryCluster": "Quality Engineering",
+      "secondaryClusters": ["Test Automation", "CI/CD"],
+      "functionalExpertise": ["Test Automation", "Quality Assurance", "End-to-End Testing"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Snellere releases", "Minder productiebugs", "Kortere regressietijd"],
+      "industryDomains": ["Software", "SaaS"],
+      "environmentFit": ["scale-up", "SaaS", "startup"],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.84,
+      "clusterReasoning": "Duidelijke specialisatie in testautomatisering met groeiende ervaring in CI-integratie en kwaliteitsprocessen."
+    },
+    "searchIndex": {
+      "roles": ["QA Engineer", "SDET", "Test Automation Engineer"],
+      "skills": ["Playwright", "Cypress", "Selenium", "TypeScript", "JavaScript", "Python", "GitHub Actions", "Test Automation", "CI/CD"],
+      "industries": ["Software", "SaaS"]
+    },
+    "tags": ["qa", "sdet", "test-automation", "playwright", "midlevel"]
+  },
+  {
+    "candidateProfileSummary": "Senior data engineer met ruime ervaring in het bouwen van schaalbare dataplatformen en betrouwbare pipelines. Gespecialiseerd in batch- en streamingverwerking op de cloud. Levert kwalitatief hoogwaardige, goed gedocumenteerde datastromen die analytics en machine learning voeden.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Thijs Bakker",
+      "role": "Senior Data Engineer",
+      "summary": "Senior data engineer gespecialiseerd in het bouwen van dataplatformen met Spark, dbt en cloud-datawarehouses. Ontwerpt betrouwbare, schaalbare pipelines met sterke aandacht voor datakwaliteit.",
+      "contact": {
+        "phone": "+31 6 43829107",
+        "email": "thijs.bakker@example.com",
+        "address": {
+          "streetNumber": "205",
+          "streetName": "Stratumseind",
+          "streetType": "straat",
+          "city": "Eindhoven",
+          "state": "Noord-Brabant",
+          "zipCode": "5611 EN",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/thijsbakker",
+          "github": "https://github.com/thijsbakker",
+          "website": "https://thijsbakker.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["woensdagochtend", "vrijdagmiddag"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Dataverwerking", "skills": ["Apache Spark", "Apache Airflow", "dbt", "Kafka"] },
+      { "category": "Datawarehousing", "skills": ["Snowflake", "BigQuery", "PostgreSQL"] },
+      { "category": "Programmeren", "skills": ["Python", "SQL", "Scala"] },
+      { "category": "Cloud en infra", "skills": ["AWS", "Terraform", "Docker"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Dataplatformen", "ETL/ELT-pipelines", "Streamingverwerking", "Datakwaliteit"],
+      "keyResponsibilities": ["Ontwerpen van schaalbare datapipelines", "Bewaken van datakwaliteit en betrouwbaarheid", "Ondersteunen van analytics- en ML-teams"]
+    },
+    "workExperience": [
+      {
+        "company": "Picnic",
+        "website": "https://www.picnic.app",
+        "location": "Amsterdam, Nederland",
+        "from": "2019-01",
+        "to": "Present",
+        "position": "Senior Data Engineer",
+        "activities": [
+          {
+            "project": "Logistiek dataplatform",
+            "tasks": ["Bouwen van pipelines met Spark en Airflow", "Modelleren van data met dbt in Snowflake", "Implementeren van datakwaliteitscontroles"]
+          }
+        ],
+        "achievements": ["Dataverversheid van dagen naar minuten verbeterd", "Kosten van het datawarehouse met 30% verlaagd"],
+        "toolsAndTechnologies": ["Apache Spark", "Airflow", "dbt", "Snowflake", "Python", "AWS"]
+      },
+      {
+        "company": "TomTom",
+        "website": "https://www.tomtom.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2014-09",
+        "to": "2018-12",
+        "position": "Data Engineer",
+        "activities": [
+          {
+            "project": "Verkeersdata-pipeline",
+            "tasks": ["Verwerken van grootschalige geodata", "Bouwen van batchverwerkingsjobs", "Optimaliseren van query-prestaties"]
+          }
+        ],
+        "achievements": ["Verwerkingscapaciteit sterk vergroot"],
+        "toolsAndTechnologies": ["Scala", "Spark", "Kafka", "PostgreSQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2014",
+        "institution": "Technische Universiteit Eindhoven",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Data Science and Engineering",
+        "achievements": ["Scriptie over grootschalige dataverwerking"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "SnowPro Core Certification",
+        "institution": "Snowflake",
+        "year": "2021",
+        "description": "Certificering in het Snowflake-dataplatform."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Apache Spark", "Airflow", "dbt", "Snowflake", "BigQuery", "Python", "SQL", "Scala", "Kafka", "AWS"],
+      "softSkills": ["Analytisch vermogen", "Structuur", "Samenwerken", "Kwaliteitsgericht"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Near-real-time dataplatform",
+        "description": "Een streaming-dataplatform ontworpen dat operationele dashboards vrijwel realtime voedt.",
+        "date": "2021",
+        "impact": "Besluitvorming versneld door actuele data voor de hele organisatie."
+      }
+    ],
+    "interestsAndHobbies": ["Bergwandelen", "Astronomie", "Vinyl verzamelen"],
+    "references": [
+      {
+        "name": "Priya Raghunathan",
+        "position": "Principal ML Engineer",
+        "company": "Picnic",
+        "contact": { "phone": "+31 6 58201947", "email": "priya.raghunathan@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 74000, "max": 90000 },
+    "candidateClustering": {
+      "primaryCluster": "Data Engineering",
+      "secondaryClusters": ["Data Platforms", "Streaming Data"],
+      "functionalExpertise": ["Data Pipelines", "Data Warehousing", "Data Quality"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Lagere datakosten", "Verse data", "Betrouwbare pipelines"],
+      "industryDomains": ["Logistics", "Mobility"],
+      "environmentFit": ["scale-up", "enterprise", "SaaS"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Consistente data-engineeringloopbaan met diepe kennis van pipelines, warehousing en streamingverwerking."
+    },
+    "searchIndex": {
+      "roles": ["Data Engineer", "Big Data Engineer", "Analytics Platform Engineer"],
+      "skills": ["Apache Spark", "Airflow", "dbt", "Snowflake", "BigQuery", "Python", "SQL", "Scala", "Kafka", "AWS", "ETL"],
+      "industries": ["Logistics", "Mobility"]
+    },
+    "tags": ["data-engineer", "spark", "dbt", "snowflake", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Senior data scientist die bedrijfsproblemen vertaalt naar meetbare machine-learningoplossingen. Ervaren in het volledige traject van experiment tot productie. Combineert sterke statistische kennis met heldere communicatie richting stakeholders.",
+    "careerStartYear": 2017,
+    "personalInformation": {
+      "name": "Wouter Claes",
+      "role": "Senior Data Scientist",
+      "summary": "Senior data scientist gespecialiseerd in voorspellende modellen, aanbevelingssystemen en experimentatie. Brengt modellen naar productie en meet impact met heldere A/B-tests.",
+      "contact": {
+        "phone": "+32 478 320 916",
+        "email": "wouter.claes@example.com",
+        "address": {
+          "streetNumber": "34",
+          "streetName": "Bondgenotenlaan",
+          "streetType": "laan",
+          "city": "Leuven",
+          "state": "Vlaams-Brabant",
+          "zipCode": "3000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/wouterclaes",
+          "github": "https://github.com/wouterclaes",
+          "website": "https://wouterclaes.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["dinsdagmiddag", "donderdagmiddag"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Machine learning", "skills": ["scikit-learn", "XGBoost", "PyTorch", "TensorFlow"] },
+      { "category": "Programmeren en data", "skills": ["Python", "SQL", "pandas", "NumPy"] },
+      { "category": "Experimentatie", "skills": ["A/B-testen", "Statistiek", "Causale inferentie"] },
+      { "category": "Productie", "skills": ["MLflow", "Docker", "AWS", "Airflow"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Voorspellende modellen", "Aanbevelingssystemen", "Experimentatie", "Statistische analyse"],
+      "keyResponsibilities": ["Ontwikkelen en valideren van modellen", "Opzetten van experimenten", "Vertalen van resultaten naar businessbeslissingen"]
+    },
+    "workExperience": [
+      {
+        "company": "Collibra",
+        "website": "https://www.collibra.com",
+        "location": "Brussel, België",
+        "from": "2020-04",
+        "to": "Present",
+        "position": "Senior Data Scientist",
+        "activities": [
+          {
+            "project": "Aanbevelingssysteem voor datacatalogus",
+            "tasks": ["Bouwen van een aanbevelingsmodel", "Opzetten van A/B-experimenten", "Naar productie brengen met MLflow"]
+          }
+        ],
+        "achievements": ["Gebruikersengagement met 22% verhoogd", "Modeltrainingstijd gehalveerd"],
+        "toolsAndTechnologies": ["Python", "PyTorch", "MLflow", "AWS", "SQL"]
+      },
+      {
+        "company": "Showpad",
+        "website": "https://www.showpad.com",
+        "location": "Gent, België",
+        "from": "2017-08",
+        "to": "2020-03",
+        "position": "Data Scientist",
+        "activities": [
+          {
+            "project": "Voorspelling van klantverloop",
+            "tasks": ["Ontwikkelen van churn-modellen", "Bouwen van features uit gebruiksdata", "Presenteren van inzichten aan stakeholders"]
+          }
+        ],
+        "achievements": ["Churn-voorspelling verbeterde retentiecampagnes"],
+        "toolsAndTechnologies": ["Python", "scikit-learn", "XGBoost", "SQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2017",
+        "institution": "KU Leuven",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Statistiek en Data Science",
+        "achievements": ["Afgestudeerd met grote onderscheiding"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Certified Machine Learning - Specialty",
+        "institution": "Amazon Web Services",
+        "year": "2022",
+        "description": "Certificering in het bouwen van ML-oplossingen op AWS."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Python", "scikit-learn", "XGBoost", "PyTorch", "TensorFlow", "SQL", "pandas", "MLflow", "AWS"],
+      "softSkills": ["Kritisch denken", "Storytelling met data", "Nieuwsgierigheid", "Samenwerken"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Frans", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Aanbevelingsmotor in productie",
+        "description": "Een aanbevelingssysteem ontworpen, gevalideerd en in productie gebracht met continue monitoring.",
+        "date": "2022",
+        "impact": "Hoger engagement en meetbare omzetgroei via betere aanbevelingen."
+      }
+    ],
+    "interestsAndHobbies": ["Schaken", "Wielrennen", "Populairwetenschappelijke podcasts"],
+    "references": [
+      {
+        "name": "Ingrid Maes",
+        "position": "BI Manager",
+        "company": "Collibra",
+        "contact": { "phone": "+32 495 172 380", "email": "ingrid.maes@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 72000, "max": 88000 },
+    "candidateClustering": {
+      "primaryCluster": "Data Science",
+      "secondaryClusters": ["Machine Learning", "Experimentation"],
+      "functionalExpertise": ["Predictive Modeling", "Recommendation Systems", "Statistical Analysis"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Hoger engagement", "Betere retentie", "Omzetgroei"],
+      "industryDomains": ["Software", "SaaS"],
+      "environmentFit": ["scale-up", "enterprise", "SaaS"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Sterke data-scienceloopbaan met bewezen impact van modellen in productie en degelijke experimentatie."
+    },
+    "searchIndex": {
+      "roles": ["Data Scientist", "Machine Learning Scientist", "Applied Scientist"],
+      "skills": ["Python", "scikit-learn", "XGBoost", "PyTorch", "TensorFlow", "SQL", "MLflow", "A/B Testing", "Statistics", "AWS"],
+      "industries": ["Software", "SaaS"]
+    },
+    "tags": ["data-scientist", "machine-learning", "python", "experimentation", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Principal machine-learning engineer met diepgaande ervaring in het ontwerpen en opschalen van ML-systemen in productie. Bouwt aan robuuste MLOps-platformen en begeleidt teams bij het volwassen maken van hun ML-praktijk. Zet strategische technische richting uit voor AI-initiatieven.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Priya Raghunathan",
+      "role": "Principal Machine Learning Engineer",
+      "summary": "Principal ML-engineer gespecialiseerd in schaalbare ML-infrastructuur, MLOps en modelserving. Zet technische richting uit en begeleidt teams bij productie-ML op grote schaal.",
+      "contact": {
+        "phone": "+31 6 39028174",
+        "email": "priya.raghunathan@example.com",
+        "address": {
+          "streetNumber": "11",
+          "streetName": "Prinsengracht",
+          "streetType": "gracht",
+          "unit": "3",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipCode": "1015 DK",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/priyaraghunathan",
+          "github": "https://github.com/priyaraghunathan",
+          "website": "https://priyaraghunathan.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-03-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["vrijdagmiddag"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Machine learning", "skills": ["PyTorch", "TensorFlow", "Transformers", "MLOps"] },
+      { "category": "ML-infrastructuur", "skills": ["Kubernetes", "Kubeflow", "Ray", "Feature Store"] },
+      { "category": "Programmeren", "skills": ["Python", "Go", "SQL"] },
+      { "category": "Cloud", "skills": ["AWS", "GCP", "Terraform", "Docker"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["MLOps", "Modelserving", "Schaalbare ML-systemen", "Technische strategie"],
+      "keyResponsibilities": ["Bepalen van ML-architectuur en -strategie", "Bouwen van ML-platforminfrastructuur", "Begeleiden van engineers en data scientists"]
+    },
+    "workExperience": [
+      {
+        "company": "Booking.com",
+        "website": "https://www.booking.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2018-02",
+        "to": "Present",
+        "position": "Principal Machine Learning Engineer",
+        "activities": [
+          {
+            "project": "ML-platform en modelserving",
+            "tasks": ["Ontwerpen van een centraal ML-platform", "Opzetten van modelserving met lage latentie", "Standaardiseren van MLOps-praktijken over teams"]
+          }
+        ],
+        "achievements": ["Modeldeployment van weken naar uren teruggebracht", "Servingkosten met 40% verlaagd"],
+        "toolsAndTechnologies": ["Python", "PyTorch", "Kubernetes", "Kubeflow", "Ray", "AWS"]
+      },
+      {
+        "company": "Elsevier",
+        "website": "https://www.elsevier.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2013-05",
+        "to": "2018-01",
+        "position": "Machine Learning Engineer",
+        "activities": [
+          {
+            "project": "Zoek- en aanbevelingssystemen",
+            "tasks": ["Bouwen van NLP-modellen voor wetenschappelijke content", "Optimaliseren van zoekrelevantie", "Opzetten van modelmonitoring"]
+          }
+        ],
+        "achievements": ["Zoekrelevantie meetbaar verbeterd"],
+        "toolsAndTechnologies": ["Python", "TensorFlow", "Elasticsearch", "Docker"]
+      },
+      {
+        "company": "Philips",
+        "website": "https://www.philips.com",
+        "location": "Eindhoven, Nederland",
+        "from": "2010-09",
+        "to": "2013-04",
+        "position": "Research Engineer",
+        "activities": [
+          {
+            "project": "Beeldanalyse",
+            "tasks": ["Ontwikkelen van algoritmen voor medische beeldverwerking", "Prototypen van modellen"]
+          }
+        ],
+        "achievements": ["Meerdere onderzoeksprototypes opgeleverd"],
+        "toolsAndTechnologies": ["Python", "MATLAB", "OpenCV"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2010",
+        "institution": "Technische Universiteit Delft",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Artificial Intelligence",
+        "achievements": ["Cum laude afgestudeerd"]
+      },
+      {
+        "year": "2008",
+        "institution": "Anna University",
+        "degree": "Bachelor of Engineering",
+        "fieldOfStudy": "Computer Science",
+        "achievements": ["Afgestudeerd in de top van de jaargang"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Google Professional Machine Learning Engineer",
+        "institution": "Google Cloud",
+        "year": "2021",
+        "description": "Certificering in het ontwerpen en operationaliseren van ML op Google Cloud."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Python", "PyTorch", "TensorFlow", "Kubernetes", "Kubeflow", "Ray", "Go", "AWS", "GCP", "MLOps"],
+      "softSkills": ["Strategisch denken", "Mentorschap", "Overtuigingskracht", "Systeemdenken"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "fluent" } },
+        { "language": "Engels", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Tamil", "proficiency": { "read": "native", "written": "intermediate", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Centraal ML-platform",
+        "description": "Leiding gegeven aan het ontwerp en de bouw van een organisatiebreed ML-platform.",
+        "date": "2020",
+        "impact": "Snellere modelontwikkeling en lagere kosten voor tientallen teams."
+      }
+    ],
+    "interestsAndHobbies": ["Yoga", "Wetenschapscommunicatie", "Tuinieren"],
+    "references": [
+      {
+        "name": "Thijs Bakker",
+        "position": "Senior Data Engineer",
+        "company": "Picnic",
+        "contact": { "phone": "+31 6 43829107", "email": "thijs.bakker@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 110000, "max": 135000 },
+    "candidateClustering": {
+      "primaryCluster": "Machine Learning Engineering",
+      "secondaryClusters": ["MLOps", "AI Platforms"],
+      "functionalExpertise": ["ML Infrastructure", "Model Serving", "Technical Strategy"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Snellere deployment", "Lagere servingkosten", "Volwassen ML-praktijk"],
+      "industryDomains": ["Travel", "Software"],
+      "environmentFit": ["enterprise", "scale-up", "SaaS"],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.93,
+      "clusterReasoning": "Lange ML-loopbaan met principal-niveau invloed op platformarchitectuur en organisatiebrede ML-strategie."
+    },
+    "searchIndex": {
+      "roles": ["Principal Machine Learning Engineer", "ML Engineer", "MLOps Engineer"],
+      "skills": ["Python", "PyTorch", "TensorFlow", "Kubernetes", "Kubeflow", "Ray", "MLOps", "AWS", "GCP", "Model Serving"],
+      "industries": ["Travel", "Software"]
+    },
+    "tags": ["ml-engineer", "mlops", "principal", "kubernetes", "ai"]
+  },
+  {
+    "candidateProfileSummary": "Analytics engineer op middenniveau die ruwe data omzet in betrouwbare, goed geteste datamodellen. Slaat een brug tussen data-engineering en business intelligence met dbt en moderne datastacks. Zorgt voor heldere, herbruikbare metrics voor de hele organisatie.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Sem Hendriks",
+      "role": "Analytics Engineer",
+      "summary": "Analytics engineer gespecialiseerd in dbt, SQL en het bouwen van betrouwbare datamodellen. Vertaalt businessvragen naar heldere, geteste metrics en zelfbedieningsdashboards.",
+      "contact": {
+        "phone": "+31 6 52930184",
+        "email": "sem.hendriks@example.com",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Herestraat",
+          "streetType": "straat",
+          "city": "Groningen",
+          "state": "Groningen",
+          "zipCode": "9711 LA",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/semhendriks",
+          "github": "https://github.com/semhendriks",
+          "website": "https://semhendriks.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["maandagochtend", "woensdagochtend"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Analytics engineering", "skills": ["dbt", "SQL", "Looker", "Metrics Layer"] },
+      { "category": "Datastack", "skills": ["BigQuery", "Snowflake", "Fivetran", "Airflow"] },
+      { "category": "Programmeren", "skills": ["Python", "Git", "Jinja"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Datamodellering", "Metrics en KPI's", "Self-service analytics"],
+      "keyResponsibilities": ["Bouwen van geteste datamodellen met dbt", "Definiëren van consistente metrics", "Ondersteunen van analisten en business"]
+    },
+    "workExperience": [
+      {
+        "company": "Channable",
+        "website": "https://www.channable.com",
+        "location": "Utrecht, Nederland",
+        "from": "2022-06",
+        "to": "Present",
+        "position": "Analytics Engineer",
+        "activities": [
+          {
+            "project": "Metrics-laag en dashboards",
+            "tasks": ["Bouwen van dbt-modellen voor kern-KPI's", "Opzetten van tests en documentatie", "Samenwerken met analisten aan dashboards"]
+          }
+        ],
+        "achievements": ["Eén bron van waarheid voor omzet-KPI's opgezet", "Rapportagetijd sterk verkort"],
+        "toolsAndTechnologies": ["dbt", "SQL", "BigQuery", "Looker", "Fivetran"]
+      },
+      {
+        "company": "Nmbrs",
+        "website": "https://www.nmbrs.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2021-02",
+        "to": "2022-05",
+        "position": "Junior Data Analyst",
+        "activities": [
+          {
+            "project": "Productanalytics",
+            "tasks": ["Bouwen van rapportages", "Schrijven van SQL-queries", "Ondersteunen van productteams met data"]
+          }
+        ],
+        "achievements": ["Eerste zelfbedieningsdashboards opgeleverd"],
+        "toolsAndTechnologies": ["SQL", "Looker", "Python"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2020",
+        "institution": "Rijksuniversiteit Groningen",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Econometrie",
+        "achievements": ["Afstudeerproject over data-gedreven besluitvorming"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "dbt Analytics Engineering Certification",
+        "institution": "dbt Labs",
+        "year": "2023",
+        "description": "Certificering in analytics engineering met dbt."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["dbt", "SQL", "BigQuery", "Snowflake", "Looker", "Fivetran", "Python", "Airflow"],
+      "softSkills": ["Nauwkeurigheid", "Communicatie", "Businessgerichtheid", "Leergierig"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Metrics-laag opgezet",
+        "description": "Een consistente metrics-laag gebouwd met dbt zodat teams dezelfde definities gebruiken.",
+        "date": "2023",
+        "impact": "Minder discussie over cijfers en snellere, betrouwbaardere rapportage."
+      }
+    ],
+    "interestsAndHobbies": ["Roeien", "Datavisualisatie", "Kookclub"],
+    "references": [
+      {
+        "name": "Ingrid Maes",
+        "position": "BI Manager",
+        "company": "Collibra",
+        "contact": { "phone": "+32 495 172 380", "email": "ingrid.maes@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 50000, "max": 62000 },
+    "candidateClustering": {
+      "primaryCluster": "Analytics Engineering",
+      "secondaryClusters": ["Data Modeling", "Business Intelligence"],
+      "functionalExpertise": ["Data Modeling", "Metrics Definition", "Self-Service Analytics"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Consistente metrics", "Snellere rapportage", "Betrouwbare data"],
+      "industryDomains": ["Software", "SaaS"],
+      "environmentFit": ["scale-up", "SaaS", "startup"],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Groeiende analytics-engineeringloopbaan met sterke focus op dbt-datamodellering en betrouwbare metrics."
+    },
+    "searchIndex": {
+      "roles": ["Analytics Engineer", "Data Analyst", "BI Developer"],
+      "skills": ["dbt", "SQL", "BigQuery", "Snowflake", "Looker", "Fivetran", "Python", "Data Modeling", "Airflow"],
+      "industries": ["Software", "SaaS"]
+    },
+    "tags": ["analytics-engineer", "dbt", "sql", "bi", "midlevel"]
+  },
+  {
+    "candidateProfileSummary": "Ervaren BI-manager die data-teams aanstuurt en een datacultuur binnen organisaties opbouwt. Combineert diepe kennis van business intelligence met leiderschap en stakeholdermanagement. Levert schaalbare rapportageplatformen die besluitvorming op alle niveaus ondersteunen.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Ingrid Maes",
+      "role": "Business Intelligence Manager",
+      "summary": "BI-manager met meer dan vijftien jaar ervaring in het opbouwen van BI-teams en dataplatformen. Vertaalt bedrijfsstrategie naar bruikbare inzichten en stuurt op datavolwassenheid.",
+      "contact": {
+        "phone": "+32 489 207 561",
+        "email": "ingrid.maes@example.com",
+        "address": {
+          "streetNumber": "52",
+          "streetName": "Steenstraat",
+          "streetType": "straat",
+          "city": "Brugge",
+          "state": "West-Vlaanderen",
+          "zipCode": "8000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ingridmaes",
+          "website": "https://ingridmaes.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["dinsdagochtend"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Business intelligence", "skills": ["Power BI", "Tableau", "Looker", "SQL"] },
+      { "category": "Dataplatform", "skills": ["Snowflake", "Azure Synapse", "dbt"] },
+      { "category": "Leiderschap", "skills": ["Teammanagement", "Stakeholdermanagement", "Datastrategie"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["BI-strategie", "Teamleiderschap", "Datavisualisatie", "Datagovernance"],
+      "keyResponsibilities": ["Aansturen van het BI-team", "Bepalen van de datstrategie", "Afstemmen met directie en business", "Bewaken van datakwaliteit en governance"]
+    },
+    "workExperience": [
+      {
+        "company": "Barco",
+        "website": "https://www.barco.com",
+        "location": "Kortrijk, België",
+        "from": "2018-01",
+        "to": "Present",
+        "position": "Business Intelligence Manager",
+        "activities": [
+          {
+            "project": "Enterprise BI-platform",
+            "tasks": ["Aansturen van een team van acht BI-professionals", "Uitrollen van een enterprise BI-platform", "Opzetten van datagovernance"]
+          }
+        ],
+        "achievements": ["Bedrijfsbrede rapportage gestandaardiseerd", "Datavolwassenheid meetbaar verhoogd"],
+        "toolsAndTechnologies": ["Power BI", "Snowflake", "dbt", "SQL"]
+      },
+      {
+        "company": "Bekaert",
+        "website": "https://www.bekaert.com",
+        "location": "Zwevegem, België",
+        "from": "2013-03",
+        "to": "2017-12",
+        "position": "BI Team Lead",
+        "activities": [
+          {
+            "project": "Productie-analytics",
+            "tasks": ["Bouwen van dashboards voor productiedata", "Begeleiden van BI-analisten", "Optimaliseren van rapportageprocessen"]
+          }
+        ],
+        "achievements": ["Rapportagedoorlooptijd sterk verkort"],
+        "toolsAndTechnologies": ["Tableau", "SQL", "SSAS"]
+      },
+      {
+        "company": "KBC",
+        "website": "https://www.kbc.com",
+        "location": "Brussel, België",
+        "from": "2009-09",
+        "to": "2013-02",
+        "position": "BI Analyst",
+        "activities": [
+          {
+            "project": "Financiële rapportage",
+            "tasks": ["Bouwen van financiële rapportages", "Schrijven van complexe SQL-queries"]
+          }
+        ],
+        "achievements": ["Kernrapportages geautomatiseerd"],
+        "toolsAndTechnologies": ["SQL", "SSRS", "Excel"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2009",
+        "institution": "Universiteit Gent",
+        "degree": "Master",
+        "fieldOfStudy": "Toegepaste Economische Wetenschappen",
+        "achievements": ["Specialisatie in bedrijfsinformatica"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Microsoft Certified: Power BI Data Analyst Associate",
+        "institution": "Microsoft",
+        "year": "2020",
+        "description": "Certificering in data-analyse en rapportage met Power BI."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Power BI", "Tableau", "Looker", "SQL", "Snowflake", "Azure Synapse", "dbt"],
+      "softSkills": ["Leiderschap", "Strategisch inzicht", "Communicatie", "Coaching"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Frans", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Uitrol enterprise BI-platform",
+        "description": "Leiding gegeven aan de selectie en uitrol van een bedrijfsbreed BI-platform.",
+        "date": "2020",
+        "impact": "Eén consistente bron van rapportage voor de gehele onderneming."
+      }
+    ],
+    "interestsAndHobbies": ["Tuinieren", "Kunstgeschiedenis", "Wandelen"],
+    "references": [
+      {
+        "name": "Koen Vandenberghe",
+        "position": "Principal Platform Engineer",
+        "company": "Barco",
+        "contact": { "phone": "+32 470 318 902", "email": "koen.vandenberghe@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 90000, "max": 110000 },
+    "candidateClustering": {
+      "primaryCluster": "Business Intelligence",
+      "secondaryClusters": ["Data Leadership", "Data Strategy"],
+      "functionalExpertise": ["BI Strategy", "Team Leadership", "Data Governance"],
+      "skillDepth": "hybrid",
+      "businessImpact": ["Gestandaardiseerde rapportage", "Hogere datavolwassenheid", "Betere besluitvorming"],
+      "industryDomains": ["Manufacturing", "Finance"],
+      "environmentFit": ["enterprise", "regulated enterprise"],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Lange BI-loopbaan met bewezen teamleiderschap en verantwoordelijkheid voor datastrategie en governance."
+    },
+    "searchIndex": {
+      "roles": ["Business Intelligence Manager", "BI Team Lead", "Data Analytics Manager"],
+      "skills": ["Power BI", "Tableau", "Looker", "SQL", "Snowflake", "dbt", "Data Governance", "Data Strategy"],
+      "industries": ["Manufacturing", "Finance"]
+    },
+    "tags": ["bi", "manager", "power-bi", "data-strategy", "leadership"]
+  },
+  {
+    "candidateProfileSummary": "Senior DevOps engineer met sterke ervaring in het automatiseren van build-, deploy- en infrastructuurprocessen. Bouwt betrouwbare CI/CD-pijplijnen en Infrastructure-as-Code op de cloud. Verbetert doorlopend de betrouwbaarheid en snelheid van softwarelevering.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Youssef Bouazza",
+      "role": "Senior DevOps Engineer",
+      "summary": "Senior DevOps engineer gespecialiseerd in CI/CD, Kubernetes en Infrastructure-as-Code met Terraform. Automatiseert levering en maakt teams zelfstandiger en sneller.",
+      "contact": {
+        "phone": "+31 6 41093827",
+        "email": "youssef.bouazza@example.com",
+        "address": {
+          "streetNumber": "76",
+          "streetName": "Coolsingel",
+          "streetType": "singel",
+          "city": "Rotterdam",
+          "state": "Zuid-Holland",
+          "zipCode": "3011 AD",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/youssefbouazza",
+          "github": "https://github.com/youssefbouazza",
+          "website": "https://youssefbouazza.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["dinsdagochtend", "donderdagmiddag"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent", "contract"],
+        "willingToRelocate": false,
+        "remoteOnly": true
+      }
+    },
+    "keySkills": [
+      { "category": "CI/CD", "skills": ["GitLab CI", "GitHub Actions", "Argo CD", "Jenkins"] },
+      { "category": "Infrastructuur", "skills": ["Kubernetes", "Terraform", "Helm", "Ansible"] },
+      { "category": "Cloud", "skills": ["AWS", "GCP", "Azure"] },
+      { "category": "Observability", "skills": ["Prometheus", "Grafana", "Loki"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["CI/CD-automatisering", "Infrastructure-as-Code", "Container-orkestratie", "Observability"],
+      "keyResponsibilities": ["Bouwen en onderhouden van CI/CD-pijplijnen", "Beheren van cloudinfrastructuur", "Verbeteren van betrouwbaarheid en developer experience"]
+    },
+    "workExperience": [
+      {
+        "company": "ING",
+        "website": "https://www.ing.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2019-06",
+        "to": "Present",
+        "position": "Senior DevOps Engineer",
+        "activities": [
+          {
+            "project": "Interne developerplatform",
+            "tasks": ["Bouwen van self-service CI/CD-pijplijnen", "Beheren van Kubernetes-clusters", "Automatiseren van infrastructuur met Terraform"]
+          }
+        ],
+        "achievements": ["Deployment-frequentie verdubbeld", "Doorlooptijd van releases sterk verkort"],
+        "toolsAndTechnologies": ["Kubernetes", "Terraform", "GitLab CI", "Argo CD", "AWS", "Prometheus"]
+      },
+      {
+        "company": "Exact",
+        "website": "https://www.exact.com",
+        "location": "Delft, Nederland",
+        "from": "2015-08",
+        "to": "2019-05",
+        "position": "DevOps Engineer",
+        "activities": [
+          {
+            "project": "Cloudmigratie",
+            "tasks": ["Migreren van workloads naar de cloud", "Bouwen van geautomatiseerde deployments", "Opzetten van monitoring"]
+          }
+        ],
+        "achievements": ["Handmatige deployments vrijwel geëlimineerd"],
+        "toolsAndTechnologies": ["Docker", "Jenkins", "Ansible", "AWS"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "Hogeschool Rotterdam",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Informatica",
+        "achievements": ["Afstudeerproject over infrastructuurautomatisering"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Kubernetes Administrator (CKA)",
+        "institution": "Cloud Native Computing Foundation",
+        "year": "2020",
+        "description": "Certificering in het beheren van Kubernetes-clusters."
+      },
+      {
+        "title": "HashiCorp Certified: Terraform Associate",
+        "institution": "HashiCorp",
+        "year": "2021",
+        "description": "Certificering in Infrastructure-as-Code met Terraform."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Kubernetes", "Terraform", "Helm", "Ansible", "GitLab CI", "GitHub Actions", "Argo CD", "AWS", "GCP", "Prometheus"],
+      "softSkills": ["Probleemoplossend vermogen", "Automatiseringsdrang", "Samenwerken", "Betrouwbaarheid"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Arabisch", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Self-service developerplatform",
+        "description": "Een intern platform gebouwd waarmee teams zelfstandig en veilig kunnen deployen.",
+        "date": "2022",
+        "impact": "Kortere doorlooptijden en minder afhankelijkheid van het platformteam."
+      }
+    ],
+    "interestsAndHobbies": ["Voetbal", "Homelab-projecten", "Koken"],
+    "references": [
+      {
+        "name": "Emma Willemsen",
+        "position": "Site Reliability Engineer",
+        "company": "ING",
+        "contact": { "phone": "+31 6 48920371", "email": "emma.willemsen@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 72000, "max": 88000 },
+    "candidateClustering": {
+      "primaryCluster": "DevOps & Platform Engineering",
+      "secondaryClusters": ["Cloud Infrastructure", "CI/CD"],
+      "functionalExpertise": ["CI/CD Automation", "Infrastructure as Code", "Container Orchestration"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Snellere releases", "Hogere betrouwbaarheid", "Betere developer experience"],
+      "industryDomains": ["Fintech", "Software"],
+      "environmentFit": ["enterprise", "scale-up", "SaaS"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Consistente DevOps-loopbaan met diepgang in CI/CD, Kubernetes en Infrastructure-as-Code."
+    },
+    "searchIndex": {
+      "roles": ["DevOps Engineer", "Platform Engineer", "Infrastructure Engineer"],
+      "skills": ["Kubernetes", "Terraform", "Helm", "Ansible", "GitLab CI", "GitHub Actions", "Argo CD", "AWS", "GCP", "Prometheus", "CI/CD"],
+      "industries": ["Fintech", "Software"]
+    },
+    "tags": ["devops", "kubernetes", "terraform", "ci-cd", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Senior site reliability engineer gericht op de betrouwbaarheid, schaalbaarheid en observability van productiesystemen. Combineert software-engineering met operationele expertise om storingen te voorkomen en snel op te lossen. Bouwt aan een sterke incident- en on-callcultuur.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Emma Willemsen",
+      "role": "Senior Site Reliability Engineer",
+      "summary": "Senior SRE gespecialiseerd in observability, incidentbeheer en schaalbaarheid van productiesystemen. Werkt datagedreven aan betrouwbaarheid met SLO's en foutbudgetten.",
+      "contact": {
+        "phone": "+31 6 47201983",
+        "email": "emma.willemsen@example.com",
+        "address": {
+          "streetNumber": "23",
+          "streetName": "Grote Markt",
+          "streetType": "markt",
+          "city": "Nijmegen",
+          "state": "Gelderland",
+          "zipCode": "6511 KB",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/emmawillemsen",
+          "github": "https://github.com/emmawillemsen",
+          "website": "https://emmawillemsen.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["woensdagmiddag", "vrijdagochtend"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Reliability", "skills": ["SLO's", "Incident response", "Chaos engineering"] },
+      { "category": "Observability", "skills": ["Prometheus", "Grafana", "OpenTelemetry", "Jaeger"] },
+      { "category": "Infrastructuur", "skills": ["Kubernetes", "Terraform", "AWS"] },
+      { "category": "Programmeren", "skills": ["Go", "Python", "Bash"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Betrouwbaarheid van systemen", "Observability", "Incidentbeheer", "Capaciteitsplanning"],
+      "keyResponsibilities": ["Bewaken en verbeteren van betrouwbaarheid", "Opzetten van observability en alerting", "Leiden van incidentafhandeling en postmortems"]
+    },
+    "workExperience": [
+      {
+        "company": "bunq",
+        "website": "https://www.bunq.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2020-03",
+        "to": "Present",
+        "position": "Senior Site Reliability Engineer",
+        "activities": [
+          {
+            "project": "Reliability-programma",
+            "tasks": ["Invoeren van SLO's en foutbudgetten", "Opzetten van observability met OpenTelemetry", "Leiden van incidentresponse en postmortems"]
+          }
+        ],
+        "achievements": ["Aantal ernstige incidenten met 50% verlaagd", "Gemiddelde hersteltijd sterk verkort"],
+        "toolsAndTechnologies": ["Kubernetes", "Prometheus", "Grafana", "OpenTelemetry", "Go", "AWS"]
+      },
+      {
+        "company": "Backbase",
+        "website": "https://www.backbase.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2016-09",
+        "to": "2020-02",
+        "position": "Site Reliability Engineer",
+        "activities": [
+          {
+            "project": "Platformbetrouwbaarheid",
+            "tasks": ["Automatiseren van monitoring", "Verbeteren van deploymentveiligheid", "Ondersteunen van on-call"]
+          }
+        ],
+        "achievements": ["Monitoringdekking sterk uitgebreid"],
+        "toolsAndTechnologies": ["Prometheus", "Grafana", "Python", "AWS"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "Radboud Universiteit",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Computing Science",
+        "achievements": ["Specialisatie in gedistribueerde systemen"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Kubernetes Administrator (CKA)",
+        "institution": "Cloud Native Computing Foundation",
+        "year": "2021",
+        "description": "Certificering in Kubernetes-beheer."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Kubernetes", "Prometheus", "Grafana", "OpenTelemetry", "Jaeger", "Terraform", "Go", "Python", "AWS"],
+      "softSkills": ["Kalmte onder druk", "Analytisch denken", "Samenwerken", "Continu verbeteren"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Duits", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "SLO-gebaseerd reliability-programma",
+        "description": "Een programma opgezet rond SLO's en foutbudgetten om betrouwbaarheid meetbaar te sturen.",
+        "date": "2022",
+        "impact": "Minder incidenten en een sterkere, datagedreven betrouwbaarheidscultuur."
+      }
+    ],
+    "interestsAndHobbies": ["Trailrunning", "Elektronica", "Fotografie"],
+    "references": [
+      {
+        "name": "Youssef Bouazza",
+        "position": "Senior DevOps Engineer",
+        "company": "ING",
+        "contact": { "phone": "+31 6 41093827", "email": "youssef.bouazza@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 74000, "max": 90000 },
+    "candidateClustering": {
+      "primaryCluster": "Site Reliability Engineering",
+      "secondaryClusters": ["Observability", "Cloud Infrastructure"],
+      "functionalExpertise": ["Reliability Engineering", "Observability", "Incident Management"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Minder incidenten", "Kortere hersteltijd", "Hogere beschikbaarheid"],
+      "industryDomains": ["Fintech", "Software"],
+      "environmentFit": ["scale-up", "enterprise", "SaaS"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Sterke SRE-loopbaan met diepgang in observability, incidentbeheer en betrouwbaarheid van productiesystemen."
+    },
+    "searchIndex": {
+      "roles": ["Site Reliability Engineer", "SRE", "Platform Engineer"],
+      "skills": ["Kubernetes", "Prometheus", "Grafana", "OpenTelemetry", "Jaeger", "Terraform", "Go", "Python", "AWS", "Incident Management", "SLO"],
+      "industries": ["Fintech", "Software"]
+    },
+    "tags": ["sre", "reliability", "observability", "kubernetes", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Principal platform engineer die interne developerplatformen ontwerpt en de engineeringorganisatie op schaal versnelt. Combineert diepe infrastructuurkennis met platformdenken en technisch leiderschap. Maakt teams autonoom via goede abstracties en gouden paden.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Koen Vandenberghe",
+      "role": "Principal Platform Engineer",
+      "summary": "Principal platform engineer gespecialiseerd in interne developerplatformen, Kubernetes en platformarchitectuur. Zet technische standaarden en gouden paden op voor tientallen teams.",
+      "contact": {
+        "phone": "+32 470 318 902",
+        "email": "koen.vandenberghe@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "Nationalestraat",
+          "streetType": "straat",
+          "city": "Antwerpen",
+          "state": "Antwerpen",
+          "zipCode": "2000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/koenvandenberghe",
+          "github": "https://github.com/koenvandenberghe",
+          "website": "https://koenvandenberghe.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-02-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["donderdagmiddag"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Platform engineering", "skills": ["Kubernetes", "Backstage", "Crossplane", "GitOps"] },
+      { "category": "Infrastructuur", "skills": ["Terraform", "Helm", "Istio", "AWS"] },
+      { "category": "Programmeren", "skills": ["Go", "Python", "Rust"] },
+      { "category": "Leiderschap", "skills": ["Architectuur", "Technische strategie", "Mentorschap"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Interne developerplatformen", "Platformarchitectuur", "GitOps", "Technische strategie"],
+      "keyResponsibilities": ["Ontwerpen van het interne platform", "Bepalen van technische standaarden", "Begeleiden van platform- en productteams"]
+    },
+    "workExperience": [
+      {
+        "company": "Odoo",
+        "website": "https://www.odoo.com",
+        "location": "Louvain-la-Neuve, België",
+        "from": "2018-04",
+        "to": "Present",
+        "position": "Principal Platform Engineer",
+        "activities": [
+          {
+            "project": "Intern developerplatform",
+            "tasks": ["Bouwen van een intern platform met Backstage en GitOps", "Definiëren van gouden paden voor teams", "Aansturen van de platformarchitectuur"]
+          }
+        ],
+        "achievements": ["Onboardingtijd van nieuwe services sterk verkort", "Standaardisatie over tientallen teams gerealiseerd"],
+        "toolsAndTechnologies": ["Kubernetes", "Backstage", "Crossplane", "Terraform", "Go", "AWS"]
+      },
+      {
+        "company": "EVS Broadcast Equipment",
+        "website": "https://www.evs.com",
+        "location": "Luik, België",
+        "from": "2014-06",
+        "to": "2018-03",
+        "position": "Senior Infrastructure Engineer",
+        "activities": [
+          {
+            "project": "Container-platform",
+            "tasks": ["Bouwen van een Kubernetes-platform", "Automatiseren van infrastructuur", "Verbeteren van betrouwbaarheid"]
+          }
+        ],
+        "achievements": ["Container-adoptie in de organisatie versneld"],
+        "toolsAndTechnologies": ["Kubernetes", "Terraform", "Helm", "AWS"]
+      },
+      {
+        "company": "Cegeka",
+        "website": "https://www.cegeka.com",
+        "location": "Hasselt, België",
+        "from": "2011-09",
+        "to": "2014-05",
+        "position": "Systems Engineer",
+        "activities": [
+          {
+            "project": "Infrastructuurautomatisering",
+            "tasks": ["Automatiseren van serverconfiguratie", "Onderhouden van Linux-omgevingen"]
+          }
+        ],
+        "achievements": ["Provisioningtijd sterk verlaagd"],
+        "toolsAndTechnologies": ["Ansible", "Linux", "Bash"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "KU Leuven",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Informatica",
+        "achievements": ["Specialisatie in gedistribueerde systemen"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Kubernetes Administrator (CKA)",
+        "institution": "Cloud Native Computing Foundation",
+        "year": "2019",
+        "description": "Certificering in Kubernetes-beheer."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Kubernetes", "Backstage", "Crossplane", "Terraform", "Helm", "Istio", "Go", "Python", "AWS"],
+      "softSkills": ["Systeemdenken", "Technisch leiderschap", "Mentorschap", "Overtuigingskracht"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Frans", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Intern developerplatform met Backstage",
+        "description": "Van nul een intern developerplatform gebouwd met gouden paden en self-service.",
+        "date": "2021",
+        "impact": "Snellere levering en consistente standaarden over de hele engineeringorganisatie."
+      }
+    ],
+    "interestsAndHobbies": ["Wielrennen", "Open source", "Jazz"],
+    "references": [
+      {
+        "name": "Marloes Smit",
+        "position": "Director of Cloud Engineering",
+        "company": "Adyen",
+        "contact": { "phone": "+31 6 41209875", "email": "marloes.smit@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 105000, "max": 130000 },
+    "candidateClustering": {
+      "primaryCluster": "Platform Engineering",
+      "secondaryClusters": ["Cloud Infrastructure", "Developer Experience"],
+      "functionalExpertise": ["Internal Developer Platforms", "Platform Architecture", "GitOps"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Snellere onboarding", "Standaardisatie", "Hogere developer productivity"],
+      "industryDomains": ["Software", "SaaS"],
+      "environmentFit": ["scale-up", "enterprise", "SaaS"],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Lange infrastructuur- en platformloopbaan met principal-niveau invloed op interne developerplatformen en technische strategie."
+    },
+    "searchIndex": {
+      "roles": ["Principal Platform Engineer", "Platform Engineer", "Infrastructure Architect"],
+      "skills": ["Kubernetes", "Backstage", "Crossplane", "Terraform", "Helm", "Istio", "Go", "GitOps", "AWS", "Developer Experience"],
+      "industries": ["Software", "SaaS"]
+    },
+    "tags": ["platform", "principal", "kubernetes", "gitops", "developer-experience"]
+  },
+  {
+    "candidateProfileSummary": "Ervaren cloud- en engineeringdirector die grote infrastructuurorganisaties aanstuurt en de cloudstrategie bepaalt. Combineert diepe technische achtergrond met leiderschap over meerdere teams. Levert veilige, kostenefficiënte en schaalbare cloudplatformen op enterprise-niveau.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Marloes Smit",
+      "role": "Director of Cloud Engineering",
+      "summary": "Cloud engineering director met meer dan vijftien jaar ervaring in het opbouwen en leiden van infrastructuurteams. Verantwoordelijk voor cloudstrategie, kostenbeheersing en betrouwbaarheid op enterprise-schaal.",
+      "contact": {
+        "phone": "+31 6 41209875",
+        "email": "marloes.smit@example.com",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "Weteringschans",
+          "streetType": "schans",
+          "unit": "12",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipCode": "1017 SG",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/marloessmit",
+          "website": "https://marloessmit.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-04-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["dinsdagmiddag"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Cloudstrategie", "skills": ["AWS", "Azure", "GCP", "FinOps"] },
+      { "category": "Leiderschap", "skills": ["Teamopbouw", "Organisatieontwerp", "Stakeholdermanagement"] },
+      { "category": "Governance", "skills": ["Security", "Compliance", "Cost Management"] },
+      { "category": "Architectuur", "skills": ["Kubernetes", "Terraform", "Well-Architected"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Cloudstrategie", "Engineeringleiderschap", "Kostenbeheersing", "Governance en security"],
+      "keyResponsibilities": ["Bepalen van de cloud- en infrastructuurstrategie", "Aansturen van meerdere engineeringteams", "Bewaken van kosten, security en compliance", "Rapporteren aan directie"]
+    },
+    "workExperience": [
+      {
+        "company": "Adyen",
+        "website": "https://www.adyen.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2019-01",
+        "to": "Present",
+        "position": "Director of Cloud Engineering",
+        "activities": [
+          {
+            "project": "Cloud- en platformorganisatie",
+            "tasks": ["Aansturen van vijf infrastructuurteams", "Bepalen van de meerjarige cloudstrategie", "Invoeren van FinOps en kostenbeheersing"]
+          }
+        ],
+        "achievements": ["Cloudkosten met 25% verlaagd bij groeiende belasting", "Platformbetrouwbaarheid op enterprise-niveau geborgd"],
+        "toolsAndTechnologies": ["AWS", "Kubernetes", "Terraform", "FinOps"]
+      },
+      {
+        "company": "KPN",
+        "website": "https://www.kpn.com",
+        "location": "Den Haag, Nederland",
+        "from": "2013-02",
+        "to": "2018-12",
+        "position": "Head of Infrastructure",
+        "activities": [
+          {
+            "project": "Cloudtransformatie",
+            "tasks": ["Leiden van de migratie naar de publieke cloud", "Opbouwen van infrastructuurteams", "Invoeren van security- en compliancekaders"]
+          }
+        ],
+        "achievements": ["Grootschalige cloudmigratie succesvol afgerond"],
+        "toolsAndTechnologies": ["AWS", "Azure", "Terraform", "Kubernetes"]
+      },
+      {
+        "company": "Ordina",
+        "website": "https://www.ordina.com",
+        "location": "Nieuwegein, Nederland",
+        "from": "2008-09",
+        "to": "2013-01",
+        "position": "Infrastructure Consultant",
+        "activities": [
+          {
+            "project": "Infrastructuurprojecten",
+            "tasks": ["Adviseren over infrastructuurontwerp", "Implementeren van virtualisatie en automatisering"]
+          }
+        ],
+        "achievements": ["Meerdere succesvolle klantprojecten geleid"],
+        "toolsAndTechnologies": ["VMware", "Linux", "Ansible"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2008",
+        "institution": "Universiteit Utrecht",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Informatica",
+        "achievements": ["Specialisatie in gedistribueerde systemen"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Certified Solutions Architect - Professional",
+        "institution": "Amazon Web Services",
+        "year": "2020",
+        "description": "Certificering in geavanceerd cloudarchitectuurontwerp op AWS."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["AWS", "Azure", "GCP", "Kubernetes", "Terraform", "FinOps", "Security"],
+      "softSkills": ["Strategisch leiderschap", "Organisatieontwikkeling", "Stakeholdermanagement", "Besluitvaardigheid"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Bedrijfsbrede cloudtransformatie",
+        "description": "Leiding gegeven aan een meerjarige cloudtransformatie inclusief organisatieopbouw en governance.",
+        "date": "2021",
+        "impact": "Lagere kosten, hogere betrouwbaarheid en een volwassen cloudorganisatie."
+      }
+    ],
+    "interestsAndHobbies": ["Zeilen", "Bestuurswerk", "Skiën"],
+    "references": [
+      {
+        "name": "Koen Vandenberghe",
+        "position": "Principal Platform Engineer",
+        "company": "Odoo",
+        "contact": { "phone": "+32 470 318 902", "email": "koen.vandenberghe@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 140000, "max": 175000 },
+    "candidateClustering": {
+      "primaryCluster": "Cloud & Infrastructure Leadership",
+      "secondaryClusters": ["Engineering Leadership", "Cloud Strategy"],
+      "functionalExpertise": ["Cloud Strategy", "Engineering Leadership", "Cost Management"],
+      "skillDepth": "hybrid",
+      "businessImpact": ["Lagere cloudkosten", "Hogere betrouwbaarheid", "Volwassen cloudorganisatie"],
+      "industryDomains": ["Fintech", "Telecom"],
+      "environmentFit": ["enterprise", "regulated enterprise"],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "executiveInfluence",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Uitgebreide infrastructuurloopbaan met leiderschap over meerdere teams en verantwoordelijkheid voor cloudstrategie op directieniveau."
+    },
+    "searchIndex": {
+      "roles": ["Director of Cloud Engineering", "Head of Infrastructure", "Engineering Leader"],
+      "skills": ["AWS", "Azure", "GCP", "Kubernetes", "Terraform", "FinOps", "Cloud Strategy", "Security", "Cost Management"],
+      "industries": ["Fintech", "Telecom"]
+    },
+    "tags": ["cloud", "director", "leadership", "aws", "strategy"]
+  },
+  {
+    "candidateProfileSummary": "Senior security engineer gespecialiseerd in het beveiligen van cloudinfrastructuur en applicaties. Combineert offensieve en defensieve kennis om risico's vroeg te vinden en te mitigeren. Bouwt aan een sterke security-cultuur en veilige-by-design praktijken.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Ravi Jhinkoe",
+      "role": "Senior Security Engineer",
+      "summary": "Senior security engineer gespecialiseerd in cloudsecurity, threat modeling en DevSecOps. Beveiligt platformen end-to-end en begeleidt teams naar veilige ontwikkelpraktijken.",
+      "contact": {
+        "phone": "+31 6 49302817",
+        "email": "ravi.jhinkoe@example.com",
+        "address": {
+          "streetNumber": "48",
+          "streetName": "Spui",
+          "streetType": "plein",
+          "city": "Den Haag",
+          "state": "Zuid-Holland",
+          "zipCode": "2511 BT",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ravijhinkoe",
+          "github": "https://github.com/ravijhinkoe",
+          "website": "https://ravijhinkoe.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["maandagmiddag", "woensdagmiddag"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Cloudsecurity", "skills": ["AWS Security", "IAM", "Zero Trust", "KMS"] },
+      { "category": "Application security", "skills": ["Threat modeling", "SAST", "DAST", "OWASP"] },
+      { "category": "DevSecOps", "skills": ["Terraform", "Kubernetes", "Vault", "Trivy"] },
+      { "category": "Netwerk", "skills": ["Firewalls", "VPN", "TLS", "IDS/IPS"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Cloudsecurity", "Application security", "DevSecOps", "Netwerkbeveiliging"],
+      "keyResponsibilities": ["Uitvoeren van threat modeling en reviews", "Beveiligen van cloudinfrastructuur", "Integreren van security in CI/CD", "Begeleiden van teams in secure coding"]
+    },
+    "workExperience": [
+      {
+        "company": "Signicat",
+        "website": "https://www.signicat.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2019-05",
+        "to": "Present",
+        "position": "Senior Security Engineer",
+        "activities": [
+          {
+            "project": "DevSecOps-programma",
+            "tasks": ["Integreren van SAST/DAST in pijplijnen", "Uitvoeren van threat modeling op nieuwe features", "Hardenen van AWS-omgevingen"]
+          }
+        ],
+        "achievements": ["Kritieke kwetsbaarheden vroeg in de pijplijn onderschept", "Security-baseline over teams gestandaardiseerd"],
+        "toolsAndTechnologies": ["AWS", "Terraform", "Vault", "Trivy", "Kubernetes"]
+      },
+      {
+        "company": "Fox-IT",
+        "website": "https://www.fox-it.com",
+        "location": "Delft, Nederland",
+        "from": "2014-09",
+        "to": "2019-04",
+        "position": "Security Consultant",
+        "activities": [
+          {
+            "project": "Security assessments",
+            "tasks": ["Uitvoeren van penetratietests", "Adviseren over netwerkbeveiliging", "Rapporteren aan klanten"]
+          }
+        ],
+        "achievements": ["Talrijke kwetsbaarheden bij klanten geïdentificeerd en verholpen"],
+        "toolsAndTechnologies": ["Kali Linux", "Burp Suite", "Nmap", "Wireshark"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2014",
+        "institution": "Technische Universiteit Delft",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Cyber Security",
+        "achievements": ["Scriptie over cloud-securityarchitectuur"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Offensive Security Certified Professional (OSCP)",
+        "institution": "OffSec",
+        "year": "2017",
+        "description": "Praktijkgerichte certificering in penetratietesten."
+      },
+      {
+        "title": "AWS Certified Security - Specialty",
+        "institution": "Amazon Web Services",
+        "year": "2021",
+        "description": "Certificering in het beveiligen van AWS-omgevingen."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["AWS Security", "IAM", "Terraform", "Kubernetes", "Vault", "Trivy", "Threat Modeling", "OWASP", "TLS"],
+      "softSkills": ["Risicobewustzijn", "Nauwkeurigheid", "Communicatie", "Kritisch denken"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Hindi", "proficiency": { "read": "basic", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "DevSecOps-integratie",
+        "description": "Security volledig geïntegreerd in de CI/CD-pijplijnen van alle engineeringteams.",
+        "date": "2022",
+        "impact": "Kwetsbaarheden worden vroeg gevonden en de gemiddelde hersteltijd is sterk gedaald."
+      }
+    ],
+    "interestsAndHobbies": ["Capture the flag", "Schaken", "Hardlopen"],
+    "references": [
+      {
+        "name": "Emma Willemsen",
+        "position": "Senior Site Reliability Engineer",
+        "company": "bunq",
+        "contact": { "phone": "+31 6 47201983", "email": "emma.willemsen@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 78000, "max": 95000 },
+    "candidateClustering": {
+      "primaryCluster": "Security Engineering",
+      "secondaryClusters": ["Cloud Security", "DevSecOps"],
+      "functionalExpertise": ["Cloud Security", "Application Security", "Threat Modeling"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Vroege detectie van kwetsbaarheden", "Sterkere security-baseline", "Lager risico"],
+      "industryDomains": ["Cybersecurity", "Fintech"],
+      "environmentFit": ["enterprise", "regulated enterprise", "SaaS"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Sterke securityloopbaan met zowel offensieve als defensieve expertise en bewezen impact op DevSecOps-praktijken."
+    },
+    "searchIndex": {
+      "roles": ["Security Engineer", "Cloud Security Engineer", "DevSecOps Engineer"],
+      "skills": ["AWS Security", "IAM", "Terraform", "Kubernetes", "Vault", "Threat Modeling", "OWASP", "Penetration Testing", "Network Security"],
+      "industries": ["Cybersecurity", "Fintech"]
+    },
+    "tags": ["security", "devsecops", "cloud-security", "senior", "aws"]
+  },
+  {
+    "candidateProfileSummary": "Senior product manager die datagedreven productbeslissingen neemt en teams richting geeft met een heldere visie. Ervaren in het van idee tot lancering brengen van B2B-SaaS-producten. Combineert klantgerichtheid met sterke prioritering en stakeholdermanagement.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Julia Kowalski",
+      "role": "Senior Product Manager",
+      "summary": "Senior product manager gespecialiseerd in B2B-SaaS. Stelt productstrategie en roadmaps op, werkt datagedreven en stuurt cross-functionele teams naar meetbare uitkomsten.",
+      "contact": {
+        "phone": "+31 6 47820193",
+        "email": "julia.kowalski@example.com",
+        "address": {
+          "streetNumber": "17",
+          "streetName": "Keizersgracht",
+          "streetType": "gracht",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipCode": "1016 EE",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/juliakowalski",
+          "website": "https://juliakowalski.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["dinsdagochtend", "donderdagmiddag"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Productmanagement", "skills": ["Productstrategie", "Roadmapping", "Prioritering", "Discovery"] },
+      { "category": "Data en analyse", "skills": ["SQL", "Amplitude", "A/B-testen"] },
+      { "category": "Samenwerking", "skills": ["Jira", "Figma", "Stakeholdermanagement"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Productstrategie", "B2B-SaaS", "Product discovery", "Datagedreven besluitvorming"],
+      "keyResponsibilities": ["Opstellen van productvisie en roadmap", "Prioriteren op basis van waarde en data", "Aansturen van cross-functionele teams", "Afstemmen met klanten en stakeholders"]
+    },
+    "workExperience": [
+      {
+        "company": "MessageBird",
+        "website": "https://www.bird.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2020-01",
+        "to": "Present",
+        "position": "Senior Product Manager",
+        "activities": [
+          {
+            "project": "Communicatieplatform",
+            "tasks": ["Opstellen van de productroadmap voor een kernmodule", "Uitvoeren van klant-discovery", "Opzetten van experimenten en KPI's"]
+          }
+        ],
+        "achievements": ["Activatie van nieuwe gebruikers met 30% verhoogd", "Nieuwe module succesvol gelanceerd"],
+        "toolsAndTechnologies": ["Amplitude", "Jira", "Figma", "SQL"]
+      },
+      {
+        "company": "WeTransfer",
+        "website": "https://www.wetransfer.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2015-09",
+        "to": "2019-12",
+        "position": "Product Manager",
+        "activities": [
+          {
+            "project": "Groei en onboarding",
+            "tasks": ["Optimaliseren van de onboardingflow", "Uitvoeren van A/B-tests", "Samenwerken met design en engineering"]
+          }
+        ],
+        "achievements": ["Onboarding-conversie meetbaar verbeterd"],
+        "toolsAndTechnologies": ["Amplitude", "Jira", "SQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "Universiteit van Amsterdam",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Business Administration",
+        "achievements": ["Specialisatie in digitale innovatie"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Pragmatic Institute Certified Product Manager",
+        "institution": "Pragmatic Institute",
+        "year": "2019",
+        "description": "Certificering in marktgericht productmanagement."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["SQL", "Amplitude", "Jira", "Figma", "A/B Testing"],
+      "softSkills": ["Klantgerichtheid", "Prioritering", "Communicatie", "Leiderschap zonder autoriteit"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Engels", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Pools", "proficiency": { "read": "native", "written": "native", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Lancering nieuwe productmodule",
+        "description": "Een nieuwe module van discovery tot lancering gebracht met een cross-functioneel team.",
+        "date": "2022",
+        "impact": "Hogere activatie en een nieuwe bron van terugkerende omzet."
+      }
+    ],
+    "interestsAndHobbies": ["Reizen", "Design thinking", "Yoga"],
+    "references": [
+      {
+        "name": "Pieter De Smet",
+        "position": "Head of Product",
+        "company": "MessageBird",
+        "contact": { "phone": "+32 472 019 384", "email": "pieter.desmet@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 80000, "max": 98000 },
+    "candidateClustering": {
+      "primaryCluster": "Product Management",
+      "secondaryClusters": ["B2B SaaS", "Product Strategy"],
+      "functionalExpertise": ["Product Strategy", "Product Discovery", "Data-Driven Decision Making"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Hogere activatie", "Succesvolle lanceringen", "Omzetgroei"],
+      "industryDomains": ["Software", "SaaS"],
+      "environmentFit": ["scale-up", "SaaS", "startup"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Sterke product-managementloopbaan in B2B-SaaS met bewezen datagedreven impact en cross-functioneel leiderschap."
+    },
+    "searchIndex": {
+      "roles": ["Product Manager", "Senior Product Manager", "Product Owner"],
+      "skills": ["Product Strategy", "Roadmapping", "Product Discovery", "SQL", "Amplitude", "A/B Testing", "Jira", "Figma"],
+      "industries": ["Software", "SaaS"]
+    },
+    "tags": ["product-manager", "b2b-saas", "product-strategy", "senior", "data-driven"]
+  },
+  {
+    "candidateProfileSummary": "Gedreven product owner op middenniveau die backlogs beheert en de brug slaat tussen business en development. Vertaalt behoeften naar heldere user stories en zorgt voor een soepel agile proces. Werkt nauw samen met stakeholders en het scrumteam aan waardevolle producten.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Tim Janssens",
+      "role": "Product Owner",
+      "summary": "Product owner met sterke agile vaardigheden en focus op backlogbeheer, user stories en stakeholdercommunicatie. Zorgt dat het team continu waarde levert.",
+      "contact": {
+        "phone": "+32 493 820 176",
+        "email": "tim.janssens@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Kapelstraat",
+          "streetType": "straat",
+          "city": "Hasselt",
+          "state": "Limburg",
+          "zipCode": "3500",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/timjanssens",
+          "website": "https://timjanssens.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["maandagochtend", "woensdagmiddag", "vrijdagochtend"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Agile", "skills": ["Scrum", "Kanban", "Backlogbeheer", "User stories"] },
+      { "category": "Werktuigen", "skills": ["Jira", "Confluence", "Miro"] },
+      { "category": "Analyse", "skills": ["SQL", "Requirements analysis", "Acceptatiecriteria"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Backlogbeheer", "Agile werken", "Stakeholdercommunicatie"],
+      "keyResponsibilities": ["Beheren en prioriteren van de productbacklog", "Schrijven van heldere user stories", "Afstemmen met stakeholders en het scrumteam"]
+    },
+    "workExperience": [
+      {
+        "company": "Bpost",
+        "website": "https://www.bpost.be",
+        "location": "Brussel, België",
+        "from": "2022-09",
+        "to": "Present",
+        "position": "Product Owner",
+        "activities": [
+          {
+            "project": "Track & trace-portaal",
+            "tasks": ["Beheren van de backlog voor het klantportaal", "Schrijven van user stories en acceptatiecriteria", "Afstemmen met business en development"]
+          }
+        ],
+        "achievements": ["Doorlooptijd van features verkort", "Klanttevredenheid van het portaal verhoogd"],
+        "toolsAndTechnologies": ["Jira", "Confluence", "Miro"]
+      },
+      {
+        "company": "Cronos Group",
+        "website": "https://www.cronos-groep.be",
+        "location": "Kontich, België",
+        "from": "2021-02",
+        "to": "2022-08",
+        "position": "Junior Product Owner",
+        "activities": [
+          {
+            "project": "Interne applicaties",
+            "tasks": ["Ondersteunen van backlogbeheer", "Verzamelen van requirements", "Faciliteren van refinements"]
+          }
+        ],
+        "achievements": ["Eerste zelfstandige epic succesvol opgeleverd"],
+        "toolsAndTechnologies": ["Jira", "Confluence"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2020",
+        "institution": "UHasselt",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Bedrijfsmanagement",
+        "achievements": ["Afstudeerproject over agile productontwikkeling"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Professional Scrum Product Owner I",
+        "institution": "Scrum.org",
+        "year": "2022",
+        "description": "Certificering in de rol van product owner binnen Scrum."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Jira", "Confluence", "Miro", "SQL"],
+      "softSkills": ["Communicatie", "Prioritering", "Samenwerken", "Organisatietalent"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } },
+        { "language": "Frans", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Vernieuwing track & trace-portaal",
+        "description": "De backlog beheerd voor de vernieuwing van het klantgerichte track & trace-portaal.",
+        "date": "2023",
+        "impact": "Betere gebruikerservaring en hogere klanttevredenheid."
+      }
+    ],
+    "interestsAndHobbies": ["Wielrennen", "Koken", "Podcasts"],
+    "references": [
+      {
+        "name": "Nadia Haddad",
+        "position": "Lead Technical Product Manager",
+        "company": "Bpost",
+        "contact": { "phone": "+31 6 40912837", "email": "nadia.haddad@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 48000, "max": 60000 },
+    "candidateClustering": {
+      "primaryCluster": "Product Ownership",
+      "secondaryClusters": ["Agile Delivery", "Requirements Management"],
+      "functionalExpertise": ["Backlog Management", "Agile Delivery", "Stakeholder Communication"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Snellere levering", "Hogere klanttevredenheid"],
+      "industryDomains": ["Logistics", "Software"],
+      "environmentFit": ["enterprise", "consulting", "SaaS"],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "Groeiende product-ownerloopbaan met solide agile vaardigheden en verantwoordelijkheid voor backlog en stakeholders."
+    },
+    "searchIndex": {
+      "roles": ["Product Owner", "Agile Product Owner", "Business Analyst"],
+      "skills": ["Scrum", "Kanban", "Backlog Management", "User Stories", "Jira", "Confluence", "SQL", "Requirements Analysis"],
+      "industries": ["Logistics", "Software"]
+    },
+    "tags": ["product-owner", "agile", "scrum", "jira", "midlevel"]
+  },
+  {
+    "candidateProfileSummary": "Technisch onderlegde product lead die complexe platform- en API-producten aanstuurt. Combineert een engineeringachtergrond met sterk productinzicht om technische en zakelijke belangen te verenigen. Geeft richting aan meerdere teams rond developer-gerichte producten.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Nadia Haddad",
+      "role": "Lead Technical Product Manager",
+      "summary": "Lead technical product manager gespecialiseerd in platform-, API- en developer-producten. Vertaalt technische complexiteit naar heldere strategie en stuurt meerdere teams aan.",
+      "contact": {
+        "phone": "+31 6 40912837",
+        "email": "nadia.haddad@example.com",
+        "address": {
+          "streetNumber": "31",
+          "streetName": "Neude",
+          "streetType": "plein",
+          "city": "Utrecht",
+          "state": "Utrecht",
+          "zipCode": "3512 AE",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/nadiahaddad",
+          "github": "https://github.com/nadiahaddad",
+          "website": "https://nadiahaddad.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["dinsdagmiddag", "donderdagochtend"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Technisch productmanagement", "skills": ["API-productstrategie", "Platformdenken", "Roadmapping"] },
+      { "category": "Techniek", "skills": ["REST", "GraphQL", "SQL", "Systeemontwerp"] },
+      { "category": "Data en analyse", "skills": ["Amplitude", "A/B-testen", "SQL"] },
+      { "category": "Samenwerking", "skills": ["Jira", "Figma", "Stakeholdermanagement"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["API- en platformproducten", "Technische productstrategie", "Developer experience"],
+      "keyResponsibilities": ["Bepalen van de strategie voor platformproducten", "Aansturen van meerdere productteams", "Vertalen van technische afwegingen naar productbeslissingen", "Afstemmen met engineering en stakeholders"]
+    },
+    "workExperience": [
+      {
+        "company": "TomTom",
+        "website": "https://www.tomtom.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2019-02",
+        "to": "Present",
+        "position": "Lead Technical Product Manager",
+        "activities": [
+          {
+            "project": "Maps API-platform",
+            "tasks": ["Aansturen van de strategie voor het API-platform", "Coördineren van meerdere productteams", "Verbeteren van developer experience en documentatie"]
+          }
+        ],
+        "achievements": ["API-adoptie door externe developers sterk vergroot", "Time-to-first-call voor developers verkort"],
+        "toolsAndTechnologies": ["REST", "GraphQL", "Amplitude", "Jira", "SQL"]
+      },
+      {
+        "company": "Mews",
+        "website": "https://www.mews.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2015-06",
+        "to": "2019-01",
+        "position": "Technical Product Manager",
+        "activities": [
+          {
+            "project": "Integratieplatform",
+            "tasks": ["Bouwen van de roadmap voor integraties", "Werken met partners en developers", "Prioriteren op basis van data"]
+          }
+        ],
+        "achievements": ["Aantal beschikbare integraties sterk uitgebreid"],
+        "toolsAndTechnologies": ["REST", "Jira", "SQL"]
+      },
+      {
+        "company": "Sogeti",
+        "website": "https://www.sogeti.com",
+        "location": "Vianen, Nederland",
+        "from": "2012-09",
+        "to": "2015-05",
+        "position": "Software Engineer",
+        "activities": [
+          {
+            "project": "Maatwerkapplicaties",
+            "tasks": ["Bouwen van backend-services", "Samenwerken met klanten"]
+          }
+        ],
+        "achievements": ["Overstap gemaakt van engineering naar productmanagement"],
+        "toolsAndTechnologies": ["Java", "REST", "SQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2012",
+        "institution": "Technische Universiteit Eindhoven",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Computer Science",
+        "achievements": ["Combinatie van techniek en bedrijfskunde"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Professional Scrum Product Owner II",
+        "institution": "Scrum.org",
+        "year": "2020",
+        "description": "Gevorderde certificering in productmanagement binnen Scrum."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["REST", "GraphQL", "SQL", "Amplitude", "Jira", "Figma", "System Design"],
+      "softSkills": ["Strategisch denken", "Leiderschap", "Technische communicatie", "Stakeholdermanagement"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Frans", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Vernieuwing API-platform",
+        "description": "Leiding gegeven aan de strategie en vernieuwing van een extern API-platform met focus op developer experience.",
+        "date": "2021",
+        "impact": "Meer externe adoptie en snellere integratie door partners."
+      }
+    ],
+    "interestsAndHobbies": ["Bergwandelen", "API-design", "Documentaires"],
+    "references": [
+      {
+        "name": "Julia Kowalski",
+        "position": "Senior Product Manager",
+        "company": "MessageBird",
+        "contact": { "phone": "+31 6 47820193", "email": "julia.kowalski@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 92000, "max": 112000 },
+    "candidateClustering": {
+      "primaryCluster": "Technical Product Management",
+      "secondaryClusters": ["Platform Products", "Developer Experience"],
+      "functionalExpertise": ["API Product Strategy", "Platform Products", "Technical Roadmapping"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Meer API-adoptie", "Betere developer experience", "Snellere integraties"],
+      "industryDomains": ["Software", "Mobility"],
+      "environmentFit": ["scale-up", "enterprise", "SaaS"],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Technische productloopbaan met engineeringachtergrond en leiderschap over meerdere platform- en API-teams."
+    },
+    "searchIndex": {
+      "roles": ["Technical Product Manager", "Lead Product Manager", "Platform Product Manager"],
+      "skills": ["API Product Strategy", "Platform Products", "Roadmapping", "REST", "GraphQL", "SQL", "Amplitude", "Developer Experience"],
+      "industries": ["Software", "Mobility"]
+    },
+    "tags": ["technical-pm", "api", "platform", "lead", "developer-experience"]
+  },
+  {
+    "candidateProfileSummary": "Ervaren product manager met een sterke UX-focus en leiderschap over meerdere productteams. Combineert diepe kennis van gebruikersonderzoek en design met productstrategie. Bouwt aan gebruikersgerichte organisaties waarin design en product hand in hand gaan.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Pieter De Smet",
+      "role": "Head of Product (UX-focus)",
+      "summary": "Product manager en teamleider met sterke UX-achtergrond. Verenigt gebruikersonderzoek, design en strategie en stuurt meerdere productteams richting gebruikersgerichte uitkomsten.",
+      "contact": {
+        "phone": "+32 472 019 384",
+        "email": "pieter.desmet@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Korenlei",
+          "streetType": "kaai",
+          "city": "Gent",
+          "state": "Oost-Vlaanderen",
+          "zipCode": "9000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/pieterdesmet",
+          "website": "https://pieterdesmet.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-02-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["woensdagmiddag"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Productleiderschap", "skills": ["Productstrategie", "Teammanagement", "Roadmapping"] },
+      { "category": "UX en design", "skills": ["Gebruikersonderzoek", "Usability testing", "Design thinking"] },
+      { "category": "Data en analyse", "skills": ["Amplitude", "A/B-testen", "SQL"] },
+      { "category": "Werktuigen", "skills": ["Figma", "Jira", "Maze"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["UX-gedreven productmanagement", "Productleiderschap", "Gebruikersonderzoek", "Productstrategie"],
+      "keyResponsibilities": ["Aansturen van meerdere productteams", "Verankeren van gebruikersonderzoek in het proces", "Bepalen van productvisie en -strategie", "Coachen van product managers en designers"]
+    },
+    "workExperience": [
+      {
+        "company": "Teamleader",
+        "website": "https://www.teamleader.eu",
+        "location": "Gent, België",
+        "from": "2019-01",
+        "to": "Present",
+        "position": "Head of Product",
+        "activities": [
+          {
+            "project": "Productorganisatie",
+            "tasks": ["Aansturen van drie productteams", "Opzetten van een continu discovery-proces", "Verankeren van gebruikersonderzoek in de roadmap"]
+          }
+        ],
+        "achievements": ["Gebruikerstevredenheid meetbaar verhoogd", "Discovery-cultuur organisatiebreed ingevoerd"],
+        "toolsAndTechnologies": ["Figma", "Amplitude", "Jira", "Maze"]
+      },
+      {
+        "company": "In The Pocket",
+        "website": "https://www.inthepocket.com",
+        "location": "Gent, België",
+        "from": "2016-03",
+        "to": "2018-12",
+        "position": "Senior Product Manager",
+        "activities": [
+          {
+            "project": "Digitale producten",
+            "tasks": ["Leiden van product discovery voor klanten", "Faciliteren van usability testing", "Prioriteren van roadmaps"]
+          }
+        ],
+        "achievements": ["Meerdere gebruikersgerichte producten gelanceerd"],
+        "toolsAndTechnologies": ["Figma", "Amplitude", "Jira"]
+      },
+      {
+        "company": "Bagaar",
+        "website": "https://www.bagaar.be",
+        "location": "Antwerpen, België",
+        "from": "2013-09",
+        "to": "2016-02",
+        "position": "UX Designer / Product Manager",
+        "activities": [
+          {
+            "project": "UX en productontwerp",
+            "tasks": ["Uitvoeren van gebruikersonderzoek", "Ontwerpen van interfaces", "Ondersteunen van productbeslissingen"]
+          }
+        ],
+        "achievements": ["Overstap gemaakt van UX-design naar productleiderschap"],
+        "toolsAndTechnologies": ["Sketch", "Figma", "Jira"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2013",
+        "institution": "Universiteit Gent",
+        "degree": "Master",
+        "fieldOfStudy": "Communicatiewetenschappen",
+        "achievements": ["Specialisatie in mens-computerinteractie"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Nielsen Norman Group UX Certification",
+        "institution": "Nielsen Norman Group",
+        "year": "2018",
+        "description": "Certificering in gebruikersgericht ontwerp en onderzoek."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Figma", "Amplitude", "Jira", "Maze", "SQL", "A/B Testing"],
+      "softSkills": ["Empathie", "Leiderschap", "Storytelling", "Coaching"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Frans", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Invoering continu discovery",
+        "description": "Een continu discovery-proces opgezet waarin gebruikersonderzoek de roadmap voedt.",
+        "date": "2021",
+        "impact": "Betere productbeslissingen en hogere gebruikerstevredenheid."
+      }
+    ],
+    "interestsAndHobbies": ["Schilderen", "Architectuur", "Koffie"],
+    "references": [
+      {
+        "name": "Esmée van Dijk",
+        "position": "Growth Product Manager",
+        "company": "Coolblue",
+        "contact": { "phone": "+31 6 29418756", "email": "esmee.vandijk@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 95000, "max": 118000 },
+    "candidateClustering": {
+      "primaryCluster": "Product Leadership",
+      "secondaryClusters": ["UX Strategy", "Product Management"],
+      "functionalExpertise": ["UX-Driven Product Management", "Product Leadership", "User Research"],
+      "skillDepth": "hybrid",
+      "businessImpact": ["Hogere gebruikerstevredenheid", "Sterke discovery-cultuur", "Betere producten"],
+      "industryDomains": ["Software", "SaaS"],
+      "environmentFit": ["scale-up", "SaaS", "consulting"],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Productleiderschap met sterke UX-achtergrond en verantwoordelijkheid voor meerdere teams en productstrategie."
+    },
+    "searchIndex": {
+      "roles": ["Head of Product", "Product Manager", "UX Product Manager"],
+      "skills": ["Product Strategy", "User Research", "Usability Testing", "Design Thinking", "Figma", "Amplitude", "A/B Testing", "Roadmapping"],
+      "industries": ["Software", "SaaS"]
+    },
+    "tags": ["product", "ux", "manager", "product-leadership", "discovery"]
+  },
+  {
+    "candidateProfileSummary": "Datagedreven growth product manager die groei aanjaagt via experimenten in de volledige funnel. Ervaren in acquisitie, activatie en retentie voor consumentgerichte producten. Combineert analytisch vermogen met een sterke experimenteercultuur en teamleiderschap.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Esmée van Dijk",
+      "role": "Growth Product Manager",
+      "summary": "Growth product manager en teamleider gespecialiseerd in funnel-optimalisatie, experimentatie en retentie. Bouwt aan groeimotoren voor consumentproducten met een sterke datacultuur.",
+      "contact": {
+        "phone": "+31 6 29418756",
+        "email": "esmee.vandijk@example.com",
+        "address": {
+          "streetNumber": "56",
+          "streetName": "Grote Houtstraat",
+          "streetType": "straat",
+          "city": "Haarlem",
+          "state": "Noord-Holland",
+          "zipCode": "2011 SR",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/esmeevandijk",
+          "website": "https://esmeevandijk.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["maandagmiddag", "donderdagochtend"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Growth", "skills": ["Funnel-optimalisatie", "Experimentatie", "Retentie", "Activatie"] },
+      { "category": "Data en analyse", "skills": ["SQL", "Amplitude", "Mixpanel", "A/B-testen"] },
+      { "category": "Leiderschap", "skills": ["Teammanagement", "Growth-strategie", "Stakeholdermanagement"] },
+      { "category": "Werktuigen", "skills": ["Jira", "Figma", "Optimizely"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Growth-productmanagement", "Experimentatie", "Funnel-optimalisatie", "Retentie"],
+      "keyResponsibilities": ["Aansturen van een growth-team", "Ontwerpen en uitvoeren van experimenten", "Optimaliseren van de volledige funnel", "Sturen op groei-KPI's"]
+    },
+    "workExperience": [
+      {
+        "company": "Coolblue",
+        "website": "https://www.coolblue.nl",
+        "location": "Rotterdam, Nederland",
+        "from": "2019-05",
+        "to": "Present",
+        "position": "Growth Product Manager",
+        "activities": [
+          {
+            "project": "Growth-team",
+            "tasks": ["Aansturen van een cross-functioneel growth-team", "Opzetten van een experimenteerprogramma", "Optimaliseren van activatie en retentie"]
+          }
+        ],
+        "achievements": ["Retentie na 30 dagen met 18% verhoogd", "Experimenteertempo verdrievoudigd"],
+        "toolsAndTechnologies": ["Amplitude", "SQL", "Optimizely", "Jira"]
+      },
+      {
+        "company": "Takeaway.com",
+        "website": "https://www.takeaway.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2015-01",
+        "to": "2019-04",
+        "position": "Product Manager Growth",
+        "activities": [
+          {
+            "project": "Acquisitie en onboarding",
+            "tasks": ["Optimaliseren van acquisitiekanalen", "Verbeteren van de onboardingflow", "Uitvoeren van A/B-tests"]
+          }
+        ],
+        "achievements": ["Conversie in de funnel meetbaar verhoogd"],
+        "toolsAndTechnologies": ["Mixpanel", "SQL", "Optimizely"]
+      },
+      {
+        "company": "Marktplaats",
+        "website": "https://www.marktplaats.nl",
+        "location": "Amsterdam, Nederland",
+        "from": "2012-09",
+        "to": "2014-12",
+        "position": "Junior Product Manager",
+        "activities": [
+          {
+            "project": "Marktplaatsfeatures",
+            "tasks": ["Ondersteunen van feature-ontwikkeling", "Analyseren van gebruikersgedrag"]
+          }
+        ],
+        "achievements": ["Eerste zelfstandige groeiexperiment opgezet"],
+        "toolsAndTechnologies": ["SQL", "Google Analytics"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2012",
+        "institution": "Erasmus Universiteit Rotterdam",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Marketing Management",
+        "achievements": ["Specialisatie in digitale marketing en analytics"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Reforge Growth Series",
+        "institution": "Reforge",
+        "year": "2020",
+        "description": "Programma in geavanceerde growth-strategieën en experimentatie."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["SQL", "Amplitude", "Mixpanel", "Optimizely", "A/B Testing", "Jira", "Figma"],
+      "softSkills": ["Analytisch denken", "Leiderschap", "Experimenteermentaliteit", "Communicatie"],
+      "languages": [
+        { "language": "Nederlands", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Engels", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Duits", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Opzet experimenteerprogramma",
+        "description": "Een organisatiebreed experimenteerprogramma opgezet dat groei-initiatieven versnelt.",
+        "date": "2022",
+        "impact": "Hoger experimenteertempo en meetbaar betere retentie."
+      }
+    ],
+    "interestsAndHobbies": ["Hardlopen", "Podcasts over groei", "Reizen"],
+    "references": [
+      {
+        "name": "Bram Jacobs",
+        "position": "Lead Full-Stack Engineer",
+        "company": "Coolblue",
+        "contact": { "phone": "+31 6 45120983", "email": "bram.jacobs@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 90000, "max": 110000 },
+    "candidateClustering": {
+      "primaryCluster": "Growth Product Management",
+      "secondaryClusters": ["Experimentation", "Product Analytics"],
+      "functionalExpertise": ["Growth Strategy", "Funnel Optimization", "Experimentation"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Hogere retentie", "Meer experimenten", "Betere funnel-conversie"],
+      "industryDomains": ["E-commerce", "Consumer Tech"],
+      "environmentFit": ["scale-up", "SaaS", "consumer"],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Growth-productloopbaan met leiderschap over een growth-team en bewezen impact op retentie en funnel-conversie."
+    },
+    "searchIndex": {
+      "roles": ["Growth Product Manager", "Product Manager", "Growth Lead"],
+      "skills": ["Growth Strategy", "Funnel Optimization", "Experimentation", "SQL", "Amplitude", "Mixpanel", "A/B Testing", "Retention"],
+      "industries": ["E-commerce", "Consumer Tech"]
+    },
+    "tags": ["growth", "product-manager", "experimentation", "retention", "manager"]
+  }
+]

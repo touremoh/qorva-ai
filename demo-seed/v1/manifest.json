@@ -1,0 +1,235 @@
+{
+  "version": "v1",
+  "languages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "it",
+    "nl",
+    "pt"
+  ],
+  "perBucket": {
+    "cvs": 20,
+    "jobPosts": 5
+  },
+  "totals": {
+    "segments": 7,
+    "languages": 7,
+    "buckets": 49,
+    "cvs": 980,
+    "jobPosts": 245
+  },
+  "segments": {
+    "tech-it": {
+      "en": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "fr": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "de": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "es": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "it": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "nl": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "pt": {
+        "cvs": 20,
+        "jobPosts": 5
+      }
+    },
+    "engineering": {
+      "en": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "fr": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "de": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "es": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "it": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "nl": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "pt": {
+        "cvs": 20,
+        "jobPosts": 5
+      }
+    },
+    "finance-accounting": {
+      "en": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "fr": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "de": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "es": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "it": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "nl": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "pt": {
+        "cvs": 20,
+        "jobPosts": 5
+      }
+    },
+    "sales-marketing": {
+      "en": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "fr": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "de": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "es": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "it": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "nl": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "pt": {
+        "cvs": 20,
+        "jobPosts": 5
+      }
+    },
+    "healthcare-life-sciences": {
+      "en": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "fr": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "de": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "es": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "it": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "nl": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "pt": {
+        "cvs": 20,
+        "jobPosts": 5
+      }
+    },
+    "executive-management": {
+      "en": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "fr": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "de": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "es": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "it": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "nl": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "pt": {
+        "cvs": 20,
+        "jobPosts": 5
+      }
+    },
+    "generalist": {
+      "en": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "fr": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "de": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "es": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "it": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "nl": {
+        "cvs": 20,
+        "jobPosts": 5
+      },
+      "pt": {
+        "cvs": 20,
+        "jobPosts": 5
+      }
+    }
+  }
+}

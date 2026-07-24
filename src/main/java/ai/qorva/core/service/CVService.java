@@ -12,10 +12,12 @@ import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.common.Availability;
 import ai.qorva.core.dto.common.PersonalInformation;
+import ai.qorva.core.enums.ContentDateSourceEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.CVMapper;
 import ai.qorva.core.mapper.OpenAIResultMapper;
+import ai.qorva.core.utils.CVContentDateResolver;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.ai.converter.BeanOutputConverter;
@@ -47,8 +49,12 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final MatchingReportRepository matchingReportRepository;
     private final ChatsRepository chatsRepository;
     private final UsageMonitoringService usageMonitoringService;
+    private final S3StorageService s3StorageService;
 
     private static final int DEFAULT_MATCH_LIMIT = 10;
+
+    /** Stashes the attachment S3 key between pre- and post-delete hooks (same pattern as existingDTOForUpdate). */
+    private final ThreadLocal<String> attachmentKeyForDelete = new ThreadLocal<>();
 
     @Autowired
     public CVService(
@@ -61,7 +67,8 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         CVMapper cVMapper,
         MatchingReportRepository matchingReportRepository,
         ChatsRepository chatsRepository,
-        UsageMonitoringService usageMonitoringService) {
+        UsageMonitoringService usageMonitoringService,
+        S3StorageService s3StorageService) {
         super(repository, cvMapper, queryBuilder);
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
@@ -70,6 +77,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         this.matchingReportRepository = matchingReportRepository;
         this.chatsRepository = chatsRepository;
         this.usageMonitoringService = usageMonitoringService;
+        this.s3StorageService = s3StorageService;
     }
 
     @Override
@@ -95,6 +103,9 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         if (availability.getRemoteOnly() == null) {
             availability.setRemoteOnly(false);
         }
+
+        // Content-based freshness evidence — applies to every creation path (upload, seeding, API).
+        CVContentDateResolver.resolve(dto);
     }
 
     @Override
@@ -151,7 +162,33 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         String fileContent = fileReaderContext.readFile(file);
 
         log.debug("Processing file: {}", file.getOriginalFilename());
-        return extractCVData(fileContent, tenantId);
+        var cvDtoToPersist = extractCVData(fileContent, tenantId);
+        cvDtoToPersist.setRawText(fileContent);
+
+        // Document metadata date is freshness evidence; work-history dates may override it in preProcessCreateOne.
+        var documentDate = fileReaderContext.readDocumentDate(file);
+        if (documentDate != null) {
+            cvDtoToPersist.setContentDate(documentDate);
+            cvDtoToPersist.setContentDateSource(ContentDateSourceEnum.DOC_METADATA.name());
+        }
+
+        // Best-effort: an S3 outage must not cost the recruiter the parsed CV.
+        try {
+            cvDtoToPersist.setAttachment(this.s3StorageService.uploadCvDocument(tenantId, file));
+        } catch (QorvaException e) {
+            log.warn("CV Service - Could not store original file {} for tenant {} — CV will be saved without attachment",
+                file.getOriginalFilename(), tenantId);
+        }
+
+        try {
+            return createOne(cvDtoToPersist);
+        } catch (QorvaException | RuntimeException e) {
+            // Persisting failed — remove the uploaded object so S3 never holds orphans.
+            if (cvDtoToPersist.getAttachment() != null) {
+                this.s3StorageService.deleteObject(cvDtoToPersist.getAttachment().getS3Key());
+            }
+            throw e;
+        }
     }
 
     private CVDTO extractCVData(String cvContent, String tenantId) throws QorvaException {
@@ -173,7 +210,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         var cvDtoToPersist = this.openAIResultMapper.map(outputDTO);
         cvDtoToPersist.setTenantId(tenantId);
 
-        return createOne(cvDtoToPersist);
+        return cvDtoToPersist;
     }
 
     public List<CVDTO> match(JobPostDTO jobPostDTO) throws QorvaException {
@@ -285,6 +322,15 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     }
 
     @Override
+    protected void preProcessDeleteOneById(String id, String tenantId) throws QorvaException {
+        super.preProcessDeleteOneById(id, tenantId);
+
+        // Capture the S3 key now — after the DB delete the reference is gone.
+        var dto = this.findOneById(id);
+        this.attachmentKeyForDelete.set(dto.getAttachment() != null ? dto.getAttachment().getS3Key() : null);
+    }
+
+    @Override
     protected void postProcessDeleteOneById(String id, String tenantId) throws QorvaException {
         log.info("Deleted CV with ID: {}", id);
 
@@ -293,5 +339,11 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
         var countDeletedChats = this.chatsRepository.deleteByTenantIdAndContextCvId(tenantId, id);
         log.info("Deleted {} chats associated with CV ID: {}", countDeletedChats, id);
+
+        try {
+            this.s3StorageService.deleteObject(this.attachmentKeyForDelete.get());
+        } finally {
+            this.attachmentKeyForDelete.remove();
+        }
     }
 }

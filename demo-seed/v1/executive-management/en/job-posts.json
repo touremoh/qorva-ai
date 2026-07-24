@@ -1,0 +1,456 @@
+[
+  {
+    "title": "Managing Director, UK & Ireland",
+    "description": "Ardenwall Group, a private-equity-backed consumer and light-manufacturing platform headquartered in London, is searching for a Managing Director to lead its UK & Ireland operating company through its next phase of growth.\n\nReporting to the Group CEO and the private-equity board, you will hold full P&L ownership for a business of roughly £180m revenue and 700 employees. You will set and execute the commercial and operational strategy, drive EBITDA expansion, and lead the executive team spanning sales, operations, finance, and people. A central mandate is organizational transformation: professionalizing the operating model, sharpening go-to-market, and preparing the business for a successful exit within a three-to-four-year horizon.\n\nYou will be the primary interface with the investor board, delivering clear board reporting, monthly performance packs, and a credible value-creation plan. You will also lead selective bolt-on M&A, from origination through diligence and integration.\n\nRequired: 15+ years of leadership with prior full-P&L accountability as a Managing Director, General Manager, or Country Manager, ideally within a private-equity portfolio company. Proven EBITDA growth, board-level stakeholder management, and experience running a value-creation plan are essential. An MBA or equivalent strategic-leadership grounding is expected.\n\nNice-to-have: consumer or manufacturing sector experience, buy-and-build M&A track record, and exposure to an exit process.\n\nThis is a London-based executive role with regular travel to sites across the UK and Ireland.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "P&L Ownership",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Strategic Leadership",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Board Reporting",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Organizational Transformation",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Mergers and Acquisitions",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.11,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MBA",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 15,
+        "minRelevantYears": 10,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "London",
+          "Birmingham",
+          "Dublin",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Private Equity",
+          "Consumer Goods",
+          "Manufacturing"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.4,
+        "experience": 0.35,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Chief Operating Officer (COO)",
+    "description": "Northgate Industrials, a US manufacturing group headquartered in Columbus, Ohio, is seeking a Chief Operating Officer to lead end-to-end operations across five plants and a 1,200-person workforce.\n\nReporting to the CEO and serving on the executive committee, you will own operational P&L, manufacturing, supply chain, quality, and health-and-safety. Your mandate is to drive a step-change in operational performance: improving throughput, on-time delivery, and margin through disciplined Lean and Six Sigma execution while scaling capacity to meet demand.\n\nYou will lead a large operations leadership team, set the operating rhythm, and embed a continuous-improvement culture. You will partner with the CFO on capital planning and with Commercial on demand and S&OP, and you will present operational performance and investment cases to the board. Organizational transformation is core: modernizing systems, hardening the supply chain, and building bench strength across plant leadership.\n\nRequired: 15+ years in operations with prior VP Operations or COO-level accountability in a manufacturing or industrial environment, deep Lean Manufacturing and Six Sigma expertise, proven P&L and margin improvement, and strong board-level stakeholder management. An MBA or engineering-plus-management background is expected.\n\nNice-to-have: multi-site and international operations experience, ERP-led transformation, and private-equity portfolio exposure.\n\nThis is an onsite executive role based in Columbus with regular travel to plants across the Midwest United States.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Operations Leadership",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "P&L Ownership",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Lean Manufacturing",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Six Sigma",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Supply Chain Management",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Organizational Transformation",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Board Reporting",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 15,
+        "minRelevantYears": 10,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Columbus",
+          "Cleveland",
+          "Indianapolis",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Industrial",
+          "Supply Chain and Logistics"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.35,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Chief Financial Officer (CFO)",
+    "description": "Meridian Payments, a high-growth financial-services and fintech scale-up headquartered in London, is appointing a Chief Financial Officer to lead finance through its next funding round and toward IPO readiness.\n\nReporting to the CEO and the board, you will own the full finance function: financial planning and analysis, controllership, treasury, tax, and investor relations. You will hold P&L and balance-sheet accountability, drive capital strategy, and lead fundraising and, in time, a public-markets transaction. A central mandate is building an institutional-grade finance organization with the controls, reporting, and forecasting rigour that investors and regulators expect.\n\nYou will lead board reporting and investor communications, manage relationships with banks, auditors, and shareholders, and partner with the CEO on M&A and corporate strategy. You will also drive organizational transformation across systems, controls, and the finance operating model to support rapid scaling.\n\nRequired: 15+ years in senior finance with prior CFO or Finance Director accountability, a professional qualification (ACA, ACCA, CIMA, or CPA), proven fundraising or M&A leadership, deep board reporting and investor-relations experience, and strong capital and treasury management. An MBA is a plus.\n\nNice-to-have: fintech or financial-services experience, IPO or private-equity exit exposure, and international group reporting under IFRS.\n\nThis is a London-based executive role with hybrid flexibility and periodic investor travel.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Financial Strategy",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "P&L Ownership",
+          "importance": "mandatory",
+          "weight": 0.17,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Board Reporting",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Investor Relations",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Mergers and Acquisitions",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Treasury and Capital Management",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MBA",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 15,
+        "minRelevantYears": 10,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "London",
+          "Manchester",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Financial Services",
+          "Technology",
+          "Private Equity"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.4,
+        "experience": 0.35,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Chief Technology Officer (CTO)",
+    "description": "Solvent Cloud, a venture- and private-equity-backed B2B SaaS company headquartered in San Francisco, California, is hiring a Chief Technology Officer to lead engineering, product architecture, and technical strategy as the platform scales globally.\n\nReporting to the CEO and serving on the executive team, you will own the technology vision, the engineering P&L, and the roadmap that turns product strategy into a reliable, secure, and scalable platform. You will lead an organization of 120+ engineers across product engineering, platform, data, and security, and you will set the standards for architecture, delivery velocity, and operational excellence.\n\nYour mandate includes organizational transformation: scaling the engineering organization, maturing the software-delivery lifecycle, hardening cloud architecture on AWS, and embedding a pragmatic approach to AI and data. You will partner with the CPO on product strategy, present technology strategy and investment cases to the board, and manage build-versus-buy and technical M&A diligence.\n\nRequired: 15+ years in engineering leadership with prior CTO or VP Engineering accountability at scale, deep expertise in cloud and distributed systems architecture, a proven record of scaling high-performing engineering organizations, strong board-level stakeholder management, and clear technology strategy ownership.\n\nNice-to-have: B2B SaaS experience, exposure to a private-equity value-creation plan, and technical due-diligence experience for acquisitions.\n\nThis is a San Francisco-based executive role with hybrid flexibility across the United States.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Technology Strategy",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Engineering Leadership",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Cloud Architecture",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Organization Scaling",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Product Strategy",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Board Reporting",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AWS",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 15,
+        "minRelevantYears": 10,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "San Francisco",
+          "New York",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Software",
+          "Private Equity"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Chief Commercial Officer (CCO)",
+    "description": "Baxter & Lowell, a US-headquartered consumer and B2B services group operating across North America and hiring into its Boston, Massachusetts headquarters, is appointing a Chief Commercial Officer to own the entire revenue engine.\n\nReporting to the CEO and serving on the executive committee, you will hold commercial P&L accountability across sales, marketing, pricing, and customer success. Your mandate is to accelerate profitable growth: sharpening go-to-market strategy, professionalizing revenue operations, expanding key accounts, and building a repeatable, data-driven commercial model across the group.\n\nYou will lead a commercial organization of several hundred people, set pricing and channel strategy, and drive the disciplines that convert strategy into forecastable revenue. You will present commercial performance and growth plans to the board, partner with the CFO on planning and unit economics, and support M&A from a commercial-diligence and integration perspective. Organizational transformation of the commercial function is central to the role.\n\nRequired: 15+ years in commercial leadership with prior CCO, CRO, or VP Sales and Marketing accountability, proven ownership of a large revenue P&L, deep go-to-market and pricing strategy expertise, strong board-level stakeholder management, and a track record of building high-performing commercial teams. An MBA is a plus.\n\nNice-to-have: consumer or B2B services experience, private-equity portfolio exposure, and a record of commercial-led M&A integration.\n\nThis is a Boston-based executive role with hybrid flexibility and travel across the United States.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Commercial Strategy",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "P&L Ownership",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Go-to-Market Strategy",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Revenue Growth",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Pricing Strategy",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MBA",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 15,
+        "minRelevantYears": 10,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Boston",
+          "New York",
+          "Chicago",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Consumer Goods",
+          "Professional Services",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.4,
+        "experience": 0.35,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  }
+]

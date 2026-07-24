@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Account Executive B2B SaaS (m/w/d)",
+    "description": "Für unser wachsendes SaaS-Unternehmen mit Hauptsitz in München suchen wir eine:n Account Executive (m/w/d), die:der den gesamten Vertriebszyklus im B2B-Neukundengeschäft verantwortet – vom ersten qualifizierten Lead bis zum unterschriebenen Vertrag.\n\nDeine Mission: Du gewinnst mittelständische und Enterprise-Kunden im DACH-Raum für unsere Cloud-Plattform und baust langfristige Beziehungen zu Entscheider:innen auf C-Level auf.\n\nDeine Aufgaben:\n- Eigenverantwortliche Steuerung des kompletten Sales-Cycles (Discovery, Demo, Verhandlung, Closing)\n- Aufbau und Pflege einer belastbaren Pipeline im CRM (Salesforce)\n- Durchführung überzeugender Produktdemos und Value-Präsentationen\n- Enge Zusammenarbeit mit SDR-, Marketing- und Customer-Success-Teams\n- Verhandlung von Vertrags- und Preiskonditionen bis zum Abschluss\n\nDein Profil:\n- Mindestens 4 Jahre Erfahrung im B2B-SaaS-Vertrieb, idealerweise im Closing komplexer Deals\n- Nachweisbare Erfolge bei der Übererfüllung von Quoten\n- Sicherer Umgang mit Salesforce und modernen Sales-Engagement-Tools\n- Verständnis für MEDDIC oder vergleichbare Sales-Methodiken\n- Verhandlungssichere Deutsch- und gute Englischkenntnisse\n\nNice-to-have: Erfahrung mit Outreach oder Salesloft sowie Kenntnisse im Bereich Forecasting.\n\nArbeitsmodell: Hybrid mit Standort München, bis zu drei Tage Homeoffice pro Woche und gelegentlicher Reisetätigkeit zu Kundenterminen.",
+    "scoringRules": {
+      "skills": [
+        { "name": "B2B Sales", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Salesforce", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SaaS Sales", "importance": "important", "weight": 0.15, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Negotiation", "importance": "important", "weight": 0.15, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Pipeline Management", "importance": "important", "weight": 0.1, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "MEDDIC", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Salesloft", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 4, "minRelevantYears": 3, "seniorityLevel": "mid" },
+      "locationPreferences": { "allowedLocations": ["München", "Stuttgart", "Remote"], "remoteAllowed": true, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["SaaS", "B2B Technology"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Performance Marketing Manager (m/w/d) – Paid Media",
+    "description": "Für unser E-Commerce-Team in Berlin suchen wir eine:n Performance Marketing Manager (m/w/d), die:der unsere Paid-Media-Kanäle datengetrieben steuert und skaliert.\n\nDeine Mission: Du verantwortest die Planung, Umsetzung und Optimierung unserer bezahlten Kampagnen über Google, Meta und weitere Plattformen mit klarem Fokus auf ROAS und Umsatzwachstum.\n\nDeine Aufgaben:\n- Konzeption, Aussteuerung und Optimierung von Kampagnen in Google Ads und Meta Ads\n- Budgetverantwortung im sechsstelligen Bereich und laufendes Bid-Management\n- Analyse der Kampagnen-Performance in GA4 und Aufbau aussagekräftiger Dashboards\n- A/B-Tests von Creatives, Zielgruppen und Landingpages\n- Enge Abstimmung mit Creative-, Content- und Data-Teams\n\nDein Profil:\n- Mindestens 3 Jahre Erfahrung im Performance Marketing, idealerweise im E-Commerce\n- Fundierte Kenntnisse in Google Ads, Meta Ads und GA4\n- Sicherer Umgang mit Tracking-Setups und Conversion-Attribution\n- Ausgeprägtes analytisches Denken und Zahlenaffinität\n- Sehr gute Deutsch- und gute Englischkenntnisse\n\nNice-to-have: Erfahrung mit SQL, Looker Studio oder TikTok Ads.\n\nArbeitsmodell: Hybrid mit Standort Berlin, flexible Homeoffice-Regelung und ein modernes Büro in Berlin-Kreuzberg.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Google Ads", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Meta Ads", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GA4", "importance": "important", "weight": 0.15, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Performance Marketing", "importance": "mandatory", "weight": 0.15, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "A/B Testing", "importance": "important", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Looker Studio", "importance": "nice_to_have", "weight": 0.07, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 3, "minRelevantYears": 3, "seniorityLevel": "mid" },
+      "locationPreferences": { "allowedLocations": ["Berlin", "Remote"], "remoteAllowed": true, "strictness": "relaxed" },
+      "industryPreferences": { "preferredIndustries": ["E-commerce", "Consumer Goods"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Junior Brand & Content Manager (m/w/d)",
+    "description": "Für unsere Marketingabteilung in Hamburg suchen wir eine:n Junior Brand & Content Manager (m/w/d), die:der unsere Markenstimme über alle Kanäle hinweg zum Leben erweckt.\n\nDeine Mission: Du unterstützt bei der Weiterentwicklung unserer Markenidentität und produzierst Content, der unsere Zielgruppe begeistert und die Markenbekanntheit steigert.\n\nDeine Aufgaben:\n- Erstellung und Redaktion von Content für Blog, Social Media und Newsletter\n- Mitarbeit an der Content-Strategie und dem redaktionellen Kalender\n- Pflege und Weiterentwicklung der Brand-Guidelines und Tonalität\n- Steuerung von Social-Media-Kanälen und Community Management\n- Zusammenarbeit mit Grafik, PR und externen Agenturen\n\nDein Profil:\n- Erste Berufserfahrung (mindestens 1 Jahr) im Content- oder Brand-Marketing, gerne durch Praktika ergänzt\n- Exzellentes Sprachgefühl und Freude am Schreiben auf Deutsch\n- Grundkenntnisse in Content-Management-Systemen und Social-Media-Tools\n- Kreativität, Sorgfalt und ein gutes Gespür für Ästhetik\n- Sehr gute Deutsch- und gute Englischkenntnisse\n\nNice-to-have: Erfahrung mit Canva, SEO-Grundlagen oder HubSpot.\n\nArbeitsmodell: Hybrid mit Standort Hamburg, zwei Tage Homeoffice pro Woche und ein kreatives Team in der HafenCity.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Content Marketing", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Copywriting", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Social Media Management", "importance": "important", "weight": 0.18, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Brand Management", "importance": "important", "weight": 0.15, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "SEO", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Canva", "importance": "nice_to_have", "weight": 0.07, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "HubSpot", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 1, "minRelevantYears": 1, "seniorityLevel": "junior" },
+      "locationPreferences": { "allowedLocations": ["Hamburg", "Onsite"], "remoteAllowed": false, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Media", "Consumer Goods", "E-commerce"], "strictness": "relaxed" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.2, "location": 0.15, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Senior Product Marketing Manager (m/w/d) – SaaS",
+    "description": "Für unser B2B-SaaS-Unternehmen mit Sitz in Wien suchen wir eine:n Senior Product Marketing Manager (m/w/d), die:der als Bindeglied zwischen Produkt, Vertrieb und Markt agiert.\n\nDeine Mission: Du verantwortest die Go-to-Market-Strategie für neue Features und Produkte, schärfst unsere Positionierung und befähigst das Sales-Team mit erstklassigem Enablement-Material.\n\nDeine Aufgaben:\n- Entwicklung und Umsetzung von GTM-Strategien für Produkt-Launches\n- Erarbeitung von Positionierung, Messaging und Value Propositions\n- Durchführung von Markt-, Wettbewerbs- und Kundenanalysen\n- Erstellung von Sales-Enablement-Material, Battlecards und Case Studies\n- Auswertung von Produktdaten und Nutzungsverhalten zur Steuerung der Roadmap\n\nDein Profil:\n- Mindestens 6 Jahre Erfahrung im Product Marketing, davon Erfahrung im SaaS-Umfeld\n- Nachweisbare Erfolge bei der Steuerung komplexer Produkt-Launches\n- Sicherer Umgang mit Product Analytics (z. B. Amplitude oder Mixpanel)\n- Ausgeprägtes strategisches und analytisches Denken\n- Verhandlungssichere Deutsch- und Englischkenntnisse\n\nNice-to-have: Erfahrung mit HubSpot, Pendo oder Customer-Research-Methoden.\n\nArbeitsmodell: Hybrid mit Standort Wien, flexible Homeoffice-Tage und regelmäßiger Austausch mit internationalen Teams.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Marketing", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "GTM Strategy", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "important", "weight": 0.15, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Positioning and Messaging", "importance": "important", "weight": 0.15, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Sales Enablement", "importance": "important", "weight": 0.1, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Amplitude", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "HubSpot", "importance": "nice_to_have", "weight": 0.07, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 6, "minRelevantYears": 5, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Wien", "München", "Remote"], "remoteAllowed": true, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["SaaS", "B2B Technology"], "strictness": "strict" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["openButNotSearching", "activelyLooking"]
+    }
+  },
+  {
+    "title": "Demand Generation Manager (m/w/d) – B2B",
+    "description": "Für unser B2B-Technologieunternehmen mit Standort Zürich suchen wir eine:n Demand Generation Manager (m/w/d), die:der einen kanalübergreifenden Nachfrage-Motor aufbaut und skaliert.\n\nDeine Mission: Du verantwortest die Generierung qualifizierter Leads über den gesamten Funnel und stimmst Marketing und Vertrieb entlang einer gemeinsamen Pipeline-Zielsetzung ab.\n\nDeine Aufgaben:\n- Planung und Umsetzung integrierter Demand-Gen-Kampagnen über E-Mail, Paid, Events und Webinare\n- Aufbau und Pflege von Lead-Nurturing-Strecken und Scoring-Modellen in Marketo\n- Steuerung von SEO- und SEM-Maßnahmen zur Steigerung des Inbound-Traffics\n- Enge Zusammenarbeit mit dem Sales-Team zur Optimierung der Lead-Übergabe\n- Reporting von Pipeline-Beitrag, CAC und Funnel-Conversion in Salesforce\n\nDein Profil:\n- Mindestens 5 Jahre Erfahrung in der Demand Generation oder im Growth Marketing im B2B-Umfeld\n- Fundierte Kenntnisse in Marketing Automation (Marketo) und CRM (Salesforce)\n- Erfahrung mit SEO/SEM und Multi-Channel-Kampagnen\n- Starke analytische Fähigkeiten und Pipeline-orientiertes Denken\n- Sehr gute Deutsch- und Englischkenntnisse\n\nNice-to-have: Erfahrung mit ABM-Strategien, 6sense oder HubSpot.\n\nArbeitsmodell: Hybrid mit Standort Zürich, bis zu zwei Tage Homeoffice pro Woche und enge Zusammenarbeit mit internationalen Marketing-Teams.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Demand Generation", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Marketo", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Salesforce", "importance": "important", "weight": 0.15, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "SEO", "importance": "important", "weight": 0.12, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SEM", "importance": "important", "weight": 0.11, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Marketing Automation", "importance": "important", "weight": 0.1, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Account-Based Marketing", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 5, "minRelevantYears": 4, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Zürich", "Remote"], "remoteAllowed": true, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["B2B Technology", "SaaS"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  }
+]

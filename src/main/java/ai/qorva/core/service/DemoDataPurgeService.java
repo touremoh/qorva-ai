@@ -26,6 +26,7 @@ public class DemoDataPurgeService {
 	private final ChatMessagesRepository chatMessagesRepository;
 	private final InsightConversationTurnRepository insightConversationTurnRepository;
 	private final UsageMonitoringRepository usageMonitoringRepository;
+	private final S3StorageService s3StorageService;
 
 	@Autowired
 	public DemoDataPurgeService(
@@ -35,7 +36,8 @@ public class DemoDataPurgeService {
 		ChatsRepository chatsRepository,
 		ChatMessagesRepository chatMessagesRepository,
 		InsightConversationTurnRepository insightConversationTurnRepository,
-		UsageMonitoringRepository usageMonitoringRepository
+		UsageMonitoringRepository usageMonitoringRepository,
+		S3StorageService s3StorageService
 	) {
 		this.cvRepository = cvRepository;
 		this.jobPostRepository = jobPostRepository;
@@ -44,12 +46,14 @@ public class DemoDataPurgeService {
 		this.chatMessagesRepository = chatMessagesRepository;
 		this.insightConversationTurnRepository = insightConversationTurnRepository;
 		this.usageMonitoringRepository = usageMonitoringRepository;
+		this.s3StorageService = s3StorageService;
 	}
 
 	/** Deletes every recruitment-related document for the tenant. Best-effort per collection. */
 	public void purgeAll(String tenantId) {
 		log.info("Purging demo data for tenant={}", tenantId);
 		long cvs = safeDelete("cvs", () -> cvRepository.deleteByTenantId(tenantId));
+		s3StorageService.deleteCvDocumentsForTenant(tenantId); // best-effort, never throws
 		long jobs = safeDelete("job_posts", () -> jobPostRepository.deleteByTenantId(tenantId));
 		long reports = safeDelete("matching_reports", () -> matchingReportRepository.deleteByTenantId(tenantId));
 		long chats = safeDelete("chats", () -> chatsRepository.deleteByTenantId(tenantId));

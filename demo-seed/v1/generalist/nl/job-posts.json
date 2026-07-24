@@ -1,0 +1,420 @@
+[
+  {
+    "title": "Talent Acquisition Specialist",
+    "description": "Voor een snelgroeiende zakelijke dienstverlener in Amsterdam zoeken wij een gedreven Talent Acquisition Specialist die de volledige werving en selectie voor de corporate functies op zich neemt.\n\nJouw missie: Je werkt nauw samen met hiring managers om het juiste talent aan te trekken, te beoordelen en aan te nemen, terwijl je zorgt voor een vlekkeloze kandidaatervaring en een betrouwbaar, opgeruimd ATS.\n\nWat ga je doen:\n- End-to-end recruitment beheren voor corporate en supportfuncties, van intake tot aanbod\n- Actieve en passieve kandidaten benaderen via LinkedIn Recruiter, referrals en vacaturesites\n- Sollicitaties screenen, gestructureerde interviews voeren en assessmentrondes coördineren\n- Pipelines en rapportages nauwkeurig bijhouden in ons ATS en HRIS (Workday)\n- Managers adviseren over functieprofielen, arbeidsmarkttrends en inclusief werven\n\nOver jou:\n- Minimaal 3 jaar ervaring in corporate of bureaurecruitment\n- Ervaren met een ATS/HRIS en sourcingtools zoals LinkedIn Recruiter\n- Sterke stakeholdervaardigheden en heldere communicatie\n- Een gestructureerde, datagedreven aanpak van je pipeline\n\nPré: Ervaring met Workday recruiting en employer-brandingcampagnes.\n\nWerkbeleid: Hybride met een kantoor in Amsterdam en tot drie dagen thuiswerken per week. Wij bieden een collegiaal peopleteam, moderne tooling en echte ruimte om onze werving vorm te geven.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Talent Acquisition",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ATS/HRIS",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "LinkedIn Recruiter",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Workday",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Amsterdam",
+          "Utrecht",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Technology",
+          "Retail"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Office Manager",
+    "description": "Een groeiend technologiebedrijf in Rotterdam zoekt een proactieve Office Manager die ons kantoor soepel laat draaien en het vriendelijke aanspreekpunt is voor het hele team.\n\nJouw missie: Je bent verantwoordelijk voor de dagelijkse kantooractiviteiten, creëert een gastvrije omgeving en ondersteunt het management met betrouwbare administratieve coördinatie.\n\nWat ga je doen:\n- Kantoorfaciliteiten, leveranciers, bestellingen en de basis rond veiligheid beheren\n- Vergaderingen, reizen en events coördineren en de onboarding van nieuwe collega's ondersteunen\n- Inkooporders, facturen en declaraties verwerken samen met het financeteam\n- Documenten en gegevens nauwkeurig bijhouden in MS Office en gedeelde schijven\n- De interne communicatie ondersteunen en hét aanspreekpunt zijn voor kantoorvragen\n\nOver jou:\n- Minimaal 2 jaar ervaring in officemanagement, administratie of een vergelijkbare rol\n- Sterk organisatietalent en vlot met MS Office, met name Excel en Outlook\n- Een servicegerichte instelling en het vermogen om meerdere prioriteiten te jongleren\n- Goede beheersing van het Nederlands en gemak in de omgang met externe leveranciers\n\nPré: Ervaring met eenvoudige boekhoudtools en eventcoördinatie.\n\nWerkbeleid: Op kantoor in Rotterdam met af en toe flexibiliteit. Wij bieden een gezellig, dynamisch team en echte verantwoordelijkheid over de sfeer op onze werkplek.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Office Management",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Administration",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Vendor Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Event Coordination",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Bookkeeping",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Rotterdam",
+          "Den Haag",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services",
+          "Retail"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Customer Success Manager",
+    "description": "Ons SaaS-bedrijf in Antwerpen zoekt een empathische Customer Success Manager die een portefeuille van klanten beheert en hen helpt échte waarde uit ons platform te halen.\n\nJouw missie: Je bent de vertrouwde adviseur van je klanten, stimuleert adoptie, retentie en groei, en bent tegelijk hun stem binnen de organisatie.\n\nWat ga je doen:\n- Onboarding, adoptie en verlenging beheren voor een portefeuille mid-market accounts\n- Succesplannen opstellen, business reviews leiden en klantgezondheidsmetrics volgen\n- Samenwerken met support, product en sales om problemen op te lossen en kansen te signaleren\n- Klantgesprekken en tickets beheren via Zendesk en Intercom\n- Uitbreidingskansen identificeren en churn verlagen met proactieve opvolging\n\nOver jou:\n- Minimaal 4 jaar ervaring in customer success, accountmanagement of support\n- Sterke relatievaardigheden en stakeholdermanagement\n- Vertrouwd met CRM- en supporttools zoals Zendesk en Intercom\n- Een datagedreven aanpak van adoptie, retentie en klantgezondheid\n\nPré: Ervaring in een B2B-SaaS-omgeving en kennis van Salesforce.\n\nWerkbeleid: Hybride met een kantoor in Antwerpen en flexibele thuiswerkdagen. Wij bieden een klantgerichte cultuur, duidelijke groeipaden en directe impact op retentie.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Customer Success",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Account Management",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Zendesk",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Intercom",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Salesforce",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 4,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Antwerpen",
+          "Gent",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services",
+          "Retail"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Business Analyst",
+    "description": "Een shared-servicecentrum in Utrecht zoekt een scherpe Business Analyst die processen doorgrondt en cross-functionele verbeterprojecten helpt vormgeven.\n\nJouw missie: Je vertaalt bedrijfsbehoeften naar heldere requirements en concrete oplossingen, en bent de verbindende schakel tussen operatie, IT en management.\n\nWat ga je doen:\n- Bedrijfsprocessen in kaart brengen, knelpunten analyseren en verbeteringen voorstellen\n- Requirements ophalen bij stakeholders en vertalen naar functionele documentatie\n- Data analyseren en dashboards opzetten om beslissingen te onderbouwen\n- Projecten en actiepunten opvolgen in Jira en Asana en de voortgang bewaken\n- Governance en standaarden toepassen volgens een PRINCE2-gestuurde aanpak\n\nOver jou:\n- Minimaal 5 jaar ervaring als business analyst of in een vergelijkbare rol\n- Sterk analytisch vermogen en ervaring met requirements en procesmodellering\n- Vertrouwd met projecttools zoals Jira en Asana en sterke MS Office-vaardigheden\n- Uitstekende stakeholdervaardigheden en oog voor detail\n\nPré: PRINCE2-certificering en ervaring in een shared-service- of dienstverleningsomgeving.\n\nWerkbeleid: Hybride met een kantoor in Utrecht en tot drie dagen thuiswerken per week. Wij bieden gevarieerde projecten, ondersteunende teams en zichtbaarheid bij het management.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Business Analysis",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Requirements Gathering",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Jira",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Asana",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "PRINCE2",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 5,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Utrecht",
+          "Eindhoven",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Technology",
+          "Public Sector"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.35,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  },
+  {
+    "title": "HR Business Partner",
+    "description": "Een non-profitorganisatie met een nationaal bereik, gevestigd in Gent, zoekt een ervaren HR Business Partner om leidinggevenden te adviseren en onze people-agenda vorm te geven.\n\nJouw missie: Je bent een vertrouwde partner voor senior stakeholders, brengt de peoplestrategie in lijn met de organisatiedoelen en coacht managers doorheen de volledige employee lifecycle.\n\nWat ga je doen:\n- Samen met het management werken aan personeelsplanning, talent en organisatieontwerp\n- Managers adviseren over arbeidsrelaties, performance en verandermanagement\n- People-initiatieven leiden rond betrokkenheid, retentie en ontwikkeling\n- HRIS-data (Workday, SuccessFactors) inzetten voor beslissingen en rapportages\n- Ervoor zorgen dat HR-praktijken eerlijk, compliant en in lijn met onze waarden zijn\n\nOver jou:\n- Minimaal 7 jaar HR-ervaring, waarvan meerdere jaren als HR Business Partner\n- Sterke kennis van arbeidsrelaties en de Belgische arbeidswetgeving\n- Vertrouwd met een HRIS zoals Workday of SuccessFactors\n- Uitstekende stakeholder-, coaching- en beïnvloedingsvaardigheden\n\nPré: Een HR-gerelateerd diploma en ervaring in de non-profit- of publieke sector.\n\nWerkbeleid: Hybride met een kantoor in Gent en tot drie dagen thuiswerken per week. Wij bieden een betekenisvolle missie, zichtbaarheid op seniorniveau en ruimte om onze peoplestrategie te bepalen.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "HR Business Partnering",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 7,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Employee Relations",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Workday",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SuccessFactors",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Change Management",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Gent",
+          "Brussel",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Non-Profit",
+          "Public Sector",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.35,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  }
+]

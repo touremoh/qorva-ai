@@ -1,0 +1,2460 @@
+[
+  {
+    "candidateProfileSummary": "Beratungsstarker B2B-SaaS-Account-Executive mit über zehn Jahren Erfahrung im Abschluss von Mid-Market- und Enterprise-Deals. Konstant im oberen Zehntel des Vertriebsteams mit einer Quotenerfüllung von über 110 Prozent in mehreren Jahren. Fühlt sich in komplexen Sales-Zyklen mit vielen Stakeholdern wohl und baut langfristige Kundenbeziehungen auf.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Maximilian Vogt",
+      "role": "Senior Account Executive",
+      "summary": "Enterprise-SaaS-Closer, der disziplinierte, MEDDIC-getriebene Sales-Zyklen führt und jüngere Kolleginnen und Kollegen in Discovery und Verhandlung coacht.",
+      "contact": {
+        "phone": "+49 151 23456701",
+        "email": "maximilian.vogt@example.com",
+        "address": {
+          "streetNumber": "42",
+          "streetName": "Königsallee",
+          "streetType": "Allee",
+          "city": "Düsseldorf",
+          "state": "Nordrhein-Westfalen",
+          "zipCode": "40212",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/maximilian-vogt-sales"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Werktags mittags", "Früher Morgen"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Vertriebssteuerung", "skills": ["Enterprise Sales", "Solution Selling", "MEDDIC", "Verhandlungsführung", "Abschlussstärke"] },
+      { "category": "CRM & Tools", "skills": ["Salesforce", "Outreach", "Gong", "LinkedIn Sales Navigator"] },
+      { "category": "Pipeline", "skills": ["Pipeline-Management", "Forecasting", "Gebietsplanung", "Quotenerfüllung"] },
+      { "category": "Kommerziell", "skills": ["Value Selling", "Vertragsverhandlung", "Renewals", "Upsell"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Enterprise-B2B-Vertrieb", "Pipeline-Management", "Beratender Verkauf"],
+      "keyResponsibilities": ["Verantwortung für ein Mid-Market- und Enterprise-Gebiet end-to-end", "Führen des kompletten Sales-Zyklus von Discovery bis Abschluss", "Präzises Forecasting und Pipeline-Hygiene in Salesforce"]
+    },
+    "workExperience": [
+      {
+        "company": "Nordlicht Cloud Solutions",
+        "website": "https://nordlichtcloud.example.com",
+        "location": "Düsseldorf, Deutschland",
+        "from": "2020-02",
+        "to": "Present",
+        "position": "Senior Account Executive",
+        "activities": [
+          { "project": "Enterprise Neugeschäft", "tasks": ["Verantwortung für eine Jahresquote von 2,4 Mio. EUR über deutsche Enterprise-Accounts", "Führung von Multi-Threading-Deals mit 6 bis 9 Stakeholdern nach MEDDIC", "Zusammenarbeit mit Pre-Sales und Customer Success bei Land-and-Expand-Strategien"] }
+        ],
+        "achievements": ["118 Prozent Quotenerfüllung im Geschäftsjahr 2024 und 112 Prozent im Jahr 2023", "Größter Neukunden-Deal der Region mit 480.000 EUR ACV"],
+        "toolsAndTechnologies": ["Salesforce", "Outreach", "Gong", "LinkedIn Sales Navigator"]
+      },
+      {
+        "company": "Vantage Software GmbH",
+        "website": "https://vantagesoftware.example.com",
+        "location": "Köln, Deutschland",
+        "from": "2017-06",
+        "to": "2020-01",
+        "position": "Account Executive",
+        "activities": [
+          { "project": "Mid-Market-Akquise", "tasks": ["Abschluss von SaaS-Neugeschäft im Bereich 20.000 bis 120.000 EUR ACV", "Aufbau und Qualifizierung der Pipeline über Outbound und Inbound", "Verhandlung von Jahres- und Mehrjahresverträgen"] }
+        ],
+        "achievements": ["Beförderung zum Senior AE innerhalb von 30 Monaten", "Durchschnittlich 105 Prozent Quotenerfüllung"],
+        "toolsAndTechnologies": ["Salesforce", "HubSpot CRM", "Outreach"]
+      },
+      {
+        "company": "BrightPath Media GmbH",
+        "website": "https://brightpathmedia.example.com",
+        "location": "Köln, Deutschland",
+        "from": "2015-09",
+        "to": "2017-05",
+        "position": "Sales Development Representative",
+        "activities": [
+          { "project": "Outbound-Prospecting", "tasks": ["Terminierung qualifizierter Meetings für das Field-Sales-Team", "Ausführung von E-Mail- und Call-Kadenzen im großen Maßstab", "Pflege der Datenqualität im CRM"] }
+        ],
+        "achievements": ["Konstantes Übertreffen der Terminierungsziele"],
+        "toolsAndTechnologies": ["Salesforce", "Outreach"]
+      }
+    ],
+    "education": [
+      { "year": "2015", "institution": "Universität zu Köln", "degree": "Bachelor of Science", "fieldOfStudy": "Betriebswirtschaftslehre", "achievements": ["Abschluss mit Auszeichnung", "Vorstand der Gründerinitiative"] }
+    ],
+    "certifications": [
+      { "title": "MEDDIC Fundamentals", "institution": "MEDDIC Academy", "year": "2021", "description": "Qualifizierungs- und Forecasting-Methodik für komplexen B2B-Vertrieb." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Salesforce", "Outreach", "Gong", "LinkedIn Sales Navigator", "HubSpot CRM"],
+      "softSkills": ["Beziehungsaufbau", "Resilienz", "Aktives Zuhören", "Verhandlungsgeschick"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Enterprise-Land-and-Expand-Playbook", "description": "Aufbau eines wiederholbaren Multi-Threading-Playbooks, das im gesamten Enterprise-Team eingeführt wurde.", "date": "2023-03", "impact": "Steigerung der durchschnittlichen Dealgröße in der Region um 22 Prozent." }
+    ],
+    "interestsAndHobbies": ["Rennradfahren", "Fußballtraining", "Kochen"],
+    "references": [
+      { "name": "Priya Nair", "position": "Regional Sales Director", "company": "Nordlicht Cloud Solutions", "contact": { "phone": "+49 151 23456702", "email": "priya.nair@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 75000, "max": 95000 },
+    "candidateClustering": {
+      "primaryCluster": "Enterprise SaaS Sales",
+      "secondaryClusters": ["B2B Account Management", "New Business Development"],
+      "functionalExpertise": ["Enterprise selling", "Pipeline management", "Forecasting"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Exceeded quota multiple years", "Grew average deal size"],
+      "industryDomains": ["SaaS", "B2B technology"],
+      "environmentFit": ["High-growth SaaS", "Scale-up"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Sustained quota-carrying enterprise SaaS closing with MEDDIC discipline and top-decile attainment places this candidate firmly in senior enterprise sales."
+    },
+    "searchIndex": {
+      "roles": ["Account Executive", "Enterprise Account Executive", "Sales Executive"],
+      "skills": ["Salesforce", "Outreach", "Gong", "MEDDIC", "Pipeline management", "Negotiation"],
+      "industries": ["SaaS", "B2B Technology"]
+    },
+    "tags": ["sales", "account-executive", "saas", "senior", "quota-carrying"]
+  },
+  {
+    "candidateProfileSummary": "Dynamische Business-Development-Managerin mit über zehn Jahren Erfahrung im Aufbau neuer Märkte und Partnerschaften im B2B-Technologieumfeld. Spezialisiert auf Outbound-Strategien, Partner-Ökosysteme und die Erschließung neuer Vertikalen. Kombiniert analytisches Denken mit ausgeprägtem Netzwerkgeschick.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Katharina Reinhardt",
+      "role": "Business Development Manager",
+      "summary": "Öffnet neue Märkte und baut strategische Partnerschaften auf, von der ersten Ansprache bis zum unterschriebenen Vertrag.",
+      "contact": {
+        "phone": "+49 170 33456711",
+        "email": "katharina.reinhardt@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "Maximilianstraße",
+          "streetType": "Straße",
+          "city": "München",
+          "state": "Bayern",
+          "zipCode": "80539",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/katharina-reinhardt-bizdev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["Werktags nachmittags", "Freitags flexibel"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Business Development", "skills": ["Markterschließung", "Partner-Management", "Lead-Generierung", "Strategische Allianzen"] },
+      { "category": "CRM & Tools", "skills": ["Salesforce", "HubSpot CRM", "LinkedIn Sales Navigator", "Apollo"] },
+      { "category": "Vertrieb", "skills": ["Consultative Selling", "Verhandlungsführung", "Pipeline-Aufbau"] },
+      { "category": "Analyse", "skills": ["Marktanalyse", "Wettbewerbsanalyse", "Business Cases"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Neugeschäftsentwicklung", "Partner-Ökosysteme", "Markteintrittsstrategien"],
+      "keyResponsibilities": ["Identifikation und Erschließung neuer Marktsegmente", "Aufbau und Steuerung von Vertriebspartnerschaften", "Entwicklung von Business Cases für neue Vertikalen"]
+    },
+    "workExperience": [
+      {
+        "company": "Helvetia B2B Systems GmbH",
+        "website": "https://helvetiab2b.example.com",
+        "location": "München, Deutschland",
+        "from": "2019-04",
+        "to": "Present",
+        "position": "Business Development Manager",
+        "activities": [
+          { "project": "DACH-Markterschließung", "tasks": ["Aufbau eines Partner-Ökosystems mit 14 Reseller-Partnern", "Entwicklung von Outbound-Strategien für den Fertigungssektor", "Verhandlung strategischer Rahmenverträge"] }
+        ],
+        "achievements": ["Erschließung von zwei neuen Vertikalen mit 1,8 Mio. EUR Pipeline", "Aufbau eines Partnerkanals, der 30 Prozent des Neugeschäfts beisteuert"],
+        "toolsAndTechnologies": ["Salesforce", "HubSpot CRM", "LinkedIn Sales Navigator"]
+      },
+      {
+        "company": "Kontinent Software AG",
+        "website": "https://kontinentsoftware.example.com",
+        "location": "Stuttgart, Deutschland",
+        "from": "2016-03",
+        "to": "2019-03",
+        "position": "Business Development Representative",
+        "activities": [
+          { "project": "Outbound-Neugeschäft", "tasks": ["Qualifizierung von Inbound- und Outbound-Leads", "Aufbau der Pipeline für das Enterprise-Sales-Team", "Durchführung von Marktrecherchen zu neuen Segmenten"] }
+        ],
+        "achievements": ["150 Prozent des Meeting-Ziels über zwei Jahre", "Beförderung zur BD Managerin"],
+        "toolsAndTechnologies": ["HubSpot CRM", "Apollo", "LinkedIn Sales Navigator"]
+      },
+      {
+        "company": "Rheintal Consulting GmbH",
+        "website": "https://rheintalconsulting.example.com",
+        "location": "Frankfurt am Main, Deutschland",
+        "from": "2014-07",
+        "to": "2016-02",
+        "position": "Junior Consultant",
+        "activities": [
+          { "project": "Marktstudien", "tasks": ["Erstellung von Markt- und Wettbewerbsanalysen", "Unterstützung bei Go-to-Market-Projekten", "Aufbereitung von Kundenpräsentationen"] }
+        ],
+        "achievements": ["Mitwirkung an fünf erfolgreichen Markteintrittsprojekten"],
+        "toolsAndTechnologies": ["Salesforce", "Excel"]
+      }
+    ],
+    "education": [
+      { "year": "2014", "institution": "Ludwig-Maximilians-Universität München", "degree": "Master of Science", "fieldOfStudy": "International Business", "achievements": ["Auslandssemester in Singapur", "Note 1,7"] }
+    ],
+    "certifications": [
+      { "title": "HubSpot Sales Software Certification", "institution": "HubSpot Academy", "year": "2020", "description": "Zertifizierung für den professionellen Einsatz von HubSpot im Vertrieb." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Salesforce", "HubSpot CRM", "LinkedIn Sales Navigator", "Apollo", "Excel"],
+      "softSkills": ["Netzwerken", "Überzeugungskraft", "Eigeninitiative", "Analytisches Denken"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Französisch", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Partnerprogramm DACH", "description": "Konzeption und Aufbau eines strukturierten Reseller-Programms für die DACH-Region.", "date": "2022-06", "impact": "Neuer indirekter Kanal mit 30 Prozent Umsatzanteil." }
+    ],
+    "interestsAndHobbies": ["Bergwandern", "Sprachen lernen", "Fotografie"],
+    "references": [
+      { "name": "Thomas Berger", "position": "VP Sales", "company": "Helvetia B2B Systems GmbH", "contact": { "phone": "+49 170 33456712", "email": "thomas.berger@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 72000, "max": 90000 },
+    "candidateClustering": {
+      "primaryCluster": "Business Development",
+      "secondaryClusters": ["Partnerships", "New Business Development"],
+      "functionalExpertise": ["Market entry", "Partner management", "Lead generation"],
+      "skillDepth": "hybrid",
+      "businessImpact": ["Opened new verticals", "Built partner channel"],
+      "industryDomains": ["B2B technology", "SaaS"],
+      "environmentFit": ["Scale-up", "B2B software"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Consistent record of opening new markets, building partner ecosystems and generating pipeline positions this candidate as a senior business development professional."
+    },
+    "searchIndex": {
+      "roles": ["Business Development Manager", "Business Development Representative", "Partnerships Manager"],
+      "skills": ["Salesforce", "HubSpot CRM", "LinkedIn Sales Navigator", "Lead generation", "Partner management", "Market entry"],
+      "industries": ["B2B Technology", "SaaS"]
+    },
+    "tags": ["sales", "business-development", "partnerships", "senior", "b2b"]
+  },
+  {
+    "candidateProfileSummary": "Erfahrener Key Account Manager mit fünfzehn Jahren im strategischen Großkundengeschäft der Konsumgüterindustrie. Verantwortet nationale Handelsketten und komplexe Jahresgespräche mit siebenstelligen Volumina. Führt ein kleines Account-Team und steuert Category-Management-Initiativen.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Andreas Schneider",
+      "role": "Key Account Manager",
+      "summary": "Strategischer Partner für nationale Handelskunden, der Umsatz, Marge und langfristige Kundenbindung in Einklang bringt.",
+      "contact": {
+        "phone": "+49 160 44456721",
+        "email": "andreas.schneider@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Mönckebergstraße",
+          "streetType": "Straße",
+          "city": "Hamburg",
+          "state": "Hamburg",
+          "zipCode": "20095",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/andreas-schneider-kam"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Werktags abends", "Samstags vormittags"],
+        "preferredWorkTypes": ["hybrid", "onsite"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Key Account Management", "skills": ["Großkundenbetreuung", "Jahresgespräche", "Category Management", "Konditionsverhandlung"] },
+      { "category": "CRM & Tools", "skills": ["SAP", "Salesforce", "Excel", "Power BI"] },
+      { "category": "Kommerziell", "skills": ["Margensteuerung", "Trade Marketing", "Sortimentsplanung"] },
+      { "category": "Führung", "skills": ["Teamführung", "Coaching", "Stakeholder-Management"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Strategisches Key Account Management", "Category Management", "Handelsmarketing"],
+      "keyResponsibilities": ["Verantwortung für nationale Handelsketten mit siebenstelligem Volumen", "Führung der jährlichen Konditions- und Sortimentsgespräche", "Steuerung eines Teams von drei Account-Managern"]
+    },
+    "workExperience": [
+      {
+        "company": "Bergquell Konsumgüter GmbH",
+        "website": "https://bergquell.example.com",
+        "location": "Hamburg, Deutschland",
+        "from": "2017-01",
+        "to": "Present",
+        "position": "Key Account Manager",
+        "activities": [
+          { "project": "Nationale Handelsketten", "tasks": ["Betreuung von drei nationalen Handelskonzernen mit 42 Mio. EUR Umsatz", "Führung der jährlichen Konditionsverhandlungen", "Entwicklung gemeinsamer Category-Management-Pläne"] }
+        ],
+        "achievements": ["Umsatzsteigerung von 18 Prozent über drei Jahre", "Ausbau der Distribution um 220 neue Listungen"],
+        "toolsAndTechnologies": ["SAP", "Salesforce", "Power BI"]
+      },
+      {
+        "company": "Nordsee Markenwaren AG",
+        "website": "https://nordsee-marken.example.com",
+        "location": "Bremen, Deutschland",
+        "from": "2013-05",
+        "to": "2016-12",
+        "position": "Account Manager Handel",
+        "activities": [
+          { "project": "Regionales Großkundengeschäft", "tasks": ["Betreuung regionaler Handelskunden", "Umsetzung von Trade-Marketing-Aktionen", "Analyse von Abverkaufsdaten"] }
+        ],
+        "achievements": ["Übertreffen des Umsatzziels in vier aufeinanderfolgenden Jahren"],
+        "toolsAndTechnologies": ["SAP", "Excel"]
+      },
+      {
+        "company": "Hansa Vertrieb GmbH",
+        "website": "https://hansavertrieb.example.com",
+        "location": "Hamburg, Deutschland",
+        "from": "2010-08",
+        "to": "2013-04",
+        "position": "Vertriebsmitarbeiter Außendienst",
+        "activities": [
+          { "project": "Außendienst Norddeutschland", "tasks": ["Betreuung des Fachhandels im Vertriebsgebiet", "Neukundengewinnung", "Durchführung von Verkaufspräsentationen"] }
+        ],
+        "achievements": ["Auszeichnung als bester Nachwuchsverkäufer 2012"],
+        "toolsAndTechnologies": ["SAP", "Excel"]
+      }
+    ],
+    "education": [
+      { "year": "2010", "institution": "Universität Hamburg", "degree": "Diplom-Kaufmann", "fieldOfStudy": "Marketing und Vertrieb", "achievements": ["Schwerpunkt Handelsmanagement"] }
+    ],
+    "certifications": [
+      { "title": "Category Management Zertifikat", "institution": "GS1 Germany", "year": "2018", "description": "Zertifizierung für kooperatives Category Management im Handel." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["SAP", "Salesforce", "Power BI", "Excel"],
+      "softSkills": ["Verhandlungsstärke", "Kundenorientierung", "Durchsetzungsvermögen", "Teamführung"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Joint Business Plan mit Handelskonzern", "description": "Entwicklung eines gemeinsamen Geschäftsplans mit einem der größten deutschen Handelskonzerne.", "date": "2021-11", "impact": "Umsatzsteigerung von 9 Prozent im Folgejahr." }
+    ],
+    "interestsAndHobbies": ["Segeln", "Golf", "Weinkunde"],
+    "references": [
+      { "name": "Christiane Wolf", "position": "Vertriebsleiterin", "company": "Bergquell Konsumgüter GmbH", "contact": { "phone": "+49 160 44456722", "email": "christiane.wolf@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 85000, "max": 110000 },
+    "candidateClustering": {
+      "primaryCluster": "Key Account Management",
+      "secondaryClusters": ["Category Management", "Trade Marketing"],
+      "functionalExpertise": ["Key account management", "Negotiation", "Category management"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Grew national account revenue", "Expanded distribution"],
+      "industryDomains": ["Consumer goods", "Retail"],
+      "environmentFit": ["FMCG", "Retail"],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Fifteen years managing national retail accounts with team leadership and category management responsibility places this candidate at manager level in key account management."
+    },
+    "searchIndex": {
+      "roles": ["Key Account Manager", "National Account Manager", "Sales Manager"],
+      "skills": ["SAP", "Salesforce", "Category management", "Negotiation", "Trade marketing", "Power BI"],
+      "industries": ["Consumer Goods", "Retail"]
+    },
+    "tags": ["sales", "key-account-manager", "fmcg", "manager", "retail"]
+  },
+  {
+    "candidateProfileSummary": "Vertriebsleiter mit rund achtzehn Jahren Erfahrung im Auf- und Ausbau leistungsstarker Sales-Teams im B2B- und SaaS-Umfeld. Verantwortet Umsatzziele im zweistelligen Millionenbereich sowie die gesamte Go-to-Market-Steuerung. Bekannt für datengetriebene Vertriebssteuerung und die Entwicklung von Talenten.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Stefan Bauer",
+      "role": "Sales Director DACH",
+      "summary": "Umsatzverantwortlicher Vertriebsführer, der Teams skaliert, Forecasts verantwortet und Vertriebsprozesse professionalisiert.",
+      "contact": {
+        "phone": "+49 152 55456731",
+        "email": "stefan.bauer@example.com",
+        "address": {
+          "streetNumber": "15",
+          "streetName": "Prager Straße",
+          "streetType": "Straße",
+          "city": "Dresden",
+          "state": "Sachsen",
+          "zipCode": "01069",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/stefan-bauer-salesdirector"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 180,
+        "interviewAvailability": ["Nach Vereinbarung"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Vertriebsführung", "skills": ["Teamaufbau", "Forecasting", "Vertriebsstrategie", "Go-to-Market"] },
+      { "category": "CRM & Tools", "skills": ["Salesforce", "Gong", "Clari", "Tableau"] },
+      { "category": "Kommerziell", "skills": ["Umsatzverantwortung", "Pricing", "Revenue Operations"] },
+      { "category": "Führung", "skills": ["Führung von Führungskräften", "Talententwicklung", "Change Management"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Vertriebsleitung", "Go-to-Market-Strategie", "Sales Operations"],
+      "keyResponsibilities": ["Verantwortung für die Umsatzziele der DACH-Region", "Aufbau und Führung eines Vertriebsteams von 24 Personen", "Steuerung von Forecast, Pipeline und Vertriebsprozessen"]
+    },
+    "workExperience": [
+      {
+        "company": "Zenit Cloud AG",
+        "website": "https://zenitcloud.example.com",
+        "location": "Dresden, Deutschland",
+        "from": "2018-03",
+        "to": "Present",
+        "position": "Sales Director DACH",
+        "activities": [
+          { "project": "Skalierung DACH-Vertrieb", "tasks": ["Aufbau des Vertriebsteams von 6 auf 24 Mitarbeitende", "Verantwortung für 28 Mio. EUR ARR", "Einführung eines datengetriebenen Forecast-Prozesses mit Clari"] }
+        ],
+        "achievements": ["Verdreifachung des ARR in vier Jahren", "Senkung der Sales-Cycle-Länge um 20 Prozent"],
+        "toolsAndTechnologies": ["Salesforce", "Clari", "Gong", "Tableau"]
+      },
+      {
+        "company": "Meridian Software GmbH",
+        "website": "https://meridiansoftware.example.com",
+        "location": "Leipzig, Deutschland",
+        "from": "2013-06",
+        "to": "2018-02",
+        "position": "Head of Sales",
+        "activities": [
+          { "project": "Vertriebsaufbau", "tasks": ["Aufbau des ersten strukturierten Vertriebsteams", "Definition von Vertriebsprozessen und Provisionsmodellen", "Coaching der Account Executives"] }
+        ],
+        "achievements": ["Steigerung der Quotenerfüllung des Teams auf durchschnittlich 108 Prozent", "Aufbau eines wiederholbaren Sales-Playbooks"],
+        "toolsAndTechnologies": ["Salesforce", "HubSpot CRM"]
+      },
+      {
+        "company": "Elbe Systeme GmbH",
+        "website": "https://elbesysteme.example.com",
+        "location": "Dresden, Deutschland",
+        "from": "2008-09",
+        "to": "2013-05",
+        "position": "Account Executive",
+        "activities": [
+          { "project": "Neugeschäft Mittelstand", "tasks": ["Verkauf von IT-Lösungen an den Mittelstand", "Aufbau langfristiger Kundenbeziehungen", "Führung kompletter Sales-Zyklen"] }
+        ],
+        "achievements": ["Mehrfach bester Verkäufer des Jahres"],
+        "toolsAndTechnologies": ["Salesforce"]
+      }
+    ],
+    "education": [
+      { "year": "2008", "institution": "Technische Universität Dresden", "degree": "Diplom-Wirtschaftsingenieur", "fieldOfStudy": "Wirtschaftsingenieurwesen", "achievements": ["Schwerpunkt Vertrieb und Marketing"] }
+    ],
+    "certifications": [
+      { "title": "Challenger Sales Leadership", "institution": "Challenger Inc.", "year": "2019", "description": "Führungsprogramm für die Skalierung von Challenger-basierten Vertriebsteams." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Salesforce", "Clari", "Gong", "Tableau", "HubSpot CRM"],
+      "softSkills": ["Führungsstärke", "Strategisches Denken", "Kommunikationsstärke", "Entscheidungsfreude"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Revenue-Operations-Transformation", "description": "Einführung eines integrierten Revenue-Operations-Modells mit einheitlichem Forecast über Marketing, Sales und Customer Success.", "date": "2021-09", "impact": "Verbesserung der Forecast-Genauigkeit auf über 90 Prozent." }
+    ],
+    "interestsAndHobbies": ["Marathonlauf", "Schach", "Mentoring"],
+    "references": [
+      { "name": "Julia Frank", "position": "Chief Revenue Officer", "company": "Zenit Cloud AG", "contact": { "phone": "+49 152 55456732", "email": "julia.frank@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 130000, "max": 165000 },
+    "candidateClustering": {
+      "primaryCluster": "Sales Leadership",
+      "secondaryClusters": ["Go-to-Market Strategy", "Revenue Operations"],
+      "functionalExpertise": ["Sales leadership", "Team building", "Forecasting"],
+      "skillDepth": "hybrid",
+      "businessImpact": ["Tripled ARR", "Scaled sales team"],
+      "industryDomains": ["SaaS", "B2B technology"],
+      "environmentFit": ["High-growth SaaS", "Scale-up"],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.93,
+      "clusterReasoning": "Eighteen years culminating in regional sales leadership with full revenue ownership and team scaling clearly places this candidate at director level."
+    },
+    "searchIndex": {
+      "roles": ["Sales Director", "Head of Sales", "VP Sales"],
+      "skills": ["Salesforce", "Clari", "Gong", "Forecasting", "Go-to-market", "Sales leadership"],
+      "industries": ["SaaS", "B2B Technology"]
+    },
+    "tags": ["sales", "sales-director", "leadership", "saas", "director"]
+  },
+  {
+    "candidateProfileSummary": "Motivierter Sales Development Representative mit rund drei Jahren Erfahrung in der Outbound-Neukundengewinnung im SaaS-Umfeld. Sicher in der Terminierung qualifizierter Meetings über E-Mail, Telefon und LinkedIn. Übertrifft regelmäßig die monatlichen Aktivitäts- und SQL-Ziele.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Lea Wagner",
+      "role": "Sales Development Representative",
+      "summary": "Energiegeladene SDR, die strukturierte Outbound-Kadenzen fährt und die Pipeline für das Account-Executive-Team füllt.",
+      "contact": {
+        "phone": "+49 176 66456741",
+        "email": "lea.wagner@example.com",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "Zeil",
+          "streetType": "Straße",
+          "city": "Frankfurt am Main",
+          "state": "Hessen",
+          "zipCode": "60313",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/lea-wagner-sdr"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Werktags flexibel", "Kurzfristig verfügbar"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Outbound", "skills": ["Cold Calling", "E-Mail-Sequenzen", "Social Selling", "Lead-Qualifizierung"] },
+      { "category": "CRM & Tools", "skills": ["Salesforce", "Outreach", "HubSpot CRM", "LinkedIn Sales Navigator"] },
+      { "category": "Kommunikation", "skills": ["Gesprächsführung", "Einwandbehandlung", "Terminierung"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Outbound-Prospecting", "Lead-Qualifizierung", "Terminierung"],
+      "keyResponsibilities": ["Ausführung von Multi-Channel-Outbound-Kadenzen", "Qualifizierung von Leads und Übergabe an Account Executives", "Pflege der Datenqualität im CRM"]
+    },
+    "workExperience": [
+      {
+        "company": "Flowbit SaaS GmbH",
+        "website": "https://flowbit.example.com",
+        "location": "Frankfurt am Main, Deutschland",
+        "from": "2023-05",
+        "to": "Present",
+        "position": "Sales Development Representative",
+        "activities": [
+          { "project": "Outbound Neugeschäft", "tasks": ["Ausführung täglicher Call- und E-Mail-Kadenzen mit Outreach", "Qualifizierung von Leads nach BANT", "Terminierung von Discovery-Calls für vier Account Executives"] }
+        ],
+        "achievements": ["Durchschnittlich 118 Prozent des SQL-Ziels", "Meiste gebuchte Meetings im Team in zwei Quartalen"],
+        "toolsAndTechnologies": ["Salesforce", "Outreach", "LinkedIn Sales Navigator"]
+      },
+      {
+        "company": "Startpunkt Digital GmbH",
+        "website": "https://startpunktdigital.example.com",
+        "location": "Mainz, Deutschland",
+        "from": "2022-02",
+        "to": "2023-04",
+        "position": "Junior Sales Development Representative",
+        "activities": [
+          { "project": "Inbound-Qualifizierung", "tasks": ["Bearbeitung eingehender Anfragen", "Erste Qualifizierung von Interessenten", "Pflege der CRM-Daten"] }
+        ],
+        "achievements": ["Schnellste Einarbeitung im Team", "Übertreffen der Aktivitätsziele ab dem zweiten Monat"],
+        "toolsAndTechnologies": ["HubSpot CRM"]
+      }
+    ],
+    "education": [
+      { "year": "2021", "institution": "Hochschule RheinMain", "degree": "Bachelor of Arts", "fieldOfStudy": "Media Management", "achievements": ["Werkstudententätigkeit im Vertrieb"] }
+    ],
+    "certifications": [
+      { "title": "HubSpot Sales Software Certification", "institution": "HubSpot Academy", "year": "2023", "description": "Grundlagenzertifizierung für den Vertriebseinsatz von HubSpot." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Salesforce", "Outreach", "HubSpot CRM", "LinkedIn Sales Navigator"],
+      "softSkills": ["Beharrlichkeit", "Kommunikationsfreude", "Lernbereitschaft", "Selbstorganisation"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Optimierung der Outbound-Sequenz", "description": "Neugestaltung der E-Mail-Betreffzeilen und Call-Skripte im Team.", "date": "2024-02", "impact": "Steigerung der Antwortrate um 15 Prozent." }
+    ],
+    "interestsAndHobbies": ["Volleyball", "Podcasts", "Reisen"],
+    "references": [
+      { "name": "Nils Petersen", "position": "SDR Team Lead", "company": "Flowbit SaaS GmbH", "contact": { "phone": "+49 176 66456742", "email": "nils.petersen@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 42000, "max": 52000 },
+    "candidateClustering": {
+      "primaryCluster": "Sales Development",
+      "secondaryClusters": ["Outbound Prospecting", "Lead Qualification"],
+      "functionalExpertise": ["Outbound prospecting", "Lead qualification", "Appointment setting"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Exceeded SQL targets", "Booked most meetings on team"],
+      "industryDomains": ["SaaS", "B2B technology"],
+      "environmentFit": ["High-growth SaaS", "Scale-up"],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Three years of outbound prospecting with consistent target attainment and no team responsibility places this candidate at junior sales development level."
+    },
+    "searchIndex": {
+      "roles": ["Sales Development Representative", "Business Development Representative", "SDR"],
+      "skills": ["Salesforce", "Outreach", "HubSpot CRM", "Cold calling", "Lead qualification", "Social selling"],
+      "industries": ["SaaS", "B2B Technology"]
+    },
+    "tags": ["sales", "sdr", "outbound", "junior", "saas"]
+  },
+  {
+    "candidateProfileSummary": "Erfahrene SEO- und SEM-Managerin mit über neun Jahren im Performance-getriebenen Suchmaschinenmarketing für E-Commerce- und SaaS-Marken. Kombiniert technisches SEO mit datengestützter Paid-Search-Steuerung und skaliert profitablen organischen und bezahlten Traffic. Sicher im Umgang mit GA4, Google Ads und gängigen SEO-Tools.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Nina Kowalski",
+      "role": "SEO & SEM Manager",
+      "summary": "Search-Spezialistin, die organische und bezahlte Suche zusammendenkt und Wachstum über den gesamten Search-Funnel treibt.",
+      "contact": {
+        "phone": "+49 157 77456751",
+        "email": "nina.kowalski@example.com",
+        "address": {
+          "streetNumber": "19",
+          "streetName": "Schildergasse",
+          "streetType": "Straße",
+          "city": "Köln",
+          "state": "Nordrhein-Westfalen",
+          "zipCode": "50667",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/nina-kowalski-search"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["Werktags vormittags", "Mittwochs ganztägig"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "SEO", "skills": ["Technisches SEO", "On-Page-Optimierung", "Content-SEO", "Linkaufbau"] },
+      { "category": "SEM", "skills": ["Google Ads", "Bing Ads", "Gebotsstrategien", "Keyword-Recherche"] },
+      { "category": "Analytics", "skills": ["GA4", "Google Search Console", "Looker Studio", "Screaming Frog"] },
+      { "category": "Optimierung", "skills": ["A/B-Testing", "Conversion-Optimierung", "Landingpage-Optimierung"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Suchmaschinenoptimierung", "Suchmaschinenwerbung", "Web-Analyse"],
+      "keyResponsibilities": ["Steuerung der organischen und bezahlten Suchstrategie", "Verwaltung von Google-Ads-Budgets im sechsstelligen Bereich", "Technische SEO-Audits und Content-Optimierung"]
+    },
+    "workExperience": [
+      {
+        "company": "Warenwelt Online GmbH",
+        "website": "https://warenwelt.example.com",
+        "location": "Köln, Deutschland",
+        "from": "2020-01",
+        "to": "Present",
+        "position": "SEO & SEM Manager",
+        "activities": [
+          { "project": "Search-Wachstum E-Commerce", "tasks": ["Steuerung eines jährlichen Google-Ads-Budgets von 1,2 Mio. EUR", "Durchführung technischer SEO-Audits mit Screaming Frog", "Aufbau eines Content-Hubs zur Steigerung des organischen Traffics"] }
+        ],
+        "achievements": ["Steigerung des organischen Traffics um 65 Prozent in zwei Jahren", "Senkung des CPA im Paid Search um 24 Prozent"],
+        "toolsAndTechnologies": ["Google Ads", "GA4", "Google Search Console", "Screaming Frog"]
+      },
+      {
+        "company": "Klick Performance Agentur GmbH",
+        "website": "https://klickperformance.example.com",
+        "location": "Düsseldorf, Deutschland",
+        "from": "2016-08",
+        "to": "2019-12",
+        "position": "SEA Specialist",
+        "activities": [
+          { "project": "Paid-Search-Kampagnen", "tasks": ["Aufsetzen und Optimieren von Google-Ads-Kampagnen für Kunden", "Erstellung von Reportings in Google Analytics", "Keyword-Recherche und Anzeigentexte"] }
+        ],
+        "achievements": ["Betreuung von zehn Kundenkonten parallel", "Durchschnittliche ROAS-Steigerung von 30 Prozent"],
+        "toolsAndTechnologies": ["Google Ads", "Google Analytics", "Bing Ads"]
+      }
+    ],
+    "education": [
+      { "year": "2016", "institution": "Heinrich-Heine-Universität Düsseldorf", "degree": "Bachelor of Arts", "fieldOfStudy": "Kommunikations- und Medienwissenschaft", "achievements": ["Schwerpunkt Digitale Medien"] }
+    ],
+    "certifications": [
+      { "title": "Google Ads Search Certification", "institution": "Google", "year": "2023", "description": "Zertifizierung für die Erstellung und Optimierung von Google-Search-Kampagnen." },
+      { "title": "Google Analytics Certification", "institution": "Google", "year": "2022", "description": "Zertifizierung für GA4 und die Analyse von Website-Daten." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Google Ads", "GA4", "Google Search Console", "Screaming Frog", "Looker Studio", "Bing Ads"],
+      "softSkills": ["Analytisches Denken", "Detailgenauigkeit", "Ergebnisorientierung", "Neugier"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } },
+        { "language": "Polnisch", "proficiency": { "read": "native", "written": "fluent", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "SEO-Content-Hub", "description": "Aufbau eines redaktionellen Content-Hubs mit über 200 optimierten Ratgeberseiten.", "date": "2022-05", "impact": "Verdopplung des organischen Non-Brand-Traffics." }
+    ],
+    "interestsAndHobbies": ["Yoga", "Bloggen", "Städtereisen"],
+    "references": [
+      { "name": "Markus Lang", "position": "Head of Marketing", "company": "Warenwelt Online GmbH", "contact": { "phone": "+49 157 77456752", "email": "markus.lang@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 62000, "max": 80000 },
+    "candidateClustering": {
+      "primaryCluster": "Search Marketing",
+      "secondaryClusters": ["Performance Marketing", "SEO"],
+      "functionalExpertise": ["SEO", "Paid search", "Web analytics"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Grew organic traffic", "Reduced paid CPA"],
+      "industryDomains": ["E-commerce", "SaaS"],
+      "environmentFit": ["E-commerce", "Digital agency"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Nine years of combined SEO and paid search work with measurable traffic and CPA impact places this candidate at senior search marketing level."
+    },
+    "searchIndex": {
+      "roles": ["SEO Manager", "SEM Manager", "Search Marketing Manager"],
+      "skills": ["Google Ads", "GA4", "SEO", "SEM", "Google Search Console", "Screaming Frog"],
+      "industries": ["E-commerce", "SaaS"]
+    },
+    "tags": ["marketing", "seo", "sem", "search", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Paid-Media-Lead mit über zwölf Jahren Erfahrung in der Planung und Steuerung kanalübergreifender Performance-Kampagnen für D2C- und E-Commerce-Marken. Führt ein Team von Media-Buyern und verantwortet Media-Budgets im siebenstelligen Bereich. Stark in datengetriebener Budgetallokation und Attribution.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "David Fischer",
+      "role": "Paid Media Lead",
+      "summary": "Performance-Marketing-Führungskraft, die Media-Budgets über Google, Meta und Programmatic hinweg profitabel skaliert.",
+      "contact": {
+        "phone": "+49 151 88456761",
+        "email": "david.fischer@example.com",
+        "address": {
+          "streetNumber": "6",
+          "streetName": "Friedrichstraße",
+          "streetType": "Straße",
+          "city": "Berlin",
+          "state": "Berlin",
+          "zipCode": "10117",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/david-fischer-paidmedia"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Werktags nachmittags"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Paid Media", "skills": ["Google Ads", "Meta Ads", "Programmatic", "TikTok Ads"] },
+      { "category": "Steuerung", "skills": ["Budgetallokation", "Bid-Management", "Attribution", "Skalierung"] },
+      { "category": "Analytics", "skills": ["GA4", "Looker Studio", "Google Tag Manager", "Northbeam"] },
+      { "category": "Führung", "skills": ["Teamführung", "Agentursteuerung", "Stakeholder-Management"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Performance Marketing", "Media Buying", "Marketing-Attribution"],
+      "keyResponsibilities": ["Verantwortung für ein Media-Budget von über 8 Mio. EUR pro Jahr", "Führung eines Teams von fünf Media-Buyern", "Definition der Attributions- und Messstrategie"]
+    },
+    "workExperience": [
+      {
+        "company": "Nova Direct GmbH",
+        "website": "https://novadirect.example.com",
+        "location": "Berlin, Deutschland",
+        "from": "2019-02",
+        "to": "Present",
+        "position": "Paid Media Lead",
+        "activities": [
+          { "project": "Skalierung D2C-Media", "tasks": ["Steuerung eines Media-Budgets von 8,5 Mio. EUR über Google, Meta und TikTok", "Führung und Coaching von fünf Media-Buyern", "Aufbau eines Attributionsmodells mit Northbeam"] }
+        ],
+        "achievements": ["Skalierung des Umsatzes um 3x bei stabilem ROAS", "Senkung des Blended CAC um 18 Prozent"],
+        "toolsAndTechnologies": ["Google Ads", "Meta Ads", "TikTok Ads", "GA4"]
+      },
+      {
+        "company": "Reichweite Media GmbH",
+        "website": "https://reichweitemedia.example.com",
+        "location": "Hamburg, Deutschland",
+        "from": "2016-05",
+        "to": "2019-01",
+        "position": "Senior Performance Marketing Manager",
+        "activities": [
+          { "project": "Performance-Kampagnen", "tasks": ["Planung und Optimierung von Paid-Social- und Paid-Search-Kampagnen", "Aufbau von Reporting-Dashboards", "A/B-Testing von Creatives und Zielgruppen"] }
+        ],
+        "achievements": ["Steigerung der ROAS über alle Kunden um 28 Prozent", "Einführung eines standardisierten Testing-Frameworks"],
+        "toolsAndTechnologies": ["Google Ads", "Meta Ads", "Google Analytics"]
+      },
+      {
+        "company": "Pixelwerk Agentur GmbH",
+        "website": "https://pixelwerk.example.com",
+        "location": "Hamburg, Deutschland",
+        "from": "2013-09",
+        "to": "2016-04",
+        "position": "Performance Marketing Manager",
+        "activities": [
+          { "project": "Kampagnenmanagement", "tasks": ["Betreuung von Paid-Media-Kampagnen für Kunden", "Erstellung von Reportings", "Optimierung von Geboten und Budgets"] }
+        ],
+        "achievements": ["Aufbau des Paid-Social-Bereichs der Agentur"],
+        "toolsAndTechnologies": ["Google Ads", "Meta Ads"]
+      }
+    ],
+    "education": [
+      { "year": "2013", "institution": "Freie Universität Berlin", "degree": "Master of Science", "fieldOfStudy": "Marketing", "achievements": ["Masterarbeit über Attributionsmodelle"] }
+    ],
+    "certifications": [
+      { "title": "Meta Certified Media Buying Professional", "institution": "Meta", "year": "2022", "description": "Zertifizierung für die professionelle Planung und Steuerung von Meta-Werbekampagnen." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Google Ads", "Meta Ads", "TikTok Ads", "GA4", "Google Tag Manager", "Looker Studio"],
+      "softSkills": ["Führungsstärke", "Datenaffinität", "Ergebnisorientierung", "Kommunikationsstärke"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Attributionsmodell-Rollout", "description": "Einführung eines Multi-Touch-Attributionsmodells über alle Paid-Kanäle.", "date": "2021-07", "impact": "Umverteilung von 20 Prozent des Budgets in profitablere Kanäle." }
+    ],
+    "interestsAndHobbies": ["Basketball", "Elektronische Musik", "Kochen"],
+    "references": [
+      { "name": "Sarah Kim", "position": "CMO", "company": "Nova Direct GmbH", "contact": { "phone": "+49 151 88456762", "email": "sarah.kim@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 78000, "max": 98000 },
+    "candidateClustering": {
+      "primaryCluster": "Performance Marketing",
+      "secondaryClusters": ["Paid Media", "Media Buying"],
+      "functionalExpertise": ["Paid media", "Media buying", "Attribution"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Scaled revenue 3x", "Reduced CAC"],
+      "industryDomains": ["E-commerce", "D2C"],
+      "environmentFit": ["D2C", "E-commerce"],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Twelve years in performance marketing with team leadership and seven-figure budget ownership positions this candidate as a paid media lead."
+    },
+    "searchIndex": {
+      "roles": ["Paid Media Lead", "Performance Marketing Manager", "Head of Performance Marketing"],
+      "skills": ["Google Ads", "Meta Ads", "TikTok Ads", "GA4", "Media buying", "Attribution"],
+      "industries": ["E-commerce", "D2C"]
+    },
+    "tags": ["marketing", "paid-media", "performance", "lead", "ecommerce"]
+  },
+  {
+    "candidateProfileSummary": "Performance-Marketing-Managerin mit rund fünf Jahren Erfahrung in der Steuerung datengetriebener Kampagnen für SaaS- und Abo-Geschäftsmodelle. Verantwortet Paid-Kanäle, Reporting und Conversion-Optimierung. Fühlt sich zwischen Zahlen, Creatives und Landingpages gleichermaßen wohl.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Jonas Weber",
+      "role": "Performance Marketing Manager",
+      "summary": "Datengetriebener Performance-Marketer, der Kampagnen, Tracking und Conversion-Optimierung end-to-end verantwortet.",
+      "contact": {
+        "phone": "+49 152 99456771",
+        "email": "jonas.weber@example.com",
+        "address": {
+          "streetNumber": "22",
+          "streetName": "Karl-Liebknecht-Straße",
+          "streetType": "Straße",
+          "city": "Leipzig",
+          "state": "Sachsen",
+          "zipCode": "04107",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/jonas-weber-performance"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Werktags flexibel"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Paid Kanäle", "skills": ["Google Ads", "Meta Ads", "LinkedIn Ads", "Kampagnenoptimierung"] },
+      { "category": "Analytics", "skills": ["GA4", "Google Tag Manager", "Looker Studio", "Tracking-Setup"] },
+      { "category": "Optimierung", "skills": ["A/B-Testing", "Conversion-Optimierung", "Landingpage-Tests"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Performance Marketing", "Kampagnenmanagement", "Web-Tracking"],
+      "keyResponsibilities": ["Planung und Optimierung von Paid-Kampagnen", "Aufbau und Pflege des Trackings", "Reporting und Ableitung von Optimierungen"]
+    },
+    "workExperience": [
+      {
+        "company": "Abolytics SaaS GmbH",
+        "website": "https://abolytics.example.com",
+        "location": "Leipzig, Deutschland",
+        "from": "2022-09",
+        "to": "Present",
+        "position": "Performance Marketing Manager",
+        "activities": [
+          { "project": "Paid Growth SaaS", "tasks": ["Steuerung von Google- und LinkedIn-Ads-Kampagnen für Trial-Signups", "Aufbau des Conversion-Trackings mit Google Tag Manager", "Erstellung von Reporting-Dashboards in Looker Studio"] }
+        ],
+        "achievements": ["Senkung der Cost-per-Trial um 26 Prozent", "Steigerung der Trial-to-Paid-Conversion um 12 Prozent"],
+        "toolsAndTechnologies": ["Google Ads", "LinkedIn Ads", "GA4", "Google Tag Manager"]
+      },
+      {
+        "company": "Digitalschmiede GmbH",
+        "website": "https://digitalschmiede.example.com",
+        "location": "Leipzig, Deutschland",
+        "from": "2021-03",
+        "to": "2022-08",
+        "position": "Junior Performance Marketing Manager",
+        "activities": [
+          { "project": "Kampagnenunterstützung", "tasks": ["Aufsetzen von Meta-Ads-Kampagnen", "Pflege von Reportings", "Durchführung von A/B-Tests für Anzeigen"] }
+        ],
+        "achievements": ["Selbstständige Übernahme von drei Kundenkonten"],
+        "toolsAndTechnologies": ["Meta Ads", "Google Analytics"]
+      }
+    ],
+    "education": [
+      { "year": "2021", "institution": "Universität Leipzig", "degree": "Bachelor of Science", "fieldOfStudy": "Wirtschaftswissenschaften", "achievements": ["Schwerpunkt Marketing"] }
+    ],
+    "certifications": [
+      { "title": "Google Ads Measurement Certification", "institution": "Google", "year": "2023", "description": "Zertifizierung für Messung und Reporting in Google Ads." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Google Ads", "Meta Ads", "LinkedIn Ads", "GA4", "Google Tag Manager", "Looker Studio"],
+      "softSkills": ["Analytisches Denken", "Lernbereitschaft", "Sorgfalt", "Eigeninitiative"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Trial-Funnel-Optimierung", "description": "Systematisches Testing von Landingpages und Anzeigen entlang des Trial-Funnels.", "date": "2024-04", "impact": "Steigerung der qualifizierten Trials um 20 Prozent." }
+    ],
+    "interestsAndHobbies": ["Klettern", "Gaming", "Data-Podcasts"],
+    "references": [
+      { "name": "Miriam Roth", "position": "Head of Growth", "company": "Abolytics SaaS GmbH", "contact": { "phone": "+49 152 99456772", "email": "miriam.roth@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 50000, "max": 64000 },
+    "candidateClustering": {
+      "primaryCluster": "Performance Marketing",
+      "secondaryClusters": ["Paid Media", "Conversion Optimization"],
+      "functionalExpertise": ["Paid media", "Web tracking", "Conversion optimization"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Reduced cost-per-trial", "Improved trial-to-paid conversion"],
+      "industryDomains": ["SaaS", "Subscription"],
+      "environmentFit": ["SaaS", "Scale-up"],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "Five years of hands-on paid campaign and tracking work with measurable conversion improvements and no team responsibility positions this candidate at mid-level performance marketing."
+    },
+    "searchIndex": {
+      "roles": ["Performance Marketing Manager", "Paid Media Manager", "Growth Marketing Manager"],
+      "skills": ["Google Ads", "Meta Ads", "LinkedIn Ads", "GA4", "Google Tag Manager", "Conversion optimization"],
+      "industries": ["SaaS", "Subscription"]
+    },
+    "tags": ["marketing", "performance", "paid-media", "midlevel", "saas"]
+  },
+  {
+    "candidateProfileSummary": "Marketing-Automation-Spezialistin mit über zehn Jahren Erfahrung im Aufbau von Lead-Nurturing-Strecken und Lifecycle-Kampagnen im B2B-SaaS-Umfeld. Verbindet HubSpot- und Marketo-Expertise mit einem tiefen Verständnis für Datenmodelle und Lead-Scoring. Schnittstelle zwischen Marketing, Vertrieb und RevOps.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Sophie Braun",
+      "role": "Marketing Automation Manager",
+      "summary": "Automatisiert den gesamten Lead-Lifecycle und sorgt für saubere Übergaben zwischen Marketing und Vertrieb.",
+      "contact": {
+        "phone": "+49 176 10456781",
+        "email": "sophie.braun@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Kaiserstraße",
+          "streetType": "Straße",
+          "city": "Karlsruhe",
+          "state": "Baden-Württemberg",
+          "zipCode": "76133",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sophie-braun-automation"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["Werktags vormittags", "Dienstags ganztägig"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": true
+      }
+    },
+    "keySkills": [
+      { "category": "Marketing Automation", "skills": ["HubSpot", "Marketo", "Lead Nurturing", "Lead Scoring"] },
+      { "category": "Lifecycle", "skills": ["E-Mail-Marketing", "Workflow-Design", "Segmentierung", "Onboarding-Strecken"] },
+      { "category": "Daten & Ops", "skills": ["CRM-Integration", "Datenhygiene", "Reporting", "Salesforce"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Marketing Automation", "Lifecycle-Marketing", "Lead Management"],
+      "keyResponsibilities": ["Aufbau und Pflege von Automatisierungsstrecken", "Definition von Lead-Scoring-Modellen", "Sicherstellung sauberer Marketing-zu-Sales-Übergaben"]
+    },
+    "workExperience": [
+      {
+        "company": "Signalpfad Software GmbH",
+        "website": "https://signalpfad.example.com",
+        "location": "Karlsruhe, Deutschland",
+        "from": "2019-06",
+        "to": "Present",
+        "position": "Marketing Automation Manager",
+        "activities": [
+          { "project": "Lifecycle-Automation", "tasks": ["Aufbau von Nurturing-Strecken in HubSpot über den gesamten Funnel", "Entwicklung eines Lead-Scoring-Modells gemeinsam mit dem Vertrieb", "Integration von HubSpot und Salesforce"] }
+        ],
+        "achievements": ["Steigerung der MQL-zu-SQL-Conversion um 22 Prozent", "Automatisierung des kompletten Trial-Onboardings"],
+        "toolsAndTechnologies": ["HubSpot", "Salesforce", "GA4"]
+      },
+      {
+        "company": "Marktimpuls GmbH",
+        "website": "https://marktimpuls.example.com",
+        "location": "Mannheim, Deutschland",
+        "from": "2015-04",
+        "to": "2019-05",
+        "position": "E-Mail & Automation Specialist",
+        "activities": [
+          { "project": "E-Mail-Programme", "tasks": ["Erstellung und Versand von E-Mail-Kampagnen in Marketo", "Aufbau von Segmentierungslogiken", "A/B-Testing von Betreffzeilen und Inhalten"] }
+        ],
+        "achievements": ["Steigerung der E-Mail-Öffnungsrate um 30 Prozent", "Aufbau der ersten automatisierten Willkommensstrecke"],
+        "toolsAndTechnologies": ["Marketo", "Salesforce"]
+      }
+    ],
+    "education": [
+      { "year": "2015", "institution": "Karlsruher Institut für Technologie", "degree": "Master of Science", "fieldOfStudy": "Wirtschaftsinformatik", "achievements": ["Schwerpunkt Digitales Marketing"] }
+    ],
+    "certifications": [
+      { "title": "HubSpot Marketing Software Certification", "institution": "HubSpot Academy", "year": "2021", "description": "Zertifizierung für den Aufbau von Marketing-Automation-Workflows in HubSpot." },
+      { "title": "Marketo Certified Expert", "institution": "Adobe", "year": "2018", "description": "Expertenzertifizierung für die Marketing-Automation-Plattform Marketo." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["HubSpot", "Marketo", "Salesforce", "GA4", "SQL"],
+      "softSkills": ["Prozessdenken", "Genauigkeit", "Kollaboration", "Problemlösung"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Lead-Scoring-Neuaufbau", "description": "Konzeption und Umsetzung eines verhaltens- und firmografiebasierten Lead-Scoring-Modells.", "date": "2022-10", "impact": "Erhöhung der Akzeptanz qualifizierter Leads im Vertrieb um 35 Prozent." }
+    ],
+    "interestsAndHobbies": ["Gärtnern", "Schwimmen", "Kochbücher sammeln"],
+    "references": [
+      { "name": "Peter Hansen", "position": "VP Marketing", "company": "Signalpfad Software GmbH", "contact": { "phone": "+49 176 10456782", "email": "peter.hansen@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 62000, "max": 82000 },
+    "candidateClustering": {
+      "primaryCluster": "Marketing Automation",
+      "secondaryClusters": ["Lifecycle Marketing", "Lead Management"],
+      "functionalExpertise": ["Marketing automation", "Lead nurturing", "Lead scoring"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Improved MQL-to-SQL conversion", "Automated onboarding"],
+      "industryDomains": ["SaaS", "B2B technology"],
+      "environmentFit": ["B2B SaaS", "RevOps-driven"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Ten years building automation and lifecycle programs across HubSpot and Marketo with cross-functional lead-management impact places this candidate at senior automation level."
+    },
+    "searchIndex": {
+      "roles": ["Marketing Automation Manager", "Lifecycle Marketing Manager", "CRM Marketing Manager"],
+      "skills": ["HubSpot", "Marketo", "Salesforce", "Lead nurturing", "Lead scoring", "Email marketing"],
+      "industries": ["SaaS", "B2B Technology"]
+    },
+    "tags": ["marketing", "marketing-automation", "lifecycle", "senior", "saas"]
+  },
+  {
+    "candidateProfileSummary": "CRM- und Lifecycle-Managerin mit rund vierzehn Jahren Erfahrung im Aufbau datengetriebener Kundenbindungsprogramme im E-Commerce und Retail. Verantwortet die gesamte Customer-Journey von Onboarding bis Reaktivierung und führt ein CRM-Team. Kombiniert kreatives Kampagnendenken mit fundierter Kohortenanalyse.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Melanie Krüger",
+      "role": "CRM & Lifecycle Manager",
+      "summary": "Verantwortet Kundenbindung, Retention und Lifetime Value über alle direkten Kundenkanäle hinweg.",
+      "contact": {
+        "phone": "+49 160 20456791",
+        "email": "melanie.krueger@example.com",
+        "address": {
+          "streetNumber": "31",
+          "streetName": "Neuer Wall",
+          "streetType": "Straße",
+          "city": "Hamburg",
+          "state": "Hamburg",
+          "zipCode": "20354",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/melanie-krueger-crm"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Werktags abends"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "CRM & Lifecycle", "skills": ["Retention-Marketing", "Customer Journeys", "Reaktivierung", "Loyalty-Programme"] },
+      { "category": "Kanäle", "skills": ["E-Mail-Marketing", "Push-Nachrichten", "SMS", "In-App-Messaging"] },
+      { "category": "Analyse", "skills": ["Kohortenanalyse", "RFM-Segmentierung", "Customer Lifetime Value", "A/B-Testing"] },
+      { "category": "Tools", "skills": ["Braze", "HubSpot", "Emarsys", "SQL"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Lifecycle-Marketing", "Kundenbindung", "CRM-Strategie"],
+      "keyResponsibilities": ["Verantwortung für Retention und Customer Lifetime Value", "Steuerung aller direkten Kundenkanäle", "Führung eines CRM-Teams von vier Personen"]
+    },
+    "workExperience": [
+      {
+        "company": "Stilwerk Retail GmbH",
+        "website": "https://stilwerkretail.example.com",
+        "location": "Hamburg, Deutschland",
+        "from": "2018-01",
+        "to": "Present",
+        "position": "CRM & Lifecycle Manager",
+        "activities": [
+          { "project": "Retention-Programm", "tasks": ["Aufbau eines Loyalty-Programms mit über 500.000 Mitgliedern", "Konzeption automatisierter Lifecycle-Kampagnen in Braze", "Steuerung eines vierköpfigen CRM-Teams"] }
+        ],
+        "achievements": ["Steigerung der Wiederkaufrate um 19 Prozent", "Erhöhung des Customer Lifetime Value um 14 Prozent"],
+        "toolsAndTechnologies": ["Braze", "SQL", "Looker"]
+      },
+      {
+        "company": "Heimtrend Versand GmbH",
+        "website": "https://heimtrend.example.com",
+        "location": "Hannover, Deutschland",
+        "from": "2014-03",
+        "to": "2017-12",
+        "position": "CRM Manager",
+        "activities": [
+          { "project": "E-Mail-Lifecycle", "tasks": ["Aufbau von Willkommens- und Reaktivierungsstrecken", "Segmentierung der Kundenbasis nach RFM", "A/B-Testing von Kampagnen"] }
+        ],
+        "achievements": ["Steigerung des E-Mail-Umsatzanteils auf 22 Prozent"],
+        "toolsAndTechnologies": ["Emarsys", "HubSpot"]
+      },
+      {
+        "company": "Direktkontakt GmbH",
+        "website": "https://direktkontakt.example.com",
+        "location": "Hannover, Deutschland",
+        "from": "2011-09",
+        "to": "2014-02",
+        "position": "Junior CRM Specialist",
+        "activities": [
+          { "project": "Kampagnenumsetzung", "tasks": ["Erstellung von E-Mail-Newslettern", "Pflege der Kundendatenbank", "Aufbereitung von Kampagnen-Reports"] }
+        ],
+        "achievements": ["Automatisierung des monatlichen Reportings"],
+        "toolsAndTechnologies": ["HubSpot"]
+      }
+    ],
+    "education": [
+      { "year": "2011", "institution": "Leibniz Universität Hannover", "degree": "Bachelor of Arts", "fieldOfStudy": "Marketing und Management", "achievements": ["Abschlussarbeit über Kundenbindung im E-Commerce"] }
+    ],
+    "certifications": [
+      { "title": "Braze Certified Marketer", "institution": "Braze", "year": "2020", "description": "Zertifizierung für den Aufbau von Lifecycle-Kampagnen in Braze." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Braze", "HubSpot", "Emarsys", "SQL", "Looker"],
+      "softSkills": ["Kundenzentrierung", "Kreativität", "Analytik", "Teamführung"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Loyalty-Programm-Launch", "description": "Konzeption und Einführung eines gestuften Treueprogramms für Bestandskunden.", "date": "2021-04", "impact": "Über 500.000 aktive Mitglieder im ersten Jahr." }
+    ],
+    "interestsAndHobbies": ["Backen", "Wandern", "Interior Design"],
+    "references": [
+      { "name": "Robert Schulz", "position": "Head of E-Commerce", "company": "Stilwerk Retail GmbH", "contact": { "phone": "+49 160 20456792", "email": "robert.schulz@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 75000, "max": 95000 },
+    "candidateClustering": {
+      "primaryCluster": "CRM & Lifecycle Marketing",
+      "secondaryClusters": ["Retention Marketing", "Loyalty"],
+      "functionalExpertise": ["Lifecycle marketing", "Retention", "Customer analytics"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Increased repeat purchase rate", "Grew customer lifetime value"],
+      "industryDomains": ["E-commerce", "Retail"],
+      "environmentFit": ["E-commerce", "Consumer brands"],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Fourteen years owning retention and lifecycle programs with team leadership and measurable CLV impact places this candidate at manager level in CRM marketing."
+    },
+    "searchIndex": {
+      "roles": ["CRM Manager", "Lifecycle Marketing Manager", "Retention Marketing Manager"],
+      "skills": ["Braze", "HubSpot", "Emarsys", "SQL", "Lifecycle marketing", "Retention"],
+      "industries": ["E-commerce", "Retail"]
+    },
+    "tags": ["marketing", "crm", "lifecycle", "retention", "manager"]
+  },
+  {
+    "candidateProfileSummary": "Brand-Managerin mit über zehn Jahren Erfahrung in der Führung und Weiterentwicklung von Konsumgütermarken. Verantwortet Markenstrategie, Positionierung und integrierte Kampagnen über alle Touchpoints. Verbindet strategisches Markendenken mit einem feinen Gespür für Kreation und Konsumententrends.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Carolin Neumann",
+      "role": "Brand Manager",
+      "summary": "Führt Marken strategisch und kreativ, von der Positionierung bis zur integrierten Kampagne über alle Kanäle.",
+      "contact": {
+        "phone": "+49 151 30456801",
+        "email": "carolin.neumann@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Marienplatz",
+          "streetType": "Platz",
+          "city": "München",
+          "state": "Bayern",
+          "zipCode": "80331",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/carolin-neumann-brand"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Werktags nachmittags", "Donnerstags ganztägig"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Markenführung", "skills": ["Markenstrategie", "Positionierung", "Markenarchitektur", "Konsumentenforschung"] },
+      { "category": "Kampagnen", "skills": ["Integrierte Kampagnen", "Kreativsteuerung", "Agentursteuerung", "Storytelling"] },
+      { "category": "Kanäle", "skills": ["ATL", "Social Media", "Point of Sale", "Influencer-Kooperationen"] },
+      { "category": "Steuerung", "skills": ["Budgetplanung", "Markttracking", "Brand-KPIs"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Markenmanagement", "Kampagnenentwicklung", "Konsumententrends"],
+      "keyResponsibilities": ["Verantwortung für Markenstrategie und Positionierung", "Steuerung integrierter Kampagnen und Agenturen", "Führung des Markenbudgets"]
+    },
+    "workExperience": [
+      {
+        "company": "Alpenfrische Konsumgüter GmbH",
+        "website": "https://alpenfrische.example.com",
+        "location": "München, Deutschland",
+        "from": "2019-04",
+        "to": "Present",
+        "position": "Brand Manager",
+        "activities": [
+          { "project": "Markenrelaunch", "tasks": ["Führung des Relaunchs einer Kernmarke inklusive neuer Positionierung", "Steuerung von Kreativ- und Media-Agenturen", "Entwicklung integrierter Kampagnen über TV, Social und POS"] }
+        ],
+        "achievements": ["Steigerung der gestützten Markenbekanntheit um 12 Prozentpunkte", "Marktanteilsgewinn von 2,3 Prozentpunkten"],
+        "toolsAndTechnologies": ["Adobe Creative Suite", "Nielsen", "Meta Business Suite"]
+      },
+      {
+        "company": "Frischwind Marken GmbH",
+        "website": "https://frischwind.example.com",
+        "location": "Nürnberg, Deutschland",
+        "from": "2016-02",
+        "to": "2019-03",
+        "position": "Junior Brand Manager",
+        "activities": [
+          { "project": "Produktkampagnen", "tasks": ["Unterstützung bei der Kampagnenentwicklung", "Auswertung von Markttracking-Daten", "Koordination von Verpackungsdesigns"] }
+        ],
+        "achievements": ["Mitwirkung an einem erfolgreichen Produktlaunch"],
+        "toolsAndTechnologies": ["Adobe Creative Suite", "Nielsen"]
+      },
+      {
+        "company": "Kreativagentur Süd GmbH",
+        "website": "https://kreativagentursued.example.com",
+        "location": "Nürnberg, Deutschland",
+        "from": "2014-08",
+        "to": "2016-01",
+        "position": "Account Managerin",
+        "activities": [
+          { "project": "Kundenbetreuung", "tasks": ["Betreuung von Markenkunden", "Koordination von Kreativprojekten", "Erstellung von Präsentationen"] }
+        ],
+        "achievements": ["Betreuung von drei Markenkunden parallel"],
+        "toolsAndTechnologies": ["Adobe Creative Suite"]
+      }
+    ],
+    "education": [
+      { "year": "2014", "institution": "Universität Mannheim", "degree": "Master of Science", "fieldOfStudy": "Marketing", "achievements": ["Schwerpunkt Markenmanagement"] }
+    ],
+    "certifications": [
+      { "title": "CIM Diploma in Professional Marketing", "institution": "CIM", "year": "2018", "description": "Diplom des Chartered Institute of Marketing mit Schwerpunkt Markenführung." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Adobe Creative Suite", "Nielsen", "Meta Business Suite", "PowerPoint"],
+      "softSkills": ["Kreativität", "Strategisches Denken", "Präsentationsstärke", "Teamarbeit"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Italienisch", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Markenrelaunch Kernmarke", "description": "Ganzheitlicher Relaunch einer Kernmarke mit neuer Positionierung, Design und Kampagne.", "date": "2022-03", "impact": "Zweistelliger Zuwachs bei Bekanntheit und Marktanteil." }
+    ],
+    "interestsAndHobbies": ["Kunst", "Reisen", "Kochen"],
+    "references": [
+      { "name": "Alexander Huber", "position": "Marketing Director", "company": "Alpenfrische Konsumgüter GmbH", "contact": { "phone": "+49 151 30456802", "email": "alexander.huber@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 68000, "max": 88000 },
+    "candidateClustering": {
+      "primaryCluster": "Brand Management",
+      "secondaryClusters": ["Integrated Campaigns", "Consumer Marketing"],
+      "functionalExpertise": ["Brand strategy", "Campaign management", "Positioning"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Increased brand awareness", "Grew market share"],
+      "industryDomains": ["Consumer goods", "FMCG"],
+      "environmentFit": ["FMCG", "Consumer brands"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Ten years of brand management culminating in a full brand relaunch with measurable awareness and share gains places this candidate at senior brand level."
+    },
+    "searchIndex": {
+      "roles": ["Brand Manager", "Marketing Manager", "Brand Marketing Manager"],
+      "skills": ["Brand strategy", "Positioning", "Adobe Creative Suite", "Campaign management", "Nielsen", "Consumer research"],
+      "industries": ["Consumer Goods", "FMCG"]
+    },
+    "tags": ["marketing", "brand", "fmcg", "senior", "campaigns"]
+  },
+  {
+    "candidateProfileSummary": "Content-Marketing-Managerin mit rund sechs Jahren Erfahrung in der Entwicklung und Umsetzung von Content-Strategien für B2B- und Lifestyle-Marken. Verantwortet Redaktionsplanung, SEO-Content und Multi-Format-Storytelling. Verbindet redaktionelle Qualität mit datenbasierter Themenplanung.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Fabian Hartmann",
+      "role": "Content Marketing Manager",
+      "summary": "Entwickelt Content-Strategien und produziert Formate über Blog, Video und Social, die Reichweite und Leads erzeugen.",
+      "contact": {
+        "phone": "+49 152 40456811",
+        "email": "fabian.hartmann@example.com",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "Reeperbahn",
+          "streetType": "Straße",
+          "city": "Hamburg",
+          "state": "Hamburg",
+          "zipCode": "20359",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/fabian-hartmann-content",
+          "website": "https://fabianhartmann.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Werktags flexibel"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Content-Strategie", "skills": ["Redaktionsplanung", "Themenrecherche", "Content-Audits", "Multi-Format-Content"] },
+      { "category": "Redaktion", "skills": ["Texten", "Storytelling", "Redigieren", "Video-Skripte"] },
+      { "category": "SEO & Distribution", "skills": ["SEO-Content", "Content-Distribution", "Newsletter", "Repurposing"] },
+      { "category": "Tools", "skills": ["WordPress", "Contentful", "Semrush", "Canva"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Content-Marketing", "Redaktionelle Planung", "SEO-Content"],
+      "keyResponsibilities": ["Entwicklung und Umsetzung der Content-Strategie", "Führung des Redaktionskalenders", "Produktion und Distribution von Content-Formaten"]
+    },
+    "workExperience": [
+      {
+        "company": "Wissenswert Media GmbH",
+        "website": "https://wissenswert.example.com",
+        "location": "Hamburg, Deutschland",
+        "from": "2022-06",
+        "to": "Present",
+        "position": "Content Marketing Manager",
+        "activities": [
+          { "project": "Content-Engine", "tasks": ["Aufbau eines redaktionellen Content-Kalenders über Blog, Newsletter und Social", "Produktion von SEO-optimierten Ratgeberartikeln", "Repurposing von Long-Form-Content in Kurzformate"] }
+        ],
+        "achievements": ["Verdopplung des Blog-Traffics in 18 Monaten", "Aufbau eines Newsletters mit 25.000 Abonnenten"],
+        "toolsAndTechnologies": ["WordPress", "Semrush", "Canva"]
+      },
+      {
+        "company": "Storyfabrik GmbH",
+        "website": "https://storyfabrik.example.com",
+        "location": "Bremen, Deutschland",
+        "from": "2020-02",
+        "to": "2022-05",
+        "position": "Content Editor",
+        "activities": [
+          { "project": "Redaktion", "tasks": ["Erstellung von Blogartikeln und Whitepapers", "Recherche von Themen und Interviews", "Pflege des CMS"] }
+        ],
+        "achievements": ["Etablierung eines wöchentlichen Publikationsrhythmus"],
+        "toolsAndTechnologies": ["WordPress", "Contentful"]
+      }
+    ],
+    "education": [
+      { "year": "2019", "institution": "Universität Bremen", "degree": "Bachelor of Arts", "fieldOfStudy": "Germanistik und Journalistik", "achievements": ["Redaktionspraktikum bei einer Tageszeitung"] }
+    ],
+    "certifications": [
+      { "title": "HubSpot Content Marketing Certification", "institution": "HubSpot Academy", "year": "2022", "description": "Zertifizierung für strategisches Content-Marketing und Content-Erstellung." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["WordPress", "Contentful", "Semrush", "Canva", "Google Analytics"],
+      "softSkills": ["Sprachgefühl", "Kreativität", "Organisationstalent", "Neugier"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Ratgeber-Content-Serie", "description": "Konzeption einer SEO-getriebenen Ratgeberserie mit begleitenden Videoformaten.", "date": "2023-09", "impact": "Vervierfachung der organischen Sichtbarkeit im Themencluster." }
+    ],
+    "interestsAndHobbies": ["Schreiben", "Fotografie", "Konzerte"],
+    "references": [
+      { "name": "Laura Meyer", "position": "Head of Content", "company": "Wissenswert Media GmbH", "contact": { "phone": "+49 152 40456812", "email": "laura.meyer@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 48000, "max": 62000 },
+    "candidateClustering": {
+      "primaryCluster": "Content Marketing",
+      "secondaryClusters": ["Editorial", "SEO Content"],
+      "functionalExpertise": ["Content strategy", "Editorial planning", "SEO content"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Doubled blog traffic", "Grew newsletter audience"],
+      "industryDomains": ["Media", "B2B technology"],
+      "environmentFit": ["Content-led", "Scale-up"],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.84,
+      "clusterReasoning": "Six years of content production and strategy with measurable traffic and audience growth but no team leadership places this candidate at mid-level content marketing."
+    },
+    "searchIndex": {
+      "roles": ["Content Marketing Manager", "Content Editor", "Content Strategist"],
+      "skills": ["WordPress", "Semrush", "SEO content", "Editorial planning", "Content strategy", "Copywriting"],
+      "industries": ["Media", "B2B Technology"]
+    },
+    "tags": ["marketing", "content", "editorial", "midlevel", "seo-content"]
+  },
+  {
+    "candidateProfileSummary": "Social-Media-Managerin mit rund drei Jahren Erfahrung in der Betreuung von Marken-Communities und der Produktion von Social-First-Content. Plant und veröffentlicht kanalübergreifend auf Instagram, TikTok und LinkedIn. Stark in Community-Management, Trendgespür und kreativer Content-Produktion.",
+    "careerStartYear": 2023,
+    "personalInformation": {
+      "name": "Lena Schäfer",
+      "role": "Social Media Manager",
+      "summary": "Betreut Social-Kanäle end-to-end, von der Content-Idee über die Produktion bis zum Community-Management.",
+      "contact": {
+        "phone": "+49 176 50456821",
+        "email": "lena.schaefer@example.com",
+        "address": {
+          "streetNumber": "11",
+          "streetName": "Bergmannstraße",
+          "streetType": "Straße",
+          "city": "Berlin",
+          "state": "Berlin",
+          "zipCode": "10961",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/lena-schaefer-social"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Werktags flexibel", "Kurzfristig verfügbar"],
+        "preferredWorkTypes": ["hybrid", "onsite"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Social Media", "skills": ["Content-Planung", "Community-Management", "Social-First-Content", "Trend-Recherche"] },
+      { "category": "Produktion", "skills": ["Kurzvideos", "Reels", "Grafikdesign", "Copywriting"] },
+      { "category": "Tools", "skills": ["Meta Business Suite", "TikTok", "Canva", "CapCut"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Social-Media-Management", "Community-Management", "Content-Produktion"],
+      "keyResponsibilities": ["Planung und Veröffentlichung von Social-Content", "Betreuung und Ausbau der Community", "Produktion von Kurzvideos und Grafiken"]
+    },
+    "workExperience": [
+      {
+        "company": "Trendkollektiv GmbH",
+        "website": "https://trendkollektiv.example.com",
+        "location": "Berlin, Deutschland",
+        "from": "2024-03",
+        "to": "Present",
+        "position": "Social Media Manager",
+        "activities": [
+          { "project": "Social-First-Kanäle", "tasks": ["Planung und Umsetzung des Content-Kalenders für Instagram und TikTok", "Produktion von Reels und Kurzvideos", "Community-Management und Interaktion mit Followern"] }
+        ],
+        "achievements": ["Steigerung der Follower um 45 Prozent in einem Jahr", "Ein viraler TikTok-Clip mit über 2 Mio. Views"],
+        "toolsAndTechnologies": ["Meta Business Suite", "TikTok", "CapCut"]
+      },
+      {
+        "company": "Buntfaktor Agentur GmbH",
+        "website": "https://buntfaktor.example.com",
+        "location": "Potsdam, Deutschland",
+        "from": "2023-01",
+        "to": "2024-02",
+        "position": "Junior Social Media Manager",
+        "activities": [
+          { "project": "Kundenkanäle", "tasks": ["Erstellung von Social-Posts für mehrere Kunden", "Pflege der Redaktionspläne", "Erstellung einfacher Grafiken in Canva"] }
+        ],
+        "achievements": ["Selbstständige Betreuung von vier Kundenkanälen"],
+        "toolsAndTechnologies": ["Canva", "Meta Business Suite"]
+      }
+    ],
+    "education": [
+      { "year": "2022", "institution": "Hochschule für Medien Berlin", "degree": "Bachelor of Arts", "fieldOfStudy": "Medien- und Kommunikationsmanagement", "achievements": ["Praxisprojekt im Social-Media-Marketing"] }
+    ],
+    "certifications": [
+      { "title": "Meta Certified Digital Marketing Associate", "institution": "Meta", "year": "2023", "description": "Grundlagenzertifizierung für digitales Marketing auf Meta-Plattformen." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Meta Business Suite", "TikTok", "Canva", "CapCut"],
+      "softSkills": ["Kreativität", "Trendgespür", "Kommunikationsfreude", "Flexibilität"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "TikTok-Launchkampagne", "description": "Aufbau des TikTok-Kanals einer Marke von null auf 50.000 Follower.", "date": "2024-11", "impact": "Reichweitensteigerung und neuer Zielgruppenzugang unter 25 Jahren." }
+    ],
+    "interestsAndHobbies": ["Tanzen", "Fotografie", "Streetart"],
+    "references": [
+      { "name": "Tom Richter", "position": "Marketing Lead", "company": "Trendkollektiv GmbH", "contact": { "phone": "+49 176 50456822", "email": "tom.richter@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 40000, "max": 50000 },
+    "candidateClustering": {
+      "primaryCluster": "Social Media Marketing",
+      "secondaryClusters": ["Community Management", "Content Production"],
+      "functionalExpertise": ["Social media management", "Community management", "Content production"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Grew follower base", "Produced viral content"],
+      "industryDomains": ["Media", "Consumer goods"],
+      "environmentFit": ["Consumer brands", "Agency"],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "Three years of social content and community work with strong audience growth and no leadership responsibility places this candidate at junior social media level."
+    },
+    "searchIndex": {
+      "roles": ["Social Media Manager", "Community Manager", "Content Creator"],
+      "skills": ["Meta Business Suite", "TikTok", "Canva", "Community management", "Content production", "Copywriting"],
+      "industries": ["Media", "Consumer Goods"]
+    },
+    "tags": ["marketing", "social-media", "community", "junior", "content"]
+  },
+  {
+    "candidateProfileSummary": "PR- und Communications-Lead mit über dreizehn Jahren Erfahrung in Unternehmenskommunikation, Media Relations und Krisenkommunikation für Tech- und Konsumgüterunternehmen. Führt ein Kommunikationsteam und verantwortet die Sprecherfunktion gegenüber Medien. Kombiniert redaktionelle Präzision mit strategischem Reputationsmanagement.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Julia Wolff",
+      "role": "PR & Communications Lead",
+      "summary": "Verantwortet Unternehmenskommunikation, Media Relations und Krisenkommunikation und positioniert Marken und Sprecher in den Medien.",
+      "contact": {
+        "phone": "+49 151 60456831",
+        "email": "julia.wolff@example.com",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "Kurfürstendamm",
+          "streetType": "Straße",
+          "city": "Berlin",
+          "state": "Berlin",
+          "zipCode": "10719",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/julia-wolff-comms"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Werktags vormittags"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "PR & Kommunikation", "skills": ["Media Relations", "Unternehmenskommunikation", "Krisenkommunikation", "Pressetexte"] },
+      { "category": "Strategie", "skills": ["Reputationsmanagement", "Messaging", "Sprecher-Coaching", "Themenmanagement"] },
+      { "category": "Kanäle", "skills": ["Corporate Blog", "LinkedIn", "Pressekonferenzen", "Fachmedien"] },
+      { "category": "Führung", "skills": ["Teamführung", "Agentursteuerung", "Stakeholder-Management"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Unternehmenskommunikation", "Media Relations", "Krisenkommunikation"],
+      "keyResponsibilities": ["Verantwortung für die externe Unternehmenskommunikation", "Führung eines Kommunikationsteams von vier Personen", "Sprecherfunktion gegenüber Medien"]
+    },
+    "workExperience": [
+      {
+        "company": "Horizont Technologies GmbH",
+        "website": "https://horizonttech.example.com",
+        "location": "Berlin, Deutschland",
+        "from": "2018-05",
+        "to": "Present",
+        "position": "PR & Communications Lead",
+        "activities": [
+          { "project": "Unternehmenskommunikation", "tasks": ["Steuerung der Media Relations gegenüber Wirtschafts- und Fachmedien", "Führung eines vierköpfigen Kommunikationsteams", "Koordination der Krisenkommunikation bei sensiblen Themen"] }
+        ],
+        "achievements": ["Steigerung der Medienreichweite um 40 Prozent", "Erfolgreiche Steuerung von zwei Krisensituationen ohne Reputationsschaden"],
+        "toolsAndTechnologies": ["Cision", "Meltwater", "LinkedIn"]
+      },
+      {
+        "company": "Klartext Kommunikation GmbH",
+        "website": "https://klartextkomm.example.com",
+        "location": "Hamburg, Deutschland",
+        "from": "2014-03",
+        "to": "2018-04",
+        "position": "PR Managerin",
+        "activities": [
+          { "project": "Kundenkommunikation", "tasks": ["Entwicklung von PR-Konzepten für B2B-Kunden", "Verfassen von Pressemitteilungen und Fachbeiträgen", "Pflege von Journalistenkontakten"] }
+        ],
+        "achievements": ["Platzierung von Beiträgen in führenden Fachmedien", "Aufbau eines Redaktionsnetzwerks"],
+        "toolsAndTechnologies": ["Cision", "Meltwater"]
+      },
+      {
+        "company": "Wortlaut Agentur GmbH",
+        "website": "https://wortlautagentur.example.com",
+        "location": "Hamburg, Deutschland",
+        "from": "2012-09",
+        "to": "2014-02",
+        "position": "Junior PR Consultant",
+        "activities": [
+          { "project": "PR-Unterstützung", "tasks": ["Recherche und Erstellung von Presseinformationen", "Aufbau von Presseverteilern", "Monitoring der Medienberichterstattung"] }
+        ],
+        "achievements": ["Aufbau eines strukturierten Medienmonitorings"],
+        "toolsAndTechnologies": ["Meltwater"]
+      }
+    ],
+    "education": [
+      { "year": "2012", "institution": "Freie Universität Berlin", "degree": "Master of Arts", "fieldOfStudy": "Publizistik- und Kommunikationswissenschaft", "achievements": ["Schwerpunkt Unternehmenskommunikation"] }
+    ],
+    "certifications": [
+      { "title": "DPRG Kommunikationsmanagement Zertifikat", "institution": "Deutsche Public Relations Gesellschaft", "year": "2017", "description": "Zertifikat für strategisches Kommunikationsmanagement." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Cision", "Meltwater", "LinkedIn", "WordPress"],
+      "softSkills": ["Kommunikationsstärke", "Sprachgefühl", "Krisenfestigkeit", "Führungskompetenz"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Spanisch", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Krisenkommunikations-Framework", "description": "Aufbau eines strukturierten Krisenkommunikations-Playbooks für das Unternehmen.", "date": "2021-06", "impact": "Reaktionszeit auf kritische Anfragen um 50 Prozent verkürzt." }
+    ],
+    "interestsAndHobbies": ["Lesen", "Debattierclub", "Wandern"],
+    "references": [
+      { "name": "Michael Vogel", "position": "Chief Communications Officer", "company": "Horizont Technologies GmbH", "contact": { "phone": "+49 151 60456832", "email": "michael.vogel@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 78000, "max": 98000 },
+    "candidateClustering": {
+      "primaryCluster": "Corporate Communications",
+      "secondaryClusters": ["Public Relations", "Media Relations"],
+      "functionalExpertise": ["Media relations", "Corporate communications", "Crisis communications"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Grew media reach", "Managed crises without reputational damage"],
+      "industryDomains": ["B2B technology", "Consumer goods"],
+      "environmentFit": ["Corporate", "Technology"],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Thirteen years in communications with team leadership, spokesperson duties and crisis management places this candidate at communications lead level."
+    },
+    "searchIndex": {
+      "roles": ["PR Manager", "Communications Lead", "Head of Communications"],
+      "skills": ["Media relations", "Corporate communications", "Crisis communications", "Cision", "Meltwater", "Press relations"],
+      "industries": ["B2B Technology", "Consumer Goods"]
+    },
+    "tags": ["marketing", "pr", "communications", "lead", "media-relations"]
+  },
+  {
+    "candidateProfileSummary": "Events- und Experiential-Marketing-Managerin mit über neun Jahren Erfahrung in der Konzeption und Durchführung von B2B-Messen, Kundenevents und Konferenzen. Verantwortet Eventstrategie, Budgets und die operative Umsetzung vom Konzept bis zur Nachbereitung. Verbindet kreatives Erlebnisdesign mit stringentem Projektmanagement.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Isabella Moser",
+      "role": "Events Marketing Manager",
+      "summary": "Konzipiert und realisiert B2B-Events und Messeauftritte, die Marke erlebbar machen und Pipeline erzeugen.",
+      "contact": {
+        "phone": "+43 660 7045684",
+        "email": "isabella.moser@example.at",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Mariahilfer Straße",
+          "streetType": "Straße",
+          "city": "Wien",
+          "state": "Wien",
+          "zipCode": "1060",
+          "country": "Österreich"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/isabella-moser-events"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["Werktags nachmittags", "Freitags flexibel"],
+        "preferredWorkTypes": ["hybrid", "onsite"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Eventmanagement", "skills": ["Messeplanung", "Kundenevents", "Konferenzen", "Erlebnisdesign"] },
+      { "category": "Projektsteuerung", "skills": ["Budgetplanung", "Dienstleistersteuerung", "Zeitplanung", "On-Site-Management"] },
+      { "category": "Marketing", "skills": ["Event-Promotion", "Lead-Erfassung", "Sponsoring", "Nachbereitung"] },
+      { "category": "Tools", "skills": ["Cvent", "Bizzabo", "HubSpot", "Asana"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Eventmarketing", "Messeauftritte", "Experiential Marketing"],
+      "keyResponsibilities": ["Konzeption und Umsetzung von B2B-Events und Messen", "Steuerung von Eventbudgets und Dienstleistern", "Sicherstellung der Lead-Erfassung und Nachbereitung"]
+    },
+    "workExperience": [
+      {
+        "company": "Donau Software GmbH",
+        "website": "https://donausoftware.example.com",
+        "location": "Wien, Österreich",
+        "from": "2020-03",
+        "to": "Present",
+        "position": "Events Marketing Manager",
+        "activities": [
+          { "project": "Messe- und Eventprogramm", "tasks": ["Planung und Durchführung von zwölf B2B-Events pro Jahr", "Steuerung eines Eventbudgets von 900.000 EUR", "Koordination von Standbau, Dienstleistern und Lead-Erfassung"] }
+        ],
+        "achievements": ["Steigerung der auf Events generierten Pipeline um 35 Prozent", "Durchführung der erfolgreichsten Hausmesse der Unternehmensgeschichte"],
+        "toolsAndTechnologies": ["Cvent", "HubSpot", "Asana"]
+      },
+      {
+        "company": "Eventwerk Austria GmbH",
+        "website": "https://eventwerk.example.at",
+        "location": "Graz, Österreich",
+        "from": "2016-06",
+        "to": "2020-02",
+        "position": "Event Coordinator",
+        "activities": [
+          { "project": "Kundenveranstaltungen", "tasks": ["Organisation von Firmenveranstaltungen und Konferenzen", "Koordination von Locations und Catering", "Betreuung der Gäste vor Ort"] }
+        ],
+        "achievements": ["Erfolgreiche Umsetzung von über 40 Veranstaltungen"],
+        "toolsAndTechnologies": ["Bizzabo", "Asana"]
+      }
+    ],
+    "education": [
+      { "year": "2016", "institution": "Wirtschaftsuniversität Wien", "degree": "Bachelor of Science", "fieldOfStudy": "Marketing und Tourismus", "achievements": ["Schwerpunkt Eventmanagement"] }
+    ],
+    "certifications": [
+      { "title": "Cvent Event Management Certification", "institution": "Cvent", "year": "2021", "description": "Zertifizierung für die Planung und Steuerung von Events mit Cvent." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Cvent", "Bizzabo", "HubSpot", "Asana"],
+      "softSkills": ["Organisationstalent", "Stressresistenz", "Kommunikationsstärke", "Detailorientierung"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Italienisch", "proficiency": { "read": "intermediate", "written": "intermediate", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Flagship-Kundenkonferenz", "description": "Konzeption und Durchführung einer zweitägigen Kundenkonferenz mit 600 Teilnehmenden.", "date": "2023-05", "impact": "Über 1,2 Mio. EUR beeinflusste Pipeline aus einem einzigen Event." }
+    ],
+    "interestsAndHobbies": ["Reisen", "Skifahren", "Kochen"],
+    "references": [
+      { "name": "Gregor Steiner", "position": "Marketing Director", "company": "Donau Software GmbH", "contact": { "phone": "+43 660 7045685", "email": "gregor.steiner@example.at" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 55000, "max": 72000 },
+    "candidateClustering": {
+      "primaryCluster": "Event Marketing",
+      "secondaryClusters": ["Experiential Marketing", "Field Marketing"],
+      "functionalExpertise": ["Event management", "Project management", "Field marketing"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Grew event-sourced pipeline", "Delivered flagship conference"],
+      "industryDomains": ["B2B technology", "SaaS"],
+      "environmentFit": ["B2B software", "Events-driven"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Nine years of B2B event and conference delivery with budget ownership and measurable pipeline impact places this candidate at senior event marketing level."
+    },
+    "searchIndex": {
+      "roles": ["Events Marketing Manager", "Event Manager", "Field Marketing Manager"],
+      "skills": ["Cvent", "Bizzabo", "HubSpot", "Event management", "Project management", "Field marketing"],
+      "industries": ["B2B Technology", "SaaS"]
+    },
+    "tags": ["marketing", "events", "field-marketing", "senior", "b2b"]
+  },
+  {
+    "candidateProfileSummary": "Product-Marketing-Managerin mit über zehn Jahren Erfahrung in Positionierung, Go-to-Market und Sales Enablement für B2B-SaaS-Produkte. Übersetzt Produktfähigkeiten in klare Wertversprechen und orchestriert produktübergreifende Markteinführungen. Enge Schnittstelle zwischen Produkt, Marketing und Vertrieb.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Daniel Keller",
+      "role": "Product Marketing Manager",
+      "summary": "Verantwortet Positionierung, Messaging und Go-to-Market und befähigt den Vertrieb mit überzeugenden Narrativen.",
+      "contact": {
+        "phone": "+41 79 7045686",
+        "email": "daniel.keller@example.ch",
+        "address": {
+          "streetNumber": "24",
+          "streetName": "Bahnhofstrasse",
+          "streetType": "Strasse",
+          "city": "Zürich",
+          "state": "Zürich",
+          "zipCode": "8001",
+          "country": "Schweiz"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/daniel-keller-pmm"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Werktags nachmittags"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Product Marketing", "skills": ["Positionierung", "Messaging", "Go-to-Market", "Wertversprechen"] },
+      { "category": "Enablement", "skills": ["Sales Enablement", "Battlecards", "Pitch-Decks", "Wettbewerbsanalyse"] },
+      { "category": "Research", "skills": ["Kundeninterviews", "Marktsegmentierung", "Win-Loss-Analyse"] },
+      { "category": "Tools", "skills": ["Productboard", "HubSpot", "Highspot", "Pendo"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Product Marketing", "Go-to-Market-Strategie", "Sales Enablement"],
+      "keyResponsibilities": ["Entwicklung von Positionierung und Messaging", "Orchestrierung von Produkteinführungen", "Befähigung des Vertriebs mit Enablement-Material"]
+    },
+    "workExperience": [
+      {
+        "company": "Alpina Cloud AG",
+        "website": "https://alpinacloud.example.ch",
+        "location": "Zürich, Schweiz",
+        "from": "2019-02",
+        "to": "Present",
+        "position": "Product Marketing Manager",
+        "activities": [
+          { "project": "Go-to-Market Plattform", "tasks": ["Entwicklung der Positionierung und Messaging-Frameworks für die Plattform", "Orchestrierung von vier großen Produkteinführungen", "Aufbau von Sales-Enablement-Material und Battlecards"] }
+        ],
+        "achievements": ["Steigerung der Feature-Adoption um 30 Prozent nach dem Launch", "Verkürzung der Sales-Ramp-Zeit um 25 Prozent durch Enablement"],
+        "toolsAndTechnologies": ["Productboard", "Highspot", "HubSpot"]
+      },
+      {
+        "company": "Zentrum Software GmbH",
+        "website": "https://zentrumsoftware.example.com",
+        "location": "Stuttgart, Deutschland",
+        "from": "2015-06",
+        "to": "2019-01",
+        "position": "Product Marketing Specialist",
+        "activities": [
+          { "project": "Produktkommunikation", "tasks": ["Erstellung von Produktinhalten und Datenblättern", "Durchführung von Kundeninterviews", "Unterstützung bei Produkteinführungen"] }
+        ],
+        "achievements": ["Aufbau der ersten Wettbewerbs-Battlecards", "Etablierung eines Launch-Prozesses"],
+        "toolsAndTechnologies": ["HubSpot", "Pendo"]
+      }
+    ],
+    "education": [
+      { "year": "2015", "institution": "Universität St. Gallen", "degree": "Master of Arts", "fieldOfStudy": "Marketing Management", "achievements": ["Auszeichnung für die Masterarbeit"] }
+    ],
+    "certifications": [
+      { "title": "Pragmatic Institute Foundations", "institution": "Pragmatic Institute", "year": "2020", "description": "Zertifizierung für produktorientiertes Marketing und Go-to-Market-Methodik." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Productboard", "Highspot", "HubSpot", "Pendo"],
+      "softSkills": ["Strukturiertes Denken", "Storytelling", "Kollaboration", "Empathie"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Französisch", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Plattform-Repositionierung", "description": "Neupositionierung der Plattform vom Punktprodukt zur integrierten Suite inklusive neuem Messaging.", "date": "2022-09", "impact": "Deutliche Steigerung der Feature-Adoption und Cross-Sell-Rate." }
+    ],
+    "interestsAndHobbies": ["Bergsteigen", "Jazz", "Lesen"],
+    "references": [
+      { "name": "Nadine Weber", "position": "VP Product", "company": "Alpina Cloud AG", "contact": { "phone": "+41 79 7045687", "email": "nadine.weber@example.ch" } }
+    ],
+    "salaryExpectation": { "currency": "CHF", "min": 115000, "max": 140000 },
+    "candidateClustering": {
+      "primaryCluster": "Product Marketing",
+      "secondaryClusters": ["Go-to-Market", "Sales Enablement"],
+      "functionalExpertise": ["Positioning", "Go-to-market", "Sales enablement"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Increased feature adoption", "Reduced sales ramp time"],
+      "industryDomains": ["SaaS", "B2B technology"],
+      "environmentFit": ["B2B SaaS", "Product-led"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Ten years of positioning, launches and enablement across B2B SaaS with cross-functional influence places this candidate at senior product marketing level."
+    },
+    "searchIndex": {
+      "roles": ["Product Marketing Manager", "Go-to-Market Manager", "Product Marketing Specialist"],
+      "skills": ["Positioning", "Messaging", "Go-to-market", "Sales enablement", "Productboard", "Highspot"],
+      "industries": ["SaaS", "B2B Technology"]
+    },
+    "tags": ["marketing", "product-marketing", "gtm", "senior", "saas"]
+  },
+  {
+    "candidateProfileSummary": "Demand-Generation-Manager mit über neun Jahren Erfahrung im Aufbau skalierbarer Pipeline-Programme für B2B-SaaS-Unternehmen. Verantwortet integrierte Kampagnen, ABM und die Zusammenarbeit mit dem Vertrieb entlang des gesamten Funnels. Denkt in Pipeline-Beiträgen, Conversion-Raten und Kanaleffizienz.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Simon Braunschweig",
+      "role": "Demand Generation Manager",
+      "summary": "Baut integrierte Demand-Gen-Programme, die planbar qualifizierte Pipeline für den Vertrieb erzeugen.",
+      "contact": {
+        "phone": "+49 151 70456841",
+        "email": "simon.braunschweig@example.com",
+        "address": {
+          "streetNumber": "20",
+          "streetName": "Königstraße",
+          "streetType": "Straße",
+          "city": "Stuttgart",
+          "state": "Baden-Württemberg",
+          "zipCode": "70173",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/simon-braunschweig-demandgen"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["Werktags flexibel"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Demand Generation", "skills": ["Integrierte Kampagnen", "Account-Based Marketing", "Pipeline-Programme", "Funnel-Optimierung"] },
+      { "category": "Kanäle", "skills": ["Paid Media", "Webinare", "E-Mail-Kampagnen", "Content-Syndication"] },
+      { "category": "Analyse", "skills": ["Pipeline-Reporting", "Attribution", "Conversion-Analyse", "Kohorten"] },
+      { "category": "Tools", "skills": ["HubSpot", "Marketo", "Salesforce", "6sense"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Demand Generation", "Account-Based Marketing", "Pipeline-Marketing"],
+      "keyResponsibilities": ["Aufbau integrierter Demand-Gen-Kampagnen", "Steuerung von ABM-Programmen für Zielaccounts", "Verantwortung für den Marketing-Pipeline-Beitrag"]
+    },
+    "workExperience": [
+      {
+        "company": "Datenpuls SaaS GmbH",
+        "website": "https://datenpuls.example.com",
+        "location": "Stuttgart, Deutschland",
+        "from": "2020-01",
+        "to": "Present",
+        "position": "Demand Generation Manager",
+        "activities": [
+          { "project": "Pipeline-Programme", "tasks": ["Aufbau integrierter Kampagnen über Paid, Webinare und E-Mail", "Umsetzung eines ABM-Programms für 120 Zielaccounts", "Enge Abstimmung mit dem Vertrieb zu Lead-Übergaben"] }
+        ],
+        "achievements": ["Steigerung des Marketing-Pipeline-Beitrags um 40 Prozent", "Verdopplung der Webinar-generierten Opportunities"],
+        "toolsAndTechnologies": ["HubSpot", "Salesforce", "6sense"]
+      },
+      {
+        "company": "Impulsgeber Marketing GmbH",
+        "website": "https://impulsgeber.example.com",
+        "location": "Mannheim, Deutschland",
+        "from": "2016-04",
+        "to": "2019-12",
+        "position": "Campaign Manager",
+        "activities": [
+          { "project": "Kampagnenmanagement", "tasks": ["Planung und Umsetzung von Lead-Kampagnen", "Aufbau von E-Mail-Nurturing-Strecken", "Erstellung von Kampagnen-Reportings"] }
+        ],
+        "achievements": ["Steigerung der Lead-Conversion um 25 Prozent"],
+        "toolsAndTechnologies": ["Marketo", "Salesforce"]
+      }
+    ],
+    "education": [
+      { "year": "2016", "institution": "Universität Mannheim", "degree": "Master of Science", "fieldOfStudy": "Betriebswirtschaftslehre", "achievements": ["Schwerpunkt Marketing und Analytics"] }
+    ],
+    "certifications": [
+      { "title": "Marketo Certified Expert", "institution": "Adobe", "year": "2019", "description": "Expertenzertifizierung für Kampagnen und Automation in Marketo." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["HubSpot", "Marketo", "Salesforce", "6sense", "Looker Studio"],
+      "softSkills": ["Analytisches Denken", "Prozessorientierung", "Kollaboration", "Ergebnisfokus"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "ABM-Programm für Enterprise-Accounts", "description": "Aufbau eines ABM-Programms mit personalisierten Journeys für 120 Zielaccounts.", "date": "2022-11", "impact": "Steigerung der Opportunity-Rate bei Zielaccounts um 32 Prozent." }
+    ],
+    "interestsAndHobbies": ["Radsport", "Kochen", "Data-Science-Kurse"],
+    "references": [
+      { "name": "Franziska Baumann", "position": "Head of Marketing", "company": "Datenpuls SaaS GmbH", "contact": { "phone": "+49 151 70456842", "email": "franziska.baumann@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 68000, "max": 88000 },
+    "candidateClustering": {
+      "primaryCluster": "Demand Generation",
+      "secondaryClusters": ["Account-Based Marketing", "Pipeline Marketing"],
+      "functionalExpertise": ["Demand generation", "Account-based marketing", "Campaign management"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Grew marketing pipeline contribution", "Doubled webinar opportunities"],
+      "industryDomains": ["SaaS", "B2B technology"],
+      "environmentFit": ["B2B SaaS", "Revenue-driven"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Nine years building integrated demand and ABM programs with clear pipeline impact and tight sales alignment places this candidate at senior demand generation level."
+    },
+    "searchIndex": {
+      "roles": ["Demand Generation Manager", "Campaign Manager", "Growth Marketing Manager"],
+      "skills": ["HubSpot", "Marketo", "Salesforce", "Account-based marketing", "Demand generation", "6sense"],
+      "industries": ["SaaS", "B2B Technology"]
+    },
+    "tags": ["marketing", "demand-generation", "abm", "senior", "saas"]
+  },
+  {
+    "candidateProfileSummary": "Growth-Lead mit über dreizehn Jahren Erfahrung im Aufbau datengetriebener Wachstumsprogramme für Consumer- und SaaS-Produkte. Führt ein cross-funktionales Growth-Team aus Marketing, Analytics und Product und verantwortet Akquise, Aktivierung und Retention. Denkt in Experimenten, Funnels und Wachstumsschleifen.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Aylin Yıldız",
+      "role": "Growth Lead",
+      "summary": "Leitet ein cross-funktionales Growth-Team und treibt Akquise, Aktivierung und Retention über systematisches Experimentieren.",
+      "contact": {
+        "phone": "+49 151 80456851",
+        "email": "aylin.yildiz@example.com",
+        "address": {
+          "streetNumber": "16",
+          "streetName": "Torstraße",
+          "streetType": "Straße",
+          "city": "Berlin",
+          "state": "Berlin",
+          "zipCode": "10119",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/aylin-yildiz-growth"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Werktags nachmittags", "Dienstags ganztägig"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Growth", "skills": ["Wachstumsstrategie", "Experiment-Design", "Funnel-Optimierung", "Growth Loops"] },
+      { "category": "Akquise & Retention", "skills": ["Akquisekanäle", "Aktivierung", "Retention", "Referral-Programme"] },
+      { "category": "Analytics", "skills": ["Produktanalyse", "A/B-Testing", "Kohortenanalyse", "SQL"] },
+      { "category": "Tools", "skills": ["Amplitude", "Mixpanel", "Optimizely", "HubSpot"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Growth Marketing", "Experiment-getriebenes Wachstum", "Funnel-Optimierung"],
+      "keyResponsibilities": ["Führung eines cross-funktionalen Growth-Teams", "Verantwortung für Akquise, Aktivierung und Retention", "Aufbau eines strukturierten Experiment-Prozesses"]
+    },
+    "workExperience": [
+      {
+        "company": "Wachstumswerk GmbH",
+        "website": "https://wachstumswerk.example.com",
+        "location": "Berlin, Deutschland",
+        "from": "2018-04",
+        "to": "Present",
+        "position": "Growth Lead",
+        "activities": [
+          { "project": "Growth-Programm", "tasks": ["Aufbau und Führung eines Growth-Teams aus sechs Personen", "Etablierung eines wöchentlichen Experiment-Zyklus", "Optimierung von Onboarding- und Aktivierungsflüssen"] }
+        ],
+        "achievements": ["Steigerung der Aktivierungsrate um 28 Prozent", "Aufbau einer Referral-Schleife mit 15 Prozent Anteil an Neuregistrierungen"],
+        "toolsAndTechnologies": ["Amplitude", "Optimizely", "SQL"]
+      },
+      {
+        "company": "Skalar Digital GmbH",
+        "website": "https://skalardigital.example.com",
+        "location": "München, Deutschland",
+        "from": "2015-06",
+        "to": "2018-03",
+        "position": "Growth Marketing Manager",
+        "activities": [
+          { "project": "Akquise-Experimente", "tasks": ["Durchführung von Akquise- und Conversion-Experimenten", "Aufbau von Analytics-Dashboards", "Optimierung von Landingpages und Funnels"] }
+        ],
+        "achievements": ["Senkung der Akquisekosten um 22 Prozent"],
+        "toolsAndTechnologies": ["Mixpanel", "Optimizely"]
+      },
+      {
+        "company": "Netzknoten GmbH",
+        "website": "https://netzknoten.example.com",
+        "location": "München, Deutschland",
+        "from": "2013-09",
+        "to": "2015-05",
+        "position": "Online Marketing Manager",
+        "activities": [
+          { "project": "Digitale Akquise", "tasks": ["Steuerung von Paid- und Organic-Kanälen", "Aufbau von Tracking und Reporting", "Erste A/B-Tests auf der Website"] }
+        ],
+        "achievements": ["Aufbau des ersten datengetriebenen Marketing-Reportings"],
+        "toolsAndTechnologies": ["Google Analytics", "Google Ads"]
+      }
+    ],
+    "education": [
+      { "year": "2013", "institution": "Technische Universität München", "degree": "Master of Science", "fieldOfStudy": "Management und Technologie", "achievements": ["Schwerpunkt Digitale Geschäftsmodelle"] }
+    ],
+    "certifications": [
+      { "title": "Reforge Growth Series", "institution": "Reforge", "year": "2020", "description": "Programm für systematisches Wachstum, Akquise und Retention." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Amplitude", "Mixpanel", "Optimizely", "SQL", "HubSpot"],
+      "softSkills": ["Experimentierfreude", "Datenaffinität", "Führungsstärke", "Neugier"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Türkisch", "proficiency": { "read": "native", "written": "fluent", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Aktivierungs-Neugestaltung", "description": "Vollständige Überarbeitung des Onboarding- und Aktivierungsflusses auf Basis von Experimenten.", "date": "2021-10", "impact": "Nachhaltige Steigerung der Aktivierungsrate um 28 Prozent." }
+    ],
+    "interestsAndHobbies": ["Bouldern", "Data-Visualisierung", "Kochen"],
+    "references": [
+      { "name": "Christian Albrecht", "position": "VP Growth", "company": "Wachstumswerk GmbH", "contact": { "phone": "+49 151 80456852", "email": "christian.albrecht@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 85000, "max": 108000 },
+    "candidateClustering": {
+      "primaryCluster": "Growth Marketing",
+      "secondaryClusters": ["Experimentation", "Product Growth"],
+      "functionalExpertise": ["Growth marketing", "Experimentation", "Funnel optimization"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Increased activation rate", "Built referral loop"],
+      "industryDomains": ["SaaS", "Consumer tech"],
+      "environmentFit": ["High-growth SaaS", "Product-led"],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Thirteen years leading cross-functional growth work with team leadership and experiment-driven impact places this candidate at growth lead level."
+    },
+    "searchIndex": {
+      "roles": ["Growth Lead", "Head of Growth", "Growth Marketing Manager"],
+      "skills": ["Amplitude", "Mixpanel", "Optimizely", "SQL", "Experimentation", "Funnel optimization"],
+      "industries": ["SaaS", "Consumer Tech"]
+    },
+    "tags": ["marketing", "growth", "experimentation", "lead", "saas"]
+  },
+  {
+    "candidateProfileSummary": "Insights- und Market-Research-Lead mit über neun Jahren Erfahrung in quantitativer und qualitativer Marktforschung für Konsumgüter- und Technologiemarken. Verantwortet Segmentierungsstudien, Brand-Tracking und Customer-Insights-Programme und berät das Management strategisch. Übersetzt komplexe Daten in klare, handlungsleitende Empfehlungen.",
+    "careerStartYear": 2017,
+    "personalInformation": {
+      "name": "Hannah Schwarz",
+      "role": "Market Research & Insights Lead",
+      "summary": "Führt Insights-Programme und übersetzt Markt- und Kundendaten in strategische Empfehlungen für Produkt und Marketing.",
+      "contact": {
+        "phone": "+49 151 90456861",
+        "email": "hannah.schwarz@example.com",
+        "address": {
+          "streetNumber": "13",
+          "streetName": "Grafenberger Allee",
+          "streetType": "Allee",
+          "city": "Düsseldorf",
+          "state": "Nordrhein-Westfalen",
+          "zipCode": "40237",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/hannah-schwarz-insights"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Werktags vormittags"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Marktforschung", "skills": ["Quantitative Forschung", "Qualitative Forschung", "Segmentierung", "Brand-Tracking"] },
+      { "category": "Insights", "skills": ["Customer Insights", "Umfragedesign", "Fokusgruppen", "Datenstorytelling"] },
+      { "category": "Analyse", "skills": ["Statistische Analyse", "Conjoint-Analyse", "SPSS", "Datenvisualisierung"] },
+      { "category": "Tools", "skills": ["Qualtrics", "SPSS", "Tableau", "Dovetail"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Marktforschung", "Customer Insights", "Marktsegmentierung"],
+      "keyResponsibilities": ["Führung des Insights- und Research-Programms", "Konzeption von Segmentierungs- und Tracking-Studien", "Beratung des Managements auf Basis von Insights"]
+    },
+    "workExperience": [
+      {
+        "company": "Marktblick Insights GmbH",
+        "website": "https://marktblick.example.com",
+        "location": "Düsseldorf, Deutschland",
+        "from": "2020-02",
+        "to": "Present",
+        "position": "Market Research & Insights Lead",
+        "activities": [
+          { "project": "Insights-Programm", "tasks": ["Konzeption und Steuerung von Segmentierungs- und Brand-Tracking-Studien", "Führung eines kleinen Insights-Teams", "Präsentation von Ergebnissen und Empfehlungen vor der Geschäftsleitung"] }
+        ],
+        "achievements": ["Aufbau einer neuen Kundensegmentierung als Grundlage der Marketingstrategie", "Etablierung eines quartalsweisen Brand-Trackings"],
+        "toolsAndTechnologies": ["Qualtrics", "SPSS", "Tableau"]
+      },
+      {
+        "company": "Konsumforschung Rhein GmbH",
+        "website": "https://konsumforschung.example.com",
+        "location": "Köln, Deutschland",
+        "from": "2017-04",
+        "to": "2020-01",
+        "position": "Research Manager",
+        "activities": [
+          { "project": "Studienprojekte", "tasks": ["Design und Auswertung quantitativer Umfragen", "Durchführung qualitativer Interviews und Fokusgruppen", "Erstellung von Ergebnisberichten für Kunden"] }
+        ],
+        "achievements": ["Leitung von über 30 Forschungsprojekten", "Einführung eines standardisierten Reporting-Formats"],
+        "toolsAndTechnologies": ["Qualtrics", "SPSS", "Dovetail"]
+      }
+    ],
+    "education": [
+      { "year": "2017", "institution": "Universität zu Köln", "degree": "Master of Science", "fieldOfStudy": "Sozialwissenschaften und Statistik", "achievements": ["Schwerpunkt empirische Marktforschung"] }
+    ],
+    "certifications": [
+      { "title": "Qualtrics Research Core Certification", "institution": "Qualtrics", "year": "2021", "description": "Zertifizierung für Design und Analyse von Forschungsstudien mit Qualtrics." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Qualtrics", "SPSS", "Tableau", "Dovetail", "R"],
+      "softSkills": ["Analytische Strenge", "Storytelling", "Beratungskompetenz", "Neugier"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Niederländisch", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Kundensegmentierungs-Studie", "description": "Konzeption und Umsetzung einer bedürfnisbasierten Segmentierung als Basis der Marketingstrategie.", "date": "2022-06", "impact": "Neuausrichtung der Zielgruppenansprache über alle Kanäle." }
+    ],
+    "interestsAndHobbies": ["Lesen", "Statistik-Podcasts", "Radfahren"],
+    "references": [
+      { "name": "Oliver Kraus", "position": "Director Strategy", "company": "Marktblick Insights GmbH", "contact": { "phone": "+49 151 90456862", "email": "oliver.kraus@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 82000, "max": 105000 },
+    "candidateClustering": {
+      "primaryCluster": "Market Research & Insights",
+      "secondaryClusters": ["Customer Insights", "Segmentation"],
+      "functionalExpertise": ["Market research", "Customer insights", "Segmentation"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Built customer segmentation", "Established brand tracking"],
+      "industryDomains": ["Consumer goods", "B2B technology"],
+      "environmentFit": ["Insights-driven", "Consumer brands"],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Nine years of research culminating in an insights lead role advising management on segmentation and brand strategy places this candidate at principal research level."
+    },
+    "searchIndex": {
+      "roles": ["Market Research Manager", "Insights Lead", "Consumer Insights Manager"],
+      "skills": ["Qualtrics", "SPSS", "Tableau", "Market research", "Segmentation", "Brand tracking"],
+      "industries": ["Consumer Goods", "B2B Technology"]
+    },
+    "tags": ["marketing", "market-research", "insights", "principal", "segmentation"]
+  },
+  {
+    "candidateProfileSummary": "Product-Marketing-Direktorin mit über fünfzehn Jahren Erfahrung im Aufbau und der Führung von Product-Marketing-Funktionen in B2B-SaaS-Unternehmen. Verantwortet Positionierung, Go-to-Market-Strategie und Sales Enablement auf Portfolioebene und führt ein Team von Product Marketing Managern. Prägt Preis-, Verpackungs- und Markteintrittsentscheidungen auf Führungsebene.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Philipp Lehmann",
+      "role": "Director of Product Marketing",
+      "summary": "Baut und führt Product-Marketing-Teams und verantwortet Positionierung, Pricing und Go-to-Market auf Portfolioebene.",
+      "contact": {
+        "phone": "+49 151 11456871",
+        "email": "philipp.lehmann@example.com",
+        "address": {
+          "streetNumber": "2",
+          "streetName": "Maximiliansplatz",
+          "streetType": "Platz",
+          "city": "München",
+          "state": "Bayern",
+          "zipCode": "80333",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/philipp-lehmann-pmm-director"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 180,
+        "interviewAvailability": ["Nach Vereinbarung"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Product Marketing Leadership", "skills": ["Portfolio-Positionierung", "Go-to-Market-Strategie", "Pricing & Packaging", "Team-Aufbau"] },
+      { "category": "Strategie", "skills": ["Markteintrittsstrategie", "Wettbewerbsstrategie", "Messaging-Architektur", "Analyst Relations"] },
+      { "category": "Enablement", "skills": ["Sales Enablement", "Launch-Governance", "Win-Loss-Programme"] },
+      { "category": "Führung", "skills": ["Führung von Führungskräften", "Stakeholder-Management", "Budgetverantwortung"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Product-Marketing-Leadership", "Go-to-Market-Strategie", "Pricing und Packaging"],
+      "keyResponsibilities": ["Aufbau und Führung der Product-Marketing-Funktion", "Verantwortung für Positionierung und Pricing auf Portfolioebene", "Führung eines Teams von Product Marketing Managern"]
+    },
+    "workExperience": [
+      {
+        "company": "Gipfel Cloud AG",
+        "website": "https://gipfelcloud.example.com",
+        "location": "München, Deutschland",
+        "from": "2018-01",
+        "to": "Present",
+        "position": "Director of Product Marketing",
+        "activities": [
+          { "project": "Product-Marketing-Aufbau", "tasks": ["Aufbau der Product-Marketing-Funktion von einer auf sieben Personen", "Verantwortung für Positionierung und Pricing des gesamten Portfolios", "Steuerung der Go-to-Market-Strategie für neue Produktlinien"] }
+        ],
+        "achievements": ["Führung des Markteintritts in zwei neue Segmente", "Neugestaltung des Pricing-Modells mit 12 Prozent höherem Durchschnittsumsatz pro Kunde"],
+        "toolsAndTechnologies": ["Productboard", "Highspot", "Salesforce"]
+      },
+      {
+        "company": "Prisma Software GmbH",
+        "website": "https://prismasoftware.example.com",
+        "location": "Frankfurt am Main, Deutschland",
+        "from": "2014-03",
+        "to": "2017-12",
+        "position": "Senior Product Marketing Manager",
+        "activities": [
+          { "project": "Portfolio-Marketing", "tasks": ["Verantwortung für die Positionierung mehrerer Produkte", "Führung großer Produkteinführungen", "Aufbau des Sales-Enablement-Programms"] }
+        ],
+        "achievements": ["Steigerung der Launch-Adoption um 35 Prozent", "Aufbau des ersten Analyst-Relations-Programms"],
+        "toolsAndTechnologies": ["HubSpot", "Highspot"]
+      },
+      {
+        "company": "Leitwert Consulting GmbH",
+        "website": "https://leitwertconsulting.example.com",
+        "location": "Frankfurt am Main, Deutschland",
+        "from": "2010-09",
+        "to": "2014-02",
+        "position": "Marketing Consultant",
+        "activities": [
+          { "project": "Go-to-Market-Beratung", "tasks": ["Beratung von Technologiekunden zu Positionierung und Go-to-Market", "Erstellung von Marktanalysen", "Entwicklung von Messaging-Konzepten"] }
+        ],
+        "achievements": ["Begleitung von acht erfolgreichen Markteinführungen"],
+        "toolsAndTechnologies": ["HubSpot"]
+      }
+    ],
+    "education": [
+      { "year": "2010", "institution": "Goethe-Universität Frankfurt", "degree": "Master of Science", "fieldOfStudy": "Marketing und Management", "achievements": ["Auszeichnung als Jahrgangsbester"] }
+    ],
+    "certifications": [
+      { "title": "Pragmatic Institute Certified", "institution": "Pragmatic Institute", "year": "2016", "description": "Zertifizierung für strategisches Product Marketing und Go-to-Market." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Productboard", "Highspot", "Salesforce", "HubSpot"],
+      "softSkills": ["Strategisches Denken", "Führungsstärke", "Kommunikationsstärke", "Entscheidungsfreude"],
+      "languages": [
+        { "language": "Deutsch", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Englisch", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Französisch", "proficiency": { "read": "intermediate", "written": "intermediate", "spoken": "basic" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Pricing- und Packaging-Neugestaltung", "description": "Führung eines unternehmensweiten Projekts zur Neugestaltung von Preis- und Paketmodellen.", "date": "2021-03", "impact": "Steigerung des Durchschnittsumsatzes pro Kunde um 12 Prozent." }
+    ],
+    "interestsAndHobbies": ["Segeln", "Klassische Musik", "Mentoring"],
+    "references": [
+      { "name": "Sabine Richter", "position": "Chief Marketing Officer", "company": "Gipfel Cloud AG", "contact": { "phone": "+49 151 11456872", "email": "sabine.richter@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 130000, "max": 165000 },
+    "candidateClustering": {
+      "primaryCluster": "Product Marketing Leadership",
+      "secondaryClusters": ["Go-to-Market Strategy", "Pricing"],
+      "functionalExpertise": ["Product marketing", "Go-to-market strategy", "Pricing"],
+      "skillDepth": "hybrid",
+      "businessImpact": ["Entered new segments", "Increased average revenue per customer"],
+      "industryDomains": ["SaaS", "B2B technology"],
+      "environmentFit": ["B2B SaaS", "Enterprise software"],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.93,
+      "clusterReasoning": "Fifteen years culminating in building and leading a product marketing function with portfolio-level pricing and go-to-market ownership places this candidate at director level."
+    },
+    "searchIndex": {
+      "roles": ["Director of Product Marketing", "Head of Product Marketing", "VP Product Marketing"],
+      "skills": ["Positioning", "Go-to-market", "Pricing", "Sales enablement", "Productboard", "Highspot"],
+      "industries": ["SaaS", "B2B Technology"]
+    },
+    "tags": ["marketing", "product-marketing", "leadership", "director", "saas"]
+  }
+]

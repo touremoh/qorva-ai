@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Financial Accountant (IFRS / SAP FICO)",
+    "description": "Voor een internationaal productiebedrijf met een shared service center in Eindhoven zoeken wij een Financial Accountant die verantwoordelijk is voor een correcte en tijdige financiële administratie. Je werkt in een dynamisch team en bent de spil tussen de dagelijkse boekhouding en de maandelijkse rapportages.\n\nWat je gaat doen:\n- Je verzorgt de maand- en kwartaalafsluitingen en stelt de balans- en resultatenrekening op volgens IFRS.\n- Je boekt en controleert grootboekmutaties, vaste activa en voorzieningen in SAP FICO.\n- Je bereidt de aansluitingen (reconciliations) voor en onderbouwt de posten richting de accountant.\n- Je draagt bij aan de verbetering van administratieve processen en interne controles.\n\nWat wij vragen:\nEen afgeronde HBO-opleiding Bedrijfseconomie, Accountancy of Finance en 3 tot 5 jaar ervaring in een vergelijkbare rol. Je hebt gedegen kennis van IFRS en werkt vlot met SAP FICO en Excel. Je bent nauwkeurig, cijfermatig sterk en communiceert helder met collega's binnen en buiten de financiële afdeling.\n\nLocatie:\nJe werkt hybride vanuit ons kantoor in Eindhoven, met de mogelijkheid tot twee thuiswerkdagen per week. Kandidaten uit de regio Antwerpen zijn ook van harte welkom.",
+    "scoringRules": {
+      "skills": [
+        { "name": "IFRS", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SAP FICO", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "General Ledger Accounting", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Month-End Close", "importance": "important", "weight": 0.7, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Account Reconciliation", "importance": "important", "weight": 0.65, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Microsoft Excel", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Fixed Assets Accounting", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Eindhoven", "Antwerpen", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Manufacturing", "Technology", "Professional Services"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "FP&A Analyst (Anaplan / Power BI)",
+    "description": "Een snelgroeiend technologiebedrijf in Amsterdam versterkt zijn finance team met een FP&A Analyst die het management voorziet van scherpe inzichten en betrouwbare forecasts. Je vertaalt cijfers naar een helder verhaal en helpt de business betere beslissingen te nemen.\n\nWat je gaat doen:\n- Je stelt de maandelijkse forecasts, budgetten en langetermijnplannen op en bouwt financiële modellen in Excel en Anaplan.\n- Je analyseert de verschillen tussen actuals, budget en forecast en signaleert trends en risico's.\n- Je ontwikkelt en onderhoudt dashboards in Power BI voor het management en de afdelingshoofden.\n- Je ondersteunt de business partners met ad-hocanalyses en business cases.\n\nWat wij vragen:\nEen WO-diploma in Bedrijfseconomie, Finance of een kwantitatieve richting en 2 tot 4 jaar ervaring in FP&A, controlling of consultancy. Je bent sterk in financial modeling in Excel en hebt bij voorkeur ervaring met Anaplan en Power BI. Je bent analytisch, proactief en weet complexe data begrijpelijk te presenteren.\n\nLocatie:\nOns kantoor ligt in het hart van Amsterdam en we werken hybride met drie kantoordagen per week. Remote werken binnen Nederland is deels bespreekbaar.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Financial Modeling", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Anaplan", "importance": "important", "weight": 0.7, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Power BI", "importance": "important", "weight": 0.7, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Microsoft Excel", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Budgeting and Forecasting", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Variance Analysis", "importance": "important", "weight": 0.6, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Amsterdam", "Utrecht", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Technology", "Professional Services", "Banking"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.2, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Internal Auditor (SOX / ACL) - Junior",
+    "description": "Voor de internal audit afdeling van een gerenommeerde verzekeraar in Utrecht zoeken wij een startende Internal Auditor. Je krijgt volop begeleiding en opleiding en werkt mee aan audits die de kwaliteit van de interne beheersing binnen de organisatie waarborgen.\n\nWat je gaat doen:\n- Je ondersteunt bij het uitvoeren van operationele en financiële audits volgens het jaarlijkse auditplan.\n- Je test de opzet en werking van interne controles, onder andere in het kader van SOX-compliance.\n- Je verzamelt en analyseert data met behulp van ACL en Excel om afwijkingen en risico's te identificeren.\n- Je documenteert bevindingen zorgvuldig en helpt bij het opstellen van heldere auditrapportages.\n\nWat wij vragen:\nEen afgeronde opleiding Accountancy, Bedrijfseconomie of Audit en 0 tot 2 jaar werkervaring; ook recent afgestudeerden worden nadrukkelijk uitgenodigd. Affiniteit met risicomanagement, interne controle en data-analyse is een pré. Je bent leergierig, integer en werkt gestructureerd.\n\nLocatie:\nJe werkt grotendeels op ons kantoor in Utrecht, met de mogelijkheid tot één thuiswerkdag per week. Kandidaten uit de regio Amersfoort en Den Bosch zijn ook welkom.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Internal Audit", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "SOX Compliance", "importance": "important", "weight": 0.7, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Internal Controls", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "ACL", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Risk Management", "importance": "important", "weight": 0.6, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Microsoft Excel", "importance": "important", "weight": 0.6, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Data Analysis", "importance": "nice_to_have", "weight": 0.5, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Utrecht", "Amersfoort", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Insurance", "Banking", "Professional Services"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.2, "location": 0.15, "industry": 0.2 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Tax Manager (Corporate Tax / Transfer Pricing)",
+    "description": "Een internationale groep met het hoofdkantoor in Rotterdam zoekt een ervaren Tax Manager die de volledige belastingpositie van de groep beheert. Je bent het aanspreekpunt voor alle fiscale vraagstukken en werkt nauw samen met de finance-, treasury- en legal-teams.\n\nWat je gaat doen:\n- Je verzorgt en beoordeelt de aangiften vennootschapsbelasting en btw voor meerdere entiteiten.\n- Je bewaakt en documenteert het transfer pricing beleid conform de OECD-richtlijnen.\n- Je berekent de belastinglast en voorzieningen (tax provisioning) ten behoeve van de IFRS-rapportage.\n- Je adviseert de directie over fiscale gevolgen van herstructureringen, investeringen en nieuwe wetgeving.\n\nWat wij vragen:\nEen WO-diploma Fiscaal Recht of Fiscale Economie en minimaal 6 jaar ervaring bij een Big Four-kantoor of een internationale onderneming. Je hebt diepgaande kennis van corporate tax en transfer pricing en bent bekend met de fiscale aspecten onder IFRS. Je bent een sterke adviseur die complexe materie helder overbrengt.\n\nLocatie:\nJe standplaats is ons hoofdkantoor in Rotterdam, met de mogelijkheid tot hybride werken (twee thuiswerkdagen per week). Kandidaten uit de regio Breda en Antwerpen zijn ook welkom.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Corporate Tax", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Transfer Pricing", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "VAT", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Tax Provisioning", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "IFRS", "importance": "important", "weight": 0.65, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Tax Compliance", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "SAP FICO", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Rotterdam", "Breda", "Antwerpen", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Professional Services", "Manufacturing", "Technology"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.35, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Financial Controller (US GAAP / Oracle)",
+    "description": "Voor de Benelux-vestiging van een beursgenoteerde onderneming in Antwerpen (Vlaanderen) zoeken wij een Financial Controller die de financiële rapportage en interne beheersing naar een hoger niveau tilt. Je stuurt een klein team aan en bent de rechterhand van de Finance Director.\n\nWat je gaat doen:\n- Je bent eindverantwoordelijk voor de maand-, kwartaal- en jaarafsluiting volgens US GAAP en de lokale wetgeving.\n- Je consolideert de financiële resultaten van meerdere entiteiten in Oracle en bewaakt de datakwaliteit.\n- Je stelt de management- en groepsrapportages op en analyseert de belangrijkste KPI's.\n- Je versterkt de interne controleomgeving en begeleidt de externe audit.\n- Je coacht en ontwikkelt de medewerkers van de accounting- en reporting-teams.\n\nWat wij vragen:\nEen masterdiploma in Finance, Accountancy of Economie en minimaal 7 jaar ervaring, waarvan enkele jaren in een controlling- of reporting-rol. Je hebt gedegen kennis van US GAAP en ervaring met Oracle of een vergelijkbaar ERP-systeem. Je bent een verbindende leider met een scherp oog voor detail en processen.\n\nLocatie:\nJe standplaats is ons kantoor in Antwerpen, met de mogelijkheid tot hybride werken. Kandidaten uit de regio Eindhoven en Breda zijn ook van harte welkom.",
+    "scoringRules": {
+      "skills": [
+        { "name": "US GAAP", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Financial Reporting", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Oracle", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Financial Consolidation", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Internal Controls", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Team Leadership", "importance": "important", "weight": 0.65, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Microsoft Excel", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 5, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Antwerpen", "Eindhoven", "Breda", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Manufacturing", "Technology", "Professional Services"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.4, "experience": 0.4, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  }
+]

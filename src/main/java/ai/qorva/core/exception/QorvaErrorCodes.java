@@ -30,6 +30,7 @@ public final class QorvaErrorCodes {
     public static final String CV_NO_FILES_PROCESSED = "error.cv.no_files_processed";
     public static final String CV_CONTENT_EMPTY      = "error.cv.content_empty";
     public static final String CV_EXTRACTION_FAILED  = "error.cv.extraction_failed";
+    public static final String CV_ATTACHMENT_UPLOAD_FAILED = "error.cv.attachment_upload_failed";
 
     // file  (params: {0} = filename)
     public static final String FILE_EMPTY             = "error.file.empty";

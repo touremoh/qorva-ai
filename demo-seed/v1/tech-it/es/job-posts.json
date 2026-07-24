@@ -1,0 +1,160 @@
+[
+  {
+    "title": "Ingeniero/a de Software Backend Senior (Java/Spring)",
+    "description": "En una fintech en pleno crecimiento con sede en Madrid, buscamos un/a Ingeniero/a de Software Backend Senior para liderar la evolución de nuestra plataforma de pagos hacia una arquitectura de microservicios de alta disponibilidad.\n\nTu misión será diseñar, construir y mantener servicios críticos que procesan millones de transacciones diarias, garantizando fiabilidad, seguridad y rendimiento en producción. Trabajarás codo con codo con equipos de producto y datos para transformar requisitos de negocio en soluciones técnicas sólidas.\n\nResponsabilidades principales:\n- Diseñar y desarrollar APIs REST y servicios asíncronos con Java 21 y Spring Boot.\n- Modernizar componentes del monolito heredado hacia microservicios desacoplados.\n- Definir contratos de eventos y flujos de mensajería con Apache Kafka.\n- Asegurar la calidad mediante TDD, revisiones de código y observabilidad.\n- Mentorizar a perfiles junior y participar en decisiones de arquitectura.\n\nRequisitos imprescindibles:\n- Más de 6 años de experiencia en backend con Java y Spring.\n- Dominio de bases de datos relacionales (PostgreSQL) y patrones de diseño distribuidos.\n- Experiencia real con arquitecturas de microservicios y mensajería basada en eventos.\n\nValoramos: conocimientos de Kubernetes, exposición a entornos regulados de banca o pagos, y experiencia con Redis para caché.\n\nModelo híbrido con dos días presenciales por semana en nuestras oficinas de Madrid. Ofrecemos un stack moderno, cultura de ingeniería fuerte y proyectos con impacto directo en el negocio.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Java", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Spring Boot", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "PostgreSQL", "importance": "important", "weight": 0.15, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Microservices", "importance": "important", "weight": 0.15, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Apache Kafka", "importance": "important", "weight": 0.1, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Kubernetes", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Redis", "importance": "nice_to_have", "weight": 0.07, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Madrid", "Barcelona", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Fintech", "Financial Services", "Software"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Ingeniero/a de Datos (Python/Airflow)",
+    "description": "Nuestra empresa de comercio electrónico en Barcelona busca un/a Ingeniero/a de Datos de nivel intermedio para reforzar el equipo de plataforma de datos y llevar nuestros pipelines analíticos al siguiente nivel.\n\nSerás responsable de construir y mantener flujos de ingesta y transformación de datos que alimentan modelos de recomendación, cuadros de mando de negocio y reporting financiero. Colaborarás con analistas, científicos de datos y equipos de producto para garantizar datos fiables, trazables y accesibles.\n\nResponsabilidades principales:\n- Diseñar pipelines ETL/ELT robustos y orquestarlos con Apache Airflow.\n- Desarrollar transformaciones en Python y SQL sobre nuestro almacén de datos.\n- Modelar tablas analíticas y optimizar consultas de gran volumen.\n- Implementar controles de calidad, pruebas de datos y monitorización.\n- Colaborar en la migración progresiva hacia una arquitectura cloud en AWS.\n\nRequisitos imprescindibles:\n- Entre 3 y 5 años de experiencia en ingeniería de datos.\n- Sólidos conocimientos de Python y SQL aplicados a datos.\n- Experiencia práctica con orquestación de pipelines (Airflow o similar).\n\nValoramos: experiencia con dbt, servicios de datos de AWS (S3, Redshift, Glue) y nociones de modelado dimensional.\n\nModelo remoto dentro de España con encuentros trimestrales de equipo en Barcelona. Ambiente colaborativo, cultura data-driven y muchas oportunidades de aprendizaje.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Python", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Apache Airflow", "importance": "important", "weight": 0.18, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "important", "weight": 0.13, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "dbt", "importance": "nice_to_have", "weight": 0.12, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Data Modeling", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Barcelona", "Valencia", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["E-commerce", "Retail", "Software"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Ingeniero/a DevOps / SRE (Kubernetes/Terraform)",
+    "description": "Empresa SaaS B2B con presencia internacional y hub tecnológico en Valencia busca un/a Ingeniero/a DevOps / SRE senior para consolidar la fiabilidad y la automatización de nuestra plataforma cloud.\n\nTu objetivo será garantizar que nuestros servicios sean escalables, seguros y observables, reduciendo el trabajo manual mediante infraestructura como código y prácticas SRE. Serás una pieza clave entre los equipos de desarrollo y la operación de producción.\n\nResponsabilidades principales:\n- Gestionar y evolucionar clústeres de Kubernetes en producción.\n- Definir infraestructura como código con Terraform sobre AWS.\n- Construir y mantener pipelines de CI/CD fiables y rápidos.\n- Implementar observabilidad end-to-end (métricas, logs y trazas).\n- Definir SLOs, gestionar incidentes y liderar análisis post-mortem.\n\nRequisitos imprescindibles:\n- Más de 6 años de experiencia en DevOps, SRE o plataforma.\n- Dominio de Kubernetes y de al menos un proveedor cloud (AWS).\n- Experiencia sólida con Terraform y automatización de CI/CD.\n\nValoramos: experiencia con Docker avanzado, herramientas de observabilidad como Prometheus y Grafana, y scripting en Python o Go.\n\nModelo híbrido con base en Valencia y flexibilidad remota. Formarás parte de un equipo de plataforma maduro con fuerte cultura de automatización y mejora continua.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Kubernetes", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Terraform", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "CI/CD", "importance": "important", "weight": 0.14, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Docker", "importance": "important", "weight": 0.1, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Prometheus", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Python", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Valencia", "Madrid", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["SaaS", "Cloud Computing", "Software"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Product Manager Técnico (Plataforma / APIs)",
+    "description": "Scale-up tecnológica con equipos distribuidos entre Madrid y Ciudad de México busca un/a Product Manager Técnico de nivel intermedio para liderar la evolución de nuestra plataforma de APIs y servicios internos.\n\nActuarás como puente entre negocio, ingeniería y clientes, definiendo la visión y la hoja de ruta de productos técnicos que otros equipos y desarrolladores externos consumen. Tomarás decisiones basadas en datos y en un profundo entendimiento de las necesidades del usuario.\n\nResponsabilidades principales:\n- Definir y priorizar el roadmap de la plataforma según impacto y valor.\n- Traducir necesidades de negocio en historias de usuario claras y accionables.\n- Colaborar estrechamente con ingeniería en el diseño de APIs y su ciclo de vida.\n- Analizar métricas de producto y adopción para guiar decisiones.\n- Coordinar lanzamientos, documentación y comunicación con stakeholders.\n\nRequisitos imprescindibles:\n- Entre 3 y 5 años de experiencia como Product Manager en entornos técnicos.\n- Comprensión sólida de APIs, arquitecturas web y ciclos de desarrollo ágil.\n- Experiencia usando analítica de producto para la toma de decisiones.\n\nValoramos: background técnico previo, experiencia con productos de plataforma o para desarrolladores, y dominio de SQL para explorar datos.\n\nModelo remoto con solapamiento horario con LATAM y viajes puntuales a Madrid. Buscamos una persona curiosa, orientada a resultados y con excelente comunicación.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Management", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "API Design", "importance": "important", "weight": 0.18, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Agile", "importance": "important", "weight": 0.14, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Roadmapping", "importance": "important", "weight": 0.12, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Madrid", "Ciudad de México", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "SaaS", "Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Desarrollador/a Full-Stack Junior (React/Node.js)",
+    "description": "Estudio de producto digital con oficinas en Sevilla y una vibrante cultura de aprendizaje busca un/a Desarrollador/a Full-Stack Junior para incorporarse a un equipo cercano y colaborativo.\n\nEsta es una oportunidad ideal para dar tus primeros pasos profesionales construyendo aplicaciones web reales para clientes de distintos sectores. Contarás con acompañamiento de perfiles senior, revisiones de código constructivas y un plan de crecimiento claro.\n\nResponsabilidades principales:\n- Desarrollar interfaces de usuario con React y TypeScript.\n- Implementar endpoints y lógica de servidor con Node.js.\n- Integrar APIs REST y trabajar con bases de datos relacionales.\n- Participar en pruebas, revisiones de código y ceremonias ágiles.\n- Aprender buenas prácticas de calidad, git y despliegue continuo.\n\nRequisitos imprescindibles:\n- Entre 0 y 2 años de experiencia (prácticas o proyectos propios cuentan).\n- Conocimientos de JavaScript y fundamentos de React.\n- Nociones básicas de HTML, CSS y consumo de APIs.\n\nValoramos: familiaridad con TypeScript, Node.js, SQL o experiencia con proyectos personales publicados en GitHub.\n\nModelo híbrido en Sevilla con dos días de teletrabajo por semana. Ofrecemos mentoría real, formación continua y un entorno donde equivocarse y aprender es parte del proceso.",
+    "scoringRules": {
+      "skills": [
+        { "name": "JavaScript", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "React", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Node.js", "importance": "important", "weight": 0.16, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "HTML", "importance": "important", "weight": 0.12, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "CSS", "importance": "important", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "TypeScript", "importance": "nice_to_have", "weight": 0.09, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.07, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Sevilla", "Málaga", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "Digital Agency", "Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.2, "location": 0.15, "industry": 0.2 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

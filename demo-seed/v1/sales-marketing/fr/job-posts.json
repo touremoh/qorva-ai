@@ -1,0 +1,157 @@
+[
+  {
+    "title": "Account Executive Senior (SaaS)",
+    "description": "Brightwave Cloud, éditeur de logiciels d'automatisation des workflows en mode SaaS, recrute un Account Executive Senior basé à Paris pour piloter la conquête de nouveaux comptes sur la France et le Benelux.\n\nVous prendrez en charge l'intégralité du cycle de vente : prospection sur des comptes cibles, qualification et découverte, construction de business cases avec les décideurs économiques, négociation des conditions commerciales et signature de contrats pluriannuels. Vous porterez un quota d'environ 850 k€ d'ARR net nouveau et gérerez un portefeuille de comptes stratégiques dans les services financiers, l'industrie et le retail.\n\nNotre go-to-market s'appuie sur Salesforce et une stack outbound moderne : une hygiène de pipeline rigoureuse, des prévisions fiables et une qualification de type MEDDIC sont indispensables. Vous collaborerez étroitement avec les équipes Sales Engineering et Marketing sur des plays account-based.\n\nProfil requis : au moins 5 ans de closing sur des deals B2B SaaS net nouveaux, un historique constant d'atteinte ou de dépassement de quota, une discipline forte sur Salesforce et une aisance à négocier en valeur avec des interlocuteurs de niveau direction. Atouts appréciés : formation MEDDIC ou Challenger, maîtrise d'Outreach ou Salesloft, expérience de vente dans des secteurs régulés.\n\nPoste senior en mode hybride basé à Paris (2 jours par semaine au bureau), ouvert aux candidats en France, en Belgique et au Luxembourg. Rémunération fixe attractive, commission déplafonnée, equity et évolution claire vers un rôle de Strategic AE.",
+    "scoringRules": {
+      "skills": [
+        { "name": "B2B Sales", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Salesforce", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Negotiation", "importance": "important", "weight": 0.16, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Pipeline Management", "importance": "important", "weight": 0.14, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "MEDDIC", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Outreach", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 5,
+        "minRelevantYears": 4,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Paris", "Lyon", "Bruxelles", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["SaaS", "B2B Technology", "Software"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Performance Marketing Manager",
+    "description": "Loomly Goods, marque e-commerce en vente directe au consommateur basée à Lille, recrute un Performance Marketing Manager pour piloter l'acquisition payante sur la France, la Belgique et le Luxembourg.\n\nVous planifierez et gérerez notre budget média payant sur Google Ads, Meta Ads et les canaux émergents, en portant les objectifs de ROAS, de CAC et de payback consolidé. Au quotidien, vous construirez et optimiserez les campagnes, mènerez des tests créatifs et d'audiences, gérerez les campagnes shopping alimentées par flux et suivrez la performance dans GA4 et Looker Studio. Vous travaillerez avec l'équipe créative sur une production publicitaire à forte cadence et avec l'équipe data sur l'attribution et l'incrémentalité.\n\nNous recherchons un opérateur aussi à l'aise dans un tableur que dans un compte publicitaire, capable de transformer un budget en croissance rentable et prévisible.\n\nProfil requis : 3 à 5 ans de gestion de budgets d'acquisition payante en interne ou en agence, une expertise concrète de Google Ads et Meta Ads, de solides compétences analytiques et GA4, et un état d'esprit test-and-learn. Atouts appréciés : TikTok Ads, SQL et expérience DTC ou abonnement.\n\nPoste de niveau intermédiaire en remote-first, ouvert aux candidats en France, en Belgique et au Luxembourg, avec accès optionnel à notre bureau de Lille. Nous investissons dans l'outillage, protégeons le budget de test et donnons aux marketeurs une vraie responsabilité sur le P&L du canal.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Google Ads", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Meta Ads", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GA4", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Performance Marketing", "importance": "important", "weight": 0.16, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SEM", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Lille", "Paris", "Bruxelles", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["E-commerce", "Consumer Goods", "Retail"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Responsable Marque et Contenu",
+    "description": "Meridian Studio, société de médias grand public basée à Bruxelles, recrute un Responsable Marque et Contenu pour façonner notre voix et développer notre audience sur les canaux owned, earned et social en France et au Benelux.\n\nVous piloterez la stratégie de marque et le calendrier éditorial de bout en bout : positionnement, messages, tone of voice et le moteur de contenu qui les incarne sur les formats long, vidéo, newsletter et social. Vous encadrerez une petite équipe de rédacteurs et un designer, briefrez des créateurs externes et collaborerez avec le performance marketing pour aligner marque et demande. Vous porterez également le social organique et le contenu SEO, en vous appuyant sur les insights search et social pour décider quoi publier ensuite.\n\nNous recherchons un storyteller doté de la rigueur opérationnelle nécessaire pour faire tourner une véritable rédaction et en mesurer l'impact sur la notoriété et le pipeline.\n\nProfil requis : au moins 6 ans en marque, contenu ou communication, un portfolio de campagnes que vous avez façonnées, une expérience de management de rédacteurs ou d'agences et une bonne maîtrise du SEO et de l'analytics de contenu. Atouts appréciés : production vidéo, relations presse et expérience dans les secteurs médias ou grande consommation.\n\nPoste senior en mode hybride basé à Bruxelles (3 jours au bureau) avec déplacements occasionnels à Paris. Nous confions à l'équipe marque un vrai mandat et une place dans la stratégie de l'entreprise.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Brand Strategy", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Content Marketing", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "SEO", "importance": "important", "weight": 0.18, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Copywriting", "importance": "important", "weight": 0.14, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Social Media Marketing", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Public Relations", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Bruxelles", "Paris", "Remote"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Media", "Consumer Goods", "Entertainment"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Product Marketing Manager",
+    "description": "Kestrel Analytics, société de technologie B2B développant un logiciel d'analytics produit, recrute un Product Marketing Manager basé à Luxembourg pour piloter le positionnement, les lancements et le go-to-market de sa plateforme.\n\nVous concevrez des messages et un positionnement qui rendent un produit technique simple à comprendre et impossible à ignorer, piloterez l'intelligence concurrentielle et mènerez des lancements produit transverses, de la bêta à la disponibilité générale. Vous construirez la boîte à outils de sales enablement (decks, battlecards, trames de démo), définirez les segments cibles et les personas, et collaborerez avec la demand generation sur des campagnes qui font avancer le pipeline. Vous vous appuierez sur l'analytics produit et les insights win/loss pour affiner le récit en continu.\n\nC'est un rôle pour quelqu'un à l'aise entre le produit, les ventes et le marketing, capable de transformer une roadmap en un récit que les clients comme les commerciaux adorent.\n\nProfil requis : 3 à 5 ans en product marketing pour un produit logiciel ou SaaS B2B, une expérience avérée de pilotage de lancements, d'excellentes compétences rédactionnelles et une solide maîtrise de la stratégie GTM. Atouts appréciés : HubSpot, outils d'analytics produit et un parcours en ingénierie ou en produit.\n\nPoste de niveau intermédiaire en mode hybride basé à Luxembourg (2 jours au bureau), ouvert aux candidats au Luxembourg, en Belgique et en France. Nous donnons aux PMM une place centrale dans la mise sur le marché du produit.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Marketing", "importance": "mandatory", "weight": 0.3, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GTM Strategy", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Positioning", "importance": "important", "weight": 0.18, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "important", "weight": 0.14, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Sales Enablement", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "HubSpot", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Luxembourg", "Bruxelles", "Paris", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["B2B Technology", "SaaS", "Software"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Chargé de Demand Generation Junior",
+    "description": "Larkspur Software, jeune éditeur SaaS B2B basé à Nantes, recrute un Chargé de Demand Generation Junior pour aider à construire le moteur marketing qui alimente notre pipeline commercial.\n\nC'est un poste pour quelqu'un en début de carrière marketing, passionné par la donnée et désireux d'apprendre la demand gen B2B moderne à partir des fondamentaux. Vous aiderez à mener des campagnes multicanales sur l'email, le payant et les webinaires, construirez et maintiendrez des scénarios de nurturing dans HubSpot, garderez nos données de leads propres et suivrez les métriques du funnel du clic au closed-won. Vous mènerez des tests A/B de landing pages et d'emails, soutiendrez le SEO et la distribution de contenu, et travaillerez étroitement avec les ventes sur le suivi et le passage de leads.\n\nNous investirons dans votre montée en compétences avec du mentorat, un parcours d'intégration clair et une exposition à toute la stack marketing.\n\nProfil requis : 0 à 2 ans d'expérience marketing (stages, alternance ou projets solides inclus), une familiarité avec HubSpot ou un CRM similaire, de bonnes compétences analytiques sur tableur et une réelle curiosité pour la croissance B2B. Atouts appréciés : Google Ads, GA4 et bases de copywriting email ou contenu.\n\nPoste junior en mode hybride basé à Nantes (2 jours au bureau), ouvert aux candidats en France, en Belgique et au Luxembourg. Nous offrons un mentorat structuré, une équipe bienveillante et sans ego, et une vraie trajectoire d'évolution vers la demand generation.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Demand Generation", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "HubSpot", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Email Marketing", "importance": "important", "weight": 0.18, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Marketing Analytics", "importance": "important", "weight": 0.14, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Google Ads", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "GA4", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Nantes", "Paris", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["SaaS", "B2B Technology", "Software"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.2, "location": 0.15, "industry": 0.2 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

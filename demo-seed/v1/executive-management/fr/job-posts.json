@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Directeur Général France & Benelux",
+    "description": "Ardenwall Group, une plateforme industrielle et grand public soutenue par un fonds de private equity, recherche son Directeur Général pour piloter sa filiale France & Benelux dans sa prochaine phase de croissance. Le poste est basé à Paris avec des déplacements réguliers sur les sites de Lille, Bruxelles et Luxembourg.\n\nRattaché au CEO Groupe et au conseil d'administration des investisseurs, vous détenez la pleine responsabilité du P&L d'une activité d'environ 180 M€ de chiffre d'affaires et 700 collaborateurs. Vous définissez et exécutez la stratégie commerciale et opérationnelle, pilotez l'expansion de l'EBITDA et dirigez le comité exécutif couvrant les ventes, les opérations, la finance et les ressources humaines.\n\nUn mandat central est la transformation organisationnelle : professionnaliser le modèle opérationnel, affiner la stratégie go-to-market et préparer l'entreprise à une cession réussie sur un horizon de trois à quatre ans. Vous êtes l'interlocuteur principal du conseil des investisseurs, avec un reporting board clair, des revues de performance mensuelles et un plan de création de valeur crédible.\n\nVous menez également des acquisitions bolt-on sélectives, de l'origination à l'intégration en passant par la due diligence.\n\nProfil requis : 15 ans et plus de leadership avec une responsabilité P&L complète en tant que Directeur Général ou Country Manager, idéalement au sein d'une société sous LBO. Croissance prouvée de l'EBITDA, gestion des parties prenantes au niveau board et pilotage d'un plan de création de valeur sont essentiels. Un MBA ou une formation équivalente en leadership stratégique est attendu.\n\nAtouts : expérience des secteurs grand public ou manufacturier et parcours de build-up.",
+    "scoringRules": {
+      "skills": [
+        { "name": "P&L Ownership", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 10, "exactSkillOnly": false },
+        { "name": "Strategic Leadership", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 10, "exactSkillOnly": false },
+        { "name": "Board Reporting", "importance": "important", "weight": 0.15, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Organizational Transformation", "importance": "important", "weight": 0.14, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Mergers and Acquisitions", "importance": "important", "weight": 0.12, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Stakeholder Management", "importance": "important", "weight": 0.11, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "MBA", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 15, "minRelevantYears": 10, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Paris", "Lille", "Bruxelles", "Luxembourg", "Onsite"], "remoteAllowed": false, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Private Equity", "Consumer Goods", "Manufacturing"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.4, "experience": 0.35, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Directeur des Opérations (COO)",
+    "description": "Novaris Manufacturing, groupe industriel de taille intermédiaire présent en France et en Belgique, recrute un Directeur des Opérations (COO) pour structurer et faire monter en échelle sa performance industrielle. Le poste est basé à Lyon avec une forte présence sur les sites de production de Grenoble et Charleroi.\n\nMembre du comité exécutif et rattaché au Directeur Général, vous pilotez l'ensemble de la chaîne opérationnelle : production, supply chain, achats, qualité et HSE, sur un périmètre de plus de 1 200 collaborateurs et cinq usines. Vous portez la responsabilité des indicateurs opérationnels clés (OTIF, coût unitaire, taux de service) et de l'amélioration continue de l'EBITDA opérationnel.\n\nVotre mission centrale est une transformation industrielle profonde : déploiement du Lean Manufacturing, modernisation des lignes, digitalisation des ateliers et refonte de l'organisation supply chain. Vous conduisez également l'intégration opérationnelle des acquisitions et l'harmonisation des processus multi-sites.\n\nVous présentez régulièrement l'avancement au conseil et aux actionnaires, avec un reporting rigoureux et des plans d'action mesurables.\n\nProfil requis : 15 ans et plus d'expérience opérationnelle dont plusieurs années en tant que COO, VP Operations ou Directeur Industriel. Maîtrise éprouvée du Lean Manufacturing, de la gestion supply chain à grande échelle et de la conduite du changement. Solide expérience de la gestion des parties prenantes et du pilotage P&L opérationnel. MBA apprécié.\n\nAtout : expérience en environnement sous private equity et parcours de post-merger integration.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Operations Leadership", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 10, "exactSkillOnly": false },
+        { "name": "Supply Chain Management", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 10, "exactSkillOnly": false },
+        { "name": "Lean Manufacturing", "importance": "important", "weight": 0.15, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "P&L Ownership", "importance": "important", "weight": 0.14, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Organizational Transformation", "importance": "important", "weight": 0.12, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Change Management", "importance": "important", "weight": 0.11, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Stakeholder Management", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 6, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 15, "minRelevantYears": 10, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Lyon", "Grenoble", "Charleroi", "Onsite"], "remoteAllowed": false, "strictness": "strict" },
+      "industryPreferences": { "preferredIndustries": ["Manufacturing", "Industrial", "Private Equity"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Directeur Financier Groupe (CFO)",
+    "description": "Lumen Financial Services, société de services financiers en forte croissance basée à Paris avec une entité à Luxembourg, recherche son Directeur Financier Groupe (CFO) pour accompagner sa structuration et sa trajectoire vers une levée de fonds majeure.\n\nMembre du comité exécutif et rattaché au CEO, vous supervisez l'ensemble de la fonction finance : contrôle de gestion, comptabilité, trésorerie, fiscalité, consolidation et relations investisseurs. Vous détenez la responsabilité du reporting financier au conseil d'administration et aux actionnaires, ainsi que du pilotage de la performance et de la création de valeur.\n\nVotre mandat inclut le renforcement du cadre de contrôle interne, la mise en place d'une planification financière robuste (FP&A), l'optimisation de la structure de capital et le pilotage des opérations de M&A et de fundraising. Vous êtes un partenaire stratégique du CEO dans la définition et l'exécution de la stratégie de croissance.\n\nVous dirigez une équipe finance de plus de 40 personnes et représentez l'entreprise auprès des banques, auditeurs et investisseurs.\n\nProfil requis : 15 ans et plus d'expérience financière dont plusieurs années en tant que CFO ou Directeur Financier, idéalement dans les services financiers ou une société sous private equity. Maîtrise approfondie du financial reporting, du corporate finance, des normes IFRS et de la gestion des parties prenantes au niveau board. Expérience avérée de M&A et de fundraising. MBA ou qualification comptable (CPA, DSCG, ACCA) attendu.\n\nAtout : expérience d'un processus d'IPO ou de cession.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Financial Reporting", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 10, "exactSkillOnly": false },
+        { "name": "Corporate Finance", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 10, "exactSkillOnly": false },
+        { "name": "Board Reporting", "importance": "important", "weight": 0.15, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Mergers and Acquisitions", "importance": "important", "weight": 0.14, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "IFRS", "importance": "important", "weight": 0.12, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Fundraising", "importance": "important", "weight": 0.11, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "MBA", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 15, "minRelevantYears": 10, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Paris", "Luxembourg", "Onsite"], "remoteAllowed": false, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Financial Services", "Private Equity", "Banking"], "strictness": "strict" },
+      "scoringWeight": { "skills": 0.4, "experience": 0.35, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Directeur de la Technologie (CTO)",
+    "description": "Northbridge Technology, scale-up SaaS B2B soutenue par des fonds de capital-risque, recrute son Directeur de la Technologie (CTO) pour porter sa plateforme au niveau international. Le poste est basé à Paris avec une politique de travail hybride et un pôle d'ingénierie à Bruxelles.\n\nMembre du comité exécutif et rattaché au CEO, vous définissez la vision technologique et produit, et dirigez une organisation R&D de plus de 120 ingénieurs et product managers. Vous êtes responsable de la roadmap technique, de l'architecture de la plateforme, de la scalabilité, de la sécurité et de la fiabilité du service.\n\nVotre mandat couvre la transformation de l'organisation d'ingénierie : mise à l'échelle des équipes, structuration de la gouvernance produit, adoption des pratiques Cloud et DevOps, et intégration de l'intelligence artificielle dans le produit. Vous alignez la stratégie technologique sur les objectifs business et le P&L produit.\n\nVous présentez la stratégie et les investissements technologiques au conseil d'administration et aux investisseurs, et représentez l'entreprise auprès des partenaires stratégiques et grands clients.\n\nProfil requis : 12 ans et plus d'expérience technologique dont plusieurs années en tant que CTO ou VP Engineering dans un environnement SaaS à forte croissance. Solide maîtrise de l'architecture Cloud, du scaling d'équipes d'ingénierie et de la stratégie produit. Expérience de la gestion des parties prenantes au niveau board et du leadership stratégique. MBA ou formation technique supérieure apprécié.\n\nAtout : expérience d'une hypercroissance et de l'internationalisation d'une plateforme.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Technology Strategy", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Engineering Leadership", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Cloud Architecture", "importance": "important", "weight": 0.15, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Product Strategy", "importance": "important", "weight": 0.14, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Organizational Transformation", "importance": "important", "weight": 0.12, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Stakeholder Management", "importance": "important", "weight": 0.11, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "MBA", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 13, "minRelevantYears": 9, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Paris", "Bruxelles", "Remote"], "remoteAllowed": true, "strictness": "relaxed" },
+      "industryPreferences": { "preferredIndustries": ["Technology", "Software", "SaaS"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Directeur Commercial Groupe (CCO)",
+    "description": "Meridian Consumer Brands, groupe grand public multi-marques présent en France, en Belgique et au Luxembourg, recherche son Directeur Commercial Groupe (Chief Commercial Officer) pour accélérer sa croissance et unifier sa stratégie go-to-market. Le poste est basé à Paris avec des déplacements fréquents à Bruxelles et sur les marchés régionaux.\n\nMembre du comité exécutif et rattaché au Directeur Général, vous détenez la responsabilité du chiffre d'affaires et de la marge commerciale de l'ensemble du groupe. Vous dirigez les fonctions ventes, marketing, key accounts et revenue operations, sur un périmètre de plus de 300 collaborateurs commerciaux.\n\nVotre mandat est de définir et exécuter la stratégie commerciale : développement des grands comptes, expansion sur de nouveaux canaux, pricing et transformation de la performance commerciale. Vous portez la responsabilité du P&L commercial et de l'atteinte des objectifs de croissance rentable.\n\nVous présentez la performance et la stratégie commerciale au conseil d'administration et aux actionnaires, et pilotez les partenariats stratégiques et les négociations clés.\n\nProfil requis : 15 ans et plus d'expérience commerciale dont plusieurs années en tant que Chief Commercial Officer, VP Sales ou Directeur Commercial dans le secteur grand public ou retail. Maîtrise éprouvée de la stratégie go-to-market, du développement des grands comptes et du pilotage du P&L commercial. Solide expérience de la gestion des parties prenantes au niveau board et du leadership stratégique. MBA apprécié.\n\nAtout : expérience en environnement sous private equity et transformation commerciale.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Commercial Strategy", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 10, "exactSkillOnly": false },
+        { "name": "Go-to-Market Strategy", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "P&L Ownership", "importance": "important", "weight": 0.15, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Key Account Management", "importance": "important", "weight": 0.14, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Board Reporting", "importance": "important", "weight": 0.12, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Stakeholder Management", "importance": "important", "weight": 0.11, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "MBA", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 15, "minRelevantYears": 10, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Paris", "Bruxelles", "Luxembourg", "Onsite"], "remoteAllowed": false, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Consumer Goods", "Retail", "Private Equity"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.4, "experience": 0.35, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  }
+]

@@ -1,0 +1,5575 @@
+[
+  {
+    "candidateProfileSummary": "Chartered mechanical design engineer with over a decade of experience developing precision components and assemblies for automotive and industrial clients. Fluent in SolidWorks and CATIA, with deep expertise in GD&T, tolerance stack-up analysis and design for manufacture. Enjoys bridging the gap between concept sketches and validated production hardware.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Daniel Harrington",
+      "role": "Senior Mechanical Design Engineer",
+      "summary": "Mechanical design engineer who turns demanding performance requirements into manufacturable, cost-effective parts and mentors junior designers through detailed design reviews.",
+      "contact": {
+        "phone": "+44 7700 900231",
+        "email": "daniel.harrington@example.com",
+        "address": {
+          "streetNumber": "17",
+          "streetName": "Aston",
+          "streetType": "Road",
+          "city": "Coventry",
+          "state": "England",
+          "zipCode": "CV1 4JQ",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/daniel-harrington-eng",
+          "website": "https://danielharrington.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Weekday evenings",
+          "Saturday mornings"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "CAD & Modelling",
+        "skills": [
+          "SolidWorks",
+          "CATIA V5",
+          "AutoCAD",
+          "GD&T"
+        ]
+      },
+      {
+        "category": "Analysis",
+        "skills": [
+          "ANSYS Mechanical",
+          "FEA",
+          "Tolerance stack-up"
+        ]
+      },
+      {
+        "category": "Design for Manufacture",
+        "skills": [
+          "DFM",
+          "DFA",
+          "Sheet metal",
+          "Injection moulding"
+        ]
+      },
+      {
+        "category": "Validation",
+        "skills": [
+          "Prototype testing",
+          "DVP&R",
+          "Root cause analysis"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Mechanical component design",
+        "Tolerance analysis",
+        "Design for manufacture"
+      ],
+      "keyResponsibilities": [
+        "Own detailed design of mechanical assemblies",
+        "Lead design reviews and sign-off drawings",
+        "Support suppliers through prototyping and production"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Brayton Automotive Systems",
+        "website": "https://brayton.example.com",
+        "location": "Coventry, United Kingdom",
+        "from": "2018-04",
+        "to": "Present",
+        "position": "Senior Mechanical Design Engineer",
+        "activities": [
+          {
+            "project": "Electric powertrain housing",
+            "tasks": [
+              "Designed die-cast aluminium motor housings in SolidWorks",
+              "Ran ANSYS thermal and structural FEA",
+              "Applied GD&T and led tolerance stack-up studies"
+            ]
+          }
+        ],
+        "achievements": [
+          "Cut housing mass by 18% while meeting stiffness targets",
+          "Reduced supplier reject rate through improved GD&T scheme"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "ANSYS Mechanical",
+          "GD&T",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Meridian Precision Ltd",
+        "website": "https://meridianprecision.example.com",
+        "location": "Birmingham, United Kingdom",
+        "from": "2013-09",
+        "to": "2018-03",
+        "position": "Mechanical Design Engineer",
+        "activities": [
+          {
+            "project": "Industrial gearbox range",
+            "tasks": [
+              "Modelled shafts, gears and casings in CATIA V5",
+              "Produced manufacturing drawings",
+              "Coordinated design changes with machining suppliers"
+            ]
+          }
+        ],
+        "achievements": [
+          "Delivered a new gearbox family from concept to production in 14 months"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA V5",
+          "AutoCAD",
+          "FEA"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2013",
+        "institution": "University of Sheffield",
+        "degree": "MEng",
+        "fieldOfStudy": "Mechanical Engineering",
+        "achievements": [
+          "First-class honours",
+          "IMechE-accredited degree"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Chartered Engineer (CEng MIMechE)",
+        "institution": "Institution of Mechanical Engineers",
+        "year": "2019",
+        "description": "Professional registration recognising competence in mechanical engineering practice."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SolidWorks",
+        "CATIA V5",
+        "ANSYS Mechanical",
+        "GD&T",
+        "AutoCAD",
+        "FEA",
+        "DFM"
+      ],
+      "softSkills": [
+        "Attention to detail",
+        "Mentoring",
+        "Structured problem solving"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "German",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Lightweight bracket redesign",
+        "description": "Topology-optimised mounting bracket for an EV chassis using FEA-driven iteration.",
+        "date": "2021-05",
+        "impact": "Reduced part weight by 30% and removed a secondary machining operation."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Classic car restoration",
+      "Cycling",
+      "3D printing"
+    ],
+    "references": [
+      {
+        "name": "Helen Marsh",
+        "position": "Engineering Director",
+        "company": "Brayton Automotive Systems",
+        "contact": {
+          "phone": "+44 7700 900244",
+          "email": "helen.marsh@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 55000,
+      "max": 68000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Mechanical Design Engineering",
+      "secondaryClusters": [
+        "Automotive Engineering",
+        "Product Development"
+      ],
+      "functionalExpertise": [
+        "Mechanical component design",
+        "FEA",
+        "Design for manufacture"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced part weight",
+        "Lowered supplier reject rates"
+      ],
+      "industryDomains": [
+        "Automotive",
+        "Industrial equipment"
+      ],
+      "environmentFit": [
+        "OEM",
+        "Engineering consultancy"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Sustained CAD-driven mechanical design work with FEA validation and chartered status places this candidate firmly in senior mechanical design engineering."
+    },
+    "searchIndex": {
+      "roles": [
+        "Mechanical Design Engineer",
+        "Mechanical Engineer",
+        "Design Engineer"
+      ],
+      "skills": [
+        "SolidWorks",
+        "CATIA",
+        "ANSYS",
+        "GD&T",
+        "AutoCAD",
+        "FEA",
+        "DFM"
+      ],
+      "industries": [
+        "Automotive",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "design",
+      "solidworks",
+      "senior",
+      "ceng"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Mechanical HVAC engineer with five years of experience designing heating, ventilation and air-conditioning systems for commercial buildings. Skilled in load calculations, ductwork layout and coordinating with MEP teams through Revit-based BIM models. Committed to energy-efficient designs that meet ASHRAE standards.",
+    "careerStartYear": 2019,
+    "personalInformation": {
+      "name": "Sofia Ramirez",
+      "role": "HVAC Design Engineer",
+      "summary": "Building-services mechanical engineer focused on efficient HVAC design and smooth MEP coordination on mid-size commercial projects.",
+      "contact": {
+        "phone": "+1 (312) 555 0173",
+        "email": "sofia.ramirez@example.com",
+        "address": {
+          "streetNumber": "2200",
+          "streetName": "West Fulton",
+          "streetType": "Street",
+          "unit": "Suite 4B",
+          "city": "Chicago",
+          "state": "Illinois",
+          "zipCode": "60612",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sofia-ramirez-hvac"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 21,
+        "interviewAvailability": [
+          "Weekday mornings",
+          "Wednesday afternoons"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "HVAC Design",
+        "skills": [
+          "Load calculations",
+          "Ductwork design",
+          "Chilled water systems",
+          "ASHRAE standards"
+        ]
+      },
+      {
+        "category": "Software",
+        "skills": [
+          "Revit MEP",
+          "AutoCAD",
+          "Trane TRACE",
+          "Carrier HAP"
+        ]
+      },
+      {
+        "category": "Coordination",
+        "skills": [
+          "BIM coordination",
+          "Clash detection",
+          "MEP integration"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "HVAC system design",
+        "Energy modelling",
+        "MEP coordination"
+      ],
+      "keyResponsibilities": [
+        "Perform heating and cooling load calculations",
+        "Produce HVAC layouts and schedules",
+        "Coordinate mechanical design with architects and other trades"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Lakeshore MEP Consultants",
+        "website": "https://lakeshoremep.example.com",
+        "location": "Chicago, United States",
+        "from": "2021-06",
+        "to": "Present",
+        "position": "HVAC Design Engineer",
+        "activities": [
+          {
+            "project": "Downtown office retrofit",
+            "tasks": [
+              "Sized chilled water and VAV systems",
+              "Modelled ductwork and equipment in Revit MEP",
+              "Ran energy models in Trane TRACE"
+            ]
+          }
+        ],
+        "achievements": [
+          "Cut projected building energy use by 22% through system optimisation",
+          "Resolved 90% of MEP clashes before construction"
+        ],
+        "toolsAndTechnologies": [
+          "Revit MEP",
+          "Trane TRACE",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Prairie State Engineering",
+        "website": "https://prairiestate.example.com",
+        "location": "Naperville, United States",
+        "from": "2019-07",
+        "to": "2021-05",
+        "position": "Junior Mechanical Engineer",
+        "activities": [
+          {
+            "project": "School HVAC upgrades",
+            "tasks": [
+              "Assisted with load calculations",
+              "Drafted ductwork layouts in AutoCAD",
+              "Prepared equipment schedules"
+            ]
+          }
+        ],
+        "achievements": [
+          "Supported delivery of six school HVAC upgrade packages"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "Carrier HAP"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2019",
+        "institution": "University of Illinois at Urbana-Champaign",
+        "degree": "BSc",
+        "fieldOfStudy": "Mechanical Engineering",
+        "achievements": [
+          "Dean's List",
+          "HVAC design capstone project"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Engineer in Training (EIT)",
+        "institution": "Illinois Department of Financial and Professional Regulation",
+        "year": "2020",
+        "description": "Passed the Fundamentals of Engineering exam as a step toward Professional Engineer licensure."
+      },
+      {
+        "title": "LEED Green Associate",
+        "institution": "US Green Building Council",
+        "year": "2022",
+        "description": "Credential covering sustainable building design principles."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Revit MEP",
+        "AutoCAD",
+        "Trane TRACE",
+        "Carrier HAP",
+        "ASHRAE standards",
+        "Load calculations"
+      ],
+      "softSkills": [
+        "Teamwork",
+        "Clear communication",
+        "Diligence"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Spanish",
+          "proficiency": {
+            "read": "native",
+            "written": "advanced",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Energy-efficient lab HVAC",
+        "description": "Designed a variable-air-volume system for a research laboratory with strict pressure requirements.",
+        "date": "2023-03",
+        "impact": "Met containment requirements while reducing fan energy by 15%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Rock climbing",
+      "Community volunteering",
+      "Cooking"
+    ],
+    "references": [
+      {
+        "name": "Marcus Bell",
+        "position": "Principal Engineer",
+        "company": "Lakeshore MEP Consultants",
+        "contact": {
+          "phone": "+1 (312) 555 0190",
+          "email": "marcus.bell@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "USD",
+      "min": 78000,
+      "max": 92000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Building Services Engineering",
+      "secondaryClusters": [
+        "HVAC Design",
+        "MEP Engineering"
+      ],
+      "functionalExpertise": [
+        "HVAC system design",
+        "Energy modelling",
+        "MEP coordination"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced building energy use",
+        "Improved coordination efficiency"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Building services"
+      ],
+      "environmentFit": [
+        "Engineering consultancy",
+        "MEP firm"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Focused HVAC design experience with Revit MEP and energy modelling aligns with a mid-level building-services mechanical engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "HVAC Engineer",
+        "Mechanical Engineer",
+        "Building Services Engineer"
+      ],
+      "skills": [
+        "Revit",
+        "AutoCAD",
+        "HVAC",
+        "ASHRAE",
+        "Energy Modelling"
+      ],
+      "industries": [
+        "Construction",
+        "Building Services"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "hvac",
+      "revit",
+      "mid-level",
+      "building-services"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Powertrain engineering lead with fifteen years in the automotive sector, spanning internal combustion calibration and electric drive integration. Leads multidisciplinary teams delivering propulsion systems from concept through vehicle sign-off. Strong background in FEA, thermal management and cross-functional programme delivery.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "James Okonkwo",
+      "role": "Powertrain Engineering Lead",
+      "summary": "Automotive powertrain lead who steers teams delivering electrified propulsion systems while keeping cost, weight and durability targets in balance.",
+      "contact": {
+        "phone": "+44 7700 900312",
+        "email": "james.okonkwo@example.com",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "Gaydon",
+          "streetType": "Lane",
+          "city": "Warwick",
+          "state": "England",
+          "zipCode": "CV35 0BJ",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/james-okonkwo-powertrain"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Powertrain",
+        "skills": [
+          "Electric drive integration",
+          "Engine calibration",
+          "Thermal management"
+        ]
+      },
+      {
+        "category": "Analysis & Test",
+        "skills": [
+          "ANSYS",
+          "FEA",
+          "Dyno testing",
+          "Durability analysis"
+        ]
+      },
+      {
+        "category": "CAD",
+        "skills": [
+          "CATIA V5",
+          "Creo",
+          "GD&T"
+        ]
+      },
+      {
+        "category": "Leadership",
+        "skills": [
+          "Programme delivery",
+          "Team leadership",
+          "Supplier management"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Powertrain integration",
+        "Thermal management",
+        "Team leadership"
+      ],
+      "keyResponsibilities": [
+        "Lead powertrain engineering teams",
+        "Own propulsion system requirements and sign-off",
+        "Manage suppliers and cross-functional interfaces"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Aldermoor Vehicles",
+        "website": "https://aldermoor.example.com",
+        "location": "Warwick, United Kingdom",
+        "from": "2017-02",
+        "to": "Present",
+        "position": "Powertrain Engineering Lead",
+        "activities": [
+          {
+            "project": "Battery electric SUV drivetrain",
+            "tasks": [
+              "Led integration of e-axle and thermal system",
+              "Directed FEA and durability sign-off",
+              "Coordinated Tier 1 suppliers and test programmes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Delivered drivetrain to programme timing with zero durability escapes",
+          "Grew and mentored a team of eight engineers"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA V5",
+          "ANSYS",
+          "Creo",
+          "FEA"
+        ]
+      },
+      {
+        "company": "Crestwell Motors",
+        "website": "https://crestwell.example.com",
+        "location": "Gaydon, United Kingdom",
+        "from": "2011-09",
+        "to": "2017-01",
+        "position": "Powertrain Engineer",
+        "activities": [
+          {
+            "project": "Turbocharged engine calibration",
+            "tasks": [
+              "Calibrated engine control maps on dyno",
+              "Analysed durability test results",
+              "Supported design changes to cooling circuits"
+            ]
+          }
+        ],
+        "achievements": [
+          "Improved fuel economy by 6% through calibration refinement"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA V5",
+          "Dyno testing",
+          "FEA"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "University of Bath",
+        "degree": "MEng",
+        "fieldOfStudy": "Automotive Engineering",
+        "achievements": [
+          "First-class honours",
+          "Formula Student team lead"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Chartered Engineer (CEng MIMechE)",
+        "institution": "Institution of Mechanical Engineers",
+        "year": "2016",
+        "description": "Professional registration in mechanical engineering."
+      },
+      {
+        "title": "PMP",
+        "institution": "Project Management Institute",
+        "year": "2020",
+        "description": "Project Management Professional certification."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "CATIA V5",
+        "Creo",
+        "ANSYS",
+        "FEA",
+        "Engine calibration",
+        "Thermal management",
+        "GD&T"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Decision making",
+        "Stakeholder management"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "French",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "e-Axle thermal derisking",
+        "description": "Led a cross-functional study resolving thermal derating in a high-power e-axle.",
+        "date": "2022-09",
+        "impact": "Recovered 12% continuous power output and prevented a programme slip."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Motorsport",
+      "Mountain biking",
+      "Mentoring STEM students"
+    ],
+    "references": [
+      {
+        "name": "Rachel Ford",
+        "position": "Chief Engineer",
+        "company": "Aldermoor Vehicles",
+        "contact": {
+          "phone": "+44 7700 900333",
+          "email": "rachel.ford@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 78000,
+      "max": 95000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Powertrain Engineering",
+      "secondaryClusters": [
+        "Automotive Engineering",
+        "Systems Integration"
+      ],
+      "functionalExpertise": [
+        "Powertrain integration",
+        "Thermal management",
+        "Team leadership"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Delivered programmes on time",
+        "Improved fuel economy and power output"
+      ],
+      "industryDomains": [
+        "Automotive",
+        "Electric vehicles"
+      ],
+      "environmentFit": [
+        "OEM",
+        "Tier 1 supplier"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Deep automotive powertrain experience combined with team leadership and cross-functional delivery places this candidate at a lead engineering level."
+    },
+    "searchIndex": {
+      "roles": [
+        "Powertrain Engineer",
+        "Mechanical Engineer",
+        "Automotive Engineer"
+      ],
+      "skills": [
+        "CATIA",
+        "Creo",
+        "ANSYS",
+        "FEA",
+        "GD&T",
+        "Powertrain"
+      ],
+      "industries": [
+        "Automotive",
+        "Electric Vehicles"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "powertrain",
+      "automotive",
+      "lead",
+      "ceng"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Mechanical maintenance engineer with nine years keeping high-volume manufacturing plants running reliably. Expert in preventive and predictive maintenance, root cause failure analysis and reducing unplanned downtime. Comfortable on the shop floor and in reliability data, driving continuous improvement of asset performance.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Aisha Khan",
+      "role": "Senior Mechanical Maintenance Engineer",
+      "summary": "Hands-on maintenance engineer who blends reliability data with shop-floor experience to cut downtime and extend asset life in manufacturing plants.",
+      "contact": {
+        "phone": "+44 7700 900401",
+        "email": "aisha.khan@example.com",
+        "address": {
+          "streetNumber": "88",
+          "streetName": "Trafford",
+          "streetType": "Park",
+          "city": "Manchester",
+          "state": "England",
+          "zipCode": "M17 1AB",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/aisha-khan-maintenance"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Weekday afternoons",
+          "Saturday mornings"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Maintenance",
+        "skills": [
+          "Preventive maintenance",
+          "Predictive maintenance",
+          "RCM",
+          "CMMS"
+        ]
+      },
+      {
+        "category": "Reliability",
+        "skills": [
+          "Root cause analysis",
+          "FMEA",
+          "Vibration analysis",
+          "Condition monitoring"
+        ]
+      },
+      {
+        "category": "Mechanical Systems",
+        "skills": [
+          "Pumps",
+          "Conveyors",
+          "Hydraulics",
+          "Pneumatics"
+        ]
+      },
+      {
+        "category": "Improvement",
+        "skills": [
+          "Lean",
+          "5S",
+          "Kaizen"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Reliability engineering",
+        "Failure analysis",
+        "Maintenance planning"
+      ],
+      "keyResponsibilities": [
+        "Plan and optimise preventive maintenance schedules",
+        "Lead root cause analysis on breakdowns",
+        "Drive downtime reduction initiatives"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Northgate Foods Manufacturing",
+        "website": "https://northgatefoods.example.com",
+        "location": "Manchester, United Kingdom",
+        "from": "2020-01",
+        "to": "Present",
+        "position": "Senior Mechanical Maintenance Engineer",
+        "activities": [
+          {
+            "project": "Packaging line reliability programme",
+            "tasks": [
+              "Introduced vibration-based condition monitoring",
+              "Rebuilt PM schedules in the CMMS",
+              "Led cross-shift root cause analysis"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduced unplanned downtime by 27% over two years",
+          "Extended bearing life through improved lubrication routines"
+        ],
+        "toolsAndTechnologies": [
+          "CMMS",
+          "Vibration analysis",
+          "FMEA"
+        ]
+      },
+      {
+        "company": "Pennine Components",
+        "website": "https://penninecomponents.example.com",
+        "location": "Leeds, United Kingdom",
+        "from": "2016-08",
+        "to": "2019-12",
+        "position": "Maintenance Engineer",
+        "activities": [
+          {
+            "project": "CNC machine upkeep",
+            "tasks": [
+              "Carried out planned and reactive maintenance",
+              "Diagnosed hydraulic and pneumatic faults",
+              "Recorded reliability data"
+            ]
+          }
+        ],
+        "achievements": [
+          "Improved machine availability from 82% to 91%"
+        ],
+        "toolsAndTechnologies": [
+          "CMMS",
+          "Hydraulics",
+          "Pneumatics"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "University of Manchester",
+        "degree": "BEng",
+        "fieldOfStudy": "Mechanical Engineering",
+        "achievements": [
+          "Upper second-class honours",
+          "Industrial placement year"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Maintenance & Reliability Technician (CMRT)",
+        "institution": "Society for Maintenance & Reliability Professionals",
+        "year": "2021",
+        "description": "Certification in maintenance and reliability best practice."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "CMMS",
+        "Vibration analysis",
+        "FMEA",
+        "RCM",
+        "Hydraulics",
+        "Pneumatics",
+        "Lean"
+      ],
+      "softSkills": [
+        "Calm under pressure",
+        "Practical problem solving",
+        "Cross-shift collaboration"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Urdu",
+          "proficiency": {
+            "read": "advanced",
+            "written": "intermediate",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Condition monitoring rollout",
+        "description": "Deployed vibration and thermal condition monitoring across critical rotating equipment.",
+        "date": "2022-06",
+        "impact": "Detected three failures early, avoiding an estimated 40 hours of downtime."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Motorcycle maintenance",
+      "Hiking",
+      "Amateur radio"
+    ],
+    "references": [
+      {
+        "name": "Tom Reilly",
+        "position": "Engineering Manager",
+        "company": "Northgate Foods Manufacturing",
+        "contact": {
+          "phone": "+44 7700 900422",
+          "email": "tom.reilly@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 46000,
+      "max": 56000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Maintenance & Reliability Engineering",
+      "secondaryClusters": [
+        "Manufacturing Engineering",
+        "Continuous Improvement"
+      ],
+      "functionalExpertise": [
+        "Reliability engineering",
+        "Failure analysis",
+        "Maintenance planning"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced unplanned downtime",
+        "Improved machine availability"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "FMCG"
+      ],
+      "environmentFit": [
+        "Manufacturing plant",
+        "Process industry"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Consistent maintenance and reliability work with measurable downtime reduction places this candidate in senior maintenance engineering."
+    },
+    "searchIndex": {
+      "roles": [
+        "Maintenance Engineer",
+        "Reliability Engineer",
+        "Mechanical Engineer"
+      ],
+      "skills": [
+        "CMMS",
+        "FMEA",
+        "Vibration Analysis",
+        "RCM",
+        "Lean",
+        "Hydraulics"
+      ],
+      "industries": [
+        "Manufacturing",
+        "FMCG"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "maintenance",
+      "reliability",
+      "senior",
+      "manufacturing"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Early-career mechanical R&D engineer with two years developing consumer hardware prototypes. Enjoys the full loop of sketching concepts, printing prototypes, running basic FEA and testing them to failure. Eager to grow under senior designers while contributing fresh ideas to product development.",
+    "careerStartYear": 2023,
+    "personalInformation": {
+      "name": "Ethan Caldwell",
+      "role": "Mechanical R&D Engineer",
+      "summary": "Junior product engineer who thrives in fast prototype-and-test loops and is building depth in CAD, FEA and design for manufacture.",
+      "contact": {
+        "phone": "+1 (415) 555 0128",
+        "email": "ethan.caldwell@example.com",
+        "address": {
+          "streetNumber": "540",
+          "streetName": "Bryant",
+          "streetType": "Street",
+          "unit": "Apt 12",
+          "city": "San Francisco",
+          "state": "California",
+          "zipCode": "94107",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ethan-caldwell-mech"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 14,
+        "interviewAvailability": [
+          "Weekday mornings",
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "CAD",
+        "skills": [
+          "SolidWorks",
+          "Fusion 360",
+          "GD&T"
+        ]
+      },
+      {
+        "category": "Prototyping",
+        "skills": [
+          "3D printing",
+          "CNC prototyping",
+          "Rapid iteration"
+        ]
+      },
+      {
+        "category": "Analysis & Test",
+        "skills": [
+          "FEA",
+          "Design of experiments",
+          "Mechanical testing"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Prototype development",
+        "Mechanical testing",
+        "CAD modelling"
+      ],
+      "keyResponsibilities": [
+        "Model concepts and detailed parts in SolidWorks",
+        "Build and test prototypes",
+        "Document test results and design iterations"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Vantage Hardware Labs",
+        "website": "https://vantagelabs.example.com",
+        "location": "San Francisco, United States",
+        "from": "2024-02",
+        "to": "Present",
+        "position": "Mechanical R&D Engineer",
+        "activities": [
+          {
+            "project": "Wearable device enclosure",
+            "tasks": [
+              "Modelled snap-fit enclosures in SolidWorks",
+              "Ran drop-test FEA and iterated designs",
+              "Managed 3D-printed prototype builds"
+            ]
+          }
+        ],
+        "achievements": [
+          "Improved enclosure drop survival rate to 95% in testing",
+          "Cut prototype turnaround from five days to two"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "FEA",
+          "3D printing"
+        ]
+      },
+      {
+        "company": "Bayline Devices",
+        "website": "https://baylinedevices.example.com",
+        "location": "Oakland, United States",
+        "from": "2023-06",
+        "to": "2024-01",
+        "position": "Mechanical Engineering Intern",
+        "activities": [
+          {
+            "project": "Test rig automation",
+            "tasks": [
+              "Designed fixtures in Fusion 360",
+              "Assembled and wired test rigs",
+              "Logged and plotted test data"
+            ]
+          }
+        ],
+        "achievements": [
+          "Built a reusable durability test fixture adopted by the team"
+        ],
+        "toolsAndTechnologies": [
+          "Fusion 360",
+          "Mechanical testing"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2023",
+        "institution": "California Polytechnic State University",
+        "degree": "BSc",
+        "fieldOfStudy": "Mechanical Engineering",
+        "achievements": [
+          "Cum laude",
+          "Senior design award for a prosthetic prototype"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified SolidWorks Associate (CSWA)",
+        "institution": "Dassault Systèmes",
+        "year": "2023",
+        "description": "Entry-level certification in SolidWorks part and assembly modelling."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SolidWorks",
+        "Fusion 360",
+        "FEA",
+        "3D printing",
+        "GD&T",
+        "Design of experiments"
+      ],
+      "softSkills": [
+        "Curiosity",
+        "Hands-on mindset",
+        "Adaptability"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Prosthetic hand prototype",
+        "description": "Senior design project developing a low-cost 3D-printed prosthetic hand.",
+        "date": "2023-05",
+        "impact": "Reduced material cost by 60% versus a commercial reference design."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Maker projects",
+      "Trail running",
+      "Photography"
+    ],
+    "references": [
+      {
+        "name": "Grace Lin",
+        "position": "R&D Lead",
+        "company": "Vantage Hardware Labs",
+        "contact": {
+          "phone": "+1 (415) 555 0141",
+          "email": "grace.lin@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "USD",
+      "min": 82000,
+      "max": 96000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Product Development Engineering",
+      "secondaryClusters": [
+        "Mechanical Design",
+        "R&D"
+      ],
+      "functionalExpertise": [
+        "Prototype development",
+        "Mechanical testing",
+        "CAD modelling"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Improved product durability",
+        "Sped up prototyping"
+      ],
+      "industryDomains": [
+        "Consumer hardware",
+        "Product development"
+      ],
+      "environmentFit": [
+        "Startup",
+        "Hardware R&D"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.82,
+      "clusterReasoning": "Two years of prototype-driven mechanical development with CAD and FEA exposure fits an early-career product R&D engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Mechanical Engineer",
+        "Product Engineer",
+        "R&D Engineer"
+      ],
+      "skills": [
+        "SolidWorks",
+        "Fusion 360",
+        "FEA",
+        "GD&T",
+        "3D Printing"
+      ],
+      "industries": [
+        "Consumer Hardware",
+        "Product Development"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "product",
+      "r-and-d",
+      "junior",
+      "solidworks"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Chartered structural engineer with eleven years designing reinforced concrete and steel structures for commercial and residential buildings. Skilled in ETABS, SAP2000 and Eurocode-compliant design, with a strong record of coordinating with architects and contractors. Passionate about safe, buildable and economical structural solutions.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Priya Nair",
+      "role": "Senior Structural Engineer",
+      "summary": "Chartered structural engineer delivering Eurocode-compliant building designs and mentoring graduates through analysis and detailing.",
+      "contact": {
+        "phone": "+44 7700 900511",
+        "email": "priya.nair@example.com",
+        "address": {
+          "streetNumber": "23",
+          "streetName": "Deansgate",
+          "streetType": "Street",
+          "city": "Manchester",
+          "state": "England",
+          "zipCode": "M3 2EN",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/priya-nair-structural"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Structural Analysis",
+        "skills": [
+          "ETABS",
+          "SAP2000",
+          "STAAD.Pro",
+          "Tekla Structural Designer"
+        ]
+      },
+      {
+        "category": "Design Codes",
+        "skills": [
+          "Eurocodes",
+          "BS 8110",
+          "Reinforced concrete",
+          "Structural steel"
+        ]
+      },
+      {
+        "category": "Documentation",
+        "skills": [
+          "AutoCAD",
+          "Revit",
+          "BIM",
+          "Design calculations"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Reinforced concrete design",
+        "Steel design",
+        "Eurocode compliance"
+      ],
+      "keyResponsibilities": [
+        "Design building superstructures and foundations",
+        "Produce and check structural calculations",
+        "Coordinate structural design with the wider design team"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Halcrow Structures",
+        "website": "https://halcrowstructures.example.com",
+        "location": "Manchester, United Kingdom",
+        "from": "2018-05",
+        "to": "Present",
+        "position": "Senior Structural Engineer",
+        "activities": [
+          {
+            "project": "12-storey mixed-use tower",
+            "tasks": [
+              "Modelled the frame in ETABS",
+              "Designed RC cores and post-tensioned slabs to Eurocodes",
+              "Coordinated with architects and MEP via Revit"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduced concrete volume by 12% through slab optimisation",
+          "Delivered structural package on programme across three phases"
+        ],
+        "toolsAndTechnologies": [
+          "ETABS",
+          "Revit",
+          "Eurocodes"
+        ]
+      },
+      {
+        "company": "Pennine Consulting Engineers",
+        "website": "https://pennineconsulting.example.com",
+        "location": "Leeds, United Kingdom",
+        "from": "2013-09",
+        "to": "2018-04",
+        "position": "Structural Engineer",
+        "activities": [
+          {
+            "project": "Residential steel-frame scheme",
+            "tasks": [
+              "Designed steel connections and members",
+              "Prepared calculation packages",
+              "Carried out site inspections"
+            ]
+          }
+        ],
+        "achievements": [
+          "Achieved chartership within the standard training period"
+        ],
+        "toolsAndTechnologies": [
+          "SAP2000",
+          "STAAD.Pro",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2013",
+        "institution": "Imperial College London",
+        "degree": "MEng",
+        "fieldOfStudy": "Civil Engineering",
+        "achievements": [
+          "First-class honours",
+          "Structures specialisation"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Chartered Engineer (CEng MICE)",
+        "institution": "Institution of Civil Engineers",
+        "year": "2018",
+        "description": "Professional registration recognising competence in civil and structural engineering."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ETABS",
+        "SAP2000",
+        "STAAD.Pro",
+        "Revit",
+        "AutoCAD",
+        "Eurocodes",
+        "Reinforced concrete"
+      ],
+      "softSkills": [
+        "Rigour",
+        "Clear communication",
+        "Mentoring"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Hindi",
+          "proficiency": {
+            "read": "advanced",
+            "written": "intermediate",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Post-tensioned slab optimisation",
+        "description": "Value-engineered a tower's floor plates using post-tensioned design.",
+        "date": "2021-11",
+        "impact": "Saved an estimated GBP 400k in concrete and reinforcement."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Sketching buildings",
+      "Yoga",
+      "Volunteering with young engineers"
+    ],
+    "references": [
+      {
+        "name": "Andrew Blake",
+        "position": "Associate Director",
+        "company": "Halcrow Structures",
+        "contact": {
+          "phone": "+44 7700 900533",
+          "email": "andrew.blake@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 52000,
+      "max": 64000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Structural Engineering",
+      "secondaryClusters": [
+        "Building Design",
+        "Civil Engineering"
+      ],
+      "functionalExpertise": [
+        "Reinforced concrete design",
+        "Steel design",
+        "Eurocode compliance"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced material use",
+        "Delivered projects on programme"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Buildings"
+      ],
+      "environmentFit": [
+        "Engineering consultancy",
+        "Design office"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Sustained Eurocode building design with ETABS and chartered status clearly indicates a senior structural engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Structural Engineer",
+        "Civil Engineer",
+        "Building Engineer"
+      ],
+      "skills": [
+        "ETABS",
+        "SAP2000",
+        "STAAD.Pro",
+        "Revit",
+        "AutoCAD",
+        "Eurocodes",
+        "BIM"
+      ],
+      "industries": [
+        "Construction",
+        "Buildings"
+      ]
+    },
+    "tags": [
+      "civil",
+      "structural",
+      "etabs",
+      "senior",
+      "ceng"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Site engineer with six years delivering civil and building projects on busy construction sites across Ireland. Strong in setting out, quality control and coordinating subcontractors to programme. Combines practical site know-how with solid technical grounding in reinforced concrete and drainage works.",
+    "careerStartYear": 2019,
+    "personalInformation": {
+      "name": "Cian O'Sullivan",
+      "role": "Site Engineer",
+      "summary": "Construction site engineer who keeps works on programme through accurate setting out, tight quality control and clear subcontractor coordination.",
+      "contact": {
+        "phone": "+353 87 555 0142",
+        "email": "cian.osullivan@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Baggot",
+          "streetType": "Street",
+          "city": "Dublin",
+          "state": "Leinster",
+          "zipCode": "D02 X285",
+          "country": "Ireland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/cian-osullivan-site"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-20",
+        "noticePeriodDays": 28,
+        "interviewAvailability": [
+          "Weekday evenings",
+          "Saturday mornings"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Site Engineering",
+        "skills": [
+          "Setting out",
+          "Total station",
+          "GPS survey",
+          "Quality control"
+        ]
+      },
+      {
+        "category": "Construction",
+        "skills": [
+          "Reinforced concrete",
+          "Drainage",
+          "Groundworks",
+          "Temporary works"
+        ]
+      },
+      {
+        "category": "Documentation",
+        "skills": [
+          "AutoCAD",
+          "AutoCAD Civil 3D",
+          "As-built records"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Setting out",
+        "Quality control",
+        "Subcontractor coordination"
+      ],
+      "keyResponsibilities": [
+        "Set out structures and levels on site",
+        "Carry out quality and dimensional checks",
+        "Coordinate subcontractors against the construction programme"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Shannon Build Contractors",
+        "website": "https://shannonbuild.example.com",
+        "location": "Dublin, Ireland",
+        "from": "2022-03",
+        "to": "Present",
+        "position": "Site Engineer",
+        "activities": [
+          {
+            "project": "City-centre apartment scheme",
+            "tasks": [
+              "Set out foundations and cores using a total station",
+              "Ran ITP-based quality checks",
+              "Coordinated groundworks and concrete subcontractors"
+            ]
+          }
+        ],
+        "achievements": [
+          "Kept the substructure package on programme through a wet winter",
+          "Reduced setting-out rework through tighter checking routines"
+        ],
+        "toolsAndTechnologies": [
+          "Total station",
+          "AutoCAD Civil 3D",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Liffey Civil Works",
+        "website": "https://liffeycivil.example.com",
+        "location": "Cork, Ireland",
+        "from": "2019-06",
+        "to": "2022-02",
+        "position": "Graduate Site Engineer",
+        "activities": [
+          {
+            "project": "Regional road upgrade",
+            "tasks": [
+              "Assisted with setting out drainage and kerbs",
+              "Recorded as-built information",
+              "Supported quality documentation"
+            ]
+          }
+        ],
+        "achievements": [
+          "Progressed from graduate to site engineer within three years"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Civil 3D",
+          "GPS survey"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2019",
+        "institution": "University College Dublin",
+        "degree": "BEng",
+        "fieldOfStudy": "Civil Engineering",
+        "achievements": [
+          "Second-class honours, upper division",
+          "Summer placement with a main contractor"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CSCS Site Engineer Card",
+        "institution": "Construction Skills Certification Scheme",
+        "year": "2019",
+        "description": "Health, safety and competence card for construction site work."
+      },
+      {
+        "title": "SMSTS",
+        "institution": "CITB",
+        "year": "2023",
+        "description": "Site Management Safety Training Scheme certificate."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Total station",
+        "AutoCAD Civil 3D",
+        "AutoCAD",
+        "Setting out",
+        "Reinforced concrete",
+        "Drainage"
+      ],
+      "softSkills": [
+        "Reliability",
+        "Practical communication",
+        "Teamwork"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Irish",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Setting-out quality drive",
+        "description": "Introduced a peer-check routine for critical setting out on a residential site.",
+        "date": "2023-08",
+        "impact": "Cut setting-out related rework by around 40%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Gaelic football",
+      "Sea kayaking",
+      "DIY"
+    ],
+    "references": [
+      {
+        "name": "Niamh Doyle",
+        "position": "Project Manager",
+        "company": "Shannon Build Contractors",
+        "contact": {
+          "phone": "+353 87 555 0160",
+          "email": "niamh.doyle@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 42000,
+      "max": 52000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Construction Engineering",
+      "secondaryClusters": [
+        "Site Management",
+        "Civil Engineering"
+      ],
+      "functionalExpertise": [
+        "Setting out",
+        "Quality control",
+        "Subcontractor coordination"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Kept works on programme",
+        "Reduced rework"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Infrastructure"
+      ],
+      "environmentFit": [
+        "Main contractor",
+        "Civil contractor"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.84,
+      "clusterReasoning": "Practical site engineering with setting out and quality control across several projects fits a mid-level construction site engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Site Engineer",
+        "Civil Engineer",
+        "Construction Engineer"
+      ],
+      "skills": [
+        "AutoCAD Civil 3D",
+        "AutoCAD",
+        "Total Station",
+        "Setting Out",
+        "Reinforced Concrete"
+      ],
+      "industries": [
+        "Construction",
+        "Infrastructure"
+      ]
+    },
+    "tags": [
+      "civil",
+      "site-engineer",
+      "construction",
+      "mid-level",
+      "ireland"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Geotechnical engineer with ten years assessing ground conditions and designing foundations for infrastructure and building projects. Experienced in site investigation, slope stability and retaining wall design, using PLAXIS and hand methods to Eurocode 7. Known for pragmatic advice that balances risk, cost and buildability.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Michael Thornton",
+      "role": "Senior Geotechnical Engineer",
+      "summary": "Geotechnical engineer who turns ground investigation data into safe, economical foundation and earthworks designs to Eurocode 7.",
+      "contact": {
+        "phone": "+44 7700 900601",
+        "email": "michael.thornton@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Colston",
+          "streetType": "Avenue",
+          "city": "Bristol",
+          "state": "England",
+          "zipCode": "BS1 4XE",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/michael-thornton-geotech"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Geotechnics",
+        "skills": [
+          "Site investigation",
+          "Slope stability",
+          "Retaining walls",
+          "Foundation design"
+        ]
+      },
+      {
+        "category": "Software",
+        "skills": [
+          "PLAXIS",
+          "Slope/W",
+          "gINT",
+          "AutoCAD"
+        ]
+      },
+      {
+        "category": "Design Codes",
+        "skills": [
+          "Eurocode 7",
+          "Ground risk assessment",
+          "Settlement analysis"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Site investigation",
+        "Foundation design",
+        "Slope stability"
+      ],
+      "keyResponsibilities": [
+        "Interpret ground investigation data",
+        "Design foundations and earth-retaining structures",
+        "Advise on geotechnical risk"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Westcliff Geotechnical",
+        "website": "https://westcliffgeo.example.com",
+        "location": "Bristol, United Kingdom",
+        "from": "2019-01",
+        "to": "Present",
+        "position": "Senior Geotechnical Engineer",
+        "activities": [
+          {
+            "project": "Highway embankment scheme",
+            "tasks": [
+              "Assessed slope stability in Slope/W and PLAXIS",
+              "Designed reinforced-soil retaining walls",
+              "Interpreted CPT and borehole data in gINT"
+            ]
+          }
+        ],
+        "achievements": [
+          "Value-engineered a retaining solution saving significant piling cost",
+          "Managed geotechnical input across five concurrent schemes"
+        ],
+        "toolsAndTechnologies": [
+          "PLAXIS",
+          "Slope/W",
+          "gINT",
+          "Eurocode 7"
+        ]
+      },
+      {
+        "company": "Avon Ground Engineering",
+        "website": "https://avonground.example.com",
+        "location": "Cardiff, United Kingdom",
+        "from": "2014-09",
+        "to": "2018-12",
+        "position": "Geotechnical Engineer",
+        "activities": [
+          {
+            "project": "Commercial foundation designs",
+            "tasks": [
+              "Designed shallow and piled foundations",
+              "Produced factual and interpretative reports",
+              "Supervised site investigations"
+            ]
+          }
+        ],
+        "achievements": [
+          "Delivered foundation designs for over twenty commercial buildings"
+        ],
+        "toolsAndTechnologies": [
+          "PLAXIS",
+          "gINT",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2013",
+        "institution": "University of Bristol",
+        "degree": "BEng",
+        "fieldOfStudy": "Civil Engineering",
+        "achievements": [
+          "First-class honours",
+          "Geotechnics dissertation on clay behaviour"
+        ]
+      },
+      {
+        "year": "2014",
+        "institution": "Imperial College London",
+        "degree": "MSc",
+        "fieldOfStudy": "Soil Mechanics",
+        "achievements": [
+          "Distinction"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Chartered Engineer (CEng MICE)",
+        "institution": "Institution of Civil Engineers",
+        "year": "2019",
+        "description": "Professional registration in civil engineering with a geotechnical focus."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "PLAXIS",
+        "Slope/W",
+        "gINT",
+        "AutoCAD",
+        "Eurocode 7",
+        "Foundation design"
+      ],
+      "softSkills": [
+        "Analytical thinking",
+        "Risk awareness",
+        "Report writing"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Reinforced-soil retaining wall",
+        "description": "Replaced a proposed piled wall with a reinforced-soil solution on an embankment.",
+        "date": "2022-04",
+        "impact": "Reduced construction cost by around 25% while meeting stability requirements."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Fell walking",
+      "Geology field trips",
+      "Chess"
+    ],
+    "references": [
+      {
+        "name": "Sarah Hughes",
+        "position": "Technical Director",
+        "company": "Westcliff Geotechnical",
+        "contact": {
+          "phone": "+44 7700 900622",
+          "email": "sarah.hughes@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 50000,
+      "max": 62000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Geotechnical Engineering",
+      "secondaryClusters": [
+        "Civil Engineering",
+        "Infrastructure"
+      ],
+      "functionalExpertise": [
+        "Site investigation",
+        "Foundation design",
+        "Slope stability"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced construction cost",
+        "Managed geotechnical risk"
+      ],
+      "industryDomains": [
+        "Infrastructure",
+        "Construction"
+      ],
+      "environmentFit": [
+        "Engineering consultancy",
+        "Ground engineering firm"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Specialised geotechnical design experience with PLAXIS and Eurocode 7 plus chartership indicates a senior geotechnical engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Geotechnical Engineer",
+        "Civil Engineer",
+        "Ground Engineer"
+      ],
+      "skills": [
+        "PLAXIS",
+        "gINT",
+        "AutoCAD",
+        "Eurocode 7",
+        "Foundation Design",
+        "Slope Stability"
+      ],
+      "industries": [
+        "Infrastructure",
+        "Construction"
+      ]
+    },
+    "tags": [
+      "civil",
+      "geotechnical",
+      "plaxis",
+      "senior",
+      "ceng"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Highways and transportation engineering manager with eighteen years delivering major road and infrastructure schemes. Leads multidisciplinary teams and clients through design, approvals and construction support. Deep expertise in highway geometry, drainage and design standards, backed by strong programme and commercial management.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Elizabeth Coburn",
+      "role": "Highways Engineering Manager",
+      "summary": "Transportation engineering manager who leads teams delivering major highway schemes from feasibility to construction while managing clients and budgets.",
+      "contact": {
+        "phone": "+44 7700 900701",
+        "email": "elizabeth.coburn@example.com",
+        "address": {
+          "streetNumber": "40",
+          "streetName": "Wellington",
+          "streetType": "Street",
+          "city": "Leeds",
+          "state": "England",
+          "zipCode": "LS1 2DE",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/elizabeth-coburn-highways"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-05",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Highway Design",
+        "skills": [
+          "Highway geometry",
+          "Drainage design",
+          "DMRB",
+          "Autodesk Civil 3D"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Team leadership",
+          "Programme management",
+          "Commercial management",
+          "Client management"
+        ]
+      },
+      {
+        "category": "Delivery",
+        "skills": [
+          "Design assurance",
+          "Approvals",
+          "Construction support"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Highway scheme delivery",
+        "Team leadership",
+        "Client and commercial management"
+      ],
+      "keyResponsibilities": [
+        "Lead highways design teams",
+        "Own scheme delivery, quality and budget",
+        "Manage client relationships and approvals"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Northbridge Infrastructure",
+        "website": "https://northbridge.example.com",
+        "location": "Leeds, United Kingdom",
+        "from": "2016-03",
+        "to": "Present",
+        "position": "Highways Engineering Manager",
+        "activities": [
+          {
+            "project": "Major junction improvement programme",
+            "tasks": [
+              "Led a team of fifteen designers",
+              "Managed multi-million-pound design budgets",
+              "Oversaw DMRB-compliant geometry and drainage design"
+            ]
+          }
+        ],
+        "achievements": [
+          "Delivered a GBP 40m scheme portfolio to time and budget",
+          "Grew the highways team from six to fifteen engineers"
+        ],
+        "toolsAndTechnologies": [
+          "Autodesk Civil 3D",
+          "DMRB",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Calder Highways Consultants",
+        "website": "https://calderhighways.example.com",
+        "location": "Sheffield, United Kingdom",
+        "from": "2008-09",
+        "to": "2016-02",
+        "position": "Highways Engineer",
+        "activities": [
+          {
+            "project": "Regional road improvements",
+            "tasks": [
+              "Designed highway alignments and drainage",
+              "Prepared technical approval documents",
+              "Supported schemes through construction"
+            ]
+          }
+        ],
+        "achievements": [
+          "Progressed from graduate to principal engineer"
+        ],
+        "toolsAndTechnologies": [
+          "Autodesk Civil 3D",
+          "AutoCAD",
+          "DMRB"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2008",
+        "institution": "University of Leeds",
+        "degree": "MEng",
+        "fieldOfStudy": "Civil Engineering",
+        "achievements": [
+          "Upper second-class honours",
+          "Transport specialisation"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Chartered Engineer (CEng MICE)",
+        "institution": "Institution of Civil Engineers",
+        "year": "2013",
+        "description": "Professional registration in civil engineering."
+      },
+      {
+        "title": "PMP",
+        "institution": "Project Management Institute",
+        "year": "2018",
+        "description": "Project Management Professional certification."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Autodesk Civil 3D",
+        "AutoCAD",
+        "DMRB",
+        "Highway geometry",
+        "Drainage design"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Commercial acumen",
+        "Stakeholder management"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Junction improvement programme",
+        "description": "Directed design delivery of a programme of urban junction upgrades.",
+        "date": "2021-07",
+        "impact": "Improved network capacity and reduced peak-hour delays across the corridor."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Long-distance cycling",
+      "Choral singing",
+      "Mentoring"
+    ],
+    "references": [
+      {
+        "name": "David Osei",
+        "position": "Regional Director",
+        "company": "Northbridge Infrastructure",
+        "contact": {
+          "phone": "+44 7700 900722",
+          "email": "david.osei@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 75000,
+      "max": 92000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Transportation Engineering",
+      "secondaryClusters": [
+        "Highways Design",
+        "Engineering Management"
+      ],
+      "functionalExpertise": [
+        "Highway scheme delivery",
+        "Team leadership",
+        "Commercial management"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Delivered scheme portfolio on budget",
+        "Grew and led teams"
+      ],
+      "industryDomains": [
+        "Infrastructure",
+        "Transport"
+      ],
+      "environmentFit": [
+        "Engineering consultancy",
+        "Infrastructure client"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Long highways design career progressing into team, budget and client leadership places this candidate at engineering manager level."
+    },
+    "searchIndex": {
+      "roles": [
+        "Highways Engineer",
+        "Transportation Engineer",
+        "Engineering Manager"
+      ],
+      "skills": [
+        "Civil 3D",
+        "AutoCAD",
+        "DMRB",
+        "Highway Design",
+        "Drainage"
+      ],
+      "industries": [
+        "Infrastructure",
+        "Transport"
+      ]
+    },
+    "tags": [
+      "civil",
+      "highways",
+      "transportation",
+      "manager",
+      "ceng"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Water resources engineer with three years designing stormwater and wastewater systems for municipal clients. Comfortable with hydraulic modelling, hydrology and permitting, using AutoCAD Civil 3D and EPA SWMM. Motivated by resilient, sustainable water infrastructure and steadily working toward professional licensure.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Marcus Tanaka",
+      "role": "Water Resources Engineer",
+      "summary": "Civil engineer focused on stormwater and wastewater design who pairs hydraulic modelling with practical permitting knowledge.",
+      "contact": {
+        "phone": "+1 (206) 555 0119",
+        "email": "marcus.tanaka@example.com",
+        "address": {
+          "streetNumber": "1201",
+          "streetName": "Pine",
+          "streetType": "Street",
+          "unit": "Unit 305",
+          "city": "Seattle",
+          "state": "Washington",
+          "zipCode": "98101",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/marcus-tanaka-water"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-10",
+        "noticePeriodDays": 21,
+        "interviewAvailability": [
+          "Weekday mornings",
+          "Weekday afternoons"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Water Engineering",
+        "skills": [
+          "Stormwater design",
+          "Wastewater collection",
+          "Hydrology",
+          "Hydraulic modelling"
+        ]
+      },
+      {
+        "category": "Software",
+        "skills": [
+          "AutoCAD Civil 3D",
+          "EPA SWMM",
+          "HEC-RAS",
+          "ArcGIS"
+        ]
+      },
+      {
+        "category": "Permitting",
+        "skills": [
+          "NPDES permitting",
+          "Drainage reports",
+          "Regulatory compliance"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Stormwater design",
+        "Hydraulic modelling",
+        "Permitting support"
+      ],
+      "keyResponsibilities": [
+        "Design stormwater and sewer systems",
+        "Build hydraulic and hydrologic models",
+        "Prepare drainage reports and permit documentation"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Cascade Water Engineers",
+        "website": "https://cascadewater.example.com",
+        "location": "Seattle, United States",
+        "from": "2023-07",
+        "to": "Present",
+        "position": "Water Resources Engineer",
+        "activities": [
+          {
+            "project": "Municipal stormwater upgrades",
+            "tasks": [
+              "Modelled catchments in EPA SWMM",
+              "Designed detention and conveyance in Civil 3D",
+              "Prepared drainage reports for permitting"
+            ]
+          }
+        ],
+        "achievements": [
+          "Sized a detention system that met updated flood criteria at reduced footprint",
+          "Supported permitting for four municipal projects"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Civil 3D",
+          "EPA SWMM",
+          "HEC-RAS"
+        ]
+      },
+      {
+        "company": "Puget Civil Group",
+        "website": "https://pugetcivil.example.com",
+        "location": "Tacoma, United States",
+        "from": "2022-06",
+        "to": "2023-06",
+        "position": "Junior Civil Engineer",
+        "activities": [
+          {
+            "project": "Sewer rehabilitation study",
+            "tasks": [
+              "Assisted with hydraulic modelling",
+              "Compiled GIS data in ArcGIS",
+              "Drafted plans in Civil 3D"
+            ]
+          }
+        ],
+        "achievements": [
+          "Helped deliver a citywide sewer condition study"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Civil 3D",
+          "ArcGIS"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2022",
+        "institution": "University of Washington",
+        "degree": "BSc",
+        "fieldOfStudy": "Civil Engineering",
+        "achievements": [
+          "Water resources concentration",
+          "Capstone on green stormwater infrastructure"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Engineer in Training (EIT)",
+        "institution": "Washington State Board of Registration",
+        "year": "2022",
+        "description": "Passed the Fundamentals of Engineering exam toward PE licensure."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "AutoCAD Civil 3D",
+        "EPA SWMM",
+        "HEC-RAS",
+        "ArcGIS",
+        "Hydrology",
+        "Stormwater design"
+      ],
+      "softSkills": [
+        "Detail orientation",
+        "Collaboration",
+        "Willingness to learn"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Japanese",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Green stormwater capstone",
+        "description": "Designed a bioretention-based stormwater scheme for an urban catchment.",
+        "date": "2022-05",
+        "impact": "Modelled a 30% reduction in peak runoff versus conventional design."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Kayaking",
+      "Urban gardening",
+      "Volunteering on river clean-ups"
+    ],
+    "references": [
+      {
+        "name": "Laura Simmons",
+        "position": "Senior Engineer",
+        "company": "Cascade Water Engineers",
+        "contact": {
+          "phone": "+1 (206) 555 0133",
+          "email": "laura.simmons@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "USD",
+      "min": 76000,
+      "max": 90000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Water Resources Engineering",
+      "secondaryClusters": [
+        "Civil Engineering",
+        "Environmental Engineering"
+      ],
+      "functionalExpertise": [
+        "Stormwater design",
+        "Hydraulic modelling",
+        "Permitting support"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Met updated flood criteria",
+        "Supported municipal permitting"
+      ],
+      "industryDomains": [
+        "Water",
+        "Infrastructure"
+      ],
+      "environmentFit": [
+        "Engineering consultancy",
+        "Public sector clients"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "A few years of stormwater and hydraulic modelling work with EIT status fits an early-to-mid-level water resources engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Water Resources Engineer",
+        "Civil Engineer",
+        "Environmental Engineer"
+      ],
+      "skills": [
+        "AutoCAD Civil 3D",
+        "EPA SWMM",
+        "HEC-RAS",
+        "ArcGIS",
+        "Hydrology"
+      ],
+      "industries": [
+        "Water",
+        "Infrastructure"
+      ]
+    },
+    "tags": [
+      "civil",
+      "water",
+      "environmental",
+      "mid-level",
+      "stormwater"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Power systems engineer with twelve years in transmission and distribution network design and studies. Expert in load flow, short-circuit and protection coordination studies using ETAP and DIgSILENT PowerFactory. Delivers grid connection and reinforcement projects for utilities and renewable developers to industry standards.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Rebecca Sinclair",
+      "role": "Senior Power Systems Engineer",
+      "summary": "Power systems engineer specialising in network studies and grid connections who turns complex analysis into practical, compliant designs.",
+      "contact": {
+        "phone": "+44 7700 900801",
+        "email": "rebecca.sinclair@example.com",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "George",
+          "streetType": "Street",
+          "city": "Glasgow",
+          "state": "Scotland",
+          "zipCode": "G2 1DY",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/rebecca-sinclair-power"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Network Studies",
+        "skills": [
+          "Load flow",
+          "Short-circuit analysis",
+          "Protection coordination",
+          "Grid connection studies"
+        ]
+      },
+      {
+        "category": "Software",
+        "skills": [
+          "ETAP",
+          "DIgSILENT PowerFactory",
+          "MATLAB",
+          "AutoCAD Electrical"
+        ]
+      },
+      {
+        "category": "Standards",
+        "skills": [
+          "G99",
+          "IEC 61850",
+          "Protection settings"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Power system studies",
+        "Grid connections",
+        "Protection coordination"
+      ],
+      "keyResponsibilities": [
+        "Perform load flow and fault studies",
+        "Design protection schemes and settings",
+        "Deliver grid connection applications"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Caledonian Grid Consultants",
+        "website": "https://caledoniangrid.example.com",
+        "location": "Glasgow, United Kingdom",
+        "from": "2017-04",
+        "to": "Present",
+        "position": "Senior Power Systems Engineer",
+        "activities": [
+          {
+            "project": "Onshore wind grid connection",
+            "tasks": [
+              "Ran load flow and fault studies in PowerFactory",
+              "Designed protection coordination",
+              "Prepared G99 connection applications"
+            ]
+          }
+        ],
+        "achievements": [
+          "Secured grid connection for a 60 MW wind farm",
+          "Standardised the firm's study templates, cutting delivery time"
+        ],
+        "toolsAndTechnologies": [
+          "DIgSILENT PowerFactory",
+          "ETAP",
+          "MATLAB"
+        ]
+      },
+      {
+        "company": "Northern Power Networks",
+        "website": "https://northernpower.example.com",
+        "location": "Newcastle, United Kingdom",
+        "from": "2012-09",
+        "to": "2017-03",
+        "position": "Power Systems Engineer",
+        "activities": [
+          {
+            "project": "Distribution reinforcement",
+            "tasks": [
+              "Modelled 11kV and 33kV networks in ETAP",
+              "Assessed thermal and voltage constraints",
+              "Specified protection settings"
+            ]
+          }
+        ],
+        "achievements": [
+          "Delivered reinforcement designs across dozens of primary substations"
+        ],
+        "toolsAndTechnologies": [
+          "ETAP",
+          "AutoCAD Electrical"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2012",
+        "institution": "University of Strathclyde",
+        "degree": "MEng",
+        "fieldOfStudy": "Electrical & Electronic Engineering",
+        "achievements": [
+          "First-class honours",
+          "Power systems specialisation"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Chartered Engineer (CEng MIET)",
+        "institution": "Institution of Engineering and Technology",
+        "year": "2018",
+        "description": "Professional registration in electrical engineering."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "DIgSILENT PowerFactory",
+        "ETAP",
+        "MATLAB",
+        "AutoCAD Electrical",
+        "Protection coordination",
+        "Load flow"
+      ],
+      "softSkills": [
+        "Analytical rigour",
+        "Clear reporting",
+        "Client focus"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "60 MW wind grid connection",
+        "description": "Led power system studies and connection design for an onshore wind farm.",
+        "date": "2022-02",
+        "impact": "Enabled connection approval and 60 MW of renewable generation."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Hill running",
+      "Renewable energy advocacy",
+      "Sailing"
+    ],
+    "references": [
+      {
+        "name": "Iain Fraser",
+        "position": "Principal Engineer",
+        "company": "Caledonian Grid Consultants",
+        "contact": {
+          "phone": "+44 7700 900822",
+          "email": "iain.fraser@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 58000,
+      "max": 72000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Power Systems Engineering",
+      "secondaryClusters": [
+        "Grid Connections",
+        "Electrical Engineering"
+      ],
+      "functionalExpertise": [
+        "Power system studies",
+        "Grid connections",
+        "Protection coordination"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Enabled renewable connections",
+        "Standardised delivery"
+      ],
+      "industryDomains": [
+        "Utilities",
+        "Renewable energy"
+      ],
+      "environmentFit": [
+        "Engineering consultancy",
+        "Utility"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Deep network study and grid connection experience with PowerFactory and chartership indicates a senior power systems engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Power Systems Engineer",
+        "Electrical Engineer",
+        "Grid Engineer"
+      ],
+      "skills": [
+        "ETAP",
+        "DIgSILENT PowerFactory",
+        "MATLAB",
+        "AutoCAD Electrical",
+        "Protection Coordination"
+      ],
+      "industries": [
+        "Utilities",
+        "Renewable Energy"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "power-systems",
+      "etap",
+      "senior",
+      "ceng"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Electrical building services engineer with five years designing low-voltage power, lighting and containment for commercial buildings. Proficient in AutoCAD Electrical, Revit MEP and Dialux, working to BS 7671 wiring regulations. Focused on coordinated, energy-conscious electrical designs delivered through BIM workflows.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Omar Farah",
+      "role": "Electrical Design Engineer",
+      "summary": "Building-services electrical engineer who delivers coordinated LV, lighting and small power designs to BS 7671 within BIM teams.",
+      "contact": {
+        "phone": "+44 7700 900901",
+        "email": "omar.farah@example.com",
+        "address": {
+          "streetNumber": "31",
+          "streetName": "Colmore",
+          "streetType": "Row",
+          "city": "Birmingham",
+          "state": "England",
+          "zipCode": "B3 2BJ",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/omar-farah-electrical"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-10",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Weekday evenings",
+          "Saturday mornings"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Electrical Design",
+        "skills": [
+          "LV power design",
+          "Lighting design",
+          "Containment",
+          "Cable sizing"
+        ]
+      },
+      {
+        "category": "Software",
+        "skills": [
+          "AutoCAD Electrical",
+          "Revit MEP",
+          "Dialux",
+          "Amtech"
+        ]
+      },
+      {
+        "category": "Standards",
+        "skills": [
+          "BS 7671",
+          "Earthing",
+          "Emergency lighting"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "LV electrical design",
+        "Lighting design",
+        "BIM coordination"
+      ],
+      "keyResponsibilities": [
+        "Design LV power, lighting and containment systems",
+        "Produce electrical layouts and schematics",
+        "Coordinate electrical services within BIM models"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Midland Building Services",
+        "website": "https://midlandbs.example.com",
+        "location": "Birmingham, United Kingdom",
+        "from": "2022-01",
+        "to": "Present",
+        "position": "Electrical Design Engineer",
+        "activities": [
+          {
+            "project": "Commercial office fit-out",
+            "tasks": [
+              "Designed LV distribution and small power",
+              "Produced lighting designs in Dialux",
+              "Modelled containment and services in Revit MEP"
+            ]
+          }
+        ],
+        "achievements": [
+          "Cut lighting energy load by 20% using LED and controls",
+          "Reduced coordination clashes through disciplined BIM modelling"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Electrical",
+          "Revit MEP",
+          "Dialux"
+        ]
+      },
+      {
+        "company": "Severn MEP Design",
+        "website": "https://severnmep.example.com",
+        "location": "Worcester, United Kingdom",
+        "from": "2020-08",
+        "to": "2021-12",
+        "position": "Junior Electrical Engineer",
+        "activities": [
+          {
+            "project": "School electrical upgrades",
+            "tasks": [
+              "Sized cables and calculated loads in Amtech",
+              "Drafted layouts in AutoCAD Electrical",
+              "Supported BS 7671 compliance checks"
+            ]
+          }
+        ],
+        "achievements": [
+          "Supported delivery of several school electrical refurbishments"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Electrical",
+          "Amtech"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2020",
+        "institution": "University of Birmingham",
+        "degree": "BEng",
+        "fieldOfStudy": "Electrical & Electronic Engineering",
+        "achievements": [
+          "Upper second-class honours",
+          "Building services elective"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "City & Guilds 2382 (BS 7671)",
+        "institution": "City & Guilds",
+        "year": "2021",
+        "description": "Certification in the IET Wiring Regulations."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "AutoCAD Electrical",
+        "Revit MEP",
+        "Dialux",
+        "Amtech",
+        "BS 7671",
+        "Cable sizing"
+      ],
+      "softSkills": [
+        "Coordination",
+        "Attention to detail",
+        "Teamwork"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Arabic",
+          "proficiency": {
+            "read": "advanced",
+            "written": "intermediate",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Lighting controls upgrade",
+        "description": "Designed a DALI lighting control scheme for an office refurbishment.",
+        "date": "2023-09",
+        "impact": "Reduced lighting energy consumption by around 30%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Football",
+      "Electronics tinkering",
+      "Cycling"
+    ],
+    "references": [
+      {
+        "name": "Claire Dawson",
+        "position": "Senior Electrical Engineer",
+        "company": "Midland Building Services",
+        "contact": {
+          "phone": "+44 7700 900922",
+          "email": "claire.dawson@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 40000,
+      "max": 50000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Electrical Building Services",
+      "secondaryClusters": [
+        "MEP Engineering",
+        "Electrical Design"
+      ],
+      "functionalExpertise": [
+        "LV electrical design",
+        "Lighting design",
+        "BIM coordination"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced lighting energy load",
+        "Improved coordination"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Building services"
+      ],
+      "environmentFit": [
+        "Engineering consultancy",
+        "MEP firm"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Focused electrical building-services design with AutoCAD Electrical and Revit MEP aligns with a mid-level electrical design engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Electrical Design Engineer",
+        "Building Services Engineer",
+        "Electrical Engineer"
+      ],
+      "skills": [
+        "AutoCAD Electrical",
+        "Revit",
+        "Dialux",
+        "BS 7671",
+        "Lighting Design"
+      ],
+      "industries": [
+        "Construction",
+        "Building Services"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "building-services",
+      "revit",
+      "mid-level",
+      "bs7671"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Control and instrumentation engineer with ten years automating processes across water, oil and gas facilities. Skilled in PLC and SCADA design, instrument selection and functional safety, using EPLAN and vendor programming suites. Delivers robust automation from P&ID through commissioning and site acceptance testing.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Gavin Wright",
+      "role": "Senior Control & Instrumentation Engineer",
+      "summary": "C&I engineer who designs and commissions PLC and SCADA automation for process plants with a strong eye on functional safety.",
+      "contact": {
+        "phone": "+44 7700 901001",
+        "email": "gavin.wright@example.com",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Queens",
+          "streetType": "Road",
+          "city": "Aberdeen",
+          "state": "Scotland",
+          "zipCode": "AB15 4YE",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/gavin-wright-ci"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Control Systems",
+        "skills": [
+          "PLC programming",
+          "SCADA",
+          "HMI design",
+          "Control panel design"
+        ]
+      },
+      {
+        "category": "Instrumentation",
+        "skills": [
+          "Instrument selection",
+          "P&ID",
+          "Loop diagrams",
+          "Calibration"
+        ]
+      },
+      {
+        "category": "Software & Standards",
+        "skills": [
+          "EPLAN",
+          "Siemens TIA Portal",
+          "Rockwell Studio 5000",
+          "Functional safety"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "PLC and SCADA design",
+        "Instrumentation design",
+        "Commissioning"
+      ],
+      "keyResponsibilities": [
+        "Design PLC/SCADA systems and control panels",
+        "Select and specify instrumentation",
+        "Lead commissioning and site acceptance testing"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Granite Automation",
+        "website": "https://graniteautomation.example.com",
+        "location": "Aberdeen, United Kingdom",
+        "from": "2019-02",
+        "to": "Present",
+        "position": "Senior Control & Instrumentation Engineer",
+        "activities": [
+          {
+            "project": "Water treatment automation upgrade",
+            "tasks": [
+              "Designed control panels in EPLAN",
+              "Developed Siemens PLC and SCADA code",
+              "Led site acceptance testing and commissioning"
+            ]
+          }
+        ],
+        "achievements": [
+          "Delivered a plant-wide SCADA upgrade with zero unplanned downtime",
+          "Improved alarm rationalisation to reduce operator load"
+        ],
+        "toolsAndTechnologies": [
+          "EPLAN",
+          "Siemens TIA Portal",
+          "SCADA"
+        ]
+      },
+      {
+        "company": "Deeside Controls",
+        "website": "https://deesidecontrols.example.com",
+        "location": "Dundee, United Kingdom",
+        "from": "2015-08",
+        "to": "2019-01",
+        "position": "Control & Instrumentation Engineer",
+        "activities": [
+          {
+            "project": "Process skid automation",
+            "tasks": [
+              "Programmed Rockwell PLCs",
+              "Produced loop and wiring diagrams",
+              "Calibrated field instruments"
+            ]
+          }
+        ],
+        "achievements": [
+          "Commissioned multiple process skids to schedule"
+        ],
+        "toolsAndTechnologies": [
+          "Rockwell Studio 5000",
+          "EPLAN",
+          "PLC"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "Heriot-Watt University",
+        "degree": "BEng",
+        "fieldOfStudy": "Electrical & Electronic Engineering",
+        "achievements": [
+          "Upper second-class honours",
+          "Control systems specialisation"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "TÜV Functional Safety Engineer",
+        "institution": "TÜV Rheinland",
+        "year": "2020",
+        "description": "Certification in functional safety per IEC 61508."
+      },
+      {
+        "title": "Chartered Engineer (CEng MIET)",
+        "institution": "Institution of Engineering and Technology",
+        "year": "2022",
+        "description": "Professional registration in electrical engineering."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "EPLAN",
+        "Siemens TIA Portal",
+        "Rockwell Studio 5000",
+        "SCADA",
+        "PLC",
+        "Functional safety"
+      ],
+      "softSkills": [
+        "Methodical approach",
+        "Commissioning composure",
+        "Team coordination"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Alarm rationalisation",
+        "description": "Rationalised plant alarms to EEMUA 191 guidance during a SCADA upgrade.",
+        "date": "2022-10",
+        "impact": "Cut nuisance alarms by around 60%, improving operator response."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Sea fishing",
+      "Home automation",
+      "Golf"
+    ],
+    "references": [
+      {
+        "name": "Fiona MacLeod",
+        "position": "Engineering Manager",
+        "company": "Granite Automation",
+        "contact": {
+          "phone": "+44 7700 901022",
+          "email": "fiona.macleod@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 55000,
+      "max": 68000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Control & Instrumentation Engineering",
+      "secondaryClusters": [
+        "Automation",
+        "Electrical Engineering"
+      ],
+      "functionalExpertise": [
+        "PLC and SCADA design",
+        "Instrumentation design",
+        "Commissioning"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Delivered upgrades without downtime",
+        "Improved alarm management"
+      ],
+      "industryDomains": [
+        "Water",
+        "Oil and gas"
+      ],
+      "environmentFit": [
+        "Systems integrator",
+        "Process industry"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Extensive PLC, SCADA and instrumentation design with commissioning and functional safety credentials indicates a senior C&I engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Control and Instrumentation Engineer",
+        "Automation Engineer",
+        "Electrical Engineer"
+      ],
+      "skills": [
+        "EPLAN",
+        "PLC",
+        "SCADA",
+        "Siemens TIA Portal",
+        "Functional Safety"
+      ],
+      "industries": [
+        "Water",
+        "Oil and Gas"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "control-instrumentation",
+      "plc",
+      "scada",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Principal electrical hardware engineer with sixteen years designing embedded systems and power electronics for industrial and medical devices. Leads board-level design, signal integrity and compliance efforts across multidisciplinary teams. Deep expertise in schematic capture, PCB layout and design for EMC, from prototype to volume production.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Nadia Petrova",
+      "role": "Principal Hardware Engineer",
+      "summary": "Principal electrical engineer who leads embedded and power-electronics hardware design and sets board-level design and compliance strategy.",
+      "contact": {
+        "phone": "+1 (512) 555 0187",
+        "email": "nadia.petrova@example.com",
+        "address": {
+          "streetNumber": "3400",
+          "streetName": "Guadalupe",
+          "streetType": "Street",
+          "unit": "Suite 210",
+          "city": "Austin",
+          "state": "Texas",
+          "zipCode": "78705",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/nadia-petrova-hardware"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Hardware Design",
+        "skills": [
+          "Schematic capture",
+          "PCB layout",
+          "Power electronics",
+          "Embedded systems"
+        ]
+      },
+      {
+        "category": "Analysis",
+        "skills": [
+          "Signal integrity",
+          "Design for EMC",
+          "MATLAB/Simulink",
+          "SPICE simulation"
+        ]
+      },
+      {
+        "category": "Tools",
+        "skills": [
+          "Altium Designer",
+          "Cadence",
+          "Oscilloscope",
+          "Bench testing"
+        ]
+      },
+      {
+        "category": "Leadership",
+        "skills": [
+          "Technical leadership",
+          "Design reviews",
+          "Compliance strategy"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Embedded hardware design",
+        "Power electronics",
+        "EMC compliance"
+      ],
+      "keyResponsibilities": [
+        "Lead board-level hardware architecture",
+        "Own signal integrity and EMC compliance",
+        "Guide teams through design reviews and production"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Lonestar MedTech",
+        "website": "https://lonestarmedtech.example.com",
+        "location": "Austin, United States",
+        "from": "2016-05",
+        "to": "Present",
+        "position": "Principal Hardware Engineer",
+        "activities": [
+          {
+            "project": "Portable diagnostic device",
+            "tasks": [
+              "Architected mixed-signal boards in Altium",
+              "Led signal integrity and EMC design",
+              "Directed design reviews and production transfer"
+            ]
+          }
+        ],
+        "achievements": [
+          "Passed medical EMC compliance on first submission",
+          "Reduced board respins from three to one on average"
+        ],
+        "toolsAndTechnologies": [
+          "Altium Designer",
+          "MATLAB/Simulink",
+          "SPICE simulation"
+        ]
+      },
+      {
+        "company": "Rio Grande Controls",
+        "website": "https://riograndecontrols.example.com",
+        "location": "San Antonio, United States",
+        "from": "2010-08",
+        "to": "2016-04",
+        "position": "Electrical Hardware Engineer",
+        "activities": [
+          {
+            "project": "Industrial motor drives",
+            "tasks": [
+              "Designed power electronics stages",
+              "Ran SPICE and thermal simulations",
+              "Performed bench testing and debug"
+            ]
+          }
+        ],
+        "achievements": [
+          "Improved drive efficiency and thermal margins across a product line"
+        ],
+        "toolsAndTechnologies": [
+          "Cadence",
+          "SPICE simulation",
+          "Power electronics"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2010",
+        "institution": "Georgia Institute of Technology",
+        "degree": "MSc",
+        "fieldOfStudy": "Electrical Engineering",
+        "achievements": [
+          "Power electronics research focus"
+        ]
+      },
+      {
+        "year": "2008",
+        "institution": "Georgia Institute of Technology",
+        "degree": "BSc",
+        "fieldOfStudy": "Electrical Engineering",
+        "achievements": [
+          "Magna cum laude"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Professional Engineer (PE)",
+        "institution": "Texas Board of Professional Engineers",
+        "year": "2015",
+        "description": "Licensed professional engineer in electrical engineering."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Altium Designer",
+        "Cadence",
+        "MATLAB/Simulink",
+        "SPICE simulation",
+        "Power electronics",
+        "Signal integrity"
+      ],
+      "softSkills": [
+        "Technical leadership",
+        "Mentoring",
+        "Systems thinking"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "advanced",
+            "spoken": "advanced"
+          }
+        },
+        {
+          "language": "Russian",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "First-pass EMC compliance",
+        "description": "Established an EMC-by-design process across the hardware team.",
+        "date": "2021-03",
+        "impact": "Cut compliance cycles and saved months of certification time per product."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Amateur radio",
+      "Robotics",
+      "Cross-country skiing"
+    ],
+    "references": [
+      {
+        "name": "Robert Yates",
+        "position": "VP Engineering",
+        "company": "Lonestar MedTech",
+        "contact": {
+          "phone": "+1 (512) 555 0199",
+          "email": "robert.yates@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "USD",
+      "min": 150000,
+      "max": 180000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Electrical Hardware Engineering",
+      "secondaryClusters": [
+        "Embedded Systems",
+        "Power Electronics"
+      ],
+      "functionalExpertise": [
+        "Embedded hardware design",
+        "Power electronics",
+        "EMC compliance"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Passed compliance first time",
+        "Reduced board respins"
+      ],
+      "industryDomains": [
+        "Medical devices",
+        "Industrial electronics"
+      ],
+      "environmentFit": [
+        "Product company",
+        "Hardware R&D"
+      ],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Sixteen years of board-level hardware and power electronics design with technical leadership and PE licensure places this candidate at principal engineer level."
+    },
+    "searchIndex": {
+      "roles": [
+        "Hardware Engineer",
+        "Electrical Engineer",
+        "Embedded Engineer"
+      ],
+      "skills": [
+        "Altium Designer",
+        "Cadence",
+        "MATLAB",
+        "SPICE",
+        "PCB Layout",
+        "Power Electronics"
+      ],
+      "industries": [
+        "Medical Devices",
+        "Industrial Electronics"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "hardware",
+      "embedded",
+      "principal",
+      "pe"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Lead electrical engineer with fourteen years in renewable energy, spanning solar PV and battery storage project design. Leads electrical design teams from feasibility through energisation, covering HV/LV design, grid compliance and safety. Combines strong technical depth with the delivery leadership large renewable projects demand.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Samuel Adeyemi",
+      "role": "Lead Electrical Engineer, Renewables",
+      "summary": "Renewables electrical lead who guides teams delivering solar and storage projects from design through grid energisation.",
+      "contact": {
+        "phone": "+44 7700 901101",
+        "email": "samuel.adeyemi@example.com",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "Park",
+          "streetType": "Street",
+          "city": "Bristol",
+          "state": "England",
+          "zipCode": "BS1 5PB",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/samuel-adeyemi-renewables"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-20",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Renewables Design",
+        "skills": [
+          "Solar PV design",
+          "Battery storage",
+          "HV/LV design",
+          "Grid compliance"
+        ]
+      },
+      {
+        "category": "Software",
+        "skills": [
+          "ETAP",
+          "PVsyst",
+          "AutoCAD Electrical",
+          "DIgSILENT PowerFactory"
+        ]
+      },
+      {
+        "category": "Leadership",
+        "skills": [
+          "Design team leadership",
+          "Technical assurance",
+          "Project delivery"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Solar and storage electrical design",
+        "Grid compliance",
+        "Design leadership"
+      ],
+      "keyResponsibilities": [
+        "Lead electrical design for renewable projects",
+        "Own HV/LV design and grid compliance",
+        "Provide technical assurance across the team"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Solaris Energy Developments",
+        "website": "https://solarisenergy.example.com",
+        "location": "Bristol, United Kingdom",
+        "from": "2017-06",
+        "to": "Present",
+        "position": "Lead Electrical Engineer",
+        "activities": [
+          {
+            "project": "50 MW solar and storage site",
+            "tasks": [
+              "Led HV/LV electrical design",
+              "Directed grid compliance studies in PowerFactory",
+              "Managed a team of six electrical engineers"
+            ]
+          }
+        ],
+        "achievements": [
+          "Energised a 50 MW solar-plus-storage project on schedule",
+          "Introduced design standards that reduced review iterations"
+        ],
+        "toolsAndTechnologies": [
+          "ETAP",
+          "PVsyst",
+          "DIgSILENT PowerFactory"
+        ]
+      },
+      {
+        "company": "GreenVolt Engineering",
+        "website": "https://greenvolt.example.com",
+        "location": "Reading, United Kingdom",
+        "from": "2011-09",
+        "to": "2017-05",
+        "position": "Electrical Engineer",
+        "activities": [
+          {
+            "project": "Rooftop and ground-mount PV",
+            "tasks": [
+              "Designed PV array and inverter layouts in PVsyst",
+              "Sized LV cabling and protection",
+              "Prepared connection documentation"
+            ]
+          }
+        ],
+        "achievements": [
+          "Delivered electrical design for over 40 MW of installed PV"
+        ],
+        "toolsAndTechnologies": [
+          "PVsyst",
+          "AutoCAD Electrical",
+          "ETAP"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "University of Nottingham",
+        "degree": "MEng",
+        "fieldOfStudy": "Electrical & Electronic Engineering",
+        "achievements": [
+          "First-class honours",
+          "Renewable energy specialisation"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Chartered Engineer (CEng MIET)",
+        "institution": "Institution of Engineering and Technology",
+        "year": "2017",
+        "description": "Professional registration in electrical engineering."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ETAP",
+        "PVsyst",
+        "DIgSILENT PowerFactory",
+        "AutoCAD Electrical",
+        "HV/LV design",
+        "Grid compliance"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Technical judgement",
+        "Delivery focus"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Yoruba",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "advanced"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "50 MW solar-plus-storage",
+        "description": "Led electrical design and grid compliance for a co-located solar and battery site.",
+        "date": "2023-05",
+        "impact": "Delivered 50 MW of renewable capacity energised on programme."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Football coaching",
+      "Sustainability projects",
+      "Chess"
+    ],
+    "references": [
+      {
+        "name": "Hannah Price",
+        "position": "Engineering Director",
+        "company": "Solaris Energy Developments",
+        "contact": {
+          "phone": "+44 7700 901122",
+          "email": "hannah.price@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 70000,
+      "max": 85000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Renewable Energy Engineering",
+      "secondaryClusters": [
+        "Electrical Design",
+        "Power Systems"
+      ],
+      "functionalExpertise": [
+        "Solar and storage electrical design",
+        "Grid compliance",
+        "Design leadership"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Energised major renewable projects",
+        "Improved design efficiency"
+      ],
+      "industryDomains": [
+        "Renewable energy",
+        "Utilities"
+      ],
+      "environmentFit": [
+        "Renewable developer",
+        "Engineering consultancy"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Extensive renewable electrical design combined with team leadership and grid compliance delivery places this candidate at a lead engineering level."
+    },
+    "searchIndex": {
+      "roles": [
+        "Electrical Engineer",
+        "Renewable Energy Engineer",
+        "Power Systems Engineer"
+      ],
+      "skills": [
+        "ETAP",
+        "PVsyst",
+        "DIgSILENT PowerFactory",
+        "AutoCAD Electrical",
+        "HV/LV Design"
+      ],
+      "industries": [
+        "Renewable Energy",
+        "Utilities"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "renewables",
+      "solar",
+      "lead",
+      "ceng"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Industrial process engineer with eight years optimising manufacturing operations in automotive and electronics plants. Applies lean, time studies and simulation to raise throughput and cut waste. Skilled in process mapping, line balancing and MES data analysis to drive measurable operational gains.",
+    "careerStartYear": 2017,
+    "personalInformation": {
+      "name": "Olivia Bennett",
+      "role": "Senior Industrial Process Engineer",
+      "summary": "Industrial engineer who redesigns production processes using lean and data to lift throughput and remove waste on the factory floor.",
+      "contact": {
+        "phone": "+1 (313) 555 0164",
+        "email": "olivia.bennett@example.com",
+        "address": {
+          "streetNumber": "900",
+          "streetName": "Woodward",
+          "streetType": "Avenue",
+          "unit": "Suite 500",
+          "city": "Detroit",
+          "state": "Michigan",
+          "zipCode": "48226",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/olivia-bennett-industrial"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Weekday mornings",
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Process Engineering",
+        "skills": [
+          "Process mapping",
+          "Line balancing",
+          "Time studies",
+          "Capacity planning"
+        ]
+      },
+      {
+        "category": "Lean & Improvement",
+        "skills": [
+          "Lean",
+          "Kaizen",
+          "5S",
+          "Value stream mapping"
+        ]
+      },
+      {
+        "category": "Analysis",
+        "skills": [
+          "Minitab",
+          "MES",
+          "Discrete-event simulation"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Process optimisation",
+        "Lean manufacturing",
+        "Line balancing"
+      ],
+      "keyResponsibilities": [
+        "Analyse and improve production processes",
+        "Lead lean and kaizen events",
+        "Model process changes and track results"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Great Lakes Automotive",
+        "website": "https://greatlakesauto.example.com",
+        "location": "Detroit, United States",
+        "from": "2020-04",
+        "to": "Present",
+        "position": "Senior Industrial Process Engineer",
+        "activities": [
+          {
+            "project": "Assembly line throughput programme",
+            "tasks": [
+              "Ran time studies and balanced the line",
+              "Led kaizen events with operators",
+              "Analysed MES data in Minitab"
+            ]
+          }
+        ],
+        "achievements": [
+          "Raised line throughput by 15% without added labour",
+          "Cut work-in-progress inventory by 25%"
+        ],
+        "toolsAndTechnologies": [
+          "Minitab",
+          "MES",
+          "Value stream mapping"
+        ]
+      },
+      {
+        "company": "Midwest Electronics Mfg",
+        "website": "https://midwestelectronics.example.com",
+        "location": "Grand Rapids, United States",
+        "from": "2017-07",
+        "to": "2020-03",
+        "position": "Industrial Engineer",
+        "activities": [
+          {
+            "project": "SMT line optimisation",
+            "tasks": [
+              "Mapped process flows",
+              "Reduced changeover times",
+              "Implemented 5S on the shop floor"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduced changeover time by 40% using SMED techniques"
+        ],
+        "toolsAndTechnologies": [
+          "Lean",
+          "5S",
+          "Minitab"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2017",
+        "institution": "Purdue University",
+        "degree": "BSc",
+        "fieldOfStudy": "Industrial Engineering",
+        "achievements": [
+          "Cum laude",
+          "Operations research focus"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Six Sigma Green Belt",
+        "institution": "ASQ",
+        "year": "2019",
+        "description": "Certification in Six Sigma process improvement methodology."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Minitab",
+        "MES",
+        "Lean",
+        "Six Sigma",
+        "5S",
+        "Value stream mapping"
+      ],
+      "softSkills": [
+        "Data-driven mindset",
+        "Operator engagement",
+        "Facilitation"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Line balancing overhaul",
+        "description": "Rebalanced a final assembly line using time studies and simulation.",
+        "date": "2022-08",
+        "impact": "Increased output by 15% and reduced operator idle time."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Running",
+      "Board games",
+      "Volunteering as a STEM mentor"
+    ],
+    "references": [
+      {
+        "name": "Kevin Nguyen",
+        "position": "Operations Manager",
+        "company": "Great Lakes Automotive",
+        "contact": {
+          "phone": "+1 (313) 555 0178",
+          "email": "kevin.nguyen@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "USD",
+      "min": 92000,
+      "max": 110000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Industrial Engineering",
+      "secondaryClusters": [
+        "Lean Manufacturing",
+        "Process Improvement"
+      ],
+      "functionalExpertise": [
+        "Process optimisation",
+        "Lean manufacturing",
+        "Line balancing"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Increased throughput",
+        "Reduced inventory and changeover time"
+      ],
+      "industryDomains": [
+        "Automotive",
+        "Electronics manufacturing"
+      ],
+      "environmentFit": [
+        "Manufacturing plant",
+        "High-volume production"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Consistent process optimisation with lean and data analysis delivering measurable gains fits a senior industrial engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Industrial Engineer",
+        "Process Engineer",
+        "Manufacturing Engineer"
+      ],
+      "skills": [
+        "Lean",
+        "Six Sigma",
+        "Minitab",
+        "MES",
+        "5S",
+        "Value Stream Mapping"
+      ],
+      "industries": [
+        "Automotive",
+        "Electronics Manufacturing"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "process",
+      "lean",
+      "senior",
+      "six-sigma"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Manufacturing quality engineer with five years ensuring product and process quality in aerospace and automotive supply chains. Skilled in APQP, PPAP, SPC and root cause analysis, working to IATF 16949 and AS9100 standards. Focused on preventing defects at source and driving supplier quality improvement.",
+    "careerStartYear": 2019,
+    "personalInformation": {
+      "name": "Ryan Patel",
+      "role": "Quality Engineer",
+      "summary": "Quality engineer who embeds APQP and SPC discipline into manufacturing to stop defects at source and lift supplier performance.",
+      "contact": {
+        "phone": "+44 7700 901201",
+        "email": "ryan.patel@example.com",
+        "address": {
+          "streetNumber": "26",
+          "streetName": "Foregate",
+          "streetType": "Street",
+          "city": "Chester",
+          "state": "England",
+          "zipCode": "CH1 1HB",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ryan-patel-quality"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-25",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Weekday evenings",
+          "Saturday mornings"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Quality Systems",
+        "skills": [
+          "APQP",
+          "PPAP",
+          "FMEA",
+          "Control plans"
+        ]
+      },
+      {
+        "category": "Statistical Methods",
+        "skills": [
+          "SPC",
+          "MSA",
+          "Minitab",
+          "Capability studies"
+        ]
+      },
+      {
+        "category": "Standards",
+        "skills": [
+          "IATF 16949",
+          "AS9100",
+          "8D problem solving"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Quality planning",
+        "Statistical process control",
+        "Supplier quality"
+      ],
+      "keyResponsibilities": [
+        "Run APQP and PPAP activities",
+        "Lead root cause and 8D investigations",
+        "Monitor process capability using SPC"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Cheshire Aerospace Components",
+        "website": "https://cheshireaero.example.com",
+        "location": "Chester, United Kingdom",
+        "from": "2021-05",
+        "to": "Present",
+        "position": "Quality Engineer",
+        "activities": [
+          {
+            "project": "New part introduction quality",
+            "tasks": [
+              "Led APQP and PPAP submissions",
+              "Set up SPC and capability studies in Minitab",
+              "Ran 8D investigations on non-conformances"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduced customer PPM by 45% over eighteen months",
+          "Achieved first-time PPAP approval on key new parts"
+        ],
+        "toolsAndTechnologies": [
+          "Minitab",
+          "SPC",
+          "APQP"
+        ]
+      },
+      {
+        "company": "Mersey Automotive Parts",
+        "website": "https://merseyauto.example.com",
+        "location": "Liverpool, United Kingdom",
+        "from": "2019-08",
+        "to": "2021-04",
+        "position": "Junior Quality Engineer",
+        "activities": [
+          {
+            "project": "Supplier quality monitoring",
+            "tasks": [
+              "Conducted supplier audits",
+              "Tracked non-conformances",
+              "Supported control plan updates"
+            ]
+          }
+        ],
+        "achievements": [
+          "Improved on-time PPAP submissions across suppliers"
+        ],
+        "toolsAndTechnologies": [
+          "FMEA",
+          "8D problem solving",
+          "Minitab"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2019",
+        "institution": "University of Liverpool",
+        "degree": "BEng",
+        "fieldOfStudy": "Manufacturing Engineering",
+        "achievements": [
+          "Upper second-class honours",
+          "Quality systems project"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Six Sigma Green Belt",
+        "institution": "British Quality Foundation",
+        "year": "2021",
+        "description": "Certification in Six Sigma process improvement."
+      },
+      {
+        "title": "IATF 16949 Internal Auditor",
+        "institution": "SGS",
+        "year": "2022",
+        "description": "Internal auditor training for the automotive quality standard."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Minitab",
+        "SPC",
+        "APQP",
+        "PPAP",
+        "FMEA",
+        "8D problem solving"
+      ],
+      "softSkills": [
+        "Rigour",
+        "Persistence",
+        "Cross-functional collaboration"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Gujarati",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "advanced"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "PPM reduction drive",
+        "description": "Led a defect-reduction programme across a machining cell.",
+        "date": "2023-06",
+        "impact": "Cut customer defect rate (PPM) by 45%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Cricket",
+      "Data puzzles",
+      "Cooking"
+    ],
+    "references": [
+      {
+        "name": "Sandra Whitfield",
+        "position": "Quality Manager",
+        "company": "Cheshire Aerospace Components",
+        "contact": {
+          "phone": "+44 7700 901222",
+          "email": "sandra.whitfield@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 40000,
+      "max": 50000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Quality Engineering",
+      "secondaryClusters": [
+        "Manufacturing Quality",
+        "Supplier Quality"
+      ],
+      "functionalExpertise": [
+        "Quality planning",
+        "Statistical process control",
+        "Supplier quality"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced customer defect rates",
+        "Achieved first-time PPAP approvals"
+      ],
+      "industryDomains": [
+        "Aerospace",
+        "Automotive"
+      ],
+      "environmentFit": [
+        "Manufacturing plant",
+        "Tier 1 supplier"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Focused quality engineering with APQP, SPC and standards experience delivering PPM reductions fits a mid-level quality engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Quality Engineer",
+        "Manufacturing Engineer",
+        "Supplier Quality Engineer"
+      ],
+      "skills": [
+        "Minitab",
+        "SPC",
+        "APQP",
+        "PPAP",
+        "FMEA",
+        "Six Sigma"
+      ],
+      "industries": [
+        "Aerospace",
+        "Automotive"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "quality",
+      "spc",
+      "mid-level",
+      "iatf16949"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Continuous improvement manager with seventeen years driving operational excellence across manufacturing and distribution sites. Leads lean transformations, Six Sigma projects and coaching programmes that reshape site culture. A certified Black Belt with a track record of multimillion-dollar savings and sustained performance gains.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Angela Foster",
+      "role": "Continuous Improvement Manager",
+      "summary": "Operational excellence leader who runs lean and Six Sigma transformations and coaches teams to sustain hard-won performance gains.",
+      "contact": {
+        "phone": "+1 (614) 555 0152",
+        "email": "angela.foster@example.com",
+        "address": {
+          "streetNumber": "77",
+          "streetName": "North High",
+          "streetType": "Street",
+          "unit": "Suite 900",
+          "city": "Columbus",
+          "state": "Ohio",
+          "zipCode": "43215",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/angela-foster-ci"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Operational Excellence",
+        "skills": [
+          "Lean transformation",
+          "Six Sigma",
+          "Kaizen",
+          "Hoshin planning"
+        ]
+      },
+      {
+        "category": "Leadership",
+        "skills": [
+          "Change management",
+          "Coaching",
+          "Program leadership",
+          "Stakeholder management"
+        ]
+      },
+      {
+        "category": "Analysis",
+        "skills": [
+          "Minitab",
+          "Value stream mapping",
+          "DMAIC",
+          "SAP"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Lean transformation",
+        "Six Sigma leadership",
+        "Change management"
+      ],
+      "keyResponsibilities": [
+        "Lead site-wide continuous improvement programmes",
+        "Coach and certify Green and Black Belts",
+        "Deliver savings through structured problem solving"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Buckeye Manufacturing Group",
+        "website": "https://buckeyemfg.example.com",
+        "location": "Columbus, United States",
+        "from": "2015-02",
+        "to": "Present",
+        "position": "Continuous Improvement Manager",
+        "activities": [
+          {
+            "project": "Multi-site lean transformation",
+            "tasks": [
+              "Deployed lean across four plants",
+              "Led high-impact Six Sigma projects",
+              "Coached and certified belts"
+            ]
+          }
+        ],
+        "achievements": [
+          "Delivered over USD 6m in annualised savings",
+          "Built a belt certification program with 30 graduates"
+        ],
+        "toolsAndTechnologies": [
+          "Minitab",
+          "SAP",
+          "Value stream mapping"
+        ]
+      },
+      {
+        "company": "Riverside Industries",
+        "website": "https://riversideind.example.com",
+        "location": "Cincinnati, United States",
+        "from": "2009-08",
+        "to": "2015-01",
+        "position": "Continuous Improvement Engineer",
+        "activities": [
+          {
+            "project": "Distribution flow improvement",
+            "tasks": [
+              "Mapped value streams",
+              "Led kaizen events",
+              "Standardised work across shifts"
+            ]
+          }
+        ],
+        "achievements": [
+          "Improved on-time shipment rate to 98%"
+        ],
+        "toolsAndTechnologies": [
+          "Lean",
+          "Kaizen",
+          "Minitab"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2009",
+        "institution": "Ohio State University",
+        "degree": "BSc",
+        "fieldOfStudy": "Industrial & Systems Engineering",
+        "achievements": [
+          "Operations focus",
+          "Lean enterprise capstone"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Six Sigma Black Belt",
+        "institution": "ASQ",
+        "year": "2014",
+        "description": "Advanced certification in Six Sigma project leadership."
+      },
+      {
+        "title": "PMP",
+        "institution": "Project Management Institute",
+        "year": "2017",
+        "description": "Project Management Professional certification."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Minitab",
+        "SAP",
+        "Lean",
+        "Six Sigma",
+        "Value stream mapping",
+        "DMAIC"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Coaching",
+        "Influencing",
+        "Resilience"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Multi-site lean rollout",
+        "description": "Directed a lean operating system rollout across four manufacturing plants.",
+        "date": "2021-12",
+        "impact": "Generated over USD 6m in annual savings and embedded daily management."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Marathon running",
+      "Mentoring women in engineering",
+      "Travel"
+    ],
+    "references": [
+      {
+        "name": "Paul Draper",
+        "position": "VP Operations",
+        "company": "Buckeye Manufacturing Group",
+        "contact": {
+          "phone": "+1 (614) 555 0166",
+          "email": "paul.draper@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "USD",
+      "min": 125000,
+      "max": 150000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Continuous Improvement",
+      "secondaryClusters": [
+        "Operational Excellence",
+        "Industrial Engineering"
+      ],
+      "functionalExpertise": [
+        "Lean transformation",
+        "Six Sigma leadership",
+        "Change management"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Delivered multimillion-dollar savings",
+        "Built belt certification programs"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Distribution"
+      ],
+      "environmentFit": [
+        "Manufacturing group",
+        "Operations organisation"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Long continuous-improvement career leading multi-site transformations and coaching belts places this candidate at manager level."
+    },
+    "searchIndex": {
+      "roles": [
+        "Continuous Improvement Manager",
+        "Lean Manager",
+        "Industrial Engineer"
+      ],
+      "skills": [
+        "Lean",
+        "Six Sigma",
+        "Minitab",
+        "SAP",
+        "Kaizen",
+        "Value Stream Mapping"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Distribution"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "continuous-improvement",
+      "lean",
+      "manager",
+      "black-belt"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Supply chain and operations engineer with nine years improving planning, inventory and logistics in manufacturing environments. Combines analytical modelling with SAP and lean methods to balance service, cost and stock. Skilled at turning demand and capacity data into robust operational plans.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Chloe Armstrong",
+      "role": "Senior Supply Chain Engineer",
+      "summary": "Supply chain engineer who blends analytics, SAP and lean thinking to optimise planning, inventory and logistics for manufacturers.",
+      "contact": {
+        "phone": "+44 7700 901301",
+        "email": "chloe.armstrong@example.com",
+        "address": {
+          "streetNumber": "52",
+          "streetName": "Briggate",
+          "streetType": "Street",
+          "city": "Leeds",
+          "state": "England",
+          "zipCode": "LS1 6HD",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/chloe-armstrong-supplychain"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-05",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Planning",
+        "skills": [
+          "Demand planning",
+          "Capacity planning",
+          "Production planning",
+          "S&OP"
+        ]
+      },
+      {
+        "category": "Inventory & Logistics",
+        "skills": [
+          "Inventory optimisation",
+          "MRP",
+          "Logistics analysis"
+        ]
+      },
+      {
+        "category": "Tools & Methods",
+        "skills": [
+          "SAP",
+          "Excel modelling",
+          "Lean",
+          "Power BI"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Production planning",
+        "Inventory optimisation",
+        "S&OP"
+      ],
+      "keyResponsibilities": [
+        "Build and run planning and inventory models",
+        "Improve MRP and scheduling processes",
+        "Support the S&OP cycle with analysis"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Yorkshire Precision Manufacturing",
+        "website": "https://yorkshireprecision.example.com",
+        "location": "Leeds, United Kingdom",
+        "from": "2020-02",
+        "to": "Present",
+        "position": "Senior Supply Chain Engineer",
+        "activities": [
+          {
+            "project": "Inventory optimisation programme",
+            "tasks": [
+              "Modelled safety stock and reorder policies",
+              "Improved MRP parameters in SAP",
+              "Built planning dashboards in Power BI"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduced finished-goods inventory by 20% while holding service levels",
+          "Improved schedule adherence to 95%"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Power BI",
+          "Excel modelling"
+        ]
+      },
+      {
+        "company": "Airedale Components",
+        "website": "https://airedalecomponents.example.com",
+        "location": "Bradford, United Kingdom",
+        "from": "2016-09",
+        "to": "2020-01",
+        "position": "Supply Chain Analyst",
+        "activities": [
+          {
+            "project": "Demand planning improvement",
+            "tasks": [
+              "Analysed demand patterns",
+              "Maintained MRP data",
+              "Supported the S&OP process"
+            ]
+          }
+        ],
+        "achievements": [
+          "Improved forecast accuracy across key product lines"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Excel modelling",
+          "Lean"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "University of Leeds",
+        "degree": "BEng",
+        "fieldOfStudy": "Industrial Engineering",
+        "achievements": [
+          "Upper second-class honours",
+          "Operations and logistics focus"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "APICS CPIM",
+        "institution": "ASCM",
+        "year": "2019",
+        "description": "Certified in Planning and Inventory Management."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "Power BI",
+        "Excel modelling",
+        "MRP",
+        "Lean",
+        "Inventory optimisation"
+      ],
+      "softSkills": [
+        "Analytical thinking",
+        "Cross-functional collaboration",
+        "Pragmatism"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "French",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Safety stock optimisation",
+        "description": "Rebuilt safety-stock policies using service-level modelling.",
+        "date": "2022-11",
+        "impact": "Cut inventory by 20% while maintaining 98% service level."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Netball",
+      "Baking",
+      "Data visualisation"
+    ],
+    "references": [
+      {
+        "name": "Mark Sullivan",
+        "position": "Operations Director",
+        "company": "Yorkshire Precision Manufacturing",
+        "contact": {
+          "phone": "+44 7700 901322",
+          "email": "mark.sullivan@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 48000,
+      "max": 60000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Supply Chain Engineering",
+      "secondaryClusters": [
+        "Operations",
+        "Production Planning"
+      ],
+      "functionalExpertise": [
+        "Production planning",
+        "Inventory optimisation",
+        "S&OP"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced inventory",
+        "Improved schedule adherence"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Industrial products"
+      ],
+      "environmentFit": [
+        "Manufacturing plant",
+        "Operations organisation"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Consistent planning and inventory optimisation work with SAP and analytics delivering measurable results fits a senior supply chain engineer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Supply Chain Engineer",
+        "Operations Engineer",
+        "Production Planner"
+      ],
+      "skills": [
+        "SAP",
+        "Power BI",
+        "MRP",
+        "Lean",
+        "Inventory Optimisation",
+        "S&OP"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Supply Chain"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "supply-chain",
+      "sap",
+      "senior",
+      "planning"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Manufacturing and production director with twenty years leading operations across automotive and industrial plants. Owns production planning, engineering and continuous improvement for multi-line sites, delivering safety, quality, cost and delivery targets. Blends strong operational leadership with a data-driven improvement mindset.",
+    "careerStartYear": 2006,
+    "personalInformation": {
+      "name": "Richard Ellison",
+      "role": "Manufacturing Director",
+      "summary": "Manufacturing director who leads multi-line operations and drives safety, quality, cost and delivery performance through engaged teams.",
+      "contact": {
+        "phone": "+44 7700 901401",
+        "email": "richard.ellison@example.com",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "Broad",
+          "streetType": "Street",
+          "city": "Coventry",
+          "state": "England",
+          "zipCode": "CV1 1LT",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/richard-ellison-manufacturing"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-02-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Weekday evenings"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Operations Leadership",
+        "skills": [
+          "Production management",
+          "Manufacturing strategy",
+          "SQCDP",
+          "P&L ownership"
+        ]
+      },
+      {
+        "category": "Planning & Systems",
+        "skills": [
+          "Production planning",
+          "SAP",
+          "Capacity management"
+        ]
+      },
+      {
+        "category": "Improvement",
+        "skills": [
+          "Lean manufacturing",
+          "Six Sigma",
+          "Kaizen",
+          "5S"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Manufacturing operations leadership",
+        "Production planning",
+        "Operational excellence"
+      ],
+      "keyResponsibilities": [
+        "Lead multi-line manufacturing operations",
+        "Own site safety, quality, cost and delivery",
+        "Set manufacturing strategy and improvement roadmap"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Warwickshire Automotive Manufacturing",
+        "website": "https://warwickauto.example.com",
+        "location": "Coventry, United Kingdom",
+        "from": "2016-01",
+        "to": "Present",
+        "position": "Manufacturing Director",
+        "activities": [
+          {
+            "project": "Site operational turnaround",
+            "tasks": [
+              "Led a 400-person manufacturing operation",
+              "Owned production planning and capacity strategy",
+              "Drove a lean improvement programme"
+            ]
+          }
+        ],
+        "achievements": [
+          "Improved on-time delivery from 84% to 97%",
+          "Cut manufacturing cost per unit by 12% over three years"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Lean manufacturing",
+          "Six Sigma"
+        ]
+      },
+      {
+        "company": "Coventry Industrial Products",
+        "website": "https://coventryindustrial.example.com",
+        "location": "Coventry, United Kingdom",
+        "from": "2006-09",
+        "to": "2015-12",
+        "position": "Production Manager",
+        "activities": [
+          {
+            "project": "Production line expansion",
+            "tasks": [
+              "Managed production lines and planning",
+              "Led continuous improvement teams",
+              "Commissioned a new assembly line"
+            ]
+          }
+        ],
+        "achievements": [
+          "Progressed from shift engineer to production manager"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Lean manufacturing",
+          "5S"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2006",
+        "institution": "University of Warwick",
+        "degree": "MEng",
+        "fieldOfStudy": "Manufacturing Engineering",
+        "achievements": [
+          "Upper second-class honours",
+          "WMG-affiliated programme"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Six Sigma Black Belt",
+        "institution": "British Quality Foundation",
+        "year": "2013",
+        "description": "Advanced certification in Six Sigma project leadership."
+      },
+      {
+        "title": "Chartered Engineer (CEng MIMechE)",
+        "institution": "Institution of Mechanical Engineers",
+        "year": "2012",
+        "description": "Professional registration in mechanical engineering."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "Lean manufacturing",
+        "Six Sigma",
+        "Production planning",
+        "Capacity management",
+        "5S"
+      ],
+      "softSkills": [
+        "Operational leadership",
+        "Strategic thinking",
+        "People development",
+        "Resilience"
+      ],
+      "languages": [
+        {
+          "language": "English",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "German",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Site turnaround",
+        "description": "Led an operational turnaround of an underperforming automotive plant.",
+        "date": "2020-06",
+        "impact": "Lifted on-time delivery to 97% and reduced unit cost by 12%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Golf",
+      "Classic motorcycles",
+      "Mentoring emerging leaders"
+    ],
+    "references": [
+      {
+        "name": "Julia Kern",
+        "position": "Group Operations VP",
+        "company": "Warwickshire Automotive Manufacturing",
+        "contact": {
+          "phone": "+44 7700 901422",
+          "email": "julia.kern@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "GBP",
+      "min": 95000,
+      "max": 120000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Manufacturing Operations Leadership",
+      "secondaryClusters": [
+        "Production Management",
+        "Operational Excellence"
+      ],
+      "functionalExpertise": [
+        "Manufacturing operations leadership",
+        "Production planning",
+        "Operational excellence"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Improved on-time delivery",
+        "Reduced unit cost"
+      ],
+      "industryDomains": [
+        "Automotive",
+        "Industrial manufacturing"
+      ],
+      "environmentFit": [
+        "Manufacturing plant",
+        "Multi-site operations"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "executiveInfluence",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Twenty years progressing to full site P&L and operational leadership of a large plant places this candidate at director level."
+    },
+    "searchIndex": {
+      "roles": [
+        "Manufacturing Director",
+        "Production Manager",
+        "Operations Manager"
+      ],
+      "skills": [
+        "SAP",
+        "Lean",
+        "Six Sigma",
+        "Production Planning",
+        "5S"
+      ],
+      "industries": [
+        "Automotive",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "manufacturing",
+      "operations",
+      "director",
+      "leadership"
+    ]
+  }
+]

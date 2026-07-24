@@ -10,7 +10,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
-import org.bson.types.Binary;
 
 import java.time.Instant;
 import java.util.List;
@@ -42,7 +41,21 @@ public class CVDTO extends AbstractQorvaDTO {
     private SalaryExpectation salaryExpectation;
     private CandidateClustering candidateClustering;
     private SearchIndex searchIndex;
-    private Binary attachment;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private AttachmentInfo attachment;
+
+    /** Extracted source text — persisted for re-analysis, never serialized to API responses. */
+    @JsonProperty(access = Access.WRITE_ONLY)
+    private String rawText;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant contentDate;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private String contentDateSource;
+
     private List<String> tags;
 
     @JsonProperty(access = Access.READ_ONLY)

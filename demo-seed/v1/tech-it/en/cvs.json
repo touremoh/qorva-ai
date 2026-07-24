@@ -1,0 +1,2831 @@
+[
+  {
+    "candidateProfileSummary": "Backend software engineer with three years of experience building REST and event-driven services in Java and Spring Boot. Comfortable owning features end to end, from database schema to production monitoring. Keen on clean code, testing discipline and steadily growing into system design.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Oliver Whitfield",
+      "role": "Backend Software Engineer",
+      "summary": "Java backend developer who enjoys turning fuzzy requirements into reliable, well-tested services and learning from senior engineers through code review.",
+      "contact": {
+        "phone": "+44 7700 900142",
+        "email": "oliver.whitfield@example.com",
+        "address": {
+          "streetNumber": "48",
+          "streetName": "Hoxton",
+          "streetType": "Square",
+          "city": "London",
+          "state": "England",
+          "zipCode": "N1 6PB",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/oliver-whitfield",
+          "github": "https://github.com/owhitfield-dev",
+          "website": "https://oliverwhitfield.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Weekday evenings", "Friday afternoons"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Backend Development", "skills": ["Java", "Spring Boot", "REST APIs", "JPA/Hibernate"] },
+      { "category": "Data Stores", "skills": ["PostgreSQL", "Redis", "Flyway"] },
+      { "category": "Testing", "skills": ["JUnit 5", "Mockito", "Testcontainers"] },
+      { "category": "Tooling", "skills": ["Git", "Maven", "Docker", "GitHub Actions"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Service development", "Relational data modelling", "Automated testing"],
+      "keyResponsibilities": ["Implement and maintain backend microservices", "Write unit and integration tests", "Participate in code reviews and on-call rotations"]
+    },
+    "workExperience": [
+      {
+        "company": "Ordio Payments",
+        "website": "https://ordio.example.com",
+        "location": "London, United Kingdom",
+        "from": "2023-06",
+        "to": "Present",
+        "position": "Backend Software Engineer",
+        "activities": [
+          {
+            "project": "Merchant settlement service",
+            "tasks": ["Built Spring Boot endpoints for settlement reconciliation", "Modelled ledger tables and wrote Flyway migrations", "Added Testcontainers-based integration tests"]
+          }
+        ],
+        "achievements": ["Reduced reconciliation job runtime by 35% by batching database writes", "Raised service unit-test coverage from 48% to 78%"],
+        "toolsAndTechnologies": ["Java", "Spring Boot", "PostgreSQL", "Redis", "Docker", "GitHub Actions"]
+      },
+      {
+        "company": "Brightloop Studio",
+        "website": "https://brightloop.example.com",
+        "location": "London, United Kingdom",
+        "from": "2022-07",
+        "to": "2023-05",
+        "position": "Junior Software Engineer",
+        "activities": [
+          {
+            "project": "Client CMS platform",
+            "tasks": ["Implemented CRUD APIs for content models", "Fixed bugs reported by QA", "Wrote documentation for internal endpoints"]
+          }
+        ],
+        "achievements": ["Shipped first production feature within two months of joining"],
+        "toolsAndTechnologies": ["Java", "Spring Boot", "MySQL", "Git"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2022",
+        "institution": "University of Leeds",
+        "degree": "BSc",
+        "fieldOfStudy": "Computer Science",
+        "achievements": ["First-class honours", "Final-year project on distributed caching"]
+      }
+    ],
+    "certifications": [
+      { "title": "Oracle Certified Associate, Java SE 8 Programmer", "institution": "Oracle", "year": "2023", "description": "Foundational certification in core Java language features." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Java", "Spring Boot", "PostgreSQL", "Redis", "Docker", "REST APIs", "JUnit"],
+      "softSkills": ["Curiosity", "Collaboration", "Attention to detail"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Spanish", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Open-source rate limiter", "description": "A small Java library implementing token-bucket rate limiting for Spring applications.", "date": "2024-02", "impact": "Adopted by two internal teams for API throttling." }
+    ],
+    "interestsAndHobbies": ["Bouldering", "Chess", "Home-lab tinkering"],
+    "references": [
+      { "name": "Priya Anand", "position": "Engineering Manager", "company": "Ordio Payments", "contact": { "phone": "+44 7700 900188", "email": "priya.anand@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "GBP", "min": 48000, "max": 58000 },
+    "candidateClustering": {
+      "primaryCluster": "Backend Engineering",
+      "secondaryClusters": ["Distributed Systems", "API Development"],
+      "functionalExpertise": ["Service development", "Relational data modelling", "Automated testing"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Improved batch job performance", "Increased test coverage"],
+      "industryDomains": ["Fintech", "Digital agencies"],
+      "environmentFit": ["Startup", "SaaS"],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "Consistent Java and Spring Boot backend work with growing testing maturity places this candidate firmly in early-career backend engineering."
+    },
+    "searchIndex": {
+      "roles": ["Backend Engineer", "Java Developer", "Software Engineer"],
+      "skills": ["Java", "Spring Boot", "PostgreSQL", "Redis", "REST APIs", "Docker", "JUnit"],
+      "industries": ["Fintech", "Software"]
+    },
+    "tags": ["java", "spring-boot", "backend", "junior"]
+  },
+  {
+    "candidateProfileSummary": "Full-stack engineer with over a decade of experience delivering customer-facing web applications across the JavaScript and Java ecosystems. Comfortable across React frontends, Node and Spring backends, and the CI/CD that ships them. Enjoys mentoring and setting pragmatic engineering standards.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Hannah Fletcher",
+      "role": "Senior Full-Stack Engineer",
+      "summary": "Senior full-stack engineer who bridges design and infrastructure, shipping accessible, well-instrumented products at pace.",
+      "contact": {
+        "phone": "+44 7700 900233",
+        "email": "hannah.fletcher@example.com",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "Deansgate",
+          "streetType": "Mews",
+          "unit": "Flat 3",
+          "city": "Manchester",
+          "state": "England",
+          "zipCode": "M3 2BW",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/hannah-fletcher-eng",
+          "github": "https://github.com/hfletcher",
+          "website": "https://hannahfletcher.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["Weekday mornings"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent", "contract"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Frontend", "skills": ["React", "TypeScript", "Next.js", "Redux", "Accessibility"] },
+      { "category": "Backend", "skills": ["Node.js", "Java", "Spring Boot", "GraphQL"] },
+      { "category": "Data", "skills": ["PostgreSQL", "MongoDB", "Prisma"] },
+      { "category": "Delivery", "skills": ["Docker", "GitHub Actions", "AWS", "Cypress"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Full-stack web development", "Design systems", "CI/CD pipelines"],
+      "keyResponsibilities": ["Own features from UI to database", "Set frontend architecture standards", "Mentor mid-level engineers"]
+    },
+    "workExperience": [
+      {
+        "company": "Northwind Retail Tech",
+        "website": "https://northwind-retail.example.com",
+        "location": "Manchester, United Kingdom",
+        "from": "2020-04",
+        "to": "Present",
+        "position": "Senior Full-Stack Engineer",
+        "activities": [
+          {
+            "project": "Headless commerce storefront",
+            "tasks": ["Led migration from a monolith to a Next.js + GraphQL storefront", "Built reusable component library with accessibility baked in", "Introduced Cypress end-to-end tests into CI"]
+          }
+        ],
+        "achievements": ["Improved Largest Contentful Paint from 4.2s to 1.6s", "Cut checkout defect rate by 40% after adding E2E coverage"],
+        "toolsAndTechnologies": ["React", "Next.js", "TypeScript", "GraphQL", "Node.js", "PostgreSQL", "AWS", "Cypress"]
+      },
+      {
+        "company": "Loomly Labs",
+        "website": "https://loomlylabs.example.com",
+        "location": "Manchester, United Kingdom",
+        "from": "2017-09",
+        "to": "2020-03",
+        "position": "Full-Stack Engineer",
+        "activities": [
+          {
+            "project": "SaaS scheduling product",
+            "tasks": ["Built React dashboards backed by a Spring Boot API", "Implemented OAuth2 login and role-based access", "Owned the release pipeline"]
+          }
+        ],
+        "achievements": ["Delivered the multi-tenant billing module used by 3,000 accounts"],
+        "toolsAndTechnologies": ["React", "Java", "Spring Boot", "MongoDB", "Docker"]
+      },
+      {
+        "company": "Tinderbox Digital",
+        "website": "https://tinderbox.example.com",
+        "location": "Leeds, United Kingdom",
+        "from": "2015-06",
+        "to": "2017-08",
+        "position": "Junior Web Developer",
+        "activities": [
+          {
+            "project": "Agency client sites",
+            "tasks": ["Built responsive marketing sites", "Integrated CMS back-ends", "Optimised page performance"]
+          }
+        ],
+        "achievements": ["Delivered 20+ client sites on schedule"],
+        "toolsAndTechnologies": ["JavaScript", "PHP", "MySQL", "SCSS"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "University of Manchester",
+        "degree": "BSc",
+        "fieldOfStudy": "Software Engineering",
+        "achievements": ["Upper second-class honours", "Women in Tech society lead"]
+      }
+    ],
+    "certifications": [
+      { "title": "AWS Certified Developer – Associate", "institution": "Amazon Web Services", "year": "2021", "description": "Validates building and deploying applications on AWS." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["React", "TypeScript", "Next.js", "Node.js", "Java", "Spring Boot", "GraphQL", "PostgreSQL", "AWS"],
+      "softSkills": ["Mentoring", "Pragmatism", "Clear communication"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "French", "proficiency": { "read": "intermediate", "written": "intermediate", "spoken": "basic" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Accessible component library", "description": "An internal React design system meeting WCAG 2.1 AA.", "date": "2021-11", "impact": "Adopted across four product teams, cutting UI build time by a third." }
+    ],
+    "interestsAndHobbies": ["Trail running", "Cooking", "Volunteering as a coding mentor"],
+    "references": [
+      { "name": "Marcus Bell", "position": "Head of Engineering", "company": "Northwind Retail Tech", "contact": { "phone": "+44 7700 900301", "email": "marcus.bell@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "GBP", "min": 72000, "max": 85000 },
+    "candidateClustering": {
+      "primaryCluster": "Full-Stack Engineering",
+      "secondaryClusters": ["Frontend Engineering", "Web Performance"],
+      "functionalExpertise": ["Full-stack web development", "Design systems", "CI/CD"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Improved web performance", "Reduced defect rates"],
+      "industryDomains": ["Retail", "SaaS"],
+      "environmentFit": ["Scale-up", "SaaS"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Deep frontend expertise paired with solid backend delivery and mentoring signals a T-shaped senior full-stack engineer."
+    },
+    "searchIndex": {
+      "roles": ["Full-Stack Engineer", "Frontend Engineer", "Senior Software Engineer"],
+      "skills": ["React", "TypeScript", "Next.js", "Node.js", "Java", "Spring Boot", "GraphQL", "AWS", "PostgreSQL"],
+      "industries": ["Retail", "Software"]
+    },
+    "tags": ["full-stack", "react", "typescript", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Frontend engineer specialising in performant, accessible single-page applications. Nine years building design-system-driven UIs in React and Vue with strong attention to interaction detail and Core Web Vitals. Comfortable partnering closely with designers and product managers.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Cian O'Sullivan",
+      "role": "Senior Frontend Engineer",
+      "summary": "Frontend specialist who obsesses over accessibility, animation and load performance in complex web applications.",
+      "contact": {
+        "phone": "+353 85 700 0142",
+        "email": "cian.osullivan@example.ie",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Grand Canal",
+          "streetType": "Quay",
+          "city": "Dublin",
+          "state": "Leinster",
+          "zipCode": "D02 XT91",
+          "country": "Ireland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/cian-osullivan",
+          "github": "https://github.com/cianosullivan",
+          "website": "https://cianos.example.ie"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Weekday afternoons"],
+        "preferredWorkTypes": ["remote"],
+        "preferredContractTypes": ["permanent", "contract"],
+        "willingToRelocate": false,
+        "remoteOnly": true
+      }
+    },
+    "keySkills": [
+      { "category": "Frameworks", "skills": ["React", "Vue.js", "TypeScript", "Svelte"] },
+      { "category": "Styling & UX", "skills": ["CSS Architecture", "Tailwind CSS", "Framer Motion", "WCAG Accessibility"] },
+      { "category": "Performance", "skills": ["Core Web Vitals", "Webpack", "Vite", "Lighthouse"] },
+      { "category": "Testing", "skills": ["Jest", "Playwright", "Storybook"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Single-page application architecture", "Web accessibility", "Frontend performance"],
+      "keyResponsibilities": ["Build and maintain component libraries", "Own frontend performance budgets", "Collaborate with product and design"]
+    },
+    "workExperience": [
+      {
+        "company": "Ardent Health Platform",
+        "website": "https://ardenthealth.example.ie",
+        "location": "Dublin, Ireland",
+        "from": "2021-01",
+        "to": "Present",
+        "position": "Senior Frontend Engineer",
+        "activities": [
+          {
+            "project": "Clinician workflow app",
+            "tasks": ["Rebuilt patient dashboards in React and TypeScript", "Established a Storybook-driven design system", "Drove accessibility remediation to WCAG 2.1 AA"]
+          }
+        ],
+        "achievements": ["Achieved a Lighthouse performance score above 95 on core screens", "Reduced accessibility defects to zero across audited pages"],
+        "toolsAndTechnologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Playwright", "Storybook"]
+      },
+      {
+        "company": "Kettle Software",
+        "website": "https://kettlesoftware.example.ie",
+        "location": "Dublin, Ireland",
+        "from": "2018-05",
+        "to": "2020-12",
+        "position": "Frontend Engineer",
+        "activities": [
+          {
+            "project": "Vue analytics suite",
+            "tasks": ["Built interactive charts and filters in Vue.js", "Optimised bundle size", "Wrote component unit tests"]
+          }
+        ],
+        "achievements": ["Cut initial bundle size by 45% through code splitting"],
+        "toolsAndTechnologies": ["Vue.js", "JavaScript", "Webpack", "Jest"]
+      },
+      {
+        "company": "Pixelforge",
+        "website": "https://pixelforge.example.ie",
+        "location": "Galway, Ireland",
+        "from": "2016-07",
+        "to": "2018-04",
+        "position": "Junior Frontend Developer",
+        "activities": [
+          {
+            "project": "E-commerce theming",
+            "tasks": ["Implemented responsive storefront templates", "Fixed cross-browser layout issues"]
+          }
+        ],
+        "achievements": ["Delivered mobile-first redesign that lifted conversion by 12%"],
+        "toolsAndTechnologies": ["JavaScript", "SCSS", "jQuery"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "University College Dublin",
+        "degree": "BSc",
+        "fieldOfStudy": "Computer Science",
+        "achievements": ["First-class honours"]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": ["React", "Vue.js", "TypeScript", "Tailwind CSS", "Vite", "Playwright", "WCAG Accessibility"],
+      "softSkills": ["Empathy for users", "Craftsmanship", "Cross-team collaboration"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Irish", "proficiency": { "read": "intermediate", "written": "intermediate", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "A11y audit toolkit", "description": "An open-source browser extension for quick WCAG contrast and landmark checks.", "date": "2022-05", "impact": "Over 4,000 installs and used in the team's QA workflow." }
+    ],
+    "interestsAndHobbies": ["Photography", "Sea swimming", "Typography"],
+    "references": [
+      { "name": "Aoife Kelly", "position": "Design Director", "company": "Ardent Health Platform", "contact": { "phone": "+353 85 700 0210", "email": "aoife.kelly@example.ie" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 90000, "max": 110000 },
+    "candidateClustering": {
+      "primaryCluster": "Frontend Engineering",
+      "secondaryClusters": ["Web Accessibility", "Web Performance"],
+      "functionalExpertise": ["SPA architecture", "Accessibility", "Frontend performance"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Improved accessibility compliance", "Improved web vitals"],
+      "industryDomains": ["Healthcare", "E-commerce"],
+      "environmentFit": ["SaaS", "Remote-first"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Sustained specialisation in accessible, performant frontend work across React and Vue marks a senior frontend specialist."
+    },
+    "searchIndex": {
+      "roles": ["Frontend Engineer", "UI Engineer", "Senior Software Engineer"],
+      "skills": ["React", "Vue.js", "TypeScript", "Tailwind CSS", "Web Accessibility", "Core Web Vitals", "Playwright"],
+      "industries": ["Healthcare", "E-commerce", "Software"]
+    },
+    "tags": ["frontend", "react", "accessibility", "senior", "remote"]
+  },
+  {
+    "candidateProfileSummary": "Principal mobile engineer with sixteen years shipping iOS applications at scale, from indie apps to products serving tens of millions of users. Deep expertise in Swift, app architecture and performance, and a track record of leading cross-team technical initiatives. Sets mobile standards and mentors engineers across the org.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Daniela Rossi",
+      "role": "Principal iOS Engineer",
+      "summary": "Principal mobile engineer who shapes iOS architecture, developer experience and performance across large app portfolios.",
+      "contact": {
+        "phone": "+1 415 555 0147",
+        "email": "daniela.rossi@example.com",
+        "address": {
+          "streetNumber": "980",
+          "streetName": "Folsom",
+          "streetType": "Street",
+          "unit": "Apt 6C",
+          "city": "San Francisco",
+          "state": "California",
+          "zipCode": "94107",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/daniela-rossi-ios",
+          "github": "https://github.com/danielarossi",
+          "website": "https://danielarossi.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-05",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Weekday evenings PT"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "iOS Development", "skills": ["Swift", "SwiftUI", "UIKit", "Combine", "Objective-C"] },
+      { "category": "Architecture", "skills": ["Modularization", "MVVM", "Dependency Injection", "The Composable Architecture"] },
+      { "category": "Performance & Tooling", "skills": ["Instruments", "Xcode", "Fastlane", "Swift Package Manager"] },
+      { "category": "Quality", "skills": ["XCTest", "Snapshot Testing", "CI for Mobile"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["iOS application architecture", "Mobile performance", "Technical leadership"],
+      "keyResponsibilities": ["Define mobile architecture and standards", "Lead cross-team technical initiatives", "Mentor senior and staff engineers"]
+    },
+    "workExperience": [
+      {
+        "company": "Kestrel Mobility",
+        "website": "https://kestrel.example.com",
+        "location": "San Francisco, United States",
+        "from": "2019-02",
+        "to": "Present",
+        "position": "Principal iOS Engineer",
+        "activities": [
+          {
+            "project": "Super-app modularization",
+            "tasks": ["Led modularization of a 1.2M-line iOS codebase into 60+ Swift packages", "Introduced a scalable feature-flagging and A/B framework", "Established mobile performance and release standards"]
+          }
+        ],
+        "achievements": ["Cut app cold-start time by 38%", "Reduced average build time from 22 to 7 minutes across the org"],
+        "toolsAndTechnologies": ["Swift", "SwiftUI", "Combine", "Swift Package Manager", "Fastlane", "Instruments"]
+      },
+      {
+        "company": "Lumen Apps",
+        "website": "https://lumenapps.example.com",
+        "location": "San Francisco, United States",
+        "from": "2014-06",
+        "to": "2019-01",
+        "position": "Senior iOS Engineer",
+        "activities": [
+          {
+            "project": "Consumer fitness app",
+            "tasks": ["Owned core workout tracking features", "Migrated legacy Objective-C modules to Swift", "Built offline sync engine"]
+          }
+        ],
+        "achievements": ["Grew app rating from 3.9 to 4.7 after reliability push"],
+        "toolsAndTechnologies": ["Swift", "Objective-C", "UIKit", "Core Data"]
+      },
+      {
+        "company": "Foghorn Studios",
+        "website": "https://foghorn.example.com",
+        "location": "Portland, United States",
+        "from": "2010-08",
+        "to": "2014-05",
+        "position": "iOS Developer",
+        "activities": [
+          {
+            "project": "Indie utility apps",
+            "tasks": ["Built and shipped several App Store utilities", "Handled full lifecycle from design to release"]
+          }
+        ],
+        "achievements": ["Two apps featured by Apple in the utilities category"],
+        "toolsAndTechnologies": ["Objective-C", "UIKit", "Core Animation"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2010",
+        "institution": "University of California, Berkeley",
+        "degree": "BS",
+        "fieldOfStudy": "Electrical Engineering and Computer Sciences",
+        "achievements": ["Graduated with honors"]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Swift", "SwiftUI", "UIKit", "Combine", "Objective-C", "Swift Package Manager", "Fastlane", "XCTest"],
+      "softSkills": ["Technical leadership", "Mentoring", "Systems thinking"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Italian", "proficiency": { "read": "native", "written": "fluent", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Mobile modularization playbook", "description": "An internal and conference-shared guide to breaking up large iOS monoliths.", "date": "2022-09", "impact": "Presented at a major mobile conference and adopted by several partner teams." },
+      { "title": "Open-source dependency graph tool", "description": "A CLI that visualises Swift package dependencies to spot cycles.", "date": "2023-03", "impact": "Over 2,000 GitHub stars." }
+    ],
+    "interestsAndHobbies": ["Rock climbing", "Woodworking", "Conference speaking"],
+    "references": [
+      { "name": "Andre Whitmore", "position": "VP of Engineering", "company": "Kestrel Mobility", "contact": { "phone": "+1 415 555 0199", "email": "andre.whitmore@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 230000, "max": 280000 },
+    "candidateClustering": {
+      "primaryCluster": "Mobile Engineering",
+      "secondaryClusters": ["Technical Leadership", "Developer Experience"],
+      "functionalExpertise": ["iOS architecture", "Mobile performance", "Technical strategy"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Improved app startup and build times", "Raised product quality and ratings"],
+      "industryDomains": ["Consumer Apps", "Mobility"],
+      "environmentFit": ["Enterprise", "Scale-up"],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Long, deep iOS specialization combined with org-wide architectural leadership and mentoring clearly indicates a principal mobile engineer."
+    },
+    "searchIndex": {
+      "roles": ["Principal iOS Engineer", "Mobile Engineer", "Staff Engineer"],
+      "skills": ["Swift", "SwiftUI", "UIKit", "Combine", "Objective-C", "Fastlane", "Mobile Architecture"],
+      "industries": ["Consumer Apps", "Mobility", "Software"]
+    },
+    "tags": ["ios", "swift", "mobile", "principal", "leadership"]
+  },
+  {
+    "candidateProfileSummary": "QA and test engineering leader with fifteen years spanning manual, automated and performance testing. Now manages a team of SDETs and owns quality strategy across multiple product lines. Passionate about shift-left testing, reliable CI and coaching engineers into automation.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Marcus Coleman",
+      "role": "QA Engineering Manager",
+      "summary": "Quality engineering manager who builds automation-first test cultures and dependable release pipelines across product teams.",
+      "contact": {
+        "phone": "+1 512 555 0163",
+        "email": "marcus.coleman@example.com",
+        "address": {
+          "streetNumber": "2401",
+          "streetName": "East 6th",
+          "streetType": "Street",
+          "city": "Austin",
+          "state": "Texas",
+          "zipCode": "78702",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/marcus-coleman-qa",
+          "github": "https://github.com/mcoleman-qa",
+          "website": "https://marcuscoleman.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Weekday afternoons CT"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Test Automation", "skills": ["Selenium", "Playwright", "Cypress", "REST Assured"] },
+      { "category": "Programming", "skills": ["Java", "Python", "TypeScript"] },
+      { "category": "Performance & Reliability", "skills": ["JMeter", "k6", "Chaos Testing"] },
+      { "category": "Leadership", "skills": ["Test Strategy", "Team Management", "Coaching"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Quality engineering strategy", "Test automation frameworks", "Team leadership"],
+      "keyResponsibilities": ["Own quality strategy across product lines", "Manage and grow a team of SDETs", "Champion shift-left testing practices"]
+    },
+    "workExperience": [
+      {
+        "company": "Vireo Software",
+        "website": "https://vireo.example.com",
+        "location": "Austin, United States",
+        "from": "2019-03",
+        "to": "Present",
+        "position": "QA Engineering Manager",
+        "activities": [
+          {
+            "project": "Quality transformation program",
+            "tasks": ["Built a cross-product test automation platform", "Grew the SDET team from 3 to 11 engineers", "Introduced performance and chaos testing into release gates"]
+          }
+        ],
+        "achievements": ["Reduced escaped production defects by 55%", "Cut regression cycle time from 3 days to 4 hours"],
+        "toolsAndTechnologies": ["Playwright", "Java", "k6", "GitHub Actions", "Docker"]
+      },
+      {
+        "company": "Cardinal Systems",
+        "website": "https://cardinalsystems.example.com",
+        "location": "Dallas, United States",
+        "from": "2014-07",
+        "to": "2019-02",
+        "position": "Lead SDET",
+        "activities": [
+          {
+            "project": "API test automation",
+            "tasks": ["Designed a REST Assured based API testing framework", "Mentored engineers on automation best practices", "Integrated tests into CI"]
+          }
+        ],
+        "achievements": ["Automated 80% of the regression suite"],
+        "toolsAndTechnologies": ["Java", "REST Assured", "Selenium", "Jenkins"]
+      },
+      {
+        "company": "Beacon QA Services",
+        "website": "https://beaconqa.example.com",
+        "location": "Houston, United States",
+        "from": "2011-06",
+        "to": "2014-06",
+        "position": "QA Analyst",
+        "activities": [
+          {
+            "project": "Enterprise web testing",
+            "tasks": ["Wrote and executed manual test plans", "Logged and triaged defects", "Started building Selenium scripts"]
+          }
+        ],
+        "achievements": ["Introduced first automated smoke tests for the flagship product"],
+        "toolsAndTechnologies": ["Selenium", "Java", "TestNG"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "Texas A&M University",
+        "degree": "BS",
+        "fieldOfStudy": "Computer Science",
+        "achievements": ["Dean's list"]
+      }
+    ],
+    "certifications": [
+      { "title": "ISTQB Advanced Level Test Manager", "institution": "ISTQB", "year": "2018", "description": "Advanced certification in test management and strategy." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Playwright", "Selenium", "Java", "Python", "k6", "REST Assured", "GitHub Actions"],
+      "softSkills": ["People management", "Coaching", "Stakeholder communication"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Flaky test detector", "description": "A tooling project that quarantines and reports flaky tests automatically.", "date": "2021-06", "impact": "Reduced CI reruns by 60% and restored trust in the pipeline." }
+    ],
+    "interestsAndHobbies": ["Cycling", "Barbecue", "Board games"],
+    "references": [
+      { "name": "Elena Duarte", "position": "Director of Engineering", "company": "Vireo Software", "contact": { "phone": "+1 512 555 0188", "email": "elena.duarte@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 165000, "max": 195000 },
+    "candidateClustering": {
+      "primaryCluster": "Quality Engineering",
+      "secondaryClusters": ["Test Automation", "Engineering Management"],
+      "functionalExpertise": ["Quality strategy", "Test automation", "Team leadership"],
+      "skillDepth": "hybrid",
+      "businessImpact": ["Reduced escaped defects", "Accelerated regression cycles"],
+      "industryDomains": ["Enterprise Software", "SaaS"],
+      "environmentFit": ["Enterprise", "SaaS"],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Progression from QA analyst to managing a growing SDET team, with quality-strategy ownership, points to a quality engineering manager."
+    },
+    "searchIndex": {
+      "roles": ["QA Manager", "Test Engineering Manager", "SDET Lead"],
+      "skills": ["Test Automation", "Playwright", "Selenium", "Java", "Performance Testing", "k6", "CI/CD"],
+      "industries": ["Enterprise Software", "Software"]
+    },
+    "tags": ["qa", "sdet", "test-automation", "manager"]
+  },
+  {
+    "candidateProfileSummary": "Data engineer with six years building batch and streaming pipelines on cloud data platforms. Comfortable across Python, SQL and Spark, with a focus on reliable, well-tested pipelines and clean data models. Enjoys collaborating with analysts and scientists to make data trustworthy and accessible.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Sofia Nkemdirim",
+      "role": "Data Engineer",
+      "summary": "Mid-level data engineer who builds dependable ELT pipelines and tidy data models on modern cloud stacks.",
+      "contact": {
+        "phone": "+44 7700 900411",
+        "email": "sofia.nkemdirim@example.com",
+        "address": {
+          "streetNumber": "22",
+          "streetName": "Park",
+          "streetType": "Row",
+          "city": "Bristol",
+          "state": "England",
+          "zipCode": "BS1 5LJ",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sofia-nkemdirim",
+          "github": "https://github.com/snkemdirim",
+          "website": "https://sofian.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Weekday mornings", "Weekday lunchtimes"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Pipelines", "skills": ["Apache Spark", "dbt", "Airflow", "Kafka"] },
+      { "category": "Languages", "skills": ["Python", "SQL", "Scala"] },
+      { "category": "Cloud & Storage", "skills": ["AWS", "Snowflake", "S3", "Redshift"] },
+      { "category": "Quality", "skills": ["Great Expectations", "pytest", "Data Contracts"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["ELT pipeline development", "Dimensional data modelling", "Data quality"],
+      "keyResponsibilities": ["Build and maintain data pipelines", "Model curated datasets for analytics", "Implement data quality checks"]
+    },
+    "workExperience": [
+      {
+        "company": "Tidewater Analytics",
+        "website": "https://tidewater.example.com",
+        "location": "Bristol, United Kingdom",
+        "from": "2022-02",
+        "to": "Present",
+        "position": "Data Engineer",
+        "activities": [
+          {
+            "project": "Warehouse modernization",
+            "tasks": ["Migrated legacy SQL jobs to dbt on Snowflake", "Built Airflow DAGs for daily ingestion", "Added Great Expectations data quality suites"]
+          }
+        ],
+        "achievements": ["Cut nightly pipeline runtime by 40%", "Reduced data incidents by 50% after adding quality gates"],
+        "toolsAndTechnologies": ["Python", "SQL", "dbt", "Snowflake", "Airflow", "AWS"]
+      },
+      {
+        "company": "Halcyon Retail Group",
+        "website": "https://halcyonretail.example.com",
+        "location": "Bristol, United Kingdom",
+        "from": "2020-07",
+        "to": "2022-01",
+        "position": "Junior Data Engineer",
+        "activities": [
+          {
+            "project": "Sales reporting pipeline",
+            "tasks": ["Built ingestion from POS systems into Redshift", "Wrote transformation scripts in Python", "Supported BI reporting needs"]
+          }
+        ],
+        "achievements": ["Automated a previously manual weekly sales report"],
+        "toolsAndTechnologies": ["Python", "SQL", "Redshift", "S3"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2020",
+        "institution": "University of Bristol",
+        "degree": "BSc",
+        "fieldOfStudy": "Mathematics and Computer Science",
+        "achievements": ["Upper second-class honours"]
+      }
+    ],
+    "certifications": [
+      { "title": "SnowPro Core Certification", "institution": "Snowflake", "year": "2023", "description": "Validates core knowledge of the Snowflake data cloud." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Python", "SQL", "Apache Spark", "dbt", "Airflow", "Snowflake", "AWS", "Kafka"],
+      "softSkills": ["Collaboration", "Reliability", "Problem solving"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Igbo", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "dbt style guide", "description": "An internal set of dbt modelling conventions and macros.", "date": "2023-08", "impact": "Standardised models across three analytics teams." }
+    ],
+    "interestsAndHobbies": ["Baking", "Cycling", "Community data workshops"],
+    "references": [
+      { "name": "Tom Ashworth", "position": "Analytics Lead", "company": "Tidewater Analytics", "contact": { "phone": "+44 7700 900455", "email": "tom.ashworth@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "GBP", "min": 55000, "max": 65000 },
+    "candidateClustering": {
+      "primaryCluster": "Data Engineering",
+      "secondaryClusters": ["Analytics Engineering", "Data Quality"],
+      "functionalExpertise": ["ELT pipelines", "Data modelling", "Data quality"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Reduced pipeline runtime", "Reduced data incidents"],
+      "industryDomains": ["Retail", "Analytics"],
+      "environmentFit": ["Scale-up", "SaaS"],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Modern ELT stack experience with dbt, Airflow and Snowflake and a focus on data quality places this candidate in mid-level data engineering."
+    },
+    "searchIndex": {
+      "roles": ["Data Engineer", "Analytics Engineer", "ETL Developer"],
+      "skills": ["Python", "SQL", "Apache Spark", "dbt", "Airflow", "Snowflake", "AWS", "Kafka"],
+      "industries": ["Retail", "Analytics", "Software"]
+    },
+    "tags": ["data-engineering", "dbt", "snowflake", "python", "midlevel"]
+  },
+  {
+    "candidateProfileSummary": "Data scientist with ten years turning messy data into deployed models and clear decisions. Strong in statistical modelling, experimentation and productionising machine learning. Trusted partner to product and business teams for measurement and forecasting.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Ethan Park",
+      "role": "Senior Data Scientist",
+      "summary": "Senior data scientist blending rigorous statistics with pragmatic engineering to ship models that move business metrics.",
+      "contact": {
+        "phone": "+1 646 555 0172",
+        "email": "ethan.park@example.com",
+        "address": {
+          "streetNumber": "155",
+          "streetName": "West 24th",
+          "streetType": "Street",
+          "unit": "Apt 9F",
+          "city": "New York",
+          "state": "New York",
+          "zipCode": "10011",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ethan-park-ds",
+          "github": "https://github.com/ethanpark",
+          "website": "https://ethanpark.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Weekday afternoons ET"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Modelling", "skills": ["Regression", "Gradient Boosting", "Time Series", "Bayesian Inference"] },
+      { "category": "Experimentation", "skills": ["A/B Testing", "Causal Inference", "Uplift Modelling"] },
+      { "category": "Languages & Tools", "skills": ["Python", "SQL", "R", "PyTorch", "scikit-learn"] },
+      { "category": "Production", "skills": ["MLflow", "Docker", "AWS SageMaker"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Predictive modelling", "Experimentation and causal inference", "Model deployment"],
+      "keyResponsibilities": ["Build and validate predictive models", "Design and analyse experiments", "Deploy and monitor models in production"]
+    },
+    "workExperience": [
+      {
+        "company": "Meridian Commerce",
+        "website": "https://meridiancommerce.example.com",
+        "location": "New York, United States",
+        "from": "2020-05",
+        "to": "Present",
+        "position": "Senior Data Scientist",
+        "activities": [
+          {
+            "project": "Demand forecasting",
+            "tasks": ["Built gradient-boosted demand forecasts across 40k SKUs", "Deployed models with MLflow and SageMaker", "Set up drift monitoring and retraining"]
+          }
+        ],
+        "achievements": ["Improved forecast accuracy by 18% over the prior baseline", "Reduced overstock costs by an estimated $4M annually"],
+        "toolsAndTechnologies": ["Python", "PyTorch", "scikit-learn", "MLflow", "AWS SageMaker", "SQL"]
+      },
+      {
+        "company": "Cobalt Insights",
+        "website": "https://cobaltinsights.example.com",
+        "location": "New York, United States",
+        "from": "2016-08",
+        "to": "2020-04",
+        "position": "Data Scientist",
+        "activities": [
+          {
+            "project": "Marketing attribution",
+            "tasks": ["Built causal attribution models", "Designed A/B experiments with the growth team", "Automated reporting dashboards"]
+          }
+        ],
+        "achievements": ["Reallocated spend based on model output, lifting ROAS by 22%"],
+        "toolsAndTechnologies": ["Python", "R", "SQL", "scikit-learn"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "Columbia University",
+        "degree": "MS",
+        "fieldOfStudy": "Statistics",
+        "achievements": ["Graduate research assistant in applied statistics"]
+      },
+      {
+        "year": "2014",
+        "institution": "University of Michigan",
+        "degree": "BS",
+        "fieldOfStudy": "Mathematics",
+        "achievements": ["Graduated with high distinction"]
+      }
+    ],
+    "certifications": [
+      { "title": "AWS Certified Machine Learning – Specialty", "institution": "Amazon Web Services", "year": "2022", "description": "Validates building, training and deploying ML models on AWS." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Python", "SQL", "R", "PyTorch", "scikit-learn", "MLflow", "AWS SageMaker", "A/B Testing"],
+      "softSkills": ["Storytelling with data", "Business partnership", "Rigor"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Korean", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Experimentation guide", "description": "A company-wide handbook on running trustworthy A/B tests.", "date": "2022-04", "impact": "Reduced misread experiments and standardised analysis across teams." }
+    ],
+    "interestsAndHobbies": ["Bouldering", "Jazz piano", "Kaggle competitions"],
+    "references": [
+      { "name": "Rachel Simmons", "position": "Head of Data Science", "company": "Meridian Commerce", "contact": { "phone": "+1 646 555 0190", "email": "rachel.simmons@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 175000, "max": 210000 },
+    "candidateClustering": {
+      "primaryCluster": "Data Science",
+      "secondaryClusters": ["Machine Learning", "Experimentation"],
+      "functionalExpertise": ["Predictive modelling", "Causal inference", "Model deployment"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Improved forecast accuracy", "Reduced overstock costs", "Improved marketing ROAS"],
+      "industryDomains": ["E-commerce", "Retail"],
+      "environmentFit": ["Scale-up", "Enterprise"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Strong statistical foundation plus production ML and experimentation impact across commerce indicates a senior data scientist."
+    },
+    "searchIndex": {
+      "roles": ["Data Scientist", "Machine Learning Scientist", "Applied Scientist"],
+      "skills": ["Python", "SQL", "PyTorch", "scikit-learn", "A/B Testing", "Causal Inference", "MLflow", "AWS SageMaker"],
+      "industries": ["E-commerce", "Retail", "Software"]
+    },
+    "tags": ["data-science", "machine-learning", "experimentation", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Machine learning engineer with eleven years bridging research and production, specialising in NLP and recommendation systems. Owns the full lifecycle from feature pipelines to low-latency serving. Comfortable operating models at scale with strong MLOps foundations.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Niamh Doyle",
+      "role": "Senior Machine Learning Engineer",
+      "summary": "ML engineer who ships production NLP and recommendation systems with robust pipelines, monitoring and low-latency serving.",
+      "contact": {
+        "phone": "+353 86 700 0155",
+        "email": "niamh.doyle@example.ie",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "Barrow",
+          "streetType": "Street",
+          "city": "Dublin",
+          "state": "Leinster",
+          "zipCode": "D01 R6X0",
+          "country": "Ireland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/niamh-doyle-ml",
+          "github": "https://github.com/niamhdoyle",
+          "website": "https://niamhdoyle.example.ie"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["Weekday evenings"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "ML Domains", "skills": ["NLP", "Recommendation Systems", "Deep Learning"] },
+      { "category": "Frameworks", "skills": ["PyTorch", "TensorFlow", "Hugging Face Transformers"] },
+      { "category": "MLOps", "skills": ["Kubeflow", "MLflow", "Feast", "Triton Inference Server"] },
+      { "category": "Engineering", "skills": ["Python", "Go", "Kubernetes", "gRPC"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Production machine learning", "NLP systems", "Model serving and MLOps"],
+      "keyResponsibilities": ["Design feature and training pipelines", "Deploy low-latency model serving", "Own model monitoring and retraining"]
+    },
+    "workExperience": [
+      {
+        "company": "Selene AI",
+        "website": "https://seleneai.example.ie",
+        "location": "Dublin, Ireland",
+        "from": "2020-01",
+        "to": "Present",
+        "position": "Senior Machine Learning Engineer",
+        "activities": [
+          {
+            "project": "Semantic search platform",
+            "tasks": ["Built a transformer-based semantic search service", "Deployed models on Triton with GPU autoscaling", "Implemented a feature store with Feast"]
+          }
+        ],
+        "achievements": ["Cut search p95 latency to under 80ms at scale", "Increased search click-through rate by 27%"],
+        "toolsAndTechnologies": ["Python", "PyTorch", "Hugging Face Transformers", "Triton Inference Server", "Kubernetes", "Feast"]
+      },
+      {
+        "company": "Grid Dynamics Labs",
+        "website": "https://griddynamicslabs.example.ie",
+        "location": "Dublin, Ireland",
+        "from": "2017-03",
+        "to": "2019-12",
+        "position": "Machine Learning Engineer",
+        "activities": [
+          {
+            "project": "Recommendation engine",
+            "tasks": ["Built collaborative filtering and ranking models", "Set up training pipelines on Kubeflow", "A/B tested model variants"]
+          }
+        ],
+        "achievements": ["Lifted add-to-cart rate by 15% with a new ranking model"],
+        "toolsAndTechnologies": ["Python", "TensorFlow", "Kubeflow", "Spark"]
+      },
+      {
+        "company": "Corrib Software",
+        "website": "https://corribsoftware.example.ie",
+        "location": "Galway, Ireland",
+        "from": "2015-09",
+        "to": "2017-02",
+        "position": "Data / ML Developer",
+        "activities": [
+          {
+            "project": "Text classification service",
+            "tasks": ["Built classical NLP classifiers", "Deployed as REST services", "Created data labelling workflows"]
+          }
+        ],
+        "achievements": ["Automated support ticket triage with 92% accuracy"],
+        "toolsAndTechnologies": ["Python", "scikit-learn", "Flask"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "Trinity College Dublin",
+        "degree": "MSc",
+        "fieldOfStudy": "Computer Science (Machine Learning)",
+        "achievements": ["Distinction", "Thesis on neural sequence models"]
+      }
+    ],
+    "certifications": [
+      { "title": "Certified Kubernetes Application Developer", "institution": "Cloud Native Computing Foundation", "year": "2021", "description": "Validates designing and deploying applications on Kubernetes." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Python", "PyTorch", "TensorFlow", "Hugging Face Transformers", "Kubernetes", "Triton Inference Server", "MLflow", "Feast"],
+      "softSkills": ["Research-to-production mindset", "Collaboration", "Ownership"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "French", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Embedding cache library", "description": "An open-source library for caching and serving vector embeddings efficiently.", "date": "2023-01", "impact": "Adopted internally and starred by over 1,500 developers." }
+    ],
+    "interestsAndHobbies": ["Hiking", "Traditional music", "Open-source contribution"],
+    "references": [
+      { "name": "Liam Byrne", "position": "Director of ML", "company": "Selene AI", "contact": { "phone": "+353 86 700 0177", "email": "liam.byrne@example.ie" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 150000, "max": 185000 },
+    "candidateClustering": {
+      "primaryCluster": "Machine Learning Engineering",
+      "secondaryClusters": ["NLP", "MLOps"],
+      "functionalExpertise": ["Production ML", "NLP systems", "Model serving"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Reduced serving latency", "Increased engagement metrics"],
+      "industryDomains": ["Software", "E-commerce"],
+      "environmentFit": ["Startup", "SaaS"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "End-to-end ownership of production NLP and recommendation systems with strong MLOps tooling marks a senior ML engineer specialist."
+    },
+    "searchIndex": {
+      "roles": ["Machine Learning Engineer", "ML Engineer", "NLP Engineer"],
+      "skills": ["Python", "PyTorch", "TensorFlow", "Transformers", "Kubernetes", "MLOps", "Recommendation Systems", "NLP"],
+      "industries": ["Software", "E-commerce"]
+    },
+    "tags": ["machine-learning", "mlops", "nlp", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Analytics engineering lead with twelve years turning raw data into governed, trusted metrics. Leads a small team owning the semantic layer, dbt project and BI enablement. Bridges data engineering and analytics with a strong focus on documentation and self-service.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Grace Adeyemi",
+      "role": "Analytics Engineering Lead",
+      "summary": "Analytics engineering lead who builds governed semantic layers and empowers teams with trustworthy, self-service data.",
+      "contact": {
+        "phone": "+44 7700 900523",
+        "email": "grace.adeyemi@example.com",
+        "address": {
+          "streetNumber": "15",
+          "streetName": "Wellington",
+          "streetType": "Place",
+          "city": "Leeds",
+          "state": "England",
+          "zipCode": "LS1 4DL",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/grace-adeyemi",
+          "github": "https://github.com/gadeyemi",
+          "website": "https://graceadeyemi.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["Weekday mornings"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Analytics Engineering", "skills": ["dbt", "Semantic Layer", "Data Modelling", "Metrics Governance"] },
+      { "category": "Warehouses", "skills": ["Snowflake", "BigQuery", "Databricks"] },
+      { "category": "BI", "skills": ["Looker", "Tableau", "Power BI"] },
+      { "category": "Languages", "skills": ["SQL", "Python", "Jinja"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Semantic layer design", "Metrics governance", "BI enablement"],
+      "keyResponsibilities": ["Own the dbt project and semantic layer", "Lead a small analytics engineering team", "Enable self-service analytics across the business"]
+    },
+    "workExperience": [
+      {
+        "company": "Beacon Financial Data",
+        "website": "https://beaconfindata.example.com",
+        "location": "Leeds, United Kingdom",
+        "from": "2019-06",
+        "to": "Present",
+        "position": "Analytics Engineering Lead",
+        "activities": [
+          {
+            "project": "Metrics layer program",
+            "tasks": ["Designed a governed metrics layer in dbt and Looker", "Led a team of four analytics engineers", "Established data documentation and testing standards"]
+          }
+        ],
+        "achievements": ["Reduced conflicting metric definitions to a single source of truth", "Cut time-to-dashboard for new metrics from weeks to days"],
+        "toolsAndTechnologies": ["dbt", "Snowflake", "Looker", "SQL", "Python"]
+      },
+      {
+        "company": "Northgate Insurance",
+        "website": "https://northgateinsurance.example.com",
+        "location": "Leeds, United Kingdom",
+        "from": "2016-01",
+        "to": "2019-05",
+        "position": "Senior Data Analyst",
+        "activities": [
+          {
+            "project": "Claims analytics",
+            "tasks": ["Built claims dashboards in Tableau", "Modelled datasets for reporting", "Partnered with actuarial teams"]
+          }
+        ],
+        "achievements": ["Surfaced fraud signals that saved an estimated £1.5M"],
+        "toolsAndTechnologies": ["SQL", "Tableau", "Python"]
+      },
+      {
+        "company": "Ledger & Vine",
+        "website": "https://ledgerandvine.example.com",
+        "location": "Manchester, United Kingdom",
+        "from": "2014-08",
+        "to": "2015-12",
+        "position": "Data Analyst",
+        "activities": [
+          {
+            "project": "Retail reporting",
+            "tasks": ["Produced weekly performance reports", "Automated Excel workflows with SQL"]
+          }
+        ],
+        "achievements": ["Automated the weekly board reporting pack"],
+        "toolsAndTechnologies": ["SQL", "Excel", "Power BI"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2014",
+        "institution": "University of Sheffield",
+        "degree": "BSc",
+        "fieldOfStudy": "Economics and Statistics",
+        "achievements": ["First-class honours"]
+      }
+    ],
+    "certifications": [
+      { "title": "dbt Analytics Engineering Certification", "institution": "dbt Labs", "year": "2022", "description": "Validates analytics engineering skills with dbt." },
+      { "title": "Looker LookML Developer", "institution": "Google Cloud", "year": "2021", "description": "Validates building semantic models in LookML." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["dbt", "SQL", "Snowflake", "Looker", "Python", "BigQuery", "Tableau"],
+      "softSkills": ["Team leadership", "Stakeholder alignment", "Documentation"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Yoruba", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Metrics governance framework", "description": "A documented process and template for proposing and certifying business metrics.", "date": "2021-10", "impact": "Adopted company-wide, ending years of dashboard discrepancies." }
+    ],
+    "interestsAndHobbies": ["Running", "Mentoring women in data", "Cooking"],
+    "references": [
+      { "name": "David Muir", "position": "Head of Data", "company": "Beacon Financial Data", "contact": { "phone": "+44 7700 900560", "email": "david.muir@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "GBP", "min": 80000, "max": 95000 },
+    "candidateClustering": {
+      "primaryCluster": "Analytics Engineering",
+      "secondaryClusters": ["Business Intelligence", "Data Governance"],
+      "functionalExpertise": ["Semantic layer design", "Metrics governance", "BI enablement"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Unified metric definitions", "Accelerated dashboard delivery"],
+      "industryDomains": ["Financial Services", "Insurance"],
+      "environmentFit": ["Enterprise", "Regulated enterprise"],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Ownership of a governed semantic layer and leadership of an analytics engineering team indicate an analytics engineering lead."
+    },
+    "searchIndex": {
+      "roles": ["Analytics Engineer", "Analytics Engineering Lead", "BI Lead"],
+      "skills": ["dbt", "SQL", "Snowflake", "Looker", "Data Modelling", "Metrics Governance", "BigQuery", "Tableau"],
+      "industries": ["Financial Services", "Insurance", "Analytics"]
+    },
+    "tags": ["analytics-engineering", "dbt", "looker", "lead"]
+  },
+  {
+    "candidateProfileSummary": "Data and BI leader with seventeen years spanning analytics, engineering and team building. Currently Director of Data, owning the data platform, governance and a multi-team organisation. Known for aligning data strategy with business outcomes and scaling data-driven cultures.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Robert Callahan",
+      "role": "Director of Data & Analytics",
+      "summary": "Data and analytics director who scales platforms, teams and governance to make organisations genuinely data-driven.",
+      "contact": {
+        "phone": "+1 617 555 0181",
+        "email": "robert.callahan@example.com",
+        "address": {
+          "streetNumber": "70",
+          "streetName": "Beacon",
+          "streetType": "Street",
+          "unit": "Unit 4",
+          "city": "Boston",
+          "state": "Massachusetts",
+          "zipCode": "02108",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/robert-callahan-data",
+          "website": "https://robertcallahan.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Weekday mornings ET"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Leadership", "skills": ["Data Strategy", "Org Building", "Stakeholder Management"] },
+      { "category": "Data Platform", "skills": ["Data Warehousing", "Data Governance", "Data Mesh"] },
+      { "category": "BI & Analytics", "skills": ["Tableau", "Power BI", "Looker", "KPI Design"] },
+      { "category": "Technical", "skills": ["SQL", "Snowflake", "dbt", "Python"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Data strategy and governance", "Analytics org leadership", "Executive stakeholder alignment"],
+      "keyResponsibilities": ["Own the enterprise data strategy and platform", "Lead multiple analytics and engineering teams", "Partner with executives on data-driven decisions"]
+    },
+    "workExperience": [
+      {
+        "company": "Charterline Health",
+        "website": "https://charterlinehealth.example.com",
+        "location": "Boston, United States",
+        "from": "2018-04",
+        "to": "Present",
+        "position": "Director of Data & Analytics",
+        "activities": [
+          {
+            "project": "Enterprise data platform",
+            "tasks": ["Built a modern data platform on Snowflake and dbt", "Established data governance and a stewardship program", "Grew the data organisation from 8 to 34 people"]
+          }
+        ],
+        "achievements": ["Delivered a self-service analytics platform used by 600+ staff", "Enabled a regulatory reporting program that passed audit with zero findings"],
+        "toolsAndTechnologies": ["Snowflake", "dbt", "Looker", "Python", "SQL"]
+      },
+      {
+        "company": "Pinebridge Retail",
+        "website": "https://pinebridgeretail.example.com",
+        "location": "New York, United States",
+        "from": "2013-02",
+        "to": "2018-03",
+        "position": "Head of Business Intelligence",
+        "activities": [
+          {
+            "project": "BI modernization",
+            "tasks": ["Led migration to a cloud data warehouse", "Built the BI team and reporting standards", "Introduced executive KPI dashboards"]
+          }
+        ],
+        "achievements": ["Cut monthly reporting cycle from 10 days to 2"],
+        "toolsAndTechnologies": ["SQL", "Tableau", "Redshift"]
+      },
+      {
+        "company": "Ridgeway Analytics",
+        "website": "https://ridgewayanalytics.example.com",
+        "location": "Chicago, United States",
+        "from": "2009-07",
+        "to": "2013-01",
+        "position": "BI Analyst",
+        "activities": [
+          {
+            "project": "Reporting and dashboards",
+            "tasks": ["Built dashboards and data extracts", "Automated recurring reports"]
+          }
+        ],
+        "achievements": ["Standardised reporting across three business units"],
+        "toolsAndTechnologies": ["SQL", "Excel", "SSRS"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "Boston University",
+        "degree": "MBA",
+        "fieldOfStudy": "Business Analytics",
+        "achievements": ["Beta Gamma Sigma honor society"]
+      },
+      {
+        "year": "2009",
+        "institution": "University of Illinois Urbana-Champaign",
+        "degree": "BS",
+        "fieldOfStudy": "Statistics",
+        "achievements": ["Graduated with honors"]
+      }
+    ],
+    "certifications": [
+      { "title": "Certified Data Management Professional (CDMP)", "institution": "DAMA International", "year": "2019", "description": "Validates expertise in enterprise data management and governance." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["SQL", "Snowflake", "dbt", "Looker", "Tableau", "Data Governance", "Python"],
+      "softSkills": ["Strategic leadership", "Executive communication", "Organisational design"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Data governance operating model", "description": "A cross-functional governance model with clear ownership and stewardship.", "date": "2020-06", "impact": "Underpinned successful regulatory audits and improved data trust." }
+    ],
+    "interestsAndHobbies": ["Sailing", "History podcasts", "Mentoring data leaders"],
+    "references": [
+      { "name": "Karen Whitfield", "position": "Chief Information Officer", "company": "Charterline Health", "contact": { "phone": "+1 617 555 0195", "email": "karen.whitfield@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 250000, "max": 300000 },
+    "candidateClustering": {
+      "primaryCluster": "Data & Analytics Leadership",
+      "secondaryClusters": ["Business Intelligence", "Data Governance"],
+      "functionalExpertise": ["Data strategy", "Analytics leadership", "Governance"],
+      "skillDepth": "hybrid",
+      "businessImpact": ["Scaled data organisation", "Enabled self-service analytics", "Passed regulatory audits"],
+      "industryDomains": ["Healthcare", "Retail"],
+      "environmentFit": ["Enterprise", "Regulated enterprise"],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "executiveInfluence",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Directing a multi-team data organisation, platform and governance with executive partnership marks a data and analytics director."
+    },
+    "searchIndex": {
+      "roles": ["Director of Data", "Head of Analytics", "Data Leader"],
+      "skills": ["Data Strategy", "Data Governance", "Snowflake", "dbt", "Looker", "Tableau", "SQL", "Business Intelligence"],
+      "industries": ["Healthcare", "Retail", "Analytics"]
+    },
+    "tags": ["data-leadership", "director", "governance", "bi"]
+  },
+  {
+    "candidateProfileSummary": "DevOps engineer early in a promising career, with three years automating cloud infrastructure and CI/CD. Comfortable with Terraform, Docker and AWS, and eager to deepen Kubernetes and reliability skills. Practical, security-aware and keen to learn from senior SREs.",
+    "careerStartYear": 2023,
+    "personalInformation": {
+      "name": "Aoibhinn Murphy",
+      "role": "DevOps Engineer",
+      "summary": "Early-career DevOps engineer who automates infrastructure and pipelines and is growing fast toward SRE work.",
+      "contact": {
+        "phone": "+353 87 700 0166",
+        "email": "aoibhinn.murphy@example.ie",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "South Mall",
+          "streetType": "Avenue",
+          "city": "Cork",
+          "state": "Munster",
+          "zipCode": "T12 A2X3",
+          "country": "Ireland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/aoibhinn-murphy",
+          "github": "https://github.com/aoibhinnm",
+          "website": "https://aoibhinnmurphy.example.ie"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Weekday afternoons"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Infrastructure as Code", "skills": ["Terraform", "Ansible"] },
+      { "category": "CI/CD", "skills": ["GitHub Actions", "GitLab CI", "ArgoCD"] },
+      { "category": "Cloud & Containers", "skills": ["AWS", "Docker", "Kubernetes"] },
+      { "category": "Scripting", "skills": ["Bash", "Python"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Infrastructure automation", "CI/CD pipelines", "Cloud operations"],
+      "keyResponsibilities": ["Automate infrastructure provisioning", "Maintain and improve CI/CD pipelines", "Support deployments and basic on-call"]
+    },
+    "workExperience": [
+      {
+        "company": "Lee Valley Cloud",
+        "website": "https://leevalleycloud.example.ie",
+        "location": "Cork, Ireland",
+        "from": "2024-01",
+        "to": "Present",
+        "position": "DevOps Engineer",
+        "activities": [
+          {
+            "project": "Platform automation",
+            "tasks": ["Wrote Terraform modules for AWS environments", "Built GitHub Actions pipelines for microservices", "Set up ArgoCD for GitOps deployments"]
+          }
+        ],
+        "achievements": ["Reduced environment provisioning time from days to under an hour", "Standardised CI templates across a dozen services"],
+        "toolsAndTechnologies": ["Terraform", "AWS", "Docker", "Kubernetes", "GitHub Actions", "ArgoCD"]
+      },
+      {
+        "company": "Blarney Digital",
+        "website": "https://blarneydigital.example.ie",
+        "location": "Cork, Ireland",
+        "from": "2023-02",
+        "to": "2023-12",
+        "position": "Junior Systems Engineer",
+        "activities": [
+          {
+            "project": "Ops support",
+            "tasks": ["Maintained Linux servers", "Automated backups with Bash scripts", "Assisted with monitoring setup"]
+          }
+        ],
+        "achievements": ["Automated nightly backups, eliminating manual steps"],
+        "toolsAndTechnologies": ["Linux", "Bash", "Nagios"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2022",
+        "institution": "Munster Technological University",
+        "degree": "BSc",
+        "fieldOfStudy": "Cloud Computing",
+        "achievements": ["First-class honours", "Final project on GitOps deployment"]
+      }
+    ],
+    "certifications": [
+      { "title": "AWS Certified Solutions Architect – Associate", "institution": "Amazon Web Services", "year": "2024", "description": "Validates designing distributed systems on AWS." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Terraform", "AWS", "Docker", "Kubernetes", "GitHub Actions", "Bash", "Python", "ArgoCD"],
+      "softSkills": ["Eagerness to learn", "Reliability", "Teamwork"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Irish", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Homelab GitOps demo", "description": "A personal Kubernetes homelab managed entirely with GitOps.", "date": "2024-05", "impact": "Used as a learning reference shared with the local DevOps meetup." }
+    ],
+    "interestsAndHobbies": ["Gaelic football", "3D printing", "Meetup organising"],
+    "references": [
+      { "name": "Sean Fitzgerald", "position": "Platform Lead", "company": "Lee Valley Cloud", "contact": { "phone": "+353 87 700 0188", "email": "sean.fitzgerald@example.ie" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 60000, "max": 72000 },
+    "candidateClustering": {
+      "primaryCluster": "DevOps & Platform Engineering",
+      "secondaryClusters": ["Cloud Infrastructure", "CI/CD"],
+      "functionalExpertise": ["Infrastructure automation", "CI/CD", "Cloud operations"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Faster environment provisioning", "Standardised pipelines"],
+      "industryDomains": ["Software", "Digital agencies"],
+      "environmentFit": ["Startup", "SaaS"],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.82,
+      "clusterReasoning": "Solid IaC and CI/CD automation with cloud certifications early in a career places this candidate in junior DevOps engineering."
+    },
+    "searchIndex": {
+      "roles": ["DevOps Engineer", "Platform Engineer", "Cloud Engineer"],
+      "skills": ["Terraform", "AWS", "Docker", "Kubernetes", "CI/CD", "GitHub Actions", "ArgoCD", "Bash"],
+      "industries": ["Software"]
+    },
+    "tags": ["devops", "terraform", "aws", "kubernetes", "junior"]
+  },
+  {
+    "candidateProfileSummary": "Site reliability engineer with eleven years keeping high-traffic systems fast and available. Deep experience in observability, incident response and reliability engineering across Kubernetes-based platforms. Balances hands-on engineering with driving reliability culture and SLOs.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Yusuf Rahman",
+      "role": "Senior Site Reliability Engineer",
+      "summary": "SRE who designs for resilience, drives meaningful SLOs, and turns incidents into lasting reliability improvements.",
+      "contact": {
+        "phone": "+44 7700 900612",
+        "email": "yusuf.rahman@example.com",
+        "address": {
+          "streetNumber": "88",
+          "streetName": "Clerkenwell",
+          "streetType": "Road",
+          "city": "London",
+          "state": "England",
+          "zipCode": "EC1M 5RJ",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/yusuf-rahman-sre",
+          "github": "https://github.com/yusufrahman",
+          "website": "https://yusufrahman.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Weekday evenings"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent", "contract"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Reliability", "skills": ["SLOs", "Incident Response", "Chaos Engineering", "Capacity Planning"] },
+      { "category": "Observability", "skills": ["Prometheus", "Grafana", "OpenTelemetry", "Loki"] },
+      { "category": "Platform", "skills": ["Kubernetes", "Terraform", "Helm", "AWS"] },
+      { "category": "Automation", "skills": ["Go", "Python", "Bash"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Reliability engineering", "Observability", "Incident management"],
+      "keyResponsibilities": ["Define and track SLOs and error budgets", "Lead incident response and postmortems", "Automate toil and improve resilience"]
+    },
+    "workExperience": [
+      {
+        "company": "Skyline Streaming",
+        "website": "https://skylinestreaming.example.com",
+        "location": "London, United Kingdom",
+        "from": "2020-06",
+        "to": "Present",
+        "position": "Senior Site Reliability Engineer",
+        "activities": [
+          {
+            "project": "Reliability program",
+            "tasks": ["Rolled out SLOs and error budgets across 30 services", "Rebuilt observability on Prometheus, Grafana and OpenTelemetry", "Led major incident response and blameless postmortems"]
+          }
+        ],
+        "achievements": ["Improved core service availability from 99.9% to 99.98%", "Cut mean time to recovery by 45%"],
+        "toolsAndTechnologies": ["Kubernetes", "Prometheus", "Grafana", "OpenTelemetry", "Terraform", "Go"]
+      },
+      {
+        "company": "Pentagon Systems",
+        "website": "https://pentagonsystems.example.com",
+        "location": "Reading, United Kingdom",
+        "from": "2017-03",
+        "to": "2020-05",
+        "position": "Site Reliability Engineer",
+        "activities": [
+          {
+            "project": "Platform migration",
+            "tasks": ["Migrated services onto Kubernetes", "Built autoscaling and monitoring", "Automated deployment pipelines"]
+          }
+        ],
+        "achievements": ["Reduced infrastructure cost by 30% through right-sizing"],
+        "toolsAndTechnologies": ["Kubernetes", "AWS", "Terraform", "Python"]
+      },
+      {
+        "company": "Corvus Hosting",
+        "website": "https://corvushosting.example.com",
+        "location": "Bristol, United Kingdom",
+        "from": "2015-08",
+        "to": "2017-02",
+        "position": "Systems Engineer",
+        "activities": [
+          {
+            "project": "Infrastructure operations",
+            "tasks": ["Managed Linux fleets", "Automated configuration with Ansible", "Handled on-call incidents"]
+          }
+        ],
+        "achievements": ["Automated server provisioning with Ansible playbooks"],
+        "toolsAndTechnologies": ["Linux", "Ansible", "Bash"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "University of Southampton",
+        "degree": "BEng",
+        "fieldOfStudy": "Computer Engineering",
+        "achievements": ["Upper second-class honours"]
+      }
+    ],
+    "certifications": [
+      { "title": "Certified Kubernetes Administrator", "institution": "Cloud Native Computing Foundation", "year": "2020", "description": "Validates skills administering Kubernetes clusters." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Kubernetes", "Prometheus", "Grafana", "OpenTelemetry", "Terraform", "Go", "AWS", "Python"],
+      "softSkills": ["Calm under pressure", "Systems thinking", "Clear incident communication"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Bengali", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "SLO toolkit", "description": "An internal toolkit that generates SLO dashboards and alerts from a config file.", "date": "2022-03", "impact": "Adopted by every service team, standardising reliability targets." }
+    ],
+    "interestsAndHobbies": ["Cricket", "Astrophotography", "Homelab automation"],
+    "references": [
+      { "name": "Claire Donnelly", "position": "Head of Platform", "company": "Skyline Streaming", "contact": { "phone": "+44 7700 900640", "email": "claire.donnelly@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "GBP", "min": 85000, "max": 100000 },
+    "candidateClustering": {
+      "primaryCluster": "Site Reliability Engineering",
+      "secondaryClusters": ["Observability", "Platform Engineering"],
+      "functionalExpertise": ["Reliability engineering", "Observability", "Incident management"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Improved availability", "Reduced MTTR", "Reduced infrastructure cost"],
+      "industryDomains": ["Media", "Software"],
+      "environmentFit": ["Scale-up", "Enterprise"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Deep reliability, observability and incident-response work with measurable availability gains marks a senior SRE specialist."
+    },
+    "searchIndex": {
+      "roles": ["Site Reliability Engineer", "SRE", "Platform Engineer"],
+      "skills": ["Kubernetes", "Prometheus", "Grafana", "OpenTelemetry", "Terraform", "Go", "SLOs", "Incident Response"],
+      "industries": ["Media", "Software"]
+    },
+    "tags": ["sre", "kubernetes", "observability", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Cloud and platform engineer with ten years designing scalable, secure infrastructure on AWS and GCP. Builds internal developer platforms that make teams productive while keeping cost and security in check. Comfortable across networking, containers and infrastructure as code.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Maria Gonzalez",
+      "role": "Senior Cloud Platform Engineer",
+      "summary": "Cloud platform engineer who builds paved-road developer platforms balancing speed, security and cost.",
+      "contact": {
+        "phone": "+1 206 555 0193",
+        "email": "maria.gonzalez@example.com",
+        "address": {
+          "streetNumber": "1420",
+          "streetName": "Pike",
+          "streetType": "Street",
+          "unit": "Suite 12",
+          "city": "Seattle",
+          "state": "Washington",
+          "zipCode": "98101",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/maria-gonzalez-cloud",
+          "github": "https://github.com/mariagonzalez",
+          "website": "https://mariagonzalez.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Weekday afternoons PT"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Cloud", "skills": ["AWS", "GCP", "Networking", "IAM"] },
+      { "category": "Platform", "skills": ["Kubernetes", "Crossplane", "Backstage", "Service Mesh"] },
+      { "category": "IaC", "skills": ["Terraform", "Pulumi", "Helm"] },
+      { "category": "Languages", "skills": ["Go", "Python"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Cloud infrastructure design", "Internal developer platforms", "Cloud security and cost"],
+      "keyResponsibilities": ["Design and operate cloud infrastructure", "Build self-service developer platforms", "Enforce security and cost guardrails"]
+    },
+    "workExperience": [
+      {
+        "company": "Cascade Cloud Systems",
+        "website": "https://cascadecloud.example.com",
+        "location": "Seattle, United States",
+        "from": "2020-02",
+        "to": "Present",
+        "position": "Senior Cloud Platform Engineer",
+        "activities": [
+          {
+            "project": "Internal developer platform",
+            "tasks": ["Built a Backstage-based developer portal", "Created golden-path Terraform modules and Crossplane compositions", "Implemented cloud cost and security guardrails"]
+          }
+        ],
+        "achievements": ["Reduced service onboarding time from two weeks to two days", "Cut monthly cloud spend by 25% through automation and right-sizing"],
+        "toolsAndTechnologies": ["AWS", "Kubernetes", "Terraform", "Crossplane", "Backstage", "Go"]
+      },
+      {
+        "company": "Rainier Data",
+        "website": "https://rainierdata.example.com",
+        "location": "Portland, United States",
+        "from": "2016-06",
+        "to": "2020-01",
+        "position": "Cloud Infrastructure Engineer",
+        "activities": [
+          {
+            "project": "Multi-account AWS setup",
+            "tasks": ["Designed a multi-account AWS landing zone", "Automated networking and IAM with Terraform", "Set up centralized logging"]
+          }
+        ],
+        "achievements": ["Established secure account baselines used across the company"],
+        "toolsAndTechnologies": ["AWS", "Terraform", "Python", "Networking"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "University of Washington",
+        "degree": "BS",
+        "fieldOfStudy": "Computer Engineering",
+        "achievements": ["Graduated cum laude"]
+      }
+    ],
+    "certifications": [
+      { "title": "AWS Certified Solutions Architect – Professional", "institution": "Amazon Web Services", "year": "2021", "description": "Advanced certification in designing complex AWS architectures." },
+      { "title": "HashiCorp Certified: Terraform Associate", "institution": "HashiCorp", "year": "2020", "description": "Validates core Terraform skills." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["AWS", "GCP", "Kubernetes", "Terraform", "Crossplane", "Backstage", "Go", "Networking"],
+      "softSkills": ["Developer empathy", "Pragmatism", "Cross-team collaboration"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Spanish", "proficiency": { "read": "native", "written": "fluent", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Golden-path module registry", "description": "A curated registry of vetted Terraform and Crossplane modules.", "date": "2022-08", "impact": "Standardised infrastructure and cut misconfigurations significantly." }
+    ],
+    "interestsAndHobbies": ["Kayaking", "Salsa dancing", "Open-source infrastructure"],
+    "references": [
+      { "name": "Jonathan Reyes", "position": "Director of Platform Engineering", "company": "Cascade Cloud Systems", "contact": { "phone": "+1 206 555 0210", "email": "jonathan.reyes@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 170000, "max": 205000 },
+    "candidateClustering": {
+      "primaryCluster": "Cloud & Platform Engineering",
+      "secondaryClusters": ["Developer Experience", "Cloud Security"],
+      "functionalExpertise": ["Cloud infrastructure", "Internal developer platforms", "Cloud cost and security"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Faster service onboarding", "Reduced cloud spend"],
+      "industryDomains": ["Software", "SaaS"],
+      "environmentFit": ["Scale-up", "Enterprise"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Design and operation of internal developer platforms on AWS with cost and security impact marks a senior cloud platform engineer."
+    },
+    "searchIndex": {
+      "roles": ["Cloud Engineer", "Platform Engineer", "Infrastructure Engineer"],
+      "skills": ["AWS", "GCP", "Kubernetes", "Terraform", "Crossplane", "Backstage", "Go", "Networking"],
+      "industries": ["Software", "SaaS"]
+    },
+    "tags": ["cloud", "platform-engineering", "aws", "terraform", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Principal security engineer with fifteen years protecting cloud and application environments. Deep expertise in application security, cloud security architecture and threat modelling, with a track record of building security programs that engineers actually adopt. Trusted advisor to leadership on risk.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Callum Fraser",
+      "role": "Principal Security Engineer",
+      "summary": "Principal security engineer who embeds practical security into cloud platforms and engineering workflows without slowing teams down.",
+      "contact": {
+        "phone": "+44 7700 900701",
+        "email": "callum.fraser@example.com",
+        "address": {
+          "streetNumber": "24",
+          "streetName": "George",
+          "streetType": "Street",
+          "city": "Edinburgh",
+          "state": "Scotland",
+          "zipCode": "EH2 2PF",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/callum-fraser-sec",
+          "github": "https://github.com/callumfraser",
+          "website": "https://callumfraser.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Weekday mornings"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Application Security", "skills": ["Threat Modelling", "SAST", "DAST", "Secure Code Review"] },
+      { "category": "Cloud Security", "skills": ["AWS Security", "IAM", "Zero Trust", "CSPM"] },
+      { "category": "Detection", "skills": ["SIEM", "Incident Response", "Threat Detection"] },
+      { "category": "Tooling", "skills": ["Terraform", "Python", "Go"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Application and cloud security", "Threat modelling", "Security program building"],
+      "keyResponsibilities": ["Set security architecture and standards", "Lead threat modelling and reviews", "Advise leadership on security risk"]
+    },
+    "workExperience": [
+      {
+        "company": "Thistle Financial",
+        "website": "https://thistlefinancial.example.com",
+        "location": "Edinburgh, United Kingdom",
+        "from": "2018-05",
+        "to": "Present",
+        "position": "Principal Security Engineer",
+        "activities": [
+          {
+            "project": "Product security program",
+            "tasks": ["Built a security champions program across engineering", "Introduced automated SAST and dependency scanning into CI", "Led cloud security architecture for a regulated platform"]
+          }
+        ],
+        "achievements": ["Reduced critical vulnerabilities in production by 70%", "Passed ISO 27001 and SOC 2 audits with no major findings"],
+        "toolsAndTechnologies": ["AWS Security", "Terraform", "SAST", "SIEM", "Python"]
+      },
+      {
+        "company": "Aegis Cyber",
+        "website": "https://aegiscyber.example.com",
+        "location": "Glasgow, United Kingdom",
+        "from": "2014-02",
+        "to": "2018-04",
+        "position": "Senior Security Engineer",
+        "activities": [
+          {
+            "project": "Security consulting",
+            "tasks": ["Performed penetration tests and threat models", "Advised clients on remediation", "Built detection rules for SIEM platforms"]
+          }
+        ],
+        "achievements": ["Uncovered and helped remediate several critical client vulnerabilities"],
+        "toolsAndTechnologies": ["Penetration Testing", "SIEM", "Python"]
+      },
+      {
+        "company": "Fortbridge IT",
+        "website": "https://fortbridgeit.example.com",
+        "location": "Edinburgh, United Kingdom",
+        "from": "2011-07",
+        "to": "2014-01",
+        "position": "Security Analyst",
+        "activities": [
+          {
+            "project": "Security operations",
+            "tasks": ["Monitored alerts and triaged incidents", "Maintained firewall and access policies"]
+          }
+        ],
+        "achievements": ["Improved alert triage time through better tuning"],
+        "toolsAndTechnologies": ["Firewalls", "SIEM", "Networking"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "University of Edinburgh",
+        "degree": "BSc",
+        "fieldOfStudy": "Computer Science",
+        "achievements": ["First-class honours"]
+      }
+    ],
+    "certifications": [
+      { "title": "Offensive Security Certified Professional (OSCP)", "institution": "OffSec", "year": "2016", "description": "Hands-on penetration testing certification." },
+      { "title": "Certified Information Systems Security Professional (CISSP)", "institution": "ISC2", "year": "2019", "description": "Broad certification in information security management." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["AWS Security", "Threat Modelling", "SAST", "SIEM", "Terraform", "Python", "IAM"],
+      "softSkills": ["Risk communication", "Pragmatism", "Influence without authority"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Threat modelling toolkit", "description": "A lightweight, template-driven threat modelling process for engineering teams.", "date": "2021-05", "impact": "Adopted across all product teams, catching design flaws early." }
+    ],
+    "interestsAndHobbies": ["Hillwalking", "Lock picking sport", "CTF competitions"],
+    "references": [
+      { "name": "Fiona Stewart", "position": "Chief Information Security Officer", "company": "Thistle Financial", "contact": { "phone": "+44 7700 900733", "email": "fiona.stewart@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "GBP", "min": 110000, "max": 130000 },
+    "candidateClustering": {
+      "primaryCluster": "Security Engineering",
+      "secondaryClusters": ["Cloud Security", "Application Security"],
+      "functionalExpertise": ["Application security", "Cloud security architecture", "Threat modelling"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Reduced critical vulnerabilities", "Passed security audits"],
+      "industryDomains": ["Financial Services", "Cybersecurity"],
+      "environmentFit": ["Regulated enterprise", "Enterprise"],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Deep, broad security expertise plus program building and leadership advisory in a regulated context indicates a principal security engineer."
+    },
+    "searchIndex": {
+      "roles": ["Security Engineer", "Application Security Engineer", "Cloud Security Engineer"],
+      "skills": ["Application Security", "Cloud Security", "Threat Modelling", "SAST", "SIEM", "AWS Security", "Terraform", "IAM"],
+      "industries": ["Financial Services", "Cybersecurity", "Software"]
+    },
+    "tags": ["security", "appsec", "cloud-security", "principal"]
+  },
+  {
+    "candidateProfileSummary": "Infrastructure and network engineering manager with sixteen years across data centres, networking and cloud migration. Now leads an infrastructure team responsible for connectivity, compute and hybrid-cloud reliability. Blends deep networking knowledge with people leadership and vendor management.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Angela Petrova",
+      "role": "Infrastructure Engineering Manager",
+      "summary": "Infrastructure manager who leads hybrid-cloud and network teams, keeping critical systems connected, secure and resilient.",
+      "contact": {
+        "phone": "+1 312 555 0177",
+        "email": "angela.petrova@example.com",
+        "address": {
+          "streetNumber": "540",
+          "streetName": "North Michigan",
+          "streetType": "Avenue",
+          "unit": "Suite 800",
+          "city": "Chicago",
+          "state": "Illinois",
+          "zipCode": "60611",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/angela-petrova-infra",
+          "website": "https://angelapetrova.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["Weekday afternoons CT"],
+        "preferredWorkTypes": ["hybrid", "onsite"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Networking", "skills": ["BGP", "MPLS", "SD-WAN", "Firewalls"] },
+      { "category": "Infrastructure", "skills": ["VMware", "Data Center Operations", "Hybrid Cloud"] },
+      { "category": "Cloud", "skills": ["AWS", "Azure", "Direct Connect"] },
+      { "category": "Leadership", "skills": ["Team Management", "Vendor Management", "Capacity Planning"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Network engineering", "Hybrid-cloud infrastructure", "Team leadership"],
+      "keyResponsibilities": ["Lead infrastructure and network operations", "Own hybrid-cloud connectivity and reliability", "Manage vendors and infrastructure budgets"]
+    },
+    "workExperience": [
+      {
+        "company": "Lakefront Logistics",
+        "website": "https://lakefrontlogistics.example.com",
+        "location": "Chicago, United States",
+        "from": "2018-01",
+        "to": "Present",
+        "position": "Infrastructure Engineering Manager",
+        "activities": [
+          {
+            "project": "Hybrid-cloud migration",
+            "tasks": ["Led migration of core workloads to AWS with Direct Connect", "Redesigned the SD-WAN across 40 sites", "Managed a team of eight infrastructure engineers"]
+          }
+        ],
+        "achievements": ["Improved inter-site network reliability to 99.99%", "Cut data-centre footprint by 60% after cloud migration"],
+        "toolsAndTechnologies": ["AWS", "SD-WAN", "VMware", "BGP", "Direct Connect"]
+      },
+      {
+        "company": "Prairie Telecom",
+        "website": "https://prairietelecom.example.com",
+        "location": "Chicago, United States",
+        "from": "2013-06",
+        "to": "2017-12",
+        "position": "Senior Network Engineer",
+        "activities": [
+          {
+            "project": "Backbone network upgrade",
+            "tasks": ["Designed and rolled out MPLS backbone upgrades", "Automated network configuration", "Handled escalated incidents"]
+          }
+        ],
+        "achievements": ["Reduced network incidents by 40% after redundancy improvements"],
+        "toolsAndTechnologies": ["MPLS", "BGP", "Cisco", "Python"]
+      },
+      {
+        "company": "Midway Data Centers",
+        "website": "https://midwaydc.example.com",
+        "location": "Chicago, United States",
+        "from": "2010-08",
+        "to": "2013-05",
+        "position": "Network Engineer",
+        "activities": [
+          {
+            "project": "Data center networking",
+            "tasks": ["Provisioned and maintained switching and routing", "Supported colocation customers"]
+          }
+        ],
+        "achievements": ["Maintained 100% uptime across managed racks for two years"],
+        "toolsAndTechnologies": ["Cisco", "Juniper", "Networking"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2010",
+        "institution": "Purdue University",
+        "degree": "BS",
+        "fieldOfStudy": "Network Engineering Technology",
+        "achievements": ["Graduated with honors"]
+      }
+    ],
+    "certifications": [
+      { "title": "Cisco Certified Network Professional (CCNP)", "institution": "Cisco", "year": "2015", "description": "Advanced certification in enterprise networking." },
+      { "title": "AWS Certified Advanced Networking – Specialty", "institution": "Amazon Web Services", "year": "2020", "description": "Validates complex networking on AWS." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["BGP", "MPLS", "SD-WAN", "AWS", "VMware", "Firewalls", "Direct Connect"],
+      "softSkills": ["People leadership", "Vendor negotiation", "Operational rigor"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Russian", "proficiency": { "read": "native", "written": "fluent", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Network automation initiative", "description": "A program to automate network configuration and compliance checks.", "date": "2020-09", "impact": "Reduced manual configuration errors and audit prep time significantly." }
+    ],
+    "interestsAndHobbies": ["Marathon running", "Amateur radio", "Chess"],
+    "references": [
+      { "name": "Gregory Hanson", "position": "VP of Infrastructure", "company": "Lakefront Logistics", "contact": { "phone": "+1 312 555 0201", "email": "gregory.hanson@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 175000, "max": 205000 },
+    "candidateClustering": {
+      "primaryCluster": "Infrastructure & Network Engineering",
+      "secondaryClusters": ["Hybrid Cloud", "Engineering Management"],
+      "functionalExpertise": ["Network engineering", "Hybrid-cloud infrastructure", "Team leadership"],
+      "skillDepth": "hybrid",
+      "businessImpact": ["Improved network reliability", "Reduced data-centre footprint"],
+      "industryDomains": ["Logistics", "Telecommunications"],
+      "environmentFit": ["Enterprise", "Regulated enterprise"],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Deep networking background plus leadership of an infrastructure team through hybrid-cloud migration indicates an infrastructure engineering manager."
+    },
+    "searchIndex": {
+      "roles": ["Infrastructure Manager", "Network Engineering Manager", "Network Engineer"],
+      "skills": ["BGP", "MPLS", "SD-WAN", "AWS", "VMware", "Networking", "Hybrid Cloud", "Direct Connect"],
+      "industries": ["Logistics", "Telecommunications", "Software"]
+    },
+    "tags": ["infrastructure", "networking", "hybrid-cloud", "manager"]
+  },
+  {
+    "candidateProfileSummary": "Product manager with seven years shipping B2B SaaS features that users love and businesses value. Strong at discovery, prioritisation and working closely with engineering and design. Balances data and customer empathy to make confident product decisions.",
+    "careerStartYear": 2019,
+    "personalInformation": {
+      "name": "Jasmine Clarke",
+      "role": "Product Manager",
+      "summary": "Product manager who pairs customer discovery with crisp prioritisation to ship SaaS features that move the needle.",
+      "contact": {
+        "phone": "+44 7700 900812",
+        "email": "jasmine.clarke@example.com",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "Kings",
+          "streetType": "Parade",
+          "city": "Brighton",
+          "state": "England",
+          "zipCode": "BN1 1NS",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/jasmine-clarke-pm",
+          "website": "https://jasmineclarke.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Weekday mornings", "Weekday lunchtimes"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Product Discovery", "skills": ["User Research", "Customer Interviews", "Opportunity Mapping"] },
+      { "category": "Delivery", "skills": ["Roadmapping", "Prioritisation", "Agile", "Story Writing"] },
+      { "category": "Analytics", "skills": ["SQL", "Amplitude", "A/B Testing"] },
+      { "category": "Design Collaboration", "skills": ["Figma", "Prototyping", "Usability Testing"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Product discovery", "Roadmap prioritisation", "Cross-functional delivery"],
+      "keyResponsibilities": ["Own a product area roadmap", "Run discovery and validate opportunities", "Partner with engineering and design to ship"]
+    },
+    "workExperience": [
+      {
+        "company": "Verdant HR Cloud",
+        "website": "https://verdanthr.example.com",
+        "location": "Brighton, United Kingdom",
+        "from": "2022-03",
+        "to": "Present",
+        "position": "Product Manager",
+        "activities": [
+          {
+            "project": "Onboarding experience",
+            "tasks": ["Ran discovery to redesign employee onboarding", "Defined and prioritised the roadmap", "Partnered with design and engineering on delivery"]
+          }
+        ],
+        "achievements": ["Increased activation rate by 24%", "Reduced onboarding support tickets by a third"],
+        "toolsAndTechnologies": ["Amplitude", "Figma", "Jira", "SQL"]
+      },
+      {
+        "company": "Coastline Software",
+        "website": "https://coastlinesoftware.example.com",
+        "location": "Brighton, United Kingdom",
+        "from": "2019-06",
+        "to": "2022-02",
+        "position": "Associate Product Manager",
+        "activities": [
+          {
+            "project": "Reporting module",
+            "tasks": ["Gathered requirements from customers", "Wrote user stories and acceptance criteria", "Coordinated release and adoption"]
+          }
+        ],
+        "achievements": ["Launched a reporting module adopted by 70% of accounts"],
+        "toolsAndTechnologies": ["Jira", "Figma", "Google Analytics"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2019",
+        "institution": "University of Sussex",
+        "degree": "BA",
+        "fieldOfStudy": "Business and Management",
+        "achievements": ["Upper second-class honours"]
+      }
+    ],
+    "certifications": [
+      { "title": "Certified Scrum Product Owner", "institution": "Scrum Alliance", "year": "2021", "description": "Foundational certification in agile product ownership." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["SQL", "Amplitude", "Figma", "Jira", "A/B Testing"],
+      "softSkills": ["Customer empathy", "Prioritisation", "Communication"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "German", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Discovery playbook", "description": "A lightweight discovery process introduced to the product team.", "date": "2023-04", "impact": "Improved the hit rate of shipped features against target metrics." }
+    ],
+    "interestsAndHobbies": ["Surfing", "Podcasting", "Community meetups"],
+    "references": [
+      { "name": "Oliver Grant", "position": "Head of Product", "company": "Verdant HR Cloud", "contact": { "phone": "+44 7700 900830", "email": "oliver.grant@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "GBP", "min": 62000, "max": 74000 },
+    "candidateClustering": {
+      "primaryCluster": "Product Management",
+      "secondaryClusters": ["Product Discovery", "SaaS"],
+      "functionalExpertise": ["Product discovery", "Roadmap prioritisation", "Delivery"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Increased activation", "Reduced support load"],
+      "industryDomains": ["HR Tech", "SaaS"],
+      "environmentFit": ["Scale-up", "SaaS"],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.84,
+      "clusterReasoning": "Progression from APM to owning a SaaS product area with measurable activation impact indicates a mid-level product manager."
+    },
+    "searchIndex": {
+      "roles": ["Product Manager", "Associate Product Manager"],
+      "skills": ["Product Discovery", "Roadmapping", "Prioritisation", "SQL", "Amplitude", "A/B Testing", "Figma"],
+      "industries": ["HR Tech", "SaaS", "Software"]
+    },
+    "tags": ["product-management", "saas", "discovery", "midlevel"]
+  },
+  {
+    "candidateProfileSummary": "Senior product owner with eleven years in agile delivery, translating business goals into well-groomed backlogs and shipped outcomes. Strong at stakeholder alignment, backlog management and keeping delivery teams focused. Bridges business and engineering with clarity.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Fionnuala Walsh",
+      "role": "Senior Product Owner",
+      "summary": "Senior product owner who turns strategy into clear, prioritised backlogs and keeps cross-functional teams delivering value.",
+      "contact": {
+        "phone": "+353 89 700 0199",
+        "email": "fionnuala.walsh@example.ie",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "Shop",
+          "streetType": "Street",
+          "city": "Galway",
+          "state": "Connacht",
+          "zipCode": "H91 CX34",
+          "country": "Ireland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/fionnuala-walsh-po",
+          "website": "https://fionnualawalsh.example.ie"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["Weekday afternoons"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent", "contract"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Agile Delivery", "skills": ["Backlog Management", "Sprint Planning", "Scrum", "Kanban"] },
+      { "category": "Stakeholder Management", "skills": ["Requirements Gathering", "Roadmap Communication", "Facilitation"] },
+      { "category": "Analysis", "skills": ["User Stories", "Acceptance Criteria", "Process Mapping"] },
+      { "category": "Tools", "skills": ["Jira", "Confluence", "Miro"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Backlog management", "Agile delivery", "Stakeholder alignment"],
+      "keyResponsibilities": ["Own and prioritise the product backlog", "Align stakeholders on scope and priorities", "Support the team through delivery"]
+    },
+    "workExperience": [
+      {
+        "company": "Atlantic Insurance Digital",
+        "website": "https://atlanticinsurance.example.ie",
+        "location": "Galway, Ireland",
+        "from": "2020-04",
+        "to": "Present",
+        "position": "Senior Product Owner",
+        "activities": [
+          {
+            "project": "Claims portal modernization",
+            "tasks": ["Owned the backlog for a customer claims portal", "Facilitated planning and refinement across three teams", "Aligned business, compliance and engineering stakeholders"]
+          }
+        ],
+        "achievements": ["Delivered the portal on time, lifting self-service claims by 35%", "Reduced average claim handling time by 20%"],
+        "toolsAndTechnologies": ["Jira", "Confluence", "Miro"]
+      },
+      {
+        "company": "Shannon Software",
+        "website": "https://shannonsoftware.example.ie",
+        "location": "Limerick, Ireland",
+        "from": "2017-01",
+        "to": "2020-03",
+        "position": "Product Owner",
+        "activities": [
+          {
+            "project": "Field services app",
+            "tasks": ["Managed the backlog for a mobile field app", "Wrote user stories and acceptance criteria", "Coordinated releases with support and operations"]
+          }
+        ],
+        "achievements": ["Improved field engineer productivity by 18%"],
+        "toolsAndTechnologies": ["Jira", "Confluence"]
+      },
+      {
+        "company": "Corrib Consulting",
+        "website": "https://corribconsulting.example.ie",
+        "location": "Galway, Ireland",
+        "from": "2015-08",
+        "to": "2016-12",
+        "position": "Business Analyst",
+        "activities": [
+          {
+            "project": "Process improvement",
+            "tasks": ["Mapped business processes", "Gathered requirements for a new CRM", "Supported user acceptance testing"]
+          }
+        ],
+        "achievements": ["Streamlined an order process, cutting cycle time by 25%"],
+        "toolsAndTechnologies": ["Visio", "SQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "University of Galway",
+        "degree": "BComm",
+        "fieldOfStudy": "Business Information Systems",
+        "achievements": ["First-class honours"]
+      }
+    ],
+    "certifications": [
+      { "title": "Professional Scrum Product Owner II", "institution": "Scrum.org", "year": "2020", "description": "Advanced certification in product ownership." },
+      { "title": "SAFe Product Owner/Product Manager", "institution": "Scaled Agile", "year": "2021", "description": "Certification for product roles in scaled agile environments." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Jira", "Confluence", "Miro", "SQL", "Process Mapping"],
+      "softSkills": ["Facilitation", "Stakeholder management", "Clarity"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Irish", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Backlog health framework", "description": "A set of practices to keep backlogs refined and outcome-focused.", "date": "2022-02", "impact": "Improved sprint predictability across delivery teams." }
+    ],
+    "interestsAndHobbies": ["Sea kayaking", "Traditional Irish music", "Book club"],
+    "references": [
+      { "name": "Padraig Nolan", "position": "Delivery Director", "company": "Atlantic Insurance Digital", "contact": { "phone": "+353 89 700 0212", "email": "padraig.nolan@example.ie" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 95000, "max": 115000 },
+    "candidateClustering": {
+      "primaryCluster": "Product Ownership",
+      "secondaryClusters": ["Agile Delivery", "Business Analysis"],
+      "functionalExpertise": ["Backlog management", "Agile delivery", "Stakeholder alignment"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Increased self-service adoption", "Reduced handling times"],
+      "industryDomains": ["Insurance", "Financial Services"],
+      "environmentFit": ["Regulated enterprise", "Enterprise"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Sustained backlog ownership across multiple teams in regulated delivery with clear outcomes indicates a senior product owner."
+    },
+    "searchIndex": {
+      "roles": ["Product Owner", "Senior Product Owner", "Business Analyst"],
+      "skills": ["Backlog Management", "Agile", "Scrum", "Stakeholder Management", "Jira", "User Stories"],
+      "industries": ["Insurance", "Financial Services", "Software"]
+    },
+    "tags": ["product-owner", "agile", "scrum", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Technical product manager with ten years at the intersection of engineering and product, specialising in platform, API and developer-facing products. Comfortable reading code, shaping technical trade-offs and driving complex, cross-team initiatives. Turns infrastructure investments into clear business value.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "David Nakamura",
+      "role": "Senior Technical Product Manager",
+      "summary": "Technical PM who owns platform and API products, translating deep technical work into roadmaps and outcomes stakeholders understand.",
+      "contact": {
+        "phone": "+1 720 555 0188",
+        "email": "david.nakamura@example.com",
+        "address": {
+          "streetNumber": "1201",
+          "streetName": "Larimer",
+          "streetType": "Street",
+          "unit": "Apt 14",
+          "city": "Denver",
+          "state": "Colorado",
+          "zipCode": "80204",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/david-nakamura-tpm",
+          "github": "https://github.com/davidnakamura",
+          "website": "https://davidnakamura.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["Weekday afternoons MT"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Technical Product", "skills": ["API Product Management", "Platform Strategy", "Developer Experience"] },
+      { "category": "Technical Depth", "skills": ["System Design Literacy", "SQL", "REST & gRPC APIs"] },
+      { "category": "Delivery", "skills": ["Roadmapping", "Cross-team Coordination", "OKRs"] },
+      { "category": "Analytics", "skills": ["Amplitude", "Looker", "Experimentation"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Platform and API products", "Developer experience", "Technical roadmapping"],
+      "keyResponsibilities": ["Own platform and API product roadmaps", "Shape technical trade-offs with engineering", "Drive cross-team technical initiatives"]
+    },
+    "workExperience": [
+      {
+        "company": "Summit Payments Platform",
+        "website": "https://summitpayments.example.com",
+        "location": "Denver, United States",
+        "from": "2020-07",
+        "to": "Present",
+        "position": "Senior Technical Product Manager",
+        "activities": [
+          {
+            "project": "Public API program",
+            "tasks": ["Owned the public payments API product and developer portal", "Defined versioning, deprecation and SLA policies", "Coordinated a multi-team migration to a new API gateway"]
+          }
+        ],
+        "achievements": ["Grew active API integrations by 60% in eighteen months", "Cut partner integration time from six weeks to two"],
+        "toolsAndTechnologies": ["Amplitude", "Looker", "SQL", "Postman", "Jira"]
+      },
+      {
+        "company": "Front Range Data",
+        "website": "https://frontrangedata.example.com",
+        "location": "Boulder, United States",
+        "from": "2016-09",
+        "to": "2020-06",
+        "position": "Technical Product Manager",
+        "activities": [
+          {
+            "project": "Data platform",
+            "tasks": ["Owned the internal data platform roadmap", "Prioritised reliability and self-service investments", "Worked closely with data engineering"]
+          }
+        ],
+        "achievements": ["Improved platform adoption by internal teams by 40%"],
+        "toolsAndTechnologies": ["SQL", "Looker", "Jira"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "University of Colorado Boulder",
+        "degree": "BS",
+        "fieldOfStudy": "Computer Science",
+        "achievements": ["Graduated cum laude"]
+      }
+    ],
+    "certifications": [
+      { "title": "Pragmatic Institute Product Management Certified", "institution": "Pragmatic Institute", "year": "2019", "description": "Certification in market-driven product management." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["API Product Management", "SQL", "Amplitude", "Looker", "System Design Literacy", "Postman"],
+      "softSkills": ["Technical communication", "Cross-team leadership", "Structured thinking"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Japanese", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "API design guidelines", "description": "A cross-team standard for consistent, well-documented public APIs.", "date": "2022-06", "impact": "Improved developer satisfaction scores and reduced support load." }
+    ],
+    "interestsAndHobbies": ["Snowboarding", "Mechanical keyboards", "Homebrewing"],
+    "references": [
+      { "name": "Laura Kim", "position": "VP of Product", "company": "Summit Payments Platform", "contact": { "phone": "+1 720 555 0201", "email": "laura.kim@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 165000, "max": 195000 },
+    "candidateClustering": {
+      "primaryCluster": "Technical Product Management",
+      "secondaryClusters": ["Platform Product", "Developer Experience"],
+      "functionalExpertise": ["Platform and API products", "Developer experience", "Technical roadmapping"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Grew API integrations", "Reduced integration time"],
+      "industryDomains": ["Fintech", "Developer Tools"],
+      "environmentFit": ["Scale-up", "SaaS"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Ownership of platform and API products with technical depth and cross-team initiatives marks a senior technical product manager."
+    },
+    "searchIndex": {
+      "roles": ["Technical Product Manager", "Platform Product Manager", "API Product Manager"],
+      "skills": ["API Product Management", "Platform Strategy", "Developer Experience", "SQL", "Amplitude", "Looker"],
+      "industries": ["Fintech", "Developer Tools", "Software"]
+    },
+    "tags": ["technical-product-manager", "api", "platform", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Growth-focused group product manager with thirteen years driving acquisition, activation and retention across consumer and B2B products. Leads a group of product managers and pairs experimentation rigor with strategic thinking. Known for compounding growth through disciplined testing.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Priya Krishnan",
+      "role": "Group Product Manager, Growth",
+      "summary": "Growth product leader who scales acquisition and retention through rigorous experimentation and a strong product-led motion.",
+      "contact": {
+        "phone": "+44 7700 900901",
+        "email": "priya.krishnan@example.com",
+        "address": {
+          "streetNumber": "33",
+          "streetName": "Old",
+          "streetType": "Street",
+          "unit": "Floor 5",
+          "city": "London",
+          "state": "England",
+          "zipCode": "EC1V 9HL",
+          "country": "United Kingdom"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/priya-krishnan-growth",
+          "website": "https://priyakrishnan.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Weekday evenings"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Growth", "skills": ["Acquisition", "Activation", "Retention", "Product-Led Growth"] },
+      { "category": "Experimentation", "skills": ["A/B Testing", "Growth Modelling", "Funnel Analysis"] },
+      { "category": "Leadership", "skills": ["Team Leadership", "Strategy", "OKRs"] },
+      { "category": "Analytics", "skills": ["SQL", "Amplitude", "Mixpanel", "Looker"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Growth product management", "Experimentation strategy", "Product leadership"],
+      "keyResponsibilities": ["Lead a group of growth product managers", "Set the growth strategy and experimentation roadmap", "Own acquisition, activation and retention metrics"]
+    },
+    "workExperience": [
+      {
+        "company": "Lumina Learning",
+        "website": "https://luminalearning.example.com",
+        "location": "London, United Kingdom",
+        "from": "2019-05",
+        "to": "Present",
+        "position": "Group Product Manager, Growth",
+        "activities": [
+          {
+            "project": "Product-led growth engine",
+            "tasks": ["Built and led a growth pod of five PMs", "Established a continuous experimentation program", "Reworked the onboarding and referral loops"]
+          }
+        ],
+        "achievements": ["Grew monthly active users by 3x over three years", "Improved trial-to-paid conversion by 40% through onboarding experiments"],
+        "toolsAndTechnologies": ["Amplitude", "Mixpanel", "SQL", "Looker"]
+      },
+      {
+        "company": "Nimbus Media",
+        "website": "https://nimbusmedia.example.com",
+        "location": "London, United Kingdom",
+        "from": "2016-02",
+        "to": "2019-04",
+        "position": "Senior Growth Product Manager",
+        "activities": [
+          {
+            "project": "Subscription growth",
+            "tasks": ["Owned the subscription funnel", "Ran high-tempo pricing and paywall experiments", "Partnered with marketing on acquisition"]
+          }
+        ],
+        "achievements": ["Increased subscriber growth rate by 30%"],
+        "toolsAndTechnologies": ["Mixpanel", "SQL", "Optimizely"]
+      },
+      {
+        "company": "Beacon Apps",
+        "website": "https://beaconapps.example.com",
+        "location": "Manchester, United Kingdom",
+        "from": "2013-09",
+        "to": "2016-01",
+        "position": "Product Manager",
+        "activities": [
+          {
+            "project": "Mobile engagement",
+            "tasks": ["Owned engagement and notification features", "Ran the first A/B testing framework rollout"]
+          }
+        ],
+        "achievements": ["Lifted day-7 retention by 20%"],
+        "toolsAndTechnologies": ["Firebase", "SQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2013",
+        "institution": "London School of Economics",
+        "degree": "BSc",
+        "fieldOfStudy": "Economics",
+        "achievements": ["Upper second-class honours"]
+      }
+    ],
+    "certifications": [
+      { "title": "Reforge Growth Series", "institution": "Reforge", "year": "2020", "description": "Advanced program in growth strategy and experimentation." }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["SQL", "Amplitude", "Mixpanel", "Looker", "A/B Testing", "Optimizely"],
+      "softSkills": ["Strategic thinking", "Team leadership", "Data-driven decision making"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Tamil", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Growth experimentation system", "description": "A prioritisation and analysis framework for a high-tempo experiment pipeline.", "date": "2021-09", "impact": "Sustained a cadence of 20+ experiments per quarter with clear learnings." }
+    ],
+    "interestsAndHobbies": ["Yoga", "Growth podcasts", "Angel advising for startups"],
+    "references": [
+      { "name": "Michael O'Brien", "position": "Chief Product Officer", "company": "Lumina Learning", "contact": { "phone": "+44 7700 900920", "email": "michael.obrien@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "GBP", "min": 115000, "max": 140000 },
+    "candidateClustering": {
+      "primaryCluster": "Growth Product Management",
+      "secondaryClusters": ["Product Leadership", "Experimentation"],
+      "functionalExpertise": ["Growth product management", "Experimentation strategy", "Product leadership"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Grew active users", "Improved conversion and retention"],
+      "industryDomains": ["EdTech", "Media"],
+      "environmentFit": ["Scale-up", "SaaS"],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Leadership of a growth PM group with a rigorous experimentation program and strong metric impact marks a lead-level growth product manager."
+    },
+    "searchIndex": {
+      "roles": ["Group Product Manager", "Growth Product Manager", "Product Lead"],
+      "skills": ["Product-Led Growth", "A/B Testing", "Experimentation", "SQL", "Amplitude", "Mixpanel", "Retention"],
+      "industries": ["EdTech", "Media", "Software"]
+    },
+    "tags": ["growth", "product-management", "experimentation", "lead"]
+  },
+  {
+    "candidateProfileSummary": "Director of Product with eighteen years building and scaling product organisations across B2B SaaS and marketplaces. Sets product vision and strategy, builds high-performing teams, and partners with executives on company direction. Known for balancing bold bets with disciplined execution.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Thomas Bergstrom",
+      "role": "Director of Product",
+      "summary": "Product executive who sets vision and strategy, scales product teams, and turns market opportunities into durable growth.",
+      "contact": {
+        "phone": "+1 917 555 0166",
+        "email": "thomas.bergstrom@example.com",
+        "address": {
+          "streetNumber": "250",
+          "streetName": "Hudson",
+          "streetType": "Street",
+          "unit": "Floor 7",
+          "city": "New York",
+          "state": "New York",
+          "zipCode": "10013",
+          "country": "United States"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/thomas-bergstrom-product",
+          "website": "https://thomasbergstrom.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-02-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["Weekday mornings ET"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Product Strategy", "skills": ["Vision Setting", "Portfolio Strategy", "Market Analysis"] },
+      { "category": "Leadership", "skills": ["Org Building", "Coaching", "Executive Communication"] },
+      { "category": "Execution", "skills": ["OKRs", "Roadmapping", "Go-to-Market"] },
+      { "category": "Commercial", "skills": ["Pricing Strategy", "P&L Ownership", "Partnerships"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Product vision and strategy", "Product organisation building", "Executive partnership"],
+      "keyResponsibilities": ["Set product vision and portfolio strategy", "Build and lead product management teams", "Partner with the executive team on company direction"]
+    },
+    "workExperience": [
+      {
+        "company": "Harborview Marketplace",
+        "website": "https://harborview.example.com",
+        "location": "New York, United States",
+        "from": "2017-03",
+        "to": "Present",
+        "position": "Director of Product",
+        "activities": [
+          {
+            "project": "Marketplace expansion",
+            "tasks": ["Set the multi-year product strategy for a two-sided marketplace", "Grew the product team from 6 to 22 across four squads", "Led the expansion into two new verticals"]
+          }
+        ],
+        "achievements": ["Drove revenue growth from $40M to $130M ARR", "Launched two new business lines now contributing 30% of revenue"],
+        "toolsAndTechnologies": ["Amplitude", "Looker", "Jira", "SQL"]
+      },
+      {
+        "company": "Everline SaaS",
+        "website": "https://everline.example.com",
+        "location": "San Francisco, United States",
+        "from": "2012-01",
+        "to": "2017-02",
+        "position": "Group Product Manager",
+        "activities": [
+          {
+            "project": "Platform and monetization",
+            "tasks": ["Led product for the core platform and billing", "Introduced usage-based pricing", "Built and mentored a team of product managers"]
+          }
+        ],
+        "achievements": ["Increased net revenue retention from 105% to 128%"],
+        "toolsAndTechnologies": ["Mixpanel", "SQL", "Jira"]
+      },
+      {
+        "company": "Rivertown Software",
+        "website": "https://rivertownsoftware.example.com",
+        "location": "Chicago, United States",
+        "from": "2008-08",
+        "to": "2011-12",
+        "position": "Product Manager",
+        "activities": [
+          {
+            "project": "SMB product suite",
+            "tasks": ["Owned features for an SMB accounting suite", "Ran customer research and roadmap planning"]
+          }
+        ],
+        "achievements": ["Launched a feature adopted by 50% of the customer base"],
+        "toolsAndTechnologies": ["SQL", "Google Analytics"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2010",
+        "institution": "Northwestern University",
+        "degree": "MBA",
+        "fieldOfStudy": "Strategy and Entrepreneurship",
+        "achievements": ["Kellogg product management fellow"]
+      },
+      {
+        "year": "2008",
+        "institution": "University of Minnesota",
+        "degree": "BS",
+        "fieldOfStudy": "Information Systems",
+        "achievements": ["Graduated with honors"]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": ["SQL", "Amplitude", "Looker", "Pricing Strategy", "Roadmapping"],
+      "softSkills": ["Visionary leadership", "Executive communication", "Team building"],
+      "languages": [
+        { "language": "English", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Swedish", "proficiency": { "read": "native", "written": "fluent", "spoken": "native" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      { "title": "Product operating model", "description": "A company-wide framework connecting strategy, OKRs and team structure.", "date": "2019-03", "impact": "Aligned product, engineering and go-to-market around shared outcomes." }
+    ],
+    "interestsAndHobbies": ["Sailing", "Mentoring product leaders", "Modern architecture"],
+    "references": [
+      { "name": "Sandra Ellison", "position": "Chief Executive Officer", "company": "Harborview Marketplace", "contact": { "phone": "+1 917 555 0180", "email": "sandra.ellison@example.com" } }
+    ],
+    "salaryExpectation": { "currency": "USD", "min": 260000, "max": 320000 },
+    "candidateClustering": {
+      "primaryCluster": "Product Leadership",
+      "secondaryClusters": ["Product Strategy", "Marketplace Products"],
+      "functionalExpertise": ["Product vision and strategy", "Organisation building", "Executive partnership"],
+      "skillDepth": "hybrid",
+      "businessImpact": ["Grew ARR significantly", "Launched new business lines", "Improved net revenue retention"],
+      "industryDomains": ["Marketplaces", "SaaS"],
+      "environmentFit": ["Scale-up", "Enterprise"],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "executiveInfluence",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Setting product strategy, scaling a large product organisation and driving major revenue growth with executive partnership marks a director of product."
+    },
+    "searchIndex": {
+      "roles": ["Director of Product", "Head of Product", "Product Leader"],
+      "skills": ["Product Strategy", "Product Vision", "Roadmapping", "Pricing Strategy", "OKRs", "SQL", "Amplitude"],
+      "industries": ["Marketplaces", "SaaS", "Software"]
+    },
+    "tags": ["product-leadership", "director", "strategy", "saas"]
+  }
+]
