@@ -1,0 +1,106 @@
+[
+  {
+    "title": "Financial Accountant (IFRS/SAP FICO)",
+    "description": "Gruppo manifatturiero internazionale con sede a Milano cerca un Financial Accountant per rafforzare il team di contabilità generale. Entrerai a far parte di una funzione Finance strutturata che gestisce la contabilità di più società del gruppo e supporta le chiusure mensili e annuali.\n\nLa tua missione sarà garantire registrazioni contabili accurate e tempestive, nel pieno rispetto dei principi contabili internazionali e delle policy interne.\n\nResponsabilità principali:\n- Gestire la contabilità generale, cespiti, ratei e risconti\n- Contribuire alle chiusure mensili, trimestrali e di fine anno\n- Effettuare riconciliazioni bancarie e quadrature dei conti\n- Predisporre le scritture di rettifica e la reportistica per il bilancio\n- Collaborare con i revisori esterni durante l'audit annuale\n\nRequisiti richiesti: laurea in Economia o discipline affini, buona conoscenza dei principi IFRS, esperienza operativa con SAP FICO e ottima padronanza di Excel.\n\nNice-to-have: esperienza in contesti multi-società e conoscenza dei principi US GAAP.\n\nOffriamo modalità di lavoro ibrida (tre giorni in sede a Milano), un ambiente collaborativo e un percorso di crescita nel Finance. Contesto orientato alla precisione e al rispetto delle scadenze.",
+    "scoringRules": {
+      "skills": [
+        { "name": "IFRS", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SAP FICO", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "General Ledger Accounting", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Month-End Close", "importance": "important", "weight": 0.65, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Account Reconciliation", "importance": "important", "weight": 0.6, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Excel", "importance": "important", "weight": 0.55, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "US GAAP", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 3, "minRelevantYears": 3, "seniorityLevel": "mid" },
+      "locationPreferences": { "allowedLocations": ["Milano", "Onsite"], "remoteAllowed": false, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Manufacturing", "Professional Services", "Technology"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "FP&A Analyst (Anaplan/Power BI)",
+    "description": "Azienda tecnologica in forte crescita con sede a Roma cerca un FP&A Analyst da inserire nel team di pianificazione finanziaria. È un'opportunità ideale per un profilo junior-mid che desidera sviluppare competenze avanzate di modellazione e business partnering.\n\nLa tua missione sarà supportare i processi di budgeting, forecasting e analisi degli scostamenti, fornendo insight utili alle decisioni del management.\n\nResponsabilità principali:\n- Contribuire alla predisposizione di budget e forecast rolling\n- Analizzare gli scostamenti tra dati actual e previsionali\n- Costruire e mantenere modelli finanziari in Excel e Anaplan\n- Sviluppare dashboard e reportistica in Power BI\n- Collaborare con le funzioni di business per il monitoraggio dei KPI\n\nRequisiti richiesti: laurea in Economia, Finanza o Ingegneria Gestionale, ottime capacità di financial modeling su Excel, attitudine analitica e buona conoscenza dell'inglese.\n\nNice-to-have: prima esperienza con Anaplan e con strumenti di business intelligence come Power BI o Tableau.\n\nOffriamo un ambiente dinamico, formazione continua e modalità di lavoro ibrida con due giorni da remoto. Percorso di crescita rapido all'interno della funzione Finance.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Financial Modeling", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Excel", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Budgeting and Forecasting", "importance": "important", "weight": 0.7, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Variance Analysis", "importance": "important", "weight": 0.6, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Power BI", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Anaplan", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 1, "minRelevantYears": 1, "seniorityLevel": "junior" },
+      "locationPreferences": { "allowedLocations": ["Roma", "Remote"], "remoteAllowed": true, "strictness": "relaxed" },
+      "industryPreferences": { "preferredIndustries": ["Technology", "Professional Services", "Banking"], "strictness": "relaxed" },
+      "scoringWeight": { "skills": 0.55, "experience": 0.2, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Internal Auditor (SOX/Risk & Compliance)",
+    "description": "Primario gruppo bancario con sede a Milano ricerca un Internal Auditor senior per la funzione di Internal Audit & Compliance. Il ruolo prevede la pianificazione ed esecuzione di verifiche di controllo interno su processi finanziari e operativi in ottica di gestione del rischio.\n\nLa tua missione sarà valutare l'adeguatezza del sistema di controllo interno, identificare aree di rischio e proporre azioni correttive al management e al comitato audit.\n\nResponsabilità principali:\n- Pianificare ed eseguire audit su processi finanziari e di compliance\n- Valutare l'efficacia dei controlli interni e la conformità SOX\n- Analizzare dati e transazioni con strumenti di data analytics come ACL\n- Redigere report di audit chiari e proporre piani di rimedio\n- Monitorare l'implementazione delle azioni correttive concordate\n\nRequisiti richiesti: laurea in Economia, solida esperienza in internal audit o revisione, conoscenza approfondita dei framework di controllo interno e del SOX, capacità di redazione di report.\n\nNice-to-have: certificazione CIA o CISA ed esperienza con strumenti ACL o IDEA.\n\nOffriamo un contesto strutturato in ambito banking, visibilità sul top management e modalità di lavoro ibrida. Ruolo senior con responsabilità dirette sui piani di audit.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Internal Audit", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "SOX Compliance", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Risk Management", "importance": "important", "weight": 0.75, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Internal Controls", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "ACL", "importance": "important", "weight": 0.55, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Audit Reporting", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "CIA Certification", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 5, "minRelevantYears": 5, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Milano", "Onsite"], "remoteAllowed": false, "strictness": "strict" },
+      "industryPreferences": { "preferredIndustries": ["Banking", "Insurance", "Professional Services"], "strictness": "strict" },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Treasury Analyst (Cash Management)",
+    "description": "Gruppo assicurativo con sede a Bologna cerca un Treasury Analyst da inserire nel team di tesoreria e finanza. È un ruolo ideale per un profilo junior-mid interessato alla gestione della liquidità, dei rapporti bancari e degli strumenti finanziari.\n\nLa tua missione sarà monitorare i flussi di cassa, ottimizzare la posizione finanziaria netta e supportare le attività di gestione del rischio finanziario.\n\nResponsabilità principali:\n- Monitorare quotidianamente la posizione di liquidità e i flussi di cassa\n- Predisporre il cash flow forecast di breve e medio termine\n- Gestire i rapporti bancari e le operazioni di pagamento\n- Supportare la gestione del rischio tasso e cambio\n- Contribuire alla reportistica di tesoreria e alle riconciliazioni\n\nRequisiti richiesti: laurea in Economia o Finanza, buona conoscenza dei principi di cash management, ottima padronanza di Excel e attitudine analitica.\n\nNice-to-have: esperienza con un Treasury Management System e conoscenza degli strumenti di copertura (hedging).\n\nOffriamo un percorso di crescita nella funzione Finance, formazione dedicata e modalità di lavoro ibrida. Contesto assicurativo strutturato e orientato al rigore metodologico.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Cash Management", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Cash Flow Forecasting", "importance": "mandatory", "weight": 0.75, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Excel", "importance": "important", "weight": 0.7, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Treasury Management System", "importance": "important", "weight": 0.55, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Financial Risk Management", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Hedging", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 2, "minRelevantYears": 2, "seniorityLevel": "mid" },
+      "locationPreferences": { "allowedLocations": ["Bologna", "Onsite"], "remoteAllowed": false, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Insurance", "Banking", "Manufacturing"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Financial Controller (IFRS/US GAAP)",
+    "description": "Multinazionale del settore tecnologico con sede a Torino cerca un Financial Controller esperto per guidare le attività di controllo di gestione e reporting della filiale italiana. Il ruolo riporta al CFO e coordina un piccolo team contabile.\n\nLa tua missione sarà garantire l'integrità del bilancio, presidiare le chiusure e fornire analisi finanziarie affidabili a supporto delle decisioni strategiche.\n\nResponsabilità principali:\n- Coordinare le chiusure mensili e annuali secondo IFRS e US GAAP\n- Presidiare il controllo di gestione, budget e analisi degli scostamenti\n- Garantire l'affidabilità del reporting finanziario e gestionale\n- Supervisionare i controlli interni e i rapporti con i revisori\n- Guidare e sviluppare il team di contabilità e controlling\n\nRequisiti richiesti: laurea in Economia, consolidata esperienza in ruoli di controlling o financial reporting, ottima conoscenza di IFRS e US GAAP, esperienza con SAP FICO o Oracle e forte padronanza di Excel.\n\nNice-to-have: esperienza in contesti multinazionali e conoscenza di strumenti di consolidamento e Power BI.\n\nOffriamo un ruolo di responsabilità con visibilità internazionale, pacchetto retributivo competitivo e modalità di lavoro ibrida a Torino. Contesto senior orientato ai risultati.",
+    "scoringRules": {
+      "skills": [
+        { "name": "IFRS", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "US GAAP", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Financial Reporting", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "SAP FICO", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Management Accounting", "importance": "important", "weight": 0.65, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Excel", "importance": "important", "weight": 0.6, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Oracle", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Power BI", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 6, "minRelevantYears": 6, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Torino", "Onsite"], "remoteAllowed": false, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Technology", "Manufacturing", "Professional Services"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "notAvailable"]
+    }
+  }
+]

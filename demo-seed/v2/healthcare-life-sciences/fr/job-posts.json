@@ -1,0 +1,444 @@
+[
+  {
+    "title": "Infirmier(ère) Diplômé(e) d'État - Service de Cardiologie",
+    "description": "Notre centre hospitalier universitaire de Lyon recrute un(e) Infirmier(ère) Diplômé(e) d'État pour renforcer son service de cardiologie et soins intensifs. Vous rejoignez une équipe pluridisciplinaire de vingt soignants au sein d'un établissement reconnu pour la qualité de sa prise en charge.\n\nVotre mission : dispenser des soins infirmiers de qualité, sûrs et personnalisés, tout en accompagnant les patients et leurs proches tout au long du parcours de soins.\n\nResponsabilités :\n- Réaliser les soins prescrits, la surveillance clinique et la préparation des traitements.\n- Administrer les médicaments dans le respect strict des protocoles et de la traçabilité.\n- Assurer la surveillance hémodynamique et l'interprétation des paramètres vitaux.\n- Collaborer avec les médecins, aides-soignants et kinésithérapeutes au sein de l'équipe.\n- Tenir à jour le dossier patient informatisé et garantir la continuité des transmissions.\n- Participer à la démarche qualité et à la prévention du risque infectieux.\n\nCompétences requises : diplôme d'État d'infirmier valide, inscription à l'Ordre National des Infirmiers, expérience confirmée en soins hospitaliers, maîtrise des gestes d'urgence et des protocoles de soins.\n\nAtouts appréciés : expérience en unité de soins intensifs, formation aux premiers secours avancés (BLS/ACLS), anglais professionnel.\n\nSéniorité : profil confirmé (mid), 3 ans d'expérience minimum. Poste en présentiel à Lyon, horaires en roulement jour/nuit. Environnement stimulant, formations continues et perspectives d'évolution.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Registered Nurse",
+          "importance": "mandatory",
+          "weight": 0.95,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": true
+        },
+        {
+          "name": "Patient Care",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Medication Administration",
+          "importance": "important",
+          "weight": 0.75,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Monitoring",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Electronic Health Records",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Intensive Care",
+          "importance": "nice_to_have",
+          "weight": 0.5,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Basic Life Support",
+          "importance": "nice_to_have",
+          "weight": 0.45,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lyon",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Hospitals & Clinics",
+          "Healthcare"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.05
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Chargé(e) de Pharmacovigilance Junior (H/F)",
+    "description": "Notre laboratoire pharmaceutique implanté à Paris recherche un(e) Chargé(e) de Pharmacovigilance junior pour rejoindre son département sécurité des médicaments. Vous débutez votre carrière au sein d'une équipe expérimentée qui veille à la sécurité des patients sur l'ensemble du portefeuille produits.\n\nVotre mission : contribuer au traitement, à l'évaluation et à la déclaration des cas de sécurité dans le respect des exigences réglementaires européennes.\n\nResponsabilités :\n- Saisir et coder les cas individuels d'effets indésirables (ICSR) dans la base de données de sécurité.\n- Assurer le suivi des délais réglementaires de déclaration auprès de l'EMA et de l'ANSM.\n- Réaliser la revue de la littérature scientifique et le codage MedDRA.\n- Participer à la rédaction des rapports périodiques de sécurité (PSUR/PBRER).\n- Contribuer à la gestion de la base Argus Safety et au contrôle qualité des données.\n- Collaborer avec les affaires réglementaires et les équipes médicales.\n\nCompétences requises : formation scientifique ou pharmaceutique (Bac+5), première expérience ou stage en pharmacovigilance, connaissance des bonnes pratiques (GVP), rigueur et sens du détail.\n\nAtouts appréciés : maîtrise de MedDRA, connaissance d'Argus Safety, anglais courant indispensable en environnement international.\n\nSéniorité : profil junior, 1 an d'expérience minimum. Poste basé à Paris en mode hybride (2 jours de télétravail par semaine). Accompagnement, formation continue et évolution vers un poste senior en pharmacovigilance.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Pharmacovigilance",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Adverse Event Reporting",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Good Pharmacovigilance Practices",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MedDRA",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Argus Safety",
+          "importance": "nice_to_have",
+          "weight": 0.5,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Medical Writing",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 1,
+        "minRelevantYears": 1,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Paris",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "CRO"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.6,
+        "experience": 0.2,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Scientifique Bioanalytique Senior - Développement (GLP)",
+    "description": "Notre société de biotechnologie basée à Braine-l'Alleud, en Belgique, recrute un(e) Scientifique Bioanalytique Senior pour piloter le développement et la validation de méthodes bioanalytiques au service de nos programmes précliniques et cliniques. Vous rejoignez un laboratoire de pointe reconnu pour son excellence scientifique.\n\nVotre mission : développer, valider et transférer des méthodes bioanalytiques robustes conformes aux référentiels GLP et aux recommandations FDA et EMA.\n\nResponsabilités :\n- Développer et valider des méthodes LC-MS/MS et ligand-binding assays pour le dosage de biomarqueurs et de médicaments.\n- Garantir la conformité des études au référentiel GLP et aux SOP internes.\n- Rédiger les protocoles, plans de validation et rapports d'étude.\n- Encadrer une équipe de techniciens et de scientifiques juniors.\n- Interagir avec les partenaires CRO et assurer le transfert de méthodes.\n- Contribuer aux soumissions réglementaires et aux réponses aux autorités.\n\nCompétences requises : doctorat ou master en sciences de la vie, expertise confirmée en bioanalyse, maîtrise de la LC-MS/MS, solide connaissance des bonnes pratiques de laboratoire (GLP) et de la validation de méthodes.\n\nAtouts appréciés : expérience des grandes molécules (biologics), connaissance des directives FDA sur la validation bioanalytique, anglais courant.\n\nSéniorité : profil senior, 6 ans d'expérience minimum. Poste en présentiel à Braine-l'Alleud avec flexibilité ponctuelle. Environnement innovant et projets à fort impact scientifique.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Bioanalytical Method Development",
+          "importance": "mandatory",
+          "weight": 0.95,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "LC-MS/MS",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Good Laboratory Practice",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Method Validation",
+          "importance": "important",
+          "weight": 0.75,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Ligand Binding Assay",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Preclinical Research",
+          "importance": "nice_to_have",
+          "weight": 0.55,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "FDA Regulations",
+          "importance": "nice_to_have",
+          "weight": 0.45,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Braine-l'Alleud",
+          "Brussels",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Biotechnology",
+          "Pharmaceuticals",
+          "CRO"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.6,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.05
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Responsable Affaires Réglementaires Senior (Dispositifs Médicaux)",
+    "description": "Notre société de dispositifs médicaux implantée à Bruxelles recherche un(e) Responsable Affaires Réglementaires Senior pour piloter la stratégie réglementaire de notre portefeuille produits sur les marchés européens et internationaux. Vous jouez un rôle central dans la mise sur le marché et le maintien de la conformité.\n\nVotre mission : définir et exécuter la stratégie d'enregistrement des produits dans le respect du règlement européen sur les dispositifs médicaux (MDR) et des exigences des autorités compétentes.\n\nResponsabilités :\n- Constituer et soumettre les dossiers techniques et les demandes de marquage CE selon le MDR.\n- Assurer l'interface avec les organismes notifiés, l'EMA et la FDA.\n- Piloter la veille réglementaire et évaluer l'impact des évolutions normatives.\n- Garantir la conformité du système de management de la qualité (ISO 13485).\n- Coordonner les activités de vigilance et les rapports post-commercialisation.\n- Encadrer une équipe réglementaire et former les équipes projet.\n\nCompétences requises : formation scientifique ou pharmaceutique (Bac+5), expertise confirmée en affaires réglementaires, maîtrise du MDR et des soumissions réglementaires, solide connaissance de la norme ISO 13485.\n\nAtouts appréciés : expérience des soumissions FDA (510k), connaissance des systèmes qualité GMP, anglais courant indispensable.\n\nSéniorité : profil senior, 7 ans d'expérience minimum. Poste basé à Bruxelles en mode hybride. Environnement international, projets stratégiques et forte visibilité auprès de la direction.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Regulatory Affairs",
+          "importance": "mandatory",
+          "weight": 0.95,
+          "minYearsOfExperience": 7,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Medical Device Regulation",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Regulatory Submissions",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ISO 13485",
+          "importance": "important",
+          "weight": 0.75,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "CE Marking",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "EMA",
+          "importance": "nice_to_have",
+          "weight": 0.55,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "FDA Regulations",
+          "importance": "nice_to_have",
+          "weight": 0.5,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Brussels",
+          "Luxembourg",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Medical Devices",
+          "Pharmaceuticals",
+          "Biotechnology"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.05
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Medical Science Liaison - Oncologie (H/F)",
+    "description": "Notre laboratoire pharmaceutique international recherche un(e) Medical Science Liaison spécialisé(e) en oncologie pour couvrir la région Grand Est et le Luxembourg. Vous êtes l'interlocuteur scientifique privilégié des leaders d'opinion et contribuez à la diffusion d'une information médicale de haute qualité.\n\nVotre mission : établir et entretenir des relations scientifiques avec les experts cliniques, tout en assurant l'interface entre le terrain et les équipes médicales internes.\n\nResponsabilités :\n- Développer un réseau d'experts (KOL) et d'établissements de santé sur le territoire.\n- Présenter les données cliniques et scientifiques dans le respect de la conformité.\n- Recueillir et remonter les insights médicaux du terrain aux équipes internes.\n- Accompagner les investigateurs dans le cadre des essais cliniques.\n- Animer des staffs, symposiums et réunions scientifiques.\n- Assurer une veille bibliographique et concurrentielle en oncologie.\n\nCompétences requises : doctorat en pharmacie, médecine ou sciences (PharmD/PhD/MD), solide culture scientifique en oncologie, expérience en information médicale ou relation avec les KOL, excellent relationnel et rigueur scientifique.\n\nAtouts appréciés : connaissance des essais cliniques et de l'ICH-GCP, expérience en HEOR ou accès au marché, anglais courant indispensable.\n\nSéniorité : profil confirmé (mid), 4 ans d'expérience minimum. Poste terrain itinérant avec télétravail, déplacements fréquents sur la région et au Luxembourg. Environnement dynamique et parcours d'évolution vers des fonctions médicales seniors.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Medical Science Liaison",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Oncology",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Key Opinion Leader Engagement",
+          "importance": "important",
+          "weight": 0.75,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trials",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Medical Affairs",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ICH-GCP",
+          "importance": "nice_to_have",
+          "weight": 0.5,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Market Access",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Strasbourg",
+          "Luxembourg",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "Healthcare"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  }
+]

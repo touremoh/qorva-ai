@@ -1,0 +1,5909 @@
+[
+  {
+    "candidateProfileSummary": "Business Partner de RR. HH. con más de once años acompañando a líderes comerciales y operativos en servicios profesionales y retail. Combina la gestión de relaciones laborales con el diseño organizativo y la planificación de plantillas para traducir los objetivos de negocio en planes de personas. Reconocida por su acompañamiento sereno y pragmático en reestructuraciones, crecimiento y cambio.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Marta Iglesias Bravo",
+      "role": "HR Business Partner",
+      "summary": "HRBP con visión comercial que asesora a la alta dirección en diseño organizativo, relaciones laborales y talento sin perder de vista la experiencia del empleado.",
+      "contact": {
+        "phone": "+34 611 205 348",
+        "email": "marta.iglesias@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Gran Vía",
+          "streetType": "Calle",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28013",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/martaiglesiasbravo"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Martes por la tarde",
+          "Miércoles por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Asesoría de RR. HH.",
+        "skills": [
+          "Relaciones laborales",
+          "Diseño organizativo",
+          "Planificación de plantillas",
+          "Gestión del cambio"
+        ]
+      },
+      {
+        "category": "Talento",
+        "skills": [
+          "Planes de sucesión",
+          "Revisiones de talento",
+          "Gestión del desempeño"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "Workday",
+          "SuccessFactors",
+          "Reporting de HRIS"
+        ]
+      },
+      {
+        "category": "Cumplimiento",
+        "skills": [
+          "Derecho laboral español",
+          "Negociación colectiva",
+          "Expedientes de regulación"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "HR business partnering",
+        "Relaciones laborales",
+        "Diseño organizativo"
+      ],
+      "keyResponsibilities": [
+        "Asesorar a la dirección en estrategia de personas y diseño organizativo",
+        "Liderar casos complejos de relaciones laborales",
+        "Impulsar los ciclos anuales de talento y desempeño"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Grupo Retail Levante",
+        "website": "https://retaillevante.example.com",
+        "location": "Madrid, España",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "HR Business Partner",
+        "activities": [
+          {
+            "project": "Business partnering regional",
+            "tasks": [
+              "Acompañé a una división de retail de 850 personas entre tienda y servicios centrales",
+              "Lideré reestructuraciones y subrogaciones que afectaron a más de 180 empleados",
+              "Formé a mandos intermedios en casos disciplinarios y conflictos complejos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje la rotación voluntaria de la división en 6 puntos en dos años",
+          "Desplegué un programa de capacitación de mandos para 120 líderes"
+        ],
+        "toolsAndTechnologies": [
+          "Workday",
+          "SuccessFactors",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Consultora Meridian Servicios",
+        "website": "https://meridianservicios.example.com",
+        "location": "Alcobendas, España",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "HR Advisor Senior",
+        "activities": [
+          {
+            "project": "Relaciones laborales",
+            "tasks": [
+              "Gestioné de principio a fin los casos de relaciones laborales de una plantilla de 400 personas",
+              "Asesoré a directores en cambios organizativos y evaluación del desempeño",
+              "Coordiné las campañas anuales de revisión salarial"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el tiempo medio de resolución de casos en un 25 %"
+        ],
+        "toolsAndTechnologies": [
+          "SAP SuccessFactors",
+          "Microsoft Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad Complutense de Madrid",
+        "degree": "Grado",
+        "fieldOfStudy": "Relaciones Laborales y Recursos Humanos",
+        "achievements": [
+          "Matrícula de honor en Derecho del Trabajo"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CIPD Level 7 Advanced Diploma",
+        "institution": "CIPD",
+        "year": "@Y-0@",
+        "description": "Cualificación de nivel avanzado en gestión estratégica de personas."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Workday",
+        "SuccessFactors",
+        "Reporting de HRIS",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Coaching",
+        "Influencia",
+        "Discreción",
+        "Gestión de stakeholders"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de capacitación de mandos",
+        "description": "Diseñé y desplegué un itinerario de liderazgo para toda una división de retail.",
+        "date": "2023-05",
+        "impact": "Mejoró la confianza de los mandos y redujo las escaladas de relaciones laborales en un 18 %."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Senderismo",
+      "Canto coral",
+      "Voluntariado en un banco de alimentos"
+    ],
+    "references": [
+      {
+        "name": "Ricardo Salas Vega",
+        "position": "Director de RR. HH.",
+        "company": "Grupo Retail Levante",
+        "contact": {
+          "phone": "+34 611 205 349",
+          "email": "ricardo.salas@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 45000,
+      "max": 55000
+    },
+    "candidateClustering": {
+      "primaryCluster": "HR Business Partnering",
+      "secondaryClusters": [
+        "Employee Relations",
+        "Organisational Design"
+      ],
+      "functionalExpertise": [
+        "People strategy",
+        "Employee relations",
+        "Change management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced turnover",
+        "Improved manager capability"
+      ],
+      "industryDomains": [
+        "Retail",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "Matrixed organisations",
+        "Change-heavy environments"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Trayectoria sostenida como HRBP senior en relaciones laborales, diseño organizativo y cambio sitúa a la candidata en el partnering estratégico de personas."
+    },
+    "searchIndex": {
+      "roles": [
+        "HR Business Partner",
+        "Senior HR Advisor",
+        "People Partner"
+      ],
+      "skills": [
+        "Workday",
+        "SuccessFactors",
+        "Employee relations",
+        "Organisational design",
+        "Workforce planning"
+      ],
+      "industries": [
+        "Retail",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "hr",
+      "hr-business-partner",
+      "employee-relations",
+      "senior",
+      "cipd"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Especialista en adquisición de talento con cuatro años cubriendo posiciones de perfil comercial, soporte y operaciones para centros de servicios compartidos. Domina el sourcing directo, la evaluación por competencias y la experiencia de candidato. Le motiva construir procesos de selección ágiles y basados en datos.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Diego Serrano Molina",
+      "role": "Especialista en Adquisición de Talento",
+      "summary": "Recruiter proactivo que combina sourcing directo con una experiencia de candidato cuidada para cubrir volúmenes altos sin perder calidad.",
+      "contact": {
+        "phone": "+34 622 341 076",
+        "email": "diego.serrano@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Colón",
+          "streetType": "Calle",
+          "city": "Valencia",
+          "state": "Comunidad Valenciana",
+          "zipCode": "46004",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/diegoserranomolina"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 15,
+        "interviewAvailability": [
+          "Lunes por la tarde",
+          "Viernes por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Sourcing",
+        "skills": [
+          "Sourcing directo",
+          "Búsqueda en LinkedIn Recruiter",
+          "Boolean search",
+          "Talent pipelining"
+        ]
+      },
+      {
+        "category": "Selección",
+        "skills": [
+          "Entrevistas por competencias",
+          "Cribado telefónico",
+          "Evaluación de candidatos"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "ATS",
+          "Greenhouse",
+          "LinkedIn Recruiter"
+        ]
+      },
+      {
+        "category": "Employer branding",
+        "skills": [
+          "Experiencia de candidato",
+          "Publicación de ofertas",
+          "Redes sociales"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Adquisición de talento",
+        "Sourcing",
+        "Experiencia de candidato"
+      ],
+      "keyResponsibilities": [
+        "Gestionar procesos de selección de principio a fin",
+        "Construir pipelines de talento para perfiles recurrentes",
+        "Coordinar la agenda de entrevistas con los managers"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Talent Hub Mediterráneo",
+        "website": "https://talenthubmed.example.com",
+        "location": "Valencia, España",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Especialista en Adquisición de Talento",
+        "activities": [
+          {
+            "project": "Selección de volumen",
+            "tasks": [
+              "Cubrí una media de 12 vacantes mensuales de atención al cliente y operaciones",
+              "Reduje el time-to-fill mediante pipelines proactivos",
+              "Mejoré la experiencia de candidato con comunicaciones estructuradas"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el time-to-fill medio de 42 a 30 días",
+          "Alcancé un NPS de candidato de 68"
+        ],
+        "toolsAndTechnologies": [
+          "Greenhouse",
+          "LinkedIn Recruiter",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Servicios Compartidos Turia",
+        "website": "https://turiassc.example.com",
+        "location": "Paterna, España",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Recruiter Junior",
+        "activities": [
+          {
+            "project": "Soporte a selección",
+            "tasks": [
+              "Realicé cribados telefónicos y coordiné entrevistas",
+              "Publiqué ofertas en portales de empleo",
+              "Mantuve actualizada la base de datos de candidatos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Cubrí más de 90 vacantes junior en 18 meses"
+        ],
+        "toolsAndTechnologies": [
+          "ATS",
+          "Microsoft Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universitat de València",
+        "degree": "Grado",
+        "fieldOfStudy": "Psicología",
+        "achievements": [
+          "Especialización en psicología del trabajo"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "LinkedIn Certified Professional Recruiter",
+        "institution": "LinkedIn",
+        "year": "@Y-0@",
+        "description": "Certificación en sourcing y uso avanzado de LinkedIn Recruiter."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Greenhouse",
+        "LinkedIn Recruiter",
+        "ATS",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Comunicación",
+        "Organización",
+        "Orientación a candidato",
+        "Proactividad"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Rediseño de la experiencia de candidato",
+        "description": "Implanté plantillas de comunicación y feedback en cada fase del proceso.",
+        "date": "2024-03",
+        "impact": "Elevó el NPS de candidato de 45 a 68 en seis meses."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Fútbol sala",
+      "Fotografía urbana",
+      "Cocina mediterránea"
+    ],
+    "references": [
+      {
+        "name": "Ana Belén Torres Gil",
+        "position": "Talent Acquisition Manager",
+        "company": "Talent Hub Mediterráneo",
+        "contact": {
+          "phone": "+34 622 341 077",
+          "email": "anabelen.torres@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 28000,
+      "max": 34000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Talent Acquisition",
+      "secondaryClusters": [
+        "Sourcing",
+        "Candidate Experience"
+      ],
+      "functionalExpertise": [
+        "Recruitment",
+        "Sourcing",
+        "Interviewing"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Reduced time-to-fill",
+        "Improved candidate experience"
+      ],
+      "industryDomains": [
+        "Shared services",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "High-volume recruitment",
+        "Fast-paced teams"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Experiencia centrada en selección de volumen con métricas claras de time-to-fill y experiencia de candidato encaja en adquisición de talento de nivel intermedio."
+    },
+    "searchIndex": {
+      "roles": [
+        "Talent Acquisition Specialist",
+        "Recruiter",
+        "Sourcer"
+      ],
+      "skills": [
+        "Greenhouse",
+        "LinkedIn Recruiter",
+        "Sourcing",
+        "Competency interviewing",
+        "Candidate experience"
+      ],
+      "industries": [
+        "Shared services",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "hr",
+      "talent-acquisition",
+      "recruiter",
+      "midlevel",
+      "sourcing"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Responsable de Formación y Desarrollo con quince años diseñando programas de aprendizaje corporativo en sector público y servicios profesionales. Experta en detección de necesidades, diseño instruccional y medición del impacto formativo. Lidera equipos de L&D y presupuestos anuales de desarrollo de talento.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Nuria Castells Puig",
+      "role": "Responsable de Formación y Desarrollo",
+      "summary": "Líder de L&D orientada al negocio que conecta las necesidades de capacitación con resultados medibles y una cultura de aprendizaje continuo.",
+      "contact": {
+        "phone": "+34 633 118 942",
+        "email": "nuria.castells@example.com",
+        "address": {
+          "streetNumber": "88",
+          "streetName": "Diagonal",
+          "streetType": "Avenida",
+          "unit": "3º 2ª",
+          "city": "Barcelona",
+          "state": "Cataluña",
+          "zipCode": "08019",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/nuriacastellspuig"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Miércoles por la tarde",
+          "Jueves por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Aprendizaje",
+        "skills": [
+          "Diseño instruccional",
+          "Detección de necesidades",
+          "Formación de líderes",
+          "Aprendizaje digital"
+        ]
+      },
+      {
+        "category": "Medición",
+        "skills": [
+          "Modelo Kirkpatrick",
+          "KPIs formativos",
+          "ROI de formación"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "Cornerstone LMS",
+          "SuccessFactors",
+          "Articulate 360"
+        ]
+      },
+      {
+        "category": "Gestión",
+        "skills": [
+          "Gestión de equipos",
+          "Gestión presupuestaria",
+          "Gestión de proveedores"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Formación y desarrollo",
+        "Diseño instruccional",
+        "Desarrollo de liderazgo"
+      ],
+      "keyResponsibilities": [
+        "Definir la estrategia anual de formación",
+        "Liderar el equipo y el presupuesto de L&D",
+        "Medir el impacto de los programas formativos"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Institut de Serveis Públics de Catalunya",
+        "website": "https://ispc.example.com",
+        "location": "Barcelona, España",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Responsable de Formación y Desarrollo",
+        "activities": [
+          {
+            "project": "Academia de liderazgo",
+            "tasks": [
+              "Diseñé una academia interna de liderazgo para 300 mandos",
+              "Gestioné un presupuesto anual de formación de 1,2 M€",
+              "Lideré un equipo de cinco especialistas de L&D"
+            ]
+          }
+        ],
+        "achievements": [
+          "Aumenté la finalización de itinerarios formativos del 62 % al 89 %",
+          "Reduje el coste por hora de formación un 22 % renegociando proveedores"
+        ],
+        "toolsAndTechnologies": [
+          "Cornerstone LMS",
+          "Articulate 360",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "company": "Consultoría Ágora Talent",
+        "website": "https://agoratalent.example.com",
+        "location": "Barcelona, España",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Consultora de Formación",
+        "activities": [
+          {
+            "project": "Programas a medida",
+            "tasks": [
+              "Diseñé programas formativos para clientes de servicios profesionales",
+              "Facilité talleres presenciales y virtuales",
+              "Implanté evaluaciones de impacto basadas en Kirkpatrick"
+            ]
+          }
+        ],
+        "achievements": [
+          "Cartera de 20 clientes recurrentes de formación corporativa"
+        ],
+        "toolsAndTechnologies": [
+          "Articulate Storyline",
+          "Moodle"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universitat de Barcelona",
+        "degree": "Licenciatura",
+        "fieldOfStudy": "Pedagogía",
+        "achievements": [
+          "Premio extraordinario de fin de carrera"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "ESADE",
+        "degree": "Máster",
+        "fieldOfStudy": "Dirección de Recursos Humanos",
+        "achievements": [
+          "Proyecto final sobre analítica del aprendizaje"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Professional in Talent Development (CPTD)",
+        "institution": "ATD",
+        "year": "@Y-0@",
+        "description": "Certificación internacional en desarrollo del talento."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Cornerstone LMS",
+        "Articulate 360",
+        "SuccessFactors",
+        "Microsoft Power BI"
+      ],
+      "softSkills": [
+        "Liderazgo",
+        "Facilitación",
+        "Pensamiento estratégico",
+        "Comunicación"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Catalán",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Academia interna de liderazgo",
+        "description": "Creé un itinerario modular de desarrollo de mandos con seguimiento por competencias.",
+        "date": "2022-01",
+        "impact": "Elevó la finalización de itinerarios al 89 % y mejoró la promoción interna."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Teatro amateur",
+      "Lectura de ensayo",
+      "Excursiones en bicicleta"
+    ],
+    "references": [
+      {
+        "name": "Jordi Ferrer Camps",
+        "position": "Director de Personas",
+        "company": "Institut de Serveis Públics de Catalunya",
+        "contact": {
+          "phone": "+34 633 118 943",
+          "email": "jordi.ferrer@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 52000,
+      "max": 64000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Learning & Development",
+      "secondaryClusters": [
+        "Instructional Design",
+        "Leadership Development"
+      ],
+      "functionalExpertise": [
+        "Learning strategy",
+        "Instructional design",
+        "Team leadership"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Improved learning completion",
+        "Reduced training cost"
+      ],
+      "industryDomains": [
+        "Public sector",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "Structured organisations",
+        "Learning cultures"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Larga trayectoria liderando estrategia, equipo y presupuesto de L&D con impacto medido posiciona a la candidata como manager de formación y desarrollo."
+    },
+    "searchIndex": {
+      "roles": [
+        "Learning & Development Manager",
+        "L&D Lead",
+        "Training Manager"
+      ],
+      "skills": [
+        "Cornerstone LMS",
+        "Articulate 360",
+        "Instructional design",
+        "Leadership development",
+        "Training evaluation"
+      ],
+      "industries": [
+        "Public sector",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "hr",
+      "learning-development",
+      "training",
+      "manager",
+      "instructional-design"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Partner de Compensación y Beneficios con once años estructurando políticas retributivas en tecnología y servicios financieros. Especialista en benchmarking salarial, bandas retributivas y gestión de la retribución variable. Traduce datos de mercado en políticas justas y competitivas.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Álvaro Ruiz Delgado",
+      "role": "Partner de Compensación y Beneficios",
+      "summary": "Especialista en compensación que equilibra equidad interna y competitividad externa con un enfoque analítico y orientado al negocio.",
+      "contact": {
+        "phone": "+34 644 902 155",
+        "email": "alvaro.ruiz@example.com",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "San Fernando",
+          "streetType": "Avenida",
+          "city": "Sevilla",
+          "state": "Andalucía",
+          "zipCode": "41004",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/alvaroruizdelgado"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Martes por la mañana",
+          "Jueves por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Compensación",
+        "skills": [
+          "Benchmarking salarial",
+          "Diseño de bandas retributivas",
+          "Retribución variable",
+          "Equidad salarial"
+        ]
+      },
+      {
+        "category": "Beneficios",
+        "skills": [
+          "Planes de beneficios",
+          "Retribución flexible",
+          "Movilidad internacional"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "Workday",
+          "Mercer",
+          "Microsoft Excel avanzado"
+        ]
+      },
+      {
+        "category": "Analítica",
+        "skills": [
+          "Modelado retributivo",
+          "Reporting",
+          "Análisis de brecha salarial"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Compensación y beneficios",
+        "Benchmarking salarial",
+        "Retribución variable"
+      ],
+      "keyResponsibilities": [
+        "Diseñar y mantener la política retributiva",
+        "Gestionar las campañas anuales de revisión salarial",
+        "Asesorar a RR. HH. sobre equidad y competitividad"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Fintech Guadalquivir",
+        "website": "https://fintechguadalquivir.example.com",
+        "location": "Sevilla, España",
+        "from": "@M-2@",
+        "to": "Present",
+        "position": "Partner de Compensación y Beneficios",
+        "activities": [
+          {
+            "project": "Política retributiva global",
+            "tasks": [
+              "Rediseñé las bandas salariales de una plantilla de 700 personas",
+              "Gestioné el ciclo anual de revisión y bonus",
+              "Implanté un análisis de brecha salarial de género"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje la brecha salarial de género del 9 % al 3 %",
+          "Alineé el 95 % de los salarios dentro de las bandas objetivo"
+        ],
+        "toolsAndTechnologies": [
+          "Workday",
+          "Mercer",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Servicios Financieros Betis",
+        "website": "https://sfbetis.example.com",
+        "location": "Sevilla, España",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Analista de Compensación",
+        "activities": [
+          {
+            "project": "Benchmarking y reporting",
+            "tasks": [
+              "Elaboré estudios de benchmarking con datos de Mercer",
+              "Modelé escenarios de coste de las revisiones salariales",
+              "Preparé el reporting de compensación para dirección"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automaticé el reporting retributivo ahorrando 15 horas mensuales"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Excel",
+          "Mercer"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad de Sevilla",
+        "degree": "Grado",
+        "fieldOfStudy": "Administración y Dirección de Empresas",
+        "achievements": [
+          "Mención en finanzas"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Workday",
+        "Mercer",
+        "Microsoft Excel",
+        "Power BI"
+      ],
+      "softSkills": [
+        "Análisis",
+        "Rigor",
+        "Confidencialidad",
+        "Comunicación de datos"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Análisis de brecha salarial de género",
+        "description": "Diseñé la metodología y el plan de acción para cerrar diferencias retributivas injustificadas.",
+        "date": "2023-11",
+        "impact": "Redujo la brecha salarial de género del 9 % al 3 % en dos ciclos."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ajedrez",
+      "Running",
+      "Historia económica"
+    ],
+    "references": [
+      {
+        "name": "Isabel Moreno Castro",
+        "position": "Directora de RR. HH.",
+        "company": "Fintech Guadalquivir",
+        "contact": {
+          "phone": "+34 644 902 156",
+          "email": "isabel.moreno@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 60000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Compensation & Benefits",
+      "secondaryClusters": [
+        "Reward Analytics",
+        "Pay Equity"
+      ],
+      "functionalExpertise": [
+        "Compensation design",
+        "Benchmarking",
+        "Variable pay"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced pay gap",
+        "Improved pay competitiveness"
+      ],
+      "industryDomains": [
+        "Technology",
+        "Financial services"
+      ],
+      "environmentFit": [
+        "Data-driven organisations",
+        "Scaling companies"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Experiencia consolidada en diseño retributivo, benchmarking y equidad salarial con impacto cuantificado ubica al candidato en compensación y beneficios senior."
+    },
+    "searchIndex": {
+      "roles": [
+        "Compensation & Benefits Partner",
+        "Reward Analyst",
+        "Compensation Specialist"
+      ],
+      "skills": [
+        "Workday",
+        "Mercer",
+        "Salary benchmarking",
+        "Variable pay",
+        "Pay equity"
+      ],
+      "industries": [
+        "Technology",
+        "Financial services"
+      ]
+    },
+    "tags": [
+      "hr",
+      "compensation-benefits",
+      "reward",
+      "senior",
+      "grp"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Lead de Operaciones de RR. HH. con catorce años optimizando procesos de administración de personal y nómina en centros de servicios compartidos. Experto en HRIS, gestión de casos y mejora continua de procesos de people operations. Lidera equipos de soporte de RR. HH. y proyectos de digitalización.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Beatriz Ortega Marín",
+      "role": "HR Operations Lead",
+      "summary": "Líder de people operations que combina eficiencia de procesos, calidad de servicio y una experiencia de empleado impecable en entornos de alto volumen.",
+      "contact": {
+        "phone": "+34 655 447 210",
+        "email": "beatriz.ortega@example.com",
+        "address": {
+          "streetNumber": "31",
+          "streetName": "Ercilla",
+          "streetType": "Calle",
+          "city": "Bilbao",
+          "state": "País Vasco",
+          "zipCode": "48011",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/beatrizortegamarin"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Lunes por la tarde",
+          "Miércoles por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "People Operations",
+        "skills": [
+          "Administración de personal",
+          "Gestión de casos",
+          "Onboarding y offboarding",
+          "Mejora de procesos"
+        ]
+      },
+      {
+        "category": "Nómina",
+        "skills": [
+          "Coordinación de nómina",
+          "Control de incidencias",
+          "Cumplimiento laboral"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "Workday",
+          "SAP HR",
+          "ServiceNow HR"
+        ]
+      },
+      {
+        "category": "Liderazgo",
+        "skills": [
+          "Gestión de equipos",
+          "SLAs de servicio",
+          "Formación de agentes"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Operaciones de RR. HH.",
+        "Administración de personal",
+        "Mejora de procesos"
+      ],
+      "keyResponsibilities": [
+        "Liderar el equipo de soporte de RR. HH.",
+        "Garantizar el cumplimiento de los SLAs de servicio",
+        "Impulsar la digitalización de procesos de people operations"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Centro de Servicios Compartidos Norte",
+        "website": "https://cssnorte.example.com",
+        "location": "Bilbao, España",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "HR Operations Lead",
+        "activities": [
+          {
+            "project": "People operations de alto volumen",
+            "tasks": [
+              "Lideré un equipo de ocho agentes de soporte de RR. HH.",
+              "Gestioné más de 2.500 consultas mensuales dentro de SLA",
+              "Implanté un portal de autoservicio del empleado en ServiceNow"
+            ]
+          }
+        ],
+        "achievements": [
+          "Elevé el cumplimiento de SLA del 82 % al 96 %",
+          "Reduje las consultas repetitivas un 30 % con el autoservicio"
+        ],
+        "toolsAndTechnologies": [
+          "Workday",
+          "ServiceNow HR",
+          "SAP HR"
+        ]
+      },
+      {
+        "company": "Grupo Industrial Cantábrico",
+        "website": "https://industrialcantabrico.example.com",
+        "location": "Barakaldo, España",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Técnico de Administración de Personal",
+        "activities": [
+          {
+            "project": "Administración y nómina",
+            "tasks": [
+              "Gestioné altas, bajas y modificaciones contractuales",
+              "Coordiné la nómina de 600 empleados con el proveedor externo",
+              "Controlé incidencias y absentismo"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje los errores de nómina por debajo del 0,5 %"
+        ],
+        "toolsAndTechnologies": [
+          "SAP HR",
+          "Microsoft Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad de Deusto",
+        "degree": "Diplomatura",
+        "fieldOfStudy": "Relaciones Laborales",
+        "achievements": [
+          "Prácticas destacadas en administración de personal"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Workday HCM Fundamentals",
+        "institution": "Workday",
+        "year": "@Y-0@",
+        "description": "Formación oficial en administración de Workday HCM."
+      },
+      {
+        "title": "Lean Six Sigma Green Belt",
+        "institution": "IASSC",
+        "year": "@Y-1@",
+        "description": "Certificación en mejora de procesos."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Workday",
+        "ServiceNow HR",
+        "SAP HR",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Liderazgo",
+        "Orientación al servicio",
+        "Rigor",
+        "Resolución de problemas"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Euskera",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Portal de autoservicio del empleado",
+        "description": "Lideré la implantación de un portal de RR. HH. en ServiceNow con gestión de casos.",
+        "date": "2022-09",
+        "impact": "Redujo las consultas repetitivas un 30 % y mejoró la satisfacción del empleado."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Montañismo",
+      "Cocina vasca",
+      "Voluntariado social"
+    ],
+    "references": [
+      {
+        "name": "Iñaki Aguirre Sáez",
+        "position": "Director de Servicios de RR. HH.",
+        "company": "Centro de Servicios Compartidos Norte",
+        "contact": {
+          "phone": "+34 655 447 211",
+          "email": "inaki.aguirre@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 42000,
+      "max": 52000
+    },
+    "candidateClustering": {
+      "primaryCluster": "HR Operations",
+      "secondaryClusters": [
+        "People Operations",
+        "Process Improvement"
+      ],
+      "functionalExpertise": [
+        "HR administration",
+        "Case management",
+        "Process improvement"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Improved SLA compliance",
+        "Reduced payroll errors"
+      ],
+      "industryDomains": [
+        "Shared services",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "High-volume operations",
+        "Service-driven teams"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Trayectoria liderando people operations de alto volumen con mejora de SLAs y digitalización de procesos encaja en un rol lead de operaciones de RR. HH."
+    },
+    "searchIndex": {
+      "roles": [
+        "HR Operations Lead",
+        "People Operations Lead",
+        "HR Services Team Lead"
+      ],
+      "skills": [
+        "Workday",
+        "ServiceNow HR",
+        "SAP HR",
+        "Case management",
+        "Process improvement"
+      ],
+      "industries": [
+        "Shared services",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "hr",
+      "hr-operations",
+      "people-operations",
+      "lead",
+      "workday"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Office Manager con trece años coordinando la operativa diaria de oficinas en tecnología y servicios profesionales. Experta en gestión de proveedores, facilities ligeros y soporte a dirección. Mantiene entornos de trabajo eficientes y acogedores mientras controla el presupuesto de oficina.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Carmen Vega Alonso",
+      "role": "Office Manager",
+      "summary": "Office Manager resolutiva que orquesta proveedores, presupuesto y experiencia de oficina para que los equipos funcionen sin fricciones.",
+      "contact": {
+        "phone": "+34 666 210 883",
+        "email": "carmen.vega@example.com",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "Larios",
+          "streetType": "Calle",
+          "city": "Málaga",
+          "state": "Andalucía",
+          "zipCode": "29005",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/carmenvegaalonso"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Martes por la tarde",
+          "Viernes por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Gestión de oficina",
+        "skills": [
+          "Gestión de proveedores",
+          "Control presupuestario",
+          "Compras de oficina",
+          "Coordinación de facilities"
+        ]
+      },
+      {
+        "category": "Soporte",
+        "skills": [
+          "Soporte a dirección",
+          "Organización de eventos",
+          "Gestión de agendas"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Office",
+          "Google Workspace",
+          "Sistemas de gastos"
+        ]
+      },
+      {
+        "category": "Procesos",
+        "skills": [
+          "Onboarding logístico",
+          "Salud y seguridad",
+          "Gestión documental"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Gestión de oficina",
+        "Gestión de proveedores",
+        "Soporte a dirección"
+      ],
+      "keyResponsibilities": [
+        "Coordinar la operativa diaria de la oficina",
+        "Gestionar proveedores y presupuesto",
+        "Organizar eventos internos y logística de onboarding"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Innova Software Sur",
+        "website": "https://innovasur.example.com",
+        "location": "Málaga, España",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Office Manager",
+        "activities": [
+          {
+            "project": "Operativa de oficina",
+            "tasks": [
+              "Coordiné la operativa de una oficina de 150 personas",
+              "Gestioné contratos con más de 20 proveedores",
+              "Controlé un presupuesto anual de oficina de 250.000 €"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el gasto de oficina un 12 % renegociando proveedores",
+          "Organicé más de 30 eventos internos anuales"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Office",
+          "Google Workspace",
+          "SAP Concur"
+        ]
+      },
+      {
+        "company": "Bufete Costa del Sol",
+        "website": "https://bufetecostadelsol.example.com",
+        "location": "Marbella, España",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Coordinadora de Oficina",
+        "activities": [
+          {
+            "project": "Soporte administrativo",
+            "tasks": [
+              "Gestioné la agenda y los viajes de los socios",
+              "Coordiné la recepción y la mensajería",
+              "Mantuve la gestión documental del despacho"
+            ]
+          }
+        ],
+        "achievements": [
+          "Digitalicé el archivo del despacho reduciendo el papel un 60 %"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Office",
+          "Sistema de gestión documental"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad de Málaga",
+        "degree": "Grado",
+        "fieldOfStudy": "Administración de Empresas",
+        "achievements": [
+          "Prácticas en gestión administrativa"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certificado de Prevención de Riesgos Laborales (nivel básico)",
+        "institution": "FUNDAE",
+        "year": "@Y-2@",
+        "description": "Formación en salud y seguridad en el entorno de oficina."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Microsoft Office",
+        "Google Workspace",
+        "SAP Concur",
+        "Gestión documental"
+      ],
+      "softSkills": [
+        "Organización",
+        "Resolución",
+        "Trato cercano",
+        "Atención al detalle"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Renegociación de proveedores de oficina",
+        "description": "Revisé y renegocié los principales contratos de servicios de la oficina.",
+        "date": "2021-04",
+        "impact": "Ahorró un 12 % del presupuesto anual de oficina sin bajar el nivel de servicio."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Jardinería",
+      "Voluntariado en eventos culturales",
+      "Natación"
+    ],
+    "references": [
+      {
+        "name": "Francisco Molina Rueda",
+        "position": "Director General",
+        "company": "Innova Software Sur",
+        "contact": {
+          "phone": "+34 666 210 884",
+          "email": "francisco.molina@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Office Management",
+      "secondaryClusters": [
+        "Facilities Coordination",
+        "Executive Support"
+      ],
+      "functionalExpertise": [
+        "Office operations",
+        "Vendor management",
+        "Budget control"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Reduced office costs",
+        "Improved workplace experience"
+      ],
+      "industryDomains": [
+        "Technology",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "Growing offices",
+        "People-facing environments"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Experiencia sólida coordinando operativa de oficina, proveedores y presupuesto sitúa a la candidata como Office Manager senior generalista."
+    },
+    "searchIndex": {
+      "roles": [
+        "Office Manager",
+        "Office Coordinator",
+        "Workplace Manager"
+      ],
+      "skills": [
+        "Microsoft Office",
+        "Google Workspace",
+        "Vendor management",
+        "Budget control",
+        "Event coordination"
+      ],
+      "industries": [
+        "Technology",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "admin",
+      "office-manager",
+      "facilities",
+      "senior",
+      "vendor-management"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Asistente Ejecutivo con catorce años dando soporte a comités de dirección en banca y consultoría. Experto en gestión de agendas complejas, coordinación de viajes internacionales y preparación de reuniones de alto nivel. Discreto, anticipativo y con un dominio impecable de las herramientas ofimáticas.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Javier Domínguez Ferrer",
+      "role": "Asistente Ejecutivo",
+      "summary": "EA de confianza que gestiona agendas, viajes y prioridades de la alta dirección con discreción, anticipación y precisión.",
+      "contact": {
+        "phone": "+34 677 559 041",
+        "email": "javier.dominguez@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Independencia",
+          "streetType": "Paseo",
+          "city": "Zaragoza",
+          "state": "Aragón",
+          "zipCode": "50004",
+          "country": "España"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Lunes por la mañana",
+          "Jueves por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Soporte ejecutivo",
+        "skills": [
+          "Gestión de agendas",
+          "Coordinación de viajes",
+          "Preparación de reuniones",
+          "Gestión de gastos"
+        ]
+      },
+      {
+        "category": "Comunicación",
+        "skills": [
+          "Redacción ejecutiva",
+          "Interlocución con stakeholders",
+          "Confidencialidad"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Office",
+          "Outlook avanzado",
+          "SAP Concur"
+        ]
+      },
+      {
+        "category": "Organización",
+        "skills": [
+          "Priorización",
+          "Gestión de proyectos ligeros",
+          "Coordinación de eventos"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Soporte ejecutivo",
+        "Gestión de agendas",
+        "Coordinación de viajes"
+      ],
+      "keyResponsibilities": [
+        "Gestionar la agenda y las prioridades de la dirección",
+        "Coordinar viajes y eventos internacionales",
+        "Preparar reuniones y actas del comité"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Banca Ibérica del Ebro",
+        "website": "https://bancaebro.example.com",
+        "location": "Zaragoza, España",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Asistente Ejecutivo del CEO",
+        "activities": [
+          {
+            "project": "Soporte al comité de dirección",
+            "tasks": [
+              "Gestioné la agenda y los viajes del CEO y dos directores generales",
+              "Coordiné las reuniones mensuales del comité de dirección",
+              "Preparé presentaciones y actas confidenciales"
+            ]
+          }
+        ],
+        "achievements": [
+          "Optimicé la agenda del CEO liberando un 15 % de tiempo productivo",
+          "Coordiné más de 60 viajes internacionales sin incidencias"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Office",
+          "SAP Concur",
+          "Outlook"
+        ]
+      },
+      {
+        "company": "Consultora Moncayo",
+        "website": "https://consultoramoncayo.example.com",
+        "location": "Zaragoza, España",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Asistente de Dirección",
+        "activities": [
+          {
+            "project": "Soporte administrativo",
+            "tasks": [
+              "Gestioné agendas y viajes de tres socios",
+              "Coordiné eventos con clientes",
+              "Controlé los gastos y las facturas del área"
+            ]
+          }
+        ],
+        "achievements": [
+          "Implanté un sistema de control de gastos que redujo errores un 40 %"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Office",
+          "Sistema de gastos"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad de Zaragoza",
+        "degree": "Diplomatura",
+        "fieldOfStudy": "Secretariado de Dirección y Administración",
+        "achievements": [
+          "Especialización en asistencia de dirección internacional"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Executive PA Diploma",
+        "institution": "Pitman Training",
+        "year": "@Y-2@",
+        "description": "Diploma profesional en asistencia ejecutiva de alto nivel."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Microsoft Office",
+        "SAP Concur",
+        "Outlook",
+        "Google Workspace"
+      ],
+      "softSkills": [
+        "Discreción",
+        "Anticipación",
+        "Organización",
+        "Comunicación"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Francés",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Optimización de la agenda ejecutiva",
+        "description": "Rediseñé la gestión de la agenda del CEO priorizando el tiempo estratégico.",
+        "date": "2021-02",
+        "impact": "Liberó un 15 % del tiempo del CEO para trabajo de alto valor."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ciclismo de montaña",
+      "Enología",
+      "Ajedrez"
+    ],
+    "references": [
+      {
+        "name": "Marta Bielsa Roldán",
+        "position": "CEO",
+        "company": "Banca Ibérica del Ebro",
+        "contact": {
+          "phone": "+34 677 559 042",
+          "email": "marta.bielsa@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 34000,
+      "max": 42000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Executive Support",
+      "secondaryClusters": [
+        "Diary Management",
+        "Travel Coordination"
+      ],
+      "functionalExpertise": [
+        "Executive assistance",
+        "Diary management",
+        "Travel coordination"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Freed executive time",
+        "Flawless travel coordination"
+      ],
+      "industryDomains": [
+        "Financial services",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "Fast-paced executive offices",
+        "Confidential environments"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Larga experiencia dando soporte directo a comités de dirección con gestión de agenda y viajes de alto nivel encaja en soporte ejecutivo senior."
+    },
+    "searchIndex": {
+      "roles": [
+        "Executive Assistant",
+        "Personal Assistant",
+        "EA to CEO"
+      ],
+      "skills": [
+        "Microsoft Office",
+        "SAP Concur",
+        "Diary management",
+        "Travel coordination",
+        "Meeting preparation"
+      ],
+      "industries": [
+        "Financial services",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "admin",
+      "executive-assistant",
+      "personal-assistant",
+      "senior",
+      "diary-management"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Administrativa con tres años de experiencia dando soporte a equipos de operaciones en el sector retail. Ágil con la gestión documental, la introducción de datos y la atención a proveedores. Persona organizada y fiable que busca crecer dentro de la función administrativa.",
+    "careerStartYear": 2023,
+    "personalInformation": {
+      "name": "Paula Navarro Gil",
+      "role": "Administrativa",
+      "summary": "Administrativa organizada y meticulosa que mantiene los datos, la documentación y las tareas de oficina al día con precisión.",
+      "contact": {
+        "phone": "+34 688 340 512",
+        "email": "paula.navarro@example.com",
+        "address": {
+          "streetNumber": "6",
+          "streetName": "Santiago",
+          "streetType": "Calle",
+          "city": "Valladolid",
+          "state": "Castilla y León",
+          "zipCode": "47001",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/paulanavarrogil"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 15,
+        "interviewAvailability": [
+          "Lunes por la tarde",
+          "Miércoles por la mañana",
+          "Viernes por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "temporary"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Administración",
+        "skills": [
+          "Gestión documental",
+          "Introducción de datos",
+          "Archivo",
+          "Atención telefónica"
+        ]
+      },
+      {
+        "category": "Soporte",
+        "skills": [
+          "Facturación básica",
+          "Control de pedidos",
+          "Gestión de correo"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Office",
+          "Excel",
+          "Google Workspace"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Administración de oficina",
+        "Gestión documental",
+        "Soporte a operaciones"
+      ],
+      "keyResponsibilities": [
+        "Mantener actualizada la documentación y las bases de datos",
+        "Atender llamadas y correos de proveedores",
+        "Dar soporte administrativo al equipo de operaciones"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Distribución Castilla Retail",
+        "website": "https://castillaretail.example.com",
+        "location": "Valladolid, España",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Administrativa",
+        "activities": [
+          {
+            "project": "Soporte administrativo a operaciones",
+            "tasks": [
+              "Gestioné la documentación de pedidos y albaranes",
+              "Introduje datos en el ERP y controlé incidencias",
+              "Atendí las consultas telefónicas de proveedores"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje los errores de introducción de datos con un checklist de control",
+          "Mantuve el archivo digital al día al 100 %"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Office",
+          "Excel",
+          "ERP interno"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IES Zorrilla",
+        "degree": "Grado Superior FP",
+        "fieldOfStudy": "Administración y Finanzas",
+        "achievements": [
+          "Prácticas destacadas en gestión administrativa"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Microsoft Office Specialist: Excel Associate",
+        "institution": "Microsoft",
+        "year": "@Y-4@",
+        "description": "Certificación en uso de Microsoft Excel."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Microsoft Office",
+        "Excel",
+        "Google Workspace",
+        "ERP"
+      ],
+      "softSkills": [
+        "Organización",
+        "Fiabilidad",
+        "Atención al detalle",
+        "Trabajo en equipo"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Checklist de control de datos",
+        "description": "Creé un checklist para revisar la introducción de datos de pedidos.",
+        "date": "2024-06",
+        "impact": "Redujo notablemente los errores de albarán y las incidencias con proveedores."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voleibol",
+      "Series de misterio",
+      "Repostería"
+    ],
+    "references": [
+      {
+        "name": "Luis Herrero Gómez",
+        "position": "Responsable de Operaciones",
+        "company": "Distribución Castilla Retail",
+        "contact": {
+          "phone": "+34 688 340 513",
+          "email": "luis.herrero@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 19000,
+      "max": 23000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Office Administration",
+      "secondaryClusters": [
+        "Data Entry",
+        "Operations Support"
+      ],
+      "functionalExpertise": [
+        "Administration",
+        "Data entry",
+        "Document management"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Improved data accuracy",
+        "Kept records up to date"
+      ],
+      "industryDomains": [
+        "Retail",
+        "Shared services"
+      ],
+      "environmentFit": [
+        "Structured teams",
+        "Operations support"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.82,
+      "clusterReasoning": "Perfil administrativo temprano centrado en gestión documental y soporte a operaciones encaja en administración de oficina de nivel junior."
+    },
+    "searchIndex": {
+      "roles": [
+        "Administrator",
+        "Office Administrator",
+        "Administrative Assistant"
+      ],
+      "skills": [
+        "Microsoft Office",
+        "Excel",
+        "Data entry",
+        "Document management",
+        "ERP"
+      ],
+      "industries": [
+        "Retail",
+        "Shared services"
+      ]
+    },
+    "tags": [
+      "admin",
+      "office-administration",
+      "data-entry",
+      "junior",
+      "support"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Facilities Manager con dieciséis años gestionando instalaciones, mantenimiento y servicios generales en sedes corporativas del sector público y servicios. Experto en contratos de mantenimiento, salud y seguridad y proyectos de reforma. Garantiza espacios seguros, sostenibles y eficientes.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Rubén Herrera Campos",
+      "role": "Facilities Manager",
+      "summary": "Responsable de facilities que gestiona instalaciones, mantenimiento y seguridad con foco en eficiencia energética y cumplimiento normativo.",
+      "contact": {
+        "phone": "+34 699 118 265",
+        "email": "ruben.herrera@example.com",
+        "address": {
+          "streetNumber": "45",
+          "streetName": "Bravo Murillo",
+          "streetType": "Calle",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28020",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/rubenherreracampos"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Martes por la mañana",
+          "Jueves por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Facilities",
+        "skills": [
+          "Gestión de mantenimiento",
+          "Contratos de servicios",
+          "Eficiencia energética",
+          "Gestión de espacios"
+        ]
+      },
+      {
+        "category": "Cumplimiento",
+        "skills": [
+          "Salud y seguridad",
+          "Normativa de edificación",
+          "Planes de emergencia"
+        ]
+      },
+      {
+        "category": "Proyectos",
+        "skills": [
+          "Reformas de oficina",
+          "Mudanzas corporativas",
+          "Gestión de proveedores"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "CAFM",
+          "Microsoft Office",
+          "Sistemas de tickets"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Gestión de facilities",
+        "Mantenimiento",
+        "Salud y seguridad"
+      ],
+      "keyResponsibilities": [
+        "Gestionar el mantenimiento y los servicios de las sedes",
+        "Garantizar el cumplimiento de salud y seguridad",
+        "Liderar proyectos de reforma y mudanza"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Servicios Generales Capital",
+        "website": "https://sgcapital.example.com",
+        "location": "Madrid, España",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Facilities Manager",
+        "activities": [
+          {
+            "project": "Gestión de sedes corporativas",
+            "tasks": [
+              "Gestioné tres sedes con más de 25.000 m² en total",
+              "Coordiné contratos de mantenimiento con 15 proveedores",
+              "Lideré un proyecto de eficiencia energética en las sedes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el consumo energético un 18 % en tres años",
+          "Ejecuté una reforma de sede de 2.000 m² dentro de plazo y presupuesto"
+        ],
+        "toolsAndTechnologies": [
+          "CAFM",
+          "Microsoft Office",
+          "Sistema de tickets"
+        ]
+      },
+      {
+        "company": "Administración Regional de Servicios",
+        "website": "https://arservicios.example.com",
+        "location": "Getafe, España",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Técnico de Facilities",
+        "activities": [
+          {
+            "project": "Mantenimiento y seguridad",
+            "tasks": [
+              "Supervisé el mantenimiento preventivo y correctivo",
+              "Coordiné las inspecciones de salud y seguridad",
+              "Gestioné los planes de emergencia y evacuación"
+            ]
+          }
+        ],
+        "achievements": [
+          "Cero incidencias graves de seguridad en cinco años"
+        ],
+        "toolsAndTechnologies": [
+          "Sistema de tickets",
+          "Microsoft Office"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad Politécnica de Madrid",
+        "degree": "Ingeniería Técnica",
+        "fieldOfStudy": "Ingeniería de la Edificación",
+        "achievements": [
+          "Proyecto sobre eficiencia energética en edificios"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "IWFM Level 4 Diploma in Facilities Management",
+        "institution": "IWFM",
+        "year": "@Y-4@",
+        "description": "Diploma profesional en gestión de facilities."
+      },
+      {
+        "title": "Técnico Superior en PRL",
+        "institution": "Instituto Nacional de Seguridad y Salud en el Trabajo",
+        "year": "@Y-4@",
+        "description": "Certificación en prevención de riesgos laborales."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "CAFM",
+        "Microsoft Office",
+        "Sistemas de tickets",
+        "AutoCAD básico"
+      ],
+      "softSkills": [
+        "Organización",
+        "Negociación",
+        "Resolución de problemas",
+        "Orientación a la seguridad"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Proyecto de eficiencia energética",
+        "description": "Lideré la renovación de iluminación y climatización de tres sedes.",
+        "date": "2022-07",
+        "impact": "Redujo el consumo energético un 18 % y las emisiones asociadas."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Bricolaje",
+      "Ciclismo",
+      "Sostenibilidad"
+    ],
+    "references": [
+      {
+        "name": "Elena Vázquez Prieto",
+        "position": "Directora de Servicios Generales",
+        "company": "Servicios Generales Capital",
+        "contact": {
+          "phone": "+34 699 118 266",
+          "email": "elena.vazquez@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 45000,
+      "max": 56000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Facilities Management",
+      "secondaryClusters": [
+        "Maintenance Management",
+        "Health & Safety"
+      ],
+      "functionalExpertise": [
+        "Facilities management",
+        "Maintenance",
+        "Health and safety"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced energy consumption",
+        "Delivered office refurbishment"
+      ],
+      "industryDomains": [
+        "Public sector",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "Multi-site operations",
+        "Compliance-driven environments"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Trayectoria gestionando múltiples sedes, mantenimiento y proyectos de eficiencia con cumplimiento normativo posiciona al candidato como Facilities Manager."
+    },
+    "searchIndex": {
+      "roles": [
+        "Facilities Manager",
+        "Building Manager",
+        "Workplace Facilities Manager"
+      ],
+      "skills": [
+        "CAFM",
+        "Maintenance management",
+        "Health and safety",
+        "Vendor management",
+        "Energy efficiency"
+      ],
+      "industries": [
+        "Public sector",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "admin",
+      "facilities-management",
+      "health-safety",
+      "manager",
+      "maintenance"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Recepcionista con dos años de experiencia en la acogida de visitas y el soporte de front office en un centro de negocios. Cercana, resolutiva y con un excelente trato al cliente. Domina la gestión de centralita, salas de reuniones y correspondencia.",
+    "personalInformation": {
+      "name": "Lucía Reyes Santos",
+      "role": "Recepcionista",
+      "summary": "Recepcionista amable y organizada que ofrece una primera impresión impecable y mantiene el front office funcionando con fluidez.",
+      "contact": {
+        "phone": "+34 610 447 328",
+        "email": "lucia.reyes@example.com",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "Recogidas",
+          "streetType": "Calle",
+          "city": "Granada",
+          "state": "Andalucía",
+          "zipCode": "18002",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/luciareyessantos"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 15,
+        "interviewAvailability": [
+          "Lunes por la mañana",
+          "Martes por la tarde",
+          "Jueves por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "temporary"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Front office",
+        "skills": [
+          "Atención de visitas",
+          "Gestión de centralita",
+          "Reserva de salas",
+          "Correspondencia"
+        ]
+      },
+      {
+        "category": "Atención al cliente",
+        "skills": [
+          "Trato al cliente",
+          "Resolución de consultas",
+          "Protocolo de acogida"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Office",
+          "Sistemas de reservas",
+          "Correo electrónico"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Recepción",
+        "Atención de visitas",
+        "Soporte de front office"
+      ],
+      "keyResponsibilities": [
+        "Recibir y acompañar a las visitas",
+        "Gestionar la centralita y el correo",
+        "Coordinar la reserva de salas de reuniones"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Centro de Negocios Alhambra",
+        "website": "https://cnalhambra.example.com",
+        "location": "Granada, España",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Recepcionista",
+        "activities": [
+          {
+            "project": "Front office",
+            "tasks": [
+              "Atendí una media de 80 visitas diarias",
+              "Gestioné la centralita y el correo entrante",
+              "Coordiné la ocupación de 12 salas de reuniones"
+            ]
+          }
+        ],
+        "achievements": [
+          "Recibí valoraciones excelentes de clientes en las encuestas de servicio",
+          "Reduje los conflictos de reserva de salas con un nuevo calendario compartido"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Office",
+          "Sistema de reservas"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IES Ángel Ganivet",
+        "degree": "Grado Medio FP",
+        "fieldOfStudy": "Gestión Administrativa",
+        "achievements": [
+          "Prácticas en atención al público"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certificado de Atención al Cliente",
+        "institution": "Cámara de Comercio de Granada",
+        "year": "@Y-4@",
+        "description": "Formación en técnicas de atención y protocolo."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Microsoft Office",
+        "Sistema de reservas",
+        "Centralita"
+      ],
+      "softSkills": [
+        "Amabilidad",
+        "Organización",
+        "Resolución",
+        "Comunicación"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Calendario compartido de salas",
+        "description": "Propuse e implanté un calendario compartido para las salas de reuniones.",
+        "date": "2024-09",
+        "impact": "Eliminó prácticamente los conflictos de reserva entre clientes."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Baile",
+      "Idiomas",
+      "Voluntariado con mayores"
+    ],
+    "references": [
+      {
+        "name": "Marta Cano Ruiz",
+        "position": "Responsable de Servicios",
+        "company": "Centro de Negocios Alhambra",
+        "contact": {
+          "phone": "+34 610 447 329",
+          "email": "marta.cano@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 17000,
+      "max": 21000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Front of House",
+      "secondaryClusters": [
+        "Reception",
+        "Customer Service"
+      ],
+      "functionalExpertise": [
+        "Reception",
+        "Visitor management",
+        "Front office"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Improved visitor experience",
+        "Reduced room booking conflicts"
+      ],
+      "industryDomains": [
+        "Professional services",
+        "Shared services"
+      ],
+      "environmentFit": [
+        "Client-facing environments",
+        "Busy front offices"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.8,
+      "clusterReasoning": "Perfil de recepción temprano con foco en atención de visitas y front office encaja en front of house de nivel junior."
+    },
+    "searchIndex": {
+      "roles": [
+        "Receptionist",
+        "Front of House Receptionist",
+        "Front Office Assistant"
+      ],
+      "skills": [
+        "Microsoft Office",
+        "Switchboard",
+        "Visitor management",
+        "Room booking",
+        "Customer service"
+      ],
+      "industries": [
+        "Professional services",
+        "Shared services"
+      ]
+    },
+    "tags": [
+      "admin",
+      "reception",
+      "front-of-house",
+      "junior",
+      "customer-service"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Team Lead de Soporte al Cliente con trece años en contact centers de tecnología y telecomunicaciones. Experto en gestión de colas, SLAs y desarrollo de agentes. Lidera equipos multicanal orientados a la resolución en el primer contacto y a la satisfacción del cliente.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Andrés Cortés Vidal",
+      "role": "Team Lead de Soporte al Cliente",
+      "summary": "Líder de soporte que combina gestión operativa de colas y SLAs con el coaching de agentes para elevar la calidad y la satisfacción.",
+      "contact": {
+        "email": "andres.cortes@example.com",
+        "address": {
+          "streetNumber": "22",
+          "streetName": "Balmes",
+          "streetType": "Calle",
+          "city": "Barcelona",
+          "state": "Cataluña",
+          "zipCode": "08007",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/andrescortesvidal"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Miércoles por la tarde",
+          "Viernes por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Gestión de soporte",
+        "skills": [
+          "Gestión de colas",
+          "SLAs y KPIs",
+          "Escalados",
+          "Soporte multicanal"
+        ]
+      },
+      {
+        "category": "Liderazgo",
+        "skills": [
+          "Coaching de agentes",
+          "Planificación de turnos",
+          "Quality assurance"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "Zendesk",
+          "Intercom",
+          "Salesforce Service Cloud"
+        ]
+      },
+      {
+        "category": "Métricas",
+        "skills": [
+          "CSAT",
+          "Resolución en primer contacto",
+          "Tiempo medio de gestión"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Liderazgo de soporte",
+        "Gestión de contact center",
+        "Coaching de agentes"
+      ],
+      "keyResponsibilities": [
+        "Liderar un equipo de agentes de soporte multicanal",
+        "Garantizar el cumplimiento de SLAs y KPIs",
+        "Impulsar la mejora de la calidad y el CSAT"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Telecom Mediterránea",
+        "website": "https://telecommed.example.com",
+        "location": "Barcelona, España",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Team Lead de Soporte al Cliente",
+        "activities": [
+          {
+            "project": "Soporte multicanal",
+            "tasks": [
+              "Lideré un equipo de 14 agentes de soporte por chat, teléfono y email",
+              "Gestioné las colas y los escalados para cumplir los SLAs",
+              "Implanté un programa de coaching y calibración de calidad"
+            ]
+          }
+        ],
+        "achievements": [
+          "Elevé el CSAT del 84 % al 92 %",
+          "Aumenté la resolución en primer contacto en 11 puntos"
+        ],
+        "toolsAndTechnologies": [
+          "Zendesk",
+          "Salesforce Service Cloud",
+          "Intercom"
+        ]
+      },
+      {
+        "company": "Soporte Digital Cataluña",
+        "website": "https://soportedigitalcat.example.com",
+        "location": "Hospitalet de Llobregat, España",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Agente Senior de Soporte",
+        "activities": [
+          {
+            "project": "Atención al cliente",
+            "tasks": [
+              "Atendí consultas técnicas y de facturación por múltiples canales",
+              "Formé a nuevos agentes en producto y herramientas",
+              "Gestioné escalados de segundo nivel"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reconocido como mejor agente de soporte dos años consecutivos"
+        ],
+        "toolsAndTechnologies": [
+          "Zendesk",
+          "Microsoft Office"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universitat Autònoma de Barcelona",
+        "degree": "Grado",
+        "fieldOfStudy": "Comunicación Audiovisual",
+        "achievements": [
+          "Prácticas en atención al cliente digital"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Zendesk Support Administrator",
+        "institution": "Zendesk",
+        "year": "@Y-0@",
+        "description": "Certificación en administración de Zendesk Support."
+      },
+      {
+        "title": "COPC Best Practices",
+        "institution": "COPC",
+        "year": "@Y-1@",
+        "description": "Formación en mejores prácticas de contact center."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Zendesk",
+        "Salesforce Service Cloud",
+        "Intercom",
+        "Microsoft Office"
+      ],
+      "softSkills": [
+        "Liderazgo",
+        "Coaching",
+        "Empatía",
+        "Orientación a resultados"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Catalán",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de calidad y coaching",
+        "description": "Diseñé un programa de calibración y coaching semanal para el equipo de soporte.",
+        "date": "2022-05",
+        "impact": "Elevó el CSAT del 84 % al 92 % en un año."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Baloncesto",
+      "Podcast de tecnología",
+      "Cine"
+    ],
+    "references": [
+      {
+        "name": "Núria Sala Font",
+        "position": "Responsable de Atención al Cliente",
+        "company": "Telecom Mediterránea",
+        "contact": {
+          "phone": "+34 621 903 775",
+          "email": "nuria.sala@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 38000,
+      "max": 47000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Customer Support Leadership",
+      "secondaryClusters": [
+        "Contact Centre",
+        "Quality Assurance"
+      ],
+      "functionalExpertise": [
+        "Support leadership",
+        "Contact centre management",
+        "Agent coaching"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Improved CSAT",
+        "Increased first contact resolution"
+      ],
+      "industryDomains": [
+        "Technology",
+        "Telecommunications"
+      ],
+      "environmentFit": [
+        "Multichannel support",
+        "Metrics-driven teams"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Experiencia liderando equipos de soporte multicanal con mejora medida de CSAT y FCR sitúa al candidato en liderazgo de soporte al cliente."
+    },
+    "searchIndex": {
+      "roles": [
+        "Customer Support Team Lead",
+        "Contact Centre Team Leader",
+        "Support Lead"
+      ],
+      "skills": [
+        "Zendesk",
+        "Salesforce Service Cloud",
+        "Intercom",
+        "CSAT",
+        "First contact resolution"
+      ],
+      "industries": [
+        "Technology",
+        "Telecommunications"
+      ]
+    },
+    "tags": [
+      "support",
+      "customer-support",
+      "team-lead",
+      "lead",
+      "zendesk"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Customer Success Manager con diez años acompañando a carteras de clientes SaaS en retención y crecimiento. Experta en onboarding, planes de éxito y gestión de la renovación. Combina empatía comercial con lectura de métricas de adopción y salud del cliente.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Elena Prieto Ramos",
+      "role": "Customer Success Manager",
+      "summary": "CSM orientada a la retención que convierte la adopción del producto en renovaciones y crecimiento mediante planes de éxito accionables.",
+      "contact": {
+        "phone": "+34 632 118 490",
+        "address": {
+          "streetNumber": "17",
+          "streetName": "Serrano",
+          "streetType": "Calle",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28001",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/elenaprietoramos"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Martes por la tarde",
+          "Jueves por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Customer Success",
+        "skills": [
+          "Onboarding",
+          "Planes de éxito",
+          "Gestión de renovaciones",
+          "Salud del cliente"
+        ]
+      },
+      {
+        "category": "Comercial",
+        "skills": [
+          "Upselling",
+          "Cross-selling",
+          "Prevención de churn"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "Gainsight",
+          "Salesforce",
+          "HubSpot"
+        ]
+      },
+      {
+        "category": "Métricas",
+        "skills": [
+          "NPS",
+          "Net revenue retention",
+          "Adopción de producto"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Customer success",
+        "Onboarding",
+        "Gestión de renovaciones"
+      ],
+      "keyResponsibilities": [
+        "Gestionar una cartera de clientes SaaS",
+        "Impulsar la adopción y la renovación",
+        "Identificar oportunidades de crecimiento en la cuenta"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "CloudFactura SaaS",
+        "website": "https://cloudfactura.example.com",
+        "location": "Madrid, España",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Customer Success Manager",
+        "activities": [
+          {
+            "project": "Cartera de clientes mid-market",
+            "tasks": [
+              "Gestioné una cartera de 45 cuentas con 3,5 M€ de ARR",
+              "Diseñé planes de éxito y revisiones trimestrales de negocio",
+              "Coordiné el onboarding de nuevos clientes con producto y soporte"
+            ]
+          }
+        ],
+        "achievements": [
+          "Alcancé una tasa de renovación bruta del 94 %",
+          "Generé 480.000 € de expansión mediante upselling"
+        ],
+        "toolsAndTechnologies": [
+          "Gainsight",
+          "Salesforce",
+          "HubSpot"
+        ]
+      },
+      {
+        "company": "Plataforma RRHH Digital",
+        "website": "https://plataformarrhh.example.com",
+        "location": "Madrid, España",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Customer Success Specialist",
+        "activities": [
+          {
+            "project": "Adopción y soporte proactivo",
+            "tasks": [
+              "Acompañé a clientes en la adopción del producto",
+              "Monitoricé la salud de la cuenta y anticipé riesgos de churn",
+              "Recogí feedback para el equipo de producto"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el churn de mi cartera un 20 %"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Intercom"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad Carlos III de Madrid",
+        "degree": "Grado",
+        "fieldOfStudy": "Administración de Empresas",
+        "achievements": [
+          "Programa de intercambio en gestión comercial"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Gainsight Certified Customer Success Manager",
+        "institution": "Gainsight",
+        "year": "@Y-2@",
+        "description": "Certificación en metodología de customer success."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Gainsight",
+        "Salesforce",
+        "HubSpot",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Empatía",
+        "Comunicación",
+        "Negociación",
+        "Orientación al cliente"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de revisiones trimestrales de negocio",
+        "description": "Implanté QBRs estructuradas para las cuentas estratégicas de la cartera.",
+        "date": "2023-04",
+        "impact": "Elevó la renovación bruta al 94 % y aumentó la expansión."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Yoga",
+      "Viajes",
+      "Novela histórica"
+    ],
+    "references": [
+      {
+        "name": "Carlos Nieto Aranda",
+        "position": "Head of Customer Success",
+        "company": "CloudFactura SaaS",
+        "contact": {
+          "phone": "+34 632 118 491",
+          "email": "carlos.nieto@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 40000,
+      "max": 50000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Customer Success",
+      "secondaryClusters": [
+        "Account Management",
+        "Retention"
+      ],
+      "functionalExpertise": [
+        "Customer success",
+        "Onboarding",
+        "Renewals"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Improved gross retention",
+        "Drove expansion revenue"
+      ],
+      "industryDomains": [
+        "Technology",
+        "SaaS"
+      ],
+      "environmentFit": [
+        "SaaS companies",
+        "Portfolio management"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Trayectoria gestionando carteras SaaS con métricas de retención y expansión posiciona a la candidata como Customer Success Manager senior."
+    },
+    "searchIndex": {
+      "roles": [
+        "Customer Success Manager",
+        "Account Manager",
+        "CSM"
+      ],
+      "skills": [
+        "Gainsight",
+        "Salesforce",
+        "HubSpot",
+        "Renewals",
+        "Net revenue retention"
+      ],
+      "industries": [
+        "Technology",
+        "SaaS"
+      ]
+    },
+    "tags": [
+      "support",
+      "customer-success",
+      "retention",
+      "senior",
+      "gainsight"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Manager de Servicios al Cliente con quince años dirigiendo equipos de client services en servicios profesionales y outsourcing. Experta en gestión de cuentas clave, acuerdos de nivel de servicio y satisfacción del cliente. Lidera equipos, presupuestos y relaciones con clientes estratégicos.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Sergio Fuentes Aguilar",
+      "role": "Manager de Servicios al Cliente",
+      "summary": "Líder de client services que dirige equipos y cuentas clave garantizando SLAs, satisfacción y crecimiento de las relaciones.",
+      "contact": {
+        "phone": "+34 643 550 218",
+        "email": "sergio.fuentes@example.com",
+        "address": {
+          "streetNumber": "28",
+          "streetName": "Reyes Católicos",
+          "streetType": "Avenida",
+          "city": "Sevilla",
+          "state": "Andalucía",
+          "zipCode": "41001",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sergiofuentesaguilar"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Lunes por la tarde",
+          "Miércoles por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Client services",
+        "skills": [
+          "Gestión de cuentas clave",
+          "Acuerdos de nivel de servicio",
+          "Satisfacción del cliente",
+          "Gestión de escalados"
+        ]
+      },
+      {
+        "category": "Liderazgo",
+        "skills": [
+          "Dirección de equipos",
+          "Gestión presupuestaria",
+          "Planificación de recursos"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "Salesforce Service Cloud",
+          "Zendesk",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Métricas",
+        "skills": [
+          "NPS",
+          "CSAT",
+          "Cumplimiento de SLA"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Servicios al cliente",
+        "Gestión de cuentas clave",
+        "Dirección de equipos"
+      ],
+      "keyResponsibilities": [
+        "Dirigir el equipo de client services",
+        "Gestionar las cuentas clave y los SLAs",
+        "Impulsar la satisfacción y la fidelización de clientes"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Outsourcing Guadalquivir",
+        "website": "https://outsourcingguad.example.com",
+        "location": "Sevilla, España",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Manager de Servicios al Cliente",
+        "activities": [
+          {
+            "project": "Dirección de client services",
+            "tasks": [
+              "Dirigí un equipo de 18 personas de client services",
+              "Gestioné una cartera de 12 cuentas clave con SLAs contractuales",
+              "Lideré las revisiones de servicio y los planes de mejora"
+            ]
+          }
+        ],
+        "achievements": [
+          "Elevé el NPS de la cartera de 32 a 58",
+          "Renové el 100 % de las cuentas clave dos años seguidos"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce Service Cloud",
+          "Zendesk",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "company": "Servicios Profesionales Hispalis",
+        "website": "https://sphispalis.example.com",
+        "location": "Sevilla, España",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Responsable de Cuentas de Servicio",
+        "activities": [
+          {
+            "project": "Gestión de cuentas",
+            "tasks": [
+              "Gestioné la relación con clientes de servicios profesionales",
+              "Coordiné la resolución de incidencias y escalados",
+              "Preparé los informes de servicio para los clientes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mejoré la retención de cuentas del 85 % al 93 %"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Microsoft Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad Pablo de Olavide",
+        "degree": "Licenciatura",
+        "fieldOfStudy": "Administración y Dirección de Empresas",
+        "achievements": [
+          "Especialización en gestión comercial"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "ITIL Foundation",
+        "institution": "AXELOS",
+        "year": "@Y-4@",
+        "description": "Certificación en gestión de servicios."
+      },
+      {
+        "title": "Salesforce Service Cloud Consultant",
+        "institution": "Salesforce",
+        "year": "@Y-4@",
+        "description": "Certificación en implantación de Service Cloud."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce Service Cloud",
+        "Zendesk",
+        "Microsoft Power BI",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Liderazgo",
+        "Negociación",
+        "Orientación al cliente",
+        "Comunicación ejecutiva"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Plan de mejora de satisfacción de cuentas clave",
+        "description": "Diseñé un programa de revisiones de servicio y planes de acción por cuenta.",
+        "date": "2022-10",
+        "impact": "Elevó el NPS de la cartera de 32 a 58 en dos años."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Golf",
+      "Gastronomía",
+      "Lectura de management"
+    ],
+    "references": [
+      {
+        "name": "Patricia Gómez León",
+        "position": "Directora de Operaciones",
+        "company": "Outsourcing Guadalquivir",
+        "contact": {
+          "phone": "+34 643 550 219",
+          "email": "patricia.gomez@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Client Services",
+      "secondaryClusters": [
+        "Key Account Management",
+        "Service Delivery"
+      ],
+      "functionalExpertise": [
+        "Client services",
+        "Key account management",
+        "Team leadership"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Improved NPS",
+        "Retained key accounts"
+      ],
+      "industryDomains": [
+        "Professional services",
+        "Outsourcing"
+      ],
+      "environmentFit": [
+        "Client-facing organisations",
+        "SLA-driven environments"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Experiencia dirigiendo equipos y cuentas clave de client services con impacto en NPS y retención posiciona al candidato como manager de servicios al cliente."
+    },
+    "searchIndex": {
+      "roles": [
+        "Client Services Manager",
+        "Service Delivery Manager",
+        "Key Account Manager"
+      ],
+      "skills": [
+        "Salesforce Service Cloud",
+        "Zendesk",
+        "Key account management",
+        "SLA management",
+        "NPS"
+      ],
+      "industries": [
+        "Professional services",
+        "Outsourcing"
+      ]
+    },
+    "tags": [
+      "support",
+      "client-services",
+      "key-accounts",
+      "manager",
+      "service-delivery"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Agente de contact center con tres años de experiencia en atención multicanal para el sector seguros. Resolutiva y empática, gestiona consultas, reclamaciones y gestiones administrativas con foco en la satisfacción del cliente. Busca crecer hacia roles de soporte especializado.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Daniela Morales Quispe",
+      "role": "Agente de Contact Center",
+      "summary": "Agente de contact center empática y resolutiva que atiende consultas y reclamaciones multicanal cuidando la experiencia del cliente.",
+      "contact": {
+        "phone": "+34 611 778 402",
+        "email": "daniela.morales@example.com",
+        "address": {
+          "streetNumber": "11",
+          "streetName": "Alcalá",
+          "streetType": "Calle",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28009",
+          "country": "España"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 15,
+        "interviewAvailability": [
+          "Lunes por la tarde",
+          "Miércoles por la mañana",
+          "Viernes por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "temporary"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Atención al cliente",
+        "skills": [
+          "Atención telefónica",
+          "Gestión de reclamaciones",
+          "Chat y email",
+          "Resolución de consultas"
+        ]
+      },
+      {
+        "category": "Administración",
+        "skills": [
+          "Registro de casos",
+          "Gestión documental",
+          "Seguimiento de incidencias"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "Zendesk",
+          "CRM de seguros",
+          "Microsoft Office"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Contact center",
+        "Atención multicanal",
+        "Gestión de reclamaciones"
+      ],
+      "keyResponsibilities": [
+        "Atender consultas y reclamaciones por teléfono, chat y email",
+        "Registrar y hacer seguimiento de los casos",
+        "Cumplir los objetivos de calidad y tiempo de respuesta"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Seguros Central Madrid",
+        "website": "https://seguroscentral.example.com",
+        "location": "Madrid, España",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Agente de Contact Center",
+        "activities": [
+          {
+            "project": "Atención multicanal de seguros",
+            "tasks": [
+              "Atendí una media de 60 contactos diarios por teléfono, chat y email",
+              "Gestioné reclamaciones y tramité gestiones de póliza",
+              "Registré cada caso en el CRM y realicé el seguimiento"
+            ]
+          }
+        ],
+        "achievements": [
+          "Superé sistemáticamente el objetivo de CSAT del equipo",
+          "Reduje el tiempo medio de gestión un 10 % con plantillas de respuesta"
+        ],
+        "toolsAndTechnologies": [
+          "Zendesk",
+          "CRM de seguros",
+          "Microsoft Office"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IES San Isidro",
+        "degree": "Grado Superior FP",
+        "fieldOfStudy": "Administración y Finanzas",
+        "achievements": [
+          "Prácticas en atención al cliente"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Zendesk Support Agent",
+        "institution": "Zendesk",
+        "year": "@Y-4@",
+        "description": "Formación en uso de Zendesk para agentes de soporte."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Zendesk",
+        "CRM",
+        "Microsoft Office"
+      ],
+      "softSkills": [
+        "Empatía",
+        "Paciencia",
+        "Comunicación",
+        "Orientación al cliente"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Plantillas de respuesta multicanal",
+        "description": "Elaboré una librería de plantillas para consultas frecuentes de seguros.",
+        "date": "2024-02",
+        "impact": "Redujo el tiempo medio de gestión un 10 % y homogeneizó las respuestas."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voluntariado con inmigrantes",
+      "Danza latina",
+      "Fotografía"
+    ],
+    "references": [
+      {
+        "name": "Óscar Ramírez Ponce",
+        "position": "Coordinador de Contact Center",
+        "company": "Seguros Central Madrid",
+        "contact": {
+          "phone": "+34 611 778 403",
+          "email": "oscar.ramirez@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 18000,
+      "max": 22000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Contact Centre",
+      "secondaryClusters": [
+        "Customer Service",
+        "Complaints Handling"
+      ],
+      "functionalExpertise": [
+        "Contact centre",
+        "Multichannel support",
+        "Complaints handling"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Exceeded CSAT targets",
+        "Reduced handling time"
+      ],
+      "industryDomains": [
+        "Insurance",
+        "Shared services"
+      ],
+      "environmentFit": [
+        "Contact centres",
+        "Metrics-driven teams"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.81,
+      "clusterReasoning": "Perfil de agente de contact center temprano con atención multicanal y buenos indicadores de calidad encaja en contact centre de nivel junior."
+    },
+    "searchIndex": {
+      "roles": [
+        "Contact Centre Advisor",
+        "Customer Service Agent",
+        "Call Centre Agent"
+      ],
+      "skills": [
+        "Zendesk",
+        "CRM",
+        "Multichannel support",
+        "Complaints handling",
+        "CSAT"
+      ],
+      "industries": [
+        "Insurance",
+        "Shared services"
+      ]
+    },
+    "tags": [
+      "support",
+      "contact-centre",
+      "customer-service",
+      "junior",
+      "zendesk"
+    ]
+  },
+  {
+    "personalInformation": {
+      "name": "Cristina Blanco Rueda",
+      "role": "Enterprise Customer Success Manager",
+      "summary": "CSM de enterprise que orquesta stakeholders y equipos internos para asegurar valor, adopción y expansión en cuentas corporativas complejas.",
+      "contact": {
+        "address": {
+          "streetNumber": "33",
+          "streetName": "Ruzafa",
+          "streetType": "Calle",
+          "city": "Valencia",
+          "state": "Comunidad Valenciana",
+          "zipCode": "46006",
+          "country": "España"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Martes por la mañana",
+          "Jueves por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "profiles": {
+      "areasOfExpertise": [
+        "Enterprise customer success",
+        "Gobernanza de cuentas",
+        "Expansión estratégica"
+      ],
+      "keyResponsibilities": [
+        "Gestionar cuentas enterprise estratégicas",
+        "Liderar revisiones ejecutivas y planes de valor",
+        "Coordinar equipos internos para asegurar la adopción"
+      ]
+    },
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Gainsight",
+        "Salesforce",
+        "Tableau",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Comunicación ejecutiva",
+        "Liderazgo de influencia",
+        "Negociación",
+        "Pensamiento estratégico"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Rescate de cuentas enterprise en riesgo",
+        "description": "Lideré planes de recuperación para dos cuentas estratégicas con señales de churn.",
+        "date": "2023-09",
+        "impact": "Aseguró 1,2 M€ de ARR y elevó el net revenue retention al 118 %."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Vela",
+      "Idiomas",
+      "Mentoring profesional"
+    ],
+    "references": [
+      {
+        "name": "David Server Puchol",
+        "position": "VP de Customer Success",
+        "company": "Enterprise Software Levante",
+        "contact": {
+          "phone": "+34 622 447 951",
+          "email": "david.server@example.com"
+        }
+      }
+    ],
+    "searchIndex": {
+      "roles": [
+        "Enterprise Customer Success Manager",
+        "Strategic Account Manager",
+        "Enterprise CSM"
+      ],
+      "skills": [
+        "Gainsight",
+        "Salesforce",
+        "Tableau",
+        "Net revenue retention",
+        "Account governance"
+      ],
+      "industries": [
+        "Technology",
+        "SaaS"
+      ]
+    },
+    "tags": [
+      "support",
+      "enterprise-customer-success",
+      "account-management",
+      "senior",
+      "gainsight"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Lead de Entrega de Proyectos con catorce años coordinando proyectos transversales en servicios profesionales y transformación de operaciones. Experto en PRINCE2, gestión de stakeholders y control de alcance, plazo y coste. Lidera equipos de proyecto y oficinas de coordinación.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Pablo Guerrero León",
+      "role": "Lead de Entrega de Proyectos",
+      "summary": "Líder de entrega que orquesta alcance, plazo y coste con una gestión de stakeholders sólida para llevar proyectos transversales a buen puerto.",
+      "contact": {
+        "phone": "+34 655 902 331",
+        "email": "pablo.guerrero@example.com",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Gran Vía Don Diego López de Haro",
+          "streetType": "Calle",
+          "city": "Bilbao",
+          "state": "País Vasco",
+          "zipCode": "48009",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/pabloguerreroleon"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Lunes por la mañana",
+          "Jueves por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Gestión de proyectos",
+        "skills": [
+          "Planificación de proyectos",
+          "Gestión de alcance",
+          "Gestión de riesgos",
+          "Control de plazo y coste"
+        ]
+      },
+      {
+        "category": "Metodologías",
+        "skills": [
+          "PRINCE2",
+          "Waterfall",
+          "Agile básico"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Jira",
+          "MS Project",
+          "Asana"
+        ]
+      },
+      {
+        "category": "Liderazgo",
+        "skills": [
+          "Gestión de stakeholders",
+          "Coordinación de equipos",
+          "Reporting a dirección"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Entrega de proyectos",
+        "Gestión de stakeholders",
+        "Control de proyectos"
+      ],
+      "keyResponsibilities": [
+        "Liderar la entrega de proyectos transversales",
+        "Gestionar alcance, plazo y coste",
+        "Coordinar equipos y reportar a dirección"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Consultora Transforma Norte",
+        "website": "https://transformanorte.example.com",
+        "location": "Bilbao, España",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Lead de Entrega de Proyectos",
+        "activities": [
+          {
+            "project": "Transformación de operaciones",
+            "tasks": [
+              "Lideré una cartera de 6 proyectos transversales simultáneos",
+              "Gestioné stakeholders de negocio, IT y proveedores",
+              "Controlé alcance, plazo y coste con revisiones quincenales"
+            ]
+          }
+        ],
+        "achievements": [
+          "Entregué el 90 % de los proyectos en plazo y presupuesto",
+          "Reduje las desviaciones de coste medias del 12 % al 4 %"
+        ],
+        "toolsAndTechnologies": [
+          "Jira",
+          "MS Project",
+          "Asana"
+        ]
+      },
+      {
+        "company": "Servicios Profesionales Nervión",
+        "website": "https://spnervion.example.com",
+        "location": "Bilbao, España",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Coordinador de Proyectos",
+        "activities": [
+          {
+            "project": "Coordinación de proyectos",
+            "tasks": [
+              "Coordiné proyectos de mejora de procesos internos",
+              "Elaboré planes de proyecto y seguimiento de hitos",
+              "Gestioné el reporting a los patrocinadores"
+            ]
+          }
+        ],
+        "achievements": [
+          "Implanté una plantilla de seguimiento adoptada por toda la PMO"
+        ],
+        "toolsAndTechnologies": [
+          "MS Project",
+          "Microsoft Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad del País Vasco",
+        "degree": "Grado",
+        "fieldOfStudy": "Ingeniería de Organización Industrial",
+        "achievements": [
+          "Proyecto sobre gestión de proyectos"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "PRINCE2 Practitioner",
+        "institution": "AXELOS",
+        "year": "@Y-2@",
+        "description": "Certificación en gestión de proyectos PRINCE2."
+      },
+      {
+        "title": "Agile Foundation",
+        "institution": "APMG",
+        "year": "@Y-2@",
+        "description": "Formación en fundamentos de metodologías ágiles."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Jira",
+        "MS Project",
+        "Asana",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Liderazgo",
+        "Gestión de stakeholders",
+        "Organización",
+        "Resolución de problemas"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Euskera",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de transformación de operaciones",
+        "description": "Lideré la entrega de un programa de seis proyectos de mejora operativa.",
+        "date": "2023-03",
+        "impact": "Redujo las desviaciones de coste medias del 12 % al 4 %."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Montañismo",
+      "Ajedrez",
+      "Historia industrial"
+    ],
+    "references": [
+      {
+        "name": "Ainhoa Larrea Uribe",
+        "position": "Directora de Proyectos",
+        "company": "Consultora Transforma Norte",
+        "contact": {
+          "phone": "+34 655 902 332",
+          "email": "ainhoa.larrea@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 46000,
+      "max": 58000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Project Delivery",
+      "secondaryClusters": [
+        "Stakeholder Management",
+        "Project Control"
+      ],
+      "functionalExpertise": [
+        "Project delivery",
+        "Stakeholder management",
+        "Project control"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Delivered projects on time",
+        "Reduced cost variance"
+      ],
+      "industryDomains": [
+        "Professional services",
+        "Operations"
+      ],
+      "environmentFit": [
+        "Project-driven organisations",
+        "Transformation programmes"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Experiencia liderando carteras de proyectos transversales con control de alcance, plazo y coste sitúa al candidato en un rol lead de entrega de proyectos."
+    },
+    "searchIndex": {
+      "roles": [
+        "Project Delivery Lead",
+        "Project Manager",
+        "Project Coordinator"
+      ],
+      "skills": [
+        "Jira",
+        "MS Project",
+        "Asana",
+        "PRINCE2",
+        "Stakeholder management"
+      ],
+      "industries": [
+        "Professional services",
+        "Operations"
+      ]
+    },
+    "tags": [
+      "project",
+      "project-delivery",
+      "prince2",
+      "lead",
+      "stakeholder-management"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Analista de Negocio Senior con once años traduciendo necesidades de negocio en requisitos y mejoras de proceso en banca y retail. Experta en mapeo de procesos, análisis de datos y facilitación de talleres. Puente sólido entre negocio y equipos técnicos.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Rosa María Sánchez Ibáñez",
+      "role": "Analista de Negocio Senior",
+      "summary": "Business analyst que convierte problemas de negocio en requisitos claros y mejoras de proceso, con foco en datos y en el usuario final.",
+      "contact": {
+        "phone": "+34 632 550 187",
+        "email": "rosamaria.sanchez@example.com",
+        "address": {
+          "streetNumber": "19",
+          "streetName": "Goya",
+          "streetType": "Calle",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28001",
+          "country": "España"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Martes por la tarde",
+          "Jueves por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Análisis de negocio",
+        "skills": [
+          "Toma de requisitos",
+          "Mapeo de procesos",
+          "Análisis de datos",
+          "Casos de uso"
+        ]
+      },
+      {
+        "category": "Facilitación",
+        "skills": [
+          "Talleres de trabajo",
+          "Gestión de stakeholders",
+          "Documentación funcional"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Jira",
+          "Confluence",
+          "SQL básico"
+        ]
+      },
+      {
+        "category": "Mejora de procesos",
+        "skills": [
+          "BPMN",
+          "Lean",
+          "Análisis de brechas"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Análisis de negocio",
+        "Mapeo de procesos",
+        "Toma de requisitos"
+      ],
+      "keyResponsibilities": [
+        "Recoger y documentar requisitos de negocio",
+        "Analizar y rediseñar procesos",
+        "Facilitar talleres y coordinar con equipos técnicos"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Banca Digital Central",
+        "website": "https://bancadigitalcentral.example.com",
+        "location": "Madrid, España",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Analista de Negocio Senior",
+        "activities": [
+          {
+            "project": "Digitalización de procesos",
+            "tasks": [
+              "Recogí y documenté requisitos para la digitalización de procesos de cliente",
+              "Mapeé y rediseñé procesos con BPMN",
+              "Facilité talleres con negocio y equipos de producto"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el tiempo de un proceso clave de cliente un 35 %",
+          "Documenté más de 40 casos de uso adoptados por desarrollo"
+        ],
+        "toolsAndTechnologies": [
+          "Jira",
+          "Confluence",
+          "SQL"
+        ]
+      },
+      {
+        "company": "Grupo Retail Central",
+        "website": "https://retailcentral.example.com",
+        "location": "Madrid, España",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Analista de Negocio",
+        "activities": [
+          {
+            "project": "Análisis de operaciones",
+            "tasks": [
+              "Analicé datos de ventas y operaciones para detectar mejoras",
+              "Documenté requisitos para nuevas funcionalidades del ERP",
+              "Coordiné pruebas de aceptación con usuarios"
+            ]
+          }
+        ],
+        "achievements": [
+          "Detecté ineficiencias que ahorraron 120.000 € anuales"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Excel",
+          "SQL"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Jira",
+        "Confluence",
+        "SQL",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Análisis",
+        "Comunicación",
+        "Facilitación",
+        "Pensamiento crítico"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Rediseño de proceso de alta de cliente",
+        "description": "Mapeé y rediseñé el proceso de onboarding de cliente eliminando pasos redundantes.",
+        "date": "2022-11",
+        "impact": "Redujo el tiempo del proceso un 35 % y mejoró la experiencia."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ajedrez",
+      "Divulgación de datos",
+      "Senderismo"
+    ],
+    "references": [
+      {
+        "name": "Miguel Ángel Ortiz Real",
+        "position": "Jefe de Transformación",
+        "company": "Banca Digital Central",
+        "contact": {
+          "phone": "+34 632 550 188",
+          "email": "miguelangel.ortiz@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 42000,
+      "max": 52000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Business Analysis",
+      "secondaryClusters": [
+        "Process Mapping",
+        "Requirements Gathering"
+      ],
+      "functionalExpertise": [
+        "Business analysis",
+        "Process mapping",
+        "Requirements gathering"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Reduced process time",
+        "Identified cost savings"
+      ],
+      "industryDomains": [
+        "Financial services",
+        "Retail"
+      ],
+      "environmentFit": [
+        "Transformation environments",
+        "Cross-functional teams"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Trayectoria traduciendo necesidades de negocio en requisitos y mejoras de proceso con impacto medible posiciona a la candidata como business analyst senior."
+    },
+    "searchIndex": {
+      "roles": [
+        "Senior Business Analyst",
+        "Business Analyst",
+        "Process Analyst"
+      ],
+      "skills": [
+        "Jira",
+        "Confluence",
+        "SQL",
+        "BPMN",
+        "Requirements gathering"
+      ],
+      "industries": [
+        "Financial services",
+        "Retail"
+      ]
+    },
+    "tags": [
+      "project",
+      "business-analysis",
+      "process-mapping",
+      "senior",
+      "requirements"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directora de Operaciones con diecisiete años dirigiendo operaciones y equipos multifuncionales en centros de servicios compartidos y retail. Experta en excelencia operativa, gestión de P&L y transformación de procesos. Lidera la estrategia operativa y a directores de área.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Verónica Lozano Peña",
+      "role": "Directora de Operaciones",
+      "summary": "Directora de operaciones que combina visión estratégica, gestión de P&L y excelencia operativa para escalar servicios con eficiencia y calidad.",
+      "contact": {
+        "phone": "+34 644 118 706",
+        "email": "veronica.lozano@example.com",
+        "address": {
+          "streetNumber": "52",
+          "streetName": "Alfonso I",
+          "streetType": "Calle",
+          "city": "Zaragoza",
+          "state": "Aragón",
+          "zipCode": "50003",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/veronicalozanopena"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Miércoles por la mañana",
+          "Viernes por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Dirección de operaciones",
+        "skills": [
+          "Excelencia operativa",
+          "Gestión de P&L",
+          "Estrategia operativa",
+          "Escalado de operaciones"
+        ]
+      },
+      {
+        "category": "Transformación",
+        "skills": [
+          "Rediseño de procesos",
+          "Automatización",
+          "Gestión del cambio"
+        ]
+      },
+      {
+        "category": "Liderazgo",
+        "skills": [
+          "Dirección de equipos",
+          "Gestión de directores de área",
+          "Cuadro de mando"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Power BI",
+          "SAP",
+          "Asana"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Dirección de operaciones",
+        "Excelencia operativa",
+        "Gestión de P&L"
+      ],
+      "keyResponsibilities": [
+        "Definir y ejecutar la estrategia operativa",
+        "Gestionar el P&L de operaciones",
+        "Liderar a los directores de área y la transformación de procesos"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Centro de Servicios Compartidos Aragón",
+        "website": "https://cssaragon.example.com",
+        "location": "Zaragoza, España",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Directora de Operaciones",
+        "activities": [
+          {
+            "project": "Excelencia operativa",
+            "tasks": [
+              "Dirigí operaciones de 350 personas en cuatro áreas de servicio",
+              "Gestioné un P&L de 22 M€",
+              "Lideré un programa de automatización de procesos transaccionales"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mejoré el margen operativo en 6 puntos en cuatro años",
+          "Automaticé procesos que liberaron 45 FTE de tareas repetitivas"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Power BI",
+          "SAP",
+          "Asana"
+        ]
+      },
+      {
+        "company": "Grupo Retail Aragonés",
+        "website": "https://retailaragones.example.com",
+        "location": "Zaragoza, España",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Responsable de Operaciones",
+        "activities": [
+          {
+            "project": "Operaciones de retail",
+            "tasks": [
+              "Gestioné las operaciones de logística y back office de 40 tiendas",
+              "Lideré la mejora de procesos de reposición",
+              "Coordiné a los responsables de zona"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el coste operativo por tienda un 9 %"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Microsoft Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad de Zaragoza",
+        "degree": "Licenciatura",
+        "fieldOfStudy": "Administración y Dirección de Empresas",
+        "achievements": [
+          "Premio al mejor expediente de la promoción"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "IE Business School",
+        "degree": "Máster",
+        "fieldOfStudy": "Dirección de Operaciones",
+        "achievements": [
+          "Proyecto sobre excelencia operativa"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Microsoft Power BI",
+        "SAP",
+        "Asana",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Liderazgo estratégico",
+        "Visión de negocio",
+        "Gestión del cambio",
+        "Comunicación ejecutiva"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Francés",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de automatización de procesos",
+        "description": "Lideré la automatización de procesos transaccionales del centro de servicios.",
+        "date": "2022-06",
+        "impact": "Liberó 45 FTE de tareas repetitivas y mejoró el margen operativo."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Maratón",
+      "Mentoring de mujeres directivas",
+      "Ópera"
+    ],
+    "references": [
+      {
+        "name": "Fernando Aznar Gil",
+        "position": "Director General",
+        "company": "Centro de Servicios Compartidos Aragón",
+        "contact": {
+          "phone": "+34 644 118 707",
+          "email": "fernando.aznar@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 80000,
+      "max": 100000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Operations Leadership",
+      "secondaryClusters": [
+        "Operational Excellence",
+        "Transformation"
+      ],
+      "functionalExpertise": [
+        "Operations leadership",
+        "P&L management",
+        "Operational excellence"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Improved operating margin",
+        "Automated processes"
+      ],
+      "industryDomains": [
+        "Shared services",
+        "Retail"
+      ],
+      "environmentFit": [
+        "Large-scale operations",
+        "Transformation environments"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Larga trayectoria dirigiendo operaciones de gran escala con gestión de P&L y transformación posiciona a la candidata como directora de operaciones."
+    },
+    "searchIndex": {
+      "roles": [
+        "Head of Operations",
+        "Operations Director",
+        "Director of Operations"
+      ],
+      "skills": [
+        "Power BI",
+        "SAP",
+        "Operational excellence",
+        "P&L management",
+        "Process automation"
+      ],
+      "industries": [
+        "Shared services",
+        "Retail"
+      ]
+    },
+    "tags": [
+      "operations",
+      "operations-leadership",
+      "operational-excellence",
+      "director",
+      "p-and-l"
+    ]
+  },
+  {
+    "candidateProfileSummary": "PMO Lead con dieciséis años estructurando oficinas de gestión de proyectos en tecnología y sector público. Experto en gobernanza de portafolio, estándares de proyecto y reporting a comité. Principal referente metodológico que asegura consistencia y visibilidad en la cartera.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Mateo Rojas Villalba",
+      "role": "PMO Lead",
+      "summary": "Referente de PMO que instaura gobernanza de portafolio, estándares y reporting fiable para dar visibilidad y control a la cartera de proyectos.",
+      "contact": {
+        "email": "mateo.rojas@example.com",
+        "address": {
+          "streetNumber": "41",
+          "streetName": "Aragó",
+          "streetType": "Calle",
+          "city": "Barcelona",
+          "state": "Cataluña",
+          "zipCode": "08015",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/mateorojasvillalba"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Lunes por la tarde",
+          "Jueves por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "PMO",
+        "skills": [
+          "Gobernanza de portafolio",
+          "Estándares de proyecto",
+          "Gestión de dependencias",
+          "Aseguramiento de calidad"
+        ]
+      },
+      {
+        "category": "Reporting",
+        "skills": [
+          "Cuadros de mando de portafolio",
+          "Reporting a comité",
+          "Gestión de riesgos de cartera"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "MS Project",
+          "Jira",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Metodologías",
+        "skills": [
+          "PRINCE2",
+          "MSP",
+          "Agile básico"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "PMO",
+        "Gobernanza de portafolio",
+        "Estándares de proyecto"
+      ],
+      "keyResponsibilities": [
+        "Definir estándares y metodología de proyecto",
+        "Consolidar el reporting de portafolio para el comité",
+        "Asegurar la calidad y la gestión de riesgos de la cartera"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Tecnología Pública de Cataluña",
+        "website": "https://tecpublicacat.example.com",
+        "location": "Barcelona, España",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "PMO Lead",
+        "activities": [
+          {
+            "project": "Gobernanza de portafolio",
+            "tasks": [
+              "Estructuré la PMO para una cartera de 40 proyectos",
+              "Definí estándares, plantillas y ciclos de reporting",
+              "Consolidé el cuadro de mando de portafolio para el comité de dirección"
+            ]
+          }
+        ],
+        "achievements": [
+          "Elevé la fiabilidad del reporting de portafolio y la puntualidad al 95 %",
+          "Reduje los proyectos en rojo del 22 % al 8 %"
+        ],
+        "toolsAndTechnologies": [
+          "MS Project",
+          "Jira",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "company": "Consultora Sistemas Mediterráneo",
+        "website": "https://sistemasmed.example.com",
+        "location": "Barcelona, España",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Analista de PMO",
+        "activities": [
+          {
+            "project": "Soporte de PMO",
+            "tasks": [
+              "Consolidé el seguimiento de proyectos y los planes de acción",
+              "Mantuve las plantillas y los repositorios de proyecto",
+              "Elaboré informes de estado para los patrocinadores"
+            ]
+          }
+        ],
+        "achievements": [
+          "Estandaricé el reporting de 25 proyectos en un único formato"
+        ],
+        "toolsAndTechnologies": [
+          "MS Project",
+          "Microsoft Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universitat Politècnica de Catalunya",
+        "degree": "Ingeniería Técnica",
+        "fieldOfStudy": "Ingeniería Informática",
+        "achievements": [
+          "Proyecto sobre gestión de portafolios de proyectos"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "PRINCE2 Practitioner",
+        "institution": "AXELOS",
+        "year": "@Y-4@",
+        "description": "Certificación en gestión de proyectos PRINCE2."
+      },
+      {
+        "title": "Management of Portfolios (MoP) Foundation",
+        "institution": "AXELOS",
+        "year": "@Y-4@",
+        "description": "Certificación en gestión de portafolios."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "MS Project",
+        "Jira",
+        "Microsoft Power BI",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Rigor metodológico",
+        "Organización",
+        "Comunicación",
+        "Influencia sin autoridad"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Catalán",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Implantación de gobernanza de portafolio",
+        "description": "Definí e implanté los estándares, plantillas y reporting de la PMO.",
+        "date": "2021-09",
+        "impact": "Redujo los proyectos en rojo del 22 % al 8 % y mejoró la puntualidad del reporting."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ciclismo",
+      "Ajedrez",
+      "Divulgación de gestión de proyectos"
+    ],
+    "references": [
+      {
+        "name": "Laura Vila Roca",
+        "position": "Directora de Proyectos",
+        "company": "Tecnología Pública de Cataluña",
+        "contact": {
+          "phone": "+34 655 340 922",
+          "email": "laura.vila@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 55000,
+      "max": 68000
+    },
+    "candidateClustering": {
+      "primaryCluster": "PMO Leadership",
+      "secondaryClusters": [
+        "Portfolio Governance",
+        "Project Standards"
+      ],
+      "functionalExpertise": [
+        "PMO",
+        "Portfolio governance",
+        "Project reporting"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Improved reporting reliability",
+        "Reduced red projects"
+      ],
+      "industryDomains": [
+        "Technology",
+        "Public sector"
+      ],
+      "environmentFit": [
+        "Portfolio-driven organisations",
+        "Governance-heavy environments"
+      ],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Experiencia consolidada estructurando PMO, estándares y gobernanza de portafolio con impacto en fiabilidad y control posiciona al candidato como PMO Lead principal."
+    },
+    "searchIndex": {
+      "roles": [
+        "PMO Lead",
+        "Portfolio Manager",
+        "PMO Manager"
+      ],
+      "skills": [
+        "MS Project",
+        "Jira",
+        "Power BI",
+        "PRINCE2",
+        "Portfolio governance"
+      ],
+      "industries": [
+        "Technology",
+        "Public sector"
+      ]
+    },
+    "tags": [
+      "project",
+      "pmo",
+      "portfolio-governance",
+      "principal",
+      "prince2"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Asociado Senior de Operaciones con nueve años optimizando procesos operativos y de back office en fintech y servicios compartidos. Experto en gestión de procesos, análisis de datos operativos y coordinación con proveedores. Referente en la mejora continua y en la eficiencia del día a día.",
+    "careerStartYear": 2017,
+    "personalInformation": {
+      "name": "Gonzalo Medina Cabrera",
+      "role": "Asociado Senior de Operaciones",
+      "summary": "Asociado de operaciones orientado a la mejora continua que optimiza procesos de back office con datos, rigor y coordinación transversal.",
+      "contact": {
+        "phone": "+34 643 118 559",
+        "email": "gonzalo.medina@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "Alameda Principal",
+          "streetType": "Calle",
+          "city": "Málaga",
+          "state": "Andalucía",
+          "zipCode": "29001",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/gonzalomedinacabrera"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Martes por la mañana",
+          "Jueves por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Operaciones",
+        "skills": [
+          "Gestión de procesos",
+          "Back office",
+          "Coordinación con proveedores",
+          "Mejora continua"
+        ]
+      },
+      {
+        "category": "Análisis",
+        "skills": [
+          "Análisis de datos operativos",
+          "Reporting",
+          "Cuadros de mando"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Asana",
+          "Jira",
+          "Microsoft Excel avanzado"
+        ]
+      },
+      {
+        "category": "Calidad",
+        "skills": [
+          "Mapeo de procesos",
+          "Documentación de procedimientos",
+          "Control de calidad"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Operaciones",
+        "Mejora de procesos",
+        "Análisis operativo"
+      ],
+      "keyResponsibilities": [
+        "Optimizar procesos de back office",
+        "Analizar datos operativos y elaborar reporting",
+        "Coordinar con proveedores y equipos internos"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Fintech Costa del Sol",
+        "website": "https://fintechcostasol.example.com",
+        "location": "Málaga, España",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Asociado Senior de Operaciones",
+        "activities": [
+          {
+            "project": "Optimización de back office",
+            "tasks": [
+              "Optimicé procesos de back office de pagos y conciliaciones",
+              "Elaboré cuadros de mando de KPIs operativos",
+              "Coordiné con proveedores externos la mejora de SLAs"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el tiempo de conciliación diaria un 40 %",
+          "Documenté y estandaricé 25 procedimientos operativos"
+        ],
+        "toolsAndTechnologies": [
+          "Asana",
+          "Jira",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Servicios Compartidos Andalucía",
+        "website": "https://sscandalucia.example.com",
+        "location": "Málaga, España",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Analista de Operaciones",
+        "activities": [
+          {
+            "project": "Soporte a operaciones",
+            "tasks": [
+              "Analicé datos operativos para detectar cuellos de botella",
+              "Mantuve el reporting semanal de operaciones",
+              "Apoyé la mejora de procesos transaccionales"
+            ]
+          }
+        ],
+        "achievements": [
+          "Identifiqué mejoras que redujeron reprocesos un 18 %"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Excel",
+          "Asana"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad de Málaga",
+        "degree": "Grado",
+        "fieldOfStudy": "Administración y Dirección de Empresas",
+        "achievements": [
+          "Especialización en operaciones y logística"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Lean Six Sigma Green Belt",
+        "institution": "IASSC",
+        "year": "@Y-4@",
+        "description": "Certificación en mejora de procesos operativos."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Asana",
+        "Jira",
+        "Microsoft Excel",
+        "Power BI"
+      ],
+      "softSkills": [
+        "Orientación al detalle",
+        "Análisis",
+        "Coordinación",
+        "Mejora continua"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Optimización del proceso de conciliación",
+        "description": "Rediseñé el proceso de conciliación diaria y automaticé controles en Excel.",
+        "date": "2023-05",
+        "impact": "Redujo el tiempo de conciliación diaria un 40 %."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Pádel",
+      "Tecnología financiera",
+      "Cocina"
+    ],
+    "references": [
+      {
+        "name": "Silvia Cabrera Ortiz",
+        "position": "Responsable de Operaciones",
+        "company": "Fintech Costa del Sol",
+        "contact": {
+          "phone": "+34 643 118 560",
+          "email": "silvia.cabrera@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 34000,
+      "max": 43000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Business Operations",
+      "secondaryClusters": [
+        "Process Improvement",
+        "Operations Analysis"
+      ],
+      "functionalExpertise": [
+        "Operations",
+        "Process improvement",
+        "Operations analysis"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Reduced reconciliation time",
+        "Reduced rework"
+      ],
+      "industryDomains": [
+        "Financial services",
+        "Shared services"
+      ],
+      "environmentFit": [
+        "Back office operations",
+        "Continuous improvement cultures"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Experiencia optimizando procesos de back office con análisis de datos y mejora continua sitúa al candidato en operaciones de negocio senior."
+    },
+    "searchIndex": {
+      "roles": [
+        "Senior Operations Associate",
+        "Operations Analyst",
+        "Business Operations Associate"
+      ],
+      "skills": [
+        "Asana",
+        "Jira",
+        "Excel",
+        "Process mapping",
+        "Operations analytics"
+      ],
+      "industries": [
+        "Financial services",
+        "Shared services"
+      ]
+    },
+    "tags": [
+      "operations",
+      "business-operations",
+      "process-improvement",
+      "senior",
+      "lean"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Business Partner de RR. HH. con más de once años acompañando a líderes comerciales y operativos en servicios profesionales y retail. Combina la gestión de relaciones laborales con el diseño organizativo y la planificación de plantillas para traducir los objetivos de negocio en planes de personas. Reconocida por su acompañamiento sereno y pragmático en reestructuraciones, crecimiento y cambio.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Marta Iglesias Bravo",
+      "role": "HR Business Partner",
+      "summary": "HRBP con visión comercial que asesora a la alta dirección en diseño organizativo, relaciones laborales y talento sin perder de vista la experiencia del empleado.",
+      "contact": {
+        "phone": "+34 611 205 399",
+        "email": "marta.iglesias@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Gran Vía",
+          "streetType": "Calle",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28013",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/martaiglesiasbravo"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Martes por la tarde",
+          "Miércoles por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Asesoría de RR. HH.",
+        "skills": [
+          "Relaciones laborales",
+          "Diseño organizativo",
+          "Planificación de plantillas",
+          "Gestión del cambio"
+        ]
+      },
+      {
+        "category": "Talento",
+        "skills": [
+          "Planes de sucesión",
+          "Revisiones de talento",
+          "Gestión del desempeño"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "Workday",
+          "SuccessFactors",
+          "Reporting de HRIS"
+        ]
+      },
+      {
+        "category": "Cumplimiento",
+        "skills": [
+          "Derecho laboral español",
+          "Negociación colectiva",
+          "Expedientes de regulación"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "HR business partnering",
+        "Relaciones laborales",
+        "Diseño organizativo"
+      ],
+      "keyResponsibilities": [
+        "Asesorar a la dirección en estrategia de personas y diseño organizativo",
+        "Liderar casos complejos de relaciones laborales",
+        "Impulsar los ciclos anuales de talento y desempeño"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Grupo Retail Levante",
+        "website": "https://retaillevante.example.com",
+        "location": "Madrid, España",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "HR Business Partner",
+        "activities": [
+          {
+            "project": "Business partnering regional",
+            "tasks": [
+              "Acompañé a una división de retail de 850 personas entre tienda y servicios centrales",
+              "Lideré reestructuraciones y subrogaciones que afectaron a más de 180 empleados",
+              "Formé a mandos intermedios en casos disciplinarios y conflictos complejos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje la rotación voluntaria de la división en 6 puntos en dos años",
+          "Desplegué un programa de capacitación de mandos para 120 líderes"
+        ],
+        "toolsAndTechnologies": [
+          "Workday",
+          "SuccessFactors",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Consultora Meridian Servicios",
+        "website": "https://meridianservicios.example.com",
+        "location": "Alcobendas, España",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "HR Advisor Senior",
+        "activities": [
+          {
+            "project": "Relaciones laborales",
+            "tasks": [
+              "Gestioné de principio a fin los casos de relaciones laborales de una plantilla de 400 personas",
+              "Asesoré a directores en cambios organizativos y evaluación del desempeño",
+              "Coordiné las campañas anuales de revisión salarial"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el tiempo medio de resolución de casos en un 25 %"
+        ],
+        "toolsAndTechnologies": [
+          "SAP SuccessFactors",
+          "Microsoft Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidad Complutense de Madrid",
+        "degree": "Grado",
+        "fieldOfStudy": "Relaciones Laborales y Recursos Humanos",
+        "achievements": [
+          "Matrícula de honor en Derecho del Trabajo"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CIPD Level 7 Advanced Diploma",
+        "institution": "CIPD",
+        "year": "@Y-4@",
+        "description": "Cualificación de nivel avanzado en gestión estratégica de personas."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Workday",
+        "SuccessFactors",
+        "Reporting de HRIS",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Coaching",
+        "Influencia",
+        "Discreción",
+        "Gestión de stakeholders"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de capacitación de mandos",
+        "description": "Diseñé y desplegué un itinerario de liderazgo para toda una división de retail.",
+        "date": "2023-05",
+        "impact": "Mejoró la confianza de los mandos y redujo las escaladas de relaciones laborales en un 18 %."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Senderismo",
+      "Canto coral",
+      "Voluntariado en un banco de alimentos"
+    ],
+    "references": [
+      {
+        "name": "Ricardo Salas Vega",
+        "position": "Director de RR. HH.",
+        "company": "Grupo Retail Levante",
+        "contact": {
+          "phone": "+34 611 205 349",
+          "email": "ricardo.salas@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 45000,
+      "max": 55000
+    },
+    "candidateClustering": {
+      "primaryCluster": "HR Business Partnering",
+      "secondaryClusters": [
+        "Employee Relations",
+        "Organisational Design"
+      ],
+      "functionalExpertise": [
+        "People strategy",
+        "Employee relations",
+        "Change management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced turnover",
+        "Improved manager capability"
+      ],
+      "industryDomains": [
+        "Retail",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "Matrixed organisations",
+        "Change-heavy environments"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Trayectoria sostenida como HRBP senior en relaciones laborales, diseño organizativo y cambio sitúa a la candidata en el partnering estratégico de personas."
+    },
+    "searchIndex": {
+      "roles": [
+        "HR Business Partner",
+        "Senior HR Advisor",
+        "People Partner"
+      ],
+      "skills": [
+        "Workday",
+        "SuccessFactors",
+        "Employee relations",
+        "Organisational design",
+        "Workforce planning"
+      ],
+      "industries": [
+        "Retail",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "hr",
+      "hr-business-partner",
+      "employee-relations",
+      "senior",
+      "cipd"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Especialista en adquisición de talento con cuatro años cubriendo posiciones de perfil comercial, soporte y operaciones para centros de servicios compartidos. Domina el sourcing directo, la evaluación por competencias y la experiencia de candidato. Le motiva construir procesos de selección ágiles y basados en datos.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Diego Serrano Molina",
+      "role": "Especialista en Adquisición de Talento",
+      "summary": "Recruiter proactivo que combina sourcing directo con una experiencia de candidato cuidada para cubrir volúmenes altos sin perder calidad.",
+      "contact": {
+        "phone": "+34 622 341 076",
+        "email": "diego.serrano.personal@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Colón",
+          "streetType": "Calle",
+          "city": "Valencia",
+          "state": "Comunidad Valenciana",
+          "zipCode": "46004",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/diegoserranomolina"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 15,
+        "interviewAvailability": [
+          "Lunes por la tarde",
+          "Viernes por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Sourcing",
+        "skills": [
+          "Sourcing directo",
+          "Búsqueda en LinkedIn Recruiter",
+          "Boolean search",
+          "Talent pipelining"
+        ]
+      },
+      {
+        "category": "Selección",
+        "skills": [
+          "Entrevistas por competencias",
+          "Cribado telefónico",
+          "Evaluación de candidatos"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "ATS",
+          "Greenhouse",
+          "LinkedIn Recruiter"
+        ]
+      },
+      {
+        "category": "Employer branding",
+        "skills": [
+          "Experiencia de candidato",
+          "Publicación de ofertas",
+          "Redes sociales"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Adquisición de talento",
+        "Sourcing",
+        "Experiencia de candidato"
+      ],
+      "keyResponsibilities": [
+        "Gestionar procesos de selección de principio a fin",
+        "Construir pipelines de talento para perfiles recurrentes",
+        "Coordinar la agenda de entrevistas con los managers"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Talent Hub Mediterráneo",
+        "website": "https://talenthubmed.example.com",
+        "location": "Valencia, España",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Especialista en Adquisición de Talento",
+        "activities": [
+          {
+            "project": "Selección de volumen",
+            "tasks": [
+              "Cubrí una media de 12 vacantes mensuales de atención al cliente y operaciones",
+              "Reduje el time-to-fill mediante pipelines proactivos",
+              "Mejoré la experiencia de candidato con comunicaciones estructuradas"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el time-to-fill medio de 42 a 30 días",
+          "Alcancé un NPS de candidato de 68"
+        ],
+        "toolsAndTechnologies": [
+          "Greenhouse",
+          "LinkedIn Recruiter",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Servicios Compartidos Turia",
+        "website": "https://turiassc.example.com",
+        "location": "Paterna, España",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Recruiter Junior",
+        "activities": [
+          {
+            "project": "Soporte a selección",
+            "tasks": [
+              "Realicé cribados telefónicos y coordiné entrevistas",
+              "Publiqué ofertas en portales de empleo",
+              "Mantuve actualizada la base de datos de candidatos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Cubrí más de 90 vacantes junior en 18 meses"
+        ],
+        "toolsAndTechnologies": [
+          "ATS",
+          "Microsoft Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universitat de València",
+        "degree": "Grado",
+        "fieldOfStudy": "Psicología",
+        "achievements": [
+          "Especialización en psicología del trabajo"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "LinkedIn Certified Professional Recruiter",
+        "institution": "LinkedIn",
+        "year": "@Y-4@",
+        "description": "Certificación en sourcing y uso avanzado de LinkedIn Recruiter."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Greenhouse",
+        "LinkedIn Recruiter",
+        "ATS",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Comunicación",
+        "Organización",
+        "Orientación a candidato",
+        "Proactividad"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Rediseño de la experiencia de candidato",
+        "description": "Implanté plantillas de comunicación y feedback en cada fase del proceso.",
+        "date": "2024-03",
+        "impact": "Elevó el NPS de candidato de 45 a 68 en seis meses."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Fútbol sala",
+      "Fotografía urbana",
+      "Cocina mediterránea"
+    ],
+    "references": [
+      {
+        "name": "Ana Belén Torres Gil",
+        "position": "Talent Acquisition Manager",
+        "company": "Talent Hub Mediterráneo",
+        "contact": {
+          "phone": "+34 622 341 077",
+          "email": "anabelen.torres@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 28000,
+      "max": 34000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Talent Acquisition",
+      "secondaryClusters": [
+        "Sourcing",
+        "Candidate Experience"
+      ],
+      "functionalExpertise": [
+        "Recruitment",
+        "Sourcing",
+        "Interviewing"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Reduced time-to-fill",
+        "Improved candidate experience"
+      ],
+      "industryDomains": [
+        "Shared services",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "High-volume recruitment",
+        "Fast-paced teams"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Experiencia centrada en selección de volumen con métricas claras de time-to-fill y experiencia de candidato encaja en adquisición de talento de nivel intermedio."
+    },
+    "searchIndex": {
+      "roles": [
+        "Talent Acquisition Specialist",
+        "Recruiter",
+        "Sourcer"
+      ],
+      "skills": [
+        "Greenhouse",
+        "LinkedIn Recruiter",
+        "Sourcing",
+        "Competency interviewing",
+        "Candidate experience"
+      ],
+      "industries": [
+        "Shared services",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "hr",
+      "talent-acquisition",
+      "recruiter",
+      "midlevel",
+      "sourcing"
+    ]
+  }
+]

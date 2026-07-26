@@ -1,0 +1,452 @@
+[
+  {
+    "title": "Director/a General (Country Manager España)",
+    "description": "Compañía tecnológica europea en fase de expansión, participada por un fondo de private equity, busca un/a Director/a General para liderar su filial en España con sede en Madrid.\n\nReportando al Consejo de Administración y al CEO del grupo, asumirás la responsabilidad plena sobre la cuenta de resultados (P&L) del país, definiendo y ejecutando la estrategia comercial, operativa y financiera para acelerar el crecimiento rentable.\n\nResponsabilidades principales:\n- Diseñar y ejecutar el plan estratégico plurianual, con objetivos claros de ingresos, márgenes y cuota de mercado.\n- Asumir la propiedad total del P&L y presentar resultados y previsiones al Consejo y al fondo inversor.\n- Liderar y desarrollar al comité de dirección, construyendo una cultura de alto rendimiento y rendición de cuentas.\n- Impulsar la transformación organizativa y la eficiencia operativa en un entorno de rápido crecimiento.\n- Representar a la compañía ante clientes clave, socios institucionales y organismos reguladores.\n- Evaluar oportunidades de M&A y alianzas estratégicas para consolidar el mercado ibérico.\n\nRequisitos imprescindibles:\n- Más de 15 años de experiencia directiva, con al menos 5 en posiciones de máxima responsabilidad (General Management).\n- Trayectoria demostrable de ownership de P&L y crecimiento sostenido de ingresos.\n- Formación MBA o equivalente y sólida capacidad de liderazgo y gestión de stakeholders.\n\nValoramos: experiencia previa en empresas participadas por private equity y en procesos de M&A.\n\nModelo híbrido con base en Madrid y disponibilidad para viajar. Paquete retributivo competitivo con variable ligado a resultados y plan de incentivos a largo plazo.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "P&L Management",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Strategic Planning",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Board Reporting",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Organizational Transformation",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Mergers & Acquisitions",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "General Management",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 15,
+        "minRelevantYears": 12,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Madrid",
+          "Barcelona",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Private Equity Portfolio Companies",
+          "Financial Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Director/a de Operaciones (COO)",
+    "description": "Grupo industrial de fabricación con presencia internacional busca un/a Director/a de Operaciones (COO) para su plataforma industrial en Barcelona.\n\nReportando al CEO y formando parte del comité de dirección, serás responsable de garantizar la excelencia operativa a escala, optimizando la cadena de suministro, la producción y la calidad en varias plantas.\n\nResponsabilidades principales:\n- Dirigir las operaciones globales (producción, supply chain, calidad y logística) con responsabilidad sobre el presupuesto operativo y el margen industrial.\n- Liderar programas de transformación operativa y mejora continua bajo metodologías Lean y Six Sigma.\n- Definir KPIs operativos y presentar el desempeño y los planes de mejora al Consejo.\n- Escalar la capacidad productiva acompañando el crecimiento del negocio y los nuevos lanzamientos.\n- Gestionar y desarrollar a los directores de planta, construyendo equipos de alto rendimiento.\n- Impulsar la digitalización y automatización de procesos industriales (Industry 4.0).\n\nRequisitos imprescindibles:\n- Más de 14 años de experiencia en operaciones industriales, con al menos 5 liderando operaciones multiplanta.\n- Dominio de gestión de supply chain y metodologías de mejora continua (Lean, Six Sigma).\n- Experiencia comprobada en transformación organizativa y gestión de P&L operativo.\n\nValoramos: experiencia internacional, proyectos de M&A e integración de plantas, y formación MBA.\n\nModelo presencial con base en Barcelona y viajes frecuentes a plantas. Retribución acorde a un rol de C-suite con variable e incentivos a largo plazo.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Operations Management",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Supply Chain Management",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Lean Manufacturing",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Six Sigma",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "P&L Management",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Organizational Transformation",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 14,
+        "minRelevantYears": 12,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Barcelona",
+          "Zaragoza",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Industrial Machinery",
+          "Consumer Goods"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Director/a Financiero/a (CFO)",
+    "description": "Compañía de servicios financieros participada por private equity busca un/a Director/a Financiero/a (CFO) para su sede en Madrid, en un momento clave de crecimiento y preparación de un proceso de desinversión.\n\nReportando al CEO y al Consejo, liderarás la función financiera de forma integral, actuando como socio estratégico del negocio y garantizando el control, la solidez financiera y la creación de valor.\n\nResponsabilidades principales:\n- Dirigir contabilidad, control de gestión, tesorería, fiscalidad y reporting financiero del grupo.\n- Asumir la propiedad del proceso presupuestario, forecasting y análisis de rentabilidad (P&L y cash flow).\n- Presentar información financiera y planes al Consejo y al fondo inversor, garantizando transparencia y gobierno corporativo.\n- Liderar operaciones de financiación, M&A, due diligence y preparación de la compañía para un exit.\n- Fortalecer los controles internos y el cumplimiento normativo (IFRS, auditoría, SOX).\n- Desarrollar y liderar al equipo financiero, elevando su capacidad analítica y de business partnering.\n\nRequisitos imprescindibles:\n- Más de 15 años de experiencia financiera, con al menos 5 como CFO o Director/a Financiero/a.\n- Dominio de reporting bajo IFRS, control de gestión y gestión de tesorería.\n- Experiencia demostrable en M&A, financiación y relación con inversores.\n\nValoramos: experiencia en entornos participados por private equity, procesos de exit y formación MBA o cualificación contable (ACCA, CPA).\n\nModelo híbrido con base en Madrid. Paquete retributivo de C-suite con variable e incentivo ligado a la creación de valor.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Financial Planning & Analysis",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Mergers & Acquisitions",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Treasury Management",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Board Reporting",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Investor Relations",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Corporate Governance",
+          "importance": "nice_to_have",
+          "weight": 0.09,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 15,
+        "minRelevantYears": 12,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Madrid",
+          "Ciudad de México",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Financial Services",
+          "Private Equity Portfolio Companies",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Director/a de Tecnología (CTO)",
+    "description": "Scale-up tecnológica de rápido crecimiento, respaldada por inversores institucionales, busca un/a Director/a de Tecnología (CTO) para liderar su organización de ingeniería y producto desde Barcelona.\n\nReportando al CEO y formando parte del comité ejecutivo, definirás la visión y la estrategia tecnológica, escalando la plataforma, los equipos y la arquitectura para soportar un crecimiento internacional acelerado.\n\nResponsabilidades principales:\n- Definir la estrategia y el roadmap tecnológico alineados con los objetivos de negocio y la creación de valor.\n- Liderar y escalar la organización de ingeniería (100+ personas), construyendo una cultura de excelencia técnica.\n- Supervisar la arquitectura de una plataforma cloud escalable, segura y resiliente.\n- Gestionar el presupuesto tecnológico y presentar la estrategia y los avances al Consejo.\n- Impulsar la transformación organizativa, las prácticas de ingeniería y la adopción de IA.\n- Garantizar la seguridad, el cumplimiento y la fiabilidad de los sistemas a escala.\n\nRequisitos imprescindibles:\n- Más de 14 años de experiencia en tecnología, con al menos 5 liderando organizaciones de ingeniería a gran escala.\n- Sólida visión de arquitectura cloud (AWS) y sistemas distribuidos.\n- Experiencia demostrable en escalado de equipos y transformación organizativa.\n\nValoramos: experiencia en entornos SaaS de alto crecimiento, gobierno tecnológico ante el Consejo y adopción de IA/Machine Learning.\n\nModelo híbrido con base en Barcelona. Retribución de C-suite con equity y variable ligado a resultados.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Technology Strategy",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Engineering Leadership",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Cloud Architecture",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Organizational Transformation",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Board Reporting",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AWS",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Artificial Intelligence",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 14,
+        "minRelevantYears": 12,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Barcelona",
+          "Madrid",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Private Equity Portfolio Companies",
+          "Financial Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Director/a Comercial (Chief Commercial Officer)",
+    "description": "Compañía del sector consumo con marcas líderes en el mercado ibérico y latinoamericano busca un/a Director/a Comercial (Chief Commercial Officer) para su sede en Valencia.\n\nReportando al CEO y como miembro del comité de dirección, serás responsable de la estrategia comercial global, integrando ventas, marketing y desarrollo de negocio para impulsar el crecimiento rentable y la expansión en nuevos mercados.\n\nResponsabilidades principales:\n- Definir y ejecutar la estrategia comercial (go-to-market), con responsabilidad sobre los ingresos y el margen bruto.\n- Liderar las funciones de ventas, marketing, trade y desarrollo de negocio a escala internacional.\n- Asumir el ownership del P&L comercial y presentar resultados y previsiones al Consejo.\n- Desarrollar relaciones estratégicas con clientes clave, distribuidores y socios comerciales.\n- Impulsar la transformación comercial, la digitalización de canales y la expansión a Latinoamérica.\n- Construir y liderar un equipo comercial de alto rendimiento orientado a resultados.\n\nRequisitos imprescindibles:\n- Más de 14 años de experiencia comercial, con al menos 5 en posiciones de dirección (CCO, Director/a Comercial o Ventas).\n- Trayectoria demostrable de crecimiento de ingresos y ownership de P&L comercial.\n- Experiencia en gestión de grandes cuentas, negociación y desarrollo de mercados internacionales.\n\nValoramos: experiencia en el sector consumo (FMCG/retail), expansión en Latinoamérica y formación MBA.\n\nModelo híbrido con base en Valencia y disponibilidad para viajar internacionalmente. Retribución de C-suite con variable ligado a resultados comerciales.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Commercial Strategy",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "P&L Management",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 10,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Sales Leadership",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Go-to-Market Strategy",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Key Account Management",
+          "importance": "important",
+          "weight": 0.11,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Business Development",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 14,
+        "minRelevantYears": 12,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Valencia",
+          "Madrid",
+          "Bogotá"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Consumer Goods",
+          "Retail",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  }
+]

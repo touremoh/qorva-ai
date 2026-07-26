@@ -15,7 +15,11 @@ import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.GetObjectRequest;
 import software.amazon.awssdk.services.s3.model.NoSuchKeyException;
 
+import java.nio.charset.StandardCharsets;
+import java.time.YearMonth;
+import java.time.ZoneOffset;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Seeds a freshly created demo tenant with sample CVs and job posts pulled from S3.
@@ -24,6 +28,10 @@ import java.util.List;
  * a tenant that already has CVs. Missing (segment, language) fixture sets fall back to the
  * configured fallback language. All failures are logged and swallowed so seeding never rolls back
  * account creation.
+ * <p>
+ * Fixture JSON may carry relative date tokens resolved at seed time, keeping the demo data
+ * evergreen (see docs/demo-seed-fixtures.md): {@code @M-n@} → month n months ago as "yyyy-MM",
+ * {@code @Y-n@} → year n years ago as "yyyy".
  */
 @Slf4j
 @Service
@@ -123,11 +131,27 @@ public class DemoSeedService {
 			return List.of();
 		}
 		try {
-			return objectMapper.readValue(bytes, type);
+			var json = resolveDateTokens(new String(bytes, StandardCharsets.UTF_8));
+			return objectMapper.readValue(json, type);
 		} catch (Exception e) {
 			log.error("Failed to parse fixture {} for segment={}", fileName, slug, e);
 			return List.of();
 		}
+	}
+
+	private static final Pattern MONTHS_AGO_TOKEN = Pattern.compile("@M-(\\d{1,3})@");
+	private static final Pattern YEARS_AGO_TOKEN = Pattern.compile("@Y-(\\d{1,2})@");
+
+	static String resolveDateTokens(String rawJson) {
+		return resolveDateTokens(rawJson, YearMonth.now(ZoneOffset.UTC));
+	}
+
+	/** Replaces relative date tokens so fixture freshness never decays as the fixtures age. */
+	static String resolveDateTokens(String rawJson, YearMonth now) {
+		var withMonths = MONTHS_AGO_TOKEN.matcher(rawJson)
+			.replaceAll(match -> now.minusMonths(Long.parseLong(match.group(1))).toString());
+		return YEARS_AGO_TOKEN.matcher(withMonths)
+			.replaceAll(match -> String.valueOf(now.getYear() - Integer.parseInt(match.group(1))));
 	}
 
 	private byte[] fetchObject(String key) {

@@ -1,0 +1,418 @@
+[
+  {
+    "title": "Contabilista Financeiro (IFRS)",
+    "description": "A Ribeira Consumer Group, uma empresa transformadora de média dimensão com sede no Porto, está a reforçar a sua equipa de reporte financeiro e procura um Contabilista Financeiro.\n\nReportando ao Controller Financeiro, será responsável pelo fecho mensal de duas entidades legais, pela preparação de lançamentos contabilísticos e reconciliações de balanço, e pela elaboração das demonstrações financeiras estatutárias segundo as normas IFRS. Irá manter o razão geral em SAP FICO, registar acréscimos e diferimentos, reconciliar saldos intercompany e apoiar a auditoria externa anual através da preparação de mapas de suporte e da resposta a pedidos dos auditores.\n\nNo dia a dia colaborará com as áreas de contas a pagar e a receber para manter o razão limpo, calculará a depreciação de ativos fixos e ajudará a melhorar os prazos do ciclo de fecho através de melhores controlos e documentação.\n\nRequisitos: contabilista certificado ou em fase de certificação (OCC/ACCA), com mais de 3 anos numa função financeira exigente, experiência prática em razão geral, sólido conhecimento de IFRS e Excel avançado para reconciliações. Experiência prática em SAP FICO é essencial.\n\nValorizamos: exposição a ferramentas de consolidação, ambientes industriais ou de grande consumo, e Power BI para reporting.\n\nRegime híbrido baseado no Porto (3 dias por semana no escritório), aberto a candidatos da região Norte. Oferecemos apoio à formação, salário competitivo e um percurso claro para uma posição de contabilista sénior.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "IFRS",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP FICO",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "General Ledger Accounting",
+          "importance": "important",
+          "weight": 0.18,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Month-End Close",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Porto",
+          "Braga",
+          "Aveiro",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Consumer Goods",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Analista de FP&A",
+    "description": "A Atlântico Tech, uma empresa tecnológica em rápido crescimento sediada em Lisboa, procura um Analista de FP&A para integrar a sua equipa de Planeamento e Análise Financeira.\n\nReportando ao FP&A Manager, será responsável por apoiar o ciclo orçamental anual, os processos de forecast trimestral e a análise de desvios entre valores reais e orçamentados. Irá construir e manter modelos financeiros em Excel, preparar dashboards de gestão em Power BI e colaborar com os responsáveis de cada departamento para consolidar previsões de receita e de custos.\n\nO seu trabalho terá impacto direto nas decisões da direção: análise de rentabilidade por produto, cálculo de métricas SaaS como ARR, churn e margem bruta, e preparação de materiais para reuniões de board e investidores.\n\nRequisitos: 2 a 4 anos de experiência em FP&A, controlo de gestão ou consultoria; modelação financeira avançada em Excel; sólida capacidade analítica e à-vontade com grandes volumes de dados. Experiência com ferramentas de planeamento como Anaplan é uma forte vantagem.\n\nValorizamos: conhecimento de Power BI, SQL para extração de dados, e experiência prévia num ambiente tecnológico ou de subscrição.\n\nRegime híbrido em Lisboa, com flexibilidade e trabalho remoto parcial. Oferecemos um plano de progressão estruturado e um ambiente dinâmico e orientado a dados.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Financial Modeling",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Budgeting and Forecasting",
+          "importance": "important",
+          "weight": 0.18,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Anaplan",
+          "importance": "nice_to_have",
+          "weight": 0.13,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SQL",
+          "importance": "nice_to_have",
+          "weight": 0.11,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Auditor Interno Sénior (SOX)",
+    "description": "O Banco Meridiano, uma instituição financeira com operações em Portugal e no Brasil, procura um Auditor Interno Sénior para a sua Direção de Auditoria Interna, sediada em Lisboa.\n\nReportando ao Head of Internal Audit, irá liderar auditorias de âmbito financeiro e operacional, avaliar o desenho e a eficácia dos controlos internos e coordenar o programa de conformidade SOX do grupo. Será responsável por planear trabalhos de auditoria com base em risco, executar testes de controlos, documentar walkthroughs e apresentar conclusões e recomendações à gestão sénior.\n\nIrá utilizar ferramentas de análise de dados como ACL para testar populações completas de transações, identificar exceções e quantificar exposição ao risco. Terá também um papel de mentoria sobre auditores júnior e de interlocução com os auditores externos.\n\nRequisitos: mais de 6 anos de experiência em auditoria interna ou externa, preferencialmente no setor financeiro; conhecimento profundo de controlos internos e do enquadramento SOX; certificação CIA ou CISA valorizada. Experiência prática com ACL ou ferramentas equivalentes de data analytics é essencial.\n\nValorizamos: conhecimento de regulação bancária, risco operacional e domínio de US GAAP e IFRS.\n\nRegime híbrido em Lisboa. Oferecemos um pacote competitivo, exposição internacional e um percurso de carreira para posições de gestão em auditoria e risco.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Internal Audit",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SOX Compliance",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Internal Controls",
+          "importance": "important",
+          "weight": 0.18,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ACL",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Risk Assessment",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "US GAAP",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "São Paulo",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Banking",
+          "Insurance",
+          "Professional Services"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Analista de Tesouraria",
+    "description": "A Douro Energia, um grupo do setor energético com sede em Coimbra, procura um Analista de Tesouraria para integrar a sua equipa de Corporate Finance.\n\nReportando ao Treasury Manager, será responsável pela gestão diária de liquidez, pela elaboração de previsões de cash flow de curto e médio prazo e pela reconciliação de posições bancárias. Irá acompanhar a execução de pagamentos, gerir relações com bancos, e apoiar operações de financiamento e de cobertura de risco cambial e de taxa de juro.\n\nNo dia a dia irá operar o Treasury Management System, monitorizar covenants de dívida, preparar reportes de posição de tesouraria para a direção financeira e contribuir para a otimização do capital circulante. Colaborará ainda com as equipas de contabilidade e de FP&A na conciliação entre previsões e realizado.\n\nRequisitos: 1 a 3 anos de experiência em tesouraria, banca ou controlo financeiro; sólido domínio de Excel; compreensão de instrumentos financeiros e de gestão de liquidez. Familiaridade com um Treasury Management System (por exemplo Kyriba) é uma vantagem.\n\nValorizamos: conhecimento de SAP, noções de derivados e de cobertura cambial, e inglês fluente para interação com contrapartes internacionais.\n\nRegime híbrido em Coimbra. Ideal para um profissional em início de carreira que pretenda desenvolver-se na área de tesouraria corporativa, com formação contínua e progressão clara.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Treasury Management",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Cash Flow Forecasting",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "important",
+          "weight": 0.18,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Liquidity Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Kyriba",
+          "importance": "nice_to_have",
+          "weight": 0.12,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP",
+          "importance": "nice_to_have",
+          "weight": 0.11,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 1,
+        "minRelevantYears": 1,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Coimbra",
+          "Lisboa",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Energy",
+          "Banking",
+          "Manufacturing"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.2,
+        "location": 0.15,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Controller Financeiro",
+    "description": "A Serra Nova Insurance, uma seguradora estabelecida com sede em Braga, procura um Controller Financeiro para liderar a sua função de controlo e reporting.\n\nReportando ao CFO, será responsável por todo o processo de fecho mensal e anual, pela integridade do razão geral e pela produção das demonstrações financeiras consolidadas segundo IFRS. Irá supervisionar uma equipa de contabilistas, garantir a robustez do ambiente de controlo interno e gerir o relacionamento com os auditores externos durante a auditoria estatutária.\n\nComo Controller, terá um papel central na melhoria de processos: automatização do fecho, reforço dos controlos, definição de políticas contabilísticas e implementação de melhorias no ERP. Irá também preparar reportes de gestão, apoiar o processo orçamental e assegurar o cumprimento das obrigações fiscais e regulamentares do setor segurador.\n\nRequisitos: mais de 8 anos de experiência em contabilidade e controlo financeiro, dos quais alguns em funções de liderança; certificação de contabilista (OCC, ACCA ou equivalente); domínio sólido de IFRS e de consolidação; experiência prática com SAP FICO. Capacidade comprovada de gestão de equipas é essencial.\n\nValorizamos: experiência no setor segurador ou bancário, conhecimento de controlos SOX, e Power BI para reporting de gestão.\n\nRegime híbrido em Braga. Oferecemos um pacote de remuneração sénior, bónus por desempenho e um lugar de destaque na liderança financeira do grupo.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "IFRS",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP FICO",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Financial Consolidation",
+          "importance": "important",
+          "weight": 0.17,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Month-End Close",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Team Leadership",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "nice_to_have",
+          "weight": 0.12,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 8,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Braga",
+          "Porto",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Insurance",
+          "Banking",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  }
+]

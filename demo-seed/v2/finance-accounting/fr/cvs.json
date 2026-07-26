@@ -1,0 +1,6185 @@
+[
+  {
+    "candidateProfileSummary": "Comptable junior rigoureuse avec trois ans d'expérience au sein du service comptable d'un groupe de distribution. À l'aise sur la comptabilité fournisseurs, les rapprochements bancaires et le support à la clôture mensuelle. Actuellement en préparation du DSCG et désireuse d'évoluer vers un poste de comptable général.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Camille Lefèvre",
+      "role": "Comptable junior",
+      "summary": "Comptable en début de carrière, méthodique et fiable, qui tient des grands livres propres et respecte les échéances de clôture.",
+      "contact": {
+        "phone": "+33 6 12 45 78 90",
+        "email": "camille.lefevre@example.com",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "de la République",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75011",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/camille-lefevre-compta"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En soirée en semaine",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Comptabilité",
+        "skills": [
+          "Comptabilité fournisseurs",
+          "Rapprochements bancaires",
+          "Écritures de journal",
+          "Clôture mensuelle"
+        ]
+      },
+      {
+        "category": "Systèmes",
+        "skills": [
+          "SAP FICO",
+          "Sage",
+          "Excel"
+        ]
+      },
+      {
+        "category": "Reporting",
+        "skills": [
+          "Balance générale",
+          "Charges à payer",
+          "Déclarations de TVA"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "PCG",
+          "Bases IFRS"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Comptabilité transactionnelle",
+        "Rapprochements",
+        "Support à la clôture"
+      ],
+      "keyResponsibilities": [
+        "Traiter les factures fournisseurs et les campagnes de paiement",
+        "Rapprocher les comptes bancaires et les comptes de contrôle",
+        "Participer à la clôture mensuelle et au reporting"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Groupe Distridéal",
+        "website": "https://distrideal.example.com",
+        "location": "Paris, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Comptable junior",
+        "activities": [
+          {
+            "project": "Clôture mensuelle",
+            "tasks": [
+              "Préparation des écritures de charges à payer et de charges constatées d'avance",
+              "Rapprochement de 10 comptes bancaires chaque semaine",
+              "Assistance aux déclarations trimestrielles de TVA"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction de 25 % des litiges fournisseurs anciens en réorganisant le suivi des factures",
+          "Réduction du cycle de rapprochement bancaire de 4 à 2 jours"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Excel",
+          "Sage"
+        ]
+      },
+      {
+        "company": "Cabinet Moreau & Associés",
+        "website": "https://moreau-associes.example.com",
+        "location": "Créteil, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Assistante comptable",
+        "activities": [
+          {
+            "project": "Tenue comptable clients",
+            "tasks": [
+              "Tenue des journaux d'achats et de ventes pour des PME",
+              "Préparation des déclarations de TVA",
+              "Traitement des écritures de paie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Gestion de la comptabilité d'un portefeuille de 15 petites entreprises"
+        ],
+        "toolsAndTechnologies": [
+          "Sage",
+          "Cegid",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université Paris-Dauphine",
+        "degree": "Licence",
+        "fieldOfStudy": "Comptabilité, Contrôle, Audit",
+        "achievements": [
+          "Mention bien",
+          "Trésorière de l'association étudiante de finance"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "DCG",
+        "institution": "Ministère de l'Éducation nationale",
+        "year": "@Y-0@",
+        "description": "Diplôme de comptabilité et de gestion obtenu, préparation du DSCG en cours."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP FICO",
+        "Sage",
+        "Cegid",
+        "Excel",
+        "Rapprochements bancaires",
+        "Déclarations de TVA",
+        "PCG"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Gestion du temps",
+        "Envie d'apprendre"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Refonte du traitement des factures fournisseurs",
+        "description": "Mise en place d'une boîte de réception partagée et d'un circuit de validation des factures.",
+        "date": "2023-11",
+        "impact": "Réduction du délai de validation des factures de deux jours en moyenne."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Volley-ball",
+      "Pâtisserie",
+      "Blog sur les finances personnelles"
+    ],
+    "references": [
+      {
+        "name": "Nathalie Girard",
+        "position": "Chef comptable",
+        "company": "Groupe Distridéal",
+        "contact": {
+          "phone": "+33 6 22 33 44 55",
+          "email": "nathalie.girard@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 32000,
+      "max": 38000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Financial Accounting",
+      "secondaryClusters": [
+        "Transactional Finance",
+        "Accounts Payable"
+      ],
+      "functionalExpertise": [
+        "Reconciliations",
+        "Month-end close",
+        "Accounts payable"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Faster reconciliations",
+        "Cleaner AP process"
+      ],
+      "industryDomains": [
+        "Retail",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "SME",
+        "Shared service centre"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Transactional accounting duties, month-end support and DCG qualification place this candidate as an early-career financial accountant."
+    },
+    "searchIndex": {
+      "roles": [
+        "Junior Accountant",
+        "Accounts Assistant",
+        "Financial Accountant"
+      ],
+      "skills": [
+        "SAP FICO",
+        "Sage",
+        "Cegid",
+        "Bank reconciliations",
+        "VAT",
+        "Month-end close",
+        "Excel"
+      ],
+      "industries": [
+        "Retail",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "junior",
+      "dcg",
+      "sap",
+      "month-end"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Comptable général confirmé disposant de dix ans d'expérience en comptabilité générale et statutaire au sein de groupes industriels. Pilote de bout en bout la clôture mensuelle et annuelle, les liasses fiscales et les relations avec les commissaires aux comptes. Maîtrise SAP FICO, Oracle et les normes IFRS et françaises.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Julien Marchand",
+      "role": "Comptable général confirmé",
+      "summary": "Comptable confirmé qui sécurise les clôtures, fiabilise les comptes statutaires et sert d'interlocuteur privilégié des auditeurs.",
+      "contact": {
+        "phone": "+33 6 33 21 09 87",
+        "email": "julien.marchand@example.com",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Vendôme",
+          "streetType": "Rue",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69003",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/julien-marchand-compta"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En soirée en semaine"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Comptabilité générale",
+        "skills": [
+          "Clôture mensuelle et annuelle",
+          "Comptes statutaires",
+          "Immobilisations",
+          "Provisions"
+        ]
+      },
+      {
+        "category": "Systèmes",
+        "skills": [
+          "SAP FICO",
+          "Oracle",
+          "Excel avancé"
+        ]
+      },
+      {
+        "category": "Fiscalité & reporting",
+        "skills": [
+          "Liasse fiscale",
+          "Déclarations de TVA",
+          "Reporting groupe"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "PCG",
+          "IFRS",
+          "US GAAP"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Comptabilité générale et statutaire",
+        "Clôtures",
+        "Relations avec les commissaires aux comptes"
+      ],
+      "keyResponsibilities": [
+        "Piloter la clôture mensuelle et annuelle",
+        "Établir les comptes statutaires et la liasse fiscale",
+        "Coordonner les audits légaux"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Rhône Industries SA",
+        "website": "https://rhone-industries.example.com",
+        "location": "Lyon, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Comptable général confirmé",
+        "activities": [
+          {
+            "project": "Clôture annuelle",
+            "tasks": [
+              "Établissement des comptes statutaires de trois entités",
+              "Préparation de la liasse fiscale",
+              "Coordination de l'audit légal"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction du délai de clôture annuelle de 20 jours à 12 jours",
+          "Automatisation des écritures d'immobilisations dans SAP"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Excel",
+          "Oracle"
+        ]
+      },
+      {
+        "company": "Fabrimétal Auvergne",
+        "website": "https://fabrimetal.example.com",
+        "location": "Clermont-Ferrand, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Comptable général",
+        "activities": [
+          {
+            "project": "Comptabilité générale",
+            "tasks": [
+              "Tenue de la comptabilité générale et analytique",
+              "Rapprochements intercos",
+              "Déclarations fiscales périodiques"
+            ]
+          }
+        ],
+        "achievements": [
+          "Fiabilisation du processus de comptabilité analytique sur deux sites de production"
+        ],
+        "toolsAndTechnologies": [
+          "Oracle",
+          "Excel",
+          "Sage"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IAE Lyon - Université Jean Moulin",
+        "degree": "Master",
+        "fieldOfStudy": "Comptabilité, Contrôle, Audit",
+        "achievements": [
+          "Major de promotion en comptabilité approfondie"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "DSCG",
+        "institution": "Ministère de l'Éducation nationale",
+        "year": "@Y-0@",
+        "description": "Diplôme supérieur de comptabilité et de gestion."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP FICO",
+        "Oracle",
+        "Excel",
+        "IFRS",
+        "US GAAP",
+        "Liasse fiscale",
+        "Comptes statutaires"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Organisation",
+        "Sens du détail"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Réduction du cycle de clôture",
+        "description": "Refonte du calendrier de clôture et automatisation des écritures récurrentes.",
+        "date": "2022-02",
+        "impact": "Gain de 8 jours sur la clôture annuelle."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Randonnée",
+      "Œnologie",
+      "Course à pied"
+    ],
+    "references": [
+      {
+        "name": "Sophie Bernard",
+        "position": "Directrice financière",
+        "company": "Rhône Industries SA",
+        "contact": {
+          "phone": "+33 6 44 55 66 77",
+          "email": "sophie.bernard@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 58000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Financial Accounting",
+      "secondaryClusters": [
+        "Statutory Reporting",
+        "General Ledger"
+      ],
+      "functionalExpertise": [
+        "Statutory accounting",
+        "Month-end close",
+        "Tax filings"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Faster close cycle",
+        "Reliable statutory accounts"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Industrial"
+      ],
+      "environmentFit": [
+        "Mid-cap",
+        "Multi-site industrial group"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Ten years in general and statutory accounting with ownership of close and legal audits marks a senior financial accountant."
+    },
+    "searchIndex": {
+      "roles": [
+        "Financial Accountant",
+        "General Ledger Accountant",
+        "Statutory Accountant"
+      ],
+      "skills": [
+        "SAP FICO",
+        "Oracle",
+        "IFRS",
+        "US GAAP",
+        "Statutory reporting",
+        "Month-end close",
+        "Excel"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Industrial"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "senior",
+      "dscg",
+      "sap",
+      "statutory"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Responsable comptable expérimentée pilotant une équipe de six collaborateurs au sein d'un groupe de services financiers à Bruxelles. Quinze ans d'expérience couvrant la consolidation, le reporting IFRS et l'amélioration continue des processus de clôture. Reconnue pour sa capacité à structurer un service comptable et à fiabiliser les états financiers.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Isabelle Vandenberghe",
+      "role": "Responsable comptable",
+      "summary": "Manager comptable qui structure les équipes, sécurise la consolidation et transforme la clôture en un processus prévisible.",
+      "contact": {
+        "phone": "+32 475 12 34 56",
+        "email": "isabelle.vandenberghe@example.com",
+        "address": {
+          "streetNumber": "120",
+          "streetName": "Louise",
+          "streetType": "Avenue",
+          "city": "Bruxelles",
+          "state": "Bruxelles-Capitale",
+          "zipCode": "1050",
+          "country": "Belgique"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/isabelle-vandenberghe"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Consolidation",
+        "skills": [
+          "Consolidation IFRS",
+          "Reporting groupe",
+          "Éliminations intercos"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Encadrement d'équipe",
+          "Amélioration des processus",
+          "Formation"
+        ]
+      },
+      {
+        "category": "Systèmes",
+        "skills": [
+          "SAP FICO",
+          "Oracle",
+          "BFC",
+          "Excel avancé"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "IFRS",
+          "BE GAAP",
+          "Contrôle interne"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Consolidation",
+        "Reporting IFRS",
+        "Management d'équipe comptable"
+      ],
+      "keyResponsibilities": [
+        "Piloter la clôture consolidée",
+        "Encadrer et développer l'équipe comptable",
+        "Fiabiliser les états financiers et le contrôle interne"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Belfin Services SA",
+        "website": "https://belfin-services.example.com",
+        "location": "Bruxelles, Belgique",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Responsable comptable",
+        "activities": [
+          {
+            "project": "Consolidation groupe",
+            "tasks": [
+              "Pilotage de la consolidation de 8 entités",
+              "Encadrement d'une équipe de 6 comptables",
+              "Refonte du calendrier de clôture"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction du délai de clôture consolidée de 15 à 9 jours",
+          "Mise en place d'un manuel de procédures comptables groupe"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "BFC",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Cabinet De Smet & Partners",
+        "website": "https://desmet-partners.example.com",
+        "location": "Anvers, Belgique",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Chef comptable",
+        "activities": [
+          {
+            "project": "Clôtures clients",
+            "tasks": [
+              "Supervision des clôtures pour un portefeuille de clients",
+              "Établissement des comptes annuels",
+              "Encadrement de deux collaborateurs"
+            ]
+          }
+        ],
+        "achievements": [
+          "Standardisation des dossiers de clôture pour 20 clients"
+        ],
+        "toolsAndTechnologies": [
+          "Oracle",
+          "Excel",
+          "Winbooks"
+        ]
+      },
+      {
+        "company": "Groupe Delvaux",
+        "website": "https://delvaux-groupe.example.com",
+        "location": "Liège, Belgique",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Comptable",
+        "activities": [
+          {
+            "project": "Comptabilité générale",
+            "tasks": [
+              "Tenue de la comptabilité générale",
+              "Rapprochements bancaires",
+              "Support TVA"
+            ]
+          }
+        ],
+        "achievements": [
+          "Fiabilisation des rapprochements intercos"
+        ],
+        "toolsAndTechnologies": [
+          "Winbooks",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Solvay Brussels School",
+        "degree": "Master",
+        "fieldOfStudy": "Sciences de gestion - Comptabilité",
+        "achievements": [
+          "Distinction"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "IEC - Expert-comptable",
+        "institution": "Institut des Experts-comptables et des Conseils fiscaux",
+        "year": "@Y-0@",
+        "description": "Titre d'expert-comptable belge (ITAA)."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP FICO",
+        "BFC",
+        "Oracle",
+        "Excel",
+        "IFRS",
+        "Consolidation",
+        "Contrôle interne"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Communication",
+        "Sens de l'organisation"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Néerlandais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Manuel de procédures groupe",
+        "description": "Rédaction et déploiement d'un référentiel de procédures comptables sur 8 entités.",
+        "date": "2021-06",
+        "impact": "Harmonisation des clôtures et réduction des écarts de reporting."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voile",
+      "Théâtre",
+      "Cuisine"
+    ],
+    "references": [
+      {
+        "name": "Marc Peeters",
+        "position": "CFO",
+        "company": "Belfin Services SA",
+        "contact": {
+          "phone": "+32 475 99 88 77",
+          "email": "marc.peeters@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 78000,
+      "max": 92000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Financial Accounting",
+      "secondaryClusters": [
+        "Consolidation",
+        "Accounting Management"
+      ],
+      "functionalExpertise": [
+        "Consolidation",
+        "IFRS reporting",
+        "Team leadership"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Faster consolidated close",
+        "Stronger internal control"
+      ],
+      "industryDomains": [
+        "Financial services",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "Group finance",
+        "Multi-entity"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Leads a team of six on consolidated close with IFRS depth and an expert-comptable title, a clear accounting team lead."
+    },
+    "searchIndex": {
+      "roles": [
+        "Accounting Manager",
+        "Head of Accounting",
+        "Consolidation Manager"
+      ],
+      "skills": [
+        "SAP FICO",
+        "Consolidation",
+        "IFRS",
+        "Internal control",
+        "Team leadership",
+        "Excel"
+      ],
+      "industries": [
+        "Financial services",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "lead",
+      "consolidation",
+      "ifrs",
+      "expert-comptable"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Chef comptable senior évoluant dans le secteur des fonds d'investissement à Luxembourg. Douze ans d'expérience en comptabilité de sociétés holding, reporting IFRS et Lux GAAP, et coordination des prestataires de comptabilité. Solide maîtrise de la comptabilité multi-devises et des obligations réglementaires locales.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Thomas Weber",
+      "role": "Chef comptable",
+      "summary": "Comptable senior spécialisé dans les structures holding et les fonds, à l'aise avec le multi-devises et les référentiels Lux GAAP et IFRS.",
+      "contact": {
+        "phone": "+352 621 234 567",
+        "email": "thomas.weber@example.com",
+        "address": {
+          "streetNumber": "25",
+          "streetName": "de la Liberté",
+          "streetType": "Avenue",
+          "city": "Luxembourg",
+          "state": "Luxembourg",
+          "zipCode": "1931",
+          "country": "Luxembourg"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/thomas-weber-fin"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En soirée en semaine",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Comptabilité",
+        "skills": [
+          "Comptabilité holding",
+          "Multi-devises",
+          "Comptes annuels",
+          "Support NAV"
+        ]
+      },
+      {
+        "category": "Systèmes",
+        "skills": [
+          "SAP",
+          "BOB 50",
+          "Excel avancé"
+        ]
+      },
+      {
+        "category": "Reporting",
+        "skills": [
+          "Reporting IFRS",
+          "Reporting investisseurs",
+          "Consolidation"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "Lux GAAP",
+          "IFRS"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Comptabilité de sociétés holding",
+        "Reporting multi-devises",
+        "Coordination de prestataires"
+      ],
+      "keyResponsibilities": [
+        "Établir les comptes annuels des structures holding",
+        "Superviser le reporting IFRS et Lux GAAP",
+        "Coordonner les prestataires de domiciliation et d'audit"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Lux Capital Partners",
+        "website": "https://luxcapital.example.com",
+        "location": "Luxembourg, Luxembourg",
+        "from": "@M-2@",
+        "to": "Present",
+        "position": "Chef comptable",
+        "activities": [
+          {
+            "project": "Comptabilité holding",
+            "tasks": [
+              "Établissement des comptes de 12 sociétés holding",
+              "Reporting multi-devises trimestriel aux investisseurs",
+              "Coordination des audits annuels"
+            ]
+          }
+        ],
+        "achievements": [
+          "Fiabilisation du reporting investisseurs multi-devises",
+          "Réduction des délais de production des comptes annuels de 30 %"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "BOB 50",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Fiduciaire Schmitz",
+        "website": "https://fiduciaire-schmitz.example.com",
+        "location": "Luxembourg, Luxembourg",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Comptable senior",
+        "activities": [
+          {
+            "project": "Portefeuille clients",
+            "tasks": [
+              "Tenue comptable de sociétés commerciales et holding",
+              "Établissement des déclarations TVA et des comptes annuels",
+              "Support aux clients internationaux"
+            ]
+          }
+        ],
+        "achievements": [
+          "Gestion autonome d'un portefeuille de 25 sociétés"
+        ],
+        "toolsAndTechnologies": [
+          "BOB 50",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université du Luxembourg",
+        "degree": "Master",
+        "fieldOfStudy": "Comptabilité et fiscalité",
+        "achievements": [
+          "Mention très bien"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "BOB 50",
+        "Excel",
+        "IFRS",
+        "Lux GAAP",
+        "Multi-currency accounting",
+        "Consolidation"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Autonomie",
+        "Sens du service client"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Allemand",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Automatisation du reporting investisseurs",
+        "description": "Développement de modèles Excel automatisés pour le reporting multi-devises.",
+        "date": "2021-09",
+        "impact": "Division par deux du temps de préparation du reporting trimestriel."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Cyclisme",
+      "Échecs",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Anne Klein",
+        "position": "Managing Director",
+        "company": "Lux Capital Partners",
+        "contact": {
+          "phone": "+352 621 987 654",
+          "email": "anne.klein@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 72000,
+      "max": 85000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Financial Accounting",
+      "secondaryClusters": [
+        "Fund Accounting",
+        "Holding Accounting"
+      ],
+      "functionalExpertise": [
+        "Multi-currency accounting",
+        "IFRS reporting",
+        "Annual accounts"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Faster annual accounts",
+        "Reliable investor reporting"
+      ],
+      "industryDomains": [
+        "Financial services",
+        "Investment funds"
+      ],
+      "environmentFit": [
+        "Fund structures",
+        "International group"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Twelve years of holding and fund accounting in Luxembourg with IFRS and Lux GAAP mastery places this as a senior chief accountant."
+    },
+    "searchIndex": {
+      "roles": [
+        "Chief Accountant",
+        "Fund Accountant",
+        "Financial Accountant"
+      ],
+      "skills": [
+        "SAP",
+        "IFRS",
+        "Lux GAAP",
+        "Multi-currency accounting",
+        "Consolidation",
+        "Excel"
+      ],
+      "industries": [
+        "Financial services",
+        "Investment funds"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "senior",
+      "acca",
+      "luxembourg",
+      "funds"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directeur comptable et expert-comptable disposant de dix-huit ans d'expérience dans des groupes cotés et non cotés. Responsable de l'ensemble des opérations comptables, de la consolidation, du contrôle interne et des relations avec les commissaires aux comptes pour un groupe de 1 200 collaborateurs. Reconnu pour la transformation des fonctions comptables et le déploiement d'ERP.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Philippe Rousseau",
+      "role": "Directeur comptable",
+      "summary": "Directeur comptable, expert-comptable diplômé, qui pilote la consolidation, structure le contrôle interne et conduit les projets de transformation ERP.",
+      "contact": {
+        "phone": "+33 6 78 90 12 34",
+        "email": "philippe.rousseau@example.com",
+        "address": {
+          "streetNumber": "52",
+          "streetName": "des Champs-Élysées",
+          "streetType": "Avenue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75008",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/philippe-rousseau-dgcompta"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Direction comptable",
+        "skills": [
+          "Pilotage de la fonction comptable",
+          "Consolidation",
+          "Contrôle interne",
+          "Relations CAC"
+        ]
+      },
+      {
+        "category": "Transformation",
+        "skills": [
+          "Déploiement ERP",
+          "Optimisation des processus",
+          "Centres de services partagés"
+        ]
+      },
+      {
+        "category": "Systèmes",
+        "skills": [
+          "SAP FICO",
+          "Oracle",
+          "BFC",
+          "Power BI"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "IFRS",
+          "US GAAP",
+          "PCG",
+          "SOX"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Direction de la fonction comptable",
+        "Consolidation groupe",
+        "Contrôle interne et transformation"
+      ],
+      "keyResponsibilities": [
+        "Diriger l'ensemble des opérations comptables et de consolidation",
+        "Garantir la fiabilité des états financiers et le respect des normes",
+        "Piloter les projets de transformation et de déploiement ERP"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Groupe Novaris",
+        "website": "https://novaris-groupe.example.com",
+        "location": "Paris, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Directeur comptable",
+        "activities": [
+          {
+            "project": "Transformation ERP",
+            "tasks": [
+              "Direction d'une équipe comptable de 25 personnes",
+              "Pilotage de la migration vers SAP S/4HANA",
+              "Refonte du contrôle interne et des délégations de pouvoir"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction du délai de clôture groupe de 12 à 6 jours ouvrés",
+          "Déploiement réussi de SAP S/4HANA sur 8 filiales",
+          "Mise en conformité SOX du cycle de reporting"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "BFC",
+          "Power BI"
+        ]
+      },
+      {
+        "company": "Industries Delacroix",
+        "website": "https://delacroix-ind.example.com",
+        "location": "Boulogne-Billancourt, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Responsable consolidation et reporting",
+        "activities": [
+          {
+            "project": "Consolidation IFRS",
+            "tasks": [
+              "Pilotage de la consolidation IFRS de 15 entités",
+              "Production du reporting mensuel groupe",
+              "Encadrement de 5 collaborateurs"
+            ]
+          }
+        ],
+        "achievements": [
+          "Standardisation du reporting groupe",
+          "Réduction des écarts de consolidation intercos"
+        ],
+        "toolsAndTechnologies": [
+          "Oracle",
+          "BFC",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Cabinet Laurent & Associés",
+        "website": "https://laurent-associes.example.com",
+        "location": "Paris, France",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Auditeur puis chef de mission",
+        "activities": [
+          {
+            "project": "Audit légal",
+            "tasks": [
+              "Réalisation de missions de commissariat aux comptes",
+              "Encadrement d'équipes d'audit",
+              "Revue des comptes consolidés"
+            ]
+          }
+        ],
+        "achievements": [
+          "Promotion chef de mission en trois ans"
+        ],
+        "toolsAndTechnologies": [
+          "Excel",
+          "Outils d'audit"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "HEC Paris",
+        "degree": "Master",
+        "fieldOfStudy": "Finance et contrôle",
+        "achievements": [
+          "Spécialisation comptabilité et audit"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Diplôme d'Expertise Comptable (DEC)",
+        "institution": "Ordre des Experts-Comptables",
+        "year": "@Y-0@",
+        "description": "Titre d'expert-comptable français."
+      },
+      {
+        "title": "DSCG",
+        "institution": "Ministère de l'Éducation nationale",
+        "year": "@Y-1@",
+        "description": "Diplôme supérieur de comptabilité et de gestion."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP FICO",
+        "Oracle",
+        "BFC",
+        "Power BI",
+        "IFRS",
+        "US GAAP",
+        "SOX",
+        "Consolidation"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Vision stratégique",
+        "Conduite du changement"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Migration SAP S/4HANA",
+        "description": "Direction du programme de migration ERP sur 8 filiales.",
+        "date": "2020-06",
+        "impact": "Unification du référentiel comptable et clôture groupe ramenée à 6 jours."
+      },
+      {
+        "title": "Mise en conformité SOX",
+        "description": "Déploiement d'un dispositif de contrôle interne conforme SOX.",
+        "date": "2018-11",
+        "impact": "Réduction significative des déficiences de contrôle identifiées par l'audit."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Golf",
+      "Histoire économique",
+      "Ski"
+    ],
+    "references": [
+      {
+        "name": "Catherine Dubois",
+        "position": "Directrice générale",
+        "company": "Groupe Novaris",
+        "contact": {
+          "phone": "+33 6 11 22 33 44",
+          "email": "catherine.dubois@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 130000,
+      "max": 160000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Accounting Leadership",
+      "secondaryClusters": [
+        "Consolidation",
+        "Finance Transformation"
+      ],
+      "functionalExpertise": [
+        "Group consolidation",
+        "Internal control",
+        "ERP transformation"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Faster group close",
+        "Successful ERP rollout",
+        "SOX compliance"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Industrial"
+      ],
+      "environmentFit": [
+        "Listed group",
+        "Large enterprise"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Eighteen years culminating in leading a 25-person accounting function, ERP transformation and SOX compliance as an expert-comptable marks an accounting director."
+    },
+    "searchIndex": {
+      "roles": [
+        "Accounting Director",
+        "Head of Accounting",
+        "Group Chief Accountant"
+      ],
+      "skills": [
+        "SAP FICO",
+        "Consolidation",
+        "IFRS",
+        "US GAAP",
+        "SOX",
+        "ERP implementation",
+        "Internal control"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Industrial"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "director",
+      "expert-comptable",
+      "consolidation",
+      "sap",
+      "sox"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Analyste FP&A junior passionné par la modélisation financière et l'aide à la décision. Trois ans d'expérience dans la construction de budgets, de prévisions et de reportings de gestion pour une entreprise technologique. Solide maîtrise d'Excel avancé, de Power BI et débute sur Anaplan.",
+    "careerStartYear": 2023,
+    "personalInformation": {
+      "name": "Léa Fontaine",
+      "role": "Analyste FP&A junior",
+      "summary": "Analyste en début de carrière qui transforme les données en tableaux de bord clairs et fiabilise les prévisions.",
+      "contact": {
+        "phone": "+33 6 55 66 77 88",
+        "email": "lea.fontaine@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "du Faubourg Saint-Antoine",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75012",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/lea-fontaine-fpa"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En soirée en semaine",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Planification",
+        "skills": [
+          "Budget",
+          "Prévisions",
+          "Reporting de gestion"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Excel avancé",
+          "Power BI",
+          "Anaplan"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Analyse des écarts",
+          "Modélisation financière",
+          "KPI"
+        ]
+      },
+      {
+        "category": "Data",
+        "skills": [
+          "SQL",
+          "Tableaux croisés dynamiques"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Reporting de gestion",
+        "Analyse des écarts",
+        "Modélisation"
+      ],
+      "keyResponsibilities": [
+        "Construire les budgets et les prévisions",
+        "Analyser les écarts par rapport au budget",
+        "Produire les reportings de gestion mensuels"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Technéo SaaS",
+        "website": "https://techneo.example.com",
+        "location": "Paris, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Analyste FP&A junior",
+        "activities": [
+          {
+            "project": "Cycle budgétaire",
+            "tasks": [
+              "Consolidation des budgets des départements",
+              "Production du reporting mensuel de gestion",
+              "Automatisation des tableaux de bord sous Power BI"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automatisation du reporting mensuel, gain de 3 jours par mois",
+          "Mise en place d'un tableau de bord de suivi des KPI SaaS"
+        ],
+        "toolsAndTechnologies": [
+          "Excel",
+          "Power BI",
+          "Anaplan"
+        ]
+      },
+      {
+        "company": "Groupe Verel",
+        "website": "https://groupe-verel.example.com",
+        "location": "Paris, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Stagiaire puis analyste financier",
+        "activities": [
+          {
+            "project": "Analyse de rentabilité",
+            "tasks": [
+              "Analyse de la marge par produit",
+              "Support à la préparation du budget",
+              "Extraction de données SQL"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à l'analyse de rentabilité par ligne de produit"
+        ],
+        "toolsAndTechnologies": [
+          "Excel",
+          "SQL"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "emlyon business school",
+        "degree": "Master",
+        "fieldOfStudy": "Finance d'entreprise",
+        "achievements": [
+          "Mention bien",
+          "Spécialisation contrôle de gestion"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Financial Modeling & Valuation Analyst (FMVA)",
+        "institution": "Corporate Finance Institute",
+        "year": "@Y-2@",
+        "description": "Certification en modélisation financière."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Excel",
+        "Power BI",
+        "Anaplan",
+        "SQL",
+        "Financial modeling",
+        "Budgeting",
+        "Forecasting"
+      ],
+      "softSkills": [
+        "Curiosité",
+        "Esprit d'analyse",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Tableau de bord KPI SaaS",
+        "description": "Conception d'un tableau de bord Power BI pour le suivi du MRR et du churn.",
+        "date": "2024-05",
+        "impact": "Meilleure visibilité de la direction sur les indicateurs récurrents."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Photographie",
+      "Escalade",
+      "Podcasts finance"
+    ],
+    "references": [
+      {
+        "name": "Antoine Rivière",
+        "position": "Responsable FP&A",
+        "company": "Technéo SaaS",
+        "contact": {
+          "phone": "+33 6 88 77 66 55",
+          "email": "antoine.riviere@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "FP&A",
+      "secondaryClusters": [
+        "Management Reporting",
+        "Financial Modeling"
+      ],
+      "functionalExpertise": [
+        "Budgeting",
+        "Variance analysis",
+        "Reporting"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Automated reporting",
+        "Better KPI visibility"
+      ],
+      "industryDomains": [
+        "Technology",
+        "SaaS"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Tech company"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Early-career analyst focused on budgeting, forecasting and reporting with Power BI and Anaplan exposure fits a junior FP&A profile."
+    },
+    "searchIndex": {
+      "roles": [
+        "FP&A Analyst",
+        "Financial Analyst",
+        "Junior FP&A Analyst"
+      ],
+      "skills": [
+        "Excel",
+        "Power BI",
+        "Anaplan",
+        "SQL",
+        "Budgeting",
+        "Forecasting",
+        "Financial modeling"
+      ],
+      "industries": [
+        "Technology",
+        "SaaS"
+      ]
+    },
+    "tags": [
+      "fpa",
+      "junior",
+      "powerbi",
+      "anaplan",
+      "forecasting"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Contrôleur de gestion senior avec onze ans d'expérience en pilotage de la performance dans l'industrie et la grande distribution. Business partner des opérations, il construit les budgets, anime les revues de performance et pilote les analyses de rentabilité. Maîtrise avancée d'Excel, de Power BI et d'Oracle Hyperion.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Karim Benali",
+      "role": "Contrôleur de gestion senior",
+      "summary": "Contrôleur de gestion et business partner qui éclaire les décisions opérationnelles par une analyse rigoureuse de la performance.",
+      "contact": {
+        "phone": "+33 6 44 33 22 11",
+        "email": "karim.benali@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Crébillon",
+          "streetType": "Rue",
+          "city": "Nantes",
+          "state": "Pays de la Loire",
+          "zipCode": "44000",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En soirée en semaine"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Contrôle de gestion",
+        "skills": [
+          "Budget",
+          "Prévisions",
+          "Analyse des écarts",
+          "Rentabilité"
+        ]
+      },
+      {
+        "category": "Business partnering",
+        "skills": [
+          "Revues de performance",
+          "Aide à la décision",
+          "Suivi des KPI opérationnels"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Excel avancé",
+          "Power BI",
+          "Oracle Hyperion",
+          "SAP"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Coûts standards",
+          "Analyse de marge",
+          "Modélisation"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Pilotage de la performance",
+        "Business partnering",
+        "Analyse de rentabilité"
+      ],
+      "keyResponsibilities": [
+        "Construire et suivre les budgets opérationnels",
+        "Animer les revues de performance mensuelles",
+        "Analyser la rentabilité par produit et par site"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Atlantique Retail",
+        "website": "https://atlantique-retail.example.com",
+        "location": "Nantes, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Contrôleur de gestion senior",
+        "activities": [
+          {
+            "project": "Pilotage de la performance",
+            "tasks": [
+              "Élaboration du budget et des reforecasts trimestriels",
+              "Animation des revues de performance avec les directeurs de magasin",
+              "Analyse de la marge par catégorie de produits"
+            ]
+          }
+        ],
+        "achievements": [
+          "Identification de 1,5 M€ d'économies via l'analyse de rentabilité par magasin",
+          "Déploiement d'un reporting Power BI en libre-service"
+        ],
+        "toolsAndTechnologies": [
+          "Excel",
+          "Power BI",
+          "Oracle Hyperion"
+        ]
+      },
+      {
+        "company": "Loire Manufacturing",
+        "website": "https://loire-mfg.example.com",
+        "location": "Angers, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Contrôleur de gestion industriel",
+        "activities": [
+          {
+            "project": "Contrôle de gestion industriel",
+            "tasks": [
+              "Suivi des coûts standards et des écarts de production",
+              "Calcul des prix de revient",
+              "Support aux clôtures mensuelles"
+            ]
+          }
+        ],
+        "achievements": [
+          "Fiabilisation du calcul des coûts standards sur trois lignes de production"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Audencia Business School",
+        "degree": "Master",
+        "fieldOfStudy": "Contrôle de gestion et audit organisationnel",
+        "achievements": [
+          "Mention bien"
+        ]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Excel",
+        "Power BI",
+        "Oracle Hyperion",
+        "SAP",
+        "Budgeting",
+        "Forecasting",
+        "Variance analysis"
+      ],
+      "softSkills": [
+        "Esprit d'analyse",
+        "Communication",
+        "Sens du business"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        },
+        {
+          "language": "Arabe",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Analyse de rentabilité par magasin",
+        "description": "Modélisation de la rentabilité de 40 magasins pour orienter les décisions d'assortiment.",
+        "date": "2022-03",
+        "impact": "1,5 M€ d'économies identifiées et plan d'action déployé."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Football",
+      "Cuisine",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Émilie Chevalier",
+        "position": "Directrice financière",
+        "company": "Atlantique Retail",
+        "contact": {
+          "phone": "+33 6 12 34 56 78",
+          "email": "emilie.chevalier@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 55000,
+      "max": 65000
+    },
+    "candidateClustering": {
+      "primaryCluster": "FP&A",
+      "secondaryClusters": [
+        "Management Control",
+        "Business Partnering"
+      ],
+      "functionalExpertise": [
+        "Budgeting",
+        "Profitability analysis",
+        "Performance management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Cost savings identified",
+        "Self-service reporting"
+      ],
+      "industryDomains": [
+        "Retail",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "Multi-site",
+        "Operational finance"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Eleven years as a controlling business partner driving budgets, performance reviews and profitability analysis fits a senior FP&A controller."
+    },
+    "searchIndex": {
+      "roles": [
+        "Management Controller",
+        "FP&A Analyst",
+        "Financial Controller"
+      ],
+      "skills": [
+        "Excel",
+        "Power BI",
+        "Oracle Hyperion",
+        "SAP",
+        "Budgeting",
+        "Forecasting",
+        "Profitability analysis"
+      ],
+      "industries": [
+        "Retail",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "fpa",
+      "senior",
+      "controlling",
+      "powerbi",
+      "hyperion"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Analyste FP&A senior spécialisée dans la planification et la modélisation pour un groupe pharmaceutique international. Dix ans d'expérience à structurer les processus de prévision, à modéliser les scénarios et à accompagner les décisions d'investissement. Experte Anaplan et modélisation avancée sous Excel.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Sofie Janssens",
+      "role": "Analyste FP&A senior",
+      "summary": "Analyste FP&A senior qui bâtit des modèles robustes et fiabilise le processus de forecasting à l'échelle du groupe.",
+      "contact": {
+        "phone": "+32 478 22 33 44",
+        "email": "sofie.janssens@example.com",
+        "address": {
+          "streetNumber": "33",
+          "streetName": "des Arts",
+          "streetType": "Avenue",
+          "city": "Bruxelles",
+          "state": "Bruxelles-Capitale",
+          "zipCode": "1000",
+          "country": "Belgique"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sofie-janssens-fpa"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En soirée en semaine",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Planification",
+        "skills": [
+          "Forecasting",
+          "Modélisation de scénarios",
+          "Planification long terme"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Anaplan",
+          "Excel avancé",
+          "Tableau",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Business case",
+          "Analyse d'investissement",
+          "Sensibilité"
+        ]
+      },
+      {
+        "category": "Reporting",
+        "skills": [
+          "Reporting groupe",
+          "Tableaux de bord",
+          "KPI"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Modélisation financière",
+        "Forecasting",
+        "Aide à la décision d'investissement"
+      ],
+      "keyResponsibilities": [
+        "Piloter le processus de forecasting groupe",
+        "Construire des modèles de scénarios et des business cases",
+        "Fournir des analyses pour les décisions d'investissement"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "PharmaBel International",
+        "website": "https://pharmabel.example.com",
+        "location": "Bruxelles, Belgique",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Analyste FP&A senior",
+        "activities": [
+          {
+            "project": "Forecasting groupe",
+            "tasks": [
+              "Pilotage du processus de forecast trimestriel sur 6 pays",
+              "Construction de modèles de scénarios sous Anaplan",
+              "Préparation des business cases d'investissement"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction de l'écart de prévision de chiffre d'affaires de 12 % à 5 %",
+          "Migration du modèle de forecast d'Excel vers Anaplan"
+        ],
+        "toolsAndTechnologies": [
+          "Anaplan",
+          "Excel",
+          "Tableau"
+        ]
+      },
+      {
+        "company": "NutriGroup",
+        "website": "https://nutrigroup.example.com",
+        "location": "Gand, Belgique",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Analyste financier",
+        "activities": [
+          {
+            "project": "Analyse de la performance",
+            "tasks": [
+              "Analyse des écarts mensuels",
+              "Support au cycle budgétaire",
+              "Extractions et analyses SQL"
+            ]
+          }
+        ],
+        "achievements": [
+          "Développement d'un modèle de marge par gamme de produits"
+        ],
+        "toolsAndTechnologies": [
+          "Excel",
+          "SQL"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "KU Leuven",
+        "degree": "Master",
+        "fieldOfStudy": "Sciences économiques appliquées",
+        "achievements": [
+          "Distinction"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Anaplan Model Builder (Level 2)",
+        "institution": "Anaplan",
+        "year": "@Y-4@",
+        "description": "Certification de modélisation Anaplan."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Anaplan",
+        "Excel",
+        "Tableau",
+        "SQL",
+        "Financial modeling",
+        "Forecasting",
+        "Scenario planning"
+      ],
+      "softSkills": [
+        "Rigueur analytique",
+        "Communication",
+        "Autonomie"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Migration vers Anaplan",
+        "description": "Refonte du modèle de forecast groupe et migration depuis Excel vers Anaplan.",
+        "date": "2022-04",
+        "impact": "Fiabilisation des prévisions et réduction du temps de cycle de forecast de 40 %."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Natation",
+      "Lecture",
+      "Cuisine végétarienne"
+    ],
+    "references": [
+      {
+        "name": "Dirk Maes",
+        "position": "Head of FP&A",
+        "company": "PharmaBel International",
+        "contact": {
+          "phone": "+32 478 55 66 77",
+          "email": "dirk.maes@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 74000
+    },
+    "candidateClustering": {
+      "primaryCluster": "FP&A",
+      "secondaryClusters": [
+        "Financial Modeling",
+        "Forecasting"
+      ],
+      "functionalExpertise": [
+        "Forecasting",
+        "Scenario modeling",
+        "Investment analysis"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "More accurate forecasts",
+        "Faster planning cycle"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Consumer goods"
+      ],
+      "environmentFit": [
+        "International group",
+        "Group FP&A"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Ten years of forecasting and modeling with Anaplan expertise and multi-country group scope defines a senior FP&A analyst."
+    },
+    "searchIndex": {
+      "roles": [
+        "Senior FP&A Analyst",
+        "Financial Analyst",
+        "Planning Analyst"
+      ],
+      "skills": [
+        "Anaplan",
+        "Excel",
+        "Tableau",
+        "SQL",
+        "Forecasting",
+        "Financial modeling",
+        "Scenario planning"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Consumer goods"
+      ]
+    },
+    "tags": [
+      "fpa",
+      "senior",
+      "anaplan",
+      "forecasting",
+      "modeling"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Responsable planification et analyse financière (Lead FP&A) avec quatorze ans d'expérience dans les services financiers. Anime une équipe de quatre analystes, pilote le processus budgétaire groupe et accompagne le comité de direction dans ses décisions stratégiques. Expert Oracle Hyperion, Anaplan et modélisation avancée.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Marc Hoffmann",
+      "role": "Lead FP&A",
+      "summary": "Lead FP&A qui structure la planification groupe, développe son équipe et traduit les chiffres en recommandations pour la direction.",
+      "contact": {
+        "phone": "+352 621 445 667",
+        "email": "marc.hoffmann@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "John F. Kennedy",
+          "streetType": "Avenue",
+          "city": "Luxembourg",
+          "state": "Luxembourg",
+          "zipCode": "1855",
+          "country": "Luxembourg"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/marc-hoffmann-fpa"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Pilotage FP&A",
+        "skills": [
+          "Processus budgétaire groupe",
+          "Planification stratégique",
+          "Reporting comité de direction"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Encadrement d'équipe",
+          "Développement des talents",
+          "Coordination transverse"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Oracle Hyperion",
+          "Anaplan",
+          "Power BI",
+          "Excel avancé"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Business case",
+          "Analyse de rentabilité",
+          "Modélisation stratégique"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Pilotage du processus budgétaire",
+        "Planification stratégique",
+        "Management d'équipe FP&A"
+      ],
+      "keyResponsibilities": [
+        "Piloter le processus budgétaire et de forecast groupe",
+        "Encadrer et développer une équipe de quatre analystes",
+        "Conseiller le comité de direction sur les décisions stratégiques"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Europ Assurances",
+        "website": "https://europ-assurances.example.com",
+        "location": "Luxembourg, Luxembourg",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Lead FP&A",
+        "activities": [
+          {
+            "project": "Planification stratégique",
+            "tasks": [
+              "Pilotage du plan à trois ans et du budget annuel",
+              "Encadrement d'une équipe de 4 analystes",
+              "Présentation des analyses au comité de direction"
+            ]
+          }
+        ],
+        "achievements": [
+          "Refonte du processus budgétaire, réduction du cycle de 3 mois à 6 semaines",
+          "Mise en place d'un modèle de planification Anaplan à l'échelle du groupe"
+        ],
+        "toolsAndTechnologies": [
+          "Oracle Hyperion",
+          "Anaplan",
+          "Power BI"
+        ]
+      },
+      {
+        "company": "BanqueGrand-Duché",
+        "website": "https://banque-gd.example.com",
+        "location": "Luxembourg, Luxembourg",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Contrôleur de gestion senior",
+        "activities": [
+          {
+            "project": "Contrôle de gestion",
+            "tasks": [
+              "Pilotage du reporting de gestion",
+              "Analyse de la rentabilité par ligne d'activité",
+              "Support au forecast trimestriel"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automatisation du reporting mensuel de gestion"
+        ],
+        "toolsAndTechnologies": [
+          "Oracle Hyperion",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Cabinet Conseil Fischer",
+        "website": "https://conseil-fischer.example.com",
+        "location": "Luxembourg, Luxembourg",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Consultant financier",
+        "activities": [
+          {
+            "project": "Missions de conseil",
+            "tasks": [
+              "Modélisation financière pour des clients du secteur financier",
+              "Élaboration de business plans",
+              "Analyses de valorisation"
+            ]
+          }
+        ],
+        "achievements": [
+          "Livraison de modèles financiers pour 8 clients"
+        ],
+        "toolsAndTechnologies": [
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université de Strasbourg",
+        "degree": "Master",
+        "fieldOfStudy": "Finance",
+        "achievements": [
+          "Mention bien"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CIMA",
+        "institution": "Chartered Institute of Management Accountants",
+        "year": "@Y-4@",
+        "description": "Qualification CIMA en comptabilité de gestion."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Oracle Hyperion",
+        "Anaplan",
+        "Power BI",
+        "Excel",
+        "Budgeting",
+        "Strategic planning",
+        "Financial modeling"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Communication",
+        "Vision stratégique"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Allemand",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Refonte du processus budgétaire",
+        "description": "Simplification et digitalisation du cycle budgétaire groupe sous Anaplan.",
+        "date": "2021-10",
+        "impact": "Cycle budgétaire réduit de moitié et meilleure fiabilité des prévisions."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Tennis",
+      "Piano",
+      "Randonnée"
+    ],
+    "references": [
+      {
+        "name": "Claudine Wagner",
+        "position": "CFO",
+        "company": "Europ Assurances",
+        "contact": {
+          "phone": "+352 621 778 990",
+          "email": "claudine.wagner@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 90000,
+      "max": 110000
+    },
+    "candidateClustering": {
+      "primaryCluster": "FP&A",
+      "secondaryClusters": [
+        "Strategic Planning",
+        "Management Control"
+      ],
+      "functionalExpertise": [
+        "Budgeting",
+        "Strategic planning",
+        "Team leadership"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Shorter budget cycle",
+        "Group planning model"
+      ],
+      "industryDomains": [
+        "Insurance",
+        "Financial services"
+      ],
+      "environmentFit": [
+        "Group finance",
+        "Financial services"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Leads a four-person FP&A team, owns the group budget process and advises the executive committee, a clear FP&A lead."
+    },
+    "searchIndex": {
+      "roles": [
+        "FP&A Lead",
+        "Head of Planning",
+        "Senior Management Controller"
+      ],
+      "skills": [
+        "Oracle Hyperion",
+        "Anaplan",
+        "Power BI",
+        "Budgeting",
+        "Strategic planning",
+        "Financial modeling"
+      ],
+      "industries": [
+        "Insurance",
+        "Financial services"
+      ]
+    },
+    "tags": [
+      "fpa",
+      "lead",
+      "cima",
+      "anaplan",
+      "hyperion",
+      "planning"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directrice du contrôle de gestion avec seize ans d'expérience dans l'industrie et les biens de consommation. Dirige la fonction FP&A groupe, le processus budgétaire et le pilotage de la performance à l'échelle internationale. Reconnue pour la transformation des processus de planification et la mise en place d'outils EPM.",
+    "personalInformation": {
+      "name": "Nathalie Lambert",
+      "role": "Directrice du contrôle de gestion",
+      "summary": "Directrice FP&A qui aligne planification, performance et stratégie, et modernise les outils de pilotage à l'échelle du groupe.",
+      "contact": {
+        "phone": "+33 6 90 12 34 56",
+        "email": "nathalie.lambert@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "de Rivoli",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75004",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/nathalie-lambert-fpa"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-03-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Direction FP&A",
+        "skills": [
+          "Pilotage de la fonction contrôle de gestion",
+          "Processus budgétaire groupe",
+          "Performance internationale"
+        ]
+      },
+      {
+        "category": "Transformation",
+        "skills": [
+          "Déploiement EPM",
+          "Optimisation des processus",
+          "Conduite du changement"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Oracle Hyperion",
+          "Anaplan",
+          "SAP",
+          "Power BI"
+        ]
+      },
+      {
+        "category": "Stratégie",
+        "skills": [
+          "Plan stratégique",
+          "Business partnering exécutif",
+          "Investissements"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Direction du contrôle de gestion",
+        "Transformation des processus de planification",
+        "Pilotage de la performance internationale"
+      ],
+      "keyResponsibilities": [
+        "Diriger la fonction FP&A et contrôle de gestion groupe",
+        "Piloter le processus budgétaire et le plan stratégique",
+        "Conduire la transformation des outils EPM"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Groupe Consoria",
+        "website": "https://consoria.example.com",
+        "location": "Paris, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Directrice du contrôle de gestion",
+        "activities": [
+          {
+            "project": "Transformation EPM",
+            "tasks": [
+              "Direction d'une équipe FP&A de 12 personnes sur 5 pays",
+              "Pilotage du déploiement d'Anaplan à l'échelle du groupe",
+              "Animation du processus budgétaire et du plan à trois ans"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction du cycle budgétaire groupe de 4 à 2 mois",
+          "Déploiement d'Anaplan sur 5 pays",
+          "Mise en place d'un pilotage de la performance harmonisé"
+        ],
+        "toolsAndTechnologies": [
+          "Anaplan",
+          "Oracle Hyperion",
+          "Power BI"
+        ]
+      },
+      {
+        "company": "Industries Beauval",
+        "website": "https://beauval-ind.example.com",
+        "location": "Lille, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Responsable contrôle de gestion",
+        "activities": [
+          {
+            "project": "Contrôle de gestion industriel",
+            "tasks": [
+              "Pilotage de la performance de 4 usines",
+              "Encadrement d'une équipe de 5 contrôleurs",
+              "Analyse des investissements industriels"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration de la marge industrielle de 2 points via des plans d'action ciblés"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Hyperion",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Cabinet Audit Vernet",
+        "website": "https://audit-vernet.example.com",
+        "location": "Paris, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Consultante en performance",
+        "activities": [
+          {
+            "project": "Missions de conseil",
+            "tasks": [
+              "Diagnostic des processus de gestion",
+              "Conception de tableaux de bord",
+              "Support aux transformations finance"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à trois programmes de transformation finance"
+        ],
+        "toolsAndTechnologies": [
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "ESCP Business School",
+        "degree": "Master",
+        "fieldOfStudy": "Management et finance",
+        "achievements": [
+          "Spécialisation contrôle de gestion et pilotage"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CIMA",
+        "institution": "Chartered Institute of Management Accountants",
+        "year": "@Y-4@",
+        "description": "Qualification CIMA."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Anaplan",
+        "Oracle Hyperion",
+        "SAP",
+        "Power BI",
+        "Budgeting",
+        "Strategic planning",
+        "EPM"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Vision stratégique",
+        "Conduite du changement"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Espagnol",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Déploiement Anaplan groupe",
+        "description": "Direction du programme de déploiement d'une plateforme EPM sur cinq pays.",
+        "date": "2020-09",
+        "impact": "Harmonisation de la planification et division par deux du cycle budgétaire."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Art contemporain",
+      "Yoga",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Bernard Fontaine",
+        "position": "Directeur général",
+        "company": "Groupe Consoria",
+        "contact": {
+          "phone": "+33 6 33 44 55 66",
+          "email": "bernard.fontaine@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 120000,
+      "max": 150000
+    },
+    "candidateClustering": {
+      "primaryCluster": "FP&A Leadership",
+      "secondaryClusters": [
+        "Strategic Planning",
+        "Finance Transformation"
+      ],
+      "functionalExpertise": [
+        "Group FP&A",
+        "EPM transformation",
+        "Performance management"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Shorter budget cycle",
+        "EPM rollout",
+        "Harmonised performance management"
+      ],
+      "industryDomains": [
+        "Consumer goods",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "International group",
+        "Large enterprise"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Sixteen years leading a 12-person multi-country FP&A function with EPM transformation ownership marks a controlling director."
+    },
+    "searchIndex": {
+      "roles": [
+        "FP&A Director",
+        "Head of Controlling",
+        "Director of FP&A"
+      ],
+      "skills": [
+        "Anaplan",
+        "Oracle Hyperion",
+        "SAP",
+        "Power BI",
+        "Budgeting",
+        "Strategic planning",
+        "EPM"
+      ],
+      "industries": [
+        "Consumer goods",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "fpa",
+      "director",
+      "cima",
+      "anaplan",
+      "epm",
+      "transformation"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Auditeur interne avec six ans d'expérience dans la conduite de missions d'audit opérationnel et financier au sein d'un groupe de distribution. Solide connaissance des référentiels COSO et des dispositifs de contrôle interne. Rigoureux dans l'évaluation des risques et la formulation de recommandations concrètes.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Antoine Mercier",
+      "role": "Auditeur interne",
+      "summary": "Auditeur interne méthodique qui évalue les risques, teste les contrôles et propose des plans d'action pragmatiques.",
+      "contact": {
+        "email": "antoine.mercier@example.com",
+        "address": {
+          "streetNumber": "11",
+          "streetName": "Nationale",
+          "streetType": "Rue",
+          "city": "Lille",
+          "state": "Hauts-de-France",
+          "zipCode": "59000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/antoine-mercier-audit"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En soirée en semaine",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Audit interne",
+        "skills": [
+          "Audit opérationnel",
+          "Audit financier",
+          "Évaluation des risques",
+          "Tests de contrôle"
+        ]
+      },
+      {
+        "category": "Référentiels",
+        "skills": [
+          "COSO",
+          "Contrôle interne",
+          "Cartographie des risques"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "ACL",
+          "IDEA",
+          "Excel"
+        ]
+      },
+      {
+        "category": "Restitution",
+        "skills": [
+          "Rédaction de rapports",
+          "Recommandations",
+          "Suivi des plans d'action"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Audit opérationnel et financier",
+        "Contrôle interne",
+        "Évaluation des risques"
+      ],
+      "keyResponsibilities": [
+        "Conduire des missions d'audit selon le plan annuel",
+        "Évaluer les dispositifs de contrôle interne",
+        "Formuler des recommandations et suivre leur mise en œuvre"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Nord Distribution",
+        "website": "https://nord-distribution.example.com",
+        "location": "Lille, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Auditeur interne",
+        "activities": [
+          {
+            "project": "Plan d'audit annuel",
+            "tasks": [
+              "Réalisation de 8 missions d'audit par an",
+              "Évaluation des contrôles des cycles achats et ventes",
+              "Rédaction des rapports et recommandations"
+            ]
+          }
+        ],
+        "achievements": [
+          "Identification de failles de contrôle sur le cycle achats ayant permis d'éviter des surcoûts",
+          "Mise en place d'un suivi structuré des recommandations"
+        ],
+        "toolsAndTechnologies": [
+          "ACL",
+          "IDEA",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Cabinet Audit Ferrand",
+        "website": "https://audit-ferrand.example.com",
+        "location": "Lille, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Auditeur junior",
+        "activities": [
+          {
+            "project": "Missions de commissariat aux comptes",
+            "tasks": [
+              "Réalisation de tests de contrôle et de substance",
+              "Revue des cycles trésorerie et paie",
+              "Support à la certification des comptes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participation à 12 missions de certification"
+        ],
+        "toolsAndTechnologies": [
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "SKEMA Business School",
+        "degree": "Master",
+        "fieldOfStudy": "Audit et conseil",
+        "achievements": [
+          "Mention bien"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CIA (Part 1)",
+        "institution": "Institute of Internal Auditors",
+        "year": "@Y-0@",
+        "description": "Première partie de la certification Certified Internal Auditor validée."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ACL",
+        "IDEA",
+        "Excel",
+        "COSO",
+        "Internal control",
+        "Risk assessment"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Esprit critique",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Revue du cycle achats",
+        "description": "Audit approfondi du processus achats et des contrôles associés.",
+        "date": "2023-06",
+        "impact": "Correction de failles de contrôle réduisant l'exposition aux surcoûts fournisseurs."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Course à pied",
+      "Échecs",
+      "Lecture"
+    ],
+    "references": [
+      {
+        "name": "Valérie Roussel",
+        "position": "Directrice de l'audit interne",
+        "company": "Nord Distribution",
+        "contact": {
+          "phone": "+33 6 55 44 33 22",
+          "email": "valerie.roussel@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 42000,
+      "max": 50000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Internal Audit",
+      "secondaryClusters": [
+        "Internal Control",
+        "Risk"
+      ],
+      "functionalExpertise": [
+        "Operational audit",
+        "Internal control",
+        "Risk assessment"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Control gaps identified",
+        "Structured follow-up"
+      ],
+      "industryDomains": [
+        "Retail",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "Corporate audit",
+        "Multi-site"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Six years running operational and financial audit missions with COSO knowledge and CIA progress fits a mid-level internal auditor."
+    },
+    "searchIndex": {
+      "roles": [
+        "Internal Auditor",
+        "Audit Associate",
+        "Risk Analyst"
+      ],
+      "skills": [
+        "ACL",
+        "IDEA",
+        "COSO",
+        "Internal control",
+        "Risk assessment",
+        "Excel"
+      ],
+      "industries": [
+        "Retail",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "audit",
+      "midlevel",
+      "coso",
+      "internal-control",
+      "cia"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Auditrice senior en cabinet Big Four à Paris, spécialisée dans l'audit légal de groupes cotés des secteurs banque et assurance. Onze ans d'expérience à piloter des missions d'audit, à encadrer des équipes et à réviser des comptes consolidés IFRS. Titulaire du DEC.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Claire Dumas",
+      "role": "Auditrice senior (manager d'audit)",
+      "summary": "Manager d'audit en cabinet qui pilote des missions complexes, encadre les équipes et sécurise la certification des comptes.",
+      "contact": {
+        "phone": "+33 6 76 54 32 10",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "de la Bourse",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75002",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/claire-dumas-audit"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En soirée en semaine"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Audit légal",
+        "skills": [
+          "Certification des comptes",
+          "Audit de groupes cotés",
+          "Revue de comptes consolidés"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "IFRS",
+          "Normes d'audit",
+          "SOX"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Encadrement d'équipe",
+          "Gestion de mission",
+          "Relation client"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "ACL",
+          "IDEA",
+          "Outils d'audit propriétaires",
+          "Excel"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Audit légal de groupes cotés",
+        "Revue IFRS",
+        "Pilotage de missions"
+      ],
+      "keyResponsibilities": [
+        "Piloter des missions de commissariat aux comptes",
+        "Encadrer les équipes d'audit sur le terrain",
+        "Réviser les comptes consolidés et les conclusions d'audit"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Cabinet Grant Vernier (Big Four)",
+        "website": "https://grant-vernier.example.com",
+        "location": "Paris, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Manager d'audit",
+        "activities": [
+          {
+            "project": "Audit de groupes cotés",
+            "tasks": [
+              "Pilotage de missions d'audit pour des clients banque et assurance",
+              "Encadrement d'équipes de 4 à 8 auditeurs",
+              "Revue des comptes consolidés IFRS et des dossiers de travail"
+            ]
+          }
+        ],
+        "achievements": [
+          "Promotion manager en cinq ans",
+          "Pilotage de la certification de trois groupes cotés du CAC",
+          "Amélioration de l'efficacité des missions via la standardisation des programmes de travail"
+        ],
+        "toolsAndTechnologies": [
+          "ACL",
+          "IDEA",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Cabinet Grant Vernier (Big Four)",
+        "website": "https://grant-vernier.example.com",
+        "location": "Paris, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Auditeur junior puis senior",
+        "activities": [
+          {
+            "project": "Missions d'audit",
+            "tasks": [
+              "Réalisation de tests de contrôle et de substance",
+              "Revue des cycles significatifs",
+              "Support à la rédaction des rapports"
+            ]
+          }
+        ],
+        "achievements": [
+          "Progression rapide junior vers senior"
+        ],
+        "toolsAndTechnologies": [
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université Paris 1 Panthéon-Sorbonne",
+        "degree": "Master",
+        "fieldOfStudy": "Comptabilité, Contrôle, Audit",
+        "achievements": [
+          "Mention très bien"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Diplôme d'Expertise Comptable (DEC)",
+        "institution": "Ordre des Experts-Comptables",
+        "year": "@Y-2@",
+        "description": "Titre d'expert-comptable et de commissaire aux comptes."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ACL",
+        "IDEA",
+        "Excel",
+        "IFRS",
+        "SOX",
+        "Audit methodology",
+        "Consolidation review"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Esprit critique",
+        "Gestion du stress"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Standardisation des programmes de travail",
+        "description": "Refonte des programmes d'audit pour les clients du secteur assurance.",
+        "date": "2022-01",
+        "impact": "Réduction du temps de mission et amélioration de la couverture des risques."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Danse",
+      "Voyages",
+      "Bénévolat associatif"
+    ],
+    "references": [
+      {
+        "name": "Olivier Petit",
+        "position": "Associé audit",
+        "company": "Cabinet Grant Vernier",
+        "contact": {
+          "phone": "+33 6 99 88 77 66",
+          "email": "olivier.petit@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 60000,
+      "max": 72000
+    },
+    "candidateClustering": {
+      "primaryCluster": "External Audit",
+      "secondaryClusters": [
+        "Financial Audit",
+        "Assurance"
+      ],
+      "functionalExpertise": [
+        "Statutory audit",
+        "IFRS review",
+        "Engagement management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Certified listed groups",
+        "More efficient engagements"
+      ],
+      "industryDomains": [
+        "Banking",
+        "Insurance"
+      ],
+      "environmentFit": [
+        "Big Four",
+        "Listed clients"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Eleven years in Big Four audit managing engagements for listed banking and insurance groups with a DEC qualification fits a senior audit manager."
+    },
+    "searchIndex": {
+      "roles": [
+        "Audit Manager",
+        "Senior Auditor",
+        "External Auditor"
+      ],
+      "skills": [
+        "ACL",
+        "IDEA",
+        "IFRS",
+        "SOX",
+        "Statutory audit",
+        "Consolidation review",
+        "Excel"
+      ],
+      "industries": [
+        "Banking",
+        "Insurance"
+      ]
+    },
+    "tags": [
+      "audit",
+      "senior",
+      "dec",
+      "ifrs",
+      "big-four"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Risk manager senior dans le secteur bancaire luxembourgeois, spécialisé dans le risque opérationnel et la gestion des dispositifs de contrôle. Douze ans d'expérience à cartographier les risques, à animer les comités de risque et à renforcer les cadres de contrôle interne conformément aux exigences réglementaires. Solide culture COSO et gestion des risques.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Youssef El Amrani",
+      "role": "Risk manager senior",
+      "summary": "Risk manager qui structure les cadres de contrôle, cartographie les risques et anime la gouvernance de risque à l'échelle de la banque.",
+      "contact": {
+        "phone": "+352 621 556 778",
+        "email": "youssef.elamrani@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "de la Gare",
+          "streetType": "Avenue",
+          "city": "Luxembourg",
+          "state": "Luxembourg",
+          "zipCode": "1611",
+          "country": "Luxembourg"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/youssef-elamrani-risk"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En soirée en semaine",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Gestion des risques",
+        "skills": [
+          "Risque opérationnel",
+          "Cartographie des risques",
+          "Indicateurs de risque (KRI)"
+        ]
+      },
+      {
+        "category": "Contrôle interne",
+        "skills": [
+          "COSO",
+          "Dispositifs de contrôle",
+          "Gouvernance de risque"
+        ]
+      },
+      {
+        "category": "Conformité",
+        "skills": [
+          "Exigences réglementaires",
+          "Reporting risque",
+          "Comités de risque"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "GRC tools",
+          "Excel",
+          "Power BI"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Risque opérationnel",
+        "Cadres de contrôle interne",
+        "Gouvernance de risque"
+      ],
+      "keyResponsibilities": [
+        "Piloter la cartographie des risques opérationnels",
+        "Renforcer les dispositifs de contrôle interne",
+        "Animer les comités de risque et le reporting"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Banque Centrale Privée",
+        "website": "https://bcp-lux.example.com",
+        "location": "Luxembourg, Luxembourg",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Risk manager senior",
+        "activities": [
+          {
+            "project": "Cadre de risque opérationnel",
+            "tasks": [
+              "Refonte de la cartographie des risques opérationnels",
+              "Définition et suivi des indicateurs de risque clés",
+              "Animation du comité de risque trimestriel"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction des incidents opérationnels de 30 % sur trois ans",
+          "Mise en place d'un dispositif GRC centralisé"
+        ],
+        "toolsAndTechnologies": [
+          "GRC tools",
+          "Power BI",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Assurances Moselle",
+        "website": "https://assurances-moselle.example.com",
+        "location": "Metz, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Analyste risques et contrôle interne",
+        "activities": [
+          {
+            "project": "Contrôle interne",
+            "tasks": [
+              "Évaluation des dispositifs de contrôle",
+              "Suivi des plans de remédiation",
+              "Support aux audits réglementaires"
+            ]
+          }
+        ],
+        "achievements": [
+          "Fiabilisation du dispositif de contrôle interne sur le périmètre assurance"
+        ],
+        "toolsAndTechnologies": [
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université de Lorraine",
+        "degree": "Master",
+        "fieldOfStudy": "Gestion des risques et contrôle",
+        "achievements": [
+          "Mention bien"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "FRM",
+        "institution": "Global Association of Risk Professionals",
+        "year": "@Y-4@",
+        "description": "Certification Financial Risk Manager."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "GRC tools",
+        "Power BI",
+        "Excel",
+        "COSO",
+        "Operational risk",
+        "Internal control",
+        "Risk mapping"
+      ],
+      "softSkills": [
+        "Esprit d'analyse",
+        "Communication",
+        "Sens de la gouvernance"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Arabe",
+          "proficiency": {
+            "read": "native",
+            "written": "fluent",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Refonte de la cartographie des risques",
+        "description": "Mise à jour complète de la cartographie des risques opérationnels et déploiement d'un outil GRC.",
+        "date": "2021-05",
+        "impact": "Réduction de 30 % des incidents opérationnels et meilleure traçabilité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Course à pied",
+      "Lecture",
+      "Cuisine"
+    ],
+    "references": [
+      {
+        "name": "Isabelle Muller",
+        "position": "Chief Risk Officer",
+        "company": "Banque Centrale Privée",
+        "contact": {
+          "phone": "+352 621 334 556",
+          "email": "isabelle.muller@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Risk Management",
+      "secondaryClusters": [
+        "Operational Risk",
+        "Internal Control"
+      ],
+      "functionalExpertise": [
+        "Operational risk",
+        "Risk mapping",
+        "Risk governance"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Fewer operational incidents",
+        "Centralised GRC"
+      ],
+      "industryDomains": [
+        "Banking",
+        "Insurance"
+      ],
+      "environmentFit": [
+        "Regulated bank",
+        "Financial services"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Twelve years in operational risk and internal control in a regulated bank with an FRM qualification fits a senior risk manager."
+    },
+    "searchIndex": {
+      "roles": [
+        "Risk Manager",
+        "Operational Risk Manager",
+        "Internal Control Manager"
+      ],
+      "skills": [
+        "COSO",
+        "Operational risk",
+        "Risk mapping",
+        "Internal control",
+        "GRC",
+        "Power BI"
+      ],
+      "industries": [
+        "Banking",
+        "Insurance"
+      ]
+    },
+    "tags": [
+      "risk",
+      "senior",
+      "frm",
+      "coso",
+      "operational-risk"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Responsable de l'audit interne pilotant une équipe de cinq auditeurs pour un groupe industriel européen. Quatorze ans d'expérience couvrant l'audit financier et opérationnel, la conformité SOX et la relation avec le comité d'audit. Structure les plans d'audit fondés sur les risques et accompagne la montée en maturité du contrôle interne.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Élodie Simon",
+      "role": "Responsable audit interne",
+      "summary": "Responsable audit interne qui bâtit des plans d'audit fondés sur les risques, développe son équipe et dialogue avec le comité d'audit.",
+      "contact": {
+        "phone": "+32 476 33 44 55",
+        "email": "elodie.simon@example.com",
+        "address": {
+          "streetNumber": "58",
+          "streetName": "de Tervueren",
+          "streetType": "Avenue",
+          "city": "Bruxelles",
+          "state": "Bruxelles-Capitale",
+          "zipCode": "1150",
+          "country": "Belgique"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Audit interne",
+        "skills": [
+          "Plan d'audit fondé sur les risques",
+          "Audit financier et opérationnel",
+          "Conformité SOX"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Encadrement d'équipe",
+          "Relation comité d'audit",
+          "Développement des auditeurs"
+        ]
+      },
+      {
+        "category": "Référentiels",
+        "skills": [
+          "COSO",
+          "SOX",
+          "Contrôle interne"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "ACL",
+          "IDEA",
+          "GRC tools",
+          "Excel"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Pilotage de l'audit interne",
+        "Plans d'audit fondés sur les risques",
+        "Conformité SOX"
+      ],
+      "keyResponsibilities": [
+        "Définir et piloter le plan d'audit annuel",
+        "Encadrer et développer l'équipe d'audit",
+        "Présenter les conclusions au comité d'audit"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Groupe Meridian Industries",
+        "website": "https://meridian-ind.example.com",
+        "location": "Bruxelles, Belgique",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Responsable audit interne",
+        "activities": [
+          {
+            "project": "Plan d'audit groupe",
+            "tasks": [
+              "Élaboration du plan d'audit fondé sur les risques",
+              "Encadrement d'une équipe de 5 auditeurs sur 4 pays",
+              "Présentation trimestrielle au comité d'audit"
+            ]
+          }
+        ],
+        "achievements": [
+          "Refonte de l'approche d'audit par les risques",
+          "Mise en conformité SOX de trois filiales américaines",
+          "Réduction du délai de clôture des recommandations de 40 %"
+        ],
+        "toolsAndTechnologies": [
+          "ACL",
+          "IDEA",
+          "GRC tools"
+        ]
+      },
+      {
+        "company": "Cabinet Audit Lambert (Big Four)",
+        "website": "https://audit-lambert.example.com",
+        "location": "Bruxelles, Belgique",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Auditrice puis manager",
+        "activities": [
+          {
+            "project": "Audit et conseil",
+            "tasks": [
+              "Missions d'audit légal et de conseil en contrôle interne",
+              "Encadrement d'équipes sur le terrain",
+              "Revue des dispositifs de contrôle des clients"
+            ]
+          }
+        ],
+        "achievements": [
+          "Promotion manager en cinq ans"
+        ],
+        "toolsAndTechnologies": [
+          "ACL",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "UCLouvain",
+        "degree": "Master",
+        "fieldOfStudy": "Sciences de gestion - Audit",
+        "achievements": [
+          "Distinction"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CIA",
+        "institution": "Institute of Internal Auditors",
+        "year": "@Y-4@",
+        "description": "Certification Certified Internal Auditor complète."
+      },
+      {
+        "title": "CISA",
+        "institution": "ISACA",
+        "year": "@Y-4@",
+        "description": "Certification en audit des systèmes d'information."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ACL",
+        "IDEA",
+        "GRC tools",
+        "Excel",
+        "COSO",
+        "SOX",
+        "Risk-based audit"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Communication",
+        "Esprit critique"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Néerlandais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Approche d'audit par les risques",
+        "description": "Refonte complète de la méthodologie d'audit interne autour d'une cartographie des risques.",
+        "date": "2020-11",
+        "impact": "Meilleure couverture des risques majeurs et priorisation des missions."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Équitation",
+      "Lecture",
+      "Randonnée"
+    ],
+    "references": [
+      {
+        "name": "Geert Willems",
+        "position": "Président du comité d'audit",
+        "company": "Groupe Meridian Industries",
+        "contact": {
+          "phone": "+32 476 66 77 88",
+          "email": "geert.willems@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 85000,
+      "max": 100000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Internal Audit",
+      "secondaryClusters": [
+        "Audit Management",
+        "Compliance"
+      ],
+      "functionalExpertise": [
+        "Risk-based audit",
+        "SOX compliance",
+        "Team leadership"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "SOX compliance achieved",
+        "Faster remediation"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Industrial"
+      ],
+      "environmentFit": [
+        "International group",
+        "Audit committee reporting"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Leads a five-person audit team across four countries with SOX and audit-committee scope, a clear internal audit lead."
+    },
+    "searchIndex": {
+      "roles": [
+        "Head of Internal Audit",
+        "Audit Manager",
+        "Internal Audit Lead"
+      ],
+      "skills": [
+        "ACL",
+        "IDEA",
+        "COSO",
+        "SOX",
+        "Risk-based audit",
+        "Internal control",
+        "GRC"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Industrial"
+      ]
+    },
+    "tags": [
+      "audit",
+      "lead",
+      "cia",
+      "cisa",
+      "sox",
+      "risk-based"
+    ]
+  },
+  {
+    "personalInformation": {
+      "name": "Bruno Garnier",
+      "role": "Directeur de l'audit interne",
+      "summary": "Directeur audit et contrôle interne qui définit la stratégie d'assurance, dialogue avec le comité d'audit et diffuse la culture de maîtrise des risques.",
+      "contact": {
+        "address": {
+          "streetNumber": "41",
+          "streetName": "de la Défense",
+          "streetType": "Boulevard",
+          "city": "Courbevoie",
+          "state": "Île-de-France",
+          "zipCode": "92400",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-06-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "profiles": {
+      "areasOfExpertise": [
+        "Direction de l'audit interne",
+        "Gestion des risques d'entreprise",
+        "Gouvernance et contrôle interne"
+      ],
+      "keyResponsibilities": [
+        "Diriger la fonction audit interne et contrôle interne groupe",
+        "Définir la stratégie d'assurance et le plan pluriannuel",
+        "Rapporter au comité d'audit et au conseil"
+      ]
+    },
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ACL",
+        "GRC tools",
+        "Power BI",
+        "COSO",
+        "SOX",
+        "ERM",
+        "Data analytics"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Vision stratégique",
+        "Communication exécutive"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Modernisation de l'audit par la data",
+        "description": "Introduction de techniques de data analytics dans les missions d'audit.",
+        "date": "2019-06",
+        "impact": "Couverture d'audit élargie et détection anticipée des anomalies."
+      },
+      {
+        "title": "Dispositif ERM groupe",
+        "description": "Conception et déploiement d'un cadre de gestion des risques d'entreprise.",
+        "date": "2018-03",
+        "impact": "Meilleure visibilité du conseil sur les risques majeurs."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voile",
+      "Histoire",
+      "Golf"
+    ],
+    "references": [
+      {
+        "name": "Hélène Fabre",
+        "position": "Présidente du comité d'audit",
+        "company": "Groupe Financière Atlas",
+        "contact": {
+          "phone": "+33 6 12 21 32 43",
+          "email": "helene.fabre@example.com"
+        }
+      }
+    ],
+    "searchIndex": {
+      "roles": [
+        "Chief Audit Executive",
+        "Head of Internal Audit",
+        "Director of Internal Audit"
+      ],
+      "skills": [
+        "COSO",
+        "SOX",
+        "ERM",
+        "Data analytics",
+        "Internal control",
+        "GRC",
+        "Audit strategy"
+      ],
+      "industries": [
+        "Financial services",
+        "Insurance"
+      ]
+    },
+    "tags": [
+      "audit",
+      "director",
+      "cia",
+      "crma",
+      "erm",
+      "governance"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Fiscaliste avec cinq ans d'expérience en fiscalité d'entreprise et TVA au sein d'un groupe de services. Prépare les déclarations fiscales, assiste sur la TVA intracommunautaire et contribue au suivi de trésorerie. Rigoureuse et à l'aise avec les évolutions réglementaires, elle souhaite se spécialiser en fiscalité internationale.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Manon Roussel",
+      "role": "Fiscaliste",
+      "summary": "Fiscaliste rigoureuse qui sécurise les déclarations, maîtrise la TVA intracommunautaire et suit de près les évolutions réglementaires.",
+      "contact": {
+        "phone": "+33 6 32 21 10 09",
+        "email": "manon.roussel@example.com",
+        "address": {
+          "streetNumber": "22",
+          "streetName": "de Vaugirard",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75015",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/manon-roussel-fisca"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En soirée en semaine",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Fiscalité",
+        "skills": [
+          "Impôt sur les sociétés",
+          "TVA",
+          "TVA intracommunautaire",
+          "Déclarations fiscales"
+        ]
+      },
+      {
+        "category": "Trésorerie",
+        "skills": [
+          "Suivi de trésorerie",
+          "Rapprochements de flux",
+          "Prévisions de cash"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "SAP",
+          "Excel",
+          "Tax engines"
+        ]
+      },
+      {
+        "category": "Veille",
+        "skills": [
+          "Veille réglementaire",
+          "Documentation fiscale"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Fiscalité d'entreprise",
+        "TVA",
+        "Support trésorerie"
+      ],
+      "keyResponsibilities": [
+        "Préparer les déclarations d'impôt sur les sociétés et de TVA",
+        "Gérer la TVA intracommunautaire",
+        "Contribuer au suivi et aux prévisions de trésorerie"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Groupe Servalis",
+        "website": "https://servalis.example.com",
+        "location": "Paris, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Fiscaliste",
+        "activities": [
+          {
+            "project": "Conformité fiscale",
+            "tasks": [
+              "Préparation des déclarations de TVA et d'IS",
+              "Gestion de la TVA intracommunautaire pour 4 pays",
+              "Support au suivi de trésorerie hebdomadaire"
+            ]
+          }
+        ],
+        "achievements": [
+          "Fiabilisation des déclarations de TVA intracommunautaire",
+          "Automatisation des contrôles de cohérence TVA sous Excel"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Cabinet Fiscal Aubry",
+        "website": "https://fiscal-aubry.example.com",
+        "location": "Paris, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Assistante fiscaliste",
+        "activities": [
+          {
+            "project": "Missions fiscales clients",
+            "tasks": [
+              "Préparation des déclarations fiscales de PME",
+              "Veille réglementaire",
+              "Support aux contrôles fiscaux"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à la gestion fiscale d'un portefeuille de 20 clients"
+        ],
+        "toolsAndTechnologies": [
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université Paris 2 Panthéon-Assas",
+        "degree": "Master",
+        "fieldOfStudy": "Droit fiscal",
+        "achievements": [
+          "Mention bien"
+        ]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "Excel",
+        "VAT",
+        "Corporate tax",
+        "Tax compliance",
+        "Cash forecasting"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Curiosité juridique",
+        "Organisation"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        },
+        {
+          "language": "Espagnol",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Automatisation des contrôles TVA",
+        "description": "Développement de contrôles de cohérence automatisés pour les déclarations de TVA.",
+        "date": "2024-02",
+        "impact": "Réduction des erreurs déclaratives et gain de temps au moment des échéances."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Yoga",
+      "Lecture juridique",
+      "Cinéma"
+    ],
+    "references": [
+      {
+        "name": "Pierre Lemoine",
+        "position": "Responsable fiscal",
+        "company": "Groupe Servalis",
+        "contact": {
+          "phone": "+33 6 45 56 67 78",
+          "email": "pierre.lemoine@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 42000,
+      "max": 50000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Tax",
+      "secondaryClusters": [
+        "VAT",
+        "Treasury Support"
+      ],
+      "functionalExpertise": [
+        "Corporate tax",
+        "VAT compliance",
+        "Cash monitoring"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Reliable VAT filings",
+        "Automated tax controls"
+      ],
+      "industryDomains": [
+        "Professional services",
+        "Technology"
+      ],
+      "environmentFit": [
+        "Corporate tax team",
+        "Multi-country"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Five years in corporate tax and VAT with treasury support and a tax law master's fits a mid-level tax specialist."
+    },
+    "searchIndex": {
+      "roles": [
+        "Tax Analyst",
+        "Tax Specialist",
+        "VAT Analyst"
+      ],
+      "skills": [
+        "SAP",
+        "VAT",
+        "Corporate tax",
+        "Tax compliance",
+        "Cash forecasting",
+        "Excel"
+      ],
+      "industries": [
+        "Professional services",
+        "Technology"
+      ]
+    },
+    "tags": [
+      "tax",
+      "midlevel",
+      "vat",
+      "corporate-tax",
+      "sap"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Fiscaliste senior spécialisé en TVA et fiscalité indirecte au sein d'un groupe international à Luxembourg. Dix ans d'expérience à gérer la conformité TVA multi-juridictionnelle, à optimiser les flux et à accompagner les projets transfrontaliers. Solide connaissance des directives TVA européennes et des tax engines.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "David Schmit",
+      "role": "Fiscaliste senior - TVA",
+      "summary": "Fiscaliste TVA senior qui sécurise la conformité multi-pays, optimise les flux indirects et fiabilise les déclarations transfrontalières.",
+      "contact": {
+        "phone": "+352 621 667 889",
+        "email": "david.schmit@example.com",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "Grand-Rue",
+          "streetType": "Rue",
+          "city": "Luxembourg",
+          "state": "Luxembourg",
+          "zipCode": "1660",
+          "country": "Luxembourg"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En soirée en semaine"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Fiscalité indirecte",
+        "skills": [
+          "TVA multi-juridictionnelle",
+          "TVA intracommunautaire",
+          "Optimisation des flux"
+        ]
+      },
+      {
+        "category": "Conformité",
+        "skills": [
+          "Déclarations TVA",
+          "Contrôles fiscaux",
+          "Documentation"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "Directives TVA UE",
+          "OSS/IOSS"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "SAP",
+          "Tax engines",
+          "Excel avancé"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Conformité TVA multi-pays",
+        "Fiscalité indirecte",
+        "Projets transfrontaliers"
+      ],
+      "keyResponsibilities": [
+        "Gérer la conformité TVA de plusieurs juridictions",
+        "Optimiser les flux et schémas TVA",
+        "Accompagner les projets et transactions transfrontaliers"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Global Trade Luxembourg",
+        "website": "https://globaltrade-lux.example.com",
+        "location": "Luxembourg, Luxembourg",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Fiscaliste senior - TVA",
+        "activities": [
+          {
+            "project": "Conformité TVA groupe",
+            "tasks": [
+              "Gestion de la conformité TVA dans 10 juridictions",
+              "Optimisation des flux TVA sur les ventes intracommunautaires",
+              "Support fiscal aux projets de nouvelles implantations"
+            ]
+          }
+        ],
+        "achievements": [
+          "Sécurisation de la conformité TVA sur 10 pays",
+          "Optimisation ayant réduit le coût de portage de la TVA",
+          "Déploiement d'un tax engine pour automatiser les déterminations de TVA"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Tax engines",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Cabinet Tax Advisory Reuter",
+        "website": "https://tax-reuter.example.com",
+        "location": "Luxembourg, Luxembourg",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Consultant fiscal TVA",
+        "activities": [
+          {
+            "project": "Conseil TVA",
+            "tasks": [
+              "Conseil en TVA pour des clients internationaux",
+              "Analyses de schémas de flux",
+              "Support aux contrôles fiscaux"
+            ]
+          }
+        ],
+        "achievements": [
+          "Accompagnement de 15 clients sur des problématiques TVA transfrontalières"
+        ],
+        "toolsAndTechnologies": [
+          "Excel"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "Tax engines",
+        "Excel",
+        "VAT",
+        "Indirect tax",
+        "EU VAT directives",
+        "OSS/IOSS"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Sens du conseil",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Allemand",
+          "proficiency": {
+            "read": "native",
+            "written": "fluent",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Déploiement d'un tax engine",
+        "description": "Mise en place d'un moteur de détermination automatique de la TVA dans SAP.",
+        "date": "2022-06",
+        "impact": "Automatisation des déterminations de TVA et réduction des erreurs sur les factures."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Vélo de route",
+      "Échecs",
+      "Langues étrangères"
+    ],
+    "references": [
+      {
+        "name": "Martine Weis",
+        "position": "Head of Tax",
+        "company": "Global Trade Luxembourg",
+        "contact": {
+          "phone": "+352 621 223 445",
+          "email": "martine.weis@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 70000,
+      "max": 85000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Tax",
+      "secondaryClusters": [
+        "Indirect Tax",
+        "VAT"
+      ],
+      "functionalExpertise": [
+        "VAT compliance",
+        "Indirect tax optimisation",
+        "Cross-border tax"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Multi-country VAT compliance",
+        "Reduced VAT carrying cost"
+      ],
+      "industryDomains": [
+        "Trading",
+        "Financial services"
+      ],
+      "environmentFit": [
+        "International group",
+        "Multi-jurisdiction"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Ten years of multi-jurisdiction VAT and indirect tax with tax-engine deployment and an ADIT qualification fits a senior tax specialist."
+    },
+    "searchIndex": {
+      "roles": [
+        "Senior Tax Analyst",
+        "VAT Manager",
+        "Indirect Tax Specialist"
+      ],
+      "skills": [
+        "SAP",
+        "Tax engines",
+        "VAT",
+        "Indirect tax",
+        "EU VAT directives",
+        "OSS/IOSS",
+        "Excel"
+      ],
+      "industries": [
+        "Trading",
+        "Financial services"
+      ]
+    },
+    "tags": [
+      "tax",
+      "senior",
+      "vat",
+      "adit",
+      "indirect-tax",
+      "luxembourg"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Trésorier senior avec neuf ans d'expérience en gestion de trésorerie et cash management pour des groupes internationaux. Pilote les prévisions de trésorerie, la gestion du risque de change et les relations bancaires. Expert des systèmes de gestion de trésorerie (TMS) et de l'optimisation des positions de cash à l'échelle du groupe.",
+    "careerStartYear": 2017,
+    "personalInformation": {
+      "name": "Aurélie Petit",
+      "role": "Trésorière senior",
+      "summary": "Trésorière senior qui pilote le cash, couvre le risque de change et optimise les positions de trésorerie du groupe.",
+      "contact": {
+        "phone": "+32 479 44 55 66",
+        "email": "aurelie.petit@example.com",
+        "address": {
+          "streetNumber": "20",
+          "streetName": "de la Loi",
+          "streetType": "Rue",
+          "city": "Bruxelles",
+          "state": "Bruxelles-Capitale",
+          "zipCode": "1040",
+          "country": "Belgique"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/aurelie-petit-treasury"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En soirée en semaine",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Trésorerie",
+        "skills": [
+          "Cash management",
+          "Prévisions de trésorerie",
+          "Gestion des liquidités"
+        ]
+      },
+      {
+        "category": "Risques financiers",
+        "skills": [
+          "Risque de change",
+          "Couverture (hedging)",
+          "Risque de taux"
+        ]
+      },
+      {
+        "category": "Relations bancaires",
+        "skills": [
+          "Négociation bancaire",
+          "Financements",
+          "Cash pooling"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "TMS (Kyriba)",
+          "SAP",
+          "Excel avancé"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Cash management",
+        "Gestion du risque de change",
+        "Relations bancaires"
+      ],
+      "keyResponsibilities": [
+        "Piloter les prévisions et positions de trésorerie",
+        "Gérer le risque de change et les couvertures",
+        "Optimiser le cash pooling et les relations bancaires"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Belga Industries",
+        "website": "https://belga-industries.example.com",
+        "location": "Bruxelles, Belgique",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Trésorière senior",
+        "activities": [
+          {
+            "project": "Cash management groupe",
+            "tasks": [
+              "Pilotage des prévisions de trésorerie sur 8 pays",
+              "Gestion du risque de change via des couvertures à terme",
+              "Optimisation du cash pooling multi-devises"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction des frais financiers de 15 % via l'optimisation du cash pooling",
+          "Mise en place d'un TMS Kyriba centralisé",
+          "Amélioration de la fiabilité des prévisions de trésorerie"
+        ],
+        "toolsAndTechnologies": [
+          "Kyriba",
+          "SAP",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Cabinet Conseil Trésorerie Dupuis",
+        "website": "https://tresorerie-dupuis.example.com",
+        "location": "Bruxelles, Belgique",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Analyste trésorerie",
+        "activities": [
+          {
+            "project": "Missions trésorerie",
+            "tasks": [
+              "Support à la gestion de trésorerie de clients",
+              "Analyse des positions de cash",
+              "Aide à la mise en place de TMS"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution au déploiement de TMS chez trois clients"
+        ],
+        "toolsAndTechnologies": [
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "HEC Liège",
+        "degree": "Master",
+        "fieldOfStudy": "Finance d'entreprise",
+        "achievements": [
+          "Distinction",
+          "Spécialisation trésorerie et marchés"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Kyriba",
+        "SAP",
+        "Excel",
+        "Cash management",
+        "FX risk",
+        "Cash pooling",
+        "Hedging"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Réactivité",
+        "Négociation"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Néerlandais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Déploiement d'un TMS Kyriba",
+        "description": "Mise en place d'un système de gestion de trésorerie centralisé sur 8 pays.",
+        "date": "2022-09",
+        "impact": "Visibilité en temps réel sur le cash et réduction des frais financiers."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Course à pied",
+      "Cuisine",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Jan De Clerck",
+        "position": "Group Treasurer",
+        "company": "Belga Industries",
+        "contact": {
+          "phone": "+32 479 77 88 99",
+          "email": "jan.declerck@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 75000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Treasury",
+      "secondaryClusters": [
+        "Cash Management",
+        "Financial Risk"
+      ],
+      "functionalExpertise": [
+        "Cash management",
+        "FX risk management",
+        "Bank relations"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Lower financing costs",
+        "Centralised TMS",
+        "Reliable cash forecasts"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Industrial"
+      ],
+      "environmentFit": [
+        "International group",
+        "Group treasury"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Nine years in cash management, FX risk and TMS deployment for international groups with a CTP marks a senior treasurer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Senior Treasurer",
+        "Treasury Analyst",
+        "Cash Manager"
+      ],
+      "skills": [
+        "Kyriba",
+        "SAP",
+        "Cash management",
+        "FX risk",
+        "Cash pooling",
+        "Hedging",
+        "Excel"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Industrial"
+      ]
+    },
+    "tags": [
+      "treasury",
+      "senior",
+      "ctp",
+      "kyriba",
+      "cash-management"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Expert en prix de transfert (transfer pricing lead) avec treize ans d'expérience dans le conseil et l'industrie. Pilote la politique de prix de transfert d'un groupe multinational, la documentation, et la défense lors des contrôles fiscaux. Référent technique reconnu sur les principes OCDE et les problématiques de fiscalité internationale.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Sébastien Moreau",
+      "role": "Transfer Pricing Lead",
+      "summary": "Référent prix de transfert qui définit la politique groupe, sécurise la documentation et défend les positions lors des contrôles fiscaux.",
+      "contact": {
+        "email": "sebastien.moreau@example.com",
+        "address": {
+          "streetNumber": "36",
+          "streetName": "Haussmann",
+          "streetType": "Boulevard",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75009",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sebastien-moreau-tp"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Prix de transfert",
+        "skills": [
+          "Politique de prix de transfert",
+          "Documentation TP",
+          "Analyses de comparabilité"
+        ]
+      },
+      {
+        "category": "Fiscalité internationale",
+        "skills": [
+          "Principes OCDE",
+          "BEPS",
+          "Conventions fiscales"
+        ]
+      },
+      {
+        "category": "Contentieux",
+        "skills": [
+          "Défense lors des contrôles",
+          "APA",
+          "Résolution de différends"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "SAP",
+          "Bases de données TP",
+          "Excel avancé"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Prix de transfert",
+        "Fiscalité internationale",
+        "Documentation et défense TP"
+      ],
+      "keyResponsibilities": [
+        "Définir et piloter la politique de prix de transfert du groupe",
+        "Produire la documentation TP conforme aux exigences BEPS",
+        "Défendre les positions lors des contrôles fiscaux"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Groupe Technord International",
+        "website": "https://technord-intl.example.com",
+        "location": "Paris, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Transfer Pricing Lead",
+        "activities": [
+          {
+            "project": "Politique de prix de transfert",
+            "tasks": [
+              "Définition de la politique TP sur 20 pays",
+              "Production du Master File et des Local Files",
+              "Défense lors de contrôles fiscaux en France et à l'étranger"
+            ]
+          }
+        ],
+        "achievements": [
+          "Sécurisation d'un redressement fiscal majeur évité grâce à une documentation robuste",
+          "Négociation d'un accord préalable de prix (APA) avec l'administration",
+          "Harmonisation de la politique TP à l'échelle du groupe"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Cabinet Fiscal International Vasseur (Big Four)",
+        "website": "https://fiscal-vasseur.example.com",
+        "location": "Paris, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Consultant puis manager prix de transfert",
+        "activities": [
+          {
+            "project": "Conseil TP",
+            "tasks": [
+              "Missions de documentation TP pour des multinationales",
+              "Analyses de comparabilité et études économiques",
+              "Support aux contentieux fiscaux"
+            ]
+          }
+        ],
+        "achievements": [
+          "Promotion manager en quatre ans",
+          "Livraison de documentations TP pour 25 groupes"
+        ],
+        "toolsAndTechnologies": [
+          "Excel",
+          "Bases de données TP"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "HEC Paris",
+        "degree": "Master",
+        "fieldOfStudy": "Fiscalité internationale",
+        "achievements": [
+          "Spécialisation prix de transfert"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "ADIT (Transfer Pricing)",
+        "institution": "Chartered Institute of Taxation",
+        "year": "@Y-4@",
+        "description": "Advanced Diploma in International Taxation, module prix de transfert."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "Excel",
+        "Transfer pricing",
+        "OECD guidelines",
+        "BEPS",
+        "Comparability analysis"
+      ],
+      "softSkills": [
+        "Expertise technique",
+        "Négociation",
+        "Rédaction"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Allemand",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Négociation d'un APA",
+        "description": "Obtention d'un accord préalable de prix avec l'administration fiscale.",
+        "date": "2021-04",
+        "impact": "Sécurisation fiscale du groupe sur cinq ans et réduction du risque de redressement."
+      },
+      {
+        "title": "Refonte de la documentation TP",
+        "description": "Standardisation du Master File et des Local Files conformément à BEPS.",
+        "date": "2019-09",
+        "impact": "Documentation robuste ayant évité un redressement significatif."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Course à pied",
+      "Économie internationale",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Christine Aubert",
+        "position": "Directrice fiscale",
+        "company": "Groupe Technord International",
+        "contact": {
+          "phone": "+33 6 78 89 90 01",
+          "email": "christine.aubert@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 90000,
+      "max": 115000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Tax",
+      "secondaryClusters": [
+        "Transfer Pricing",
+        "International Tax"
+      ],
+      "functionalExpertise": [
+        "Transfer pricing",
+        "BEPS documentation",
+        "Tax controversy"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Avoided major tax adjustment",
+        "APA secured",
+        "Harmonised TP policy"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Technology"
+      ],
+      "environmentFit": [
+        "Multinational group",
+        "International tax"
+      ],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Thirteen years owning transfer pricing policy, BEPS documentation and controversy for a multinational marks a principal-level TP expert."
+    },
+    "searchIndex": {
+      "roles": [
+        "Transfer Pricing Lead",
+        "International Tax Manager",
+        "Transfer Pricing Specialist"
+      ],
+      "skills": [
+        "Transfer pricing",
+        "OECD guidelines",
+        "BEPS",
+        "Comparability analysis",
+        "SAP",
+        "Excel"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Technology"
+      ]
+    },
+    "tags": [
+      "tax",
+      "principal",
+      "transfer-pricing",
+      "beps",
+      "adit",
+      "international-tax"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directrice fiscale (Head of Tax) avec seize ans d'expérience en fiscalité internationale et corporate au Luxembourg. Dirige la stratégie fiscale d'un groupe financier, pilote la conformité multi-juridictionnelle et conseille la direction sur les structurations et les opérations. Reconnue pour son expertise en fiscalité des fonds et sa maîtrise des évolutions BEPS et Pillar Two.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Caroline Thiry",
+      "role": "Directrice fiscale (Head of Tax)",
+      "summary": "Directrice fiscale qui définit la stratégie fiscale groupe, sécurise la conformité internationale et conseille la direction sur les structurations.",
+      "contact": {
+        "phone": "+352 621 778 990",
+        "email": "caroline.thiry@example.com",
+        "address": {
+          "streetNumber": "6",
+          "streetName": "de la Porte-Neuve",
+          "streetType": "Avenue",
+          "city": "Luxembourg",
+          "state": "Luxembourg",
+          "zipCode": "2227",
+          "country": "Luxembourg"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/caroline-thiry-tax"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-04-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Stratégie fiscale",
+        "skills": [
+          "Stratégie fiscale groupe",
+          "Structurations",
+          "Fiscalité des fonds"
+        ]
+      },
+      {
+        "category": "Conformité",
+        "skills": [
+          "Conformité multi-juridictionnelle",
+          "Reporting fiscal",
+          "Relations avec l'administration"
+        ]
+      },
+      {
+        "category": "Fiscalité internationale",
+        "skills": [
+          "BEPS",
+          "Pillar Two",
+          "Conventions fiscales",
+          "Prix de transfert"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Encadrement d'équipe",
+          "Conseil à la direction",
+          "Gestion des conseils externes"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Direction fiscale",
+        "Fiscalité internationale et des fonds",
+        "Structurations et conformité"
+      ],
+      "keyResponsibilities": [
+        "Définir et piloter la stratégie fiscale du groupe",
+        "Garantir la conformité fiscale multi-juridictionnelle",
+        "Conseiller la direction sur les structurations et opérations"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Groupe Financier Ardenne",
+        "website": "https://financier-ardenne.example.com",
+        "location": "Luxembourg, Luxembourg",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Directrice fiscale (Head of Tax)",
+        "activities": [
+          {
+            "project": "Stratégie fiscale groupe",
+            "tasks": [
+              "Direction d'une équipe fiscale de 6 personnes",
+              "Pilotage de la conformité fiscale sur 15 juridictions",
+              "Conseil au comité de direction sur les structurations et l'impact de Pillar Two"
+            ]
+          }
+        ],
+        "achievements": [
+          "Anticipation de l'impact de Pillar Two et adaptation de la structure du groupe",
+          "Optimisation de la charge fiscale effective du groupe",
+          "Sécurisation de la conformité lors de plusieurs contrôles fiscaux"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Tax engines",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Cabinet Fiscal International Kremer (Big Four)",
+        "website": "https://fiscal-kremer.example.com",
+        "location": "Luxembourg, Luxembourg",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Consultante puis directrice fiscalité internationale",
+        "activities": [
+          {
+            "project": "Conseil fiscal",
+            "tasks": [
+              "Conseil en structuration fiscale pour des fonds et des groupes",
+              "Missions de fiscalité internationale et prix de transfert",
+              "Encadrement d'équipes de conseil"
+            ]
+          }
+        ],
+        "achievements": [
+          "Promotion directrice en six ans",
+          "Accompagnement de nombreux fonds sur leur structuration fiscale"
+        ],
+        "toolsAndTechnologies": [
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université catholique de Louvain",
+        "degree": "Master",
+        "fieldOfStudy": "Droit fiscal international",
+        "achievements": [
+          "Grande distinction"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "ADIT",
+        "institution": "Chartered Institute of Taxation",
+        "year": "@Y-4@",
+        "description": "Advanced Diploma in International Taxation."
+      },
+      {
+        "title": "LL.M. en fiscalité internationale",
+        "institution": "Université de Leyde",
+        "year": "@Y-4@",
+        "description": "Master de spécialisation en fiscalité internationale."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "Tax engines",
+        "Excel",
+        "International tax",
+        "BEPS",
+        "Pillar Two",
+        "Transfer pricing"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Vision stratégique",
+        "Négociation"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Préparation à Pillar Two",
+        "description": "Analyse d'impact et adaptation de la structure du groupe aux règles Pillar Two.",
+        "date": "2023-06",
+        "impact": "Conformité anticipée et maîtrise de la charge fiscale effective."
+      },
+      {
+        "title": "Optimisation de la charge fiscale effective",
+        "description": "Revue des structures et des flux pour optimiser le taux effectif d'imposition.",
+        "date": "2020-10",
+        "impact": "Réduction du taux effectif d'imposition dans le respect de la conformité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Art",
+      "Voile",
+      "Lecture"
+    ],
+    "references": [
+      {
+        "name": "Laurent Weber",
+        "position": "CFO",
+        "company": "Groupe Financier Ardenne",
+        "contact": {
+          "phone": "+352 621 889 001",
+          "email": "laurent.weber@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 140000,
+      "max": 180000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Tax Leadership",
+      "secondaryClusters": [
+        "International Tax",
+        "Fund Taxation"
+      ],
+      "functionalExpertise": [
+        "Tax strategy",
+        "International tax compliance",
+        "Structuring"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Pillar Two readiness",
+        "Optimised effective tax rate",
+        "Compliance secured"
+      ],
+      "industryDomains": [
+        "Financial services",
+        "Investment funds"
+      ],
+      "environmentFit": [
+        "International group",
+        "Financial services"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Sixteen years leading a six-person tax function with international, fund and Pillar Two expertise marks a tax director / head of tax."
+    },
+    "searchIndex": {
+      "roles": [
+        "Head of Tax",
+        "Tax Director",
+        "International Tax Director"
+      ],
+      "skills": [
+        "International tax",
+        "BEPS",
+        "Pillar Two",
+        "Transfer pricing",
+        "Tax engines",
+        "SAP"
+      ],
+      "industries": [
+        "Financial services",
+        "Investment funds"
+      ]
+    },
+    "tags": [
+      "tax",
+      "director",
+      "head-of-tax",
+      "adit",
+      "pillar-two",
+      "luxembourg"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Comptable junior rigoureuse avec trois ans d'expérience au sein du service comptable d'un groupe de distribution. À l'aise sur la comptabilité fournisseurs, les rapprochements bancaires et le support à la clôture mensuelle. Actuellement en préparation du DSCG et désireuse d'évoluer vers un poste de comptable général.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Camille Lefèvre",
+      "role": "Comptable junior",
+      "summary": "Comptable en début de carrière, méthodique et fiable, qui tient des grands livres propres et respecte les échéances de clôture.",
+      "contact": {
+        "phone": "+33 6 12 45 78 99",
+        "email": "camille.lefevre@example.com",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "de la République",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75011",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/camille-lefevre-compta"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En soirée en semaine",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Comptabilité",
+        "skills": [
+          "Comptabilité fournisseurs",
+          "Rapprochements bancaires",
+          "Écritures de journal",
+          "Clôture mensuelle"
+        ]
+      },
+      {
+        "category": "Systèmes",
+        "skills": [
+          "SAP FICO",
+          "Sage",
+          "Excel"
+        ]
+      },
+      {
+        "category": "Reporting",
+        "skills": [
+          "Balance générale",
+          "Charges à payer",
+          "Déclarations de TVA"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "PCG",
+          "Bases IFRS"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Comptabilité transactionnelle",
+        "Rapprochements",
+        "Support à la clôture"
+      ],
+      "keyResponsibilities": [
+        "Traiter les factures fournisseurs et les campagnes de paiement",
+        "Rapprocher les comptes bancaires et les comptes de contrôle",
+        "Participer à la clôture mensuelle et au reporting"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Groupe Distridéal",
+        "website": "https://distrideal.example.com",
+        "location": "Paris, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Comptable junior",
+        "activities": [
+          {
+            "project": "Clôture mensuelle",
+            "tasks": [
+              "Préparation des écritures de charges à payer et de charges constatées d'avance",
+              "Rapprochement de 10 comptes bancaires chaque semaine",
+              "Assistance aux déclarations trimestrielles de TVA"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction de 25 % des litiges fournisseurs anciens en réorganisant le suivi des factures",
+          "Réduction du cycle de rapprochement bancaire de 4 à 2 jours"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Excel",
+          "Sage"
+        ]
+      },
+      {
+        "company": "Cabinet Moreau & Associés",
+        "website": "https://moreau-associes.example.com",
+        "location": "Créteil, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Assistante comptable",
+        "activities": [
+          {
+            "project": "Tenue comptable clients",
+            "tasks": [
+              "Tenue des journaux d'achats et de ventes pour des PME",
+              "Préparation des déclarations de TVA",
+              "Traitement des écritures de paie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Gestion de la comptabilité d'un portefeuille de 15 petites entreprises"
+        ],
+        "toolsAndTechnologies": [
+          "Sage",
+          "Cegid",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université Paris-Dauphine",
+        "degree": "Licence",
+        "fieldOfStudy": "Comptabilité, Contrôle, Audit",
+        "achievements": [
+          "Mention bien",
+          "Trésorière de l'association étudiante de finance"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "DCG",
+        "institution": "Ministère de l'Éducation nationale",
+        "year": "@Y-4@",
+        "description": "Diplôme de comptabilité et de gestion obtenu, préparation du DSCG en cours."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP FICO",
+        "Sage",
+        "Cegid",
+        "Excel",
+        "Rapprochements bancaires",
+        "Déclarations de TVA",
+        "PCG"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Gestion du temps",
+        "Envie d'apprendre"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Refonte du traitement des factures fournisseurs",
+        "description": "Mise en place d'une boîte de réception partagée et d'un circuit de validation des factures.",
+        "date": "2023-11",
+        "impact": "Réduction du délai de validation des factures de deux jours en moyenne."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Volley-ball",
+      "Pâtisserie",
+      "Blog sur les finances personnelles"
+    ],
+    "references": [
+      {
+        "name": "Nathalie Girard",
+        "position": "Chef comptable",
+        "company": "Groupe Distridéal",
+        "contact": {
+          "phone": "+33 6 22 33 44 55",
+          "email": "nathalie.girard@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 32000,
+      "max": 38000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Financial Accounting",
+      "secondaryClusters": [
+        "Transactional Finance",
+        "Accounts Payable"
+      ],
+      "functionalExpertise": [
+        "Reconciliations",
+        "Month-end close",
+        "Accounts payable"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Faster reconciliations",
+        "Cleaner AP process"
+      ],
+      "industryDomains": [
+        "Retail",
+        "Professional services"
+      ],
+      "environmentFit": [
+        "SME",
+        "Shared service centre"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Transactional accounting duties, month-end support and DCG qualification place this candidate as an early-career financial accountant."
+    },
+    "searchIndex": {
+      "roles": [
+        "Junior Accountant",
+        "Accounts Assistant",
+        "Financial Accountant"
+      ],
+      "skills": [
+        "SAP FICO",
+        "Sage",
+        "Cegid",
+        "Bank reconciliations",
+        "VAT",
+        "Month-end close",
+        "Excel"
+      ],
+      "industries": [
+        "Retail",
+        "Professional services"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "junior",
+      "dcg",
+      "sap",
+      "month-end"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Comptable général confirmé disposant de dix ans d'expérience en comptabilité générale et statutaire au sein de groupes industriels. Pilote de bout en bout la clôture mensuelle et annuelle, les liasses fiscales et les relations avec les commissaires aux comptes. Maîtrise SAP FICO, Oracle et les normes IFRS et françaises.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Julien Marchand",
+      "role": "Comptable général confirmé",
+      "summary": "Comptable confirmé qui sécurise les clôtures, fiabilise les comptes statutaires et sert d'interlocuteur privilégié des auditeurs.",
+      "contact": {
+        "phone": "+33 6 33 21 09 87",
+        "email": "julien.marchand.personal@example.com",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Vendôme",
+          "streetType": "Rue",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69003",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/julien-marchand-compta"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En soirée en semaine"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Comptabilité générale",
+        "skills": [
+          "Clôture mensuelle et annuelle",
+          "Comptes statutaires",
+          "Immobilisations",
+          "Provisions"
+        ]
+      },
+      {
+        "category": "Systèmes",
+        "skills": [
+          "SAP FICO",
+          "Oracle",
+          "Excel avancé"
+        ]
+      },
+      {
+        "category": "Fiscalité & reporting",
+        "skills": [
+          "Liasse fiscale",
+          "Déclarations de TVA",
+          "Reporting groupe"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "PCG",
+          "IFRS",
+          "US GAAP"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Comptabilité générale et statutaire",
+        "Clôtures",
+        "Relations avec les commissaires aux comptes"
+      ],
+      "keyResponsibilities": [
+        "Piloter la clôture mensuelle et annuelle",
+        "Établir les comptes statutaires et la liasse fiscale",
+        "Coordonner les audits légaux"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Rhône Industries SA",
+        "website": "https://rhone-industries.example.com",
+        "location": "Lyon, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Comptable général confirmé",
+        "activities": [
+          {
+            "project": "Clôture annuelle",
+            "tasks": [
+              "Établissement des comptes statutaires de trois entités",
+              "Préparation de la liasse fiscale",
+              "Coordination de l'audit légal"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction du délai de clôture annuelle de 20 jours à 12 jours",
+          "Automatisation des écritures d'immobilisations dans SAP"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Excel",
+          "Oracle"
+        ]
+      },
+      {
+        "company": "Fabrimétal Auvergne",
+        "website": "https://fabrimetal.example.com",
+        "location": "Clermont-Ferrand, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Comptable général",
+        "activities": [
+          {
+            "project": "Comptabilité générale",
+            "tasks": [
+              "Tenue de la comptabilité générale et analytique",
+              "Rapprochements intercos",
+              "Déclarations fiscales périodiques"
+            ]
+          }
+        ],
+        "achievements": [
+          "Fiabilisation du processus de comptabilité analytique sur deux sites de production"
+        ],
+        "toolsAndTechnologies": [
+          "Oracle",
+          "Excel",
+          "Sage"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IAE Lyon - Université Jean Moulin",
+        "degree": "Master",
+        "fieldOfStudy": "Comptabilité, Contrôle, Audit",
+        "achievements": [
+          "Major de promotion en comptabilité approfondie"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "DSCG",
+        "institution": "Ministère de l'Éducation nationale",
+        "year": "@Y-4@",
+        "description": "Diplôme supérieur de comptabilité et de gestion."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP FICO",
+        "Oracle",
+        "Excel",
+        "IFRS",
+        "US GAAP",
+        "Liasse fiscale",
+        "Comptes statutaires"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Organisation",
+        "Sens du détail"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Réduction du cycle de clôture",
+        "description": "Refonte du calendrier de clôture et automatisation des écritures récurrentes.",
+        "date": "2022-02",
+        "impact": "Gain de 8 jours sur la clôture annuelle."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Randonnée",
+      "Œnologie",
+      "Course à pied"
+    ],
+    "references": [
+      {
+        "name": "Sophie Bernard",
+        "position": "Directrice financière",
+        "company": "Rhône Industries SA",
+        "contact": {
+          "phone": "+33 6 44 55 66 77",
+          "email": "sophie.bernard@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 58000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Financial Accounting",
+      "secondaryClusters": [
+        "Statutory Reporting",
+        "General Ledger"
+      ],
+      "functionalExpertise": [
+        "Statutory accounting",
+        "Month-end close",
+        "Tax filings"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Faster close cycle",
+        "Reliable statutory accounts"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Industrial"
+      ],
+      "environmentFit": [
+        "Mid-cap",
+        "Multi-site industrial group"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Ten years in general and statutory accounting with ownership of close and legal audits marks a senior financial accountant."
+    },
+    "searchIndex": {
+      "roles": [
+        "Financial Accountant",
+        "General Ledger Accountant",
+        "Statutory Accountant"
+      ],
+      "skills": [
+        "SAP FICO",
+        "Oracle",
+        "IFRS",
+        "US GAAP",
+        "Statutory reporting",
+        "Month-end close",
+        "Excel"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Industrial"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "senior",
+      "dscg",
+      "sap",
+      "statutory"
+    ]
+  }
+]

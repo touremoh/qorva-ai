@@ -126,7 +126,7 @@ qorva:
   demo-seed:
     enabled: true
     prefix: demo-seed
-    version: v1
+    version: v2
     fallback-language: en
 
 aws:

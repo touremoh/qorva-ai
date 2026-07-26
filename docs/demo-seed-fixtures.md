@@ -30,10 +30,33 @@ s3://<bucket>/<prefix>/<version>/<recruitment-slug>/<lang>/{cvs.json,job-posts.j
 
 ## Volume (target)
 
-- `cvs.json`       — JSON array of ~20 `CVDTO` objects
+- `cvs.json`       — JSON array of 22 `CVDTO` objects (v2; v1 had 20)
 - `job-posts.json` — JSON array of ~5 `JobPostDTO` objects
 
 Full matrix = 7 segments × 7 languages = 49 folders / 98 files.
+
+## Relative date tokens (v2+)
+
+Fixture JSON may carry relative date tokens, resolved by `DemoSeedService` at seed time so
+fixture freshness never decays as the files age:
+
+| Token    | Resolves to                      | Example (seeding in 2026-07) |
+|----------|----------------------------------|------------------------------|
+| `@M-n@`  | the month `n` months ago, `yyyy-MM` | `@M-10@` → `2025-09`      |
+| `@Y-n@`  | the year `n` years ago, `yyyy`      | `@Y-4@`  → `2022`         |
+
+Use `@M-n@` in `workExperience.from/to` and `@Y-n@` in `education.year` /
+`certifications.year`. Literal dates still work but will age.
+
+## v2 imperfection profile (Library Quality demo)
+
+v2 fixtures are generated from v1 by `demo-seed/generate_v2.py` (do not hand-edit v2 —
+change the generator and re-run). Each 22-CV file applies the same per-index persona
+profile so demo users see every issue the Library Quality report can raise: missing
+contact/enrichment fields, outdated and undateable CVs, two duplicate pairs (same email /
+same phone), one unparseable "bad parse" CV, and low AI-confidence parses. Predicted
+report per fresh demo tenant: completeness 92, freshness 38, uniqueness 91,
+AI confidence 82 → **overall 79**.
 
 ## Fixture rules
 

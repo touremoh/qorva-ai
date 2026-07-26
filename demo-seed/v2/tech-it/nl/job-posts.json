@@ -1,0 +1,160 @@
+[
+  {
+    "title": "Senior Backend Engineer (Java/Spring)",
+    "description": "Wij zijn een snelgroeiende SaaS-scale-up in het hart van Amsterdam en zoeken een Senior Backend Engineer die mede-eigenaar wordt van ons platform. In deze rol ben je verantwoordelijk voor het ontwerpen, bouwen en onderhouden van robuuste microservices die dagelijks miljoenen requests verwerken.\n\nWat je gaat doen:\n- Je ontwerpt en implementeert schaalbare backend-services in Java 21 en Spring Boot.\n- Je bewaakt de kwaliteit via code reviews, geautomatiseerde tests en een pragmatische CI/CD-aanpak.\n- Je werkt nauw samen met product en frontend om nieuwe features van idee tot productie te brengen.\n- Je coacht medior collega's en helpt onze technische standaarden verder te tillen.\n\nOnze stack:\nJava, Spring Boot, PostgreSQL, Kafka, Docker en AWS. We deployen meerdere keren per dag en hechten veel waarde aan clean code en observability.\n\nWat wij zoeken:\nMinimaal 6 jaar ervaring met backend-ontwikkeling in Java, diepgaande kennis van het Spring-ecosysteem en ervaring met gedistribueerde systemen. Je denkt in oplossingen, communiceert helder en voelt je thuis in een omgeving met veel autonomie.\n\nLocatie & remote:\nOns kantoor staat in Amsterdam; we werken hybride met twee vaste kantoordagen per week. Woon je in België of elders in Nederland, dan is grotendeels remote bespreekbaar.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Java", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Spring Boot", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "PostgreSQL", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Kafka", "importance": "important", "weight": 0.6, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Docker", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "nice_to_have", "weight": 0.5, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Microservices", "importance": "important", "weight": 0.65, "minYearsOfExperience": 4, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Amsterdam", "Utrecht", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "SaaS", "Information Technology"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Data Engineer (Python/Airflow)",
+    "description": "Voor het dataplatform van een toonaangevende e-commercespeler in Eindhoven zoeken wij een Data Engineer die onze data-infrastructuur naar een hoger niveau tilt. Je bouwt betrouwbare pipelines die ruwe data omzetten naar waardevolle inzichten voor analisten en data scientists.\n\nWat je gaat doen:\n- Je ontwikkelt en onderhoudt ETL/ELT-pipelines in Python en Apache Airflow.\n- Je modelleert data in ons cloud data warehouse en optimaliseert query's voor performance en kosten.\n- Je waarborgt datakwaliteit met tests, monitoring en duidelijke data contracts.\n- Je werkt samen met analytics- en engineeringteams om databehoeften te vertalen naar schaalbare oplossingen.\n\nOnze stack:\nPython, Apache Airflow, SQL, dbt, Snowflake en AWS. Infrastructuur beheren we as code en we omarmen een DataOps-mentaliteit.\n\nWat wij zoeken:\nDrie tot vijf jaar ervaring als Data Engineer, sterke Python- en SQL-vaardigheden en ervaring met orkestratietools zoals Airflow. Je bent nauwkeurig, pragmatisch en houdt van het bouwen van duurzame datafundamenten.\n\nLocatie & remote:\nStandplaats Eindhoven met een hybride werkmodel. Remote werken vanuit heel Nederland of Vlaanderen is grotendeels mogelijk.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Python", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Apache Airflow", "importance": "important", "weight": 0.75, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "dbt", "importance": "important", "weight": 0.6, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Snowflake", "importance": "nice_to_have", "weight": 0.5, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "important", "weight": 0.6, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Data Modeling", "importance": "important", "weight": 0.6, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Eindhoven", "Amsterdam", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["E-commerce", "Retail", "Information Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "DevOps / Site Reliability Engineer",
+    "description": "Een gevestigde fintech in Rotterdam zoekt een DevOps / Site Reliability Engineer om onze cloudplatformen betrouwbaar, veilig en schaalbaar te houden. Je bent de brug tussen ontwikkeling en operatie en zorgt dat teams zelfstandig en veilig kunnen deployen.\n\nWat je gaat doen:\n- Je beheert en automatiseert onze Kubernetes-clusters op AWS.\n- Je schrijft infrastructuur as code met Terraform en bouwt robuuste CI/CD-pipelines.\n- Je verbetert onze observability met metrics, logging en alerting, en je bewaakt SLO's en SLA's.\n- Je neemt deel aan de on-call rotatie en leidt post-mortems om incidenten structureel op te lossen.\n\nOnze stack:\nKubernetes, AWS, Terraform, Docker, Prometheus, Grafana en GitLab CI. Security en betrouwbaarheid staan bij ons centraal.\n\nWat wij zoeken:\nMinimaal 6 jaar ervaring in een DevOps- of SRE-rol, diepgaande kennis van Kubernetes en cloudinfrastructuur, en een sterke automatiseringsmindset. Je blijft kalm onder druk en denkt proactief in termen van betrouwbaarheid.\n\nLocatie & remote:\nStandplaats Rotterdam, hybride werken met flexibele kantoordagen. Grotendeels remote vanuit Nederland of België is bespreekbaar.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Kubernetes", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Terraform", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Docker", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Prometheus", "importance": "important", "weight": 0.6, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "CI/CD", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Linux", "importance": "important", "weight": 0.6, "minYearsOfExperience": 4, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Rotterdam", "Den Haag", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Fintech", "Financial Services", "Information Technology"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Technical Product Manager",
+    "description": "Voor een innovatief B2B-softwarebedrijf in Gent zoeken wij een Technical Product Manager die de brug slaat tussen klantbehoeften, business en engineering. Je bent verantwoordelijk voor een deel van onze productportefeuille en stuurt op impact en waarde.\n\nWat je gaat doen:\n- Je bepaalt de productstrategie en roadmap voor jouw domein, onderbouwd met data en klantgesprekken.\n- Je vertaalt complexe technische mogelijkheden naar heldere features en user stories.\n- Je werkt dagelijks samen met engineering, design en sales in een agile setting.\n- Je meet succes met product analytics en itereert op basis van gebruikersgedrag.\n\nWat wij zoeken:\nDrie tot vijf jaar ervaring als Product Manager in een technische omgeving, affiniteit met API's en softwarearchitectuur, en sterke analytische vaardigheden. Je bent een natuurlijke communicator die stakeholders meekrijgt en scherpe keuzes maakt.\n\nHandig om te hebben:\nErvaring met tools zoals Jira, Amplitude of Mixpanel en een basisbegrip van SQL om zelf data te kunnen verkennen.\n\nLocatie & remote:\nOns kantoor staat in Gent (België); we werken hybride met flexibele afspraken. Remote vanuit Nederland of Vlaanderen behoort tot de mogelijkheden.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Management", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "important", "weight": 0.75, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Agile", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Roadmapping", "importance": "important", "weight": 0.65, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Stakeholder Management", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Gent", "Antwerpen", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "SaaS", "Information Technology"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Frontend Engineer (React) - Junior",
+    "description": "Ben jij aan het begin van je carrière en wil je groeien tot een sterke frontend-ontwikkelaar? Een creatief digital agency in Utrecht zoekt een enthousiaste Junior Frontend Engineer die samen met een ervaren team gebruiksvriendelijke webapplicaties bouwt.\n\nWat je gaat doen:\n- Je ontwikkelt responsieve interfaces met React en TypeScript.\n- Je zet designs uit Figma om in pixel-perfecte, toegankelijke componenten.\n- Je leert dagelijks van medior en senior collega's via pair programming en code reviews.\n- Je draagt bij aan onze componentbibliotheek en helpt de gebruikerservaring te verbeteren.\n\nOnze stack:\nReact, TypeScript, HTML, CSS en Next.js. We hechten waarde aan schone code, toegankelijkheid en een fijne ontwikkelervaring.\n\nWat wij zoeken:\nNul tot twee jaar ervaring (stage of eerste baan telt mee), basiskennis van React en JavaScript, en vooral veel leergierigheid. Je bent nieuwsgierig, neemt initiatief en werkt graag samen in een team.\n\nWat wij bieden:\nEen gestructureerd inwerktraject, een persoonlijk opleidingsbudget en volop ruimte om te groeien.\n\nLocatie & remote:\nStandplaats Utrecht met een hybride werkmodel; voor junioren vragen we minimaal drie kantoordagen per week zodat je optimaal kunt leren.",
+    "scoringRules": {
+      "skills": [
+        { "name": "React", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "JavaScript", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "TypeScript", "importance": "important", "weight": 0.65, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "HTML", "importance": "important", "weight": 0.6, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "CSS", "importance": "important", "weight": 0.6, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Next.js", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Utrecht", "Amsterdam"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "Digital Agency", "Information Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.2, "location": 0.15, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  }
+]

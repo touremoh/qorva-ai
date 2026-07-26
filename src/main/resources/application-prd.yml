@@ -111,5 +111,5 @@ qorva:
     enabled: true
     bucket: ${AWS_S3_BUCKET_NAME}
     prefix: demo-seed
-    version: v1
+    version: v2
     fallback-language: en

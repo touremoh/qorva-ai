@@ -1,0 +1,159 @@
+[
+  {
+    "title": "Senior Backend Engineer (Java/Spring)",
+    "description": "Nimbus Ledger, a London-based fintech scaling its payments platform, is hiring a Senior Backend Engineer to own the services that move money for our UK and Irish customers.\n\nYou will design, build, and operate high-throughput microservices in Java 21 and Spring Boot, backed by PostgreSQL and event streaming with Kafka. Day to day you will lead the technical design of new payment flows, harden reliability and observability, and mentor two mid-level engineers through code review and pairing.\n\nWe expect strong fundamentals in distributed systems, transactional correctness, and API design (REST and event-driven). Our stack runs on AWS behind Kubernetes; comfort reasoning about idempotency, retries, and eventual consistency is essential.\n\nRequired: 6+ years building production JVM services, deep Spring Boot and Spring Data experience, solid SQL, and a track record shipping resilient services at scale. Nice-to-have: Kafka, Kubernetes, and experience in regulated financial environments.\n\nThis is a hybrid role based in London (2 days per week in office) open to candidates across the UK and Ireland. We offer a strong salary band, equity, and a generous learning budget.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Java", "importance": "mandatory", "weight": 0.3, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Spring Boot", "importance": "mandatory", "weight": 0.25, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "PostgreSQL", "importance": "important", "weight": 0.15, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Kafka", "importance": "important", "weight": 0.12, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Kubernetes", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["London", "Dublin", "Manchester", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Fintech", "Financial Services", "Payments"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Data Engineer (Python/Airflow)",
+    "description": "Meridian Health Analytics, a Dublin-headquartered healthcare data company, is looking for a Data Engineer to build the pipelines that power clinical and operational reporting for hospitals across Ireland and the United Kingdom.\n\nYou will design and maintain batch and streaming pipelines in Python, orchestrate workflows with Apache Airflow, and model curated datasets in our Snowflake warehouse. You will partner with analysts and data scientists to turn messy source systems into trustworthy, well-documented tables, and you will own data quality checks and lineage.\n\nWe care about clean, tested code and pragmatic engineering. Expect to write SQL every day, containerise jobs with Docker, and deploy on AWS.\n\nRequired: 3-5 years in data engineering, strong Python and SQL, hands-on Airflow, and experience with a cloud data warehouse. Nice-to-have: dbt, Spark, and exposure to healthcare or other regulated data.\n\nThis is a mid-level position, fully remote within Ireland and the UK with optional access to our Dublin office. We invest heavily in mentorship and give engineers real ownership of the platform.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Python", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Apache Airflow", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Snowflake", "importance": "important", "weight": 0.12, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "dbt", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Docker", "importance": "nice_to_have", "weight": 0.04, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Dublin", "London", "Belfast", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Healthcare", "Health Tech", "Data Analytics"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "DevOps / Site Reliability Engineer",
+    "description": "Halcyon Cloud, a fast-growing SaaS company with engineering hubs in Manchester and Austin, is hiring a DevOps / Site Reliability Engineer to keep our multi-tenant platform fast, secure, and always on.\n\nYou will own our Kubernetes clusters on AWS, manage infrastructure as code with Terraform, and continuously improve CI/CD pipelines. You will define SLOs, build observability with Prometheus and Grafana, and lead incident response and blameless post-mortems. A big part of the role is reducing toil through automation and helping product teams ship safely.\n\nRequired: 4+ years in DevOps or SRE, production Kubernetes, strong Terraform, solid Linux and networking fundamentals, and scripting in Python or Bash. Nice-to-have: AWS certifications, service mesh experience, and security hardening.\n\nThis is a mid-to-senior role open to candidates across the United Kingdom and the United States, remote-first with quarterly team gatherings. You will collaborate closely with product engineers to bake reliability into new features from the start, own our disaster-recovery strategy, and champion a strong platform-security posture. We on-call fairly, compensate it well, protect focus time, and give every engineer a meaningful voice in how the platform evolves.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Kubernetes", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Terraform", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Linux", "importance": "important", "weight": 0.12, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Python", "importance": "important", "weight": 0.08, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Prometheus", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "CI/CD", "importance": "nice_to_have", "weight": 0.03, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 4,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Manchester", "London", "Austin", "New York", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["SaaS", "Cloud Computing", "Software"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Technical Product Manager",
+    "description": "Kestrel Commerce, a London e-commerce technology company serving retailers across the UK and US, is hiring a Technical Product Manager to own our merchant-facing API and integrations platform.\n\nYou will define the roadmap for developer-facing products, write clear specs, and work shoulder to shoulder with engineering to ship. You will translate merchant and partner needs into prioritised, measurable outcomes, run discovery, and use product analytics to decide what to build next. Because the platform is deeply technical, you will reason about API design, webhooks, rate limits, and data contracts, and you will represent those trade-offs to both engineers and commercial stakeholders.\n\nRequired: 3-5 years in product management for a technical or platform product, comfort reading API docs and working with engineers, strong analytical skills with SQL or a BI tool, and excellent written communication. Nice-to-have: prior software engineering background, experience with developer platforms, and A/B testing.\n\nThis is a mid-level, hybrid role based in London (3 days in office) with occasional travel. We give PMs genuine ownership and a seat at the strategy table.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Management", "importance": "mandatory", "weight": 0.3, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "API Design", "importance": "important", "weight": 0.18, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "important", "weight": 0.14, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Agile", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "A/B Testing", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["London", "Bristol", "Remote"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["E-commerce", "Retail Technology", "SaaS"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.4, "experience": 0.3, "location": 0.15, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Junior Full-Stack Engineer (React/Node.js)",
+    "description": "Larkfield Labs, an early-stage product studio in Edinburgh, is hiring a Junior Full-Stack Engineer to help build web applications for our clients and our own products.\n\nThis is a role for someone early in their career who loves shipping. You will work across the stack building React front-ends in TypeScript and Node.js APIs, backed by PostgreSQL. You will pick up code review feedback quickly, write tests, and pair regularly with senior engineers who will invest in your growth. We deploy to AWS and expect you to become comfortable with Git-based workflows and modern CI.\n\nRequired: 0-2 years of professional or project experience, working knowledge of JavaScript/TypeScript, React, and Node.js, basic SQL, and genuine enthusiasm for learning. A public portfolio, internships, or bootcamp projects all count. Nice-to-have: exposure to AWS, Docker, or testing frameworks.\n\nThis is a junior, hybrid role based in Edinburgh (2 days in office), open to candidates across the United Kingdom. We offer structured mentorship, a clear growth path, and a friendly, low-ego team.",
+    "scoringRules": {
+      "skills": [
+        { "name": "JavaScript", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "React", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Node.js", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "TypeScript", "importance": "important", "weight": 0.14, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "important", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Git", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Edinburgh", "Glasgow", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "Web Development", "Startups"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.2, "location": 0.15, "industry": 0.2 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

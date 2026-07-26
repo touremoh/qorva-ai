@@ -1,0 +1,157 @@
+[
+  {
+    "title": "Senior Account Executive (SaaS)",
+    "description": "Brightwave Cloud, een B2B SaaS-bedrijf in Amsterdam dat workflow-automatiseringssoftware verkoopt aan mid-market en enterprise klanten, zoekt een Senior Account Executive die verantwoordelijk wordt voor de new-business omzet in de Benelux.\n\nJe beheert de volledige salescyclus: prospecting binnen target accounts, het voeren van discovery-gesprekken, het opbouwen van een business case met economic buyers, het onderhandelen over commerciële voorwaarden en het sluiten van meerjarige contracten. Je draagt een quota van ongeveer 900k aan nieuwe ARR en beheert een portefeuille van waardevolle logo's binnen financiële dienstverlening en retail.\n\nOnze go-to-market draait op Salesforce en een moderne outbound stack, dus gedisciplineerde pipeline-hygiëne, betrouwbare forecasting en MEDDIC-achtige kwalificatie zijn essentieel. Je werkt nauw samen met Sales Engineering en Marketing aan account-based plays.\n\nVereist: 5+ jaar ervaring met het sluiten van net-new B2B SaaS-deals, een consistent trackrecord van het halen of overtreffen van je quota, sterke Salesforce-discipline en overtuigende value-based onderhandeling met senior stakeholders. Pré: MEDDIC- of Challenger-training, ervaring met Outreach of Salesloft, en verkopen aan gereguleerde sectoren.\n\nDit is een senior, hybride functie met standplaats Amsterdam (2 dagen per week op kantoor), open voor kandidaten in Nederland en Vlaanderen. Wij bieden een competitief basissalaris, ongelimiteerde commissie, aandelenopties en een duidelijk groeipad naar Strategic AE.",
+    "scoringRules": {
+      "skills": [
+        { "name": "B2B Sales", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Salesforce", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Negotiation", "importance": "important", "weight": 0.16, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Pipeline Management", "importance": "important", "weight": 0.14, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "MEDDIC", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Outreach", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 5,
+        "minRelevantYears": 4,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Amsterdam", "Rotterdam", "Antwerpen", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["SaaS", "B2B Technology", "Software"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Performance Marketing Manager",
+    "description": "Loomly Goods, een direct-to-consumer e-commercemerk met hoofdkantoor in Rotterdam, zoekt een Performance Marketing Manager die verantwoordelijk wordt voor paid acquisition in de Benelux en Duitsland.\n\nJe plant en beheert ons paid media-budget over Google Ads, Meta Ads en opkomende kanalen, en bent eigenaar van de doelstellingen voor ROAS, CAC en blended payback. Dagelijks bouw en optimaliseer je campagnes, voer je creatieve tests en audience-tests uit, beheer je feed-based shoppingcampagnes en rapporteer je prestaties in GA4 en Looker Studio. Je werkt samen met het creatieve team aan ad-productie met hoog tempo en met het data-team aan attributie en incrementality.\n\nWe zoeken een operator die zich net zo thuis voelt in een spreadsheet als in een advertentie-account, en die budget kan omzetten in voorspelbare, winstgevende groei.\n\nVereist: 3-5 jaar ervaring met het beheren van paid acquisition-budgetten in-house of bij een bureau, hands-on expertise in Google Ads en Meta Ads, sterke GA4- en analytische vaardigheden, en een test-and-learn mentaliteit. Pré: TikTok Ads, SQL en ervaring met DTC of subscription-modellen.\n\nDit is een medior, remote-first functie open voor kandidaten in Nederland en Vlaanderen, met optionele toegang tot ons kantoor in Rotterdam. We investeren in tooling, beschermen testbudget en geven marketeers echt eigenaarschap over de channel-P&L.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Google Ads", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Meta Ads", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GA4", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Performance Marketing", "importance": "important", "weight": 0.16, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SEM", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Rotterdam", "Amsterdam", "Gent", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["E-commerce", "Consumer Goods", "Retail"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Brand & Content Lead",
+    "description": "Meridian Studio, een consumentenmediabedrijf in Utrecht, zoekt een Brand & Content Lead die onze merkstem vormgeeft en ons publiek laat groeien over owned, earned en social kanalen in Nederland en België.\n\nJe wordt eigenaar van de merkstrategie en de redactionele kalender van begin tot eind: positionering, messaging, tone of voice en de contentmachine die dit tot leven brengt over long-form, video, nieuwsbrief en social. Je geeft leiding aan een klein team van schrijvers en een designer, briefte externe creators en werkt samen met performance marketing zodat merk en vraag dezelfde kant op trekken. Daarnaast ben je verantwoordelijk voor organische social en SEO-content, waarbij je search- en social-inzichten gebruikt om te bepalen wat je vervolgens publiceert.\n\nWe zoeken een verhalenverteller met de operationele discipline om een publicatieoperatie te runnen en de impact ervan op merkbekendheid en pipeline te meten.\n\nVereist: 6+ jaar ervaring in brand, content of communicatie, een portfolio van campagnes die je zelf hebt vormgegeven, ervaring met het aansturen van schrijvers of bureaus, en een sterke beheersing van SEO en content-analytics. Pré: videoproductie, PR en ervaring in de consumenten- of mediasector.\n\nDit is een senior, hybride functie met standplaats Utrecht (3 dagen op kantoor) met af en toe reizen naar Antwerpen. We geven het brand-team een echt mandaat en een plek in de bedrijfsstrategie.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Brand Strategy", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Content Marketing", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "SEO", "importance": "important", "weight": 0.18, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Copywriting", "importance": "important", "weight": 0.14, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Social Media Marketing", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Public Relations", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Utrecht", "Antwerpen", "Remote"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Media", "Consumer Goods", "Entertainment"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Product Marketing Manager",
+    "description": "Kestrel Analytics, een B2B technologiebedrijf in Eindhoven en Leuven dat product-analytics software bouwt, zoekt een Product Marketing Manager die eigenaar wordt van positionering, launches en go-to-market voor ons platform.\n\nJe ontwikkelt messaging en positionering die een technisch product makkelijk te begrijpen en onmogelijk te negeren maken, bent verantwoordelijk voor competitive intelligence en leidt cross-functionele productlaunches van beta tot general availability. Je bouwt de sales-enablement toolkit (decks, battlecards, demo-narratieven), definieert doelsegmenten en persona's, en werkt samen met demand generation aan campagnes die pipeline in beweging brengen. Je gebruikt product analytics en win/loss-inzichten om het verhaal continu aan te scherpen.\n\nDit is een rol voor iemand die zich comfortabel voelt tussen product, sales en marketing en een roadmap kan omzetten in een verhaal waar zowel klanten als reps van houden.\n\nVereist: 3-5 jaar ervaring in product marketing voor een B2B software- of SaaS-product, bewezen eigenaarschap van launches, uitstekende schriftelijke messaging en sterke GTM Strategy-vaardigheden. Pré: HubSpot, product-analytics tooling en een achtergrond in engineering of product.\n\nDit is een medior, hybride functie met standplaats Eindhoven (2 dagen op kantoor), open voor kandidaten in Nederland en Vlaanderen. We geven PMM's een centrale plek in hoe het product de markt bereikt.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Marketing", "importance": "mandatory", "weight": 0.3, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GTM Strategy", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Positioning", "importance": "important", "weight": 0.18, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "important", "weight": 0.14, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Sales Enablement", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "HubSpot", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Eindhoven", "Amsterdam", "Leuven", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["B2B Technology", "SaaS", "Software"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Junior Demand Generation Specialist",
+    "description": "Larkspur Software, een B2B SaaS-bedrijf in een vroege fase in Den Haag, zoekt een Junior Demand Generation Specialist die helpt de marketingmachine te bouwen die onze salespipeline vult.\n\nDit is een rol voor iemand aan het begin van zijn of haar marketingcarrière die van data houdt en moderne B2B demand gen vanaf de basis wil leren. Je helpt bij het uitvoeren van multichannel-campagnes over e-mail, paid en webinars, bouwt en onderhoudt nurture-flows in HubSpot, houdt onze leaddata schoon en rapporteert over funnelmetrics van klik tot closed-won. Je voert A/B-tests uit op landingspagina's en e-mails, ondersteunt SEO en contentdistributie, en werkt nauw samen met sales aan leadopvolging en overdracht.\n\nWe investeren in jouw groei met mentorship, een duidelijk inwerktraject en blootstelling aan de volledige marketingstack.\n\nVereist: 0-2 jaar marketingervaring (inclusief stages, werkstudentschappen of sterk projectwerk), bekendheid met HubSpot of een vergelijkbaar CRM, solide analytische vaardigheden in spreadsheets en oprechte nieuwsgierigheid naar B2B-groei. Pré: Google Ads, GA4 en basis-copywriting voor e-mail of content.\n\nDit is een junior, hybride functie met standplaats Den Haag (2 dagen op kantoor), open voor kandidaten in heel Nederland. We bieden gestructureerde mentorship, een vriendelijk team zonder ego's en een echt groeipad naar demand generation.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Demand Generation", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "HubSpot", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Email Marketing", "importance": "important", "weight": 0.18, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Marketing Analytics", "importance": "important", "weight": 0.14, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Google Ads", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "GA4", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Den Haag", "Rotterdam", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["SaaS", "B2B Technology", "Software"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.2, "location": 0.15, "industry": 0.2 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

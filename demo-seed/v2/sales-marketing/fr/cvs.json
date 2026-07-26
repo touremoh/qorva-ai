@@ -1,0 +1,6535 @@
+[
+  {
+    "candidateProfileSummary": "Account Executive B2B SaaS avec plus de dix ans d'expérience dans la vente de solutions logicielles aux entreprises mid-market et grands comptes. Régulièrement classée dans le top 10% de l'équipe commerciale avec une atteinte de quota supérieure à 115% sur plusieurs exercices. Spécialiste des cycles de vente complexes multi-interlocuteurs et de la méthodologie MEDDIC.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Camille Moreau",
+      "role": "Senior Account Executive",
+      "summary": "Closeuse SaaS entreprise, rigoureuse sur la qualification MEDDIC, qui accompagne les nouveaux commerciaux sur la découverte et la négociation.",
+      "contact": {
+        "phone": "+33 6 12 45 78 90",
+        "email": "camille.moreau@example.com",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "de Rivoli",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75004",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/camille-moreau-sales"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Déjeuners en semaine",
+          "Fin de journée"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Exécution commerciale",
+        "skills": [
+          "Vente entreprise",
+          "Vente de solutions",
+          "MEDDIC",
+          "Négociation",
+          "Closing"
+        ]
+      },
+      {
+        "category": "CRM & Outils",
+        "skills": [
+          "Salesforce",
+          "Outreach",
+          "Gong",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "category": "Pipeline",
+        "skills": [
+          "Gestion de pipeline",
+          "Prévisions",
+          "Planification de territoire",
+          "Atteinte de quota"
+        ]
+      },
+      {
+        "category": "Commercial",
+        "skills": [
+          "Vente à la valeur",
+          "Négociation de contrats",
+          "Renouvellements",
+          "Upsell"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Vente B2B entreprise",
+        "Gestion de pipeline",
+        "Vente consultative"
+      ],
+      "keyResponsibilities": [
+        "Piloter un territoire mid-market et grands comptes de bout en bout",
+        "Mener des cycles de vente complets de la découverte au closing",
+        "Prévoir avec précision et maintenir l'hygiène du pipeline dans Salesforce"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Cloudsphere SAS",
+        "website": "https://cloudsphere.example.com",
+        "location": "Paris, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Senior Account Executive",
+        "activities": [
+          {
+            "project": "Nouveaux comptes entreprise",
+            "tasks": [
+              "Gestion d'un quota annuel de 2,6 M€ sur les grands comptes français",
+              "Pilotage de deals multi-interlocuteurs (6 à 9 parties prenantes) avec MEDDIC",
+              "Collaboration avec l'avant-vente et le customer success sur les stratégies land-and-expand"
+            ]
+          }
+        ],
+        "achievements": [
+          "Atteinte de 118% du quota en 2024 et 113% en 2023",
+          "Signature du plus gros nouveau logo de la région à 460 K€ d'ACV"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Outreach",
+          "Gong",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "company": "Vantia Software",
+        "website": "https://vantia.example.com",
+        "location": "Lyon, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Account Executive",
+        "activities": [
+          {
+            "project": "Acquisition mid-market",
+            "tasks": [
+              "Closing de deals SaaS entre 20 K€ et 120 K€ d'ACV",
+              "Construction et qualification de pipeline en outbound et inbound",
+              "Négociation de contrats annuels et pluriannuels"
+            ]
+          }
+        ],
+        "achievements": [
+          "Promue Senior AE en moins de 30 mois",
+          "Moyenne de 106% d'atteinte de quota"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "HubSpot CRM",
+          "Outreach"
+        ]
+      },
+      {
+        "company": "Mediapulse",
+        "website": "https://mediapulse.example.com",
+        "location": "Lyon, France",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Sales Development Representative",
+        "activities": [
+          {
+            "project": "Prospection outbound",
+            "tasks": [
+              "Prise de rendez-vous qualifiés pour l'équipe terrain",
+              "Séquences d'emails et d'appels à grande échelle",
+              "Maintien de la qualité des données CRM"
+            ]
+          }
+        ],
+        "achievements": [
+          "Dépassement régulier des objectifs de rendez-vous"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Outreach"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "EM Lyon Business School",
+        "degree": "Master en Management",
+        "fieldOfStudy": "Marketing et Vente",
+        "achievements": [
+          "Mention Bien",
+          "Majeure Entrepreneuriat"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "MEDDIC Fundamentals",
+        "institution": "MEDDIC Academy",
+        "year": "@Y-0@",
+        "description": "Méthodologie de qualification et de prévision pour la vente B2B complexe."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "Outreach",
+        "Gong",
+        "LinkedIn Sales Navigator",
+        "HubSpot CRM"
+      ],
+      "softSkills": [
+        "Sens de la relation",
+        "Résilience",
+        "Écoute active",
+        "Négociation"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Espagnol",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Playbook land-and-expand entreprise",
+        "description": "Construction d'un playbook de multi-threading reproductible adopté par toute l'équipe grands comptes.",
+        "date": "2023-04",
+        "impact": "Hausse de 22% de la taille moyenne des deals de la région."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Cyclisme sur route",
+      "Cuisine",
+      "Randonnée"
+    ],
+    "references": [
+      {
+        "name": "Julien Faure",
+        "position": "Directeur Commercial Régional",
+        "company": "Cloudsphere SAS",
+        "contact": {
+          "phone": "+33 6 22 33 44 55",
+          "email": "julien.faure@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 82000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Enterprise SaaS Sales",
+      "secondaryClusters": [
+        "B2B Account Management",
+        "New Business Development"
+      ],
+      "functionalExpertise": [
+        "Enterprise selling",
+        "Pipeline management",
+        "Forecasting"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Exceeded quota multiple years",
+        "Grew average deal size"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "High-growth SaaS",
+        "Scale-up"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Quota-carrying enterprise SaaS closing with MEDDIC discipline and top-decile attainment places this candidate firmly in senior enterprise sales."
+    },
+    "searchIndex": {
+      "roles": [
+        "Account Executive",
+        "Enterprise Account Executive",
+        "Sales Executive"
+      ],
+      "skills": [
+        "Salesforce",
+        "Outreach",
+        "Gong",
+        "MEDDIC",
+        "Pipeline management",
+        "Negotiation"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B Technology"
+      ]
+    },
+    "tags": [
+      "sales",
+      "account-executive",
+      "saas",
+      "senior",
+      "quota-carrying"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Business Development Manager senior spécialisé dans l'ouverture de nouveaux marchés B2B et le développement de partenariats stratégiques. Treize ans d'expérience à structurer des équipes outbound et à générer du pipeline pour des éditeurs SaaS et des sociétés de services technologiques. Excellent à transformer des marchés vierges en portefeuilles clients rentables.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Thomas Lefèvre",
+      "role": "Business Development Manager",
+      "summary": "Développeur commercial orienté résultats, expert de l'outbound et de l'ouverture de nouveaux segments de marché.",
+      "contact": {
+        "phone": "+33 6 87 65 43 21",
+        "email": "thomas.lefevre@example.com",
+        "address": {
+          "streetNumber": "24",
+          "streetName": "de la République",
+          "streetType": "Cours",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69002",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/thomas-lefevre-bizdev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Matinées en semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Business Development",
+        "skills": [
+          "Ouverture de marché",
+          "Partenariats stratégiques",
+          "Prospection outbound",
+          "Génération de pipeline"
+        ]
+      },
+      {
+        "category": "CRM & Outils",
+        "skills": [
+          "Salesforce",
+          "HubSpot CRM",
+          "Outreach",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "category": "Négociation",
+        "skills": [
+          "Négociation de contrats",
+          "Cadrage de deals",
+          "Gestion des parties prenantes"
+        ]
+      },
+      {
+        "category": "Stratégie",
+        "skills": [
+          "Go-to-market",
+          "Segmentation",
+          "Analyse concurrentielle"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Développement commercial B2B",
+        "Partenariats",
+        "Ouverture de nouveaux marchés"
+      ],
+      "keyResponsibilities": [
+        "Identifier et ouvrir de nouveaux segments de marché",
+        "Structurer et animer une équipe de SDR",
+        "Construire des partenariats revendeurs et technologiques"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Nexthorizon",
+        "website": "https://nexthorizon.example.com",
+        "location": "Lyon, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Business Development Manager",
+        "activities": [
+          {
+            "project": "Expansion Europe du Sud",
+            "tasks": [
+              "Ouverture des marchés espagnol et italien pour une plateforme SaaS RH",
+              "Recrutement et encadrement d'une équipe de 4 SDR",
+              "Signature de 6 partenariats revendeurs générant 1,8 M€ de pipeline"
+            ]
+          }
+        ],
+        "achievements": [
+          "Génération de 3,2 M€ de nouveau pipeline en 2024",
+          "Réduction du cycle de vente moyen de 18%"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Outreach",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "company": "Groupe Alteva",
+        "website": "https://alteva.example.com",
+        "location": "Grenoble, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Business Development Representative Senior",
+        "activities": [
+          {
+            "project": "Acquisition B2B",
+            "tasks": [
+              "Construction de pipeline outbound sur le segment industriel",
+              "Qualification et transfert des opportunités à l'équipe AE",
+              "Mise en place des premières séquences multicanales"
+            ]
+          }
+        ],
+        "achievements": [
+          "Atteinte de 130% de l'objectif de génération de pipeline",
+          "Meilleur BDR de l'année 2017"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot CRM",
+          "Outreach"
+        ]
+      },
+      {
+        "company": "Datalink Services",
+        "website": "https://datalink.example.com",
+        "location": "Lyon, France",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Commercial Junior",
+        "activities": [
+          {
+            "project": "Prospection PME",
+            "tasks": [
+              "Prospection téléphonique auprès des PME régionales",
+              "Prise de rendez-vous et présentation de l'offre",
+              "Suivi et mise à jour du CRM"
+            ]
+          }
+        ],
+        "achievements": [
+          "Dépassement des objectifs de prise de rendez-vous dès la première année"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IAE Lyon - Université Jean Moulin",
+        "degree": "Master 2",
+        "fieldOfStudy": "Développement Commercial",
+        "achievements": [
+          "Mémoire sur l'internationalisation des PME"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "HubSpot Sales Software Certification",
+        "institution": "HubSpot Academy",
+        "year": "@Y-0@",
+        "description": "Maîtrise du CRM HubSpot et des processus de vente inbound."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "HubSpot CRM",
+        "Outreach",
+        "LinkedIn Sales Navigator"
+      ],
+      "softSkills": [
+        "Ténacité",
+        "Leadership",
+        "Sens du réseau",
+        "Adaptabilité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Italien",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Lancement du programme partenaires",
+        "description": "Conception et déploiement d'un programme partenaires revendeurs de zéro.",
+        "date": "2022-06",
+        "impact": "Contribution de 28% du nouveau pipeline dès la première année."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Rugby",
+      "Voyages",
+      "Œnologie"
+    ],
+    "references": [
+      {
+        "name": "Sophie Girard",
+        "position": "VP Sales",
+        "company": "Nexthorizon",
+        "contact": {
+          "phone": "+33 6 44 55 66 77",
+          "email": "sophie.girard@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 58000,
+      "max": 78000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Business Development",
+      "secondaryClusters": [
+        "Partnerships",
+        "Outbound Sales"
+      ],
+      "functionalExpertise": [
+        "Market development",
+        "Outbound prospecting",
+        "Partnerships"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Opened new markets",
+        "Built partner channel"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "International expansion"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Consistent record of opening new markets and building outbound teams and partner channels indicates a senior business development profile."
+    },
+    "searchIndex": {
+      "roles": [
+        "Business Development Manager",
+        "Business Development Representative",
+        "Sales Development"
+      ],
+      "skills": [
+        "Salesforce",
+        "HubSpot CRM",
+        "Outreach",
+        "Pipeline generation",
+        "Partnerships",
+        "Go-to-market"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B Technology"
+      ]
+    },
+    "tags": [
+      "sales",
+      "business-development",
+      "outbound",
+      "senior",
+      "partnerships"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Key Account Manager expérimentée gérant des portefeuilles grands comptes stratégiques dans les biens de consommation et le B2B. Quinze ans d'expérience à développer le chiffre d'affaires sur des comptes clés, à négocier des accords-cadres annuels et à piloter des plans de compte pluriannuels. Reconnue pour sa capacité à fidéliser et à faire croître des comptes à forts enjeux.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Nathalie Dubois",
+      "role": "Key Account Manager",
+      "summary": "Gestionnaire de grands comptes stratégiques, orientée fidélisation et croissance du revenu par compte.",
+      "contact": {
+        "phone": "+32 475 12 34 56",
+        "email": "nathalie.dubois@example.be",
+        "address": {
+          "streetNumber": "60",
+          "streetName": "Louise",
+          "streetType": "Avenue",
+          "city": "Bruxelles",
+          "state": "Région de Bruxelles-Capitale",
+          "zipCode": "1050",
+          "country": "Belgique"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/nathalie-dubois-kam"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Soirées en semaine"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Gestion de comptes",
+        "skills": [
+          "Grands comptes",
+          "Plans de compte",
+          "Fidélisation",
+          "Croissance du revenu"
+        ]
+      },
+      {
+        "category": "Négociation",
+        "skills": [
+          "Accords-cadres",
+          "Négociation annuelle",
+          "Conditions commerciales"
+        ]
+      },
+      {
+        "category": "CRM & Outils",
+        "skills": [
+          "Salesforce",
+          "SAP",
+          "Power BI"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Encadrement d'équipe",
+          "Coordination transverse",
+          "Pilotage de la performance"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Gestion de grands comptes",
+        "Négociation commerciale",
+        "Développement du revenu"
+      ],
+      "keyResponsibilities": [
+        "Piloter un portefeuille de comptes stratégiques",
+        "Négocier les accords annuels et les conditions commerciales",
+        "Encadrer une équipe de responsables de comptes"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Belfoods Group",
+        "website": "https://belfoods.example.be",
+        "location": "Bruxelles, Belgique",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Key Account Manager",
+        "activities": [
+          {
+            "project": "Comptes grande distribution",
+            "tasks": [
+              "Gestion des comptes clés de la grande distribution belge et luxembourgeoise",
+              "Négociation des accords-cadres annuels représentant 22 M€ de CA",
+              "Encadrement de 3 responsables de comptes régionaux"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance de 14% du CA du portefeuille en 2024",
+          "Renouvellement de 100% des comptes stratégiques"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "SAP",
+          "Power BI"
+        ]
+      },
+      {
+        "company": "Consumia NV",
+        "website": "https://consumia.example.be",
+        "location": "Anvers, Belgique",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Account Manager Senior",
+        "activities": [
+          {
+            "project": "Développement grands comptes",
+            "tasks": [
+              "Développement des comptes retail nationaux",
+              "Mise en place de plans de compte annuels",
+              "Coordination avec le trade marketing sur les promotions"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance à deux chiffres sur trois comptes majeurs",
+          "Promue KAM en 2017"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Salesforce"
+        ]
+      },
+      {
+        "company": "Distrivar",
+        "website": "https://distrivar.example.be",
+        "location": "Gand, Belgique",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Chargée de clientèle",
+        "activities": [
+          {
+            "project": "Suivi clientèle",
+            "tasks": [
+              "Suivi commercial des comptes régionaux",
+              "Traitement des commandes et des litiges",
+              "Reporting hebdomadaire des ventes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration du taux de satisfaction client"
+        ],
+        "toolsAndTechnologies": [
+          "SAP"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Solvay Brussels School",
+        "degree": "Master",
+        "fieldOfStudy": "Commerce et Gestion",
+        "achievements": [
+          "Spécialisation en négociation commerciale"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Haute École Francisco Ferrer",
+        "degree": "Bachelier",
+        "fieldOfStudy": "Marketing",
+        "achievements": [
+          "Stage en distribution"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Strategic Account Management",
+        "institution": "Miller Heiman Group",
+        "year": "@Y-0@",
+        "description": "Méthodologie de gestion stratégique des grands comptes."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "SAP",
+        "Power BI",
+        "Excel"
+      ],
+      "softSkills": [
+        "Diplomatie",
+        "Négociation",
+        "Sens du service",
+        "Leadership"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Néerlandais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Refonte du plan de compte grande distribution",
+        "description": "Mise en place d'un modèle standardisé de plan de compte annuel pour les comptes stratégiques.",
+        "date": "2021-09",
+        "impact": "Amélioration de la visibilité et croissance de 14% du portefeuille."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Cuisine belge",
+      "Jardinage",
+      "Course à pied"
+    ],
+    "references": [
+      {
+        "name": "Marc Vandenberghe",
+        "position": "Directeur des Ventes",
+        "company": "Belfoods Group",
+        "contact": {
+          "phone": "+32 475 98 76 54",
+          "email": "marc.vandenberghe@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 70000,
+      "max": 92000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Key Account Management",
+      "secondaryClusters": [
+        "Consumer Goods Sales",
+        "Retail Account Management"
+      ],
+      "functionalExpertise": [
+        "Strategic account management",
+        "Commercial negotiation",
+        "Revenue growth"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Grew strategic account revenue",
+        "Retained key accounts"
+      ],
+      "industryDomains": [
+        "Consumer goods",
+        "Retail"
+      ],
+      "environmentFit": [
+        "Large enterprise",
+        "FMCG"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Long track record of managing and growing strategic retail accounts while leading a small account team indicates a manager-level key account profile."
+    },
+    "searchIndex": {
+      "roles": [
+        "Key Account Manager",
+        "Account Manager",
+        "Sales Manager"
+      ],
+      "skills": [
+        "Salesforce",
+        "SAP",
+        "Account management",
+        "Contract negotiation",
+        "Power BI"
+      ],
+      "industries": [
+        "Consumer goods",
+        "Retail"
+      ]
+    },
+    "tags": [
+      "sales",
+      "key-account-manager",
+      "consumer-goods",
+      "manager",
+      "retail"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directeur commercial chevronné avec vingt ans d'expérience à structurer et diriger des équipes de vente B2B performantes. A piloté des organisations commerciales de plus de 30 personnes, défini des stratégies go-to-market et dépassé des objectifs de revenu à plusieurs dizaines de millions d'euros. Expert de la construction de processus de vente scalables et du développement des talents commerciaux.",
+    "careerStartYear": 2006,
+    "personalInformation": {
+      "name": "Étienne Klein",
+      "role": "Directeur Commercial",
+      "summary": "Dirigeant commercial qui construit des organisations de vente scalables et développe les talents pour dépasser les objectifs de revenu.",
+      "contact": {
+        "phone": "+352 621 234 567",
+        "email": "etienne.klein@example.lu",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "de la Liberté",
+          "streetType": "Avenue",
+          "city": "Luxembourg",
+          "state": "Luxembourg",
+          "zipCode": "1930",
+          "country": "Luxembourg"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/etienne-klein-sales-director"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Sur rendez-vous"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Direction commerciale",
+        "skills": [
+          "Stratégie commerciale",
+          "Go-to-market",
+          "Structuration d'équipe",
+          "Pilotage du revenu"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Recrutement",
+          "Coaching",
+          "Gestion de la performance",
+          "Organisation commerciale"
+        ]
+      },
+      {
+        "category": "CRM & Outils",
+        "skills": [
+          "Salesforce",
+          "Gong",
+          "Power BI",
+          "Clari"
+        ]
+      },
+      {
+        "category": "Finance commerciale",
+        "skills": [
+          "Prévisions",
+          "Planification de territoire",
+          "Politique de rémunération variable"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Direction commerciale",
+        "Stratégie go-to-market",
+        "Développement des équipes de vente"
+      ],
+      "keyResponsibilities": [
+        "Définir et exécuter la stratégie commerciale",
+        "Structurer et faire grandir l'organisation de vente",
+        "Piloter la prévision et l'atteinte des objectifs de revenu"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Finartis Group",
+        "website": "https://finartis.example.lu",
+        "location": "Luxembourg",
+        "from": "@M-2@",
+        "to": "Present",
+        "position": "Directeur Commercial",
+        "activities": [
+          {
+            "project": "Direction de l'organisation commerciale",
+            "tasks": [
+              "Direction d'une équipe de 32 commerciaux répartis sur le Benelux",
+              "Définition de la stratégie go-to-market et des segments prioritaires",
+              "Refonte du modèle de rémunération variable et du plan de territoires"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance du CA de 45 M€ à 78 M€ en cinq ans",
+          "Réduction du turnover commercial de 25% à 11%"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Clari",
+          "Power BI"
+        ]
+      },
+      {
+        "company": "Novalink SA",
+        "website": "https://novalink.example.lu",
+        "location": "Luxembourg",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Head of Sales",
+        "activities": [
+          {
+            "project": "Structuration de l'équipe de vente",
+            "tasks": [
+              "Construction de l'équipe commerciale de 6 à 18 personnes",
+              "Mise en place des processus de prévision et de reporting",
+              "Ouverture du marché allemand"
+            ]
+          }
+        ],
+        "achievements": [
+          "Doublement du CA en quatre ans",
+          "Mise en place du premier CRM de l'entreprise"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "HubSpot CRM"
+        ]
+      },
+      {
+        "company": "Groupe Sereno",
+        "website": "https://sereno.example.fr",
+        "location": "Metz, France",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Responsable des Ventes Régional",
+        "activities": [
+          {
+            "project": "Développement régional",
+            "tasks": [
+              "Encadrement d'une équipe de 5 commerciaux terrain",
+              "Développement du portefeuille sur le Grand Est",
+              "Négociation des contrats majeurs"
+            ]
+          }
+        ],
+        "achievements": [
+          "Meilleure région du groupe en 2010"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "ICN Business School Nancy",
+        "degree": "Master en Management",
+        "fieldOfStudy": "Marketing et Vente",
+        "achievements": [
+          "Mention Bien"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "Clari",
+        "Gong",
+        "Power BI"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Vision stratégique",
+        "Coaching",
+        "Prise de décision"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Allemand",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Transformation de l'organisation commerciale",
+        "description": "Refonte complète de la structure, des territoires et de la rémunération variable de la force de vente.",
+        "date": "2020-01",
+        "impact": "Croissance du CA de 73% et réduction du turnover de moitié."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voile",
+      "Golf",
+      "Lecture d'essais économiques"
+    ],
+    "references": [
+      {
+        "name": "Isabelle Weber",
+        "position": "Directrice Générale",
+        "company": "Finartis Group",
+        "contact": {
+          "phone": "+352 621 987 654",
+          "email": "isabelle.weber@example.lu"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 105000,
+      "max": 145000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Sales Leadership",
+      "secondaryClusters": [
+        "Go-to-Market Strategy",
+        "Team Building"
+      ],
+      "functionalExpertise": [
+        "Sales strategy",
+        "Team leadership",
+        "Revenue forecasting"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Scaled revenue",
+        "Reduced sales turnover"
+      ],
+      "industryDomains": [
+        "B2B technology",
+        "Financial services"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Large enterprise"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.93,
+      "clusterReasoning": "Two decades leading and scaling sizeable B2B sales organizations with strategy ownership and P&L impact indicate a director-level sales leadership profile."
+    },
+    "searchIndex": {
+      "roles": [
+        "Sales Director",
+        "Head of Sales",
+        "Sales Manager"
+      ],
+      "skills": [
+        "Salesforce",
+        "Clari",
+        "Gong",
+        "Sales strategy",
+        "Forecasting",
+        "Team leadership"
+      ],
+      "industries": [
+        "B2B Technology",
+        "Financial Services"
+      ]
+    },
+    "tags": [
+      "sales",
+      "sales-director",
+      "leadership",
+      "director",
+      "go-to-market"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Sales Development Representative dynamique en début de carrière, spécialisé dans la prospection outbound multicanale pour des éditeurs SaaS B2B. Deux ans d'expérience à générer des rendez-vous qualifiés et à alimenter le pipeline des Account Executives. Curieux, tenace et rapidement à l'aise avec les outils de sales engagement.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Lucas Bernard",
+      "role": "Sales Development Representative",
+      "summary": "SDR outbound énergique, à l'aise avec les séquences multicanales et la qualification d'opportunités.",
+      "contact": {
+        "phone": "+33 6 33 22 11 00",
+        "email": "lucas.bernard@example.com",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "Faidherbe",
+          "streetType": "Rue",
+          "city": "Lille",
+          "state": "Hauts-de-France",
+          "zipCode": "59000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/lucas-bernard-sdr"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Prospection",
+        "skills": [
+          "Prospection outbound",
+          "Séquences multicanales",
+          "Cold calling",
+          "Cold emailing"
+        ]
+      },
+      {
+        "category": "Qualification",
+        "skills": [
+          "Qualification BANT",
+          "Prise de rendez-vous",
+          "Discovery"
+        ]
+      },
+      {
+        "category": "CRM & Outils",
+        "skills": [
+          "HubSpot CRM",
+          "Salesforce",
+          "LinkedIn Sales Navigator",
+          "Lemlist"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Prospection outbound",
+        "Qualification d'opportunités",
+        "Prise de rendez-vous"
+      ],
+      "keyResponsibilities": [
+        "Générer des rendez-vous qualifiés pour les AE",
+        "Exécuter des séquences d'appels et d'emails",
+        "Maintenir la qualité des données CRM"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Saasly",
+        "website": "https://saasly.example.com",
+        "location": "Lille, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Sales Development Representative",
+        "activities": [
+          {
+            "project": "Génération de pipeline outbound",
+            "tasks": [
+              "Prospection de comptes cibles via LinkedIn, email et téléphone",
+              "Qualification des prospects et transfert aux Account Executives",
+              "Test et optimisation des séquences d'emails"
+            ]
+          }
+        ],
+        "achievements": [
+          "Dépassement de l'objectif de rendez-vous qualifiés de 120% sur 2024",
+          "Génération de 480 K€ de pipeline attribué"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot CRM",
+          "Lemlist",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "company": "Groupe Vendôme",
+        "website": "https://vendome.example.com",
+        "location": "Lille, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Business Developer Junior",
+        "activities": [
+          {
+            "project": "Prospection PME",
+            "tasks": [
+              "Appels sortants auprès des PME de la région",
+              "Prise de rendez-vous pour l'équipe commerciale",
+              "Mise à jour du CRM"
+            ]
+          }
+        ],
+        "achievements": [
+          "Meilleur volume d'appels de l'équipe deux mois consécutifs"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "SKEMA Business School",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Commerce et Marketing",
+        "achievements": [
+          "Stage de fin d'études en développement commercial"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "HubSpot Sales Software Certification",
+        "institution": "HubSpot Academy",
+        "year": "@Y-0@",
+        "description": "Certification sur l'usage du CRM et des outils de vente HubSpot."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "HubSpot CRM",
+        "Salesforce",
+        "LinkedIn Sales Navigator",
+        "Lemlist"
+      ],
+      "softSkills": [
+        "Ténacité",
+        "Curiosité",
+        "Écoute",
+        "Esprit d'équipe"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Optimisation des séquences outbound",
+        "description": "Refonte des séquences d'emails et test A/B des objets de messages.",
+        "date": "2024-05",
+        "impact": "Amélioration du taux de réponse de 30%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Football",
+      "Jeux vidéo",
+      "Podcasts business"
+    ],
+    "references": [
+      {
+        "name": "Amélie Rousseau",
+        "position": "Team Lead SDR",
+        "company": "Saasly",
+        "contact": {
+          "phone": "+33 6 55 44 33 22",
+          "email": "amelie.rousseau@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 32000,
+      "max": 42000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Sales Development",
+      "secondaryClusters": [
+        "Outbound Prospecting"
+      ],
+      "functionalExpertise": [
+        "Outbound prospecting",
+        "Lead qualification"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Exceeded meeting targets",
+        "Generated pipeline"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Start-up",
+        "Scale-up"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Two years of outbound prospecting with strong meeting and pipeline generation but no ownership of full-cycle deals places this candidate at junior sales development level."
+    },
+    "searchIndex": {
+      "roles": [
+        "Sales Development Representative",
+        "Business Development Representative",
+        "SDR"
+      ],
+      "skills": [
+        "HubSpot CRM",
+        "Salesforce",
+        "Outbound prospecting",
+        "Cold calling",
+        "LinkedIn Sales Navigator"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B Technology"
+      ]
+    },
+    "tags": [
+      "sales",
+      "sdr",
+      "outbound",
+      "junior",
+      "saas"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Spécialiste SEO/SEM senior avec onze ans d'expérience à piloter l'acquisition organique et payante pour des sites e-commerce et des marques B2B. Expert du référencement technique, de la stratégie de contenu et de la gestion de campagnes Google Ads à fort budget. Passionné par l'analyse de données et l'optimisation du ROI d'acquisition.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Antoine Petit",
+      "role": "Spécialiste SEO/SEM Senior",
+      "summary": "Expert acquisition organique et payante, orienté données et ROI, à l'aise avec le SEO technique et Google Ads.",
+      "contact": {
+        "phone": "+33 6 78 90 12 34",
+        "email": "antoine.petit@example.com",
+        "address": {
+          "streetNumber": "22",
+          "streetName": "Sainte-Catherine",
+          "streetType": "Rue",
+          "city": "Bordeaux",
+          "state": "Nouvelle-Aquitaine",
+          "zipCode": "33000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/antoine-petit-seo",
+          "website": "https://antoinepetit-seo.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "freelance"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "SEO",
+        "skills": [
+          "SEO technique",
+          "Netlinking",
+          "Recherche de mots-clés",
+          "Optimisation on-page"
+        ]
+      },
+      {
+        "category": "SEM",
+        "skills": [
+          "Google Ads",
+          "Microsoft Ads",
+          "Enchères automatiques",
+          "Gestion de budget"
+        ]
+      },
+      {
+        "category": "Analytics",
+        "skills": [
+          "GA4",
+          "Google Search Console",
+          "Google Tag Manager",
+          "Looker Studio"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Semrush",
+          "Ahrefs",
+          "Screaming Frog"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Référencement naturel",
+        "Référencement payant",
+        "Analyse d'audience"
+      ],
+      "keyResponsibilities": [
+        "Piloter la stratégie SEO technique et éditoriale",
+        "Gérer les campagnes Google Ads et optimiser le ROAS",
+        "Analyser la performance d'acquisition et reporter aux équipes"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Maison Vélour",
+        "website": "https://maisonvelour.example.com",
+        "location": "Bordeaux, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Spécialiste SEO/SEM Senior",
+        "activities": [
+          {
+            "project": "Acquisition e-commerce",
+            "tasks": [
+              "Pilotage de la stratégie SEO d'un site e-commerce de 250 000 visites/mois",
+              "Gestion d'un budget Google Ads de 80 K€/mois avec optimisation du ROAS",
+              "Mise en place du suivi GA4 et des tableaux de bord Looker Studio"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance du trafic organique de 65% en deux ans",
+          "Amélioration du ROAS des campagnes payantes de 3,2 à 4,8"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "GA4",
+          "Semrush",
+          "Screaming Frog"
+        ]
+      },
+      {
+        "company": "Digitalink Agence",
+        "website": "https://digitalink.example.com",
+        "location": "Toulouse, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Consultant SEO/SEA",
+        "activities": [
+          {
+            "project": "Portefeuille clients agence",
+            "tasks": [
+              "Gestion du SEO et du SEA de 8 comptes clients",
+              "Audits techniques et recommandations de netlinking",
+              "Reporting mensuel de performance"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration moyenne du trafic organique de 40% sur les comptes gérés"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "Ahrefs",
+          "Google Analytics"
+        ]
+      },
+      {
+        "company": "Webqualia",
+        "website": "https://webqualia.example.com",
+        "location": "Toulouse, France",
+        "from": "@M-100@",
+        "to": "@M-70@",
+        "position": "Chargé de référencement Junior",
+        "activities": [
+          {
+            "project": "Optimisation on-page",
+            "tasks": [
+              "Optimisation on-page et rédaction de balises",
+              "Suivi des positions et reporting",
+              "Recherche de mots-clés"
+            ]
+          }
+        ],
+        "achievements": [
+          "Progression des positions sur les mots-clés stratégiques"
+        ],
+        "toolsAndTechnologies": [
+          "Semrush",
+          "Google Search Console"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université Bordeaux Montaigne",
+        "degree": "Master",
+        "fieldOfStudy": "Communication et Marketing Digital",
+        "achievements": [
+          "Mémoire sur le référencement e-commerce"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Google Ads Search Certification",
+        "institution": "Google",
+        "year": "@Y-2@",
+        "description": "Certification officielle sur la gestion des campagnes Google Ads Search."
+      },
+      {
+        "title": "GA4 Certification",
+        "institution": "Google",
+        "year": "@Y-2@",
+        "description": "Certification sur l'analyse d'audience avec Google Analytics 4."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Google Ads",
+        "GA4",
+        "Google Tag Manager",
+        "Semrush",
+        "Ahrefs",
+        "Screaming Frog",
+        "Looker Studio"
+      ],
+      "softSkills": [
+        "Rigueur analytique",
+        "Curiosité",
+        "Autonomie",
+        "Pédagogie"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Refonte de l'architecture SEO e-commerce",
+        "description": "Restructuration du maillage interne et des catégories d'un grand site e-commerce.",
+        "date": "2022-11",
+        "impact": "Hausse de 65% du trafic organique en 18 mois."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Photographie",
+      "Randonnée",
+      "Veille technologique"
+    ],
+    "references": [
+      {
+        "name": "Claire Lemoine",
+        "position": "Directrice Marketing",
+        "company": "Maison Vélour",
+        "contact": {
+          "phone": "+33 6 66 77 88 99",
+          "email": "claire.lemoine@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Search Marketing",
+      "secondaryClusters": [
+        "Performance Marketing",
+        "E-commerce Acquisition"
+      ],
+      "functionalExpertise": [
+        "SEO",
+        "SEM",
+        "Web analytics"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Grew organic traffic",
+        "Improved ROAS"
+      ],
+      "industryDomains": [
+        "E-commerce",
+        "Agency"
+      ],
+      "environmentFit": [
+        "E-commerce",
+        "Digital agency"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Deep hands-on expertise across SEO and paid search with measurable traffic and ROAS gains defines a senior search marketing specialist."
+    },
+    "searchIndex": {
+      "roles": [
+        "SEO Specialist",
+        "SEM Specialist",
+        "Search Marketing Manager"
+      ],
+      "skills": [
+        "Google Ads",
+        "GA4",
+        "Semrush",
+        "Ahrefs",
+        "SEO",
+        "Google Tag Manager"
+      ],
+      "industries": [
+        "E-commerce",
+        "Digital Agency"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "seo",
+      "sem",
+      "performance",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Paid Media Manager senior spécialisée dans la gestion de campagnes payantes multicanales à grande échelle pour des marques D2C et e-commerce. Dix ans d'expérience à piloter des budgets média de plusieurs millions d'euros sur Google Ads, Meta Ads et les plateformes programmatiques. Experte de l'optimisation du CAC et de la mesure d'attribution.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Inès Benali",
+      "role": "Paid Media Manager",
+      "summary": "Gestionnaire de média payant orientée performance, experte de Google Ads, Meta Ads et de l'optimisation du CAC.",
+      "contact": {
+        "phone": "+33 6 21 34 56 78",
+        "email": "ines.benali@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Oberkampf",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75011",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine",
+          "Fin de journée"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Média payant",
+        "skills": [
+          "Google Ads",
+          "Meta Ads",
+          "Programmatique",
+          "Retargeting"
+        ]
+      },
+      {
+        "category": "Performance",
+        "skills": [
+          "Optimisation du CAC",
+          "ROAS",
+          "Gestion de budget",
+          "Enchères"
+        ]
+      },
+      {
+        "category": "Analytics & Attribution",
+        "skills": [
+          "GA4",
+          "Attribution multi-touch",
+          "Looker Studio"
+        ]
+      },
+      {
+        "category": "Créa & Tests",
+        "skills": [
+          "Tests A/B créatifs",
+          "Audiences",
+          "Landing pages"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Média payant",
+        "Marketing à la performance",
+        "Attribution"
+      ],
+      "keyResponsibilities": [
+        "Piloter les campagnes payantes multicanales",
+        "Optimiser le CAC et le ROAS des budgets média",
+        "Mesurer l'attribution et reporter la performance"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Belora Cosmetics",
+        "website": "https://belora.example.com",
+        "location": "Paris, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Paid Media Manager",
+        "activities": [
+          {
+            "project": "Acquisition D2C",
+            "tasks": [
+              "Pilotage d'un budget média de 4,5 M€/an sur Google, Meta et TikTok Ads",
+              "Optimisation du CAC et scaling des campagnes acquisition",
+              "Mise en place du modèle d'attribution multi-touch"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction du CAC de 27% tout en doublant le volume d'acquisition",
+          "Croissance du ROAS blended de 2,4 à 3,6"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "Meta Ads",
+          "GA4",
+          "Looker Studio"
+        ]
+      },
+      {
+        "company": "Agence Pixelis",
+        "website": "https://pixelis.example.com",
+        "location": "Paris, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Traffic Manager Senior",
+        "activities": [
+          {
+            "project": "Comptes e-commerce",
+            "tasks": [
+              "Gestion des campagnes payantes de 6 comptes e-commerce",
+              "Optimisation des enchères et des audiences",
+              "Reporting hebdomadaire de performance"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration moyenne du ROAS de 35% sur le portefeuille"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "Meta Ads",
+          "Google Analytics"
+        ]
+      },
+      {
+        "company": "Shopina",
+        "website": "https://shopina.example.com",
+        "location": "Paris, France",
+        "from": "@M-100@",
+        "to": "@M-70@",
+        "position": "Chargée d'acquisition Junior",
+        "activities": [
+          {
+            "project": "Campagnes acquisition",
+            "tasks": [
+              "Création et suivi de campagnes Google et Facebook Ads",
+              "Analyse des performances et optimisation",
+              "Gestion des flux produits"
+            ]
+          }
+        ],
+        "achievements": [
+          "Progression rapide vers un poste senior"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "Meta Ads"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "CELSA - Sorbonne Université",
+        "degree": "Master",
+        "fieldOfStudy": "Marketing et Communication Digitale",
+        "achievements": [
+          "Spécialisation acquisition digitale"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Meta Certified Media Buying Professional",
+        "institution": "Meta",
+        "year": "@Y-2@",
+        "description": "Certification sur l'achat média et l'optimisation des campagnes Meta."
+      },
+      {
+        "title": "Google Ads Display Certification",
+        "institution": "Google",
+        "year": "@Y-2@",
+        "description": "Certification sur les campagnes Display et vidéo Google Ads."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Google Ads",
+        "Meta Ads",
+        "TikTok Ads",
+        "GA4",
+        "Looker Studio"
+      ],
+      "softSkills": [
+        "Rigueur analytique",
+        "Créativité",
+        "Réactivité",
+        "Sens du détail"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Arabe",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Refonte de la stratégie d'attribution",
+        "description": "Passage d'un modèle last-click à un modèle multi-touch data-driven.",
+        "date": "2023-02",
+        "impact": "Réallocation budgétaire ayant réduit le CAC de 27%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Danse",
+      "Cuisine du monde",
+      "Design graphique"
+    ],
+    "references": [
+      {
+        "name": "Pauline Marchand",
+        "position": "Head of Growth",
+        "company": "Belora Cosmetics",
+        "contact": {
+          "phone": "+33 6 33 44 55 66",
+          "email": "pauline.marchand@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 54000,
+      "max": 72000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Paid Media",
+      "secondaryClusters": [
+        "Performance Marketing",
+        "Growth"
+      ],
+      "functionalExpertise": [
+        "Paid acquisition",
+        "CAC optimization",
+        "Attribution"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced CAC",
+        "Scaled acquisition"
+      ],
+      "industryDomains": [
+        "E-commerce",
+        "Consumer goods"
+      ],
+      "environmentFit": [
+        "D2C",
+        "E-commerce"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Multi-million euro paid budget management with measurable CAC reduction and ROAS growth across channels defines a senior paid media specialist."
+    },
+    "searchIndex": {
+      "roles": [
+        "Paid Media Manager",
+        "Performance Marketing Manager",
+        "Traffic Manager"
+      ],
+      "skills": [
+        "Google Ads",
+        "Meta Ads",
+        "GA4",
+        "TikTok Ads",
+        "Attribution",
+        "ROAS"
+      ],
+      "industries": [
+        "E-commerce",
+        "Consumer Goods"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "paid-media",
+      "performance",
+      "senior",
+      "d2c"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Responsable marketing automation avec quatorze ans d'expérience à concevoir et industrialiser des programmes de lead nurturing et de lifecycle pour des entreprises SaaS B2B. Expert de HubSpot et Marketo, du lead scoring et de l'alignement sales-marketing. Pilote une équipe marketing ops et travaille à l'intersection de la donnée, du contenu et de la technologie.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Guillaume Roy",
+      "role": "Marketing Automation Lead",
+      "summary": "Lead marketing operations, expert HubSpot et Marketo, qui industrialise le nurturing et le lifecycle B2B.",
+      "contact": {
+        "phone": "+33 6 45 67 89 01",
+        "email": "guillaume.roy@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Crébillon",
+          "streetType": "Rue",
+          "city": "Nantes",
+          "state": "Pays de la Loire",
+          "zipCode": "44000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/guillaume-roy-marketingops"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Marketing Automation",
+        "skills": [
+          "HubSpot",
+          "Marketo",
+          "Lead nurturing",
+          "Lead scoring"
+        ]
+      },
+      {
+        "category": "Lifecycle",
+        "skills": [
+          "Email marketing",
+          "Workflows",
+          "Segmentation",
+          "Programmes lifecycle"
+        ]
+      },
+      {
+        "category": "Marketing Ops",
+        "skills": [
+          "Alignement sales-marketing",
+          "Attribution",
+          "Reporting",
+          "Data hygiene"
+        ]
+      },
+      {
+        "category": "Outils & Intégrations",
+        "skills": [
+          "Salesforce",
+          "Zapier",
+          "Google Analytics"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Marketing automation",
+        "Lifecycle marketing",
+        "Marketing operations"
+      ],
+      "keyResponsibilities": [
+        "Concevoir les programmes de nurturing et de lifecycle",
+        "Piloter le lead scoring et l'alignement sales-marketing",
+        "Encadrer l'équipe marketing operations"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Cloudmetrics",
+        "website": "https://cloudmetrics.example.com",
+        "location": "Nantes, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Marketing Automation Lead",
+        "activities": [
+          {
+            "project": "Industrialisation du nurturing",
+            "tasks": [
+              "Conception des programmes de nurturing et de lifecycle sur HubSpot",
+              "Mise en place du lead scoring et des SLA sales-marketing",
+              "Encadrement de 3 spécialistes marketing operations"
+            ]
+          }
+        ],
+        "achievements": [
+          "Augmentation du taux de conversion MQL vers SQL de 22%",
+          "Réduction du délai de traitement des leads de 40%"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot",
+          "Salesforce",
+          "Google Analytics"
+        ]
+      },
+      {
+        "company": "B2Bridge",
+        "website": "https://b2bridge.example.com",
+        "location": "Rennes, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Marketing Automation Manager",
+        "activities": [
+          {
+            "project": "Déploiement Marketo",
+            "tasks": [
+              "Implémentation de Marketo et migration des workflows",
+              "Création des campagnes email et de nurturing",
+              "Mise en place du reporting d'attribution"
+            ]
+          }
+        ],
+        "achievements": [
+          "Déploiement réussi de Marketo sur 4 pays",
+          "Doublement du volume de MQL"
+        ],
+        "toolsAndTechnologies": [
+          "Marketo",
+          "Salesforce"
+        ]
+      },
+      {
+        "company": "Agence Wetlink",
+        "website": "https://wetlink.example.com",
+        "location": "Rennes, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Chargé de marketing digital",
+        "activities": [
+          {
+            "project": "Campagnes email clients",
+            "tasks": [
+              "Création de campagnes email pour les clients de l'agence",
+              "Segmentation des bases de données",
+              "Analyse des performances"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration des taux d'ouverture des campagnes gérées"
+        ],
+        "toolsAndTechnologies": [
+          "Mailchimp",
+          "Google Analytics"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Audencia Business School",
+        "degree": "Master en Management",
+        "fieldOfStudy": "Marketing Digital",
+        "achievements": [
+          "Spécialisation CRM et data marketing"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "HubSpot Marketing Software Certification",
+        "institution": "HubSpot Academy",
+        "year": "@Y-4@",
+        "description": "Certification avancée sur la plateforme marketing HubSpot."
+      },
+      {
+        "title": "Marketo Certified Expert",
+        "institution": "Adobe",
+        "year": "@Y-4@",
+        "description": "Certification d'expertise sur la plateforme Marketo."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "HubSpot",
+        "Marketo",
+        "Salesforce",
+        "Google Analytics",
+        "Zapier"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Vision systémique",
+        "Pédagogie",
+        "Sens du collectif"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Refonte du modèle de lead scoring",
+        "description": "Conception d'un modèle de scoring comportemental et démographique aligné avec les ventes.",
+        "date": "2022-03",
+        "impact": "Hausse de 22% de la conversion MQL vers SQL."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voile",
+      "Cuisine",
+      "Automatisation domotique"
+    ],
+    "references": [
+      {
+        "name": "Élodie Marchand",
+        "position": "VP Marketing",
+        "company": "Cloudmetrics",
+        "contact": {
+          "phone": "+33 6 77 88 99 00",
+          "email": "elodie.marchand@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 82000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Marketing Operations",
+      "secondaryClusters": [
+        "Marketing Automation",
+        "Lifecycle Marketing"
+      ],
+      "functionalExpertise": [
+        "Marketing automation",
+        "Lead nurturing",
+        "Sales-marketing alignment"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Improved MQL-to-SQL conversion",
+        "Reduced lead processing time"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "B2B SaaS",
+        "Scale-up"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Deep automation platform expertise, ownership of lifecycle programs and leadership of a marketing ops team place this candidate at lead level."
+    },
+    "searchIndex": {
+      "roles": [
+        "Marketing Automation Manager",
+        "Marketing Operations Manager",
+        "Lifecycle Marketing Manager"
+      ],
+      "skills": [
+        "HubSpot",
+        "Marketo",
+        "Salesforce",
+        "Lead scoring",
+        "Lead nurturing",
+        "Email marketing"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B Technology"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "marketing-automation",
+      "marketing-ops",
+      "lead",
+      "b2b"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Responsable CRM et lifecycle marketing avec quinze ans d'expérience à concevoir des stratégies de fidélisation et de rétention pour des marques e-commerce et retail. Experte de la segmentation comportementale, des programmes de fidélité et de l'orchestration omnicanale. Pilote une équipe CRM et travaille à maximiser la valeur vie client.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Charlotte Simon",
+      "role": "CRM & Lifecycle Marketing Lead",
+      "summary": "Lead CRM orientée rétention et LTV, experte de la segmentation comportementale et de l'orchestration omnicanale.",
+      "contact": {
+        "phone": "+32 478 23 45 67",
+        "email": "charlotte.simon@example.be",
+        "address": {
+          "streetNumber": "35",
+          "streetName": "Antoine Dansaert",
+          "streetType": "Rue",
+          "city": "Bruxelles",
+          "state": "Région de Bruxelles-Capitale",
+          "zipCode": "1000",
+          "country": "Belgique"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/charlotte-simon-crm"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "CRM & Lifecycle",
+        "skills": [
+          "Stratégie CRM",
+          "Rétention",
+          "Programmes de fidélité",
+          "Valeur vie client"
+        ]
+      },
+      {
+        "category": "Segmentation",
+        "skills": [
+          "Segmentation comportementale",
+          "RFM",
+          "Personnalisation"
+        ]
+      },
+      {
+        "category": "Orchestration",
+        "skills": [
+          "Email",
+          "SMS",
+          "Push",
+          "Marketing omnicanal"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Braze",
+          "Salesforce Marketing Cloud",
+          "GA4"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "CRM",
+        "Lifecycle marketing",
+        "Fidélisation client"
+      ],
+      "keyResponsibilities": [
+        "Définir la stratégie CRM et de rétention",
+        "Orchestrer les campagnes lifecycle omnicanales",
+        "Piloter la valeur vie client et encadrer l'équipe CRM"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Modevia",
+        "website": "https://modevia.example.be",
+        "location": "Bruxelles, Belgique",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "CRM & Lifecycle Marketing Lead",
+        "activities": [
+          {
+            "project": "Rétention e-commerce",
+            "tasks": [
+              "Définition de la stratégie CRM et du programme de fidélité",
+              "Orchestration des parcours lifecycle email, SMS et push sur Braze",
+              "Encadrement d'une équipe de 4 personnes CRM"
+            ]
+          }
+        ],
+        "achievements": [
+          "Hausse de la valeur vie client de 19%",
+          "Réduction du taux d'attrition de 12%"
+        ],
+        "toolsAndTechnologies": [
+          "Braze",
+          "GA4",
+          "Salesforce Marketing Cloud"
+        ]
+      },
+      {
+        "company": "Retailink SA",
+        "website": "https://retailink.example.be",
+        "location": "Liège, Belgique",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "CRM Manager",
+        "activities": [
+          {
+            "project": "Programme de fidélité",
+            "tasks": [
+              "Refonte du programme de fidélité multicanal",
+              "Segmentation RFM de la base clients",
+              "Mise en place des campagnes de réactivation"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance de 30% des membres actifs du programme"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce Marketing Cloud"
+        ]
+      },
+      {
+        "company": "Groupe Novena",
+        "website": "https://novena.example.be",
+        "location": "Namur, Belgique",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Chargée de marketing relationnel",
+        "activities": [
+          {
+            "project": "Campagnes relationnelles",
+            "tasks": [
+              "Création des campagnes email relationnelles",
+              "Suivi des indicateurs de fidélisation",
+              "Gestion de la base de données clients"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration du taux de réachat"
+        ],
+        "toolsAndTechnologies": [
+          "Mailchimp"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "ICHEC Brussels Management School",
+        "degree": "Master",
+        "fieldOfStudy": "Marketing",
+        "achievements": [
+          "Spécialisation marketing relationnel"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Salesforce Marketing Cloud Email Specialist",
+        "institution": "Salesforce",
+        "year": "@Y-4@",
+        "description": "Certification sur l'orchestration email dans Salesforce Marketing Cloud."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Braze",
+        "Salesforce Marketing Cloud",
+        "GA4",
+        "SQL"
+      ],
+      "softSkills": [
+        "Sens du client",
+        "Créativité",
+        "Rigueur",
+        "Leadership"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Néerlandais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Orchestration lifecycle omnicanale",
+        "description": "Déploiement de parcours automatisés email/SMS/push basés sur le comportement d'achat.",
+        "date": "2022-06",
+        "impact": "Hausse de 19% de la valeur vie client."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Mode durable",
+      "Yoga",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "David Lambert",
+        "position": "Directeur Marketing",
+        "company": "Modevia",
+        "contact": {
+          "phone": "+32 478 87 65 43",
+          "email": "david.lambert@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 60000,
+      "max": 80000
+    },
+    "candidateClustering": {
+      "primaryCluster": "CRM & Lifecycle Marketing",
+      "secondaryClusters": [
+        "Retention Marketing",
+        "Loyalty"
+      ],
+      "functionalExpertise": [
+        "CRM strategy",
+        "Retention",
+        "Segmentation"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Increased customer lifetime value",
+        "Reduced churn"
+      ],
+      "industryDomains": [
+        "E-commerce",
+        "Retail"
+      ],
+      "environmentFit": [
+        "E-commerce",
+        "Retail"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Ownership of CRM strategy, omnichannel lifecycle orchestration and leadership of a CRM team with measurable LTV gains defines a lead-level lifecycle marketer."
+    },
+    "searchIndex": {
+      "roles": [
+        "CRM Manager",
+        "Lifecycle Marketing Manager",
+        "Retention Marketing Manager"
+      ],
+      "skills": [
+        "Braze",
+        "Salesforce Marketing Cloud",
+        "GA4",
+        "Segmentation",
+        "Email marketing",
+        "Retention"
+      ],
+      "industries": [
+        "E-commerce",
+        "Retail"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "crm",
+      "lifecycle",
+      "lead",
+      "retention"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Spécialiste marketing à la performance avec cinq ans d'expérience à gérer des campagnes d'acquisition payantes pour des startups et des scale-ups. À l'aise avec Google Ads, Meta Ads et l'analyse de données d'acquisition. Orienté résultats, curieux et en montée en compétence rapide sur l'attribution et le growth.",
+    "personalInformation": {
+      "name": "Maxime Girard",
+      "role": "Performance Marketing Specialist",
+      "summary": "Spécialiste acquisition payante orienté données, à l'aise avec Google Ads, Meta Ads et l'analyse de performance.",
+      "contact": {
+        "phone": "+33 6 90 12 34 56",
+        "email": "maxime.girard@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "d'Alsace-Lorraine",
+          "streetType": "Rue",
+          "city": "Toulouse",
+          "state": "Occitanie",
+          "zipCode": "31000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/maxime-girard-perf"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Média payant",
+        "skills": [
+          "Google Ads",
+          "Meta Ads",
+          "Retargeting",
+          "Gestion de budget"
+        ]
+      },
+      {
+        "category": "Analytics",
+        "skills": [
+          "GA4",
+          "Google Tag Manager",
+          "Looker Studio"
+        ]
+      },
+      {
+        "category": "Optimisation",
+        "skills": [
+          "Tests A/B",
+          "Optimisation du CAC",
+          "Landing pages"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Marketing à la performance",
+        "Acquisition payante",
+        "Analyse d'audience"
+      ],
+      "keyResponsibilities": [
+        "Gérer les campagnes d'acquisition payantes",
+        "Optimiser le CAC et le taux de conversion",
+        "Analyser et reporter la performance"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Growly",
+        "website": "https://growly.example.com",
+        "location": "Toulouse, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Performance Marketing Specialist",
+        "activities": [
+          {
+            "project": "Acquisition scale-up",
+            "tasks": [
+              "Gestion des campagnes Google et Meta Ads (budget de 1,2 M€/an)",
+              "Optimisation du CAC et des taux de conversion",
+              "Mise en place du suivi GA4 et des tableaux de bord"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction du CAC de 18% en un an",
+          "Croissance de 40% du volume de leads qualifiés"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "Meta Ads",
+          "GA4",
+          "Looker Studio"
+        ]
+      },
+      {
+        "company": "Digigo Agence",
+        "website": "https://digigo.example.com",
+        "location": "Montpellier, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Chargé d'acquisition Junior",
+        "activities": [
+          {
+            "project": "Comptes clients",
+            "tasks": [
+              "Création et suivi de campagnes payantes pour les clients de l'agence",
+              "Analyse des performances et reporting",
+              "Optimisation des enchères"
+            ]
+          }
+        ],
+        "achievements": [
+          "Prise en autonomie d'un portefeuille de 4 comptes"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "Meta Ads"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Toulouse Business School",
+        "degree": "Master",
+        "fieldOfStudy": "Marketing Digital",
+        "achievements": [
+          "Spécialisation acquisition"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Google Ads Search Certification",
+        "institution": "Google",
+        "year": "@Y-4@",
+        "description": "Certification officielle sur les campagnes Google Ads Search."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Google Ads",
+        "Meta Ads",
+        "GA4",
+        "Google Tag Manager",
+        "Looker Studio"
+      ],
+      "softSkills": [
+        "Curiosité",
+        "Rigueur",
+        "Autonomie",
+        "Esprit analytique"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Mise en place du tracking GA4",
+        "description": "Migration Universal Analytics vers GA4 et création des tableaux de bord d'acquisition.",
+        "date": "2023-04",
+        "impact": "Meilleure visibilité ayant permis une baisse de 18% du CAC."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Escalade",
+      "Photographie",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Sarah Cohen",
+        "position": "Head of Marketing",
+        "company": "Growly",
+        "contact": {
+          "phone": "+33 6 11 22 33 44",
+          "email": "sarah.cohen@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 42000,
+      "max": 54000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Performance Marketing",
+      "secondaryClusters": [
+        "Paid Media",
+        "Growth"
+      ],
+      "functionalExpertise": [
+        "Paid acquisition",
+        "Web analytics",
+        "Conversion optimization"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Reduced CAC",
+        "Grew qualified leads"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "Start-up"
+      ],
+      "environmentFit": [
+        "Start-up",
+        "Scale-up"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "Five years of hands-on paid acquisition with growing budget ownership and measurable CAC gains but no team leadership places this candidate at mid-level performance marketing."
+    },
+    "searchIndex": {
+      "roles": [
+        "Performance Marketing Specialist",
+        "Paid Media Specialist",
+        "Acquisition Manager"
+      ],
+      "skills": [
+        "Google Ads",
+        "Meta Ads",
+        "GA4",
+        "Google Tag Manager",
+        "CAC optimization"
+      ],
+      "industries": [
+        "SaaS",
+        "Start-up"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "performance",
+      "paid-media",
+      "midlevel",
+      "acquisition"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Brand Manager senior avec plus de treize ans d'expérience à construire et développer des marques dans les biens de consommation et la beauté. Experte du positionnement, de la stratégie de marque et du pilotage de campagnes 360 avec les agences. Reconnue pour sa capacité à traduire les insights consommateurs en plateformes de marque distinctives.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Sophie Laurent",
+      "role": "Brand Manager Senior",
+      "summary": "Brand manager stratège qui traduit les insights consommateurs en plateformes de marque distinctives et campagnes 360.",
+      "contact": {
+        "email": "sophie.laurent@example.com",
+        "address": {
+          "streetNumber": "30",
+          "streetName": "du Faubourg Saint-Honoré",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75008",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sophie-laurent-brand"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Stratégie de marque",
+        "skills": [
+          "Positionnement",
+          "Plateforme de marque",
+          "Architecture de marque",
+          "Brand equity"
+        ]
+      },
+      {
+        "category": "Campagnes",
+        "skills": [
+          "Campagnes 360",
+          "Gestion d'agences",
+          "Brief créatif",
+          "Media planning"
+        ]
+      },
+      {
+        "category": "Insights",
+        "skills": [
+          "Études consommateurs",
+          "Insights",
+          "Veille concurrentielle"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Adobe Creative Suite",
+          "Nielsen",
+          "Google Analytics"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Gestion de marque",
+        "Stratégie de communication",
+        "Campagnes 360"
+      ],
+      "keyResponsibilities": [
+        "Définir le positionnement et la plateforme de marque",
+        "Piloter les campagnes 360 avec les agences",
+        "Traduire les insights consommateurs en actions de marque"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Lumière Beauté",
+        "website": "https://lumierebeaute.example.com",
+        "location": "Paris, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Brand Manager Senior",
+        "activities": [
+          {
+            "project": "Repositionnement de marque",
+            "tasks": [
+              "Pilotage du repositionnement d'une marque de soins premium",
+              "Coordination des campagnes 360 avec les agences créa et média",
+              "Suivi de la brand equity et des études consommateurs"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance de 24% de la notoriété assistée en deux ans",
+          "Lancement réussi de trois gammes de produits"
+        ],
+        "toolsAndTechnologies": [
+          "Adobe Creative Suite",
+          "Nielsen",
+          "Google Analytics"
+        ]
+      },
+      {
+        "company": "Groupe Cosmétis",
+        "website": "https://cosmetis.example.com",
+        "location": "Paris, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Chef de produit Marketing",
+        "activities": [
+          {
+            "project": "Développement de gamme",
+            "tasks": [
+              "Gestion du plan marketing d'une gamme de maquillage",
+              "Coordination des lancements produits",
+              "Analyse des performances et des parts de marché"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance à deux chiffres de la gamme gérée"
+        ],
+        "toolsAndTechnologies": [
+          "Nielsen",
+          "Adobe Creative Suite"
+        ]
+      },
+      {
+        "company": "Maison Verlaine",
+        "website": "https://verlaine.example.com",
+        "location": "Paris, France",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Assistante chef de produit",
+        "activities": [
+          {
+            "project": "Support marketing",
+            "tasks": [
+              "Support à la gestion des gammes produits",
+              "Suivi des campagnes et des PLV",
+              "Réalisation d'études de marché"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à un lancement produit majeur"
+        ],
+        "toolsAndTechnologies": [
+          "Adobe Creative Suite"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "ESSEC Business School",
+        "degree": "Master en Management",
+        "fieldOfStudy": "Marketing",
+        "achievements": [
+          "Majeure Marketing du Luxe"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Brand Management Professional",
+        "institution": "The Chartered Institute of Marketing (CIM)",
+        "year": "@Y-0@",
+        "description": "Certification professionnelle en gestion de marque."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Adobe Creative Suite",
+        "Nielsen",
+        "Google Analytics"
+      ],
+      "softSkills": [
+        "Créativité",
+        "Sens stratégique",
+        "Leadership d'influence",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Italien",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Refonte de la plateforme de marque",
+        "description": "Construction d'une nouvelle plateforme de marque et déclinaison en campagne 360.",
+        "date": "2021-09",
+        "impact": "Hausse de 24% de la notoriété assistée."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Art contemporain",
+      "Voyages",
+      "Œnologie"
+    ],
+    "references": [
+      {
+        "name": "Béatrice Fontaine",
+        "position": "Directrice Marketing",
+        "company": "Lumière Beauté",
+        "contact": {
+          "phone": "+33 6 88 99 00 11",
+          "email": "beatrice.fontaine@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 56000,
+      "max": 74000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Brand Management",
+      "secondaryClusters": [
+        "Consumer Marketing",
+        "Integrated Campaigns"
+      ],
+      "functionalExpertise": [
+        "Brand strategy",
+        "Positioning",
+        "Campaign management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Grew brand awareness",
+        "Launched product lines"
+      ],
+      "industryDomains": [
+        "Consumer goods",
+        "Beauty"
+      ],
+      "environmentFit": [
+        "FMCG",
+        "Consumer brands"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Ownership of brand positioning, 360 campaigns and product launches with measurable awareness gains in consumer goods defines a senior brand manager."
+    },
+    "searchIndex": {
+      "roles": [
+        "Brand Manager",
+        "Product Marketing Manager",
+        "Marketing Manager"
+      ],
+      "skills": [
+        "Adobe Creative Suite",
+        "Nielsen",
+        "Brand strategy",
+        "Positioning",
+        "Campaign management"
+      ],
+      "industries": [
+        "Consumer Goods",
+        "Beauty"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "brand",
+      "consumer-goods",
+      "senior",
+      "campaigns"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Content Manager avec sept ans d'expérience à concevoir et piloter des stratégies éditoriales pour des marques média et B2B. Experte de la production de contenu multiformat, du calendrier éditorial et du SEO éditorial. Passionnée par le storytelling de marque et la performance des contenus.",
+    "careerStartYear": 2018,
+    "personalInformation": {
+      "name": "Léa Fontaine",
+      "role": "Content Manager",
+      "summary": "Content manager créative et data-driven, experte du calendrier éditorial, du contenu multiformat et du SEO éditorial.",
+      "contact": {
+        "phone": "+33 6 56 78 90 12",
+        "address": {
+          "streetNumber": "16",
+          "streetName": "de la République",
+          "streetType": "Rue",
+          "city": "Marseille",
+          "state": "Provence-Alpes-Côte d'Azur",
+          "zipCode": "13002",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/lea-fontaine-content",
+          "website": "https://leafontaine-content.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "freelance"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Contenu éditorial",
+        "skills": [
+          "Stratégie éditoriale",
+          "Rédaction web",
+          "Storytelling",
+          "Ligne éditoriale"
+        ]
+      },
+      {
+        "category": "Production",
+        "skills": [
+          "Calendrier éditorial",
+          "Contenu multiformat",
+          "Vidéo",
+          "Newsletter"
+        ]
+      },
+      {
+        "category": "SEO éditorial",
+        "skills": [
+          "Recherche de mots-clés",
+          "Optimisation on-page",
+          "Cocon sémantique"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "WordPress",
+          "Adobe Creative Suite",
+          "Canva",
+          "Semrush"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Stratégie de contenu",
+        "Rédaction éditoriale",
+        "SEO éditorial"
+      ],
+      "keyResponsibilities": [
+        "Définir et piloter la stratégie éditoriale",
+        "Produire et coordonner du contenu multiformat",
+        "Optimiser les contenus pour le référencement"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Mediashift",
+        "website": "https://mediashift.example.com",
+        "location": "Marseille, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Content Manager",
+        "activities": [
+          {
+            "project": "Stratégie de contenu B2B",
+            "tasks": [
+              "Définition de la ligne éditoriale et du calendrier de contenu",
+              "Production d'articles, livres blancs et newsletters",
+              "Coordination avec les freelances et optimisation SEO"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance de 55% du trafic organique du blog",
+          "Génération de 1 200 leads via les livres blancs"
+        ],
+        "toolsAndTechnologies": [
+          "WordPress",
+          "Semrush",
+          "Canva"
+        ]
+      },
+      {
+        "company": "Agence Storywave",
+        "website": "https://storywave.example.com",
+        "location": "Aix-en-Provence, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Rédactrice web / Content",
+        "activities": [
+          {
+            "project": "Contenu clients",
+            "tasks": [
+              "Rédaction de contenu pour les clients de l'agence",
+              "Gestion des calendriers éditoriaux",
+              "Optimisation SEO des articles"
+            ]
+          }
+        ],
+        "achievements": [
+          "Prise en charge autonome de 5 comptes éditoriaux"
+        ],
+        "toolsAndTechnologies": [
+          "WordPress",
+          "Semrush"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Aix-Marseille Université",
+        "degree": "Master",
+        "fieldOfStudy": "Information et Communication",
+        "achievements": [
+          "Spécialisation communication numérique"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "HubSpot Content Marketing Certification",
+        "institution": "HubSpot Academy",
+        "year": "@Y-2@",
+        "description": "Certification sur la stratégie et la production de contenu."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "WordPress",
+        "Adobe Creative Suite",
+        "Canva",
+        "Semrush",
+        "GA4"
+      ],
+      "softSkills": [
+        "Créativité",
+        "Sens du récit",
+        "Organisation",
+        "Curiosité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Espagnol",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Lancement du blog de marque",
+        "description": "Création de la stratégie éditoriale et du blog d'entreprise de zéro.",
+        "date": "2022-03",
+        "impact": "Hausse de 55% du trafic organique et génération de leads."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Écriture",
+      "Podcasts",
+      "Randonnée"
+    ],
+    "references": [
+      {
+        "name": "Nicolas Mercier",
+        "position": "Directeur de la Communication",
+        "company": "Mediashift",
+        "contact": {
+          "phone": "+33 6 22 44 66 88",
+          "email": "nicolas.mercier@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 40000,
+      "max": 52000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Content Marketing",
+      "secondaryClusters": [
+        "Editorial Strategy",
+        "SEO Content"
+      ],
+      "functionalExpertise": [
+        "Content strategy",
+        "Copywriting",
+        "SEO content"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Grew organic blog traffic",
+        "Generated leads via content"
+      ],
+      "industryDomains": [
+        "Media",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Media",
+        "Digital agency"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.84,
+      "clusterReasoning": "Seven years producing and orchestrating multiformat content with measurable organic and lead results but limited team leadership places this candidate at mid-level content marketing."
+    },
+    "searchIndex": {
+      "roles": [
+        "Content Manager",
+        "Content Marketing Manager",
+        "Editorial Manager"
+      ],
+      "skills": [
+        "WordPress",
+        "Semrush",
+        "Content strategy",
+        "SEO",
+        "Copywriting",
+        "Adobe Creative Suite"
+      ],
+      "industries": [
+        "Media",
+        "B2B Technology"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "content",
+      "editorial",
+      "midlevel",
+      "seo"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Social Media Manager senior avec dix ans d'expérience à bâtir et animer des communautés pour des marques lifestyle et retail. Expert de la stratégie social, du contenu créatif, de l'influence marketing et du social listening. Combine sens créatif et pilotage à la performance des réseaux sociaux.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Rayan Haddad",
+      "role": "Social Media Manager Senior",
+      "summary": "Social media manager créatif et data-driven, expert des communautés, de l'influence et du social listening.",
+      "contact": {
+        "phone": "+352 621 345 678",
+        "email": "rayan.haddad@example.lu",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Philippe II",
+          "streetType": "Rue",
+          "city": "Luxembourg",
+          "state": "Luxembourg",
+          "zipCode": "2340",
+          "country": "Luxembourg"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/rayan-haddad-social"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Stratégie social",
+        "skills": [
+          "Stratégie réseaux sociaux",
+          "Ligne éditoriale social",
+          "Community management",
+          "Calendrier de contenu"
+        ]
+      },
+      {
+        "category": "Influence",
+        "skills": [
+          "Marketing d'influence",
+          "Partenariats créateurs",
+          "Négociation influenceurs"
+        ]
+      },
+      {
+        "category": "Créa & Contenu",
+        "skills": [
+          "Contenu vidéo",
+          "Stories",
+          "Reels",
+          "Design social"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Meta Business Suite",
+          "Hootsuite",
+          "Adobe Creative Suite",
+          "Canva"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Social media",
+        "Marketing d'influence",
+        "Community management"
+      ],
+      "keyResponsibilities": [
+        "Définir la stratégie social et éditoriale",
+        "Animer et développer les communautés",
+        "Piloter les campagnes d'influence et mesurer la performance"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Nova Lifestyle",
+        "website": "https://novalifestyle.example.lu",
+        "location": "Luxembourg",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Social Media Manager Senior",
+        "activities": [
+          {
+            "project": "Stratégie social multimarché",
+            "tasks": [
+              "Pilotage de la stratégie social sur Instagram, TikTok et LinkedIn",
+              "Gestion des campagnes d'influence avec 40+ créateurs",
+              "Production de contenu vidéo court format et social listening"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance de 180% de la communauté Instagram en trois ans",
+          "Taux d'engagement moyen porté à 6,2%"
+        ],
+        "toolsAndTechnologies": [
+          "Meta Business Suite",
+          "Hootsuite",
+          "Adobe Creative Suite"
+        ]
+      },
+      {
+        "company": "Agence Buzzline",
+        "website": "https://buzzline.example.com",
+        "location": "Metz, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Community Manager Senior",
+        "activities": [
+          {
+            "project": "Comptes clients social",
+            "tasks": [
+              "Gestion des réseaux sociaux de 6 marques clientes",
+              "Création de contenu et animation de communautés",
+              "Reporting mensuel de performance social"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance moyenne de 60% des communautés gérées"
+        ],
+        "toolsAndTechnologies": [
+          "Hootsuite",
+          "Canva",
+          "Meta Business Suite"
+        ]
+      },
+      {
+        "company": "Startup Vibz",
+        "website": "https://vibz.example.com",
+        "location": "Metz, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Community Manager Junior",
+        "activities": [
+          {
+            "project": "Animation social",
+            "tasks": [
+              "Animation quotidienne des réseaux sociaux",
+              "Création de visuels et de posts",
+              "Modération et réponse aux communautés"
+            ]
+          }
+        ],
+        "achievements": [
+          "Progression rapide vers un poste senior"
+        ],
+        "toolsAndTechnologies": [
+          "Canva",
+          "Meta Business Suite"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université de Lorraine",
+        "degree": "Master",
+        "fieldOfStudy": "Communication Digitale",
+        "achievements": [
+          "Spécialisation réseaux sociaux"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Meta Certified Digital Marketing Associate",
+        "institution": "Meta",
+        "year": "@Y-4@",
+        "description": "Certification sur le marketing digital et social Meta."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Meta Business Suite",
+        "Hootsuite",
+        "Adobe Creative Suite",
+        "Canva",
+        "TikTok Ads"
+      ],
+      "softSkills": [
+        "Créativité",
+        "Réactivité",
+        "Sens du storytelling",
+        "Empathie"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Allemand",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Campagne d'influence TikTok",
+        "description": "Conception et pilotage d'une campagne d'influence multi-créateurs sur TikTok.",
+        "date": "2023-05",
+        "impact": "Plus de 4 millions de vues et hausse de 30% du trafic social."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Vidéo",
+      "Voyages",
+      "Street art"
+    ],
+    "references": [
+      {
+        "name": "Emma Dupont",
+        "position": "Directrice de la Communication",
+        "company": "Nova Lifestyle",
+        "contact": {
+          "phone": "+352 621 876 543",
+          "email": "emma.dupont@example.lu"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Social Media Marketing",
+      "secondaryClusters": [
+        "Influencer Marketing",
+        "Community Management"
+      ],
+      "functionalExpertise": [
+        "Social strategy",
+        "Influencer marketing",
+        "Community management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Grew social communities",
+        "Increased engagement"
+      ],
+      "industryDomains": [
+        "Consumer goods",
+        "Retail"
+      ],
+      "environmentFit": [
+        "Consumer brands",
+        "Lifestyle"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Ownership of multi-platform social strategy and influencer campaigns with strong community and engagement growth defines a senior social media manager."
+    },
+    "searchIndex": {
+      "roles": [
+        "Social Media Manager",
+        "Community Manager",
+        "Influencer Marketing Manager"
+      ],
+      "skills": [
+        "Meta Business Suite",
+        "Hootsuite",
+        "Adobe Creative Suite",
+        "Social media strategy",
+        "Influencer marketing"
+      ],
+      "industries": [
+        "Consumer Goods",
+        "Retail"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "social-media",
+      "influence",
+      "senior",
+      "content"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directrice de la communication et des relations presse avec près de vingt ans d'expérience à piloter la réputation et la communication corporate de grandes entreprises et de scale-ups. Experte des relations médias, de la communication de crise et de la stratégie de marque employeur. Dirige des équipes communication et conseille les comités de direction.",
+    "careerStartYear": 2007,
+    "personalInformation": {
+      "name": "Valérie Nguyen",
+      "role": "Directrice de la Communication",
+      "summary": "Dirigeante communication qui pilote réputation, relations presse et communication de crise, et conseille les comités de direction.",
+      "contact": {
+        "phone": "+33 6 20 40 60 80",
+        "email": "valerie.nguyen@example.com",
+        "address": {
+          "streetNumber": "25",
+          "streetName": "de la Boétie",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75008",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Sur rendez-vous"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Communication corporate",
+        "skills": [
+          "Stratégie de communication",
+          "Réputation",
+          "Communication institutionnelle",
+          "Marque employeur"
+        ]
+      },
+      {
+        "category": "Relations presse",
+        "skills": [
+          "Relations médias",
+          "Prise de parole",
+          "Communication de crise",
+          "Media training"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Direction d'équipe",
+          "Gestion d'agences RP",
+          "Conseil au comité de direction"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Cision",
+          "Meltwater",
+          "Adobe Creative Suite"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Communication corporate",
+        "Relations presse",
+        "Communication de crise"
+      ],
+      "keyResponsibilities": [
+        "Définir et piloter la stratégie de communication corporate",
+        "Gérer les relations médias et la communication de crise",
+        "Diriger les équipes communication et conseiller la direction"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Groupe Ardessa",
+        "website": "https://ardessa.example.com",
+        "location": "Paris, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Directrice de la Communication",
+        "activities": [
+          {
+            "project": "Communication corporate groupe",
+            "tasks": [
+              "Pilotage de la stratégie de communication corporate et de la réputation",
+              "Gestion des relations presse et de la communication de crise",
+              "Direction d'une équipe de 8 personnes et des agences RP"
+            ]
+          }
+        ],
+        "achievements": [
+          "Gestion réussie de deux crises médiatiques majeures",
+          "Amélioration de 30% de la part de voix dans les médias"
+        ],
+        "toolsAndTechnologies": [
+          "Cision",
+          "Meltwater"
+        ]
+      },
+      {
+        "company": "Technova",
+        "website": "https://technova.example.com",
+        "location": "Paris, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Responsable Communication et RP",
+        "activities": [
+          {
+            "project": "Communication scale-up",
+            "tasks": [
+              "Structuration de la fonction communication d'une scale-up tech",
+              "Développement des relations presse et de la notoriété",
+              "Lancement de la communication de marque employeur"
+            ]
+          }
+        ],
+        "achievements": [
+          "Multiplication par 3 des retombées presse",
+          "Mise en place de la stratégie de marque employeur"
+        ],
+        "toolsAndTechnologies": [
+          "Cision",
+          "Adobe Creative Suite"
+        ]
+      },
+      {
+        "company": "Agence Publica",
+        "website": "https://publica.example.com",
+        "location": "Paris, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Consultante en relations presse",
+        "activities": [
+          {
+            "project": "Comptes clients RP",
+            "tasks": [
+              "Gestion des relations presse de plusieurs comptes clients",
+              "Rédaction de communiqués et organisation d'événements presse",
+              "Développement des relations médias"
+            ]
+          }
+        ],
+        "achievements": [
+          "Développement d'un portefeuille de journalistes clés"
+        ],
+        "toolsAndTechnologies": [
+          "Cision"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Sciences Po Paris",
+        "degree": "Master",
+        "fieldOfStudy": "Communication",
+        "achievements": [
+          "Spécialisation communication institutionnelle"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "CELSA - Sorbonne Université",
+        "degree": "Licence",
+        "fieldOfStudy": "Information et Communication",
+        "achievements": [
+          "Stage en agence de communication"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Crisis Communication Certificate",
+        "institution": "The Chartered Institute of Public Relations (CIPR)",
+        "year": "@Y-4@",
+        "description": "Certification en communication de crise."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Cision",
+        "Meltwater",
+        "Adobe Creative Suite"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Sens politique",
+        "Sang-froid",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Vietnamien",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Gestion de crise médiatique",
+        "description": "Pilotage de la communication lors d'une crise produit à forte exposition médiatique.",
+        "date": "2020-11",
+        "impact": "Maîtrise de la réputation et retour rapide à une part de voix positive."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Théâtre",
+      "Littérature",
+      "Course à pied"
+    ],
+    "references": [
+      {
+        "name": "Philippe Garnier",
+        "position": "Directeur Général",
+        "company": "Groupe Ardessa",
+        "contact": {
+          "phone": "+33 6 12 34 56 78",
+          "email": "philippe.garnier@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 95000,
+      "max": 135000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Corporate Communications",
+      "secondaryClusters": [
+        "Public Relations",
+        "Crisis Communication"
+      ],
+      "functionalExpertise": [
+        "Corporate communications",
+        "Media relations",
+        "Crisis communication"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Managed media crises",
+        "Grew share of voice"
+      ],
+      "industryDomains": [
+        "B2B technology",
+        "Corporate"
+      ],
+      "environmentFit": [
+        "Large enterprise",
+        "Scale-up"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Two decades leading corporate communications, media relations and crisis management while advising executive committees indicate a director-level communications profile."
+    },
+    "searchIndex": {
+      "roles": [
+        "Communications Director",
+        "PR Director",
+        "Head of Communications"
+      ],
+      "skills": [
+        "Cision",
+        "Meltwater",
+        "Media relations",
+        "Crisis communication",
+        "Corporate communications"
+      ],
+      "industries": [
+        "B2B Technology",
+        "Corporate"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "communications",
+      "public-relations",
+      "director",
+      "corporate"
+    ]
+  },
+  {
+    "personalInformation": {
+      "name": "Julie Weber",
+      "role": "Events & Field Marketing Lead",
+      "summary": "Lead événementiel qui orchestre salons et campagnes terrain B2B et pilote la génération de leads événementielle.",
+      "contact": {
+        "address": {
+          "streetNumber": "11",
+          "streetName": "des Grandes Arcades",
+          "streetType": "Rue",
+          "city": "Strasbourg",
+          "state": "Grand Est",
+          "zipCode": "67000",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "profiles": {
+      "areasOfExpertise": [
+        "Événementiel B2B",
+        "Field marketing",
+        "Génération de leads"
+      ],
+      "keyResponsibilities": [
+        "Concevoir et orchestrer les événements et salons",
+        "Piloter les campagnes de field marketing",
+        "Gérer les budgets et mesurer le ROI événementiel"
+      ]
+    },
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "HubSpot",
+        "Cvent",
+        "Adobe Creative Suite"
+      ],
+      "softSkills": [
+        "Organisation",
+        "Sang-froid",
+        "Leadership",
+        "Sens du détail"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Refonte du programme de salons",
+        "description": "Rationalisation du portefeuille d'événements et mesure systématique du ROI.",
+        "date": "2022-01",
+        "impact": "Hausse de 40% du ROI événementiel."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Randonnée",
+      "Cuisine alsacienne",
+      "Photographie"
+    ],
+    "references": [
+      {
+        "name": "Thomas Keller",
+        "position": "Directeur Marketing",
+        "company": "Enterprica",
+        "contact": {
+          "phone": "+33 6 99 88 77 66",
+          "email": "thomas.keller@example.com"
+        }
+      }
+    ],
+    "searchIndex": {
+      "roles": [
+        "Events Manager",
+        "Field Marketing Manager",
+        "Event Marketing Lead"
+      ],
+      "skills": [
+        "Salesforce",
+        "HubSpot",
+        "Cvent",
+        "Event management",
+        "Field marketing",
+        "Lead generation"
+      ],
+      "industries": [
+        "B2B Technology",
+        "SaaS"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "events",
+      "field-marketing",
+      "lead",
+      "b2b"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Product Marketing Manager senior avec douze ans d'expérience à définir le positionnement, les messages et les go-to-market de produits SaaS B2B. Expert de la recherche de marché, du sales enablement et du lancement produit. Fait le pont entre produit, ventes et marketing pour accélérer l'adoption.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Alexandre Dupont",
+      "role": "Product Marketing Manager Senior",
+      "summary": "PMM senior qui définit positionnement, messages et go-to-market, et outille les ventes pour accélérer l'adoption produit.",
+      "contact": {
+        "phone": "+33 6 30 50 70 90",
+        "email": "alexandre.dupont@example.com",
+        "address": {
+          "streetNumber": "40",
+          "streetName": "du Temple",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75003",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/alexandre-dupont-pmm"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Product Marketing",
+        "skills": [
+          "Positionnement",
+          "Messaging",
+          "Go-to-market",
+          "Lancement produit"
+        ]
+      },
+      {
+        "category": "Recherche",
+        "skills": [
+          "Études de marché",
+          "Analyse concurrentielle",
+          "Personas",
+          "Voice of customer"
+        ]
+      },
+      {
+        "category": "Sales Enablement",
+        "skills": [
+          "Sales enablement",
+          "Battle cards",
+          "Pitch decks",
+          "Formation commerciale"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Productboard",
+          "GA4",
+          "HubSpot",
+          "Notion"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Product marketing",
+        "Go-to-market",
+        "Sales enablement"
+      ],
+      "keyResponsibilities": [
+        "Définir le positionnement et les messages produit",
+        "Piloter les lancements et les go-to-market",
+        "Outiller les équipes commerciales"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Flowlytics",
+        "website": "https://flowlytics.example.com",
+        "location": "Paris, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Product Marketing Manager Senior",
+        "activities": [
+          {
+            "project": "Go-to-market produit",
+            "tasks": [
+              "Définition du positionnement et des messages de la suite produit",
+              "Pilotage des lancements et des go-to-market multi-marchés",
+              "Création des supports de sales enablement et battle cards"
+            ]
+          }
+        ],
+        "achievements": [
+          "Lancement de 5 fonctionnalités majeures avec adoption supérieure aux objectifs",
+          "Hausse de 25% du taux de conversion trial-to-paid"
+        ],
+        "toolsAndTechnologies": [
+          "Productboard",
+          "HubSpot",
+          "GA4"
+        ]
+      },
+      {
+        "company": "Datexis",
+        "website": "https://datexis.example.com",
+        "location": "Paris, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Product Marketing Manager",
+        "activities": [
+          {
+            "project": "Positionnement produit",
+            "tasks": [
+              "Élaboration du positionnement et des personas",
+              "Réalisation d'études de marché et d'analyses concurrentielles",
+              "Support aux équipes de vente"
+            ]
+          }
+        ],
+        "achievements": [
+          "Refonte du messaging ayant amélioré la génération de leads"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot",
+          "Google Analytics"
+        ]
+      },
+      {
+        "company": "Agence Marktech",
+        "website": "https://marktech.example.com",
+        "location": "Paris, France",
+        "from": "@M-100@",
+        "to": "@M-70@",
+        "position": "Chargé d'études marketing",
+        "activities": [
+          {
+            "project": "Études clients",
+            "tasks": [
+              "Réalisation d'études de marché pour les clients",
+              "Analyse des données et restitution",
+              "Veille concurrentielle"
+            ]
+          }
+        ],
+        "achievements": [
+          "Livraison d'études structurantes pour les clients"
+        ],
+        "toolsAndTechnologies": [
+          "Google Analytics"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "HEC Paris",
+        "degree": "Master en Management",
+        "fieldOfStudy": "Marketing",
+        "achievements": [
+          "Majeure Marketing et Stratégie"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Product Marketing Certified",
+        "institution": "Product Marketing Alliance",
+        "year": "@Y-2@",
+        "description": "Certification sur les fondamentaux du product marketing."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Productboard",
+        "HubSpot",
+        "GA4",
+        "Notion"
+      ],
+      "softSkills": [
+        "Sens stratégique",
+        "Communication",
+        "Curiosité",
+        "Collaboration"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Go-to-market d'une nouvelle offre",
+        "description": "Pilotage du lancement d'une nouvelle offre produit de la stratégie au sales enablement.",
+        "date": "2023-03",
+        "impact": "Adoption dépassant les objectifs de 40% au premier trimestre."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Échecs",
+      "Course à pied",
+      "Podcasts produit"
+    ],
+    "references": [
+      {
+        "name": "Marie Lefort",
+        "position": "VP Marketing",
+        "company": "Flowlytics",
+        "contact": {
+          "phone": "+33 6 44 66 88 00",
+          "email": "marie.lefort@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 58000,
+      "max": 78000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Product Marketing",
+      "secondaryClusters": [
+        "Go-to-Market",
+        "Sales Enablement"
+      ],
+      "functionalExpertise": [
+        "Positioning",
+        "Go-to-market",
+        "Sales enablement"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Improved trial-to-paid conversion",
+        "Launched features with strong adoption"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "B2B SaaS",
+        "Scale-up"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Ownership of positioning, go-to-market and sales enablement with measurable conversion and adoption impact in B2B SaaS defines a senior product marketing manager."
+    },
+    "searchIndex": {
+      "roles": [
+        "Product Marketing Manager",
+        "Go-to-Market Manager",
+        "Product Marketer"
+      ],
+      "skills": [
+        "Productboard",
+        "HubSpot",
+        "GA4",
+        "Positioning",
+        "Go-to-market",
+        "Sales enablement"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B Technology"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "product-marketing",
+      "go-to-market",
+      "senior",
+      "saas"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Demand Generation Manager senior avec onze ans d'expérience à construire des moteurs de génération de demande pour des entreprises SaaS B2B. Experte des campagnes multicanales, de l'ABM et du pilotage du pipeline marketing. Orientée revenu, elle aligne marketing et ventes autour d'objectifs de pipeline mesurables.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Manon Girard",
+      "role": "Demand Generation Manager Senior",
+      "summary": "Demand gen senior orientée revenu, experte des campagnes multicanales, de l'ABM et du pilotage du pipeline marketing.",
+      "contact": {
+        "phone": "+33 6 71 82 93 04",
+        "email": "manon.girard@example.com",
+        "address": {
+          "streetNumber": "19",
+          "streetName": "de la Charité",
+          "streetType": "Rue",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69002",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Demand Generation",
+        "skills": [
+          "Campagnes multicanales",
+          "Génération de pipeline",
+          "ABM",
+          "Nurturing"
+        ]
+      },
+      {
+        "category": "Canaux",
+        "skills": [
+          "Paid media",
+          "Email",
+          "Webinaires",
+          "Content syndication"
+        ]
+      },
+      {
+        "category": "Pilotage",
+        "skills": [
+          "Pipeline marketing",
+          "Attribution",
+          "Reporting revenu",
+          "Objectifs de pipeline"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "HubSpot",
+          "Marketo",
+          "Salesforce",
+          "GA4"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Demand generation",
+        "Account-based marketing",
+        "Pipeline marketing"
+      ],
+      "keyResponsibilities": [
+        "Construire et piloter le moteur de génération de demande",
+        "Orchestrer les campagnes multicanales et ABM",
+        "Aligner marketing et ventes sur les objectifs de pipeline"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Scalix",
+        "website": "https://scalix.example.com",
+        "location": "Lyon, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Demand Generation Manager Senior",
+        "activities": [
+          {
+            "project": "Moteur de demand gen",
+            "tasks": [
+              "Construction du moteur de génération de demande multicanal",
+              "Pilotage des campagnes ABM sur les comptes cibles",
+              "Alignement avec les ventes sur les objectifs de pipeline marketing"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance de 60% du pipeline généré par le marketing en deux ans",
+          "Contribution du marketing à 42% du CA nouveau"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot",
+          "Salesforce",
+          "GA4"
+        ]
+      },
+      {
+        "company": "Netfluent",
+        "website": "https://netfluent.example.com",
+        "location": "Lyon, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Marketing Campaign Manager",
+        "activities": [
+          {
+            "project": "Campagnes acquisition",
+            "tasks": [
+              "Gestion des campagnes multicanales de génération de leads",
+              "Coordination des webinaires et de la content syndication",
+              "Suivi de la performance et de l'attribution"
+            ]
+          }
+        ],
+        "achievements": [
+          "Doublement du volume de MQL en deux ans"
+        ],
+        "toolsAndTechnologies": [
+          "Marketo",
+          "Salesforce"
+        ]
+      },
+      {
+        "company": "Groupe Vialis",
+        "website": "https://vialis.example.com",
+        "location": "Lyon, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Chargée de marketing digital",
+        "activities": [
+          {
+            "project": "Campagnes email",
+            "tasks": [
+              "Création de campagnes email et de landing pages",
+              "Suivi des indicateurs de performance",
+              "Segmentation des bases"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration des taux de conversion des campagnes"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "HubSpot",
+        "Marketo",
+        "Salesforce",
+        "GA4",
+        "LinkedIn Ads"
+      ],
+      "softSkills": [
+        "Sens du résultat",
+        "Rigueur analytique",
+        "Collaboration",
+        "Adaptabilité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Lancement d'un programme ABM",
+        "description": "Conception et déploiement d'un programme ABM sur les comptes stratégiques.",
+        "date": "2022-09",
+        "impact": "Contribution de 20% du pipeline enterprise dès la première année."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Trail running",
+      "Cuisine",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Antoine Meyer",
+        "position": "CMO",
+        "company": "Scalix",
+        "contact": {
+          "phone": "+33 6 33 55 77 99",
+          "email": "antoine.meyer@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 56000,
+      "max": 74000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Demand Generation",
+      "secondaryClusters": [
+        "Account-Based Marketing",
+        "Growth"
+      ],
+      "functionalExpertise": [
+        "Demand generation",
+        "ABM",
+        "Pipeline marketing"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Grew marketing-sourced pipeline",
+        "Increased marketing revenue contribution"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "B2B SaaS",
+        "Scale-up"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Ownership of a multichannel demand engine and ABM program with measurable pipeline and revenue contribution defines a senior demand generation manager."
+    },
+    "searchIndex": {
+      "roles": [
+        "Demand Generation Manager",
+        "Growth Marketing Manager",
+        "Campaign Manager"
+      ],
+      "skills": [
+        "HubSpot",
+        "Marketo",
+        "Salesforce",
+        "ABM",
+        "Demand generation",
+        "Pipeline marketing"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B Technology"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "demand-generation",
+      "abm",
+      "senior",
+      "b2b"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Growth Marketing Lead avec treize ans d'expérience à construire des boucles de croissance et à piloter l'expérimentation pour des scale-ups tech. Expert de l'acquisition, de l'activation et de la rétention, de l'analyse produit et de la culture de test. Dirige une équipe growth pluridisciplinaire orientée métriques.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Youssef El Amrani",
+      "role": "Growth Marketing Lead",
+      "summary": "Growth lead orienté données qui construit des boucles de croissance et pilote l'expérimentation sur tout le funnel.",
+      "contact": {
+        "phone": "+32 476 34 56 78",
+        "email": "youssef.elamrani@example.be",
+        "address": {
+          "streetNumber": "48",
+          "streetName": "de Flandre",
+          "streetType": "Rue",
+          "city": "Bruxelles",
+          "state": "Région de Bruxelles-Capitale",
+          "zipCode": "1000",
+          "country": "Belgique"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/youssef-elamrani-growth"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Growth",
+        "skills": [
+          "Boucles de croissance",
+          "Acquisition",
+          "Activation",
+          "Rétention"
+        ]
+      },
+      {
+        "category": "Expérimentation",
+        "skills": [
+          "Tests A/B",
+          "Expérimentation",
+          "Growth loops",
+          "CRO"
+        ]
+      },
+      {
+        "category": "Analytics",
+        "skills": [
+          "Analyse produit",
+          "Amplitude",
+          "Mixpanel",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Google Ads",
+          "Meta Ads",
+          "GA4",
+          "Segment"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Growth marketing",
+        "Expérimentation",
+        "Analyse produit"
+      ],
+      "keyResponsibilities": [
+        "Construire et piloter les boucles de croissance",
+        "Diriger le programme d'expérimentation sur le funnel",
+        "Encadrer une équipe growth pluridisciplinaire"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Rocketbase",
+        "website": "https://rocketbase.example.com",
+        "location": "Bruxelles, Belgique",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Growth Marketing Lead",
+        "activities": [
+          {
+            "project": "Moteur de croissance",
+            "tasks": [
+              "Construction des boucles d'acquisition, activation et rétention",
+              "Pilotage d'un programme d'expérimentation de 30+ tests par trimestre",
+              "Encadrement d'une équipe growth de 5 personnes (marketing, data, produit)"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance de 3x du nombre d'utilisateurs actifs en trois ans",
+          "Amélioration de 35% du taux d'activation"
+        ],
+        "toolsAndTechnologies": [
+          "Amplitude",
+          "Google Ads",
+          "GA4",
+          "Segment"
+        ]
+      },
+      {
+        "company": "Appnova",
+        "website": "https://appnova.example.com",
+        "location": "Bruxelles, Belgique",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Growth Marketer",
+        "activities": [
+          {
+            "project": "Acquisition et activation",
+            "tasks": [
+              "Gestion des campagnes d'acquisition payante",
+              "Optimisation des parcours d'onboarding et d'activation",
+              "Analyse des cohortes et de la rétention"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration de 20% de la rétention à 30 jours"
+        ],
+        "toolsAndTechnologies": [
+          "Mixpanel",
+          "Meta Ads"
+        ]
+      },
+      {
+        "company": "Startup Kliqo",
+        "website": "https://kliqo.example.com",
+        "location": "Anvers, Belgique",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Chargé de marketing digital",
+        "activities": [
+          {
+            "project": "Acquisition",
+            "tasks": [
+              "Gestion des campagnes digitales d'acquisition",
+              "Suivi des indicateurs et reporting",
+              "Tests de landing pages"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise en place des premiers tests A/B de l'entreprise"
+        ],
+        "toolsAndTechnologies": [
+          "Google Analytics"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Vlerick Business School",
+        "degree": "Master",
+        "fieldOfStudy": "Marketing",
+        "achievements": [
+          "Spécialisation digital et innovation"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Amplitude",
+        "Mixpanel",
+        "GA4",
+        "Segment",
+        "SQL",
+        "Google Ads",
+        "Meta Ads"
+      ],
+      "softSkills": [
+        "Esprit expérimental",
+        "Analyse",
+        "Leadership",
+        "Curiosité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Arabe",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Néerlandais",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Refonte du parcours d'activation",
+        "description": "Optimisation de l'onboarding par une série d'expérimentations produit.",
+        "date": "2022-06",
+        "impact": "Hausse de 35% du taux d'activation des nouveaux utilisateurs."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Basketball",
+      "Data science",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Laura Peeters",
+        "position": "VP Growth",
+        "company": "Rocketbase",
+        "contact": {
+          "phone": "+32 476 87 65 43",
+          "email": "laura.peeters@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 68000,
+      "max": 88000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Growth Marketing",
+      "secondaryClusters": [
+        "Experimentation",
+        "Product Analytics"
+      ],
+      "functionalExpertise": [
+        "Growth loops",
+        "Experimentation",
+        "Product analytics"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Grew active users",
+        "Improved activation rate"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "Start-up"
+      ],
+      "environmentFit": [
+        "Start-up",
+        "Scale-up"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Ownership of full-funnel growth loops, a high-velocity experimentation program and leadership of a cross-functional growth team define a lead-level growth marketer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Growth Marketing Lead",
+        "Growth Manager",
+        "Head of Growth"
+      ],
+      "skills": [
+        "Amplitude",
+        "Mixpanel",
+        "GA4",
+        "A/B testing",
+        "Growth loops",
+        "SQL"
+      ],
+      "industries": [
+        "SaaS",
+        "Start-up"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "growth",
+      "experimentation",
+      "lead",
+      "saas"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Analyste études de marché en début de carrière, spécialisée dans la recherche quantitative et qualitative pour le marketing produit et la stratégie. Trois ans d'expérience à concevoir des enquêtes, analyser des données consommateurs et restituer des insights actionnables. Rigoureuse, curieuse et à l'aise avec les outils d'analyse.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Chloé Martin",
+      "role": "Analyste Études de Marché",
+      "summary": "Analyste études rigoureuse qui transforme données consommateurs et enquêtes en insights actionnables pour le marketing.",
+      "contact": {
+        "email": "chloe.martin@example.com",
+        "address": {
+          "streetNumber": "13",
+          "streetName": "de France",
+          "streetType": "Rue",
+          "city": "Nice",
+          "state": "Provence-Alpes-Côte d'Azur",
+          "zipCode": "06000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/chloe-martin-research"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Études quantitatives",
+        "skills": [
+          "Conception d'enquêtes",
+          "Analyse statistique",
+          "Segmentation",
+          "Sondages"
+        ]
+      },
+      {
+        "category": "Études qualitatives",
+        "skills": [
+          "Entretiens",
+          "Focus groups",
+          "Analyse thématique"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "SPSS",
+          "Qualtrics",
+          "Excel",
+          "Power BI"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Études de marché",
+        "Analyse de données",
+        "Insights consommateurs"
+      ],
+      "keyResponsibilities": [
+        "Concevoir et administrer des enquêtes",
+        "Analyser les données quantitatives et qualitatives",
+        "Restituer des insights actionnables"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Insightia",
+        "website": "https://insightia.example.com",
+        "location": "Nice, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Analyste Études de Marché",
+        "activities": [
+          {
+            "project": "Études consommateurs",
+            "tasks": [
+              "Conception et administration d'enquêtes consommateurs",
+              "Analyse statistique et segmentation des résultats",
+              "Restitution d'insights aux équipes marketing et produit"
+            ]
+          }
+        ],
+        "achievements": [
+          "Livraison de 25+ études par an",
+          "Étude de segmentation ayant guidé le repositionnement d'une gamme"
+        ],
+        "toolsAndTechnologies": [
+          "SPSS",
+          "Qualtrics",
+          "Power BI"
+        ]
+      },
+      {
+        "company": "Cabinet Études Riviera",
+        "website": "https://etudesriviera.example.com",
+        "location": "Nice, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Chargée d'études Junior",
+        "activities": [
+          {
+            "project": "Support études",
+            "tasks": [
+              "Support à la conception des questionnaires",
+              "Traitement et saisie des données",
+              "Aide à la rédaction des rapports"
+            ]
+          }
+        ],
+        "achievements": [
+          "Autonomie rapide sur le traitement des données"
+        ],
+        "toolsAndTechnologies": [
+          "Excel",
+          "SPSS"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université Côte d'Azur",
+        "degree": "Master",
+        "fieldOfStudy": "Marketing et Études",
+        "achievements": [
+          "Spécialisation études quantitatives"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Google Data Analytics Certificate",
+        "institution": "Google",
+        "year": "@Y-4@",
+        "description": "Certification sur l'analyse et la visualisation de données."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SPSS",
+        "Qualtrics",
+        "Excel",
+        "Power BI",
+        "GA4"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Curiosité",
+        "Esprit de synthèse",
+        "Autonomie"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Italien",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Étude de segmentation consommateurs",
+        "description": "Conception d'une étude de segmentation ayant orienté le repositionnement d'une gamme.",
+        "date": "2024-02",
+        "impact": "Repositionnement produit basé sur des segments consommateurs actionnables."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Lecture",
+      "Voile",
+      "Statistiques"
+    ],
+    "references": [
+      {
+        "name": "Olivier Blanc",
+        "position": "Directeur des Études",
+        "company": "Insightia",
+        "contact": {
+          "phone": "+33 6 55 66 77 88",
+          "email": "olivier.blanc@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 34000,
+      "max": 44000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Market Research",
+      "secondaryClusters": [
+        "Consumer Insights",
+        "Data Analysis"
+      ],
+      "functionalExpertise": [
+        "Market research",
+        "Survey design",
+        "Data analysis"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Delivered actionable insights",
+        "Informed product repositioning"
+      ],
+      "industryDomains": [
+        "Consumer goods",
+        "Market research"
+      ],
+      "environmentFit": [
+        "Research agency",
+        "Consumer brands"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.82,
+      "clusterReasoning": "Three years designing surveys and analysing consumer data with actionable insight delivery but no team ownership places this candidate at junior market research level."
+    },
+    "searchIndex": {
+      "roles": [
+        "Market Research Analyst",
+        "Consumer Insights Analyst",
+        "Research Analyst"
+      ],
+      "skills": [
+        "SPSS",
+        "Qualtrics",
+        "Power BI",
+        "Survey design",
+        "Market research",
+        "Segmentation"
+      ],
+      "industries": [
+        "Consumer Goods",
+        "Market Research"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "market-research",
+      "insights",
+      "junior",
+      "analytics"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directrice product marketing avec dix-huit ans d'expérience à bâtir et diriger des fonctions product marketing dans des entreprises SaaS B2B en forte croissance. Experte de la stratégie go-to-market, du positionnement de portefeuille et de l'alignement produit-ventes-marketing. Dirige des équipes pluridisciplinaires et siège au comité marketing.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Karim Benjelloun",
+      "role": "Head of Product Marketing",
+      "summary": "Dirigeant product marketing qui bâtit des fonctions PMM, pilote la stratégie go-to-market de portefeuille et aligne produit, ventes et marketing.",
+      "contact": {
+        "phone": "+33 6 10 20 30 40",
+        "email": "karim.benjelloun@example.com",
+        "address": {
+          "streetNumber": "50",
+          "streetName": "de Courcelles",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75017",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/karim-benjelloun-pmm"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Sur rendez-vous"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Direction PMM",
+        "skills": [
+          "Stratégie product marketing",
+          "Positionnement de portefeuille",
+          "Go-to-market",
+          "Vision produit"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Direction d'équipe",
+          "Développement des talents",
+          "Organisation marketing",
+          "Budget"
+        ]
+      },
+      {
+        "category": "Stratégie",
+        "skills": [
+          "Segmentation",
+          "Pricing",
+          "Analyse concurrentielle",
+          "Expansion internationale"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Productboard",
+          "HubSpot",
+          "Salesforce",
+          "GA4"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Product marketing",
+        "Stratégie go-to-market",
+        "Direction d'équipe"
+      ],
+      "keyResponsibilities": [
+        "Définir la stratégie product marketing et le positionnement de portefeuille",
+        "Diriger et développer l'équipe product marketing",
+        "Aligner produit, ventes et marketing sur le go-to-market"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Cortexa",
+        "website": "https://cortexa.example.com",
+        "location": "Paris, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Head of Product Marketing",
+        "activities": [
+          {
+            "project": "Fonction product marketing",
+            "tasks": [
+              "Construction de la fonction product marketing de zéro à 9 personnes",
+              "Définition de la stratégie de positionnement de portefeuille",
+              "Pilotage des go-to-market internationaux et de l'alignement produit-ventes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Structuration de la fonction PMM contribuant à une croissance du CA de 40% par an",
+          "Lancement réussi sur 4 nouveaux marchés européens"
+        ],
+        "toolsAndTechnologies": [
+          "Productboard",
+          "HubSpot",
+          "Salesforce"
+        ]
+      },
+      {
+        "company": "Sygma Software",
+        "website": "https://sygma.example.com",
+        "location": "Paris, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Product Marketing Manager Senior",
+        "activities": [
+          {
+            "project": "Go-to-market portefeuille",
+            "tasks": [
+              "Pilotage du positionnement et des lancements de plusieurs produits",
+              "Encadrement de 3 product marketing managers",
+              "Développement du sales enablement"
+            ]
+          }
+        ],
+        "achievements": [
+          "Refonte du portefeuille ayant clarifié l'offre et amélioré la conversion",
+          "Promu Head of PMM en 2017"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot",
+          "Salesforce"
+        ]
+      },
+      {
+        "company": "Agence Innoveo",
+        "website": "https://innoveo.example.com",
+        "location": "Paris, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Consultant marketing produit",
+        "activities": [
+          {
+            "project": "Missions clients",
+            "tasks": [
+              "Conseil en positionnement et go-to-market pour les clients",
+              "Réalisation d'études de marché et de segmentation",
+              "Accompagnement des lancements produits"
+            ]
+          }
+        ],
+        "achievements": [
+          "Accompagnement réussi de plusieurs lancements produits clients"
+        ],
+        "toolsAndTechnologies": [
+          "Google Analytics"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "ESCP Business School",
+        "degree": "Master en Management",
+        "fieldOfStudy": "Marketing et Stratégie",
+        "achievements": [
+          "Majeure Marketing"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Université Paris-Dauphine",
+        "degree": "Licence",
+        "fieldOfStudy": "Gestion",
+        "achievements": [
+          "Échange universitaire en Espagne"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Pragmatic Institute Product Marketing Certification",
+        "institution": "Pragmatic Institute",
+        "year": "@Y-4@",
+        "description": "Certification avancée en product marketing et go-to-market."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Productboard",
+        "HubSpot",
+        "Salesforce",
+        "GA4"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Vision stratégique",
+        "Communication",
+        "Développement des talents"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Construction de la fonction product marketing",
+        "description": "Création et structuration de la fonction product marketing d'une scale-up SaaS.",
+        "date": "2019-06",
+        "impact": "Contribution à une croissance annuelle du CA de 40%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Course à pied",
+      "Cinéma",
+      "Lecture stratégique"
+    ],
+    "references": [
+      {
+        "name": "Hélène Rousseau",
+        "position": "CMO",
+        "company": "Cortexa",
+        "contact": {
+          "phone": "+33 6 22 33 44 55",
+          "email": "helene.rousseau@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 100000,
+      "max": 140000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Product Marketing Leadership",
+      "secondaryClusters": [
+        "Go-to-Market Strategy",
+        "Portfolio Positioning"
+      ],
+      "functionalExpertise": [
+        "Product marketing strategy",
+        "Go-to-market",
+        "Team leadership"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Built PMM function",
+        "Drove revenue growth"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "B2B SaaS",
+        "Scale-up"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Building and leading product marketing functions with portfolio strategy ownership and revenue impact over nearly two decades indicates a director-level product marketing leader."
+    },
+    "searchIndex": {
+      "roles": [
+        "Head of Product Marketing",
+        "Director of Product Marketing",
+        "Product Marketing Lead"
+      ],
+      "skills": [
+        "Productboard",
+        "HubSpot",
+        "Salesforce",
+        "Go-to-market",
+        "Positioning",
+        "Team leadership"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B Technology"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "product-marketing",
+      "leadership",
+      "director",
+      "saas"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Account Executive B2B SaaS avec plus de dix ans d'expérience dans la vente de solutions logicielles aux entreprises mid-market et grands comptes. Régulièrement classée dans le top 10% de l'équipe commerciale avec une atteinte de quota supérieure à 115% sur plusieurs exercices. Spécialiste des cycles de vente complexes multi-interlocuteurs et de la méthodologie MEDDIC.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Camille Moreau",
+      "role": "Senior Account Executive",
+      "summary": "Closeuse SaaS entreprise, rigoureuse sur la qualification MEDDIC, qui accompagne les nouveaux commerciaux sur la découverte et la négociation.",
+      "contact": {
+        "phone": "+33 6 12 45 78 99",
+        "email": "camille.moreau@example.com",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "de Rivoli",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75004",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/camille-moreau-sales"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Déjeuners en semaine",
+          "Fin de journée"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Exécution commerciale",
+        "skills": [
+          "Vente entreprise",
+          "Vente de solutions",
+          "MEDDIC",
+          "Négociation",
+          "Closing"
+        ]
+      },
+      {
+        "category": "CRM & Outils",
+        "skills": [
+          "Salesforce",
+          "Outreach",
+          "Gong",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "category": "Pipeline",
+        "skills": [
+          "Gestion de pipeline",
+          "Prévisions",
+          "Planification de territoire",
+          "Atteinte de quota"
+        ]
+      },
+      {
+        "category": "Commercial",
+        "skills": [
+          "Vente à la valeur",
+          "Négociation de contrats",
+          "Renouvellements",
+          "Upsell"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Vente B2B entreprise",
+        "Gestion de pipeline",
+        "Vente consultative"
+      ],
+      "keyResponsibilities": [
+        "Piloter un territoire mid-market et grands comptes de bout en bout",
+        "Mener des cycles de vente complets de la découverte au closing",
+        "Prévoir avec précision et maintenir l'hygiène du pipeline dans Salesforce"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Cloudsphere SAS",
+        "website": "https://cloudsphere.example.com",
+        "location": "Paris, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Senior Account Executive",
+        "activities": [
+          {
+            "project": "Nouveaux comptes entreprise",
+            "tasks": [
+              "Gestion d'un quota annuel de 2,6 M€ sur les grands comptes français",
+              "Pilotage de deals multi-interlocuteurs (6 à 9 parties prenantes) avec MEDDIC",
+              "Collaboration avec l'avant-vente et le customer success sur les stratégies land-and-expand"
+            ]
+          }
+        ],
+        "achievements": [
+          "Atteinte de 118% du quota en 2024 et 113% en 2023",
+          "Signature du plus gros nouveau logo de la région à 460 K€ d'ACV"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Outreach",
+          "Gong",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "company": "Vantia Software",
+        "website": "https://vantia.example.com",
+        "location": "Lyon, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Account Executive",
+        "activities": [
+          {
+            "project": "Acquisition mid-market",
+            "tasks": [
+              "Closing de deals SaaS entre 20 K€ et 120 K€ d'ACV",
+              "Construction et qualification de pipeline en outbound et inbound",
+              "Négociation de contrats annuels et pluriannuels"
+            ]
+          }
+        ],
+        "achievements": [
+          "Promue Senior AE en moins de 30 mois",
+          "Moyenne de 106% d'atteinte de quota"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "HubSpot CRM",
+          "Outreach"
+        ]
+      },
+      {
+        "company": "Mediapulse",
+        "website": "https://mediapulse.example.com",
+        "location": "Lyon, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Sales Development Representative",
+        "activities": [
+          {
+            "project": "Prospection outbound",
+            "tasks": [
+              "Prise de rendez-vous qualifiés pour l'équipe terrain",
+              "Séquences d'emails et d'appels à grande échelle",
+              "Maintien de la qualité des données CRM"
+            ]
+          }
+        ],
+        "achievements": [
+          "Dépassement régulier des objectifs de rendez-vous"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Outreach"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "EM Lyon Business School",
+        "degree": "Master en Management",
+        "fieldOfStudy": "Marketing et Vente",
+        "achievements": [
+          "Mention Bien",
+          "Majeure Entrepreneuriat"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "MEDDIC Fundamentals",
+        "institution": "MEDDIC Academy",
+        "year": "@Y-4@",
+        "description": "Méthodologie de qualification et de prévision pour la vente B2B complexe."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "Outreach",
+        "Gong",
+        "LinkedIn Sales Navigator",
+        "HubSpot CRM"
+      ],
+      "softSkills": [
+        "Sens de la relation",
+        "Résilience",
+        "Écoute active",
+        "Négociation"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Espagnol",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Playbook land-and-expand entreprise",
+        "description": "Construction d'un playbook de multi-threading reproductible adopté par toute l'équipe grands comptes.",
+        "date": "2023-04",
+        "impact": "Hausse de 22% de la taille moyenne des deals de la région."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Cyclisme sur route",
+      "Cuisine",
+      "Randonnée"
+    ],
+    "references": [
+      {
+        "name": "Julien Faure",
+        "position": "Directeur Commercial Régional",
+        "company": "Cloudsphere SAS",
+        "contact": {
+          "phone": "+33 6 22 33 44 55",
+          "email": "julien.faure@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 82000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Enterprise SaaS Sales",
+      "secondaryClusters": [
+        "B2B Account Management",
+        "New Business Development"
+      ],
+      "functionalExpertise": [
+        "Enterprise selling",
+        "Pipeline management",
+        "Forecasting"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Exceeded quota multiple years",
+        "Grew average deal size"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "High-growth SaaS",
+        "Scale-up"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Quota-carrying enterprise SaaS closing with MEDDIC discipline and top-decile attainment places this candidate firmly in senior enterprise sales."
+    },
+    "searchIndex": {
+      "roles": [
+        "Account Executive",
+        "Enterprise Account Executive",
+        "Sales Executive"
+      ],
+      "skills": [
+        "Salesforce",
+        "Outreach",
+        "Gong",
+        "MEDDIC",
+        "Pipeline management",
+        "Negotiation"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B Technology"
+      ]
+    },
+    "tags": [
+      "sales",
+      "account-executive",
+      "saas",
+      "senior",
+      "quota-carrying"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Business Development Manager senior spécialisé dans l'ouverture de nouveaux marchés B2B et le développement de partenariats stratégiques. Treize ans d'expérience à structurer des équipes outbound et à générer du pipeline pour des éditeurs SaaS et des sociétés de services technologiques. Excellent à transformer des marchés vierges en portefeuilles clients rentables.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Thomas Lefèvre",
+      "role": "Business Development Manager",
+      "summary": "Développeur commercial orienté résultats, expert de l'outbound et de l'ouverture de nouveaux segments de marché.",
+      "contact": {
+        "phone": "+33 6 87 65 43 21",
+        "email": "thomas.lefevre.personal@example.com",
+        "address": {
+          "streetNumber": "24",
+          "streetName": "de la République",
+          "streetType": "Cours",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69002",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/thomas-lefevre-bizdev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Matinées en semaine",
+          "Visioconférence"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Business Development",
+        "skills": [
+          "Ouverture de marché",
+          "Partenariats stratégiques",
+          "Prospection outbound",
+          "Génération de pipeline"
+        ]
+      },
+      {
+        "category": "CRM & Outils",
+        "skills": [
+          "Salesforce",
+          "HubSpot CRM",
+          "Outreach",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "category": "Négociation",
+        "skills": [
+          "Négociation de contrats",
+          "Cadrage de deals",
+          "Gestion des parties prenantes"
+        ]
+      },
+      {
+        "category": "Stratégie",
+        "skills": [
+          "Go-to-market",
+          "Segmentation",
+          "Analyse concurrentielle"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Développement commercial B2B",
+        "Partenariats",
+        "Ouverture de nouveaux marchés"
+      ],
+      "keyResponsibilities": [
+        "Identifier et ouvrir de nouveaux segments de marché",
+        "Structurer et animer une équipe de SDR",
+        "Construire des partenariats revendeurs et technologiques"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Nexthorizon",
+        "website": "https://nexthorizon.example.com",
+        "location": "Lyon, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Business Development Manager",
+        "activities": [
+          {
+            "project": "Expansion Europe du Sud",
+            "tasks": [
+              "Ouverture des marchés espagnol et italien pour une plateforme SaaS RH",
+              "Recrutement et encadrement d'une équipe de 4 SDR",
+              "Signature de 6 partenariats revendeurs générant 1,8 M€ de pipeline"
+            ]
+          }
+        ],
+        "achievements": [
+          "Génération de 3,2 M€ de nouveau pipeline en 2024",
+          "Réduction du cycle de vente moyen de 18%"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Outreach",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "company": "Groupe Alteva",
+        "website": "https://alteva.example.com",
+        "location": "Grenoble, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Business Development Representative Senior",
+        "activities": [
+          {
+            "project": "Acquisition B2B",
+            "tasks": [
+              "Construction de pipeline outbound sur le segment industriel",
+              "Qualification et transfert des opportunités à l'équipe AE",
+              "Mise en place des premières séquences multicanales"
+            ]
+          }
+        ],
+        "achievements": [
+          "Atteinte de 130% de l'objectif de génération de pipeline",
+          "Meilleur BDR de l'année 2017"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot CRM",
+          "Outreach"
+        ]
+      },
+      {
+        "company": "Datalink Services",
+        "website": "https://datalink.example.com",
+        "location": "Lyon, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Commercial Junior",
+        "activities": [
+          {
+            "project": "Prospection PME",
+            "tasks": [
+              "Prospection téléphonique auprès des PME régionales",
+              "Prise de rendez-vous et présentation de l'offre",
+              "Suivi et mise à jour du CRM"
+            ]
+          }
+        ],
+        "achievements": [
+          "Dépassement des objectifs de prise de rendez-vous dès la première année"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IAE Lyon - Université Jean Moulin",
+        "degree": "Master 2",
+        "fieldOfStudy": "Développement Commercial",
+        "achievements": [
+          "Mémoire sur l'internationalisation des PME"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "HubSpot Sales Software Certification",
+        "institution": "HubSpot Academy",
+        "year": "@Y-4@",
+        "description": "Maîtrise du CRM HubSpot et des processus de vente inbound."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "HubSpot CRM",
+        "Outreach",
+        "LinkedIn Sales Navigator"
+      ],
+      "softSkills": [
+        "Ténacité",
+        "Leadership",
+        "Sens du réseau",
+        "Adaptabilité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Italien",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Lancement du programme partenaires",
+        "description": "Conception et déploiement d'un programme partenaires revendeurs de zéro.",
+        "date": "2022-06",
+        "impact": "Contribution de 28% du nouveau pipeline dès la première année."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Rugby",
+      "Voyages",
+      "Œnologie"
+    ],
+    "references": [
+      {
+        "name": "Sophie Girard",
+        "position": "VP Sales",
+        "company": "Nexthorizon",
+        "contact": {
+          "phone": "+33 6 44 55 66 77",
+          "email": "sophie.girard@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 58000,
+      "max": 78000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Business Development",
+      "secondaryClusters": [
+        "Partnerships",
+        "Outbound Sales"
+      ],
+      "functionalExpertise": [
+        "Market development",
+        "Outbound prospecting",
+        "Partnerships"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Opened new markets",
+        "Built partner channel"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "International expansion"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Consistent record of opening new markets and building outbound teams and partner channels indicates a senior business development profile."
+    },
+    "searchIndex": {
+      "roles": [
+        "Business Development Manager",
+        "Business Development Representative",
+        "Sales Development"
+      ],
+      "skills": [
+        "Salesforce",
+        "HubSpot CRM",
+        "Outreach",
+        "Pipeline generation",
+        "Partnerships",
+        "Go-to-market"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B Technology"
+      ]
+    },
+    "tags": [
+      "sales",
+      "business-development",
+      "outbound",
+      "senior",
+      "partnerships"
+    ]
+  }
+]

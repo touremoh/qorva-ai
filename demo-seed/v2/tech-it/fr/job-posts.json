@@ -1,0 +1,164 @@
+[
+  {
+    "title": "Ingénieur Backend Senior (Java/Spring)",
+    "description": "Rejoignez notre équipe Plateforme à Paris pour concevoir et faire évoluer les microservices qui alimentent notre produit SaaS de recrutement, utilisé par des milliers d'entreprises en France et en Europe.\n\nVotre mission : concevoir des API robustes, garantir la fiabilité et la performance de systèmes distribués à fort trafic, et porter les décisions d'architecture au sein d'une équipe agile.\n\nResponsabilités :\n- Développer et maintenir des microservices Java 17 / Spring Boot.\n- Concevoir des schémas de données MongoDB et optimiser les requêtes.\n- Mettre en place l'observabilité, les tests automatisés et l'intégration continue.\n- Encadrer les développeurs juniors via la revue de code et le mentorat technique.\n\nCompétences requises : solide maîtrise de Java et de l'écosystème Spring, expérience des architectures microservices, des bases de données NoSQL et des API REST. Une expérience du cloud (AWS) et de la conteneurisation (Docker) est attendue.\n\nAtouts appréciés : Kafka, Kubernetes, connaissance des pratiques DevOps.\n\nSeniorité : profil senior, 6 ans d'expérience minimum. Poste basé à Paris en mode hybride (3 jours au bureau, 2 jours en télétravail). Environnement stimulant, forte culture d'ingénierie et opportunités d'évolution vers un rôle de tech lead.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Java", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Spring Boot", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Microservices", "importance": "important", "weight": 0.75, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "MongoDB", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "REST API", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "nice_to_have", "weight": 0.5, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Docker", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Kafka", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Paris", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "SaaS", "Information Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Data Engineer (Python/Airflow)",
+    "description": "Notre équipe Data à Lyon recherche un Data Engineer pour construire et fiabiliser les pipelines qui transforment nos données brutes en actifs exploitables pour l'analytique et le machine learning.\n\nVotre mission : concevoir des pipelines de données batch et temps réel, garantir la qualité et la gouvernance des données, et collaborer étroitement avec les data scientists et les équipes produit.\n\nResponsabilités :\n- Développer des pipelines ETL/ELT en Python orchestrés avec Airflow.\n- Modéliser et maintenir notre entrepôt de données sur le cloud.\n- Écrire des requêtes SQL performantes et optimiser le stockage.\n- Mettre en place le monitoring, les tests de données et la documentation.\n\nCompétences requises : bonne maîtrise de Python et de SQL, expérience d'un orchestrateur (Airflow), connaissance des entrepôts de données cloud et des formats de données. Compréhension des principes de modélisation dimensionnelle.\n\nAtouts appréciés : dbt, Spark, expérience AWS (S3, Redshift), notions de streaming (Kafka).\n\nSeniorité : profil mid, 3 à 5 ans d'expérience. Poste basé à Lyon, télétravail partiel possible. Vous rejoindrez une équipe soudée qui investit fortement dans la culture de la donnée et l'automatisation.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Python", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Apache Airflow", "importance": "important", "weight": 0.75, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "ETL", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Data Warehousing", "importance": "important", "weight": 0.6, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "dbt", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Apache Spark", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "nice_to_have", "weight": 0.5, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Lyon", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Data", "Software", "Information Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Ingénieur DevOps / SRE (Kubernetes/Terraform)",
+    "description": "Nous recherchons un Ingénieur DevOps / SRE pour notre plateforme cloud, avec une équipe répartie entre Bruxelles et le télétravail. Vous serez le garant de la fiabilité, de la scalabilité et de la sécurité de notre infrastructure.\n\nVotre mission : automatiser le provisionnement de l'infrastructure, industrialiser les déploiements et améliorer en continu l'observabilité et la résilience de nos services.\n\nResponsabilités :\n- Gérer et faire évoluer nos clusters Kubernetes en production.\n- Décrire l'infrastructure en code avec Terraform sur AWS.\n- Construire et maintenir les pipelines CI/CD.\n- Définir les SLO/SLI, gérer l'alerting et les post-mortems d'incidents.\n\nCompétences requises : solide expérience de Kubernetes, de Terraform et d'un fournisseur cloud (AWS de préférence). Bonne pratique de Docker, des pipelines CI/CD et du scripting (Bash ou Python). Culture forte de l'automatisation et de la fiabilité.\n\nAtouts appréciés : Prometheus/Grafana, Helm, expérience du service mesh, notions de sécurité cloud.\n\nSeniorité : profil senior, 6 ans d'expérience minimum. Poste basé à Bruxelles ou en télétravail complet. Vous aurez un impact direct sur la stabilité d'une plateforme utilisée quotidiennement par nos clients.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Kubernetes", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Terraform", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Docker", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "CI/CD", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Bash", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Prometheus", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Bruxelles", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Cloud Computing", "Software", "Information Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.6, "experience": 0.25, "location": 0.05, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Technical Product Manager (Plateforme B2B)",
+    "description": "Notre équipe Produit à Luxembourg recherche un Technical Product Manager pour piloter la feuille de route de notre plateforme B2B destinée aux recruteurs. Vous ferez le lien entre les besoins clients, la stratégie business et les équipes d'ingénierie.\n\nVotre mission : définir la vision produit, prioriser le backlog et livrer des fonctionnalités à forte valeur, en vous appuyant sur les données et le retour terrain.\n\nResponsabilités :\n- Construire et prioriser la roadmap produit en lien avec les objectifs business.\n- Rédiger des spécifications claires et animer les cérémonies agiles.\n- Analyser les métriques d'usage et mener la découverte produit auprès des utilisateurs.\n- Collaborer étroitement avec l'ingénierie, le design et les équipes commerciales.\n\nCompétences requises : expérience avérée de Product Management sur un produit technique ou SaaS, maîtrise des méthodes agiles, aisance avec l'analytique produit et capacité à dialoguer avec des équipes techniques. Bonne compréhension des API et des architectures cloud.\n\nAtouts appréciés : notions de SQL, expérience du recrutement ou des RH, connaissance des outils d'analytics.\n\nSeniorité : profil mid, 4 à 5 ans d'expérience. Poste basé à Luxembourg, mode hybride. Vous aurez la responsabilité complète d'un domaine produit stratégique.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Management", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Agile", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Roadmapping", "importance": "important", "weight": 0.65, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Stakeholder Management", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "REST API", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 4,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Luxembourg", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["SaaS", "Software", "Human Resources"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Développeur Full-Stack Junior (React/Node.js)",
+    "description": "Vous débutez votre carrière et souhaitez apprendre au sein d'une équipe bienveillante ? Notre studio produit à Nantes recherche un Développeur Full-Stack Junior pour contribuer à notre application web moderne.\n\nVotre mission : développer des fonctionnalités de bout en bout, du front-end React à l'API Node.js, avec l'accompagnement d'ingénieurs expérimentés.\n\nResponsabilités :\n- Implémenter des interfaces réactives et accessibles avec React et TypeScript.\n- Développer des endpoints d'API en Node.js et interagir avec la base de données.\n- Participer aux revues de code et progresser via le pair programming.\n- Écrire des tests et corriger des anomalies sous supervision.\n\nCompétences requises : bases solides en JavaScript et TypeScript, première expérience (stage, alternance ou projet personnel) avec React et Node.js, compréhension du HTML/CSS et des principes des API REST. Curiosité, rigueur et envie d'apprendre sont essentielles.\n\nAtouts appréciés : notions de Git, de SQL, ou d'un framework de tests.\n\nSeniorité : profil junior, 0 à 2 ans d'expérience. Poste basé à Nantes en mode hybride, avec un vrai parcours d'onboarding et de mentorat. Idéal pour un premier ou deuxième poste en développement web.",
+    "scoringRules": {
+      "skills": [
+        { "name": "JavaScript", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "React", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Node.js", "importance": "important", "weight": 0.7, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "TypeScript", "importance": "important", "weight": 0.6, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "HTML", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "CSS", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Git", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Nantes", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "Web Development", "Information Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.15, "location": 0.15, "industry": 0.2 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

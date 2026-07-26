@@ -1,0 +1,5806 @@
+[
+  {
+    "candidateProfileSummary": "Engenheiro mecânico sénior com mais de dez anos em projeto mecânico e desenvolvimento de produto para a indústria metalomecânica e de moldes. Especialista em modelação 3D em SolidWorks, aplicação de GD&T e análise por elementos finitos (FEA). Combina rigor técnico com capacidade de coordenar equipas de projeto e otimizar componentes para fabrico.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Rui Alexandre Ferreira",
+      "role": "Engenheiro Mecânico de Projeto Sénior",
+      "summary": "Engenheiro mecânico focado em projeto de componentes e conjuntos, tolerâncias geométricas e validação estrutural por simulação.",
+      "contact": {
+        "phone": "+351 916 204 517",
+        "email": "rui.ferreira@example.com",
+        "address": {
+          "streetNumber": "142",
+          "streetName": "de Cedofeita",
+          "streetType": "Rua",
+          "city": "Porto",
+          "state": "Porto",
+          "zipCode": "4050-181",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/rui-ferreira-eng"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dias úteis ao fim da tarde",
+          "sábado de manhã"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Projeto e CAD",
+        "skills": [
+          "SolidWorks",
+          "AutoCAD",
+          "Modelação paramétrica"
+        ]
+      },
+      {
+        "category": "Simulação e análise",
+        "skills": [
+          "ANSYS",
+          "FEA",
+          "Análise estrutural"
+        ]
+      },
+      {
+        "category": "Fabrico e qualidade",
+        "skills": [
+          "GD&T",
+          "DFM",
+          "Desenho técnico"
+        ]
+      },
+      {
+        "category": "Gestão de projeto",
+        "skills": [
+          "Coordenação de equipas",
+          "Gestão de requisitos"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Projeto mecânico de componentes",
+        "Análise por elementos finitos",
+        "Tolerâncias geométricas GD&T"
+      ],
+      "keyResponsibilities": [
+        "Conceber e detalhar conjuntos mecânicos",
+        "Validar componentes por simulação estrutural",
+        "Assegurar a fabricabilidade e a qualidade dos desenhos"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Simoldes Aços",
+        "website": "https://www.simoldes.com",
+        "location": "Oliveira de Azeméis, Portugal",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Engenheiro Mecânico de Projeto Sénior",
+        "activities": [
+          {
+            "project": "Moldes de injeção para componentes automóveis",
+            "tasks": [
+              "Modelar conjuntos de molde em SolidWorks",
+              "Aplicar GD&T em componentes críticos",
+              "Realizar análises FEA de resistência e fadiga"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduziu o peso de um suporte estrutural em 18% mantendo a rigidez exigida",
+          "Diminuiu o número de iterações de projeto ao introduzir revisões DFM sistemáticas"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "ANSYS",
+          "GD&T",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Bosch Termotecnologia",
+        "website": "https://www.bosch.pt",
+        "location": "Aveiro, Portugal",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Engenheiro Mecânico de Projeto",
+        "activities": [
+          {
+            "project": "Componentes de esquentadores e caldeiras",
+            "tasks": [
+              "Desenvolver peças em chapa e plástico",
+              "Preparar desenhos técnicos e tolerâncias",
+              "Apoiar ensaios de validação"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribuiu para a industrialização de uma nova gama de permutadores"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "AutoCAD",
+          "FEA"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Faculdade de Engenharia da Universidade do Porto",
+        "degree": "Mestrado Integrado em Engenharia Mecânica",
+        "fieldOfStudy": "Projeto e Construção Mecânica",
+        "achievements": [
+          "Dissertação em otimização estrutural de componentes"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified SolidWorks Professional (CSWP)",
+        "institution": "Dassault Systèmes",
+        "year": "@Y-0@",
+        "description": "Certificação avançada de modelação em SolidWorks."
+      },
+      {
+        "title": "Membro efetivo da Ordem dos Engenheiros",
+        "institution": "Ordem dos Engenheiros",
+        "year": "@Y-1@",
+        "description": "Inscrição no colégio de Engenharia Mecânica."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SolidWorks",
+        "ANSYS",
+        "GD&T",
+        "FEA",
+        "AutoCAD",
+        "DFM"
+      ],
+      "softSkills": [
+        "Rigor técnico",
+        "Trabalho em equipa",
+        "Resolução de problemas"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Otimização de suporte estrutural",
+        "description": "Redução de peso de um componente metálico mantendo requisitos de rigidez através de análise FEA iterativa.",
+        "date": "2023-06",
+        "impact": "Poupança de material de 18% por peça produzida em série."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Modelismo",
+      "Ciclismo de montanha",
+      "Impressão 3D"
+    ],
+    "references": [
+      {
+        "name": "Carla Nogueira",
+        "position": "Diretora de Engenharia",
+        "company": "Simoldes Aços",
+        "contact": {
+          "phone": "+351 917 331 220",
+          "email": "carla.nogueira@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 42000,
+      "max": 52000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Mechanical Design Engineering",
+      "secondaryClusters": [
+        "Product Development",
+        "Structural Simulation"
+      ],
+      "functionalExpertise": [
+        "Projeto mecânico",
+        "Simulação estrutural"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Redução de custos de material",
+        "Melhoria da fabricabilidade"
+      ],
+      "industryDomains": [
+        "Automotive",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "Ambiente industrial",
+        "Equipas de engenharia de produto"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Perfil consolidado em projeto mecânico com domínio de SolidWorks, GD&T e FEA, historial estável na indústria de moldes e componentes automóveis."
+    },
+    "searchIndex": {
+      "roles": [
+        "Mechanical Design Engineer",
+        "Product Engineer",
+        "CAD Engineer"
+      ],
+      "skills": [
+        "SolidWorks",
+        "ANSYS",
+        "GD&T",
+        "FEA",
+        "AutoCAD"
+      ],
+      "industries": [
+        "Automotive",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "solidworks",
+      "fea",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheira mecânica sénior especializada em climatização e AVAC para edifícios de serviços e hospitais. Domina o dimensionamento de sistemas HVAC, eficiência energética e coordenação MEP em ambiente BIM. Experiência sólida em projeto, obra e comissionamento de instalações técnicas.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Sofia Mendes Cardoso",
+      "role": "Engenheira de AVAC Sénior",
+      "summary": "Engenheira mecânica de climatização com forte foco em eficiência energética e coordenação de especialidades em projeto de edifícios.",
+      "contact": {
+        "phone": "+351 913 887 042",
+        "email": "sofia.cardoso@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Duque de Ávila",
+          "streetType": "Avenida",
+          "unit": "5 Esq",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1050-016",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sofia-cardoso-hvac"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "dias úteis de manhã",
+          "quinta e sexta à tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Climatização e AVAC",
+        "skills": [
+          "Dimensionamento HVAC",
+          "Ventilação",
+          "Cargas térmicas"
+        ]
+      },
+      {
+        "category": "Ferramentas de projeto",
+        "skills": [
+          "AutoCAD",
+          "Revit MEP",
+          "HAP"
+        ]
+      },
+      {
+        "category": "Eficiência energética",
+        "skills": [
+          "Certificação energética",
+          "Simulação térmica"
+        ]
+      },
+      {
+        "category": "Coordenação",
+        "skills": [
+          "BIM",
+          "Coordenação MEP"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Projeto de sistemas AVAC",
+        "Eficiência energética de edifícios",
+        "Coordenação MEP em BIM"
+      ],
+      "keyResponsibilities": [
+        "Dimensionar equipamentos e redes de climatização",
+        "Assegurar conformidade com regulamentação térmica",
+        "Coordenar especialidades em modelo BIM"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "AFAconsult",
+        "website": "https://www.afaconsult.com",
+        "location": "Lisboa, Portugal",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Engenheira de AVAC Sénior",
+        "activities": [
+          {
+            "project": "Climatização de complexo hospitalar",
+            "tasks": [
+              "Dimensionar sistemas de tratamento de ar",
+              "Coordenar a especialidade AVAC em Revit MEP",
+              "Elaborar cadernos de encargos e mapas de quantidades"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduziu o consumo energético estimado de um edifício de serviços em 22%",
+          "Coordenou a especialidade mecânica de um hospital de média dimensão"
+        ],
+        "toolsAndTechnologies": [
+          "Revit MEP",
+          "AutoCAD",
+          "HAP"
+        ]
+      },
+      {
+        "company": "Gatehouse Engenharia",
+        "website": "https://www.example.com",
+        "location": "Lisboa, Portugal",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Engenheira de AVAC",
+        "activities": [
+          {
+            "project": "Instalações técnicas de edifícios de escritórios",
+            "tasks": [
+              "Calcular cargas térmicas e caudais",
+              "Preparar peças desenhadas de AVAC",
+              "Acompanhar obra e comissionamento"
+            ]
+          }
+        ],
+        "achievements": [
+          "Assegurou a certificação energética de vários edifícios de serviços"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "HAP",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Instituto Superior Técnico",
+        "degree": "Mestrado Integrado em Engenharia Mecânica",
+        "fieldOfStudy": "Energia e Climatização",
+        "achievements": [
+          "Especialização em sistemas térmicos e AVAC"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Perito Qualificado em Certificação Energética",
+        "institution": "ADENE",
+        "year": "@Y-0@",
+        "description": "Habilitação para certificação energética de edifícios."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Revit MEP",
+        "AutoCAD",
+        "HAP",
+        "HVAC",
+        "Simulação térmica"
+      ],
+      "softSkills": [
+        "Organização",
+        "Comunicação com clientes",
+        "Trabalho sob prazos"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Requalificação energética de edifício de serviços",
+        "description": "Redesenho do sistema AVAC com recuperação de calor e controlo por variação de caudal.",
+        "date": "2022-11",
+        "impact": "Redução de 22% no consumo energético anual estimado."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Corrida",
+      "Fotografia de arquitetura",
+      "Voluntariado ambiental"
+    ],
+    "references": [
+      {
+        "name": "Pedro Vasconcelos",
+        "position": "Diretor de Projeto",
+        "company": "AFAconsult",
+        "contact": {
+          "phone": "+351 912 556 700",
+          "email": "pedro.vasconcelos@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 40000,
+      "max": 50000
+    },
+    "candidateClustering": {
+      "primaryCluster": "HVAC Engineering",
+      "secondaryClusters": [
+        "Building Services",
+        "Energy Efficiency"
+      ],
+      "functionalExpertise": [
+        "Projeto AVAC",
+        "Eficiência energética"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Redução de consumos energéticos",
+        "Conformidade regulamentar"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Healthcare Facilities"
+      ],
+      "environmentFit": [
+        "Gabinetes de projeto",
+        "Ambiente multidisciplinar"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Especialista clara em AVAC e climatização de edifícios, com competências de coordenação MEP em BIM e forte componente de eficiência energética."
+    },
+    "searchIndex": {
+      "roles": [
+        "HVAC Engineer",
+        "Building Services Engineer",
+        "MEP Engineer"
+      ],
+      "skills": [
+        "Revit MEP",
+        "AutoCAD",
+        "HVAC",
+        "HAP",
+        "BIM"
+      ],
+      "industries": [
+        "Construction",
+        "Healthcare Facilities"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "hvac",
+      "mep",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro mecânico líder na área de powertrain e desenvolvimento de motores, com mais de catorze anos na indústria automóvel. Especialista em CATIA, análise por elementos finitos e validação de componentes de motorização. Lidera equipas de desenvolvimento e coordena fornecedores em programas de novos veículos.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Bruno Almeida Ribeiro",
+      "role": "Líder de Engenharia de Powertrain",
+      "summary": "Engenheiro mecânico de powertrain com liderança de equipas de desenvolvimento e validação de componentes de motorização.",
+      "contact": {
+        "phone": "+55 11 98432 7710",
+        "email": "bruno.ribeiro@example.com",
+        "address": {
+          "streetNumber": "1200",
+          "streetName": "Paulista",
+          "streetType": "Avenida",
+          "unit": "Conj 84",
+          "city": "São Paulo",
+          "state": "SP",
+          "zipCode": "01310-100",
+          "country": "Brasil"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/bruno-ribeiro-powertrain"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "dias úteis ao final da tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Projeto de powertrain",
+        "skills": [
+          "CATIA",
+          "Desenvolvimento de motores",
+          "Componentes de motorização"
+        ]
+      },
+      {
+        "category": "Simulação",
+        "skills": [
+          "ANSYS",
+          "FEA",
+          "Análise térmica"
+        ]
+      },
+      {
+        "category": "Validação e ensaios",
+        "skills": [
+          "Ensaios em banco",
+          "Fadiga",
+          "Durabilidade"
+        ]
+      },
+      {
+        "category": "Liderança",
+        "skills": [
+          "Gestão de equipa",
+          "Gestão de fornecedores",
+          "Gestão de programa"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Desenvolvimento de powertrain",
+        "Simulação estrutural e térmica",
+        "Validação de componentes"
+      ],
+      "keyResponsibilities": [
+        "Liderar o desenvolvimento de componentes de motorização",
+        "Coordenar fornecedores e ensaios de validação",
+        "Garantir cumprimento de metas de custo e prazo"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Volkswagen do Brasil",
+        "website": "https://www.vw.com.br",
+        "location": "São Bernardo do Campo, Brasil",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Líder de Engenharia de Powertrain",
+        "activities": [
+          {
+            "project": "Desenvolvimento de novo grupo motopropulsor",
+            "tasks": [
+              "Coordenar equipa de projeto de componentes",
+              "Definir requisitos e planos de validação",
+              "Gerir fornecedores de sistemas de motorização"
+            ]
+          }
+        ],
+        "achievements": [
+          "Liderou o desenvolvimento de um coletor de admissão que reduziu perdas de carga em 12%",
+          "Reduziu o prazo de validação de um programa em oito semanas"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA",
+          "ANSYS",
+          "FEA"
+        ]
+      },
+      {
+        "company": "Magneti Marelli",
+        "website": "https://www.example.com.br",
+        "location": "Hortolândia, Brasil",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Engenheiro de Desenvolvimento de Powertrain",
+        "activities": [
+          {
+            "project": "Sistemas de admissão e escape",
+            "tasks": [
+              "Modelar componentes em CATIA",
+              "Realizar análises FEA e térmicas",
+              "Apoiar ensaios de durabilidade"
+            ]
+          }
+        ],
+        "achievements": [
+          "Desenvolveu componentes homologados para vários modelos em produção"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA",
+          "ANSYS",
+          "FEA"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Escola Politécnica da Universidade de São Paulo",
+        "degree": "Bacharelado em Engenharia Mecânica",
+        "fieldOfStudy": "Automóvel e Motorização",
+        "achievements": [
+          "Trabalho de conclusão em simulação de motores de combustão"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CATIA V5 Mechanical Design Specialist",
+        "institution": "Dassault Systèmes",
+        "year": "@Y-0@",
+        "description": "Certificação avançada em projeto mecânico com CATIA."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "CATIA",
+        "ANSYS",
+        "FEA",
+        "Análise térmica",
+        "Gestão de programa"
+      ],
+      "softSkills": [
+        "Liderança",
+        "Visão estratégica",
+        "Negociação com fornecedores"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Espanhol",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Novo coletor de admissão",
+        "description": "Desenvolvimento e validação de coletor otimizado por CFD e FEA para nova gama de motores.",
+        "date": "2021-03",
+        "impact": "Redução de 12% nas perdas de carga e ganho de eficiência do motor."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Automobilismo",
+      "Corrida de rua",
+      "Mentoria de jovens engenheiros"
+    ],
+    "references": [
+      {
+        "name": "Fernanda Lima",
+        "position": "Gerente de Engenharia",
+        "company": "Volkswagen do Brasil",
+        "contact": {
+          "phone": "+55 11 99120 3345",
+          "email": "fernanda.lima@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "BRL",
+      "min": 220000,
+      "max": 300000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Powertrain Engineering",
+      "secondaryClusters": [
+        "Automotive Development",
+        "Structural Simulation"
+      ],
+      "functionalExpertise": [
+        "Desenvolvimento de powertrain",
+        "Liderança de equipa"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Redução de prazos de desenvolvimento",
+        "Melhoria de eficiência de componentes"
+      ],
+      "industryDomains": [
+        "Automotive"
+      ],
+      "environmentFit": [
+        "Grandes fabricantes",
+        "Ambiente de programa"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Perfil de liderança técnica em powertrain com forte base em CATIA e simulação, historial em grandes fabricantes automóveis e coordenação de fornecedores."
+    },
+    "searchIndex": {
+      "roles": [
+        "Powertrain Engineer",
+        "Automotive Engineer",
+        "Engineering Lead"
+      ],
+      "skills": [
+        "CATIA",
+        "ANSYS",
+        "FEA",
+        "Powertrain",
+        "CFD"
+      ],
+      "industries": [
+        "Automotive"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "powertrain",
+      "automotive",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro mecânico com percurso na produção e manutenção industrial, hoje responsável por equipas de manutenção e fiabilidade em ambiente fabril. Especialista em manutenção preventiva, gestão de ativos e melhoria de disponibilidade de linhas. Combina competências técnicas com gestão de equipas e orçamentos de manutenção.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Nuno Miguel Tavares",
+      "role": "Responsável de Manutenção e Fiabilidade",
+      "summary": "Gestor de manutenção industrial focado em fiabilidade, disponibilidade de equipamentos e liderança de equipas técnicas.",
+      "contact": {
+        "phone": "+351 914 660 231",
+        "email": "nuno.tavares@example.com",
+        "address": {
+          "streetNumber": "58",
+          "streetName": "de Santa Joana",
+          "streetType": "Rua",
+          "city": "Aveiro",
+          "state": "Aveiro",
+          "zipCode": "3810-227",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/nuno-tavares-maintenance"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "dias úteis ao fim do dia",
+          "sábado de manhã"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Manutenção industrial",
+        "skills": [
+          "Manutenção preventiva",
+          "Manutenção preditiva",
+          "Gestão de ativos"
+        ]
+      },
+      {
+        "category": "Fiabilidade",
+        "skills": [
+          "RCM",
+          "Análise de falhas",
+          "TPM"
+        ]
+      },
+      {
+        "category": "Gestão",
+        "skills": [
+          "Gestão de equipas",
+          "Orçamentação",
+          "Gestão de contratos"
+        ]
+      },
+      {
+        "category": "Ferramentas",
+        "skills": [
+          "SAP PM",
+          "AutoCAD",
+          "Excel"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Manutenção e fiabilidade",
+        "Gestão de ativos industriais",
+        "Melhoria de disponibilidade"
+      ],
+      "keyResponsibilities": [
+        "Gerir equipas de manutenção e planos preventivos",
+        "Aumentar a disponibilidade das linhas de produção",
+        "Controlar orçamentos e contratos de manutenção"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Renault Cacia",
+        "website": "https://www.renault.pt",
+        "location": "Aveiro, Portugal",
+        "from": "@M-2@",
+        "to": "Present",
+        "position": "Responsável de Manutenção e Fiabilidade",
+        "activities": [
+          {
+            "project": "Manutenção de linhas de caixas de velocidades",
+            "tasks": [
+              "Coordenar equipas de manutenção por turnos",
+              "Implementar planos de manutenção preventiva e preditiva",
+              "Gerir indicadores de disponibilidade e MTBF"
+            ]
+          }
+        ],
+        "achievements": [
+          "Aumentou a disponibilidade das linhas de 88% para 94%",
+          "Reduziu paragens não planeadas em 30% através de manutenção preditiva"
+        ],
+        "toolsAndTechnologies": [
+          "SAP PM",
+          "TPM",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Colep",
+        "website": "https://www.colep.com",
+        "location": "Vale de Cambra, Portugal",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Engenheiro de Manutenção",
+        "activities": [
+          {
+            "project": "Manutenção de linhas de embalagem metálica",
+            "tasks": [
+              "Diagnosticar avarias mecânicas e pneumáticas",
+              "Planear intervenções preventivas",
+              "Gerir peças de reserva"
+            ]
+          }
+        ],
+        "achievements": [
+          "Implementou plano de manutenção preventiva que reduziu avarias recorrentes"
+        ],
+        "toolsAndTechnologies": [
+          "SAP PM",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidade de Aveiro",
+        "degree": "Mestrado em Engenharia Mecânica",
+        "fieldOfStudy": "Produção e Manutenção Industrial",
+        "achievements": [
+          "Projeto em gestão de manutenção industrial"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP PM",
+        "TPM",
+        "RCM",
+        "Manutenção preditiva",
+        "AutoCAD"
+      ],
+      "softSkills": [
+        "Liderança de equipas",
+        "Gestão de conflitos",
+        "Orientação para resultados"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de manutenção preditiva",
+        "description": "Introdução de análise de vibrações e termografia em equipamentos críticos da fábrica.",
+        "date": "2020-09",
+        "impact": "Redução de 30% em paragens não planeadas ao longo de um ano."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Restauro de motores clássicos",
+      "Pesca",
+      "Futebol de veteranos"
+    ],
+    "references": [
+      {
+        "name": "Helena Cruz",
+        "position": "Diretora Industrial",
+        "company": "Renault Cacia",
+        "contact": {
+          "phone": "+351 916 445 902",
+          "email": "helena.cruz@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 55000,
+      "max": 68000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Maintenance & Reliability Management",
+      "secondaryClusters": [
+        "Industrial Maintenance",
+        "Asset Management"
+      ],
+      "functionalExpertise": [
+        "Gestão de manutenção",
+        "Fiabilidade de equipamentos"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Aumento de disponibilidade",
+        "Redução de paragens"
+      ],
+      "industryDomains": [
+        "Automotive",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "Ambiente fabril",
+        "Gestão de equipas técnicas"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.84,
+      "clusterReasoning": "Gestor de manutenção com forte componente de fiabilidade e liderança de equipas, resultados mensuráveis em disponibilidade de linhas industriais."
+    },
+    "searchIndex": {
+      "roles": [
+        "Maintenance Manager",
+        "Reliability Engineer",
+        "Industrial Engineer"
+      ],
+      "skills": [
+        "SAP PM",
+        "TPM",
+        "RCM",
+        "Predictive Maintenance",
+        "AutoCAD"
+      ],
+      "industries": [
+        "Automotive",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "maintenance",
+      "reliability",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro mecânico em início de carreira dedicado ao desenvolvimento de produto e investigação aplicada. Confortável com modelação em Creo e SolidWorks, prototipagem rápida e ensaios de validação. Procura consolidar competências em I&D de produto numa equipa técnica exigente.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "André Filipe Costa",
+      "role": "Engenheiro Mecânico de I&D",
+      "summary": "Engenheiro mecânico júnior focado em desenvolvimento de produto, prototipagem e ensaios.",
+      "contact": {
+        "phone": "+351 915 073 884",
+        "email": "andre.costa@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Dr. Dias da Silva",
+          "streetType": "Rua",
+          "city": "Coimbra",
+          "state": "Coimbra",
+          "zipCode": "3000-136",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/andre-costa-eng"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "dias úteis a qualquer hora"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Projeto e CAD",
+        "skills": [
+          "Creo",
+          "SolidWorks",
+          "Desenho técnico"
+        ]
+      },
+      {
+        "category": "Prototipagem",
+        "skills": [
+          "Impressão 3D",
+          "Prototipagem rápida"
+        ]
+      },
+      {
+        "category": "Ensaios",
+        "skills": [
+          "Ensaios mecânicos",
+          "Instrumentação básica"
+        ]
+      },
+      {
+        "category": "Análise",
+        "skills": [
+          "FEA introdutório",
+          "Excel"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Desenvolvimento de produto",
+        "Prototipagem",
+        "Ensaios de validação"
+      ],
+      "keyResponsibilities": [
+        "Modelar componentes e conjuntos em CAD",
+        "Preparar e acompanhar ensaios de protótipos",
+        "Documentar resultados e propor melhorias"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Active Space Technologies",
+        "website": "https://www.example.com",
+        "location": "Coimbra, Portugal",
+        "from": "@M-2@",
+        "to": "Present",
+        "position": "Engenheiro Mecânico de I&D",
+        "activities": [
+          {
+            "project": "Mecanismos para aplicações industriais",
+            "tasks": [
+              "Modelar componentes em Creo",
+              "Preparar protótipos por impressão 3D",
+              "Apoiar ensaios mecânicos e recolha de dados"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribuiu para o desenvolvimento de um mecanismo de posicionamento de precisão",
+          "Reduziu o tempo de prototipagem através de padronização de peças impressas"
+        ],
+        "toolsAndTechnologies": [
+          "Creo",
+          "SolidWorks",
+          "Impressão 3D"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidade de Coimbra",
+        "degree": "Mestrado Integrado em Engenharia Mecânica",
+        "fieldOfStudy": "Sistemas de Produção",
+        "achievements": [
+          "Dissertação em desenvolvimento de mecanismos de precisão"
+        ]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Creo",
+        "SolidWorks",
+        "Impressão 3D",
+        "Ensaios mecânicos",
+        "FEA"
+      ],
+      "softSkills": [
+        "Curiosidade técnica",
+        "Vontade de aprender",
+        "Trabalho em equipa"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Mecanismo de posicionamento de precisão",
+        "description": "Desenvolvimento e prototipagem de um mecanismo com requisitos de repetibilidade elevada.",
+        "date": "2023-10",
+        "impact": "Protótipo funcional validado e integrado num equipamento de demonstração."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Robótica",
+      "Escalada",
+      "Impressão 3D"
+    ],
+    "references": [
+      {
+        "name": "Ricardo Pinto",
+        "position": "Coordenador de I&D",
+        "company": "Active Space Technologies",
+        "contact": {
+          "phone": "+351 913 224 118",
+          "email": "ricardo.pinto@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 24000,
+      "max": 30000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Mechanical R&D",
+      "secondaryClusters": [
+        "Product Development",
+        "Prototyping"
+      ],
+      "functionalExpertise": [
+        "Desenvolvimento de produto",
+        "Prototipagem"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Aceleração de prototipagem",
+        "Apoio a inovação de produto"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "R&D"
+      ],
+      "environmentFit": [
+        "Equipas de I&D",
+        "Ambiente técnico"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.78,
+      "clusterReasoning": "Engenheiro júnior com base sólida em CAD e prototipagem, orientado para I&D de produto e com elevada velocidade de aprendizagem."
+    },
+    "searchIndex": {
+      "roles": [
+        "Mechanical Engineer",
+        "R&D Engineer",
+        "Product Engineer"
+      ],
+      "skills": [
+        "Creo",
+        "SolidWorks",
+        "3D Printing",
+        "FEA",
+        "Prototyping"
+      ],
+      "industries": [
+        "Manufacturing",
+        "R&D"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "r-and-d",
+      "creo",
+      "junior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheira civil sénior especializada em projeto de estruturas de betão armado e metálicas para edifícios e infraestruturas. Domina o dimensionamento segundo os Eurocódigos e software como ETABS e SAP2000. Experiência em projeto, revisão de projeto e assistência técnica em obra.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Marta Isabel Nunes",
+      "role": "Engenheira Civil de Estruturas Sénior",
+      "summary": "Engenheira de estruturas com forte domínio dos Eurocódigos e de software de análise estrutural.",
+      "contact": {
+        "phone": "+351 917 552 108",
+        "email": "marta.nunes@example.com",
+        "address": {
+          "streetNumber": "83",
+          "streetName": "de Campolide",
+          "streetType": "Rua",
+          "unit": "3 Frt",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1070-036",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/marta-nunes-struct"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dias úteis de manhã"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Análise estrutural",
+        "skills": [
+          "ETABS",
+          "SAP2000",
+          "Robot Structural"
+        ]
+      },
+      {
+        "category": "Dimensionamento",
+        "skills": [
+          "Eurocódigos",
+          "Betão armado",
+          "Estruturas metálicas"
+        ]
+      },
+      {
+        "category": "Projeto",
+        "skills": [
+          "AutoCAD",
+          "Revit",
+          "BIM"
+        ]
+      },
+      {
+        "category": "Obra",
+        "skills": [
+          "Assistência técnica",
+          "Revisão de projeto"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Projeto de estruturas de betão e metálicas",
+        "Verificação segundo Eurocódigos",
+        "Assistência técnica em obra"
+      ],
+      "keyResponsibilities": [
+        "Dimensionar elementos estruturais de edifícios",
+        "Modelar e analisar estruturas em ETABS e SAP2000",
+        "Elaborar peças escritas e desenhadas de projeto"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "JSJ Consultoria",
+        "website": "https://www.example.com",
+        "location": "Lisboa, Portugal",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Engenheira Civil de Estruturas Sénior",
+        "activities": [
+          {
+            "project": "Estrutura de edifício de habitação de dez pisos",
+            "tasks": [
+              "Modelar a estrutura em ETABS",
+              "Dimensionar lajes, pilares e fundações segundo os Eurocódigos",
+              "Coordenar o modelo estrutural em BIM"
+            ]
+          }
+        ],
+        "achievements": [
+          "Otimizou o consumo de betão de um edifício em 9% mantendo a segurança",
+          "Coordenou a revisão estrutural de vários projetos de habitação"
+        ],
+        "toolsAndTechnologies": [
+          "ETABS",
+          "SAP2000",
+          "Revit",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Betar Consultores",
+        "website": "https://www.example.com",
+        "location": "Lisboa, Portugal",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Engenheira Civil de Estruturas",
+        "activities": [
+          {
+            "project": "Estruturas de edifícios de escritórios",
+            "tasks": [
+              "Calcular esforços em elementos de betão armado",
+              "Preparar pormenores de armaduras",
+              "Apoiar a fiscalização em obra"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participou no projeto estrutural de vários edifícios de serviços na área de Lisboa"
+        ],
+        "toolsAndTechnologies": [
+          "SAP2000",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Instituto Superior Técnico",
+        "degree": "Mestrado em Engenharia Civil",
+        "fieldOfStudy": "Estruturas",
+        "achievements": [
+          "Dissertação em análise sísmica de edifícios"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Membro efetivo da Ordem dos Engenheiros",
+        "institution": "Ordem dos Engenheiros",
+        "year": "@Y-2@",
+        "description": "Inscrição no colégio de Engenharia Civil, especialidade de estruturas."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ETABS",
+        "SAP2000",
+        "Eurocodes",
+        "Revit",
+        "AutoCAD"
+      ],
+      "softSkills": [
+        "Rigor",
+        "Atenção ao detalhe",
+        "Trabalho colaborativo"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Otimização estrutural de edifício residencial",
+        "description": "Revisão do dimensionamento com afinação de secções e armaduras segundo os Eurocódigos.",
+        "date": "2022-05",
+        "impact": "Redução de 9% no consumo de betão sem perda de segurança estrutural."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Caminhadas",
+      "Aguarela",
+      "Voluntariado em reconstrução"
+    ],
+    "references": [
+      {
+        "name": "João Peixoto",
+        "position": "Diretor Técnico",
+        "company": "JSJ Consultoria",
+        "contact": {
+          "phone": "+351 914 778 500",
+          "email": "joao.peixoto@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Structural Engineering",
+      "secondaryClusters": [
+        "Building Structures",
+        "Seismic Design"
+      ],
+      "functionalExpertise": [
+        "Projeto de estruturas",
+        "Verificação por Eurocódigos"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Otimização de materiais",
+        "Segurança estrutural"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Infrastructure"
+      ],
+      "environmentFit": [
+        "Gabinetes de projeto",
+        "Ambiente técnico exigente"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Engenheira de estruturas experiente com domínio dos Eurocódigos e de ETABS/SAP2000, historial estável em gabinetes de projeto de edifícios."
+    },
+    "searchIndex": {
+      "roles": [
+        "Structural Engineer",
+        "Civil Engineer",
+        "Design Engineer"
+      ],
+      "skills": [
+        "ETABS",
+        "SAP2000",
+        "Eurocodes",
+        "Revit",
+        "AutoCAD"
+      ],
+      "industries": [
+        "Construction",
+        "Infrastructure"
+      ]
+    },
+    "tags": [
+      "civil",
+      "structural",
+      "eurocodes",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro civil de obra com experiência em direção e coordenação de empreitadas de edifícios e infraestruturas. Confortável com planeamento de trabalhos, controlo de custos e coordenação de subempreiteiros. Combina presença em obra com competências de planeamento em MS Project.",
+    "careerStartYear": 2019,
+    "personalInformation": {
+      "name": "Diogo Sá Pereira",
+      "role": "Engenheiro Civil de Obra",
+      "summary": "Engenheiro de obra focado em planeamento, controlo de produção e coordenação de subempreiteiros.",
+      "contact": {
+        "phone": "+351 918 340 675",
+        "email": "diogo.pereira@example.com",
+        "address": {
+          "streetNumber": "212",
+          "streetName": "dos Chãos",
+          "streetType": "Rua",
+          "city": "Braga",
+          "state": "Braga",
+          "zipCode": "4700-099",
+          "country": "Portugal"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "dias úteis ao fim da tarde",
+          "sábado de manhã"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Direção de obra",
+        "skills": [
+          "Coordenação de subempreiteiros",
+          "Controlo de produção",
+          "Segurança em obra"
+        ]
+      },
+      {
+        "category": "Planeamento",
+        "skills": [
+          "MS Project",
+          "Cronogramas",
+          "Autos de medição"
+        ]
+      },
+      {
+        "category": "Projeto",
+        "skills": [
+          "AutoCAD",
+          "Leitura de projeto"
+        ]
+      },
+      {
+        "category": "Custos",
+        "skills": [
+          "Controlo de custos",
+          "Mapas de quantidades"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Direção e coordenação de obra",
+        "Planeamento de empreitadas",
+        "Controlo de custos e produção"
+      ],
+      "keyResponsibilities": [
+        "Coordenar frentes de trabalho e subempreiteiros",
+        "Controlar prazos, custos e qualidade em obra",
+        "Elaborar autos de medição e mapas de progresso"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Casais Engenharia",
+        "website": "https://www.casais.pt",
+        "location": "Braga, Portugal",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Engenheiro Civil de Obra",
+        "activities": [
+          {
+            "project": "Construção de edifício de habitação coletiva",
+            "tasks": [
+              "Coordenar subempreiteiros de estrutura e acabamentos",
+              "Elaborar e atualizar o cronograma em MS Project",
+              "Controlar autos de medição e produção mensal"
+            ]
+          }
+        ],
+        "achievements": [
+          "Manteve a obra dentro do prazo contratual apesar de constrangimentos de materiais",
+          "Reduziu desvios de produção através de reuniões semanais de coordenação"
+        ],
+        "toolsAndTechnologies": [
+          "MS Project",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "DST Group",
+        "website": "https://www.dstsgps.com",
+        "location": "Braga, Portugal",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Engenheiro Civil Adjunto de Obra",
+        "activities": [
+          {
+            "project": "Infraestruturas rodoviárias municipais",
+            "tasks": [
+              "Apoiar a medição de trabalhos",
+              "Acompanhar frentes de terraplenagem e pavimentação",
+              "Verificar conformidade com o projeto"
+            ]
+          }
+        ],
+        "achievements": [
+          "Apoiou a conclusão de um troço rodoviário municipal dentro do orçamento"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "MS Project"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidade do Minho",
+        "degree": "Mestrado em Engenharia Civil",
+        "fieldOfStudy": "Construção e Reabilitação",
+        "achievements": [
+          "Projeto final em planeamento de empreitadas"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Coordenador de Segurança em Obra",
+        "institution": "Ordem dos Engenheiros",
+        "year": "@Y-2@",
+        "description": "Formação em coordenação de segurança em fase de obra."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "MS Project",
+        "AutoCAD",
+        "Controlo de custos",
+        "Planeamento"
+      ],
+      "softSkills": [
+        "Liderança em obra",
+        "Comunicação",
+        "Gestão de imprevistos"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Coordenação de edifício residencial",
+        "description": "Gestão de frentes de obra e cronograma de um edifício de habitação coletiva em Braga.",
+        "date": "2023-02",
+        "impact": "Entrega dentro do prazo contratual com controlo eficaz de subempreiteiros."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Futebol",
+      "Trail running",
+      "Bricolage"
+    ],
+    "references": [
+      {
+        "name": "Sara Antunes",
+        "position": "Diretora de Obra",
+        "company": "Casais Engenharia",
+        "contact": {
+          "phone": "+351 913 660 447",
+          "email": "sara.antunes@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 30000,
+      "max": 38000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Construction Engineering",
+      "secondaryClusters": [
+        "Site Management",
+        "Project Planning"
+      ],
+      "functionalExpertise": [
+        "Direção de obra",
+        "Planeamento de empreitadas"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Cumprimento de prazos",
+        "Controlo de custos de obra"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Infrastructure"
+      ],
+      "environmentFit": [
+        "Ambiente de obra",
+        "Equipas de empreitada"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.8,
+      "clusterReasoning": "Engenheiro de obra em progressão, com competências práticas de coordenação e planeamento, orientado para o terreno e o cumprimento de prazos."
+    },
+    "searchIndex": {
+      "roles": [
+        "Site Engineer",
+        "Construction Engineer",
+        "Civil Engineer"
+      ],
+      "skills": [
+        "MS Project",
+        "AutoCAD",
+        "Cost Control",
+        "Planning"
+      ],
+      "industries": [
+        "Construction",
+        "Infrastructure"
+      ]
+    },
+    "tags": [
+      "civil",
+      "construction",
+      "site",
+      "mid"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro civil sénior especializado em geotecnia e fundações de obras de arte e edifícios. Domina o dimensionamento de fundações, contenções e estabilidade de taludes segundo o Eurocódigo 7, com experiência em PLAXIS. Combina projeto geotécnico com acompanhamento de ensaios de campo e obra.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Tiago Rebelo Moreira",
+      "role": "Engenheiro Geotécnico Sénior",
+      "summary": "Engenheiro geotécnico com domínio de PLAXIS, Eurocódigo 7 e projeto de fundações e contenções.",
+      "contact": {
+        "phone": "+351 916 118 903",
+        "email": "tiago.moreira@example.com",
+        "address": {
+          "streetNumber": "61",
+          "streetName": "da Boavista",
+          "streetType": "Avenida",
+          "unit": "7 Dto",
+          "city": "Porto",
+          "state": "Porto",
+          "zipCode": "4100-112",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/tiago-moreira-geo"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dias úteis de manhã",
+          "terça e quinta à tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Geotecnia",
+        "skills": [
+          "Fundações",
+          "Contenções",
+          "Estabilidade de taludes"
+        ]
+      },
+      {
+        "category": "Modelação",
+        "skills": [
+          "PLAXIS",
+          "Eurocode 7",
+          "Análise numérica"
+        ]
+      },
+      {
+        "category": "Ensaios de campo",
+        "skills": [
+          "SPT",
+          "CPT",
+          "Ensaios de carga"
+        ]
+      },
+      {
+        "category": "Projeto",
+        "skills": [
+          "AutoCAD",
+          "Relatórios geotécnicos"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Projeto geotécnico de fundações",
+        "Contenções e escavações",
+        "Estabilidade de taludes"
+      ],
+      "keyResponsibilities": [
+        "Dimensionar fundações e estruturas de contenção",
+        "Modelar problemas geotécnicos em PLAXIS",
+        "Interpretar ensaios de campo e elaborar relatórios"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Geocontrole",
+        "website": "https://www.example.com",
+        "location": "Porto, Portugal",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Engenheiro Geotécnico Sénior",
+        "activities": [
+          {
+            "project": "Contenção de escavação profunda em meio urbano",
+            "tasks": [
+              "Dimensionar cortina de estacas e ancoragens",
+              "Modelar a escavação em PLAXIS",
+              "Acompanhar instrumentação e observação geotécnica"
+            ]
+          }
+        ],
+        "achievements": [
+          "Assegurou a estabilidade de uma escavação de doze metros junto a edifícios existentes",
+          "Otimizou o sistema de ancoragens reduzindo custos de contenção"
+        ],
+        "toolsAndTechnologies": [
+          "PLAXIS",
+          "Eurocode 7",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Tecnasol",
+        "website": "https://www.example.com",
+        "location": "Lisboa, Portugal",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Engenheiro Geotécnico",
+        "activities": [
+          {
+            "project": "Fundações de obras de arte rodoviárias",
+            "tasks": [
+              "Dimensionar fundações profundas por estacas",
+              "Interpretar ensaios SPT e CPT",
+              "Elaborar relatórios geotécnicos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participou no projeto de fundações de várias pontes e viadutos"
+        ],
+        "toolsAndTechnologies": [
+          "PLAXIS",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Faculdade de Engenharia da Universidade do Porto",
+        "degree": "Mestrado em Engenharia Civil",
+        "fieldOfStudy": "Geotecnia",
+        "achievements": [
+          "Dissertação em comportamento de escavações profundas"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Membro efetivo da Ordem dos Engenheiros",
+        "institution": "Ordem dos Engenheiros",
+        "year": "@Y-4@",
+        "description": "Inscrição no colégio de Engenharia Civil, especialidade de geotecnia."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "PLAXIS",
+        "Eurocode 7",
+        "AutoCAD",
+        "Geotecnia",
+        "Análise numérica"
+      ],
+      "softSkills": [
+        "Rigor analítico",
+        "Espírito crítico",
+        "Trabalho em obra"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Contenção de escavação urbana profunda",
+        "description": "Projeto e observação de contenção por cortina ancorada junto a edifícios sensíveis.",
+        "date": "2021-07",
+        "impact": "Escavação executada em segurança sem danos nas estruturas vizinhas."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Geologia de campo",
+      "Montanhismo",
+      "Fotografia de paisagem"
+    ],
+    "references": [
+      {
+        "name": "Beatriz Faria",
+        "position": "Diretora de Projeto",
+        "company": "Geocontrole",
+        "contact": {
+          "phone": "+351 917 009 226",
+          "email": "beatriz.faria@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 40000,
+      "max": 50000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Geotechnical Engineering",
+      "secondaryClusters": [
+        "Foundations",
+        "Deep Excavations"
+      ],
+      "functionalExpertise": [
+        "Projeto geotécnico",
+        "Contenções e fundações"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Segurança de escavações",
+        "Otimização de fundações"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Infrastructure"
+      ],
+      "environmentFit": [
+        "Gabinetes de geotecnia",
+        "Ambiente projeto e obra"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Especialista em geotecnia com domínio de PLAXIS e Eurocódigo 7 e forte experiência em contenções e fundações de obras de arte."
+    },
+    "searchIndex": {
+      "roles": [
+        "Geotechnical Engineer",
+        "Civil Engineer",
+        "Foundation Engineer"
+      ],
+      "skills": [
+        "PLAXIS",
+        "Eurocode 7",
+        "AutoCAD",
+        "SPT",
+        "CPT"
+      ],
+      "industries": [
+        "Construction",
+        "Infrastructure"
+      ]
+    },
+    "tags": [
+      "civil",
+      "geotechnical",
+      "plaxis",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheira civil líder em projeto de infraestruturas rodoviárias e de transportes, com quinze anos de experiência em rodovias, drenagem e terraplenagem. Especialista em AutoCAD Civil 3D e coordenação de equipas de projeto multidisciplinares. Lidera projetos de grande porte desde o estudo prévio até ao projeto executivo.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Camila Duarte Fonseca",
+      "role": "Líder de Projeto de Infraestruturas Rodoviárias",
+      "summary": "Engenheira de transportes com liderança de equipas de projeto rodoviário e domínio de Civil 3D.",
+      "contact": {
+        "phone": "+55 21 99765 4432",
+        "email": "camila.fonseca@example.com",
+        "address": {
+          "streetNumber": "350",
+          "streetName": "Nossa Senhora de Copacabana",
+          "streetType": "Avenida",
+          "unit": "Apto 902",
+          "city": "Rio de Janeiro",
+          "state": "RJ",
+          "zipCode": "22020-001",
+          "country": "Brasil"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/camila-fonseca-infra"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "dias úteis de manhã"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Projeto rodoviário",
+        "skills": [
+          "AutoCAD Civil 3D",
+          "Geometria de vias",
+          "Terraplenagem"
+        ]
+      },
+      {
+        "category": "Drenagem",
+        "skills": [
+          "Drenagem pluvial",
+          "Hidráulica de vias"
+        ]
+      },
+      {
+        "category": "Coordenação",
+        "skills": [
+          "Gestão de equipa",
+          "Coordenação multidisciplinar",
+          "Gestão de projeto"
+        ]
+      },
+      {
+        "category": "Ferramentas",
+        "skills": [
+          "AutoCAD",
+          "BIM",
+          "MS Project"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Projeto geométrico de rodovias",
+        "Drenagem e terraplenagem",
+        "Coordenação de projetos de infraestrutura"
+      ],
+      "keyResponsibilities": [
+        "Liderar equipas de projeto de infraestruturas rodoviárias",
+        "Coordenar as várias especialidades do projeto",
+        "Garantir a qualidade técnica e o cumprimento de prazos"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Arteris",
+        "website": "https://www.example.com.br",
+        "location": "Rio de Janeiro, Brasil",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Líder de Projeto de Infraestruturas Rodoviárias",
+        "activities": [
+          {
+            "project": "Duplicação de rodovia federal",
+            "tasks": [
+              "Coordenar equipa de projeto geométrico e drenagem",
+              "Definir soluções de terraplenagem em Civil 3D",
+              "Gerir interfaces com fiscalização e cliente"
+            ]
+          }
+        ],
+        "achievements": [
+          "Liderou o projeto executivo de um lote de duplicação de 40 km",
+          "Reduziu volumes de terraplenagem através de otimização do traçado"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Civil 3D",
+          "AutoCAD",
+          "MS Project"
+        ]
+      },
+      {
+        "company": "DER-RJ",
+        "website": "https://www.example.com.br",
+        "location": "Rio de Janeiro, Brasil",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Engenheira de Projeto Rodoviário",
+        "activities": [
+          {
+            "project": "Vias urbanas e acessos",
+            "tasks": [
+              "Elaborar projeto geométrico de vias",
+              "Dimensionar sistemas de drenagem pluvial",
+              "Preparar peças gráficas e memoriais"
+            ]
+          }
+        ],
+        "achievements": [
+          "Desenvolveu projetos de várias vias urbanas e acessos rodoviários"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Civil 3D",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidade Federal do Rio de Janeiro",
+        "degree": "Bacharelado em Engenharia Civil",
+        "fieldOfStudy": "Infraestrutura de Transportes",
+        "achievements": [
+          "Trabalho de conclusão em projeto geométrico de rodovias"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AutoCAD Civil 3D Certified Professional",
+        "institution": "Autodesk",
+        "year": "@Y-4@",
+        "description": "Certificação profissional em projeto de infraestruturas com Civil 3D."
+      },
+      {
+        "title": "PMP - Project Management Professional",
+        "institution": "PMI",
+        "year": "@Y-4@",
+        "description": "Certificação internacional em gestão de projetos."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "AutoCAD Civil 3D",
+        "AutoCAD",
+        "MS Project",
+        "BIM",
+        "Drenagem"
+      ],
+      "softSkills": [
+        "Liderança",
+        "Coordenação de equipas",
+        "Comunicação com clientes"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        },
+        {
+          "language": "Espanhol",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Duplicação de rodovia federal",
+        "description": "Coordenação do projeto executivo de duplicação de um lote de 40 km com otimização de traçado.",
+        "date": "2021-09",
+        "impact": "Redução significativa de volumes de terraplenagem e do custo da obra."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ciclismo",
+      "Fotografia de viagem",
+      "Mentoria de engenheiras"
+    ],
+    "references": [
+      {
+        "name": "Rafael Teixeira",
+        "position": "Gerente de Engenharia",
+        "company": "Arteris",
+        "contact": {
+          "phone": "+55 21 98800 1122",
+          "email": "rafael.teixeira@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "BRL",
+      "min": 200000,
+      "max": 280000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Transportation Engineering",
+      "secondaryClusters": [
+        "Highway Design",
+        "Infrastructure Projects"
+      ],
+      "functionalExpertise": [
+        "Projeto rodoviário",
+        "Liderança de projeto"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Otimização de custos de infraestrutura",
+        "Cumprimento de prazos de projeto"
+      ],
+      "industryDomains": [
+        "Infrastructure",
+        "Construction"
+      ],
+      "environmentFit": [
+        "Empresas de infraestrutura",
+        "Ambiente de projeto multidisciplinar"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Líder de projeto rodoviário com domínio de Civil 3D e forte capacidade de coordenação multidisciplinar em grandes obras de infraestrutura."
+    },
+    "searchIndex": {
+      "roles": [
+        "Transportation Engineer",
+        "Highway Engineer",
+        "Civil Engineer"
+      ],
+      "skills": [
+        "AutoCAD Civil 3D",
+        "AutoCAD",
+        "Drainage",
+        "BIM",
+        "MS Project"
+      ],
+      "industries": [
+        "Infrastructure",
+        "Construction"
+      ]
+    },
+    "tags": [
+      "civil",
+      "transportation",
+      "civil3d",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro civil com percurso de dezoito anos em engenharia hidráulica e ambiental, hoje diretor de departamento de águas e saneamento. Especialista em redes de abastecimento e drenagem, modelação hidráulica em EPANET e gestão de grandes projetos de infraestrutura. Combina liderança estratégica com sólida base técnica.",
+    "personalInformation": {
+      "name": "Fernando José Baptista",
+      "role": "Diretor de Engenharia Hidráulica e Ambiental",
+      "summary": "Diretor de engenharia de águas e saneamento com foco em infraestruturas hidráulicas e gestão de departamento.",
+      "contact": {
+        "phone": "+351 913 442 087",
+        "email": "fernando.baptista@example.com",
+        "address": {
+          "streetNumber": "104",
+          "streetName": "de Berna",
+          "streetType": "Avenida",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1050-042",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/fernando-baptista-water"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "dias úteis ao fim do dia"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Hidráulica",
+        "skills": [
+          "Redes de abastecimento",
+          "Drenagem urbana",
+          "Modelação hidráulica"
+        ]
+      },
+      {
+        "category": "Ferramentas",
+        "skills": [
+          "EPANET",
+          "SWMM",
+          "AutoCAD"
+        ]
+      },
+      {
+        "category": "Ambiente",
+        "skills": [
+          "Tratamento de águas",
+          "Saneamento"
+        ]
+      },
+      {
+        "category": "Gestão",
+        "skills": [
+          "Direção de departamento",
+          "Gestão de projetos",
+          "Gestão de equipas"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Infraestruturas de águas e saneamento",
+        "Modelação hidráulica de redes",
+        "Gestão de grandes projetos"
+      ],
+      "keyResponsibilities": [
+        "Dirigir o departamento de engenharia hidráulica",
+        "Definir soluções técnicas de redes e ETAR",
+        "Gerir carteira de projetos e equipas técnicas"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Águas de Portugal",
+        "website": "https://www.adp.pt",
+        "location": "Lisboa, Portugal",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Diretor de Engenharia Hidráulica e Ambiental",
+        "activities": [
+          {
+            "project": "Reabilitação de redes de abastecimento",
+            "tasks": [
+              "Dirigir equipas de projeto de redes e ETAR",
+              "Definir estratégia de reabilitação de infraestruturas",
+              "Gerir orçamento e carteira de projetos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Liderou um programa de redução de perdas de água em redes municipais",
+          "Reduziu perdas reais de água em 15% num sistema regional"
+        ],
+        "toolsAndTechnologies": [
+          "EPANET",
+          "SWMM",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Hidra Engenharia",
+        "website": "https://www.example.com",
+        "location": "Lisboa, Portugal",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Engenheiro Hidráulico Sénior",
+        "activities": [
+          {
+            "project": "Sistemas de abastecimento e drenagem",
+            "tasks": [
+              "Modelar redes em EPANET e SWMM",
+              "Dimensionar condutas e estações elevatórias",
+              "Coordenar projetos de saneamento"
+            ]
+          }
+        ],
+        "achievements": [
+          "Projetou sistemas de abastecimento para vários municípios"
+        ],
+        "toolsAndTechnologies": [
+          "EPANET",
+          "SWMM",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Instituto Superior Técnico",
+        "degree": "Mestrado em Engenharia Civil",
+        "fieldOfStudy": "Hidráulica e Recursos Hídricos",
+        "achievements": [
+          "Especialização em sistemas de abastecimento de água"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Nova SBE",
+        "degree": "Pós-Graduação em Gestão",
+        "fieldOfStudy": "Gestão de Empresas",
+        "achievements": [
+          "Formação em gestão para quadros técnicos"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Membro sénior da Ordem dos Engenheiros",
+        "institution": "Ordem dos Engenheiros",
+        "year": "@Y-4@",
+        "description": "Reconhecimento sénior no colégio de Engenharia Civil."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "EPANET",
+        "SWMM",
+        "AutoCAD",
+        "Hidráulica",
+        "Gestão de projetos"
+      ],
+      "softSkills": [
+        "Liderança estratégica",
+        "Visão de negócio",
+        "Gestão de stakeholders"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de redução de perdas de água",
+        "description": "Estratégia de setorização e reabilitação de redes para reduzir perdas reais num sistema regional.",
+        "date": "2020-04",
+        "impact": "Redução de 15% nas perdas reais de água ao longo de dois anos."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Vela",
+      "Enologia",
+      "Ciência ambiental"
+    ],
+    "references": [
+      {
+        "name": "Luísa Marques",
+        "position": "Administradora",
+        "company": "Águas de Portugal",
+        "contact": {
+          "phone": "+351 914 002 338",
+          "email": "luisa.marques@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 70000,
+      "max": 90000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Water & Environmental Engineering",
+      "secondaryClusters": [
+        "Hydraulic Infrastructure",
+        "Engineering Management"
+      ],
+      "functionalExpertise": [
+        "Engenharia hidráulica",
+        "Direção de engenharia"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Redução de perdas de água",
+        "Gestão de grandes infraestruturas"
+      ],
+      "industryDomains": [
+        "Utilities",
+        "Infrastructure"
+      ],
+      "environmentFit": [
+        "Utilities e concessionárias",
+        "Ambiente de gestão"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Diretor de engenharia hidráulica com base técnica forte em EPANET e infraestruturas de água, hoje com responsabilidades estratégicas e de gestão de departamento."
+    },
+    "searchIndex": {
+      "roles": [
+        "Water Engineer",
+        "Environmental Engineer",
+        "Engineering Director"
+      ],
+      "skills": [
+        "EPANET",
+        "SWMM",
+        "AutoCAD",
+        "Hydraulics"
+      ],
+      "industries": [
+        "Utilities",
+        "Infrastructure"
+      ]
+    },
+    "tags": [
+      "civil",
+      "water",
+      "environmental",
+      "director"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro eletrotécnico sénior especializado em sistemas de energia e redes elétricas de média e alta tensão. Domina estudos de curto-circuito, coordenação de proteções e análise de fluxo de potência em ETAP e PSS/E. Experiência em projeto de subestações e integração de produção renovável na rede.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Hugo Daniel Carvalho",
+      "role": "Engenheiro de Sistemas de Energia Sénior",
+      "summary": "Engenheiro de sistemas de potência com domínio de ETAP, PSS/E e coordenação de proteções.",
+      "contact": {
+        "email": "hugo.carvalho@example.com",
+        "address": {
+          "streetNumber": "77",
+          "streetName": "de Serralves",
+          "streetType": "Rua",
+          "city": "Porto",
+          "state": "Porto",
+          "zipCode": "4150-702",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/hugo-carvalho-power"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dias úteis de manhã",
+          "sexta à tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Sistemas de energia",
+        "skills": [
+          "Fluxo de potência",
+          "Curto-circuito",
+          "Coordenação de proteções"
+        ]
+      },
+      {
+        "category": "Ferramentas",
+        "skills": [
+          "ETAP",
+          "PSS/E",
+          "AutoCAD Electrical"
+        ]
+      },
+      {
+        "category": "Instalações elétricas",
+        "skills": [
+          "Subestações",
+          "Média tensão",
+          "Alta tensão"
+        ]
+      },
+      {
+        "category": "Renováveis",
+        "skills": [
+          "Integração na rede",
+          "Estudos de ligação"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Estudos de sistemas de potência",
+        "Coordenação de proteções",
+        "Projeto de subestações"
+      ],
+      "keyResponsibilities": [
+        "Realizar estudos de fluxo de potência e curto-circuito",
+        "Coordenar proteções em redes de MT e AT",
+        "Apoiar a ligação de centrais renováveis à rede"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "EFACEC",
+        "website": "https://www.efacec.pt",
+        "location": "Porto, Portugal",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Engenheiro de Sistemas de Energia Sénior",
+        "activities": [
+          {
+            "project": "Subestação de média/alta tensão",
+            "tasks": [
+              "Realizar estudos de curto-circuito em ETAP",
+              "Definir a coordenação de proteções",
+              "Elaborar estudos de ligação de centrais fotovoltaicas"
+            ]
+          }
+        ],
+        "achievements": [
+          "Coordenou os estudos elétricos de várias subestações de distribuição",
+          "Melhorou a seletividade das proteções reduzindo disparos indevidos"
+        ],
+        "toolsAndTechnologies": [
+          "ETAP",
+          "PSS/E",
+          "AutoCAD Electrical"
+        ]
+      },
+      {
+        "company": "EDP Distribuição",
+        "website": "https://www.e-redes.pt",
+        "location": "Porto, Portugal",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Engenheiro Eletrotécnico",
+        "activities": [
+          {
+            "project": "Redes de distribuição de média tensão",
+            "tasks": [
+              "Analisar fluxos de potência em PSS/E",
+              "Estudar a ligação de novos consumidores e produtores",
+              "Apoiar a operação da rede"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participou em estudos de reforço de redes de distribuição regionais"
+        ],
+        "toolsAndTechnologies": [
+          "PSS/E",
+          "ETAP"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Faculdade de Engenharia da Universidade do Porto",
+        "degree": "Mestrado Integrado em Engenharia Eletrotécnica e de Computadores",
+        "fieldOfStudy": "Sistemas de Energia",
+        "achievements": [
+          "Dissertação em integração de renováveis na rede"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Membro efetivo da Ordem dos Engenheiros",
+        "institution": "Ordem dos Engenheiros",
+        "year": "@Y-0@",
+        "description": "Inscrição no colégio de Engenharia Eletrotécnica."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ETAP",
+        "PSS/E",
+        "AutoCAD Electrical",
+        "Power Systems",
+        "Protection Coordination"
+      ],
+      "softSkills": [
+        "Rigor técnico",
+        "Análise crítica",
+        "Trabalho em equipa"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Coordenação de proteções de subestação",
+        "description": "Revisão da coordenação de proteções de uma subestação de distribuição para melhorar a seletividade.",
+        "date": "2022-06",
+        "impact": "Redução de disparos indevidos e maior fiabilidade da rede local."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Energias renováveis",
+      "Ciclismo",
+      "Astronomia amadora"
+    ],
+    "references": [
+      {
+        "name": "Cláudia Rocha",
+        "position": "Coordenadora de Engenharia",
+        "company": "EFACEC",
+        "contact": {
+          "phone": "+351 913 550 774",
+          "email": "claudia.rocha@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 40000,
+      "max": 50000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Power Systems Engineering",
+      "secondaryClusters": [
+        "Protection Coordination",
+        "Substation Design"
+      ],
+      "functionalExpertise": [
+        "Estudos de sistemas de potência",
+        "Coordenação de proteções"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Fiabilidade de rede",
+        "Integração de renováveis"
+      ],
+      "industryDomains": [
+        "Energy",
+        "Utilities"
+      ],
+      "environmentFit": [
+        "Empresas de energia",
+        "Ambiente técnico"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Especialista em sistemas de potência com domínio de ETAP e PSS/E, experiência sólida em subestações e integração de produção renovável."
+    },
+    "searchIndex": {
+      "roles": [
+        "Power Systems Engineer",
+        "Electrical Engineer",
+        "Protection Engineer"
+      ],
+      "skills": [
+        "ETAP",
+        "PSS/E",
+        "AutoCAD Electrical",
+        "Power Systems",
+        "Protection Coordination"
+      ],
+      "industries": [
+        "Energy",
+        "Utilities"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "power-systems",
+      "etap",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheira eletrotécnica responsável por projeto de instalações elétricas de edifícios, hoje a gerir uma equipa de projeto de instalações. Especialista em projeto de baixa tensão, iluminação e segurança contra incêndio, com domínio de AutoCAD Electrical e DIALux. Combina competências técnicas com gestão de equipa e relação com clientes.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Patrícia Gomes Lopes",
+      "role": "Responsável de Projeto de Instalações Elétricas",
+      "summary": "Gestora de projeto de instalações elétricas de edifícios, com foco em baixa tensão, iluminação e segurança.",
+      "contact": {
+        "phone": "+351 917 226 940",
+        "address": {
+          "streetNumber": "15",
+          "streetName": "de São Pedro",
+          "streetType": "Rua",
+          "unit": "1 Esq",
+          "city": "Faro",
+          "state": "Faro",
+          "zipCode": "8000-145",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/patricia-lopes-elec"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dias úteis ao fim da tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Instalações elétricas",
+        "skills": [
+          "Baixa tensão",
+          "Quadros elétricos",
+          "Segurança contra incêndio"
+        ]
+      },
+      {
+        "category": "Iluminação",
+        "skills": [
+          "DIALux",
+          "Luminotecnia"
+        ]
+      },
+      {
+        "category": "Ferramentas",
+        "skills": [
+          "AutoCAD Electrical",
+          "AutoCAD",
+          "Revit MEP"
+        ]
+      },
+      {
+        "category": "Gestão",
+        "skills": [
+          "Gestão de equipa",
+          "Coordenação de projeto",
+          "Relação com clientes"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Projeto de instalações elétricas de edifícios",
+        "Luminotecnia e iluminação",
+        "Coordenação de equipas de projeto"
+      ],
+      "keyResponsibilities": [
+        "Coordenar a equipa de projeto de instalações elétricas",
+        "Definir soluções de baixa tensão e iluminação",
+        "Assegurar conformidade regulamentar e prazos de entrega"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "RGA Engenharia",
+        "website": "https://www.example.com",
+        "location": "Faro, Portugal",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Responsável de Projeto de Instalações Elétricas",
+        "activities": [
+          {
+            "project": "Instalações elétricas de complexo turístico",
+            "tasks": [
+              "Coordenar a equipa de projeto elétrico",
+              "Dimensionar quadros e redes de baixa tensão",
+              "Desenvolver estudos luminotécnicos em DIALux"
+            ]
+          }
+        ],
+        "achievements": [
+          "Coordenou o projeto elétrico de vários empreendimentos turísticos no Algarve",
+          "Padronizou soluções que reduziram o tempo de projeto em 20%"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Electrical",
+          "DIALux",
+          "Revit MEP"
+        ]
+      },
+      {
+        "company": "Certiel Engenharia",
+        "website": "https://www.example.com",
+        "location": "Lisboa, Portugal",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Engenheira Eletrotécnica de Projeto",
+        "activities": [
+          {
+            "project": "Instalações elétricas de edifícios de serviços",
+            "tasks": [
+              "Dimensionar instalações de baixa tensão",
+              "Elaborar projetos de segurança contra incêndio",
+              "Preparar peças desenhadas em AutoCAD"
+            ]
+          }
+        ],
+        "achievements": [
+          "Desenvolveu projetos elétricos de vários edifícios de escritórios e comércio"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Electrical",
+          "DIALux"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidade do Algarve",
+        "degree": "Mestrado em Engenharia Eletrotécnica",
+        "fieldOfStudy": "Instalações e Energia",
+        "achievements": [
+          "Projeto final em eficiência de instalações de iluminação"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Técnica Responsável por Instalações Elétricas",
+        "institution": "DGEG",
+        "year": "@Y-2@",
+        "description": "Habilitação como técnica responsável por instalações elétricas de serviço particular."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "AutoCAD Electrical",
+        "DIALux",
+        "Revit MEP",
+        "Low Voltage",
+        "AutoCAD"
+      ],
+      "softSkills": [
+        "Liderança de equipa",
+        "Organização",
+        "Comunicação com clientes"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Padronização de projeto elétrico",
+        "description": "Criação de bibliotecas e modelos padronizados para projeto de instalações elétricas de edifícios.",
+        "date": "2021-10",
+        "impact": "Redução de 20% no tempo médio de elaboração de projeto."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Jardinagem",
+      "Natação",
+      "Fotografia"
+    ],
+    "references": [
+      {
+        "name": "Miguel Sousa",
+        "position": "Diretor Geral",
+        "company": "RGA Engenharia",
+        "contact": {
+          "phone": "+351 914 337 810",
+          "email": "miguel.sousa@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 60000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Electrical Building Services",
+      "secondaryClusters": [
+        "Lighting Design",
+        "Engineering Management"
+      ],
+      "functionalExpertise": [
+        "Projeto de instalações elétricas",
+        "Gestão de equipa de projeto"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Eficiência de projeto",
+        "Conformidade regulamentar"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Real Estate"
+      ],
+      "environmentFit": [
+        "Gabinetes de projeto",
+        "Gestão de equipas"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "Gestora de projeto de instalações elétricas de edifícios, com base técnica sólida em baixa tensão e iluminação e responsabilidades de coordenação de equipa."
+    },
+    "searchIndex": {
+      "roles": [
+        "Electrical Engineer",
+        "Building Services Engineer",
+        "Electrical Design Manager"
+      ],
+      "skills": [
+        "AutoCAD Electrical",
+        "DIALux",
+        "Revit MEP",
+        "Low Voltage"
+      ],
+      "industries": [
+        "Construction",
+        "Real Estate"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "building-services",
+      "lighting",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro eletrotécnico sénior de controlo e instrumentação para indústria de processo. Especialista em automação com PLC e SCADA, instrumentação de campo e projeto elétrico em EPLAN. Experiência em comissionamento e otimização de sistemas de controlo em ambiente industrial.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Ricardo Nuno Fialho",
+      "role": "Engenheiro de Controlo e Instrumentação Sénior",
+      "summary": "Engenheiro de automação industrial com domínio de PLC, SCADA e EPLAN, orientado para controlo de processo.",
+      "contact": {
+        "phone": "+351 915 884 209",
+        "email": "ricardo.fialho@example.com",
+        "address": {
+          "streetNumber": "34",
+          "streetName": "de Palhavã",
+          "streetType": "Rua",
+          "city": "Setúbal",
+          "state": "Setúbal",
+          "zipCode": "2900-410",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ricardo-fialho-control"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "dias úteis de manhã",
+          "quarta à tarde"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Automação",
+        "skills": [
+          "PLC",
+          "SCADA",
+          "Sistemas de controlo"
+        ]
+      },
+      {
+        "category": "Instrumentação",
+        "skills": [
+          "Instrumentação de campo",
+          "Malhas de controlo",
+          "Sensores"
+        ]
+      },
+      {
+        "category": "Projeto elétrico",
+        "skills": [
+          "EPLAN",
+          "AutoCAD Electrical",
+          "Quadros de comando"
+        ]
+      },
+      {
+        "category": "Comissionamento",
+        "skills": [
+          "Comissionamento",
+          "Testes de aceitação"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Automação industrial com PLC e SCADA",
+        "Instrumentação de processo",
+        "Projeto elétrico em EPLAN"
+      ],
+      "keyResponsibilities": [
+        "Programar e configurar PLC e sistemas SCADA",
+        "Especificar instrumentação de campo",
+        "Executar comissionamento de sistemas de controlo"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "The Navigator Company",
+        "website": "https://www.thenavigatorcompany.com",
+        "location": "Setúbal, Portugal",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Engenheiro de Controlo e Instrumentação Sénior",
+        "activities": [
+          {
+            "project": "Automação de linha de produção de pasta de papel",
+            "tasks": [
+              "Programar PLC e configurar SCADA",
+              "Especificar e calibrar instrumentação de processo",
+              "Coordenar comissionamento de novas malhas de controlo"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduziu a variabilidade de uma malha crítica melhorando a qualidade do produto",
+          "Diminuiu o tempo de arranque de linha após paragem em 20%"
+        ],
+        "toolsAndTechnologies": [
+          "PLC",
+          "SCADA",
+          "EPLAN"
+        ]
+      },
+      {
+        "company": "Siemens Portugal",
+        "website": "https://www.siemens.pt",
+        "location": "Lisboa, Portugal",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Engenheiro de Automação",
+        "activities": [
+          {
+            "project": "Sistemas de controlo para indústria alimentar",
+            "tasks": [
+              "Desenvolver programas de PLC",
+              "Projetar quadros de comando em EPLAN",
+              "Apoiar comissionamento no cliente"
+            ]
+          }
+        ],
+        "achievements": [
+          "Implementou sistemas de automação em várias fábricas de bens de consumo"
+        ],
+        "toolsAndTechnologies": [
+          "PLC",
+          "SCADA",
+          "EPLAN",
+          "AutoCAD Electrical"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Instituto Superior de Engenharia de Lisboa",
+        "degree": "Mestrado em Engenharia Eletrotécnica",
+        "fieldOfStudy": "Automação e Controlo",
+        "achievements": [
+          "Projeto final em sistemas SCADA industriais"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Siemens TIA Portal Certified",
+        "institution": "Siemens",
+        "year": "@Y-4@",
+        "description": "Certificação em programação de automação com TIA Portal."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "PLC",
+        "SCADA",
+        "EPLAN",
+        "AutoCAD Electrical",
+        "Instrumentation"
+      ],
+      "softSkills": [
+        "Resolução de problemas",
+        "Trabalho sob pressão",
+        "Autonomia"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Otimização de malha de controlo crítica",
+        "description": "Afinação de controlo e instrumentação de uma malha crítica numa linha de pasta de papel.",
+        "date": "2022-03",
+        "impact": "Redução da variabilidade do processo e melhoria da qualidade do produto."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Eletrónica DIY",
+      "Pesca desportiva",
+      "Corrida"
+    ],
+    "references": [
+      {
+        "name": "Tânia Ferreira",
+        "position": "Responsável de Manutenção",
+        "company": "The Navigator Company",
+        "contact": {
+          "phone": "+351 913 447 205",
+          "email": "tania.ferreira@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Control & Instrumentation Engineering",
+      "secondaryClusters": [
+        "Industrial Automation",
+        "SCADA Systems"
+      ],
+      "functionalExpertise": [
+        "Automação industrial",
+        "Instrumentação de processo"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Estabilidade de processo",
+        "Redução de tempos de arranque"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Process Industry"
+      ],
+      "environmentFit": [
+        "Ambiente fabril",
+        "Indústria de processo"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Especialista em controlo e instrumentação com forte domínio de PLC, SCADA e EPLAN e experiência de comissionamento na indústria de processo."
+    },
+    "searchIndex": {
+      "roles": [
+        "Control Engineer",
+        "Instrumentation Engineer",
+        "Automation Engineer"
+      ],
+      "skills": [
+        "PLC",
+        "SCADA",
+        "EPLAN",
+        "AutoCAD Electrical",
+        "Instrumentation"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Process Industry"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "control",
+      "scada",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheira eletrotécnica em início de carreira focada em sistemas embebidos e eletrónica de hardware. Confortável com projeto de PCB em Altium, programação de microcontroladores e prototipagem de eletrónica. Procura crescer numa equipa de desenvolvimento de produto eletrónico.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Inês Rodrigues Matos",
+      "role": "Engenheira de Sistemas Embebidos",
+      "summary": "Engenheira eletrónica júnior focada em hardware, PCB e firmware de microcontroladores.",
+      "contact": {
+        "phone": "+351 918 550 176",
+        "email": "ines.matos@example.com",
+        "address": {
+          "streetNumber": "6",
+          "streetName": "de Aradas",
+          "streetType": "Rua",
+          "city": "Aveiro",
+          "state": "Aveiro",
+          "zipCode": "3810-076",
+          "country": "Portugal"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "dias úteis a qualquer hora"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Eletrónica",
+        "skills": [
+          "Projeto de PCB",
+          "Altium Designer",
+          "Eletrónica analógica"
+        ]
+      },
+      {
+        "category": "Sistemas embebidos",
+        "skills": [
+          "Microcontroladores",
+          "Firmware",
+          "C"
+        ]
+      },
+      {
+        "category": "Ferramentas",
+        "skills": [
+          "MATLAB",
+          "Osciloscópio",
+          "Prototipagem"
+        ]
+      },
+      {
+        "category": "Análise",
+        "skills": [
+          "Depuração de hardware",
+          "Testes de bancada"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Projeto de hardware eletrónico",
+        "Sistemas embebidos",
+        "Prototipagem eletrónica"
+      ],
+      "keyResponsibilities": [
+        "Projetar placas de circuito impresso em Altium",
+        "Desenvolver firmware para microcontroladores",
+        "Testar e depurar protótipos de hardware"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Bosch Aveiro",
+        "website": "https://www.bosch.pt",
+        "location": "Aveiro, Portugal",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Engenheira de Sistemas Embebidos",
+        "activities": [
+          {
+            "project": "Módulos eletrónicos para sistemas de segurança",
+            "tasks": [
+              "Projetar PCB em Altium Designer",
+              "Desenvolver firmware em C para microcontroladores",
+              "Realizar testes de bancada e depuração"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribuiu para o desenvolvimento de um módulo eletrónico validado para produção",
+          "Reduziu o número de revisões de PCB através de revisões de projeto mais rigorosas"
+        ],
+        "toolsAndTechnologies": [
+          "Altium Designer",
+          "MATLAB",
+          "C"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidade de Aveiro",
+        "degree": "Mestrado Integrado em Engenharia Eletrónica e Telecomunicações",
+        "fieldOfStudy": "Sistemas Eletrónicos",
+        "achievements": [
+          "Dissertação em sistemas embebidos de baixo consumo"
+        ]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Altium Designer",
+        "MATLAB",
+        "C",
+        "PCB Design",
+        "Embedded Systems"
+      ],
+      "softSkills": [
+        "Curiosidade técnica",
+        "Atenção ao detalhe",
+        "Vontade de aprender"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Módulo eletrónico de segurança",
+        "description": "Projeto de PCB e firmware de um módulo eletrónico integrado num sistema de segurança.",
+        "date": "2023-05",
+        "impact": "Módulo validado e integrado na linha de produção do cliente."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Eletrónica maker",
+      "Robótica",
+      "Ilustração digital"
+    ],
+    "references": [
+      {
+        "name": "Paulo Marinho",
+        "position": "Team Lead de Hardware",
+        "company": "Bosch Aveiro",
+        "contact": {
+          "phone": "+351 913 006 741",
+          "email": "paulo.marinho@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 24000,
+      "max": 30000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Embedded & Hardware Engineering",
+      "secondaryClusters": [
+        "PCB Design",
+        "Firmware Development"
+      ],
+      "functionalExpertise": [
+        "Projeto de hardware",
+        "Sistemas embebidos"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Desenvolvimento de produto eletrónico",
+        "Qualidade de hardware"
+      ],
+      "industryDomains": [
+        "Electronics",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "Equipas de I&D eletrónica",
+        "Ambiente técnico"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.79,
+      "clusterReasoning": "Engenheira júnior de eletrónica com base sólida em Altium e firmware, orientada para desenvolvimento de hardware e com elevada velocidade de aprendizagem."
+    },
+    "searchIndex": {
+      "roles": [
+        "Embedded Engineer",
+        "Hardware Engineer",
+        "Electronics Engineer"
+      ],
+      "skills": [
+        "Altium Designer",
+        "MATLAB",
+        "C",
+        "PCB Design",
+        "Embedded Systems"
+      ],
+      "industries": [
+        "Electronics",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "embedded",
+      "hardware",
+      "junior"
+    ]
+  },
+  {
+    "personalInformation": {
+      "name": "Gonçalo Vasco Antunes",
+      "role": "Engenheiro Principal de Energias Renováveis",
+      "summary": "Engenheiro principal de renováveis com domínio de PVsyst, projeto de centrais solares e integração na rede.",
+      "contact": {
+        "address": {
+          "streetNumber": "220",
+          "streetName": "da República",
+          "streetType": "Avenida",
+          "unit": "9 Frt",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1050-198",
+          "country": "Portugal"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dias úteis de manhã"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "profiles": {
+      "areasOfExpertise": [
+        "Projeto de centrais fotovoltaicas",
+        "Integração de renováveis na rede",
+        "Supervisão e monitorização SCADA"
+      ],
+      "keyResponsibilities": [
+        "Dimensionar centrais solares em PVsyst",
+        "Liderar tecnicamente projetos de produção renovável",
+        "Definir arquiteturas de supervisão SCADA"
+      ]
+    },
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "PVsyst",
+        "SCADA",
+        "AutoCAD Electrical",
+        "Photovoltaics",
+        "Grid Integration"
+      ],
+      "softSkills": [
+        "Liderança técnica",
+        "Visão de sistema",
+        "Comunicação técnica"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Central solar de grande escala",
+        "description": "Liderança técnica do projeto elétrico e de supervisão de uma central fotovoltaica acima de 50 MW.",
+        "date": "2022-08",
+        "impact": "Melhoria de 3% no rácio de desempenho face ao projeto de referência."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Sustentabilidade",
+      "Trekking",
+      "Fotografia de natureza"
+    ],
+    "references": [
+      {
+        "name": "Sónia Barros",
+        "position": "Diretora de Engenharia",
+        "company": "EDP Renováveis",
+        "contact": {
+          "phone": "+351 914 771 660",
+          "email": "sonia.barros@example.com"
+        }
+      }
+    ],
+    "searchIndex": {
+      "roles": [
+        "Renewable Energy Engineer",
+        "Solar PV Engineer",
+        "Electrical Engineer"
+      ],
+      "skills": [
+        "PVsyst",
+        "SCADA",
+        "AutoCAD Electrical",
+        "Photovoltaics",
+        "Grid Integration"
+      ],
+      "industries": [
+        "Energy",
+        "Renewables"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "renewables",
+      "solar",
+      "principal"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro industrial sénior focado em otimização de processos produtivos e melhoria contínua. Especialista em metodologias Lean e Six Sigma, análise de dados em Minitab e gestão de operações em SAP. Experiência comprovada em aumento de produtividade e redução de desperdício em ambiente fabril.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Carlos Eduardo Freitas",
+      "role": "Engenheiro Industrial de Processos Sénior",
+      "summary": "Engenheiro de processos com forte componente Lean e Six Sigma, orientado para produtividade e eficiência.",
+      "contact": {
+        "phone": "+351 917 448 302",
+        "email": "carlos.freitas@example.com",
+        "address": {
+          "streetNumber": "48",
+          "streetName": "de Gil Vicente",
+          "streetType": "Rua",
+          "city": "Guimarães",
+          "state": "Braga",
+          "zipCode": "4810-441",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/carlos-freitas-ind"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "dias úteis ao fim da tarde"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Melhoria contínua",
+        "skills": [
+          "Lean",
+          "Six Sigma",
+          "Kaizen"
+        ]
+      },
+      {
+        "category": "Análise de dados",
+        "skills": [
+          "Minitab",
+          "SPC",
+          "Análise estatística"
+        ]
+      },
+      {
+        "category": "Operações",
+        "skills": [
+          "SAP",
+          "Gestão de produção",
+          "Balanceamento de linhas"
+        ]
+      },
+      {
+        "category": "Ferramentas Lean",
+        "skills": [
+          "5S",
+          "VSM",
+          "SMED"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Otimização de processos produtivos",
+        "Melhoria contínua Lean Six Sigma",
+        "Análise de dados de produção"
+      ],
+      "keyResponsibilities": [
+        "Analisar e otimizar processos de produção",
+        "Liderar projetos de melhoria contínua",
+        "Monitorizar indicadores de produtividade e qualidade"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Continental Mabor",
+        "website": "https://www.continental.com",
+        "location": "Lousado, Portugal",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Engenheiro Industrial de Processos Sénior",
+        "activities": [
+          {
+            "project": "Otimização de linha de produção de pneus",
+            "tasks": [
+              "Mapear o fluxo de valor com VSM",
+              "Liderar projetos Six Sigma de redução de defeitos",
+              "Analisar dados de processo em Minitab"
+            ]
+          }
+        ],
+        "achievements": [
+          "Aumentou a produtividade de uma linha em 12% com iniciativas Lean",
+          "Reduziu a taxa de defeitos de um processo em 25% com um projeto Six Sigma"
+        ],
+        "toolsAndTechnologies": [
+          "Six Sigma",
+          "Lean",
+          "Minitab",
+          "SAP"
+        ]
+      },
+      {
+        "company": "Bosch Braga",
+        "website": "https://www.bosch.pt",
+        "location": "Braga, Portugal",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Engenheiro de Processos",
+        "activities": [
+          {
+            "project": "Melhoria de processos de montagem eletrónica",
+            "tasks": [
+              "Implementar 5S e trabalho padronizado",
+              "Aplicar SMED na redução de tempos de setup",
+              "Analisar indicadores de produção"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduziu tempos de setup em várias células com aplicação de SMED"
+        ],
+        "toolsAndTechnologies": [
+          "Lean",
+          "SAP",
+          "Minitab"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidade do Minho",
+        "degree": "Mestrado em Engenharia e Gestão Industrial",
+        "fieldOfStudy": "Sistemas de Produção",
+        "achievements": [
+          "Projeto final em otimização de linhas de produção"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Lean Six Sigma Green Belt",
+        "institution": "ASQ",
+        "year": "@Y-2@",
+        "description": "Certificação em melhoria contínua e redução de variabilidade."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Six Sigma",
+        "Lean",
+        "Minitab",
+        "SAP",
+        "SPC"
+      ],
+      "softSkills": [
+        "Pensamento analítico",
+        "Liderança de projetos",
+        "Comunicação"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Projeto Six Sigma de redução de defeitos",
+        "description": "Projeto DMAIC para reduzir defeitos numa linha de produção de pneus com análise em Minitab.",
+        "date": "2022-07",
+        "impact": "Redução de 25% na taxa de defeitos do processo alvo."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Corrida de estrada",
+      "Xadrez",
+      "Análise de dados"
+    ],
+    "references": [
+      {
+        "name": "Marta Ribeiro",
+        "position": "Diretora de Produção",
+        "company": "Continental Mabor",
+        "contact": {
+          "phone": "+351 913 778 220",
+          "email": "marta.ribeiro@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 38000,
+      "max": 48000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Industrial & Process Engineering",
+      "secondaryClusters": [
+        "Lean Six Sigma",
+        "Manufacturing Optimization"
+      ],
+      "functionalExpertise": [
+        "Otimização de processos",
+        "Melhoria contínua"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Aumento de produtividade",
+        "Redução de defeitos"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Automotive"
+      ],
+      "environmentFit": [
+        "Ambiente fabril",
+        "Equipas de melhoria contínua"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Engenheiro industrial sénior com forte domínio de Lean e Six Sigma e resultados mensuráveis em produtividade e qualidade em ambiente fabril."
+    },
+    "searchIndex": {
+      "roles": [
+        "Process Engineer",
+        "Industrial Engineer",
+        "Continuous Improvement Engineer"
+      ],
+      "skills": [
+        "Six Sigma",
+        "Lean",
+        "Minitab",
+        "SAP",
+        "SPC"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Automotive"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "process",
+      "lean-six-sigma",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheira industrial de qualidade com experiência em sistemas de gestão da qualidade e qualidade de fornecedores na indústria de componentes. Confortável com ferramentas APQP, PPAP, FMEA e análise de dados em Minitab. Orientada para a resolução estruturada de problemas e a melhoria da qualidade do produto.",
+    "careerStartYear": 2018,
+    "personalInformation": {
+      "name": "Beatriz Salgado Nunes",
+      "role": "Engenheira de Qualidade",
+      "summary": "Engenheira de qualidade focada em APQP, PPAP e resolução estruturada de problemas na indústria de componentes.",
+      "contact": {
+        "phone": "+351 915 337 641",
+        "email": "beatriz.nunes@example.com",
+        "address": {
+          "streetNumber": "19",
+          "streetName": "de Tomar",
+          "streetType": "Rua",
+          "city": "Leiria",
+          "state": "Leiria",
+          "zipCode": "2400-231",
+          "country": "Portugal"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "dias úteis de manhã",
+          "sexta à tarde"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Qualidade",
+        "skills": [
+          "APQP",
+          "PPAP",
+          "FMEA"
+        ]
+      },
+      {
+        "category": "Análise",
+        "skills": [
+          "Minitab",
+          "SPC",
+          "8D"
+        ]
+      },
+      {
+        "category": "Sistemas de gestão",
+        "skills": [
+          "ISO 9001",
+          "IATF 16949",
+          "Auditorias"
+        ]
+      },
+      {
+        "category": "Ferramentas",
+        "skills": [
+          "SAP",
+          "Excel"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Qualidade de produto e processo",
+        "Qualidade de fornecedores",
+        "Resolução estruturada de problemas"
+      ],
+      "keyResponsibilities": [
+        "Coordenar APQP e aprovações PPAP",
+        "Conduzir análises FMEA e resoluções 8D",
+        "Monitorizar indicadores de qualidade e auditorias"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Vishay Portugal",
+        "website": "https://www.example.com",
+        "location": "Leiria, Portugal",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Engenheira de Qualidade",
+        "activities": [
+          {
+            "project": "Qualidade de componentes eletrónicos",
+            "tasks": [
+              "Coordenar processos APQP e PPAP com fornecedores",
+              "Conduzir resoluções de problemas 8D",
+              "Analisar dados de qualidade em Minitab"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduziu reclamações de cliente em 18% através de ações 8D estruturadas",
+          "Melhorou a taxa de aprovação de PPAP à primeira"
+        ],
+        "toolsAndTechnologies": [
+          "Minitab",
+          "SAP",
+          "APQP"
+        ]
+      },
+      {
+        "company": "Vangest",
+        "website": "https://www.example.com",
+        "location": "Marinha Grande, Portugal",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Engenheira de Qualidade Júnior",
+        "activities": [
+          {
+            "project": "Controlo de qualidade de moldes e peças",
+            "tasks": [
+              "Elaborar planos de controlo",
+              "Apoiar auditorias internas ISO 9001",
+              "Registar e tratar não conformidades"
+            ]
+          }
+        ],
+        "achievements": [
+          "Apoiou a manutenção da certificação ISO 9001 da empresa"
+        ],
+        "toolsAndTechnologies": [
+          "Minitab",
+          "Excel"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "APQP",
+        "PPAP",
+        "FMEA",
+        "Minitab",
+        "SAP"
+      ],
+      "softSkills": [
+        "Rigor",
+        "Resolução de problemas",
+        "Comunicação com fornecedores"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Redução de reclamações de cliente",
+        "description": "Programa de resolução estruturada de problemas 8D aplicado a defeitos recorrentes de componentes.",
+        "date": "2023-03",
+        "impact": "Redução de 18% nas reclamações de cliente num ano."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Pilates",
+      "Culinária",
+      "Viagens"
+    ],
+    "references": [
+      {
+        "name": "André Lopes",
+        "position": "Responsável de Qualidade",
+        "company": "Vishay Portugal",
+        "contact": {
+          "phone": "+351 914 220 883",
+          "email": "andre.lopes@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 30000,
+      "max": 38000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Quality Engineering",
+      "secondaryClusters": [
+        "Supplier Quality",
+        "Continuous Improvement"
+      ],
+      "functionalExpertise": [
+        "Qualidade de produto",
+        "Resolução de problemas"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Redução de reclamações",
+        "Melhoria de qualidade"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Automotive"
+      ],
+      "environmentFit": [
+        "Ambiente fabril",
+        "Equipas de qualidade"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.82,
+      "clusterReasoning": "Engenheira de qualidade em progressão, com domínio de APQP, PPAP e ferramentas de resolução de problemas na indústria de componentes."
+    },
+    "searchIndex": {
+      "roles": [
+        "Quality Engineer",
+        "Supplier Quality Engineer",
+        "Industrial Engineer"
+      ],
+      "skills": [
+        "APQP",
+        "PPAP",
+        "FMEA",
+        "Minitab",
+        "SAP"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Automotive"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "quality",
+      "apqp",
+      "mid"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro industrial líder de melhoria contínua com catorze anos de experiência em transformação Lean de operações. Especialista em Kaizen, VSM e implementação de sistemas de produção, com formação Six Sigma Black Belt. Lidera equipas multidisciplinares em programas de excelência operacional.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Vítor Manuel Sampaio",
+      "role": "Líder de Melhoria Contínua",
+      "summary": "Líder de excelência operacional focado em transformação Lean, Kaizen e desenvolvimento de sistemas de produção.",
+      "contact": {
+        "phone": "+351 916 550 447",
+        "email": "vitor.sampaio@example.com",
+        "address": {
+          "streetNumber": "133",
+          "streetName": "de Costa Cabral",
+          "streetType": "Rua",
+          "city": "Porto",
+          "state": "Porto",
+          "zipCode": "4200-212",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/vitor-sampaio-lean"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dias úteis ao fim da tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Lean",
+        "skills": [
+          "Kaizen",
+          "VSM",
+          "5S"
+        ]
+      },
+      {
+        "category": "Six Sigma",
+        "skills": [
+          "Six Sigma",
+          "DMAIC",
+          "SPC"
+        ]
+      },
+      {
+        "category": "Sistemas de produção",
+        "skills": [
+          "Trabalho padronizado",
+          "Gestão visual",
+          "TPM"
+        ]
+      },
+      {
+        "category": "Liderança",
+        "skills": [
+          "Gestão de equipas",
+          "Gestão de projetos",
+          "Coaching"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Transformação Lean de operações",
+        "Excelência operacional",
+        "Desenvolvimento de sistemas de produção"
+      ],
+      "keyResponsibilities": [
+        "Liderar programas de melhoria contínua",
+        "Formar e treinar equipas em Lean e Six Sigma",
+        "Desenvolver e implementar sistemas de produção"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Amorim Cork",
+        "website": "https://www.amorim.com",
+        "location": "Santa Maria da Feira, Portugal",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Líder de Melhoria Contínua",
+        "activities": [
+          {
+            "project": "Programa de excelência operacional multi-fábrica",
+            "tasks": [
+              "Liderar eventos Kaizen em várias unidades",
+              "Implementar sistema de produção padronizado",
+              "Formar equipas em ferramentas Lean e Six Sigma"
+            ]
+          }
+        ],
+        "achievements": [
+          "Liderou um programa que gerou poupanças anuais superiores a 1 milhão de euros",
+          "Implementou o sistema de produção em cinco unidades fabris"
+        ],
+        "toolsAndTechnologies": [
+          "Lean",
+          "Six Sigma",
+          "Kaizen"
+        ]
+      },
+      {
+        "company": "Sonae Arauco",
+        "website": "https://www.sonaearauco.com",
+        "location": "Oliveira do Hospital, Portugal",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Engenheiro de Melhoria Contínua",
+        "activities": [
+          {
+            "project": "Otimização de processos de produção de derivados de madeira",
+            "tasks": [
+              "Aplicar VSM e 5S nas linhas",
+              "Conduzir projetos DMAIC",
+              "Analisar dados de processo"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduziu desperdício de matéria-prima através de projetos Lean"
+        ],
+        "toolsAndTechnologies": [
+          "Lean",
+          "Six Sigma",
+          "SPC"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Faculdade de Engenharia da Universidade do Porto",
+        "degree": "Mestrado Integrado em Engenharia Industrial e Gestão",
+        "fieldOfStudy": "Gestão da Produção",
+        "achievements": [
+          "Dissertação em sistemas de produção Lean"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Lean",
+        "Six Sigma",
+        "Kaizen",
+        "VSM",
+        "SPC"
+      ],
+      "softSkills": [
+        "Liderança",
+        "Coaching",
+        "Gestão da mudança"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa multi-fábrica de excelência operacional",
+        "description": "Implementação de um sistema de produção padronizado e eventos Kaizen em cinco unidades.",
+        "date": "2021-11",
+        "impact": "Poupanças anuais superiores a 1 milhão de euros em custos operacionais."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ciclismo",
+      "Voluntariado",
+      "Leitura de gestão"
+    ],
+    "references": [
+      {
+        "name": "Isabel Moura",
+        "position": "Diretora de Operações",
+        "company": "Amorim Cork",
+        "contact": {
+          "phone": "+351 913 880 662",
+          "email": "isabel.moura@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 52000,
+      "max": 68000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Continuous Improvement & Operational Excellence",
+      "secondaryClusters": [
+        "Lean Transformation",
+        "Six Sigma"
+      ],
+      "functionalExpertise": [
+        "Melhoria contínua",
+        "Liderança de programas Lean"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Poupanças operacionais",
+        "Excelência operacional"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Consumer Goods"
+      ],
+      "environmentFit": [
+        "Ambiente multi-fábrica",
+        "Programas de transformação"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Líder de melhoria contínua com Black Belt e historial de programas Lean multi-fábrica com poupanças significativas e forte componente de liderança."
+    },
+    "searchIndex": {
+      "roles": [
+        "Continuous Improvement Lead",
+        "Lean Manager",
+        "Operational Excellence Engineer"
+      ],
+      "skills": [
+        "Lean",
+        "Six Sigma",
+        "Kaizen",
+        "VSM",
+        "SPC"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Consumer Goods"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "lean",
+      "continuous-improvement",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheira industrial com percurso em cadeia de abastecimento e operações, hoje responsável por planeamento e logística de uma unidade industrial. Especialista em planeamento de operações (S&OP), gestão de inventário e ERP SAP. Combina visão end-to-end da cadeia com liderança de equipas de planeamento e logística.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Raquel Andrade Pinto",
+      "role": "Responsável de Cadeia de Abastecimento e Operações",
+      "summary": "Gestora de supply chain focada em S&OP, gestão de inventário e operações logísticas em SAP.",
+      "contact": {
+        "email": "raquel.pinto@example.com",
+        "address": {
+          "streetNumber": "72",
+          "streetName": "de Entrecampos",
+          "streetType": "Avenida",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1700-158",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/raquel-pinto-supplychain"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "dias úteis ao fim do dia"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Planeamento",
+        "skills": [
+          "S&OP",
+          "MRP",
+          "Planeamento de produção"
+        ]
+      },
+      {
+        "category": "Logística",
+        "skills": [
+          "Gestão de inventário",
+          "Distribuição",
+          "Compras"
+        ]
+      },
+      {
+        "category": "Ferramentas",
+        "skills": [
+          "SAP",
+          "Excel",
+          "Power BI"
+        ]
+      },
+      {
+        "category": "Gestão",
+        "skills": [
+          "Gestão de equipas",
+          "Gestão de fornecedores",
+          "KPIs de operações"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Gestão de cadeia de abastecimento",
+        "Planeamento de operações S&OP",
+        "Logística e gestão de inventário"
+      ],
+      "keyResponsibilities": [
+        "Coordenar o planeamento de produção e distribuição",
+        "Gerir níveis de inventário e serviço ao cliente",
+        "Liderar equipas de planeamento e logística"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Unicer / Super Bock Group",
+        "website": "https://www.superbockgroup.com",
+        "location": "Leça do Balio, Portugal",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Responsável de Cadeia de Abastecimento e Operações",
+        "activities": [
+          {
+            "project": "Planeamento integrado de operações",
+            "tasks": [
+              "Coordenar o processo S&OP mensal",
+              "Otimizar níveis de inventário em SAP",
+              "Liderar equipas de planeamento e logística"
+            ]
+          }
+        ],
+        "achievements": [
+          "Melhorou o nível de serviço ao cliente para 98% mantendo o inventário controlado",
+          "Reduziu ruturas de stock através de melhor previsão de procura"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Power BI"
+        ]
+      },
+      {
+        "company": "Nestlé Portugal",
+        "website": "https://www.nestle.pt",
+        "location": "Lisboa, Portugal",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Planeadora de Produção e Logística",
+        "activities": [
+          {
+            "project": "Planeamento de produção e distribuição",
+            "tasks": [
+              "Elaborar planos de produção via MRP",
+              "Gerir inventário e reposição",
+              "Coordenar transportes e distribuição"
+            ]
+          }
+        ],
+        "achievements": [
+          "Otimizou planos de produção reduzindo custos logísticos"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Instituto Superior Técnico",
+        "degree": "Mestrado em Engenharia e Gestão Industrial",
+        "fieldOfStudy": "Logística e Operações",
+        "achievements": [
+          "Projeto final em otimização de cadeia de abastecimento"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "APICS CPIM",
+        "institution": "ASCM",
+        "year": "@Y-4@",
+        "description": "Certificação internacional em gestão de produção e inventário."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "S&OP",
+        "MRP",
+        "Power BI",
+        "Inventory Management"
+      ],
+      "softSkills": [
+        "Liderança",
+        "Visão end-to-end",
+        "Negociação"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Implementação de processo S&OP",
+        "description": "Estruturação do processo de planeamento integrado de vendas e operações da unidade.",
+        "date": "2020-06",
+        "impact": "Nível de serviço ao cliente melhorado para 98% com inventário controlado."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ténis",
+      "Cozinha",
+      "Viagens culturais"
+    ],
+    "references": [
+      {
+        "name": "Tiago Correia",
+        "position": "Diretor de Operações",
+        "company": "Super Bock Group",
+        "contact": {
+          "phone": "+351 914 550 991",
+          "email": "tiago.correia@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 55000,
+      "max": 70000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Supply Chain & Operations Management",
+      "secondaryClusters": [
+        "Production Planning",
+        "Logistics"
+      ],
+      "functionalExpertise": [
+        "Gestão de cadeia de abastecimento",
+        "Planeamento de operações"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Melhoria de nível de serviço",
+        "Otimização de inventário"
+      ],
+      "industryDomains": [
+        "Consumer Goods",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "Grandes empresas de bens de consumo",
+        "Ambiente de operações"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Gestora de supply chain e operações com forte domínio de S&OP e SAP e liderança de equipas de planeamento e logística em bens de consumo."
+    },
+    "searchIndex": {
+      "roles": [
+        "Supply Chain Manager",
+        "Operations Manager",
+        "Production Planner"
+      ],
+      "skills": [
+        "SAP",
+        "S&OP",
+        "MRP",
+        "Power BI",
+        "Inventory Management"
+      ],
+      "industries": [
+        "Consumer Goods",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "supply-chain",
+      "operations",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro industrial sénior de planeamento e controlo de produção em ambiente automóvel. Especialista em MRP, sequenciamento de produção e sistemas MES, com forte análise de dados. Experiência em sincronização da produção com a cadeia de abastecimento e melhoria de indicadores de eficiência.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Miguel Ângelo Barreto",
+      "role": "Engenheiro de Planeamento e Controlo de Produção Sénior",
+      "summary": "Engenheiro de planeamento de produção focado em MRP, MES e sequenciamento em ambiente automóvel.",
+      "contact": {
+        "phone": "+351 916 448 771",
+        "email": "miguel.barreto@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "das Industrias",
+          "streetType": "Rua",
+          "city": "Palmela",
+          "state": "Setúbal",
+          "zipCode": "2950-805",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/miguel-barreto-planning"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "dias úteis de manhã",
+          "quinta à tarde"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Planeamento",
+        "skills": [
+          "MRP",
+          "Sequenciamento de produção",
+          "Planeamento de capacidade"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "MES",
+          "SAP",
+          "Sistemas de execução de produção"
+        ]
+      },
+      {
+        "category": "Análise",
+        "skills": [
+          "Análise de dados",
+          "KPIs de produção",
+          "Excel"
+        ]
+      },
+      {
+        "category": "Melhoria",
+        "skills": [
+          "Lean",
+          "Balanceamento de linhas"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Planeamento e controlo de produção",
+        "Sequenciamento e MRP",
+        "Sistemas MES de execução"
+      ],
+      "keyResponsibilities": [
+        "Elaborar e ajustar planos de produção",
+        "Sincronizar a produção com a cadeia de abastecimento",
+        "Monitorizar indicadores de eficiência via MES"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Volkswagen Autoeuropa",
+        "website": "https://www.volkswagenautoeuropa.pt",
+        "location": "Palmela, Portugal",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Engenheiro de Planeamento e Controlo de Produção Sénior",
+        "activities": [
+          {
+            "project": "Sequenciamento de produção de veículos",
+            "tasks": [
+              "Definir sequências de produção otimizadas",
+              "Gerir MRP e disponibilidade de componentes",
+              "Analisar indicadores de eficiência em MES"
+            ]
+          }
+        ],
+        "achievements": [
+          "Melhorou a estabilidade do sequenciamento reduzindo alterações de última hora",
+          "Aumentou a eficiência de linha (OEE) em 4 pontos percentuais"
+        ],
+        "toolsAndTechnologies": [
+          "MES",
+          "SAP",
+          "MRP"
+        ]
+      },
+      {
+        "company": "Faurecia",
+        "website": "https://www.example.com",
+        "location": "Palmela, Portugal",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Engenheiro de Planeamento de Produção",
+        "activities": [
+          {
+            "project": "Planeamento de componentes de interior automóvel",
+            "tasks": [
+              "Elaborar planos de produção via MRP",
+              "Coordenar com logística e fornecedores",
+              "Analisar cumprimento do plano"
+            ]
+          }
+        ],
+        "achievements": [
+          "Melhorou o cumprimento do plano de produção através de melhor coordenação com a logística"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "MES"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universidade Nova de Lisboa",
+        "degree": "Mestrado em Engenharia e Gestão Industrial",
+        "fieldOfStudy": "Produção e Operações",
+        "achievements": [
+          "Projeto final em planeamento e sequenciamento de produção"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "APICS CPIM",
+        "institution": "ASCM",
+        "year": "@Y-4@",
+        "description": "Certificação em planeamento e controlo de produção e inventário."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "MES",
+        "SAP",
+        "MRP",
+        "Lean",
+        "Data Analysis"
+      ],
+      "softSkills": [
+        "Pensamento analítico",
+        "Organização",
+        "Trabalho em equipa"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Estabilização do sequenciamento de produção",
+        "description": "Revisão das regras de sequenciamento e integração com o MES para reduzir alterações de última hora.",
+        "date": "2022-09",
+        "impact": "Aumento de 4 pontos percentuais no OEE da linha de montagem."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Automóveis",
+      "Ciclismo",
+      "Modelismo"
+    ],
+    "references": [
+      {
+        "name": "Cristina Vaz",
+        "position": "Responsável de Planeamento",
+        "company": "Volkswagen Autoeuropa",
+        "contact": {
+          "phone": "+351 913 550 208",
+          "email": "cristina.vaz@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 38000,
+      "max": 47000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Production Planning & Control",
+      "secondaryClusters": [
+        "MES Systems",
+        "Manufacturing Operations"
+      ],
+      "functionalExpertise": [
+        "Planeamento de produção",
+        "Controlo de produção"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Aumento de OEE",
+        "Estabilidade de produção"
+      ],
+      "industryDomains": [
+        "Automotive",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "Ambiente fabril automóvel",
+        "Equipas de planeamento"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Engenheiro de planeamento sénior com domínio de MRP e MES em ambiente automóvel e resultados mensuráveis em eficiência de linha."
+    },
+    "searchIndex": {
+      "roles": [
+        "Production Planner",
+        "Production Control Engineer",
+        "Industrial Engineer"
+      ],
+      "skills": [
+        "MES",
+        "SAP",
+        "MRP",
+        "Lean",
+        "Data Analysis"
+      ],
+      "industries": [
+        "Automotive",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "production-planning",
+      "mes",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro mecânico sénior com mais de dez anos em projeto mecânico e desenvolvimento de produto para a indústria metalomecânica e de moldes. Especialista em modelação 3D em SolidWorks, aplicação de GD&T e análise por elementos finitos (FEA). Combina rigor técnico com capacidade de coordenar equipas de projeto e otimizar componentes para fabrico.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Rui Alexandre Ferreira",
+      "role": "Engenheiro Mecânico de Projeto Sénior",
+      "summary": "Engenheiro mecânico focado em projeto de componentes e conjuntos, tolerâncias geométricas e validação estrutural por simulação.",
+      "contact": {
+        "phone": "+351 916 204 599",
+        "email": "rui.ferreira@example.com",
+        "address": {
+          "streetNumber": "142",
+          "streetName": "de Cedofeita",
+          "streetType": "Rua",
+          "city": "Porto",
+          "state": "Porto",
+          "zipCode": "4050-181",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/rui-ferreira-eng"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dias úteis ao fim da tarde",
+          "sábado de manhã"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Projeto e CAD",
+        "skills": [
+          "SolidWorks",
+          "AutoCAD",
+          "Modelação paramétrica"
+        ]
+      },
+      {
+        "category": "Simulação e análise",
+        "skills": [
+          "ANSYS",
+          "FEA",
+          "Análise estrutural"
+        ]
+      },
+      {
+        "category": "Fabrico e qualidade",
+        "skills": [
+          "GD&T",
+          "DFM",
+          "Desenho técnico"
+        ]
+      },
+      {
+        "category": "Gestão de projeto",
+        "skills": [
+          "Coordenação de equipas",
+          "Gestão de requisitos"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Projeto mecânico de componentes",
+        "Análise por elementos finitos",
+        "Tolerâncias geométricas GD&T"
+      ],
+      "keyResponsibilities": [
+        "Conceber e detalhar conjuntos mecânicos",
+        "Validar componentes por simulação estrutural",
+        "Assegurar a fabricabilidade e a qualidade dos desenhos"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Simoldes Aços",
+        "website": "https://www.simoldes.com",
+        "location": "Oliveira de Azeméis, Portugal",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Engenheiro Mecânico de Projeto Sénior",
+        "activities": [
+          {
+            "project": "Moldes de injeção para componentes automóveis",
+            "tasks": [
+              "Modelar conjuntos de molde em SolidWorks",
+              "Aplicar GD&T em componentes críticos",
+              "Realizar análises FEA de resistência e fadiga"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduziu o peso de um suporte estrutural em 18% mantendo a rigidez exigida",
+          "Diminuiu o número de iterações de projeto ao introduzir revisões DFM sistemáticas"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "ANSYS",
+          "GD&T",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Bosch Termotecnologia",
+        "website": "https://www.bosch.pt",
+        "location": "Aveiro, Portugal",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Engenheiro Mecânico de Projeto",
+        "activities": [
+          {
+            "project": "Componentes de esquentadores e caldeiras",
+            "tasks": [
+              "Desenvolver peças em chapa e plástico",
+              "Preparar desenhos técnicos e tolerâncias",
+              "Apoiar ensaios de validação"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribuiu para a industrialização de uma nova gama de permutadores"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "AutoCAD",
+          "FEA"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Faculdade de Engenharia da Universidade do Porto",
+        "degree": "Mestrado Integrado em Engenharia Mecânica",
+        "fieldOfStudy": "Projeto e Construção Mecânica",
+        "achievements": [
+          "Dissertação em otimização estrutural de componentes"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified SolidWorks Professional (CSWP)",
+        "institution": "Dassault Systèmes",
+        "year": "@Y-4@",
+        "description": "Certificação avançada de modelação em SolidWorks."
+      },
+      {
+        "title": "Membro efetivo da Ordem dos Engenheiros",
+        "institution": "Ordem dos Engenheiros",
+        "year": "@Y-4@",
+        "description": "Inscrição no colégio de Engenharia Mecânica."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SolidWorks",
+        "ANSYS",
+        "GD&T",
+        "FEA",
+        "AutoCAD",
+        "DFM"
+      ],
+      "softSkills": [
+        "Rigor técnico",
+        "Trabalho em equipa",
+        "Resolução de problemas"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Otimização de suporte estrutural",
+        "description": "Redução de peso de um componente metálico mantendo requisitos de rigidez através de análise FEA iterativa.",
+        "date": "2023-06",
+        "impact": "Poupança de material de 18% por peça produzida em série."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Modelismo",
+      "Ciclismo de montanha",
+      "Impressão 3D"
+    ],
+    "references": [
+      {
+        "name": "Carla Nogueira",
+        "position": "Diretora de Engenharia",
+        "company": "Simoldes Aços",
+        "contact": {
+          "phone": "+351 917 331 220",
+          "email": "carla.nogueira@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 42000,
+      "max": 52000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Mechanical Design Engineering",
+      "secondaryClusters": [
+        "Product Development",
+        "Structural Simulation"
+      ],
+      "functionalExpertise": [
+        "Projeto mecânico",
+        "Simulação estrutural"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Redução de custos de material",
+        "Melhoria da fabricabilidade"
+      ],
+      "industryDomains": [
+        "Automotive",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "Ambiente industrial",
+        "Equipas de engenharia de produto"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Perfil consolidado em projeto mecânico com domínio de SolidWorks, GD&T e FEA, historial estável na indústria de moldes e componentes automóveis."
+    },
+    "searchIndex": {
+      "roles": [
+        "Mechanical Design Engineer",
+        "Product Engineer",
+        "CAD Engineer"
+      ],
+      "skills": [
+        "SolidWorks",
+        "ANSYS",
+        "GD&T",
+        "FEA",
+        "AutoCAD"
+      ],
+      "industries": [
+        "Automotive",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "solidworks",
+      "fea",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Engenheira mecânica sénior especializada em climatização e AVAC para edifícios de serviços e hospitais. Domina o dimensionamento de sistemas HVAC, eficiência energética e coordenação MEP em ambiente BIM. Experiência sólida em projeto, obra e comissionamento de instalações técnicas.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Sofia Mendes Cardoso",
+      "role": "Engenheira de AVAC Sénior",
+      "summary": "Engenheira mecânica de climatização com forte foco em eficiência energética e coordenação de especialidades em projeto de edifícios.",
+      "contact": {
+        "phone": "+351 913 887 042",
+        "email": "sofia.cardoso.personal@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Duque de Ávila",
+          "streetType": "Avenida",
+          "unit": "5 Esq",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1050-016",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sofia-cardoso-hvac"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "dias úteis de manhã",
+          "quinta e sexta à tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Climatização e AVAC",
+        "skills": [
+          "Dimensionamento HVAC",
+          "Ventilação",
+          "Cargas térmicas"
+        ]
+      },
+      {
+        "category": "Ferramentas de projeto",
+        "skills": [
+          "AutoCAD",
+          "Revit MEP",
+          "HAP"
+        ]
+      },
+      {
+        "category": "Eficiência energética",
+        "skills": [
+          "Certificação energética",
+          "Simulação térmica"
+        ]
+      },
+      {
+        "category": "Coordenação",
+        "skills": [
+          "BIM",
+          "Coordenação MEP"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Projeto de sistemas AVAC",
+        "Eficiência energética de edifícios",
+        "Coordenação MEP em BIM"
+      ],
+      "keyResponsibilities": [
+        "Dimensionar equipamentos e redes de climatização",
+        "Assegurar conformidade com regulamentação térmica",
+        "Coordenar especialidades em modelo BIM"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "AFAconsult",
+        "website": "https://www.afaconsult.com",
+        "location": "Lisboa, Portugal",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Engenheira de AVAC Sénior",
+        "activities": [
+          {
+            "project": "Climatização de complexo hospitalar",
+            "tasks": [
+              "Dimensionar sistemas de tratamento de ar",
+              "Coordenar a especialidade AVAC em Revit MEP",
+              "Elaborar cadernos de encargos e mapas de quantidades"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduziu o consumo energético estimado de um edifício de serviços em 22%",
+          "Coordenou a especialidade mecânica de um hospital de média dimensão"
+        ],
+        "toolsAndTechnologies": [
+          "Revit MEP",
+          "AutoCAD",
+          "HAP"
+        ]
+      },
+      {
+        "company": "Gatehouse Engenharia",
+        "website": "https://www.example.com",
+        "location": "Lisboa, Portugal",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Engenheira de AVAC",
+        "activities": [
+          {
+            "project": "Instalações técnicas de edifícios de escritórios",
+            "tasks": [
+              "Calcular cargas térmicas e caudais",
+              "Preparar peças desenhadas de AVAC",
+              "Acompanhar obra e comissionamento"
+            ]
+          }
+        ],
+        "achievements": [
+          "Assegurou a certificação energética de vários edifícios de serviços"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "HAP",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Instituto Superior Técnico",
+        "degree": "Mestrado Integrado em Engenharia Mecânica",
+        "fieldOfStudy": "Energia e Climatização",
+        "achievements": [
+          "Especialização em sistemas térmicos e AVAC"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Perito Qualificado em Certificação Energética",
+        "institution": "ADENE",
+        "year": "@Y-4@",
+        "description": "Habilitação para certificação energética de edifícios."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Revit MEP",
+        "AutoCAD",
+        "HAP",
+        "HVAC",
+        "Simulação térmica"
+      ],
+      "softSkills": [
+        "Organização",
+        "Comunicação com clientes",
+        "Trabalho sob prazos"
+      ],
+      "languages": [
+        {
+          "language": "Português",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglês",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Requalificação energética de edifício de serviços",
+        "description": "Redesenho do sistema AVAC com recuperação de calor e controlo por variação de caudal.",
+        "date": "2022-11",
+        "impact": "Redução de 22% no consumo energético anual estimado."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Corrida",
+      "Fotografia de arquitetura",
+      "Voluntariado ambiental"
+    ],
+    "references": [
+      {
+        "name": "Pedro Vasconcelos",
+        "position": "Diretor de Projeto",
+        "company": "AFAconsult",
+        "contact": {
+          "phone": "+351 912 556 700",
+          "email": "pedro.vasconcelos@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 40000,
+      "max": 50000
+    },
+    "candidateClustering": {
+      "primaryCluster": "HVAC Engineering",
+      "secondaryClusters": [
+        "Building Services",
+        "Energy Efficiency"
+      ],
+      "functionalExpertise": [
+        "Projeto AVAC",
+        "Eficiência energética"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Redução de consumos energéticos",
+        "Conformidade regulamentar"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Healthcare Facilities"
+      ],
+      "environmentFit": [
+        "Gabinetes de projeto",
+        "Ambiente multidisciplinar"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Especialista clara em AVAC e climatização de edifícios, com competências de coordenação MEP em BIM e forte componente de eficiência energética."
+    },
+    "searchIndex": {
+      "roles": [
+        "HVAC Engineer",
+        "Building Services Engineer",
+        "MEP Engineer"
+      ],
+      "skills": [
+        "Revit MEP",
+        "AutoCAD",
+        "HVAC",
+        "HAP",
+        "BIM"
+      ],
+      "industries": [
+        "Construction",
+        "Healthcare Facilities"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "hvac",
+      "mep",
+      "senior"
+    ]
+  }
+]

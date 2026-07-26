@@ -1,0 +1,6094 @@
+[
+  {
+    "candidateProfileSummary": "Ingénieure en conception mécanique senior avec plus de dix ans d'expérience dans la conception de systèmes mécaniques pour l'aéronautique et l'industrie. Spécialiste de la modélisation 3D sous CATIA et SolidWorks, du dimensionnement par calcul FEA et de la cotation GD&T. Habituée au travail en équipe pluridisciplinaire et au pilotage de projets de développement produit.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Camille Rousseau",
+      "role": "Ingénieure Conception Mécanique Senior",
+      "summary": "Passionnée par la conception de pièces mécaniques fiables et optimisées. J'aime transformer un cahier des charges exigeant en solutions robustes prêtes pour l'industrialisation.",
+      "contact": {
+        "phone": "+33 6 24 51 88 03",
+        "email": "camille.rousseau@example.com",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "des Frères Lumière",
+          "streetType": "Rue",
+          "city": "Toulouse",
+          "state": "Occitanie",
+          "zipCode": "31000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/camille-rousseau-meca"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Conception CAO",
+        "skills": [
+          "CATIA V5",
+          "SolidWorks",
+          "Creo"
+        ]
+      },
+      {
+        "category": "Calcul et simulation",
+        "skills": [
+          "ANSYS",
+          "FEA",
+          "Analyse modale"
+        ]
+      },
+      {
+        "category": "Méthodes et cotation",
+        "skills": [
+          "GD&T",
+          "Tolérancement",
+          "AMDEC"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "AutoCAD",
+          "PLM Enovia",
+          "MS Project"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Conception mécanique 3D",
+        "Dimensionnement par éléments finis",
+        "Industrialisation produit"
+      ],
+      "keyResponsibilities": [
+        "Concevoir des ensembles mécaniques conformes au cahier des charges",
+        "Réaliser les calculs de résistance et de fatigue",
+        "Piloter les revues de conception avec les fournisseurs"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Airbus",
+        "website": "https://airbus.com",
+        "location": "Toulouse, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Ingénieure Conception Mécanique Senior",
+        "activities": [
+          {
+            "project": "Systèmes de fixation cabine",
+            "tasks": [
+              "Conception d'ensembles structuraux sous CATIA V5",
+              "Calculs de tenue mécanique par FEA sous ANSYS",
+              "Définition des plans avec cotation GD&T"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction de 18 pour cent de la masse d'un support structural",
+          "Réduction du délai de validation grâce à la standardisation des composants"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA V5",
+          "ANSYS",
+          "GD&T",
+          "Enovia"
+        ]
+      },
+      {
+        "company": "Liebherr Aerospace",
+        "website": "https://liebherr.com",
+        "location": "Toulouse, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Ingénieure Conception Mécanique",
+        "activities": [
+          {
+            "project": "Systèmes de conditionnement d'air",
+            "tasks": [
+              "Modélisation de composants sous SolidWorks",
+              "Analyse de tolérancement",
+              "Suivi de la fabrication de prototypes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise au point d'un banc d'essai réduisant les cycles de test"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "AutoCAD",
+          "GD&T"
+        ]
+      },
+      {
+        "company": "Segula Technologies",
+        "website": "https://segula.fr",
+        "location": "Blagnac, France",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Ingénieure d'études junior",
+        "activities": [
+          {
+            "project": "Bureau d'études mécaniques",
+            "tasks": [
+              "Réalisation de plans de détail",
+              "Support aux calculs de dimensionnement"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à la digitalisation des dossiers de définition"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA V5",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "INSA Toulouse",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie mécanique",
+        "achievements": [
+          "Spécialisation conception et calcul de structures",
+          "Projet de fin d'études sur l'optimisation topologique"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certification CATIA V5 Mechanical Design",
+        "institution": "Dassault Systèmes",
+        "year": "@Y-0@",
+        "description": "Maîtrise avancée de la conception mécanique sous CATIA V5."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "CATIA V5",
+        "SolidWorks",
+        "ANSYS",
+        "FEA",
+        "GD&T",
+        "AutoCAD",
+        "Creo"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Esprit d'analyse",
+        "Travail en équipe",
+        "Sens du détail"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Optimisation d'un support structural cabine",
+        "description": "Refonte d'un support par optimisation topologique et validation FEA.",
+        "date": "2021",
+        "impact": "Gain de masse de 18 pour cent tout en respectant les marges de sécurité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Randonnée en montagne",
+      "Impression 3D",
+      "Photographie"
+    ],
+    "references": [
+      {
+        "name": "Étienne Faure",
+        "position": "Responsable Bureau d'Études",
+        "company": "Airbus",
+        "contact": {
+          "phone": "+33 6 71 22 45 09",
+          "email": "etienne.faure@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 52000,
+      "max": 62000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Mechanical Design Engineering",
+      "secondaryClusters": [
+        "Aerospace Engineering",
+        "Structural Analysis"
+      ],
+      "functionalExpertise": [
+        "CAD Design",
+        "Finite Element Analysis",
+        "Product Industrialization"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Réduction de masse structurale",
+        "Standardisation des composants"
+      ],
+      "industryDomains": [
+        "Aerospace",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "R&D"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Parcours cohérent en conception mécanique aéronautique avec expertise CATIA et calcul par éléments finis."
+    },
+    "searchIndex": {
+      "roles": [
+        "Mechanical Design Engineer",
+        "Senior Design Engineer",
+        "CAD Engineer"
+      ],
+      "skills": [
+        "CATIA",
+        "SolidWorks",
+        "ANSYS",
+        "FEA",
+        "GD&T",
+        "AutoCAD",
+        "Creo"
+      ],
+      "industries": [
+        "Aerospace",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "design",
+      "catia",
+      "fea",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieur en génie climatique avec cinq ans d'expérience dans la conception d'installations CVC pour les bâtiments tertiaires et industriels. Compétent en dimensionnement thermique, en réseaux aérauliques et hydrauliques, et en études d'efficacité énergétique. Rigoureux et orienté performance énergétique.",
+    "careerStartYear": 2019,
+    "personalInformation": {
+      "name": "Yanis Benali",
+      "role": "Ingénieur Génie Climatique (CVC)",
+      "summary": "Ingénieur CVC motivé par la conception de bâtiments confortables et sobres en énergie. J'apprécie les projets où performance thermique et contraintes de terrain se rencontrent.",
+      "contact": {
+        "phone": "+33 6 88 03 17 42",
+        "email": "yanis.benali@example.com",
+        "address": {
+          "streetNumber": "45",
+          "streetName": "de la République",
+          "streetType": "Avenue",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69003",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/yanis-benali-cvc"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En semaine 17h-19h",
+          "Mercredi journée"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Génie climatique",
+        "skills": [
+          "Dimensionnement CVC",
+          "Aéraulique",
+          "Hydraulique"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "AutoCAD",
+          "Revit MEP",
+          "Pleiades"
+        ]
+      },
+      {
+        "category": "Énergie",
+        "skills": [
+          "Bilan thermique",
+          "RT 2012",
+          "RE 2020"
+        ]
+      },
+      {
+        "category": "Méthodes",
+        "skills": [
+          "Chiffrage",
+          "Suivi de chantier"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Conception d'installations CVC",
+        "Dimensionnement thermique",
+        "Études d'efficacité énergétique"
+      ],
+      "keyResponsibilities": [
+        "Réaliser les bilans thermiques des bâtiments",
+        "Dimensionner les réseaux aérauliques et hydrauliques",
+        "Assurer le suivi technique des installations"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Egis",
+        "website": "https://egis-group.com",
+        "location": "Lyon, France",
+        "from": "@M-2@",
+        "to": "Present",
+        "position": "Ingénieur Génie Climatique",
+        "activities": [
+          {
+            "project": "Réhabilitation d'un campus tertiaire",
+            "tasks": [
+              "Bilans thermiques et dimensionnement CVC",
+              "Modélisation des réseaux sous Revit MEP",
+              "Rédaction des CCTP et pièces techniques"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction estimée de 25 pour cent des consommations de chauffage",
+          "Conformité RE 2020 sur l'ensemble du lot CVC"
+        ],
+        "toolsAndTechnologies": [
+          "Revit MEP",
+          "AutoCAD",
+          "Pleiades"
+        ]
+      },
+      {
+        "company": "Bureau Veritas",
+        "website": "https://bureauveritas.fr",
+        "location": "Villeurbanne, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Ingénieur d'études CVC junior",
+        "activities": [
+          {
+            "project": "Bâtiments logistiques",
+            "tasks": [
+              "Calculs de déperditions",
+              "Sélection d'équipements de ventilation",
+              "Plans d'exécution sous AutoCAD"
+            ]
+          }
+        ],
+        "achievements": [
+          "Standardisation des notes de calcul thermique de l'agence"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "Pleiades"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "INSA Lyon",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie énergétique et environnement",
+        "achievements": [
+          "Spécialisation énergétique du bâtiment",
+          "Projet sur la ventilation double flux"
+        ]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Dimensionnement CVC",
+        "Revit MEP",
+        "AutoCAD",
+        "Pleiades",
+        "Bilan thermique",
+        "RE 2020"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Autonomie",
+        "Communication",
+        "Adaptabilité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Réhabilitation énergétique d'un campus",
+        "description": "Conception complète du lot CVC pour un campus tertiaire de 12 000 m².",
+        "date": "2023",
+        "impact": "Baisse significative des consommations et confort thermique amélioré."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Vélo de route",
+      "Bricolage",
+      "Cinéma"
+    ],
+    "references": [
+      {
+        "name": "Nadia Cherki",
+        "position": "Cheffe de Projet Bâtiment",
+        "company": "Egis",
+        "contact": {
+          "phone": "+33 6 45 90 12 76",
+          "email": "nadia.cherki@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 40000,
+      "max": 48000
+    },
+    "candidateClustering": {
+      "primaryCluster": "HVAC Engineering",
+      "secondaryClusters": [
+        "Building Services",
+        "Energy Efficiency"
+      ],
+      "functionalExpertise": [
+        "Thermal Design",
+        "MEP Design",
+        "Energy Modeling"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Réduction des consommations énergétiques",
+        "Conformité réglementaire"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Building Services"
+      ],
+      "environmentFit": [
+        "Consulting",
+        "Engineering Firm"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Profil CVC en développement avec expérience solide en conception thermique et modélisation MEP."
+    },
+    "searchIndex": {
+      "roles": [
+        "HVAC Engineer",
+        "Building Services Engineer",
+        "Mechanical Engineer"
+      ],
+      "skills": [
+        "HVAC Design",
+        "Revit MEP",
+        "AutoCAD",
+        "Thermal Analysis",
+        "Energy Efficiency"
+      ],
+      "industries": [
+        "Construction",
+        "Building Services"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "hvac",
+      "building-services",
+      "energy",
+      "midlevel"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieur powertrain lead avec plus de quinze ans d'expérience dans le développement de groupes motopropulseurs thermiques et électriques. Expert en simulation moteur, en essais bancs et en intégration véhicule. Reconnu pour l'encadrement d'équipes d'essais et la coordination avec les fournisseurs de rang 1.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Thomas Lefèvre",
+      "role": "Lead Ingénieur Powertrain",
+      "summary": "Ingénieur powertrain guidé par la performance et la fiabilité des motorisations. J'aime piloter des équipes techniques du concept jusqu'à la validation véhicule.",
+      "contact": {
+        "phone": "+33 6 12 77 40 55",
+        "email": "thomas.lefevre@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "Louis Renault",
+          "streetType": "Boulevard",
+          "city": "Boulogne-Billancourt",
+          "state": "Île-de-France",
+          "zipCode": "92100",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/thomas-lefevre-powertrain"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 18h-20h"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Motorisation",
+        "skills": [
+          "Groupes motopropulseurs",
+          "Motorisation électrique",
+          "Combustion"
+        ]
+      },
+      {
+        "category": "Simulation",
+        "skills": [
+          "GT-Power",
+          "MATLAB/Simulink",
+          "AMESim"
+        ]
+      },
+      {
+        "category": "Essais",
+        "skills": [
+          "Bancs moteur",
+          "Instrumentation",
+          "Validation véhicule"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Pilotage d'équipe",
+          "Gestion fournisseurs",
+          "Planning projet"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Développement powertrain",
+        "Simulation et essais moteur",
+        "Intégration véhicule"
+      ],
+      "keyResponsibilities": [
+        "Piloter le développement des motorisations",
+        "Encadrer les équipes d'essais et de simulation",
+        "Coordonner les fournisseurs et les plannings de validation"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Renault Group",
+        "website": "https://renaultgroup.com",
+        "location": "Guyancourt, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Lead Ingénieur Powertrain",
+        "activities": [
+          {
+            "project": "Chaîne de traction électrique",
+            "tasks": [
+              "Pilotage de l'équipe d'intégration moteur électrique",
+              "Définition des plans de validation banc et véhicule",
+              "Coordination avec les fournisseurs de batteries et onduleurs"
+            ]
+          }
+        ],
+        "achievements": [
+          "Lancement réussi d'une nouvelle chaîne de traction",
+          "Réduction de 20 pour cent des cycles d'essais grâce à la simulation"
+        ],
+        "toolsAndTechnologies": [
+          "MATLAB/Simulink",
+          "AMESim",
+          "GT-Power"
+        ]
+      },
+      {
+        "company": "Stellantis",
+        "website": "https://stellantis.com",
+        "location": "Vélizy-Villacoublay",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Ingénieur d'essais Powertrain",
+        "activities": [
+          {
+            "project": "Optimisation moteur essence",
+            "tasks": [
+              "Essais bancs moteur",
+              "Calibration et analyse de données",
+              "Corrélation simulation-essai"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration du rendement moteur sur cycle homologué"
+        ],
+        "toolsAndTechnologies": [
+          "GT-Power",
+          "MATLAB/Simulink"
+        ]
+      },
+      {
+        "company": "FEV",
+        "website": "https://fev.com",
+        "location": "Saint-Quentin-en-Yvelines",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Ingénieur d'études moteur",
+        "activities": [
+          {
+            "project": "Développement composants moteur",
+            "tasks": [
+              "Dimensionnement de composants",
+              "Analyse thermodynamique"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution au dépôt d'un brevet sur la distribution variable"
+        ],
+        "toolsAndTechnologies": [
+          "AMESim",
+          "MATLAB/Simulink"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Arts et Métiers ParisTech",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie mécanique et énergétique",
+        "achievements": [
+          "Spécialisation motorisation et énergétique",
+          "Mémoire sur la combustion moteur"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "IFP School",
+        "degree": "Mastère spécialisé",
+        "fieldOfStudy": "Motorisations et énergie",
+        "achievements": [
+          "Formation appliquée aux groupes motopropulseurs"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Ingénieur EUR ING",
+        "institution": "FEANI",
+        "year": "@Y-0@",
+        "description": "Titre européen d'ingénieur reconnaissant l'expertise et l'expérience professionnelle."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "GT-Power",
+        "MATLAB/Simulink",
+        "AMESim",
+        "Essais bancs",
+        "Calibration moteur"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Prise de décision",
+        "Communication",
+        "Gestion du stress"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Intégration d'une chaîne de traction électrique",
+        "description": "Pilotage de l'intégration d'un groupe motopropulseur électrique du concept à la production.",
+        "date": "2022",
+        "impact": "Mise sur le marché dans les délais avec un plan de validation optimisé."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Sport automobile",
+      "Course à pied",
+      "Mécanique classique"
+    ],
+    "references": [
+      {
+        "name": "Isabelle Marchand",
+        "position": "Directrice Ingénierie Powertrain",
+        "company": "Renault Group",
+        "contact": {
+          "phone": "+33 6 34 55 21 88",
+          "email": "isabelle.marchand@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 72000,
+      "max": 88000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Powertrain Engineering",
+      "secondaryClusters": [
+        "Automotive Engineering",
+        "Simulation & Testing"
+      ],
+      "functionalExpertise": [
+        "Powertrain Development",
+        "Engine Simulation",
+        "Vehicle Integration"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Réduction des cycles d'essais",
+        "Lancement de nouvelle motorisation"
+      ],
+      "industryDomains": [
+        "Automotive",
+        "Mobility"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "OEM"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Expert powertrain avec forte expérience en simulation, essais et encadrement d'équipes automobiles."
+    },
+    "searchIndex": {
+      "roles": [
+        "Powertrain Engineer",
+        "Lead Mechanical Engineer",
+        "Automotive Engineer"
+      ],
+      "skills": [
+        "GT-Power",
+        "MATLAB",
+        "Simulink",
+        "AMESim",
+        "Engine Testing",
+        "Vehicle Integration"
+      ],
+      "industries": [
+        "Automotive",
+        "Mobility"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "powertrain",
+      "automotive",
+      "simulation",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieure maintenance mécanique senior spécialisée dans la fiabilisation des lignes de production industrielles. Forte de neuf ans d'expérience en maintenance prédictive, en GMAO et en amélioration de la disponibilité machine. Orientée terrain et résolution de problèmes.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Sarah Dumont",
+      "role": "Ingénieure Maintenance Mécanique Senior",
+      "summary": "Ingénieure maintenance de terrain, j'aime fiabiliser des équipements complexes et réduire les arrêts non planifiés au plus près des opérateurs.",
+      "contact": {
+        "phone": "+33 6 90 41 03 22",
+        "email": "sarah.dumont@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "de l'Industrie",
+          "streetType": "Rue",
+          "city": "Lille",
+          "state": "Hauts-de-France",
+          "zipCode": "59000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/sarah-dumont-maintenance"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Samedi matin"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Maintenance",
+        "skills": [
+          "Maintenance prédictive",
+          "Maintenance préventive",
+          "Analyse vibratoire"
+        ]
+      },
+      {
+        "category": "Fiabilité",
+        "skills": [
+          "AMDEC",
+          "MTBF",
+          "Root Cause Analysis"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "GMAO SAP PM",
+          "AutoCAD",
+          "Excel avancé"
+        ]
+      },
+      {
+        "category": "Mécanique",
+        "skills": [
+          "Systèmes hydrauliques",
+          "Transmissions",
+          "Pompes et compresseurs"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Maintenance industrielle",
+        "Fiabilisation d'équipements",
+        "Analyse de défaillances"
+      ],
+      "keyResponsibilities": [
+        "Définir les plans de maintenance préventive",
+        "Analyser les défaillances récurrentes",
+        "Améliorer la disponibilité des lignes de production"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "ArcelorMittal",
+        "website": "https://arcelormittal.com",
+        "location": "Dunkerque, France",
+        "from": "@M-2@",
+        "to": "Present",
+        "position": "Ingénieure Maintenance Mécanique Senior",
+        "activities": [
+          {
+            "project": "Fiabilisation ligne de laminage",
+            "tasks": [
+              "Déploiement de la maintenance prédictive par analyse vibratoire",
+              "Analyses AMDEC des équipements critiques",
+              "Optimisation des plans de maintenance sous GMAO"
+            ]
+          }
+        ],
+        "achievements": [
+          "Augmentation de 12 points du taux de disponibilité machine",
+          "Réduction de 30 pour cent des arrêts non planifiés"
+        ],
+        "toolsAndTechnologies": [
+          "SAP PM",
+          "Analyse vibratoire",
+          "AMDEC"
+        ]
+      },
+      {
+        "company": "Toyota Motor Manufacturing",
+        "website": "https://toyota.fr",
+        "location": "Onnaing, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Ingénieure Maintenance",
+        "activities": [
+          {
+            "project": "Maintenance ligne d'assemblage",
+            "tasks": [
+              "Suivi des indicateurs MTBF et MTTR",
+              "Résolution de pannes mécaniques",
+              "Formation des techniciens"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise en place d'un plan de maintenance autonome inspiré du TPM"
+        ],
+        "toolsAndTechnologies": [
+          "GMAO",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Polytech Lille",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie mécanique",
+        "achievements": [
+          "Option mécanique et maintenance industrielle",
+          "Projet sur la maintenance conditionnelle"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP PM",
+        "Analyse vibratoire",
+        "AMDEC",
+        "AutoCAD",
+        "Hydraulique",
+        "Root Cause Analysis"
+      ],
+      "softSkills": [
+        "Réactivité",
+        "Sens du terrain",
+        "Esprit d'équipe",
+        "Résolution de problèmes"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programme de maintenance prédictive",
+        "description": "Déploiement de l'analyse vibratoire sur les équipements critiques d'une ligne de laminage.",
+        "date": "2022",
+        "impact": "Nette réduction des arrêts non planifiés et hausse de la disponibilité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Course à pied",
+      "Jardinage",
+      "Modélisme"
+    ],
+    "references": [
+      {
+        "name": "Karim Bouaziz",
+        "position": "Responsable Maintenance",
+        "company": "ArcelorMittal",
+        "contact": {
+          "phone": "+33 6 22 78 40 15",
+          "email": "karim.bouaziz@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 50000,
+      "max": 60000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Maintenance Engineering",
+      "secondaryClusters": [
+        "Reliability Engineering",
+        "Manufacturing"
+      ],
+      "functionalExpertise": [
+        "Predictive Maintenance",
+        "Failure Analysis",
+        "Equipment Reliability"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Hausse de la disponibilité machine",
+        "Réduction des arrêts non planifiés"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Metallurgy"
+      ],
+      "environmentFit": [
+        "Industrial",
+        "Enterprise"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Ingénieure maintenance orientée fiabilité avec résultats mesurables sur la disponibilité des lignes."
+    },
+    "searchIndex": {
+      "roles": [
+        "Maintenance Engineer",
+        "Reliability Engineer",
+        "Mechanical Engineer"
+      ],
+      "skills": [
+        "Predictive Maintenance",
+        "SAP PM",
+        "Vibration Analysis",
+        "FMEA",
+        "Root Cause Analysis"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Metallurgy"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "maintenance",
+      "reliability",
+      "manufacturing",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Manager R&D mécanique avec plus de seize ans d'expérience dans le développement de produits pour l'électroménager et les biens d'équipement. Pilote des équipes de conception et d'essais, du concept à l'industrialisation. Expert en conception robuste, en réduction des coûts et en gestion de portefeuille produit.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Olivier Vandenberghe",
+      "role": "Manager R&D Mécanique",
+      "summary": "Manager R&D passionné par l'innovation produit et la performance industrielle. J'aime faire grandir mes équipes tout en tenant les objectifs de coût, qualité et délai.",
+      "contact": {
+        "phone": "+32 475 21 04 88",
+        "email": "olivier.vandenberghe@example.be",
+        "address": {
+          "streetNumber": "60",
+          "streetName": "de la Loi",
+          "streetType": "Rue",
+          "unit": "Bte 4",
+          "city": "Bruxelles",
+          "state": "Bruxelles-Capitale",
+          "zipCode": "1040",
+          "country": "Belgique"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/olivier-vandenberghe-rd"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 18h-19h"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Développement produit",
+        "skills": [
+          "Conception robuste",
+          "Design to Cost",
+          "Gestion de portefeuille"
+        ]
+      },
+      {
+        "category": "CAO et simulation",
+        "skills": [
+          "SolidWorks",
+          "Creo",
+          "ANSYS"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Pilotage d'équipe R&D",
+          "Stage-Gate",
+          "Roadmap produit"
+        ]
+      },
+      {
+        "category": "Industrialisation",
+        "skills": [
+          "DFM",
+          "AMDEC",
+          "Plans d'expériences"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Développement produit mécanique",
+        "Management d'équipe R&D",
+        "Industrialisation et réduction des coûts"
+      ],
+      "keyResponsibilities": [
+        "Définir la feuille de route technique des produits",
+        "Manager les ingénieurs conception et essais",
+        "Garantir le respect des objectifs coût, qualité et délai"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Atlas Copco",
+        "website": "https://atlascopco.com",
+        "location": "Bruxelles, Belgique",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Manager R&D Mécanique",
+        "activities": [
+          {
+            "project": "Gamme de compresseurs industriels",
+            "tasks": [
+              "Pilotage d'une équipe de 12 ingénieurs",
+              "Définition de la roadmap produit et des jalons Stage-Gate",
+              "Déploiement d'une démarche Design to Cost"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction de 15 pour cent du coût de revient d'une gamme",
+          "Lancement de trois nouveaux produits en trois ans"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "Creo",
+          "ANSYS"
+        ]
+      },
+      {
+        "company": "Bosch",
+        "website": "https://bosch.com",
+        "location": "Anderlecht, Belgique",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Chef de Projet R&D",
+        "activities": [
+          {
+            "project": "Développement d'outillage électroportatif",
+            "tasks": [
+              "Coordination conception et essais",
+              "Optimisation par plans d'expériences",
+              "Validation de la fiabilité produit"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration mesurable de la durée de vie produit"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "ANSYS"
+        ]
+      },
+      {
+        "company": "Techspace Aero",
+        "website": "https://safran-aero-boosters.com",
+        "location": "Liège, Belgique",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Ingénieur d'études R&D",
+        "activities": [
+          {
+            "project": "Composants aéronautiques",
+            "tasks": [
+              "Conception et calcul de composants",
+              "Support aux essais"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à l'optimisation d'un carter"
+        ],
+        "toolsAndTechnologies": [
+          "Creo",
+          "ANSYS"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université de Liège",
+        "degree": "Master ingénieur civil",
+        "fieldOfStudy": "Génie mécanique",
+        "achievements": [
+          "Spécialisation conception mécanique",
+          "Mémoire sur la conception robuste"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certification PMP",
+        "institution": "Project Management Institute",
+        "year": "@Y-0@",
+        "description": "Certification en gestion de projet reconnue internationalement."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SolidWorks",
+        "Creo",
+        "ANSYS",
+        "Design to Cost",
+        "AMDEC",
+        "Stage-Gate"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Vision stratégique",
+        "Communication",
+        "Développement des talents"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Néerlandais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "professional",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programme Design to Cost compresseurs",
+        "description": "Refonte d'une gamme de compresseurs avec une démarche systématique de réduction des coûts.",
+        "date": "2021",
+        "impact": "Coût de revient réduit de 15 pour cent sans compromis sur la fiabilité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voile",
+      "Œnologie",
+      "Randonnée"
+    ],
+    "references": [
+      {
+        "name": "Marie Delvaux",
+        "position": "Directrice Technique",
+        "company": "Atlas Copco",
+        "contact": {
+          "phone": "+32 478 33 21 09",
+          "email": "marie.delvaux@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 85000,
+      "max": 105000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Mechanical R&D Management",
+      "secondaryClusters": [
+        "Product Development",
+        "Engineering Management"
+      ],
+      "functionalExpertise": [
+        "Product Development",
+        "R&D Leadership",
+        "Design to Cost"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Réduction du coût de revient",
+        "Lancement de nouveaux produits"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Industrial Equipment"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "R&D"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Manager R&D expérimenté combinant expertise conception mécanique et pilotage d'équipes produit."
+    },
+    "searchIndex": {
+      "roles": [
+        "R&D Manager",
+        "Mechanical Engineering Manager",
+        "Product Development Manager"
+      ],
+      "skills": [
+        "SolidWorks",
+        "Creo",
+        "ANSYS",
+        "Design to Cost",
+        "FMEA",
+        "Product Development"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Industrial Equipment"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "r&d",
+      "management",
+      "product",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieur structures senior avec plus de douze ans d'expérience dans le calcul et la conception de bâtiments et d'ouvrages en béton armé et charpente métallique. Expert des Eurocodes et des logiciels ETABS et Robot. Habitué à piloter des lots structure sur des projets tertiaires et résidentiels d'envergure.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Adrien Moreau",
+      "role": "Ingénieur Structures Senior",
+      "summary": "Ingénieur structures rigoureux, j'aime concevoir des ouvrages sûrs et optimisés en maîtrisant finement les Eurocodes et la modélisation aux éléments finis.",
+      "contact": {
+        "phone": "+33 6 55 12 08 44",
+        "email": "adrien.moreau@example.com",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "Gambetta",
+          "streetType": "Place",
+          "city": "Nantes",
+          "state": "Pays de la Loire",
+          "zipCode": "44000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/adrien-moreau-structures"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Calcul de structures",
+        "skills": [
+          "Béton armé",
+          "Charpente métallique",
+          "Eurocodes"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "ETABS",
+          "Robot Structural Analysis",
+          "SAP2000"
+        ]
+      },
+      {
+        "category": "Modélisation",
+        "skills": [
+          "Revit",
+          "AutoCAD",
+          "BIM"
+        ]
+      },
+      {
+        "category": "Méthodes",
+        "skills": [
+          "Notes de calcul",
+          "Descente de charges",
+          "Dimensionnement sismique"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Calcul de structures béton et acier",
+        "Application des Eurocodes",
+        "Modélisation BIM"
+      ],
+      "keyResponsibilities": [
+        "Réaliser les notes de calcul de structures",
+        "Modéliser les bâtiments sous ETABS et Robot",
+        "Piloter les lots structure en phase études"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Setec",
+        "website": "https://setec.fr",
+        "location": "Nantes, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Ingénieur Structures Senior",
+        "activities": [
+          {
+            "project": "Tour de bureaux R+18",
+            "tasks": [
+              "Modélisation globale sous ETABS",
+              "Dimensionnement béton armé selon Eurocode 2",
+              "Coordination BIM du lot structure sous Revit"
+            ]
+          }
+        ],
+        "achievements": [
+          "Optimisation de 10 pour cent des quantités de béton",
+          "Livraison des notes de calcul dans les délais contractuels"
+        ],
+        "toolsAndTechnologies": [
+          "ETABS",
+          "Revit",
+          "Eurocode 2"
+        ]
+      },
+      {
+        "company": "Ingérop",
+        "website": "https://ingerop.com",
+        "location": "Rennes, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Ingénieur Structures",
+        "activities": [
+          {
+            "project": "Ouvrages résidentiels et scolaires",
+            "tasks": [
+              "Descente de charges et dimensionnement",
+              "Notes de calcul selon Eurocodes",
+              "Plans de coffrage et ferraillage"
+            ]
+          }
+        ],
+        "achievements": [
+          "Standardisation des modèles de calcul de l'agence"
+        ],
+        "toolsAndTechnologies": [
+          "Robot Structural Analysis",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "École Centrale de Nantes",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie civil et structures",
+        "achievements": [
+          "Spécialisation structures et matériaux",
+          "Projet sur le comportement sismique des bâtiments"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Ingénieur IESF reconnu",
+        "institution": "Ingénieurs et Scientifiques de France",
+        "year": "@Y-2@",
+        "description": "Reconnaissance du titre et des compétences d'ingénieur."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ETABS",
+        "Robot Structural Analysis",
+        "SAP2000",
+        "Revit",
+        "AutoCAD",
+        "Eurocode 2",
+        "BIM"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Sens des responsabilités",
+        "Coordination",
+        "Précision"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Calcul structure d'une tour de bureaux",
+        "description": "Conception et dimensionnement de la structure béton d'un immeuble de grande hauteur.",
+        "date": "2022",
+        "impact": "Optimisation des quantités et respect strict des exigences réglementaires."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Escalade",
+      "Architecture",
+      "Voile"
+    ],
+    "references": [
+      {
+        "name": "Claire Petit",
+        "position": "Directrice de Projet Structures",
+        "company": "Setec",
+        "contact": {
+          "phone": "+33 6 41 09 55 21",
+          "email": "claire.petit@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Structural Engineering",
+      "secondaryClusters": [
+        "Civil Engineering",
+        "BIM"
+      ],
+      "functionalExpertise": [
+        "Structural Analysis",
+        "Reinforced Concrete Design",
+        "Eurocode Design"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Optimisation des quantités de matériaux",
+        "Respect des délais études"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Engineering Consulting"
+      ],
+      "environmentFit": [
+        "Consulting",
+        "Engineering Firm"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Ingénieur structures confirmé maîtrisant les Eurocodes et les logiciels de calcul sur des projets complexes."
+    },
+    "searchIndex": {
+      "roles": [
+        "Structural Engineer",
+        "Civil Engineer",
+        "Senior Structural Engineer"
+      ],
+      "skills": [
+        "ETABS",
+        "Robot Structural Analysis",
+        "SAP2000",
+        "Revit",
+        "AutoCAD",
+        "Eurocode",
+        "BIM"
+      ],
+      "industries": [
+        "Construction",
+        "Engineering Consulting"
+      ]
+    },
+    "tags": [
+      "civil",
+      "structural",
+      "eurocode",
+      "etabs",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieure travaux avec trois ans d'expérience dans l'encadrement de chantiers de bâtiment et de génie civil. Compétente en suivi de planning, en gestion de la sécurité et en coordination des corps d'état. Rigoureuse, réactive et à l'aise sur le terrain comme en bureau.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Lucie Girard",
+      "role": "Ingénieure Travaux",
+      "summary": "Ingénieure travaux de terrain, j'aime coordonner les équipes et tenir les délais tout en garantissant la sécurité et la qualité d'exécution.",
+      "contact": {
+        "phone": "+33 6 78 44 90 12",
+        "email": "lucie.girard@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "des Bâtisseurs",
+          "streetType": "Rue",
+          "city": "Bordeaux",
+          "state": "Nouvelle-Aquitaine",
+          "zipCode": "33000",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En semaine 12h-13h",
+          "Samedi matin"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Conduite de travaux",
+        "skills": [
+          "Suivi de chantier",
+          "Planning",
+          "Coordination corps d'état"
+        ]
+      },
+      {
+        "category": "Sécurité et qualité",
+        "skills": [
+          "Plan de prévention",
+          "Contrôle qualité",
+          "Réception de travaux"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "AutoCAD",
+          "MS Project",
+          "Revit"
+        ]
+      },
+      {
+        "category": "Gestion",
+        "skills": [
+          "Métré",
+          "Suivi budgétaire",
+          "Reporting"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Conduite de travaux",
+        "Coordination de chantier",
+        "Suivi qualité et sécurité"
+      ],
+      "keyResponsibilities": [
+        "Organiser et suivre l'avancement des chantiers",
+        "Coordonner les sous-traitants et corps d'état",
+        "Assurer le respect des règles de sécurité et de qualité"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Bouygues Construction",
+        "website": "https://bouygues-construction.com",
+        "location": "Bordeaux, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Ingénieure Travaux",
+        "activities": [
+          {
+            "project": "Résidence collective de 120 logements",
+            "tasks": [
+              "Planification et suivi de l'avancement",
+              "Coordination des corps d'état secondaires",
+              "Contrôle qualité et suivi sécurité"
+            ]
+          }
+        ],
+        "achievements": [
+          "Livraison du gros œuvre dans les délais contractuels",
+          "Zéro accident avec arrêt sur la période"
+        ],
+        "toolsAndTechnologies": [
+          "MS Project",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Eiffage",
+        "website": "https://eiffage.com",
+        "location": "Mérignac, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Ingénieure Travaux Junior",
+        "activities": [
+          {
+            "project": "Ouvrage de génie civil",
+            "tasks": [
+              "Suivi de sous-traitants",
+              "Métrés et suivi budgétaire",
+              "Rédaction de comptes rendus de chantier"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise en place d'un tableau de suivi d'avancement partagé"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "MS Project"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "ESTP Paris",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Bâtiment et travaux publics",
+        "achievements": [
+          "Spécialisation conduite de travaux",
+          "Stage de fin d'études sur un chantier de logements"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Formation SST",
+        "institution": "INRS",
+        "year": "@Y-2@",
+        "description": "Sauveteur secouriste du travail, prévention des risques sur chantier."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "AutoCAD",
+        "MS Project",
+        "Revit",
+        "Métré",
+        "Suivi de chantier"
+      ],
+      "softSkills": [
+        "Réactivité",
+        "Leadership de terrain",
+        "Communication",
+        "Organisation"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Suivi d'une résidence de 120 logements",
+        "description": "Conduite du chantier de gros œuvre d'une résidence collective.",
+        "date": "2024",
+        "impact": "Respect des délais et excellent bilan sécurité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Randonnée",
+      "Football",
+      "Bénévolat associatif"
+    ],
+    "references": [
+      {
+        "name": "Franck Leroy",
+        "position": "Directeur de Travaux",
+        "company": "Bouygues Construction",
+        "contact": {
+          "phone": "+33 6 33 21 78 40",
+          "email": "franck.leroy@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 38000,
+      "max": 45000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Site & Construction Engineering",
+      "secondaryClusters": [
+        "Civil Engineering",
+        "Project Management"
+      ],
+      "functionalExpertise": [
+        "Construction Management",
+        "Site Coordination",
+        "Quality & Safety"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Respect des délais chantier",
+        "Amélioration de la sécurité"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Public Works"
+      ],
+      "environmentFit": [
+        "Contractor",
+        "Field"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.82,
+      "clusterReasoning": "Jeune ingénieure travaux dynamique avec bons résultats en suivi de chantier et sécurité."
+    },
+    "searchIndex": {
+      "roles": [
+        "Site Engineer",
+        "Construction Engineer",
+        "Civil Engineer"
+      ],
+      "skills": [
+        "Construction Management",
+        "AutoCAD",
+        "MS Project",
+        "Site Supervision",
+        "Quality Control"
+      ],
+      "industries": [
+        "Construction",
+        "Public Works"
+      ]
+    },
+    "tags": [
+      "civil",
+      "construction",
+      "site",
+      "project",
+      "junior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieur géotechnicien senior avec plus de onze ans d'expérience en études de sols, fondations et soutènements. Spécialiste des campagnes de reconnaissance, des essais in situ et de la modélisation géotechnique sous Plaxis. Intervient sur des projets d'infrastructures et de bâtiment.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Mehdi Haddad",
+      "role": "Ingénieur Géotechnicien Senior",
+      "summary": "Géotechnicien passionné par le comportement des sols, j'aime sécuriser les projets par des reconnaissances fines et des modèles réalistes.",
+      "contact": {
+        "phone": "+33 6 47 90 33 21",
+        "email": "mehdi.haddad@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "des Alpes",
+          "streetType": "Avenue",
+          "city": "Grenoble",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "38000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/mehdi-haddad-geotech"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine 12h-14h"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Géotechnique",
+        "skills": [
+          "Études de sols",
+          "Fondations",
+          "Soutènements"
+        ]
+      },
+      {
+        "category": "Essais",
+        "skills": [
+          "Essais pressiométriques",
+          "Essais in situ",
+          "Reconnaissance de sol"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "Plaxis",
+          "Foxta",
+          "AutoCAD"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "Eurocode 7",
+          "Missions géotechniques G1-G5"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Études géotechniques",
+        "Conception de fondations",
+        "Modélisation numérique des sols"
+      ],
+      "keyResponsibilities": [
+        "Piloter les campagnes de reconnaissance de sol",
+        "Dimensionner les fondations et soutènements",
+        "Rédiger les rapports géotechniques selon la norme"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Fondasol",
+        "website": "https://fondasol.fr",
+        "location": "Grenoble, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Ingénieur Géotechnicien Senior",
+        "activities": [
+          {
+            "project": "Fondations d'un ouvrage d'art",
+            "tasks": [
+              "Pilotage de la campagne de reconnaissance",
+              "Modélisation des soutènements sous Plaxis",
+              "Dimensionnement des fondations profondes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Optimisation du système de fondation réduisant les coûts",
+          "Sécurisation d'une excavation en site urbain contraint"
+        ],
+        "toolsAndTechnologies": [
+          "Plaxis",
+          "Foxta",
+          "Eurocode 7"
+        ]
+      },
+      {
+        "company": "Ginger CEBTP",
+        "website": "https://ginger-cebtp.com",
+        "location": "Chambéry, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Ingénieur Géotechnicien",
+        "activities": [
+          {
+            "project": "Études de sols bâtiment",
+            "tasks": [
+              "Interprétation des essais in situ",
+              "Rédaction de rapports G2",
+              "Recommandations de fondation"
+            ]
+          }
+        ],
+        "achievements": [
+          "Standardisation des rapports géotechniques d'agence"
+        ],
+        "toolsAndTechnologies": [
+          "Foxta",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Grenoble INP - Ense3",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Géotechnique et génie civil",
+        "achievements": [
+          "Spécialisation mécanique des sols",
+          "Projet sur la stabilité des pentes"
+        ]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Plaxis",
+        "Foxta",
+        "AutoCAD",
+        "Eurocode 7",
+        "Essais pressiométriques"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Analyse",
+        "Sens du risque",
+        "Communication technique"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Fondations profondes d'un ouvrage d'art",
+        "description": "Conception et justification des fondations d'un pont en contexte géotechnique complexe.",
+        "date": "2021",
+        "impact": "Solution optimisée réduisant les coûts et les délais d'exécution."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Alpinisme",
+      "Géologie",
+      "Photographie de montagne"
+    ],
+    "references": [
+      {
+        "name": "Hélène Roche",
+        "position": "Responsable d'Agence Géotechnique",
+        "company": "Fondasol",
+        "contact": {
+          "phone": "+33 6 12 88 45 07",
+          "email": "helene.roche@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 58000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Geotechnical Engineering",
+      "secondaryClusters": [
+        "Civil Engineering",
+        "Foundation Design"
+      ],
+      "functionalExpertise": [
+        "Soil Investigation",
+        "Foundation Design",
+        "Numerical Modeling"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Optimisation des fondations",
+        "Sécurisation des excavations"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Infrastructure"
+      ],
+      "environmentFit": [
+        "Consulting",
+        "Engineering Firm"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Géotechnicien confirmé maîtrisant reconnaissance, modélisation Plaxis et Eurocode 7."
+    },
+    "searchIndex": {
+      "roles": [
+        "Geotechnical Engineer",
+        "Civil Engineer",
+        "Foundation Engineer"
+      ],
+      "skills": [
+        "Plaxis",
+        "Foxta",
+        "Eurocode 7",
+        "Soil Investigation",
+        "Foundation Design"
+      ],
+      "industries": [
+        "Construction",
+        "Infrastructure"
+      ]
+    },
+    "tags": [
+      "civil",
+      "geotechnical",
+      "foundations",
+      "plaxis",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieure infrastructures de transport lead avec plus de quatorze ans d'expérience dans la conception routière et les projets de mobilité. Pilote des équipes de projeteurs et coordonne les études de tracé, d'assainissement et de terrassement sous AutoCAD Civil 3D. Reconnue pour sa maîtrise des projets d'infrastructures complexes.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Aurélie Fontaine",
+      "role": "Lead Ingénieure Infrastructures de Transport",
+      "summary": "Ingénieure infrastructures passionnée par la mobilité durable, j'aime concevoir des routes sûres et coordonner des équipes pluridisciplinaires du tracé à la réalisation.",
+      "contact": {
+        "phone": "+33 6 60 22 91 08",
+        "email": "aurelie.fontaine@example.com",
+        "address": {
+          "streetNumber": "22",
+          "streetName": "de Strasbourg",
+          "streetType": "Boulevard",
+          "city": "Strasbourg",
+          "state": "Grand Est",
+          "zipCode": "67000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/aurelie-fontaine-infra"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 18h-19h"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Conception routière",
+        "skills": [
+          "Tracé routier",
+          "Terrassement",
+          "Assainissement"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "AutoCAD Civil 3D",
+          "Mensura",
+          "Covadis"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Pilotage d'équipe projet",
+          "Coordination pluridisciplinaire",
+          "Suivi de production"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "ICTAAL",
+          "Eurocodes",
+          "Guides SETRA"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Conception d'infrastructures routières",
+        "Pilotage de projets de mobilité",
+        "Coordination d'études"
+      ],
+      "keyResponsibilities": [
+        "Piloter les études de conception routière",
+        "Encadrer les projeteurs et ingénieurs",
+        "Coordonner les lots assainissement et terrassement"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Arcadis",
+        "website": "https://arcadis.com",
+        "location": "Strasbourg, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Lead Ingénieure Infrastructures",
+        "activities": [
+          {
+            "project": "Contournement routier régional",
+            "tasks": [
+              "Pilotage d'une équipe de 8 projeteurs",
+              "Conception du tracé et des profils sous Civil 3D",
+              "Coordination des études d'assainissement"
+            ]
+          }
+        ],
+        "achievements": [
+          "Livraison de l'avant-projet dans les délais et le budget",
+          "Optimisation des mouvements de terre de 15 pour cent"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Civil 3D",
+          "Mensura"
+        ]
+      },
+      {
+        "company": "Egis",
+        "website": "https://egis-group.com",
+        "location": "Metz, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Ingénieure Conception Routière",
+        "activities": [
+          {
+            "project": "Aménagements urbains et voiries",
+            "tasks": [
+              "Conception de tracés et carrefours",
+              "Études d'assainissement pluvial",
+              "Plans de terrassement"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à un projet de requalification urbaine primé"
+        ],
+        "toolsAndTechnologies": [
+          "Covadis",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "INSA Strasbourg",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie civil - infrastructures",
+        "achievements": [
+          "Spécialisation travaux publics et infrastructures",
+          "Projet sur la conception d'un échangeur"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certification PMP",
+        "institution": "Project Management Institute",
+        "year": "@Y-4@",
+        "description": "Certification internationale en gestion de projet."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "AutoCAD Civil 3D",
+        "Mensura",
+        "Covadis",
+        "Tracé routier",
+        "Assainissement"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Coordination",
+        "Organisation",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Allemand",
+          "proficiency": {
+            "read": "professional",
+            "written": "professional",
+            "spoken": "professional"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "professional",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Conception d'un contournement routier",
+        "description": "Pilotage des études de conception d'un contournement de 12 km.",
+        "date": "2022",
+        "impact": "Optimisation des terrassements et respect du budget d'études."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Cyclisme",
+      "Urbanisme",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Bruno Schneider",
+        "position": "Directeur de Département Infrastructures",
+        "company": "Arcadis",
+        "contact": {
+          "phone": "+33 6 55 44 12 09",
+          "email": "bruno.schneider@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 76000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Transportation Engineering",
+      "secondaryClusters": [
+        "Civil Infrastructure",
+        "Highway Design"
+      ],
+      "functionalExpertise": [
+        "Road Design",
+        "Infrastructure Project Management",
+        "Drainage Design"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Optimisation des terrassements",
+        "Respect budget et délais"
+      ],
+      "industryDomains": [
+        "Infrastructure",
+        "Public Works"
+      ],
+      "environmentFit": [
+        "Consulting",
+        "Engineering Firm"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Lead infrastructures expérimentée en conception routière et pilotage d'équipes projet."
+    },
+    "searchIndex": {
+      "roles": [
+        "Transportation Engineer",
+        "Highway Engineer",
+        "Civil Infrastructure Engineer"
+      ],
+      "skills": [
+        "AutoCAD Civil 3D",
+        "Road Design",
+        "Drainage",
+        "Mensura",
+        "Project Management"
+      ],
+      "industries": [
+        "Infrastructure",
+        "Public Works"
+      ]
+    },
+    "tags": [
+      "civil",
+      "transportation",
+      "highways",
+      "infrastructure",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directeur ingénierie de l'eau et de l'environnement avec plus de dix-sept ans d'expérience dans les projets d'assainissement, de traitement d'eau et d'aménagement hydraulique. Dirige des équipes pluridisciplinaires et pilote la stratégie technique et commerciale d'un pôle. Expert en hydraulique urbaine et en gestion durable de la ressource.",
+    "personalInformation": {
+      "name": "Philippe Nguyen",
+      "role": "Directeur Ingénierie Eau et Environnement",
+      "summary": "Directeur d'ingénierie engagé pour une gestion durable de l'eau, je pilote des équipes et des projets structurants au service des collectivités.",
+      "contact": {
+        "phone": "+352 621 45 08 33",
+        "email": "philippe.nguyen@example.lu",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "de la Gare",
+          "streetType": "Avenue",
+          "city": "Luxembourg",
+          "state": "Luxembourg",
+          "zipCode": "1611",
+          "country": "Luxembourg"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/philippe-nguyen-eau"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-03-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 18h-19h"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Ingénierie de l'eau",
+        "skills": [
+          "Assainissement",
+          "Traitement d'eau",
+          "Hydraulique urbaine"
+        ]
+      },
+      {
+        "category": "Modélisation",
+        "skills": [
+          "Mike Urban",
+          "SWMM",
+          "AutoCAD"
+        ]
+      },
+      {
+        "category": "Direction",
+        "skills": [
+          "Management de pôle",
+          "Stratégie technique",
+          "Développement commercial"
+        ]
+      },
+      {
+        "category": "Environnement",
+        "skills": [
+          "Études d'impact",
+          "Gestion des eaux pluviales",
+          "Réglementation ICPE"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Ingénierie de l'eau et de l'environnement",
+        "Direction d'équipes techniques",
+        "Stratégie de développement"
+      ],
+      "keyResponsibilities": [
+        "Diriger le pôle eau et environnement",
+        "Définir la stratégie technique et commerciale",
+        "Garantir la qualité et la rentabilité des projets"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "SUEZ Consulting",
+        "website": "https://suez.com",
+        "location": "Luxembourg, Luxembourg",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Directeur Ingénierie Eau et Environnement",
+        "activities": [
+          {
+            "project": "Schéma directeur d'assainissement régional",
+            "tasks": [
+              "Direction d'un pôle de 25 ingénieurs",
+              "Pilotage de la stratégie technique et commerciale",
+              "Supervision de projets de traitement d'eau"
+            ]
+          }
+        ],
+        "achievements": [
+          "Croissance de 30 pour cent du chiffre d'affaires du pôle",
+          "Remporté plusieurs schémas directeurs structurants"
+        ],
+        "toolsAndTechnologies": [
+          "Mike Urban",
+          "SWMM"
+        ]
+      },
+      {
+        "company": "Veolia",
+        "website": "https://veolia.com",
+        "location": "Metz, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Chef de Projet Eau",
+        "activities": [
+          {
+            "project": "Stations d'épuration",
+            "tasks": [
+              "Conception de filières de traitement",
+              "Modélisation hydraulique des réseaux",
+              "Pilotage des études et travaux"
+            ]
+          }
+        ],
+        "achievements": [
+          "Livraison d'une station d'épuration performante et sobre en énergie"
+        ],
+        "toolsAndTechnologies": [
+          "SWMM",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "SAFEGE",
+        "website": "https://safege.com",
+        "location": "Nancy, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Ingénieur Hydraulique",
+        "activities": [
+          {
+            "project": "Réseaux d'assainissement",
+            "tasks": [
+              "Modélisation hydraulique",
+              "Dimensionnement de réseaux"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à des schémas directeurs d'assainissement"
+        ],
+        "toolsAndTechnologies": [
+          "Mike Urban"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "ENGEES Strasbourg",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie de l'eau et de l'environnement",
+        "achievements": [
+          "Spécialisation hydraulique urbaine",
+          "Mémoire sur la gestion des eaux pluviales"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "HEC Liège",
+        "degree": "Executive Master",
+        "fieldOfStudy": "Management",
+        "achievements": [
+          "Formation au management et à la stratégie d'entreprise"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Ingénieur EUR ING",
+        "institution": "FEANI",
+        "year": "@Y-4@",
+        "description": "Titre européen d'ingénieur reconnaissant l'expertise professionnelle."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Mike Urban",
+        "SWMM",
+        "AutoCAD",
+        "Hydraulique urbaine",
+        "Traitement d'eau"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Vision stratégique",
+        "Négociation",
+        "Développement des équipes"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Allemand",
+          "proficiency": {
+            "read": "professional",
+            "written": "professional",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Schéma directeur d'assainissement régional",
+        "description": "Direction d'un schéma directeur structurant pour une collectivité importante.",
+        "date": "2020",
+        "impact": "Feuille de route pluriannuelle et croissance du pôle d'ingénierie."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Kayak",
+      "Écologie",
+      "Lecture"
+    ],
+    "references": [
+      {
+        "name": "Sandrine Faure",
+        "position": "Directrice Générale Adjointe",
+        "company": "SUEZ Consulting",
+        "contact": {
+          "phone": "+352 621 33 09 44",
+          "email": "sandrine.faure@example.lu"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 105000,
+      "max": 135000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Water & Environmental Engineering",
+      "secondaryClusters": [
+        "Engineering Management",
+        "Infrastructure"
+      ],
+      "functionalExpertise": [
+        "Water Treatment",
+        "Urban Hydraulics",
+        "Engineering Leadership"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Croissance du chiffre d'affaires",
+        "Projets structurants remportés"
+      ],
+      "industryDomains": [
+        "Water",
+        "Environment",
+        "Infrastructure"
+      ],
+      "environmentFit": [
+        "Consulting",
+        "Enterprise"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Directeur d'ingénierie eau alliant expertise hydraulique et pilotage stratégique d'un pôle."
+    },
+    "searchIndex": {
+      "roles": [
+        "Water Engineering Director",
+        "Environmental Engineer",
+        "Engineering Director"
+      ],
+      "skills": [
+        "Water Treatment",
+        "SWMM",
+        "Mike Urban",
+        "Urban Hydraulics",
+        "Drainage"
+      ],
+      "industries": [
+        "Water",
+        "Environment",
+        "Infrastructure"
+      ]
+    },
+    "tags": [
+      "civil",
+      "water",
+      "environmental",
+      "management",
+      "director"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieur réseaux électriques senior avec plus de douze ans d'expérience dans les études de systèmes de puissance haute et moyenne tension. Expert des études de court-circuit, de sélectivité et de coordination des protections sous ETAP. Intervient sur des projets industriels et d'infrastructures énergétiques.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Nicolas Faure",
+      "role": "Ingénieur Réseaux Électriques Senior",
+      "summary": "Ingénieur en systèmes de puissance, j'aime garantir la fiabilité et la sécurité des réseaux électriques par des études rigoureuses et des protections bien coordonnées.",
+      "contact": {
+        "email": "nicolas.faure@example.com",
+        "address": {
+          "streetNumber": "16",
+          "streetName": "de l'Énergie",
+          "streetType": "Rue",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69007",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/nicolas-faure-power"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-30",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Jeudi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Systèmes de puissance",
+        "skills": [
+          "Études HT/MT",
+          "Court-circuit",
+          "Sélectivité"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "ETAP",
+          "AutoCAD Electrical",
+          "DIALux"
+        ]
+      },
+      {
+        "category": "Protections",
+        "skills": [
+          "Coordination des protections",
+          "Plans de protection",
+          "Relais numériques"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "NF C 13-100",
+          "NF C 15-100",
+          "IEC 60909"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Études de systèmes de puissance",
+        "Coordination des protections",
+        "Conception de postes électriques"
+      ],
+      "keyResponsibilities": [
+        "Réaliser les études de court-circuit et de sélectivité",
+        "Concevoir les schémas unifilaires et de protection",
+        "Assurer la conformité aux normes électriques"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Schneider Electric",
+        "website": "https://se.com",
+        "location": "Lyon, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Ingénieur Réseaux Électriques Senior",
+        "activities": [
+          {
+            "project": "Poste de distribution industriel",
+            "tasks": [
+              "Études de court-circuit et de sélectivité sous ETAP",
+              "Conception des schémas unifilaires",
+              "Coordination des protections numériques"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration de la sélectivité réduisant les déclenchements intempestifs",
+          "Mise en conformité d'un réseau industriel complet"
+        ],
+        "toolsAndTechnologies": [
+          "ETAP",
+          "AutoCAD Electrical"
+        ]
+      },
+      {
+        "company": "SPIE",
+        "website": "https://spie.com",
+        "location": "Villeurbanne, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Ingénieur d'Études Électriques",
+        "activities": [
+          {
+            "project": "Installations électriques tertiaires",
+            "tasks": [
+              "Bilans de puissance",
+              "Schémas unifilaires",
+              "Dimensionnement des câbles et protections"
+            ]
+          }
+        ],
+        "achievements": [
+          "Standardisation des notes de calcul électriques de l'agence"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Electrical",
+          "DIALux"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "CentraleSupélec",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie électrique - énergie",
+        "achievements": [
+          "Spécialisation systèmes électriques de puissance",
+          "Projet sur la coordination des protections"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Habilitation électrique BR/HTA",
+        "institution": "Organisme agréé",
+        "year": "@Y-0@",
+        "description": "Habilitation pour les interventions sur installations électriques haute et basse tension."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ETAP",
+        "AutoCAD Electrical",
+        "DIALux",
+        "Court-circuit",
+        "IEC 60909"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Sens de la sécurité",
+        "Analyse",
+        "Communication technique"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Étude de sélectivité d'un poste industriel",
+        "description": "Étude complète de court-circuit et de coordination des protections d'un poste MT/BT.",
+        "date": "2022",
+        "impact": "Fiabilité accrue et réduction des déclenchements intempestifs."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Astronomie",
+      "Randonnée",
+      "Électronique de loisir"
+    ],
+    "references": [
+      {
+        "name": "Laure Dubois",
+        "position": "Responsable Études Électriques",
+        "company": "Schneider Electric",
+        "contact": {
+          "phone": "+33 6 44 90 12 33",
+          "email": "laure.dubois@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 52000,
+      "max": 63000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Power Systems Engineering",
+      "secondaryClusters": [
+        "Electrical Engineering",
+        "Protection Coordination"
+      ],
+      "functionalExpertise": [
+        "Power System Studies",
+        "Protection Coordination",
+        "Electrical Design"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Amélioration de la sélectivité",
+        "Mise en conformité réseau"
+      ],
+      "industryDomains": [
+        "Energy",
+        "Industrial"
+      ],
+      "environmentFit": [
+        "Engineering Firm",
+        "Industrial"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Ingénieur puissance confirmé spécialisé en études ETAP et coordination des protections."
+    },
+    "searchIndex": {
+      "roles": [
+        "Power Systems Engineer",
+        "Electrical Engineer",
+        "Protection Engineer"
+      ],
+      "skills": [
+        "ETAP",
+        "AutoCAD Electrical",
+        "Short Circuit Analysis",
+        "Protection Coordination",
+        "IEC 60909"
+      ],
+      "industries": [
+        "Energy",
+        "Industrial"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "power-systems",
+      "etap",
+      "protection",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieure électricité du bâtiment senior avec huit ans d'expérience dans la conception des installations électriques courant fort et courant faible pour le tertiaire. Compétente en dimensionnement, en études d'éclairage et en modélisation BIM des réseaux électriques. Rigoureuse et orientée conformité.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Inès Bouhadi",
+      "role": "Ingénieure Électricité du Bâtiment Senior",
+      "summary": "Ingénieure électricité du bâtiment, j'aime concevoir des installations sûres et bien dimensionnées, en veillant à l'efficacité énergétique et au confort des usagers.",
+      "contact": {
+        "phone": "+33 6 71 45 22 90",
+        "address": {
+          "streetNumber": "31",
+          "streetName": "de la Canebière",
+          "streetType": "Rue",
+          "city": "Marseille",
+          "state": "Provence-Alpes-Côte d'Azur",
+          "zipCode": "13001",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/ines-bouhadi-elec"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Électricité du bâtiment",
+        "skills": [
+          "Courant fort",
+          "Courant faible",
+          "Éclairage"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "AutoCAD Electrical",
+          "Revit MEP",
+          "DIALux"
+        ]
+      },
+      {
+        "category": "Calcul",
+        "skills": [
+          "Bilans de puissance",
+          "Dimensionnement de câbles",
+          "Caneco BT"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "NF C 15-100",
+          "RE 2020",
+          "Sécurité incendie"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Conception électrique du bâtiment",
+        "Études d'éclairage",
+        "Modélisation BIM électrique"
+      ],
+      "keyResponsibilities": [
+        "Concevoir les installations courant fort et faible",
+        "Réaliser les bilans de puissance et dimensionnements",
+        "Modéliser les réseaux électriques sous Revit MEP"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Artelia",
+        "website": "https://arteliagroup.com",
+        "location": "Marseille, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Ingénieure Électricité du Bâtiment Senior",
+        "activities": [
+          {
+            "project": "Complexe hospitalier",
+            "tasks": [
+              "Conception des installations courant fort et faible",
+              "Études d'éclairage sous DIALux",
+              "Coordination BIM du lot électrique sous Revit MEP"
+            ]
+          }
+        ],
+        "achievements": [
+          "Conformité complète à la NF C 15-100 sur un projet sensible",
+          "Optimisation de la puissance souscrite du bâtiment"
+        ],
+        "toolsAndTechnologies": [
+          "Revit MEP",
+          "AutoCAD Electrical",
+          "DIALux"
+        ]
+      },
+      {
+        "company": "Ineo Engie",
+        "website": "https://engie.com",
+        "location": "Aix-en-Provence, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Ingénieure d'Études Électriques",
+        "activities": [
+          {
+            "project": "Bâtiments tertiaires",
+            "tasks": [
+              "Bilans de puissance",
+              "Dimensionnement sous Caneco BT",
+              "Plans électriques sous AutoCAD"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise en place de gabarits de plans électriques standardisés"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Electrical",
+          "Caneco BT"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Polytech Marseille",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie électrique",
+        "achievements": [
+          "Spécialisation électricité du bâtiment",
+          "Projet sur l'efficacité énergétique du tertiaire"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Habilitation électrique B2V/BR",
+        "institution": "Organisme agréé",
+        "year": "@Y-2@",
+        "description": "Habilitation pour interventions sur installations basse tension."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "AutoCAD Electrical",
+        "Revit MEP",
+        "DIALux",
+        "Caneco BT",
+        "NF C 15-100"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Coordination",
+        "Sens du détail",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Installations électriques d'un complexe hospitalier",
+        "description": "Conception complète des lots électriques courant fort et faible d'un hôpital.",
+        "date": "2023",
+        "impact": "Installation conforme, sûre et optimisée en puissance."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Plongée sous-marine",
+      "Cuisine méditerranéenne",
+      "Lecture"
+    ],
+    "references": [
+      {
+        "name": "Marc Olivier",
+        "position": "Directeur de Projet MEP",
+        "company": "Artelia",
+        "contact": {
+          "phone": "+33 6 22 45 90 11",
+          "email": "marc.olivier@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 45000,
+      "max": 55000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Building Electrical Design",
+      "secondaryClusters": [
+        "Building Services",
+        "Electrical Engineering"
+      ],
+      "functionalExpertise": [
+        "Electrical Design",
+        "Lighting Design",
+        "MEP BIM"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Conformité réglementaire",
+        "Optimisation de la puissance"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Building Services"
+      ],
+      "environmentFit": [
+        "Consulting",
+        "Engineering Firm"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Ingénieure électricité du bâtiment confirmée en conception courant fort/faible et BIM MEP."
+    },
+    "searchIndex": {
+      "roles": [
+        "Electrical Design Engineer",
+        "Building Services Engineer",
+        "Electrical Engineer"
+      ],
+      "skills": [
+        "AutoCAD Electrical",
+        "Revit MEP",
+        "DIALux",
+        "Lighting Design",
+        "Electrical Design"
+      ],
+      "industries": [
+        "Construction",
+        "Building Services"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "building-services",
+      "design",
+      "revit",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieur contrôle-commande et instrumentation lead avec plus de treize ans d'expérience dans l'automatisation de procédés industriels. Expert en programmation d'automates PLC, en supervision SCADA et en architectures de contrôle. Pilote des équipes d'automaticiens sur des projets industriels et énergétiques.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Guillaume Lambert",
+      "role": "Lead Ingénieur Contrôle-Commande",
+      "summary": "Ingénieur automaticien passionné par les procédés industriels, j'aime concevoir des architectures de contrôle robustes et faire monter en compétence les équipes.",
+      "contact": {
+        "phone": "+32 476 33 09 21",
+        "email": "guillaume.lambert@example.be",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "de l'Industrie",
+          "streetType": "Rue",
+          "city": "Liège",
+          "state": "Wallonie",
+          "zipCode": "4000",
+          "country": "Belgique"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/guillaume-lambert-automation"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 18h-20h"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Automatisme",
+        "skills": [
+          "Programmation PLC",
+          "Grafcet",
+          "Architectures de contrôle"
+        ]
+      },
+      {
+        "category": "Supervision",
+        "skills": [
+          "SCADA",
+          "IHM",
+          "Historisation"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "Siemens TIA Portal",
+          "Schneider Unity",
+          "EPLAN"
+        ]
+      },
+      {
+        "category": "Instrumentation",
+        "skills": [
+          "Capteurs et actionneurs",
+          "Régulation",
+          "Bus de terrain"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Contrôle-commande industriel",
+        "Programmation d'automates et supervision",
+        "Architecture d'automatismes"
+      ],
+      "keyResponsibilities": [
+        "Concevoir les architectures de contrôle-commande",
+        "Développer et mettre en service les programmes PLC et SCADA",
+        "Encadrer une équipe d'automaticiens"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "John Cockerill",
+        "website": "https://johncockerill.com",
+        "location": "Seraing, Belgique",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Lead Ingénieur Contrôle-Commande",
+        "activities": [
+          {
+            "project": "Automatisation d'une ligne industrielle",
+            "tasks": [
+              "Conception de l'architecture PLC et SCADA",
+              "Encadrement de 5 automaticiens",
+              "Mise en service et essais sur site"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction de 20 pour cent du temps de mise en service",
+          "Standardisation des blocs fonctionnels PLC réutilisables"
+        ],
+        "toolsAndTechnologies": [
+          "Siemens TIA Portal",
+          "SCADA",
+          "EPLAN"
+        ]
+      },
+      {
+        "company": "Actemium",
+        "website": "https://actemium.com",
+        "location": "Herstal, Belgique",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Ingénieur Automaticien",
+        "activities": [
+          {
+            "project": "Systèmes de régulation industriels",
+            "tasks": [
+              "Programmation d'automates",
+              "Développement d'IHM de supervision",
+              "Mise au point de boucles de régulation"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration de la stabilité de procédés critiques"
+        ],
+        "toolsAndTechnologies": [
+          "Schneider Unity",
+          "SCADA"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université de Liège",
+        "degree": "Master ingénieur civil",
+        "fieldOfStudy": "Génie électrique et automatisation",
+        "achievements": [
+          "Spécialisation automatique et contrôle de procédés",
+          "Mémoire sur la commande de systèmes industriels"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Siemens Certified Programmer TIA Portal",
+        "institution": "Siemens",
+        "year": "@Y-4@",
+        "description": "Certification en programmation d'automates sous TIA Portal."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Siemens TIA Portal",
+        "Schneider Unity",
+        "SCADA",
+        "EPLAN",
+        "PLC",
+        "Régulation"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Résolution de problèmes",
+        "Rigueur",
+        "Pédagogie"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Néerlandais",
+          "proficiency": {
+            "read": "professional",
+            "written": "professional",
+            "spoken": "professional"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "professional",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Automatisation d'une ligne de production",
+        "description": "Conception et mise en service de l'architecture PLC/SCADA d'une ligne industrielle.",
+        "date": "2021",
+        "impact": "Mise en service accélérée et exploitation fiabilisée."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Domotique",
+      "VTT",
+      "Échecs"
+    ],
+    "references": [
+      {
+        "name": "Émilie Renard",
+        "position": "Responsable Ingénierie Automatismes",
+        "company": "John Cockerill",
+        "contact": {
+          "phone": "+32 478 21 44 09",
+          "email": "emilie.renard@example.be"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Control & Instrumentation",
+      "secondaryClusters": [
+        "Industrial Automation",
+        "Electrical Engineering"
+      ],
+      "functionalExpertise": [
+        "PLC Programming",
+        "SCADA Systems",
+        "Control Architecture"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Réduction du temps de mise en service",
+        "Standardisation des automatismes"
+      ],
+      "industryDomains": [
+        "Industrial",
+        "Energy"
+      ],
+      "environmentFit": [
+        "Engineering Firm",
+        "Industrial"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Lead automaticien expert en PLC/SCADA avec encadrement d'équipes sur projets industriels."
+    },
+    "searchIndex": {
+      "roles": [
+        "Control Engineer",
+        "Automation Engineer",
+        "Instrumentation Engineer"
+      ],
+      "skills": [
+        "PLC",
+        "SCADA",
+        "Siemens TIA Portal",
+        "EPLAN",
+        "Industrial Automation"
+      ],
+      "industries": [
+        "Industrial",
+        "Energy"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "control",
+      "automation",
+      "plc",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieur électronique embarquée junior avec deux ans d'expérience dans la conception de cartes électroniques et le développement de firmware pour des systèmes industriels. Compétent en conception de PCB, en microcontrôleurs et en tests matériels. Curieux, méthodique et motivé par les systèmes embarqués.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Hugo Mercier",
+      "role": "Ingénieur Électronique Embarquée",
+      "summary": "Jeune ingénieur en électronique embarquée, j'aime donner vie à des cartes électroniques et écrire du firmware fiable au plus près du matériel.",
+      "contact": {
+        "phone": "+33 6 84 12 09 55",
+        "email": "hugo.mercier@example.com",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "des Sciences",
+          "streetType": "Rue",
+          "city": "Rennes",
+          "state": "Bretagne",
+          "zipCode": "35000",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En semaine 17h-19h",
+          "Samedi matin"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Électronique",
+        "skills": [
+          "Conception PCB",
+          "Microcontrôleurs",
+          "Schématique"
+        ]
+      },
+      {
+        "category": "Firmware",
+        "skills": [
+          "C embarqué",
+          "STM32",
+          "RTOS"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "Altium Designer",
+          "MATLAB/Simulink",
+          "Oscilloscope"
+        ]
+      },
+      {
+        "category": "Test",
+        "skills": [
+          "Tests fonctionnels",
+          "Mesure",
+          "Débogage matériel"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Conception de cartes électroniques",
+        "Développement de firmware embarqué",
+        "Test et validation matérielle"
+      ],
+      "keyResponsibilities": [
+        "Concevoir des schémas et routages de PCB",
+        "Développer du firmware sur microcontrôleurs",
+        "Réaliser les tests et la validation des cartes"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Thales",
+        "website": "https://thalesgroup.com",
+        "location": "Cesson-Sévigné, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Ingénieur Électronique Embarquée",
+        "activities": [
+          {
+            "project": "Carte de contrôle industrielle",
+            "tasks": [
+              "Conception de schémas sous Altium Designer",
+              "Développement de firmware C sur STM32",
+              "Tests fonctionnels et débogage matériel"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise au point d'une carte de test réduisant le temps de validation",
+          "Contribution à la réduction du taux de défauts en production"
+        ],
+        "toolsAndTechnologies": [
+          "Altium Designer",
+          "STM32",
+          "C embarqué"
+        ]
+      },
+      {
+        "company": "Sagemcom",
+        "website": "https://sagemcom.com",
+        "location": "Rennes, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Ingénieur Électronique Junior",
+        "activities": [
+          {
+            "project": "Modules électroniques grand public",
+            "tasks": [
+              "Support à la conception de PCB",
+              "Tests de cartes en laboratoire",
+              "Rédaction de rapports de test"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automatisation partielle des bancs de test"
+        ],
+        "toolsAndTechnologies": [
+          "Altium Designer",
+          "MATLAB/Simulink"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "INSA Rennes",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Électronique et systèmes embarqués",
+        "achievements": [
+          "Spécialisation systèmes embarqués",
+          "Projet de fin d'études sur un système de mesure IoT"
+        ]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Altium Designer",
+        "STM32",
+        "C embarqué",
+        "MATLAB/Simulink",
+        "PCB Design"
+      ],
+      "softSkills": [
+        "Curiosité",
+        "Méthode",
+        "Persévérance",
+        "Travail en équipe"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Carte de contrôle industrielle",
+        "description": "Conception et validation d'une carte électronique de contrôle avec firmware STM32.",
+        "date": "2024",
+        "impact": "Validation accélérée et fiabilité renforcée en production."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Électronique de loisir",
+      "Drones",
+      "Jeux vidéo"
+    ],
+    "references": [
+      {
+        "name": "Pauline Girard",
+        "position": "Responsable Équipe Électronique",
+        "company": "Thales",
+        "contact": {
+          "phone": "+33 6 12 55 90 44",
+          "email": "pauline.girard@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 38000,
+      "max": 44000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Embedded & Hardware Engineering",
+      "secondaryClusters": [
+        "Electronics",
+        "Firmware Development"
+      ],
+      "functionalExpertise": [
+        "PCB Design",
+        "Firmware Development",
+        "Hardware Testing"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Réduction du temps de validation",
+        "Baisse du taux de défauts"
+      ],
+      "industryDomains": [
+        "Electronics",
+        "Defense"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "R&D"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.8,
+      "clusterReasoning": "Jeune ingénieur électronique embarquée prometteur en conception PCB et firmware."
+    },
+    "searchIndex": {
+      "roles": [
+        "Embedded Engineer",
+        "Hardware Engineer",
+        "Electronics Engineer"
+      ],
+      "skills": [
+        "Altium Designer",
+        "STM32",
+        "Embedded C",
+        "PCB Design",
+        "Firmware"
+      ],
+      "industries": [
+        "Electronics",
+        "Defense"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "embedded",
+      "hardware",
+      "firmware",
+      "junior"
+    ]
+  },
+  {
+    "personalInformation": {
+      "name": "Fatou Diallo",
+      "role": "Manager Ingénierie Énergies Renouvelables",
+      "summary": "Manager engagée pour la transition énergétique, je pilote des projets d'énergies renouvelables ambitieux et fais grandir des équipes d'ingénieurs études.",
+      "contact": {
+        "address": {
+          "streetNumber": "40",
+          "streetName": "du Soleil",
+          "streetType": "Avenue",
+          "city": "Montpellier",
+          "state": "Occitanie",
+          "zipCode": "34000",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 18h-19h"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "profiles": {
+      "areasOfExpertise": [
+        "Ingénierie des énergies renouvelables",
+        "Raccordement réseau",
+        "Management de projets énergie"
+      ],
+      "keyResponsibilities": [
+        "Piloter les études de projets photovoltaïques et éoliens",
+        "Coordonner le raccordement au réseau électrique",
+        "Manager une équipe d'ingénieurs études"
+      ]
+    },
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "PVsyst",
+        "ETAP",
+        "AutoCAD Electrical",
+        "Raccordement réseau",
+        "Photovoltaïque"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Vision stratégique",
+        "Communication",
+        "Gestion d'équipe"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Déploiement de 200 MW de solaire",
+        "description": "Pilotage des études d'un portefeuille de centrales photovoltaïques jusqu'à la mise en service.",
+        "date": "2022",
+        "impact": "Contribution significative à la capacité renouvelable installée."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Randonnée",
+      "Transition écologique",
+      "Yoga"
+    ],
+    "references": [
+      {
+        "name": "Antoine Berger",
+        "position": "Directeur Ingénierie",
+        "company": "EDF Renouvelables",
+        "contact": {
+          "phone": "+33 6 33 45 90 22",
+          "email": "antoine.berger@example.com"
+        }
+      }
+    ],
+    "searchIndex": {
+      "roles": [
+        "Renewable Energy Manager",
+        "Electrical Engineer",
+        "Solar Project Engineer"
+      ],
+      "skills": [
+        "PVsyst",
+        "ETAP",
+        "AutoCAD Electrical",
+        "Grid Connection",
+        "Photovoltaics"
+      ],
+      "industries": [
+        "Energy",
+        "Renewables"
+      ]
+    },
+    "tags": [
+      "electrical",
+      "renewables",
+      "solar",
+      "management",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieur process et industrialisation senior avec neuf ans d'expérience dans l'optimisation des lignes de production et l'amélioration continue. Compétent en Lean Manufacturing, en implantation d'ateliers et en analyse de flux. Orienté performance industrielle et réduction des gaspillages.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Romain Petit",
+      "role": "Ingénieur Process et Industrialisation Senior",
+      "summary": "Ingénieur process passionné par l'excellence opérationnelle, j'aime optimiser les flux et fiabiliser les procédés pour gagner en performance industrielle.",
+      "contact": {
+        "phone": "+33 6 22 90 41 08",
+        "email": "romain.petit@example.com",
+        "address": {
+          "streetNumber": "11",
+          "streetName": "de la Fonderie",
+          "streetType": "Rue",
+          "city": "Clermont-Ferrand",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "63000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/romain-petit-process"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Amélioration continue",
+        "skills": [
+          "Lean Manufacturing",
+          "Kaizen",
+          "5S"
+        ]
+      },
+      {
+        "category": "Industrialisation",
+        "skills": [
+          "Analyse de flux",
+          "Implantation d'atelier",
+          "Temps et méthodes"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "AutoCAD",
+          "SAP",
+          "MES"
+        ]
+      },
+      {
+        "category": "Qualité",
+        "skills": [
+          "AMDEC process",
+          "Résolution de problèmes",
+          "Standardisation"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Optimisation des procédés industriels",
+        "Lean Manufacturing",
+        "Industrialisation de produits"
+      ],
+      "keyResponsibilities": [
+        "Optimiser les flux et les temps de cycle",
+        "Déployer les démarches d'amélioration continue",
+        "Industrialiser les nouveaux produits en production"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Michelin",
+        "website": "https://michelin.com",
+        "location": "Clermont-Ferrand, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Ingénieur Process et Industrialisation Senior",
+        "activities": [
+          {
+            "project": "Optimisation d'une ligne de production",
+            "tasks": [
+              "Analyse de flux et cartographie de la chaîne de valeur",
+              "Déploiement de chantiers Kaizen et 5S",
+              "Réimplantation d'atelier pour réduire les déplacements"
+            ]
+          }
+        ],
+        "achievements": [
+          "Gain de 15 pour cent de productivité sur la ligne",
+          "Réduction des en-cours de production de 25 pour cent"
+        ],
+        "toolsAndTechnologies": [
+          "Lean",
+          "SAP",
+          "MES"
+        ]
+      },
+      {
+        "company": "Valeo",
+        "website": "https://valeo.com",
+        "location": "Riom, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Ingénieur Process",
+        "activities": [
+          {
+            "project": "Industrialisation de nouveaux produits",
+            "tasks": [
+              "Définition des gammes de fabrication",
+              "Analyse des temps et méthodes",
+              "AMDEC process"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réussite du démarrage série de plusieurs références"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "SAP"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "SIGMA Clermont",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie industriel",
+        "achievements": [
+          "Spécialisation production et logistique",
+          "Projet sur l'optimisation des flux d'atelier"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Lean Six Sigma Green Belt",
+        "institution": "Organisme certifié",
+        "year": "@Y-2@",
+        "description": "Certification en méthodes Lean et Six Sigma appliquées à la production."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Lean",
+        "Kaizen",
+        "5S",
+        "SAP",
+        "MES",
+        "AutoCAD"
+      ],
+      "softSkills": [
+        "Esprit d'analyse",
+        "Animation d'équipe",
+        "Rigueur",
+        "Force de proposition"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Optimisation d'une ligne de production",
+        "description": "Refonte des flux et réimplantation d'un atelier de production.",
+        "date": "2022",
+        "impact": "Productivité en hausse de 15 pour cent et en-cours réduits."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Rugby",
+      "Randonnée volcanique",
+      "Bricolage"
+    ],
+    "references": [
+      {
+        "name": "Céline Girard",
+        "position": "Responsable Amélioration Continue",
+        "company": "Michelin",
+        "contact": {
+          "phone": "+33 6 44 21 90 55",
+          "email": "celine.girard@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 58000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Process & Industrial Engineering",
+      "secondaryClusters": [
+        "Lean Manufacturing",
+        "Manufacturing"
+      ],
+      "functionalExpertise": [
+        "Process Optimization",
+        "Lean Manufacturing",
+        "Industrialization"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Hausse de productivité",
+        "Réduction des en-cours"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Automotive"
+      ],
+      "environmentFit": [
+        "Industrial",
+        "Enterprise"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Ingénieur process confirmé orienté Lean avec résultats mesurables sur la productivité."
+    },
+    "searchIndex": {
+      "roles": [
+        "Process Engineer",
+        "Industrial Engineer",
+        "Manufacturing Engineer"
+      ],
+      "skills": [
+        "Lean",
+        "Kaizen",
+        "5S",
+        "SAP",
+        "MES",
+        "Process Optimization"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Automotive"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "process",
+      "lean",
+      "manufacturing",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieure qualité senior avec plus de onze ans d'expérience dans le management de la qualité en environnement industriel automobile et aéronautique. Experte en Six Sigma, en analyse statistique sous Minitab et en gestion des non-conformités. Rigoureuse et orientée satisfaction client.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Julie Lefebvre",
+      "role": "Ingénieure Qualité Senior",
+      "summary": "Ingénieure qualité rigoureuse, j'aime fiabiliser les procédés par l'analyse des données et transformer les non-conformités en opportunités d'amélioration.",
+      "contact": {
+        "phone": "+33 6 45 90 22 11",
+        "email": "julie.lefebvre@example.com",
+        "address": {
+          "streetNumber": "24",
+          "streetName": "de Verdun",
+          "streetType": "Avenue",
+          "city": "Le Mans",
+          "state": "Pays de la Loire",
+          "zipCode": "72000",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine 12h-14h"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Qualité",
+        "skills": [
+          "Management de la qualité",
+          "Non-conformités",
+          "Audits"
+        ]
+      },
+      {
+        "category": "Méthodes",
+        "skills": [
+          "Six Sigma",
+          "8D",
+          "AMDEC"
+        ]
+      },
+      {
+        "category": "Statistiques",
+        "skills": [
+          "Minitab",
+          "SPC",
+          "Plans d'expériences"
+        ]
+      },
+      {
+        "category": "Normes",
+        "skills": [
+          "IATF 16949",
+          "ISO 9001",
+          "PPAP"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Management de la qualité industrielle",
+        "Analyse statistique des procédés",
+        "Résolution de problèmes qualité"
+      ],
+      "keyResponsibilities": [
+        "Piloter le système qualité et les audits",
+        "Traiter les non-conformités et réclamations clients",
+        "Déployer les outils Six Sigma et le SPC"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Safran",
+        "website": "https://safran-group.com",
+        "location": "Le Mans, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Ingénieure Qualité Senior",
+        "activities": [
+          {
+            "project": "Fiabilisation d'un procédé d'usinage",
+            "tasks": [
+              "Analyses statistiques SPC sous Minitab",
+              "Résolution de problèmes en méthode 8D",
+              "Pilotage des plans d'action qualité"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction de 40 pour cent du taux de rebut",
+          "Amélioration du taux de service client"
+        ],
+        "toolsAndTechnologies": [
+          "Minitab",
+          "Six Sigma",
+          "SPC"
+        ]
+      },
+      {
+        "company": "Faurecia",
+        "website": "https://faurecia.com",
+        "location": "Allonnes, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Ingénieure Qualité",
+        "activities": [
+          {
+            "project": "Qualité fournisseurs",
+            "tasks": [
+              "Audits fournisseurs",
+              "Traitement des non-conformités",
+              "Suivi des PPAP"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration mesurable de la qualité fournisseurs"
+        ],
+        "toolsAndTechnologies": [
+          "Minitab",
+          "AMDEC"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Minitab",
+        "Six Sigma",
+        "SPC",
+        "AMDEC",
+        "8D",
+        "IATF 16949"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Esprit d'analyse",
+        "Ténacité",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Réduction du taux de rebut d'un procédé",
+        "description": "Projet Six Sigma de fiabilisation d'un procédé d'usinage critique.",
+        "date": "2021",
+        "impact": "Taux de rebut réduit de 40 pour cent et gains financiers associés."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Course à pied",
+      "Photographie",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Pierre Masson",
+        "position": "Responsable Qualité",
+        "company": "Safran",
+        "contact": {
+          "phone": "+33 6 33 12 45 90",
+          "email": "pierre.masson@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 50000,
+      "max": 60000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Quality Engineering",
+      "secondaryClusters": [
+        "Six Sigma",
+        "Manufacturing"
+      ],
+      "functionalExpertise": [
+        "Quality Management",
+        "Statistical Process Control",
+        "Problem Solving"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Réduction du taux de rebut",
+        "Amélioration du service client"
+      ],
+      "industryDomains": [
+        "Aerospace",
+        "Automotive"
+      ],
+      "environmentFit": [
+        "Industrial",
+        "Enterprise"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Ingénieure qualité confirmée experte en Six Sigma et analyse statistique des procédés."
+    },
+    "searchIndex": {
+      "roles": [
+        "Quality Engineer",
+        "Six Sigma Engineer",
+        "Industrial Engineer"
+      ],
+      "skills": [
+        "Six Sigma",
+        "Minitab",
+        "SPC",
+        "FMEA",
+        "8D",
+        "IATF 16949"
+      ],
+      "industries": [
+        "Aerospace",
+        "Automotive"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "quality",
+      "six-sigma",
+      "manufacturing",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Expert lean et excellence opérationnelle avec plus de seize ans d'expérience dans la transformation des organisations industrielles. Déploie des systèmes de production Lean à l'échelle de sites et coache les équipes de management. Reconnu comme référent technique en amélioration continue et conduite du changement.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Sébastien Colin",
+      "role": "Expert Lean et Excellence Opérationnelle",
+      "summary": "Référent lean passionné par la transformation industrielle, j'accompagne les sites et les équipes vers l'excellence opérationnelle durable.",
+      "contact": {
+        "phone": "+33 6 71 45 09 22",
+        "email": "sebastien.colin@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "de la Manufacture",
+          "streetType": "Rue",
+          "city": "Besançon",
+          "state": "Bourgogne-Franche-Comté",
+          "zipCode": "25000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/sebastien-colin-lean"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 18h-19h"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "freelance"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Excellence opérationnelle",
+        "skills": [
+          "Lean Manufacturing",
+          "TPM",
+          "Value Stream Mapping"
+        ]
+      },
+      {
+        "category": "Amélioration continue",
+        "skills": [
+          "Kaizen",
+          "Hoshin",
+          "SMED"
+        ]
+      },
+      {
+        "category": "Conduite du changement",
+        "skills": [
+          "Coaching des équipes",
+          "Management visuel",
+          "Standardisation"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "Six Sigma",
+          "Minitab",
+          "SAP"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Systèmes de production Lean",
+        "Transformation opérationnelle",
+        "Coaching et conduite du changement"
+      ],
+      "keyResponsibilities": [
+        "Déployer le système de production Lean à l'échelle du site",
+        "Coacher les managers et animateurs d'équipe",
+        "Piloter les programmes d'amélioration continue"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Schneider Electric",
+        "website": "https://se.com",
+        "location": "Dijon, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Expert Lean et Excellence Opérationnelle",
+        "activities": [
+          {
+            "project": "Déploiement du système de production",
+            "tasks": [
+              "Déploiement du Lean sur plusieurs ateliers",
+              "Coaching des équipes de management",
+              "Animation de chantiers Hoshin et Kaizen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration de 20 pour cent de l'efficience globale des équipements",
+          "Réduction significative des délais de production"
+        ],
+        "toolsAndTechnologies": [
+          "Lean",
+          "TPM",
+          "Six Sigma"
+        ]
+      },
+      {
+        "company": "PSA",
+        "website": "https://stellantis.com",
+        "location": "Sochaux, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Chef de Projet Amélioration Continue",
+        "activities": [
+          {
+            "project": "Chantiers SMED et TPM",
+            "tasks": [
+              "Réduction des temps de changement de série",
+              "Déploiement de la maintenance productive totale",
+              "Standardisation des postes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction des temps de changement de série de 30 pour cent"
+        ],
+        "toolsAndTechnologies": [
+          "Lean",
+          "TPM"
+        ]
+      },
+      {
+        "company": "Alstom",
+        "website": "https://alstom.com",
+        "location": "Belfort, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Ingénieur Méthodes",
+        "activities": [
+          {
+            "project": "Optimisation des lignes de montage",
+            "tasks": [
+              "Équilibrage de lignes",
+              "Analyse des temps"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration de l'équilibrage des postes de montage"
+        ],
+        "toolsAndTechnologies": [
+          "Lean"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "ENSMM Besançon",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie mécanique et productique",
+        "achievements": [
+          "Spécialisation productique et méthodes",
+          "Projet sur l'équilibrage de lignes"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Lean",
+        "TPM",
+        "SMED",
+        "Six Sigma",
+        "Minitab",
+        "Value Stream Mapping"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Coaching",
+        "Pédagogie",
+        "Conduite du changement"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Déploiement d'un système de production Lean",
+        "description": "Transformation opérationnelle d'un site industriel avec coaching des équipes.",
+        "date": "2020",
+        "impact": "Efficience des équipements en hausse de 20 pour cent."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Course d'endurance",
+      "Menuiserie",
+      "Lecture de management"
+    ],
+    "references": [
+      {
+        "name": "Nathalie Roux",
+        "position": "Directrice de Site",
+        "company": "Schneider Electric",
+        "contact": {
+          "phone": "+33 6 22 90 45 11",
+          "email": "nathalie.roux@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 72000,
+      "max": 88000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Lean & Operational Excellence",
+      "secondaryClusters": [
+        "Continuous Improvement",
+        "Manufacturing"
+      ],
+      "functionalExpertise": [
+        "Lean Deployment",
+        "Change Management",
+        "Operational Excellence"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Hausse de l'efficience des équipements",
+        "Réduction des temps de changement"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Automotive"
+      ],
+      "environmentFit": [
+        "Industrial",
+        "Enterprise"
+      ],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Référent lean expérimenté pilotant des transformations opérationnelles et le coaching des équipes."
+    },
+    "searchIndex": {
+      "roles": [
+        "Lean Manager",
+        "Continuous Improvement Engineer",
+        "Operational Excellence Expert"
+      ],
+      "skills": [
+        "Lean",
+        "TPM",
+        "SMED",
+        "Six Sigma",
+        "Value Stream Mapping",
+        "Kaizen"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Automotive"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "lean",
+      "continuous-improvement",
+      "operational-excellence",
+      "principal"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Manager supply chain et opérations avec plus de quatorze ans d'expérience dans le pilotage des flux logistiques et de la planification industrielle. Dirige des équipes planning et approvisionnement et optimise les stocks et les taux de service. Expert des ERP SAP et des démarches S&OP.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Karim Benjelloun",
+      "role": "Manager Supply Chain et Opérations",
+      "summary": "Manager supply chain orienté résultats, j'aime fluidifier les flux, fiabiliser les approvisionnements et faire progresser les taux de service.",
+      "contact": {
+        "email": "karim.benjelloun@example.com",
+        "address": {
+          "streetNumber": "50",
+          "streetName": "de la Logistique",
+          "streetType": "Avenue",
+          "city": "Lille",
+          "state": "Hauts-de-France",
+          "zipCode": "59000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/karim-benjelloun-supplychain"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 18h-19h"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Supply chain",
+        "skills": [
+          "Planification industrielle",
+          "S&OP",
+          "Gestion des stocks"
+        ]
+      },
+      {
+        "category": "Approvisionnement",
+        "skills": [
+          "Achats",
+          "Gestion fournisseurs",
+          "MRP"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "SAP",
+          "Excel avancé",
+          "Power BI"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Pilotage d'équipe",
+          "KPI et reporting",
+          "Amélioration continue"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Pilotage de la supply chain",
+        "Planification et S&OP",
+        "Optimisation des stocks et des flux"
+      ],
+      "keyResponsibilities": [
+        "Piloter la planification industrielle et les approvisionnements",
+        "Manager les équipes planning et logistique",
+        "Optimiser les stocks et améliorer les taux de service"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Decathlon",
+        "website": "https://decathlon.com",
+        "location": "Villeneuve-d'Ascq, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Manager Supply Chain et Opérations",
+        "activities": [
+          {
+            "project": "Optimisation de la chaîne d'approvisionnement",
+            "tasks": [
+              "Management d'une équipe de 12 personnes",
+              "Déploiement d'un processus S&OP",
+              "Optimisation des niveaux de stock sous SAP"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration du taux de service de 6 points",
+          "Réduction de 20 pour cent des stocks dormants"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Power BI"
+        ]
+      },
+      {
+        "company": "Auchan",
+        "website": "https://auchan.fr",
+        "location": "Croix, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Responsable Planification",
+        "activities": [
+          {
+            "project": "Planification de la production",
+            "tasks": [
+              "Élaboration des plans de production",
+              "Gestion des approvisionnements MRP",
+              "Suivi des KPI logistiques"
+            ]
+          }
+        ],
+        "achievements": [
+          "Fiabilisation du plan de production et réduction des ruptures"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Excel avancé"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IMT Lille Douai",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie industriel - logistique",
+        "achievements": [
+          "Spécialisation supply chain et logistique",
+          "Projet sur l'optimisation des stocks"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certification APICS CPIM",
+        "institution": "APICS",
+        "year": "@Y-4@",
+        "description": "Certification en gestion de la production et des stocks."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "Power BI",
+        "S&OP",
+        "MRP",
+        "Gestion des stocks"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Organisation",
+        "Analyse",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Déploiement d'un processus S&OP",
+        "description": "Mise en place d'un processus de planification intégrée S&OP à l'échelle d'un site.",
+        "date": "2021",
+        "impact": "Taux de service amélioré et stocks dormants réduits."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Football",
+      "Cuisine",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Sophie Bernard",
+        "position": "Directrice Supply Chain",
+        "company": "Decathlon",
+        "contact": {
+          "phone": "+33 6 33 90 12 44",
+          "email": "sophie.bernard@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 65000,
+      "max": 80000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Supply Chain & Operations",
+      "secondaryClusters": [
+        "Industrial Engineering",
+        "Operations Management"
+      ],
+      "functionalExpertise": [
+        "Supply Chain Planning",
+        "S&OP",
+        "Inventory Optimization"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Amélioration du taux de service",
+        "Réduction des stocks dormants"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Retail"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Industrial"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Manager supply chain expérimenté en planification S&OP et optimisation des flux avec SAP."
+    },
+    "searchIndex": {
+      "roles": [
+        "Supply Chain Manager",
+        "Operations Manager",
+        "Planning Manager"
+      ],
+      "skills": [
+        "SAP",
+        "S&OP",
+        "MRP",
+        "Inventory Management",
+        "Power BI"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Retail"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "supply-chain",
+      "operations",
+      "sap",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieur planification de production avec quatre ans d'expérience dans l'ordonnancement et le pilotage des flux en atelier. Compétent en planification MRP, en suivi de la performance et en outils ERP. Rigoureux, réactif et orienté respect des délais clients.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Antoine Dubois",
+      "role": "Ingénieur Planification de Production",
+      "summary": "Ingénieur planification passionné par l'ordonnancement, j'aime optimiser les plannings d'atelier pour tenir les délais tout en lissant la charge.",
+      "contact": {
+        "phone": "+33 6 44 21 90 08",
+        "email": "antoine.dubois@example.com",
+        "address": {
+          "streetNumber": "13",
+          "streetName": "des Ateliers",
+          "streetType": "Rue",
+          "city": "Angers",
+          "state": "Pays de la Loire",
+          "zipCode": "49000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/antoine-dubois-planning"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En semaine 17h-19h",
+          "Samedi matin"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Planification",
+        "skills": [
+          "Ordonnancement",
+          "MRP",
+          "Lissage de charge"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "SAP",
+          "Excel avancé",
+          "MES"
+        ]
+      },
+      {
+        "category": "Performance",
+        "skills": [
+          "KPI de production",
+          "Suivi des délais",
+          "Analyse de la charge"
+        ]
+      },
+      {
+        "category": "Méthodes",
+        "skills": [
+          "Amélioration continue",
+          "5S",
+          "Gestion des priorités"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Planification et ordonnancement de production",
+        "Pilotage des flux d'atelier",
+        "Suivi de la performance"
+      ],
+      "keyResponsibilities": [
+        "Élaborer et ajuster les plannings de production",
+        "Lisser la charge et gérer les priorités",
+        "Suivre les indicateurs de performance et les délais"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Scania",
+        "website": "https://scania.com",
+        "location": "Angers, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Ingénieur Planification de Production",
+        "activities": [
+          {
+            "project": "Ordonnancement d'un atelier d'assemblage",
+            "tasks": [
+              "Élaboration des plannings hebdomadaires",
+              "Lissage de la charge et gestion des priorités",
+              "Suivi des KPI de production sous SAP"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration du respect des délais de 10 points",
+          "Réduction des retards de livraison en atelier"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "MES"
+        ]
+      },
+      {
+        "company": "Manitou",
+        "website": "https://manitou-group.com",
+        "location": "Ancenis, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Chargé de Planification Junior",
+        "activities": [
+          {
+            "project": "Planification de production",
+            "tasks": [
+              "Saisie et suivi des ordres de fabrication",
+              "Analyse de la charge atelier",
+              "Reporting hebdomadaire"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automatisation d'un tableau de bord de suivi de charge"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Excel avancé"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Arts et Métiers Angers",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie industriel",
+        "achievements": [
+          "Spécialisation gestion de production",
+          "Projet sur l'ordonnancement d'atelier"
+        ]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "MES",
+        "Excel avancé",
+        "MRP",
+        "Ordonnancement"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Réactivité",
+        "Organisation",
+        "Esprit d'équipe"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Ordonnancement d'un atelier d'assemblage",
+        "description": "Pilotage de la planification d'un atelier pour améliorer le respect des délais.",
+        "date": "2023",
+        "impact": "Respect des délais amélioré de 10 points."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Basket-ball",
+      "Jeux de société",
+      "Course à pied"
+    ],
+    "references": [
+      {
+        "name": "Laurent Moreau",
+        "position": "Responsable Production",
+        "company": "Scania",
+        "contact": {
+          "phone": "+33 6 22 45 90 33",
+          "email": "laurent.moreau@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 38000,
+      "max": 46000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Production Planning",
+      "secondaryClusters": [
+        "Industrial Engineering",
+        "Operations"
+      ],
+      "functionalExpertise": [
+        "Production Scheduling",
+        "MRP Planning",
+        "Performance Monitoring"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Amélioration du respect des délais",
+        "Réduction des retards"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Automotive"
+      ],
+      "environmentFit": [
+        "Industrial",
+        "Enterprise"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Ingénieur planification en progression avec de bons résultats sur le respect des délais atelier."
+    },
+    "searchIndex": {
+      "roles": [
+        "Production Planner",
+        "Industrial Engineer",
+        "Planning Engineer"
+      ],
+      "skills": [
+        "SAP",
+        "MRP",
+        "Production Scheduling",
+        "MES",
+        "Capacity Planning"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Automotive"
+      ]
+    },
+    "tags": [
+      "industrial",
+      "planning",
+      "production",
+      "sap",
+      "midlevel"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieure en conception mécanique senior avec plus de dix ans d'expérience dans la conception de systèmes mécaniques pour l'aéronautique et l'industrie. Spécialiste de la modélisation 3D sous CATIA et SolidWorks, du dimensionnement par calcul FEA et de la cotation GD&T. Habituée au travail en équipe pluridisciplinaire et au pilotage de projets de développement produit.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Camille Rousseau",
+      "role": "Ingénieure Conception Mécanique Senior",
+      "summary": "Passionnée par la conception de pièces mécaniques fiables et optimisées. J'aime transformer un cahier des charges exigeant en solutions robustes prêtes pour l'industrialisation.",
+      "contact": {
+        "phone": "+33 6 24 51 88 99",
+        "email": "camille.rousseau@example.com",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "des Frères Lumière",
+          "streetType": "Rue",
+          "city": "Toulouse",
+          "state": "Occitanie",
+          "zipCode": "31000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/camille-rousseau-meca"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Conception CAO",
+        "skills": [
+          "CATIA V5",
+          "SolidWorks",
+          "Creo"
+        ]
+      },
+      {
+        "category": "Calcul et simulation",
+        "skills": [
+          "ANSYS",
+          "FEA",
+          "Analyse modale"
+        ]
+      },
+      {
+        "category": "Méthodes et cotation",
+        "skills": [
+          "GD&T",
+          "Tolérancement",
+          "AMDEC"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "AutoCAD",
+          "PLM Enovia",
+          "MS Project"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Conception mécanique 3D",
+        "Dimensionnement par éléments finis",
+        "Industrialisation produit"
+      ],
+      "keyResponsibilities": [
+        "Concevoir des ensembles mécaniques conformes au cahier des charges",
+        "Réaliser les calculs de résistance et de fatigue",
+        "Piloter les revues de conception avec les fournisseurs"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Airbus",
+        "website": "https://airbus.com",
+        "location": "Toulouse, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Ingénieure Conception Mécanique Senior",
+        "activities": [
+          {
+            "project": "Systèmes de fixation cabine",
+            "tasks": [
+              "Conception d'ensembles structuraux sous CATIA V5",
+              "Calculs de tenue mécanique par FEA sous ANSYS",
+              "Définition des plans avec cotation GD&T"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction de 18 pour cent de la masse d'un support structural",
+          "Réduction du délai de validation grâce à la standardisation des composants"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA V5",
+          "ANSYS",
+          "GD&T",
+          "Enovia"
+        ]
+      },
+      {
+        "company": "Liebherr Aerospace",
+        "website": "https://liebherr.com",
+        "location": "Toulouse, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Ingénieure Conception Mécanique",
+        "activities": [
+          {
+            "project": "Systèmes de conditionnement d'air",
+            "tasks": [
+              "Modélisation de composants sous SolidWorks",
+              "Analyse de tolérancement",
+              "Suivi de la fabrication de prototypes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise au point d'un banc d'essai réduisant les cycles de test"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "AutoCAD",
+          "GD&T"
+        ]
+      },
+      {
+        "company": "Segula Technologies",
+        "website": "https://segula.fr",
+        "location": "Blagnac, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Ingénieure d'études junior",
+        "activities": [
+          {
+            "project": "Bureau d'études mécaniques",
+            "tasks": [
+              "Réalisation de plans de détail",
+              "Support aux calculs de dimensionnement"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à la digitalisation des dossiers de définition"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA V5",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "INSA Toulouse",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie mécanique",
+        "achievements": [
+          "Spécialisation conception et calcul de structures",
+          "Projet de fin d'études sur l'optimisation topologique"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certification CATIA V5 Mechanical Design",
+        "institution": "Dassault Systèmes",
+        "year": "@Y-4@",
+        "description": "Maîtrise avancée de la conception mécanique sous CATIA V5."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "CATIA V5",
+        "SolidWorks",
+        "ANSYS",
+        "FEA",
+        "GD&T",
+        "AutoCAD",
+        "Creo"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Esprit d'analyse",
+        "Travail en équipe",
+        "Sens du détail"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Optimisation d'un support structural cabine",
+        "description": "Refonte d'un support par optimisation topologique et validation FEA.",
+        "date": "2021",
+        "impact": "Gain de masse de 18 pour cent tout en respectant les marges de sécurité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Randonnée en montagne",
+      "Impression 3D",
+      "Photographie"
+    ],
+    "references": [
+      {
+        "name": "Étienne Faure",
+        "position": "Responsable Bureau d'Études",
+        "company": "Airbus",
+        "contact": {
+          "phone": "+33 6 71 22 45 09",
+          "email": "etienne.faure@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 52000,
+      "max": 62000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Mechanical Design Engineering",
+      "secondaryClusters": [
+        "Aerospace Engineering",
+        "Structural Analysis"
+      ],
+      "functionalExpertise": [
+        "CAD Design",
+        "Finite Element Analysis",
+        "Product Industrialization"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Réduction de masse structurale",
+        "Standardisation des composants"
+      ],
+      "industryDomains": [
+        "Aerospace",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "R&D"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Parcours cohérent en conception mécanique aéronautique avec expertise CATIA et calcul par éléments finis."
+    },
+    "searchIndex": {
+      "roles": [
+        "Mechanical Design Engineer",
+        "Senior Design Engineer",
+        "CAD Engineer"
+      ],
+      "skills": [
+        "CATIA",
+        "SolidWorks",
+        "ANSYS",
+        "FEA",
+        "GD&T",
+        "AutoCAD",
+        "Creo"
+      ],
+      "industries": [
+        "Aerospace",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "design",
+      "catia",
+      "fea",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieur en génie climatique avec cinq ans d'expérience dans la conception d'installations CVC pour les bâtiments tertiaires et industriels. Compétent en dimensionnement thermique, en réseaux aérauliques et hydrauliques, et en études d'efficacité énergétique. Rigoureux et orienté performance énergétique.",
+    "careerStartYear": 2019,
+    "personalInformation": {
+      "name": "Yanis Benali",
+      "role": "Ingénieur Génie Climatique (CVC)",
+      "summary": "Ingénieur CVC motivé par la conception de bâtiments confortables et sobres en énergie. J'apprécie les projets où performance thermique et contraintes de terrain se rencontrent.",
+      "contact": {
+        "phone": "+33 6 88 03 17 42",
+        "email": "yanis.benali.personal@example.com",
+        "address": {
+          "streetNumber": "45",
+          "streetName": "de la République",
+          "streetType": "Avenue",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69003",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/yanis-benali-cvc"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En semaine 17h-19h",
+          "Mercredi journée"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Génie climatique",
+        "skills": [
+          "Dimensionnement CVC",
+          "Aéraulique",
+          "Hydraulique"
+        ]
+      },
+      {
+        "category": "Logiciels",
+        "skills": [
+          "AutoCAD",
+          "Revit MEP",
+          "Pleiades"
+        ]
+      },
+      {
+        "category": "Énergie",
+        "skills": [
+          "Bilan thermique",
+          "RT 2012",
+          "RE 2020"
+        ]
+      },
+      {
+        "category": "Méthodes",
+        "skills": [
+          "Chiffrage",
+          "Suivi de chantier"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Conception d'installations CVC",
+        "Dimensionnement thermique",
+        "Études d'efficacité énergétique"
+      ],
+      "keyResponsibilities": [
+        "Réaliser les bilans thermiques des bâtiments",
+        "Dimensionner les réseaux aérauliques et hydrauliques",
+        "Assurer le suivi technique des installations"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Egis",
+        "website": "https://egis-group.com",
+        "location": "Lyon, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Ingénieur Génie Climatique",
+        "activities": [
+          {
+            "project": "Réhabilitation d'un campus tertiaire",
+            "tasks": [
+              "Bilans thermiques et dimensionnement CVC",
+              "Modélisation des réseaux sous Revit MEP",
+              "Rédaction des CCTP et pièces techniques"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction estimée de 25 pour cent des consommations de chauffage",
+          "Conformité RE 2020 sur l'ensemble du lot CVC"
+        ],
+        "toolsAndTechnologies": [
+          "Revit MEP",
+          "AutoCAD",
+          "Pleiades"
+        ]
+      },
+      {
+        "company": "Bureau Veritas",
+        "website": "https://bureauveritas.fr",
+        "location": "Villeurbanne, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Ingénieur d'études CVC junior",
+        "activities": [
+          {
+            "project": "Bâtiments logistiques",
+            "tasks": [
+              "Calculs de déperditions",
+              "Sélection d'équipements de ventilation",
+              "Plans d'exécution sous AutoCAD"
+            ]
+          }
+        ],
+        "achievements": [
+          "Standardisation des notes de calcul thermique de l'agence"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "Pleiades"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "INSA Lyon",
+        "degree": "Diplôme d'ingénieur",
+        "fieldOfStudy": "Génie énergétique et environnement",
+        "achievements": [
+          "Spécialisation énergétique du bâtiment",
+          "Projet sur la ventilation double flux"
+        ]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Dimensionnement CVC",
+        "Revit MEP",
+        "AutoCAD",
+        "Pleiades",
+        "Bilan thermique",
+        "RE 2020"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Autonomie",
+        "Communication",
+        "Adaptabilité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "professional"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Réhabilitation énergétique d'un campus",
+        "description": "Conception complète du lot CVC pour un campus tertiaire de 12 000 m².",
+        "date": "2023",
+        "impact": "Baisse significative des consommations et confort thermique amélioré."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Vélo de route",
+      "Bricolage",
+      "Cinéma"
+    ],
+    "references": [
+      {
+        "name": "Nadia Cherki",
+        "position": "Cheffe de Projet Bâtiment",
+        "company": "Egis",
+        "contact": {
+          "phone": "+33 6 45 90 12 76",
+          "email": "nadia.cherki@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 40000,
+      "max": 48000
+    },
+    "candidateClustering": {
+      "primaryCluster": "HVAC Engineering",
+      "secondaryClusters": [
+        "Building Services",
+        "Energy Efficiency"
+      ],
+      "functionalExpertise": [
+        "Thermal Design",
+        "MEP Design",
+        "Energy Modeling"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Réduction des consommations énergétiques",
+        "Conformité réglementaire"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Building Services"
+      ],
+      "environmentFit": [
+        "Consulting",
+        "Engineering Firm"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Profil CVC en développement avec expérience solide en conception thermique et modélisation MEP."
+    },
+    "searchIndex": {
+      "roles": [
+        "HVAC Engineer",
+        "Building Services Engineer",
+        "Mechanical Engineer"
+      ],
+      "skills": [
+        "HVAC Design",
+        "Revit MEP",
+        "AutoCAD",
+        "Thermal Analysis",
+        "Energy Efficiency"
+      ],
+      "industries": [
+        "Construction",
+        "Building Services"
+      ]
+    },
+    "tags": [
+      "mechanical",
+      "hvac",
+      "building-services",
+      "energy",
+      "midlevel"
+    ]
+  }
+]
