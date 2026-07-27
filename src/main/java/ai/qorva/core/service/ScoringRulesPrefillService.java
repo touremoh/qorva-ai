@@ -30,9 +30,19 @@ import java.util.stream.Collectors;
 @Service
 public class ScoringRulesPrefillService {
 
+	// Vocabularies MUST match the job_posts $jsonSchema validator enums exactly
+	// (see 20260514_04__create_job_posts_collection.json) or inserts fail validation.
 	private static final Set<String> VALID_IMPORTANCE = Set.of("mandatory", "important", "nice_to_have");
-	private static final Set<String> VALID_STRICTNESS = Set.of("low", "medium", "high");
-	private static final Set<String> VALID_SENIORITY = Set.of("junior", "mid", "senior", "lead");
+	private static final Set<String> VALID_STRICTNESS = Set.of("strict", "medium", "relaxed");
+	private static final Set<String> VALID_SENIORITY = Set.of("junior", "mid", "senior");
+
+	/** Common LLM drift → schema vocabulary, so a synonym never becomes a write failure. */
+	private static final java.util.Map<String, String> STRICTNESS_SYNONYMS = java.util.Map.of(
+		"low", "relaxed", "flexible", "relaxed", "loose", "relaxed",
+		"high", "strict", "hard", "strict", "required", "strict");
+	private static final java.util.Map<String, String> SENIORITY_SYNONYMS = java.util.Map.of(
+		"lead", "senior", "principal", "senior", "staff", "senior", "expert", "senior",
+		"entry", "junior", "intern", "junior", "mid-level", "mid", "intermediate", "mid");
 	private static final Set<String> VALID_AVAILABILITY = Set.of(
 		"activelyLooking", "openButNotSearching", "notAvailable", "freelanceOnly");
 
@@ -102,8 +112,7 @@ public class ScoringRulesPrefillService {
 
 		if (rules.getExperienceRequirements() != null) {
 			var exp = rules.getExperienceRequirements();
-			var seniority = exp.seniorityLevel() != null && VALID_SENIORITY.contains(exp.seniorityLevel().toLowerCase())
-				? exp.seniorityLevel().toLowerCase() : "mid";
+			var seniority = normalizeEnum(exp.seniorityLevel(), VALID_SENIORITY, SENIORITY_SYNONYMS, "mid");
 			rules.setExperienceRequirements(new ai.qorva.core.dto.common.ExperienceRequirements(
 				exp.minYearsOfExperience() != null && exp.minYearsOfExperience() >= 0 ? exp.minYearsOfExperience() : 0,
 				exp.minRelevantYears() != null && exp.minRelevantYears() >= 0 ? exp.minRelevantYears() : 0,
@@ -141,7 +150,14 @@ public class ScoringRulesPrefillService {
 	}
 
 	private String normalizeStrictness(String value) {
-		return value != null && VALID_STRICTNESS.contains(value.toLowerCase()) ? value.toLowerCase() : "medium";
+		return normalizeEnum(value, VALID_STRICTNESS, STRICTNESS_SYNONYMS, "medium");
+	}
+
+	private String normalizeEnum(String value, Set<String> valid, java.util.Map<String, String> synonyms, String fallback) {
+		if (value == null) return fallback;
+		var lower = value.toLowerCase();
+		if (valid.contains(lower)) return lower;
+		return synonyms.getOrDefault(lower, fallback);
 	}
 
 	private double round2(double value) {
