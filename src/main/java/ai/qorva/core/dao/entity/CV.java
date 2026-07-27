@@ -65,6 +65,12 @@ public class CV implements QorvaEntity {
     /** Origin of contentDate: WORK_HISTORY | DOC_METADATA | VERIFIED | UNKNOWN. */
     private String contentDateSource;
 
+    /** Denormalized quality defects (see QualityFlagEnum), recomputed on every write. */
+    private List<String> qualityFlags;
+
+    /** Archived CVs are excluded from quality reporting and matching. */
+    private Boolean archived;
+
     private float[] embedding;
 
     @Field("score")

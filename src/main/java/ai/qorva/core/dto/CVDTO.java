@@ -56,6 +56,12 @@ public class CVDTO extends AbstractQorvaDTO {
     @JsonProperty(access = Access.READ_ONLY)
     private String contentDateSource;
 
+    @JsonProperty(access = Access.READ_ONLY)
+    private List<String> qualityFlags;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private Boolean archived;
+
     private List<String> tags;
 
     @JsonProperty(access = Access.READ_ONLY)

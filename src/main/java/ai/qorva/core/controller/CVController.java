@@ -3,6 +3,7 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVDuplicatesData;
 import ai.qorva.core.dto.QorvaRequestResponse;
+import ai.qorva.core.dto.UploadResult;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.utils.BuildApiResponse;
@@ -35,12 +36,21 @@ public class CVController extends AbstractQorvaController<CVDTO> {
 
     @PostMapping(value = "/upload")
     @PreAuthorize("@accessManager.hasPermission(authentication,'ADD_CV') and @accessManager.hasNotExceededScreeningLimit()")
-    public ResponseEntity<List<CVDTO>> uploadFiles(
+    public ResponseEntity<List<UploadResult>> uploadFiles(
             @RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language,
             @RequestParam("files") List<MultipartFile> files) throws QorvaException {
         LanguageContextHolder.setLanguage(language);
         log.info("Received {} files", files.size());
         return ResponseEntity.ok(((CVService) service).upload(files, currentTenantId()));
+    }
+
+    /** Resolves an upload-time duplicate: keeps the new CV (merging tags) and deletes the old copy. */
+    @PostMapping("/{newCvId}/replace/{oldCvId}")
+    @PreAuthorize("@accessManager.hasPermission(authentication,'DELETE_CV')")
+    public ResponseEntity<CVDTO> replaceDuplicate(
+            @PathVariable String newCvId,
+            @PathVariable String oldCvId) throws QorvaException {
+        return ResponseEntity.ok(((CVService) service).replaceDuplicate(newCvId, oldCvId, currentTenantId()));
     }
 
     @Override

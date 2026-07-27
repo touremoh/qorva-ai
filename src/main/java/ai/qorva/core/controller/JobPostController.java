@@ -2,8 +2,10 @@ package ai.qorva.core.controller;
 
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.QorvaRequestResponse;
+import ai.qorva.core.dto.common.ScoringRules;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.JobPostService;
+import ai.qorva.core.service.ScoringRulesPrefillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -27,9 +29,27 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "${weblink.allowedOrigins}")
 public class JobPostController extends AbstractQorvaController<JobPostDTO> {
 
+    private final ScoringRulesPrefillService scoringRulesPrefillService;
+
     @Autowired
-    public JobPostController(JobPostService service) {
+    public JobPostController(JobPostService service, ScoringRulesPrefillService scoringRulesPrefillService) {
         super(service);
+        this.scoringRulesPrefillService = scoringRulesPrefillService;
+    }
+
+    public record SuggestScoringRulesRequest(String title, String description) {}
+
+    /**
+     * AI-drafts the scoring rules from a job title/description (job-post creation wizard).
+     * Create flow only — the frontend never calls this for updates, where a human already
+     * invested in the rules.
+     */
+    @PostMapping("/scoring-rules/suggest")
+    @PreAuthorize("@accessManager.hasPermission(authentication,'ADD_JOB')")
+    public ResponseEntity<ScoringRules> suggestScoringRules(
+            @RequestBody SuggestScoringRulesRequest request) throws QorvaException {
+        return ResponseEntity.ok(this.scoringRulesPrefillService.suggest(
+            currentTenantId(), request.title(), request.description()));
     }
 
     @Override

@@ -24,7 +24,15 @@ public record LibraryQualityReport(
 
 	public record Metric(String name, long count, double percentage) {}
 
-	public record QualityIssue(String issueKey, String severity, long count) {}
+	public record QualityIssue(String issueKey, String severity, long count, boolean dismissed) {}
+
+	/** Lightweight sidebar-badge payload — served from the cached report. */
+	public record Summary(int openIssueCount) {}
+
+	/** Bulk remediation request: criteria mode (issueKey) or explicit selection (cvIds). */
+	public record ActionRequest(String action, String issueKey, List<String> cvIds) {}
+
+	public record ActionResult(String action, long modifiedCount) {}
 
 	public record IssueCV(
 		String id,
@@ -43,32 +51,5 @@ public record LibraryQualityReport(
 		long totalElements,
 		int totalPages,
 		boolean hasNext
-	) {}
-
-	/** Single-pass field-presence counts (also carries the structural parse anomalies). */
-	public record FieldPresenceCounts(
-		long total,
-		long hasName,
-		long hasRole,
-		long hasEmail,
-		long hasPhone,
-		long missingContact,
-		long hasWorkExperience,
-		long hasSkills,
-		long hasEducation,
-		long hasCareerStartYear,
-		long hasLanguages,
-		long hasCertifications,
-		long hasSalary,
-		long hasLinkedin,
-		long hasSummary
-	) {}
-
-	/** Parse-confidence aggregation result. */
-	public record ConfidenceCounts(
-		long total,
-		long missingClustering,
-		long lowConfidence,
-		Double avgConfidence
 	) {}
 }
