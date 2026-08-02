@@ -61,9 +61,11 @@ public class SecurityConfig {
 					"/registrations/**",
 					"/auth/login",
 					"/auth/token/validate",
+					"/auth/password/**",
 					"/portal/jobs/**",
 					"/stripe/**",
-					"/actuator/**"
+					"/actuator/**",
+					"/public/**"
 				).permitAll() // Publicly accessible routes
 
 				.anyRequest().authenticated()

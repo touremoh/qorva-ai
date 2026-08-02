@@ -29,7 +29,7 @@ public class RegistrationController {
 		@RequestBody AccountRegistrationDTO accountRegistrationDTO,
 		@RequestHeader("Accept-Language") String languageCode
 	) throws QorvaException {
-		return BuildApiResponse.from(this.registrationService.createAccount(accountRegistrationDTO, languageCode));
+		return BuildApiResponse.from(this.registrationService.createDemoAccount(accountRegistrationDTO, languageCode));
 	}
 
 	@PostMapping(path = "/checkout-session", produces = MediaType.APPLICATION_JSON_VALUE)

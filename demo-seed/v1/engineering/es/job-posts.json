@@ -1,0 +1,454 @@
+[
+  {
+    "title": "Ingeniero/a de Diseño Mecánico (SolidWorks/GD&T)",
+    "description": "En una empresa de bienes de equipo industrial con sede en Bilbao, buscamos un/a Ingeniero/a de Diseño Mecánico para desarrollar maquinaria y conjuntos mecánicos destinados a líneas de producción del sector automoción y energía.\n\nTu misión será transformar requisitos funcionales en diseños robustos y fabricables, cubriendo todo el ciclo desde el concepto hasta la puesta en marcha.\n\nResponsabilidades principales:\n- Diseñar componentes y conjuntos en 3D con SolidWorks, generando planos de fabricación acotados con GD&T.\n- Realizar cálculos estructurales y análisis de elementos finitos (FEA) con ANSYS para validar resistencia y fatiga.\n- Seleccionar materiales, tolerancias y procesos de fabricación junto al taller y proveedores.\n- Elaborar listas de materiales (BOM) y documentación técnica bajo normativa ISO y CE.\n- Dar soporte a montaje, pruebas y resolución de incidencias en planta.\n\nRequisitos imprescindibles:\n- Entre 3 y 5 años de experiencia en diseño mecánico de maquinaria o utillaje.\n- Dominio de SolidWorks y acotación funcional con GD&T.\n- Conocimientos sólidos de fabricación mecánica y selección de materiales.\n\nValoramos: experiencia con ANSYS, conocimientos de neumática/hidráulica y familiaridad con AutoCAD para planos 2D.\n\nModelo presencial con flexibilidad horaria en nuestras instalaciones de Bilbao. Ofrecemos proyectos técnicos variados y un equipo de ingeniería consolidado.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "SolidWorks",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GD&T",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Mechanical Design",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ANSYS",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "FEA",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AutoCAD",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Materials Selection",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Bilbao",
+          "Vitoria-Gasteiz",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Industrial Machinery",
+          "Automotive",
+          "Manufacturing"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Ingeniero/a de Estructuras Senior (Eurocódigos/ETABS)",
+    "description": "Estudio de ingeniería civil y edificación en Madrid busca un/a Ingeniero/a de Estructuras Senior para liderar el cálculo y diseño estructural de edificios residenciales, terciarios e infraestructura.\n\nTu misión será dirigir el dimensionamiento estructural de proyectos complejos, garantizando seguridad, cumplimiento normativo y optimización de materiales.\n\nResponsabilidades principales:\n- Modelar y calcular estructuras de hormigón y acero con ETABS y STAAD.Pro.\n- Dimensionar elementos conforme a los Eurocódigos y el Código Técnico de la Edificación (CTE).\n- Elaborar y supervisar planos estructurales en AutoCAD y modelos BIM en Revit.\n- Coordinar con arquitectura, instalaciones y dirección de obra.\n- Revisar el trabajo de ingenieros junior y validar memorias de cálculo.\n\nRequisitos imprescindibles:\n- Más de 6 años de experiencia en cálculo de estructuras de edificación.\n- Dominio de los Eurocódigos y del CTE.\n- Experiencia avanzada con ETABS y STAAD.Pro.\n\nValoramos: experiencia con Revit y flujos BIM, conocimientos de geotecnia y proyectos internacionales.\n\nModelo híbrido con tres días presenciales en nuestras oficinas de Madrid y visitas puntuales a obra. Ofrecemos proyectos emblemáticos y desarrollo profesional dentro de un equipo técnico de referencia.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Structural Analysis",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ETABS",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Eurocode",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "STAAD.Pro",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AutoCAD",
+          "importance": "important",
+          "weight": 0.1,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Revit",
+          "importance": "nice_to_have",
+          "weight": 0.09,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Reinforced Concrete Design",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Madrid",
+          "Valencia",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Construction",
+          "Civil Engineering",
+          "Architecture"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  },
+  {
+    "title": "Ingeniero/a Eléctrico/a de Diseño (ETAP/Baja Tensión)",
+    "description": "Consultora de ingeniería eléctrica en Sevilla incorpora un/a Ingeniero/a Eléctrico/a de Diseño para proyectos de instalaciones de baja y media tensión en el sector industrial y de energías renovables.\n\nTu misión será diseñar sistemas eléctricos seguros, eficientes y conformes a la normativa vigente, desde el cálculo hasta la documentación de proyecto.\n\nResponsabilidades principales:\n- Realizar cálculos de cargas, cortocircuito y coordinación de protecciones con ETAP.\n- Diseñar esquemas unifilares y planos eléctricos en AutoCAD Electrical.\n- Dimensionar cuadros, canalizaciones y sistemas de puesta a tierra según el REBT e IEC.\n- Especificar equipos, elaborar memorias técnicas y listados de materiales.\n- Dar soporte técnico en obra y coordinar con proveedores e instaladores.\n\nRequisitos imprescindibles:\n- Entre 3 y 5 años de experiencia en diseño de instalaciones eléctricas.\n- Conocimiento del Reglamento Electrotécnico de Baja Tensión (REBT) y normativa IEC.\n- Experiencia con AutoCAD Electrical y herramientas de cálculo eléctrico.\n\nValoramos: experiencia con ETAP, conocimientos de instalaciones fotovoltaicas y familiaridad con sistemas SCADA.\n\nModelo híbrido con base en Sevilla y desplazamientos ocasionales a planta. Ofrecemos una cartera de proyectos diversa y un plan de formación continua.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Electrical Design",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AutoCAD Electrical",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Low Voltage Systems",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ETAP",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IEC Standards",
+          "importance": "important",
+          "weight": 0.11,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Photovoltaic Systems",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SCADA",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Sevilla",
+          "Málaga",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Energy",
+          "Renewable Energy",
+          "Engineering Consulting"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Ingeniero/a de Procesos Junior (Lean/Six Sigma)",
+    "description": "Planta de fabricación de componentes de automoción en Zaragoza busca un/a Ingeniero/a de Procesos Junior para impulsar la mejora continua y la eficiencia de las líneas de producción.\n\nTu misión será analizar procesos productivos, identificar desperdicios y aplicar metodologías Lean para aumentar la productividad y la calidad.\n\nResponsabilidades principales:\n- Analizar tiempos, capacidades y cuellos de botella en las líneas de montaje.\n- Participar en proyectos de mejora continua bajo metodologías Lean y Six Sigma.\n- Elaborar instrucciones de trabajo, layouts y estudios de métodos y tiempos.\n- Apoyar la implantación de estándares 5S y sistemas de gestión visual.\n- Colaborar con calidad y mantenimiento para reducir defectos y paradas.\n\nRequisitos imprescindibles:\n- Entre 0 y 2 años de experiencia en entornos de producción o prácticas en planta.\n- Conocimientos de metodologías Lean Manufacturing y mejora continua.\n- Manejo de herramientas ofimáticas y análisis de datos básico.\n\nValoramos: certificación Six Sigma (Yellow/Green Belt), conocimientos de SAP y familiaridad con AutoCAD para layouts.\n\nModelo presencial en nuestra planta de Zaragoza, con turno partido. Ofrecemos un programa de incorporación estructurado y acompañamiento por parte de ingenieros senior.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Lean Manufacturing",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Process Improvement",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Six Sigma",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Time and Motion Study",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "5S",
+          "importance": "important",
+          "weight": 0.11,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AutoCAD",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Zaragoza",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Automotive",
+          "Manufacturing",
+          "Industrial"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.2,
+        "location": 0.15,
+        "industry": 0.2
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Ingeniero/a HVAC Senior (Climatización/Revit MEP)",
+    "description": "Ingeniería de instalaciones con proyectos en España y Latinoamérica busca un/a Ingeniero/a HVAC Senior para liderar el diseño de sistemas de climatización y ventilación en edificios terciarios, hospitalarios e industriales.\n\nTu misión será dirigir el diseño térmico y de instalaciones mecánicas, garantizando confort, eficiencia energética y cumplimiento normativo.\n\nResponsabilidades principales:\n- Realizar cálculos de cargas térmicas, ventilación y selección de equipos.\n- Diseñar sistemas HVAC y coordinar instalaciones mecánicas en modelos Revit MEP.\n- Aplicar el Reglamento de Instalaciones Térmicas en los Edificios (RITE) y normativa ASHRAE.\n- Elaborar memorias, pliegos y mediciones, y supervisar la ejecución en obra.\n- Liderar técnicamente al equipo de proyectistas y coordinar con otras disciplinas.\n\nRequisitos imprescindibles:\n- Más de 6 años de experiencia en diseño de instalaciones HVAC.\n- Dominio del RITE y de normativa ASHRAE.\n- Experiencia avanzada con Revit MEP y herramientas de cálculo de cargas.\n\nValoramos: experiencia en proyectos de eficiencia energética, certificaciones LEED y familiaridad con AutoCAD MEP.\n\nModelo híbrido con base en Barcelona y coordinación remota con equipos en Ciudad de México. Ofrecemos proyectos internacionales de gran envergadura y un rol con alta responsabilidad técnica.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "HVAC Design",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Revit MEP",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Thermal Load Calculation",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ASHRAE Standards",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AutoCAD MEP",
+          "importance": "important",
+          "weight": 0.11,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Energy Efficiency",
+          "importance": "nice_to_have",
+          "weight": 0.09,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "LEED",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Barcelona",
+          "Ciudad de México",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "MEP Engineering",
+          "Construction",
+          "Building Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  }
+]

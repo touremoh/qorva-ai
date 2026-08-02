@@ -36,7 +36,7 @@ public class QorvaApiAccessManager {
 		this.usageMonitoringService = usageMonitoringService;
 	}
 
-	public boolean hasAuthority(@AuthenticationPrincipal Authentication authentication, String action) {
+	public boolean hasPermission(@AuthenticationPrincipal Authentication authentication, String action) {
 		if (authentication == null || authentication.getAuthorities() == null) {
 			return false;
 		}

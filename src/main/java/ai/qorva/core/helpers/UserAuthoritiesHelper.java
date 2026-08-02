@@ -63,6 +63,29 @@ public class UserAuthoritiesHelper {
 		return authorities;
 	}
 
+	/**
+	 * Restricted authority set for demo users: read-only browsing plus matching-report generation.
+	 * Excludes any create/modify/delete of CVs and job posts, user management, chat, ATS export,
+	 * and all billing actions. Password change is not authority-gated so demo users can still do it.
+	 */
+	public List<UserAuthority> createDemoAuthorities() {
+		var authorities = new ArrayList<UserAuthority>();
+
+		// Dashboard + read-only browsing of seeded sample data
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), VIEW_DASHBOARD.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_CV.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_JOB.getValue(), ALLOWED.getValue()));
+
+		// Matching reports: generate + view (the only write a demo user may perform)
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.GENERATE_REPORT.getValue(), ALLOWED.getValue()));
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_REPORT.getValue(), ALLOWED.getValue()));
+
+		// Library insights (read-only)
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_LIBRARY_INSIGHTS.getValue(), ALLOWED.getValue()));
+
+		return authorities;
+	}
+
 	private UserAuthority createAuthority(String role, String action, String permission) {
 		var userAuthority = new UserAuthority();
 		userAuthority.setRole(role);

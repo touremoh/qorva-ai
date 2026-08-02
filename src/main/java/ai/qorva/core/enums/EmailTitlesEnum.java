@@ -29,7 +29,15 @@ public enum EmailTitlesEnum {
 	IT_USER_ADDED("it", "user_added", "Sei stato aggiunto a Qorva AI"),
 	ES_USER_ADDED("es", "user_added", "Has sido añadido a Qorva AI"),
 	PT_USER_ADDED("pt", "user_added", "Foi adicionado ao Qorva AI"),
-	NL_USER_ADDED("nl", "user_added", "U bent toegevoegd aan Qorva AI");
+	NL_USER_ADDED("nl", "user_added", "U bent toegevoegd aan Qorva AI"),
+
+	EN_DEMO_WELCOME("en", "demo_welcome", "Welcome to Qorva AI — activate your account"),
+	FR_DEMO_WELCOME("fr", "demo_welcome", "Bienvenue chez Qorva AI — activez votre compte"),
+	DE_DEMO_WELCOME("de", "demo_welcome", "Willkommen bei Qorva AI — aktivieren Sie Ihr Konto"),
+	IT_DEMO_WELCOME("it", "demo_welcome", "Benvenuto su Qorva AI — attiva il tuo account"),
+	ES_DEMO_WELCOME("es", "demo_welcome", "Bienvenido a Qorva AI — activa tu cuenta"),
+	PT_DEMO_WELCOME("pt", "demo_welcome", "Bem-vindo ao Qorva AI — ative a sua conta"),
+	NL_DEMO_WELCOME("nl", "demo_welcome", "Welkom bij Qorva AI — activeer uw account");
 
 	EmailTitlesEnum(String languageCode, String emailType, String emailTitle) {
 		this.languageCode = languageCode;

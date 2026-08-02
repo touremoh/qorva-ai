@@ -1,0 +1,112 @@
+[
+  {
+    "title": "HR Business Partner Senior",
+    "description": "Northbridge Services, cabinet de conseil en services professionnels présent à Paris, Bruxelles et Luxembourg, recrute un HR Business Partner senior pour accompagner ses directions opérationnelles (environ 400 collaborateurs) dans un contexte de forte croissance.\n\nRattaché à la Directrice des Ressources Humaines, vous serez le partenaire de confiance des managers sur l'ensemble du cycle de vie du collaborateur : planification des effectifs, gestion de la performance, développement des talents, plans de succession et accompagnement du changement. Vous conseillez sur les sujets sensibles de relations sociales, veillez à la conformité et arbitrez les situations individuelles complexes.\n\nVous piloterez les campagnes annuelles (revues salariales, entretiens de performance, people reviews) dans Workday et exploiterez les données RH pour éclairer les décisions du comité de direction. La qualité de votre gestion des parties prenantes et votre capacité à influencer sans lien hiérarchique seront déterminantes.\n\nProfil recherché : au moins 7 ans d'expérience en RH généraliste dont plusieurs en tant que HRBP, une excellente maîtrise du droit du travail français, une aisance avérée sur Workday ou un HRIS équivalent, et un vrai sens du conseil. La pratique de SuccessFactors et une expérience en environnement multi-pays sont des atouts.\n\nPoste senior en mode hybride basé à Paris (3 jours par semaine au bureau), ouvert aux candidats en France, en Belgique et au Luxembourg. Package attractif, intéressement et réelles perspectives d'évolution vers un rôle de HR Director régional."
+    ,
+    "scoringRules": {
+      "skills": [
+        { "name": "HR Business Partnering", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Employee Relations", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Workday", "importance": "important", "weight": 0.16, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Stakeholder Management", "importance": "important", "weight": 0.14, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Performance Management", "importance": "important", "weight": 0.12, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "SuccessFactors", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "HR Analytics", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 7, "minRelevantYears": 5, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Paris", "Bruxelles", "Luxembourg", "Remote"], "remoteAllowed": true, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Professional Services", "Consulting", "Technology"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Talent Acquisition Specialist",
+    "description": "Lumen Retail Group, enseigne de distribution spécialisée présente en France et en Belgique, renforce son équipe People et recrute un Talent Acquisition Specialist basé à Lyon pour piloter le recrutement de ses fonctions support et magasins.\n\nAu sein d'une équipe RH de six personnes, vous prenez en charge l'intégralité du processus de recrutement : recueil du besoin avec les managers, rédaction et diffusion des offres, sourcing sur LinkedIn Recruiter et les jobboards, présélection téléphonique, conduite des entretiens et coordination des retours. Vous garantissez une expérience candidat fluide et une communication réactive à chaque étape.\n\nVous êtes garant de la qualité des données dans l'ATS (suivi des pipelines, reporting du time-to-hire, respect des étapes) et contribuez à nos initiatives de marque employeur ainsi qu'aux forums écoles. Un bon sens de l'organisation et une communication soignée sont essentiels dans ce rôle très opérationnel.\n\nProfil recherché : 3 à 5 ans d'expérience en recrutement, en cabinet ou en entreprise, une pratique courante d'un ATS et du sourcing sur LinkedIn, une bonne maîtrise de MS Office et un excellent relationnel. La connaissance du secteur retail et une sensibilité aux enjeux de volume sont appréciées.\n\nPoste de niveau intermédiaire en mode hybride basé à Lyon (2 jours par semaine à distance possibles), ouvert aux candidats en France et en Belgique. Environnement dynamique, équipe soudée et parcours d'évolution vers un rôle de Talent Acquisition Lead."
+    ,
+    "scoringRules": {
+      "skills": [
+        { "name": "Talent Acquisition", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Sourcing", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "ATS", "importance": "important", "weight": 0.16, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "LinkedIn Recruiter", "importance": "important", "weight": 0.14, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Stakeholder Management", "importance": "important", "weight": 0.12, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "MS Office", "importance": "nice_to_have", "weight": 0.07, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Employer Branding", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 3, "minRelevantYears": 3, "seniorityLevel": "mid" },
+      "locationPreferences": { "allowedLocations": ["Lyon", "Paris", "Bruxelles", "Remote"], "remoteAllowed": true, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["Retail", "Professional Services", "Consumer Goods"], "strictness": "relaxed" },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Office Manager",
+    "description": "Atelier Verdant, agence de design et d'aménagement d'espaces basée à Bruxelles, recherche un Office Manager pour être le pivot organisationnel de son bureau d'une soixantaine de personnes.\n\nInterlocuteur central du quotidien, vous assurez le bon fonctionnement des locaux : gestion des fournisseurs et prestataires, suivi des contrats de services généraux, commandes de fournitures, accueil des visiteurs et coordination des espaces. Vous organisez les déplacements et les événements internes, et vous êtes le premier point de contact pour toutes les demandes logistiques.\n\nVous appuyez également la direction sur des tâches administratives : préparation de notes de frais, aide au suivi budgétaire des frais généraux, gestion de l'agenda de réunions transverses et coordination avec les RH pour l'onboarding matériel des nouveaux arrivants. La maîtrise de MS Office (Excel, Outlook, PowerPoint) et un réel sens du service sont indispensables.\n\nProfil recherché : 3 à 6 ans d'expérience en office management, assistanat de direction ou coordination administrative, un excellent sens de l'organisation, de la discrétion et une communication professionnelle en français comme en anglais. La pratique d'outils collaboratifs et une première expérience en environnement PME sont appréciées.\n\nPoste de niveau intermédiaire en présentiel basé à Bruxelles, ouvert aux candidats en Belgique et au Luxembourg, avec une flexibilité ponctuelle. Ambiance créative, équipe bienveillante et poste polyvalent au coeur de la vie de l'entreprise."
+    ,
+    "scoringRules": {
+      "skills": [
+        { "name": "Office Management", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "MS Office", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Vendor Management", "importance": "important", "weight": 0.16, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Administrative Support", "importance": "important", "weight": 0.14, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Event Coordination", "importance": "important", "weight": 0.12, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Expense Management", "importance": "nice_to_have", "weight": 0.07, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Communication", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 3, "minRelevantYears": 3, "seniorityLevel": "mid" },
+      "locationPreferences": { "allowedLocations": ["Bruxelles", "Luxembourg", "Onsite"], "remoteAllowed": false, "strictness": "strict" },
+      "industryPreferences": { "preferredIndustries": ["Professional Services", "Design", "Creative Services"], "strictness": "relaxed" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Customer Success Manager",
+    "description": "Cloudmark, éditeur SaaS de solutions de gestion de la relation client basé à Paris, recrute un Customer Success Manager pour accompagner un portefeuille de comptes PME et ETI sur la France et le Luxembourg.\n\nVous êtes le référent de la réussite de vos clients tout au long du cycle de vie : onboarding structuré, adoption des fonctionnalités, revues trimestrielles de valeur, prévention du churn et identification des opportunités d'upsell en lien avec les équipes commerciales. Vous suivez la santé de vos comptes, anticipez les risques et transformez les retours clients en plans d'action concrets.\n\nAu quotidien, vous orchestrez le support de niveau 1 via Zendesk et Intercom, animez vos clients avec des points réguliers et documentez chaque interaction dans le CRM. Votre pédagogie, votre écoute et votre capacité à gérer plusieurs parties prenantes font la différence.\n\nProfil recherché : 3 à 5 ans d'expérience en customer success, account management ou support client en environnement SaaS, une pratique courante d'outils comme Zendesk, Intercom ou un CRM, un excellent relationnel et une réelle orientation résultats. La maîtrise de l'anglais professionnel et une sensibilité aux métriques (NRR, CSAT) sont appréciées.\n\nPoste de niveau intermédiaire en mode hybride basé à Paris (2 jours par semaine au bureau), ouvert aux candidats en France et au Luxembourg. Produit reconnu, clients fidèles et évolution possible vers un rôle de Senior CSM ou Team Lead."
+    ,
+    "scoringRules": {
+      "skills": [
+        { "name": "Customer Success", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Account Management", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Zendesk", "importance": "important", "weight": 0.16, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Intercom", "importance": "important", "weight": 0.12, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Stakeholder Management", "importance": "important", "weight": 0.12, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "CRM", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Upselling", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 3, "minRelevantYears": 3, "seniorityLevel": "mid" },
+      "locationPreferences": { "allowedLocations": ["Paris", "Luxembourg", "Remote"], "remoteAllowed": true, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["SaaS", "Technology", "Software"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Project Coordinator Junior",
+    "description": "Solvista Foundation, organisation à but non lucratif dédiée à l'inclusion numérique et implantée à Lille, recrute un Project Coordinator junior pour appuyer la coordination de ses programmes terrain.\n\nAu sein du bureau des opérations, vous assistez les chefs de projet dans la planification et le suivi des programmes : mise à jour des plannings, préparation des réunions et comptes rendus, suivi des actions et relances des parties prenantes internes et externes (partenaires associatifs, bénévoles, financeurs). Vous tenez à jour les tableaux de bord et consolidez les indicateurs de suivi.\n\nAu quotidien, vous utilisez Jira et Asana pour orchestrer les tâches, MS Office pour la production de documents et vous contribuez à la bonne circulation de l'information entre les équipes. Rigueur, sens de l'organisation et communication claire sont au coeur du poste.\n\nProfil recherché : 1 à 2 ans d'expérience (stage ou alternance inclus) en coordination de projet, appui aux opérations ou assistanat, une bonne maîtrise de MS Office et une première exposition à des outils de gestion de projet comme Jira ou Asana. Un intérêt pour le secteur associatif et une sensibilité aux méthodes agiles sont des atouts. La connaissance de PRINCE2 serait un plus.\n\nPoste junior en mode hybride basé à Lille (télétravail partiel), ouvert aux candidats en France et en Belgique. Mission porteuse de sens, encadrement formateur et réelle montée en compétences vers un rôle de Project Manager."
+    ,
+    "scoringRules": {
+      "skills": [
+        { "name": "Project Coordination", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Jira", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Asana", "importance": "important", "weight": 0.16, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "MS Office", "importance": "important", "weight": 0.14, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Stakeholder Management", "importance": "important", "weight": 0.12, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Reporting", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "PRINCE2", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 1, "minRelevantYears": 1, "seniorityLevel": "junior" },
+      "locationPreferences": { "allowedLocations": ["Lille", "Bruxelles", "Remote"], "remoteAllowed": true, "strictness": "relaxed" },
+      "industryPreferences": { "preferredIndustries": ["Non-Profit", "Public Sector", "Professional Services"], "strictness": "relaxed" },
+      "scoringWeight": { "skills": 0.55, "experience": 0.2, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

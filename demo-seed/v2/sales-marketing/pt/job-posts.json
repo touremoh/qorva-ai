@@ -1,0 +1,111 @@
+[
+  {
+    "title": "Account Executive Sénior (B2B SaaS)",
+    "description": "Empresa de software B2B em fase de crescimento, com sede em Lisboa, procura um Account Executive Sénior para liderar o ciclo de vendas completo junto de contas de média e grande dimensão no mercado ibérico. Serás responsável por transformar oportunidades qualificadas em clientes, negociando contratos anuais recorrentes e superando objetivos trimestrais de receita.\n\nResponsabilidades:\n- Gerir todo o ciclo de venda, da qualificação ao fecho, com foco em contas enterprise.\n- Conduzir demonstrações consultivas alinhadas com as dores de negócio do cliente.\n- Construir e manter um pipeline saudável, com previsões rigorosas no CRM.\n- Negociar condições comerciais e contratuais em articulação com jurídico e finanças.\n- Colaborar com marketing e pré-venda para acelerar a conversão de leads.\n\nRequisitos obrigatórios:\n- 5+ anos de experiência em vendas B2B, idealmente em SaaS ou tecnologia.\n- Historial comprovado de superação de quotas de receita.\n- Domínio de Salesforce e de metodologias de venda consultiva (MEDDIC ou similar).\n\nValorizamos (nice-to-have):\n- Experiência de venda em mercados internacionais.\n- Conhecimentos de ferramentas de sales engagement e prospeção.\n\nSenioridade: Sénior. Localização: Lisboa, modelo híbrido (3 dias no escritório) com deslocações pontuais a clientes em Portugal e Espanha.",
+    "scoringRules": {
+      "skills": [
+        { "name": "B2B Sales", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Salesforce", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Consultative Selling", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Account Management", "importance": "important", "weight": 0.65, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Pipeline Management", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Negotiation", "importance": "important", "weight": 0.55, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "MEDDIC", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Sales Forecasting", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 5, "minRelevantYears": 4, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Lisboa", "Porto", "Remote"], "remoteAllowed": true, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["SaaS", "B2B Technology", "Software"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Performance Marketing Manager",
+    "description": "Marca de e-commerce em rápida expansão, com operação no Porto, procura um Performance Marketing Manager para escalar a aquisição paga em múltiplos canais. Serás o responsável por gerir orçamentos de media significativos, otimizar o retorno do investimento e traduzir dados em decisões de crescimento.\n\nResponsabilidades:\n- Planear, executar e otimizar campanhas em Google Ads, Meta Ads e outros canais pagos.\n- Gerir orçamentos com foco em ROAS, CPA e LTV, ajustando estratégias em tempo real.\n- Construir dashboards e relatórios de performance com base em GA4 e ferramentas de atribuição.\n- Conduzir testes A/B de criativos, audiências e landing pages.\n- Colaborar com as equipas de conteúdo e criativo para melhorar a taxa de conversão.\n\nRequisitos obrigatórios:\n- 4+ anos de experiência em marketing de performance ou aquisição paga.\n- Domínio de Google Ads e Meta Ads na gestão de orçamentos relevantes.\n- Forte capacidade analítica com GA4 e Excel/Sheets.\n\nValorizamos (nice-to-have):\n- Experiência com SEO/SEM e ferramentas de automação de marketing.\n- Conhecimentos de SQL para análise de dados.\n\nSenioridade: Intermédia. Localização: Porto, modelo híbrido com abertura a remoto dentro de Portugal.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Google Ads", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Meta Ads", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GA4", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Performance Marketing", "importance": "important", "weight": 0.75, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "SEM", "importance": "important", "weight": 0.55, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "A/B Testing", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SEO", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.3, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 4, "minRelevantYears": 3, "seniorityLevel": "mid" },
+      "locationPreferences": { "allowedLocations": ["Porto", "Lisboa", "Remote"], "remoteAllowed": true, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["E-commerce", "Consumer Goods", "SaaS"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Content & Brand Specialist (Júnior)",
+    "description": "Empresa de media e conteúdos digitais, sediada em Lisboa, procura um Content & Brand Specialist em início de carreira para reforçar a equipa de marca. Vais ajudar a construir uma voz de marca consistente e a produzir conteúdos que aumentem o alcance e o envolvimento das audiências.\n\nResponsabilidades:\n- Criar e adaptar conteúdos para blog, redes sociais e newsletters, respeitando o tom da marca.\n- Apoiar a gestão do calendário editorial e a publicação em várias plataformas.\n- Colaborar com designers na produção de peças visuais e criativos.\n- Acompanhar métricas de envolvimento e propor melhorias de conteúdo.\n- Apoiar campanhas de comunicação e ações de brand awareness.\n\nRequisitos obrigatórios:\n- 1+ ano de experiência (incluindo estágios) em criação de conteúdo ou comunicação.\n- Excelente escrita em português e boa capacidade de storytelling.\n- Familiaridade com gestão de redes sociais e ferramentas de agendamento.\n\nValorizamos (nice-to-have):\n- Noções de SEO e de análise de métricas de conteúdo.\n- Experiência com ferramentas de design como Canva ou Figma.\n\nSenioridade: Júnior. Localização: Lisboa, modelo híbrido, ideal para quem procura crescer numa equipa de marca.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Content Creation", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Copywriting", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Social Media Management", "importance": "important", "weight": 0.65, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Brand Management", "importance": "important", "weight": 0.6, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Storytelling", "importance": "important", "weight": 0.55, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "SEO", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Canva", "importance": "nice_to_have", "weight": 0.3, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 1, "minRelevantYears": 1, "seniorityLevel": "junior" },
+      "locationPreferences": { "allowedLocations": ["Lisboa", "Remote"], "remoteAllowed": true, "strictness": "relaxed" },
+      "industryPreferences": { "preferredIndustries": ["Media", "Consumer Goods", "E-commerce"], "strictness": "relaxed" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.2, "location": 0.15, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Product Marketing Manager Sénior",
+    "description": "Scale-up de tecnologia B2B, com equipas em Lisboa e São Paulo, procura um Product Marketing Manager Sénior para liderar o posicionamento e o go-to-market dos seus produtos. Serás a ponte entre produto, vendas e marketing, garantindo que o valor da solução é comunicado de forma clara e diferenciadora.\n\nResponsabilidades:\n- Definir posicionamento, messaging e proposta de valor para os principais produtos.\n- Liderar lançamentos de produto (GTM) de ponta a ponta, coordenando equipas multifuncionais.\n- Produzir enablement de vendas: battlecards, demos, casos de estudo e argumentários.\n- Conduzir pesquisa de mercado, análise competitiva e entrevistas com clientes.\n- Medir a adoção e o impacto das iniciativas com recurso a product analytics.\n\nRequisitos obrigatórios:\n- 6+ anos em product marketing ou marketing de produto em SaaS/B2B.\n- Experiência comprovada a liderar estratégias de GTM e lançamentos.\n- Domínio de ferramentas de product analytics e de posicionamento de produto.\n\nValorizamos (nice-to-have):\n- Experiência com HubSpot e automação de marketing.\n- Conhecimentos de metodologias de pesquisa de mercado.\n\nSenioridade: Sénior. Localização: Lisboa, com colaboração regular com a equipa no Brasil; modelo híbrido e abertura a remoto.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Marketing", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "GTM Strategy", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Product Positioning", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Sales Enablement", "importance": "important", "weight": 0.65, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Market Research", "importance": "important", "weight": 0.55, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "HubSpot", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Competitive Analysis", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 6, "minRelevantYears": 5, "seniorityLevel": "senior" },
+      "locationPreferences": { "allowedLocations": ["Lisboa", "São Paulo", "Remote"], "remoteAllowed": true, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["SaaS", "B2B Technology", "Software"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Demand Generation Manager",
+    "description": "Empresa de SaaS B2B com forte crescimento, sediada em Lisboa, procura um Demand Generation Manager para construir e escalar o motor de geração de procura. Serás responsável por criar programas multicanal que alimentem o pipeline de vendas com leads qualificados e mensuráveis.\n\nResponsabilidades:\n- Desenhar e executar campanhas de demand generation em canais pagos, orgânicos e email.\n- Gerir a automação de marketing e os fluxos de nurturing no Marketo ou HubSpot.\n- Definir e acompanhar KPIs de funil: MQLs, SQLs, custo por lead e contribuição para pipeline.\n- Coordenar com vendas o processo de lead scoring e handoff de leads.\n- Otimizar landing pages, formulários e sequências com testes contínuos.\n\nRequisitos obrigatórios:\n- 3+ anos em demand generation, growth ou marketing de aquisição B2B.\n- Experiência com plataformas de automação de marketing (Marketo ou HubSpot).\n- Boa capacidade analítica e domínio de métricas de funil.\n\nValorizamos (nice-to-have):\n- Experiência com Salesforce e alinhamento entre marketing e vendas.\n- Conhecimentos de SEO/SEM e de campanhas ABM.\n\nSenioridade: Intermédia. Localização: Lisboa, modelo híbrido com abertura a remoto dentro de Portugal.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Demand Generation", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Marketo", "importance": "mandatory", "weight": 0.75, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "HubSpot", "importance": "important", "weight": 0.7, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Marketing Automation", "importance": "important", "weight": 0.65, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Lead Scoring", "importance": "important", "weight": 0.55, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Salesforce", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SEM", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Account-Based Marketing", "importance": "nice_to_have", "weight": 0.3, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": { "minYearsOfExperience": 3, "minRelevantYears": 3, "seniorityLevel": "mid" },
+      "locationPreferences": { "allowedLocations": ["Lisboa", "Porto", "Remote"], "remoteAllowed": true, "strictness": "medium" },
+      "industryPreferences": { "preferredIndustries": ["SaaS", "B2B Technology", "Software"], "strictness": "medium" },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  }
+]

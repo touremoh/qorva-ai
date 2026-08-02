@@ -1,0 +1,161 @@
+[
+  {
+    "title": "Engenheiro Backend Sénior (Java/Spring)",
+    "description": "A nossa empresa de produto SaaS, sediada em Lisboa, procura um Engenheiro Backend Sénior para reforçar a equipa de plataforma. Vais desenhar e desenvolver microsserviços críticos que servem milhões de pedidos diários, garantindo desempenho, resiliência e observabilidade.\n\nResponsabilidades:\n- Desenhar, implementar e manter APIs REST e serviços de backend em Java 17 e Spring Boot.\n- Modelar dados e otimizar consultas em PostgreSQL, aplicando caching com Redis.\n- Colaborar com produto e frontend na definição de contratos de API e requisitos técnicos.\n- Promover boas práticas de engenharia: testes automatizados, code review e CI/CD.\n- Mentorar engenheiros mais juniores e contribuir para decisões de arquitetura.\n\nRequisitos obrigatórios:\n- 6+ anos de experiência em desenvolvimento backend com Java e Spring Boot.\n- Domínio de bases de dados relacionais (PostgreSQL) e desenho de APIs REST.\n- Experiência com contentores (Docker) e ambientes cloud.\n\nValorizamos (nice-to-have):\n- Experiência com Kubernetes, mensageria (Kafka) e arquiteturas orientadas a eventos.\n- Conhecimentos de observabilidade (Prometheus, Grafana).\n\nStack: Java 17, Spring Boot, PostgreSQL, Redis, Docker, AWS.\nSenioridade: Sénior. Localização: Lisboa, com modelo híbrido (2 a 3 dias no escritório) e abertura a remoto dentro de Portugal.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Java", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Spring Boot", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "PostgreSQL", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "REST APIs", "importance": "important", "weight": 0.65, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Docker", "importance": "important", "weight": 0.55, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Redis", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Kubernetes", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Kafka", "importance": "nice_to_have", "weight": 0.3, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Lisboa", "Porto", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "SaaS", "Information Technology"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Engenheiro de Dados (Python/Airflow)",
+    "description": "Empresa tecnológica no Porto procura um Engenheiro de Dados de nível intermédio para construir e manter pipelines de dados fiáveis que alimentam analytics e modelos de machine learning.\n\nA tua missão será garantir que os dados fluem de forma limpa, testada e atempada desde as fontes operacionais até ao data warehouse.\n\nResponsabilidades:\n- Desenvolver pipelines de ingestão e transformação (ETL/ELT) em Python e Airflow.\n- Modelar e otimizar tabelas em SQL sobre um data warehouse cloud.\n- Implementar testes de qualidade de dados e monitorização de pipelines.\n- Colaborar com cientistas de dados e stakeholders de produto.\n\nRequisitos obrigatórios:\n- 3 a 5 anos de experiência em engenharia de dados.\n- Forte domínio de Python e SQL.\n- Experiência prática com orquestração de workflows (Airflow ou equivalente).\n\nValorizamos (nice-to-have):\n- Experiência com dbt, Spark e cloud (AWS).\n- Noções de infraestrutura como código (Terraform).\n\nStack: Python, Airflow, SQL, dbt, AWS, Snowflake.\nSenioridade: Intermédio (mid). Localização: Porto, modelo híbrido, com possibilidade de trabalho remoto em Portugal.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Python", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Airflow", "importance": "important", "weight": 0.75, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "ETL", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "dbt", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Spark", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Porto", "Lisboa", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Data & Analytics", "Software", "Information Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Engenheiro DevOps / SRE Sénior",
+    "description": "Scale-up de tecnologia com operação internacional procura um Engenheiro DevOps/SRE Sénior para liderar a fiabilidade e a automação da nossa infraestrutura cloud. A posição pode ser exercida a partir de Lisboa ou de forma totalmente remota dentro da União Europeia.\n\nResponsabilidades:\n- Gerir e evoluir clusters Kubernetes e infraestrutura em AWS.\n- Definir infraestrutura como código com Terraform e automatizar pipelines de CI/CD.\n- Implementar observabilidade completa (métricas, logs, tracing) e políticas de SLO/SLA.\n- Conduzir gestão de incidentes, análises post-mortem e engenharia de resiliência.\n- Melhorar segurança, custos e desempenho da plataforma.\n\nRequisitos obrigatórios:\n- 6+ anos em DevOps/SRE ou engenharia de plataforma.\n- Domínio de Kubernetes, AWS e Terraform.\n- Experiência sólida com CI/CD e Linux em produção.\n\nValorizamos (nice-to-have):\n- Experiência com service mesh, GitOps (ArgoCD) e Prometheus/Grafana.\n- Scripting em Python ou Go.\n\nStack: Kubernetes, AWS, Terraform, Docker, Prometheus, Grafana.\nSenioridade: Sénior. Localização: Lisboa ou remoto (UE).",
+    "scoringRules": {
+      "skills": [
+        { "name": "Kubernetes", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Terraform", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "CI/CD", "importance": "important", "weight": 0.7, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Linux", "importance": "important", "weight": 0.6, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Prometheus", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Python", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Lisboa", "Braga", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Cloud Infrastructure", "Software", "Information Technology"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.6, "experience": 0.2, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Product Manager Técnico",
+    "description": "Empresa de produto B2B em São Paulo procura um Product Manager Técnico para liderar uma área de plataforma e APIs. Vais trabalhar na interseção entre negócio, engenharia e experiência do utilizador, definindo a estratégia e o roadmap do produto.\n\nResponsabilidades:\n- Definir a visão, a estratégia e o roadmap de produto para APIs e serviços de plataforma.\n- Recolher e priorizar requisitos com base em dados, entrevistas e product analytics.\n- Escrever especificações claras e colaborar de perto com engenharia e design.\n- Medir o impacto através de métricas de produto (adoção, retenção, ativação).\n- Comunicar com stakeholders e alinhar objetivos entre equipas.\n\nRequisitos obrigatórios:\n- 3 a 5 anos de experiência como Product Manager, idealmente em produtos técnicos.\n- Confortável a dialogar com equipas de engenharia sobre trade-offs técnicos.\n- Experiência com product analytics e priorização orientada por dados.\n\nValorizamos (nice-to-have):\n- Vivência com produtos de API, developer tools ou SaaS.\n- Noções de SQL para exploração de dados.\n\nSenioridade: Intermédio (mid). Localização: São Paulo, modelo híbrido, com abertura a remoto.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Management", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Roadmap Planning", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Stakeholder Management", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Agile", "importance": "important", "weight": 0.55, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["São Paulo", "Lisboa", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "SaaS", "Information Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Engenheiro Full-Stack (React/Node) Júnior",
+    "description": "Startup em crescimento com sede em Coimbra procura um Engenheiro Full-Stack Júnior para integrar uma equipa de produto acolhedora e com forte cultura de mentoria. É a oportunidade ideal para quem quer evoluir rapidamente num ambiente moderno.\n\nResponsabilidades:\n- Desenvolver funcionalidades de ponta a ponta, do frontend em React ao backend em Node.js.\n- Construir interfaces responsivas e acessíveis com TypeScript.\n- Escrever testes e participar em code reviews para aprender boas práticas.\n- Colaborar com produto e design em ciclos ágeis.\n\nRequisitos obrigatórios:\n- 0 a 2 anos de experiência (estágios e projetos pessoais contam).\n- Bases sólidas em JavaScript/TypeScript e React.\n- Vontade de aprender e crescer numa equipa multidisciplinar.\n\nValorizamos (nice-to-have):\n- Experiência com Node.js, REST APIs e Git.\n- Familiaridade com bases de dados SQL.\n\nStack: React, TypeScript, Node.js, PostgreSQL, Git.\nSenioridade: Júnior. Localização: Coimbra, modelo híbrido, com dias de trabalho remoto.",
+    "scoringRules": {
+      "skills": [
+        { "name": "JavaScript", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "React", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "TypeScript", "importance": "important", "weight": 0.65, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Node.js", "importance": "important", "weight": 0.6, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "REST APIs", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Git", "importance": "nice_to_have", "weight": 0.3, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Coimbra", "Lisboa", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "SaaS", "Information Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.2, "location": 0.15, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

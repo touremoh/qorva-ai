@@ -20,14 +20,15 @@ public class AccountRegistrationDTO {
 	private String email;
 
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-	private String password;
+	private String organizationName;
 
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-	private String companyName;
+	private String organizationSize;
+
+	/** Recruitment segment ("What type of recruitment do you mostly do?") — see RecruitmentTypeEnum. */
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+	private String recruitmentType;
 
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String languageCode;
-
-	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-	private String priceId;
 }

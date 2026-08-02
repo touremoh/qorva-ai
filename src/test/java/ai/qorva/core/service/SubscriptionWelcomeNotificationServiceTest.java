@@ -29,14 +29,16 @@ class SubscriptionWelcomeNotificationServiceTest {
     @Mock
     private OAuth2TokenService oauth2TokenService;
 
+    @Mock
+    private EmailSenderResolver senderResolver;
+
     private SubscriptionWelcomeNotificationService service;
 
     @BeforeEach
     void setUp() throws Exception {
-        service = spy(new SubscriptionWelcomeNotificationService(oauth2TokenService));
+        when(senderResolver.supportEmail()).thenReturn("support@qorva.ai");
+        service = spy(new SubscriptionWelcomeNotificationService(oauth2TokenService, senderResolver));
         ReflectionTestUtils.setField(service, "logoUrl", "https://example.com/logo.svg");
-        ReflectionTestUtils.setField(service, "senderEmail", "sender@qorva.ai");
-        ReflectionTestUtils.setField(service, "fromEmail", "support@qorva.ai");
         doNothing().when(service).sendEmail(anyString(), anyString(), anyString());
     }
 

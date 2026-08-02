@@ -1,0 +1,446 @@
+[
+  {
+    "title": "Enfermeiro(a) de Cuidados Intensivos (UCI)",
+    "description": "Hospital privado de referência em Lisboa, com unidade de cuidados intensivos polivalente, procura Enfermeiro(a) para integrar a equipa de enfermagem da UCI em regime de turnos rotativos.\n\nMissão:\nPrestar cuidados de enfermagem diferenciados e seguros a doentes críticos, garantindo a monitorização contínua e a resposta a situações de instabilidade.\n\nResponsabilidades:\n- Prestar cuidados a doentes ventilados e sob suporte hemodinâmico, com vigilância de sinais vitais e parâmetros.\n- Administrar terapêutica e gerir perfusões de acordo com protocolos clínicos e prescrição médica.\n- Colaborar em procedimentos invasivos, entubação e manobras de suporte avançado de vida.\n- Registar cuidados no processo clínico eletrónico e assegurar a continuidade nas passagens de turno.\n- Cumprir protocolos de controlo de infeção e normas de segurança do doente.\n\nRequisitos obrigatórios:\n- Licenciatura em Enfermagem e inscrição válida na Ordem dos Enfermeiros.\n- 2 a 4 anos de experiência em contexto hospitalar, preferencialmente em cuidados intensivos ou urgência.\n- Suporte Avançado de Vida (SAV) válido.\n\nValorizamos (nice-to-have):\n- Experiência com ventilação mecânica e monitorização hemodinâmica.\n- Especialização em enfermagem médico-cirúrgica.\n\nSenioridade: Intermédia. Localização: Lisboa, presencial, turnos rotativos.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Registered Nurse",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Intensive Care Nursing",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Advanced Life Support",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Patient Monitoring",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Mechanical Ventilation",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Infection Control",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Electronic Health Records",
+          "importance": "nice_to_have",
+          "weight": 0.35,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "Cascais",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Hospitals and Clinics",
+          "Healthcare",
+          "Health Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Cientista Investigador Sénior de Bioanálise (LC-MS/MS)",
+    "description": "Empresa de biotecnologia com centro de I&D no Porto, dedicada ao desenvolvimento de terapêuticas inovadoras, procura Cientista Investigador Sénior para liderar a caracterização bioanalítica de moléculas em ambiente regulado.\n\nMissão:\nConceber e validar métodos bioanalíticos robustos para suporte a estudos pré-clínicos e clínicos, garantindo qualidade de dados e conformidade regulamentar.\n\nResponsabilidades:\n- Desenvolver e validar métodos de quantificação por LC-MS/MS em matrizes biológicas.\n- Conduzir estudos de farmacocinética e imunogenicidade em conformidade com GLP.\n- Redigir protocolos, relatórios de validação e secções bioanalíticas de submissões regulamentares.\n- Assegurar a integridade de dados segundo princípios ALCOA+ e boas práticas de laboratório.\n- Orientar cientistas juniores e articular com equipas de assuntos regulamentares e clínicos.\n\nRequisitos obrigatórios:\n- Doutoramento ou Mestrado em Ciências da Vida, Química ou Farmácia.\n- 6+ anos de experiência em bioanálise em contexto GLP.\n- Domínio de LC-MS/MS e de validação de métodos analíticos.\n\nValorizamos (nice-to-have):\n- Experiência com ELISA e ensaios de ligandos.\n- Conhecimentos de farmacocinética (PK/PD).\n\nSenioridade: Sénior. Localização: Porto, regime híbrido.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "LC-MS/MS",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Bioanalytical Method Validation",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GLP",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Pharmacokinetics",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Data Integrity",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ELISA",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Immunogenicity Assays",
+          "importance": "nice_to_have",
+          "weight": 0.35,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Porto",
+          "Braga",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Biotechnology",
+          "Pharmaceuticals",
+          "Contract Research Organization"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Gestor(a) de Assuntos Regulamentares Sénior (EMA/FDA)",
+    "description": "Empresa farmacêutica com sede em Lisboa e presença europeia, com um portefólio de medicamentos de prescrição, procura Gestor(a) de Assuntos Regulamentares Sénior para conduzir a estratégia regulamentar dos seus produtos.\n\nMissão:\nGarantir a obtenção e manutenção de autorizações de introdução no mercado, assegurando a conformidade com a EMA, FDA e autoridades nacionais.\n\nResponsabilidades:\n- Preparar e submeter dossiês regulamentares em formato eCTD (novas AIM, variações, renovações).\n- Definir a estratégia regulamentar de produtos ao longo do ciclo de vida.\n- Gerir procedimentos centralizados, descentralizados e de reconhecimento mútuo junto da EMA.\n- Rever rotulagem, folhetos informativos e material promocional quanto à conformidade regulamentar.\n- Articular com farmacovigilância, qualidade e as autoridades competentes (INFARMED, EMA, FDA).\n\nRequisitos obrigatórios:\n- Licenciatura em Farmácia, Ciências da Vida ou área afim.\n- 6+ anos de experiência em assuntos regulamentares na indústria farmacêutica.\n- Experiência comprovada com submissões à EMA e conhecimento dos requisitos da FDA.\n\nValorizamos (nice-to-have):\n- Experiência com submissões eCTD e ferramentas de gestão regulamentar.\n- Conhecimentos de GMP e de interface com farmacovigilância.\n\nSenioridade: Sénior. Localização: Lisboa, regime híbrido.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Regulatory Affairs",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "EMA Submissions",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "FDA Regulations",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "eCTD",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Regulatory Submissions",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GMP",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Pharmacovigilance",
+          "importance": "nice_to_have",
+          "weight": 0.35,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "Oeiras",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "Medical Devices"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Medical Science Liaison - Oncologia",
+    "description": "Filial portuguesa de uma multinacional farmacêutica, com forte aposta na área de oncologia, procura Medical Science Liaison para desenvolver e manter relações científicas com líderes de opinião na região.\n\nMissão:\nAtuar como interface científica entre a empresa e a comunidade médica, comunicando evidência clínica de forma rigorosa e equilibrada.\n\nResponsabilidades:\n- Estabelecer e desenvolver relações com key opinion leaders e centros hospitalares.\n- Apresentar dados clínicos e responder a questões científicas não promocionais.\n- Apoiar estudos de investigação iniciados pelo investigador e a atividade dos ensaios clínicos.\n- Recolher insights científicos do terreno e reportar às equipas médica e de acesso ao mercado.\n- Assegurar o cumprimento dos códigos deontológicos e requisitos de compliance.\n\nRequisitos obrigatórios:\n- Formação avançada em Ciências da Vida, Medicina ou Farmácia (Mestrado ou Doutoramento valorizado).\n- 3 a 5 anos de experiência em funções médico-científicas na indústria farmacêutica.\n- Sólidos conhecimentos de oncologia e de leitura crítica de literatura clínica.\n\nValorizamos (nice-to-have):\n- Experiência prévia como MSL e conhecimento de ensaios clínicos.\n- Disponibilidade para deslocações frequentes.\n\nSenioridade: Intermédia. Localização: Lisboa/Porto, remoto com deslocações regionais.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Medical Science Liaison",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Oncology",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Data Communication",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "KOL Engagement",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trials",
+          "importance": "important",
+          "weight": 0.55,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Pharmaceutical Compliance",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Scientific Literature Review",
+          "importance": "nice_to_have",
+          "weight": 0.35,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "Porto",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "Healthcare"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Clinical Research Associate Júnior (ICH-GCP)",
+    "description": "CRO internacional com escritório em São Paulo (Brasil) e operações na América Latina procura Clinical Research Associate Júnior para apoiar a monitorização de ensaios clínicos multicêntricos.\n\nMissão:\nAssegurar a condução dos ensaios clínicos de acordo com o protocolo, as boas práticas clínicas e a regulamentação aplicável, garantindo a qualidade e integridade dos dados.\n\nResponsabilidades:\n- Realizar visitas de monitorização a centros de investigação (iniciação, rotina e encerramento).\n- Verificar dados-fonte (source data verification) e a conformidade dos consentimentos informados.\n- Gerir a documentação do estudo e o arquivo do investigador (Trial Master File).\n- Acompanhar o recrutamento de participantes e reportar desvios ao protocolo.\n- Colaborar com centros, patrocinadores e equipas de gestão de dados.\n\nRequisitos obrigatórios:\n- Licenciatura em Ciências da Vida, Enfermagem, Farmácia ou área da saúde.\n- 0 a 2 anos de experiência em investigação clínica (estágio relevante conta).\n- Conhecimento das boas práticas clínicas (ICH-GCP).\n\nValorizamos (nice-to-have):\n- Experiência com sistemas EDC e verificação de dados-fonte.\n- Disponibilidade para viagens frequentes aos centros.\n\nSenioridade: Júnior. Localização: São Paulo (Brasil), híbrido com deslocações a centros.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "ICH-GCP",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trial Monitoring",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Source Data Verification",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Trial Master File",
+          "importance": "important",
+          "weight": 0.55,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "EDC Systems",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trials",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "São Paulo",
+          "Lisboa",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Contract Research Organization",
+          "Pharmaceuticals",
+          "Biotechnology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.2,
+        "location": 0.15,
+        "industry": 0.2
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  }
+]

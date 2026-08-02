@@ -1,0 +1,456 @@
+[
+  {
+    "title": "Account Executive (B2B SaaS)",
+    "description": "Brightwave, a fast-growing London-based B2B SaaS company selling workflow automation to mid-market teams, is hiring an Account Executive to own the full sales cycle across the UK and Ireland.\n\nYou will manage a pipeline of inbound and outbound opportunities, run discovery calls, deliver tailored product demos, negotiate commercial terms, and close new-business deals with an average deal size of GBP 15k-40k ARR. You will partner closely with Sales Development and Marketing on outbound campaigns and account planning.\n\nWe run a modern revenue stack: Salesforce as the CRM system of record, HubSpot for marketing hand-offs, Outreach for sequencing, and Gong for call intelligence. You should be fluent in MEDDIC or a comparable qualification framework and comfortable forecasting your own number.\n\nRequired: 3+ years of quota-carrying closing experience in B2B software, a consistent record of hitting quota, and strong discovery and negotiation skills. Nice-to-have: experience selling to operations or finance buyers, and familiarity with value-based selling.\n\nThis is a hybrid role based in London (2 days per week in office), open to candidates across the UK and Ireland. We offer a competitive base plus uncapped commission, accelerators over target, and equity.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "B2B Sales",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Salesforce",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "CRM",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Sales Negotiation",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Pipeline Management",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "HubSpot",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Outreach",
+          "importance": "nice_to_have",
+          "weight": 0.05,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "London",
+          "Dublin",
+          "Manchester",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "SaaS",
+          "B2B Technology",
+          "Software"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Performance Marketing Manager",
+    "description": "Lumen Commerce, a Dublin-headquartered direct-to-consumer e-commerce brand, is looking for a Performance Marketing Manager to own paid acquisition across Google, Meta, and emerging channels for our UK, Irish, and US markets.\n\nYou will plan and manage a seven-figure annual media budget, build and optimise campaigns in Google Ads and Meta Ads, and drive efficient growth against blended CAC and ROAS targets. You will run structured experimentation on creative, audiences, and landing pages, and report performance through GA4 and dashboards you build yourself.\n\nDay to day you will partner with Creative on ad concepts, with Analytics on attribution and incrementality, and with the e-commerce team on promotions and merchandising. You should be equally comfortable in a spreadsheet model and in a channel manager UI.\n\nRequired: 4+ years managing paid acquisition budgets at scale, hands-on expertise in Google Ads and Meta Ads, strong command of GA4 and conversion tracking, and a rigorous, experiment-driven mindset. Nice-to-have: TikTok Ads, feed management for shopping, and SQL for self-serve analysis.\n\nThis is a hybrid role based in Dublin (3 days per week in office), open across Ireland, the UK, and remote US East Coast. We offer a strong salary, performance bonus, and budget for tools and learning.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Google Ads",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Meta Ads",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GA4",
+          "importance": "important",
+          "weight": 0.18,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Paid Media",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "A/B Testing",
+          "importance": "important",
+          "weight": 0.11,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SEM",
+          "importance": "nice_to_have",
+          "weight": 0.06,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SQL",
+          "importance": "nice_to_have",
+          "weight": 0.04,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 4,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Dublin",
+          "London",
+          "New York",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "E-commerce",
+          "Consumer Goods",
+          "Retail"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Brand & Content Lead",
+    "description": "Meridian Studios, a New York-based consumer media company, is hiring a Brand & Content Lead to shape our voice, narrative, and editorial output across owned and social channels.\n\nYou will own the brand guidelines, lead an editorial calendar spanning long-form articles, video, newsletters, and social, and manage two content producers plus a roster of freelancers. You will translate brand strategy into campaigns that build awareness and affinity, and you will measure impact through engagement, share of voice, and organic reach.\n\nWe want a senior storyteller who can move between big-picture brand positioning and the details of a headline. You will partner with Performance Marketing on integrated campaigns, with SEO on content that ranks, and with Design on a coherent visual system.\n\nRequired: 6+ years in brand, content, or editorial roles, a portfolio of campaigns you have led end to end, excellent writing and editing, and experience managing people and external creators. Nice-to-have: SEO content strategy, familiarity with a CMS such as Contentful, and video production oversight.\n\nThis is a hybrid role based in New York (2 days per week in office), open to candidates in the US Northeast and select remote arrangements. We offer a senior salary band, bonus, and a creative, autonomous environment.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Brand Strategy",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Content Marketing",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Copywriting",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Editorial Strategy",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Social Media Marketing",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SEO",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Contentful",
+          "importance": "nice_to_have",
+          "weight": 0.05,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "New York",
+          "Boston",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Media",
+          "Consumer Goods",
+          "Entertainment"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.05,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Product Marketing Manager (Growth)",
+    "description": "Cobalt Cloud, a San Francisco and London B2B technology company building developer infrastructure, is hiring a Product Marketing Manager to own positioning, messaging, and go-to-market for our core platform.\n\nYou will craft differentiated positioning and messaging, lead product launches end to end, build sales enablement (decks, battlecards, one-pagers), and drive competitive intelligence. You will work at the seam of Product, Sales, and Demand Generation, translating technical capability into buyer value and feeding win/loss insight back into the roadmap.\n\nA strong PMM here pairs sharp narrative with growth instincts: you will use product analytics to understand activation and expansion, and partner with Growth on onboarding and in-product messaging. You should be comfortable owning a GTM strategy from launch tiering to enablement to measurement.\n\nRequired: 5+ years in product marketing for a B2B SaaS or technology product, proven launch leadership, excellent written messaging, and fluency reading product analytics. Nice-to-have: developer or technical audience experience, HubSpot or Marketo familiarity, and pricing/packaging work.\n\nThis is a hybrid role based in London (2 days per week in office), open across the UK and remote US. We offer a senior salary, equity, and direct influence over the product story.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Product Marketing",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GTM Strategy",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Product Analytics",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Positioning and Messaging",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Sales Enablement",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "HubSpot",
+          "importance": "nice_to_have",
+          "weight": 0.06,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Marketo",
+          "importance": "nice_to_have",
+          "weight": 0.04,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 5,
+        "minRelevantYears": 4,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "London",
+          "San Francisco",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "SaaS",
+          "B2B Technology",
+          "Software"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.3,
+        "location": 0.05,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Junior Sales Development Representative",
+    "description": "Northstar Analytics, a Manchester-based B2B technology firm selling data tooling to enterprise teams, is hiring a Junior Sales Development Representative to launch a commercial career and fuel our marketing-to-sales pipeline across the UK and Ireland.\n\nAs the first touchpoint for prospective customers, you will research target accounts, run outbound prospecting through email, phone, and LinkedIn, qualify inbound leads, and book qualified meetings for our Account Executives. You will keep every interaction accurate in Salesforce and run multi-step sequences in Outreach.\n\nThis is a high-energy, coachable role for someone early in their career. You will get structured onboarding, weekly coaching, and a clear promotion path to Account Executive. Success is measured by qualified meetings booked, pipeline sourced, and consistent activity.\n\nRequired: 1+ years in a customer-facing, sales, or outbound role (internships count), excellent written and verbal communication, resilience, and strong organisation. Nice-to-have: exposure to Salesforce or HubSpot, familiarity with sales sequencing tools, and interest in SaaS.\n\nThis is a hybrid role based in Manchester (3 days per week in office), open to candidates across the UK and Ireland. We offer a solid base plus commission, hands-on coaching, and a genuine route into closing.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Sales Development",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Lead Generation",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Cold Outreach",
+          "importance": "important",
+          "weight": 0.17,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Communication",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "CRM",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Salesforce",
+          "importance": "nice_to_have",
+          "weight": 0.06,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "HubSpot",
+          "importance": "nice_to_have",
+          "weight": 0.05,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 1,
+        "minRelevantYears": 1,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Manchester",
+          "Dublin",
+          "London",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "B2B Technology",
+          "SaaS",
+          "Software"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  }
+]

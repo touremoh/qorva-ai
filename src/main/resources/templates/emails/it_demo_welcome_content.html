@@ -1,0 +1,31 @@
+<div class="email-container">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #0A1628;">
+        <tr>
+            <td align="center" style="padding: 28px 40px;">
+                <img src="{{logo_url}}" alt="Qorva AI" width="160" height="42" border="0"
+                     style="display: block; border: 0; height: auto; max-height: 42px; max-width: 160px; width: auto;" />
+            </td>
+        </tr>
+    </table>
+
+    <div class="email-content">
+        <p class="greeting">Ciao {{first_name}},</p>
+        <p>Benvenuto su <strong>{{app_name}}</strong>! Il tuo spazio demo per <strong>{{company_name}}</strong> è pronto, precaricato con candidati e annunci di lavoro di esempio per provare subito i report di corrispondenza.</p>
+        <p>Per attivare il tuo account, imposta la password con il pulsante qui sotto.</p>
+
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin: 32px 0 28px;">
+            <tr>
+                <td align="center">
+                    <a href="{{set_password_url}}" style="display: inline-block; padding: 14px 44px; background-color: #72BB53; color: #FFFFFF; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 15px; letter-spacing: 0.3px; mso-padding-alt: 0; text-align: center;">Imposta la mia password</a>
+                </td>
+            </tr>
+        </table>
+
+        <p style="font-size: 13px; color: #64748B; line-height: 1.7;">Questo link è valido per 72 ore e monouso. Se scade, puoi richiederne uno nuovo dalla pagina di accesso.</p>
+
+        <p class="support-line">Domande? Scrivici a <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
+    </div>
+    <div class="email-footer">
+        <p>&copy; {{current_year}} {{app_name}}. Tutti i diritti riservati.</p>
+    </div>
+</div>

@@ -11,4 +11,7 @@ public interface JobPostRepository extends QorvaRepository<JobPost> {
 
     @Query("{ 'tenantId': { $oid: '?0' }, 'status': ?1, 'matchingReportsNeeded': ?2 }")
     List<JobPost> findAllJobPostNeedingScreeningReports(String tenantId, String status, Boolean matchingReportNeeded);
+
+    /** Deletes every job post belonging to a tenant (used when purging demo data on upgrade). */
+    long deleteByTenantId(String tenantId);
 }

@@ -1,0 +1,6382 @@
+[
+  {
+    "candidateProfileSummary": "Ervaren werktuigbouwkundig ontwerpingenieur met meer dan tien jaar ervaring in het ontwerpen van precisiemachines en modules voor de hightechindustrie. Sterk in 3D-modellering, tolerantieanalyse en design-for-manufacturing. Werkt graag nauw samen met productie en toeleveranciers om robuuste, maakbare producten op te leveren.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Sanne de Vries",
+      "role": "Senior Werktuigbouwkundig Ontwerpingenieur",
+      "summary": "Senior mechanical design engineer gespecialiseerd in precisiemechatronica en modulair machineontwerp. Vertaalt complexe eisen naar maakbare constructies en begeleidt ontwerpreviews van concept tot serie.",
+      "contact": {
+        "phone": "+31 6 21458096",
+        "email": "sanne.devries@example.com",
+        "address": {
+          "streetNumber": "58",
+          "streetName": "Kennedylaan",
+          "streetType": "laan",
+          "city": "Eindhoven",
+          "state": "Noord-Brabant",
+          "zipCode": "5611 ZS",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sannedevries",
+          "website": "https://sannedevries.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "dinsdagmiddag",
+          "donderdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Mechanisch ontwerp",
+        "skills": [
+          "SolidWorks",
+          "GD&T",
+          "Design-for-manufacturing",
+          "Tolerantieanalyse"
+        ]
+      },
+      {
+        "category": "Berekening en simulatie",
+        "skills": [
+          "FEA",
+          "ANSYS",
+          "Sterkteberekeningen",
+          "Trillingsanalyse"
+        ]
+      },
+      {
+        "category": "Materialen en processen",
+        "skills": [
+          "Verspaning",
+          "Plaatbewerking",
+          "Kunststoffen",
+          "Oppervlaktebehandeling"
+        ]
+      },
+      {
+        "category": "Samenwerking en tooling",
+        "skills": [
+          "PDM",
+          "Jira",
+          "Toleranciestacks",
+          "Technische documentatie"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Precisiemechanica",
+        "Modulair machineontwerp",
+        "Design-for-manufacturing",
+        "Tolerantiebeheersing"
+      ],
+      "keyResponsibilities": [
+        "Ontwerpen van mechanische modules en samenstellingen",
+        "Uitvoeren van tolerantie- en sterkteanalyses",
+        "Begeleiden van ontwerpreviews",
+        "Afstemmen met productie en toeleveranciers"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "ASML",
+        "website": "https://www.asml.com",
+        "location": "Veldhoven, Nederland",
+        "from": "2019-04",
+        "to": "Present",
+        "position": "Senior Mechanical Design Engineer",
+        "activities": [
+          {
+            "project": "Precisiemodule voor waferpositionering",
+            "tasks": [
+              "Ontwerpen van hoognauwkeurige mechanische modules in SolidWorks",
+              "Uitvoeren van tolerantie-stackanalyses voor submicronprecisie",
+              "Begeleiden van prototypebouw en meetvalidatie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Positioneernauwkeurigheid van module met 25% verbeterd",
+          "Onderdelenaantal in submodule met 30% teruggebracht"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "ANSYS",
+          "GD&T",
+          "PDM"
+        ]
+      },
+      {
+        "company": "VDL ETG",
+        "website": "https://www.vdletg.com",
+        "location": "Eindhoven, Nederland",
+        "from": "2016-02",
+        "to": "2019-03",
+        "position": "Mechanical Design Engineer",
+        "activities": [
+          {
+            "project": "Modulaire opbouw van meetsystemen",
+            "tasks": [
+              "Uitwerken van mechanische concepten tot productierijpe ontwerpen",
+              "Opstellen van fabricagetekeningen met GD&T",
+              "Afstemmen met verspanende toeleveranciers"
+            ]
+          }
+        ],
+        "achievements": [
+          "Doorlooptijd van ontwerp naar prototype met 20% verkort",
+          "Standaardisatie van bevestigingsonderdelen doorgevoerd"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "AutoCAD",
+          "GD&T"
+        ]
+      },
+      {
+        "company": "Sioux Technologies",
+        "website": "https://www.sioux.eu",
+        "location": "Eindhoven, Nederland",
+        "from": "2014-09",
+        "to": "2016-01",
+        "position": "Junior Werktuigbouwkundig Ingenieur",
+        "activities": [
+          {
+            "project": "Testopstellingen voor mechatronische systemen",
+            "tasks": [
+              "Ontwerpen van eenvoudige mechanische opstellingen",
+              "Uitvoeren van eerste sterkteberekeningen",
+              "Opstellen van stuklijsten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Eerste zelfstandige testopstelling opgeleverd"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "AutoCAD"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2014",
+        "institution": "Technische Universiteit Eindhoven",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Werktuigbouwkunde",
+        "achievements": [
+          "Afstudeerrichting Precision Engineering",
+          "Afgestudeerd met onderscheiding"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "GD&T volgens ASME Y14.5",
+        "institution": "Mikrocentrum",
+        "year": "2018",
+        "description": "Certificering in geometrische toleranties en maatvoering voor precisieonderdelen."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SolidWorks",
+        "ANSYS",
+        "GD&T",
+        "FEA",
+        "AutoCAD",
+        "PDM",
+        "Design-for-manufacturing"
+      ],
+      "softSkills": [
+        "Analytisch denken",
+        "Oog voor detail",
+        "Duidelijke communicatie",
+        "Samenwerken"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Herontwerp precisiemodule",
+        "description": "Leidde het herontwerp van een kritische positioneermodule met focus op maakbaarheid en nauwkeurigheid.",
+        "date": "2022",
+        "impact": "Nauwkeurigheid verbeterd en montagetijd met 15% verlaagd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Wielrennen",
+      "3D-printen",
+      "Modelbouw"
+    ],
+    "references": [
+      {
+        "name": "Ruben Kuijpers",
+        "position": "Engineering Manager",
+        "company": "ASML",
+        "contact": {
+          "phone": "+31 6 33871240",
+          "email": "ruben.kuijpers@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 68000,
+      "max": 84000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Mechanical Design Engineering",
+      "secondaryClusters": [
+        "Precision Engineering",
+        "Product Development"
+      ],
+      "functionalExpertise": [
+        "Mechanical Design",
+        "Tolerance Analysis",
+        "Design for Manufacturing"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Hogere productnauwkeurigheid",
+        "Lagere onderdeelkosten",
+        "Kortere ontwikkeltijd"
+      ],
+      "industryDomains": [
+        "High-tech",
+        "Semiconductor"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "scale-up"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Consistente loopbaan in precisiemechanisch ontwerp binnen de hightechindustrie met diepe expertise in tolerantiebeheersing."
+    },
+    "searchIndex": {
+      "roles": [
+        "Mechanical Design Engineer",
+        "Precision Engineer",
+        "Product Development Engineer"
+      ],
+      "skills": [
+        "SolidWorks",
+        "ANSYS",
+        "GD&T",
+        "FEA",
+        "AutoCAD",
+        "Design for Manufacturing",
+        "Tolerance Analysis"
+      ],
+      "industries": [
+        "High-tech",
+        "Semiconductor",
+        "Machinery"
+      ]
+    },
+    "tags": [
+      "werktuigbouwkunde",
+      "mechanical-design",
+      "solidworks",
+      "precisie",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Werktuigbouwkundig HVAC-ingenieur met ruim zes jaar ervaring in het ontwerpen van klimaat-, ventilatie- en verwarmingsinstallaties voor utiliteitsbouw. Vertaalt bouwkundige eisen naar energiezuinige installatieconcepten en verzorgt de technische uitwerking tot en met oplevering. Sterk in duurzaamheid en het reduceren van energieverbruik.",
+    "careerStartYear": 2019,
+    "personalInformation": {
+      "name": "Youssef El Amrani",
+      "role": "HVAC-ingenieur",
+      "summary": "HVAC-ingenieur gespecialiseerd in klimaat- en ventilatie-installaties voor kantoren, zorg en onderwijs. Combineert installatietechniek met duurzaamheidsdoelen en energieberekeningen.",
+      "contact": {
+        "phone": "+31 6 45028173",
+        "email": "youssef.elamrani@example.com",
+        "address": {
+          "streetNumber": "23",
+          "streetName": "Coolsingel",
+          "streetType": "singel",
+          "city": "Rotterdam",
+          "state": "Zuid-Holland",
+          "zipCode": "3011 AD",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/youssefelamrani"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "maandagochtend",
+          "woensdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Installatietechniek",
+        "skills": [
+          "Klimaatinstallaties",
+          "Ventilatie",
+          "Verwarming",
+          "Koeling"
+        ]
+      },
+      {
+        "category": "Ontwerp en berekening",
+        "skills": [
+          "Revit MEP",
+          "AutoCAD",
+          "Energieberekeningen",
+          "Luchtdebietberekening"
+        ]
+      },
+      {
+        "category": "Duurzaamheid",
+        "skills": [
+          "Warmtepompen",
+          "BENG",
+          "Warmteterugwinning",
+          "Energielabels"
+        ]
+      },
+      {
+        "category": "Normen en beheer",
+        "skills": [
+          "ISSO",
+          "Bouwbesluit",
+          "Onderhoudsplannen"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "HVAC-ontwerp",
+        "Energiezuinige installaties",
+        "Ventilatietechniek",
+        "Duurzame gebouwinstallaties"
+      ],
+      "keyResponsibilities": [
+        "Ontwerpen van HVAC-installaties voor utiliteitsbouw",
+        "Uitvoeren van energie- en debietberekeningen",
+        "Opstellen van bestekken en tekeningen",
+        "Begeleiden van uitvoering en inregeling"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Royal HaskoningDHV",
+        "website": "https://www.royalhaskoningdhv.com",
+        "location": "Rotterdam, Nederland",
+        "from": "2022-05",
+        "to": "Present",
+        "position": "HVAC-ingenieur",
+        "activities": [
+          {
+            "project": "Klimaatinstallatie zorgcentrum",
+            "tasks": [
+              "Ontwerpen van ventilatie- en koelinstallaties in Revit MEP",
+              "Uitvoeren van BENG- en energieberekeningen",
+              "Afstemmen met bouwkundig en constructief team"
+            ]
+          }
+        ],
+        "achievements": [
+          "Energieverbruik van installatieontwerp met 18% verlaagd",
+          "Ontwerp binnen budget en planning opgeleverd"
+        ],
+        "toolsAndTechnologies": [
+          "Revit MEP",
+          "AutoCAD",
+          "ISSO"
+        ]
+      },
+      {
+        "company": "Deerns",
+        "website": "https://www.deerns.com",
+        "location": "Rijswijk, Nederland",
+        "from": "2019-08",
+        "to": "2022-04",
+        "position": "Junior HVAC-ingenieur",
+        "activities": [
+          {
+            "project": "Ventilatieconcept kantoorrenovatie",
+            "tasks": [
+              "Uitwerken van ventilatietekeningen in AutoCAD",
+              "Berekenen van luchtdebieten en kanaaldimensionering",
+              "Ondersteunen bij bestekken"
+            ]
+          }
+        ],
+        "achievements": [
+          "Zelfstandig ventilatieontwerp voor renovatie afgerond"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "Revit MEP"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2019",
+        "institution": "Hogeschool Rotterdam",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Werktuigbouwkunde",
+        "achievements": [
+          "Specialisatie installatietechniek",
+          "Afstudeeropdracht over warmtepompsystemen"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "ISSO Ventilatie in utiliteitsgebouwen",
+        "institution": "ISSO",
+        "year": "2021",
+        "description": "Vakcertificaat voor ontwerp en beheer van ventilatiesystemen in utiliteitsbouw."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Revit MEP",
+        "AutoCAD",
+        "ISSO",
+        "Energieberekeningen",
+        "BENG",
+        "Warmtepompen"
+      ],
+      "softSkills": [
+        "Nauwkeurigheid",
+        "Samenwerken",
+        "Klantgerichtheid",
+        "Leergierigheid"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Verduurzaming schoolgebouw",
+        "description": "Herontwierp de klimaatinstallatie van een schoolgebouw met warmtepompen en warmteterugwinning.",
+        "date": "2023",
+        "impact": "Gasverbruik nagenoeg geëlimineerd en binnenklimaat verbeterd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voetbal",
+      "Koken",
+      "Duurzaam wonen"
+    ],
+    "references": [
+      {
+        "name": "Linda Vermeer",
+        "position": "Teamleider Installaties",
+        "company": "Royal HaskoningDHV",
+        "contact": {
+          "phone": "+31 6 22940817",
+          "email": "linda.vermeer@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 60000
+    },
+    "candidateClustering": {
+      "primaryCluster": "HVAC Engineering",
+      "secondaryClusters": [
+        "Building Services",
+        "Sustainable Design"
+      ],
+      "functionalExpertise": [
+        "HVAC Design",
+        "Energy Calculation",
+        "Ventilation"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Lager energieverbruik",
+        "Beter binnenklimaat",
+        "Duurzamere gebouwen"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Building Services"
+      ],
+      "environmentFit": [
+        "consultancy",
+        "enterprise"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Groeiende HVAC-ingenieur met sterke focus op energiezuinige installaties in de utiliteitsbouw."
+    },
+    "searchIndex": {
+      "roles": [
+        "HVAC Engineer",
+        "Building Services Engineer",
+        "Mechanical Engineer"
+      ],
+      "skills": [
+        "Revit MEP",
+        "AutoCAD",
+        "HVAC Design",
+        "Energy Calculation",
+        "Heat Pumps",
+        "Ventilation"
+      ],
+      "industries": [
+        "Construction",
+        "Building Services",
+        "Consultancy"
+      ]
+    },
+    "tags": [
+      "hvac",
+      "installatietechniek",
+      "duurzaamheid",
+      "revit",
+      "midlevel"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ervaren lead engineer aandrijflijnen met vijftien jaar ervaring in de automotive- en mobiliteitssector. Specialist in het ontwikkelen en valideren van elektrische en hybride powertrains, van conceptstudie tot voertuigintegratie. Leidt multidisciplinaire ontwikkelteams en bewaakt de technische roadmap.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Bram Janssens",
+      "role": "Lead Powertrain Engineer",
+      "summary": "Lead engineer gespecialiseerd in elektrische en hybride aandrijflijnen. Stuurt ontwikkeltrajecten aan, bewaakt de technische kwaliteit en vertaalt voertuigeisen naar robuuste powertrainoplossingen.",
+      "contact": {
+        "phone": "+31 6 51820394",
+        "email": "bram.janssens@example.com",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "Automotive Campus",
+          "streetType": "campus",
+          "city": "Helmond",
+          "state": "Noord-Brabant",
+          "zipCode": "5708 JZ",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/bramjanssens"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dinsdagochtend",
+          "vrijdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Aandrijflijnontwikkeling",
+        "skills": [
+          "Elektrische aandrijflijnen",
+          "Hybride systemen",
+          "Transmissies",
+          "Voertuigintegratie"
+        ]
+      },
+      {
+        "category": "Ontwerp en simulatie",
+        "skills": [
+          "CATIA",
+          "MATLAB/Simulink",
+          "FEA",
+          "Systeemsimulatie"
+        ]
+      },
+      {
+        "category": "Validatie en test",
+        "skills": [
+          "Prototypevalidatie",
+          "Testbankmetingen",
+          "DVP",
+          "Functionele veiligheid"
+        ]
+      },
+      {
+        "category": "Leiderschap",
+        "skills": [
+          "Technisch teamleiderschap",
+          "Roadmapbeheer",
+          "Reviewbegeleiding"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Elektrische aandrijflijnen",
+        "Hybride powertrains",
+        "Voertuigintegratie",
+        "Validatie en testen"
+      ],
+      "keyResponsibilities": [
+        "Aansturen van powertrainontwikkelteams",
+        "Bewaken van technische roadmap en kwaliteit",
+        "Vertalen van voertuigeisen naar systeemontwerp",
+        "Begeleiden van validatie- en testtrajecten"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "DAF Trucks",
+        "website": "https://www.daf.com",
+        "location": "Eindhoven, Nederland",
+        "from": "2018-01",
+        "to": "Present",
+        "position": "Lead Powertrain Engineer",
+        "activities": [
+          {
+            "project": "Elektrische aandrijflijn voor bedrijfsvoertuigen",
+            "tasks": [
+              "Aansturen van multidisciplinair ontwikkelteam",
+              "Definiëren van systeemarchitectuur voor e-powertrain",
+              "Begeleiden van validatie- en integratietrajecten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Eerste elektrische aandrijflijn succesvol geïntegreerd in prototype",
+          "Ontwikkeltijd van validatiefase met 20% verkort"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA",
+          "MATLAB/Simulink",
+          "FEA"
+        ]
+      },
+      {
+        "company": "Punch Powertrain",
+        "website": "https://www.punchpowertrain.com",
+        "location": "Sint-Truiden, België",
+        "from": "2013-03",
+        "to": "2017-12",
+        "position": "Senior Powertrain Engineer",
+        "activities": [
+          {
+            "project": "Hybride transmissiemodule",
+            "tasks": [
+              "Ontwerpen van transmissiecomponenten in CATIA",
+              "Uitvoeren van systeemsimulaties",
+              "Coördineren van testbankvalidatie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Rendement van transmissie met 8% verbeterd",
+          "DVP-trajecten voor twee projecten geleid"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA",
+          "MATLAB/Simulink"
+        ]
+      },
+      {
+        "company": "Bosch",
+        "website": "https://www.bosch.com",
+        "location": "Tilburg, Nederland",
+        "from": "2010-09",
+        "to": "2013-02",
+        "position": "Powertrain Engineer",
+        "activities": [
+          {
+            "project": "Testontwikkeling motorcomponenten",
+            "tasks": [
+              "Opzetten van testopstellingen",
+              "Analyseren van meetdata",
+              "Ondersteunen van componentvalidatie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Testprotocol voor kleppentrein gestandaardiseerd"
+        ],
+        "toolsAndTechnologies": [
+          "CATIA",
+          "MATLAB/Simulink"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2010",
+        "institution": "KU Leuven",
+        "degree": "Master in de ingenieurswetenschappen",
+        "fieldOfStudy": "Werktuigkunde",
+        "achievements": [
+          "Afstudeerrichting voertuigtechniek",
+          "Scriptie over hybride aandrijfconcepten"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Functional Safety ISO 26262",
+        "institution": "TÜV Rheinland",
+        "year": "2019",
+        "description": "Certificering in functionele veiligheid voor automotive-systemen."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "CATIA",
+        "MATLAB/Simulink",
+        "FEA",
+        "Systeemsimulatie",
+        "ISO 26262"
+      ],
+      "softSkills": [
+        "Leiderschap",
+        "Strategisch denken",
+        "Besluitvaardigheid",
+        "Mentorschap"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Elektrificatie zwaar transport",
+        "description": "Leidde de ontwikkeling van een elektrische aandrijflijn voor zware bedrijfsvoertuigen.",
+        "date": "2021",
+        "impact": "Emissievrije prototypes succesvol op de weg gebracht."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Klassieke auto's",
+      "Zeilen",
+      "Techniekmentoring"
+    ],
+    "references": [
+      {
+        "name": "Geert Willems",
+        "position": "Head of Engineering",
+        "company": "DAF Trucks",
+        "contact": {
+          "phone": "+31 6 40129583",
+          "email": "geert.willems@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 82000,
+      "max": 100000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Powertrain Engineering",
+      "secondaryClusters": [
+        "Automotive Engineering",
+        "Electrification"
+      ],
+      "functionalExpertise": [
+        "Powertrain Development",
+        "Vehicle Integration",
+        "Validation"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Succesvolle elektrificatie",
+        "Kortere ontwikkeltijd",
+        "Hoger rendement"
+      ],
+      "industryDomains": [
+        "Automotive",
+        "Mobility"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "OEM"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Ervaren lead in powertrainontwikkeling met bewezen leiderschap in elektrificatietrajecten binnen automotive."
+    },
+    "searchIndex": {
+      "roles": [
+        "Powertrain Engineer",
+        "Automotive Engineer",
+        "Lead Engineer"
+      ],
+      "skills": [
+        "CATIA",
+        "MATLAB/Simulink",
+        "FEA",
+        "Powertrain",
+        "Vehicle Integration",
+        "ISO 26262"
+      ],
+      "industries": [
+        "Automotive",
+        "Mobility",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "automotive",
+      "powertrain",
+      "electrification",
+      "catia",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior onderhouds- en productie-ingenieur met ruim twaalf jaar ervaring in de proces- en maakindustrie. Specialist in betrouwbaarheidsonderhoud, storingsanalyse en het verhogen van machinebeschikbaarheid. Combineert mechanische kennis met een datagedreven aanpak van onderhoudsplanning.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Lotte Hendrickx",
+      "role": "Senior Onderhoudsingenieur",
+      "summary": "Senior maintenance engineer gespecialiseerd in betrouwbaarheidsonderhoud en machinebeschikbaarheid in de procesindustrie. Analyseert storingen structureel en verbetert onderhoudsstrategieën.",
+      "contact": {
+        "phone": "+32 478 21 45 90",
+        "email": "lotte.hendrickx@example.be",
+        "address": {
+          "streetNumber": "76",
+          "streetName": "Noorderlaan",
+          "streetType": "laan",
+          "city": "Antwerpen",
+          "state": "Antwerpen",
+          "zipCode": "2030",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/lottehendrickx"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "woensdagochtend",
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Onderhoudstechniek",
+        "skills": [
+          "Betrouwbaarheidsonderhoud",
+          "Preventief onderhoud",
+          "Storingsanalyse",
+          "RCM"
+        ]
+      },
+      {
+        "category": "Mechanisch ontwerp",
+        "skills": [
+          "Creo",
+          "AutoCAD",
+          "Aandrijftechniek",
+          "Hydrauliek"
+        ]
+      },
+      {
+        "category": "Analyse en methodes",
+        "skills": [
+          "FMEA",
+          "Root-cause-analyse",
+          "OEE",
+          "TPM"
+        ]
+      },
+      {
+        "category": "Beheer en systemen",
+        "skills": [
+          "SAP PM",
+          "Onderhoudsplanning",
+          "Reserveonderdelenbeheer"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Betrouwbaarheidsonderhoud",
+        "Storingsanalyse",
+        "Machinebeschikbaarheid",
+        "Onderhoudsstrategie"
+      ],
+      "keyResponsibilities": [
+        "Optimaliseren van onderhoudsstrategieën",
+        "Uitvoeren van storings- en oorzaakanalyses",
+        "Verhogen van machinebeschikbaarheid",
+        "Beheren van onderhoudsplanning in SAP PM"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "BASF Antwerpen",
+        "website": "https://www.basf.com",
+        "location": "Antwerpen, België",
+        "from": "2018-06",
+        "to": "Present",
+        "position": "Senior Onderhoudsingenieur",
+        "activities": [
+          {
+            "project": "Betrouwbaarheidsprogramma roterende apparatuur",
+            "tasks": [
+              "Opzetten van RCM-analyses voor kritische installaties",
+              "Analyseren van terugkerende storingen met FMEA",
+              "Optimaliseren van preventieve onderhoudsplannen in SAP PM"
+            ]
+          }
+        ],
+        "achievements": [
+          "Ongeplande stilstand met 30% verminderd",
+          "Machinebeschikbaarheid naar 97% verhoogd"
+        ],
+        "toolsAndTechnologies": [
+          "SAP PM",
+          "Creo",
+          "FMEA"
+        ]
+      },
+      {
+        "company": "Agfa-Gevaert",
+        "website": "https://www.agfa.com",
+        "location": "Mortsel, België",
+        "from": "2015-04",
+        "to": "2018-05",
+        "position": "Onderhoudsingenieur",
+        "activities": [
+          {
+            "project": "Optimalisatie productielijnen",
+            "tasks": [
+              "Uitvoeren van root-cause-analyses op productiestoringen",
+              "Verbeteren van preventieve onderhoudsschema's",
+              "Begeleiden van technische dienst"
+            ]
+          }
+        ],
+        "achievements": [
+          "OEE van lijn met 12% verbeterd",
+          "Reserveonderdelenvoorraad geoptimaliseerd"
+        ],
+        "toolsAndTechnologies": [
+          "SAP PM",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Bekaert",
+        "website": "https://www.bekaert.com",
+        "location": "Zwevegem, België",
+        "from": "2013-09",
+        "to": "2015-03",
+        "position": "Junior Onderhoudsingenieur",
+        "activities": [
+          {
+            "project": "Onderhoud staaldraadmachines",
+            "tasks": [
+              "Ondersteunen bij preventief onderhoud",
+              "Opstellen van onderhoudsinstructies",
+              "Analyseren van eenvoudige storingen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Onderhoudsinstructies voor sleutelmachines gestandaardiseerd"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "SAP PM"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2013",
+        "institution": "Universiteit Gent",
+        "degree": "Master in de industriële wetenschappen",
+        "fieldOfStudy": "Elektromechanica",
+        "achievements": [
+          "Afstudeerrichting onderhoudstechniek",
+          "Scriptie over betrouwbaarheidsonderhoud"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Maintenance & Reliability Professional (CMRP)",
+        "institution": "SMRP",
+        "year": "2020",
+        "description": "Internationale certificering in onderhoud en betrouwbaarheid."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP PM",
+        "Creo",
+        "AutoCAD",
+        "FMEA",
+        "RCM",
+        "OEE"
+      ],
+      "softSkills": [
+        "Probleemoplossend vermogen",
+        "Doortastendheid",
+        "Samenwerken",
+        "Structuur"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Betrouwbaarheidsprogramma pompen",
+        "description": "Zette een structureel betrouwbaarheidsprogramma op voor kritische pompen en compressoren.",
+        "date": "2021",
+        "impact": "Storingsfrequentie gehalveerd en onderhoudskosten verlaagd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Bergwandelen",
+      "Fotografie",
+      "Restaureren van oldtimers"
+    ],
+    "references": [
+      {
+        "name": "Dirk Maes",
+        "position": "Maintenance Manager",
+        "company": "BASF Antwerpen",
+        "contact": {
+          "phone": "+32 475 90 12 34",
+          "email": "dirk.maes@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 78000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Maintenance Engineering",
+      "secondaryClusters": [
+        "Reliability Engineering",
+        "Manufacturing"
+      ],
+      "functionalExpertise": [
+        "Reliability-Centered Maintenance",
+        "Root-Cause Analysis",
+        "Maintenance Planning"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Hogere machinebeschikbaarheid",
+        "Lagere onderhoudskosten",
+        "Minder ongeplande stilstand"
+      ],
+      "industryDomains": [
+        "Process Industry",
+        "Chemicals"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "industrial"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Sterke onderhoudsingenieur met bewezen resultaten in betrouwbaarheid en beschikbaarheid in de procesindustrie."
+    },
+    "searchIndex": {
+      "roles": [
+        "Maintenance Engineer",
+        "Reliability Engineer",
+        "Mechanical Engineer"
+      ],
+      "skills": [
+        "SAP PM",
+        "Creo",
+        "AutoCAD",
+        "FMEA",
+        "RCM",
+        "OEE",
+        "Preventive Maintenance"
+      ],
+      "industries": [
+        "Process Industry",
+        "Chemicals",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "onderhoud",
+      "maintenance",
+      "reliability",
+      "procesindustrie",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "R&D-manager werktuigbouwkunde met zestien jaar ervaring in productontwikkeling voor de medische en industriële sector. Stuurt engineeringteams aan van idee tot marktintroductie en bewaakt kwaliteit, kosten en time-to-market. Sterk in simulatiegedreven ontwerp en het opbouwen van innovatieroadmaps.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Thomas Peeters",
+      "role": "R&D Manager Werktuigbouwkunde",
+      "summary": "R&D-manager met brede werktuigbouwkundige achtergrond in productontwikkeling. Combineert technisch leiderschap met portfolio- en innovatiebeheer en stuurt multidisciplinaire teams aan.",
+      "contact": {
+        "phone": "+32 496 38 71 20",
+        "email": "thomas.peeters@example.be",
+        "address": {
+          "streetNumber": "34",
+          "streetName": "Vaartkom",
+          "streetType": "kom",
+          "city": "Leuven",
+          "state": "Vlaams-Brabant",
+          "zipCode": "3000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/thomaspeeters"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "maandagmiddag",
+          "donderdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Productontwikkeling",
+        "skills": [
+          "Conceptontwikkeling",
+          "Design-for-manufacturing",
+          "Stage-gate",
+          "Prototyping"
+        ]
+      },
+      {
+        "category": "Simulatie en ontwerp",
+        "skills": [
+          "ANSYS",
+          "SolidWorks",
+          "FEA",
+          "CFD"
+        ]
+      },
+      {
+        "category": "Leiderschap",
+        "skills": [
+          "Teammanagement",
+          "Innovatieroadmap",
+          "Portfoliobeheer",
+          "Budgetbeheer"
+        ]
+      },
+      {
+        "category": "Kwaliteit en compliance",
+        "skills": [
+          "ISO 13485",
+          "Risicomanagement",
+          "Verificatie en validatie"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Productontwikkeling",
+        "Simulatiegedreven ontwerp",
+        "R&D-management",
+        "Innovatiestrategie"
+      ],
+      "keyResponsibilities": [
+        "Aansturen van R&D-engineeringteams",
+        "Bewaken van kwaliteit, kosten en time-to-market",
+        "Opstellen van innovatieroadmaps",
+        "Begeleiden van productintroducties"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Materialise",
+        "website": "https://www.materialise.com",
+        "location": "Leuven, België",
+        "from": "2017-03",
+        "to": "Present",
+        "position": "R&D Manager",
+        "activities": [
+          {
+            "project": "Ontwikkeling medische hulpmiddelen",
+            "tasks": [
+              "Aansturen van multidisciplinair R&D-team",
+              "Bewaken van stage-gate-proces en kwaliteitseisen",
+              "Opstellen van innovatie- en productroadmap"
+            ]
+          }
+        ],
+        "achievements": [
+          "Drie nieuwe producten succesvol naar de markt gebracht",
+          "Time-to-market gemiddeld met 25% verkort"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "ANSYS",
+          "ISO 13485"
+        ]
+      },
+      {
+        "company": "Barco",
+        "website": "https://www.barco.com",
+        "location": "Kortrijk, België",
+        "from": "2012-05",
+        "to": "2017-02",
+        "position": "Senior R&D Engineer",
+        "activities": [
+          {
+            "project": "Mechanisch ontwerp beeldschermsystemen",
+            "tasks": [
+              "Leiden van mechanische ontwikkeltrajecten",
+              "Uitvoeren van thermische en structurele simulaties",
+              "Begeleiden van junior engineers"
+            ]
+          }
+        ],
+        "achievements": [
+          "Thermisch ontwerp verbeterd waardoor levensduur toenam",
+          "Twee patenten mede op naam"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "ANSYS",
+          "CFD"
+        ]
+      },
+      {
+        "company": "Picanol",
+        "website": "https://www.picanol.be",
+        "location": "Ieper, België",
+        "from": "2009-09",
+        "to": "2012-04",
+        "position": "R&D Engineer",
+        "activities": [
+          {
+            "project": "Ontwerp weefmachinecomponenten",
+            "tasks": [
+              "Ontwerpen van mechanische componenten",
+              "Uitvoeren van sterkteberekeningen",
+              "Ondersteunen van prototypebouw"
+            ]
+          }
+        ],
+        "achievements": [
+          "Componentgewicht met 15% gereduceerd"
+        ],
+        "toolsAndTechnologies": [
+          "SolidWorks",
+          "ANSYS"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2009",
+        "institution": "KU Leuven",
+        "degree": "Master in de ingenieurswetenschappen",
+        "fieldOfStudy": "Werktuigkunde",
+        "achievements": [
+          "Afstudeerrichting mechatronica",
+          "Afgestudeerd met grote onderscheiding"
+        ]
+      },
+      {
+        "year": "2016",
+        "institution": "Vlerick Business School",
+        "degree": "Postgraduaat",
+        "fieldOfStudy": "Innovatiemanagement",
+        "achievements": [
+          "Focus op R&D-portfoliobeheer"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Project Management Professional (PMP)",
+        "institution": "Project Management Institute",
+        "year": "2018",
+        "description": "Internationale certificering in projectmanagement."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SolidWorks",
+        "ANSYS",
+        "FEA",
+        "CFD",
+        "ISO 13485"
+      ],
+      "softSkills": [
+        "Leiderschap",
+        "Strategisch denken",
+        "Coaching",
+        "Stakeholdermanagement"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Opbouw R&D-innovatieproces",
+        "description": "Zette een gestructureerd stage-gate-innovatieproces op voor de R&D-afdeling.",
+        "date": "2020",
+        "impact": "Voorspelbaardere doorlooptijden en hogere succesratio van projecten."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Bergbeklimmen",
+      "Klassieke muziek",
+      "Innovatie-events"
+    ],
+    "references": [
+      {
+        "name": "An Verstraeten",
+        "position": "VP Engineering",
+        "company": "Materialise",
+        "contact": {
+          "phone": "+32 470 22 88 41",
+          "email": "an.verstraeten@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 95000,
+      "max": 120000
+    },
+    "candidateClustering": {
+      "primaryCluster": "R&D Management",
+      "secondaryClusters": [
+        "Product Development",
+        "Mechanical Engineering"
+      ],
+      "functionalExpertise": [
+        "R&D Leadership",
+        "Product Development",
+        "Simulation-Driven Design"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Snellere time-to-market",
+        "Succesvolle productintroducties",
+        "Hogere innovatiekracht"
+      ],
+      "industryDomains": [
+        "Medical Devices",
+        "Industrial Equipment"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "scale-up"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Ervaren R&D-manager met sterke technische basis en bewezen leiderschap in productontwikkeling."
+    },
+    "searchIndex": {
+      "roles": [
+        "R&D Manager",
+        "Engineering Manager",
+        "Product Development Engineer"
+      ],
+      "skills": [
+        "SolidWorks",
+        "ANSYS",
+        "FEA",
+        "CFD",
+        "ISO 13485",
+        "Product Development"
+      ],
+      "industries": [
+        "Medical Devices",
+        "Industrial Equipment",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "r&d",
+      "management",
+      "productontwikkeling",
+      "ansys",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior constructeur met ruim tien jaar ervaring in het ontwerpen van beton- en staalconstructies voor utiliteits- en woningbouw. Sterk in constructieve berekeningen volgens de Eurocodes en in het begeleiden van complexe bouwprojecten. Werkt nauw samen met architecten en aannemers om veilige en efficiënte constructies te realiseren.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Fleur Bakker",
+      "role": "Senior Constructeur",
+      "summary": "Senior structural engineer gespecialiseerd in beton- en staalconstructies voor de utiliteitsbouw. Rekent volgens de Eurocodes en begeleidt constructieontwerpen van schetsontwerp tot uitvoering.",
+      "contact": {
+        "phone": "+31 6 27310584",
+        "email": "fleur.bakker@example.com",
+        "address": {
+          "streetNumber": "89",
+          "streetName": "Oudegracht",
+          "streetType": "gracht",
+          "city": "Utrecht",
+          "state": "Utrecht",
+          "zipCode": "3511 AK",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/fleurbakker"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "dinsdagochtend",
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Constructief ontwerp",
+        "skills": [
+          "Betonconstructies",
+          "Staalconstructies",
+          "Eurocode",
+          "Fundering"
+        ]
+      },
+      {
+        "category": "Berekening en modellering",
+        "skills": [
+          "ETABS",
+          "SAP2000",
+          "AutoCAD",
+          "Revit"
+        ]
+      },
+      {
+        "category": "Bouwproces",
+        "skills": [
+          "BIM",
+          "Constructietekeningen",
+          "Toezicht op uitvoering"
+        ]
+      },
+      {
+        "category": "Normen",
+        "skills": [
+          "Eurocode 2",
+          "Eurocode 3",
+          "NEN",
+          "Constructieve veiligheid"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Constructief ontwerp",
+        "Beton- en staalconstructies",
+        "Eurocode-berekeningen",
+        "Bouwbegeleiding"
+      ],
+      "keyResponsibilities": [
+        "Ontwerpen en berekenen van draagconstructies",
+        "Modelleren van constructies in ETABS en SAP2000",
+        "Opstellen van constructietekeningen",
+        "Begeleiden van uitvoering op de bouwplaats"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Arcadis",
+        "website": "https://www.arcadis.com",
+        "location": "Utrecht, Nederland",
+        "from": "2019-03",
+        "to": "Present",
+        "position": "Senior Constructeur",
+        "activities": [
+          {
+            "project": "Constructie kantoortoren",
+            "tasks": [
+              "Ontwerpen van betonnen draagconstructie volgens Eurocode",
+              "Uitvoeren van constructieberekeningen in ETABS",
+              "Begeleiden van BIM-model en uitvoering"
+            ]
+          }
+        ],
+        "achievements": [
+          "Betonverbruik in ontwerp met 12% gereduceerd",
+          "Constructie binnen planning en budget opgeleverd"
+        ],
+        "toolsAndTechnologies": [
+          "ETABS",
+          "Revit",
+          "Eurocode",
+          "AutoCAD"
+        ]
+      },
+      {
+        "company": "Witteveen+Bos",
+        "website": "https://www.witteveenbos.com",
+        "location": "Deventer, Nederland",
+        "from": "2016-05",
+        "to": "2019-02",
+        "position": "Constructeur",
+        "activities": [
+          {
+            "project": "Staalconstructie parkeergarage",
+            "tasks": [
+              "Uitwerken van staalconstructie in SAP2000",
+              "Opstellen van constructietekeningen",
+              "Afstemmen met architect en aannemer"
+            ]
+          }
+        ],
+        "achievements": [
+          "Efficiënter kolommenraster ontworpen",
+          "Uitvoeringstekeningen foutloos opgeleverd"
+        ],
+        "toolsAndTechnologies": [
+          "SAP2000",
+          "AutoCAD",
+          "Eurocode"
+        ]
+      },
+      {
+        "company": "IMd Raadgevende Ingenieurs",
+        "website": "https://www.imdbv.nl",
+        "location": "Rotterdam, Nederland",
+        "from": "2014-09",
+        "to": "2016-04",
+        "position": "Junior Constructeur",
+        "activities": [
+          {
+            "project": "Constructie woningbouwproject",
+            "tasks": [
+              "Uitvoeren van eenvoudige constructieberekeningen",
+              "Opstellen van wapeningstekeningen",
+              "Ondersteunen van senior constructeurs"
+            ]
+          }
+        ],
+        "achievements": [
+          "Eerste zelfstandige woningconstructie berekend"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "Eurocode"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2014",
+        "institution": "Technische Universiteit Delft",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Civiele Techniek",
+        "achievements": [
+          "Afstudeerrichting constructieleer",
+          "Scriptie over betonnen hoogbouwconstructies"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Register Constructeur (RC)",
+        "institution": "Constructeursregister",
+        "year": "2021",
+        "description": "Erkenning als geregistreerd constructief ingenieur in Nederland."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ETABS",
+        "SAP2000",
+        "Revit",
+        "AutoCAD",
+        "Eurocode",
+        "BIM"
+      ],
+      "softSkills": [
+        "Nauwkeurigheid",
+        "Analytisch denken",
+        "Samenwerken",
+        "Verantwoordelijkheidsgevoel"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Constructie duurzaam kantoorgebouw",
+        "description": "Ontwierp de draagconstructie van een energieneutraal kantoorgebouw met hergebruik van staal.",
+        "date": "2022",
+        "impact": "Materiaalgebruik verlaagd en circulaire bouwprincipes toegepast."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Hardlopen",
+      "Architectuur",
+      "Yoga"
+    ],
+    "references": [
+      {
+        "name": "Joris van Dijk",
+        "position": "Teamleider Constructie",
+        "company": "Arcadis",
+        "contact": {
+          "phone": "+31 6 39184720",
+          "email": "joris.vandijk@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 64000,
+      "max": 80000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Structural Engineering",
+      "secondaryClusters": [
+        "Civil Engineering",
+        "Building Construction"
+      ],
+      "functionalExpertise": [
+        "Structural Design",
+        "Eurocode Calculation",
+        "BIM"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Veilige constructies",
+        "Lager materiaalgebruik",
+        "Efficiëntere ontwerpen"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Consultancy"
+      ],
+      "environmentFit": [
+        "consultancy",
+        "enterprise"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Ervaren constructeur met sterke Eurocode-kennis en bewezen ervaring in beton- en staalconstructies voor utiliteitsbouw."
+    },
+    "searchIndex": {
+      "roles": [
+        "Structural Engineer",
+        "Civil Engineer",
+        "Design Engineer"
+      ],
+      "skills": [
+        "ETABS",
+        "SAP2000",
+        "Revit",
+        "AutoCAD",
+        "Eurocode",
+        "BIM",
+        "Structural Design"
+      ],
+      "industries": [
+        "Construction",
+        "Consultancy",
+        "Infrastructure"
+      ]
+    },
+    "tags": [
+      "constructie",
+      "structural",
+      "eurocode",
+      "etabs",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Uitvoerend werkvoorbereider en constructie-ingenieur met bijna zes jaar ervaring in grote bouw- en infrastructuurprojecten. Vertaalt ontwerpen naar uitvoerbare werkplannen en coördineert onderaannemers, planning en kwaliteit op de bouwplaats. Sterk in praktische probleemoplossing en veiligheid.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Kwame Mensah",
+      "role": "Uitvoerend Constructie-ingenieur",
+      "summary": "Constructie- en uitvoeringsingenieur met ervaring in woning- en infrastructuurbouw. Coördineert de uitvoering, bewaakt planning en kwaliteit en houdt toezicht op veiligheid.",
+      "contact": {
+        "phone": "+31 6 48120935",
+        "email": "kwame.mensah@example.com",
+        "address": {
+          "streetNumber": "17",
+          "streetName": "Bijlmerdreef",
+          "streetType": "dreef",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipCode": "1102 BR",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/kwamemensah"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "maandagochtend",
+          "vrijdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Uitvoering",
+        "skills": [
+          "Werkvoorbereiding",
+          "Planning",
+          "Bouwplaatscoördinatie",
+          "Kwaliteitscontrole"
+        ]
+      },
+      {
+        "category": "Techniek",
+        "skills": [
+          "AutoCAD",
+          "Revit",
+          "Constructiekennis",
+          "Maatvoering"
+        ]
+      },
+      {
+        "category": "Veiligheid en beheer",
+        "skills": [
+          "VCA",
+          "Veiligheidsbeheer",
+          "Kostenbewaking",
+          "Onderaannemers"
+        ]
+      },
+      {
+        "category": "Normen",
+        "skills": [
+          "Bouwbesluit",
+          "Eurocode",
+          "NEN"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Werkvoorbereiding",
+        "Bouwplaatscoördinatie",
+        "Planning en kwaliteit",
+        "Veiligheid op de bouwplaats"
+      ],
+      "keyResponsibilities": [
+        "Vertalen van ontwerpen naar uitvoeringsplannen",
+        "Coördineren van onderaannemers en leveranciers",
+        "Bewaken van planning, kwaliteit en veiligheid",
+        "Rapporteren over voortgang en kosten"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "BAM Bouw en Techniek",
+        "website": "https://www.bam.com",
+        "location": "Amsterdam, Nederland",
+        "from": "2022-06",
+        "to": "Present",
+        "position": "Constructie-ingenieur Uitvoering",
+        "activities": [
+          {
+            "project": "Woningbouwproject binnenstedelijk",
+            "tasks": [
+              "Opstellen van werkplannen en fasering",
+              "Coördineren van onderaannemers op de bouwplaats",
+              "Bewaken van kwaliteit en veiligheid"
+            ]
+          }
+        ],
+        "achievements": [
+          "Project binnen planning opgeleverd",
+          "Aantal veiligheidsincidenten teruggebracht naar nul"
+        ],
+        "toolsAndTechnologies": [
+          "Revit",
+          "AutoCAD",
+          "VCA"
+        ]
+      },
+      {
+        "company": "Heijmans",
+        "website": "https://www.heijmans.nl",
+        "location": "Rosmalen, Nederland",
+        "from": "2020-08",
+        "to": "2022-05",
+        "position": "Junior Werkvoorbereider",
+        "activities": [
+          {
+            "project": "Infrastructuur wegverbreding",
+            "tasks": [
+              "Uitwerken van werkvoorbereiding",
+              "Opstellen van maatvoering en tekeningen",
+              "Ondersteunen van uitvoerder"
+            ]
+          }
+        ],
+        "achievements": [
+          "Werkvoorbereiding voor deelproject zelfstandig verzorgd"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "Revit"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2020",
+        "institution": "Hogeschool van Amsterdam",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Civiele Techniek",
+        "achievements": [
+          "Specialisatie uitvoering en beheer",
+          "Afstudeeropdracht over binnenstedelijk bouwen"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "VCA VOL",
+        "institution": "SSVV",
+        "year": "2021",
+        "description": "Veiligheidscertificaat voor operationeel leidinggevenden op de bouwplaats."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Revit",
+        "AutoCAD",
+        "VCA",
+        "Werkvoorbereiding",
+        "Planning"
+      ],
+      "softSkills": [
+        "Praktische instelling",
+        "Communicatie",
+        "Stressbestendigheid",
+        "Samenwerken"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Binnenstedelijk woningbouwproject",
+        "description": "Coördineerde de uitvoering van een complex woningbouwproject in een drukke binnenstad.",
+        "date": "2023",
+        "impact": "Overlast voor omwonenden beperkt en oplevering op tijd gerealiseerd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Basketbal",
+      "Reizen",
+      "Vrijwilligerswerk"
+    ],
+    "references": [
+      {
+        "name": "Sander de Boer",
+        "position": "Projectleider",
+        "company": "BAM Bouw en Techniek",
+        "contact": {
+          "phone": "+31 6 20548193",
+          "email": "sander.deboer@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 46000,
+      "max": 58000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Construction Engineering",
+      "secondaryClusters": [
+        "Site Management",
+        "Civil Engineering"
+      ],
+      "functionalExpertise": [
+        "Work Preparation",
+        "Site Coordination",
+        "Quality Control"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Tijdige oplevering",
+        "Hogere veiligheid",
+        "Betere kwaliteit"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Infrastructure"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "onsite"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "Praktisch ingestelde uitvoeringsingenieur met groeiende ervaring in de coördinatie van bouwprojecten."
+    },
+    "searchIndex": {
+      "roles": [
+        "Site Engineer",
+        "Construction Engineer",
+        "Work Planner"
+      ],
+      "skills": [
+        "Revit",
+        "AutoCAD",
+        "Work Preparation",
+        "Site Coordination",
+        "Quality Control",
+        "VCA"
+      ],
+      "industries": [
+        "Construction",
+        "Infrastructure",
+        "Civil Engineering"
+      ]
+    },
+    "tags": [
+      "uitvoering",
+      "bouw",
+      "site-engineer",
+      "planning",
+      "midlevel"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior geotechnisch ingenieur met dertien jaar ervaring in funderingsontwerp, grondmechanica en waterbouw. Specialist in het beoordelen van bodemgedrag, funderingen en damwanden voor complexe infrastructuurprojecten. Combineert diepgaande grondkennis met numerieke modellering en risicogestuurd ontwerp.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Ilse Vermeulen",
+      "role": "Senior Geotechnisch Ingenieur",
+      "summary": "Senior geotechnical engineer gespecialiseerd in funderings- en damwandontwerp en grondmechanica. Modelleert bodemgedrag numeriek en adviseert bij complexe infra- en waterbouwprojecten.",
+      "contact": {
+        "phone": "+31 6 31702948",
+        "email": "ilse.vermeulen@example.com",
+        "address": {
+          "streetNumber": "45",
+          "streetName": "Mekelweg",
+          "streetType": "weg",
+          "city": "Delft",
+          "state": "Zuid-Holland",
+          "zipCode": "2628 CD",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ilsevermeulen"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "woensdagochtend",
+          "vrijdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Geotechniek",
+        "skills": [
+          "Funderingsontwerp",
+          "Grondmechanica",
+          "Damwanden",
+          "Zettingsberekeningen"
+        ]
+      },
+      {
+        "category": "Modellering",
+        "skills": [
+          "Plaxis",
+          "D-Sheet Piling",
+          "AutoCAD Civil 3D",
+          "Eindige-elementenmethode"
+        ]
+      },
+      {
+        "category": "Onderzoek",
+        "skills": [
+          "Sonderingen",
+          "Grondonderzoek",
+          "Laboratoriumproeven",
+          "Risicoanalyse"
+        ]
+      },
+      {
+        "category": "Normen",
+        "skills": [
+          "Eurocode 7",
+          "CUR",
+          "NEN 9997"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Funderingsontwerp",
+        "Grondmechanica",
+        "Damwandontwerp",
+        "Geotechnische risicoanalyse"
+      ],
+      "keyResponsibilities": [
+        "Ontwerpen van funderingen en grondkerende constructies",
+        "Modelleren van bodemgedrag in Plaxis",
+        "Interpreteren van grondonderzoek",
+        "Adviseren over geotechnische risico's"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Fugro",
+        "website": "https://www.fugro.com",
+        "location": "Leidschendam, Nederland",
+        "from": "2018-02",
+        "to": "Present",
+        "position": "Senior Geotechnisch Ingenieur",
+        "activities": [
+          {
+            "project": "Funderingsontwerp bruginfrastructuur",
+            "tasks": [
+              "Ontwerpen van paalfunderingen volgens Eurocode 7",
+              "Modelleren van zettingen en stabiliteit in Plaxis",
+              "Adviseren over geotechnische risico's"
+            ]
+          }
+        ],
+        "achievements": [
+          "Funderingsontwerp geoptimaliseerd waardoor paalaantal daalde",
+          "Geotechnisch risicoregister voor project opgezet"
+        ],
+        "toolsAndTechnologies": [
+          "Plaxis",
+          "AutoCAD Civil 3D",
+          "Eurocode"
+        ]
+      },
+      {
+        "company": "Deltares",
+        "website": "https://www.deltares.nl",
+        "location": "Delft, Nederland",
+        "from": "2015-04",
+        "to": "2018-01",
+        "position": "Geotechnisch Ingenieur",
+        "activities": [
+          {
+            "project": "Dijkversterking rivierengebied",
+            "tasks": [
+              "Uitvoeren van stabiliteitsberekeningen",
+              "Interpreteren van sonderingen en labproeven",
+              "Ondersteunen bij damwandontwerp"
+            ]
+          }
+        ],
+        "achievements": [
+          "Dijkstabiliteitsanalyse voor traject afgerond",
+          "Bijgedragen aan onderzoeksrapport over piping"
+        ],
+        "toolsAndTechnologies": [
+          "Plaxis",
+          "D-Sheet Piling"
+        ]
+      },
+      {
+        "company": "Wiertsema & Partners",
+        "website": "https://www.wiertsema.nl",
+        "location": "Tolbert, Nederland",
+        "from": "2012-09",
+        "to": "2015-03",
+        "position": "Junior Geotechnisch Ingenieur",
+        "activities": [
+          {
+            "project": "Grondonderzoek utiliteitsbouw",
+            "tasks": [
+              "Uitvoeren van eenvoudige funderingsberekeningen",
+              "Verwerken van sonderingsdata",
+              "Opstellen van geotechnische adviezen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Eerste zelfstandig funderingsadvies opgesteld"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD",
+          "D-Sheet Piling"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2012",
+        "institution": "Technische Universiteit Delft",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Civiele Techniek",
+        "achievements": [
+          "Afstudeerrichting geotechniek",
+          "Scriptie over zettingsgedrag van slappe bodems"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Chartered Engineer (CEng)",
+        "institution": "Engineering Council",
+        "year": "2019",
+        "description": "Erkenning als chartered engineer in de geotechniek."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Plaxis",
+        "D-Sheet Piling",
+        "AutoCAD Civil 3D",
+        "Eurocode",
+        "Grondmechanica"
+      ],
+      "softSkills": [
+        "Analytisch denken",
+        "Zorgvuldigheid",
+        "Adviesvaardigheid",
+        "Risicobewustzijn"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Damwandontwerp havenuitbreiding",
+        "description": "Ontwierp de grondkerende constructie voor een havenuitbreiding in slappe grond.",
+        "date": "2021",
+        "impact": "Veilig ontwerp gerealiseerd met beperkte zettingen bij belendende constructies."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Zeilen",
+      "Geologie",
+      "Wandelen langs de kust"
+    ],
+    "references": [
+      {
+        "name": "Martijn Groot",
+        "position": "Principal Geotechnical Engineer",
+        "company": "Fugro",
+        "contact": {
+          "phone": "+31 6 47820193",
+          "email": "martijn.groot@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 66000,
+      "max": 82000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Geotechnical Engineering",
+      "secondaryClusters": [
+        "Civil Engineering",
+        "Foundation Design"
+      ],
+      "functionalExpertise": [
+        "Foundation Design",
+        "Soil Mechanics",
+        "Numerical Modeling"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Lager funderingsrisico",
+        "Geoptimaliseerde ontwerpen",
+        "Veiligere constructies"
+      ],
+      "industryDomains": [
+        "Infrastructure",
+        "Water Management"
+      ],
+      "environmentFit": [
+        "consultancy",
+        "enterprise"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Ervaren geotechnisch ingenieur met diepe expertise in funderings- en damwandontwerp en numerieke modellering."
+    },
+    "searchIndex": {
+      "roles": [
+        "Geotechnical Engineer",
+        "Civil Engineer",
+        "Foundation Engineer"
+      ],
+      "skills": [
+        "Plaxis",
+        "AutoCAD Civil 3D",
+        "D-Sheet Piling",
+        "Soil Mechanics",
+        "Eurocode",
+        "Foundation Design"
+      ],
+      "industries": [
+        "Infrastructure",
+        "Water Management",
+        "Consultancy"
+      ]
+    },
+    "tags": [
+      "geotechniek",
+      "geotechnical",
+      "plaxis",
+      "fundering",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Lead infrastructuuringenieur met zeventien jaar ervaring in het ontwerpen van wegen, kruispunten en mobiliteitsprojecten. Stuurt ontwerpteams aan en bewaakt de integratie van verkeersveiligheid, duurzaamheid en uitvoerbaarheid. Ervaren in grootschalige weg- en spoorprojecten in België en Nederland.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Pieter-Jan De Smet",
+      "role": "Lead Infrastructuuringenieur",
+      "summary": "Lead engineer wegen en mobiliteit met brede ervaring in wegontwerp en verkeersinfrastructuur. Stuurt multidisciplinaire ontwerpteams aan en bewaakt kwaliteit en uitvoerbaarheid.",
+      "contact": {
+        "phone": "+32 471 55 20 83",
+        "email": "pieterjan.desmet@example.be",
+        "address": {
+          "streetNumber": "62",
+          "streetName": "Kortrijksesteenweg",
+          "streetType": "steenweg",
+          "city": "Gent",
+          "state": "Oost-Vlaanderen",
+          "zipCode": "9000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/pieterjandesmet"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "maandagmiddag",
+          "donderdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Wegontwerp",
+        "skills": [
+          "Wegontwerp",
+          "Kruispuntontwerp",
+          "Verkeersveiligheid",
+          "Rioleringsontwerp"
+        ]
+      },
+      {
+        "category": "Modellering en tools",
+        "skills": [
+          "AutoCAD Civil 3D",
+          "BIM",
+          "GIS",
+          "Verkeersmodellering"
+        ]
+      },
+      {
+        "category": "Projectleiding",
+        "skills": [
+          "Teamleiderschap",
+          "Projectcoördinatie",
+          "Stakeholdermanagement"
+        ]
+      },
+      {
+        "category": "Normen",
+        "skills": [
+          "Vademecum",
+          "Eurocode",
+          "SB250"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Wegontwerp",
+        "Mobiliteitsprojecten",
+        "Verkeersinfrastructuur",
+        "Projectleiding"
+      ],
+      "keyResponsibilities": [
+        "Aansturen van infrastructuurontwerpteams",
+        "Bewaken van verkeersveiligheid en uitvoerbaarheid",
+        "Coördineren met opdrachtgevers en overheden",
+        "Begeleiden van ontwerp tot uitvoering"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "SWECO Belgium",
+        "website": "https://www.swecobelgium.be",
+        "location": "Gent, België",
+        "from": "2016-01",
+        "to": "Present",
+        "position": "Lead Infrastructuuringenieur",
+        "activities": [
+          {
+            "project": "Herinrichting stedelijke ringweg",
+            "tasks": [
+              "Aansturen van multidisciplinair ontwerpteam",
+              "Bewaken van verkeersveiligheid en fietsinfrastructuur",
+              "Coördineren met stad en Agentschap Wegen en Verkeer"
+            ]
+          }
+        ],
+        "achievements": [
+          "Ringwegproject succesvol tot uitvoering gebracht",
+          "Verkeersveiligheid van kruispunten aantoonbaar verbeterd"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Civil 3D",
+          "BIM",
+          "GIS"
+        ]
+      },
+      {
+        "company": "Arcadis Belgium",
+        "website": "https://www.arcadis.com",
+        "location": "Antwerpen, België",
+        "from": "2011-03",
+        "to": "2015-12",
+        "position": "Senior Wegenbouwkundig Ingenieur",
+        "activities": [
+          {
+            "project": "Ontwerp gewestweg",
+            "tasks": [
+              "Ontwerpen van wegtracés in Civil 3D",
+              "Uitwerken van rioleringsontwerp",
+              "Afstemmen met nutsmaatschappijen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Complex tracéontwerp binnen milieurandvoorwaarden afgerond",
+          "Rioleringsplan voor hele traject opgesteld"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Civil 3D",
+          "GIS"
+        ]
+      },
+      {
+        "company": "Technum",
+        "website": "https://www.tractebel-engie.com",
+        "location": "Gent, België",
+        "from": "2008-09",
+        "to": "2011-02",
+        "position": "Wegenbouwkundig Ingenieur",
+        "activities": [
+          {
+            "project": "Fietspadinfrastructuur",
+            "tasks": [
+              "Uitwerken van fietspadontwerpen",
+              "Opstellen van dwarsprofielen",
+              "Ondersteunen van projectleiders"
+            ]
+          }
+        ],
+        "achievements": [
+          "Zelfstandig fietspadtracé ontworpen"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Civil 3D"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2008",
+        "institution": "Universiteit Gent",
+        "degree": "Master in de ingenieurswetenschappen",
+        "fieldOfStudy": "Bouwkunde",
+        "achievements": [
+          "Afstudeerrichting verkeer en infrastructuur",
+          "Scriptie over verkeersveilige kruispunten"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "EUR ING",
+        "institution": "FEANI",
+        "year": "2015",
+        "description": "Europese titel voor professionele ingenieurs."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "AutoCAD Civil 3D",
+        "BIM",
+        "GIS",
+        "Verkeersmodellering",
+        "Eurocode"
+      ],
+      "softSkills": [
+        "Leiderschap",
+        "Stakeholdermanagement",
+        "Overtuigingskracht",
+        "Coaching"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Duurzame stadsmobiliteit",
+        "description": "Leidde het ontwerp van een verkeersluwe stadsas met prioriteit voor fietsers en openbaar vervoer.",
+        "date": "2022",
+        "impact": "Verkeersveiligheid en leefbaarheid in de stad structureel verbeterd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Wielrennen",
+      "Stedenbouw",
+      "Koken"
+    ],
+    "references": [
+      {
+        "name": "Katrien Vandamme",
+        "position": "Afdelingshoofd Infrastructuur",
+        "company": "SWECO Belgium",
+        "contact": {
+          "phone": "+32 478 63 91 20",
+          "email": "katrien.vandamme@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 80000,
+      "max": 98000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Transportation Engineering",
+      "secondaryClusters": [
+        "Civil Engineering",
+        "Infrastructure Design"
+      ],
+      "functionalExpertise": [
+        "Road Design",
+        "Mobility Planning",
+        "Project Leadership"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Veiligere infrastructuur",
+        "Duurzamere mobiliteit",
+        "Succesvolle projectrealisatie"
+      ],
+      "industryDomains": [
+        "Infrastructure",
+        "Public Sector"
+      ],
+      "environmentFit": [
+        "consultancy",
+        "enterprise"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Ervaren lead in weg- en mobiliteitsontwerp met bewezen leiderschap in grootschalige infrastructuurprojecten."
+    },
+    "searchIndex": {
+      "roles": [
+        "Transportation Engineer",
+        "Highway Engineer",
+        "Civil Engineer"
+      ],
+      "skills": [
+        "AutoCAD Civil 3D",
+        "BIM",
+        "GIS",
+        "Road Design",
+        "Traffic Modeling",
+        "Infrastructure"
+      ],
+      "industries": [
+        "Infrastructure",
+        "Public Sector",
+        "Consultancy"
+      ]
+    },
+    "tags": [
+      "infrastructuur",
+      "wegontwerp",
+      "transportation",
+      "civil-3d",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Manager water- en milieutechniek met vijftien jaar ervaring in waterbeheer, rioleringssystemen en klimaatadaptatie. Stuurt engineering- en adviesteams aan bij grootschalige water- en milieuprojecten. Combineert technische diepgang met beleids- en stakeholdervaardigheden in de publieke sector.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Nadia Bouzid",
+      "role": "Manager Water- en Milieutechniek",
+      "summary": "Manager water and environmental engineering met brede ervaring in waterbeheer, riolering en klimaatadaptatie. Stuurt teams aan en adviseert overheden over duurzame wateroplossingen.",
+      "contact": {
+        "phone": "+31 6 29471058",
+        "email": "nadia.bouzid@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "Bezuidenhoutseweg",
+          "streetType": "weg",
+          "city": "Den Haag",
+          "state": "Zuid-Holland",
+          "zipCode": "2594 AV",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/nadiabouzid"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dinsdagochtend",
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Watertechniek",
+        "skills": [
+          "Waterbeheer",
+          "Rioleringssystemen",
+          "Klimaatadaptatie",
+          "Hydrologie"
+        ]
+      },
+      {
+        "category": "Modellering",
+        "skills": [
+          "SOBEK",
+          "InfoWorks",
+          "GIS",
+          "AutoCAD Civil 3D"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Teammanagement",
+          "Projectportfolio",
+          "Budgetbeheer",
+          "Aanbestedingen"
+        ]
+      },
+      {
+        "category": "Beleid",
+        "skills": [
+          "Kaderrichtlijn Water",
+          "Milieuvergunningen",
+          "Stakeholdermanagement"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Waterbeheer",
+        "Klimaatadaptatie",
+        "Rioleringssystemen",
+        "Milieuadvies"
+      ],
+      "keyResponsibilities": [
+        "Aansturen van water- en milieuadviesteams",
+        "Bewaken van projectportfolio en budgetten",
+        "Adviseren van overheden over waterbeleid",
+        "Begeleiden van klimaatadaptatieprojecten"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Royal HaskoningDHV",
+        "website": "https://www.royalhaskoningdhv.com",
+        "location": "Den Haag, Nederland",
+        "from": "2017-05",
+        "to": "Present",
+        "position": "Manager Water & Milieu",
+        "activities": [
+          {
+            "project": "Klimaatadaptatieprogramma gemeente",
+            "tasks": [
+              "Aansturen van multidisciplinair adviesteam",
+              "Bewaken van projectportfolio en budgetten",
+              "Adviseren van bestuurders over waterberging en riolering"
+            ]
+          }
+        ],
+        "achievements": [
+          "Klimaatadaptatieplan voor grote gemeente opgeleverd",
+          "Teamomvang uitgebreid en verzuim verlaagd"
+        ],
+        "toolsAndTechnologies": [
+          "SOBEK",
+          "GIS",
+          "AutoCAD Civil 3D"
+        ]
+      },
+      {
+        "company": "Waterschap Rivierenland",
+        "website": "https://www.waterschaprivierenland.nl",
+        "location": "Tiel, Nederland",
+        "from": "2013-04",
+        "to": "2017-04",
+        "position": "Senior Adviseur Water",
+        "activities": [
+          {
+            "project": "Rioleringsplan regio",
+            "tasks": [
+              "Uitvoeren van hydraulische modelleringen in SOBEK",
+              "Opstellen van rioleringsplannen",
+              "Afstemmen met gemeenten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Regionaal rioleringsplan geactualiseerd",
+          "Wateroverlast in risicowijken structureel verminderd"
+        ],
+        "toolsAndTechnologies": [
+          "SOBEK",
+          "InfoWorks",
+          "GIS"
+        ]
+      },
+      {
+        "company": "Tauw",
+        "website": "https://www.tauw.nl",
+        "location": "Utrecht, Nederland",
+        "from": "2010-09",
+        "to": "2013-03",
+        "position": "Adviseur Water en Milieu",
+        "activities": [
+          {
+            "project": "Milieuonderzoek bodem en water",
+            "tasks": [
+              "Uitvoeren van waterkwaliteitsonderzoek",
+              "Opstellen van milieuadviezen",
+              "Ondersteunen van vergunningsaanvragen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Milieuadvies voor bedrijventerrein afgerond"
+        ],
+        "toolsAndTechnologies": [
+          "GIS",
+          "AutoCAD Civil 3D"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2010",
+        "institution": "Wageningen University & Research",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Milieutechnologie",
+        "achievements": [
+          "Afstudeerrichting waterbeheer",
+          "Scriptie over stedelijke waterberging"
+        ]
+      },
+      {
+        "year": "2019",
+        "institution": "TIAS School for Business and Society",
+        "degree": "Master",
+        "fieldOfStudy": "Public Management",
+        "achievements": [
+          "Focus op publiek leiderschap"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Project Management Professional (PMP)",
+        "institution": "Project Management Institute",
+        "year": "2016",
+        "description": "Internationale certificering in projectmanagement."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SOBEK",
+        "InfoWorks",
+        "GIS",
+        "AutoCAD Civil 3D",
+        "Hydrologie"
+      ],
+      "softSkills": [
+        "Leiderschap",
+        "Stakeholdermanagement",
+        "Strategisch denken",
+        "Coaching"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Regionaal klimaatadaptatieplan",
+        "description": "Leidde de opstelling van een regionaal plan voor waterberging en klimaatbestendige inrichting.",
+        "date": "2022",
+        "impact": "Overstromingsrisico in kwetsbare gebieden aantoonbaar verlaagd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Kanovaren",
+      "Tuinieren",
+      "Duurzaamheidsdebatten"
+    ],
+    "references": [
+      {
+        "name": "Hans Timmermans",
+        "position": "Directeur Advies",
+        "company": "Royal HaskoningDHV",
+        "contact": {
+          "phone": "+31 6 41930285",
+          "email": "hans.timmermans@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 92000,
+      "max": 115000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Water & Environmental Engineering",
+      "secondaryClusters": [
+        "Civil Engineering",
+        "Climate Adaptation"
+      ],
+      "functionalExpertise": [
+        "Water Management",
+        "Environmental Consulting",
+        "Team Leadership"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Lager overstromingsrisico",
+        "Duurzamer waterbeheer",
+        "Succesvolle programmarealisatie"
+      ],
+      "industryDomains": [
+        "Water Management",
+        "Public Sector"
+      ],
+      "environmentFit": [
+        "consultancy",
+        "public sector"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Ervaren manager water en milieu met sterke technische basis en bewezen leiderschap in klimaatadaptatie."
+    },
+    "searchIndex": {
+      "roles": [
+        "Water Engineer",
+        "Environmental Engineer",
+        "Engineering Manager"
+      ],
+      "skills": [
+        "SOBEK",
+        "InfoWorks",
+        "GIS",
+        "AutoCAD Civil 3D",
+        "Water Management",
+        "Climate Adaptation"
+      ],
+      "industries": [
+        "Water Management",
+        "Public Sector",
+        "Consultancy"
+      ]
+    },
+    "tags": [
+      "water",
+      "milieu",
+      "klimaatadaptatie",
+      "management",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior power systems engineer met ruim twaalf jaar ervaring in het ontwerpen en analyseren van elektriciteitsnetten en middenspanningsinstallaties. Specialist in netberekeningen, beschermingscoördinatie en netaansluitingen voor industrie en energiesector. Sterk in het integreren van duurzame opwekking in bestaande netten.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Daan Willems",
+      "role": "Senior Power Systems Engineer",
+      "summary": "Senior elektrotechnisch ingenieur gespecialiseerd in elektriciteitsnetten en middenspanning. Voert netberekeningen en beschermingsstudies uit en ontwerpt netaansluitingen voor industrie en energie.",
+      "contact": {
+        "phone": "+31 6 34820917",
+        "email": "daan.willems@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Velperweg",
+          "streetType": "weg",
+          "city": "Arnhem",
+          "state": "Gelderland",
+          "zipCode": "6824 BE",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/daanwillems"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "dinsdagmiddag",
+          "vrijdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Netberekeningen",
+        "skills": [
+          "Loadflow",
+          "Kortsluitberekeningen",
+          "Beschermingscoördinatie",
+          "Netaansluitingen"
+        ]
+      },
+      {
+        "category": "Software",
+        "skills": [
+          "ETAP",
+          "DIgSILENT PowerFactory",
+          "AutoCAD Electrical",
+          "MATLAB"
+        ]
+      },
+      {
+        "category": "Installaties",
+        "skills": [
+          "Middenspanning",
+          "Transformatoren",
+          "Schakelinstallaties",
+          "Aarding"
+        ]
+      },
+      {
+        "category": "Normen",
+        "skills": [
+          "IEC 60909",
+          "NEN-EN 50110",
+          "Netcode"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Elektriciteitsnetten",
+        "Middenspanningsinstallaties",
+        "Netberekeningen",
+        "Duurzame netintegratie"
+      ],
+      "keyResponsibilities": [
+        "Uitvoeren van loadflow- en kortsluitberekeningen",
+        "Ontwerpen van middenspanningsinstallaties",
+        "Opstellen van beschermingscoördinatie",
+        "Adviseren over netaansluitingen"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Alliander",
+        "website": "https://www.alliander.com",
+        "location": "Arnhem, Nederland",
+        "from": "2018-03",
+        "to": "Present",
+        "position": "Senior Power Systems Engineer",
+        "activities": [
+          {
+            "project": "Netverzwaring voor duurzame opwekking",
+            "tasks": [
+              "Uitvoeren van loadflow- en kortsluitberekeningen in ETAP",
+              "Ontwerpen van middenspanningsaansluitingen",
+              "Opstellen van beschermingscoördinatie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Netaansluiting voor zonnepark succesvol gerealiseerd",
+          "Beschermingsplan voor onderstation geoptimaliseerd"
+        ],
+        "toolsAndTechnologies": [
+          "ETAP",
+          "DIgSILENT PowerFactory",
+          "AutoCAD Electrical"
+        ]
+      },
+      {
+        "company": "Stedin",
+        "website": "https://www.stedin.net",
+        "location": "Rotterdam, Nederland",
+        "from": "2015-05",
+        "to": "2018-02",
+        "position": "Elektrotechnisch Ingenieur Netten",
+        "activities": [
+          {
+            "project": "Onderstation middenspanning",
+            "tasks": [
+              "Ontwerpen van schakelinstallaties",
+              "Uitvoeren van netberekeningen",
+              "Afstemmen met aannemers"
+            ]
+          }
+        ],
+        "achievements": [
+          "Onderstationontwerp binnen budget opgeleverd",
+          "Aarding- en beveiligingsconcept verbeterd"
+        ],
+        "toolsAndTechnologies": [
+          "ETAP",
+          "AutoCAD Electrical"
+        ]
+      },
+      {
+        "company": "Croon Elektrotechniek",
+        "website": "https://www.croonwolterendros.nl",
+        "location": "Rotterdam, Nederland",
+        "from": "2013-09",
+        "to": "2015-04",
+        "position": "Junior Elektrotechnisch Ingenieur",
+        "activities": [
+          {
+            "project": "Industriële elektrische installaties",
+            "tasks": [
+              "Uitwerken van installatietekeningen",
+              "Uitvoeren van eenvoudige berekeningen",
+              "Ondersteunen van engineers"
+            ]
+          }
+        ],
+        "achievements": [
+          "Eerste zelfstandige installatieontwerp opgeleverd"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Electrical"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2013",
+        "institution": "Technische Universiteit Delft",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Elektrotechniek",
+        "achievements": [
+          "Afstudeerrichting Electrical Power Engineering",
+          "Scriptie over netintegratie van zonne-energie"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "NEN 3140 Vakbekwaam Persoon",
+        "institution": "NEN",
+        "year": "2019",
+        "description": "Certificering voor veilig werken aan elektrische installaties."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ETAP",
+        "DIgSILENT PowerFactory",
+        "AutoCAD Electrical",
+        "MATLAB",
+        "IEC 60909"
+      ],
+      "softSkills": [
+        "Analytisch denken",
+        "Zorgvuldigheid",
+        "Samenwerken",
+        "Adviesvaardigheid"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Netaansluiting windpark",
+        "description": "Ontwierp de middenspanningsaansluiting en beschermingscoördinatie voor een regionaal windpark.",
+        "date": "2022",
+        "impact": "Duurzame opwekking betrouwbaar op het net aangesloten."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Schaken",
+      "Elektronica knutselen",
+      "Bergwandelen"
+    ],
+    "references": [
+      {
+        "name": "Ellen Post",
+        "position": "Teamleider Netontwerp",
+        "company": "Alliander",
+        "contact": {
+          "phone": "+31 6 28471039",
+          "email": "ellen.post@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 66000,
+      "max": 82000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Power Systems Engineering",
+      "secondaryClusters": [
+        "Electrical Engineering",
+        "Energy"
+      ],
+      "functionalExpertise": [
+        "Power System Analysis",
+        "Protection Coordination",
+        "Grid Connection"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Betrouwbaardere netten",
+        "Succesvolle netintegratie",
+        "Veiligere installaties"
+      ],
+      "industryDomains": [
+        "Energy",
+        "Utilities"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "utilities"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Ervaren power systems engineer met diepe expertise in netberekeningen en middenspanning binnen de energiesector."
+    },
+    "searchIndex": {
+      "roles": [
+        "Power Systems Engineer",
+        "Electrical Engineer",
+        "Grid Engineer"
+      ],
+      "skills": [
+        "ETAP",
+        "DIgSILENT PowerFactory",
+        "AutoCAD Electrical",
+        "MATLAB",
+        "Power System Analysis",
+        "Protection Coordination"
+      ],
+      "industries": [
+        "Energy",
+        "Utilities",
+        "Power Systems"
+      ]
+    },
+    "tags": [
+      "elektrotechniek",
+      "power-systems",
+      "etap",
+      "energie",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Elektrotechnisch ontwerpingenieur met bijna vijf jaar ervaring in het ontwerpen van elektrische installaties voor utiliteits- en industriebouw. Werkt aan verlichting, verdeelborden en laagspanningsinstallaties en ondersteunt de verduurzaming van gebouwen. Leergierig en nauwkeurig, met oog voor normen en veiligheid.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Emma Claes",
+      "role": "Elektrotechnisch Ontwerpingenieur",
+      "summary": "Elektrotechnisch ontwerpingenieur gespecialiseerd in laagspannings- en gebouwinstallaties. Ontwerpt verlichting en verdeelborden en werkt aan de elektrische uitwerking van bouwprojecten.",
+      "contact": {
+        "phone": "+32 479 30 82 61",
+        "email": "emma.claes@example.be",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Kempische Steenweg",
+          "streetType": "steenweg",
+          "city": "Hasselt",
+          "state": "Limburg",
+          "zipCode": "3500",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/emmaclaes"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "maandagochtend",
+          "woensdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Elektrisch ontwerp",
+        "skills": [
+          "Laagspanningsinstallaties",
+          "Verlichtingsontwerp",
+          "Verdeelborden",
+          "Kabelberekeningen"
+        ]
+      },
+      {
+        "category": "Software",
+        "skills": [
+          "AutoCAD Electrical",
+          "EPLAN",
+          "Dialux",
+          "Revit MEP"
+        ]
+      },
+      {
+        "category": "Duurzaamheid",
+        "skills": [
+          "Zonnepanelen",
+          "Laadinfrastructuur",
+          "Energiemetingen"
+        ]
+      },
+      {
+        "category": "Normen",
+        "skills": [
+          "AREI",
+          "NEN 1010",
+          "Elektrische veiligheid"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Elektrisch installatieontwerp",
+        "Verlichtingsontwerp",
+        "Laagspanning",
+        "Gebouwinstallaties"
+      ],
+      "keyResponsibilities": [
+        "Ontwerpen van laagspanningsinstallaties",
+        "Uitwerken van verlichtings- en verdeelbordschema's",
+        "Uitvoeren van kabelberekeningen",
+        "Ondersteunen bij bestekken en tekeningen"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Ingenium",
+        "website": "https://www.ingenium.be",
+        "location": "Brugge, België",
+        "from": "2023-03",
+        "to": "Present",
+        "position": "Elektrotechnisch Ontwerpingenieur",
+        "activities": [
+          {
+            "project": "Elektrische installatie schoolcampus",
+            "tasks": [
+              "Ontwerpen van laagspanningsinstallaties in EPLAN",
+              "Uitwerken van verlichtingsplannen in Dialux",
+              "Uitvoeren van kabel- en beschermingsberekeningen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Verlichtingsontwerp met lager energieverbruik gerealiseerd",
+          "Zelfstandig verdeelbordschema's opgeleverd"
+        ],
+        "toolsAndTechnologies": [
+          "EPLAN",
+          "AutoCAD Electrical",
+          "Dialux"
+        ]
+      },
+      {
+        "company": "Boydens Engineering",
+        "website": "https://www.boydens.be",
+        "location": "Brugge, België",
+        "from": "2021-08",
+        "to": "2023-02",
+        "position": "Junior Elektrotechnisch Ingenieur",
+        "activities": [
+          {
+            "project": "Installatieontwerp kantoorgebouw",
+            "tasks": [
+              "Uitwerken van elektrische tekeningen in AutoCAD Electrical",
+              "Ondersteunen bij verlichtingsberekeningen",
+              "Verwerken van commentaar op ontwerpen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Eerste zelfstandig installatieontwerp afgerond"
+        ],
+        "toolsAndTechnologies": [
+          "AutoCAD Electrical",
+          "Revit MEP"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2021",
+        "institution": "UHasselt",
+        "degree": "Master in de industriële wetenschappen",
+        "fieldOfStudy": "Elektrotechniek",
+        "achievements": [
+          "Afstudeerrichting energie",
+          "Scriptie over energiezuinige gebouwinstallaties"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AREI Basisopleiding",
+        "institution": "Volta",
+        "year": "2022",
+        "description": "Opleiding in het Algemeen Reglement op de Elektrische Installaties."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "AutoCAD Electrical",
+        "EPLAN",
+        "Dialux",
+        "Revit MEP",
+        "NEN 1010"
+      ],
+      "softSkills": [
+        "Leergierigheid",
+        "Nauwkeurigheid",
+        "Samenwerken",
+        "Doorzettingsvermogen"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Energiezuinig verlichtingsontwerp",
+        "description": "Ontwierp een LED-verlichtingsplan met daglichtregeling voor een schoolcampus.",
+        "date": "2024",
+        "impact": "Energieverbruik van de verlichting fors verlaagd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Fotografie",
+      "Wielrennen",
+      "Domotica-projecten"
+    ],
+    "references": [
+      {
+        "name": "Wouter Vermeersch",
+        "position": "Projectingenieur",
+        "company": "Ingenium",
+        "contact": {
+          "phone": "+32 470 18 55 23",
+          "email": "wouter.vermeersch@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 42000,
+      "max": 54000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Electrical Design Engineering",
+      "secondaryClusters": [
+        "Building Services",
+        "Low Voltage Systems"
+      ],
+      "functionalExpertise": [
+        "Electrical Design",
+        "Lighting Design",
+        "Building Installations"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Energiezuinigere installaties",
+        "Nauwkeurige ontwerpen",
+        "Snellere uitwerking"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Building Services"
+      ],
+      "environmentFit": [
+        "consultancy",
+        "onsite"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.82,
+      "clusterReasoning": "Startende elektrotechnisch ontwerpingenieur met sterke groei in gebouwinstallaties en duurzaamheid."
+    },
+    "searchIndex": {
+      "roles": [
+        "Electrical Design Engineer",
+        "Building Services Engineer",
+        "Electrical Engineer"
+      ],
+      "skills": [
+        "AutoCAD Electrical",
+        "EPLAN",
+        "Dialux",
+        "Revit MEP",
+        "Electrical Design",
+        "Lighting Design"
+      ],
+      "industries": [
+        "Construction",
+        "Building Services",
+        "Consultancy"
+      ]
+    },
+    "tags": [
+      "elektrotechniek",
+      "installaties",
+      "eplan",
+      "building-services",
+      "junior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior control & instrumentation engineer met tien jaar ervaring in het ontwerpen en in bedrijf stellen van besturingssystemen voor de proces- en maakindustrie. Specialist in PLC- en SCADA-programmering, procesautomatisering en instrumentatie. Sterk in het verbeteren van procesbetrouwbaarheid en het reduceren van stilstand.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Ravi Sharma",
+      "role": "Senior Control & Instrumentation Engineer",
+      "summary": "Senior C&I engineer gespecialiseerd in PLC- en SCADA-systemen en procesautomatisering. Ontwerpt besturingssystemen, verzorgt inbedrijfstelling en optimaliseert procesbetrouwbaarheid.",
+      "contact": {
+        "phone": "+31 6 39028471",
+        "email": "ravi.sharma@example.com",
+        "address": {
+          "streetNumber": "51",
+          "streetName": "Botlekweg",
+          "streetType": "weg",
+          "city": "Rotterdam",
+          "state": "Zuid-Holland",
+          "zipCode": "3197 KA",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ravisharma"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "woensdagmiddag",
+          "vrijdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Besturingstechniek",
+        "skills": [
+          "PLC-programmering",
+          "SCADA",
+          "Procesautomatisering",
+          "DCS"
+        ]
+      },
+      {
+        "category": "Software en merken",
+        "skills": [
+          "Siemens TIA Portal",
+          "Rockwell",
+          "WinCC",
+          "AutoCAD Electrical"
+        ]
+      },
+      {
+        "category": "Instrumentatie",
+        "skills": [
+          "Meet- en regeltechniek",
+          "Sensoren",
+          "Loop-diagrammen",
+          "Inbedrijfstelling"
+        ]
+      },
+      {
+        "category": "Normen",
+        "skills": [
+          "IEC 61131",
+          "SIL",
+          "Functionele veiligheid"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Procesautomatisering",
+        "PLC- en SCADA-systemen",
+        "Instrumentatie",
+        "Inbedrijfstelling"
+      ],
+      "keyResponsibilities": [
+        "Ontwerpen van besturings- en instrumentatiesystemen",
+        "Programmeren van PLC en SCADA",
+        "Uitvoeren van inbedrijfstelling",
+        "Optimaliseren van procesbetrouwbaarheid"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Yokogawa",
+        "website": "https://www.yokogawa.com",
+        "location": "Amersfoort, Nederland",
+        "from": "2019-06",
+        "to": "Present",
+        "position": "Senior Control & Instrumentation Engineer",
+        "activities": [
+          {
+            "project": "Procesbesturing chemische installatie",
+            "tasks": [
+              "Ontwerpen van DCS- en SCADA-architectuur",
+              "Programmeren van besturingslogica",
+              "Begeleiden van inbedrijfstelling op locatie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Ongeplande procesuitval met 25% verminderd",
+          "Inbedrijfstelling van nieuwe lijn zonder vertraging afgerond"
+        ],
+        "toolsAndTechnologies": [
+          "Siemens TIA Portal",
+          "WinCC",
+          "AutoCAD Electrical"
+        ]
+      },
+      {
+        "company": "Bilfinger Tebodin",
+        "website": "https://www.bilfinger.com",
+        "location": "Den Haag, Nederland",
+        "from": "2017-04",
+        "to": "2019-05",
+        "position": "Control Engineer",
+        "activities": [
+          {
+            "project": "Automatisering productielijn",
+            "tasks": [
+              "Programmeren van PLC-logica in TIA Portal",
+              "Opstellen van loop-diagrammen",
+              "Testen van besturingssystemen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Productielijn succesvol geautomatiseerd",
+          "Cyclustijd van lijn verkort"
+        ],
+        "toolsAndTechnologies": [
+          "Siemens TIA Portal",
+          "Rockwell"
+        ]
+      },
+      {
+        "company": "Actemium",
+        "website": "https://www.actemium.nl",
+        "location": "Rotterdam, Nederland",
+        "from": "2015-09",
+        "to": "2017-03",
+        "position": "Junior Besturingstechnicus",
+        "activities": [
+          {
+            "project": "Kleine automatiseringsprojecten",
+            "tasks": [
+              "Ondersteunen bij PLC-programmering",
+              "Opstellen van elektrische schema's",
+              "Uitvoeren van tests"
+            ]
+          }
+        ],
+        "achievements": [
+          "Eerste zelfstandige PLC-programma opgeleverd"
+        ],
+        "toolsAndTechnologies": [
+          "Siemens TIA Portal",
+          "AutoCAD Electrical"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "Technische Universiteit Eindhoven",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Elektrotechniek",
+        "achievements": [
+          "Afstudeerrichting systemen en regeltechniek",
+          "Scriptie over procesregeling"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "TÜV Functional Safety Engineer (SIL)",
+        "institution": "TÜV Rheinland",
+        "year": "2020",
+        "description": "Certificering in functionele veiligheid volgens IEC 61508."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Siemens TIA Portal",
+        "WinCC",
+        "Rockwell",
+        "AutoCAD Electrical",
+        "SCADA",
+        "PLC"
+      ],
+      "softSkills": [
+        "Probleemoplossend vermogen",
+        "Nauwkeurigheid",
+        "Stressbestendigheid",
+        "Samenwerken"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Modernisering procesbesturing",
+        "description": "Leidde de migratie van een verouderd besturingssysteem naar een modern DCS-platform.",
+        "date": "2022",
+        "impact": "Procesbetrouwbaarheid verhoogd en onderhoud vereenvoudigd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Cricket",
+      "Robotica",
+      "Koken"
+    ],
+    "references": [
+      {
+        "name": "Peter Bakker",
+        "position": "Lead Automation Engineer",
+        "company": "Yokogawa",
+        "contact": {
+          "phone": "+31 6 48210937",
+          "email": "peter.bakker@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 68000,
+      "max": 84000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Control & Instrumentation Engineering",
+      "secondaryClusters": [
+        "Process Automation",
+        "Electrical Engineering"
+      ],
+      "functionalExpertise": [
+        "PLC/SCADA Programming",
+        "Process Automation",
+        "Commissioning"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Minder procesuitval",
+        "Hogere procesbetrouwbaarheid",
+        "Kortere cyclustijden"
+      ],
+      "industryDomains": [
+        "Process Industry",
+        "Chemicals"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "industrial"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Ervaren C&I engineer met diepe expertise in PLC- en SCADA-systemen en procesautomatisering in de procesindustrie."
+    },
+    "searchIndex": {
+      "roles": [
+        "Control Engineer",
+        "Instrumentation Engineer",
+        "Automation Engineer"
+      ],
+      "skills": [
+        "PLC",
+        "SCADA",
+        "Siemens TIA Portal",
+        "WinCC",
+        "AutoCAD Electrical",
+        "Process Automation"
+      ],
+      "industries": [
+        "Process Industry",
+        "Chemicals",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "besturingstechniek",
+      "plc",
+      "scada",
+      "automatisering",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Lead embedded & hardware engineer met veertien jaar ervaring in het ontwerpen van elektronica en embedded systemen voor de hightech- en medische sector. Stuurt hardwareteams aan van schema en PCB-ontwerp tot firmware-integratie en EMC-validatie. Sterk in het overbruggen van elektronica, software en mechanica.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Marijke Vandenberghe",
+      "role": "Lead Embedded & Hardware Engineer",
+      "summary": "Lead engineer gespecialiseerd in embedded systemen en elektronica-ontwerp. Stuurt hardwareontwikkeling aan van PCB-ontwerp tot firmware-integratie en bewaakt EMC en betrouwbaarheid.",
+      "contact": {
+        "phone": "+31 6 41093827",
+        "email": "marijke.vandenberghe@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "High Tech Campus",
+          "streetType": "campus",
+          "city": "Eindhoven",
+          "state": "Noord-Brabant",
+          "zipCode": "5656 AE",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/marijkevandenberghe"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dinsdagochtend",
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Elektronica-ontwerp",
+        "skills": [
+          "PCB-ontwerp",
+          "Analoge elektronica",
+          "Digitale elektronica",
+          "Voedingen"
+        ]
+      },
+      {
+        "category": "Embedded",
+        "skills": [
+          "Firmware-integratie",
+          "Microcontrollers",
+          "MATLAB/Simulink",
+          "Signaalverwerking"
+        ]
+      },
+      {
+        "category": "Validatie",
+        "skills": [
+          "EMC",
+          "Betrouwbaarheidsanalyse",
+          "Testautomatisering",
+          "Meettechniek"
+        ]
+      },
+      {
+        "category": "Leiderschap",
+        "skills": [
+          "Technisch teamleiderschap",
+          "Architectuur",
+          "Reviewbegeleiding"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Embedded systemen",
+        "Elektronica-ontwerp",
+        "EMC en betrouwbaarheid",
+        "Hardwarearchitectuur"
+      ],
+      "keyResponsibilities": [
+        "Aansturen van hardwareontwikkelteams",
+        "Definiëren van elektronica-architectuur",
+        "Begeleiden van PCB- en firmware-integratie",
+        "Bewaken van EMC en betrouwbaarheid"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Philips",
+        "website": "https://www.philips.com",
+        "location": "Best, Nederland",
+        "from": "2017-02",
+        "to": "Present",
+        "position": "Lead Embedded & Hardware Engineer",
+        "activities": [
+          {
+            "project": "Elektronica voor medische beeldvorming",
+            "tasks": [
+              "Aansturen van hardwareontwikkelteam",
+              "Definiëren van elektronica-architectuur",
+              "Begeleiden van EMC- en betrouwbaarheidsvalidatie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Nieuw elektronicaplatform succesvol gecertificeerd",
+          "EMC-doorlooptijd met 30% verkort"
+        ],
+        "toolsAndTechnologies": [
+          "MATLAB/Simulink",
+          "Altium",
+          "Oscilloscoop"
+        ]
+      },
+      {
+        "company": "NXP Semiconductors",
+        "website": "https://www.nxp.com",
+        "location": "Eindhoven, Nederland",
+        "from": "2013-04",
+        "to": "2017-01",
+        "position": "Senior Hardware Engineer",
+        "activities": [
+          {
+            "project": "Ontwikkeling embedded referentieontwerp",
+            "tasks": [
+              "Ontwerpen van PCB's en voedingen",
+              "Integreren van firmware met hardware",
+              "Uitvoeren van signaalintegriteitsanalyses"
+            ]
+          }
+        ],
+        "achievements": [
+          "Referentieontwerp voor klanten uitgebracht",
+          "Twee patenten mede op naam"
+        ],
+        "toolsAndTechnologies": [
+          "Altium",
+          "MATLAB/Simulink"
+        ]
+      },
+      {
+        "company": "Prodrive Technologies",
+        "website": "https://prodrive-technologies.com",
+        "location": "Son, Nederland",
+        "from": "2011-09",
+        "to": "2013-03",
+        "position": "Hardware Engineer",
+        "activities": [
+          {
+            "project": "Aandrijfelektronica",
+            "tasks": [
+              "Ontwerpen van analoge en digitale schakelingen",
+              "Uitvoeren van metingen",
+              "Ondersteunen van productie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Aandrijfmodule met hoger rendement ontworpen"
+        ],
+        "toolsAndTechnologies": [
+          "Altium",
+          "MATLAB"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "Technische Universiteit Eindhoven",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Elektrotechniek",
+        "achievements": [
+          "Afstudeerrichting embedded systemen",
+          "Afgestudeerd met onderscheiding"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "EMC Design Engineer",
+        "institution": "Mikrocentrum",
+        "year": "2018",
+        "description": "Certificering in elektromagnetische compatibiliteit en ontwerp."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "MATLAB/Simulink",
+        "Altium",
+        "PCB-ontwerp",
+        "EMC",
+        "Signaalverwerking"
+      ],
+      "softSkills": [
+        "Leiderschap",
+        "Analytisch denken",
+        "Mentorschap",
+        "Besluitvaardigheid"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Elektronicaplatform medische apparatuur",
+        "description": "Leidde de ontwikkeling van een modulair elektronicaplatform voor meerdere medische producten.",
+        "date": "2021",
+        "impact": "Herbruikbaarheid vergroot en ontwikkeltijd van vervolgproducten verkort."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Amateurradio",
+      "Zeilen",
+      "Techniekonderwijs"
+    ],
+    "references": [
+      {
+        "name": "Tom Hermans",
+        "position": "Engineering Manager",
+        "company": "Philips",
+        "contact": {
+          "phone": "+31 6 33920841",
+          "email": "tom.hermans@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 82000,
+      "max": 100000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Embedded & Hardware Engineering",
+      "secondaryClusters": [
+        "Electronics Design",
+        "Electrical Engineering"
+      ],
+      "functionalExpertise": [
+        "PCB Design",
+        "Embedded Systems",
+        "EMC Validation"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Snellere certificering",
+        "Herbruikbare platformen",
+        "Hogere betrouwbaarheid"
+      ],
+      "industryDomains": [
+        "High-tech",
+        "Medical Devices"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "scale-up"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Ervaren lead in embedded- en hardware-ontwikkeling met bewezen leiderschap in de hightech- en medische sector."
+    },
+    "searchIndex": {
+      "roles": [
+        "Embedded Engineer",
+        "Hardware Engineer",
+        "Electronics Engineer"
+      ],
+      "skills": [
+        "MATLAB/Simulink",
+        "Altium",
+        "PCB Design",
+        "Embedded Systems",
+        "EMC",
+        "Signal Processing"
+      ],
+      "industries": [
+        "High-tech",
+        "Medical Devices",
+        "Electronics"
+      ]
+    },
+    "tags": [
+      "embedded",
+      "hardware",
+      "elektronica",
+      "matlab",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directeur duurzame energie met zestien jaar ervaring in de ontwikkeling en realisatie van wind-, zonne- en waterstofprojecten. Stuurt engineering- en projectorganisaties aan en bewaakt de technische en commerciële haalbaarheid van grootschalige energieprojecten. Sterk in netintegratie, businesscases en stakeholdermanagement.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Tom Segers",
+      "role": "Directeur Duurzame Energie",
+      "summary": "Directeur renewable energy met brede elektrotechnische achtergrond in wind-, zon- en waterstofprojecten. Stuurt engineeringteams en projectportfolio's aan en bewaakt haalbaarheid en netintegratie.",
+      "contact": {
+        "phone": "+31 6 47281093",
+        "email": "tom.segers@example.com",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "Zernikelaan",
+          "streetType": "laan",
+          "city": "Groningen",
+          "state": "Groningen",
+          "zipCode": "9747 AA",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/tomsegers"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "maandagochtend",
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Energieprojecten",
+        "skills": [
+          "Windenergie",
+          "Zonne-energie",
+          "Waterstof",
+          "Netintegratie"
+        ]
+      },
+      {
+        "category": "Techniek",
+        "skills": [
+          "ETAP",
+          "PVsyst",
+          "MATLAB",
+          "Vermogenselektronica"
+        ]
+      },
+      {
+        "category": "Leiderschap",
+        "skills": [
+          "Directievoering",
+          "Portfoliobeheer",
+          "Businesscases",
+          "Stakeholdermanagement"
+        ]
+      },
+      {
+        "category": "Regelgeving",
+        "skills": [
+          "SDE++",
+          "Netcode",
+          "Vergunningen"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Duurzame energie",
+        "Windprojecten",
+        "Netintegratie",
+        "Energietransitie"
+      ],
+      "keyResponsibilities": [
+        "Aansturen van engineering- en projectorganisatie",
+        "Bewaken van technische en commerciële haalbaarheid",
+        "Ontwikkelen van energieprojecten en businesscases",
+        "Beheren van stakeholders en vergunningen"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Vattenfall",
+        "website": "https://www.vattenfall.nl",
+        "location": "Groningen, Nederland",
+        "from": "2018-01",
+        "to": "Present",
+        "position": "Directeur Duurzame Energie",
+        "activities": [
+          {
+            "project": "Ontwikkeling windpark op land",
+            "tasks": [
+              "Aansturen van multidisciplinaire projectorganisatie",
+              "Bewaken van businesscase en netintegratie",
+              "Beheren van vergunningen en stakeholders"
+            ]
+          }
+        ],
+        "achievements": [
+          "Windpark van 100 MW succesvol gerealiseerd",
+          "Projectportfolio met meerdere GW aan pijplijn opgebouwd"
+        ],
+        "toolsAndTechnologies": [
+          "ETAP",
+          "PVsyst",
+          "MATLAB"
+        ]
+      },
+      {
+        "company": "Eneco",
+        "website": "https://www.eneco.nl",
+        "location": "Rotterdam, Nederland",
+        "from": "2013-03",
+        "to": "2017-12",
+        "position": "Manager Engineering Renewables",
+        "activities": [
+          {
+            "project": "Zonneparken en netaansluitingen",
+            "tasks": [
+              "Aansturen van engineeringteam",
+              "Bewaken van netaansluitingen en beschermingsstudies",
+              "Coördineren met netbeheerders"
+            ]
+          }
+        ],
+        "achievements": [
+          "Meerdere zonneparken tot realisatie gebracht",
+          "Standaard voor netaansluitingen opgezet"
+        ],
+        "toolsAndTechnologies": [
+          "ETAP",
+          "PVsyst"
+        ]
+      },
+      {
+        "company": "KEMA",
+        "website": "https://www.dnv.com",
+        "location": "Arnhem, Nederland",
+        "from": "2009-09",
+        "to": "2013-02",
+        "position": "Elektrotechnisch Ingenieur Energie",
+        "activities": [
+          {
+            "project": "Netstudies duurzame opwekking",
+            "tasks": [
+              "Uitvoeren van netstudies en berekeningen",
+              "Adviseren over aansluitcapaciteit",
+              "Opstellen van technische rapporten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Netstudie voor grootschalige aansluiting afgerond"
+        ],
+        "toolsAndTechnologies": [
+          "ETAP",
+          "MATLAB"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2009",
+        "institution": "Technische Universiteit Delft",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Elektrotechniek",
+        "achievements": [
+          "Afstudeerrichting Sustainable Energy Technology",
+          "Scriptie over windenergie-integratie"
+        ]
+      },
+      {
+        "year": "2017",
+        "institution": "Rotterdam School of Management",
+        "degree": "MBA",
+        "fieldOfStudy": "Business Administration",
+        "achievements": [
+          "Focus op energietransitie en strategie"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "EUR ING",
+        "institution": "FEANI",
+        "year": "2016",
+        "description": "Europese titel voor professionele ingenieurs."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ETAP",
+        "PVsyst",
+        "MATLAB",
+        "Vermogenselektronica",
+        "Netintegratie"
+      ],
+      "softSkills": [
+        "Leiderschap",
+        "Strategisch denken",
+        "Stakeholdermanagement",
+        "Onderhandelen"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Realisatie grootschalig windpark",
+        "description": "Stuurde de ontwikkeling en realisatie van een windpark op land van concept tot ingebruikname.",
+        "date": "2023",
+        "impact": "Duurzame opwekkingscapaciteit voor tienduizenden huishoudens toegevoegd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Zeilen",
+      "Energietransitie",
+      "Hardlopen"
+    ],
+    "references": [
+      {
+        "name": "Ingrid de Wit",
+        "position": "Country Manager",
+        "company": "Vattenfall",
+        "contact": {
+          "phone": "+31 6 20938471",
+          "email": "ingrid.dewit@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 110000,
+      "max": 135000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Renewable Energy Engineering",
+      "secondaryClusters": [
+        "Electrical Engineering",
+        "Energy Management"
+      ],
+      "functionalExpertise": [
+        "Renewable Energy Development",
+        "Grid Integration",
+        "Engineering Leadership"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Grootschalige duurzame opwekking",
+        "Sterke projectpijplijn",
+        "Succesvolle netintegratie"
+      ],
+      "industryDomains": [
+        "Energy",
+        "Utilities"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "utilities"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Ervaren directeur duurzame energie met sterke elektrotechnische basis en bewezen leiderschap in grootschalige energieprojecten."
+    },
+    "searchIndex": {
+      "roles": [
+        "Renewable Energy Engineer",
+        "Engineering Director",
+        "Electrical Engineer"
+      ],
+      "skills": [
+        "ETAP",
+        "PVsyst",
+        "MATLAB",
+        "Renewable Energy",
+        "Grid Integration",
+        "Power Electronics"
+      ],
+      "industries": [
+        "Energy",
+        "Utilities",
+        "Renewables"
+      ]
+    },
+    "tags": [
+      "duurzame-energie",
+      "renewables",
+      "windenergie",
+      "director",
+      "energietransitie"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior industrieel ingenieur met elf jaar ervaring in het optimaliseren van productieprocessen in de maak- en voedingsindustrie. Specialist in procesanalyse, lay-outoptimalisatie en het verhogen van doorstroom en rendement. Combineert Lean- en Six Sigma-methoden met een datagedreven verbeteraanpak.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Karin Aerts",
+      "role": "Senior Industrieel Ingenieur",
+      "summary": "Senior process/industrial engineer gespecialiseerd in procesoptimalisatie en productie-efficiëntie. Analyseert processen datagedreven en verbetert doorstroom, rendement en kwaliteit met Lean en Six Sigma.",
+      "contact": {
+        "phone": "+31 6 38471029",
+        "email": "karin.aerts@example.com",
+        "address": {
+          "streetNumber": "40",
+          "streetName": "Ringbaan",
+          "streetType": "baan",
+          "city": "Tilburg",
+          "state": "Noord-Brabant",
+          "zipCode": "5021 LX",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/karinaerts"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "dinsdagmiddag",
+          "donderdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Procesoptimalisatie",
+        "skills": [
+          "Procesanalyse",
+          "Lay-outoptimalisatie",
+          "Waardestroomanalyse",
+          "Capaciteitsplanning"
+        ]
+      },
+      {
+        "category": "Methoden",
+        "skills": [
+          "Lean",
+          "Six Sigma",
+          "Kaizen",
+          "5S"
+        ]
+      },
+      {
+        "category": "Analyse en tools",
+        "skills": [
+          "Minitab",
+          "SAP",
+          "Simulatie",
+          "Data-analyse"
+        ]
+      },
+      {
+        "category": "Kwaliteit",
+        "skills": [
+          "SPC",
+          "Root-cause-analyse",
+          "Standaardisatie"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Procesoptimalisatie",
+        "Lean manufacturing",
+        "Productie-efficiëntie",
+        "Capaciteitsplanning"
+      ],
+      "keyResponsibilities": [
+        "Analyseren en optimaliseren van productieprocessen",
+        "Uitvoeren van waardestroomanalyses",
+        "Verhogen van doorstroom en rendement",
+        "Begeleiden van verbeterprojecten"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "FrieslandCampina",
+        "website": "https://www.frieslandcampina.com",
+        "location": "Tilburg, Nederland",
+        "from": "2019-03",
+        "to": "Present",
+        "position": "Senior Industrieel Ingenieur",
+        "activities": [
+          {
+            "project": "Optimalisatie verpakkingslijnen",
+            "tasks": [
+              "Uitvoeren van waardestroomanalyses",
+              "Optimaliseren van lijn-lay-out en doorstroom",
+              "Begeleiden van Six Sigma-verbeterprojecten"
+            ]
+          }
+        ],
+        "achievements": [
+          "OEE van verpakkingslijnen met 15% verhoogd",
+          "Uitval en herbewerking structureel verlaagd"
+        ],
+        "toolsAndTechnologies": [
+          "Minitab",
+          "SAP",
+          "Lean"
+        ]
+      },
+      {
+        "company": "Fuji",
+        "website": "https://www.fujifilm.com",
+        "location": "Tilburg, Nederland",
+        "from": "2016-05",
+        "to": "2019-02",
+        "position": "Industrieel Ingenieur",
+        "activities": [
+          {
+            "project": "Procesverbetering productie",
+            "tasks": [
+              "Analyseren van productiedata in Minitab",
+              "Uitvoeren van Kaizen-workshops",
+              "Standaardiseren van werkinstructies"
+            ]
+          }
+        ],
+        "achievements": [
+          "Doorlooptijd van proces met 20% verkort",
+          "5S-programma op afdeling uitgerold"
+        ],
+        "toolsAndTechnologies": [
+          "Minitab",
+          "SAP"
+        ]
+      },
+      {
+        "company": "Van de Ven Bouw",
+        "website": "https://www.example.com",
+        "location": "Veghel, Nederland",
+        "from": "2014-09",
+        "to": "2016-04",
+        "position": "Junior Procesingenieur",
+        "activities": [
+          {
+            "project": "Efficiëntieverbetering assemblage",
+            "tasks": [
+              "Uitvoeren van tijdstudies",
+              "Ondersteunen van verbeterprojecten",
+              "Opstellen van procesbeschrijvingen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Eerste zelfstandige verbeterproject afgerond"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Lean"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2014",
+        "institution": "Technische Universiteit Eindhoven",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Technische Bedrijfskunde",
+        "achievements": [
+          "Afstudeerrichting operations management",
+          "Scriptie over productiedoorstroom"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Lean Six Sigma Black Belt",
+        "institution": "Lean Six Sigma Group",
+        "year": "2020",
+        "description": "Certificering in procesverbetering volgens Lean Six Sigma."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Minitab",
+        "SAP",
+        "Lean",
+        "Six Sigma",
+        "Value Stream Mapping"
+      ],
+      "softSkills": [
+        "Analytisch denken",
+        "Verbetergedrevenheid",
+        "Samenwerken",
+        "Overtuigingskracht"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Verhoging lijnrendement",
+        "description": "Leidde een Six Sigma-project om het rendement van een verpakkingslijn structureel te verhogen.",
+        "date": "2022",
+        "impact": "Rendement met 15% verbeterd en jaarlijkse besparing gerealiseerd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Hardlopen",
+      "Puzzelen",
+      "Reizen"
+    ],
+    "references": [
+      {
+        "name": "Bas Kuipers",
+        "position": "Operations Manager",
+        "company": "FrieslandCampina",
+        "contact": {
+          "phone": "+31 6 29104738",
+          "email": "bas.kuipers@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 78000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Industrial Engineering",
+      "secondaryClusters": [
+        "Process Optimization",
+        "Lean Manufacturing"
+      ],
+      "functionalExpertise": [
+        "Process Optimization",
+        "Lean Six Sigma",
+        "Production Efficiency"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Hoger lijnrendement",
+        "Lagere uitval",
+        "Kortere doorlooptijden"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Food & Beverage"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "industrial"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Ervaren industrieel ingenieur met bewezen resultaten in procesoptimalisatie met Lean en Six Sigma in de maakindustrie."
+    },
+    "searchIndex": {
+      "roles": [
+        "Industrial Engineer",
+        "Process Engineer",
+        "Continuous Improvement Engineer"
+      ],
+      "skills": [
+        "Minitab",
+        "SAP",
+        "Lean",
+        "Six Sigma",
+        "Value Stream Mapping",
+        "Process Optimization"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Food & Beverage",
+        "Process Industry"
+      ]
+    },
+    "tags": [
+      "industrieel",
+      "process",
+      "lean",
+      "six-sigma",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Kwaliteitsingenieur met ruim zes jaar ervaring in kwaliteitsborging en -verbetering in de automotive- en maakindustrie. Sterk in statistische procesbeheersing, klachtenanalyse en het opzetten van kwaliteitscontroles. Werkt datagedreven om afkeur te verlagen en leveranciers te verbeteren.",
+    "careerStartYear": 2019,
+    "personalInformation": {
+      "name": "Mehmet Yilmaz",
+      "role": "Kwaliteitsingenieur",
+      "summary": "Quality engineer gespecialiseerd in statistische procesbeheersing en kwaliteitsverbetering. Analyseert afkeur en klachten datagedreven en zet kwaliteitscontroles en leveranciersaudits op.",
+      "contact": {
+        "phone": "+31 6 40218397",
+        "email": "mehmet.yilmaz@example.com",
+        "address": {
+          "streetNumber": "22",
+          "streetName": "Ettensebaan",
+          "streetType": "baan",
+          "city": "Breda",
+          "state": "Noord-Brabant",
+          "zipCode": "4813 AH",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/mehmetyilmaz"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "maandagmiddag",
+          "woensdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Kwaliteitsborging",
+        "skills": [
+          "Statistische procesbeheersing",
+          "Kwaliteitscontrole",
+          "APQP",
+          "PPAP"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Minitab",
+          "8D",
+          "FMEA",
+          "Root-cause-analyse"
+        ]
+      },
+      {
+        "category": "Systemen",
+        "skills": [
+          "SAP QM",
+          "ISO 9001",
+          "IATF 16949",
+          "Auditing"
+        ]
+      },
+      {
+        "category": "Meettechniek",
+        "skills": [
+          "Meetkamer",
+          "GD&T",
+          "Meetrapporten"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Kwaliteitsborging",
+        "Statistische procesbeheersing",
+        "Klachtenanalyse",
+        "Leverancierskwaliteit"
+      ],
+      "keyResponsibilities": [
+        "Opzetten en bewaken van kwaliteitscontroles",
+        "Uitvoeren van klachten- en afkeuranalyses",
+        "Begeleiden van 8D- en FMEA-trajecten",
+        "Uitvoeren van leveranciersaudits"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Nedcar",
+        "website": "https://www.vdlnedcar.nl",
+        "location": "Born, Nederland",
+        "from": "2022-04",
+        "to": "Present",
+        "position": "Kwaliteitsingenieur",
+        "activities": [
+          {
+            "project": "Kwaliteitsborging assemblage",
+            "tasks": [
+              "Analyseren van afkeur met SPC in Minitab",
+              "Begeleiden van 8D-klachtenafhandeling",
+              "Uitvoeren van leveranciersaudits"
+            ]
+          }
+        ],
+        "achievements": [
+          "Afkeur op deelproces met 18% verlaagd",
+          "Klachtafhandeltijd structureel verkort"
+        ],
+        "toolsAndTechnologies": [
+          "Minitab",
+          "SAP QM",
+          "8D"
+        ]
+      },
+      {
+        "company": "Aptiv",
+        "website": "https://www.aptiv.com",
+        "location": "Bascharage, Luxemburg",
+        "from": "2019-08",
+        "to": "2022-03",
+        "position": "Junior Kwaliteitsingenieur",
+        "activities": [
+          {
+            "project": "Kwaliteitscontrole componenten",
+            "tasks": [
+              "Opstellen van meetrapporten",
+              "Ondersteunen bij PPAP-dossiers",
+              "Uitvoeren van FMEA's"
+            ]
+          }
+        ],
+        "achievements": [
+          "PPAP-dossiers voor nieuwe onderdelen verzorgd"
+        ],
+        "toolsAndTechnologies": [
+          "Minitab",
+          "SAP QM"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2019",
+        "institution": "Avans Hogeschool",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Werktuigbouwkunde",
+        "achievements": [
+          "Specialisatie kwaliteitstechniek",
+          "Afstudeeropdracht over statistische procesbeheersing"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Lean Six Sigma Green Belt",
+        "institution": "Lean Six Sigma Group",
+        "year": "2021",
+        "description": "Certificering in datagedreven procesverbetering."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Minitab",
+        "SAP QM",
+        "8D",
+        "FMEA",
+        "GD&T",
+        "ISO 9001"
+      ],
+      "softSkills": [
+        "Nauwkeurigheid",
+        "Analytisch denken",
+        "Doorzettingsvermogen",
+        "Samenwerken"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Reductie van afkeur",
+        "description": "Leidde een verbetertraject om de afkeur op een assemblageproces structureel te verlagen.",
+        "date": "2023",
+        "impact": "Afkeur met bijna een vijfde verlaagd en kwaliteitskosten teruggebracht."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voetbal",
+      "Sleutelen aan auto's",
+      "Koken"
+    ],
+    "references": [
+      {
+        "name": "Anne Visser",
+        "position": "Quality Manager",
+        "company": "Nedcar",
+        "contact": {
+          "phone": "+31 6 31840927",
+          "email": "anne.visser@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 60000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Quality Engineering",
+      "secondaryClusters": [
+        "Manufacturing",
+        "Continuous Improvement"
+      ],
+      "functionalExpertise": [
+        "Quality Assurance",
+        "Statistical Process Control",
+        "Supplier Quality"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Lagere afkeur",
+        "Snellere klachtafhandeling",
+        "Betere leverancierskwaliteit"
+      ],
+      "industryDomains": [
+        "Automotive",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "industrial"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Groeiende kwaliteitsingenieur met sterke datagedreven aanpak van kwaliteitsverbetering in de automotive-industrie."
+    },
+    "searchIndex": {
+      "roles": [
+        "Quality Engineer",
+        "Manufacturing Engineer",
+        "Process Engineer"
+      ],
+      "skills": [
+        "Minitab",
+        "SAP",
+        "8D",
+        "FMEA",
+        "Statistical Process Control",
+        "ISO 9001",
+        "IATF 16949"
+      ],
+      "industries": [
+        "Automotive",
+        "Manufacturing",
+        "Process Industry"
+      ]
+    },
+    "tags": [
+      "kwaliteit",
+      "quality",
+      "spc",
+      "automotive",
+      "midlevel"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior continu-verbeteringsingenieur met twaalf jaar ervaring in Lean-transformaties in de maak- en logistieke sector. Begeleidt verbeterteams, faciliteert Kaizen-events en verankert een verbetercultuur op de werkvloer. Sterk in het combineren van operationele resultaten met coaching en verandermanagement.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Sofie Maes",
+      "role": "Senior Continu-verbeteringsingenieur",
+      "summary": "Senior continuous improvement engineer gespecialiseerd in Lean-transformaties en operational excellence. Faciliteert Kaizen-events, coacht verbeterteams en verankert een verbetercultuur.",
+      "contact": {
+        "phone": "+32 476 91 30 28",
+        "email": "sofie.maes@example.be",
+        "address": {
+          "streetNumber": "31",
+          "streetName": "Brusselsesteenweg",
+          "streetType": "steenweg",
+          "city": "Mechelen",
+          "state": "Antwerpen",
+          "zipCode": "2800",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sofiemaes"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "woensdagochtend",
+          "vrijdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Lean en verbetering",
+        "skills": [
+          "Lean",
+          "Kaizen",
+          "5S",
+          "Value Stream Mapping"
+        ]
+      },
+      {
+        "category": "Operational excellence",
+        "skills": [
+          "Standaardwerk",
+          "SMED",
+          "TPM",
+          "Visueel management"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Six Sigma",
+          "Minitab",
+          "Data-analyse",
+          "KPI-dashboards"
+        ]
+      },
+      {
+        "category": "Verandermanagement",
+        "skills": [
+          "Coaching",
+          "Facilitatie",
+          "Verandermanagement"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Lean-transformatie",
+        "Continu verbeteren",
+        "Operational excellence",
+        "Verandermanagement"
+      ],
+      "keyResponsibilities": [
+        "Begeleiden van Lean-verbeterprogramma's",
+        "Faciliteren van Kaizen-events",
+        "Coachen van verbeterteams",
+        "Verankeren van verbetercultuur op de werkvloer"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Nike ELC",
+        "website": "https://www.nike.com",
+        "location": "Ham, België",
+        "from": "2018-04",
+        "to": "Present",
+        "position": "Senior Continu-verbeteringsingenieur",
+        "activities": [
+          {
+            "project": "Lean-programma distributiecentrum",
+            "tasks": [
+              "Opzetten van Lean-verbeterprogramma",
+              "Faciliteren van Kaizen-events",
+              "Coachen van teamleiders in dagstarts en visueel management"
+            ]
+          }
+        ],
+        "achievements": [
+          "Productiviteit in magazijnprocessen met 18% verhoogd",
+          "Verbetercultuur met dagelijkse verbeterborden verankerd"
+        ],
+        "toolsAndTechnologies": [
+          "Lean",
+          "Minitab",
+          "Value Stream Mapping"
+        ]
+      },
+      {
+        "company": "Atlas Copco",
+        "website": "https://www.atlascopco.com",
+        "location": "Wilrijk, België",
+        "from": "2015-03",
+        "to": "2018-03",
+        "position": "Continu-verbeteringsingenieur",
+        "activities": [
+          {
+            "project": "SMED en TPM productielijnen",
+            "tasks": [
+              "Uitvoeren van SMED-analyses",
+              "Implementeren van TPM en 5S",
+              "Analyseren van OEE-data"
+            ]
+          }
+        ],
+        "achievements": [
+          "Omsteltijd met 40% gereduceerd",
+          "OEE van pilootlijn structureel verhoogd"
+        ],
+        "toolsAndTechnologies": [
+          "Lean",
+          "Minitab"
+        ]
+      },
+      {
+        "company": "Bosal",
+        "website": "https://www.bosal.com",
+        "location": "Lummen, België",
+        "from": "2013-09",
+        "to": "2015-02",
+        "position": "Junior Verbeteringsingenieur",
+        "activities": [
+          {
+            "project": "5S en standaardwerk",
+            "tasks": [
+              "Uitrollen van 5S op de werkvloer",
+              "Opstellen van standaardwerkinstructies",
+              "Ondersteunen van Kaizen-workshops"
+            ]
+          }
+        ],
+        "achievements": [
+          "5S-standaard op meerdere afdelingen ingevoerd"
+        ],
+        "toolsAndTechnologies": [
+          "Lean"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2013",
+        "institution": "KU Leuven",
+        "degree": "Master in de industriële wetenschappen",
+        "fieldOfStudy": "Industrieel Ingenieur",
+        "achievements": [
+          "Afstudeerrichting productie en logistiek",
+          "Scriptie over Lean in productieomgevingen"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Lean Six Sigma Black Belt",
+        "institution": "Lean Six Sigma Group",
+        "year": "2019",
+        "description": "Certificering in Lean en Six Sigma op Black Belt-niveau."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Lean",
+        "Six Sigma",
+        "Minitab",
+        "Value Stream Mapping",
+        "TPM"
+      ],
+      "softSkills": [
+        "Coaching",
+        "Facilitatie",
+        "Overtuigingskracht",
+        "Empathie"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Lean-transformatie distributiecentrum",
+        "description": "Leidde een brede Lean-transformatie met dagstarts, visueel management en Kaizen-events.",
+        "date": "2022",
+        "impact": "Productiviteit en betrokkenheid van teams structureel verhoogd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Yoga",
+      "Lezen",
+      "Wandelen"
+    ],
+    "references": [
+      {
+        "name": "Jeroen Claes",
+        "position": "Operations Director",
+        "company": "Nike ELC",
+        "contact": {
+          "phone": "+32 471 20 84 39",
+          "email": "jeroen.claes@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 78000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Continuous Improvement Engineering",
+      "secondaryClusters": [
+        "Lean Manufacturing",
+        "Operational Excellence"
+      ],
+      "functionalExpertise": [
+        "Lean Transformation",
+        "Kaizen Facilitation",
+        "Change Management"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Hogere productiviteit",
+        "Sterkere verbetercultuur",
+        "Kortere omsteltijden"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Logistics"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "industrial"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Ervaren continu-verbeteringsingenieur met bewezen resultaten in Lean-transformaties en verandermanagement."
+    },
+    "searchIndex": {
+      "roles": [
+        "Continuous Improvement Engineer",
+        "Lean Engineer",
+        "Operational Excellence Engineer"
+      ],
+      "skills": [
+        "Lean",
+        "Six Sigma",
+        "Kaizen",
+        "5S",
+        "Value Stream Mapping",
+        "TPM",
+        "Minitab"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Logistics",
+        "Process Industry"
+      ]
+    },
+    "tags": [
+      "lean",
+      "continu-verbeteren",
+      "kaizen",
+      "operational-excellence",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Operations- en supply chain manager met vijftien jaar ervaring in productieplanning, voorraadbeheer en logistieke optimalisatie in de maakindustrie. Stuurt operationele teams aan en verbetert leverbetrouwbaarheid, doorlooptijden en kosten. Sterk in S&OP, ERP-implementaties en het datagedreven aansturen van de keten.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Johan Bakker",
+      "role": "Operations & Supply Chain Manager",
+      "summary": "Operations- en supply chain manager met brede ervaring in planning, voorraad en logistiek. Stuurt teams aan, optimaliseert de keten en verbetert leverbetrouwbaarheid met S&OP en ERP.",
+      "contact": {
+        "phone": "+31 6 27849013",
+        "email": "johan.bakker@example.com",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "Hanzelaan",
+          "streetType": "laan",
+          "city": "Zwolle",
+          "state": "Overijssel",
+          "zipCode": "8017 JD",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/johanbakker"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "maandagochtend",
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Supply chain",
+        "skills": [
+          "Productieplanning",
+          "Voorraadbeheer",
+          "S&OP",
+          "Logistieke optimalisatie"
+        ]
+      },
+      {
+        "category": "Systemen",
+        "skills": [
+          "SAP",
+          "ERP-implementatie",
+          "MES",
+          "Data-analyse"
+        ]
+      },
+      {
+        "category": "Methoden",
+        "skills": [
+          "Lean",
+          "Demand planning",
+          "Capaciteitsplanning",
+          "KPI-sturing"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Teammanagement",
+          "Leverancierscontract",
+          "Budgetbeheer"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Supply chain management",
+        "Productieplanning",
+        "S&OP",
+        "Operationele optimalisatie"
+      ],
+      "keyResponsibilities": [
+        "Aansturen van planning- en logistieke teams",
+        "Verbeteren van leverbetrouwbaarheid en doorlooptijden",
+        "Leiden van S&OP-proces",
+        "Begeleiden van ERP-implementaties"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Wärtsilä",
+        "website": "https://www.wartsila.com",
+        "location": "Zwolle, Nederland",
+        "from": "2017-05",
+        "to": "Present",
+        "position": "Operations & Supply Chain Manager",
+        "activities": [
+          {
+            "project": "Optimalisatie productie- en leverketen",
+            "tasks": [
+              "Aansturen van planning- en logistiek team",
+              "Inrichten en leiden van het S&OP-proces",
+              "Begeleiden van SAP-optimalisatie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Leverbetrouwbaarheid naar 96% verhoogd",
+          "Voorraadwaarde met 20% verlaagd"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "MES",
+          "Lean"
+        ]
+      },
+      {
+        "company": "Scania Production",
+        "website": "https://www.scania.com",
+        "location": "Zwolle, Nederland",
+        "from": "2013-03",
+        "to": "2017-04",
+        "position": "Supply Chain Engineer",
+        "activities": [
+          {
+            "project": "Voorraad- en materiaalstroomoptimalisatie",
+            "tasks": [
+              "Analyseren van materiaalstromen",
+              "Optimaliseren van voorraadniveaus",
+              "Verbeteren van planningprocessen in SAP"
+            ]
+          }
+        ],
+        "achievements": [
+          "Materiaaltekorten op de lijn sterk verminderd",
+          "Planningsproces gestandaardiseerd"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Lean"
+        ]
+      },
+      {
+        "company": "Nefit",
+        "website": "https://www.example.com",
+        "location": "Deventer, Nederland",
+        "from": "2010-09",
+        "to": "2013-02",
+        "position": "Planningsingenieur",
+        "activities": [
+          {
+            "project": "Productieplanning verwarmingsketels",
+            "tasks": [
+              "Opstellen van productieplanningen",
+              "Bewaken van capaciteit",
+              "Afstemmen met inkoop en productie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Planningsbetrouwbaarheid verbeterd"
+        ],
+        "toolsAndTechnologies": [
+          "SAP"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2010",
+        "institution": "Universiteit Twente",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Technische Bedrijfskunde",
+        "achievements": [
+          "Afstudeerrichting productie en logistiek",
+          "Scriptie over voorraadoptimalisatie"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "APICS CPIM",
+        "institution": "APICS",
+        "year": "2016",
+        "description": "Certificering in productie- en voorraadbeheer."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "MES",
+        "Lean",
+        "S&OP",
+        "Demand Planning"
+      ],
+      "softSkills": [
+        "Leiderschap",
+        "Analytisch denken",
+        "Onderhandelen",
+        "Coaching"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Inrichting S&OP-proces",
+        "description": "Zette een gestructureerd S&OP-proces op dat vraag, capaciteit en voorraad in balans bracht.",
+        "date": "2021",
+        "impact": "Leverbetrouwbaarheid verhoogd en voorraadkosten aanzienlijk verlaagd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Schaatsen",
+      "Zeilen",
+      "Bedrijfsprocessen"
+    ],
+    "references": [
+      {
+        "name": "Marieke Jansen",
+        "position": "Plant Director",
+        "company": "Wärtsilä",
+        "contact": {
+          "phone": "+31 6 30297481",
+          "email": "marieke.jansen@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 90000,
+      "max": 112000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Supply Chain & Operations Engineering",
+      "secondaryClusters": [
+        "Production Planning",
+        "Operations Management"
+      ],
+      "functionalExpertise": [
+        "Supply Chain Management",
+        "S&OP",
+        "Operations Leadership"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Hogere leverbetrouwbaarheid",
+        "Lagere voorraadkosten",
+        "Kortere doorlooptijden"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Automotive"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "industrial"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Ervaren operations- en supply chain manager met sterke technische basis en bewezen leiderschap in ketenoptimalisatie."
+    },
+    "searchIndex": {
+      "roles": [
+        "Supply Chain Engineer",
+        "Operations Manager",
+        "Production Planning Engineer"
+      ],
+      "skills": [
+        "SAP",
+        "MES",
+        "Lean",
+        "S&OP",
+        "Demand Planning",
+        "Supply Chain Management"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Automotive",
+        "Logistics"
+      ]
+    },
+    "tags": [
+      "supply-chain",
+      "operations",
+      "planning",
+      "sap",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Principal production planning engineer met veertien jaar ervaring in productieplanning en fabrieksoptimalisatie in de maakindustrie. Ontwerpt en verbetert planningssystemen en MES-integraties en fungeert als technisch expert binnen de operations-organisatie. Sterk in capaciteitsmodellen, digitalisering en het verbinden van planning met de werkvloer.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Anke De Ridder",
+      "role": "Principal Production Planning Engineer",
+      "summary": "Principal engineer productieplanning gespecialiseerd in planningssystemen, MES-integraties en capaciteitsmodellen. Fungeert als technisch expert en verbindt planning met de operationele uitvoering.",
+      "contact": {
+        "phone": "+32 478 40 19 23",
+        "email": "anke.deridder@example.be",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Doorniksewijk",
+          "streetType": "wijk",
+          "city": "Kortrijk",
+          "state": "West-Vlaanderen",
+          "zipCode": "8500",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ankederidder"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "dinsdagochtend",
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Productieplanning",
+        "skills": [
+          "Capaciteitsplanning",
+          "Fijnplanning",
+          "Voorraadsturing",
+          "Scenario-analyse"
+        ]
+      },
+      {
+        "category": "Systemen",
+        "skills": [
+          "MES",
+          "SAP",
+          "APS",
+          "Data-analyse"
+        ]
+      },
+      {
+        "category": "Digitalisering",
+        "skills": [
+          "Planningsalgoritmen",
+          "Simulatie",
+          "Dashboards",
+          "Procesautomatisering"
+        ]
+      },
+      {
+        "category": "Methoden",
+        "skills": [
+          "Lean",
+          "Theory of Constraints",
+          "KPI-sturing"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Productieplanning",
+        "MES-integratie",
+        "Capaciteitsmodellen",
+        "Digitalisering van planning"
+      ],
+      "keyResponsibilities": [
+        "Ontwerpen en verbeteren van planningssystemen",
+        "Begeleiden van MES- en APS-integraties",
+        "Ontwikkelen van capaciteitsmodellen",
+        "Fungeren als technisch expert voor operations"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Bekaert",
+        "website": "https://www.bekaert.com",
+        "location": "Kortrijk, België",
+        "from": "2017-03",
+        "to": "Present",
+        "position": "Principal Production Planning Engineer",
+        "activities": [
+          {
+            "project": "Digitalisering productieplanning",
+            "tasks": [
+              "Ontwerpen van geavanceerde planningsmodellen (APS)",
+              "Begeleiden van MES-integratie met planning",
+              "Ontwikkelen van capaciteits- en scenario-analyses"
+            ]
+          }
+        ],
+        "achievements": [
+          "Doorlooptijd van planning met 35% verkort",
+          "Fabrieksbrede APS-oplossing succesvol uitgerold"
+        ],
+        "toolsAndTechnologies": [
+          "MES",
+          "SAP",
+          "APS"
+        ]
+      },
+      {
+        "company": "Vandewiele",
+        "website": "https://www.vandewiele.com",
+        "location": "Marke, België",
+        "from": "2014-05",
+        "to": "2017-02",
+        "position": "Senior Planningsingenieur",
+        "activities": [
+          {
+            "project": "Optimalisatie fijnplanning",
+            "tasks": [
+              "Ontwikkelen van fijnplanningsmodellen",
+              "Analyseren van capaciteitsknelpunten",
+              "Verbeteren van planningsprocessen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Levertijden verkort door betere fijnplanning",
+          "Capaciteitsbenutting verhoogd"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "MES"
+        ]
+      },
+      {
+        "company": "Deceuninck",
+        "website": "https://www.deceuninck.com",
+        "location": "Hooglede, België",
+        "from": "2011-09",
+        "to": "2014-04",
+        "position": "Planningsingenieur",
+        "activities": [
+          {
+            "project": "Productieplanning extrusielijnen",
+            "tasks": [
+              "Opstellen van productieplanningen",
+              "Bewaken van capaciteit en voorraad",
+              "Afstemmen met productie en logistiek"
+            ]
+          }
+        ],
+        "achievements": [
+          "Planningsproces voor extrusielijnen gestroomlijnd"
+        ],
+        "toolsAndTechnologies": [
+          "SAP"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "Universiteit Gent",
+        "degree": "Master in de industriële wetenschappen",
+        "fieldOfStudy": "Industrieel Ingenieur",
+        "achievements": [
+          "Afstudeerrichting productieautomatisering",
+          "Scriptie over geavanceerde productieplanning"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "APICS CSCP",
+        "institution": "APICS",
+        "year": "2018",
+        "description": "Certificering in supply chain-professionalisme."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "MES",
+        "SAP",
+        "APS",
+        "Lean",
+        "Data-analyse"
+      ],
+      "softSkills": [
+        "Analytisch denken",
+        "Expertrol",
+        "Overtuigingskracht",
+        "Structuur"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "APS-implementatie fabriek",
+        "description": "Leidde de invoering van een advanced planning system dat planning en werkvloer digitaal verbond.",
+        "date": "2022",
+        "impact": "Planningsdoorlooptijd fors verkort en betrouwbaarheid van levertijden verhoogd."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Bordspellen",
+      "Wielrennen",
+      "Data-visualisatie"
+    ],
+    "references": [
+      {
+        "name": "Filip Vanhove",
+        "position": "Operations Director",
+        "company": "Bekaert",
+        "contact": {
+          "phone": "+32 470 92 18 34",
+          "email": "filip.vanhove@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 82000,
+      "max": 100000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Production Planning Engineering",
+      "secondaryClusters": [
+        "Manufacturing Systems",
+        "Operations"
+      ],
+      "functionalExpertise": [
+        "Production Planning",
+        "MES Integration",
+        "Capacity Modeling"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Kortere planningsdoorlooptijd",
+        "Hogere leverbetrouwbaarheid",
+        "Betere capaciteitsbenutting"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Industrial"
+      ],
+      "environmentFit": [
+        "enterprise",
+        "industrial"
+      ],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Ervaren principal engineer productieplanning met diepe expertise in planningssystemen en MES-integratie in de maakindustrie."
+    },
+    "searchIndex": {
+      "roles": [
+        "Production Planning Engineer",
+        "Manufacturing Engineer",
+        "Operations Engineer"
+      ],
+      "skills": [
+        "MES",
+        "SAP",
+        "APS",
+        "Lean",
+        "Production Planning",
+        "Capacity Planning"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Industrial",
+        "Automotive"
+      ]
+    },
+    "tags": [
+      "productieplanning",
+      "mes",
+      "aps",
+      "manufacturing",
+      "principal"
+    ]
+  }
+]

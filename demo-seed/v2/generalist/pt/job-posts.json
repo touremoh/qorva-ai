@@ -1,0 +1,418 @@
+[
+  {
+    "title": "Especialista de Recrutamento e Seleção",
+    "description": "Procuramos um Especialista de Recrutamento e Seleção dinâmico para integrar a equipa de pessoas de um grupo de serviços profissionais em crescimento, com base em Lisboa.\n\nA tua missão: serás responsável pelo ciclo completo de recrutamento, atraindo e avaliando talento para funções corporativas e de suporte, garantindo uma experiência de candidatura fluida e um ATS sempre organizado e fiável.\n\nO que vais fazer:\n- Gerir o recrutamento de ponta a ponta, desde a reunião de briefing até à proposta final\n- Fazer sourcing de candidatos ativos e passivos através do LinkedIn Recruiter, referências e portais de emprego\n- Triar candidaturas, conduzir entrevistas estruturadas e coordenar as fases de avaliação\n- Manter pipelines e reporting rigorosos no ATS/HRIS (Workday)\n- Aconselhar os gestores sobre descrições de função, tendências de mercado e práticas de contratação inclusivas\n\nSobre ti:\n- Pelo menos 3 anos de experiência em recrutamento in-house ou de agência\n- À vontade com ATS/HRIS e ferramentas de sourcing como o LinkedIn Recruiter\n- Fortes competências de gestão de stakeholders e comunicação\n- Abordagem estruturada e orientada por dados à gestão de pipeline\n\nDesejável: experiência com Workday recruiting e campanhas de employer branding.\n\nPolítica de trabalho: regime híbrido, com escritório em Lisboa e até três dias de trabalho remoto por semana. Oferecemos uma equipa de pessoas colaborativa, ferramentas modernas e espaço real para influenciar a forma como contratamos.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Talent Acquisition",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ATS/HRIS",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "LinkedIn Recruiter",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Workday",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "Porto",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Technology",
+          "Retail"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Office Manager",
+    "description": "Estamos à procura de um Office Manager organizado e proativo para assegurar o funcionamento diário do nosso escritório em Porto, num centro de serviços partilhados em expansão.\n\nA tua missão: garantir que o escritório funciona de forma impecável, apoiando as equipas, os fornecedores e a direção com processos administrativos eficientes e um ambiente de trabalho acolhedor.\n\nO que vais fazer:\n- Coordenar a gestão do escritório, economato, correio e relação com fornecedores e o senhorio\n- Apoiar a direção com agenda, marcação de viagens e organização de reuniões e eventos internos\n- Gerir orçamentos de escritório, notas de despesa e faturação em coordenação com a contabilidade\n- Ser o ponto de contacto para novos colaboradores, assegurando o onboarding logístico e o acesso a equipamentos\n- Manter políticas de saúde, segurança e gestão documental atualizadas\n\nSobre ti:\n- Pelo menos 4 anos de experiência em gestão de escritório ou funções administrativas\n- Domínio avançado de MS Office, sobretudo Excel e Outlook\n- Excelente capacidade de organização, priorização e atenção ao detalhe\n- Perfil de serviço, discrição e boa comunicação com todos os níveis da organização\n\nDesejável: experiência com ferramentas de gestão de despesas e coordenação de eventos corporativos.\n\nPolítica de trabalho: presencial no escritório do Porto, com alguma flexibilidade pontual. Oferecemos uma equipa próxima, autonomia real e a oportunidade de melhorar continuamente os nossos processos.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Office Management",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Vendor Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Office Budgeting",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Event Coordination",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Porto",
+          "Braga",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Shared-Service Centres",
+          "Professional Services",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Customer Success Manager",
+    "description": "Procuramos um Customer Success Manager sénior para liderar a relação com uma carteira estratégica de clientes de uma empresa de tecnologia SaaS, a partir de Lisboa.\n\nA tua missão: garantir que os nossos clientes atingem valor com o produto, impulsionando a adoção, a retenção e o crescimento das contas ao longo de todo o ciclo de vida.\n\nO que vais fazer:\n- Gerir uma carteira de clientes estratégicos, sendo o principal ponto de contacto e conselheiro de confiança\n- Definir planos de sucesso, acompanhar objetivos e conduzir revisões de negócio (QBRs)\n- Monitorizar saúde de contas e sinais de churn, atuando de forma proativa através do CRM\n- Colaborar com as equipas de suporte, produto e vendas para resolver bloqueios e identificar oportunidades de upsell\n- Utilizar Zendesk e ferramentas de customer success para reporting e gestão de casos\n\nSobre ti:\n- Pelo menos 6 anos de experiência em customer success ou gestão de contas, idealmente em SaaS\n- Sólida experiência com CRM (Salesforce ou HubSpot) e plataformas de suporte como Zendesk\n- Excelentes competências de comunicação, negociação e gestão de stakeholders\n- Abordagem orientada por dados a métricas de retenção e expansão\n\nDesejável: experiência com Intercom e com metodologias de onboarding de clientes.\n\nPolítica de trabalho: híbrido, com escritório em Lisboa e até três dias remotos por semana. Oferecemos uma carteira de clientes de referência, autonomia e um plano de progressão claro.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Customer Success",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Account Management",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "CRM",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Zendesk",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Intercom",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "São Paulo",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services",
+          "Retail"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Coordenador de Projetos",
+    "description": "Estamos à procura de um Coordenador de Projetos para apoiar a entrega de projetos transversais numa organização do setor público, com base em Coimbra.\n\nA tua missão: assegurar que os projetos avançam de acordo com o plano, coordenando tarefas, prazos e stakeholders, e mantendo a documentação e o reporting sempre atualizados.\n\nO que vais fazer:\n- Coordenar o planeamento, o acompanhamento e o reporting de vários projetos em simultâneo\n- Manter cronogramas, riscos e ações no Jira e no Asana, garantindo visibilidade para as equipas\n- Organizar reuniões de projeto, atas e seguimento de decisões com os stakeholders\n- Apoiar o project manager na gestão de âmbito, orçamento e dependências\n- Preparar dashboards e relatórios de progresso para a direção\n\nSobre ti:\n- Pelo menos 2 anos de experiência em coordenação ou apoio a projetos\n- Familiaridade com ferramentas de gestão de projetos como Jira e Asana\n- Conhecimento de metodologias de gestão de projetos (PRINCE2 ou Agile é uma vantagem)\n- Boa capacidade de organização, comunicação e gestão de stakeholders\n\nDesejável: certificação PRINCE2 Foundation e experiência em ambientes de serviço público.\n\nPolítica de trabalho: híbrido, com escritório em Coimbra e dois dias remotos por semana. Oferecemos um ambiente colaborativo, mentoria de gestores de projeto experientes e oportunidade de evolução para funções de gestão de projeto.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Project Coordination",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Jira",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Asana",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "PRINCE2",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Coimbra",
+          "Lisboa",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Public Sector",
+          "Professional Services",
+          "Non-Profit"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "HR Business Partner",
+    "description": "Procuramos um HR Business Partner sénior para atuar como parceiro estratégico da gestão de topo de uma organização não governamental com forte impacto social, com base em Lisboa.\n\nA tua missão: alinhar a estratégia de pessoas com os objetivos da organização, apoiando os líderes em gestão de talento, desempenho, cultura e mudança organizacional.\n\nO que vais fazer:\n- Ser o parceiro de RH de várias áreas, aconselhando gestores em temas de pessoas e organização\n- Liderar processos de gestão de desempenho, planeamento de sucessão e desenvolvimento de talento\n- Analisar dados de pessoas no HRIS (SuccessFactors) para apoiar decisões estratégicas\n- Conduzir iniciativas de cultura, envolvimento e diversidade e inclusão\n- Apoiar processos de relações laborais, mudança organizacional e políticas de RH\n\nSobre ti:\n- Pelo menos 7 anos de experiência em RH, com pelo menos 3 como HR Business Partner\n- Sólido conhecimento de HRIS, idealmente SuccessFactors ou Workday\n- Forte capacidade de influência, gestão de stakeholders e pensamento estratégico\n- Experiência em gestão de desempenho e desenvolvimento organizacional\n\nDesejável: experiência no setor não lucrativo e conhecimento de legislação laboral portuguesa.\n\nPolítica de trabalho: híbrido, com escritório em Lisboa e até dois dias remotos por semana. Oferecemos uma missão com propósito, autonomia e a oportunidade de moldar a estratégia de pessoas de uma organização em crescimento.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "HR Business Partnering",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SuccessFactors",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Performance Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "HRIS",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Workday",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lisboa",
+          "Porto",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Non-Profit",
+          "Public Sector",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  }
+]

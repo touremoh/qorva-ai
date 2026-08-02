@@ -20,6 +20,13 @@ public final class CVSpecifications {
 		return () -> Criteria.where("tenantId").is(tenantId);
 	}
 
+	/** Archived filter: the CV list shows active CVs by default; archived only on request. */
+	public static MongoSpecification<CV> archivedEquals(boolean archived) {
+		return archived
+			? () -> Criteria.where("archived").is(true)
+			: () -> Criteria.where("archived").ne(true);
+	}
+
 	public static MongoSpecification<CV> hasSkills(Collection<String> skills) {
 		if (skills == null || skills.isEmpty()) {
 			return MongoSpecifications.empty();

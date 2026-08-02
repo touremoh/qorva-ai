@@ -1,6 +1,7 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dto.UserDTO;
+import ai.qorva.core.enums.EmailCategory;
 import ai.qorva.core.exception.QorvaException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,13 @@ import org.springframework.stereotype.Service;
 public class NoopNotificationService extends AbstractEmailService {
 
 	@Autowired
-	public NoopNotificationService(OAuth2TokenService oauth2TokenService) {
-		super(oauth2TokenService);
+	public NoopNotificationService(OAuth2TokenService oauth2TokenService, EmailSenderResolver senderResolver) {
+		super(oauth2TokenService, senderResolver);
+	}
+
+	@Override
+	protected EmailCategory getCategory() {
+		return EmailCategory.SUPPORT;   // never sends
 	}
 
 	@Override

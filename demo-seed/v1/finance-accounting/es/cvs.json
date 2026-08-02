@@ -1,0 +1,5878 @@
+[
+  {
+    "candidateProfileSummary": "Contable con cuatro años de experiencia en contabilidad general y ciclos de cuentas a pagar y a cobrar. Domina SAP FICO y Excel avanzado aplicados al cierre mensual. Persona meticulosa y fiable en la conciliación de cuentas y en la preparación de asientos.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Lucía Fernández Rojas",
+      "role": "Contable general",
+      "summary": "Contable orientada al detalle, apasionada por la automatización de conciliaciones y la mejora de los procesos administrativos.",
+      "contact": {
+        "phone": "+34 611 234 187",
+        "email": "lucia.fernandez@example.com",
+        "address": {
+          "streetNumber": "42",
+          "streetName": "Alcalá",
+          "streetType": "Calle",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28014",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/luciafernandezrojas"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Lunes por la mañana",
+          "Jueves por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Contabilidad",
+        "skills": [
+          "Contabilidad general",
+          "Cuentas a pagar",
+          "Cuentas a cobrar",
+          "Conciliaciones bancarias"
+        ]
+      },
+      {
+        "category": "Sistemas ERP",
+        "skills": [
+          "SAP FICO",
+          "QuickBooks"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Excel",
+          "Tablas dinámicas",
+          "Power Query"
+        ]
+      },
+      {
+        "category": "Normativa contable",
+        "skills": [
+          "PGC",
+          "IFRS"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Contabilidad general",
+        "Cierre mensual",
+        "Ciclo de compras y ventas",
+        "Conciliaciones"
+      ],
+      "keyResponsibilities": [
+        "Registro de asientos contables",
+        "Gestión de facturas de proveedores y clientes",
+        "Conciliación de cuentas bancarias",
+        "Apoyo al cierre de mes"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Mapfre",
+        "website": "https://www.mapfre.com",
+        "location": "Madrid, España",
+        "from": "2023-04",
+        "to": "Present",
+        "position": "Contable general",
+        "activities": [
+          {
+            "project": "Cierres mensuales del grupo",
+            "tasks": [
+              "Preparación de asientos de ajuste",
+              "Conciliación de cuentas intercompañía",
+              "Gestión del ciclo de compras en SAP FICO"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el plazo de cierre mensual en dos días laborables",
+          "Automaticé la conciliación bancaria con Power Query"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Microsoft Excel",
+          "Power Query"
+        ]
+      },
+      {
+        "company": "Grupo Cortefiel",
+        "website": "https://www.tendam.es",
+        "location": "Madrid, España",
+        "from": "2022-02",
+        "to": "2023-03",
+        "position": "Contable junior",
+        "activities": [
+          {
+            "project": "Ciclo de proveedores",
+            "tasks": [
+              "Registro de facturas de proveedores",
+              "Gestión del vencimiento de pagos",
+              "Conciliación de partidas abiertas"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje las partidas abiertas vencidas en un 20%"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "QuickBooks",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2021",
+        "institution": "Universidad Complutense de Madrid",
+        "degree": "Grado en Administración y Dirección de Empresas",
+        "fieldOfStudy": "Contabilidad y finanzas",
+        "achievements": [
+          "Trabajo de fin de grado sobre los procesos de cierre contable en pymes"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "SAP FICO Foundation",
+        "institution": "SAP",
+        "year": "2023",
+        "description": "Curso sobre los módulos de contabilidad financiera y controlling de SAP."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP FICO",
+        "QuickBooks",
+        "Microsoft Excel",
+        "Power Query",
+        "PGC",
+        "IFRS"
+      ],
+      "softSkills": [
+        "Precisión",
+        "Fiabilidad",
+        "Organización"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Automatización de conciliaciones bancarias",
+        "description": "Desarrollo de un modelo en Power Query para la conciliación automática de los extractos bancarios.",
+        "date": "2024-05",
+        "impact": "Redujo el tiempo de conciliación mensual en un 40%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voleibol",
+      "Fotografía",
+      "Cocina vegetariana"
+    ],
+    "references": [
+      {
+        "name": "Antonio Molina",
+        "position": "Responsable de Contabilidad",
+        "company": "Mapfre",
+        "contact": {
+          "phone": "+34 611 552 118",
+          "email": "antonio.molina@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 27000,
+      "max": 34000
+    },
+    "candidateClustering": {
+      "primaryCluster": "General Accounting",
+      "secondaryClusters": [
+        "Accounts Payable",
+        "Month-End Close"
+      ],
+      "functionalExpertise": [
+        "General ledger",
+        "Accounts payable",
+        "Bank reconciliation"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Faster monthly close",
+        "Reduced overdue payables"
+      ],
+      "industryDomains": [
+        "Insurance",
+        "Retail"
+      ],
+      "environmentFit": [
+        "Corporate finance",
+        "Shared services"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Perfil de contabilidad general con experiencia en SAP FICO y fuerte inclinación a la automatización de los procesos de cierre."
+    },
+    "searchIndex": {
+      "roles": [
+        "General Accountant",
+        "Accountant",
+        "Bookkeeper"
+      ],
+      "skills": [
+        "SAP FICO",
+        "QuickBooks",
+        "Excel",
+        "Bank Reconciliation",
+        "IFRS"
+      ],
+      "industries": [
+        "Insurance",
+        "Retail",
+        "Professional Services"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "sap",
+      "general-ledger",
+      "month-end"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Contable sénior con más de diez años de experiencia en contabilidad financiera y reporting estatutario en entornos industriales. Especialista en cierres consolidados bajo IFRS y en la coordinación con auditores externos. Referente para el equipo en materia de NetSuite y controles contables.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Javier Serrano Puig",
+      "role": "Contable sénior",
+      "summary": "Contable sénior orientado a la calidad del dato y a la mejora continua del cierre contable en compañías multinacionales.",
+      "contact": {
+        "phone": "+34 622 907 431",
+        "email": "javier.serrano@example.com",
+        "address": {
+          "streetNumber": "118",
+          "streetName": "Gran Via de les Corts Catalanes",
+          "streetType": "Avenida",
+          "unit": "3º 2ª",
+          "city": "Barcelona",
+          "state": "Cataluña",
+          "zipCode": "08011",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/javierserranopuig"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Martes por la tarde",
+          "Viernes por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Contabilidad financiera",
+        "skills": [
+          "Reporting estatutario",
+          "Consolidación",
+          "Cierre mensual y anual",
+          "Cuentas anuales"
+        ]
+      },
+      {
+        "category": "Sistemas ERP",
+        "skills": [
+          "NetSuite",
+          "SAP FICO",
+          "Oracle"
+        ]
+      },
+      {
+        "category": "Normativa",
+        "skills": [
+          "IFRS",
+          "US GAAP",
+          "PGC"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Excel",
+          "Power Query",
+          "Hyperion"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Reporting estatutario",
+        "Consolidación",
+        "Cierre anual",
+        "Relación con auditoría"
+      ],
+      "keyResponsibilities": [
+        "Elaboración de cuentas anuales",
+        "Coordinación del cierre consolidado",
+        "Gestión de la auditoría externa",
+        "Supervisión de asientos complejos"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Grifols",
+        "website": "https://www.grifols.com",
+        "location": "Barcelona, España",
+        "from": "2019-01",
+        "to": "Present",
+        "position": "Contable sénior",
+        "activities": [
+          {
+            "project": "Cierre consolidado IFRS",
+            "tasks": [
+              "Preparación de estados financieros consolidados",
+              "Conciliación de operaciones intercompañía",
+              "Coordinación con auditores externos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Lideré la migración del cierre a NetSuite sin incidencias",
+          "Reduje los ajustes de auditoría en un 35%"
+        ],
+        "toolsAndTechnologies": [
+          "NetSuite",
+          "Oracle",
+          "Microsoft Excel",
+          "IFRS"
+        ]
+      },
+      {
+        "company": "Fluidra",
+        "website": "https://www.fluidra.com",
+        "location": "Sabadell, España",
+        "from": "2015-09",
+        "to": "2018-12",
+        "position": "Contable general",
+        "activities": [
+          {
+            "project": "Reporting estatutario",
+            "tasks": [
+              "Preparación de cuentas anuales individuales",
+              "Registro de operaciones de inmovilizado",
+              "Conciliación de cuentas de balance"
+            ]
+          }
+        ],
+        "achievements": [
+          "Estandaricé el proceso de cierre en tres filiales"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Excel",
+          "IFRS"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "Universitat Pompeu Fabra",
+        "degree": "Grado en Administración y Dirección de Empresas",
+        "fieldOfStudy": "Contabilidad y auditoría",
+        "achievements": [
+          "Mención de honor en Contabilidad de sociedades"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Diploma en Consolidación de Estados Financieros",
+        "institution": "Colegio de Economistas de Cataluña",
+        "year": "2020",
+        "description": "Formación especializada en técnicas de consolidación bajo IFRS."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "NetSuite",
+        "SAP FICO",
+        "Oracle",
+        "IFRS",
+        "US GAAP",
+        "Power Query",
+        "Hyperion"
+      ],
+      "softSkills": [
+        "Rigor",
+        "Comunicación",
+        "Trabajo en equipo"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Migración a NetSuite",
+        "description": "Coordinación contable de la implantación de NetSuite en la matriz y dos filiales.",
+        "date": "2021-06",
+        "impact": "Unificó el plan de cuentas y aceleró el cierre en tres días."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Senderismo",
+      "Ajedrez",
+      "Vino y enología"
+    ],
+    "references": [
+      {
+        "name": "Marta Ribas",
+        "position": "Directora Financiera",
+        "company": "Grifols",
+        "contact": {
+          "phone": "+34 622 118 774",
+          "email": "marta.ribas@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 42000,
+      "max": 52000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Financial Accounting",
+      "secondaryClusters": [
+        "Statutory Reporting",
+        "Consolidation"
+      ],
+      "functionalExpertise": [
+        "Statutory reporting",
+        "Consolidation",
+        "External audit coordination"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Fewer audit adjustments",
+        "Faster consolidated close"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Healthcare"
+      ],
+      "environmentFit": [
+        "Multinational",
+        "Corporate finance"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Contable sénior especializado en reporting estatutario y consolidación bajo IFRS con experiencia en migraciones de ERP."
+    },
+    "searchIndex": {
+      "roles": [
+        "Senior Accountant",
+        "Financial Accountant",
+        "Statutory Accountant"
+      ],
+      "skills": [
+        "NetSuite",
+        "SAP FICO",
+        "IFRS",
+        "US GAAP",
+        "Consolidation"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Healthcare",
+        "Professional Services"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "statutory-reporting",
+      "consolidation",
+      "ifrs"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Responsable de contabilidad con más de quince años de experiencia dirigiendo equipos de contabilidad general y reporting en empresas de gran consumo. Experta en el diseño de procesos de cierre y en la implantación de controles internos. Ha liderado la transición a servicios compartidos de finanzas.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Carmen Ortega Vidal",
+      "role": "Responsable de contabilidad",
+      "summary": "Líder de contabilidad centrada en la eficiencia del cierre, la calidad del reporting y el desarrollo de equipos.",
+      "contact": {
+        "phone": "+34 633 471 220",
+        "email": "carmen.ortega@example.com",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Colón",
+          "streetType": "Calle",
+          "city": "Valencia",
+          "state": "Comunidad Valenciana",
+          "zipCode": "46004",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/carmenortegavidal"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Miércoles por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Dirección contable",
+        "skills": [
+          "Gestión de equipos",
+          "Diseño de procesos de cierre",
+          "Reporting a dirección",
+          "Presupuesto del área"
+        ]
+      },
+      {
+        "category": "Sistemas ERP",
+        "skills": [
+          "SAP FICO",
+          "Oracle"
+        ]
+      },
+      {
+        "category": "Control interno",
+        "skills": [
+          "Controles contables",
+          "Segregación de funciones",
+          "Documentación de procesos"
+        ]
+      },
+      {
+        "category": "Normativa",
+        "skills": [
+          "IFRS",
+          "PGC",
+          "US GAAP"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Dirección de contabilidad",
+        "Servicios compartidos",
+        "Reporting",
+        "Control interno"
+      ],
+      "keyResponsibilities": [
+        "Dirección del equipo de contabilidad general",
+        "Supervisión del cierre mensual y anual",
+        "Diseño e implantación de controles internos",
+        "Reporting a la dirección financiera"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Mercadona",
+        "website": "https://www.mercadona.es",
+        "location": "Valencia, España",
+        "from": "2016-03",
+        "to": "Present",
+        "position": "Responsable de contabilidad",
+        "activities": [
+          {
+            "project": "Centro de servicios compartidos",
+            "tasks": [
+              "Dirección de un equipo de doce personas",
+              "Estandarización de procesos de cierre",
+              "Implantación de controles internos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el plazo de cierre de grupo de diez a seis días",
+          "Lideré la puesta en marcha del centro de servicios compartidos"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Oracle",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Consum",
+        "website": "https://www.consum.es",
+        "location": "Valencia, España",
+        "from": "2012-05",
+        "to": "2016-02",
+        "position": "Contable sénior",
+        "activities": [
+          {
+            "project": "Reporting mensual",
+            "tasks": [
+              "Preparación del reporting mensual",
+              "Conciliación de cuentas de balance",
+              "Coordinación con auditoría"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automaticé la elaboración del reporting mensual"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Importaco",
+        "website": "https://www.importaco.com",
+        "location": "Valencia, España",
+        "from": "2010-09",
+        "to": "2012-04",
+        "position": "Contable general",
+        "activities": [
+          {
+            "project": "Ciclo contable",
+            "tasks": [
+              "Registro de asientos",
+              "Conciliaciones bancarias",
+              "Apoyo al cierre"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mejoré la trazabilidad de los asientos manuales"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2010",
+        "institution": "Universitat de València",
+        "degree": "Licenciatura en Administración y Dirección de Empresas",
+        "fieldOfStudy": "Contabilidad",
+        "achievements": [
+          "Premio extraordinario de fin de carrera"
+        ]
+      },
+      {
+        "year": "2013",
+        "institution": "ESADE Business School",
+        "degree": "Máster en Dirección Financiera",
+        "fieldOfStudy": "Finanzas corporativas",
+        "achievements": [
+          "Proyecto final sobre centros de servicios compartidos"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Diploma en Control Interno",
+        "institution": "Instituto de Auditores Internos de España",
+        "year": "2018",
+        "description": "Formación en diseño y evaluación de controles internos financieros."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP FICO",
+        "Oracle",
+        "Microsoft Excel",
+        "IFRS",
+        "PGC",
+        "US GAAP"
+      ],
+      "softSkills": [
+        "Liderazgo",
+        "Comunicación",
+        "Toma de decisiones",
+        "Desarrollo de equipos"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Puesta en marcha del centro de servicios compartidos",
+        "description": "Diseño e implantación del centro de servicios compartidos de contabilidad para el grupo.",
+        "date": "2018-09",
+        "impact": "Redujo el coste del área de contabilidad en un 18%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Running",
+      "Lectura",
+      "Voluntariado"
+    ],
+    "references": [
+      {
+        "name": "Rafael Gómez",
+        "position": "Director Financiero",
+        "company": "Mercadona",
+        "contact": {
+          "phone": "+34 633 220 471",
+          "email": "rafael.gomez@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 58000,
+      "max": 72000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Accounting Management",
+      "secondaryClusters": [
+        "Financial Reporting",
+        "Shared Services"
+      ],
+      "functionalExpertise": [
+        "Team leadership",
+        "Financial reporting",
+        "Internal controls"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Faster group close",
+        "Lower accounting cost"
+      ],
+      "industryDomains": [
+        "Retail",
+        "Consumer Goods"
+      ],
+      "environmentFit": [
+        "Large corporate",
+        "Shared services"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Responsable de contabilidad con amplia experiencia dirigiendo equipos, diseñando procesos de cierre e implantando servicios compartidos."
+    },
+    "searchIndex": {
+      "roles": [
+        "Accounting Manager",
+        "Head of Accounting",
+        "Financial Controller"
+      ],
+      "skills": [
+        "SAP FICO",
+        "Oracle",
+        "IFRS",
+        "Internal Controls",
+        "Financial Reporting"
+      ],
+      "industries": [
+        "Retail",
+        "Consumer Goods",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "management",
+      "shared-services",
+      "internal-controls"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Especialista en cuentas a pagar y a cobrar con siete años de experiencia en el ciclo completo de facturación y cobros en el sector servicios. Domina Oracle y QuickBooks y ha reducido de forma consistente el periodo medio de cobro. Persona resolutiva en la gestión de incidencias con proveedores y clientes.",
+    "careerStartYear": 2018,
+    "personalInformation": {
+      "name": "Diego Martín Aguado",
+      "role": "Especialista en cuentas a pagar y a cobrar",
+      "summary": "Especialista en ciclos de AP y AR centrado en la reducción del capital circulante y la resolución ágil de incidencias.",
+      "contact": {
+        "phone": "+34 644 305 991",
+        "email": "diego.martin@example.com",
+        "address": {
+          "streetNumber": "25",
+          "streetName": "Sierpes",
+          "streetType": "Calle",
+          "city": "Sevilla",
+          "state": "Andalucía",
+          "zipCode": "41004",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/diegomartinaguado"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Lunes por la tarde",
+          "Miércoles por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Ciclo de cobros y pagos",
+        "skills": [
+          "Cuentas a cobrar",
+          "Cuentas a pagar",
+          "Gestión de cobros",
+          "Reclamación de impagados"
+        ]
+      },
+      {
+        "category": "Sistemas ERP",
+        "skills": [
+          "Oracle",
+          "QuickBooks",
+          "SAP FICO"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Excel",
+          "Tablas dinámicas"
+        ]
+      },
+      {
+        "category": "Tesorería operativa",
+        "skills": [
+          "Previsión de cobros",
+          "Conciliación de remesas"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Cuentas a cobrar",
+        "Cuentas a pagar",
+        "Gestión de circulante",
+        "Resolución de incidencias"
+      ],
+      "keyResponsibilities": [
+        "Emisión y control de facturas",
+        "Gestión de cobros y reclamaciones",
+        "Registro y pago de facturas de proveedores",
+        "Conciliación de cuentas de clientes"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Ferrovial",
+        "website": "https://www.ferrovial.com",
+        "location": "Sevilla, España",
+        "from": "2021-02",
+        "to": "Present",
+        "position": "Especialista en cuentas a cobrar",
+        "activities": [
+          {
+            "project": "Reducción del periodo medio de cobro",
+            "tasks": [
+              "Gestión de la cartera de clientes",
+              "Reclamación proactiva de impagados",
+              "Conciliación de remesas y cobros"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el periodo medio de cobro en 12 días",
+          "Bajé la morosidad de la cartera al 2%"
+        ],
+        "toolsAndTechnologies": [
+          "Oracle",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Ayesa",
+        "website": "https://www.ayesa.com",
+        "location": "Sevilla, España",
+        "from": "2018-06",
+        "to": "2021-01",
+        "position": "Técnico de cuentas a pagar",
+        "activities": [
+          {
+            "project": "Ciclo de proveedores",
+            "tasks": [
+              "Registro de facturas de proveedores",
+              "Gestión del calendario de pagos",
+              "Conciliación de cuentas de proveedores"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automaticé la carga de facturas con OCR"
+        ],
+        "toolsAndTechnologies": [
+          "QuickBooks",
+          "SAP FICO",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2018",
+        "institution": "Universidad de Sevilla",
+        "degree": "Grado en Finanzas y Contabilidad",
+        "fieldOfStudy": "Contabilidad",
+        "achievements": [
+          "Prácticas en el departamento financiero de una empresa constructora"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Curso de Gestión de Crédito y Cobros",
+        "institution": "Cámara de Comercio de Sevilla",
+        "year": "2020",
+        "description": "Formación en técnicas de gestión de crédito comercial y recobro."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Oracle",
+        "QuickBooks",
+        "SAP FICO",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Resolución de problemas",
+        "Negociación",
+        "Perseverancia"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Optimización del periodo medio de cobro",
+        "description": "Rediseño del proceso de reclamación de impagados y segmentación de la cartera de clientes.",
+        "date": "2023-03",
+        "impact": "Liberó 1,5 millones de euros de circulante en un año."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Fútbol",
+      "Guitarra",
+      "Rutas en moto"
+    ],
+    "references": [
+      {
+        "name": "Isabel Navarro",
+        "position": "Responsable de Tesorería",
+        "company": "Ferrovial",
+        "contact": {
+          "phone": "+34 644 991 305",
+          "email": "isabel.navarro@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 33000,
+      "max": 42000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Accounts Receivable",
+      "secondaryClusters": [
+        "Accounts Payable",
+        "Working Capital"
+      ],
+      "functionalExpertise": [
+        "Accounts receivable",
+        "Accounts payable",
+        "Credit and collections"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Lower DSO",
+        "Reduced bad debt"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Professional Services"
+      ],
+      "environmentFit": [
+        "Corporate finance",
+        "Shared services"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Especialista en AP/AR con historial probado de reducción del periodo medio de cobro y automatización del ciclo de proveedores."
+    },
+    "searchIndex": {
+      "roles": [
+        "Accounts Receivable Specialist",
+        "Accounts Payable Specialist",
+        "Credit Controller"
+      ],
+      "skills": [
+        "Oracle",
+        "QuickBooks",
+        "SAP FICO",
+        "Excel",
+        "Collections"
+      ],
+      "industries": [
+        "Construction",
+        "Professional Services",
+        "Technology"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "accounts-receivable",
+      "accounts-payable",
+      "working-capital"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Contable líder de reporting estatutario con catorce años de experiencia en compañías del sector energético y de banca. Coordina la elaboración de cuentas anuales consolidadas bajo IFRS y actúa como interlocutor principal con auditores. Referente técnico en criterios contables complejos y en la formación del equipo.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Ainhoa Etxeberria Lasa",
+      "role": "Líder de reporting estatutario",
+      "summary": "Contable líder centrada en la excelencia técnica del reporting estatutario y en la resolución de cuestiones contables complejas.",
+      "contact": {
+        "phone": "+34 655 218 640",
+        "email": "ainhoa.etxeberria@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Gran Vía",
+          "streetType": "Calle",
+          "city": "Bilbao",
+          "state": "País Vasco",
+          "zipCode": "48001",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ainhoaetxeberria"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Martes por la mañana",
+          "Jueves por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Reporting estatutario",
+        "skills": [
+          "Cuentas anuales consolidadas",
+          "Memoria",
+          "Criterios contables complejos",
+          "Relación con auditoría"
+        ]
+      },
+      {
+        "category": "Normativa",
+        "skills": [
+          "IFRS",
+          "US GAAP",
+          "PGC",
+          "Circulares de Banco de España"
+        ]
+      },
+      {
+        "category": "Sistemas ERP",
+        "skills": [
+          "SAP FICO",
+          "Oracle Hyperion"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Excel",
+          "Power Query",
+          "Tagetik"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Reporting estatutario",
+        "Consolidación",
+        "Criterios contables",
+        "Liderazgo técnico"
+      ],
+      "keyResponsibilities": [
+        "Coordinación de las cuentas anuales consolidadas",
+        "Resolución de consultas contables complejas",
+        "Interlocución con auditores externos",
+        "Formación técnica del equipo contable"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Iberdrola",
+        "website": "https://www.iberdrola.com",
+        "location": "Bilbao, España",
+        "from": "2017-04",
+        "to": "Present",
+        "position": "Líder de reporting estatutario",
+        "activities": [
+          {
+            "project": "Cuentas anuales consolidadas",
+            "tasks": [
+              "Coordinación del cierre estatutario del grupo",
+              "Elaboración de la memoria consolidada",
+              "Resolución de criterios contables complejos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Lideré la implantación de la NIIF 16 en el grupo",
+          "Reduje los tiempos de elaboración de la memoria en un 30%"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Oracle Hyperion",
+          "Tagetik",
+          "IFRS"
+        ]
+      },
+      {
+        "company": "Kutxabank",
+        "website": "https://www.kutxabank.es",
+        "location": "Bilbao, España",
+        "from": "2012-09",
+        "to": "2017-03",
+        "position": "Contable sénior",
+        "activities": [
+          {
+            "project": "Reporting regulatorio",
+            "tasks": [
+              "Elaboración de estados financieros individuales",
+              "Reporting a Banco de España",
+              "Conciliación de carteras de crédito"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automaticé los estados de reporting regulatorio"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Excel",
+          "IFRS"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2012",
+        "institution": "Universidad del País Vasco",
+        "degree": "Licenciatura en Economía",
+        "fieldOfStudy": "Contabilidad y auditoría",
+        "achievements": [
+          "Beca de excelencia académica"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "ACCA",
+        "institution": "Association of Chartered Certified Accountants",
+        "year": "2016",
+        "description": "Cualificación profesional internacional en contabilidad y finanzas."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP FICO",
+        "Oracle Hyperion",
+        "Tagetik",
+        "IFRS",
+        "US GAAP",
+        "Power Query"
+      ],
+      "softSkills": [
+        "Rigor técnico",
+        "Liderazgo",
+        "Comunicación",
+        "Mentoría"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Implantación de la NIIF 16",
+        "description": "Liderazgo del proyecto de adopción de la NIIF 16 sobre arrendamientos en el grupo.",
+        "date": "2019-01",
+        "impact": "Aseguró el cumplimiento normativo sin salvedades de auditoría."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Montañismo",
+      "Pintura",
+      "Idiomas"
+    ],
+    "references": [
+      {
+        "name": "Gorka Aguirre",
+        "position": "Director de Consolidación",
+        "company": "Iberdrola",
+        "contact": {
+          "phone": "+34 655 640 218",
+          "email": "gorka.aguirre@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 55000,
+      "max": 68000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Statutory Reporting",
+      "secondaryClusters": [
+        "Consolidation",
+        "Technical Accounting"
+      ],
+      "functionalExpertise": [
+        "Statutory reporting",
+        "Consolidation",
+        "Technical accounting"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Compliant IFRS adoption",
+        "Faster statutory close"
+      ],
+      "industryDomains": [
+        "Energy",
+        "Banking"
+      ],
+      "environmentFit": [
+        "Large corporate",
+        "Regulated industry"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Líder de reporting estatutario con cualificación ACCA, referente técnico en IFRS y en la coordinación de cuentas anuales consolidadas."
+    },
+    "searchIndex": {
+      "roles": [
+        "Statutory Reporting Lead",
+        "Technical Accounting Manager",
+        "Senior Financial Accountant"
+      ],
+      "skills": [
+        "SAP FICO",
+        "Oracle Hyperion",
+        "IFRS",
+        "US GAAP",
+        "Consolidation"
+      ],
+      "industries": [
+        "Energy",
+        "Banking",
+        "Utilities"
+      ]
+    },
+    "tags": [
+      "accounting",
+      "statutory-reporting",
+      "ifrs",
+      "acca",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Analista de FP&A junior con tres años de experiencia en presupuestación y reporting de gestión en el sector tecnológico. Construye modelos financieros en Excel y cuadros de mando en Power BI para el seguimiento de KPIs. Persona analítica con gran capacidad para transformar datos en recomendaciones accionables.",
+    "careerStartYear": 2023,
+    "personalInformation": {
+      "name": "Pablo Ruiz Herrera",
+      "role": "Analista de FP&A",
+      "summary": "Analista de FP&A orientado al dato, apasionado por la automatización del reporting y la visualización de KPIs.",
+      "contact": {
+        "phone": "+34 611 780 442",
+        "email": "pablo.ruiz@example.com",
+        "address": {
+          "streetNumber": "90",
+          "streetName": "Castellana",
+          "streetType": "Paseo de la",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28046",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/pabloruizherrera"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 15,
+        "interviewAvailability": [
+          "Lunes por la mañana",
+          "Miércoles por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Planificación financiera",
+        "skills": [
+          "Presupuestación",
+          "Forecasting",
+          "Reporting de gestión",
+          "Análisis de desviaciones"
+        ]
+      },
+      {
+        "category": "Modelización",
+        "skills": [
+          "Modelos financieros",
+          "Análisis de escenarios",
+          "Excel avanzado"
+        ]
+      },
+      {
+        "category": "Business Intelligence",
+        "skills": [
+          "Power BI",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Excel",
+          "Power Query"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Presupuestación",
+        "Forecasting",
+        "Reporting de gestión",
+        "Visualización de datos"
+      ],
+      "keyResponsibilities": [
+        "Elaboración del presupuesto anual",
+        "Actualización de forecasts mensuales",
+        "Análisis de desviaciones",
+        "Desarrollo de cuadros de mando en Power BI"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Cabify",
+        "website": "https://www.cabify.com",
+        "location": "Madrid, España",
+        "from": "2024-01",
+        "to": "Present",
+        "position": "Analista de FP&A",
+        "activities": [
+          {
+            "project": "Reporting de gestión mensual",
+            "tasks": [
+              "Preparación del reporting mensual de resultados",
+              "Análisis de desviaciones frente a presupuesto",
+              "Automatización de cuadros de mando en Power BI"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje el tiempo de elaboración del reporting mensual en un 50%",
+          "Diseñé un cuadro de mando de KPIs adoptado por toda la dirección"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Excel",
+          "Power BI",
+          "SQL"
+        ]
+      },
+      {
+        "company": "Jobandtalent",
+        "website": "https://www.jobandtalent.com",
+        "location": "Madrid, España",
+        "from": "2023-02",
+        "to": "2023-12",
+        "position": "Becario de FP&A",
+        "activities": [
+          {
+            "project": "Presupuesto anual",
+            "tasks": [
+              "Apoyo en la consolidación del presupuesto",
+              "Recopilación de datos de las unidades de negocio",
+              "Actualización de plantillas de forecast"
+            ]
+          }
+        ],
+        "achievements": [
+          "Estandaricé las plantillas de recogida de presupuesto"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Excel",
+          "Power BI"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2022",
+        "institution": "Universidad Carlos III de Madrid",
+        "degree": "Grado en Finanzas y Contabilidad",
+        "fieldOfStudy": "Finanzas",
+        "achievements": [
+          "Trabajo de fin de grado sobre modelización financiera de startups"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Microsoft Power BI Data Analyst Associate",
+        "institution": "Microsoft",
+        "year": "2024",
+        "description": "Certificación en modelado de datos y visualización con Power BI."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Microsoft Excel",
+        "Power BI",
+        "SQL",
+        "Power Query"
+      ],
+      "softSkills": [
+        "Pensamiento analítico",
+        "Curiosidad",
+        "Comunicación"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Cuadro de mando de KPIs financieros",
+        "description": "Diseño de un cuadro de mando en Power BI para el seguimiento de ingresos, margen y caja.",
+        "date": "2024-09",
+        "impact": "Redujo el tiempo de reporting mensual a la mitad."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Baloncesto",
+      "Videojuegos de estrategia",
+      "Podcasts de economía"
+    ],
+    "references": [
+      {
+        "name": "Elena Prieto",
+        "position": "Responsable de FP&A",
+        "company": "Cabify",
+        "contact": {
+          "phone": "+34 611 442 780",
+          "email": "elena.prieto@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 30000,
+      "max": 38000
+    },
+    "candidateClustering": {
+      "primaryCluster": "FP&A",
+      "secondaryClusters": [
+        "Management Reporting",
+        "Business Intelligence"
+      ],
+      "functionalExpertise": [
+        "Budgeting",
+        "Forecasting",
+        "Management reporting"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Faster reporting",
+        "Better KPI visibility"
+      ],
+      "industryDomains": [
+        "Technology"
+      ],
+      "environmentFit": [
+        "Startup",
+        "Scale-up"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.84,
+      "clusterReasoning": "Analista de FP&A junior con fuerte base en modelización en Excel y visualización en Power BI aplicadas al reporting de gestión."
+    },
+    "searchIndex": {
+      "roles": [
+        "FP&A Analyst",
+        "Financial Analyst",
+        "Business Analyst"
+      ],
+      "skills": [
+        "Excel",
+        "Power BI",
+        "SQL",
+        "Forecasting",
+        "Budgeting"
+      ],
+      "industries": [
+        "Technology"
+      ]
+    },
+    "tags": [
+      "fpa",
+      "budgeting",
+      "forecasting",
+      "power-bi"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Analista sénior de FP&A con diez años de experiencia en business partnering y forecasting en el sector de gran consumo. Construye modelos financieros complejos en Anaplan y Excel y traduce el análisis en decisiones comerciales. Reconocida por su capacidad de interlocución con las áreas de negocio.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Cristina López Marín",
+      "role": "Analista sénior de FP&A",
+      "summary": "Analista sénior de FP&A y business partner centrada en convertir el análisis financiero en decisiones de negocio.",
+      "contact": {
+        "phone": "+34 622 451 907",
+        "email": "cristina.lopez@example.com",
+        "address": {
+          "streetNumber": "200",
+          "streetName": "Diagonal",
+          "streetType": "Avenida",
+          "unit": "5º 1ª",
+          "city": "Barcelona",
+          "state": "Cataluña",
+          "zipCode": "08018",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/cristinalopezmarin"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Martes por la tarde",
+          "Viernes por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Planificación financiera",
+        "skills": [
+          "Forecasting",
+          "Presupuestación",
+          "Business partnering",
+          "Análisis de rentabilidad"
+        ]
+      },
+      {
+        "category": "Herramientas de planificación",
+        "skills": [
+          "Anaplan",
+          "Oracle Hyperion"
+        ]
+      },
+      {
+        "category": "Business Intelligence",
+        "skills": [
+          "Tableau",
+          "Power BI",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Modelización",
+        "skills": [
+          "Modelos financieros",
+          "Análisis de escenarios",
+          "Excel avanzado"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Business partnering",
+        "Forecasting",
+        "Análisis de rentabilidad",
+        "Planificación comercial"
+      ],
+      "keyResponsibilities": [
+        "Elaboración de forecasts trimestrales",
+        "Business partnering con áreas comerciales",
+        "Análisis de rentabilidad por producto",
+        "Modelización de escenarios de negocio"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Danone",
+        "website": "https://www.danone.es",
+        "location": "Barcelona, España",
+        "from": "2020-02",
+        "to": "Present",
+        "position": "Analista sénior de FP&A",
+        "activities": [
+          {
+            "project": "Business partnering comercial",
+            "tasks": [
+              "Forecasting de ventas y márgenes",
+              "Análisis de rentabilidad por categoría",
+              "Apoyo a la toma de decisiones comerciales"
+            ]
+          }
+        ],
+        "achievements": [
+          "Implanté Anaplan para el forecasting comercial",
+          "Mejoré la precisión del forecast en 8 puntos porcentuales"
+        ],
+        "toolsAndTechnologies": [
+          "Anaplan",
+          "Tableau",
+          "Microsoft Excel",
+          "SQL"
+        ]
+      },
+      {
+        "company": "Nestlé",
+        "website": "https://www.nestle.es",
+        "location": "Barcelona, España",
+        "from": "2016-09",
+        "to": "2020-01",
+        "position": "Analista de FP&A",
+        "activities": [
+          {
+            "project": "Reporting de gestión",
+            "tasks": [
+              "Preparación del reporting mensual",
+              "Análisis de desviaciones",
+              "Consolidación de presupuestos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automaticé el reporting de márgenes por categoría"
+        ],
+        "toolsAndTechnologies": [
+          "Oracle Hyperion",
+          "Excel",
+          "Power BI"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "ESADE Business School",
+        "degree": "Grado en Business Administration",
+        "fieldOfStudy": "Finanzas",
+        "achievements": [
+          "Intercambio internacional en Rotterdam School of Management"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Anaplan Model Builder",
+        "institution": "Anaplan",
+        "year": "2021",
+        "description": "Certificación en construcción de modelos de planificación en Anaplan."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Anaplan",
+        "Oracle Hyperion",
+        "Tableau",
+        "Power BI",
+        "SQL",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Comunicación",
+        "Influencia",
+        "Pensamiento crítico"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Implantación de Anaplan para forecasting",
+        "description": "Liderazgo funcional de la implantación de Anaplan para la planificación comercial.",
+        "date": "2022-04",
+        "impact": "Mejoró la precisión del forecast y redujo el ciclo de planificación en una semana."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Yoga",
+      "Cine",
+      "Viajes"
+    ],
+    "references": [
+      {
+        "name": "Sergio Bassols",
+        "position": "Director de FP&A",
+        "company": "Danone",
+        "contact": {
+          "phone": "+34 622 907 451",
+          "email": "sergio.bassols@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 60000
+    },
+    "candidateClustering": {
+      "primaryCluster": "FP&A",
+      "secondaryClusters": [
+        "Business Partnering",
+        "Commercial Finance"
+      ],
+      "functionalExpertise": [
+        "Forecasting",
+        "Business partnering",
+        "Profitability analysis"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Improved forecast accuracy",
+        "Better commercial decisions"
+      ],
+      "industryDomains": [
+        "Consumer Goods",
+        "Retail"
+      ],
+      "environmentFit": [
+        "Multinational",
+        "Commercial finance"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Analista sénior de FP&A con sólida experiencia en business partnering, forecasting en Anaplan y análisis de rentabilidad en gran consumo."
+    },
+    "searchIndex": {
+      "roles": [
+        "Senior FP&A Analyst",
+        "Finance Business Partner",
+        "Commercial Finance Analyst"
+      ],
+      "skills": [
+        "Anaplan",
+        "Hyperion",
+        "Tableau",
+        "Power BI",
+        "SQL"
+      ],
+      "industries": [
+        "Consumer Goods",
+        "Retail"
+      ]
+    },
+    "tags": [
+      "fpa",
+      "business-partnering",
+      "anaplan",
+      "forecasting"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Manager de FP&A con quince años de experiencia liderando la planificación financiera y el ciclo presupuestario en compañías multinacionales de tecnología. Dirige equipos de analistas y actúa como socio estratégico del comité de dirección. Experto en modelización de escenarios y en la implantación de herramientas de planificación corporativa.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Alberto Sánchez Ibáñez",
+      "role": "Manager de FP&A",
+      "summary": "Manager de FP&A centrado en la planificación estratégica, el desarrollo del equipo y la generación de valor para el negocio.",
+      "contact": {
+        "phone": "+34 633 902 155",
+        "email": "alberto.sanchez@example.com",
+        "address": {
+          "streetNumber": "55",
+          "streetName": "Serrano",
+          "streetType": "Calle",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28006",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/albertosanchezibanez"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-02-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Jueves por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Dirección de FP&A",
+        "skills": [
+          "Planificación estratégica",
+          "Ciclo presupuestario",
+          "Gestión de equipos",
+          "Reporting a comité de dirección"
+        ]
+      },
+      {
+        "category": "Herramientas de planificación",
+        "skills": [
+          "Anaplan",
+          "Oracle Hyperion"
+        ]
+      },
+      {
+        "category": "Business Intelligence",
+        "skills": [
+          "Power BI",
+          "Tableau",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Modelización",
+        "skills": [
+          "Modelos de escenarios",
+          "Valoración de proyectos",
+          "Excel avanzado"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Planificación estratégica",
+        "Presupuestación",
+        "Business partnering",
+        "Liderazgo de equipos"
+      ],
+      "keyResponsibilities": [
+        "Dirección del ciclo presupuestario anual",
+        "Liderazgo de un equipo de analistas",
+        "Modelización de escenarios estratégicos",
+        "Interlocución con el comité de dirección"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Amadeus IT Group",
+        "website": "https://www.amadeus.com",
+        "location": "Madrid, España",
+        "from": "2017-01",
+        "to": "Present",
+        "position": "Manager de FP&A",
+        "activities": [
+          {
+            "project": "Planificación estratégica",
+            "tasks": [
+              "Dirección del ciclo presupuestario del grupo",
+              "Modelización de escenarios de inversión",
+              "Liderazgo de un equipo de cinco analistas"
+            ]
+          }
+        ],
+        "achievements": [
+          "Lideré la implantación corporativa de Anaplan",
+          "Rediseñé el proceso presupuestario reduciéndolo en cuatro semanas"
+        ],
+        "toolsAndTechnologies": [
+          "Anaplan",
+          "Oracle Hyperion",
+          "Power BI",
+          "SQL"
+        ]
+      },
+      {
+        "company": "Indra",
+        "website": "https://www.indracompany.com",
+        "location": "Madrid, España",
+        "from": "2013-03",
+        "to": "2016-12",
+        "position": "Analista sénior de FP&A",
+        "activities": [
+          {
+            "project": "Forecasting corporativo",
+            "tasks": [
+              "Elaboración de forecasts trimestrales",
+              "Análisis de rentabilidad de proyectos",
+              "Reporting a dirección financiera"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mejoré la precisión del forecast corporativo"
+        ],
+        "toolsAndTechnologies": [
+          "Oracle Hyperion",
+          "Excel",
+          "Tableau"
+        ]
+      },
+      {
+        "company": "Everis",
+        "website": "https://www.nttdata.com",
+        "location": "Madrid, España",
+        "from": "2011-09",
+        "to": "2013-02",
+        "position": "Analista de control de gestión",
+        "activities": [
+          {
+            "project": "Control de gestión",
+            "tasks": [
+              "Seguimiento de márgenes de proyecto",
+              "Análisis de desviaciones",
+              "Apoyo al cierre de gestión"
+            ]
+          }
+        ],
+        "achievements": [
+          "Estandaricé el reporting de márgenes de proyecto"
+        ],
+        "toolsAndTechnologies": [
+          "Excel",
+          "SAP FICO"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "Universidad Pontificia Comillas ICADE",
+        "degree": "Licenciatura en Administración de Empresas",
+        "fieldOfStudy": "Finanzas",
+        "achievements": [
+          "Doble titulación en Derecho y Administración de Empresas"
+        ]
+      },
+      {
+        "year": "2015",
+        "institution": "IE Business School",
+        "degree": "Máster en Finanzas",
+        "fieldOfStudy": "Finanzas corporativas",
+        "achievements": [
+          "Proyecto sobre modelización de escenarios estratégicos"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CFA",
+        "institution": "CFA Institute",
+        "year": "2018",
+        "description": "Cualificación profesional en análisis de inversiones y finanzas corporativas."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Anaplan",
+        "Oracle Hyperion",
+        "Power BI",
+        "Tableau",
+        "SQL",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Liderazgo",
+        "Pensamiento estratégico",
+        "Comunicación",
+        "Desarrollo de equipos"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Implantación corporativa de Anaplan",
+        "description": "Dirección del proyecto de implantación de Anaplan como plataforma de planificación del grupo.",
+        "date": "2019-06",
+        "impact": "Redujo el ciclo presupuestario en cuatro semanas y unificó la planificación."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Golf",
+      "Historia",
+      "Vela"
+    ],
+    "references": [
+      {
+        "name": "Patricia Vega",
+        "position": "Directora Financiera",
+        "company": "Amadeus IT Group",
+        "contact": {
+          "phone": "+34 633 155 902",
+          "email": "patricia.vega@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 70000,
+      "max": 90000
+    },
+    "candidateClustering": {
+      "primaryCluster": "FP&A Management",
+      "secondaryClusters": [
+        "Strategic Planning",
+        "Business Partnering"
+      ],
+      "functionalExpertise": [
+        "Strategic planning",
+        "Budgeting",
+        "Team leadership"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Faster planning cycle",
+        "Better strategic decisions"
+      ],
+      "industryDomains": [
+        "Technology"
+      ],
+      "environmentFit": [
+        "Multinational",
+        "Corporate finance"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Manager de FP&A con cualificación CFA que dirige el ciclo presupuestario, lidera equipos y actúa como socio estratégico de la dirección."
+    },
+    "searchIndex": {
+      "roles": [
+        "FP&A Manager",
+        "Head of FP&A",
+        "Finance Business Partner"
+      ],
+      "skills": [
+        "Anaplan",
+        "Hyperion",
+        "Power BI",
+        "SQL",
+        "Financial Modeling"
+      ],
+      "industries": [
+        "Technology",
+        "Professional Services"
+      ]
+    },
+    "tags": [
+      "fpa",
+      "management",
+      "strategic-planning",
+      "cfa",
+      "anaplan"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Controller de negocio con doce años de experiencia como socio financiero de unidades comerciales en el sector industrial. Combina control de gestión, análisis de rentabilidad y elaboración de business cases para decisiones de inversión. Persona con fuerte orientación al negocio y capacidad de interlocución con la dirección operativa.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Natalia Cano Reyes",
+      "role": "Business controller",
+      "summary": "Business controller centrada en aportar visión financiera a las decisiones operativas y comerciales del negocio.",
+      "contact": {
+        "phone": "+34 644 118 903",
+        "email": "natalia.cano@example.com",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "Larios",
+          "streetType": "Calle",
+          "city": "Málaga",
+          "state": "Andalucía",
+          "zipCode": "29005",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/nataliacanoreyes"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Lunes por la tarde",
+          "Jueves por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Control de gestión",
+        "skills": [
+          "Business partnering",
+          "Análisis de rentabilidad",
+          "Control presupuestario",
+          "Business cases"
+        ]
+      },
+      {
+        "category": "Herramientas de planificación",
+        "skills": [
+          "Oracle Hyperion",
+          "Anaplan"
+        ]
+      },
+      {
+        "category": "Business Intelligence",
+        "skills": [
+          "Power BI",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Modelización",
+        "skills": [
+          "Modelos de inversión",
+          "Análisis de márgenes",
+          "Excel avanzado"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Control de gestión",
+        "Business partnering",
+        "Análisis de inversiones",
+        "Control presupuestario"
+      ],
+      "keyResponsibilities": [
+        "Business partnering con la dirección de planta",
+        "Análisis de rentabilidad de líneas de producto",
+        "Elaboración de business cases de inversión",
+        "Seguimiento del presupuesto de la unidad"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Acerinox",
+        "website": "https://www.acerinox.com",
+        "location": "Málaga, España",
+        "from": "2019-04",
+        "to": "Present",
+        "position": "Business controller",
+        "activities": [
+          {
+            "project": "Control de gestión industrial",
+            "tasks": [
+              "Análisis de costes de producción",
+              "Elaboración de business cases de inversión",
+              "Business partnering con la dirección de planta"
+            ]
+          }
+        ],
+        "achievements": [
+          "Impulsé un plan de reducción de costes de 2 millones de euros",
+          "Rediseñé el modelo de costes por línea de producto"
+        ],
+        "toolsAndTechnologies": [
+          "Oracle Hyperion",
+          "Power BI",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Cosentino",
+        "website": "https://www.cosentino.com",
+        "location": "Almería, España",
+        "from": "2014-09",
+        "to": "2019-03",
+        "position": "Controller de gestión",
+        "activities": [
+          {
+            "project": "Control presupuestario",
+            "tasks": [
+              "Seguimiento del presupuesto de fábrica",
+              "Análisis de desviaciones de coste",
+              "Reporting de gestión mensual"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automaticé el reporting de costes industriales"
+        ],
+        "toolsAndTechnologies": [
+          "SAP FICO",
+          "Excel",
+          "Power BI"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2014",
+        "institution": "Universidad de Málaga",
+        "degree": "Grado en Administración y Dirección de Empresas",
+        "fieldOfStudy": "Control de gestión",
+        "achievements": [
+          "Prácticas en el departamento de control de gestión de una industria manufacturera"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CIMA",
+        "institution": "Chartered Institute of Management Accountants",
+        "year": "2017",
+        "description": "Cualificación profesional en contabilidad de gestión y control."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Oracle Hyperion",
+        "Anaplan",
+        "Power BI",
+        "SQL",
+        "SAP FICO",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Orientación al negocio",
+        "Comunicación",
+        "Influencia"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Plan de reducción de costes industriales",
+        "description": "Diseño y seguimiento de un plan de eficiencia de costes en la planta de producción.",
+        "date": "2021-10",
+        "impact": "Generó un ahorro anual de 2 millones de euros."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Natación",
+      "Cocina",
+      "Fotografía de paisaje"
+    ],
+    "references": [
+      {
+        "name": "Miguel Ángel Torres",
+        "position": "Director Industrial",
+        "company": "Acerinox",
+        "contact": {
+          "phone": "+34 644 903 118",
+          "email": "miguelangel.torres@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 50000,
+      "max": 62000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Business Controlling",
+      "secondaryClusters": [
+        "FP&A",
+        "Commercial Finance"
+      ],
+      "functionalExpertise": [
+        "Business partnering",
+        "Cost analysis",
+        "Investment appraisal"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Cost savings",
+        "Better investment decisions"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Industrial"
+      ],
+      "environmentFit": [
+        "Industrial",
+        "Corporate finance"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Business controller con cualificación CIMA especializada en control de gestión industrial, análisis de rentabilidad y business partnering."
+    },
+    "searchIndex": {
+      "roles": [
+        "Business Controller",
+        "Finance Business Partner",
+        "Management Accountant"
+      ],
+      "skills": [
+        "Hyperion",
+        "Anaplan",
+        "Power BI",
+        "SAP FICO",
+        "Cost Controlling"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Industrial"
+      ]
+    },
+    "tags": [
+      "fpa",
+      "controlling",
+      "business-partnering",
+      "cima"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Líder de FP&A con trece años de experiencia diseñando procesos de planificación y modelos financieros en compañías tecnológicas de Latinoamérica. Referente en la construcción de modelos en Anaplan y en la definición de KPIs para la alta dirección. Actúa como principal punto de contacto financiero para las decisiones estratégicas.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Mateo Rojas Vargas",
+      "role": "Líder de FP&A",
+      "summary": "Líder de FP&A orientado al diseño de modelos financieros escalables y a la generación de insights para la estrategia.",
+      "contact": {
+        "phone": "+52 55 8123 4471",
+        "email": "mateo.rojas@example.mx",
+        "address": {
+          "streetNumber": "250",
+          "streetName": "Paseo de la Reforma",
+          "streetType": "Avenida",
+          "unit": "Piso 14",
+          "city": "Ciudad de México",
+          "state": "CDMX",
+          "zipCode": "06600",
+          "country": "México"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/mateorojasvargas"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Martes por la mañana",
+          "Viernes por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Planificación financiera",
+        "skills": [
+          "Diseño de procesos de planificación",
+          "Forecasting",
+          "Presupuestación",
+          "Definición de KPIs"
+        ]
+      },
+      {
+        "category": "Herramientas de planificación",
+        "skills": [
+          "Anaplan",
+          "Oracle Hyperion"
+        ]
+      },
+      {
+        "category": "Business Intelligence",
+        "skills": [
+          "Tableau",
+          "Power BI",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Modelización",
+        "skills": [
+          "Modelos financieros escalables",
+          "Análisis de escenarios",
+          "Excel avanzado"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Diseño de procesos de planificación",
+        "Modelización financiera",
+        "Definición de KPIs",
+        "Business partnering estratégico"
+      ],
+      "keyResponsibilities": [
+        "Diseño del proceso de planificación regional",
+        "Construcción de modelos financieros en Anaplan",
+        "Definición de KPIs para la alta dirección",
+        "Business partnering con las unidades de negocio"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Mercado Libre",
+        "website": "https://www.mercadolibre.com",
+        "location": "Ciudad de México, México",
+        "from": "2018-03",
+        "to": "Present",
+        "position": "Líder de FP&A",
+        "activities": [
+          {
+            "project": "Modelo de planificación regional",
+            "tasks": [
+              "Diseño del proceso de planificación para la región",
+              "Construcción de modelos financieros en Anaplan",
+              "Definición de un marco de KPIs corporativos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Diseñé el modelo de planificación adoptado en cinco países",
+          "Reduje el ciclo de forecast a dos semanas"
+        ],
+        "toolsAndTechnologies": [
+          "Anaplan",
+          "Tableau",
+          "SQL"
+        ]
+      },
+      {
+        "company": "Grupo Bimbo",
+        "website": "https://www.grupobimbo.com",
+        "location": "Ciudad de México, México",
+        "from": "2013-08",
+        "to": "2018-02",
+        "position": "Analista sénior de FP&A",
+        "activities": [
+          {
+            "project": "Forecasting regional",
+            "tasks": [
+              "Elaboración de forecasts regionales",
+              "Análisis de rentabilidad por país",
+              "Reporting a la dirección financiera regional"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mejoré la precisión del forecast regional en 10 puntos"
+        ],
+        "toolsAndTechnologies": [
+          "Oracle Hyperion",
+          "Excel",
+          "Tableau"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2013",
+        "institution": "Instituto Tecnológico Autónomo de México",
+        "degree": "Licenciatura en Economía",
+        "fieldOfStudy": "Finanzas",
+        "achievements": [
+          "Titulación con mención honorífica"
+        ]
+      },
+      {
+        "year": "2016",
+        "institution": "IPADE Business School",
+        "degree": "Máster en Dirección de Empresas",
+        "fieldOfStudy": "Finanzas",
+        "achievements": [
+          "Especialización en dirección financiera"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Anaplan Certified Master Anaplanner",
+        "institution": "Anaplan",
+        "year": "2020",
+        "description": "Certificación avanzada en diseño y construcción de modelos en Anaplan."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Anaplan",
+        "Oracle Hyperion",
+        "Tableau",
+        "Power BI",
+        "SQL",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Liderazgo",
+        "Pensamiento estratégico",
+        "Comunicación"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Modelo regional de planificación en Anaplan",
+        "description": "Diseño y despliegue de un modelo de planificación en Anaplan para cinco países de la región.",
+        "date": "2021-03",
+        "impact": "Unificó la planificación regional y redujo el ciclo de forecast a la mitad."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ciclismo",
+      "Fotografía",
+      "Gastronomía"
+    ],
+    "references": [
+      {
+        "name": "Valentina Ruiz",
+        "position": "Directora Financiera Regional",
+        "company": "Mercado Libre",
+        "contact": {
+          "phone": "+52 55 4471 8123",
+          "email": "valentina.ruiz@example.mx"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 60000,
+      "max": 78000
+    },
+    "candidateClustering": {
+      "primaryCluster": "FP&A",
+      "secondaryClusters": [
+        "Financial Modeling",
+        "Strategic Planning"
+      ],
+      "functionalExpertise": [
+        "Planning process design",
+        "Financial modeling",
+        "KPI definition"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Faster forecast cycle",
+        "Unified regional planning"
+      ],
+      "industryDomains": [
+        "Technology",
+        "Consumer Goods"
+      ],
+      "environmentFit": [
+        "Multinational",
+        "Scale-up"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Líder de FP&A y Master Anaplanner especializado en el diseño de procesos de planificación y modelos financieros escalables a nivel regional."
+    },
+    "searchIndex": {
+      "roles": [
+        "FP&A Lead",
+        "Head of Planning",
+        "Senior Finance Business Partner"
+      ],
+      "skills": [
+        "Anaplan",
+        "Hyperion",
+        "Tableau",
+        "SQL",
+        "Financial Modeling"
+      ],
+      "industries": [
+        "Technology",
+        "Consumer Goods"
+      ]
+    },
+    "tags": [
+      "fpa",
+      "anaplan",
+      "financial-modeling",
+      "lead",
+      "latam"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Auditor interno con cinco años de experiencia en la evaluación de controles y procesos en el sector bancario. Domina los marcos COSO y la metodología de auditoría basada en riesgos. Persona rigurosa y con capacidad para comunicar hallazgos y recomendaciones a los responsables de proceso.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Sara Jiménez Vela",
+      "role": "Auditora interna",
+      "summary": "Auditora interna orientada al riesgo, apasionada por la mejora de los controles y la eficiencia de los procesos.",
+      "contact": {
+        "phone": "+34 611 552 903",
+        "email": "sara.jimenez@example.com",
+        "address": {
+          "streetNumber": "33",
+          "streetName": "Génova",
+          "streetType": "Calle",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28004",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sarajimenezvela"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Lunes por la mañana",
+          "Miércoles por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Auditoría interna",
+        "skills": [
+          "Auditoría basada en riesgos",
+          "Evaluación de controles",
+          "Pruebas de cumplimiento",
+          "Redacción de informes"
+        ]
+      },
+      {
+        "category": "Marcos y normativa",
+        "skills": [
+          "COSO",
+          "SOX",
+          "Control interno"
+        ]
+      },
+      {
+        "category": "Herramientas de análisis",
+        "skills": [
+          "ACL",
+          "IDEA",
+          "Excel avanzado"
+        ]
+      },
+      {
+        "category": "Riesgos",
+        "skills": [
+          "Evaluación de riesgos",
+          "Mapas de riesgo"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Auditoría interna",
+        "Evaluación de controles",
+        "Cumplimiento",
+        "Análisis de datos"
+      ],
+      "keyResponsibilities": [
+        "Ejecución de trabajos de auditoría interna",
+        "Evaluación del diseño y eficacia de controles",
+        "Redacción de informes de auditoría",
+        "Seguimiento de planes de acción"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Banco Santander",
+        "website": "https://www.santander.com",
+        "location": "Madrid, España",
+        "from": "2023-01",
+        "to": "Present",
+        "position": "Auditora interna",
+        "activities": [
+          {
+            "project": "Auditoría de procesos de crédito",
+            "tasks": [
+              "Evaluación de controles del proceso de concesión",
+              "Pruebas de cumplimiento sobre expedientes",
+              "Análisis de datos con ACL"
+            ]
+          }
+        ],
+        "achievements": [
+          "Identifiqué debilidades de control que redujeron el riesgo operacional",
+          "Automaticé pruebas de auditoría con ACL"
+        ],
+        "toolsAndTechnologies": [
+          "ACL",
+          "COSO",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "KPMG",
+        "website": "https://www.kpmg.es",
+        "location": "Madrid, España",
+        "from": "2021-09",
+        "to": "2022-12",
+        "position": "Auditora junior",
+        "activities": [
+          {
+            "project": "Auditoría externa financiera",
+            "tasks": [
+              "Pruebas sustantivas sobre cuentas de balance",
+              "Circularización de saldos",
+              "Documentación de papeles de trabajo"
+            ]
+          }
+        ],
+        "achievements": [
+          "Colaboré en la auditoría de cinco clientes del sector financiero"
+        ],
+        "toolsAndTechnologies": [
+          "IDEA",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2021",
+        "institution": "Universidad Autónoma de Madrid",
+        "degree": "Grado en Finanzas y Contabilidad",
+        "fieldOfStudy": "Auditoría",
+        "achievements": [
+          "Trabajo de fin de grado sobre auditoría basada en riesgos"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Internal Auditor (CIA) - Parte 1",
+        "institution": "Institute of Internal Auditors",
+        "year": "2023",
+        "description": "Primera parte de la certificación profesional en auditoría interna."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ACL",
+        "IDEA",
+        "COSO",
+        "SOX",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Rigor",
+        "Comunicación",
+        "Escepticismo profesional"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Automatización de pruebas de auditoría",
+        "description": "Desarrollo de scripts en ACL para la revisión continua de controles de crédito.",
+        "date": "2024-05",
+        "impact": "Amplió la cobertura de pruebas del 20% al 100% de la población."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Atletismo",
+      "Lectura de novela negra",
+      "Ajedrez"
+    ],
+    "references": [
+      {
+        "name": "Fernando Ruiz",
+        "position": "Responsable de Auditoría Interna",
+        "company": "Banco Santander",
+        "contact": {
+          "phone": "+34 611 903 552",
+          "email": "fernando.ruiz@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 32000,
+      "max": 42000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Internal Audit",
+      "secondaryClusters": [
+        "Controls Testing",
+        "Data Analytics"
+      ],
+      "functionalExpertise": [
+        "Internal audit",
+        "Controls evaluation",
+        "Data analytics"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Reduced operational risk",
+        "Broader test coverage"
+      ],
+      "industryDomains": [
+        "Banking",
+        "Professional Services"
+      ],
+      "environmentFit": [
+        "Regulated industry",
+        "Corporate audit"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Auditora interna con base sólida en auditoría basada en riesgos, marcos COSO y análisis de datos con ACL en el sector bancario."
+    },
+    "searchIndex": {
+      "roles": [
+        "Internal Auditor",
+        "Audit Analyst",
+        "Controls Analyst"
+      ],
+      "skills": [
+        "ACL",
+        "IDEA",
+        "COSO",
+        "SOX",
+        "Excel"
+      ],
+      "industries": [
+        "Banking",
+        "Professional Services"
+      ]
+    },
+    "tags": [
+      "audit",
+      "internal-audit",
+      "coso",
+      "risk"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Auditor interno sénior con once años de experiencia liderando trabajos de auditoría y evaluaciones SOX en compañías cotizadas del sector seguros. Especialista en el diseño y prueba de controles internos sobre el reporting financiero. Reconocido por su capacidad de interlocución con la dirección y con la auditoría externa.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Marc Vidal Roca",
+      "role": "Auditor interno sénior",
+      "summary": "Auditor interno sénior centrado en el control interno sobre el reporting financiero y en la gestión eficaz del cumplimiento SOX.",
+      "contact": {
+        "phone": "+34 622 640 187",
+        "email": "marc.vidal@example.com",
+        "address": {
+          "streetNumber": "88",
+          "streetName": "Balmes",
+          "streetType": "Calle",
+          "city": "Barcelona",
+          "state": "Cataluña",
+          "zipCode": "08008",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/marcvidalroca"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Martes por la tarde",
+          "Jueves por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Auditoría y control interno",
+        "skills": [
+          "SOX",
+          "Control interno sobre reporting financiero",
+          "Auditoría basada en riesgos",
+          "Diseño de controles"
+        ]
+      },
+      {
+        "category": "Marcos y normativa",
+        "skills": [
+          "COSO",
+          "SOX",
+          "IFRS"
+        ]
+      },
+      {
+        "category": "Herramientas de análisis",
+        "skills": [
+          "ACL",
+          "IDEA",
+          "Excel avanzado"
+        ]
+      },
+      {
+        "category": "Gestión de riesgos",
+        "skills": [
+          "Evaluación de riesgos",
+          "Matrices de riesgo y control"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Cumplimiento SOX",
+        "Control interno",
+        "Auditoría basada en riesgos",
+        "Análisis de datos"
+      ],
+      "keyResponsibilities": [
+        "Liderazgo de trabajos de auditoría interna",
+        "Evaluación del control interno sobre reporting financiero",
+        "Coordinación del programa SOX",
+        "Interlocución con auditoría externa"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "MAPFRE",
+        "website": "https://www.mapfre.com",
+        "location": "Barcelona, España",
+        "from": "2019-02",
+        "to": "Present",
+        "position": "Auditor interno sénior",
+        "activities": [
+          {
+            "project": "Programa SOX",
+            "tasks": [
+              "Coordinación del programa SOX del grupo",
+              "Prueba de controles clave",
+              "Interlocución con la auditoría externa"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje las deficiencias de control identificadas en un 40%",
+          "Optimicé la matriz de riesgos y controles del grupo"
+        ],
+        "toolsAndTechnologies": [
+          "ACL",
+          "COSO",
+          "SOX",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Deloitte",
+        "website": "https://www.deloitte.es",
+        "location": "Barcelona, España",
+        "from": "2015-09",
+        "to": "2019-01",
+        "position": "Auditor",
+        "activities": [
+          {
+            "project": "Auditoría externa",
+            "tasks": [
+              "Auditoría de estados financieros de clientes cotizados",
+              "Evaluación de controles internos",
+              "Documentación de papeles de trabajo"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participé en la auditoría de tres grupos cotizados"
+        ],
+        "toolsAndTechnologies": [
+          "IDEA",
+          "Excel",
+          "IFRS"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "Universitat de Barcelona",
+        "degree": "Grado en Administración y Dirección de Empresas",
+        "fieldOfStudy": "Auditoría y control",
+        "achievements": [
+          "Prácticas en una firma de auditoría de primer nivel"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Internal Auditor (CIA)",
+        "institution": "Institute of Internal Auditors",
+        "year": "2019",
+        "description": "Cualificación profesional internacional en auditoría interna."
+      },
+      {
+        "title": "ACCA",
+        "institution": "Association of Chartered Certified Accountants",
+        "year": "2018",
+        "description": "Cualificación profesional en contabilidad y finanzas."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ACL",
+        "IDEA",
+        "COSO",
+        "SOX",
+        "IFRS",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Rigor",
+        "Liderazgo",
+        "Comunicación",
+        "Escepticismo profesional"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Optimización del programa SOX",
+        "description": "Rediseño de la matriz de riesgos y controles y racionalización de los controles clave del grupo.",
+        "date": "2022-06",
+        "impact": "Redujo el número de controles clave en un 25% manteniendo la cobertura de riesgos."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Escalada",
+      "Cine documental",
+      "Cocina"
+    ],
+    "references": [
+      {
+        "name": "Nuria Camps",
+        "position": "Directora de Auditoría Interna",
+        "company": "MAPFRE",
+        "contact": {
+          "phone": "+34 622 187 640",
+          "email": "nuria.camps@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 45000,
+      "max": 58000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Internal Audit",
+      "secondaryClusters": [
+        "SOX Compliance",
+        "Internal Controls"
+      ],
+      "functionalExpertise": [
+        "Internal audit",
+        "SOX compliance",
+        "Internal controls"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Fewer control deficiencies",
+        "Streamlined SOX program"
+      ],
+      "industryDomains": [
+        "Insurance",
+        "Professional Services"
+      ],
+      "environmentFit": [
+        "Listed company",
+        "Regulated industry"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Auditor interno sénior con doble cualificación CIA y ACCA, especializado en cumplimiento SOX y control interno sobre el reporting financiero."
+    },
+    "searchIndex": {
+      "roles": [
+        "Senior Internal Auditor",
+        "SOX Auditor",
+        "Internal Controls Manager"
+      ],
+      "skills": [
+        "ACL",
+        "IDEA",
+        "COSO",
+        "SOX",
+        "IFRS"
+      ],
+      "industries": [
+        "Insurance",
+        "Professional Services",
+        "Banking"
+      ]
+    },
+    "tags": [
+      "audit",
+      "sox",
+      "internal-controls",
+      "cia",
+      "acca"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directora de riesgos con más de dieciséis años de experiencia liderando la función de gestión de riesgos y control interno en entidades financieras. Ha diseñado marcos de riesgo corporativos e implantado modelos de tres líneas de defensa. Miembro habitual de comités de riesgos y auditoría, con reporte directo al consejo.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Beatriz Herrero Salas",
+      "role": "Directora de riesgos",
+      "summary": "Directora de riesgos centrada en el gobierno del riesgo, la cultura de control y la protección del valor de la organización.",
+      "contact": {
+        "phone": "+34 633 187 552",
+        "email": "beatriz.herrero@example.com",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "Recoletos",
+          "streetType": "Paseo de",
+          "unit": "6º",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28004",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/beatrizherrerosalas"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-06-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Viernes por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Gestión de riesgos",
+        "skills": [
+          "Marcos de riesgo corporativo",
+          "Tres líneas de defensa",
+          "Apetito de riesgo",
+          "Riesgo operacional"
+        ]
+      },
+      {
+        "category": "Gobierno y cumplimiento",
+        "skills": [
+          "Control interno",
+          "Cumplimiento normativo",
+          "Reporte al consejo"
+        ]
+      },
+      {
+        "category": "Marcos y normativa",
+        "skills": [
+          "COSO",
+          "SOX",
+          "Solvencia II"
+        ]
+      },
+      {
+        "category": "Liderazgo",
+        "skills": [
+          "Dirección de equipos",
+          "Comités de riesgo",
+          "Cultura de riesgo"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Gestión de riesgos corporativos",
+        "Control interno",
+        "Gobierno del riesgo",
+        "Cumplimiento normativo"
+      ],
+      "keyResponsibilities": [
+        "Dirección de la función de gestión de riesgos",
+        "Diseño del marco de apetito de riesgo",
+        "Reporte a los comités de riesgos y auditoría",
+        "Coordinación de las tres líneas de defensa"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "CaixaBank",
+        "website": "https://www.caixabank.es",
+        "location": "Madrid, España",
+        "from": "2016-01",
+        "to": "Present",
+        "position": "Directora de riesgos",
+        "activities": [
+          {
+            "project": "Marco de gestión de riesgos",
+            "tasks": [
+              "Diseño del marco corporativo de apetito de riesgo",
+              "Coordinación de las tres líneas de defensa",
+              "Reporte a los comités de riesgos y al consejo"
+            ]
+          }
+        ],
+        "achievements": [
+          "Implanté el marco de apetito de riesgo del grupo",
+          "Reduje las pérdidas por riesgo operacional en un 30%"
+        ],
+        "toolsAndTechnologies": [
+          "COSO",
+          "SOX",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Bankia",
+        "website": "https://www.caixabank.es",
+        "location": "Madrid, España",
+        "from": "2011-03",
+        "to": "2015-12",
+        "position": "Responsable de riesgo operacional",
+        "activities": [
+          {
+            "project": "Riesgo operacional",
+            "tasks": [
+              "Gestión del mapa de riesgos operacionales",
+              "Implantación de indicadores clave de riesgo",
+              "Coordinación con auditoría interna"
+            ]
+          }
+        ],
+        "achievements": [
+          "Desarrollé el catálogo corporativo de riesgos operacionales"
+        ],
+        "toolsAndTechnologies": [
+          "COSO",
+          "Excel"
+        ]
+      },
+      {
+        "company": "PwC",
+        "website": "https://www.pwc.es",
+        "location": "Madrid, España",
+        "from": "2009-09",
+        "to": "2011-02",
+        "position": "Consultora de riesgos",
+        "activities": [
+          {
+            "project": "Consultoría de riesgos",
+            "tasks": [
+              "Diagnóstico de marcos de control interno",
+              "Diseño de matrices de riesgo",
+              "Elaboración de informes para clientes financieros"
+            ]
+          }
+        ],
+        "achievements": [
+          "Colaboré en proyectos de riesgo para entidades financieras"
+        ],
+        "toolsAndTechnologies": [
+          "COSO",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2009",
+        "institution": "Universidad Pontificia Comillas ICADE",
+        "degree": "Licenciatura en Administración y Dirección de Empresas",
+        "fieldOfStudy": "Finanzas y riesgos",
+        "achievements": [
+          "Premio al mejor expediente de la promoción"
+        ]
+      },
+      {
+        "year": "2012",
+        "institution": "IE Business School",
+        "degree": "Máster en Gestión de Riesgos Financieros",
+        "fieldOfStudy": "Riesgos",
+        "achievements": [
+          "Proyecto sobre modelos de apetito de riesgo"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CFA",
+        "institution": "CFA Institute",
+        "year": "2014",
+        "description": "Cualificación profesional en análisis de inversiones y gestión de riesgos."
+      },
+      {
+        "title": "Financial Risk Manager (FRM)",
+        "institution": "GARP",
+        "year": "2013",
+        "description": "Certificación internacional en gestión de riesgos financieros."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "COSO",
+        "SOX",
+        "Solvencia II",
+        "Microsoft Excel",
+        "SQL"
+      ],
+      "softSkills": [
+        "Liderazgo",
+        "Visión estratégica",
+        "Comunicación con el consejo",
+        "Toma de decisiones"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Implantación del marco de apetito de riesgo",
+        "description": "Diseño e implantación del marco corporativo de apetito de riesgo y de las tres líneas de defensa.",
+        "date": "2018-11",
+        "impact": "Fortaleció el gobierno del riesgo y redujo las pérdidas operacionales en un 30%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ópera",
+      "Golf",
+      "Mentoría profesional"
+    ],
+    "references": [
+      {
+        "name": "Ignacio Salvador",
+        "position": "Consejero Delegado",
+        "company": "CaixaBank",
+        "contact": {
+          "phone": "+34 633 552 187",
+          "email": "ignacio.salvador@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 95000,
+      "max": 130000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Risk Management",
+      "secondaryClusters": [
+        "Internal Controls",
+        "Governance"
+      ],
+      "functionalExpertise": [
+        "Enterprise risk management",
+        "Operational risk",
+        "Governance"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Stronger risk governance",
+        "Lower operational losses"
+      ],
+      "industryDomains": [
+        "Banking",
+        "Insurance"
+      ],
+      "environmentFit": [
+        "Regulated industry",
+        "Board level"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "executiveInfluence",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Directora de riesgos con cualificaciones CFA y FRM que ha diseñado marcos de riesgo corporativos y reporta directamente a los órganos de gobierno."
+    },
+    "searchIndex": {
+      "roles": [
+        "Head of Risk",
+        "Chief Risk Officer",
+        "Risk Director"
+      ],
+      "skills": [
+        "COSO",
+        "SOX",
+        "Enterprise Risk Management",
+        "Operational Risk",
+        "Solvency II"
+      ],
+      "industries": [
+        "Banking",
+        "Insurance"
+      ]
+    },
+    "tags": [
+      "risk",
+      "risk-management",
+      "governance",
+      "director",
+      "cfa"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Especialista sénior en cumplimiento SOX con diez años de experiencia en el diseño y prueba de controles internos en multinacionales cotizadas de Latinoamérica. Domina la metodología COSO y la coordinación de programas de control interno en múltiples países. Persona metódica con fuerte orientación al cumplimiento normativo.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Andrés Gómez Castaño",
+      "role": "Especialista sénior en cumplimiento SOX",
+      "summary": "Especialista en SOX y control interno enfocado en la eficacia de los controles y en la cultura de cumplimiento.",
+      "contact": {
+        "phone": "+57 1 743 2210",
+        "email": "andres.gomez@example.co",
+        "address": {
+          "streetNumber": "93",
+          "streetName": "Carrera 11",
+          "streetType": "Calle",
+          "unit": "Oficina 502",
+          "city": "Bogotá",
+          "state": "Cundinamarca",
+          "zipCode": "110221",
+          "country": "Colombia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/andresgomezcastano"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Lunes por la tarde",
+          "Miércoles por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Cumplimiento SOX",
+        "skills": [
+          "Diseño de controles",
+          "Prueba de controles clave",
+          "Matrices de riesgo y control",
+          "Remediación de deficiencias"
+        ]
+      },
+      {
+        "category": "Marcos y normativa",
+        "skills": [
+          "COSO",
+          "SOX",
+          "US GAAP"
+        ]
+      },
+      {
+        "category": "Herramientas de análisis",
+        "skills": [
+          "ACL",
+          "IDEA",
+          "Excel avanzado"
+        ]
+      },
+      {
+        "category": "Gestión de programas",
+        "skills": [
+          "Coordinación multipaís",
+          "Planes de remediación"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Cumplimiento SOX",
+        "Control interno",
+        "Coordinación de programas",
+        "Remediación de controles"
+      ],
+      "keyResponsibilities": [
+        "Diseño y documentación de controles internos",
+        "Prueba de controles clave SOX",
+        "Coordinación del programa SOX en la región",
+        "Seguimiento de planes de remediación"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Ecopetrol",
+        "website": "https://www.ecopetrol.com.co",
+        "location": "Bogotá, Colombia",
+        "from": "2020-02",
+        "to": "Present",
+        "position": "Especialista sénior en cumplimiento SOX",
+        "activities": [
+          {
+            "project": "Programa SOX regional",
+            "tasks": [
+              "Coordinación del programa SOX en varias filiales",
+              "Prueba de controles clave sobre el reporting",
+              "Gestión de planes de remediación"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduje las deficiencias significativas de control a cero en dos ejercicios",
+          "Estandaricé la documentación de controles en cuatro países"
+        ],
+        "toolsAndTechnologies": [
+          "ACL",
+          "COSO",
+          "SOX",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "EY",
+        "website": "https://www.ey.com",
+        "location": "Bogotá, Colombia",
+        "from": "2016-08",
+        "to": "2020-01",
+        "position": "Consultor de riesgos y control interno",
+        "activities": [
+          {
+            "project": "Consultoría SOX",
+            "tasks": [
+              "Diseño de matrices de riesgo y control",
+              "Prueba de controles para clientes cotizados",
+              "Elaboración de informes de deficiencias"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participé en implantaciones SOX para tres grupos multinacionales"
+        ],
+        "toolsAndTechnologies": [
+          "IDEA",
+          "COSO",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "Universidad de los Andes",
+        "degree": "Pregrado en Administración de Empresas",
+        "fieldOfStudy": "Finanzas y control",
+        "achievements": [
+          "Grado con honores"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Internal Auditor (CIA)",
+        "institution": "Institute of Internal Auditors",
+        "year": "2020",
+        "description": "Cualificación profesional internacional en auditoría interna."
+      },
+      {
+        "title": "CPA",
+        "institution": "American Institute of Certified Public Accountants",
+        "year": "2019",
+        "description": "Cualificación profesional en contabilidad pública y control interno."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ACL",
+        "IDEA",
+        "COSO",
+        "SOX",
+        "US GAAP",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Método",
+        "Rigor",
+        "Comunicación intercultural"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Estandarización del programa SOX regional",
+        "description": "Unificación de la documentación y las pruebas de controles SOX en cuatro países.",
+        "date": "2022-09",
+        "impact": "Redujo el esfuerzo de testing en un 20% y eliminó las deficiencias significativas."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Montañismo",
+      "Fotografía",
+      "Cocina latinoamericana"
+    ],
+    "references": [
+      {
+        "name": "Camila Restrepo",
+        "position": "Directora de Control Interno",
+        "company": "Ecopetrol",
+        "contact": {
+          "phone": "+57 1 2210 743",
+          "email": "camila.restrepo@example.co"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 44000,
+      "max": 56000
+    },
+    "candidateClustering": {
+      "primaryCluster": "SOX Compliance",
+      "secondaryClusters": [
+        "Internal Controls",
+        "Internal Audit"
+      ],
+      "functionalExpertise": [
+        "SOX compliance",
+        "Internal controls",
+        "Controls testing"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Zero significant deficiencies",
+        "Standardized controls"
+      ],
+      "industryDomains": [
+        "Energy",
+        "Professional Services"
+      ],
+      "environmentFit": [
+        "Listed company",
+        "Multinational"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Especialista sénior en SOX con cualificaciones CIA y CPA, experto en la coordinación multipaís de programas de control interno bajo COSO."
+    },
+    "searchIndex": {
+      "roles": [
+        "SOX Compliance Specialist",
+        "Internal Controls Specialist",
+        "Internal Auditor"
+      ],
+      "skills": [
+        "ACL",
+        "IDEA",
+        "COSO",
+        "SOX",
+        "US GAAP"
+      ],
+      "industries": [
+        "Energy",
+        "Professional Services"
+      ]
+    },
+    "tags": [
+      "audit",
+      "sox",
+      "internal-controls",
+      "cia",
+      "cpa",
+      "latam"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Jefe de equipo de auditoría interna con catorce años de experiencia dirigiendo el plan de auditoría y la gestión de riesgos en el sector industrial. Lidera un equipo de auditores y define la estrategia de auditoría basada en riesgos. Referente en la mejora de controles y en la relación con el comité de auditoría.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Raúl Moreno Gil",
+      "role": "Jefe de equipo de auditoría interna",
+      "summary": "Jefe de auditoría interna centrado en la estrategia de auditoría basada en riesgos y en el desarrollo del equipo.",
+      "contact": {
+        "phone": "+34 644 552 187",
+        "email": "raul.moreno@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Independencia",
+          "streetType": "Paseo de la",
+          "city": "Zaragoza",
+          "state": "Aragón",
+          "zipCode": "50004",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/raulmorenogil"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Martes por la mañana",
+          "Jueves por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Dirección de auditoría",
+        "skills": [
+          "Plan anual de auditoría",
+          "Auditoría basada en riesgos",
+          "Gestión de equipos",
+          "Comité de auditoría"
+        ]
+      },
+      {
+        "category": "Gestión de riesgos",
+        "skills": [
+          "Mapas de riesgo",
+          "Evaluación de controles",
+          "Seguimiento de acciones"
+        ]
+      },
+      {
+        "category": "Marcos y normativa",
+        "skills": [
+          "COSO",
+          "SOX",
+          "Normas del IIA"
+        ]
+      },
+      {
+        "category": "Herramientas de análisis",
+        "skills": [
+          "ACL",
+          "IDEA",
+          "Power BI"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Dirección de auditoría interna",
+        "Auditoría basada en riesgos",
+        "Gestión de riesgos",
+        "Liderazgo de equipos"
+      ],
+      "keyResponsibilities": [
+        "Elaboración del plan anual de auditoría",
+        "Dirección de un equipo de auditores",
+        "Supervisión de los trabajos de auditoría",
+        "Reporte al comité de auditoría"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "BSH Electrodomésticos",
+        "website": "https://www.bsh-group.com",
+        "location": "Zaragoza, España",
+        "from": "2018-01",
+        "to": "Present",
+        "position": "Jefe de equipo de auditoría interna",
+        "activities": [
+          {
+            "project": "Plan anual de auditoría",
+            "tasks": [
+              "Definición del plan de auditoría basado en riesgos",
+              "Dirección de un equipo de seis auditores",
+              "Reporte al comité de auditoría"
+            ]
+          }
+        ],
+        "achievements": [
+          "Rediseñé el plan de auditoría con enfoque en riesgos clave",
+          "Implanté el uso de analítica de datos en las auditorías"
+        ],
+        "toolsAndTechnologies": [
+          "ACL",
+          "COSO",
+          "Power BI",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Grupo SAICA",
+        "website": "https://www.saica.com",
+        "location": "Zaragoza, España",
+        "from": "2015-03",
+        "to": "2017-12",
+        "position": "Auditor interno sénior",
+        "activities": [
+          {
+            "project": "Auditoría de procesos industriales",
+            "tasks": [
+              "Auditoría de procesos de compras y producción",
+              "Evaluación de controles operativos",
+              "Redacción de informes de auditoría"
+            ]
+          }
+        ],
+        "achievements": [
+          "Identifiqué mejoras de control con ahorro de costes"
+        ],
+        "toolsAndTechnologies": [
+          "ACL",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Grant Thornton",
+        "website": "https://www.grantthornton.es",
+        "location": "Zaragoza, España",
+        "from": "2012-09",
+        "to": "2015-02",
+        "position": "Auditor",
+        "activities": [
+          {
+            "project": "Auditoría externa",
+            "tasks": [
+              "Auditoría de estados financieros",
+              "Evaluación de controles internos",
+              "Documentación de papeles de trabajo"
+            ]
+          }
+        ],
+        "achievements": [
+          "Colaboré en la auditoría de clientes industriales"
+        ],
+        "toolsAndTechnologies": [
+          "IDEA",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2012",
+        "institution": "Universidad de Zaragoza",
+        "degree": "Licenciatura en Administración y Dirección de Empresas",
+        "fieldOfStudy": "Auditoría",
+        "achievements": [
+          "Beca de colaboración en el departamento de contabilidad"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Internal Auditor (CIA)",
+        "institution": "Institute of Internal Auditors",
+        "year": "2017",
+        "description": "Cualificación profesional internacional en auditoría interna."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ACL",
+        "IDEA",
+        "COSO",
+        "SOX",
+        "Power BI",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Liderazgo",
+        "Comunicación",
+        "Pensamiento crítico",
+        "Desarrollo de equipos"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Introducción de analítica de datos en auditoría",
+        "description": "Despliegue del uso de ACL y Power BI para el análisis continuo de datos en los trabajos de auditoría.",
+        "date": "2020-05",
+        "impact": "Amplió la cobertura de las auditorías y detectó anomalías antes del cierre."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ciclismo de montaña",
+      "Historia",
+      "Cocina"
+    ],
+    "references": [
+      {
+        "name": "Silvia Lacasa",
+        "position": "Directora Financiera",
+        "company": "BSH Electrodomésticos",
+        "contact": {
+          "phone": "+34 644 187 552",
+          "email": "silvia.lacasa@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 58000,
+      "max": 72000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Internal Audit",
+      "secondaryClusters": [
+        "Risk Management",
+        "Data Analytics"
+      ],
+      "functionalExpertise": [
+        "Audit leadership",
+        "Risk-based auditing",
+        "Data analytics"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Risk-focused audit plan",
+        "Broader analytics coverage"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Industrial"
+      ],
+      "environmentFit": [
+        "Large corporate",
+        "Industrial"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Jefe de equipo de auditoría interna con cualificación CIA que dirige el plan de auditoría basado en riesgos y ha introducido la analítica de datos en el sector industrial."
+    },
+    "searchIndex": {
+      "roles": [
+        "Internal Audit Lead",
+        "Audit Manager",
+        "Head of Internal Audit"
+      ],
+      "skills": [
+        "ACL",
+        "IDEA",
+        "COSO",
+        "SOX",
+        "Power BI"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Industrial"
+      ]
+    },
+    "tags": [
+      "audit",
+      "internal-audit",
+      "risk",
+      "data-analytics",
+      "lead",
+      "cia"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Asesor fiscal con seis años de experiencia en fiscalidad corporativa e IVA en el sector de servicios profesionales. Domina la preparación de declaraciones y la gestión de requerimientos de la Agencia Tributaria. Persona rigurosa y actualizada en la normativa tributaria española y comunitaria.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Elena Castro Ramos",
+      "role": "Asesora fiscal",
+      "summary": "Asesora fiscal orientada al cumplimiento tributario y a la optimización eficiente de la carga fiscal de las empresas.",
+      "contact": {
+        "phone": "+34 611 640 218",
+        "email": "elena.castro@example.com",
+        "address": {
+          "streetNumber": "48",
+          "streetName": "Velázquez",
+          "streetType": "Calle",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28001",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/elenacastroramos"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Lunes por la mañana",
+          "Miércoles por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Fiscalidad",
+        "skills": [
+          "Impuesto sobre sociedades",
+          "IVA",
+          "Declaraciones informativas",
+          "Requerimientos tributarios"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "SAP",
+          "A3 Software"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Excel",
+          "Tablas dinámicas"
+        ]
+      },
+      {
+        "category": "Normativa",
+        "skills": [
+          "Normativa tributaria española",
+          "Directivas de IVA de la UE"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Impuesto sobre sociedades",
+        "IVA",
+        "Cumplimiento tributario",
+        "Gestión de requerimientos"
+      ],
+      "keyResponsibilities": [
+        "Preparación de declaraciones de impuestos",
+        "Liquidación de IVA",
+        "Atención de requerimientos de la Agencia Tributaria",
+        "Actualización normativa"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Garrigues",
+        "website": "https://www.garrigues.com",
+        "location": "Madrid, España",
+        "from": "2022-03",
+        "to": "Present",
+        "position": "Asesora fiscal",
+        "activities": [
+          {
+            "project": "Cumplimiento fiscal de clientes",
+            "tasks": [
+              "Preparación del impuesto sobre sociedades",
+              "Liquidaciones periódicas de IVA",
+              "Atención de requerimientos tributarios"
+            ]
+          }
+        ],
+        "achievements": [
+          "Gestioné con éxito varios requerimientos sin sanciones",
+          "Optimicé la carga fiscal de clientes del sector servicios"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "A3 Software",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "BDO",
+        "website": "https://www.bdo.es",
+        "location": "Madrid, España",
+        "from": "2020-09",
+        "to": "2022-02",
+        "position": "Consultora fiscal junior",
+        "activities": [
+          {
+            "project": "Asesoramiento fiscal",
+            "tasks": [
+              "Apoyo en declaraciones de sociedades",
+              "Cálculo de liquidaciones de IVA",
+              "Investigación de normativa tributaria"
+            ]
+          }
+        ],
+        "achievements": [
+          "Colaboré en el cierre fiscal de una cartera de pymes"
+        ],
+        "toolsAndTechnologies": [
+          "A3 Software",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2020",
+        "institution": "Universidad Complutense de Madrid",
+        "degree": "Grado en Derecho y ADE",
+        "fieldOfStudy": "Fiscalidad",
+        "achievements": [
+          "Trabajo de fin de grado sobre el impuesto sobre sociedades"
+        ]
+      },
+      {
+        "year": "2021",
+        "institution": "Centro de Estudios Financieros",
+        "degree": "Máster en Tributación y Asesoría Fiscal",
+        "fieldOfStudy": "Fiscalidad",
+        "achievements": [
+          "Especialización en fiscalidad empresarial"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Miembro de la AEDAF",
+        "institution": "Asociación Española de Asesores Fiscales",
+        "year": "2022",
+        "description": "Pertenencia a la asociación profesional de asesores fiscales."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "A3 Software",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Rigor",
+        "Atención al detalle",
+        "Comunicación"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Gestión de requerimientos tributarios",
+        "description": "Coordinación de la respuesta a varios requerimientos de la Agencia Tributaria para clientes del sector servicios.",
+        "date": "2023-11",
+        "impact": "Cerró los requerimientos sin sanciones ni ajustes relevantes."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Tenis",
+      "Lectura jurídica",
+      "Viajes"
+    ],
+    "references": [
+      {
+        "name": "Carlos Duran",
+        "position": "Socio del Área Fiscal",
+        "company": "Garrigues",
+        "contact": {
+          "phone": "+34 611 218 640",
+          "email": "carlos.duran@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 33000,
+      "max": 43000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Corporate Tax",
+      "secondaryClusters": [
+        "VAT",
+        "Tax Compliance"
+      ],
+      "functionalExpertise": [
+        "Corporate tax",
+        "VAT",
+        "Tax compliance"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "No tax penalties",
+        "Optimized tax burden"
+      ],
+      "industryDomains": [
+        "Professional Services"
+      ],
+      "environmentFit": [
+        "Advisory firm",
+        "Corporate tax"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Asesora fiscal con formación jurídica y tributaria centrada en el impuesto sobre sociedades, el IVA y la gestión de requerimientos."
+    },
+    "searchIndex": {
+      "roles": [
+        "Tax Advisor",
+        "Tax Consultant",
+        "Corporate Tax Analyst"
+      ],
+      "skills": [
+        "SAP",
+        "Corporate Tax",
+        "VAT",
+        "Tax Compliance",
+        "Excel"
+      ],
+      "industries": [
+        "Professional Services"
+      ]
+    },
+    "tags": [
+      "tax",
+      "corporate-tax",
+      "vat",
+      "compliance"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Manager de fiscalidad con trece años de experiencia en fiscalidad corporativa, IVA y precios de transferencia en multinacionales del sector tecnológico. Lidera el cumplimiento fiscal del grupo y coordina las revisiones de precios de transferencia. Referente en la planificación fiscal internacional y en la relación con las administraciones tributarias.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Guillermo Prats Nadal",
+      "role": "Manager de fiscalidad",
+      "summary": "Manager de fiscalidad centrado en la planificación fiscal internacional, el cumplimiento del grupo y la gestión eficiente de riesgos tributarios.",
+      "contact": {
+        "phone": "+34 622 187 903",
+        "email": "guillermo.prats@example.com",
+        "address": {
+          "streetNumber": "140",
+          "streetName": "Aragó",
+          "streetType": "Calle",
+          "unit": "4º 1ª",
+          "city": "Barcelona",
+          "state": "Cataluña",
+          "zipCode": "08015",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/guillermopratsnadal"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Martes por la tarde",
+          "Jueves por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Fiscalidad corporativa",
+        "skills": [
+          "Impuesto sobre sociedades",
+          "Fiscalidad internacional",
+          "Consolidación fiscal",
+          "Planificación fiscal"
+        ]
+      },
+      {
+        "category": "Precios de transferencia",
+        "skills": [
+          "Documentación de precios de transferencia",
+          "Análisis de comparables",
+          "Master File y Local File"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "SAP",
+          "Motores fiscales"
+        ]
+      },
+      {
+        "category": "Normativa",
+        "skills": [
+          "Normativa tributaria internacional",
+          "OCDE BEPS",
+          "Directivas de IVA de la UE"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Fiscalidad corporativa",
+        "Fiscalidad internacional",
+        "Precios de transferencia",
+        "Cumplimiento fiscal del grupo"
+      ],
+      "keyResponsibilities": [
+        "Liderazgo del cumplimiento fiscal del grupo",
+        "Coordinación de precios de transferencia",
+        "Gestión de inspecciones tributarias",
+        "Planificación fiscal internacional"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "HP Inc.",
+        "website": "https://www.hp.com",
+        "location": "Barcelona, España",
+        "from": "2018-01",
+        "to": "Present",
+        "position": "Manager de fiscalidad",
+        "activities": [
+          {
+            "project": "Cumplimiento fiscal del grupo",
+            "tasks": [
+              "Coordinación del impuesto sobre sociedades del grupo",
+              "Gestión de la documentación de precios de transferencia",
+              "Atención de inspecciones tributarias"
+            ]
+          }
+        ],
+        "achievements": [
+          "Rediseñé la política de precios de transferencia del grupo",
+          "Cerré una inspección sin ajustes significativos"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "company": "Cuatrecasas",
+        "website": "https://www.cuatrecasas.com",
+        "location": "Barcelona, España",
+        "from": "2013-09",
+        "to": "2017-12",
+        "position": "Asesor fiscal sénior",
+        "activities": [
+          {
+            "project": "Asesoramiento fiscal internacional",
+            "tasks": [
+              "Asesoramiento en fiscalidad internacional",
+              "Elaboración de documentación de precios de transferencia",
+              "Planificación fiscal de operaciones"
+            ]
+          }
+        ],
+        "achievements": [
+          "Asesoré operaciones de reestructuración de grupos multinacionales"
+        ],
+        "toolsAndTechnologies": [
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2013",
+        "institution": "Universitat de Barcelona",
+        "degree": "Licenciatura en Derecho",
+        "fieldOfStudy": "Derecho fiscal",
+        "achievements": [
+          "Especialización en derecho tributario"
+        ]
+      },
+      {
+        "year": "2014",
+        "institution": "IE Law School",
+        "degree": "Máster en Asesoría Fiscal",
+        "fieldOfStudy": "Fiscalidad internacional",
+        "achievements": [
+          "Proyecto sobre precios de transferencia"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Miembro de la AEDAF",
+        "institution": "Asociación Española de Asesores Fiscales",
+        "year": "2015",
+        "description": "Pertenencia a la asociación profesional de asesores fiscales."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "Microsoft Excel",
+        "OCDE BEPS"
+      ],
+      "softSkills": [
+        "Rigor técnico",
+        "Negociación",
+        "Comunicación",
+        "Liderazgo"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Rediseño de la política de precios de transferencia",
+        "description": "Actualización de la política y la documentación de precios de transferencia del grupo conforme a BEPS.",
+        "date": "2021-04",
+        "impact": "Redujo el riesgo fiscal y facilitó el cierre de inspecciones sin ajustes."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Vela",
+      "Lectura",
+      "Enología"
+    ],
+    "references": [
+      {
+        "name": "Laura Miralles",
+        "position": "Directora Fiscal",
+        "company": "HP Inc.",
+        "contact": {
+          "phone": "+34 622 903 187",
+          "email": "laura.miralles@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 60000,
+      "max": 78000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Corporate Tax",
+      "secondaryClusters": [
+        "Transfer Pricing",
+        "International Tax"
+      ],
+      "functionalExpertise": [
+        "Corporate tax",
+        "Transfer pricing",
+        "International tax"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced tax risk",
+        "Clean tax audits"
+      ],
+      "industryDomains": [
+        "Technology",
+        "Professional Services"
+      ],
+      "environmentFit": [
+        "Multinational",
+        "Corporate tax"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Manager de fiscalidad con formación jurídica especializado en fiscalidad internacional y precios de transferencia en entornos multinacionales."
+    },
+    "searchIndex": {
+      "roles": [
+        "Tax Manager",
+        "Transfer Pricing Manager",
+        "International Tax Manager"
+      ],
+      "skills": [
+        "SAP",
+        "Corporate Tax",
+        "Transfer Pricing",
+        "BEPS",
+        "VAT"
+      ],
+      "industries": [
+        "Technology",
+        "Professional Services"
+      ]
+    },
+    "tags": [
+      "tax",
+      "transfer-pricing",
+      "international-tax",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Manager de tesorería con quince años de experiencia en gestión de caja, financiación y riesgo financiero en grupos industriales cotizados. Lidera la relación bancaria, la gestión del circulante y las coberturas de tipo de cambio. Experto en la implantación de sistemas de gestión de tesorería y en la optimización de la liquidez.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Óscar Delgado Ferrer",
+      "role": "Manager de tesorería",
+      "summary": "Manager de tesorería centrado en la optimización de la liquidez, la gestión del riesgo financiero y la eficiencia de la relación bancaria.",
+      "contact": {
+        "phone": "+34 633 640 218",
+        "email": "oscar.delgado@example.com",
+        "address": {
+          "streetNumber": "77",
+          "streetName": "Príncipe de Vergara",
+          "streetType": "Calle",
+          "unit": "8º",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28006",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/oscardelgadoferrer"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Miércoles por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Tesorería",
+        "skills": [
+          "Gestión de caja",
+          "Previsión de tesorería",
+          "Gestión del circulante",
+          "Relación bancaria"
+        ]
+      },
+      {
+        "category": "Financiación y riesgo",
+        "skills": [
+          "Financiación corporativa",
+          "Coberturas de tipo de cambio",
+          "Gestión de riesgo de tipos"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "SAP",
+          "Kyriba"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Excel",
+          "Bloomberg"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Gestión de tesorería",
+        "Financiación",
+        "Riesgo financiero",
+        "Relación bancaria"
+      ],
+      "keyResponsibilities": [
+        "Gestión diaria de la posición de caja",
+        "Previsión y planificación de tesorería",
+        "Coordinación de la financiación del grupo",
+        "Gestión de coberturas de tipo de cambio"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Ferrovial",
+        "website": "https://www.ferrovial.com",
+        "location": "Madrid, España",
+        "from": "2016-01",
+        "to": "Present",
+        "position": "Manager de tesorería",
+        "activities": [
+          {
+            "project": "Optimización de la liquidez",
+            "tasks": [
+              "Gestión de la posición de caja del grupo",
+              "Coordinación de líneas de financiación",
+              "Implantación del sistema de tesorería Kyriba"
+            ]
+          }
+        ],
+        "achievements": [
+          "Implanté Kyriba centralizando la tesorería de veinte filiales",
+          "Reduje el coste financiero del grupo en 1,2 millones de euros"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Kyriba",
+          "Bloomberg"
+        ]
+      },
+      {
+        "company": "ACS",
+        "website": "https://www.grupoacs.com",
+        "location": "Madrid, España",
+        "from": "2012-03",
+        "to": "2015-12",
+        "position": "Analista sénior de tesorería",
+        "activities": [
+          {
+            "project": "Gestión de caja",
+            "tasks": [
+              "Previsión de tesorería a corto plazo",
+              "Conciliación de posiciones bancarias",
+              "Gestión de coberturas de divisa"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mejoré la precisión de la previsión de tesorería"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Excel",
+          "Bloomberg"
+        ]
+      },
+      {
+        "company": "Banco Sabadell",
+        "website": "https://www.bancsabadell.com",
+        "location": "Madrid, España",
+        "from": "2010-09",
+        "to": "2012-02",
+        "position": "Analista de banca de empresas",
+        "activities": [
+          {
+            "project": "Financiación de empresas",
+            "tasks": [
+              "Análisis de riesgo de crédito de empresas",
+              "Estructuración de operaciones de financiación",
+              "Seguimiento de la cartera de clientes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Colaboré en la estructuración de financiaciones corporativas"
+        ],
+        "toolsAndTechnologies": [
+          "Excel",
+          "Bloomberg"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2010",
+        "institution": "Universidad Autónoma de Madrid",
+        "degree": "Licenciatura en Administración y Dirección de Empresas",
+        "fieldOfStudy": "Finanzas",
+        "achievements": [
+          "Especialización en mercados financieros"
+        ]
+      },
+      {
+        "year": "2013",
+        "institution": "AFI Escuela de Finanzas",
+        "degree": "Máster en Finanzas Cuantitativas",
+        "fieldOfStudy": "Tesorería y mercados",
+        "achievements": [
+          "Proyecto sobre gestión de riesgo de tipo de cambio"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Treasury Professional (CTP)",
+        "institution": "Association for Financial Professionals",
+        "year": "2016",
+        "description": "Certificación internacional en gestión de tesorería y finanzas corporativas."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "Kyriba",
+        "Bloomberg",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Negociación",
+        "Visión analítica",
+        "Liderazgo",
+        "Comunicación"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Centralización de la tesorería con Kyriba",
+        "description": "Implantación de un sistema de gestión de tesorería para centralizar la caja de veinte filiales.",
+        "date": "2019-09",
+        "impact": "Mejoró la visibilidad de la liquidez y redujo el coste financiero en 1,2 millones de euros."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Pádel",
+      "Mercados financieros",
+      "Cocina"
+    ],
+    "references": [
+      {
+        "name": "Cristina Aparicio",
+        "position": "Directora Financiera",
+        "company": "Ferrovial",
+        "contact": {
+          "phone": "+34 633 218 640",
+          "email": "cristina.aparicio@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 65000,
+      "max": 85000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Treasury",
+      "secondaryClusters": [
+        "Cash Management",
+        "Financial Risk"
+      ],
+      "functionalExpertise": [
+        "Cash management",
+        "Corporate financing",
+        "FX risk management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Lower financing cost",
+        "Centralized liquidity"
+      ],
+      "industryDomains": [
+        "Construction",
+        "Industrial"
+      ],
+      "environmentFit": [
+        "Large corporate",
+        "Multinational"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Manager de tesorería con certificación CTP que ha centralizado la tesorería del grupo con Kyriba y gestiona la financiación y el riesgo financiero."
+    },
+    "searchIndex": {
+      "roles": [
+        "Treasury Manager",
+        "Cash Manager",
+        "Corporate Treasurer"
+      ],
+      "skills": [
+        "SAP",
+        "Kyriba",
+        "Bloomberg",
+        "Cash Management",
+        "FX Hedging"
+      ],
+      "industries": [
+        "Construction",
+        "Industrial"
+      ]
+    },
+    "tags": [
+      "treasury",
+      "cash-management",
+      "financing",
+      "ctp",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Especialista sénior en precios de transferencia con diez años de experiencia en la documentación y defensa de políticas intragrupo en el sector farmacéutico. Domina el análisis de comparables y la elaboración de Master File y Local File conforme a las directrices de la OCDE. Persona analítica con sólida base económica y jurídica.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Marta Solís Bravo",
+      "role": "Especialista sénior en precios de transferencia",
+      "summary": "Especialista en precios de transferencia enfocada en el cumplimiento BEPS y en la defensa de las políticas intragrupo ante las administraciones.",
+      "contact": {
+        "phone": "+34 644 640 187",
+        "email": "marta.solis@example.com",
+        "address": {
+          "streetNumber": "20",
+          "streetName": "Orense",
+          "streetType": "Calle",
+          "unit": "5º",
+          "city": "Madrid",
+          "state": "Madrid",
+          "zipCode": "28020",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/martasolisbravo"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 45,
+        "interviewAvailability": [
+          "Lunes por la tarde",
+          "Jueves por la mañana"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Precios de transferencia",
+        "skills": [
+          "Documentación de precios de transferencia",
+          "Análisis de comparables",
+          "Master File y Local File",
+          "Defensa ante inspecciones"
+        ]
+      },
+      {
+        "category": "Fiscalidad internacional",
+        "skills": [
+          "OCDE BEPS",
+          "Convenios de doble imposición",
+          "Fiscalidad de intangibles"
+        ]
+      },
+      {
+        "category": "Análisis económico",
+        "skills": [
+          "Análisis funcional",
+          "Métodos de valoración",
+          "Bases de datos de comparables"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Excel",
+          "Bases de datos Amadeus"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Precios de transferencia",
+        "Fiscalidad internacional",
+        "Análisis económico",
+        "Cumplimiento BEPS"
+      ],
+      "keyResponsibilities": [
+        "Elaboración de documentación de precios de transferencia",
+        "Análisis de comparables y benchmarking",
+        "Diseño de políticas intragrupo",
+        "Defensa ante inspecciones tributarias"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Almirall",
+        "website": "https://www.almirall.com",
+        "location": "Madrid, España",
+        "from": "2020-02",
+        "to": "Present",
+        "position": "Especialista sénior en precios de transferencia",
+        "activities": [
+          {
+            "project": "Documentación intragrupo",
+            "tasks": [
+              "Elaboración del Master File y los Local File del grupo",
+              "Análisis de comparables para operaciones intragrupo",
+              "Defensa de la política ante inspecciones"
+            ]
+          }
+        ],
+        "achievements": [
+          "Actualicé la documentación de precios de transferencia conforme a BEPS",
+          "Defendí con éxito la política intragrupo en una inspección"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Excel",
+          "OCDE BEPS"
+        ]
+      },
+      {
+        "company": "Deloitte",
+        "website": "https://www.deloitte.es",
+        "location": "Madrid, España",
+        "from": "2016-09",
+        "to": "2020-01",
+        "position": "Consultora de precios de transferencia",
+        "activities": [
+          {
+            "project": "Consultoría de precios de transferencia",
+            "tasks": [
+              "Elaboración de análisis funcionales",
+              "Búsqueda de comparables en bases de datos",
+              "Redacción de informes de precios de transferencia"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participé en proyectos de documentación para grupos multinacionales"
+        ],
+        "toolsAndTechnologies": [
+          "Microsoft Excel",
+          "Bases de datos Amadeus"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "Universidad Carlos III de Madrid",
+        "degree": "Grado en Economía",
+        "fieldOfStudy": "Economía y fiscalidad",
+        "achievements": [
+          "Trabajo de fin de grado sobre métodos de valoración de intangibles"
+        ]
+      },
+      {
+        "year": "2017",
+        "institution": "Universidad Complutense de Madrid",
+        "degree": "Máster en Fiscalidad Internacional",
+        "fieldOfStudy": "Fiscalidad internacional",
+        "achievements": [
+          "Especialización en precios de transferencia"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Advanced Diploma in International Taxation (ADIT)",
+        "institution": "Chartered Institute of Taxation",
+        "year": "2019",
+        "description": "Cualificación internacional en fiscalidad internacional y precios de transferencia."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Microsoft Excel",
+        "OCDE BEPS",
+        "Bases de datos Amadeus"
+      ],
+      "softSkills": [
+        "Pensamiento analítico",
+        "Rigor",
+        "Redacción técnica"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Defensa de la política de precios de transferencia",
+        "description": "Preparación de la documentación y defensa de la política intragrupo en una inspección tributaria.",
+        "date": "2023-05",
+        "impact": "Cerró la inspección sin ajustes en precios de transferencia."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Danza contemporánea",
+      "Lectura",
+      "Viajes culturales"
+    ],
+    "references": [
+      {
+        "name": "Javier Ortiz",
+        "position": "Director Fiscal",
+        "company": "Almirall",
+        "contact": {
+          "phone": "+34 644 187 640",
+          "email": "javier.ortiz@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 50000,
+      "max": 64000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Transfer Pricing",
+      "secondaryClusters": [
+        "International Tax",
+        "Tax Compliance"
+      ],
+      "functionalExpertise": [
+        "Transfer pricing",
+        "International tax",
+        "Economic analysis"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Clean transfer pricing audits",
+        "BEPS-compliant documentation"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Professional Services"
+      ],
+      "environmentFit": [
+        "Multinational",
+        "Corporate tax"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Especialista sénior en precios de transferencia con cualificación ADIT, experta en documentación BEPS y en la defensa de políticas intragrupo."
+    },
+    "searchIndex": {
+      "roles": [
+        "Transfer Pricing Specialist",
+        "International Tax Analyst",
+        "Transfer Pricing Manager"
+      ],
+      "skills": [
+        "Transfer Pricing",
+        "BEPS",
+        "International Tax",
+        "Excel",
+        "Benchmarking"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Professional Services"
+      ]
+    },
+    "tags": [
+      "tax",
+      "transfer-pricing",
+      "international-tax",
+      "beps"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Líder de tesorería con doce años de experiencia diseñando la estrategia de tesorería y financiación en grupos del sector retail. Referente en la centralización de la caja, la gestión del riesgo financiero y la implantación de estructuras de cash pooling. Actúa como principal interlocutor con bancos y agencias de rating.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Víctor Romero Blanco",
+      "role": "Líder de tesorería",
+      "summary": "Líder de tesorería centrado en la estrategia de liquidez, la eficiencia de la estructura financiera y la gestión del riesgo.",
+      "contact": {
+        "phone": "+34 655 187 640",
+        "email": "victor.romero@example.com",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "del Mar",
+          "streetType": "Calle",
+          "unit": "3º",
+          "city": "Valencia",
+          "state": "Comunidad Valenciana",
+          "zipCode": "46003",
+          "country": "España"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/victorromeroblanco"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Martes por la mañana",
+          "Viernes por la tarde"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Estrategia de tesorería",
+        "skills": [
+          "Estrategia de liquidez",
+          "Cash pooling",
+          "Estructura de financiación",
+          "Relación con rating"
+        ]
+      },
+      {
+        "category": "Gestión de riesgo",
+        "skills": [
+          "Riesgo de tipo de cambio",
+          "Riesgo de tipo de interés",
+          "Coberturas"
+        ]
+      },
+      {
+        "category": "Sistemas",
+        "skills": [
+          "SAP",
+          "Kyriba"
+        ]
+      },
+      {
+        "category": "Herramientas",
+        "skills": [
+          "Microsoft Excel",
+          "Bloomberg"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Estrategia de tesorería",
+        "Financiación corporativa",
+        "Gestión de riesgo financiero",
+        "Cash pooling"
+      ],
+      "keyResponsibilities": [
+        "Definición de la estrategia de tesorería del grupo",
+        "Diseño de estructuras de cash pooling",
+        "Gestión de la relación bancaria y de rating",
+        "Coordinación de las coberturas financieras"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Inditex",
+        "website": "https://www.inditex.com",
+        "location": "Valencia, España",
+        "from": "2017-01",
+        "to": "Present",
+        "position": "Líder de tesorería",
+        "activities": [
+          {
+            "project": "Estructura de cash pooling",
+            "tasks": [
+              "Diseño del cash pooling internacional del grupo",
+              "Definición de la estrategia de liquidez",
+              "Gestión de la relación con bancos y agencias de rating"
+            ]
+          }
+        ],
+        "achievements": [
+          "Diseñé la estructura de cash pooling en doce países",
+          "Reduje la deuda financiera neta optimizando la liquidez interna"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Kyriba",
+          "Bloomberg"
+        ]
+      },
+      {
+        "company": "El Corte Inglés",
+        "website": "https://www.elcorteingles.es",
+        "location": "Madrid, España",
+        "from": "2013-03",
+        "to": "2016-12",
+        "position": "Responsable de financiación",
+        "activities": [
+          {
+            "project": "Financiación corporativa",
+            "tasks": [
+              "Gestión de las líneas de financiación del grupo",
+              "Negociación con entidades financieras",
+              "Seguimiento de covenants"
+            ]
+          }
+        ],
+        "achievements": [
+          "Refinancié la deuda del grupo mejorando las condiciones"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Excel",
+          "Bloomberg"
+        ]
+      },
+      {
+        "company": "BBVA",
+        "website": "https://www.bbva.es",
+        "location": "Madrid, España",
+        "from": "2011-09",
+        "to": "2013-02",
+        "position": "Analista de banca corporativa",
+        "activities": [
+          {
+            "project": "Financiación corporativa",
+            "tasks": [
+              "Análisis de operaciones de financiación",
+              "Estructuración de préstamos sindicados",
+              "Seguimiento del riesgo de clientes corporativos"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participé en la estructuración de préstamos sindicados"
+        ],
+        "toolsAndTechnologies": [
+          "Excel",
+          "Bloomberg"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "Universitat de València",
+        "degree": "Licenciatura en Administración y Dirección de Empresas",
+        "fieldOfStudy": "Finanzas",
+        "achievements": [
+          "Especialización en finanzas corporativas"
+        ]
+      },
+      {
+        "year": "2014",
+        "institution": "IESE Business School",
+        "degree": "Máster en Dirección Financiera",
+        "fieldOfStudy": "Finanzas corporativas",
+        "achievements": [
+          "Proyecto sobre estructuras de cash pooling internacional"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Treasury Professional (CTP)",
+        "institution": "Association for Financial Professionals",
+        "year": "2015",
+        "description": "Certificación internacional en gestión de tesorería y finanzas corporativas."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SAP",
+        "Kyriba",
+        "Bloomberg",
+        "Microsoft Excel"
+      ],
+      "softSkills": [
+        "Liderazgo",
+        "Negociación",
+        "Pensamiento estratégico",
+        "Comunicación"
+      ],
+      "languages": [
+        {
+          "language": "Español",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglés",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Diseño del cash pooling internacional",
+        "description": "Implantación de una estructura de cash pooling que integra la liquidez de doce países.",
+        "date": "2020-06",
+        "impact": "Redujo la deuda financiera neta y optimizó el uso de la liquidez interna del grupo."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Vela",
+      "Trail running",
+      "Mercados financieros"
+    ],
+    "references": [
+      {
+        "name": "Ana Belén Ferrando",
+        "position": "Directora Financiera",
+        "company": "Inditex",
+        "contact": {
+          "phone": "+34 655 640 187",
+          "email": "anabelen.ferrando@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 72000,
+      "max": 92000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Treasury",
+      "secondaryClusters": [
+        "Corporate Financing",
+        "Financial Risk"
+      ],
+      "functionalExpertise": [
+        "Treasury strategy",
+        "Cash pooling",
+        "Financial risk management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Lower net debt",
+        "Optimized group liquidity"
+      ],
+      "industryDomains": [
+        "Retail",
+        "Consumer Goods"
+      ],
+      "environmentFit": [
+        "Large corporate",
+        "Multinational"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Líder de tesorería con certificación CTP que define la estrategia de liquidez, diseña estructuras de cash pooling y gestiona la relación bancaria y de rating."
+    },
+    "searchIndex": {
+      "roles": [
+        "Head of Treasury",
+        "Treasury Lead",
+        "Group Treasurer"
+      ],
+      "skills": [
+        "SAP",
+        "Kyriba",
+        "Bloomberg",
+        "Cash Pooling",
+        "Corporate Financing"
+      ],
+      "industries": [
+        "Retail",
+        "Consumer Goods"
+      ]
+    },
+    "tags": [
+      "treasury",
+      "cash-pooling",
+      "financing",
+      "ctp",
+      "lead"
+    ]
+  }
+]

@@ -1,0 +1,420 @@
+[
+  {
+    "title": "Talent Acquisition Specialist",
+    "description": "We are looking for a driven Talent Acquisition Specialist to join our people team in London and own full-cycle recruitment across a fast-growing professional services group.\n\nYour mission: You will partner with hiring managers to attract, assess and hire great people, delivering a smooth candidate experience while keeping our applicant tracking system clean and reliable.\n\nWhat you will do:\n- Manage end-to-end recruitment for corporate and support functions, from intake to offer\n- Source active and passive candidates through LinkedIn Recruiter, referrals and job boards\n- Screen applications, run structured interviews and coordinate assessment stages\n- Maintain accurate pipelines and reporting inside our ATS and HRIS (Workday)\n- Advise managers on job descriptions, market trends and inclusive hiring practices\n\nAbout you:\n- At least 3 years of experience in in-house or agency recruitment\n- Confident using an ATS/HRIS and sourcing tools such as LinkedIn Recruiter\n- Strong stakeholder management and communication skills\n- A structured, data-aware approach to pipeline and candidate management\n\nNice to have: Experience with Workday recruiting and employer branding campaigns.\n\nWork policy: Hybrid with an office in London and up to three days remote per week. We offer a collaborative people team, modern tooling and genuine scope to shape how we hire.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Talent Acquisition",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ATS/HRIS",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "LinkedIn Recruiter",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Workday",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "London",
+          "Reading",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Technology",
+          "Retail"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Office Manager",
+    "description": "A growing technology company in Dublin is looking for a proactive Office Manager to keep our workplace running smoothly and to be the friendly point of contact for the whole team.\n\nYour mission: You will own day-to-day office operations, create a welcoming environment and support leadership with reliable administrative coordination.\n\nWhat you will do:\n- Manage office facilities, suppliers, deliveries and health-and-safety basics\n- Coordinate meetings, travel and events, and support onboarding of new joiners\n- Handle purchase orders, invoices and expense tracking with the finance team\n- Maintain accurate records and documents across MS Office and shared drives\n- Support internal communications and act as the go-to person for office queries\n\nAbout you:\n- At least 2 years of experience in office management, administration or a similar role\n- Strong organisation skills and confident use of MS Office, especially Excel and Outlook\n- A warm, service-minded approach and the ability to juggle competing priorities\n- Good written and spoken English and comfort working with external suppliers\n\nNice to have: Experience with basic bookkeeping tools and event coordination.\n\nWork policy: Onsite with a modern office in Dublin and occasional flexibility. We offer a friendly, fast-moving team and real ownership of how our workplace feels.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Office Management",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Administration",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Vendor Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Event Coordination",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Bookkeeping",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Dublin",
+          "Cork",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services",
+          "Retail"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Customer Success Manager",
+    "description": "Our SaaS business in New York is looking for an empathetic Customer Success Manager to own a portfolio of accounts and help our customers get real value from our platform.\n\nYour mission: You will be the trusted advisor for your customers, driving adoption, retention and growth while acting as their voice inside the company.\n\nWhat you will do:\n- Own onboarding, adoption and renewal for a portfolio of mid-market accounts\n- Build success plans, run business reviews and track customer health metrics\n- Partner with support, product and sales to resolve issues and surface opportunities\n- Manage customer conversations and tickets through Zendesk and Intercom\n- Identify expansion opportunities and reduce churn through proactive outreach\n\nAbout you:\n- At least 4 years of experience in customer success, account management or support\n- Strong relationship-building and stakeholder management skills\n- Comfortable using CRM and support tools such as Zendesk and Intercom\n- A data-informed approach to adoption, retention and customer health\n\nNice to have: Experience in a B2B SaaS environment and familiarity with Salesforce.\n\nWork policy: Hybrid with an office in New York and flexible remote days. We offer a customer-obsessed culture, clear growth paths and direct impact on retention.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Customer Success",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Account Management",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Zendesk",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Intercom",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Salesforce",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 4,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "New York",
+          "Boston",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services",
+          "Retail"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Project Coordinator",
+    "description": "A shared-service centre in Manchester is looking for an organised Project Coordinator to support delivery teams and keep cross-functional projects on track.\n\nYour mission: You will be the connective tissue of our project teams, coordinating tasks, timelines and stakeholders so that work is delivered on time and to plan.\n\nWhat you will do:\n- Coordinate project plans, timelines and resources across delivery teams\n- Track tasks, risks and actions in Jira and Asana and keep boards up to date\n- Prepare status reports, meeting notes and follow-ups for stakeholders\n- Support project managers with scheduling, documentation and reporting\n- Help apply lightweight PRINCE2-aligned governance and standards\n\nAbout you:\n- At least 2 years of experience in project coordination, PMO or operations support\n- Confident using project tools such as Jira and Asana and strong MS Office skills\n- Excellent organisation, attention to detail and stakeholder communication\n- A proactive, dependable approach to chasing actions and hitting deadlines\n\nNice to have: PRINCE2 Foundation certification and experience in a shared-service or professional services environment.\n\nWork policy: Hybrid with an office in Manchester and up to two days remote per week. We offer varied projects, supportive teams and a clear path towards project management.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Project Coordination",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Jira",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Asana",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "PRINCE2",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Manchester",
+          "Leeds",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Technology",
+          "Public Sector"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "HR Business Partner",
+    "description": "A non-profit organisation with a national footprint, based in Bristol, is looking for a seasoned HR Business Partner to advise leaders and drive our people agenda.\n\nYour mission: You will be a trusted partner to senior stakeholders, aligning people strategy with organisational goals and coaching managers through the full employee lifecycle.\n\nWhat you will do:\n- Partner with leadership on workforce planning, talent and organisational design\n- Advise managers on employee relations, performance and change management\n- Lead people initiatives across engagement, retention and development\n- Use HRIS data (Workday, SuccessFactors) to inform decisions and reporting\n- Ensure people practices are fair, compliant and aligned with our values\n\nAbout you:\n- At least 7 years of HR experience, including several as an HR Business Partner\n- Strong knowledge of employee relations and UK employment practices\n- Confident using an HRIS such as Workday or SuccessFactors\n- Excellent stakeholder management, coaching and influencing skills\n\nNice to have: CIPD qualification and experience in the non-profit or public sector.\n\nWork policy: Hybrid with an office in Bristol and up to three days remote per week. We offer a meaningful mission, senior visibility and scope to shape our people strategy.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "HR Business Partnering",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 7,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Employee Relations",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Workday",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SuccessFactors",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Change Management",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Bristol",
+          "Cardiff",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Non-Profit",
+          "Public Sector",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.35,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  }
+]

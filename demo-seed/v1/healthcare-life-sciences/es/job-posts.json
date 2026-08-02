@@ -1,0 +1,418 @@
+[
+  {
+    "title": "Enfermero/a de Unidad de Cuidados Intensivos (UCI)",
+    "description": "El Hospital Universitario La Paz, centro de referencia en Madrid, busca incorporar un/a Enfermero/a a su Unidad de Cuidados Intensivos de adultos para integrarse en un equipo multidisciplinar de cuidados críticos.\n\nDependiendo de la Supervisión de Enfermería de la UCI, prestarás cuidados de alta complejidad basados en la evidencia a pacientes críticos: manejarás la ventilación mecánica invasiva y la monitorización hemodinámica, ajustarás perfusiones de fármacos vasoactivos y responderás con rapidez a situaciones clínicas cambiantes. Realizarás valoraciones de enfermería completas, mantendrás una documentación rigurosa en la historia clínica electrónica y velarás en todo momento por la seguridad y la dignidad del paciente.\n\nEn el día a día colaborarás estrechamente con intensivistas, fisioterapeutas y farmacéuticos durante los pases de visita, acompañarás a las familias en conversaciones difíciles y tutorizarás al personal de nueva incorporación y a estudiantes de enfermería.\n\nImprescindible: colegiación vigente como Enfermero/a (Grado en Enfermería), más de 3 años de experiencia posgrado con al menos 2 años en cuidados críticos o unidades de alta dependencia, competencia en ventilación mecánica y soporte vital avanzado (SVA/ALS) y sólidas habilidades de valoración clínica.\n\nValorable: acreditación como instructor/a de SVB/SVA, experiencia con técnicas continuas de reemplazo renal (CVVH) y participación en proyectos de auditoría clínica o mejora de la calidad.\n\nPuesto presencial en Madrid con turnicidad rotatoria (días y noches). Ofrecemos contrato estable, programa de acogida estructurado y formación continua financiada.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Critical Care Nursing",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Nursing Registration",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": true
+        },
+        {
+          "name": "Mechanical Ventilation",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Advanced Life Support",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Patient Assessment",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Renal Replacement Therapy",
+          "importance": "nice_to_have",
+          "weight": 0.11,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 2,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Madrid",
+          "Alcobendas",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Hospitals and Clinics",
+          "Healthcare",
+          "Medical Devices"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Científico/a Bioanalítico/a Junior (Laboratorio Bioanalítico)",
+    "description": "Biotech Ibérica, una empresa biotecnológica en expansión con sede en el Parc Científic de Barcelona, incorpora un/a Científico/a Bioanalítico/a Junior a su departamento de Desarrollo Analítico para dar soporte a programas de moléculas pequeñas y biológicos.\n\nEn este puesto de nivel inicial darás soporte al desarrollo, la validación y la ejecución de métodos bioanalíticos (LC-MS/MS y ELISA) para cuantificar analitos en matrices biológicas dentro de estudios preclínicos y de fase temprana. Prepararás muestras y estándares, operarás y mantendrás la instrumentación, registrarás los datos en el cuaderno de laboratorio electrónico y contribuirás a la redacción de informes analíticos.\n\nTrabajarás en un entorno regulado por Buenas Prácticas de Laboratorio (GLP), siguiendo procedimientos normalizados de trabajo (SOP) y prácticas de integridad de datos ALCOA+, en estrecha colaboración con científicos sénior, garantía de calidad y equipos de operaciones clínicas.\n\nImprescindible: Grado o Máster en Bioquímica, Farmacia, Química Analítica o disciplina afín; conocimiento práctico de cromatografía y espectrometría de masas; rigor documental y orientación al detalle. Se valorará experiencia previa de prácticas o Trabajo Fin de Máster en un laboratorio analítico.\n\nValorable: familiaridad con GLP/GMP, manejo de software cromatográfico (Analyst, Empower) y nociones de validación de métodos según directrices de la FDA y la EMA.\n\nPuesto híbrido (mayoritariamente presencial en laboratorio) en Barcelona. Ofrecemos plan de desarrollo, mentoría y formación en un entorno científico puntero.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "LC-MS/MS",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Bioanalytical Method Validation",
+          "importance": "important",
+          "weight": 0.2,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ELISA",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Good Laboratory Practice",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Data Integrity",
+          "importance": "nice_to_have",
+          "weight": 0.14,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Analytical Chemistry",
+          "importance": "nice_to_have",
+          "weight": 0.12,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Barcelona",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Biotechnology",
+          "Pharmaceuticals",
+          "CRO"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.15,
+        "location": 0.15,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Regulatory Affairs Manager (Asuntos Regulatorios)",
+    "description": "Laboratorios Farmacéuticos Reunidos, compañía farmacéutica consolidada con presencia europea y sede en Madrid, busca un/a Regulatory Affairs Manager para liderar la estrategia regulatoria de su cartera de productos.\n\nDependiendo del Director de Asuntos Regulatorios, definirás y ejecutarás estrategias de registro para nuevos productos y variaciones, coordinarás la preparación y el mantenimiento de expedientes en formato eCTD y liderarás las presentaciones ante la EMA y la AEMPS mediante los procedimientos centralizado, descentralizado y de reconocimiento mutuo.\n\nActuarás como interlocutor/a principal con las autoridades sanitarias, gestionarás variaciones, renovaciones y respuestas a deficiencias, supervisarás el cumplimiento del etiquetado y la información del producto, y asegurarás la alineación con los requisitos de la FDA para los mercados de exportación. Colaborarás transversalmente con Calidad (GMP/GxP), Farmacovigilancia, I+D y Asuntos Médicos, y tutorizarás a especialistas junior del equipo.\n\nImprescindible: titulación en Farmacia, Biología, Química o disciplina científica afín; más de 7 años de experiencia en asuntos regulatorios dentro de la industria farmacéutica; dominio de la normativa de la EMA y la publicación en eCTD; sólida experiencia liderando presentaciones regulatorias de principio a fin.\n\nValorable: experiencia con productos biológicos, conocimiento del Reglamento de Productos Sanitarios (MDR) y experiencia en la gestión de inspecciones.\n\nModelo híbrido con base en Madrid. Ofrecemos un paquete competitivo, desarrollo de carrera y proyección internacional.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Regulatory Submissions",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "EMA Regulations",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "eCTD Publishing",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "FDA Regulations",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GxP Compliance",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Medical Device Regulation",
+          "importance": "nice_to_have",
+          "weight": 0.12,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Madrid",
+          "Barcelona",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "Medical Devices"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Medical Science Liaison - Oncología",
+    "description": "Una compañía biofarmacéutica global especializada en oncología amplía su equipo de campo en la Península Ibérica e incorpora un/a Medical Science Liaison (MSL) para la región de Cataluña y Levante, con base en Barcelona.\n\nComo enlace científico-médico, establecerás y mantendrás relaciones de confianza con líderes de opinión (KOL), oncólogos y hematólogos hospitalarios, aportando intercambio científico de alto nivel sobre nuestra cartera y el panorama terapéutico. Comunicarás datos clínicos, comentarás publicaciones y evidencia de vida real (RWE), y recogerás insights científicos que orienten la estrategia médica.\n\nApoyarás estudios iniciados por investigadores (IIS), participarás en advisory boards, darás soporte médico a ensayos clínicos y colaborarás con Asuntos Médicos, Market Access y Farmacovigilancia, respetando en todo momento los códigos de buenas prácticas del sector y la normativa aplicable.\n\nImprescindible: titulación científica o sanitaria avanzada (PhD, PharmD, MD o equivalente); más de 5 años de experiencia, idealmente como MSL o en un rol médico-científico en oncología/hematología; sólido conocimiento de ensayos clínicos e ICH-GCP; excelentes habilidades de comunicación científica en español e inglés; disponibilidad para viajar por el territorio.\n\nValorable: experiencia previa en lanzamientos de producto, conocimiento de HEOR y una red establecida de KOL en oncología.\n\nPuesto de campo (remoto con viajes frecuentes) con base en Barcelona. Ofrecemos un entorno científico estimulante y desarrollo profesional.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Medical Affairs",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Oncology",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "KOL Engagement",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trials",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ICH-GCP",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Health Economics and Outcomes Research",
+          "importance": "nice_to_have",
+          "weight": 0.14,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 5,
+        "minRelevantYears": 4,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Barcelona",
+          "Valencia",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "Healthcare"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Clinical Research Associate (CRA) - Monitorización de Ensayos Clínicos",
+    "description": "Una Organización de Investigación por Contrato (CRO) internacional incorpora un/a Clinical Research Associate (CRA) para monitorizar ensayos clínicos en centros de España y Portugal, con base en Valencia y disponibilidad para viajar.\n\nBajo la supervisión del Clinical Trial Manager, realizarás visitas de selección, inicio, monitorización y cierre en los centros investigadores, garantizando que los estudios se conducen conforme a la ICH-GCP, el protocolo y la normativa local. Verificarás los datos fuente (SDV), revisarás el consentimiento informado, supervisarás la gestión del producto en investigación y darás seguimiento a las desviaciones y hallazgos.\n\nGestionarás la documentación del Trial Master File (TMF), colaborarás con los equipos de los centros y con Data Management, y notificarás los acontecimientos adversos de acuerdo con los procedimientos de farmacovigilancia. Elaborarás informes de monitorización claros y accionables dentro de los plazos establecidos.\n\nImprescindible: titulación en Ciencias de la Salud o de la Vida (Enfermería, Farmacia, Biología o afín); entre 2 y 4 años de experiencia en monitorización clínica; conocimiento sólido de la ICH-GCP y de la regulación de ensayos clínicos; nivel alto de inglés; carné de conducir y disponibilidad para viajar con frecuencia.\n\nValorable: experiencia en estudios oncológicos, manejo de sistemas EDC (Medidata Rave) y experiencia en monitorización basada en riesgo (RBM).\n\nModelo remoto con viajes frecuentes a los centros, base en Valencia. Ofrecemos formación continua y proyección dentro de una CRO global.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Clinical Monitoring",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ICH-GCP",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Source Data Verification",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Trial Master File",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Pharmacovigilance",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Electronic Data Capture",
+          "importance": "nice_to_have",
+          "weight": 0.12,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 2,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Valencia",
+          "Madrid",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "CRO",
+          "Pharmaceuticals",
+          "Biotechnology"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  }
+]

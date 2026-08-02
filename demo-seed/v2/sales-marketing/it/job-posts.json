@@ -1,0 +1,157 @@
+[
+  {
+    "title": "Senior Account Executive (SaaS B2B)",
+    "description": "Brightwave Cloud, azienda B2B SaaS con sede a Milano che vende software di automazione dei flussi di lavoro a clienti mid-market ed enterprise, è alla ricerca di un Senior Account Executive che gestisca il fatturato new-business su tutto il territorio italiano.\n\nSeguirai l'intero ciclo di vendita: prospecting sugli account target, discovery, costruzione del business case con gli economic buyer, negoziazione delle condizioni commerciali e chiusura di contratti pluriennali. Porterai una quota di circa 900k€ di nuovo ARR e gestirai un portafoglio di logo ad alto valore nei settori dei servizi finanziari e del retail.\n\nLa nostra go-to-market gira su Salesforce e su uno stack di outbound moderno: disciplina nella pipeline, previsioni accurate e qualificazione in stile MEDDIC sono requisiti imprescindibili. Collaborerai a stretto contatto con il team di Sales Engineering e con il Marketing sulle strategie account-based.\n\nRichiesto: oltre 5 anni nella chiusura di deal B2B SaaS net-new, un track record costante nel raggiungimento della quota, forte padronanza di Salesforce e capacità di negoziazione value-based con stakeholder senior. Gradito: formazione MEDDIC o Challenger, esperienza con Outreach o Salesloft e vendita in settori regolamentati.\n\nÈ un ruolo senior ibrido con base a Milano (2 giorni a settimana in ufficio), aperto a candidati in tutta Italia. Offriamo una retribuzione competitiva, commissioni senza tetto, equity e un percorso di crescita verso Strategic AE.",
+    "scoringRules": {
+      "skills": [
+        { "name": "B2B Sales", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Salesforce", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Negotiation", "importance": "important", "weight": 0.16, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Pipeline Management", "importance": "important", "weight": 0.14, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "MEDDIC", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Outreach", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 5,
+        "minRelevantYears": 4,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Milano", "Roma", "Torino", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["SaaS", "B2B Technology", "Software"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Performance Marketing Manager",
+    "description": "Loomly Goods, brand e-commerce direct-to-consumer con quartier generale a Milano, è alla ricerca di un Performance Marketing Manager che gestisca l'acquisizione a pagamento in Italia e sui mercati europei.\n\nPianificherai e gestirai il budget di paid media su Google Ads, Meta Ads e canali emergenti, con la responsabilità degli obiettivi di ROAS, CAC e payback complessivo. Nel quotidiano costruirai e ottimizzerai le campagne, condurrai test creativi e sul pubblico, gestirai le campagne shopping basate su feed e rendiconterai le performance in GA4 e Looker Studio. Lavorerai con il team creativo sulla produzione di annunci ad alta frequenza e con il team dati su attribuzione e incrementalità.\n\nCerchiamo una persona operativa, a suo agio sia in un foglio di calcolo sia dentro un account pubblicitario, capace di trasformare il budget in crescita prevedibile e profittevole.\n\nRichiesto: 3-5 anni nella gestione di budget di acquisizione a pagamento in-house o in agenzia, competenza hands-on su Google Ads e Meta Ads, solide capacità analitiche in GA4 e una mentalità test-and-learn. Gradito: TikTok Ads, SQL ed esperienza in contesti DTC o subscription.\n\nÈ un ruolo mid-level remote-first, aperto a candidati in tutta Italia, con accesso facoltativo alla nostra sede di Milano. Investiamo negli strumenti, proteggiamo il budget di test e diamo ai marketer una reale ownership del P&L di canale.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Google Ads", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Meta Ads", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GA4", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Performance Marketing", "importance": "important", "weight": 0.16, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SEM", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Milano", "Bologna", "Roma", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["E-commerce", "Consumer Goods", "Retail"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Brand & Content Lead",
+    "description": "Meridian Studio, media company nel settore consumer con sede a Roma, è alla ricerca di un Brand & Content Lead che dia forma alla nostra voce e faccia crescere l'audience sui canali owned, earned e social in Italia e in Europa.\n\nGestirai end-to-end la brand strategy e il calendario editoriale: posizionamento, messaggistica, tone of voice e il motore di contenuti che li porta in vita tra long-form, video, newsletter e social. Guiderai un piccolo team di redattori e un designer, coordinerai creator esterni e collaborerai con il performance marketing affinché brand e domanda spingano nella stessa direzione. Sarai anche responsabile del social organico e dei contenuti SEO, usando gli insight di ricerca e social per decidere cosa pubblicare.\n\nCerchiamo uno storyteller con il rigore operativo per gestire una vera macchina editoriale e misurarne l'impatto sulla brand awareness e sulla pipeline.\n\nRichiesto: oltre 6 anni in brand, content o comunicazione, un portfolio di campagne di cui hai definito la direzione, esperienza nella gestione di redattori o agenzie e forte padronanza di SEO e content analytics. Gradito: produzione video, PR ed esperienza nel settore consumer o media.\n\nÈ un ruolo senior ibrido con base a Roma (3 giorni in ufficio) e trasferte occasionali a Milano. Diamo al team di brand un mandato reale e un posto nella strategia aziendale.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Brand Strategy", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Content Marketing", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "SEO", "importance": "important", "weight": 0.18, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Copywriting", "importance": "important", "weight": 0.14, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Social Media Marketing", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Public Relations", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Roma", "Milano", "Remote"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Media", "Consumer Goods", "Entertainment"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Product Marketing Manager",
+    "description": "Kestrel Analytics, azienda B2B technology con sedi a Torino e Bologna che sviluppa software di product analytics, è alla ricerca di un Product Marketing Manager che sia responsabile di posizionamento, lanci e go-to-market della nostra piattaforma.\n\nCostruirai messaggistica e posizionamento che rendano un prodotto tecnico facile da capire e impossibile da ignorare, gestirai la competitive intelligence e guiderai lanci di prodotto cross-funzionali dalla beta alla general availability. Realizzerai il toolkit di sales enablement (deck, battlecard, demo narrative), definirai segmenti target e persona e collaborerai con la demand generation su campagne che muovono la pipeline. Userai product analytics e insight di win/loss per affinare la narrazione in modo continuo.\n\nÈ un ruolo per chi si muove con naturalezza tra prodotto, vendite e marketing e sa trasformare una roadmap in una narrazione che clienti e commerciali amano allo stesso modo.\n\nRichiesto: 3-5 anni in product marketing per un prodotto software o SaaS B2B, comprovata ownership dei lanci, eccellenti capacità di messaggistica scritta e solide competenze di GTM strategy. Gradito: HubSpot, strumenti di product analytics e un background in ingegneria o prodotto.\n\nÈ un ruolo mid-level ibrido con base a Torino (2 giorni in ufficio), aperto a candidati in tutta Italia. Diamo ai PMM un posto centrale nel modo in cui il prodotto raggiunge il mercato.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Marketing", "importance": "mandatory", "weight": 0.3, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GTM Strategy", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Positioning", "importance": "important", "weight": 0.18, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "important", "weight": 0.14, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Sales Enablement", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "HubSpot", "importance": "nice_to_have", "weight": 0.08, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Torino", "Milano", "Bologna", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["B2B Technology", "SaaS", "Software"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Junior Demand Generation Specialist",
+    "description": "Larkspur Software, azienda B2B SaaS in fase early-stage con sede a Bologna, è alla ricerca di un Junior Demand Generation Specialist che aiuti a costruire il motore di marketing che alimenta la nostra pipeline di vendita.\n\nÈ un ruolo per chi è all'inizio del proprio percorso nel marketing, ama i dati e vuole imparare la demand generation B2B moderna partendo dalle fondamenta. Aiuterai a gestire campagne multi-canale tra email, paid e webinar, costruirai e manterrai i flussi di nurturing in HubSpot, terrai puliti i dati sui lead e rendiconterai le metriche di funnel dal click al closed-won. Condurrai test A/B su landing page ed email, supporterai la SEO e la distribuzione dei contenuti e collaborerai con le vendite sul follow-up e sul passaggio dei lead.\n\nInvestiremo nella tua crescita con mentorship, un percorso di ramp chiaro ed esposizione all'intero stack di marketing.\n\nRichiesto: 0-2 anni di esperienza nel marketing (inclusi stage, tirocini o solidi progetti), familiarità con HubSpot o un CRM simile, buone capacità analitiche nei fogli di calcolo e genuina curiosità per la crescita B2B. Gradito: Google Ads, GA4 e nozioni base di copywriting per email o contenuti.\n\nÈ un ruolo junior ibrido con base a Bologna (2 giorni in ufficio), aperto a candidati in tutta Italia. Offriamo mentorship strutturata, un team collaborativo e a basso ego e un reale percorso di crescita nella demand generation.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Demand Generation", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "HubSpot", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Email Marketing", "importance": "important", "weight": 0.18, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Marketing Analytics", "importance": "important", "weight": 0.14, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Google Ads", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "GA4", "importance": "nice_to_have", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Bologna", "Firenze", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["SaaS", "B2B Technology", "Software"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.2, "location": 0.15, "industry": 0.2 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

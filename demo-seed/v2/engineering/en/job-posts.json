@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Mechanical Design Engineer (SolidWorks/GD&T)",
+    "description": "Aldergate Precision, a Birmingham-based contract manufacturer supplying the automotive and industrial-equipment sectors across the United Kingdom, is hiring a Mechanical Design Engineer to develop mechanical assemblies from concept through to production release.\n\nYou will produce 3D models and detailed 2D manufacturing drawings in SolidWorks, apply GD&T to control fit and function, and run tolerance stack-up analyses on sheet-metal and machined components. Day to day you will collaborate with our shop floor and suppliers, select materials and standard hardware, and support DFM/DFA reviews to keep parts cost-effective and manufacturable.\n\nWe expect a solid grounding in engineering mechanics, first-principles calculation, and design for manufacture. You will validate concepts with FEA in ANSYS or SolidWorks Simulation and maintain revision-controlled drawing packs and BOMs.\n\nRequired: 3-5 years in mechanical product or machine design, strong SolidWorks and GD&T, and hands-on experience releasing parts to manufacture. Nice-to-have: ANSYS, sheet-metal and weldment design, and PDM/PLM experience.\n\nThis is a mid-level, onsite role based in Birmingham with occasional supplier visits, open to candidates across the West Midlands. We offer a clear progression path, a modern prototyping workshop, and real ownership of your designs.",
+    "scoringRules": {
+      "skills": [
+        { "name": "SolidWorks", "importance": "mandatory", "weight": 0.3, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GD&T", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Mechanical Design", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "ANSYS", "importance": "important", "weight": 0.12, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "FEA", "importance": "important", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Design for Manufacturing", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "PDM", "importance": "nice_to_have", "weight": 0.03, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Birmingham", "Coventry", "Wolverhampton", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Automotive", "Manufacturing", "Industrial Equipment"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Senior Structural Engineer (Eurocode/Revit)",
+    "description": "Callaghan Consulting Engineers, a Dublin-headquartered civil and structural practice delivering commercial, residential, and infrastructure projects across Ireland and the United Kingdom, is hiring a Senior Structural Engineer to lead the design of building structures from feasibility to construction.\n\nYou will carry out structural analysis and design of concrete, steel, and composite structures to the Eurocodes, produce and check calculations, and develop coordinated models in Revit within a BIM workflow. You will run analysis in ETABS and STAAD.Pro, take design responsibility for your projects, and mentor graduate and intermediate engineers through technical review.\n\nWe expect strong first-principles understanding, sound engineering judgement, and clear communication with architects, contractors, and clients. You will attend design-team meetings, respond to site queries, and ensure deliverables meet programme and quality standards.\n\nRequired: 6+ years in structural design consultancy, chartered or working towards, expert Eurocode knowledge, and proficiency in Revit, ETABS, and STAAD.Pro. Nice-to-have: Tekla, geotechnical interface design, and experience across multiple structural materials.\n\nThis is a senior, hybrid role based in Dublin (3 days in office) with occasional site visits, open to candidates across Ireland and the UK. We offer chartership support, varied projects, and a genuine path to associate.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Structural Engineering", "importance": "mandatory", "weight": 0.26, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Eurocode", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Revit", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "ETABS", "importance": "important", "weight": 0.14, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "STAAD.Pro", "importance": "important", "weight": 0.1, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "BIM", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Tekla", "importance": "nice_to_have", "weight": 0.04, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Dublin", "Cork", "London", "Manchester", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Construction", "Civil Engineering", "Architecture"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Electrical Design Engineer (Power Systems / ETAP)",
+    "description": "Meridian Power Solutions, a Leeds-based electrical engineering firm delivering power distribution and building services across the United Kingdom, is hiring an Electrical Design Engineer to design LV and MV power systems for commercial and industrial facilities.\n\nYou will size cables and protective devices, produce single-line diagrams and schematics in AutoCAD, and carry out load-flow, short-circuit, and protection-coordination studies in ETAP. You will design distribution boards, lighting, small power, and containment to BS 7671 (IET Wiring Regulations), and coordinate with mechanical and structural disciplines within a BIM environment.\n\nWe expect a strong grasp of electrical fundamentals, standards compliance, and practical constructability. You will produce specifications and schedules, review contractor submittals, and support commissioning on site.\n\nRequired: 3-5 years in electrical building-services or power-systems design, working knowledge of BS 7671, and proficiency in AutoCAD and ETAP. Nice-to-have: Revit MEP, Amtech/DIALux, and experience with renewable or standby generation.\n\nThis is a mid-level, hybrid role based in Leeds (2 days in office) with periodic site attendance, open to candidates across the North of England. We offer chartered-institution support, diverse projects, and strong technical mentoring.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Electrical Design", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "ETAP", "importance": "mandatory", "weight": 0.2, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "AutoCAD", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "BS 7671", "importance": "important", "weight": 0.14, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Power Systems", "importance": "important", "weight": 0.1, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Revit MEP", "importance": "nice_to_have", "weight": 0.06, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "DIALux", "importance": "nice_to_have", "weight": 0.04, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Leeds", "Sheffield", "Manchester", "Newcastle", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Building Services", "Power Distribution", "Construction"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Junior Process / Industrial Engineer (Lean)",
+    "description": "Brightwater Foods, a growing food-manufacturing company with a production site near Bristol, is hiring a Junior Process / Industrial Engineer to help improve throughput, quality, and efficiency on our production lines.\n\nThis is a role for someone early in their career who enjoys being on the shop floor. You will map processes, run time studies, and support continuous-improvement projects using Lean and Six Sigma tools such as value-stream mapping, 5S, and root-cause analysis. You will collect and analyse production data, help reduce waste and downtime, and support the rollout of standard work with operators and supervisors.\n\nWe will invest in your development, pair you with experienced engineers, and give you real projects from day one. You will learn to balance safety, quality, cost, and delivery in a fast-moving manufacturing environment.\n\nRequired: 0-2 years of experience or a relevant engineering degree, foundational knowledge of Lean and Six Sigma, comfort with data and Excel, and strong problem-solving. Nice-to-have: exposure to SAP, Minitab, or a manufacturing placement/internship.\n\nThis is a junior, onsite role based near Bristol, open to candidates across the South West of England. We offer structured training, a route towards Six Sigma certification, and a supportive team.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Lean Manufacturing", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Six Sigma", "importance": "mandatory", "weight": 0.22, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Process Improvement", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Data Analysis", "importance": "important", "weight": 0.14, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Value Stream Mapping", "importance": "important", "weight": 0.1, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "SAP", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Minitab", "importance": "nice_to_have", "weight": 0.03, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Bristol", "Bath", "Swindon", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Food Manufacturing", "Manufacturing", "FMCG"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.2, "location": 0.15, "industry": 0.2 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Principal Controls & Automation Engineer (PLC/SCADA)",
+    "description": "Cascade Automation, a US industrial-automation integrator headquartered in Houston, Texas, is hiring a Principal Controls & Automation Engineer to lead the design and delivery of control systems for process and manufacturing plants across the United States.\n\nYou will take technical ownership of automation projects end to end: developing control philosophies, designing PLC and SCADA architectures, and leading FAT and site commissioning. You will program PLCs (Allen-Bradley and Siemens), configure HMI/SCADA systems, and design control panels and instrumentation to relevant standards. As the senior technical authority, you will set engineering standards, review the work of a team of controls engineers, and interface directly with clients and operations.\n\nWe expect deep expertise in industrial control systems, functional safety, and industrial networking, along with the leadership to guide complex, multi-discipline projects.\n\nRequired: 8+ years in controls and automation with strong PLC and SCADA delivery, panel and instrumentation design experience, and a track record leading commissioning. Nice-to-have: functional safety (SIS), industrial cybersecurity, and MES integration.\n\nThis is a principal-level role based in Houston with regular travel to client sites across the US. We offer top-of-band compensation, technical leadership, and challenging greenfield and retrofit projects.",
+    "scoringRules": {
+      "skills": [
+        { "name": "PLC", "importance": "mandatory", "weight": 0.28, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "SCADA", "importance": "mandatory", "weight": 0.24, "minYearsOfExperience": 7, "exactSkillOnly": false },
+        { "name": "Industrial Automation", "importance": "mandatory", "weight": 0.18, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "HMI", "importance": "important", "weight": 0.12, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Commissioning", "importance": "important", "weight": 0.09, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Functional Safety", "importance": "nice_to_have", "weight": 0.05, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Instrumentation", "importance": "nice_to_have", "weight": 0.04, "minYearsOfExperience": 3, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 8,
+        "minRelevantYears": 7,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Houston", "Dallas", "Austin", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Industrial Automation", "Oil and Gas", "Manufacturing"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  }
+]

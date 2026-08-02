@@ -1,0 +1,424 @@
+{
+  "collMod": "cvs",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "cvs",
+      "required": ["tenantId", "applicantNumber", "createdAt", "lastUpdatedAt", "createdBy", "lastUpdatedBy"],
+      "properties": {
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "must be a valid ObjectId and is required"
+        },
+        "applicantNumber": {
+          "bsonType": "string",
+          "description": "unique applicant identifier, generated on creation"
+        },
+        "candidateProfileSummary": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "careerStartYear": {
+          "bsonType": "int",
+          "description": "must be an integer representing the year the candidate started their career"
+        },
+        "personalInformation": {
+          "bsonType": "object",
+          "description": "candidate personal details",
+          "properties": {
+            "name": { "bsonType": "string" },
+            "role": { "bsonType": "string" },
+            "summary": { "bsonType": "string" },
+            "contact": {
+              "bsonType": "object",
+              "properties": {
+                "phone": { "bsonType": "string" },
+                "email": { "bsonType": "string" },
+                "address": {
+                  "bsonType": "object",
+                  "description": "Structured physical address of the candidate",
+                  "properties": {
+                    "streetNumber": { "bsonType": "string" },
+                    "streetName": { "bsonType": "string" },
+                    "streetType": { "bsonType": "string" },
+                    "unit": { "bsonType": "string" },
+                    "city": { "bsonType": "string" },
+                    "state": { "bsonType": "string" },
+                    "zipCode": { "bsonType": "string" },
+                    "country": { "bsonType": "string" }
+                  }
+                },
+                "socialLinks": {
+                  "bsonType": "object",
+                  "properties": {
+                    "linkedin": { "bsonType": "string" },
+                    "github": { "bsonType": "string" },
+                    "website": { "bsonType": "string" }
+                  }
+                }
+              }
+            },
+            "availability": {
+              "bsonType": "object",
+              "description": "candidate work availability and hiring preferences",
+              "properties": {
+                "openToWork": {
+                  "bsonType": "bool",
+                  "description": "whether the candidate is actively open to new opportunities"
+                },
+                "status": {
+                  "bsonType": "string",
+                  "enum": ["activelyLooking", "openButNotSearching", "notAvailable", "freelanceOnly"],
+                  "description": "candidate job seeking status"
+                },
+                "availableFrom": {
+                  "bsonType": "string",
+                  "description": "earliest candidate start date"
+                },
+                "noticePeriodDays": {
+                  "bsonType": "int",
+                  "description": "notice period in days before candidate can start"
+                },
+                "interviewAvailability": {
+                  "bsonType": "array",
+                  "items": { "bsonType": "string" },
+                  "description": "preferred interview time slots"
+                },
+                "preferredWorkTypes": {
+                  "bsonType": "array",
+                  "items": { "bsonType": "string" },
+                  "description": "preferred work arrangement"
+                },
+                "preferredContractTypes": {
+                  "bsonType": "array",
+                  "items": { "bsonType": "string" },
+                  "description": "preferred contract types"
+                },
+                "willingToRelocate": {
+                  "bsonType": "bool",
+                  "description": "whether the candidate is willing to relocate"
+                },
+                "remoteOnly": {
+                  "bsonType": "bool",
+                  "description": "whether the candidate only wants remote work"
+                }
+              }
+            }
+          }
+        },
+        "keySkills": {
+          "bsonType": "array",
+          "description": "list of skill categories with their skills",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "category": { "bsonType": "string" },
+              "skills": {
+                "bsonType": "array",
+                "items": { "bsonType": "string" }
+              }
+            }
+          }
+        },
+        "profiles": {
+          "bsonType": "object",
+          "description": "candidate areas of expertise and key responsibilities",
+          "properties": {
+            "areasOfExpertise": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            },
+            "keyResponsibilities": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            }
+          }
+        },
+        "workExperience": {
+          "bsonType": "array",
+          "description": "list of work experience entries",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "company": { "bsonType": "string" },
+              "website": { "bsonType": "string" },
+              "location": { "bsonType": "string" },
+              "from": { "bsonType": "string" },
+              "to": { "bsonType": "string" },
+              "position": { "bsonType": "string" },
+              "activities": {
+                "bsonType": "array",
+                "items": {
+                  "bsonType": "object",
+                  "properties": {
+                    "project": { "bsonType": "string" },
+                    "tasks": {
+                      "bsonType": "array",
+                      "items": { "bsonType": "string" }
+                    }
+                  }
+                }
+              },
+              "achievements": {
+                "bsonType": "array",
+                "items": { "bsonType": "string" }
+              },
+              "toolsAndTechnologies": {
+                "bsonType": "array",
+                "items": { "bsonType": "string" }
+              }
+            }
+          }
+        },
+        "education": {
+          "bsonType": "array",
+          "description": "list of education entries",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "year": { "bsonType": "string" },
+              "institution": { "bsonType": "string" },
+              "degree": { "bsonType": "string" },
+              "fieldOfStudy": { "bsonType": "string" },
+              "achievements": {
+                "bsonType": "array",
+                "items": { "bsonType": "string" }
+              }
+            }
+          }
+        },
+        "certifications": {
+          "bsonType": "array",
+          "description": "list of certifications",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "title": { "bsonType": "string" },
+              "institution": { "bsonType": "string" },
+              "year": { "bsonType": "string" },
+              "description": { "bsonType": "string" }
+            }
+          }
+        },
+        "skillsAndQualifications": {
+          "bsonType": "object",
+          "description": "technical skills, soft skills, and languages",
+          "properties": {
+            "technicalSkills": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            },
+            "softSkills": {
+              "bsonType": "array",
+              "items": { "bsonType": "string" }
+            },
+            "languages": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "language": { "bsonType": "string" },
+                  "proficiency": {
+                    "bsonType": "object",
+                    "properties": {
+                      "read": { "bsonType": "string" },
+                      "written": { "bsonType": "string" },
+                      "spoken": { "bsonType": "string" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "projectsAndAchievements": {
+          "bsonType": "array",
+          "description": "list of projects and achievements",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "title": { "bsonType": "string" },
+              "description": { "bsonType": "string" },
+              "date": { "bsonType": "string" },
+              "impact": { "bsonType": "string" }
+            }
+          }
+        },
+        "interestsAndHobbies": {
+          "bsonType": "array",
+          "description": "list of interests and hobbies",
+          "items": { "bsonType": "string" }
+        },
+        "references": {
+          "bsonType": "array",
+          "description": "list of professional references",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "name": { "bsonType": "string" },
+              "position": { "bsonType": "string" },
+              "company": { "bsonType": "string" },
+              "contact": {
+                "bsonType": "object",
+                "properties": {
+                  "phone": { "bsonType": "string" },
+                  "email": { "bsonType": "string" }
+                }
+              }
+            }
+          }
+        },
+        "salaryExpectation": {
+          "bsonType": "object",
+          "description": "candidate salary expectations",
+          "properties": {
+            "currency": { "bsonType": "string" },
+            "min": { "bsonType": "int" },
+            "max": { "bsonType": "int" }
+          }
+        },
+        "attachment": {
+          "bsonType": "object",
+          "description": "reference to the original CV file stored in S3",
+          "properties": {
+            "s3Key":       { "bsonType": "string" },
+            "fileName":    { "bsonType": "string" },
+            "contentType": { "bsonType": "string" },
+            "sizeBytes":   { "bsonType": "long" }
+          }
+        },
+        "rawText": {
+          "bsonType": "string",
+          "description": "raw text extracted from the uploaded file, kept for re-analysis"
+        },
+        "contentDate": {
+          "bsonType": "date",
+          "description": "best evidence of when the CV content was current (freshness signal)"
+        },
+        "contentDateSource": {
+          "bsonType": "string",
+          "enum": ["WORK_HISTORY", "DOC_METADATA", "VERIFIED", "UNKNOWN"],
+          "description": "origin of contentDate"
+        },
+        "embedding": {
+          "bsonType": "array",
+          "description": "vector embedding for semantic search",
+          "items": { "bsonType": "double" }
+        },
+        "score": {
+          "bsonType": "double",
+          "description": "relevance score"
+        },
+        "tags": {
+          "bsonType": "array",
+          "description": "searchable tags",
+          "items": { "bsonType": "string" }
+        },
+        "candidateClustering": {
+          "bsonType": "object",
+          "description": "semantic talent clustering information inferred from the candidate CV",
+          "properties": {
+            "primaryCluster": {
+              "bsonType": "string",
+              "description": "main talent cluster, e.g. AI & Machine Learning, DevOps & Platform Engineering"
+            },
+            "secondaryClusters": {
+              "bsonType": "array",
+              "description": "additional relevant talent clusters",
+              "items": { "bsonType": "string" }
+            },
+            "functionalExpertise": {
+              "bsonType": "array",
+              "description": "core professional expertise areas",
+              "items": { "bsonType": "string" }
+            },
+            "skillDepth": {
+              "bsonType": "string",
+              "enum": ["generalist", "specialist", "tShaped", "hybrid", "unknown"],
+              "description": "candidate expertise depth profile"
+            },
+            "businessImpact": {
+              "bsonType": "array",
+              "description": "measurable or qualitative business impact indicators",
+              "items": { "bsonType": "string" }
+            },
+            "industryDomains": {
+              "bsonType": "array",
+              "description": "industries where the candidate has experience",
+              "items": { "bsonType": "string" }
+            },
+            "environmentFit": {
+              "bsonType": "array",
+              "description": "best-fit work environments such as startup, enterprise, regulated enterprise, consulting, SaaS",
+              "items": { "bsonType": "string" }
+            },
+            "seniorityLevel": {
+              "bsonType": "string",
+              "enum": ["junior", "midLevel", "senior", "lead", "principal", "manager", "director", "executive", "unknown"],
+              "description": "estimated candidate seniority level"
+            },
+            "leadershipAndInfluence": {
+              "bsonType": "string",
+              "enum": ["none", "individualContributor", "teamLead", "crossFunctionalLeader", "strategicLeader", "executiveInfluence", "unknown"],
+              "description": "candidate leadership and stakeholder influence level"
+            },
+            "learningVelocity": {
+              "bsonType": "string",
+              "enum": ["low", "medium", "high", "veryHigh", "unknown"],
+              "description": "evidence of adaptability, upskilling, certifications, and career evolution"
+            },
+            "clusterConfidenceScore": {
+              "bsonType": "double",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "confidence score of the clustering analysis between 0 and 1"
+            },
+            "clusterReasoning": {
+              "bsonType": "string",
+              "description": "short explanation of why the candidate belongs to this cluster"
+            }
+          }
+        },
+        "searchIndex": {
+          "bsonType": "object",
+          "description": "English-normalized search fields used exclusively by the talent intelligence query engine. Always in English regardless of CV language.",
+          "properties": {
+            "roles": {
+              "bsonType": "array",
+              "description": "English-normalized role titles, functional expertise areas, and talent cluster labels",
+              "items": { "bsonType": "string" }
+            },
+            "skills": {
+              "bsonType": "array",
+              "description": "English-normalized skill names, technologies, tools, certifications, and domain areas",
+              "items": { "bsonType": "string" }
+            },
+            "industries": {
+              "bsonType": "array",
+              "description": "English-normalized industry sector labels",
+              "items": { "bsonType": "string" }
+            }
+          }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

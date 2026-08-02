@@ -24,6 +24,10 @@ public class JwtUtils {
 	String SUBSCRIPTION_PLAN = "subscriptionPlan";
 	String SUBSCRIPTION_STATUS = "subscriptionStatus";
 
+	public String PURPOSE = "purpose";
+	public String CREDENTIAL_VERSION = "cv";
+	public String PURPOSE_SET_PASSWORD = "SET_PASSWORD";
+
 	public String extractToken(String bearerToken) {
 		if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
 			return bearerToken.substring(7);
@@ -85,6 +89,24 @@ public class JwtUtils {
 	public Boolean isTokenValid(String token, UserDetails userDetails, SecretKey jwtSecret) {
 		final String username = extractUsername(token, jwtSecret);
 		return (username.equals(userDetails.getUsername()) && !isTokenExpired(token, jwtSecret));
+	}
+
+	/**
+	 * Mints a single-purpose, time-boxed set-password token. The subject is the user id and the
+	 * {@code cv} claim pins the user's current credential version so the token becomes invalid once
+	 * the password is changed (single-use).
+	 */
+	public String generateSetPasswordToken(String userId, int credentialVersion, JwtConfig jwtConfig) {
+		Map<String, Object> claims = new HashMap<>();
+		claims.put(PURPOSE, PURPOSE_SET_PASSWORD);
+		claims.put(CREDENTIAL_VERSION, credentialVersion);
+		return Jwts.builder()
+			.setClaims(claims)
+			.setSubject(userId)
+			.setIssuedAt(new Date(System.currentTimeMillis()))
+			.setExpiration(new Date(System.currentTimeMillis() + jwtConfig.getSetPasswordTtlInMillis()))
+			.signWith(SignatureAlgorithm.HS512, jwtConfig.getSecretKey())
+			.compact();
 	}
 
 	public JwtDTO generateAndBuildToken(UserDetails userDetails, JwtConfig jwtConfig, TenantDTO tenantDTO) {

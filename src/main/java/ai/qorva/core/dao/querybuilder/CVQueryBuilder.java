@@ -30,6 +30,7 @@ public class CVQueryBuilder implements QorvaQueryBuilder<CV> {
 
 		return MongoSpecification
 			.where(CVSpecifications.tenantIdEquals(params.get("tenantId")))
+			.and(CVSpecifications.archivedEquals("true".equals(params.get("archived"))))
 			.and(CVSpecifications.applicantNumberEquals(params.get("applicantNumber")))
 			.and(CVSpecifications.hasRoleOrPosition(params.get("role")))
 			.and(CVSpecifications.nameContains(params.get("name")))

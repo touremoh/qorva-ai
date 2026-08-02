@@ -1,0 +1,447 @@
+[
+  {
+    "title": "Talent Acquisition Specialist",
+    "description": "NovaTech Italia, azienda tecnologica con sede a Milano che offre soluzioni SaaS a clienti mid-market in tutta Europa, cerca un Talent Acquisition Specialist per rafforzare il team People & Culture in una fase di forte crescita.\n\nGestirai l'intero ciclo di selezione end-to-end: raccolta dei fabbisogni con gli hiring manager, stesura delle job description, sourcing attivo su LinkedIn Recruiter e job board, screening dei candidati, coordinamento dei colloqui e gestione delle offerte. Sarai il punto di riferimento per garantire una candidate experience impeccabile e tempi di assunzione competitivi.\n\nLavorerai a stretto contatto con il team HR utilizzando l'ATS aziendale per mantenere una pipeline pulita e reportistica accurata sui KPI di recruiting (time-to-hire, source of hire, funnel di conversione). Contribuirai inoltre a iniziative di employer branding e a progetti di miglioramento dei processi di selezione.\n\nRichiesto: almeno 3 anni di esperienza in ruoli di recruiting o talent acquisition, ottima padronanza di un ATS e di LinkedIn Recruiter, capacità di sourcing su profili tech e corporate, eccellenti doti relazionali e di stakeholder management. Gradito: esperienza in contesti scale-up o professional services e conoscenza di tecniche di structured interviewing.\n\nÈ un ruolo mid-level ibrido con base a Milano (3 giorni a settimana in ufficio) e aperto a candidati in tutta Italia. Offriamo retribuzione competitiva, piano di formazione continua e reali opportunità di crescita verso ruoli di TA Lead.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Talent Acquisition",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ATS",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "LinkedIn Recruiter",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Candidate Sourcing",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Employer Branding",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "nice_to_have",
+          "weight": 0.06,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Milano",
+          "Torino",
+          "Bologna",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services",
+          "Shared Service Centres"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Office Manager",
+    "description": "Studio Marconi & Partners, realtà di servizi professionali con sede a Roma che assiste clienti nazionali e internazionali, cerca un Office Manager organizzato e proattivo per garantire il funzionamento fluido della sede.\n\nSarai responsabile della gestione quotidiana dell'ufficio: coordinamento dei fornitori, gestione degli acquisti di cancelleria e servizi, supervisione della reception e dell'accoglienza ospiti, organizzazione di riunioni ed eventi interni e gestione delle agende dei partner. Ti occuperai inoltre del supporto amministrativo di base, dell'archiviazione documentale e del monitoraggio delle piccole spese.\n\nLavorerai a contatto con tutti i reparti utilizzando quotidianamente MS Office (Excel, Outlook, Word) per report, calendari e comunicazioni. Sarai il punto di riferimento per la logistica dell'ufficio, la sicurezza sul lavoro e le relazioni con il facility management del palazzo.\n\nRichiesto: almeno 2 anni di esperienza in ruoli di office management, segreteria o supporto amministrativo, ottima padronanza di MS Office, spiccate capacità organizzative e di multitasking, precisione e ottime doti comunicative. Gradito: esperienza in studi professionali o contesti corporate e conoscenza dell'inglese a livello intermedio.\n\nÈ un ruolo mid-level in presenza con base a Roma, dal lunedì al venerdì. Offriamo un ambiente dinamico, contratto stabile e opportunità di crescita nell'area amministrativa e operativa.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Office Management",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Administrative Support",
+          "importance": "important",
+          "weight": 0.18,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Vendor Management",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Calendar Management",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Event Coordination",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Roma",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Retail",
+          "Public Sector"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.05
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Customer Success Manager",
+    "description": "Cloudpeak Solutions, azienda tecnologica B2B con sede a Torino che fornisce una piattaforma SaaS a clienti enterprise, cerca un Customer Success Manager per garantire adozione, retention ed espansione del proprio portafoglio clienti.\n\nSarai il punto di riferimento per un portafoglio di account strategici: gestirai l'onboarding, condurrai business review periodiche, monitorerai gli indicatori di salute dell'account e guiderai i clienti verso il massimo valore dalla piattaforma. Lavorerai in modo proattivo per ridurre il churn e individuare opportunità di upsell e cross-sell in collaborazione con il team Sales.\n\nUtilizzerai quotidianamente Zendesk e Intercom per la gestione delle richieste e un CRM per il tracciamento del ciclo di vita del cliente. Sarai la voce del cliente all'interno dell'azienda, portando feedback strutturati ai team di Prodotto ed Engineering.\n\nRichiesto: almeno 4 anni di esperienza in ruoli di customer success, account management o customer support in ambito SaaS, ottima padronanza di strumenti come Zendesk o Intercom, forti capacità di stakeholder management e orientamento ai dati. Gradito: esperienza con metriche SaaS (NRR, churn, health score) e conoscenza di metodologie di customer onboarding.\n\nÈ un ruolo senior ibrido con base a Torino (2 giorni a settimana in ufficio) e aperto a candidati in tutta Italia. Offriamo retribuzione competitiva, bonus legati alla retention e un percorso di crescita verso ruoli di CS Team Lead.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Customer Success",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Zendesk",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Intercom",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Account Management",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "CRM",
+          "importance": "nice_to_have",
+          "weight": 0.09,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Customer Onboarding",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 3,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Torino",
+          "Milano",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services",
+          "Retail"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Project Coordinator",
+    "description": "Meridiana Consulting, società di servizi professionali con sede a Bologna che realizza progetti di trasformazione per clienti nel settore pubblico e privato, cerca un Project Coordinator junior da inserire nel team PMO.\n\nSupporterai i project manager nella pianificazione e nel monitoraggio dei progetti: aggiornamento dei piani di lavoro, tracciamento delle attività e delle milestone, gestione della documentazione di progetto, preparazione dei report di avanzamento e coordinamento delle riunioni con gli stakeholder. Sarai responsabile di mantenere aggiornati i task board e di segnalare tempestivamente rischi e ritardi.\n\nUtilizzerai quotidianamente Jira e Asana per la gestione delle attività e MS Office per report e presentazioni. Lavorerai a stretto contatto con team cross-funzionali, imparando le basi delle metodologie di project management strutturato.\n\nRichiesto: 1-2 anni di esperienza in ruoli di project coordination, PMO o supporto operativo, buona conoscenza di strumenti come Jira o Asana, ottima padronanza di MS Office, precisione, capacità organizzative e buone doti comunicative. Gradito: conoscenza di base della metodologia PRINCE2 o Agile ed esperienza in ambito consulenziale.\n\nÈ un ruolo junior ibrido con base a Bologna (2-3 giorni a settimana in ufficio). Offriamo un percorso di formazione strutturato, mentoring da parte di senior project manager e concrete opportunità di crescita verso il ruolo di Project Manager.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Project Coordination",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Jira",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Asana",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "nice_to_have",
+          "weight": 0.12,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "PRINCE2",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Agile",
+          "importance": "nice_to_have",
+          "weight": 0.06,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 1,
+        "minRelevantYears": 1,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Bologna",
+          "Milano",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Public Sector",
+          "Technology"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.2,
+        "location": 0.15,
+        "industry": 0.2
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "HR Business Partner Senior",
+    "description": "Gruppo Aurora, realtà multinazionale del settore retail con shared-service centre a Milano e sedi in tutta Italia, cerca un HR Business Partner Senior per affiancare il management di una divisione strategica.\n\nSarai il partner di riferimento per i responsabili di business su tutti i temi HR: workforce planning, performance management, sviluppo dei talenti, gestione delle relazioni sindacali e accompagnamento del cambiamento organizzativo. Tradurrai le esigenze di business in piani HR concreti e guiderai i manager nelle decisioni relative alle persone.\n\nLavorerai quotidianamente con sistemi HRIS come Workday e SuccessFactors per analisi di organico, reportistica e gestione dei cicli HR. Utilizzerai i dati per fornire insight su turnover, engagement e costi del personale, collaborando con il team Comp & Ben e Talent Acquisition.\n\nRichiesto: oltre 6 anni di esperienza in ruoli HR generalisti o HRBP, solida conoscenza di sistemi HRIS come Workday o SuccessFactors, esperienza nella gestione delle relazioni industriali e forti capacità di stakeholder management con interlocutori senior. Gradito: esperienza in contesti retail o shared-service centre e conoscenza del diritto del lavoro italiano.\n\nÈ un ruolo senior ibrido con base a Milano (3 giorni a settimana in ufficio) e trasferte occasionali sulle sedi. Offriamo retribuzione di livello, bonus annuale e un percorso verso ruoli di HR Director.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "HR Business Partnering",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Workday",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SuccessFactors",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Performance Management",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Employee Relations",
+          "importance": "nice_to_have",
+          "weight": 0.09,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "HRIS",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Milano",
+          "Roma",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Retail",
+          "Shared Service Centres",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  }
+]

@@ -35,6 +35,9 @@ public class UserDTO extends AbstractQorvaDTO {
     private String userAccountStatus;
     private String communicationLanguage;
 
+    @JsonProperty(access = Access.WRITE_ONLY)
+    private Integer passwordCredentialVersion;
+
     List<UserAuthority> authorities;
 
     @JsonProperty(access = Access.READ_ONLY)

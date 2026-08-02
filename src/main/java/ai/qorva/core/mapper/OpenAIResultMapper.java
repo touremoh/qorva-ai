@@ -17,6 +17,11 @@ public interface OpenAIResultMapper {
 	@Mapping(target = "tenantId", ignore = true)
 	@Mapping(target = "applicantNumber", ignore = true)
 	@Mapping(target = "attachment", ignore = true)
+	@Mapping(target = "rawText", ignore = true)
+	@Mapping(target = "contentDate", ignore = true)
+	@Mapping(target = "contentDateSource", ignore = true)
+	@Mapping(target = "qualityFlags", ignore = true)
+	@Mapping(target = "archived", ignore = true)
 	@Mapping(target = "createdAt", ignore = true)
 	@Mapping(target = "lastUpdatedAt", ignore = true)
 	CVDTO map(CVOutputDTO data);

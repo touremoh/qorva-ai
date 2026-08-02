@@ -24,6 +24,14 @@ spring:
     basename: messages/errors
     encoding: UTF-8
     use-code-as-default-message: true
+  ai:
+    retry:
+      max-attempts: 3
+      backoff:
+        initial-interval: 1s
+        multiplier: 2
+        max-interval: 10s
+      on-client-errors: false
 
 mongock:
   migration-scan-package: ai.qorva.core.migrations
@@ -35,9 +43,10 @@ qorva:
       features:
         seats: 2
         limits:
-          screening-actions: 1000
-          ai-resume-chats: 300
-          talent-intelligence-queries: 500
+          screening-actions: 2000
+          ai-resume-chats: 500
+          talent-intelligence-queries: 1000
+          email-templates: 3
         overage:
           enabled: false
           screening-action-price: 0.0
@@ -48,9 +57,10 @@ qorva:
       features:
         seats: 5
         limits:
-          screening-actions: 5000
-          ai-resume-chats: 700
-          talent-intelligence-queries: 1500
+          screening-actions: 10000
+          ai-resume-chats: 1500
+          talent-intelligence-queries: 3000
+          email-templates: 15
         overage:
           enabled: true
           screening-action-price: 0.02
@@ -59,11 +69,12 @@ qorva:
     scale:
       stripe-product-name: Scale
       features:
-        seats: 10
+        seats: 15
         limits:
-          screening-actions: 12000
-          ai-resume-chats: 2000
-          talent-intelligence-queries: 4000
+          screening-actions: 25000
+          ai-resume-chats: 4000
+          talent-intelligence-queries: 8000
+          email-templates: 50
         overage:
           enabled: true
           screening-action-price: 0.02

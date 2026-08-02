@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.bson.types.Binary;
 import org.springframework.data.annotation.*;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.index.TextIndexed;
@@ -55,7 +54,22 @@ public class CV implements QorvaEntity {
     private SalaryExpectation salaryExpectation;
     private CandidateClustering candidateClustering;
     private SearchIndex searchIndex;
-    private Binary attachment;
+    private AttachmentInfo attachment;
+
+    /** Raw text extracted from the uploaded file, kept to allow re-running AI extraction later. */
+    private String rawText;
+
+    /** Best evidence of when the CV content was current (work history dates, document metadata, or human verification). */
+    private Instant contentDate;
+
+    /** Origin of contentDate: WORK_HISTORY | DOC_METADATA | VERIFIED | UNKNOWN. */
+    private String contentDateSource;
+
+    /** Denormalized quality defects (see QualityFlagEnum), recomputed on every write. */
+    private List<String> qualityFlags;
+
+    /** Archived CVs are excluded from quality reporting and matching. */
+    private Boolean archived;
 
     private float[] embedding;
 

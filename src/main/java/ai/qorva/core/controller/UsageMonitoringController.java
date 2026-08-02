@@ -31,7 +31,7 @@ public class UsageMonitoringController {
 	}
 
 	@GetMapping(path = "/current", produces = "application/json")
-	@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_DASHBOARD')")
+	@PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_DASHBOARD')")
 	public ResponseEntity<UsageMonitoringDTO> getCurrentUsageMonitoring(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
 		var userInfo = Optional.ofNullable(this.userService.findOneByCriteria(UserDTO.builder().email(userDetails.getUsername()).build()))
 			.orElseThrow(() -> new QorvaException("User not found"));

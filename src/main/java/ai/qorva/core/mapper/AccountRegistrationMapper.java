@@ -8,15 +8,16 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface AccountRegistrationMapper {
 
-	@Mapping(target = "rawPassword", source = "accountRegistrationDTO.password")
 	@Mapping(target = "firstName", source = "accountRegistrationDTO.firstName")
 	@Mapping(target = "lastName", source = "accountRegistrationDTO.lastName")
 	@Mapping(target = "email", source = "accountRegistrationDTO.email")
 	@Mapping(target = "languageCode", source = "accountRegistrationDTO.languageCode")
-	/* Ignored properties */
+	/* Ignored properties — password is set later via the set-password flow */
 	@Mapping(target = "id", ignore = true)
 	@Mapping(target = "tenantId", ignore = true)
+	@Mapping(target = "rawPassword", ignore = true)
 	@Mapping(target = "encryptedPassword", ignore = true)
+	@Mapping(target = "passwordCredentialVersion", ignore = true)
 	@Mapping(target = "createdAt", ignore = true)
 	@Mapping(target = "lastUpdatedAt", ignore = true)
 	@Mapping(target = "userAccountStatus", ignore = true)

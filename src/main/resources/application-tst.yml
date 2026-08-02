@@ -72,6 +72,7 @@ regex:
 
 weblink:
   allowedOrigins: ${ALLOWED_ORIGINS}
+  appBaseUrl: ${APP_BASE_URL}
 
 jwt:
   secret: ${JWT_SECRET}
@@ -93,7 +94,28 @@ aws:
     region: ${AWS_S3_REGION}
 
 qorva:
+  mail:
+    reply-to: ${MAIL_REPLY_TO:}
+    senders:
+      security:
+        user-id: ${MAIL_USER_SECURITY:}
+        from: ${MAIL_FROM_SECURITY:}
+      billing:
+        user-id: ${MAIL_USER_BILLING:}
+        from: ${MAIL_FROM_BILLING:}
+      support:
+        user-id: ${MAIL_USER_SUPPORT:}
+        from: ${MAIL_FROM_SUPPORT:}
+      updates:
+        user-id: ${MAIL_USER_UPDATES:}
+        from: ${MAIL_FROM_UPDATES:}
   notifications:
     enabled: ${QORVA_NOTIFICATION_ENABLED}
   assets:
     logo-url: ${QORVA_ASSETS_LOGO_URL}
+  demo-seed:
+    enabled: true
+    bucket: ${AWS_S3_BUCKET_NAME}
+    prefix: demo-seed
+    version: v2
+    fallback-language: en

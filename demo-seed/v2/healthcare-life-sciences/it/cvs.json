@@ -1,0 +1,6103 @@
+[
+  {
+    "candidateProfileSummary": "Infermiere professionale con oltre dieci anni di esperienza in area medica e chirurgica presso strutture ospedaliere pubbliche. Competente nella valutazione del paziente, nella gestione della terapia e nel coordinamento del turno. Riconosciuto per la calma nelle situazioni ad alta intensità e per l'impegno nella pratica basata sulle evidenze.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Giulia Ferraro",
+      "role": "Infermiere Coordinatore di Reparto",
+      "summary": "Infermiere iscritto all'Albo OPI specializzato in area medica acuta e sicurezza del paziente.",
+      "contact": {
+        "phone": "+39 340 227 8815",
+        "email": "giulia.ferraro@example.com",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "Mazzini",
+          "streetType": "Via",
+          "city": "Milano",
+          "state": "Lombardia",
+          "zipCode": "20123",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/giulia-ferraro-rn"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Sere feriali",
+          "Sabato mattina"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Assistenza clinica",
+        "skills": [
+          "Area medica acuta",
+          "Valutazione del paziente",
+          "Gestione della terapia",
+          "Cura delle ferite",
+          "Incannulamento venoso periferico"
+        ]
+      },
+      {
+        "category": "Sicurezza del paziente",
+        "skills": [
+          "Escalation NEWS2",
+          "Prevenzione delle infezioni",
+          "Prevenzione delle cadute",
+          "Tutela della persona"
+        ]
+      },
+      {
+        "category": "Coordinamento",
+        "skills": [
+          "Gestione del turno",
+          "Tutoraggio",
+          "Formazione degli studenti"
+        ]
+      },
+      {
+        "category": "Sistemi",
+        "skills": [
+          "Cartella clinica elettronica",
+          "Terapia digitale"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Assistenza infermieristica in area medica",
+        "Gestione del paziente critico",
+        "Tutoraggio clinico"
+      ],
+      "keyResponsibilities": [
+        "Erogare assistenza infermieristica globale ai pazienti acuti",
+        "Coordinare il carico di lavoro del turno e la gestione dei posti letto",
+        "Supervisionare e formare studenti e operatori sociosanitari"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Ospedale Niguarda",
+        "website": "https://www.ospedaleniguarda.it",
+        "location": "Milano, Italia",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Infermiere Coordinatore di Reparto",
+        "activities": [
+          {
+            "project": "Assistenza in Unità di Medicina Interna",
+            "tasks": [
+              "Valutare e assegnare priorità ai pazienti neo-ricoverati",
+              "Guidare le consegne infermieristiche e i briefing di sicurezza",
+              "Attivare l'escalation del paziente critico secondo NEWS2"
+            ]
+          }
+        ],
+        "achievements": [
+          "Ridotto del 22% gli errori di terapia grazie a un protocollo di doppio controllo",
+          "Formato 14 neo-infermieri fino al raggiungimento della piena autonomia"
+        ],
+        "toolsAndTechnologies": [
+          "Epic EPR",
+          "NEWS2",
+          "eMAR"
+        ]
+      },
+      {
+        "company": "ASST Grande Ospedale Metropolitano",
+        "website": "https://www.asst-pini-cto.it",
+        "location": "Milano, Italia",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Infermiere di Reparto",
+        "activities": [
+          {
+            "project": "Assistenza in chirurgia generale",
+            "tasks": [
+              "Erogare assistenza post-operatoria e gestione del dolore",
+              "Gestire drenaggi chirurgici e medicazioni"
+            ]
+          }
+        ],
+        "achievements": [
+          "Segnalato per l'eccellenza assistenziale dal coordinamento di dipartimento"
+        ],
+        "toolsAndTechnologies": [
+          "Cartella clinica elettronica",
+          "Pompe PCA"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Milano",
+        "degree": "Laurea in Infermieristica",
+        "fieldOfStudy": "Infermieristica",
+        "achievements": [
+          "Votazione 108/110",
+          "Encomio per il tirocinio clinico"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Advanced Life Support (ALS)",
+        "institution": "Italian Resuscitation Council",
+        "year": "@Y-0@",
+        "description": "Provider certificato per la rianimazione avanzata dell'adulto."
+      },
+      {
+        "title": "Iscrizione OPI",
+        "institution": "Ordine delle Professioni Infermieristiche",
+        "year": "@Y-1@",
+        "description": "Iscrizione attiva all'Albo in regola."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Prelievo venoso",
+        "Registrazione ECG",
+        "Cateterismo vescicale",
+        "Emotrasfusione"
+      ],
+      "softSkills": [
+        "Empatia",
+        "Resilienza",
+        "Leadership di squadra",
+        "Comunicazione"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Adozione del percorso Sepsi Sei",
+        "description": "Co-guidato l'adozione in reparto del bundle Sepsi Sei.",
+        "date": "2022",
+        "impact": "Migliorata la somministrazione tempestiva di antibiotici al 94% entro un'ora."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Nuoto in acque libere",
+      "Canto corale",
+      "Panificazione"
+    ],
+    "references": [
+      {
+        "name": "Dott.ssa Elena Marchetti",
+        "position": "Dirigente Medico",
+        "company": "Ospedale Niguarda",
+        "contact": {
+          "phone": "+39 340 900 3321",
+          "email": "elena.marchetti@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 32000,
+      "max": 40000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Clinical Nursing",
+      "secondaryClusters": [
+        "Acute Care",
+        "Patient Safety"
+      ],
+      "functionalExpertise": [
+        "Acute medical nursing",
+        "Clinical escalation",
+        "Mentorship"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Improved patient safety outcomes",
+        "Reduced medication errors"
+      ],
+      "industryDomains": [
+        "Hospitals & clinics"
+      ],
+      "environmentFit": [
+        "High-acuity ward",
+        "Shift-based teams"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Consistent acute nursing history with progression to ward coordinator and demonstrated mentorship and safety leadership."
+    },
+    "searchIndex": {
+      "roles": [
+        "Registered Nurse",
+        "Ward Coordinator",
+        "Acute Care Nurse"
+      ],
+      "skills": [
+        "Patient assessment",
+        "Medication administration",
+        "IV cannulation",
+        "NEWS2 escalation",
+        "Wound care"
+      ],
+      "industries": [
+        "Hospitals & clinics",
+        "Public health"
+      ]
+    },
+    "tags": [
+      "nursing",
+      "acute-care",
+      "OPI",
+      "patient-safety",
+      "hospital"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Medico cardiologo con oltre quindici anni di esperienza clinica e gestionale in cardiologia interventistica. Guida un'unità operativa complessa coordinando percorsi diagnostico-terapeutici, ricerca clinica e formazione degli specializzandi. Riferimento riconosciuto per la gestione della sindrome coronarica acuta.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Alessandro Rinaldi",
+      "role": "Direttore U.O.C. di Cardiologia",
+      "summary": "Cardiologo interventista e direttore di unità operativa specializzato in emodinamica.",
+      "contact": {
+        "phone": "+39 335 448 1290",
+        "email": "alessandro.rinaldi@example.com",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Garibaldi",
+          "streetType": "Corso",
+          "city": "Bologna",
+          "state": "Emilia-Romagna",
+          "zipCode": "40121",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/alessandro-rinaldi-md"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Venerdì pomeriggio"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Cardiologia clinica",
+        "skills": [
+          "Sindrome coronarica acuta",
+          "Scompenso cardiaco",
+          "Ecocardiografia",
+          "Gestione del paziente critico"
+        ]
+      },
+      {
+        "category": "Cardiologia interventistica",
+        "skills": [
+          "Angioplastica coronarica",
+          "Cateterismo cardiaco",
+          "Emodinamica"
+        ]
+      },
+      {
+        "category": "Direzione",
+        "skills": [
+          "Gestione dell'unità operativa",
+          "Budget di dipartimento",
+          "Governo clinico",
+          "Formazione specializzandi"
+        ]
+      },
+      {
+        "category": "Ricerca",
+        "skills": [
+          "Trial clinici",
+          "Registri di patologia",
+          "Pubblicazioni scientifiche"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Cardiologia interventistica",
+        "Gestione della sindrome coronarica acuta",
+        "Direzione di unità operativa"
+      ],
+      "keyResponsibilities": [
+        "Dirigere l'attività clinica e organizzativa dell'unità operativa",
+        "Coordinare il percorso del paziente cardiologico acuto",
+        "Supervisionare la formazione degli specializzandi e la ricerca clinica"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "IRCCS Azienda Ospedaliero-Universitaria di Bologna",
+        "website": "https://www.aosp.bo.it",
+        "location": "Bologna, Italia",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Direttore U.O.C. di Cardiologia",
+        "activities": [
+          {
+            "project": "Riorganizzazione dell'emodinamica",
+            "tasks": [
+              "Definire i percorsi diagnostico-terapeutici per la sindrome coronarica acuta",
+              "Gestire budget, personale e obiettivi di dipartimento",
+              "Coordinare il programma di ricerca clinica"
+            ]
+          }
+        ],
+        "achievements": [
+          "Ridotto il door-to-balloon time medio a 58 minuti",
+          "Avviato un registro regionale sull'infarto miocardico"
+        ],
+        "toolsAndTechnologies": [
+          "Cartella clinica elettronica",
+          "Sistemi di emodinamica",
+          "Ecocardiografia"
+        ]
+      },
+      {
+        "company": "Azienda Ospedaliera di Padova",
+        "website": "https://www.aopd.veneto.it",
+        "location": "Padova, Italia",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Dirigente Medico Cardiologo",
+        "activities": [
+          {
+            "project": "Attività di emodinamica",
+            "tasks": [
+              "Eseguire procedure di angioplastica coronarica",
+              "Gestire i pazienti in terapia intensiva cardiologica"
+            ]
+          }
+        ],
+        "achievements": [
+          "Oltre 900 procedure interventistiche eseguite",
+          "Tutor clinico di 12 specializzandi"
+        ],
+        "toolsAndTechnologies": [
+          "Angiografia",
+          "IVUS",
+          "FFR"
+        ]
+      },
+      {
+        "company": "Ospedale San Raffaele",
+        "website": "https://www.hsr.it",
+        "location": "Milano, Italia",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Medico Specializzando in Cardiologia",
+        "activities": [
+          {
+            "project": "Formazione specialistica",
+            "tasks": [
+              "Gestire pazienti in reparto e in day hospital cardiologico",
+              "Partecipare all'attività di emodinamica"
+            ]
+          }
+        ],
+        "achievements": [
+          "Vincitore di una borsa di ricerca sullo scompenso cardiaco"
+        ],
+        "toolsAndTechnologies": [
+          "Ecocardiografia",
+          "Holter"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università Vita-Salute San Raffaele",
+        "degree": "Specializzazione in Malattie dell'Apparato Cardiovascolare",
+        "fieldOfStudy": "Cardiologia",
+        "achievements": [
+          "Specializzazione con lode"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Università di Bologna",
+        "degree": "Laurea in Medicina e Chirurgia",
+        "fieldOfStudy": "Medicina",
+        "achievements": [
+          "Votazione 110/110 e lode"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Iscrizione Ordine dei Medici",
+        "institution": "FNOMCeO",
+        "year": "@Y-0@",
+        "description": "Iscrizione attiva all'Ordine dei Medici Chirurghi in regola."
+      },
+      {
+        "title": "Advanced Cardiac Life Support (ACLS)",
+        "institution": "American Heart Association",
+        "year": "@Y-1@",
+        "description": "Provider certificato per il supporto vitale cardiovascolare avanzato."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Angioplastica coronarica",
+        "Ecocardiografia",
+        "Cateterismo cardiaco",
+        "Interpretazione ECG"
+      ],
+      "softSkills": [
+        "Leadership clinica",
+        "Decisione sotto pressione",
+        "Comunicazione",
+        "Mentoring"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Registro regionale dell'infarto miocardico",
+        "description": "Ideato e coordinato un registro multicentrico sulla gestione della sindrome coronarica acuta.",
+        "date": "2021",
+        "impact": "Adottato da sei centri regionali con oltre 3.000 pazienti arruolati."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ciclismo su strada",
+      "Vela",
+      "Storia della medicina"
+    ],
+    "references": [
+      {
+        "name": "Prof. Marco Bianchi",
+        "position": "Direttore di Dipartimento Cardio-Toraco-Vascolare",
+        "company": "IRCCS Azienda Ospedaliero-Universitaria di Bologna",
+        "contact": {
+          "phone": "+39 335 900 7742",
+          "email": "marco.bianchi@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 95000,
+      "max": 130000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Clinical Medicine",
+      "secondaryClusters": [
+        "Interventional Cardiology",
+        "Clinical Leadership"
+      ],
+      "functionalExpertise": [
+        "Interventional cardiology",
+        "Acute coronary care",
+        "Department management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Improved acute care outcomes",
+        "Reduced door-to-balloon time"
+      ],
+      "industryDomains": [
+        "Hospitals & clinics",
+        "Public health"
+      ],
+      "environmentFit": [
+        "Tertiary hospital",
+        "Academic medical center"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.94,
+      "clusterReasoning": "Long clinical trajectory culminating in unit directorship with measurable acute-care outcome improvements and research leadership."
+    },
+    "searchIndex": {
+      "roles": [
+        "Cardiologist",
+        "Head of Cardiology",
+        "Interventional Cardiologist"
+      ],
+      "skills": [
+        "Coronary angioplasty",
+        "Echocardiography",
+        "Cardiac catheterization",
+        "Acute coronary syndrome",
+        "Clinical governance"
+      ],
+      "industries": [
+        "Hospitals & clinics",
+        "Public health"
+      ]
+    },
+    "tags": [
+      "cardiology",
+      "physician",
+      "MD",
+      "interventional",
+      "clinical-leadership"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Fisioterapista con sei anni di esperienza nella riabilitazione ortopedica e neurologica ambulatoriale. Competente nella valutazione funzionale, nella terapia manuale e nella progettazione di programmi di esercizio personalizzati. Orientato al recupero autonomo del paziente e alla collaborazione con l'équipe multidisciplinare.",
+    "careerStartYear": 2019,
+    "personalInformation": {
+      "name": "Matteo Greco",
+      "role": "Fisioterapista",
+      "summary": "Fisioterapista iscritto all'Albo specializzato in riabilitazione muscolo-scheletrica.",
+      "contact": {
+        "phone": "+39 347 552 1188",
+        "email": "matteo.greco@example.com",
+        "address": {
+          "streetNumber": "34",
+          "streetName": "Dante",
+          "streetType": "Via",
+          "city": "Bologna",
+          "state": "Emilia-Romagna",
+          "zipCode": "40125",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/matteo-greco-pt"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Giorni feriali",
+          "Sabato mattina"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Riabilitazione",
+        "skills": [
+          "Riabilitazione ortopedica",
+          "Riabilitazione neurologica",
+          "Terapia manuale",
+          "Rieducazione funzionale"
+        ]
+      },
+      {
+        "category": "Valutazione",
+        "skills": [
+          "Valutazione funzionale",
+          "Analisi del movimento",
+          "Scale di outcome"
+        ]
+      },
+      {
+        "category": "Terapie fisiche",
+        "skills": [
+          "Tecarterapia",
+          "Esercizio terapeutico",
+          "Taping neuromuscolare"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Riabilitazione muscolo-scheletrica",
+        "Recupero post-chirurgico",
+        "Educazione del paziente"
+      ],
+      "keyResponsibilities": [
+        "Valutare la funzionalità del paziente e definire gli obiettivi riabilitativi",
+        "Erogare trattamenti di terapia manuale ed esercizio",
+        "Monitorare i progressi e aggiornare il piano di cura"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Poliambulatorio Salus",
+        "website": "https://www.example.com",
+        "location": "Bologna, Italia",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Fisioterapista",
+        "activities": [
+          {
+            "project": "Riabilitazione ambulatoriale ortopedica",
+            "tasks": [
+              "Valutare pazienti con patologie muscolo-scheletriche",
+              "Progettare programmi di esercizio personalizzati",
+              "Applicare tecniche di terapia manuale"
+            ]
+          }
+        ],
+        "achievements": [
+          "Migliorato del 30% l'aderenza al programma domiciliare grazie a video-guide",
+          "Gestito un carico medio di 14 pazienti al giorno"
+        ],
+        "toolsAndTechnologies": [
+          "Tecarterapia",
+          "Software di gestione ambulatoriale"
+        ]
+      },
+      {
+        "company": "Centro di Riabilitazione Villa Serena",
+        "website": "https://www.example.com",
+        "location": "Modena, Italia",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Fisioterapista Junior",
+        "activities": [
+          {
+            "project": "Riabilitazione neurologica",
+            "tasks": [
+              "Assistere pazienti post-ictus nel recupero motorio",
+              "Collaborare con logopedisti e terapisti occupazionali"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribuito all'introduzione di scale di outcome standardizzate"
+        ],
+        "toolsAndTechnologies": [
+          "Elettrostimolazione",
+          "Pedane stabilometriche"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Alma Mater Studiorum - Università di Bologna",
+        "degree": "Laurea in Fisioterapia",
+        "fieldOfStudy": "Fisioterapia",
+        "achievements": [
+          "Votazione 105/110",
+          "Tesi sulla riabilitazione post-protesi di ginocchio"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Iscrizione Albo Fisioterapisti",
+        "institution": "FNO TSRM PSTRP",
+        "year": "@Y-0@",
+        "description": "Iscrizione attiva all'Albo dei Fisioterapisti in regola."
+      },
+      {
+        "title": "Taping Neuromuscolare - Livello Avanzato",
+        "institution": "NeuroMuscular Taping Institute",
+        "year": "@Y-1@",
+        "description": "Certificazione nelle tecniche avanzate di taping neuromuscolare."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Terapia manuale",
+        "Esercizio terapeutico",
+        "Tecarterapia",
+        "Valutazione posturale"
+      ],
+      "softSkills": [
+        "Empatia",
+        "Motivazione del paziente",
+        "Lavoro in team",
+        "Precisione"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        },
+        {
+          "language": "Spagnolo",
+          "proficiency": {
+            "read": "basic",
+            "written": "basic",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programma di riabilitazione post-protesi",
+        "description": "Sviluppato un protocollo ambulatoriale per il recupero dopo protesi di ginocchio.",
+        "date": "2023",
+        "impact": "Ridotti i tempi medi di recupero funzionale di due settimane."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Arrampicata sportiva",
+      "Corsa",
+      "Cucina"
+    ],
+    "references": [
+      {
+        "name": "Dott.ssa Sara Conti",
+        "position": "Responsabile Servizio di Riabilitazione",
+        "company": "Poliambulatorio Salus",
+        "contact": {
+          "phone": "+39 347 900 2210",
+          "email": "sara.conti@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 26000,
+      "max": 33000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Allied Health",
+      "secondaryClusters": [
+        "Rehabilitation",
+        "Musculoskeletal Care"
+      ],
+      "functionalExpertise": [
+        "Musculoskeletal rehabilitation",
+        "Manual therapy",
+        "Patient education"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Improved functional recovery",
+        "Higher home-program adherence"
+      ],
+      "industryDomains": [
+        "Hospitals & clinics"
+      ],
+      "environmentFit": [
+        "Outpatient clinic",
+        "Multidisciplinary team"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Six years of focused outpatient rehabilitation with progression from junior to autonomous caseload management."
+    },
+    "searchIndex": {
+      "roles": [
+        "Physiotherapist",
+        "Rehabilitation Therapist"
+      ],
+      "skills": [
+        "Manual therapy",
+        "Functional assessment",
+        "Therapeutic exercise",
+        "Musculoskeletal rehabilitation",
+        "Neuromuscular taping"
+      ],
+      "industries": [
+        "Hospitals & clinics"
+      ]
+    },
+    "tags": [
+      "physiotherapy",
+      "rehabilitation",
+      "allied-health",
+      "musculoskeletal",
+      "outpatient"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ostetrica con oltre dieci anni di esperienza in sala parto e assistenza alla gravidanza a basso e alto rischio. Esperta nella gestione del travaglio, nel monitoraggio fetale e nel sostegno all'allattamento. Riconosciuta per l'approccio centrato sulla donna e per la formazione delle colleghe più giovani.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Chiara De Luca",
+      "role": "Ostetrica Senior",
+      "summary": "Ostetrica iscritta all'Albo specializzata in assistenza al travaglio e monitoraggio fetale.",
+      "contact": {
+        "phone": "+39 348 771 3390",
+        "email": "chiara.deluca@example.com",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "Roma",
+          "streetType": "Via",
+          "city": "Napoli",
+          "state": "Campania",
+          "zipCode": "80133",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/chiara-deluca-midwife"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Sere feriali"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Assistenza ostetrica",
+        "skills": [
+          "Gestione del travaglio",
+          "Assistenza al parto",
+          "Monitoraggio cardiotocografico",
+          "Assistenza al puerperio"
+        ]
+      },
+      {
+        "category": "Salute materno-infantile",
+        "skills": [
+          "Sostegno all'allattamento",
+          "Educazione prenatale",
+          "Screening neonatale"
+        ]
+      },
+      {
+        "category": "Emergenze",
+        "skills": [
+          "Gestione dell'emorragia post-partum",
+          "Rianimazione neonatale",
+          "Distocia di spalla"
+        ]
+      },
+      {
+        "category": "Formazione",
+        "skills": [
+          "Tutoraggio studenti",
+          "Corsi di preparazione al parto"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Assistenza al travaglio e al parto",
+        "Monitoraggio fetale",
+        "Sostegno all'allattamento"
+      ],
+      "keyResponsibilities": [
+        "Assistere la donna durante travaglio, parto e puerperio",
+        "Monitorare il benessere materno-fetale",
+        "Formare studenti di ostetricia e neo-colleghe"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Azienda Ospedaliera Universitaria Federico II",
+        "website": "https://www.policlinico.unina.it",
+        "location": "Napoli, Italia",
+        "from": "@M-2@",
+        "to": "Present",
+        "position": "Ostetrica Senior",
+        "activities": [
+          {
+            "project": "Assistenza in sala parto",
+            "tasks": [
+              "Gestire il travaglio fisiologico e a rischio",
+              "Interpretare il tracciato cardiotocografico",
+              "Coordinare la gestione delle emergenze ostetriche"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribuito a ridurre del 15% i tassi di episiotomia di reparto",
+          "Referente del progetto di promozione dell'allattamento"
+        ],
+        "toolsAndTechnologies": [
+          "Cardiotocografia",
+          "Cartella ostetrica elettronica"
+        ]
+      },
+      {
+        "company": "Ospedale del Mare",
+        "website": "https://www.aslnapoli1centro.it",
+        "location": "Napoli, Italia",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Ostetrica",
+        "activities": [
+          {
+            "project": "Assistenza al percorso nascita",
+            "tasks": [
+              "Seguire le gravidanze fisiologiche in ambulatorio",
+              "Assistere i parti e il post-partum"
+            ]
+          }
+        ],
+        "achievements": [
+          "Avviato corsi di accompagnamento alla nascita per le coppie"
+        ],
+        "toolsAndTechnologies": [
+          "Ecografia ostetrica di base",
+          "Cardiotocografia"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Napoli Federico II",
+        "degree": "Laurea in Ostetricia",
+        "fieldOfStudy": "Ostetricia",
+        "achievements": [
+          "Votazione 110/110",
+          "Encomio per il tirocinio in sala parto"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Assistenza al parto",
+        "Interpretazione cardiotocografica",
+        "Sutura perineale",
+        "Rianimazione neonatale"
+      ],
+      "softSkills": [
+        "Empatia",
+        "Gestione dello stress",
+        "Comunicazione",
+        "Leadership clinica"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Progetto Ospedale Amico dell'Allattamento",
+        "description": "Coordinato il percorso aziendale per il sostegno all'allattamento al seno secondo criteri UNICEF-OMS.",
+        "date": "2022",
+        "impact": "Aumentato del 18% il tasso di allattamento esclusivo alla dimissione."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Yoga",
+      "Escursionismo",
+      "Fotografia"
+    ],
+    "references": [
+      {
+        "name": "Dott.ssa Francesca Romano",
+        "position": "Coordinatrice Ostetrica",
+        "company": "Azienda Ospedaliera Universitaria Federico II",
+        "contact": {
+          "phone": "+39 348 900 4412",
+          "email": "francesca.romano@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 30000,
+      "max": 38000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Clinical Nursing",
+      "secondaryClusters": [
+        "Midwifery",
+        "Maternal Health"
+      ],
+      "functionalExpertise": [
+        "Labour and delivery care",
+        "Fetal monitoring",
+        "Breastfeeding support"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Improved maternal outcomes",
+        "Higher breastfeeding rates"
+      ],
+      "industryDomains": [
+        "Hospitals & clinics",
+        "Public health"
+      ],
+      "environmentFit": [
+        "Delivery suite",
+        "Shift-based teams"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Decade-long midwifery career with specialist expertise in labour management and measurable maternal-health improvements."
+    },
+    "searchIndex": {
+      "roles": [
+        "Midwife",
+        "Senior Midwife"
+      ],
+      "skills": [
+        "Labour management",
+        "Fetal monitoring",
+        "Breastfeeding support",
+        "Neonatal resuscitation",
+        "Antenatal education"
+      ],
+      "industries": [
+        "Hospitals & clinics",
+        "Public health"
+      ]
+    },
+    "tags": [
+      "midwifery",
+      "maternal-health",
+      "FNOPO",
+      "labour-and-delivery",
+      "clinical"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Infermiere di terapia intensiva con quindici anni di esperienza nella gestione del paziente critico e nel coordinamento clinico. Esperto in ventilazione meccanica, monitoraggio emodinamico avanzato e supporto extracorporeo. Guida progetti di miglioramento della sicurezza e forma il personale infermieristico di area critica.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Davide Esposito",
+      "role": "Infermiere Referente di Terapia Intensiva",
+      "summary": "Infermiere di area critica specializzato in ventilazione meccanica e monitoraggio emodinamico.",
+      "contact": {
+        "phone": "+39 333 214 7756",
+        "email": "davide.esposito@example.com",
+        "address": {
+          "streetNumber": "56",
+          "streetName": "Etnea",
+          "streetType": "Via",
+          "city": "Catania",
+          "state": "Sicilia",
+          "zipCode": "95124",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/davide-esposito-icu"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Sere feriali",
+          "Domenica"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Area critica",
+        "skills": [
+          "Ventilazione meccanica",
+          "Monitoraggio emodinamico",
+          "Supporto extracorporeo (ECMO)",
+          "Gestione del paziente critico"
+        ]
+      },
+      {
+        "category": "Sicurezza e qualità",
+        "skills": [
+          "Prevenzione delle infezioni correlate all'assistenza",
+          "Bundle di terapia intensiva",
+          "Audit clinico"
+        ]
+      },
+      {
+        "category": "Coordinamento",
+        "skills": [
+          "Gestione del turno",
+          "Formazione del personale",
+          "Coordinamento delle emergenze"
+        ]
+      },
+      {
+        "category": "Sistemi",
+        "skills": [
+          "Cartella clinica di terapia intensiva",
+          "Sistemi di monitoraggio multiparametrico"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Assistenza infermieristica in terapia intensiva",
+        "Ventilazione meccanica",
+        "Miglioramento della sicurezza"
+      ],
+      "keyResponsibilities": [
+        "Assistere pazienti critici ventilati e monitorati",
+        "Coordinare il team infermieristico di area critica",
+        "Guidare progetti di miglioramento della qualità e formazione"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "ARNAS Garibaldi",
+        "website": "https://www.ao-garibaldi.ct.it",
+        "location": "Catania, Italia",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Infermiere Referente di Terapia Intensiva",
+        "activities": [
+          {
+            "project": "Gestione del paziente critico in Rianimazione",
+            "tasks": [
+              "Gestire pazienti in ventilazione meccanica e supporto ECMO",
+              "Coordinare il turno e la distribuzione del carico assistenziale",
+              "Guidare i bundle di prevenzione delle infezioni"
+            ]
+          }
+        ],
+        "achievements": [
+          "Ridotto del 35% le infezioni da catetere venoso centrale",
+          "Formato 20 infermieri all'assistenza in area critica"
+        ],
+        "toolsAndTechnologies": [
+          "Ventilatori meccanici",
+          "ECMO",
+          "Monitoraggio emodinamico PiCCO"
+        ]
+      },
+      {
+        "company": "Policlinico Universitario G. Rodolico",
+        "website": "https://www.policlinico.unict.it",
+        "location": "Catania, Italia",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Infermiere di Terapia Intensiva",
+        "activities": [
+          {
+            "project": "Assistenza in Rianimazione generale",
+            "tasks": [
+              "Assistere pazienti post-chirurgici e traumatizzati",
+              "Gestire terapie infusionali complesse"
+            ]
+          }
+        ],
+        "achievements": [
+          "Membro del gruppo aziendale per la gestione del dolore"
+        ],
+        "toolsAndTechnologies": [
+          "Ventilazione meccanica",
+          "Emofiltrazione continua"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Catania",
+        "degree": "Master in Infermieristica in Area Critica",
+        "fieldOfStudy": "Area Critica",
+        "achievements": [
+          "Master di I livello con lode"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Università degli Studi di Catania",
+        "degree": "Laurea in Infermieristica",
+        "fieldOfStudy": "Infermieristica",
+        "achievements": [
+          "Votazione 108/110"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Iscrizione OPI",
+        "institution": "Ordine delle Professioni Infermieristiche",
+        "year": "@Y-0@",
+        "description": "Iscrizione attiva all'Albo in regola."
+      },
+      {
+        "title": "Advanced Life Support (ALS)",
+        "institution": "Italian Resuscitation Council",
+        "year": "@Y-1@",
+        "description": "Provider certificato per la rianimazione avanzata dell'adulto."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Ventilazione meccanica",
+        "Monitoraggio emodinamico",
+        "Gestione ECMO",
+        "Emofiltrazione continua"
+      ],
+      "softSkills": [
+        "Leadership di squadra",
+        "Gestione dello stress",
+        "Precisione",
+        "Comunicazione"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Progetto Zero Infezioni in Terapia Intensiva",
+        "description": "Guidato l'implementazione di bundle di prevenzione delle infezioni correlate all'assistenza.",
+        "date": "2021",
+        "impact": "Riduzione del 35% delle infezioni da catetere venoso centrale in dodici mesi."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Immersioni subacquee",
+      "Trekking",
+      "Chitarra"
+    ],
+    "references": [
+      {
+        "name": "Dott. Giuseppe Russo",
+        "position": "Direttore Rianimazione",
+        "company": "ARNAS Garibaldi",
+        "contact": {
+          "phone": "+39 333 900 5521",
+          "email": "giuseppe.russo@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 36000,
+      "max": 45000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Clinical Nursing",
+      "secondaryClusters": [
+        "Critical Care",
+        "Patient Safety"
+      ],
+      "functionalExpertise": [
+        "Critical care nursing",
+        "Mechanical ventilation",
+        "Quality improvement"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduced healthcare-associated infections",
+        "Improved critical-care outcomes"
+      ],
+      "industryDomains": [
+        "Hospitals & clinics"
+      ],
+      "environmentFit": [
+        "Intensive care unit",
+        "Shift-based teams"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Fifteen years in critical care with a referent coordination role, advanced ventilation expertise and measurable infection-reduction leadership."
+    },
+    "searchIndex": {
+      "roles": [
+        "ICU Nurse",
+        "Critical Care Nurse",
+        "Nurse Team Lead"
+      ],
+      "skills": [
+        "Mechanical ventilation",
+        "Hemodynamic monitoring",
+        "ECMO",
+        "Infection prevention",
+        "Critical care"
+      ],
+      "industries": [
+        "Hospitals & clinics"
+      ]
+    },
+    "tags": [
+      "nursing",
+      "critical-care",
+      "ICU",
+      "patient-safety",
+      "OPI"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ricercatrice in biologia molecolare con un dottorato e oltre dieci anni di esperienza nella scoperta di nuovi farmaci in ambito oncologico. Esperta in colture cellulari, sviluppo di saggi e biologia molecolare in ambiente GLP. Autrice di numerose pubblicazioni e brevetti nel campo dei bersagli terapeutici.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Francesca Lombardi",
+      "role": "Senior Research Scientist",
+      "summary": "Ricercatrice in oncologia molecolare specializzata in sviluppo di saggi e colture cellulari.",
+      "contact": {
+        "phone": "+39 342 118 6690",
+        "email": "francesca.lombardi@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Torino",
+          "streetType": "Via",
+          "city": "Milano",
+          "state": "Lombardia",
+          "zipCode": "20145",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/francesca-lombardi-phd",
+          "github": "https://github.com/flombardi-bio"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Giorni feriali"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Biologia molecolare",
+        "skills": [
+          "PCR",
+          "Colture cellulari",
+          "Western blot",
+          "Silenziamento genico"
+        ]
+      },
+      {
+        "category": "Sviluppo di saggi",
+        "skills": [
+          "Assay development",
+          "Screening ad alto rendimento",
+          "Saggi funzionali cellulari"
+        ]
+      },
+      {
+        "category": "Analisi dati",
+        "skills": [
+          "Bioinformatica",
+          "Analisi statistica",
+          "R",
+          "Python"
+        ]
+      },
+      {
+        "category": "Qualità",
+        "skills": [
+          "GLP",
+          "Documentazione sperimentale",
+          "Quaderno di laboratorio elettronico"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Oncologia molecolare",
+        "Sviluppo di saggi",
+        "Validazione di bersagli terapeutici"
+      ],
+      "keyResponsibilities": [
+        "Progettare ed eseguire esperimenti di biologia molecolare e cellulare",
+        "Sviluppare e validare saggi per la scoperta di farmaci",
+        "Documentare i risultati in ambiente GLP e presentarli ai gruppi di progetto"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Nerviano Medical Sciences",
+        "website": "https://www.nervianoms.com",
+        "location": "Nerviano, Italia",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Senior Research Scientist",
+        "activities": [
+          {
+            "project": "Scoperta di inibitori oncologici",
+            "tasks": [
+              "Sviluppare saggi cellulari per la validazione di bersagli",
+              "Guidare esperimenti di biologia molecolare",
+              "Analizzare i dati e presentare i risultati ai team interfunzionali"
+            ]
+          }
+        ],
+        "achievements": [
+          "Validato tre nuovi bersagli oncologici avanzati alla fase preclinica",
+          "Co-inventrice di due brevetti sui bersagli terapeutici"
+        ],
+        "toolsAndTechnologies": [
+          "HPLC",
+          "PCR",
+          "Colture cellulari",
+          "Flow cytometry"
+        ]
+      },
+      {
+        "company": "IRCCS Istituto di Ricerche Farmacologiche Mario Negri",
+        "website": "https://www.marionegri.it",
+        "location": "Milano, Italia",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Research Scientist",
+        "activities": [
+          {
+            "project": "Meccanismi di resistenza ai farmaci",
+            "tasks": [
+              "Condurre saggi di biologia molecolare su linee cellulari tumorali",
+              "Ottimizzare protocolli di colture cellulari"
+            ]
+          }
+        ],
+        "achievements": [
+          "Pubblicati sei articoli su riviste peer-reviewed"
+        ],
+        "toolsAndTechnologies": [
+          "Western blot",
+          "qPCR",
+          "Microscopia confocale"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Milano",
+        "degree": "Dottorato di Ricerca in Biologia Molecolare",
+        "fieldOfStudy": "Oncologia Molecolare",
+        "achievements": [
+          "Tesi con lode",
+          "Vincitrice di una borsa di ricerca AIRC"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Università degli Studi di Milano",
+        "degree": "Laurea Magistrale in Biotecnologie",
+        "fieldOfStudy": "Biotecnologie Mediche",
+        "achievements": [
+          "Votazione 110/110 e lode"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Good Laboratory Practice (GLP)",
+        "institution": "National Institute for Bioprocessing",
+        "year": "@Y-2@",
+        "description": "Formazione certificata sulle buone pratiche di laboratorio."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Assay development",
+        "Cell culture",
+        "PCR",
+        "HPLC",
+        "Data analysis"
+      ],
+      "softSkills": [
+        "Pensiero critico",
+        "Rigore scientifico",
+        "Collaborazione",
+        "Comunicazione scientifica"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Francese",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Piattaforma di saggi cellulari oncologici",
+        "description": "Sviluppata una piattaforma di saggi funzionali per accelerare lo screening di composti.",
+        "date": "2022",
+        "impact": "Ridotti del 40% i tempi di validazione dei bersagli terapeutici."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Divulgazione scientifica",
+      "Giardinaggio",
+      "Sci alpino"
+    ],
+    "references": [
+      {
+        "name": "Dott. Andrea Colombo",
+        "position": "Head of Discovery Biology",
+        "company": "Nerviano Medical Sciences",
+        "contact": {
+          "phone": "+39 342 900 6612",
+          "email": "andrea.colombo@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Life Sciences R&D",
+      "secondaryClusters": [
+        "Molecular Biology",
+        "Drug Discovery"
+      ],
+      "functionalExpertise": [
+        "Assay development",
+        "Cell biology",
+        "Target validation"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Accelerated preclinical validation",
+        "Filed therapeutic-target patents"
+      ],
+      "industryDomains": [
+        "Biotech",
+        "Pharmaceuticals"
+      ],
+      "environmentFit": [
+        "Research laboratory",
+        "Cross-functional project teams"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "PhD-level molecular biologist with a decade in drug discovery, patents, and assay-development leadership within GLP settings."
+    },
+    "searchIndex": {
+      "roles": [
+        "Research Scientist",
+        "Molecular Biologist",
+        "Drug Discovery Scientist"
+      ],
+      "skills": [
+        "Assay development",
+        "Cell culture",
+        "PCR",
+        "HPLC",
+        "Bioinformatics"
+      ],
+      "industries": [
+        "Biotech",
+        "Pharmaceuticals"
+      ]
+    },
+    "tags": [
+      "research",
+      "drug-discovery",
+      "molecular-biology",
+      "GLP",
+      "oncology"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Tecnico di laboratorio bioanalitico con tre anni di esperienza nell'analisi di campioni biologici in ambiente regolamentato. Competente nelle tecniche cromatografiche e nell'esecuzione di saggi secondo protocollo. Preciso, metodico e attento alla tracciabilità dei dati.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Luca Bianchi",
+      "role": "Tecnico di Laboratorio Bioanalitico",
+      "summary": "Tecnico di laboratorio specializzato in cromatografia e analisi bioanalitica.",
+      "contact": {
+        "phone": "+39 345 663 2201",
+        "email": "luca.bianchi@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Verdi",
+          "streetType": "Via",
+          "city": "Parma",
+          "state": "Emilia-Romagna",
+          "zipCode": "43121",
+          "country": "Italia"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Giorni feriali"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Tecniche analitiche",
+        "skills": [
+          "HPLC",
+          "Spettrometria di massa",
+          "Preparazione dei campioni",
+          "Titolazioni"
+        ]
+      },
+      {
+        "category": "Biologia di laboratorio",
+        "skills": [
+          "PCR",
+          "Colture cellulari di base",
+          "ELISA"
+        ]
+      },
+      {
+        "category": "Qualità",
+        "skills": [
+          "GLP",
+          "Quaderno di laboratorio elettronico",
+          "Tracciabilità dei campioni"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Analisi bioanalitica",
+        "Cromatografia",
+        "Preparazione dei campioni"
+      ],
+      "keyResponsibilities": [
+        "Preparare e analizzare campioni biologici secondo protocollo",
+        "Eseguire analisi cromatografiche e registrare i dati",
+        "Mantenere la strumentazione e la documentazione di laboratorio"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Chiesi Farmaceutici",
+        "website": "https://www.chiesi.com",
+        "location": "Parma, Italia",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Tecnico di Laboratorio Bioanalitico",
+        "activities": [
+          {
+            "project": "Analisi bioanalitica di studi preclinici",
+            "tasks": [
+              "Preparare campioni per analisi HPLC e spettrometria di massa",
+              "Eseguire saggi secondo procedure operative standard",
+              "Registrare i dati nel quaderno di laboratorio elettronico"
+            ]
+          }
+        ],
+        "achievements": [
+          "Ottimizzato un metodo di preparazione dei campioni riducendo i tempi del 20%"
+        ],
+        "toolsAndTechnologies": [
+          "HPLC",
+          "LC-MS/MS",
+          "ELISA"
+        ]
+      },
+      {
+        "company": "Laboratorio Analisi Cliniche San Marco",
+        "website": "https://www.example.com",
+        "location": "Reggio Emilia, Italia",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Tecnico di Laboratorio Junior",
+        "activities": [
+          {
+            "project": "Analisi cliniche di routine",
+            "tasks": [
+              "Eseguire prelievi e centrifugazione dei campioni",
+              "Effettuare analisi ematochimiche di base"
+            ]
+          }
+        ],
+        "achievements": [
+          "Introdotto una checklist per la tracciabilità dei campioni"
+        ],
+        "toolsAndTechnologies": [
+          "Analizzatori automatici",
+          "Spettrofotometria"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Parma",
+        "degree": "Laurea in Biotecnologie",
+        "fieldOfStudy": "Biotecnologie",
+        "achievements": [
+          "Votazione 102/110",
+          "Tirocinio in laboratorio bioanalitico"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Good Laboratory Practice (GLP)",
+        "institution": "Chiesi Academy",
+        "year": "@Y-2@",
+        "description": "Formazione interna certificata sulle buone pratiche di laboratorio."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "HPLC",
+        "LC-MS/MS",
+        "ELISA",
+        "PCR",
+        "Sample preparation"
+      ],
+      "softSkills": [
+        "Precisione",
+        "Metodo",
+        "Affidabilità",
+        "Lavoro in team"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Ottimizzazione della preparazione dei campioni",
+        "description": "Rivisto il protocollo di estrazione per analisi LC-MS/MS.",
+        "date": "2024",
+        "impact": "Ridotti del 20% i tempi di preparazione mantenendo la qualità del dato."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ciclismo",
+      "Videogiochi",
+      "Astronomia"
+    ],
+    "references": [
+      {
+        "name": "Dott.ssa Valentina Ricci",
+        "position": "Responsabile Laboratorio Bioanalitico",
+        "company": "Chiesi Farmaceutici",
+        "contact": {
+          "phone": "+39 345 900 7723",
+          "email": "valentina.ricci@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 28000,
+      "max": 34000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Life Sciences R&D",
+      "secondaryClusters": [
+        "Bioanalytical",
+        "Laboratory Operations"
+      ],
+      "functionalExpertise": [
+        "Chromatography",
+        "Sample preparation",
+        "Assay execution"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Reduced sample-prep turnaround",
+        "Improved data traceability"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Biotech"
+      ],
+      "environmentFit": [
+        "Regulated laboratory",
+        "Structured procedures"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "Early-career lab technician with focused bioanalytical experience in a GLP pharmaceutical environment and process-improvement contributions."
+    },
+    "searchIndex": {
+      "roles": [
+        "Laboratory Technician",
+        "Bioanalytical Technician"
+      ],
+      "skills": [
+        "HPLC",
+        "Mass spectrometry",
+        "Sample preparation",
+        "ELISA",
+        "PCR"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Biotech"
+      ]
+    },
+    "tags": [
+      "laboratory",
+      "bioanalytical",
+      "HPLC",
+      "GLP",
+      "junior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Formulation scientist con oltre dodici anni di esperienza nello sviluppo di forme farmaceutiche orali e iniettabili. Esperto in pre-formulazione, scale-up e trasferimento tecnologico verso la produzione GMP. Orientato alla robustezza del prodotto e alla collaborazione con le funzioni di qualità e regolatorie.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Elisa Fontana",
+      "role": "Senior Formulation Scientist",
+      "summary": "Scienziato della formulazione specializzato in sviluppo farmaceutico e scale-up.",
+      "contact": {
+        "phone": "+39 346 771 4498",
+        "email": "elisa.fontana@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Manzoni",
+          "streetType": "Via",
+          "city": "Firenze",
+          "state": "Toscana",
+          "zipCode": "50121",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/elisa-fontana-formulation"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Giorni feriali"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Sviluppo farmaceutico",
+        "skills": [
+          "Pre-formulazione",
+          "Forme orali solide",
+          "Iniettabili",
+          "Studi di stabilità"
+        ]
+      },
+      {
+        "category": "Industrializzazione",
+        "skills": [
+          "Scale-up",
+          "Trasferimento tecnologico",
+          "Design of Experiments"
+        ]
+      },
+      {
+        "category": "Analitica",
+        "skills": [
+          "HPLC",
+          "Dissoluzione",
+          "Caratterizzazione fisico-chimica"
+        ]
+      },
+      {
+        "category": "Qualità",
+        "skills": [
+          "GMP",
+          "Quality by Design",
+          "Documentazione di sviluppo"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Sviluppo di formulazioni",
+        "Scale-up e trasferimento tecnologico",
+        "Studi di stabilità"
+      ],
+      "keyResponsibilities": [
+        "Sviluppare formulazioni robuste per forme orali e iniettabili",
+        "Guidare lo scale-up e il trasferimento verso la produzione GMP",
+        "Coordinare gli studi di stabilità e la documentazione di sviluppo"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Menarini Group",
+        "website": "https://www.menarini.com",
+        "location": "Firenze, Italia",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Senior Formulation Scientist",
+        "activities": [
+          {
+            "project": "Sviluppo di forme orali solide",
+            "tasks": [
+              "Progettare formulazioni con approccio Quality by Design",
+              "Guidare lo scale-up dal laboratorio alla scala pilota",
+              "Coordinare gli studi di stabilità ICH"
+            ]
+          }
+        ],
+        "achievements": [
+          "Portato tre formulazioni con successo al trasferimento in produzione",
+          "Ridotto del 25% i lotti fuori specifica in fase di scale-up"
+        ],
+        "toolsAndTechnologies": [
+          "HPLC",
+          "Design of Experiments",
+          "Apparati di dissoluzione"
+        ]
+      },
+      {
+        "company": "Recordati",
+        "website": "https://www.recordati.com",
+        "location": "Milano, Italia",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Formulation Scientist",
+        "activities": [
+          {
+            "project": "Pre-formulazione di nuove molecole",
+            "tasks": [
+              "Eseguire studi di pre-formulazione e compatibilità",
+              "Sviluppare metodi analitici di supporto"
+            ]
+          }
+        ],
+        "achievements": [
+          "Sviluppato una piattaforma di pre-formulazione riutilizzabile"
+        ],
+        "toolsAndTechnologies": [
+          "HPLC",
+          "Calorimetria differenziale a scansione",
+          "Diffrazione a raggi X"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Firenze",
+        "degree": "Laurea Magistrale in Chimica e Tecnologia Farmaceutiche",
+        "fieldOfStudy": "Tecnologia Farmaceutica",
+        "achievements": [
+          "Votazione 110/110 e lode"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Good Manufacturing Practice (GMP)",
+        "institution": "Istituto di Formazione Farmaceutica",
+        "year": "@Y-4@",
+        "description": "Formazione certificata sulle buone pratiche di fabbricazione."
+      },
+      {
+        "title": "Quality by Design in Pharmaceutical Development",
+        "institution": "AAPS",
+        "year": "@Y-4@",
+        "description": "Corso avanzato sull'approccio Quality by Design allo sviluppo farmaceutico."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Formulation development",
+        "Scale-up",
+        "HPLC",
+        "Design of Experiments",
+        "Stability studies"
+      ],
+      "softSkills": [
+        "Problem solving",
+        "Rigore",
+        "Collaborazione interfunzionale",
+        "Comunicazione"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Trasferimento tecnologico di una compressa a rilascio modificato",
+        "description": "Guidato lo scale-up e il trasferimento verso il sito produttivo GMP.",
+        "date": "2022",
+        "impact": "Lancio commerciale nei tempi previsti con resa di processo superiore al 96%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Cucina",
+      "Enologia",
+      "Escursionismo"
+    ],
+    "references": [
+      {
+        "name": "Dott. Paolo Mariani",
+        "position": "Head of Pharmaceutical Development",
+        "company": "Menarini Group",
+        "contact": {
+          "phone": "+39 346 900 8834",
+          "email": "paolo.mariani@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 50000,
+      "max": 64000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Life Sciences R&D",
+      "secondaryClusters": [
+        "Pharmaceutical Development",
+        "Scale-up"
+      ],
+      "functionalExpertise": [
+        "Formulation development",
+        "Technology transfer",
+        "Stability studies"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Successful commercial launches",
+        "Reduced out-of-specification batches"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals"
+      ],
+      "environmentFit": [
+        "Pharmaceutical development lab",
+        "GMP manufacturing interface"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Over a decade in pharmaceutical formulation with proven scale-up and technology-transfer outcomes across major Italian pharma companies."
+    },
+    "searchIndex": {
+      "roles": [
+        "Formulation Scientist",
+        "Pharmaceutical Development Scientist"
+      ],
+      "skills": [
+        "Formulation development",
+        "Scale-up",
+        "Technology transfer",
+        "HPLC",
+        "Design of Experiments"
+      ],
+      "industries": [
+        "Pharmaceuticals"
+      ]
+    },
+    "tags": [
+      "formulation",
+      "pharmaceutical-development",
+      "GMP",
+      "scale-up",
+      "QbD"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Bioinformatico con oltre dodici anni di esperienza nell'analisi di dati genomici e nella guida di gruppi computazionali in ambito biotech. Esperto in pipeline NGS, apprendimento automatico e infrastrutture cloud per la ricerca. Guida progetti multidisciplinari tra biologia, dati e clinica.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Simone Costa",
+      "role": "Lead Bioinformatician",
+      "summary": "Bioinformatico specializzato in analisi genomica NGS e machine learning.",
+      "contact": {
+        "phone": "+39 331 448 9921",
+        "email": "simone.costa@example.com",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "Marconi",
+          "streetType": "Viale",
+          "city": "Torino",
+          "state": "Piemonte",
+          "zipCode": "10125",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/simone-costa-bioinfo",
+          "github": "https://github.com/scosta-bioinfo"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Giorni feriali"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Bioinformatica",
+        "skills": [
+          "Analisi NGS",
+          "Genomica",
+          "Trascrittomica",
+          "Pipeline di analisi"
+        ]
+      },
+      {
+        "category": "Data science",
+        "skills": [
+          "Machine learning",
+          "Python",
+          "R",
+          "Statistica"
+        ]
+      },
+      {
+        "category": "Infrastrutture",
+        "skills": [
+          "Cloud computing",
+          "Workflow Nextflow",
+          "Docker",
+          "Git"
+        ]
+      },
+      {
+        "category": "Guida tecnica",
+        "skills": [
+          "Coordinamento di gruppo",
+          "Revisione del codice",
+          "Best practice riproducibilità"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Analisi genomica NGS",
+        "Machine learning applicato alla biologia",
+        "Guida di gruppi computazionali"
+      ],
+      "keyResponsibilities": [
+        "Progettare e mantenere pipeline di analisi genomica",
+        "Guidare un gruppo di bioinformatici e data scientist",
+        "Collaborare con biologi e clinici per interpretare i dati"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Human Technopole",
+        "website": "https://humantechnopole.it",
+        "location": "Milano, Italia",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Lead Bioinformatician",
+        "activities": [
+          {
+            "project": "Piattaforma di analisi genomica",
+            "tasks": [
+              "Definire l'architettura delle pipeline NGS su cloud",
+              "Guidare un gruppo di cinque bioinformatici",
+              "Sviluppare modelli di machine learning per la classificazione di varianti"
+            ]
+          }
+        ],
+        "achievements": [
+          "Ridotto del 60% i tempi di analisi dei genomi grazie a workflow scalabili",
+          "Standardizzato le pratiche di riproducibilità del gruppo"
+        ],
+        "toolsAndTechnologies": [
+          "Python",
+          "Nextflow",
+          "AWS",
+          "Docker"
+        ]
+      },
+      {
+        "company": "Istituto Italiano di Tecnologia",
+        "website": "https://www.iit.it",
+        "location": "Genova, Italia",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Bioinformatician",
+        "activities": [
+          {
+            "project": "Analisi trascrittomica",
+            "tasks": [
+              "Sviluppare pipeline per dati RNA-seq",
+              "Eseguire analisi statistiche su dati di espressione genica"
+            ]
+          }
+        ],
+        "achievements": [
+          "Co-autore di dodici pubblicazioni scientifiche"
+        ],
+        "toolsAndTechnologies": [
+          "R",
+          "Bioconductor",
+          "Bash"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Politecnico di Torino",
+        "degree": "Dottorato di Ricerca in Bioinformatica",
+        "fieldOfStudy": "Bioinformatica",
+        "achievements": [
+          "Tesi sulla predizione di varianti genomiche"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Università degli Studi di Torino",
+        "degree": "Laurea Magistrale in Informatica",
+        "fieldOfStudy": "Informatica",
+        "achievements": [
+          "Votazione 110/110"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Certified Solutions Architect",
+        "institution": "Amazon Web Services",
+        "year": "@Y-4@",
+        "description": "Certificazione sull'architettura di soluzioni cloud."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Bioinformatics",
+        "NGS analysis",
+        "Machine learning",
+        "Python",
+        "Nextflow"
+      ],
+      "softSkills": [
+        "Leadership tecnica",
+        "Pensiero analitico",
+        "Comunicazione interdisciplinare",
+        "Mentoring"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Pipeline scalabile per l'analisi di genomi",
+        "description": "Progettata una pipeline NGS su cloud con workflow Nextflow.",
+        "date": "2023",
+        "impact": "Riduzione del 60% dei tempi di elaborazione per genoma."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Scacchi",
+      "Fotografia digitale",
+      "Open source"
+    ],
+    "references": [
+      {
+        "name": "Prof.ssa Laura Gatti",
+        "position": "Head of Computational Biology",
+        "company": "Human Technopole",
+        "contact": {
+          "phone": "+39 331 900 9945",
+          "email": "laura.gatti@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 58000,
+      "max": 75000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Life Sciences R&D",
+      "secondaryClusters": [
+        "Bioinformatics",
+        "Computational Biology"
+      ],
+      "functionalExpertise": [
+        "NGS analysis",
+        "Machine learning",
+        "Pipeline engineering"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Faster genomic analysis",
+        "Standardized reproducible research"
+      ],
+      "industryDomains": [
+        "Biotech",
+        "Public health"
+      ],
+      "environmentFit": [
+        "Research institute",
+        "Cross-functional data teams"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "PhD bioinformatician leading a computational group with scalable-pipeline outcomes and cross-disciplinary collaboration."
+    },
+    "searchIndex": {
+      "roles": [
+        "Bioinformatician",
+        "Computational Biologist",
+        "Bioinformatics Lead"
+      ],
+      "skills": [
+        "NGS analysis",
+        "Machine learning",
+        "Python",
+        "Nextflow",
+        "Cloud computing"
+      ],
+      "industries": [
+        "Biotech",
+        "Public health"
+      ]
+    },
+    "tags": [
+      "bioinformatics",
+      "NGS",
+      "machine-learning",
+      "genomics",
+      "team-lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Principal Scientist con oltre diciassette anni di esperienza nella scoperta di nuovi farmaci in ambito immunologico. Guida programmi di ricerca dalla validazione del bersaglio alla candidatura preclinica, definendo la strategia scientifica e coordinando team interfunzionali. Autrice di brevetti e pubblicazioni di riferimento nel settore.",
+    "personalInformation": {
+      "name": "Valentina Moretti",
+      "role": "Principal Scientist, Drug Discovery",
+      "summary": "Scienziato principale in immunologia con leadership scientifica su programmi preclinici.",
+      "contact": {
+        "phone": "+39 335 662 3312",
+        "email": "valentina.moretti@example.com",
+        "address": {
+          "streetNumber": "21",
+          "streetName": "della Repubblica",
+          "streetType": "Piazza",
+          "city": "Siena",
+          "state": "Toscana",
+          "zipCode": "53100",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/valentina-moretti-phd"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-02-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Giovedì pomeriggio"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Ricerca immunologica",
+        "skills": [
+          "Immuno-oncologia",
+          "Validazione di bersagli",
+          "Modelli in vivo",
+          "Biologia molecolare"
+        ]
+      },
+      {
+        "category": "Strategia scientifica",
+        "skills": [
+          "Definizione della strategia di programma",
+          "Gestione del portafoglio preclinico",
+          "Due diligence scientifica"
+        ]
+      },
+      {
+        "category": "Leadership",
+        "skills": [
+          "Guida di team interfunzionali",
+          "Mentoring di ricercatori",
+          "Rappresentanza scientifica"
+        ]
+      },
+      {
+        "category": "Qualità",
+        "skills": [
+          "GLP",
+          "Documentazione preclinica",
+          "Peer review"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Immuno-oncologia",
+        "Strategia di scoperta di farmaci",
+        "Leadership scientifica"
+      ],
+      "keyResponsibilities": [
+        "Definire la strategia scientifica dei programmi di ricerca immunologica",
+        "Guidare team interfunzionali dalla validazione del bersaglio alla candidatura",
+        "Rappresentare la scienza verso il management e i partner esterni"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "GSK Vaccines",
+        "website": "https://www.gsk.com",
+        "location": "Siena, Italia",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Principal Scientist, Drug Discovery",
+        "activities": [
+          {
+            "project": "Programma di immuno-oncologia",
+            "tasks": [
+              "Definire la strategia scientifica del programma",
+              "Coordinare biologia, chimica e farmacologia",
+              "Guidare la selezione del candidato preclinico"
+            ]
+          }
+        ],
+        "achievements": [
+          "Portato due programmi alla candidatura preclinica",
+          "Inventrice principale di quattro famiglie brevettuali"
+        ],
+        "toolsAndTechnologies": [
+          "Flow cytometry",
+          "Modelli murini",
+          "Biologia molecolare"
+        ]
+      },
+      {
+        "company": "Dompé Farmaceutici",
+        "website": "https://www.dompe.com",
+        "location": "L'Aquila, Italia",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Senior Scientist",
+        "activities": [
+          {
+            "project": "Validazione di bersagli infiammatori",
+            "tasks": [
+              "Guidare studi di validazione in modelli cellulari e animali",
+              "Coordinare collaborazioni accademiche"
+            ]
+          }
+        ],
+        "achievements": [
+          "Validato un bersaglio poi avanzato in clinica"
+        ],
+        "toolsAndTechnologies": [
+          "ELISA",
+          "qPCR",
+          "Modelli in vivo"
+        ]
+      },
+      {
+        "company": "Università degli Studi di Siena",
+        "website": "https://www.unisi.it",
+        "location": "Siena, Italia",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Ricercatore Post-dottorato",
+        "activities": [
+          {
+            "project": "Meccanismi immunitari",
+            "tasks": [
+              "Condurre ricerca di base sull'immunità innata",
+              "Pubblicare e presentare i risultati a conferenze internazionali"
+            ]
+          }
+        ],
+        "achievements": [
+          "Vincitrice di una borsa Marie Curie"
+        ],
+        "toolsAndTechnologies": [
+          "Colture cellulari",
+          "Microscopia",
+          "Citometria"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Siena",
+        "degree": "Dottorato di Ricerca in Immunologia",
+        "fieldOfStudy": "Immunologia",
+        "achievements": [
+          "Tesi con lode",
+          "Premio per la miglior tesi di dipartimento"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Università degli Studi di Siena",
+        "degree": "Laurea in Scienze Biologiche",
+        "fieldOfStudy": "Biologia",
+        "achievements": [
+          "Votazione 110/110 e lode"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Good Laboratory Practice (GLP)",
+        "institution": "Society of Quality Assurance",
+        "year": "@Y-4@",
+        "description": "Formazione certificata sulle buone pratiche di laboratorio."
+      },
+      {
+        "title": "Leadership in R&D",
+        "institution": "SDA Bocconi",
+        "year": "@Y-4@",
+        "description": "Programma esecutivo sulla leadership nei contesti di ricerca e sviluppo."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Immunology",
+        "Target validation",
+        "In vivo models",
+        "Molecular biology",
+        "Drug discovery strategy"
+      ],
+      "softSkills": [
+        "Leadership scientifica",
+        "Visione strategica",
+        "Mentoring",
+        "Comunicazione"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Tedesco",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programma di immuno-oncologia alla candidatura preclinica",
+        "description": "Guidata la strategia scientifica dalla validazione del bersaglio alla selezione del candidato.",
+        "date": "2023",
+        "impact": "Due candidati preclinici avanzati e quattro famiglie brevettuali depositate."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Pittura ad acquerello",
+      "Corsa in montagna",
+      "Lettura scientifica"
+    ],
+    "references": [
+      {
+        "name": "Dott. Roberto Ferri",
+        "position": "VP of Discovery Research",
+        "company": "GSK Vaccines",
+        "contact": {
+          "phone": "+39 335 900 1123",
+          "email": "roberto.ferri@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 85000,
+      "max": 110000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Life Sciences R&D",
+      "secondaryClusters": [
+        "Immunology",
+        "Drug Discovery Strategy"
+      ],
+      "functionalExpertise": [
+        "Immuno-oncology",
+        "Target validation",
+        "Scientific strategy"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Advanced preclinical candidates",
+        "Filed patent families"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Biotech"
+      ],
+      "environmentFit": [
+        "Discovery research organization",
+        "Cross-functional leadership"
+      ],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Seventeen-year discovery scientist leading immuno-oncology programs to preclinical candidacy with patents and cross-functional leadership."
+    },
+    "searchIndex": {
+      "roles": [
+        "Principal Scientist",
+        "Drug Discovery Lead",
+        "Immunology Scientist"
+      ],
+      "skills": [
+        "Immuno-oncology",
+        "Target validation",
+        "In vivo models",
+        "Drug discovery",
+        "Scientific strategy"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Biotech"
+      ]
+    },
+    "tags": [
+      "drug-discovery",
+      "immunology",
+      "principal-scientist",
+      "preclinical",
+      "GLP"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Specialista in affari regolatori con cinque anni di esperienza nella preparazione e gestione di dossier per farmaci e dispositivi medici. Competente nei requisiti EMA e FDA e nella gestione delle variazioni post-autorizzazione. Precisa, organizzata e attenta alle scadenze regolatorie.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Sara Marino",
+      "role": "Regulatory Affairs Specialist",
+      "summary": "Specialista regolatorio esperta in submission e variazioni per prodotti farmaceutici.",
+      "contact": {
+        "email": "sara.marino@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "Cavour",
+          "streetType": "Via",
+          "city": "Roma",
+          "state": "Lazio",
+          "zipCode": "00184",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sara-marino-ra"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Giorni feriali"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Affari regolatori",
+        "skills": [
+          "Preparazione dossier",
+          "Variazioni post-autorizzazione",
+          "eCTD",
+          "Rinnovi"
+        ]
+      },
+      {
+        "category": "Normativa",
+        "skills": [
+          "EMA",
+          "FDA",
+          "Regolamento dispositivi medici (MDR)",
+          "ICH"
+        ]
+      },
+      {
+        "category": "Gestione",
+        "skills": [
+          "Pianificazione delle submission",
+          "Gestione delle scadenze",
+          "Coordinamento interfunzionale"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Preparazione di dossier regolatori",
+        "Gestione delle variazioni",
+        "Conformità normativa"
+      ],
+      "keyResponsibilities": [
+        "Preparare e sottomettere dossier regolatori in formato eCTD",
+        "Gestire variazioni e rinnovi delle autorizzazioni",
+        "Monitorare l'evoluzione normativa EMA e FDA"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Angelini Pharma",
+        "website": "https://www.angelinipharma.com",
+        "location": "Roma, Italia",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Regulatory Affairs Specialist",
+        "activities": [
+          {
+            "project": "Gestione del ciclo di vita regolatorio",
+            "tasks": [
+              "Preparare dossier eCTD per nuove submission",
+              "Gestire variazioni di tipo IA, IB e II",
+              "Coordinare i contributi delle funzioni tecniche"
+            ]
+          }
+        ],
+        "achievements": [
+          "Gestito oltre 40 variazioni nel rispetto delle scadenze",
+          "Contribuito a due rinnovi di autorizzazione europei"
+        ],
+        "toolsAndTechnologies": [
+          "eCTD",
+          "Veeva Vault RIM",
+          "EMA portal"
+        ]
+      },
+      {
+        "company": "IBSA Farmaceutici",
+        "website": "https://www.ibsa.it",
+        "location": "Lodi, Italia",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Junior Regulatory Affairs Officer",
+        "activities": [
+          {
+            "project": "Supporto alle submission",
+            "tasks": [
+              "Compilare la documentazione di supporto ai dossier",
+              "Aggiornare i database regolatori"
+            ]
+          }
+        ],
+        "achievements": [
+          "Standardizzato i modelli di documentazione di reparto"
+        ],
+        "toolsAndTechnologies": [
+          "eCTD",
+          "Database regolatori"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Roma La Sapienza",
+        "degree": "Laurea Magistrale in Chimica e Tecnologia Farmaceutiche",
+        "fieldOfStudy": "Tecnologia Farmaceutica",
+        "achievements": [
+          "Votazione 106/110"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Regulatory Affairs Certification (RAC)",
+        "institution": "Regulatory Affairs Professionals Society (RAPS)",
+        "year": "@Y-0@",
+        "description": "Certificazione professionale in affari regolatori."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "eCTD",
+        "Regulatory submissions",
+        "Lifecycle management",
+        "MDR",
+        "ICH"
+      ],
+      "softSkills": [
+        "Precisione",
+        "Organizzazione",
+        "Attenzione al dettaglio",
+        "Comunicazione"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Digitalizzazione della gestione delle variazioni",
+        "description": "Introdotto un flusso strutturato per il tracciamento delle variazioni post-autorizzazione.",
+        "date": "2024",
+        "impact": "Ridotti del 30% i ritardi nelle submission delle variazioni."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Lettura",
+      "Volontariato",
+      "Corsa"
+    ],
+    "references": [
+      {
+        "name": "Dott.ssa Giorgia Fabbri",
+        "position": "Regulatory Affairs Manager",
+        "company": "Angelini Pharma",
+        "contact": {
+          "phone": "+39 347 900 2234",
+          "email": "giorgia.fabbri@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 34000,
+      "max": 42000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Regulatory & Quality",
+      "secondaryClusters": [
+        "Regulatory Affairs",
+        "Compliance"
+      ],
+      "functionalExpertise": [
+        "Regulatory submissions",
+        "Lifecycle management",
+        "Variation management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "On-time regulatory submissions",
+        "Reduced variation delays"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Medical devices"
+      ],
+      "environmentFit": [
+        "Regulatory affairs department",
+        "Deadline-driven teams"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Five years in regulatory affairs with RAC certification and demonstrated variation and renewal management under EMA and FDA frameworks."
+    },
+    "searchIndex": {
+      "roles": [
+        "Regulatory Affairs Specialist",
+        "Regulatory Affairs Officer"
+      ],
+      "skills": [
+        "eCTD",
+        "Regulatory submissions",
+        "Lifecycle management",
+        "EMA",
+        "FDA"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Medical devices"
+      ]
+    },
+    "tags": [
+      "regulatory-affairs",
+      "eCTD",
+      "EMA",
+      "FDA",
+      "RAC"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Responsabile assicurazione qualità con sedici anni di esperienza in ambiente GMP farmaceutico. Guida il sistema qualità, le ispezioni regolatorie e la gestione delle deviazioni e delle CAPA. Riferimento riconosciuto per la cultura della qualità e per la preparazione alle ispezioni AIFA e FDA.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Roberto Galli",
+      "role": "Quality Assurance Manager",
+      "summary": "QA Manager GMP esperto in sistemi qualità, ispezioni e gestione CAPA.",
+      "contact": {
+        "phone": "+39 335 771 6620",
+        "address": {
+          "streetNumber": "45",
+          "streetName": "Emilia",
+          "streetType": "Via",
+          "city": "Bologna",
+          "state": "Emilia-Romagna",
+          "zipCode": "40139",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/roberto-galli-qa"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Venerdì"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Sistema qualità",
+        "skills": [
+          "Sistema di gestione della qualità",
+          "GMP",
+          "GxP",
+          "Change control"
+        ]
+      },
+      {
+        "category": "Conformità",
+        "skills": [
+          "Gestione delle deviazioni",
+          "CAPA",
+          "Convalida",
+          "Qualifica dei fornitori"
+        ]
+      },
+      {
+        "category": "Ispezioni",
+        "skills": [
+          "Preparazione alle ispezioni",
+          "Audit interni",
+          "Ispezioni AIFA e FDA"
+        ]
+      },
+      {
+        "category": "Gestione",
+        "skills": [
+          "Guida del team qualità",
+          "Formazione GMP",
+          "Indicatori di qualità"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Assicurazione qualità GMP",
+        "Gestione delle deviazioni e CAPA",
+        "Preparazione alle ispezioni"
+      ],
+      "keyResponsibilities": [
+        "Gestire il sistema di qualità del sito produttivo",
+        "Guidare le ispezioni regolatorie e gli audit interni",
+        "Coordinare deviazioni, change control e CAPA"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Bristol Myers Squibb",
+        "website": "https://www.bms.com",
+        "location": "Anagni, Italia",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Quality Assurance Manager",
+        "activities": [
+          {
+            "project": "Sistema qualità del sito produttivo",
+            "tasks": [
+              "Guidare la preparazione alle ispezioni AIFA e FDA",
+              "Coordinare deviazioni, change control e CAPA",
+              "Gestire un team di sei specialisti qualità"
+            ]
+          }
+        ],
+        "achievements": [
+          "Superate tre ispezioni FDA senza osservazioni critiche",
+          "Ridotto del 40% i tempi di chiusura delle CAPA"
+        ],
+        "toolsAndTechnologies": [
+          "TrackWise",
+          "SAP",
+          "Sistemi di gestione documentale"
+        ]
+      },
+      {
+        "company": "Fresenius Kabi",
+        "website": "https://www.fresenius-kabi.com",
+        "location": "Verona, Italia",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "QA Specialist",
+        "activities": [
+          {
+            "project": "Controllo qualità di processo",
+            "tasks": [
+              "Gestire deviazioni e reclami di prodotto",
+              "Eseguire audit interni ai reparti produttivi"
+            ]
+          }
+        ],
+        "achievements": [
+          "Introdotto un cruscotto di indicatori di qualità"
+        ],
+        "toolsAndTechnologies": [
+          "TrackWise",
+          "Sistemi MES"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Bologna",
+        "degree": "Laurea Magistrale in Farmacia",
+        "fieldOfStudy": "Farmacia",
+        "achievements": [
+          "Votazione 108/110"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Good Manufacturing Practice (GMP) - Advanced",
+        "institution": "European Compliance Academy",
+        "year": "@Y-2@",
+        "description": "Formazione avanzata sulle buone pratiche di fabbricazione."
+      },
+      {
+        "title": "Lead Auditor ISO 9001",
+        "institution": "TÜV SÜD",
+        "year": "@Y-2@",
+        "description": "Certificazione come lead auditor dei sistemi di gestione della qualità."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "GMP",
+        "CAPA",
+        "Change control",
+        "Deviation management",
+        "Validation"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Rigore",
+        "Gestione delle ispezioni",
+        "Comunicazione"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programma di miglioramento delle CAPA",
+        "description": "Ridisegnato il processo di gestione delle azioni correttive e preventive.",
+        "date": "2022",
+        "impact": "Riduzione del 40% dei tempi medi di chiusura delle CAPA."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Golf",
+      "Lettura storica",
+      "Cucina"
+    ],
+    "references": [
+      {
+        "name": "Dott. Stefano Villa",
+        "position": "Site Quality Director",
+        "company": "Bristol Myers Squibb",
+        "contact": {
+          "phone": "+39 335 900 3345",
+          "email": "stefano.villa@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 80000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Regulatory & Quality",
+      "secondaryClusters": [
+        "Quality Assurance",
+        "GMP Compliance"
+      ],
+      "functionalExpertise": [
+        "Quality management systems",
+        "CAPA management",
+        "Inspection readiness"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Passed regulatory inspections",
+        "Reduced CAPA closure times"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals"
+      ],
+      "environmentFit": [
+        "GMP manufacturing site",
+        "Quality leadership"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Sixteen years in pharmaceutical QA culminating in a manager role with successful FDA inspections and CAPA-process leadership."
+    },
+    "searchIndex": {
+      "roles": [
+        "Quality Assurance Manager",
+        "QA Manager",
+        "GMP Quality Lead"
+      ],
+      "skills": [
+        "GMP",
+        "CAPA",
+        "Change control",
+        "Validation",
+        "Inspection readiness"
+      ],
+      "industries": [
+        "Pharmaceuticals"
+      ]
+    },
+    "tags": [
+      "quality-assurance",
+      "GMP",
+      "CAPA",
+      "inspections",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Clinical Research Associate senior con undici anni di esperienza nel monitoraggio di studi clinici in area oncologica e cardiovascolare. Esperta in ICH-GCP, gestione dei centri sperimentali e verifica dei dati. Riconosciuta per la qualità del monitoraggio e per il rapporto con gli investigatori.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Alessia Bruno",
+      "role": "Senior Clinical Research Associate",
+      "summary": "CRA senior specializzata nel monitoraggio di studi clinici secondo ICH-GCP.",
+      "contact": {
+        "phone": "+39 348 227 7781",
+        "email": "alessia.bruno@example.com",
+        "address": {
+          "streetNumber": "11",
+          "streetName": "Nazionale",
+          "streetType": "Via",
+          "city": "Milano",
+          "state": "Lombardia",
+          "zipCode": "20122",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/alessia-bruno-cra"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Giorni feriali"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Monitoraggio clinico",
+        "skills": [
+          "Monitoraggio di studi clinici",
+          "Source data verification",
+          "Gestione dei centri",
+          "Visite di monitoraggio"
+        ]
+      },
+      {
+        "category": "Normativa",
+        "skills": [
+          "ICH-GCP",
+          "EMA",
+          "FDA",
+          "Consenso informato"
+        ]
+      },
+      {
+        "category": "Gestione dati",
+        "skills": [
+          "Query management",
+          "EDC",
+          "Risk-based monitoring"
+        ]
+      },
+      {
+        "category": "Relazioni",
+        "skills": [
+          "Rapporto con gli investigatori",
+          "Formazione dei centri",
+          "Coordinamento con il CRO"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Monitoraggio di studi clinici",
+        "Conformità ICH-GCP",
+        "Gestione dei centri sperimentali"
+      ],
+      "keyResponsibilities": [
+        "Condurre visite di monitoraggio presso i centri sperimentali",
+        "Verificare l'integrità dei dati e la conformità al protocollo",
+        "Formare e supportare il personale dei centri"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "IQVIA",
+        "website": "https://www.iqvia.com",
+        "location": "Milano, Italia",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Senior Clinical Research Associate",
+        "activities": [
+          {
+            "project": "Monitoraggio di studi oncologici di fase III",
+            "tasks": [
+              "Eseguire visite di monitoraggio on-site e da remoto",
+              "Verificare i dati source rispetto alla cartella clinica",
+              "Gestire query e deviazioni di protocollo"
+            ]
+          }
+        ],
+        "achievements": [
+          "Gestito fino a 12 centri sperimentali contemporaneamente",
+          "Ridotto del 30% i tempi di risoluzione delle query"
+        ],
+        "toolsAndTechnologies": [
+          "Medidata Rave",
+          "CTMS",
+          "ICH-GCP"
+        ]
+      },
+      {
+        "company": "ICON plc",
+        "website": "https://www.iconplc.com",
+        "location": "Milano, Italia",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Clinical Research Associate",
+        "activities": [
+          {
+            "project": "Studi cardiovascolari di fase II",
+            "tasks": [
+              "Condurre visite di inizializzazione e monitoraggio",
+              "Verificare il consenso informato e i criteri di eleggibilità"
+            ]
+          }
+        ],
+        "achievements": [
+          "Riconosciuta come CRA dell'anno di area 2018"
+        ],
+        "toolsAndTechnologies": [
+          "EDC",
+          "CTMS"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Pavia",
+        "degree": "Laurea Magistrale in Biotecnologie Mediche",
+        "fieldOfStudy": "Biotecnologie Mediche",
+        "achievements": [
+          "Votazione 108/110"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "ICH-GCP Certification",
+        "institution": "TransCelerate BioPharma",
+        "year": "@Y-4@",
+        "description": "Certificazione sulle buone pratiche cliniche ICH-GCP."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Clinical monitoring",
+        "ICH-GCP",
+        "Source data verification",
+        "EDC",
+        "Risk-based monitoring"
+      ],
+      "softSkills": [
+        "Attenzione al dettaglio",
+        "Autonomia",
+        "Relazione interpersonale",
+        "Organizzazione"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Adozione del monitoraggio basato sul rischio",
+        "description": "Introdotto un approccio di risk-based monitoring su un programma oncologico.",
+        "date": "2023",
+        "impact": "Ridotte del 25% le visite on-site mantenendo la qualità dei dati."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Viaggi",
+      "Fotografia",
+      "Pilates"
+    ],
+    "references": [
+      {
+        "name": "Dott. Fabio Neri",
+        "position": "Clinical Operations Manager",
+        "company": "IQVIA",
+        "contact": {
+          "phone": "+39 348 900 4456",
+          "email": "fabio.neri@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Regulatory & Quality",
+      "secondaryClusters": [
+        "Clinical Operations",
+        "Clinical Monitoring"
+      ],
+      "functionalExpertise": [
+        "Clinical monitoring",
+        "GCP compliance",
+        "Site management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Improved data quality",
+        "Reduced query resolution time"
+      ],
+      "industryDomains": [
+        "CRO",
+        "Pharmaceuticals"
+      ],
+      "environmentFit": [
+        "CRO",
+        "Field-based monitoring"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Eleven years of clinical monitoring across oncology and cardiovascular trials with GCP expertise and multi-site management."
+    },
+    "searchIndex": {
+      "roles": [
+        "Clinical Research Associate",
+        "Senior CRA",
+        "Clinical Monitor"
+      ],
+      "skills": [
+        "Clinical monitoring",
+        "ICH-GCP",
+        "Source data verification",
+        "Risk-based monitoring",
+        "EDC"
+      ],
+      "industries": [
+        "CRO",
+        "Pharmaceuticals"
+      ]
+    },
+    "tags": [
+      "clinical-research",
+      "CRA",
+      "ICH-GCP",
+      "monitoring",
+      "oncology"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Specialista in farmacovigilanza con dodici anni di esperienza nella gestione della sicurezza dei farmaci e nel reporting delle reazioni avverse. Esperto in valutazione dei casi individuali, segnali di sicurezza e rapporti periodici (PSUR). Attento alla conformità normativa EMA e FDA e alla qualità del dato.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Marco Rizzo",
+      "role": "Senior Pharmacovigilance Specialist",
+      "summary": "Specialista di farmacovigilanza esperto in gestione dei casi di sicurezza e segnali.",
+      "contact": {
+        "phone": "+39 333 662 8890",
+        "email": "marco.rizzo@example.com",
+        "address": {
+          "streetNumber": "29",
+          "streetName": "Sicilia",
+          "streetType": "Via",
+          "city": "Roma",
+          "state": "Lazio",
+          "zipCode": "00187",
+          "country": "Italia"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Giorni feriali"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Farmacovigilanza",
+        "skills": [
+          "Gestione dei casi individuali",
+          "Valutazione delle reazioni avverse",
+          "Segnali di sicurezza",
+          "PSUR e PBRER"
+        ]
+      },
+      {
+        "category": "Normativa",
+        "skills": [
+          "EMA",
+          "FDA",
+          "GVP",
+          "MedDRA"
+        ]
+      },
+      {
+        "category": "Sistemi",
+        "skills": [
+          "Database di sicurezza",
+          "Argus Safety",
+          "Reporting elettronico"
+        ]
+      },
+      {
+        "category": "Qualità",
+        "skills": [
+          "Audit di sicurezza",
+          "Gestione delle deviazioni",
+          "Procedure operative standard"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Gestione della sicurezza dei farmaci",
+        "Valutazione dei casi",
+        "Rilevazione dei segnali"
+      ],
+      "keyResponsibilities": [
+        "Valutare e processare le segnalazioni di reazioni avverse",
+        "Contribuire ai rapporti periodici di sicurezza",
+        "Supportare la rilevazione e la gestione dei segnali di sicurezza"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Sanofi",
+        "website": "https://www.sanofi.com",
+        "location": "Roma, Italia",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Senior Pharmacovigilance Specialist",
+        "activities": [
+          {
+            "project": "Gestione della sicurezza di prodotto",
+            "tasks": [
+              "Valutare i casi individuali di sicurezza secondo GVP",
+              "Redigere sezioni dei rapporti periodici PSUR",
+              "Supportare l'analisi dei segnali di sicurezza"
+            ]
+          }
+        ],
+        "achievements": [
+          "Gestito oltre 1.500 casi di sicurezza nel rispetto delle tempistiche regolatorie",
+          "Contribuito alla chiusura di due segnali di sicurezza"
+        ],
+        "toolsAndTechnologies": [
+          "Argus Safety",
+          "MedDRA",
+          "EudraVigilance"
+        ]
+      },
+      {
+        "company": "Pfizer",
+        "website": "https://www.pfizer.com",
+        "location": "Roma, Italia",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Pharmacovigilance Associate",
+        "activities": [
+          {
+            "project": "Case processing",
+            "tasks": [
+              "Codificare le reazioni avverse con MedDRA",
+              "Inserire e verificare i casi nel database di sicurezza"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mantenuto un tasso di conformità dei casi superiore al 98%"
+        ],
+        "toolsAndTechnologies": [
+          "Argus Safety",
+          "MedDRA"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Roma Tor Vergata",
+        "degree": "Laurea Magistrale in Farmacia",
+        "fieldOfStudy": "Farmacia",
+        "achievements": [
+          "Votazione 107/110"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Good Pharmacovigilance Practices (GVP)",
+        "institution": "DIA (Drug Information Association)",
+        "year": "@Y-4@",
+        "description": "Formazione certificata sulle buone pratiche di farmacovigilanza."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Case processing",
+        "Signal detection",
+        "PSUR authoring",
+        "MedDRA coding",
+        "Argus Safety"
+      ],
+      "softSkills": [
+        "Precisione",
+        "Analisi critica",
+        "Affidabilità",
+        "Comunicazione"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Ottimizzazione del processo di case intake",
+        "description": "Rivisto il flusso di ricezione e triage dei casi di sicurezza.",
+        "date": "2023",
+        "impact": "Ridotti del 20% i tempi medi di processazione dei casi."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Scacchi",
+      "Escursionismo",
+      "Lettura scientifica"
+    ],
+    "references": [
+      {
+        "name": "Dott.ssa Chiara Longo",
+        "position": "EU QPPV Office Lead",
+        "company": "Sanofi",
+        "contact": {
+          "phone": "+39 333 900 5567",
+          "email": "chiara.longo@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 44000,
+      "max": 56000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Regulatory & Quality",
+      "secondaryClusters": [
+        "Pharmacovigilance",
+        "Drug Safety"
+      ],
+      "functionalExpertise": [
+        "Case processing",
+        "Signal detection",
+        "Aggregate reporting"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Regulatory-compliant safety reporting",
+        "Improved case processing efficiency"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals"
+      ],
+      "environmentFit": [
+        "Drug safety department",
+        "Regulated processes"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Twelve years in pharmacovigilance with expertise in case management, aggregate reporting and signal detection under GVP."
+    },
+    "searchIndex": {
+      "roles": [
+        "Pharmacovigilance Specialist",
+        "Drug Safety Specialist"
+      ],
+      "skills": [
+        "Case processing",
+        "Signal detection",
+        "PSUR",
+        "MedDRA",
+        "Argus Safety"
+      ],
+      "industries": [
+        "Pharmaceuticals"
+      ]
+    },
+    "tags": [
+      "pharmacovigilance",
+      "drug-safety",
+      "GVP",
+      "MedDRA",
+      "signal-detection"
+    ]
+  },
+  {
+    "personalInformation": {
+      "name": "Federica Serra",
+      "role": "Validation Lead",
+      "summary": "Lead della convalida esperta in qualifica di sistemi computerizzati e data integrity.",
+      "contact": {
+        "address": {
+          "streetNumber": "6",
+          "streetName": "Trieste",
+          "streetType": "Via",
+          "city": "Padova",
+          "state": "Veneto",
+          "zipCode": "35131",
+          "country": "Italia"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Giorni feriali"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "profiles": {
+      "areasOfExpertise": [
+        "Convalida di sistemi computerizzati",
+        "Qualifica di impianti e processi",
+        "Data integrity"
+      ],
+      "keyResponsibilities": [
+        "Guidare i progetti di convalida di sistemi, impianti e processi",
+        "Garantire la conformità GxP e la data integrity",
+        "Coordinare team interfunzionali e fornitori esterni"
+      ]
+    },
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Computerized system validation",
+        "Process validation",
+        "GAMP 5",
+        "Data integrity",
+        "21 CFR Part 11"
+      ],
+      "softSkills": [
+        "Leadership di progetto",
+        "Rigore",
+        "Problem solving",
+        "Comunicazione"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Convalida di un nuovo sistema MES",
+        "description": "Guidata la convalida end-to-end del sistema di esecuzione della produzione.",
+        "date": "2022",
+        "impact": "Go-live nei tempi previsti e nessuna osservazione in ispezione."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Vela",
+      "Fotografia",
+      "Escursionismo"
+    ],
+    "references": [
+      {
+        "name": "Dott. Andrea Bellini",
+        "position": "Head of Validation",
+        "company": "Patheon",
+        "contact": {
+          "phone": "+39 346 900 6678",
+          "email": "andrea.bellini@example.com"
+        }
+      }
+    ],
+    "searchIndex": {
+      "roles": [
+        "Validation Lead",
+        "CSV Specialist",
+        "Validation Engineer"
+      ],
+      "skills": [
+        "Computerized system validation",
+        "Process validation",
+        "GAMP 5",
+        "Data integrity",
+        "21 CFR Part 11"
+      ],
+      "industries": [
+        "Pharmaceuticals"
+      ]
+    },
+    "tags": [
+      "validation",
+      "GMP",
+      "GAMP5",
+      "data-integrity",
+      "CSV"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Medical Science Liaison con dieci anni di esperienza nell'ambito medico-scientifico in area oncologica. Costruisce relazioni con i clinici di riferimento (KOL) e traduce l'evidenza scientifica in valore per la pratica clinica. Esperta nell'engagement scientifico e nel supporto agli studi clinici.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Giorgia Villa",
+      "role": "Medical Science Liaison",
+      "summary": "MSL in oncologia esperta in engagement dei KOL e comunicazione scientifica.",
+      "contact": {
+        "phone": "+39 347 662 4471",
+        "email": "giorgia.villa@example.com",
+        "address": {
+          "streetNumber": "17",
+          "streetName": "XX Settembre",
+          "streetType": "Via",
+          "city": "Genova",
+          "state": "Liguria",
+          "zipCode": "16121",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/giorgia-villa-msl"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Giorni feriali"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Medical affairs",
+        "skills": [
+          "Engagement dei KOL",
+          "Comunicazione scientifica",
+          "Supporto agli studi clinici",
+          "Advisory board"
+        ]
+      },
+      {
+        "category": "Conoscenza scientifica",
+        "skills": [
+          "Oncologia",
+          "Interpretazione dei dati clinici",
+          "Literature review"
+        ]
+      },
+      {
+        "category": "Relazioni",
+        "skills": [
+          "Relazioni con i clinici",
+          "Presentazioni scientifiche",
+          "Formazione medica"
+        ]
+      },
+      {
+        "category": "Strumenti",
+        "skills": [
+          "CRM",
+          "Piattaforme di engagement",
+          "Insight medici"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Engagement scientifico dei KOL",
+        "Comunicazione dell'evidenza clinica",
+        "Supporto medico agli studi"
+      ],
+      "keyResponsibilities": [
+        "Costruire e mantenere relazioni con i leader di opinione clinici",
+        "Comunicare l'evidenza scientifica ai clinici di riferimento",
+        "Raccogliere insight medici e supportare gli studi clinici"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Roche",
+        "website": "https://www.roche.com",
+        "location": "Milano, Italia",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Medical Science Liaison",
+        "activities": [
+          {
+            "project": "Engagement scientifico in oncologia",
+            "tasks": [
+              "Gestire una rete di KOL oncologici a livello regionale",
+              "Presentare i dati clinici e rispondere alle richieste mediche",
+              "Supportare gli advisory board e gli studi clinici"
+            ]
+          }
+        ],
+        "achievements": [
+          "Costruito relazioni con oltre 40 KOL oncologici",
+          "Raccolto insight che hanno orientato la strategia di medical affairs"
+        ],
+        "toolsAndTechnologies": [
+          "Veeva CRM",
+          "Piattaforme di engagement",
+          "MedDRA"
+        ]
+      },
+      {
+        "company": "Novartis",
+        "website": "https://www.novartis.com",
+        "location": "Milano, Italia",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Medical Science Liaison Junior",
+        "activities": [
+          {
+            "project": "Supporto medico-scientifico",
+            "tasks": [
+              "Fornire supporto scientifico ai clinici sull'area terapeutica",
+              "Contribuire alla formazione interna dell'area commerciale"
+            ]
+          }
+        ],
+        "achievements": [
+          "Nominata MSL emergente dell'anno 2017"
+        ],
+        "toolsAndTechnologies": [
+          "CRM",
+          "Piattaforme di literature review"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Genova",
+        "degree": "Dottorato di Ricerca in Oncologia",
+        "fieldOfStudy": "Oncologia",
+        "achievements": [
+          "Tesi sui biomarcatori tumorali"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Università degli Studi di Genova",
+        "degree": "Laurea Magistrale in Biologia",
+        "fieldOfStudy": "Biologia",
+        "achievements": [
+          "Votazione 110/110 e lode"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Medical Science Liaison",
+        "institution": "MSL Society",
+        "year": "@Y-2@",
+        "description": "Certificazione professionale per Medical Science Liaison."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "KOL engagement",
+        "Scientific communication",
+        "Clinical data interpretation",
+        "CRM",
+        "Advisory boards"
+      ],
+      "softSkills": [
+        "Relazione interpersonale",
+        "Public speaking",
+        "Ascolto attivo",
+        "Autonomia"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programma regionale di advisory board oncologico",
+        "description": "Progettato e coordinato una serie di advisory board con KOL regionali.",
+        "date": "2023",
+        "impact": "Insight integrati nel piano medico e nel disegno di due studi."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Trekking",
+      "Divulgazione scientifica",
+      "Vela"
+    ],
+    "references": [
+      {
+        "name": "Dott. Luca Ferrari",
+        "position": "Medical Affairs Lead Oncology",
+        "company": "Roche",
+        "contact": {
+          "phone": "+39 347 900 7789",
+          "email": "luca.ferrari@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 60000,
+      "max": 78000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Medical & Commercial",
+      "secondaryClusters": [
+        "Medical Affairs",
+        "KOL Engagement"
+      ],
+      "functionalExpertise": [
+        "KOL engagement",
+        "Scientific communication",
+        "Medical insights"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Strengthened KOL relationships",
+        "Informed medical strategy"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Biotech"
+      ],
+      "environmentFit": [
+        "Field medical team",
+        "Scientific stakeholder engagement"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "PhD-level MSL with a decade of oncology field-medical experience and strong KOL engagement and insight-generation track record."
+    },
+    "searchIndex": {
+      "roles": [
+        "Medical Science Liaison",
+        "Field Medical Advisor"
+      ],
+      "skills": [
+        "KOL engagement",
+        "Scientific communication",
+        "Clinical data interpretation",
+        "CRM",
+        "Advisory boards"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Biotech"
+      ]
+    },
+    "tags": [
+      "medical-affairs",
+      "MSL",
+      "KOL",
+      "oncology",
+      "field-medical"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Specialista di vendita di dispositivi medici con quattro anni di esperienza nella promozione di soluzioni per sala operatoria. Costruisce relazioni con chirurghi e reparti acquisti e supporta l'utilizzo clinico dei prodotti. Orientato agli obiettivi e alla soddisfazione del cliente clinico.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Andrea Conti",
+      "role": "Medical Device Sales Specialist",
+      "summary": "Specialista di vendita di dispositivi medici per la sala operatoria.",
+      "contact": {
+        "phone": "+39 345 227 3360",
+        "email": "andrea.conti@example.com",
+        "address": {
+          "streetNumber": "22",
+          "streetName": "Vittorio Veneto",
+          "streetType": "Corso",
+          "city": "Torino",
+          "state": "Piemonte",
+          "zipCode": "10121",
+          "country": "Italia"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Giorni feriali",
+          "Sabato mattina"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Vendita",
+        "skills": [
+          "Vendita di dispositivi medici",
+          "Gestione del territorio",
+          "Negoziazione",
+          "Sviluppo del portafoglio clienti"
+        ]
+      },
+      {
+        "category": "Supporto clinico",
+        "skills": [
+          "Affiancamento in sala operatoria",
+          "Formazione del personale sanitario",
+          "Dimostrazioni di prodotto"
+        ]
+      },
+      {
+        "category": "Strumenti",
+        "skills": [
+          "CRM",
+          "Reportistica di vendita",
+          "Gare pubbliche"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Vendita di dispositivi medici",
+        "Supporto clinico in sala operatoria",
+        "Gestione del territorio"
+      ],
+      "keyResponsibilities": [
+        "Promuovere i dispositivi presso chirurghi e strutture sanitarie",
+        "Fornire supporto clinico durante gli interventi",
+        "Gestire il territorio e raggiungere gli obiettivi di vendita"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Medtronic Italia",
+        "website": "https://www.medtronic.com",
+        "location": "Torino, Italia",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Medical Device Sales Specialist",
+        "activities": [
+          {
+            "project": "Vendita di dispositivi per chirurgia",
+            "tasks": [
+              "Gestire il portafoglio clienti del territorio del Nord-Ovest",
+              "Affiancare i chirurghi durante l'utilizzo dei dispositivi",
+              "Partecipare alle gare pubbliche ospedaliere"
+            ]
+          }
+        ],
+        "achievements": [
+          "Superato del 115% l'obiettivo di vendita annuale",
+          "Acquisiti cinque nuovi centri ospedalieri"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce CRM",
+          "Strumenti di reportistica"
+        ]
+      },
+      {
+        "company": "B. Braun Milano",
+        "website": "https://www.bbraun.it",
+        "location": "Milano, Italia",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Junior Sales Representative",
+        "activities": [
+          {
+            "project": "Vendita di materiale sanitario",
+            "tasks": [
+              "Sviluppare relazioni con i reparti acquisti",
+              "Presentare i prodotti al personale sanitario"
+            ]
+          }
+        ],
+        "achievements": [
+          "Raggiunto gli obiettivi trimestrali nel primo anno"
+        ],
+        "toolsAndTechnologies": [
+          "CRM",
+          "Cataloghi di prodotto"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Medical device sales",
+        "Territory management",
+        "CRM",
+        "Tender management",
+        "Product demonstration"
+      ],
+      "softSkills": [
+        "Orientamento al cliente",
+        "Persuasione",
+        "Resilienza",
+        "Autonomia"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Sviluppo di nuovi centri ospedalieri",
+        "description": "Acquisiti cinque nuovi centri nel territorio del Nord-Ovest.",
+        "date": "2024",
+        "impact": "Incremento del 18% del fatturato di territorio in un anno."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Calcio",
+      "Viaggi",
+      "Fotografia"
+    ],
+    "references": [
+      {
+        "name": "Dott.ssa Martina Sala",
+        "position": "Regional Sales Manager",
+        "company": "Medtronic Italia",
+        "contact": {
+          "phone": "+39 345 900 8890",
+          "email": "martina.sala@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 36000,
+      "max": 48000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Medical & Commercial",
+      "secondaryClusters": [
+        "Medical Device Sales",
+        "Territory Management"
+      ],
+      "functionalExpertise": [
+        "Medical device sales",
+        "Clinical support",
+        "Territory management"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Exceeded sales targets",
+        "Acquired new hospital accounts"
+      ],
+      "industryDomains": [
+        "Medical devices"
+      ],
+      "environmentFit": [
+        "Field sales",
+        "Hospital operating rooms"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "Four years in medical-device field sales with clinical support experience and consistent target achievement."
+    },
+    "searchIndex": {
+      "roles": [
+        "Medical Device Sales Specialist",
+        "Sales Representative"
+      ],
+      "skills": [
+        "Medical device sales",
+        "Territory management",
+        "CRM",
+        "Tender management",
+        "Clinical support"
+      ],
+      "industries": [
+        "Medical devices"
+      ]
+    },
+    "tags": [
+      "medical-device",
+      "sales",
+      "medtech",
+      "territory-management",
+      "CRM"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Market Access Manager con quattordici anni di esperienza nell'accesso al mercato e nella negoziazione di prezzo e rimborso in ambito farmaceutico. Guida le strategie di value e i dossier per i pagatori, collaborando con AIFA e regioni. Esperto di health economics e di modelli di valore.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Paolo Ferretti",
+      "role": "Market Access Manager",
+      "summary": "Manager di market access esperto in pricing, rimborso e value dossier.",
+      "contact": {
+        "phone": "+39 335 118 7712",
+        "email": "paolo.ferretti@example.com",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "Buonarroti",
+          "streetType": "Via",
+          "city": "Milano",
+          "state": "Lombardia",
+          "zipCode": "20145",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/paolo-ferretti-marketaccess"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Venerdì pomeriggio"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Market access",
+        "skills": [
+          "Pricing e rimborso",
+          "Negoziazione con i pagatori",
+          "Value dossier",
+          "Accesso regionale"
+        ]
+      },
+      {
+        "category": "Health economics",
+        "skills": [
+          "Modelli di costo-efficacia",
+          "Budget impact",
+          "HEOR",
+          "Value proposition"
+        ]
+      },
+      {
+        "category": "Relazioni istituzionali",
+        "skills": [
+          "Rapporti con AIFA",
+          "Rapporti con le regioni",
+          "Advocacy"
+        ]
+      },
+      {
+        "category": "Gestione",
+        "skills": [
+          "Guida del team di accesso",
+          "Pianificazione strategica",
+          "Collaborazione interfunzionale"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Strategia di accesso al mercato",
+        "Pricing e rimborso",
+        "Value e HEOR"
+      ],
+      "keyResponsibilities": [
+        "Definire e attuare le strategie di accesso al mercato",
+        "Preparare i value dossier per i pagatori",
+        "Gestire le negoziazioni di prezzo e rimborso con AIFA e regioni"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "AstraZeneca Italia",
+        "website": "https://www.astrazeneca.it",
+        "location": "Milano, Italia",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Market Access Manager",
+        "activities": [
+          {
+            "project": "Accesso al mercato di nuovi farmaci",
+            "tasks": [
+              "Definire la strategia di pricing e rimborso di prodotto",
+              "Preparare i value dossier e i modelli di budget impact",
+              "Gestire le negoziazioni con AIFA e le regioni"
+            ]
+          }
+        ],
+        "achievements": [
+          "Ottenuto la rimborsabilità di due prodotti nei tempi previsti",
+          "Guidato accordi di accesso condizionato con esiti favorevoli"
+        ],
+        "toolsAndTechnologies": [
+          "Modelli di health economics",
+          "CRM",
+          "Database di prezzo e rimborso"
+        ]
+      },
+      {
+        "company": "Bayer",
+        "website": "https://www.bayer.com",
+        "location": "Milano, Italia",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Market Access Specialist",
+        "activities": [
+          {
+            "project": "Supporto all'accesso regionale",
+            "tasks": [
+              "Sviluppare dossier di valore per i prontuari regionali",
+              "Analizzare i dati di costo-efficacia"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribuito all'inserimento di un prodotto in dieci prontuari regionali"
+        ],
+        "toolsAndTechnologies": [
+          "Modelli di budget impact",
+          "Excel avanzato"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università Bocconi",
+        "degree": "Laurea Magistrale in Economia e Management",
+        "fieldOfStudy": "Economia Sanitaria",
+        "achievements": [
+          "Votazione 108/110"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Pricing and reimbursement",
+        "Value dossiers",
+        "Budget impact modelling",
+        "HEOR",
+        "Payer negotiation"
+      ],
+      "softSkills": [
+        "Pensiero strategico",
+        "Negoziazione",
+        "Leadership",
+        "Comunicazione"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Strategia di accesso di un farmaco oncologico",
+        "description": "Guidata la strategia di pricing, rimborso e accesso condizionato.",
+        "date": "2023",
+        "impact": "Rimborsabilità ottenuta con un accordo di accesso condizionato favorevole."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Tennis",
+      "Lettura economica",
+      "Viaggi"
+    ],
+    "references": [
+      {
+        "name": "Dott.ssa Elena Fumagalli",
+        "position": "Market Access Director",
+        "company": "AstraZeneca Italia",
+        "contact": {
+          "phone": "+39 335 900 9912",
+          "email": "elena.fumagalli@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 70000,
+      "max": 92000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Medical & Commercial",
+      "secondaryClusters": [
+        "Market Access",
+        "Health Economics"
+      ],
+      "functionalExpertise": [
+        "Pricing and reimbursement",
+        "Value dossiers",
+        "Payer negotiation"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Secured product reimbursement",
+        "Negotiated managed-entry agreements"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals"
+      ],
+      "environmentFit": [
+        "Commercial organization",
+        "Institutional stakeholder engagement"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Fourteen years in market access with proven reimbursement wins and payer negotiation leadership across AIFA and regional bodies."
+    },
+    "searchIndex": {
+      "roles": [
+        "Market Access Manager",
+        "Pricing and Reimbursement Manager"
+      ],
+      "skills": [
+        "Pricing and reimbursement",
+        "Value dossiers",
+        "Budget impact modelling",
+        "HEOR",
+        "Payer negotiation"
+      ],
+      "industries": [
+        "Pharmaceuticals"
+      ]
+    },
+    "tags": [
+      "market-access",
+      "HEOR",
+      "pricing",
+      "reimbursement",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Direttore Medical Affairs con oltre diciotto anni di esperienza nel settore farmaceutico in aree terapeutiche complesse. Guida la strategia medica, i team di MSL e i piani di evidenza a supporto del ciclo di vita del prodotto. Riferimento nel dialogo con la comunità scientifica e le istituzioni.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Cristina Barbieri",
+      "role": "Medical Affairs Director",
+      "summary": "Direttore Medical Affairs con leadership strategica su team medici e piani di evidenza.",
+      "contact": {
+        "email": "cristina.barbieri@example.com",
+        "address": {
+          "streetNumber": "33",
+          "streetName": "Monte Napoleone",
+          "streetType": "Via",
+          "city": "Milano",
+          "state": "Lombardia",
+          "zipCode": "20121",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/cristina-barbieri-md"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-03-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Giovedì pomeriggio"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Strategia medica",
+        "skills": [
+          "Strategia di medical affairs",
+          "Piani di evidenza",
+          "Ciclo di vita del prodotto",
+          "Integrated evidence generation"
+        ]
+      },
+      {
+        "category": "Leadership",
+        "skills": [
+          "Guida di team medici",
+          "Gestione dei MSL",
+          "Sviluppo dei talenti",
+          "Gestione del budget"
+        ]
+      },
+      {
+        "category": "Relazioni scientifiche",
+        "skills": [
+          "Engagement dei KOL",
+          "Advisory board",
+          "Rapporti istituzionali"
+        ]
+      },
+      {
+        "category": "Governance",
+        "skills": [
+          "Compliance medica",
+          "Revisione promozionale",
+          "Governance degli studi"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Direzione di medical affairs",
+        "Strategia di evidenza",
+        "Leadership di team medici"
+      ],
+      "keyResponsibilities": [
+        "Definire la strategia medica dell'area terapeutica",
+        "Guidare i team di medical affairs e MSL",
+        "Presidiare il dialogo con la comunità scientifica e le istituzioni"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Merck (MSD Italia)",
+        "website": "https://www.msd-italia.it",
+        "location": "Roma, Italia",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Medical Affairs Director",
+        "activities": [
+          {
+            "project": "Direzione medica di area terapeutica",
+            "tasks": [
+              "Definire la strategia medica e i piani di evidenza",
+              "Guidare un team di medical manager e MSL",
+              "Presidiare la governance medica e la compliance"
+            ]
+          }
+        ],
+        "achievements": [
+          "Costruito un team di medical affairs di 15 persone",
+          "Guidato il piano di evidenza a supporto di due lanci di successo"
+        ],
+        "toolsAndTechnologies": [
+          "Veeva CRM",
+          "Piattaforme di evidence generation",
+          "MedDRA"
+        ]
+      },
+      {
+        "company": "Eli Lilly Italia",
+        "website": "https://www.lilly.com",
+        "location": "Firenze, Italia",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Medical Affairs Manager",
+        "activities": [
+          {
+            "project": "Gestione medica di prodotto",
+            "tasks": [
+              "Coordinare i piani medici di prodotto",
+              "Gestire il team di MSL di area"
+            ]
+          }
+        ],
+        "achievements": [
+          "Guidato il piano medico di un prodotto oncologico dal lancio"
+        ],
+        "toolsAndTechnologies": [
+          "CRM",
+          "Piattaforme mediche"
+        ]
+      },
+      {
+        "company": "Bristol Myers Squibb",
+        "website": "https://www.bms.com",
+        "location": "Roma, Italia",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Medical Advisor",
+        "activities": [
+          {
+            "project": "Supporto medico-scientifico",
+            "tasks": [
+              "Fornire supporto scientifico all'area terapeutica",
+              "Contribuire alla revisione dei materiali promozionali"
+            ]
+          }
+        ],
+        "achievements": [
+          "Riconosciuta per l'eccellenza nel supporto scientifico"
+        ],
+        "toolsAndTechnologies": [
+          "Piattaforme di literature review",
+          "CRM"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università Cattolica del Sacro Cuore",
+        "degree": "Laurea in Medicina e Chirurgia",
+        "fieldOfStudy": "Medicina",
+        "achievements": [
+          "Votazione 110/110 e lode"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "SDA Bocconi",
+        "degree": "Executive Master in Pharmaceutical Management",
+        "fieldOfStudy": "Management Farmaceutico",
+        "achievements": [
+          "Percorso executive con distinzione"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Iscrizione Ordine dei Medici",
+        "institution": "FNOMCeO",
+        "year": "@Y-4@",
+        "description": "Iscrizione attiva all'Ordine dei Medici Chirurghi in regola."
+      },
+      {
+        "title": "Pharmaceutical Medicine",
+        "institution": "Faculty of Pharmaceutical Medicine",
+        "year": "@Y-4@",
+        "description": "Formazione avanzata in medicina farmaceutica."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Medical strategy",
+        "Evidence generation",
+        "KOL engagement",
+        "Medical governance",
+        "Team leadership"
+      ],
+      "softSkills": [
+        "Leadership strategica",
+        "Visione",
+        "Negoziazione",
+        "Sviluppo dei talenti"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Francese",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Piano di evidenza integrato per due lanci",
+        "description": "Guidata la strategia di generazione di evidenza a supporto del lancio di due prodotti.",
+        "date": "2022",
+        "impact": "Lanci di successo con adozione clinica superiore alle attese."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Opera lirica",
+      "Sci",
+      "Lettura"
+    ],
+    "references": [
+      {
+        "name": "Dott. Giovanni Ricci",
+        "position": "Country Medical Lead",
+        "company": "Merck (MSD Italia)",
+        "contact": {
+          "phone": "+39 335 900 1145",
+          "email": "giovanni.ricci@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 110000,
+      "max": 150000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Medical & Commercial",
+      "secondaryClusters": [
+        "Medical Affairs",
+        "Medical Leadership"
+      ],
+      "functionalExpertise": [
+        "Medical strategy",
+        "Evidence generation",
+        "Medical team leadership"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Supported successful launches",
+        "Built medical affairs teams"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals"
+      ],
+      "environmentFit": [
+        "Country medical organization",
+        "Executive leadership"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.93,
+      "clusterReasoning": "Physician with eighteen years in pharma medical affairs progressing to director, leading medical strategy and teams supporting successful launches."
+    },
+    "searchIndex": {
+      "roles": [
+        "Medical Affairs Director",
+        "Medical Director"
+      ],
+      "skills": [
+        "Medical strategy",
+        "Evidence generation",
+        "KOL engagement",
+        "Medical governance",
+        "Team leadership"
+      ],
+      "industries": [
+        "Pharmaceuticals"
+      ]
+    },
+    "tags": [
+      "medical-affairs",
+      "director",
+      "MD",
+      "medical-strategy",
+      "leadership"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Specialista di Health Economics and Outcomes Research con undici anni di esperienza nella costruzione di modelli economici e di evidenza di valore. Esperto in modelli di costo-efficacia, budget impact e analisi di dati real-world a supporto dell'accesso. Traduce l'evidenza economica in argomenti per i pagatori.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Stefano Gallo",
+      "role": "HEOR Specialist",
+      "summary": "Specialista HEOR esperto in modelli economici e analisi real-world.",
+      "contact": {
+        "phone": "+39 347 771 2245",
+        "email": "stefano.gallo@example.com",
+        "address": {
+          "streetNumber": "19",
+          "streetName": "San Vitale",
+          "streetType": "Via",
+          "city": "Bologna",
+          "state": "Emilia-Romagna",
+          "zipCode": "40125",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/stefano-gallo-heor"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Giorni feriali"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Economia sanitaria",
+        "skills": [
+          "Modelli di costo-efficacia",
+          "Budget impact",
+          "Analisi costo-utilità",
+          "Value proposition"
+        ]
+      },
+      {
+        "category": "Evidenza real-world",
+        "skills": [
+          "Real-world evidence",
+          "Analisi di database sanitari",
+          "Studi osservazionali"
+        ]
+      },
+      {
+        "category": "Analisi dati",
+        "skills": [
+          "Statistica",
+          "R",
+          "Modellazione economica",
+          "Excel avanzato"
+        ]
+      },
+      {
+        "category": "Comunicazione",
+        "skills": [
+          "Value dossier",
+          "Pubblicazioni HEOR",
+          "Presentazioni ai pagatori"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Modellazione economica",
+        "Real-world evidence",
+        "Evidenza di valore"
+      ],
+      "keyResponsibilities": [
+        "Sviluppare modelli di costo-efficacia e budget impact",
+        "Analizzare dati real-world a supporto dell'accesso",
+        "Comunicare l'evidenza economica ai pagatori e agli stakeholder"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "IQVIA",
+        "website": "https://www.iqvia.com",
+        "location": "Milano, Italia",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "HEOR Specialist",
+        "activities": [
+          {
+            "project": "Modellazione economica per l'accesso",
+            "tasks": [
+              "Sviluppare modelli di costo-efficacia e budget impact",
+              "Condurre analisi su dati real-world",
+              "Redigere value dossier e pubblicazioni HEOR"
+            ]
+          }
+        ],
+        "achievements": [
+          "Sviluppato modelli a supporto di cinque sottomissioni di rimborso",
+          "Pubblicato quattro lavori HEOR peer-reviewed"
+        ],
+        "toolsAndTechnologies": [
+          "R",
+          "Excel avanzato",
+          "Database amministrativi sanitari"
+        ]
+      },
+      {
+        "company": "CINECA",
+        "website": "https://www.cineca.it",
+        "location": "Bologna, Italia",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Health Economics Analyst",
+        "activities": [
+          {
+            "project": "Analisi di dati sanitari",
+            "tasks": [
+              "Analizzare database amministrativi regionali",
+              "Sviluppare modelli statistici di consumo sanitario"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribuito a un report regionale sull'appropriatezza prescrittiva"
+        ],
+        "toolsAndTechnologies": [
+          "R",
+          "SQL",
+          "Statistica sanitaria"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Bologna",
+        "degree": "Laurea Magistrale in Statistica Sanitaria",
+        "fieldOfStudy": "Economia e Statistica Sanitaria",
+        "achievements": [
+          "Votazione 110/110"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "HEOR Methods",
+        "institution": "ISPOR",
+        "year": "@Y-4@",
+        "description": "Formazione certificata sui metodi di health economics e outcomes research."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Cost-effectiveness modelling",
+        "Budget impact",
+        "Real-world evidence",
+        "R",
+        "Statistical analysis"
+      ],
+      "softSkills": [
+        "Pensiero analitico",
+        "Rigore",
+        "Comunicazione dell'evidenza",
+        "Collaborazione"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Modello di costo-efficacia per l'accesso",
+        "description": "Sviluppato un modello a supporto della sottomissione di rimborso di un farmaco.",
+        "date": "2023",
+        "impact": "Evidenza economica integrata in una sottomissione con esito favorevole."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Scacchi",
+      "Corsa",
+      "Lettura scientifica"
+    ],
+    "references": [
+      {
+        "name": "Dott.ssa Anna Costa",
+        "position": "HEOR Lead",
+        "company": "IQVIA",
+        "contact": {
+          "phone": "+39 347 900 3312",
+          "email": "anna.costa@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 62000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Medical & Commercial",
+      "secondaryClusters": [
+        "Health Economics",
+        "Real-World Evidence"
+      ],
+      "functionalExpertise": [
+        "Economic modelling",
+        "Real-world evidence",
+        "Value communication"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Supported reimbursement submissions",
+        "Published HEOR evidence"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "CRO"
+      ],
+      "environmentFit": [
+        "HEOR team",
+        "Evidence-generation projects"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Eleven years in health economics with cost-effectiveness modelling, real-world analysis and reimbursement-supporting publications."
+    },
+    "searchIndex": {
+      "roles": [
+        "HEOR Specialist",
+        "Health Economics Analyst"
+      ],
+      "skills": [
+        "Cost-effectiveness modelling",
+        "Budget impact",
+        "Real-world evidence",
+        "Health economics",
+        "Statistical analysis"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "CRO"
+      ]
+    },
+    "tags": [
+      "HEOR",
+      "health-economics",
+      "real-world-evidence",
+      "value",
+      "access"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Infermiere professionale con oltre dieci anni di esperienza in area medica e chirurgica presso strutture ospedaliere pubbliche. Competente nella valutazione del paziente, nella gestione della terapia e nel coordinamento del turno. Riconosciuto per la calma nelle situazioni ad alta intensità e per l'impegno nella pratica basata sulle evidenze.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Giulia Ferraro",
+      "role": "Infermiere Coordinatore di Reparto",
+      "summary": "Infermiere iscritto all'Albo OPI specializzato in area medica acuta e sicurezza del paziente.",
+      "contact": {
+        "phone": "+39 340 227 8899",
+        "email": "giulia.ferraro@example.com",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "Mazzini",
+          "streetType": "Via",
+          "city": "Milano",
+          "state": "Lombardia",
+          "zipCode": "20123",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/giulia-ferraro-rn"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Sere feriali",
+          "Sabato mattina"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Assistenza clinica",
+        "skills": [
+          "Area medica acuta",
+          "Valutazione del paziente",
+          "Gestione della terapia",
+          "Cura delle ferite",
+          "Incannulamento venoso periferico"
+        ]
+      },
+      {
+        "category": "Sicurezza del paziente",
+        "skills": [
+          "Escalation NEWS2",
+          "Prevenzione delle infezioni",
+          "Prevenzione delle cadute",
+          "Tutela della persona"
+        ]
+      },
+      {
+        "category": "Coordinamento",
+        "skills": [
+          "Gestione del turno",
+          "Tutoraggio",
+          "Formazione degli studenti"
+        ]
+      },
+      {
+        "category": "Sistemi",
+        "skills": [
+          "Cartella clinica elettronica",
+          "Terapia digitale"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Assistenza infermieristica in area medica",
+        "Gestione del paziente critico",
+        "Tutoraggio clinico"
+      ],
+      "keyResponsibilities": [
+        "Erogare assistenza infermieristica globale ai pazienti acuti",
+        "Coordinare il carico di lavoro del turno e la gestione dei posti letto",
+        "Supervisionare e formare studenti e operatori sociosanitari"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Ospedale Niguarda",
+        "website": "https://www.ospedaleniguarda.it",
+        "location": "Milano, Italia",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Infermiere Coordinatore di Reparto",
+        "activities": [
+          {
+            "project": "Assistenza in Unità di Medicina Interna",
+            "tasks": [
+              "Valutare e assegnare priorità ai pazienti neo-ricoverati",
+              "Guidare le consegne infermieristiche e i briefing di sicurezza",
+              "Attivare l'escalation del paziente critico secondo NEWS2"
+            ]
+          }
+        ],
+        "achievements": [
+          "Ridotto del 22% gli errori di terapia grazie a un protocollo di doppio controllo",
+          "Formato 14 neo-infermieri fino al raggiungimento della piena autonomia"
+        ],
+        "toolsAndTechnologies": [
+          "Epic EPR",
+          "NEWS2",
+          "eMAR"
+        ]
+      },
+      {
+        "company": "ASST Grande Ospedale Metropolitano",
+        "website": "https://www.asst-pini-cto.it",
+        "location": "Milano, Italia",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Infermiere di Reparto",
+        "activities": [
+          {
+            "project": "Assistenza in chirurgia generale",
+            "tasks": [
+              "Erogare assistenza post-operatoria e gestione del dolore",
+              "Gestire drenaggi chirurgici e medicazioni"
+            ]
+          }
+        ],
+        "achievements": [
+          "Segnalato per l'eccellenza assistenziale dal coordinamento di dipartimento"
+        ],
+        "toolsAndTechnologies": [
+          "Cartella clinica elettronica",
+          "Pompe PCA"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università degli Studi di Milano",
+        "degree": "Laurea in Infermieristica",
+        "fieldOfStudy": "Infermieristica",
+        "achievements": [
+          "Votazione 108/110",
+          "Encomio per il tirocinio clinico"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Advanced Life Support (ALS)",
+        "institution": "Italian Resuscitation Council",
+        "year": "@Y-4@",
+        "description": "Provider certificato per la rianimazione avanzata dell'adulto."
+      },
+      {
+        "title": "Iscrizione OPI",
+        "institution": "Ordine delle Professioni Infermieristiche",
+        "year": "@Y-4@",
+        "description": "Iscrizione attiva all'Albo in regola."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Prelievo venoso",
+        "Registrazione ECG",
+        "Cateterismo vescicale",
+        "Emotrasfusione"
+      ],
+      "softSkills": [
+        "Empatia",
+        "Resilienza",
+        "Leadership di squadra",
+        "Comunicazione"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Adozione del percorso Sepsi Sei",
+        "description": "Co-guidato l'adozione in reparto del bundle Sepsi Sei.",
+        "date": "2022",
+        "impact": "Migliorata la somministrazione tempestiva di antibiotici al 94% entro un'ora."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Nuoto in acque libere",
+      "Canto corale",
+      "Panificazione"
+    ],
+    "references": [
+      {
+        "name": "Dott.ssa Elena Marchetti",
+        "position": "Dirigente Medico",
+        "company": "Ospedale Niguarda",
+        "contact": {
+          "phone": "+39 340 900 3321",
+          "email": "elena.marchetti@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 32000,
+      "max": 40000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Clinical Nursing",
+      "secondaryClusters": [
+        "Acute Care",
+        "Patient Safety"
+      ],
+      "functionalExpertise": [
+        "Acute medical nursing",
+        "Clinical escalation",
+        "Mentorship"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Improved patient safety outcomes",
+        "Reduced medication errors"
+      ],
+      "industryDomains": [
+        "Hospitals & clinics"
+      ],
+      "environmentFit": [
+        "High-acuity ward",
+        "Shift-based teams"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Consistent acute nursing history with progression to ward coordinator and demonstrated mentorship and safety leadership."
+    },
+    "searchIndex": {
+      "roles": [
+        "Registered Nurse",
+        "Ward Coordinator",
+        "Acute Care Nurse"
+      ],
+      "skills": [
+        "Patient assessment",
+        "Medication administration",
+        "IV cannulation",
+        "NEWS2 escalation",
+        "Wound care"
+      ],
+      "industries": [
+        "Hospitals & clinics",
+        "Public health"
+      ]
+    },
+    "tags": [
+      "nursing",
+      "acute-care",
+      "OPI",
+      "patient-safety",
+      "hospital"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Medico cardiologo con oltre quindici anni di esperienza clinica e gestionale in cardiologia interventistica. Guida un'unità operativa complessa coordinando percorsi diagnostico-terapeutici, ricerca clinica e formazione degli specializzandi. Riferimento riconosciuto per la gestione della sindrome coronarica acuta.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Alessandro Rinaldi",
+      "role": "Direttore U.O.C. di Cardiologia",
+      "summary": "Cardiologo interventista e direttore di unità operativa specializzato in emodinamica.",
+      "contact": {
+        "phone": "+39 335 448 1290",
+        "email": "alessandro.rinaldi.personal@example.com",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Garibaldi",
+          "streetType": "Corso",
+          "city": "Bologna",
+          "state": "Emilia-Romagna",
+          "zipCode": "40121",
+          "country": "Italia"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/alessandro-rinaldi-md"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Venerdì pomeriggio"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Cardiologia clinica",
+        "skills": [
+          "Sindrome coronarica acuta",
+          "Scompenso cardiaco",
+          "Ecocardiografia",
+          "Gestione del paziente critico"
+        ]
+      },
+      {
+        "category": "Cardiologia interventistica",
+        "skills": [
+          "Angioplastica coronarica",
+          "Cateterismo cardiaco",
+          "Emodinamica"
+        ]
+      },
+      {
+        "category": "Direzione",
+        "skills": [
+          "Gestione dell'unità operativa",
+          "Budget di dipartimento",
+          "Governo clinico",
+          "Formazione specializzandi"
+        ]
+      },
+      {
+        "category": "Ricerca",
+        "skills": [
+          "Trial clinici",
+          "Registri di patologia",
+          "Pubblicazioni scientifiche"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Cardiologia interventistica",
+        "Gestione della sindrome coronarica acuta",
+        "Direzione di unità operativa"
+      ],
+      "keyResponsibilities": [
+        "Dirigere l'attività clinica e organizzativa dell'unità operativa",
+        "Coordinare il percorso del paziente cardiologico acuto",
+        "Supervisionare la formazione degli specializzandi e la ricerca clinica"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "IRCCS Azienda Ospedaliero-Universitaria di Bologna",
+        "website": "https://www.aosp.bo.it",
+        "location": "Bologna, Italia",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Direttore U.O.C. di Cardiologia",
+        "activities": [
+          {
+            "project": "Riorganizzazione dell'emodinamica",
+            "tasks": [
+              "Definire i percorsi diagnostico-terapeutici per la sindrome coronarica acuta",
+              "Gestire budget, personale e obiettivi di dipartimento",
+              "Coordinare il programma di ricerca clinica"
+            ]
+          }
+        ],
+        "achievements": [
+          "Ridotto il door-to-balloon time medio a 58 minuti",
+          "Avviato un registro regionale sull'infarto miocardico"
+        ],
+        "toolsAndTechnologies": [
+          "Cartella clinica elettronica",
+          "Sistemi di emodinamica",
+          "Ecocardiografia"
+        ]
+      },
+      {
+        "company": "Azienda Ospedaliera di Padova",
+        "website": "https://www.aopd.veneto.it",
+        "location": "Padova, Italia",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Dirigente Medico Cardiologo",
+        "activities": [
+          {
+            "project": "Attività di emodinamica",
+            "tasks": [
+              "Eseguire procedure di angioplastica coronarica",
+              "Gestire i pazienti in terapia intensiva cardiologica"
+            ]
+          }
+        ],
+        "achievements": [
+          "Oltre 900 procedure interventistiche eseguite",
+          "Tutor clinico di 12 specializzandi"
+        ],
+        "toolsAndTechnologies": [
+          "Angiografia",
+          "IVUS",
+          "FFR"
+        ]
+      },
+      {
+        "company": "Ospedale San Raffaele",
+        "website": "https://www.hsr.it",
+        "location": "Milano, Italia",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Medico Specializzando in Cardiologia",
+        "activities": [
+          {
+            "project": "Formazione specialistica",
+            "tasks": [
+              "Gestire pazienti in reparto e in day hospital cardiologico",
+              "Partecipare all'attività di emodinamica"
+            ]
+          }
+        ],
+        "achievements": [
+          "Vincitore di una borsa di ricerca sullo scompenso cardiaco"
+        ],
+        "toolsAndTechnologies": [
+          "Ecocardiografia",
+          "Holter"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Università Vita-Salute San Raffaele",
+        "degree": "Specializzazione in Malattie dell'Apparato Cardiovascolare",
+        "fieldOfStudy": "Cardiologia",
+        "achievements": [
+          "Specializzazione con lode"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Università di Bologna",
+        "degree": "Laurea in Medicina e Chirurgia",
+        "fieldOfStudy": "Medicina",
+        "achievements": [
+          "Votazione 110/110 e lode"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Iscrizione Ordine dei Medici",
+        "institution": "FNOMCeO",
+        "year": "@Y-4@",
+        "description": "Iscrizione attiva all'Ordine dei Medici Chirurghi in regola."
+      },
+      {
+        "title": "Advanced Cardiac Life Support (ACLS)",
+        "institution": "American Heart Association",
+        "year": "@Y-4@",
+        "description": "Provider certificato per il supporto vitale cardiovascolare avanzato."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Angioplastica coronarica",
+        "Ecocardiografia",
+        "Cateterismo cardiaco",
+        "Interpretazione ECG"
+      ],
+      "softSkills": [
+        "Leadership clinica",
+        "Decisione sotto pressione",
+        "Comunicazione",
+        "Mentoring"
+      ],
+      "languages": [
+        {
+          "language": "Italiano",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Inglese",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Registro regionale dell'infarto miocardico",
+        "description": "Ideato e coordinato un registro multicentrico sulla gestione della sindrome coronarica acuta.",
+        "date": "2021",
+        "impact": "Adottato da sei centri regionali con oltre 3.000 pazienti arruolati."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Ciclismo su strada",
+      "Vela",
+      "Storia della medicina"
+    ],
+    "references": [
+      {
+        "name": "Prof. Marco Bianchi",
+        "position": "Direttore di Dipartimento Cardio-Toraco-Vascolare",
+        "company": "IRCCS Azienda Ospedaliero-Universitaria di Bologna",
+        "contact": {
+          "phone": "+39 335 900 7742",
+          "email": "marco.bianchi@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 95000,
+      "max": 130000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Clinical Medicine",
+      "secondaryClusters": [
+        "Interventional Cardiology",
+        "Clinical Leadership"
+      ],
+      "functionalExpertise": [
+        "Interventional cardiology",
+        "Acute coronary care",
+        "Department management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Improved acute care outcomes",
+        "Reduced door-to-balloon time"
+      ],
+      "industryDomains": [
+        "Hospitals & clinics",
+        "Public health"
+      ],
+      "environmentFit": [
+        "Tertiary hospital",
+        "Academic medical center"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.94,
+      "clusterReasoning": "Long clinical trajectory culminating in unit directorship with measurable acute-care outcome improvements and research leadership."
+    },
+    "searchIndex": {
+      "roles": [
+        "Cardiologist",
+        "Head of Cardiology",
+        "Interventional Cardiologist"
+      ],
+      "skills": [
+        "Coronary angioplasty",
+        "Echocardiography",
+        "Cardiac catheterization",
+        "Acute coronary syndrome",
+        "Clinical governance"
+      ],
+      "industries": [
+        "Hospitals & clinics",
+        "Public health"
+      ]
+    },
+    "tags": [
+      "cardiology",
+      "physician",
+      "MD",
+      "interventional",
+      "clinical-leadership"
+    ]
+  }
+]

@@ -1,0 +1,6777 @@
+[
+  {
+    "candidateProfileSummary": "Erfahrener Backend-Entwickler mit über zehn Jahren Praxis im Aufbau skalierbarer Microservices auf der JVM. Spezialisiert auf ereignisgesteuerte Architekturen, verteilte Systeme und die Modernisierung monolithischer Plattformen. Kombiniert tiefes technisches Wissen mit einem starken Fokus auf Zuverlässigkeit und saubere Domänenmodellierung.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Lukas Brenner",
+      "role": "Senior Backend-Entwickler",
+      "summary": "Backend-Spezialist für Java- und Kotlin-Microservices mit Schwerpunkt auf hoher Verfügbarkeit und Event Streaming.",
+      "contact": {
+        "phone": "+49 89 4521 8834",
+        "email": "lukas.brenner@example.de",
+        "address": {
+          "streetNumber": "17",
+          "streetName": "Lindwurm",
+          "streetType": "Straße",
+          "city": "München",
+          "state": "Bayern",
+          "zipCode": "80337",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/lukas-brenner",
+          "github": "https://github.com/lbrenner",
+          "website": "https://lukasbrenner.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends",
+          "Freitagnachmittag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Programmiersprachen",
+        "skills": [
+          "Java",
+          "Kotlin",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Frameworks",
+        "skills": [
+          "Spring Boot",
+          "Micronaut",
+          "Hibernate"
+        ]
+      },
+      {
+        "category": "Nachrichten & Streaming",
+        "skills": [
+          "Apache Kafka",
+          "RabbitMQ"
+        ]
+      },
+      {
+        "category": "Datenbanken",
+        "skills": [
+          "PostgreSQL",
+          "Redis",
+          "MongoDB"
+        ]
+      },
+      {
+        "category": "Betrieb",
+        "skills": [
+          "Docker",
+          "Kubernetes",
+          "Grafana"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Microservice-Architektur",
+        "Event Streaming",
+        "Domain-Driven Design",
+        "API-Design"
+      ],
+      "keyResponsibilities": [
+        "Entwurf und Betrieb geschäftskritischer Backend-Dienste",
+        "Technische Leitung bei der Zerlegung von Monolithen",
+        "Mentoring von Junior-Entwicklern",
+        "Sicherstellung von SLAs und Observability"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Celonis",
+        "website": "https://www.celonis.com",
+        "location": "München, Deutschland",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Senior Backend-Entwickler",
+        "activities": [
+          {
+            "project": "Process-Mining-Plattform",
+            "tasks": [
+              "Neugestaltung des Ingestion-Layers für Milliarden von Events",
+              "Einführung von Kafka-basierter Entkopplung zwischen Diensten",
+              "Optimierung von PostgreSQL-Abfragen für große Datenmengen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduzierung der Ingestion-Latenz um 40 Prozent",
+          "Aufbau einer wiederverwendbaren Event-Sourcing-Bibliothek für vier Teams"
+        ],
+        "toolsAndTechnologies": [
+          "Java",
+          "Kotlin",
+          "Spring Boot",
+          "Apache Kafka",
+          "PostgreSQL",
+          "Kubernetes"
+        ]
+      },
+      {
+        "company": "Check24",
+        "website": "https://www.check24.de",
+        "location": "München, Deutschland",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Backend-Entwickler",
+        "activities": [
+          {
+            "project": "Vergleichsportal Versicherungen",
+            "tasks": [
+              "Entwicklung von REST-Services für Tarifberechnungen",
+              "Integration externer Versicherer-APIs",
+              "Aufbau von Caching-Strategien mit Redis"
+            ]
+          }
+        ],
+        "achievements": [
+          "Senkung der Antwortzeiten um 30 Prozent durch Redis-Caching"
+        ],
+        "toolsAndTechnologies": [
+          "Java",
+          "Spring Boot",
+          "Redis",
+          "MySQL"
+        ]
+      },
+      {
+        "company": "msg systems",
+        "website": "https://www.msg.group",
+        "location": "Ismaning, Deutschland",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Junior-Softwareentwickler",
+        "activities": [
+          {
+            "project": "Versicherungs-Backoffice",
+            "tasks": [
+              "Wartung von Java-EE-Anwendungen",
+              "Fehleranalyse und Bugfixing",
+              "Erstellung automatisierter Tests"
+            ]
+          }
+        ],
+        "achievements": [
+          "Erhöhung der Testabdeckung von 45 auf 80 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "Java",
+          "JUnit",
+          "Oracle DB"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Technische Universität München",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": [
+          "Abschluss mit Auszeichnung",
+          "Schwerpunkt verteilte Systeme"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Technische Universität München",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Confluent Certified Developer for Apache Kafka",
+        "institution": "Confluent",
+        "year": "@Y-0@",
+        "description": "Zertifizierung für die Entwicklung von Kafka-basierten Streaming-Anwendungen."
+      },
+      {
+        "title": "Oracle Certified Professional, Java SE",
+        "institution": "Oracle",
+        "year": "@Y-1@",
+        "description": "Professionelle Zertifizierung für die Java-Standardausgabe."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Java",
+        "Kotlin",
+        "Spring Boot",
+        "Apache Kafka",
+        "PostgreSQL",
+        "Kubernetes",
+        "Docker"
+      ],
+      "softSkills": [
+        "Analytisches Denken",
+        "Kommunikationsstärke",
+        "Verantwortungsbewusstsein",
+        "Teamführung"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Event-Sourcing-Bibliothek",
+        "description": "Interne Open-Source-Bibliothek zur Vereinheitlichung von Event Sourcing über mehrere Teams.",
+        "date": "2022",
+        "impact": "Von vier Produktteams übernommen und reduzierte Boilerplate-Code erheblich."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Klettern",
+      "Kaffeerösten",
+      "Open-Source-Beiträge"
+    ],
+    "references": [
+      {
+        "name": "Sandra Vogel",
+        "position": "Engineering Manager",
+        "company": "Celonis",
+        "contact": {
+          "phone": "+49 89 4521 0011",
+          "email": "sandra.vogel@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 85000,
+      "max": 100000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Backend Engineering",
+      "secondaryClusters": [
+        "Distributed Systems",
+        "Event-Driven Architecture"
+      ],
+      "functionalExpertise": [
+        "Microservice-Design",
+        "Event Streaming",
+        "API-Entwicklung"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Latenzreduktion um 40 Prozent",
+        "Wiederverwendbare Plattform-Bibliotheken"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "Process Mining",
+        "InsurTech"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Enterprise SaaS"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Langjährige, durchgängige Backend-Erfahrung mit klarem Fokus auf verteilte Systeme und Event Streaming."
+    },
+    "searchIndex": {
+      "roles": [
+        "Backend Engineer",
+        "Senior Software Engineer",
+        "Distributed Systems Engineer"
+      ],
+      "skills": [
+        "Java",
+        "Kotlin",
+        "Spring Boot",
+        "Apache Kafka",
+        "PostgreSQL",
+        "Kubernetes",
+        "Docker",
+        "Redis",
+        "Domain-Driven Design"
+      ],
+      "industries": [
+        "SaaS",
+        "Process Mining",
+        "Insurance Technology"
+      ]
+    },
+    "tags": [
+      "backend",
+      "java",
+      "kotlin",
+      "kafka",
+      "microservices",
+      "munich"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Frontend-Entwicklerin mit rund sechs Jahren Erfahrung in der Entwicklung moderner, barrierefreier Web-Anwendungen. Fühlt sich im React-Ökosystem zuhause und legt besonderen Wert auf Performance, Design-Systeme und eine hervorragende Nutzererfahrung. Arbeitet gern eng mit Design- und Produktteams zusammen.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Nora Kellermann",
+      "role": "Frontend-Entwicklerin",
+      "summary": "React- und TypeScript-Entwicklerin mit Fokus auf Design-Systeme und Barrierefreiheit.",
+      "contact": {
+        "phone": "+49 30 5567 2210",
+        "email": "nora.kellermann@example.de",
+        "address": {
+          "streetNumber": "42",
+          "streetName": "Kastanienallee",
+          "streetType": "Allee",
+          "unit": "3. OG",
+          "city": "Berlin",
+          "state": "Berlin",
+          "zipCode": "10435",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/nora-kellermann",
+          "github": "https://github.com/norakell",
+          "website": "https://norakellermann.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Werktags vormittags"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Sprachen",
+        "skills": [
+          "TypeScript",
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "category": "Frameworks",
+        "skills": [
+          "React",
+          "Next.js",
+          "Vue.js"
+        ]
+      },
+      {
+        "category": "Styling",
+        "skills": [
+          "Tailwind CSS",
+          "Styled Components",
+          "Sass"
+        ]
+      },
+      {
+        "category": "Tooling & Test",
+        "skills": [
+          "Vite",
+          "Jest",
+          "Playwright",
+          "Storybook"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Komponentenbasierte UI-Entwicklung",
+        "Design-Systeme",
+        "Web-Barrierefreiheit",
+        "Frontend-Performance"
+      ],
+      "keyResponsibilities": [
+        "Umsetzung von UI-Komponenten nach Design-Vorgaben",
+        "Pflege des internen Design-Systems",
+        "Optimierung der Ladezeiten",
+        "Sicherstellung der WCAG-Konformität"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Zalando",
+        "website": "https://www.zalando.de",
+        "location": "Berlin, Deutschland",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Frontend-Entwicklerin",
+        "activities": [
+          {
+            "project": "Kunden-Storefront",
+            "tasks": [
+              "Entwicklung wiederverwendbarer React-Komponenten",
+              "Verbesserung der Core Web Vitals",
+              "Einführung von Playwright-End-to-End-Tests"
+            ]
+          }
+        ],
+        "achievements": [
+          "Verbesserung des Largest Contentful Paint um 25 Prozent",
+          "Aufbau von 30 barrierefreien Komponenten im Design-System"
+        ],
+        "toolsAndTechnologies": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Tailwind CSS",
+          "Playwright"
+        ]
+      },
+      {
+        "company": "Delivery Hero",
+        "website": "https://www.deliveryhero.com",
+        "location": "Berlin, Deutschland",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Junior-Frontend-Entwicklerin",
+        "activities": [
+          {
+            "project": "Partner-Dashboard",
+            "tasks": [
+              "Umsetzung von Dashboard-Ansichten",
+              "Integration von REST-APIs",
+              "Erstellung von Storybook-Dokumentation"
+            ]
+          }
+        ],
+        "achievements": [
+          "Migration von Legacy-jQuery-Views nach React"
+        ],
+        "toolsAndTechnologies": [
+          "React",
+          "JavaScript",
+          "Sass",
+          "Storybook"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Hochschule für Technik und Wirtschaft Berlin",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Angewandte Informatik",
+        "achievements": [
+          "Abschlussprojekt zu barrierefreien Web-Interfaces"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Meta Front-End Developer",
+        "institution": "Meta",
+        "year": "@Y-0@",
+        "description": "Professionelles Zertifikat für moderne Frontend-Entwicklung mit React."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Vite",
+        "Playwright",
+        "Storybook"
+      ],
+      "softSkills": [
+        "Empathie",
+        "Detailgenauigkeit",
+        "Kollaboration",
+        "Neugier"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Barrierefreies Design-System",
+        "description": "Aufbau einer Komponentenbibliothek mit vollständiger WCAG-2.1-AA-Konformität.",
+        "date": "2023",
+        "impact": "Standardisierte UI über fünf Teams und verbesserte Zugänglichkeit spürbar."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Illustration",
+      "Radfahren",
+      "Typografie"
+    ],
+    "references": [
+      {
+        "name": "Ferdinand Hein",
+        "position": "Design Lead",
+        "company": "Zalando",
+        "contact": {
+          "phone": "+49 30 5567 0001",
+          "email": "ferdinand.hein@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 60000,
+      "max": 72000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Frontend Engineering",
+      "secondaryClusters": [
+        "Design Systems",
+        "Web Accessibility"
+      ],
+      "functionalExpertise": [
+        "UI-Entwicklung",
+        "Design-Systeme",
+        "Frontend-Performance"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Verbesserung der Core Web Vitals",
+        "Barrierefreie Komponentenbibliothek"
+      ],
+      "industryDomains": [
+        "E-Commerce",
+        "Food Delivery"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Enterprise SaaS"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.84,
+      "clusterReasoning": "Solide Frontend-Erfahrung mit klarem Schwerpunkt auf React, Design-Systemen und Barrierefreiheit."
+    },
+    "searchIndex": {
+      "roles": [
+        "Frontend Engineer",
+        "React Developer",
+        "UI Engineer"
+      ],
+      "skills": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Next.js",
+        "Tailwind CSS",
+        "CSS",
+        "Playwright",
+        "Web Accessibility",
+        "Design Systems"
+      ],
+      "industries": [
+        "E-Commerce",
+        "Food Delivery"
+      ]
+    },
+    "tags": [
+      "frontend",
+      "react",
+      "typescript",
+      "accessibility",
+      "berlin"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Vielseitiger Full-Stack-Entwickler mit über einem Jahrzehnt Erfahrung im Aufbau von End-to-End-Webprodukten. Bewegt sich sicher zwischen React-Frontends und Node- sowie Python-Backends und übernimmt Verantwortung von der Idee bis zum Betrieb. Bekannt für pragmatische Lösungen und schnelle Produktiterationen.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "David Rüegg",
+      "role": "Senior Full-Stack-Entwickler",
+      "summary": "Full-Stack-Entwickler für React, Node.js und Python mit End-to-End-Produktverantwortung.",
+      "contact": {
+        "phone": "+41 44 512 88 21",
+        "email": "david.rueegg@example.ch",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "Langstrasse",
+          "streetType": "Strasse",
+          "city": "Zürich",
+          "state": "Zürich",
+          "zipCode": "8004",
+          "country": "Schweiz"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/david-rueegg",
+          "github": "https://github.com/drueegg",
+          "website": "https://drueegg.ch"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends",
+          "Samstagvormittag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Frontend",
+        "skills": [
+          "React",
+          "TypeScript",
+          "Next.js"
+        ]
+      },
+      {
+        "category": "Backend",
+        "skills": [
+          "Node.js",
+          "Python",
+          "FastAPI",
+          "GraphQL"
+        ]
+      },
+      {
+        "category": "Datenbanken",
+        "skills": [
+          "PostgreSQL",
+          "MongoDB",
+          "Redis"
+        ]
+      },
+      {
+        "category": "Cloud & DevOps",
+        "skills": [
+          "AWS",
+          "Docker",
+          "Terraform"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Full-Stack-Produktentwicklung",
+        "API-Design",
+        "Cloud-Deployment",
+        "Prototyping"
+      ],
+      "keyResponsibilities": [
+        "Entwicklung kompletter Features vom Frontend bis zur Datenbank",
+        "Betrieb der Anwendungen in der Cloud",
+        "Technische Beratung von Produktentscheidungen",
+        "Code-Reviews und Qualitätssicherung"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Smallpdf",
+        "website": "https://smallpdf.com",
+        "location": "Zürich, Schweiz",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Senior Full-Stack-Entwickler",
+        "activities": [
+          {
+            "project": "Dokumenten-Workflow-Plattform",
+            "tasks": [
+              "Entwicklung neuer Konvertierungs-Features End-to-End",
+              "Aufbau einer GraphQL-API",
+              "Betrieb der Dienste auf AWS mit Terraform"
+            ]
+          }
+        ],
+        "achievements": [
+          "Auslieferung von drei umsatzrelevanten Features in einem Jahr",
+          "Reduzierung der Infrastrukturkosten um 20 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "Python",
+          "AWS",
+          "Terraform"
+        ]
+      },
+      {
+        "company": "Ricardo",
+        "website": "https://www.ricardo.ch",
+        "location": "Zürich, Schweiz",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Full-Stack-Entwickler",
+        "activities": [
+          {
+            "project": "Marktplatz-Frontend und -Services",
+            "tasks": [
+              "Entwicklung von React-Ansichten und Node-Backends",
+              "Integration von Zahlungsdienstleistern",
+              "Aufbau von Monitoring"
+            ]
+          }
+        ],
+        "achievements": [
+          "Einführung eines neuen Checkout-Flows mit höherer Conversion"
+        ],
+        "toolsAndTechnologies": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Docker"
+        ]
+      },
+      {
+        "company": "Liip",
+        "website": "https://www.liip.ch",
+        "location": "Zürich, Schweiz",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Softwareentwickler",
+        "activities": [
+          {
+            "project": "Agentur-Kundenprojekte",
+            "tasks": [
+              "Umsetzung von Web-Anwendungen für Kunden",
+              "Beratung zu technischen Lösungen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Erfolgreiche Auslieferung von über zehn Kundenprojekten"
+        ],
+        "toolsAndTechnologies": [
+          "PHP",
+          "JavaScript",
+          "PostgreSQL"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "ETH Zürich",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": [
+          "Schwerpunkt Software Engineering"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "ETH Zürich",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Certified Developer – Associate",
+        "institution": "Amazon Web Services",
+        "year": "@Y-0@",
+        "description": "Zertifizierung für die Entwicklung und Wartung von Anwendungen auf AWS."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Python",
+        "FastAPI",
+        "GraphQL",
+        "AWS",
+        "Terraform",
+        "PostgreSQL"
+      ],
+      "softSkills": [
+        "Pragmatismus",
+        "Eigeninitiative",
+        "Kundenorientierung",
+        "Problemlösung"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Französisch",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Konvertierungs-Pipeline",
+        "description": "Neuentwicklung der Dokumentkonvertierung als skalierbarer Cloud-Service.",
+        "date": "2021",
+        "impact": "Verarbeitet täglich über eine Million Dokumente bei stabiler Performance."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Bergwandern",
+      "Fotografie",
+      "Kochen"
+    ],
+    "references": [
+      {
+        "name": "Corinne Meier",
+        "position": "CTO",
+        "company": "Smallpdf",
+        "contact": {
+          "phone": "+41 44 512 00 09",
+          "email": "corinne.meier@example.ch"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "CHF",
+      "min": 120000,
+      "max": 140000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Full-Stack Engineering",
+      "secondaryClusters": [
+        "Cloud Engineering",
+        "Product Engineering"
+      ],
+      "functionalExpertise": [
+        "Full-Stack-Entwicklung",
+        "API-Design",
+        "Cloud-Deployment"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Umsatzrelevante Features",
+        "Kostensenkung in der Infrastruktur"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "E-Commerce",
+        "Marktplätze"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "SaaS"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Breite Full-Stack-Erfahrung über Frontend, Backend und Cloud mit klarer Produktverantwortung."
+    },
+    "searchIndex": {
+      "roles": [
+        "Full-Stack Engineer",
+        "Senior Software Engineer",
+        "Product Engineer"
+      ],
+      "skills": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Python",
+        "FastAPI",
+        "GraphQL",
+        "AWS",
+        "Terraform",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "industries": [
+        "SaaS",
+        "E-Commerce",
+        "Online Marketplace"
+      ]
+    },
+    "tags": [
+      "fullstack",
+      "react",
+      "node",
+      "python",
+      "aws",
+      "zurich"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Mobile-Engineering-Lead mit über zwölf Jahren Erfahrung in der nativen und plattformübergreifenden App-Entwicklung. Führt ein Team von Mobile-Entwicklern und verantwortet die technische Ausrichtung mehrerer Apps mit Millionen von Nutzern. Verbindet fundierte iOS- und Android-Kenntnisse mit einem Blick für Architektur und Entwicklererfahrung.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Elena Petrova",
+      "role": "Mobile Engineering Lead",
+      "summary": "Führt Mobile-Teams und verantwortet native iOS-/Android- sowie Flutter-Architekturen für Apps mit hoher Reichweite.",
+      "contact": {
+        "phone": "+43 1 5123 4487",
+        "email": "elena.petrova@example.at",
+        "address": {
+          "streetNumber": "23",
+          "streetName": "Mariahilfer",
+          "streetType": "Straße",
+          "city": "Wien",
+          "state": "Wien",
+          "zipCode": "1060",
+          "country": "Österreich"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/elena-petrova",
+          "github": "https://github.com/epetrova",
+          "website": "https://elenapetrova.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "iOS",
+        "skills": [
+          "Swift",
+          "SwiftUI",
+          "Combine"
+        ]
+      },
+      {
+        "category": "Android",
+        "skills": [
+          "Kotlin",
+          "Jetpack Compose",
+          "Coroutines"
+        ]
+      },
+      {
+        "category": "Cross-Platform",
+        "skills": [
+          "Flutter",
+          "Dart"
+        ]
+      },
+      {
+        "category": "Architektur & CI",
+        "skills": [
+          "Clean Architecture",
+          "Fastlane",
+          "GitHub Actions"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Native App-Entwicklung",
+        "Mobile-Architektur",
+        "Team-Führung",
+        "Release-Management"
+      ],
+      "keyResponsibilities": [
+        "Technische Führung des Mobile-Teams",
+        "Definition von Architektur-Standards",
+        "Verantwortung für App-Store-Releases",
+        "Coaching und fachliche Weiterentwicklung des Teams"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Bitpanda",
+        "website": "https://www.bitpanda.com",
+        "location": "Wien, Österreich",
+        "from": "@M-2@",
+        "to": "Present",
+        "position": "Mobile Engineering Lead",
+        "activities": [
+          {
+            "project": "Trading-App für Privatkunden",
+            "tasks": [
+              "Leitung des iOS- und Android-Teams",
+              "Einführung von Modularisierung und Clean Architecture",
+              "Aufbau automatisierter Release-Pipelines mit Fastlane"
+            ]
+          }
+        ],
+        "achievements": [
+          "Verkürzung der Release-Zyklen von zwei Wochen auf drei Tage",
+          "Steigerung der Crash-freien Sessions auf 99,8 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "Swift",
+          "SwiftUI",
+          "Kotlin",
+          "Jetpack Compose",
+          "Fastlane",
+          "GitHub Actions"
+        ]
+      },
+      {
+        "company": "Runtastic",
+        "website": "https://www.runtastic.com",
+        "location": "Linz, Österreich",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Senior iOS-Entwickler",
+        "activities": [
+          {
+            "project": "Fitness-Tracking-App",
+            "tasks": [
+              "Entwicklung von Kernfunktionen für iOS",
+              "Optimierung von Akku- und Speicherverbrauch",
+              "Mentoring jüngerer Entwickler"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduzierung des Akkuverbrauchs beim Tracking um 15 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "Swift",
+          "Objective-C",
+          "Core Data"
+        ]
+      },
+      {
+        "company": "mySugr",
+        "website": "https://www.mysugr.com",
+        "location": "Wien, Österreich",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "iOS-Entwickler",
+        "activities": [
+          {
+            "project": "Diabetes-Management-App",
+            "tasks": [
+              "Entwicklung von Features für das Blutzucker-Tracking",
+              "Integration von Health-APIs"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mitentwicklung einer App mit über 100.000 Downloads"
+        ],
+        "toolsAndTechnologies": [
+          "Objective-C",
+          "HealthKit"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Technische Universität Wien",
+        "degree": "Diplomingenieur",
+        "fieldOfStudy": "Software Engineering",
+        "achievements": [
+          "Diplomarbeit zu mobilen Sensoranwendungen"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Swift",
+        "SwiftUI",
+        "Kotlin",
+        "Jetpack Compose",
+        "Flutter",
+        "Fastlane",
+        "GitHub Actions"
+      ],
+      "softSkills": [
+        "Führungskompetenz",
+        "Mentoring",
+        "Entscheidungsstärke",
+        "Kommunikation"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Russisch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Mobile-Modularisierung",
+        "description": "Umbau einer monolithischen App in eine modulare Feature-Architektur.",
+        "date": "2021",
+        "impact": "Ermöglichte parallele Arbeit mehrerer Teams und schnellere Releases."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Skitouren",
+      "Schach",
+      "Sprachen lernen"
+    ],
+    "references": [
+      {
+        "name": "Markus Auer",
+        "position": "VP Engineering",
+        "company": "Bitpanda",
+        "contact": {
+          "phone": "+43 1 5123 0002",
+          "email": "markus.auer@example.at"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 90000,
+      "max": 108000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Mobile Engineering",
+      "secondaryClusters": [
+        "Engineering Leadership",
+        "Mobile Architecture"
+      ],
+      "functionalExpertise": [
+        "Native App-Entwicklung",
+        "Mobile-Architektur",
+        "Team-Führung"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Kürzere Release-Zyklen",
+        "Höhere App-Stabilität"
+      ],
+      "industryDomains": [
+        "FinTech",
+        "Health",
+        "Fitness"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "SaaS"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Langjährige Mobile-Expertise kombiniert mit belegter technischer Teamführung über mehrere Plattformen."
+    },
+    "searchIndex": {
+      "roles": [
+        "Mobile Engineering Lead",
+        "iOS Engineer",
+        "Android Engineer",
+        "Mobile Team Lead"
+      ],
+      "skills": [
+        "Swift",
+        "SwiftUI",
+        "Kotlin",
+        "Jetpack Compose",
+        "Flutter",
+        "Fastlane",
+        "Clean Architecture",
+        "GitHub Actions"
+      ],
+      "industries": [
+        "FinTech",
+        "Health Technology",
+        "Fitness"
+      ]
+    },
+    "tags": [
+      "mobile",
+      "ios",
+      "android",
+      "swift",
+      "kotlin",
+      "lead",
+      "vienna"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Aufstrebender QA-Automatisierungsingenieur mit rund vier Jahren Erfahrung in der Testautomatisierung für Web- und API-Anwendungen. Begeistert sich für Testframeworks, stabile CI-Pipelines und die frühzeitige Fehlererkennung. Bringt eine strukturierte, detailorientierte Arbeitsweise mit.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Jonas Wittmann",
+      "role": "QA-Automatisierungsingenieur",
+      "summary": "SDET mit Fokus auf UI- und API-Testautomatisierung sowie CI-Integration.",
+      "contact": {
+        "phone": "+49 40 3398 1176",
+        "email": "jonas.wittmann@example.de",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "Reeperbahn",
+          "streetType": "Straße",
+          "city": "Hamburg",
+          "state": "Hamburg",
+          "zipCode": "20359",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/jonas-wittmann",
+          "github": "https://github.com/jwittmann",
+          "website": "https://jonaswittmann.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Werktags ganztags"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Testautomatisierung",
+        "skills": [
+          "Playwright",
+          "Cypress",
+          "Selenium"
+        ]
+      },
+      {
+        "category": "Sprachen",
+        "skills": [
+          "TypeScript",
+          "Python",
+          "Java"
+        ]
+      },
+      {
+        "category": "API-Test",
+        "skills": [
+          "Postman",
+          "REST Assured"
+        ]
+      },
+      {
+        "category": "CI & Tools",
+        "skills": [
+          "GitHub Actions",
+          "Jenkins",
+          "Jira"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "UI-Testautomatisierung",
+        "API-Testing",
+        "Continuous Integration",
+        "Fehleranalyse"
+      ],
+      "keyResponsibilities": [
+        "Erstellung und Wartung automatisierter Testsuiten",
+        "Integration von Tests in CI-Pipelines",
+        "Erfassung und Nachverfolgung von Fehlern",
+        "Zusammenarbeit mit Entwicklern zur Qualitätssicherung"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "XING",
+        "website": "https://www.xing.com",
+        "location": "Hamburg, Deutschland",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "QA-Automatisierungsingenieur",
+        "activities": [
+          {
+            "project": "Karriere-Plattform",
+            "tasks": [
+              "Aufbau von Playwright-Testsuiten für kritische User-Flows",
+              "Integration der Tests in GitHub Actions",
+              "Analyse und Reporting von Fehlern"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automatisierung von 200 zuvor manuellen Testfällen",
+          "Reduzierung der Regressionszeit um 60 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "Playwright",
+          "TypeScript",
+          "GitHub Actions",
+          "Jira"
+        ]
+      },
+      {
+        "company": "New Work SE",
+        "website": "https://www.new-work.se",
+        "location": "Hamburg, Deutschland",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Junior-QA-Ingenieur",
+        "activities": [
+          {
+            "project": "Recruiting-Produkte",
+            "tasks": [
+              "Durchführung manueller und automatisierter Tests",
+              "Erstellung von Testfällen",
+              "Unterstützung bei API-Tests mit Postman"
+            ]
+          }
+        ],
+        "achievements": [
+          "Aufbau der ersten automatisierten Smoke-Test-Suite des Teams"
+        ],
+        "toolsAndTechnologies": [
+          "Cypress",
+          "Postman",
+          "Jenkins"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Hochschule für Angewandte Wissenschaften Hamburg",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Technische Informatik",
+        "achievements": [
+          "Abschlussarbeit zur Testautomatisierung"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "ISTQB Certified Tester – Foundation Level",
+        "institution": "ISTQB",
+        "year": "@Y-0@",
+        "description": "Grundlagenzertifizierung für Softwaretesten und Qualitätssicherung."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Playwright",
+        "Cypress",
+        "Selenium",
+        "TypeScript",
+        "Python",
+        "REST Assured",
+        "GitHub Actions"
+      ],
+      "softSkills": [
+        "Genauigkeit",
+        "Beharrlichkeit",
+        "Lernbereitschaft",
+        "Teamgeist"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Regressions-Automatisierung",
+        "description": "Aufbau einer vollständigen automatisierten Regressionssuite für die Hauptplattform.",
+        "date": "2024",
+        "impact": "Verkürzte die Freigabetests von Tagen auf Stunden."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Bouldern",
+      "Videospiele",
+      "Modellbau"
+    ],
+    "references": [
+      {
+        "name": "Petra Sanders",
+        "position": "QA Lead",
+        "company": "XING",
+        "contact": {
+          "phone": "+49 40 3398 0003",
+          "email": "petra.sanders@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 58000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Quality Engineering",
+      "secondaryClusters": [
+        "Test Automation",
+        "CI/CD"
+      ],
+      "functionalExpertise": [
+        "Testautomatisierung",
+        "API-Testing",
+        "Continuous Integration"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduzierte Regressionszeit",
+        "Höhere Testabdeckung"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "Recruiting"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Enterprise SaaS"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.8,
+      "clusterReasoning": "Frühe, aber fokussierte Karriere in der Testautomatisierung mit klaren Effizienzgewinnen."
+    },
+    "searchIndex": {
+      "roles": [
+        "QA Engineer",
+        "SDET",
+        "Test Automation Engineer"
+      ],
+      "skills": [
+        "Playwright",
+        "Cypress",
+        "Selenium",
+        "TypeScript",
+        "Python",
+        "REST Assured",
+        "Postman",
+        "GitHub Actions",
+        "Jenkins"
+      ],
+      "industries": [
+        "SaaS",
+        "Recruiting"
+      ]
+    },
+    "tags": [
+      "qa",
+      "sdet",
+      "test-automation",
+      "playwright",
+      "junior",
+      "hamburg"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior Data Engineer mit rund zehn Jahren Erfahrung im Aufbau zuverlässiger Datenpipelines und moderner Data-Lakehouse-Architekturen. Spezialisiert auf Batch- und Streaming-Verarbeitung großer Datenmengen im Finanzumfeld. Legt großen Wert auf Datenqualität, Skalierbarkeit und wartbare Pipelines.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Amina Yusuf",
+      "role": "Senior Data Engineer",
+      "summary": "Data Engineer mit Schwerpunkt auf Spark, dbt und Cloud-Data-Lakehouse-Architekturen im Bankenumfeld.",
+      "contact": {
+        "phone": "+49 69 7745 2298",
+        "email": "amina.yusuf@example.de",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "Zeil",
+          "streetType": "Straße",
+          "city": "Frankfurt am Main",
+          "state": "Hessen",
+          "zipCode": "60313",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/amina-yusuf",
+          "github": "https://github.com/aminayusuf",
+          "website": "https://aminayusuf.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Datenverarbeitung",
+        "skills": [
+          "Apache Spark",
+          "Apache Airflow",
+          "dbt"
+        ]
+      },
+      {
+        "category": "Sprachen",
+        "skills": [
+          "Python",
+          "SQL",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Cloud & Storage",
+        "skills": [
+          "AWS",
+          "Snowflake",
+          "Delta Lake"
+        ]
+      },
+      {
+        "category": "Streaming",
+        "skills": [
+          "Apache Kafka",
+          "Kinesis"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Datenpipeline-Entwicklung",
+        "Data-Lakehouse-Architektur",
+        "Datenqualität",
+        "ETL/ELT"
+      ],
+      "keyResponsibilities": [
+        "Entwurf und Betrieb von Batch- und Streaming-Pipelines",
+        "Modellierung von Datenmodellen mit dbt",
+        "Sicherstellung von Datenqualität und Governance",
+        "Optimierung von Speicher- und Rechenkosten"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Deutsche Bank",
+        "website": "https://www.db.com",
+        "location": "Frankfurt am Main, Deutschland",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Senior Data Engineer",
+        "activities": [
+          {
+            "project": "Risiko-Data-Lakehouse",
+            "tasks": [
+              "Aufbau von Spark-Pipelines für Risikodaten",
+              "Modellierung von dbt-Datenmarts",
+              "Einführung von Datenqualitätsprüfungen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduzierung der Pipeline-Laufzeit um 50 Prozent",
+          "Einführung eines automatisierten Data-Quality-Frameworks"
+        ],
+        "toolsAndTechnologies": [
+          "Apache Spark",
+          "dbt",
+          "Snowflake",
+          "AWS",
+          "Python"
+        ]
+      },
+      {
+        "company": "Scout24",
+        "website": "https://www.scout24.com",
+        "location": "Berlin, Deutschland",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Data Engineer",
+        "activities": [
+          {
+            "project": "Marktplatz-Analytik",
+            "tasks": [
+              "Entwicklung von Airflow-Pipelines",
+              "Aufbau von Streaming-Ingestion mit Kafka",
+              "Betreuung des Data Warehouse"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automatisierung von zuvor manuellen Datenexporten"
+        ],
+        "toolsAndTechnologies": [
+          "Apache Airflow",
+          "Apache Kafka",
+          "Python",
+          "Redshift"
+        ]
+      },
+      {
+        "company": "Accenture",
+        "website": "https://www.accenture.com",
+        "location": "Frankfurt am Main, Deutschland",
+        "from": "@M-100@",
+        "to": "@M-70@",
+        "position": "Data-Consultant",
+        "activities": [
+          {
+            "project": "Data-Warehouse-Projekte",
+            "tasks": [
+              "Implementierung von ETL-Strecken für Kunden",
+              "Datenmodellierung"
+            ]
+          }
+        ],
+        "achievements": [
+          "Erfolgreiche Umsetzung von drei Data-Warehouse-Projekten"
+        ],
+        "toolsAndTechnologies": [
+          "SQL",
+          "Informatica",
+          "Oracle"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Goethe-Universität Frankfurt",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Wirtschaftsinformatik",
+        "achievements": [
+          "Schwerpunkt Data Management"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Goethe-Universität Frankfurt",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Wirtschaftsinformatik",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Certified Data Analytics – Specialty",
+        "institution": "Amazon Web Services",
+        "year": "@Y-2@",
+        "description": "Spezialzertifizierung für Datenanalyse-Dienste auf AWS."
+      },
+      {
+        "title": "dbt Analytics Engineering Certification",
+        "institution": "dbt Labs",
+        "year": "@Y-2@",
+        "description": "Zertifizierung für analytisches Datenmodellieren mit dbt."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Apache Spark",
+        "dbt",
+        "Apache Airflow",
+        "Snowflake",
+        "AWS",
+        "Python",
+        "SQL",
+        "Apache Kafka"
+      ],
+      "softSkills": [
+        "Strukturiertes Denken",
+        "Sorgfalt",
+        "Zusammenarbeit",
+        "Kommunikationsfähigkeit"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Arabisch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Data-Quality-Framework",
+        "description": "Einführung eines automatisierten Frameworks zur Prüfung der Datenqualität in Pipelines.",
+        "date": "2022",
+        "impact": "Reduzierte fehlerhafte Datenlieferungen an nachgelagerte Systeme deutlich."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Laufen",
+      "Datenvisualisierung",
+      "Reisen"
+    ],
+    "references": [
+      {
+        "name": "Thomas Berger",
+        "position": "Head of Data Platform",
+        "company": "Deutsche Bank",
+        "contact": {
+          "phone": "+49 69 7745 0004",
+          "email": "thomas.berger@example.de"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Data Engineering",
+      "secondaryClusters": [
+        "Data Platform",
+        "Analytics Engineering"
+      ],
+      "functionalExpertise": [
+        "Datenpipeline-Entwicklung",
+        "Data-Lakehouse-Architektur",
+        "Datenqualität"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduzierte Pipeline-Laufzeit",
+        "Verbesserte Datenqualität"
+      ],
+      "industryDomains": [
+        "Banking",
+        "FinTech",
+        "Online Marketplace"
+      ],
+      "environmentFit": [
+        "Regulated Enterprise",
+        "Enterprise"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Durchgängige Data-Engineering-Laufbahn mit tiefer Spark- und dbt-Expertise im regulierten Finanzumfeld."
+    },
+    "searchIndex": {
+      "roles": [
+        "Data Engineer",
+        "Senior Data Engineer",
+        "Analytics Engineer"
+      ],
+      "skills": [
+        "Apache Spark",
+        "dbt",
+        "Apache Airflow",
+        "Snowflake",
+        "AWS",
+        "Python",
+        "SQL",
+        "Apache Kafka",
+        "Delta Lake"
+      ],
+      "industries": [
+        "Banking",
+        "FinTech",
+        "Online Marketplace"
+      ]
+    },
+    "tags": [
+      "data-engineering",
+      "spark",
+      "dbt",
+      "snowflake",
+      "aws",
+      "frankfurt"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior Data Scientist mit über zehn Jahren Erfahrung in der Entwicklung von Machine-Learning-Modellen für Prognose, Empfehlung und Betrugserkennung. Verbindet statistische Fundierung mit praktischer Produktionsorientierung und arbeitet eng mit Produkt- und Engineering-Teams zusammen. Kommuniziert komplexe Ergebnisse verständlich für Entscheidungsträger.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Marco Fischer",
+      "role": "Senior Data Scientist",
+      "summary": "Data Scientist mit Fokus auf Prognosemodelle, Empfehlungssysteme und den Produktivbetrieb von ML.",
+      "contact": {
+        "phone": "+49 30 6612 4489",
+        "email": "marco.fischer@example.de",
+        "address": {
+          "streetNumber": "88",
+          "streetName": "Torstraße",
+          "streetType": "Straße",
+          "city": "Berlin",
+          "state": "Berlin",
+          "zipCode": "10119",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "github": "https://github.com/marcofischer",
+          "website": "https://marcofischer.io"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends",
+          "Freitagnachmittag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Machine Learning",
+        "skills": [
+          "scikit-learn",
+          "XGBoost",
+          "PyTorch"
+        ]
+      },
+      {
+        "category": "Sprachen",
+        "skills": [
+          "Python",
+          "SQL",
+          "R"
+        ]
+      },
+      {
+        "category": "Data & MLOps",
+        "skills": [
+          "Pandas",
+          "MLflow",
+          "Airflow"
+        ]
+      },
+      {
+        "category": "Statistik",
+        "skills": [
+          "A/B-Testing",
+          "Zeitreihenanalyse",
+          "Bayesianische Statistik"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Prädiktive Modellierung",
+        "Empfehlungssysteme",
+        "Betrugserkennung",
+        "Experimentdesign"
+      ],
+      "keyResponsibilities": [
+        "Entwicklung und Validierung von ML-Modellen",
+        "Zusammenarbeit mit Engineering für Produktivbetrieb",
+        "Gestaltung von A/B-Tests",
+        "Präsentation von Ergebnissen für Stakeholder"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "HelloFresh",
+        "website": "https://www.hellofresh.com",
+        "location": "Berlin, Deutschland",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Senior Data Scientist",
+        "activities": [
+          {
+            "project": "Nachfrageprognose",
+            "tasks": [
+              "Entwicklung von Prognosemodellen für Zutatenmengen",
+              "Aufbau eines Empfehlungssystems für Rezepte",
+              "Design und Auswertung von A/B-Tests"
+            ]
+          }
+        ],
+        "achievements": [
+          "Senkung der Lebensmittelverschwendung durch bessere Prognosen um 12 Prozent",
+          "Steigerung der Klickrate bei Empfehlungen um 18 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "Python",
+          "XGBoost",
+          "PyTorch",
+          "MLflow",
+          "SQL"
+        ]
+      },
+      {
+        "company": "Zalando",
+        "website": "https://www.zalando.de",
+        "location": "Berlin, Deutschland",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Data Scientist",
+        "activities": [
+          {
+            "project": "Betrugserkennung",
+            "tasks": [
+              "Entwicklung von Modellen zur Erkennung betrügerischer Bestellungen",
+              "Feature-Engineering aus Transaktionsdaten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduzierung von Betrugsverlusten um 20 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "Python",
+          "scikit-learn",
+          "Spark"
+        ]
+      },
+      {
+        "company": "Fraunhofer-Institut",
+        "website": "https://www.fraunhofer.de",
+        "location": "Berlin, Deutschland",
+        "from": "@M-100@",
+        "to": "@M-70@",
+        "position": "Wissenschaftlicher Mitarbeiter",
+        "activities": [
+          {
+            "project": "Forschungsprojekte zu maschinellem Lernen",
+            "tasks": [
+              "Entwicklung von Prototypen für Klassifikationsmodelle",
+              "Veröffentlichung von Forschungsergebnissen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mitautor von zwei begutachteten Publikationen"
+        ],
+        "toolsAndTechnologies": [
+          "Python",
+          "R",
+          "MATLAB"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Humboldt-Universität zu Berlin",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Statistik",
+        "achievements": [
+          "Schwerpunkt maschinelles Lernen"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Humboldt-Universität zu Berlin",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Mathematik",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Deep Learning Specialization",
+        "institution": "DeepLearning.AI",
+        "year": "@Y-2@",
+        "description": "Spezialisierung zu neuronalen Netzen und Deep Learning."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Python",
+        "scikit-learn",
+        "XGBoost",
+        "PyTorch",
+        "SQL",
+        "MLflow",
+        "Pandas"
+      ],
+      "softSkills": [
+        "Analytische Tiefe",
+        "Storytelling",
+        "Neugier",
+        "Zusammenarbeit"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Rezept-Empfehlungssystem",
+        "description": "Entwicklung eines personalisierten Empfehlungssystems für Kochboxen.",
+        "date": "2021",
+        "impact": "Erhöhte die Kundenbindung und die Klickrate auf Empfehlungen messbar."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Schach",
+      "Kochen",
+      "Popularwissenschaft"
+    ],
+    "references": [
+      {
+        "name": "Julia Krämer",
+        "position": "Director of Data Science",
+        "company": "HelloFresh",
+        "contact": {
+          "phone": "+49 30 6612 0005",
+          "email": "julia.kraemer@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 82000,
+      "max": 98000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Data Science",
+      "secondaryClusters": [
+        "Machine Learning",
+        "Experimentation"
+      ],
+      "functionalExpertise": [
+        "Prädiktive Modellierung",
+        "Empfehlungssysteme",
+        "Experimentdesign"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Reduzierte Lebensmittelverschwendung",
+        "Reduzierte Betrugsverluste"
+      ],
+      "industryDomains": [
+        "E-Commerce",
+        "Food Tech"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "SaaS"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Breite Data-Science-Erfahrung von Forschung bis Produktivbetrieb mit klaren geschäftlichen Ergebnissen."
+    },
+    "searchIndex": {
+      "roles": [
+        "Data Scientist",
+        "Senior Data Scientist",
+        "Machine Learning Scientist"
+      ],
+      "skills": [
+        "Python",
+        "scikit-learn",
+        "XGBoost",
+        "PyTorch",
+        "SQL",
+        "MLflow",
+        "A/B Testing",
+        "Time Series",
+        "Recommendation Systems"
+      ],
+      "industries": [
+        "E-Commerce",
+        "Food Technology"
+      ]
+    },
+    "tags": [
+      "data-science",
+      "machine-learning",
+      "python",
+      "pytorch",
+      "berlin"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Principal Machine Learning Engineer mit über 15 Jahren Erfahrung an der Schnittstelle von Forschung und produktivem ML. Verantwortet ML-Plattformen und die Skalierung von Modellen für Millionen von Nutzern. Prägt technische Strategien, mentort Ingenieure und treibt den verantwortungsvollen Einsatz von KI voran.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Sophie Wagner",
+      "role": "Principal Machine Learning Engineer",
+      "summary": "Principal ML Engineer mit Schwerpunkt auf ML-Plattformen, LLM-Systemen und der Produktivierung großer Modelle.",
+      "contact": {
+        "phone": "+41 44 778 12 30",
+        "email": "sophie.wagner@example.ch",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "Bahnhofstrasse",
+          "streetType": "Strasse",
+          "city": "Zürich",
+          "state": "Zürich",
+          "zipCode": "8001",
+          "country": "Schweiz"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/sophie-wagner-ml",
+          "github": "https://github.com/sophiewagner",
+          "website": "https://sophiewagner.ai"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "ML & Deep Learning",
+        "skills": [
+          "PyTorch",
+          "TensorFlow",
+          "Hugging Face"
+        ]
+      },
+      {
+        "category": "MLOps",
+        "skills": [
+          "Kubeflow",
+          "MLflow",
+          "Ray"
+        ]
+      },
+      {
+        "category": "Sprachen",
+        "skills": [
+          "Python",
+          "Go",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Infrastruktur",
+        "skills": [
+          "Kubernetes",
+          "AWS",
+          "GPU-Cluster"
+        ]
+      },
+      {
+        "category": "Schwerpunkte",
+        "skills": [
+          "LLM-Systeme",
+          "Vektor-Suche",
+          "Modellskalierung"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "ML-Plattform-Architektur",
+        "Skalierung großer Modelle",
+        "MLOps",
+        "Verantwortungsvolle KI"
+      ],
+      "keyResponsibilities": [
+        "Definition der technischen ML-Strategie",
+        "Architektur von ML-Plattformen",
+        "Produktivierung von Modellen im großen Maßstab",
+        "Mentoring von ML-Ingenieuren"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Google",
+        "website": "https://www.google.com",
+        "location": "Zürich, Schweiz",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Principal Machine Learning Engineer",
+        "activities": [
+          {
+            "project": "ML-Plattform für Sprachmodelle",
+            "tasks": [
+              "Architektur einer Trainings- und Inferenz-Plattform",
+              "Skalierung von Modellen auf GPU-Cluster",
+              "Einführung von Standards für verantwortungsvolle KI"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduzierung der Inferenzkosten um 35 Prozent",
+          "Aufbau einer plattformweiten Feature-Store-Lösung"
+        ],
+        "toolsAndTechnologies": [
+          "PyTorch",
+          "Kubeflow",
+          "Ray",
+          "Kubernetes",
+          "Python"
+        ]
+      },
+      {
+        "company": "Disney Research",
+        "website": "https://www.disneyresearch.com",
+        "location": "Zürich, Schweiz",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Senior Research Engineer",
+        "activities": [
+          {
+            "project": "Computer-Vision-Forschung",
+            "tasks": [
+              "Entwicklung von Modellen für Bild- und Videoanalyse",
+              "Überführung von Prototypen in Produkte"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mehrere Patente und Publikationen im Bereich Computer Vision"
+        ],
+        "toolsAndTechnologies": [
+          "TensorFlow",
+          "Python",
+          "C++"
+        ]
+      },
+      {
+        "company": "IBM Research",
+        "website": "https://research.ibm.com",
+        "location": "Rüschlikon, Schweiz",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Research Scientist",
+        "activities": [
+          {
+            "project": "Statistisches maschinelles Lernen",
+            "tasks": [
+              "Forschung zu Optimierungsalgorithmen",
+              "Prototyping von Modellen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Beiträge zu grundlegender ML-Forschung"
+        ],
+        "toolsAndTechnologies": [
+          "Python",
+          "MATLAB"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "ETH Zürich",
+        "degree": "Doktor der Wissenschaften",
+        "fieldOfStudy": "Maschinelles Lernen",
+        "achievements": [
+          "Dissertation zu skalierbaren Lernverfahren"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "ETH Zürich",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "TensorFlow Developer Certificate",
+        "institution": "Google",
+        "year": "@Y-4@",
+        "description": "Zertifizierung für die Entwicklung von Deep-Learning-Modellen mit TensorFlow."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "PyTorch",
+        "TensorFlow",
+        "Hugging Face",
+        "Kubeflow",
+        "Ray",
+        "Kubernetes",
+        "Python",
+        "Go"
+      ],
+      "softSkills": [
+        "Strategisches Denken",
+        "Führung",
+        "Mentoring",
+        "Wissenschaftliche Kommunikation"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Skalierbare Inferenz-Plattform",
+        "description": "Aufbau einer kosteneffizienten Plattform für die Inferenz großer Sprachmodelle.",
+        "date": "2022",
+        "impact": "Senkte die Betriebskosten erheblich und ermöglichte neue Produktfunktionen."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Segeln",
+      "Wissenschaftskommunikation",
+      "Klavier"
+    ],
+    "references": [
+      {
+        "name": "Andreas Huber",
+        "position": "Director of Engineering",
+        "company": "Google",
+        "contact": {
+          "phone": "+41 44 778 00 06",
+          "email": "andreas.huber@example.ch"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "CHF",
+      "min": 180000,
+      "max": 210000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Machine Learning Engineering",
+      "secondaryClusters": [
+        "ML Platform",
+        "Applied Research",
+        "LLM Systems"
+      ],
+      "functionalExpertise": [
+        "ML-Plattform-Architektur",
+        "Modellskalierung",
+        "MLOps"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Reduzierte Inferenzkosten",
+        "Plattformweite ML-Infrastruktur"
+      ],
+      "industryDomains": [
+        "Big Tech",
+        "AI Research"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Research"
+      ],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.93,
+      "clusterReasoning": "Herausragende, langjährige ML-Laufbahn von Forschung bis zu produktiven Plattformen mit strategischem Einfluss."
+    },
+    "searchIndex": {
+      "roles": [
+        "Machine Learning Engineer",
+        "Principal ML Engineer",
+        "ML Platform Engineer",
+        "Applied Scientist"
+      ],
+      "skills": [
+        "PyTorch",
+        "TensorFlow",
+        "Hugging Face",
+        "Kubeflow",
+        "Ray",
+        "Kubernetes",
+        "Python",
+        "LLM",
+        "Vector Search",
+        "MLOps"
+      ],
+      "industries": [
+        "Big Tech",
+        "Artificial Intelligence",
+        "Research"
+      ]
+    },
+    "tags": [
+      "ml-engineering",
+      "pytorch",
+      "mlops",
+      "llm",
+      "principal",
+      "zurich"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Analytics Engineer mit rund fünf Jahren Erfahrung an der Schnittstelle von Data Engineering und Business Intelligence. Baut zuverlässige, gut dokumentierte Datenmodelle mit dbt und verwandelt Rohdaten in vertrauenswürdige Kennzahlen. Arbeitet eng mit Fachbereichen zusammen, um Datenprodukte nutzbar zu machen.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Timo Berger",
+      "role": "Analytics Engineer",
+      "summary": "Analytics Engineer mit Schwerpunkt auf dbt, Datenmodellierung und der Bereitstellung verlässlicher Kennzahlen.",
+      "contact": {
+        "phone": "+49 221 8834 5567",
+        "email": "timo.berger@example.de",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Ehrenstraße",
+          "streetType": "Straße",
+          "city": "Köln",
+          "state": "Nordrhein-Westfalen",
+          "zipCode": "50672",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/timo-berger",
+          "github": "https://github.com/timoberger",
+          "website": "https://timoberger.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Werktags vormittags",
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Modellierung",
+        "skills": [
+          "dbt",
+          "SQL",
+          "Dimensional Modeling"
+        ]
+      },
+      {
+        "category": "Warehouses",
+        "skills": [
+          "BigQuery",
+          "Snowflake"
+        ]
+      },
+      {
+        "category": "BI-Tools",
+        "skills": [
+          "Looker",
+          "Tableau"
+        ]
+      },
+      {
+        "category": "Sprachen & Tools",
+        "skills": [
+          "Python",
+          "Git",
+          "Airflow"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Datenmodellierung",
+        "Metriken-Definition",
+        "BI-Enablement",
+        "Datendokumentation"
+      ],
+      "keyResponsibilities": [
+        "Entwicklung und Pflege von dbt-Modellen",
+        "Definition unternehmensweiter Kennzahlen",
+        "Aufbau von Dashboards",
+        "Schulung von Fachbereichen im Umgang mit Daten"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "DeepL",
+        "website": "https://www.deepl.com",
+        "location": "Köln, Deutschland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Analytics Engineer",
+        "activities": [
+          {
+            "project": "Zentrale Metriken-Schicht",
+            "tasks": [
+              "Aufbau einer dbt-basierten Metriken-Schicht",
+              "Modellierung von Produkt- und Umsatzdaten",
+              "Erstellung von Looker-Dashboards"
+            ]
+          }
+        ],
+        "achievements": [
+          "Vereinheitlichung von Kennzahlen über alle Fachbereiche",
+          "Reduzierung widersprüchlicher Reports"
+        ],
+        "toolsAndTechnologies": [
+          "dbt",
+          "BigQuery",
+          "Looker",
+          "SQL"
+        ]
+      },
+      {
+        "company": "Trivago",
+        "website": "https://www.trivago.com",
+        "location": "Düsseldorf, Deutschland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Junior Analytics Engineer",
+        "activities": [
+          {
+            "project": "Marketing-Analytik",
+            "tasks": [
+              "Aufbau von SQL-Modellen für Kampagnendaten",
+              "Unterstützung bei Tableau-Dashboards"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automatisierung wöchentlicher Marketing-Reports"
+        ],
+        "toolsAndTechnologies": [
+          "SQL",
+          "Tableau",
+          "BigQuery"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universität zu Köln",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Wirtschaftsinformatik",
+        "achievements": [
+          "Abschlussarbeit zu Self-Service-Analytics"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "dbt Fundamentals",
+        "institution": "dbt Labs",
+        "year": "@Y-4@",
+        "description": "Grundlagenzertifizierung für analytisches Datenmodellieren mit dbt."
+      },
+      {
+        "title": "Google Cloud Professional Data Engineer",
+        "institution": "Google Cloud",
+        "year": "@Y-4@",
+        "description": "Professionelle Zertifizierung für Datenlösungen auf Google Cloud."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "dbt",
+        "SQL",
+        "BigQuery",
+        "Snowflake",
+        "Looker",
+        "Tableau",
+        "Python"
+      ],
+      "softSkills": [
+        "Klare Kommunikation",
+        "Sorgfalt",
+        "Serviceorientierung",
+        "Lernbereitschaft"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Zentrale Metriken-Schicht",
+        "description": "Aufbau einer einheitlichen, dokumentierten Metriken-Schicht für das gesamte Unternehmen.",
+        "date": "2024",
+        "impact": "Schuf eine gemeinsame Wahrheitsquelle und reduzierte Reporting-Diskrepanzen."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Brettspiele",
+      "Podcasts",
+      "Radfahren"
+    ],
+    "references": [
+      {
+        "name": "Katrin Lorenz",
+        "position": "Head of Analytics",
+        "company": "DeepL",
+        "contact": {
+          "phone": "+49 221 8834 0007",
+          "email": "katrin.lorenz@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 58000,
+      "max": 70000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Analytics Engineering",
+      "secondaryClusters": [
+        "Business Intelligence",
+        "Data Modeling"
+      ],
+      "functionalExpertise": [
+        "Datenmodellierung",
+        "Metriken-Definition",
+        "BI-Enablement"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Einheitliche Kennzahlen",
+        "Weniger widersprüchliche Reports"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "Travel Tech"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "SaaS"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "Fokussierte Analytics-Engineering-Erfahrung mit starker dbt- und BI-Ausrichtung."
+    },
+    "searchIndex": {
+      "roles": [
+        "Analytics Engineer",
+        "BI Developer",
+        "Data Analyst"
+      ],
+      "skills": [
+        "dbt",
+        "SQL",
+        "BigQuery",
+        "Snowflake",
+        "Looker",
+        "Tableau",
+        "Python",
+        "Dimensional Modeling",
+        "Airflow"
+      ],
+      "industries": [
+        "SaaS",
+        "Travel Technology"
+      ]
+    },
+    "tags": [
+      "analytics-engineering",
+      "dbt",
+      "sql",
+      "looker",
+      "bigquery",
+      "cologne"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Analytics- und BI-Manager mit rund 15 Jahren Erfahrung im Aufbau und in der Führung datengetriebener Teams. Verantwortet die Datenstrategie, das Reporting und die Governance im industriellen Umfeld. Verbindet technisches Verständnis mit ausgeprägten Führungs- und Stakeholder-Management-Fähigkeiten.",
+    "personalInformation": {
+      "name": "Claudia Neumann",
+      "role": "Analytics & BI Manager",
+      "summary": "Analytics-Managerin mit Verantwortung für Datenstrategie, Reporting-Teams und Data Governance im Industrieumfeld.",
+      "contact": {
+        "phone": "+49 711 4456 2290",
+        "email": "claudia.neumann@example.de",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Königstraße",
+          "streetType": "Straße",
+          "city": "Stuttgart",
+          "state": "Baden-Württemberg",
+          "zipCode": "70173",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/claudia-neumann",
+          "website": "https://claudianeumann.de"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Führung",
+        "skills": [
+          "Team-Leitung",
+          "Datenstrategie",
+          "Stakeholder-Management"
+        ]
+      },
+      {
+        "category": "BI & Reporting",
+        "skills": [
+          "Power BI",
+          "Tableau",
+          "SAP BW"
+        ]
+      },
+      {
+        "category": "Daten",
+        "skills": [
+          "SQL",
+          "Data Governance",
+          "Data Warehousing"
+        ]
+      },
+      {
+        "category": "Methoden",
+        "skills": [
+          "KPI-Definition",
+          "Data Storytelling"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Datenstrategie",
+        "BI-Team-Führung",
+        "Data Governance",
+        "Executive Reporting"
+      ],
+      "keyResponsibilities": [
+        "Führung des Analytics- und BI-Teams",
+        "Definition der Datenstrategie",
+        "Verantwortung für Governance und Datenqualität",
+        "Beratung der Geschäftsführung mit datenbasierten Erkenntnissen"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Bosch",
+        "website": "https://www.bosch.com",
+        "location": "Stuttgart, Deutschland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Analytics & BI Manager",
+        "activities": [
+          {
+            "project": "Konzernweites Reporting",
+            "tasks": [
+              "Führung eines Teams von acht Analysten und BI-Entwicklern",
+              "Aufbau einer Data-Governance-Struktur",
+              "Einführung standardisierter Power-BI-Reports"
+            ]
+          }
+        ],
+        "achievements": [
+          "Aufbau eines konzernweiten KPI-Frameworks",
+          "Reduzierung der Report-Erstellungszeit um 40 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "Power BI",
+          "SQL",
+          "SAP BW"
+        ]
+      },
+      {
+        "company": "Daimler",
+        "website": "https://www.mercedes-benz.com",
+        "location": "Stuttgart, Deutschland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "BI-Teamleiterin",
+        "activities": [
+          {
+            "project": "Vertriebsanalytik",
+            "tasks": [
+              "Leitung eines kleinen BI-Teams",
+              "Entwicklung von Vertriebs-Dashboards",
+              "Betreuung des Data Warehouse"
+            ]
+          }
+        ],
+        "achievements": [
+          "Einführung eines einheitlichen Vertriebs-Reportings"
+        ],
+        "toolsAndTechnologies": [
+          "Tableau",
+          "SQL",
+          "Oracle"
+        ]
+      },
+      {
+        "company": "KPMG",
+        "website": "https://www.kpmg.com",
+        "location": "Stuttgart, Deutschland",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "BI-Beraterin",
+        "activities": [
+          {
+            "project": "Business-Intelligence-Projekte",
+            "tasks": [
+              "Beratung von Kunden zu Reporting-Lösungen",
+              "Implementierung von Dashboards"
+            ]
+          }
+        ],
+        "achievements": [
+          "Erfolgreiche Umsetzung mehrerer Kundenprojekte"
+        ],
+        "toolsAndTechnologies": [
+          "QlikView",
+          "SQL"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universität Mannheim",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Wirtschaftsinformatik",
+        "achievements": [
+          "Schwerpunkt Business Intelligence"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Universität Mannheim",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Betriebswirtschaftslehre",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Microsoft Certified: Power BI Data Analyst Associate",
+        "institution": "Microsoft",
+        "year": "@Y-4@",
+        "description": "Zertifizierung für Datenanalyse und Reporting mit Power BI."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Power BI",
+        "Tableau",
+        "SQL",
+        "SAP BW",
+        "Data Governance"
+      ],
+      "softSkills": [
+        "Führungsstärke",
+        "Strategisches Denken",
+        "Kommunikationsstärke",
+        "Stakeholder-Management"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Französisch",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Konzernweites KPI-Framework",
+        "description": "Definition und Einführung eines einheitlichen KPI-Frameworks über mehrere Geschäftsbereiche.",
+        "date": "2020",
+        "impact": "Ermöglichte konsistente, vergleichbare Steuerungskennzahlen auf Vorstandsebene."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Yoga",
+      "Weinkunde",
+      "Wandern"
+    ],
+    "references": [
+      {
+        "name": "Reinhard Vogt",
+        "position": "Head of Controlling",
+        "company": "Bosch",
+        "contact": {
+          "phone": "+49 711 4456 0008",
+          "email": "reinhard.vogt@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 105000,
+      "max": 125000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Business Intelligence",
+      "secondaryClusters": [
+        "Analytics Leadership",
+        "Data Governance"
+      ],
+      "functionalExpertise": [
+        "Datenstrategie",
+        "BI-Team-Führung",
+        "Executive Reporting"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Konzernweites KPI-Framework",
+        "Schnellere Report-Erstellung"
+      ],
+      "industryDomains": [
+        "Manufacturing",
+        "Automotive"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Regulated Enterprise"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Langjährige BI-Laufbahn mit klarer Entwicklung von der Beratung zur Team- und Strategieführung im Industrieumfeld."
+    },
+    "searchIndex": {
+      "roles": [
+        "Analytics Manager",
+        "BI Manager",
+        "Head of Business Intelligence"
+      ],
+      "skills": [
+        "Power BI",
+        "Tableau",
+        "SQL",
+        "SAP BW",
+        "Data Governance",
+        "Data Warehousing",
+        "KPI Definition"
+      ],
+      "industries": [
+        "Manufacturing",
+        "Automotive"
+      ]
+    },
+    "tags": [
+      "business-intelligence",
+      "power-bi",
+      "data-strategy",
+      "manager",
+      "stuttgart"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior DevOps Engineer mit über zehn Jahren Erfahrung in der Automatisierung von Infrastruktur und der Beschleunigung von Software-Auslieferungen. Spezialisiert auf Kubernetes, Infrastructure as Code und CI/CD-Pipelines. Baut Plattformen, die Entwicklerteams befähigen, schneller und sicherer zu liefern.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Sebastian Koch",
+      "role": "Senior DevOps Engineer",
+      "summary": "DevOps Engineer mit Schwerpunkt auf Kubernetes, Terraform und automatisierten CI/CD-Pipelines.",
+      "contact": {
+        "email": "sebastian.koch@example.de",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Leopoldstraße",
+          "streetType": "Straße",
+          "city": "München",
+          "state": "Bayern",
+          "zipCode": "80802",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/sebastian-koch",
+          "github": "https://github.com/skoch",
+          "website": "https://sebastiankoch.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "contract"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Container & Orchestrierung",
+        "skills": [
+          "Kubernetes",
+          "Docker",
+          "Helm"
+        ]
+      },
+      {
+        "category": "Infrastructure as Code",
+        "skills": [
+          "Terraform",
+          "Ansible",
+          "Pulumi"
+        ]
+      },
+      {
+        "category": "CI/CD",
+        "skills": [
+          "GitLab CI",
+          "ArgoCD",
+          "GitHub Actions"
+        ]
+      },
+      {
+        "category": "Cloud",
+        "skills": [
+          "AWS",
+          "Google Cloud"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Kubernetes-Betrieb",
+        "Infrastructure as Code",
+        "CI/CD-Automatisierung",
+        "Developer Experience"
+      ],
+      "keyResponsibilities": [
+        "Aufbau und Betrieb von Kubernetes-Clustern",
+        "Automatisierung der Infrastruktur mit Terraform",
+        "Gestaltung von CI/CD-Pipelines",
+        "Verbesserung der Developer Experience"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Personio",
+        "website": "https://www.personio.com",
+        "location": "München, Deutschland",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Senior DevOps Engineer",
+        "activities": [
+          {
+            "project": "Interne Entwicklerplattform",
+            "tasks": [
+              "Aufbau einer Kubernetes-basierten Plattform",
+              "Einführung von GitOps mit ArgoCD",
+              "Automatisierung der Provisionierung mit Terraform"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduzierung der Deployment-Zeit von Stunden auf Minuten",
+          "Aufbau einer Self-Service-Plattform für 20 Teams"
+        ],
+        "toolsAndTechnologies": [
+          "Kubernetes",
+          "Terraform",
+          "ArgoCD",
+          "AWS",
+          "Helm"
+        ]
+      },
+      {
+        "company": "Stylight",
+        "website": "https://www.stylight.de",
+        "location": "München, Deutschland",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "DevOps Engineer",
+        "activities": [
+          {
+            "project": "Cloud-Migration",
+            "tasks": [
+              "Migration von On-Premise-Systemen nach AWS",
+              "Aufbau von CI/CD-Pipelines",
+              "Einführung von Monitoring"
+            ]
+          }
+        ],
+        "achievements": [
+          "Erfolgreiche Cloud-Migration ohne nennenswerte Ausfälle"
+        ],
+        "toolsAndTechnologies": [
+          "AWS",
+          "Docker",
+          "Jenkins",
+          "Ansible"
+        ]
+      },
+      {
+        "company": "1&1",
+        "website": "https://www.1und1.de",
+        "location": "München, Deutschland",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Systemadministrator",
+        "activities": [
+          {
+            "project": "Rechenzentrumsbetrieb",
+            "tasks": [
+              "Betreuung von Linux-Servern",
+              "Automatisierung von Routineaufgaben"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automatisierung des Server-Provisionings"
+        ],
+        "toolsAndTechnologies": [
+          "Linux",
+          "Bash",
+          "Puppet"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Hochschule München",
+        "degree": "Bachelor of Engineering",
+        "fieldOfStudy": "Informatik",
+        "achievements": [
+          "Schwerpunkt Systemadministration"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Kubernetes Administrator",
+        "institution": "Cloud Native Computing Foundation",
+        "year": "@Y-0@",
+        "description": "Zertifizierung für die Administration von Kubernetes-Clustern."
+      },
+      {
+        "title": "HashiCorp Certified: Terraform Associate",
+        "institution": "HashiCorp",
+        "year": "@Y-1@",
+        "description": "Zertifizierung für Infrastructure as Code mit Terraform."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Kubernetes",
+        "Docker",
+        "Terraform",
+        "Ansible",
+        "ArgoCD",
+        "AWS",
+        "GitLab CI",
+        "Helm"
+      ],
+      "softSkills": [
+        "Automatisierungsdenken",
+        "Zuverlässigkeit",
+        "Zusammenarbeit",
+        "Problemlösung"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Interne Entwicklerplattform",
+        "description": "Aufbau einer Self-Service-Plattform auf Kubernetes-Basis für alle Entwicklungsteams.",
+        "date": "2022",
+        "impact": "Beschleunigte Deployments erheblich und entlastete das Plattform-Team."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Rennradfahren",
+      "Heimautomatisierung",
+      "Kochen"
+    ],
+    "references": [
+      {
+        "name": "Miriam Fuchs",
+        "position": "Head of Platform",
+        "company": "Personio",
+        "contact": {
+          "phone": "+49 89 2231 0009",
+          "email": "miriam.fuchs@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 82000,
+      "max": 96000
+    },
+    "candidateClustering": {
+      "primaryCluster": "DevOps Engineering",
+      "secondaryClusters": [
+        "Platform Engineering",
+        "Cloud Infrastructure"
+      ],
+      "functionalExpertise": [
+        "Kubernetes-Betrieb",
+        "Infrastructure as Code",
+        "CI/CD-Automatisierung"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Schnellere Deployments",
+        "Self-Service-Plattform für viele Teams"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "HR Tech"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "SaaS"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Klare DevOps-Entwicklung vom Sysadmin zum Plattform-Builder mit tiefer Kubernetes- und IaC-Expertise."
+    },
+    "searchIndex": {
+      "roles": [
+        "DevOps Engineer",
+        "Platform Engineer",
+        "Site Reliability Engineer"
+      ],
+      "skills": [
+        "Kubernetes",
+        "Docker",
+        "Terraform",
+        "Ansible",
+        "ArgoCD",
+        "AWS",
+        "GitLab CI",
+        "Helm",
+        "GitOps"
+      ],
+      "industries": [
+        "SaaS",
+        "HR Technology"
+      ]
+    },
+    "tags": [
+      "devops",
+      "kubernetes",
+      "terraform",
+      "aws",
+      "cicd",
+      "munich"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior Site Reliability Engineer mit rund zehn Jahren Erfahrung im Betrieb hochverfügbarer, latenzkritischer Systeme. Fokussiert auf Observability, Incident-Management und die Reduzierung von Toil durch Automatisierung. Denkt in Fehlerbudgets und definiert belastbare Zuverlässigkeitsziele.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Yasmin Haddad",
+      "role": "Senior Site Reliability Engineer",
+      "summary": "SRE mit Schwerpunkt auf Observability, Incident-Response und der Zuverlässigkeit verteilter Systeme.",
+      "contact": {
+        "phone": "+49 30 4478 3312",
+        "address": {
+          "streetNumber": "31",
+          "streetName": "Warschauer",
+          "streetType": "Straße",
+          "city": "Berlin",
+          "state": "Berlin",
+          "zipCode": "10243",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/yasmin-haddad",
+          "github": "https://github.com/yhaddad",
+          "website": "https://yasminhaddad.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends",
+          "Freitagnachmittag"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": true
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Observability",
+        "skills": [
+          "Prometheus",
+          "Grafana",
+          "OpenTelemetry"
+        ]
+      },
+      {
+        "category": "Orchestrierung",
+        "skills": [
+          "Kubernetes",
+          "Docker"
+        ]
+      },
+      {
+        "category": "Sprachen",
+        "skills": [
+          "Go",
+          "Python",
+          "Bash"
+        ]
+      },
+      {
+        "category": "Zuverlässigkeit",
+        "skills": [
+          "Incident Response",
+          "SLO/SLI",
+          "Chaos Engineering"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Site Reliability Engineering",
+        "Observability",
+        "Incident-Management",
+        "Kapazitätsplanung"
+      ],
+      "keyResponsibilities": [
+        "Definition und Überwachung von SLOs",
+        "Aufbau von Observability-Stacks",
+        "Leitung von Incident-Response",
+        "Reduzierung von Toil durch Automatisierung"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "SoundCloud",
+        "website": "https://soundcloud.com",
+        "location": "Berlin, Deutschland",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Senior Site Reliability Engineer",
+        "activities": [
+          {
+            "project": "Streaming-Infrastruktur",
+            "tasks": [
+              "Aufbau eines einheitlichen Observability-Stacks",
+              "Definition von SLOs für kritische Dienste",
+              "Leitung von Post-Mortems"
+            ]
+          }
+        ],
+        "achievements": [
+          "Steigerung der Verfügbarkeit auf 99,95 Prozent",
+          "Reduzierung der mittleren Wiederherstellungszeit um 45 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "Prometheus",
+          "Grafana",
+          "Kubernetes",
+          "Go"
+        ]
+      },
+      {
+        "company": "ResearchGate",
+        "website": "https://www.researchgate.net",
+        "location": "Berlin, Deutschland",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Infrastructure Engineer",
+        "activities": [
+          {
+            "project": "Plattform-Infrastruktur",
+            "tasks": [
+              "Betrieb von Kubernetes-Clustern",
+              "Aufbau von Alerting",
+              "Automatisierung von Deployments"
+            ]
+          }
+        ],
+        "achievements": [
+          "Einführung eines strukturierten On-Call-Prozesses"
+        ],
+        "toolsAndTechnologies": [
+          "Kubernetes",
+          "Python",
+          "Prometheus"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Technische Universität Berlin",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Technische Informatik",
+        "achievements": [
+          "Schwerpunkt verteilte Systeme"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Technische Universität Berlin",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Kubernetes Administrator",
+        "institution": "Cloud Native Computing Foundation",
+        "year": "@Y-2@",
+        "description": "Zertifizierung für die Administration von Kubernetes-Clustern."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Prometheus",
+        "Grafana",
+        "OpenTelemetry",
+        "Kubernetes",
+        "Go",
+        "Python",
+        "Terraform"
+      ],
+      "softSkills": [
+        "Ruhe unter Druck",
+        "Analytisches Denken",
+        "Kommunikation",
+        "Verantwortungsbewusstsein"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Arabisch",
+          "proficiency": {
+            "read": "native",
+            "written": "intermediate",
+            "spoken": "native"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Einheitlicher Observability-Stack",
+        "description": "Konsolidierung fragmentierter Monitoring-Tools in einen einheitlichen Stack.",
+        "date": "2021",
+        "impact": "Verkürzte die Fehlererkennung und verbesserte die Systemtransparenz deutlich."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Bouldern",
+      "Elektronische Musik",
+      "Reisen"
+    ],
+    "references": [
+      {
+        "name": "Daniel Roth",
+        "position": "Engineering Director",
+        "company": "SoundCloud",
+        "contact": {
+          "phone": "+49 30 4478 0010",
+          "email": "daniel.roth@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 84000,
+      "max": 98000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Site Reliability Engineering",
+      "secondaryClusters": [
+        "Observability",
+        "Cloud Infrastructure"
+      ],
+      "functionalExpertise": [
+        "Zuverlässigkeitstechnik",
+        "Observability",
+        "Incident-Management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Höhere Verfügbarkeit",
+        "Kürzere Wiederherstellungszeiten"
+      ],
+      "industryDomains": [
+        "Media",
+        "SaaS"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "SaaS"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Konsistente SRE-Laufbahn mit belegtem Fokus auf Zuverlässigkeit, Observability und Incident-Response."
+    },
+    "searchIndex": {
+      "roles": [
+        "Site Reliability Engineer",
+        "SRE",
+        "Infrastructure Engineer"
+      ],
+      "skills": [
+        "Prometheus",
+        "Grafana",
+        "OpenTelemetry",
+        "Kubernetes",
+        "Go",
+        "Python",
+        "Terraform",
+        "SLO",
+        "Incident Response"
+      ],
+      "industries": [
+        "Media",
+        "SaaS"
+      ]
+    },
+    "tags": [
+      "sre",
+      "observability",
+      "kubernetes",
+      "prometheus",
+      "go",
+      "berlin"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Platform Engineering Lead mit über 14 Jahren Erfahrung im Aufbau interner Plattformen, die Entwicklerteams produktiver machen. Verantwortet Plattformstrategie, Golden Paths und die Zuverlässigkeit gemeinsamer Infrastruktur. Verbindet tiefe technische Expertise mit der Fähigkeit, Teams und Standards zu führen.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Florian Gruber",
+      "role": "Platform Engineering Lead",
+      "summary": "Führt Platform-Teams und verantwortet interne Developer-Plattformen, Golden Paths und geteilte Infrastruktur.",
+      "contact": {
+        "phone": "+43 1 6634 2218",
+        "email": "florian.gruber@example.at",
+        "address": {
+          "streetNumber": "6",
+          "streetName": "Praterstraße",
+          "streetType": "Straße",
+          "city": "Wien",
+          "state": "Wien",
+          "zipCode": "1020",
+          "country": "Österreich"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/florian-gruber",
+          "github": "https://github.com/fgruber",
+          "website": "https://floriangruber.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-02-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Plattform",
+        "skills": [
+          "Kubernetes",
+          "Backstage",
+          "Crossplane"
+        ]
+      },
+      {
+        "category": "Infrastructure as Code",
+        "skills": [
+          "Terraform",
+          "Pulumi"
+        ]
+      },
+      {
+        "category": "Sprachen",
+        "skills": [
+          "Go",
+          "Python",
+          "TypeScript"
+        ]
+      },
+      {
+        "category": "Cloud & CI",
+        "skills": [
+          "AWS",
+          "Azure",
+          "GitHub Actions"
+        ]
+      },
+      {
+        "category": "Führung",
+        "skills": [
+          "Team-Leitung",
+          "Technische Roadmaps"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Internal Developer Platforms",
+        "Golden Paths",
+        "Plattform-Zuverlässigkeit",
+        "Technische Führung"
+      ],
+      "keyResponsibilities": [
+        "Führung des Platform-Engineering-Teams",
+        "Definition der Plattformstrategie",
+        "Aufbau von Self-Service-Golden-Paths",
+        "Sicherstellung der Zuverlässigkeit gemeinsamer Infrastruktur"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Dynatrace",
+        "website": "https://www.dynatrace.com",
+        "location": "Wien, Österreich",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Platform Engineering Lead",
+        "activities": [
+          {
+            "project": "Interne Developer-Plattform",
+            "tasks": [
+              "Aufbau eines Backstage-basierten Entwicklerportals",
+              "Definition von Golden Paths für Deployments",
+              "Führung eines Teams von sechs Plattform-Ingenieuren"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduzierung der Onboarding-Zeit neuer Services von Tagen auf Stunden",
+          "Aufbau eines unternehmensweiten Self-Service-Katalogs"
+        ],
+        "toolsAndTechnologies": [
+          "Kubernetes",
+          "Backstage",
+          "Terraform",
+          "Go",
+          "AWS"
+        ]
+      },
+      {
+        "company": "Frequentis",
+        "website": "https://www.frequentis.com",
+        "location": "Wien, Österreich",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Senior Infrastructure Engineer",
+        "activities": [
+          {
+            "project": "Kritische Kommunikationssysteme",
+            "tasks": [
+              "Betrieb hochverfügbarer Systeme",
+              "Automatisierung der Infrastruktur",
+              "Mentoring von Ingenieuren"
+            ]
+          }
+        ],
+        "achievements": [
+          "Einführung von Infrastructure as Code über mehrere Teams"
+        ],
+        "toolsAndTechnologies": [
+          "Ansible",
+          "Linux",
+          "Python"
+        ]
+      },
+      {
+        "company": "Kapsch",
+        "website": "https://www.kapsch.net",
+        "location": "Wien, Österreich",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Systems Engineer",
+        "activities": [
+          {
+            "project": "Verkehrstelematik-Infrastruktur",
+            "tasks": [
+              "Betreuung von Server- und Netzwerkinfrastruktur",
+              "Automatisierung von Deployments"
+            ]
+          }
+        ],
+        "achievements": [
+          "Verbesserung der Systemstabilität durch Automatisierung"
+        ],
+        "toolsAndTechnologies": [
+          "Linux",
+          "Bash",
+          "VMware"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Technische Universität Wien",
+        "degree": "Diplomingenieur",
+        "fieldOfStudy": "Technische Informatik",
+        "achievements": [
+          "Schwerpunkt verteilte Systeme"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Kubernetes Administrator",
+        "institution": "Cloud Native Computing Foundation",
+        "year": "@Y-4@",
+        "description": "Zertifizierung für die Administration von Kubernetes-Clustern."
+      },
+      {
+        "title": "AWS Certified Solutions Architect – Professional",
+        "institution": "Amazon Web Services",
+        "year": "@Y-4@",
+        "description": "Professionelle Zertifizierung für die Architektur von AWS-Lösungen."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Kubernetes",
+        "Backstage",
+        "Terraform",
+        "Pulumi",
+        "Go",
+        "Python",
+        "AWS",
+        "Azure"
+      ],
+      "softSkills": [
+        "Führungskompetenz",
+        "Strategisches Denken",
+        "Mentoring",
+        "Kommunikation"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Backstage-Entwicklerportal",
+        "description": "Einführung eines zentralen Entwicklerportals mit Self-Service-Golden-Paths.",
+        "date": "2021",
+        "impact": "Verkürzte das Onboarding neuer Services drastisch und standardisierte Deployments."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Bergsteigen",
+      "Fotografie",
+      "Kaffee"
+    ],
+    "references": [
+      {
+        "name": "Anna Steiner",
+        "position": "VP Engineering",
+        "company": "Dynatrace",
+        "contact": {
+          "phone": "+43 1 6634 0011",
+          "email": "anna.steiner@example.at"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Platform Engineering",
+      "secondaryClusters": [
+        "Engineering Leadership",
+        "Cloud Infrastructure"
+      ],
+      "functionalExpertise": [
+        "Internal Developer Platforms",
+        "Plattformstrategie",
+        "Technische Führung"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Schnelleres Service-Onboarding",
+        "Unternehmensweiter Self-Service-Katalog"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "Observability",
+        "Critical Infrastructure"
+      ],
+      "environmentFit": [
+        "Enterprise SaaS",
+        "Scale-up"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Lange Infrastruktur-Laufbahn mit klarer Entwicklung zur Plattform-Führung und belegtem Aufbau interner Plattformen."
+    },
+    "searchIndex": {
+      "roles": [
+        "Platform Engineering Lead",
+        "Platform Engineer",
+        "Infrastructure Lead"
+      ],
+      "skills": [
+        "Kubernetes",
+        "Backstage",
+        "Terraform",
+        "Pulumi",
+        "Go",
+        "Python",
+        "AWS",
+        "Azure",
+        "Internal Developer Platform"
+      ],
+      "industries": [
+        "SaaS",
+        "Observability",
+        "Critical Infrastructure"
+      ]
+    },
+    "tags": [
+      "platform-engineering",
+      "kubernetes",
+      "backstage",
+      "terraform",
+      "lead",
+      "vienna"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Director of Cloud Architecture mit über 17 Jahren Erfahrung in der Gestaltung und Führung großangelegter Cloud-Transformationen. Verantwortet Cloud-Strategie, Governance und die technische Ausrichtung über mehrere Geschäftsbereiche. Verbindet fundierte Architekturkompetenz mit Führungsstärke und Kostenbewusstsein im regulierten Umfeld.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Reto Baumann",
+      "role": "Director of Cloud Architecture",
+      "summary": "Cloud-Architektur-Direktor mit Verantwortung für Cloud-Strategie, Governance und Transformation im Finanzsektor.",
+      "contact": {
+        "phone": "+41 44 334 55 12",
+        "email": "reto.baumann@example.ch",
+        "address": {
+          "streetNumber": "21",
+          "streetName": "Paradeplatz",
+          "streetType": "Strasse",
+          "city": "Zürich",
+          "state": "Zürich",
+          "zipCode": "8001",
+          "country": "Schweiz"
+        },
+        "socialLinks": {
+          "website": "https://retobaumann.ch"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-03-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Cloud-Strategie",
+        "skills": [
+          "Cloud-Governance",
+          "Landing Zones",
+          "FinOps"
+        ]
+      },
+      {
+        "category": "Plattformen",
+        "skills": [
+          "AWS",
+          "Azure",
+          "Google Cloud"
+        ]
+      },
+      {
+        "category": "Architektur",
+        "skills": [
+          "Enterprise Architecture",
+          "Security by Design",
+          "Zero Trust"
+        ]
+      },
+      {
+        "category": "Führung",
+        "skills": [
+          "Team-Aufbau",
+          "Stakeholder-Management",
+          "Technische Roadmaps"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Cloud-Transformation",
+        "Enterprise-Architektur",
+        "Cloud-Governance",
+        "Technische Führung"
+      ],
+      "keyResponsibilities": [
+        "Definition der konzernweiten Cloud-Strategie",
+        "Führung eines Architektur-Teams",
+        "Sicherstellung von Compliance und Governance",
+        "Steuerung von Cloud-Kosten und -Risiken"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "UBS",
+        "website": "https://www.ubs.com",
+        "location": "Zürich, Schweiz",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Director of Cloud Architecture",
+        "activities": [
+          {
+            "project": "Konzernweite Cloud-Transformation",
+            "tasks": [
+              "Definition der Cloud-Strategie und Landing Zones",
+              "Führung eines Teams von zwölf Architekten",
+              "Etablierung von Governance und FinOps"
+            ]
+          }
+        ],
+        "achievements": [
+          "Migration von über 200 Anwendungen in die Cloud",
+          "Senkung der Cloud-Kosten um 25 Prozent durch FinOps"
+        ],
+        "toolsAndTechnologies": [
+          "AWS",
+          "Azure",
+          "Terraform",
+          "Kubernetes"
+        ]
+      },
+      {
+        "company": "Credit Suisse",
+        "website": "https://www.credit-suisse.com",
+        "location": "Zürich, Schweiz",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Lead Solutions Architect",
+        "activities": [
+          {
+            "project": "Digitale Bankplattform",
+            "tasks": [
+              "Architektur einer digitalen Banking-Plattform",
+              "Führung der technischen Entwurfsentscheidungen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Erfolgreicher Aufbau einer skalierbaren Banking-Plattform"
+        ],
+        "toolsAndTechnologies": [
+          "Java",
+          "AWS",
+          "Microservices"
+        ]
+      },
+      {
+        "company": "Swisscom",
+        "website": "https://www.swisscom.ch",
+        "location": "Zürich, Schweiz",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Software- und Systemarchitekt",
+        "activities": [
+          {
+            "project": "Telekommunikationsplattformen",
+            "tasks": [
+              "Entwurf von Systemarchitekturen",
+              "Technische Beratung von Projekten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Standardisierung der Architekturprozesse"
+        ],
+        "toolsAndTechnologies": [
+          "Java",
+          "Linux",
+          "Oracle"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "ETH Zürich",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": [
+          "Schwerpunkt Softwarearchitektur"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "ETH Zürich",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Certified Solutions Architect – Professional",
+        "institution": "Amazon Web Services",
+        "year": "@Y-4@",
+        "description": "Professionelle Zertifizierung für die Architektur komplexer AWS-Lösungen."
+      },
+      {
+        "title": "TOGAF 9 Certified",
+        "institution": "The Open Group",
+        "year": "@Y-4@",
+        "description": "Zertifizierung für Enterprise-Architektur nach dem TOGAF-Framework."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Terraform",
+        "Kubernetes",
+        "Enterprise Architecture",
+        "FinOps"
+      ],
+      "softSkills": [
+        "Strategische Führung",
+        "Entscheidungsstärke",
+        "Stakeholder-Management",
+        "Verhandlungsgeschick"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Französisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Konzernweite Cloud-Landing-Zone",
+        "description": "Aufbau einer sicheren, standardisierten Cloud-Landing-Zone für die gesamte Bank.",
+        "date": "2020",
+        "impact": "Beschleunigte Cloud-Adoption bei gleichzeitiger Einhaltung strenger Regulierung."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Golf",
+      "Segeln",
+      "Wirtschaftsliteratur"
+    ],
+    "references": [
+      {
+        "name": "Beatrice Frei",
+        "position": "Chief Technology Officer",
+        "company": "UBS",
+        "contact": {
+          "phone": "+41 44 334 00 12",
+          "email": "beatrice.frei@example.ch"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "CHF",
+      "min": 200000,
+      "max": 240000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Cloud Architecture",
+      "secondaryClusters": [
+        "Enterprise Architecture",
+        "Cloud Governance",
+        "Technology Leadership"
+      ],
+      "functionalExpertise": [
+        "Cloud-Transformation",
+        "Enterprise-Architektur",
+        "Cloud-Governance"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Groß angelegte Cloud-Migration",
+        "Signifikante Kostensenkung durch FinOps"
+      ],
+      "industryDomains": [
+        "Banking",
+        "Financial Services",
+        "Telecommunications"
+      ],
+      "environmentFit": [
+        "Regulated Enterprise",
+        "Enterprise"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "executiveInfluence",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Sehr erfahrener Architektur-Leader mit klarer Aufstiegslinie zur Direktorenrolle und strategischem Einfluss im regulierten Bankumfeld."
+    },
+    "searchIndex": {
+      "roles": [
+        "Cloud Architect",
+        "Director of Cloud Architecture",
+        "Enterprise Architect",
+        "Solutions Architect"
+      ],
+      "skills": [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Terraform",
+        "Kubernetes",
+        "Enterprise Architecture",
+        "FinOps",
+        "Cloud Governance",
+        "Zero Trust"
+      ],
+      "industries": [
+        "Banking",
+        "Financial Services",
+        "Telecommunications"
+      ]
+    },
+    "tags": [
+      "cloud-architecture",
+      "aws",
+      "azure",
+      "governance",
+      "director",
+      "zurich"
+    ]
+  },
+  {
+    "personalInformation": {
+      "name": "Katharina Böhm",
+      "role": "Senior Security Engineer",
+      "summary": "Security Engineer mit Schwerpunkt auf Cloud Security, Zero-Trust-Netzwerken und DevSecOps.",
+      "contact": {
+        "address": {
+          "streetNumber": "19",
+          "streetName": "Königsallee",
+          "streetType": "Allee",
+          "city": "Düsseldorf",
+          "state": "Nordrhein-Westfalen",
+          "zipCode": "40212",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "github": "https://github.com/kboehm",
+          "website": "https://katharinaboehm.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "profiles": {
+      "areasOfExpertise": [
+        "Cloud Security",
+        "Netzwerksicherheit",
+        "DevSecOps",
+        "Incident Response"
+      ],
+      "keyResponsibilities": [
+        "Absicherung von Cloud- und Netzwerkinfrastruktur",
+        "Aufbau von Zero-Trust-Architekturen",
+        "Automatisierung von Sicherheitskontrollen",
+        "Reaktion auf Sicherheitsvorfälle"
+      ]
+    },
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "AWS Security",
+        "IAM",
+        "Terraform",
+        "Vault",
+        "Python",
+        "Go",
+        "Zero Trust",
+        "SIEM"
+      ],
+      "softSkills": [
+        "Wachsamkeit",
+        "Analytisches Denken",
+        "Sorgfalt",
+        "Kommunikation"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Zero-Trust-Netzwerk",
+        "description": "Umbau der Netzwerkarchitektur nach dem Zero-Trust-Prinzip.",
+        "date": "2023",
+        "impact": "Reduzierte die Angriffsfläche erheblich und verbesserte die Zugriffskontrolle."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Capture-the-Flag-Wettbewerbe",
+      "Bouldern",
+      "Kryptografie"
+    ],
+    "references": [
+      {
+        "name": "Oliver Schmitt",
+        "position": "Head of Security",
+        "company": "Trivago",
+        "contact": {
+          "phone": "+49 211 5567 0013",
+          "email": "oliver.schmitt@example.de"
+        }
+      }
+    ],
+    "searchIndex": {
+      "roles": [
+        "Security Engineer",
+        "Cloud Security Engineer",
+        "Network Security Engineer",
+        "DevSecOps Engineer"
+      ],
+      "skills": [
+        "AWS Security",
+        "IAM",
+        "Terraform",
+        "Vault",
+        "Python",
+        "Go",
+        "Zero Trust",
+        "SIEM",
+        "Penetration Testing"
+      ],
+      "industries": [
+        "Travel Technology",
+        "Managed Services"
+      ]
+    },
+    "tags": [
+      "security",
+      "cloud-security",
+      "zero-trust",
+      "devsecops",
+      "aws",
+      "dusseldorf"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Senior Product Manager mit über zehn Jahren Erfahrung in der Entwicklung von B2B-SaaS-Produkten. Verbindet Kundenverständnis, Datenanalyse und klare Priorisierung, um Produkte mit messbarem Geschäftswert zu liefern. Arbeitet eng mit Engineering, Design und Vertrieb zusammen und übersetzt Strategie in konkrete Roadmaps.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Julian Weiss",
+      "role": "Senior Product Manager",
+      "summary": "B2B-SaaS-Produktmanager mit Fokus auf Discovery, Priorisierung und datengetriebene Roadmaps.",
+      "contact": {
+        "phone": "+49 30 7789 4412",
+        "email": "julian.weiss@example.de",
+        "address": {
+          "streetNumber": "54",
+          "streetName": "Prenzlauer",
+          "streetType": "Allee",
+          "city": "Berlin",
+          "state": "Berlin",
+          "zipCode": "10405",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/julian-weiss",
+          "website": "https://julianweiss.de"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "Werktags abends",
+          "Freitagnachmittag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Produktmanagement",
+        "skills": [
+          "Product Discovery",
+          "Roadmapping",
+          "Priorisierung"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "SQL",
+          "Amplitude",
+          "A/B-Testing"
+        ]
+      },
+      {
+        "category": "Methoden",
+        "skills": [
+          "Agile",
+          "OKR",
+          "Jobs-to-be-Done"
+        ]
+      },
+      {
+        "category": "Tools",
+        "skills": [
+          "Jira",
+          "Figma",
+          "Productboard"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Produktstrategie",
+        "Product Discovery",
+        "Datengetriebene Entscheidungen",
+        "Stakeholder-Management"
+      ],
+      "keyResponsibilities": [
+        "Definition der Produktvision und Roadmap",
+        "Durchführung von Discovery und Nutzerinterviews",
+        "Priorisierung des Backlogs",
+        "Messung von Produkterfolg anhand von Kennzahlen"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Contentful",
+        "website": "https://www.contentful.com",
+        "location": "Berlin, Deutschland",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Senior Product Manager",
+        "activities": [
+          {
+            "project": "Content-Modellierungs-Bereich",
+            "tasks": [
+              "Verantwortung für die Produkt-Roadmap eines Kernbereichs",
+              "Durchführung von Discovery mit Enterprise-Kunden",
+              "Definition und Verfolgung von OKRs"
+            ]
+          }
+        ],
+        "achievements": [
+          "Steigerung der Feature-Adoption um 30 Prozent",
+          "Einführung eines neuen Enterprise-Features, das den Umsatz stützte"
+        ],
+        "toolsAndTechnologies": [
+          "Jira",
+          "Amplitude",
+          "Figma",
+          "SQL"
+        ]
+      },
+      {
+        "company": "GetYourGuide",
+        "website": "https://www.getyourguide.com",
+        "location": "Berlin, Deutschland",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Product Manager",
+        "activities": [
+          {
+            "project": "Buchungserlebnis",
+            "tasks": [
+              "Optimierung des Buchungs-Funnels",
+              "Durchführung von A/B-Tests",
+              "Zusammenarbeit mit Engineering und Design"
+            ]
+          }
+        ],
+        "achievements": [
+          "Steigerung der Conversion-Rate im Buchungsprozess um 12 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "Jira",
+          "Google Analytics",
+          "Optimizely"
+        ]
+      },
+      {
+        "company": "Rocket Internet",
+        "website": "https://www.rocket-internet.com",
+        "location": "Berlin, Deutschland",
+        "from": "@M-100@",
+        "to": "@M-70@",
+        "position": "Associate Product Manager",
+        "activities": [
+          {
+            "project": "E-Commerce-Ventures",
+            "tasks": [
+              "Unterstützung bei der Produktentwicklung neuer Ventures",
+              "Erstellung von Anforderungsdokumenten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mitwirkung am Launch von zwei neuen Produkten"
+        ],
+        "toolsAndTechnologies": [
+          "Jira",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "WHU – Otto Beisheim School of Management",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Management",
+        "achievements": [
+          "Schwerpunkt Entrepreneurship"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Universität Mannheim",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Betriebswirtschaftslehre",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Scrum Product Owner",
+        "institution": "Scrum Alliance",
+        "year": "@Y-2@",
+        "description": "Zertifizierung für die Rolle des Product Owners im Scrum-Framework."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SQL",
+        "Amplitude",
+        "Jira",
+        "Figma",
+        "Productboard",
+        "A/B Testing"
+      ],
+      "softSkills": [
+        "Priorisierung",
+        "Kommunikationsstärke",
+        "Empathie",
+        "Verhandlungsgeschick"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Enterprise-Feature-Launch",
+        "description": "Konzeption und Einführung eines Enterprise-Features auf Basis intensiver Kundendiscovery.",
+        "date": "2022",
+        "impact": "Trug zur Gewinnung und Bindung mehrerer Großkunden bei."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Segeln",
+      "Podcasts",
+      "Kochen"
+    ],
+    "references": [
+      {
+        "name": "Nina Albrecht",
+        "position": "VP Product",
+        "company": "Contentful",
+        "contact": {
+          "phone": "+49 30 7789 0014",
+          "email": "nina.albrecht@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 85000,
+      "max": 100000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Product Management",
+      "secondaryClusters": [
+        "B2B SaaS",
+        "Product Discovery"
+      ],
+      "functionalExpertise": [
+        "Produktstrategie",
+        "Product Discovery",
+        "Datengetriebene Entscheidungen"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Höhere Feature-Adoption",
+        "Umsatzrelevante Enterprise-Features"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "Travel Tech",
+        "E-Commerce"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "SaaS"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Breite Produktmanagement-Erfahrung über mehrere SaaS- und Consumer-Produkte mit klarem Geschäftsfokus."
+    },
+    "searchIndex": {
+      "roles": [
+        "Product Manager",
+        "Senior Product Manager",
+        "B2B Product Manager"
+      ],
+      "skills": [
+        "Product Discovery",
+        "Roadmapping",
+        "SQL",
+        "Amplitude",
+        "A/B Testing",
+        "OKR",
+        "Jira",
+        "Figma",
+        "Jobs-to-be-Done"
+      ],
+      "industries": [
+        "SaaS",
+        "Travel Technology",
+        "E-Commerce"
+      ]
+    },
+    "tags": [
+      "product-management",
+      "b2b-saas",
+      "discovery",
+      "roadmap",
+      "senior",
+      "berlin"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Product Owner mit rund sechs Jahren Erfahrung in agilen Entwicklungsteams. Verantwortet Backlog, User Stories und die enge Abstimmung zwischen Fachbereich und Entwicklung. Sorgt dafür, dass Teams die richtigen Dinge in der richtigen Reihenfolge bauen und Stakeholder gut eingebunden sind.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Lea Schumann",
+      "role": "Product Owner",
+      "summary": "Product Owner in agilen Teams mit Fokus auf Backlog-Management, User Stories und Stakeholder-Abstimmung.",
+      "contact": {
+        "phone": "+49 341 2278 3390",
+        "email": "lea.schumann@example.de",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Karl-Liebknecht",
+          "streetType": "Straße",
+          "city": "Leipzig",
+          "state": "Sachsen",
+          "zipCode": "04107",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "website": "https://leaschumann.de"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Werktags vormittags",
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Agile",
+        "skills": [
+          "Scrum",
+          "Kanban",
+          "Backlog-Management"
+        ]
+      },
+      {
+        "category": "Anforderungen",
+        "skills": [
+          "User Stories",
+          "Akzeptanzkriterien",
+          "Story Mapping"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "SQL",
+          "Google Analytics"
+        ]
+      },
+      {
+        "category": "Tools",
+        "skills": [
+          "Jira",
+          "Confluence",
+          "Miro"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Backlog-Management",
+        "Anforderungsanalyse",
+        "Agile Zusammenarbeit",
+        "Stakeholder-Abstimmung"
+      ],
+      "keyResponsibilities": [
+        "Pflege und Priorisierung des Product Backlogs",
+        "Erstellung von User Stories und Akzeptanzkriterien",
+        "Moderation agiler Zeremonien",
+        "Abstimmung zwischen Fachbereich und Entwicklungsteam"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Spreadshirt",
+        "website": "https://www.spreadshirt.de",
+        "location": "Leipzig, Deutschland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Product Owner",
+        "activities": [
+          {
+            "project": "Shop-Plattform",
+            "tasks": [
+              "Pflege des Backlogs für ein Entwicklungsteam",
+              "Erstellung von User Stories",
+              "Abstimmung mit Fachbereichen und Design"
+            ]
+          }
+        ],
+        "achievements": [
+          "Verbesserung der Liefervorhersehbarkeit des Teams",
+          "Reduzierung von Nacharbeit durch klarere Anforderungen"
+        ],
+        "toolsAndTechnologies": [
+          "Jira",
+          "Confluence",
+          "Miro"
+        ]
+      },
+      {
+        "company": "Kaufland e-commerce",
+        "website": "https://www.kaufland.de",
+        "location": "Leipzig, Deutschland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Junior Product Owner",
+        "activities": [
+          {
+            "project": "Marktplatz-Backoffice",
+            "tasks": [
+              "Unterstützung des Product Owners bei der Backlog-Pflege",
+              "Erfassung von Anforderungen",
+              "Durchführung von Story-Mapping-Sessions"
+            ]
+          }
+        ],
+        "achievements": [
+          "Einführung strukturierter Akzeptanzkriterien"
+        ],
+        "toolsAndTechnologies": [
+          "Jira",
+          "Confluence"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Jira",
+        "Confluence",
+        "Miro",
+        "SQL",
+        "Google Analytics"
+      ],
+      "softSkills": [
+        "Organisationstalent",
+        "Kommunikationsstärke",
+        "Empathie",
+        "Durchsetzungsvermögen"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Backlog-Neustrukturierung",
+        "description": "Neuordnung und Priorisierung eines unübersichtlichen Backlogs nach Wert und Aufwand.",
+        "date": "2023",
+        "impact": "Verbesserte den Fokus des Teams und die Vorhersehbarkeit der Lieferungen."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Töpfern",
+      "Joggen",
+      "Lesen"
+    ],
+    "references": [
+      {
+        "name": "Robert Kühn",
+        "position": "Head of Product",
+        "company": "Spreadshirt",
+        "contact": {
+          "phone": "+49 341 2278 0015",
+          "email": "robert.kuehn@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 55000,
+      "max": 66000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Product Ownership",
+      "secondaryClusters": [
+        "Agile Delivery",
+        "Requirements Analysis"
+      ],
+      "functionalExpertise": [
+        "Backlog-Management",
+        "Anforderungsanalyse",
+        "Agile Zusammenarbeit"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Bessere Liefervorhersehbarkeit",
+        "Weniger Nacharbeit"
+      ],
+      "industryDomains": [
+        "E-Commerce",
+        "SaaS"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Enterprise SaaS"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.81,
+      "clusterReasoning": "Solide, wachsende Product-Owner-Erfahrung mit klarem Fokus auf agile Auslieferung und Anforderungsqualität."
+    },
+    "searchIndex": {
+      "roles": [
+        "Product Owner",
+        "Junior Product Manager",
+        "Agile Product Owner"
+      ],
+      "skills": [
+        "Scrum",
+        "Kanban",
+        "Backlog Management",
+        "User Stories",
+        "Story Mapping",
+        "Jira",
+        "Confluence",
+        "SQL"
+      ],
+      "industries": [
+        "E-Commerce",
+        "SaaS"
+      ]
+    },
+    "tags": [
+      "product-owner",
+      "scrum",
+      "agile",
+      "backlog",
+      "leipzig"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Technischer Produktmanager und Group Product Manager mit über 13 Jahren Erfahrung an der Schnittstelle von Technik und Produkt. Verantwortet Plattform- und API-Produkte und führt ein Team von Produktmanagern. Verbindet fundiertes technisches Verständnis mit strategischer Roadmap-Planung und Stakeholder-Führung.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Philipp Sommer",
+      "role": "Group Product Manager (Technical)",
+      "summary": "Technischer Group Product Manager für Plattform- und API-Produkte mit Führungsverantwortung für ein PM-Team.",
+      "contact": {
+        "phone": "+49 89 5567 3320",
+        "email": "philipp.sommer@example.de",
+        "address": {
+          "streetNumber": "33",
+          "streetName": "Maximilianstraße",
+          "streetType": "Straße",
+          "city": "München",
+          "state": "Bayern",
+          "zipCode": "80539",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/philipp-sommer",
+          "github": "https://github.com/psommer",
+          "website": "https://philippsommer.de"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Technisches PM",
+        "skills": [
+          "API-Produkte",
+          "Plattform-Strategie",
+          "Technische Roadmaps"
+        ]
+      },
+      {
+        "category": "Führung",
+        "skills": [
+          "Team-Leitung",
+          "Coaching",
+          "OKR"
+        ]
+      },
+      {
+        "category": "Technik",
+        "skills": [
+          "System Design",
+          "SQL",
+          "REST/GraphQL"
+        ]
+      },
+      {
+        "category": "Tools",
+        "skills": [
+          "Jira",
+          "Amplitude",
+          "Postman"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Technisches Produktmanagement",
+        "Plattform- und API-Strategie",
+        "Team-Führung",
+        "Stakeholder-Management"
+      ],
+      "keyResponsibilities": [
+        "Führung eines Teams von Produktmanagern",
+        "Definition der Plattform- und API-Strategie",
+        "Abstimmung technischer Roadmaps mit Engineering",
+        "Vertretung der Produktvision gegenüber Stakeholdern"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "SAP",
+        "website": "https://www.sap.com",
+        "location": "München, Deutschland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Group Product Manager (Technical)",
+        "activities": [
+          {
+            "project": "Entwicklerplattform und APIs",
+            "tasks": [
+              "Führung von vier Produktmanagern",
+              "Definition der API-Produktstrategie",
+              "Abstimmung mit Engineering zu technischen Roadmaps"
+            ]
+          }
+        ],
+        "achievements": [
+          "Steigerung der API-Nutzung durch Drittentwickler um 40 Prozent",
+          "Aufbau eines einheitlichen Developer-Portals"
+        ],
+        "toolsAndTechnologies": [
+          "Jira",
+          "Amplitude",
+          "Postman",
+          "SQL"
+        ]
+      },
+      {
+        "company": "Siemens",
+        "website": "https://www.siemens.com",
+        "location": "München, Deutschland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Technical Product Manager",
+        "activities": [
+          {
+            "project": "IoT-Plattform",
+            "tasks": [
+              "Verantwortung für Plattform-Features",
+              "Enge Zusammenarbeit mit Engineering",
+              "Definition technischer Anforderungen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Erfolgreiche Einführung einer neuen Plattform-API"
+        ],
+        "toolsAndTechnologies": [
+          "Jira",
+          "SQL",
+          "REST"
+        ]
+      },
+      {
+        "company": "Rohde & Schwarz",
+        "website": "https://www.rohde-schwarz.com",
+        "location": "München, Deutschland",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Softwareentwickler",
+        "activities": [
+          {
+            "project": "Messtechnik-Software",
+            "tasks": [
+              "Entwicklung von Softwaremodulen",
+              "Zusammenarbeit mit Produktverantwortlichen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Wechsel von der Entwicklung ins technische Produktmanagement"
+        ],
+        "toolsAndTechnologies": [
+          "C++",
+          "Python"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Technische Universität München",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": [
+          "Schwerpunkt Softwaretechnik"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Technische Universität München",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": []
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "System Design",
+        "SQL",
+        "REST",
+        "GraphQL",
+        "Jira",
+        "Amplitude",
+        "Postman"
+      ],
+      "softSkills": [
+        "Führungsstärke",
+        "Technisches Urteilsvermögen",
+        "Kommunikation",
+        "Strategisches Denken"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Einheitliches Developer-Portal",
+        "description": "Aufbau eines zentralen Portals für externe Entwickler mit konsistenter API-Dokumentation.",
+        "date": "2021",
+        "impact": "Steigerte die Akzeptanz der Plattform-APIs bei Drittentwicklern deutlich."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Bergwandern",
+      "3D-Druck",
+      "Schach"
+    ],
+    "references": [
+      {
+        "name": "Christine Baumgartner",
+        "position": "VP Product",
+        "company": "SAP",
+        "contact": {
+          "phone": "+49 89 5567 0016",
+          "email": "christine.baumgartner@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 110000,
+      "max": 130000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Technical Product Management",
+      "secondaryClusters": [
+        "Product Leadership",
+        "Platform Product"
+      ],
+      "functionalExpertise": [
+        "Technisches Produktmanagement",
+        "Plattform- und API-Strategie",
+        "Team-Führung"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Höhere API-Nutzung",
+        "Einheitliches Developer-Portal"
+      ],
+      "industryDomains": [
+        "Enterprise Software",
+        "IoT"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Enterprise SaaS"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Klare Entwicklung vom Entwickler zum technischen Produktmanager und Teamleiter mit Fokus auf Plattform- und API-Produkte."
+    },
+    "searchIndex": {
+      "roles": [
+        "Technical Product Manager",
+        "Group Product Manager",
+        "Platform Product Manager"
+      ],
+      "skills": [
+        "API Product Management",
+        "Platform Strategy",
+        "System Design",
+        "SQL",
+        "REST",
+        "GraphQL",
+        "OKR",
+        "Amplitude"
+      ],
+      "industries": [
+        "Enterprise Software",
+        "IoT"
+      ]
+    },
+    "tags": [
+      "technical-pm",
+      "platform",
+      "api",
+      "product-leadership",
+      "manager",
+      "munich"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Lead Product Manager mit ausgeprägtem UX-Fokus und über zwölf Jahren Erfahrung in der Gestaltung nutzerzentrierter Produkte. Verantwortet Produktbereiche und führt eine enge Zusammenarbeit von Produkt, Design und Research. Verbindet Empathie für Nutzer mit klarer strategischer Ausrichtung und datenbasierter Validierung.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Miriam Voss",
+      "role": "Lead Product Manager (UX-fokussiert)",
+      "summary": "UX-orientierte Lead Product Managerin mit Schwerpunkt auf nutzerzentrierter Produktgestaltung und Design-Zusammenarbeit.",
+      "contact": {
+        "email": "miriam.voss@example.de",
+        "address": {
+          "streetNumber": "11",
+          "streetName": "Schanzenstraße",
+          "streetType": "Straße",
+          "city": "Hamburg",
+          "state": "Hamburg",
+          "zipCode": "20357",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/miriam-voss",
+          "website": "https://miriamvoss.de"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Produktmanagement",
+        "skills": [
+          "Produktstrategie",
+          "Roadmapping",
+          "OKR"
+        ]
+      },
+      {
+        "category": "UX & Research",
+        "skills": [
+          "User Research",
+          "Usability-Testing",
+          "Journey Mapping"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Amplitude",
+          "Hotjar",
+          "A/B-Testing"
+        ]
+      },
+      {
+        "category": "Tools",
+        "skills": [
+          "Figma",
+          "Jira",
+          "Maze"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Nutzerzentrierte Produktgestaltung",
+        "Produktstrategie",
+        "User Research",
+        "Design-Zusammenarbeit"
+      ],
+      "keyResponsibilities": [
+        "Führung eines nutzerzentrierten Produktbereichs",
+        "Verzahnung von Produkt, Design und Research",
+        "Validierung von Konzepten durch Nutzertests",
+        "Definition der Produktstrategie anhand von Nutzerbedürfnissen"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "About You",
+        "website": "https://www.aboutyou.de",
+        "location": "Hamburg, Deutschland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Lead Product Manager",
+        "activities": [
+          {
+            "project": "Personalisiertes Einkaufserlebnis",
+            "tasks": [
+              "Leitung eines nutzerzentrierten Produktbereichs",
+              "Enge Zusammenarbeit mit Design und Research",
+              "Validierung von Konzepten durch Usability-Tests"
+            ]
+          }
+        ],
+        "achievements": [
+          "Steigerung der Nutzerzufriedenheit im Onboarding messbar",
+          "Erhöhung der Engagement-Rate um 20 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "Figma",
+          "Amplitude",
+          "Jira",
+          "Maze"
+        ]
+      },
+      {
+        "company": "Otto Group",
+        "website": "https://www.ottogroup.com",
+        "location": "Hamburg, Deutschland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Product Manager",
+        "activities": [
+          {
+            "project": "Kunden-App",
+            "tasks": [
+              "Verantwortung für App-Features",
+              "Durchführung von Nutzerinterviews",
+              "Zusammenarbeit mit UX-Design"
+            ]
+          }
+        ],
+        "achievements": [
+          "Verbesserung der App-Bewertungen durch nutzerzentrierte Features"
+        ],
+        "toolsAndTechnologies": [
+          "Jira",
+          "Sketch",
+          "Google Analytics"
+        ]
+      },
+      {
+        "company": "XING",
+        "website": "https://www.xing.com",
+        "location": "Hamburg, Deutschland",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Junior Product Manager",
+        "activities": [
+          {
+            "project": "Netzwerk-Features",
+            "tasks": [
+              "Unterstützung bei der Produktentwicklung",
+              "Erstellung von Konzepten und Wireframes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mitwirkung an der Einführung neuer Netzwerkfunktionen"
+        ],
+        "toolsAndTechnologies": [
+          "Jira",
+          "Balsamiq"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universität Hamburg",
+        "degree": "Master of Arts",
+        "fieldOfStudy": "Medien- und Kommunikationswissenschaft",
+        "achievements": [
+          "Schwerpunkt Human-Computer-Interaction"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Universität Hamburg",
+        "degree": "Bachelor of Arts",
+        "fieldOfStudy": "Kommunikationswissenschaft",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Nielsen Norman Group UX Certification",
+        "institution": "Nielsen Norman Group",
+        "year": "@Y-4@",
+        "description": "Zertifizierung für nutzerzentrierte Gestaltung und UX-Methoden."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Figma",
+        "Amplitude",
+        "Hotjar",
+        "Maze",
+        "Jira",
+        "A/B Testing"
+      ],
+      "softSkills": [
+        "Nutzerempathie",
+        "Führungskompetenz",
+        "Kommunikation",
+        "Kreativität"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Onboarding-Neugestaltung",
+        "description": "Nutzerzentrierte Neugestaltung des Onboarding-Flows auf Basis von Research und Tests.",
+        "date": "2021",
+        "impact": "Erhöhte die Aktivierungsrate neuer Nutzer und die Zufriedenheit spürbar."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Zeichnen",
+      "Segeln",
+      "Design-Podcasts"
+    ],
+    "references": [
+      {
+        "name": "Kevin Ahrens",
+        "position": "Head of Product",
+        "company": "About You",
+        "contact": {
+          "phone": "+49 40 6678 0017",
+          "email": "kevin.ahrens@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 95000,
+      "max": 112000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Product Management",
+      "secondaryClusters": [
+        "UX-Driven Product",
+        "Product Leadership"
+      ],
+      "functionalExpertise": [
+        "Nutzerzentrierte Produktgestaltung",
+        "Produktstrategie",
+        "User Research"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Höhere Nutzerzufriedenheit",
+        "Gesteigertes Engagement"
+      ],
+      "industryDomains": [
+        "E-Commerce",
+        "SaaS"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "SaaS"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Langjährige Produktlaufbahn mit klarem UX-Schwerpunkt und belegter Führung nutzerzentrierter Produktbereiche."
+    },
+    "searchIndex": {
+      "roles": [
+        "Product Manager",
+        "Lead Product Manager",
+        "UX Product Manager"
+      ],
+      "skills": [
+        "Product Strategy",
+        "Roadmapping",
+        "User Research",
+        "Usability Testing",
+        "Journey Mapping",
+        "Amplitude",
+        "Figma",
+        "A/B Testing"
+      ],
+      "industries": [
+        "E-Commerce",
+        "SaaS"
+      ]
+    },
+    "tags": [
+      "product-management",
+      "ux",
+      "user-research",
+      "lead",
+      "hamburg"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Director of Product mit über 16 Jahren Erfahrung, davon viele im wachstumsgetriebenen Produktmanagement. Verantwortet Produktstrategie, Wachstum und den Aufbau von Produktorganisationen. Verbindet datengetriebenes Growth-Denken mit strategischer Führung und einem starken Fokus auf messbare Geschäftsergebnisse.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Daniela Frei",
+      "role": "Director of Product",
+      "summary": "Produktdirektorin mit Growth-Hintergrund, verantwortlich für Produktstrategie, Wachstum und den Aufbau von Produktteams.",
+      "contact": {
+        "phone": "+41 61 223 44 18",
+        "email": "daniela.frei@example.ch",
+        "address": {
+          "streetNumber": "4",
+          "streetName": "Steinenvorstadt",
+          "streetType": "Strasse",
+          "city": "Basel",
+          "state": "Basel-Stadt",
+          "zipCode": "4051",
+          "country": "Schweiz"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/daniela-frei",
+          "website": "https://danielafrei.ch"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-04-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Produktführung",
+        "skills": [
+          "Produktstrategie",
+          "Team-Aufbau",
+          "Portfolio-Management"
+        ]
+      },
+      {
+        "category": "Growth",
+        "skills": [
+          "Growth Loops",
+          "Funnel-Optimierung",
+          "Experimentation"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "SQL",
+          "Amplitude",
+          "Mixpanel"
+        ]
+      },
+      {
+        "category": "Führung",
+        "skills": [
+          "OKR",
+          "Stakeholder-Management",
+          "Hiring"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Produktstrategie",
+        "Growth-Produktmanagement",
+        "Aufbau von Produktorganisationen",
+        "Datengetriebene Führung"
+      ],
+      "keyResponsibilities": [
+        "Definition der Produkt- und Wachstumsstrategie",
+        "Aufbau und Führung mehrerer Produktteams",
+        "Verantwortung für zentrale Wachstumskennzahlen",
+        "Beratung der Geschäftsführung"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "On",
+        "website": "https://www.on.com",
+        "location": "Zürich, Schweiz",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Director of Product",
+        "activities": [
+          {
+            "project": "Digitale Produkte und Wachstum",
+            "tasks": [
+              "Führung von drei Produktteams",
+              "Definition der Growth-Strategie",
+              "Aufbau einer Experimentationskultur"
+            ]
+          }
+        ],
+        "achievements": [
+          "Steigerung der Nutzeraktivierung um 35 Prozent",
+          "Aufbau eines Produktteams von 4 auf 15 Personen"
+        ],
+        "toolsAndTechnologies": [
+          "Amplitude",
+          "SQL",
+          "Mixpanel"
+        ]
+      },
+      {
+        "company": "Digitec Galaxus",
+        "website": "https://www.galaxus.ch",
+        "location": "Zürich, Schweiz",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Head of Growth Product",
+        "activities": [
+          {
+            "project": "E-Commerce-Wachstum",
+            "tasks": [
+              "Leitung des Growth-Produktbereichs",
+              "Optimierung von Funnels",
+              "Aufbau eines Experimentationsprogramms"
+            ]
+          }
+        ],
+        "achievements": [
+          "Signifikante Steigerung der Conversion über den gesamten Funnel"
+        ],
+        "toolsAndTechnologies": [
+          "Google Analytics",
+          "Optimizely",
+          "SQL"
+        ]
+      },
+      {
+        "company": "Doodle",
+        "website": "https://www.doodle.com",
+        "location": "Zürich, Schweiz",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Product Manager",
+        "activities": [
+          {
+            "project": "Terminplanungs-Produkt",
+            "tasks": [
+              "Verantwortung für Kernfunktionen",
+              "Durchführung von A/B-Tests",
+              "Analyse von Nutzungsdaten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Wachstum der aktiven Nutzerbasis maßgeblich mitgestaltet"
+        ],
+        "toolsAndTechnologies": [
+          "Google Analytics",
+          "Jira"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universität St. Gallen",
+        "degree": "Master of Arts",
+        "fieldOfStudy": "Business Innovation",
+        "achievements": [
+          "Schwerpunkt digitale Geschäftsmodelle"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Universität St. Gallen",
+        "degree": "Bachelor of Arts",
+        "fieldOfStudy": "Betriebswirtschaftslehre",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Reforge Growth Series",
+        "institution": "Reforge",
+        "year": "@Y-4@",
+        "description": "Fortgeschrittenes Programm für Growth-Strategie und -Systeme."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "SQL",
+        "Amplitude",
+        "Mixpanel",
+        "Optimizely",
+        "A/B Testing"
+      ],
+      "softSkills": [
+        "Strategische Führung",
+        "Aufbau von Teams",
+        "Kommunikation",
+        "Datengetriebene Entscheidungsfindung"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Aufbau der Produktorganisation",
+        "description": "Aufbau und Skalierung einer Produktorganisation samt Growth-Funktion von Grund auf.",
+        "date": "2022",
+        "impact": "Etablierte eine datengetriebene Produktkultur und beschleunigte das Nutzerwachstum."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Trailrunning",
+      "Design Thinking",
+      "Reisen"
+    ],
+    "references": [
+      {
+        "name": "Stefan Widmer",
+        "position": "Chief Product Officer",
+        "company": "On",
+        "contact": {
+          "phone": "+41 61 223 00 18",
+          "email": "stefan.widmer@example.ch"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "CHF",
+      "min": 190000,
+      "max": 225000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Product Leadership",
+      "secondaryClusters": [
+        "Growth Product Management",
+        "Product Strategy"
+      ],
+      "functionalExpertise": [
+        "Produktstrategie",
+        "Growth-Produktmanagement",
+        "Aufbau von Produktorganisationen"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Gesteigerte Nutzeraktivierung",
+        "Aufbau und Skalierung von Produktteams"
+      ],
+      "industryDomains": [
+        "E-Commerce",
+        "SaaS",
+        "Consumer Tech"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "SaaS"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "executiveInfluence",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Langjährige Produktkarriere mit klarem Growth-Schwerpunkt und Aufstieg bis zur Produktdirektorin mit Organisationsverantwortung."
+    },
+    "searchIndex": {
+      "roles": [
+        "Director of Product",
+        "Head of Product",
+        "Growth Product Manager",
+        "Product Leader"
+      ],
+      "skills": [
+        "Product Strategy",
+        "Growth",
+        "Funnel Optimization",
+        "Experimentation",
+        "SQL",
+        "Amplitude",
+        "Mixpanel",
+        "OKR"
+      ],
+      "industries": [
+        "E-Commerce",
+        "SaaS",
+        "Consumer Technology"
+      ]
+    },
+    "tags": [
+      "product-leadership",
+      "growth",
+      "director",
+      "strategy",
+      "basel"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Erfahrener Backend-Entwickler mit über zehn Jahren Praxis im Aufbau skalierbarer Microservices auf der JVM. Spezialisiert auf ereignisgesteuerte Architekturen, verteilte Systeme und die Modernisierung monolithischer Plattformen. Kombiniert tiefes technisches Wissen mit einem starken Fokus auf Zuverlässigkeit und saubere Domänenmodellierung.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Lukas Brenner",
+      "role": "Senior Backend-Entwickler",
+      "summary": "Backend-Spezialist für Java- und Kotlin-Microservices mit Schwerpunkt auf hoher Verfügbarkeit und Event Streaming.",
+      "contact": {
+        "phone": "+49 89 4521 8899",
+        "email": "lukas.brenner@example.de",
+        "address": {
+          "streetNumber": "17",
+          "streetName": "Lindwurm",
+          "streetType": "Straße",
+          "city": "München",
+          "state": "Bayern",
+          "zipCode": "80337",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/lukas-brenner",
+          "github": "https://github.com/lbrenner",
+          "website": "https://lukasbrenner.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Werktags abends",
+          "Freitagnachmittag"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Programmiersprachen",
+        "skills": [
+          "Java",
+          "Kotlin",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Frameworks",
+        "skills": [
+          "Spring Boot",
+          "Micronaut",
+          "Hibernate"
+        ]
+      },
+      {
+        "category": "Nachrichten & Streaming",
+        "skills": [
+          "Apache Kafka",
+          "RabbitMQ"
+        ]
+      },
+      {
+        "category": "Datenbanken",
+        "skills": [
+          "PostgreSQL",
+          "Redis",
+          "MongoDB"
+        ]
+      },
+      {
+        "category": "Betrieb",
+        "skills": [
+          "Docker",
+          "Kubernetes",
+          "Grafana"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Microservice-Architektur",
+        "Event Streaming",
+        "Domain-Driven Design",
+        "API-Design"
+      ],
+      "keyResponsibilities": [
+        "Entwurf und Betrieb geschäftskritischer Backend-Dienste",
+        "Technische Leitung bei der Zerlegung von Monolithen",
+        "Mentoring von Junior-Entwicklern",
+        "Sicherstellung von SLAs und Observability"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Celonis",
+        "website": "https://www.celonis.com",
+        "location": "München, Deutschland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Senior Backend-Entwickler",
+        "activities": [
+          {
+            "project": "Process-Mining-Plattform",
+            "tasks": [
+              "Neugestaltung des Ingestion-Layers für Milliarden von Events",
+              "Einführung von Kafka-basierter Entkopplung zwischen Diensten",
+              "Optimierung von PostgreSQL-Abfragen für große Datenmengen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Reduzierung der Ingestion-Latenz um 40 Prozent",
+          "Aufbau einer wiederverwendbaren Event-Sourcing-Bibliothek für vier Teams"
+        ],
+        "toolsAndTechnologies": [
+          "Java",
+          "Kotlin",
+          "Spring Boot",
+          "Apache Kafka",
+          "PostgreSQL",
+          "Kubernetes"
+        ]
+      },
+      {
+        "company": "Check24",
+        "website": "https://www.check24.de",
+        "location": "München, Deutschland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Backend-Entwickler",
+        "activities": [
+          {
+            "project": "Vergleichsportal Versicherungen",
+            "tasks": [
+              "Entwicklung von REST-Services für Tarifberechnungen",
+              "Integration externer Versicherer-APIs",
+              "Aufbau von Caching-Strategien mit Redis"
+            ]
+          }
+        ],
+        "achievements": [
+          "Senkung der Antwortzeiten um 30 Prozent durch Redis-Caching"
+        ],
+        "toolsAndTechnologies": [
+          "Java",
+          "Spring Boot",
+          "Redis",
+          "MySQL"
+        ]
+      },
+      {
+        "company": "msg systems",
+        "website": "https://www.msg.group",
+        "location": "Ismaning, Deutschland",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Junior-Softwareentwickler",
+        "activities": [
+          {
+            "project": "Versicherungs-Backoffice",
+            "tasks": [
+              "Wartung von Java-EE-Anwendungen",
+              "Fehleranalyse und Bugfixing",
+              "Erstellung automatisierter Tests"
+            ]
+          }
+        ],
+        "achievements": [
+          "Erhöhung der Testabdeckung von 45 auf 80 Prozent"
+        ],
+        "toolsAndTechnologies": [
+          "Java",
+          "JUnit",
+          "Oracle DB"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Technische Universität München",
+        "degree": "Master of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": [
+          "Abschluss mit Auszeichnung",
+          "Schwerpunkt verteilte Systeme"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Technische Universität München",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Informatik",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Confluent Certified Developer for Apache Kafka",
+        "institution": "Confluent",
+        "year": "@Y-4@",
+        "description": "Zertifizierung für die Entwicklung von Kafka-basierten Streaming-Anwendungen."
+      },
+      {
+        "title": "Oracle Certified Professional, Java SE",
+        "institution": "Oracle",
+        "year": "@Y-4@",
+        "description": "Professionelle Zertifizierung für die Java-Standardausgabe."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Java",
+        "Kotlin",
+        "Spring Boot",
+        "Apache Kafka",
+        "PostgreSQL",
+        "Kubernetes",
+        "Docker"
+      ],
+      "softSkills": [
+        "Analytisches Denken",
+        "Kommunikationsstärke",
+        "Verantwortungsbewusstsein",
+        "Teamführung"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Event-Sourcing-Bibliothek",
+        "description": "Interne Open-Source-Bibliothek zur Vereinheitlichung von Event Sourcing über mehrere Teams.",
+        "date": "2022",
+        "impact": "Von vier Produktteams übernommen und reduzierte Boilerplate-Code erheblich."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Klettern",
+      "Kaffeerösten",
+      "Open-Source-Beiträge"
+    ],
+    "references": [
+      {
+        "name": "Sandra Vogel",
+        "position": "Engineering Manager",
+        "company": "Celonis",
+        "contact": {
+          "phone": "+49 89 4521 0011",
+          "email": "sandra.vogel@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 85000,
+      "max": 100000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Backend Engineering",
+      "secondaryClusters": [
+        "Distributed Systems",
+        "Event-Driven Architecture"
+      ],
+      "functionalExpertise": [
+        "Microservice-Design",
+        "Event Streaming",
+        "API-Entwicklung"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Latenzreduktion um 40 Prozent",
+        "Wiederverwendbare Plattform-Bibliotheken"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "Process Mining",
+        "InsurTech"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Enterprise SaaS"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Langjährige, durchgängige Backend-Erfahrung mit klarem Fokus auf verteilte Systeme und Event Streaming."
+    },
+    "searchIndex": {
+      "roles": [
+        "Backend Engineer",
+        "Senior Software Engineer",
+        "Distributed Systems Engineer"
+      ],
+      "skills": [
+        "Java",
+        "Kotlin",
+        "Spring Boot",
+        "Apache Kafka",
+        "PostgreSQL",
+        "Kubernetes",
+        "Docker",
+        "Redis",
+        "Domain-Driven Design"
+      ],
+      "industries": [
+        "SaaS",
+        "Process Mining",
+        "Insurance Technology"
+      ]
+    },
+    "tags": [
+      "backend",
+      "java",
+      "kotlin",
+      "kafka",
+      "microservices",
+      "munich"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Frontend-Entwicklerin mit rund sechs Jahren Erfahrung in der Entwicklung moderner, barrierefreier Web-Anwendungen. Fühlt sich im React-Ökosystem zuhause und legt besonderen Wert auf Performance, Design-Systeme und eine hervorragende Nutzererfahrung. Arbeitet gern eng mit Design- und Produktteams zusammen.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Nora Kellermann",
+      "role": "Frontend-Entwicklerin",
+      "summary": "React- und TypeScript-Entwicklerin mit Fokus auf Design-Systeme und Barrierefreiheit.",
+      "contact": {
+        "phone": "+49 30 5567 2210",
+        "email": "nora.kellermann.personal@example.de",
+        "address": {
+          "streetNumber": "42",
+          "streetName": "Kastanienallee",
+          "streetType": "Allee",
+          "unit": "3. OG",
+          "city": "Berlin",
+          "state": "Berlin",
+          "zipCode": "10435",
+          "country": "Deutschland"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/nora-kellermann",
+          "github": "https://github.com/norakell",
+          "website": "https://norakellermann.dev"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Werktags vormittags"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Sprachen",
+        "skills": [
+          "TypeScript",
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "category": "Frameworks",
+        "skills": [
+          "React",
+          "Next.js",
+          "Vue.js"
+        ]
+      },
+      {
+        "category": "Styling",
+        "skills": [
+          "Tailwind CSS",
+          "Styled Components",
+          "Sass"
+        ]
+      },
+      {
+        "category": "Tooling & Test",
+        "skills": [
+          "Vite",
+          "Jest",
+          "Playwright",
+          "Storybook"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Komponentenbasierte UI-Entwicklung",
+        "Design-Systeme",
+        "Web-Barrierefreiheit",
+        "Frontend-Performance"
+      ],
+      "keyResponsibilities": [
+        "Umsetzung von UI-Komponenten nach Design-Vorgaben",
+        "Pflege des internen Design-Systems",
+        "Optimierung der Ladezeiten",
+        "Sicherstellung der WCAG-Konformität"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Zalando",
+        "website": "https://www.zalando.de",
+        "location": "Berlin, Deutschland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Frontend-Entwicklerin",
+        "activities": [
+          {
+            "project": "Kunden-Storefront",
+            "tasks": [
+              "Entwicklung wiederverwendbarer React-Komponenten",
+              "Verbesserung der Core Web Vitals",
+              "Einführung von Playwright-End-to-End-Tests"
+            ]
+          }
+        ],
+        "achievements": [
+          "Verbesserung des Largest Contentful Paint um 25 Prozent",
+          "Aufbau von 30 barrierefreien Komponenten im Design-System"
+        ],
+        "toolsAndTechnologies": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Tailwind CSS",
+          "Playwright"
+        ]
+      },
+      {
+        "company": "Delivery Hero",
+        "website": "https://www.deliveryhero.com",
+        "location": "Berlin, Deutschland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Junior-Frontend-Entwicklerin",
+        "activities": [
+          {
+            "project": "Partner-Dashboard",
+            "tasks": [
+              "Umsetzung von Dashboard-Ansichten",
+              "Integration von REST-APIs",
+              "Erstellung von Storybook-Dokumentation"
+            ]
+          }
+        ],
+        "achievements": [
+          "Migration von Legacy-jQuery-Views nach React"
+        ],
+        "toolsAndTechnologies": [
+          "React",
+          "JavaScript",
+          "Sass",
+          "Storybook"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Hochschule für Technik und Wirtschaft Berlin",
+        "degree": "Bachelor of Science",
+        "fieldOfStudy": "Angewandte Informatik",
+        "achievements": [
+          "Abschlussprojekt zu barrierefreien Web-Interfaces"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Meta Front-End Developer",
+        "institution": "Meta",
+        "year": "@Y-4@",
+        "description": "Professionelles Zertifikat für moderne Frontend-Entwicklung mit React."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Vite",
+        "Playwright",
+        "Storybook"
+      ],
+      "softSkills": [
+        "Empathie",
+        "Detailgenauigkeit",
+        "Kollaboration",
+        "Neugier"
+      ],
+      "languages": [
+        {
+          "language": "Deutsch",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Englisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Barrierefreies Design-System",
+        "description": "Aufbau einer Komponentenbibliothek mit vollständiger WCAG-2.1-AA-Konformität.",
+        "date": "2023",
+        "impact": "Standardisierte UI über fünf Teams und verbesserte Zugänglichkeit spürbar."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Illustration",
+      "Radfahren",
+      "Typografie"
+    ],
+    "references": [
+      {
+        "name": "Ferdinand Hein",
+        "position": "Design Lead",
+        "company": "Zalando",
+        "contact": {
+          "phone": "+49 30 5567 0001",
+          "email": "ferdinand.hein@example.de"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 60000,
+      "max": 72000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Frontend Engineering",
+      "secondaryClusters": [
+        "Design Systems",
+        "Web Accessibility"
+      ],
+      "functionalExpertise": [
+        "UI-Entwicklung",
+        "Design-Systeme",
+        "Frontend-Performance"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Verbesserung der Core Web Vitals",
+        "Barrierefreie Komponentenbibliothek"
+      ],
+      "industryDomains": [
+        "E-Commerce",
+        "Food Delivery"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Enterprise SaaS"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.84,
+      "clusterReasoning": "Solide Frontend-Erfahrung mit klarem Schwerpunkt auf React, Design-Systemen und Barrierefreiheit."
+    },
+    "searchIndex": {
+      "roles": [
+        "Frontend Engineer",
+        "React Developer",
+        "UI Engineer"
+      ],
+      "skills": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Next.js",
+        "Tailwind CSS",
+        "CSS",
+        "Playwright",
+        "Web Accessibility",
+        "Design Systems"
+      ],
+      "industries": [
+        "E-Commerce",
+        "Food Delivery"
+      ]
+    },
+    "tags": [
+      "frontend",
+      "react",
+      "typescript",
+      "accessibility",
+      "berlin"
+    ]
+  }
+]

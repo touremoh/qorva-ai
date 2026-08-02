@@ -37,14 +37,14 @@ public class UsageMonitoringScheduler {
 
     @Scheduled(cron = "0 0/5 * * * *")
     public void initializeUsageMonitoringPeriods() {
-        log.info("Usage monitoring check: initializing usage monitoring periods");
+        log.debug("Usage monitoring check: initializing usage monitoring periods");
         var statuses = List.of(
             SubscriptionStatus.ACTIVE.getValue(),
             SubscriptionStatus.TRIALING.getValue()
         );
 
         var tenants = tenantRepository.findAllBySubscriptionStatusIn(statuses);
-        log.info("Usage monitoring check: {} active/trialing tenant(s) found", tenants.size());
+        log.debug("Usage monitoring check: {} active/trialing tenant(s) found", tenants.size());
 
         int initialized = 0;
         int skipped = 0;
@@ -63,7 +63,7 @@ public class UsageMonitoringScheduler {
             }
         }
 
-        log.info("Usage monitoring check complete: initialized={} skipped={} failed={}", initialized, skipped, failed);
+        log.debug("Usage monitoring check complete: initialized={} skipped={} failed={}", initialized, skipped, failed);
     }
 
     /**
@@ -117,6 +117,8 @@ public class UsageMonitoringScheduler {
             .screeningActions(base.getScreeningActions() != null ? base.getScreeningActions() * multiplier : null)
             .aiResumeChats(base.getAiResumeChats() != null ? base.getAiResumeChats() * multiplier : null)
             .talentIntelligenceQueries(base.getTalentIntelligenceQueries() != null ? base.getTalentIntelligenceQueries() * multiplier : null)
+            // Static cap, not monthly consumption — never multiplied by billing cycle.
+            .emailTemplates(base.getEmailTemplates())
             .build();
         return ProductFeatures.builder()
             .seats(source.getSeats())

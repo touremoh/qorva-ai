@@ -1,0 +1,421 @@
+[
+  {
+    "title": "IC-verpleegkundige - Intensive Care",
+    "description": "Het Amsterdams Universitair Medisch Centrum, een groot academisch ziekenhuis in Amsterdam, zoekt een IC-verpleegkundige voor de afdeling Intensive Care Volwassenen als onderdeel van een multidisciplinair critical-care team.\n\nJe rapporteert aan de teamleider IC en levert hoogcomplexe, evidence-based zorg aan kritisch zieke patiënten. Je bewaakt en bedient invasieve beademing en hemodynamische monitoring, titreert vasoactieve medicatie en reageert adequaat op snel veranderende klinische situaties. Je voert grondige verpleegkundige assessments uit, houdt nauwkeurige verslaglegging bij in het elektronisch patiëntendossier en waarborgt te allen tijde de waardigheid en veiligheid van de patiënt.\n\nIn de dagelijkse praktijk werk je nauw samen met intensivisten, fysiotherapeuten en ziekenhuisapothekers tijdens de visite, begeleid je families in moeilijke gesprekken en coach je startende collega's en studenten op de afdeling.\n\nVereist: een geldige BIG-registratie als verpleegkundige, een afgeronde vervolgopleiding Intensive Care, minimaal 3 jaar ervaring waarvan 2 jaar op een IC of high-care, aantoonbare competentie in mechanische beademing en reanimatie (ALS), en sterke klinische beoordelingsvaardigheden.\n\nPré: ALS-instructeurschap, ervaring met nierfunctievervangende therapie (CVVH) en betrokkenheid bij klinische audits of kwaliteitsverbeterprojecten.\n\nDit is een onsite functie in Amsterdam met een roulerend dienstenpatroon (dagen en nachten), open voor BIG-geregistreerde verpleegkundigen in de regio Noord-Holland. Wij bieden een marktconform salaris volgens de cao ziekenhuizen, een gedegen inwerktraject en ruimte voor professionele ontwikkeling.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Critical Care Nursing",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "BIG Registration",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": true
+        },
+        {
+          "name": "Mechanical Ventilation",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Advanced Life Support",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Patient Assessment",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Renal Replacement Therapy",
+          "importance": "nice_to_have",
+          "weight": 0.11,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 2,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Amsterdam",
+          "Haarlem",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Hospitals and Clinics",
+          "Healthcare",
+          "Medical Devices"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Bioanalytisch Wetenschapper",
+    "description": "Leiden BioAnalytics, een groeiende contract research organisatie op het Leiden Bio Science Park, zoekt een Bioanalytisch Wetenschapper voor het gereguleerde bioanalyselaboratorium ter ondersteuning van preklinische en vroeg-klinische studies.\n\nJe rapporteert aan de Bioanalytical Lead en ontwikkelt, valideert en voert kwantitatieve LC-MS/MS- en ligand-binding-assays uit om geneesmiddel- en biomarkerconcentraties in biologische matrices te meten. Je bereidt kalibratiestandaarden en QC-samples, bedient en verhelpt storingen aan analytische apparatuur, en genereert nauwkeurige, goed gedocumenteerde datapakketten voor registratiedoeleinden.\n\nJe werkt onder GLP en de van toepassing zijnde GCP-eisen, houdt zorgvuldig gegevens bij in het LIMS en het elektronisch labjournaal, en ondersteunt methodeoverdracht en studierapportage samen met study directors en QA.\n\nVereist: een afgeronde bachelor of master in analytische chemie, biochemie, farmacologie of een verwante life-sciences-richting, minimaal 1 jaar praktische laboratoriumervaring, werkkennis van LC-MS/MS of ELISA, en een gedegen begrip van GLP en Good Documentation Practice. Een sterk oog voor detail en data-integriteit zijn essentieel.\n\nPré: ervaring met methodevalidatie volgens FDA/EMA bioanalytical guidance, bekendheid met Watson LIMS of Analyst-software, en ervaring met biomarker-assays.\n\nDit is een onsite laboratoriumfunctie in Leiden, open voor kandidaten in heel Nederland. Wij bieden een gestructureerd inwerktraject, een helder groeipad en blootstelling aan een brede portfolio van clientmoleculen.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "LC-MS/MS",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GLP",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Method Validation",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ELISA",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Good Documentation Practice",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "LIMS",
+          "importance": "nice_to_have",
+          "weight": 0.12,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 1,
+        "minRelevantYears": 1,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Leiden",
+          "Utrecht",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Contract Research Organization",
+          "Pharmaceuticals",
+          "Biotechnology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.2,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "QA/GMP-specialist",
+    "description": "Vandenberghe Biologics, een biofarmaceutisch productiebedrijf in Gent (Vlaanderen), zoekt een ervaren QA/GMP-specialist om de kwaliteitsborging van de steriele productie te versterken.\n\nJe rapporteert aan de QA Manager en waarborgt dat productie, verpakking en vrijgave verlopen conform GMP, GxP en de EMA-richtsnoeren. Je beoordeelt en keurt batchdossiers, master- en productiedocumentatie goed, beheert change controls, afwijkingen (deviations) en CAPA's, en volgt corrigerende acties op tot sluiting. Je bewaakt de kwaliteitsindicatoren en escaleert risico's tijdig naar het managementteam.\n\nDaarnaast begeleid je interne en leveranciersaudits, bereid je inspecties door bevoegde autoriteiten voor, onderhoud je het kwaliteitssysteem en het afwijkingenbeheer, en train je operationele teams in Good Documentation Practice en data-integriteit. Je werkt nauw samen met productie, QC, validatie en regulatory affairs om compliance en tijdige batchvrijgave te garanderen.\n\nVereist: minimaal 5 jaar ervaring in QA binnen een GMP-omgeving in farma, biotech of medische hulpmiddelen, grondige kennis van EU-GMP en GxP, aantoonbare ervaring met deviation- en CAPA-beheer, en een diploma in life sciences, farmacie of (bio)chemie. Sterke analytische en communicatieve vaardigheden zijn essentieel.\n\nPré: ervaring met kwalificatie en validatie, kennis van FDA-eisen voor de Amerikaanse markt, en ervaring als aangewezen persoon voor batchvrijgave.\n\nDit is een hybride functie in Gent (minimaal 3 dagen op locatie), open voor kandidaten in Vlaanderen. Wij bieden een competitief pakket, extralegale voordelen en reële doorgroeimogelijkheden.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "GMP",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Quality Assurance",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Deviation Management",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "CAPA",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GxP",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Validation",
+          "importance": "nice_to_have",
+          "weight": 0.11,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 5,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Gent",
+          "Antwerpen",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "Medical Devices"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Medical Science Liaison - Oncologie",
+    "description": "Halden Pharma, een internationaal farmaceutisch bedrijf met een medical-affairs-hub in Utrecht, zoekt een Medical Science Liaison ter ondersteuning van de oncologieportfolio in de Benelux.\n\nAls field-based wetenschappelijk expert bouw en onderhoud je peer-to-peer relaties met key opinion leaders, oncologen en academische centra. Je deelt gebalanceerde, evidence-based wetenschappelijke informatie over de producten van het bedrijf en het therapeutische landschap. Je verzamelt klinische inzichten uit het veld, ondersteunt investigator-initiated studies, verzorgt medische educatie en vertegenwoordigt Medical Affairs op congressen en adviesraden.\n\nJe vertaalt complexe data uit klinische studies en real-world evidence naar heldere wetenschappelijke uitwisseling, beantwoordt ongevraagde medisch-informatieverzoeken en werkt samen met clinical development en HEOR om de strategie te onderbouwen, altijd binnen strikte compliance- en geneesmiddelenbewakingsvereisten.\n\nVereist: een gevorderde wetenschappelijke of klinische graad (PhD, PharmD of arts), minimaal 4 jaar ervaring in de oncologie als MSL of in een vergelijkbare klinisch-wetenschappelijke rol, diepgaand begrip van klinisch onderzoeksdesign en oncologische therapieën, en uitstekende wetenschappelijke communicatievaardigheden. Bereidheid om binnen de regio te reizen is essentieel.\n\nPré: een gevestigd oncologisch KOL-netwerk, bekendheid met HEOR of gezondheidseconomie, en ervaring met productlanceringen.\n\nDit is een field-based functie met standplaats Utrecht en frequente reizen binnen de Benelux, open voor kandidaten in of nabij de regio. Wij bieden een competitief pakket, bonus en een wetenschappelijk gedreven medical-affairs-cultuur.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Medical Science Liaison",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Oncology",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trials",
+          "importance": "important",
+          "weight": 0.17,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Scientific Communication",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "KOL Engagement",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "HEOR",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 4,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Utrecht",
+          "Rotterdam",
+          "Antwerpen",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "Medical Devices"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Clinical Research Associate",
+    "description": "Meridian Clinical Research, een middelgrote contract research organisatie met een Belgisch kantoor in Leuven, zoekt een Clinical Research Associate voor de monitoring van fase II- en fase III-studies bij een netwerk van onderzoekscentra.\n\nJe rapporteert aan de Clinical Team Lead en voert site-selectie-, initiatie-, routine-monitoring- en close-out-bezoeken uit. Je verifieert brondata, ziet toe op naleving van de informed consent en bevestigt dat studies worden uitgevoerd conform het protocol, ICH-GCP en de toepasselijke regelgeving. Je beheert de relaties met de sites, stimuleert inclusie en datakwaliteit, en lost queries en protocolafwijkingen tijdig op.\n\nJe legt elk bezoek vast in heldere, tijdige monitoringrapporten, volgt actiepunten op tot afsluiting, houdt toezicht op de accountability van het onderzoeksproduct en escaleert risico's naar het studieteam. Regelmatig reizen naar sites in de Benelux is een kerntaak van de functie.\n\nVereist: een diploma in life sciences of verpleegkunde, minimaal 2 jaar ervaring met on-site klinische monitoring, grondige werkkennis van ICH-GCP en de levenscyclus van klinisch onderzoek, en sterke organisatorische en communicatieve vaardigheden. Een rijbewijs en reisbereidheid zijn essentieel.\n\nPré: therapeutische ervaring in oncologie of CNS, bekendheid met risk-based en remote monitoring, en ervaring met EDC-systemen zoals Medidata Rave.\n\nDit is een thuiswerkfunctie met frequente reizen naar sites in de Benelux, open voor kandidaten in Vlaanderen en Nederland. Wij bieden een competitief salaris, mobiliteitsbudget en een ondersteunend clinical-operations-team.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "ICH-GCP",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trial Monitoring",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Source Data Verification",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trials",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "EDC Systems",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Pharmacovigilance",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Leuven",
+          "Mechelen",
+          "Eindhoven",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Contract Research Organization",
+          "Pharmaceuticals",
+          "Biotechnology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  }
+]

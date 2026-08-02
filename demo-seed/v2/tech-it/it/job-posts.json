@@ -1,0 +1,163 @@
+[
+  {
+    "title": "Senior Backend Engineer (Java/Spring)",
+    "description": "Siamo una scale-up fintech con sede a Milano che sta costruendo la nuova generazione di infrastruttura per i pagamenti in tempo reale. Cerchiamo un Senior Backend Engineer che guidi la progettazione e l'evoluzione dei nostri microservizi critici.\n\nLa tua missione sarà garantire affidabilità, sicurezza e scalabilità di una piattaforma che processa milioni di transazioni al giorno. Lavorerai a stretto contatto con il team di prodotto e con gli altri sviluppatori senior per definire le scelte architetturali.\n\nResponsabilità principali:\n- Progettare e sviluppare microservizi in Java 17 e Spring Boot\n- Definire API REST robuste e ben documentate\n- Ottimizzare query e modelli dati su PostgreSQL\n- Implementare pattern event-driven con Apache Kafka\n- Fare mentoring dei colleghi mid e junior e presidiare le code review\n\nRequisiti richiesti: solida esperienza con Java e Spring Boot, ottima padronanza di SQL e database relazionali, esperienza con architetture a microservizi e messaggistica asincrona, familiarità con container Docker e deploy su cloud.\n\nNice-to-have: conoscenza di Kubernetes, esperienza con AWS e pratica di metodologie DevOps.\n\nOffriamo modalità di lavoro ibrida (tre giorni in ufficio a Milano), formazione continua e un ruolo con reale impatto tecnico. Stack: Java, Spring Boot, PostgreSQL, Kafka, Docker, AWS.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Java", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Spring Boot", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "PostgreSQL", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Apache Kafka", "importance": "important", "weight": 0.65, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Docker", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Kubernetes", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Milano", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Fintech", "Financial Services", "Software"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Data Engineer (Python/Airflow)",
+    "description": "Azienda del settore e-commerce con sede a Bologna cerca un Data Engineer per potenziare la propria piattaforma dati. Entrerai a far parte di un team affiatato che alimenta analytics, reportistica e modelli di machine learning con dati puliti e affidabili.\n\nLa tua missione sarà costruire e mantenere pipeline dati scalabili, dallo strato di ingestione fino ai data mart utilizzati da analisti e data scientist.\n\nResponsabilità principali:\n- Sviluppare pipeline ETL/ELT in Python orchestrate con Apache Airflow\n- Modellare e ottimizzare tabelle sul data warehouse (Snowflake)\n- Scrivere trasformazioni SQL manutenibili e testate con dbt\n- Garantire qualità, osservabilità e governance dei dati\n- Collaborare con i team di prodotto per definire i requisiti dei dati\n\nRequisiti richiesti: buona esperienza con Python in ambito data, solida conoscenza di SQL, esperienza pratica con orchestratori come Airflow e con un data warehouse cloud.\n\nNice-to-have: familiarità con dbt, conoscenza di Spark per elaborazioni su grandi volumi e pratica con AWS.\n\nOffriamo un ambiente data-driven, budget per la formazione e modalità ibrida con due giorni in ufficio a Bologna. Stack: Python, SQL, Airflow, Snowflake, dbt, AWS.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Python", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Apache Airflow", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Snowflake", "importance": "important", "weight": 0.65, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "dbt", "importance": "important", "weight": 0.55, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Apache Spark", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Bologna", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["E-commerce", "Retail", "Software"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "DevOps / Site Reliability Engineer",
+    "description": "Software house B2B SaaS con sede a Torino cerca un DevOps / Site Reliability Engineer senior per rendere le nostre piattaforme più affidabili, sicure e automatizzate. Sarai il punto di riferimento per l'infrastruttura cloud e per la cultura dell'affidabilità in tutta l'ingegneria.\n\nLa tua missione sarà ridurre il toil, aumentare l'osservabilità e portare le nostre pratiche di deployment verso lo stato dell'arte.\n\nResponsabilità principali:\n- Gestire e far evolvere cluster Kubernetes in produzione su AWS\n- Automatizzare il provisioning dell'infrastruttura con Terraform\n- Costruire e mantenere pipeline CI/CD affidabili\n- Definire SLO, alerting e dashboard con Prometheus e Grafana\n- Partecipare alla rotazione di on-call e guidare i post-mortem senza colpe\n\nRequisiti richiesti: esperienza consolidata con Kubernetes in produzione, ottima padronanza di AWS, competenza in Infrastructure as Code con Terraform, esperienza con pipeline CI/CD e scripting.\n\nNice-to-have: conoscenza di Docker avanzato, esperienza con Prometheus/Grafana e scripting in Python.\n\nOffriamo un ruolo ad alto impatto, forte autonomia tecnica e modalità di lavoro prevalentemente da remoto con incontri periodici a Torino. Stack: Kubernetes, AWS, Terraform, Docker, Prometheus, Grafana.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Kubernetes", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "AWS", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Terraform", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Docker", "importance": "important", "weight": 0.7, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "CI/CD", "importance": "important", "weight": 0.65, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Prometheus", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Python", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Torino", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "SaaS", "Information Technology"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.3, "location": 0.05, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Technical Product Manager",
+    "description": "Azienda SaaS in forte crescita con sede a Roma cerca un Technical Product Manager per guidare l'evoluzione di un prodotto rivolto a un pubblico tecnico. Farai da ponte tra business, ingegneria e clienti, trasformando esigenze complesse in una roadmap chiara e misurabile.\n\nLa tua missione sarà massimizzare il valore consegnato agli utenti, bilanciando visione di prodotto, fattibilità tecnica e obiettivi di business.\n\nResponsabilità principali:\n- Definire e comunicare la visione e la roadmap di prodotto\n- Raccogliere e prioritizzare i requisiti insieme agli stakeholder\n- Scrivere user story chiare e collaborare quotidianamente con i team di sviluppo Agile\n- Analizzare metriche di prodotto e comportamento degli utenti per guidare le decisioni\n- Coordinare i rilasci e comunicare i risultati all'azienda\n\nRequisiti richiesti: esperienza come Product Manager su prodotti software, ottima capacità di lavorare con team tecnici, solide competenze di product analytics e familiarità con metodologie Agile e Scrum. Comprensione di base di API e architetture software.\n\nNice-to-have: esperienza con strumenti come SQL per l'analisi dati e conoscenza del mondo B2B SaaS.\n\nOffriamo un ruolo centrale, crescita rapida e modalità ibrida con tre giorni in ufficio a Roma. Stack di riferimento: Agile, Scrum, Product Analytics, SQL.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Product Management", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Product Analytics", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Agile", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Scrum", "importance": "important", "weight": 0.65, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Roadmapping", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "API Design", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 4,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Roma", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Software", "SaaS", "Information Technology"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.3, "location": 0.1, "industry": 0.15 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Junior Full-Stack Engineer (React/Node)",
+    "description": "Startup del settore healthtech con sede a Napoli cerca un Junior Full-Stack Engineer entusiasta di crescere in un ambiente dinamico e con forte accompagnamento tecnico. Lavorerai su un prodotto web che aiuta cliniche e pazienti a semplificare la gestione degli appuntamenti.\n\nLa tua missione sarà contribuire allo sviluppo di funzionalità end-to-end, dal frontend all'API, imparando le migliori pratiche di ingegneria del software insieme a colleghi più esperti.\n\nResponsabilità principali:\n- Sviluppare interfacce utente in React e TypeScript\n- Implementare endpoint e servizi backend in Node.js\n- Scrivere test automatici e partecipare alle code review\n- Collaborare con designer e product manager in un contesto Agile\n- Correggere bug e migliorare progressivamente la qualità del codice\n\nRequisiti richiesti: basi solide di JavaScript e conoscenza di React, familiarità con Node.js, comprensione di HTML, CSS e delle API REST. Voglia di imparare e attitudine al lavoro di squadra.\n\nNice-to-have: esperienza con TypeScript, conoscenza di base di database SQL e familiarità con Git.\n\nOffriamo un percorso di crescita strutturato con mentoring dedicato, formazione e modalità ibrida con presenza in ufficio a Napoli. Stack: React, TypeScript, Node.js, JavaScript, SQL.",
+    "scoringRules": {
+      "skills": [
+        { "name": "JavaScript", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "React", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Node.js", "importance": "important", "weight": 0.65, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "HTML", "importance": "important", "weight": 0.5, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "CSS", "importance": "important", "weight": 0.5, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "TypeScript", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "SQL", "importance": "nice_to_have", "weight": 0.3, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 1,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Napoli", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Healthtech", "Software", "Information Technology"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.2, "location": 0.15, "industry": 0.15 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

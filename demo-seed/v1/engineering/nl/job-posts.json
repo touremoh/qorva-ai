@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Mechanical Design Engineer (SolidWorks / HVAC)",
+    "description": "Voor een gevestigde machinebouwer in de regio Eindhoven zoeken wij een Mechanical Design Engineer die het volledige ontwerptraject van industriële systemen naar zich toe trekt. Je vertaalt klantwensen naar robuuste, produceerbare ontwerpen en werkt nauw samen met productie, inkoop en de projectleider.\n\nWat je gaat doen:\n- Je ontwerpt mechanische componenten en assemblies in SolidWorks, inclusief complete 3D-modellen en 2D-productietekeningen.\n- Je voert sterkte- en tolerantieberekeningen uit en valideert ontwerpen met FEA-analyses in ANSYS.\n- Je bewaakt materiaalkeuze, kostprijs en maakbaarheid volgens de geldende normen.\n- Je stelt technische documentatie en stuklijsten op en houdt deze actueel in het PDM-systeem.\n\nWat wij vragen:\nEen afgeronde opleiding Werktuigbouwkunde (HBO/WO) en 3 tot 5 jaar ervaring in machinebouw of apparatenbouw. Je hebt gedegen kennis van SolidWorks en GD&T, en ervaring met HVAC- of thermische systemen is een sterke pré. Je werkt nauwkeurig, denkt in oplossingen en communiceert helder met collega's op de werkvloer.\n\nLocatie:\nJe werkt grotendeels op onze locatie in Eindhoven, met de mogelijkheid tot één thuiswerkdag per week. Kandidaten uit Vlaanderen zijn ook welkom, aangezien Antwerpen goed bereikbaar is.",
+    "scoringRules": {
+      "skills": [
+        { "name": "SolidWorks", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "GD&T", "importance": "important", "weight": 0.75, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "ANSYS", "importance": "important", "weight": 0.65, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "FEA", "importance": "important", "weight": 0.6, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "HVAC", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "AutoCAD", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Mechanical Design", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Eindhoven", "Antwerpen", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Machinery", "Manufacturing", "Industrial Equipment"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Senior Structural Engineer (Eurocode / ETABS)",
+    "description": "Een toonaangevend ingenieursbureau in Rotterdam versterkt zijn constructieafdeling met een Senior Structural Engineer. Je bent verantwoordelijk voor de constructieve berekeningen en het ontwerp van utiliteitsbouw, infrastructuur en complexe woningbouwprojecten, van schetsontwerp tot uitvoeringsgereed ontwerp.\n\nWat je gaat doen:\n- Je maakt constructieberekeningen voor beton-, staal- en houtconstructies volledig conform de Eurocodes.\n- Je modelleert en analyseert draagconstructies in ETABS en STAAD.Pro.\n- Je begeleidt en toetst het werk van jongere collega's en tekenaars.\n- Je stemt af met architecten, aannemers en de gemeente over vergunningen en toetsingen.\n\nWat wij vragen:\nEen WO-diploma Civiele Techniek of Bouwkunde en minimaal 6 jaar ervaring als constructeur. Je beheerst de Eurocodes tot in de details en hebt aantoonbare ervaring met ETABS of een vergelijkbaar rekenpakket. Je bent kritisch, verantwoordelijk en in staat om ontwerpkeuzes helder te onderbouwen richting opdrachtgevers.\n\nLocatie:\nOns kantoor ligt centraal in Rotterdam en we werken hybride met twee kantoordagen per week. Reizen naar bouwlocaties in de Randstad hoort af en toe bij de functie.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Eurocode", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "ETABS", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "STAAD.Pro", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Structural Analysis", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Reinforced Concrete Design", "importance": "important", "weight": 0.75, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "AutoCAD", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Revit", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Rotterdam", "Den Haag", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Construction", "Civil Engineering", "Engineering Consultancy"],
+        "strictness": "strict"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.35, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Electrical Design Engineer (Power Systems / ETAP)",
+    "description": "Voor een projectorganisatie in de energie- en installatietechniek in Utrecht zoeken wij een Electrical Design Engineer die verantwoordelijk is voor het elektrotechnisch ontwerp van middenspannings- en laagspanningsinstallaties. Je werkt aan uiteenlopende projecten, van industriële installaties tot duurzame energieaansluitingen.\n\nWat je gaat doen:\n- Je maakt elektrotechnische ontwerpen, enkellijnschema's en verdeelkastindelingen in EPLAN en AutoCAD.\n- Je voert load flow- en kortsluitberekeningen uit en dimensioneert beveiligingen in ETAP.\n- Je stelt technische specificaties op conform de NEN 1010 en relevante IEC-normen.\n- Je begeleidt de engineering tijdens de uitvoering en stemt af met leveranciers en installateurs.\n\nWat wij vragen:\nEen HBO-opleiding Elektrotechniek en 3 tot 5 jaar ervaring in installatie- of energietechniek. Kennis van ETAP en ervaring met vermogensberekeningen zijn belangrijk. Je bent gestructureerd, kwaliteitsbewust en communiceert prettig met multidisciplinaire teams.\n\nLocatie:\nJe werkt hybride vanuit ons kantoor in Utrecht, met bezoeken aan projectlocaties door heel Nederland. Eén à twee thuiswerkdagen per week zijn bespreekbaar.",
+    "scoringRules": {
+      "skills": [
+        { "name": "ETAP", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Power Systems", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "EPLAN", "importance": "important", "weight": 0.7, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "AutoCAD", "importance": "important", "weight": 0.6, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "IEC 60364", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Electrical Design", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Short Circuit Analysis", "importance": "important", "weight": 0.6, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Utrecht", "Amersfoort", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Energy", "Electrical Installation", "Utilities"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Process & Quality Engineer (Lean / Six Sigma)",
+    "description": "Een internationale productielocatie in Gent (Vlaanderen) zoekt een gedreven Process & Quality Engineer die aan de slag gaat met het verbeteren van onze productieprocessen. Als startende engineer krijg je volop begeleiding en werk je mee aan concrete verbeterprojecten op de werkvloer.\n\nWat je gaat doen:\n- Je analyseert productieprocessen en identificeert verspilling met Lean- en Six Sigma-methodieken.\n- Je ondersteunt continue verbeterprojecten (Kaizen) en helpt bij root cause-analyses bij kwaliteitsafwijkingen.\n- Je stelt werkinstructies en controleplannen op en bewaakt de kwaliteitsnormen conform ISO 9001.\n- Je verzamelt en visualiseert productiedata om onderbouwde verbetervoorstellen te doen.\n\nWat wij vragen:\nEen afgeronde opleiding Industriële Wetenschappen of Technische Bedrijfskunde en 0 tot 2 jaar werkervaring; ook recent afgestudeerden zijn welkom. Affiniteit met Lean, Six Sigma en data-analyse is een pré. Je bent leergierig, hands-on en werkt graag samen met operators en teamleiders.\n\nLocatie:\nDe functie is volledig op onze productielocatie in Gent. Kandidaten uit de regio Zeeland en West-Vlaanderen zijn nadrukkelijk uitgenodigd om te solliciteren.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Lean", "importance": "important", "weight": 0.75, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Six Sigma", "importance": "important", "weight": 0.7, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Process Improvement", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "ISO 9001", "importance": "important", "weight": 0.6, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Root Cause Analysis", "importance": "nice_to_have", "weight": 0.5, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Quality Control", "importance": "mandatory", "weight": 0.75, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Data Analysis", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Gent", "Brugge", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Manufacturing", "Automotive", "Fast Moving Consumer Goods"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.45, "experience": 0.2, "location": 0.15, "industry": 0.2 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Lead Civil Engineer (Infrastructuur / Civil 3D)",
+    "description": "Voor een grote infra-aannemer met projecten door heel Nederland zoeken wij een Lead Civil Engineer die de technische leiding neemt over multidisciplinaire infrastructuurprojecten, zoals wegen, kunstwerken en waterbouw. Je stuurt een team van engineers en tekenaars aan en bent het technische aanspreekpunt richting de opdrachtgever.\n\nWat je gaat doen:\n- Je bent eindverantwoordelijk voor het civieltechnisch ontwerp en de engineering van complexe infraprojecten.\n- Je stuurt op planning, kwaliteit en budget en bewaakt de samenhang tussen de disciplines.\n- Je begeleidt het ontwerp in Civil 3D en toetst berekeningen aan de geldende normen en de Eurocodes.\n- Je coacht medior en junior engineers en tilt de technische standaarden van het team naar een hoger niveau.\n\nWat wij vragen:\nEen WO-diploma Civiele Techniek en minimaal 8 jaar ervaring in de infra- of grond-, weg- en waterbouw, waarvan enkele jaren in een leidende rol. Je hebt diepgaande kennis van Civil 3D en ervaring met integrale contractvormen (UAV-gc). Je bent een verbindende leider die zowel technisch als organisatorisch sterk is.\n\nLocatie:\nJe standplaats is ons kantoor in Amsterdam, met regelmatig bezoek aan projectlocaties. Hybride werken met twee thuiswerkdagen per week is mogelijk.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Civil 3D", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "Civil Engineering", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 8, "exactSkillOnly": false },
+        { "name": "Eurocode", "importance": "important", "weight": 0.7, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Project Management", "importance": "important", "weight": 0.75, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Team Leadership", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "AutoCAD", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "Infrastructure Design", "importance": "important", "weight": 0.75, "minYearsOfExperience": 6, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 8,
+        "minRelevantYears": 7,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Amsterdam", "Utrecht", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Construction", "Infrastructure", "Civil Engineering"],
+        "strictness": "strict"
+      },
+      "scoringWeight": { "skills": 0.4, "experience": 0.4, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

@@ -1,0 +1,3089 @@
+[
+  {
+    "candidateProfileSummary": "Engenheiro de backend em início de carreira, especializado em Java e Spring Boot, com experiência na construção de APIs REST e microsserviços. Sólida base em bases de dados relacionais e testes automatizados. Procura crescer numa equipa de produto com boas práticas de engenharia.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Tiago Marques",
+      "role": "Engenheiro de Software Backend",
+      "summary": "Programador backend focado em Java, Spring Boot e APIs REST, com apetência por código limpo e testado.",
+      "contact": {
+        "phone": "+351 912 345 678",
+        "email": "tiago.marques@example.com",
+        "address": {
+          "streetNumber": "48",
+          "streetName": "das Amoreiras",
+          "streetType": "Rua",
+          "unit": "2 Dto",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1250-096",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/tiago-marques-dev",
+          "github": "https://github.com/tiagomarques-dev",
+          "website": "https://tiagomarques.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["segunda a sexta, fim da tarde", "sábado de manhã"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Linguagens", "skills": ["Java", "SQL", "JavaScript"] },
+      { "category": "Frameworks e bibliotecas", "skills": ["Spring Boot", "Hibernate", "JUnit"] },
+      { "category": "Bases de dados", "skills": ["PostgreSQL", "MySQL", "Redis"] },
+      { "category": "Ferramentas e DevOps", "skills": ["Git", "Docker", "Maven"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Desenvolvimento de APIs REST", "Microsserviços", "Testes automatizados"],
+      "keyResponsibilities": ["Implementar endpoints e regras de negócio", "Escrever testes unitários e de integração", "Colaborar em revisões de código"]
+    },
+    "workExperience": [
+      {
+        "company": "Cleverti",
+        "website": "https://www.cleverti.com",
+        "location": "Lisboa, Portugal",
+        "from": "2022-07",
+        "to": "Present",
+        "position": "Engenheiro de Software Backend",
+        "activities": [
+          {
+            "project": "Plataforma de faturação B2B",
+            "tasks": ["Desenvolver APIs REST em Spring Boot", "Otimizar consultas em PostgreSQL", "Integrar mensageria com RabbitMQ"]
+          }
+        ],
+        "achievements": ["Reduziu o tempo de resposta de endpoints críticos em 35%", "Aumentou a cobertura de testes do módulo de faturação para 80%"],
+        "toolsAndTechnologies": ["Java", "Spring Boot", "PostgreSQL", "RabbitMQ", "Docker", "Git"]
+      },
+      {
+        "company": "Talkdesk",
+        "website": "https://www.talkdesk.com",
+        "location": "Lisboa, Portugal",
+        "from": "2021-09",
+        "to": "2022-06",
+        "position": "Estagiário de Engenharia de Software",
+        "activities": [
+          {
+            "project": "Ferramentas internas de suporte",
+            "tasks": ["Criar scripts de automação em Java", "Apoiar a manutenção de serviços internos"]
+          }
+        ],
+        "achievements": ["Automatizou tarefas manuais de suporte poupando várias horas por semana"],
+        "toolsAndTechnologies": ["Java", "Spring Boot", "MySQL", "Git"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2021",
+        "institution": "Instituto Superior Técnico",
+        "degree": "Licenciatura em Engenharia Informática",
+        "fieldOfStudy": "Engenharia de Software",
+        "achievements": ["Projeto final distinguido em desenvolvimento web"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Oracle Certified Associate, Java SE 8 Programmer",
+        "institution": "Oracle",
+        "year": "2022",
+        "description": "Certificação de fundamentos de programação em Java."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Java", "Spring Boot", "PostgreSQL", "REST", "Docker", "Git"],
+      "softSkills": ["Trabalho em equipa", "Curiosidade técnica", "Comunicação clara"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "API open-source de gestão de tarefas",
+        "description": "Projeto pessoal em Spring Boot com autenticação JWT e documentação OpenAPI.",
+        "date": "2023-04",
+        "impact": "Mais de 120 estrelas no GitHub e utilizado como referência por colegas juniores."
+      }
+    ],
+    "interestsAndHobbies": ["Ciclismo", "Xadrez", "Contribuições open-source"],
+    "references": [
+      {
+        "name": "Ana Sousa",
+        "position": "Tech Lead",
+        "company": "Cleverti",
+        "contact": { "phone": "+351 913 000 111", "email": "ana.sousa@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 28000, "max": 34000 },
+    "candidateClustering": {
+      "primaryCluster": "Backend Engineering",
+      "secondaryClusters": ["API Development", "Microservices"],
+      "functionalExpertise": ["Desenvolvimento de APIs", "Testes automatizados"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Melhoria de desempenho de serviços", "Automação de processos"],
+      "industryDomains": ["SaaS", "FinTech"],
+      "environmentFit": ["Equipas ágeis", "Ambiente de produto"],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.83,
+      "clusterReasoning": "Perfil claramente backend com stack Java/Spring consolidada, ainda em fase inicial de carreira mas com progressão rápida e forte foco em qualidade de código."
+    },
+    "searchIndex": {
+      "roles": ["Backend Engineer", "Java Developer", "Software Engineer"],
+      "skills": ["Java", "Spring Boot", "PostgreSQL", "REST", "Docker"],
+      "industries": ["SaaS", "FinTech"]
+    },
+    "tags": ["java", "backend", "spring-boot", "junior-mid"]
+  },
+  {
+    "candidateProfileSummary": "Engenheira frontend sénior com forte domínio de React, TypeScript e arquitetura de componentes. Experiência a liderar a construção de interfaces acessíveis e de alto desempenho para produtos SaaS. Gosta de mentoria e de estabelecer boas práticas de UI.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Beatriz Fonseca",
+      "role": "Engenheira Frontend Sénior",
+      "summary": "Especialista em React e TypeScript, com paixão por design systems e performance web.",
+      "contact": {
+        "phone": "+351 926 778 234",
+        "email": "beatriz.fonseca@example.com",
+        "address": {
+          "streetNumber": "112",
+          "streetName": "de Santa Catarina",
+          "streetType": "Rua",
+          "city": "Porto",
+          "state": "Porto",
+          "zipCode": "4000-447",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/beatriz-fonseca-fe",
+          "github": "https://github.com/beatrizfonseca",
+          "website": "https://beatrizfonseca.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["dias úteis ao fim do dia"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": true
+      }
+    },
+    "keySkills": [
+      { "category": "Linguagens", "skills": ["TypeScript", "JavaScript", "HTML", "CSS"] },
+      { "category": "Frameworks e bibliotecas", "skills": ["React", "Next.js", "Redux", "React Query"] },
+      { "category": "Qualidade e testes", "skills": ["Jest", "Testing Library", "Cypress"] },
+      { "category": "Design e acessibilidade", "skills": ["Storybook", "WCAG", "Figma"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Arquitetura de frontend", "Design systems", "Performance web"],
+      "keyResponsibilities": ["Definir a arquitetura de componentes", "Garantir acessibilidade e desempenho", "Mentorar engenheiros júnior"]
+    },
+    "workExperience": [
+      {
+        "company": "Feedzai",
+        "website": "https://www.feedzai.com",
+        "location": "Porto, Portugal",
+        "from": "2020-02",
+        "to": "Present",
+        "position": "Engenheira Frontend Sénior",
+        "activities": [
+          {
+            "project": "Consola de prevenção de fraude",
+            "tasks": ["Reestruturar a arquitetura de componentes em React", "Criar um design system partilhado", "Otimizar o tempo de carregamento inicial"]
+          }
+        ],
+        "achievements": ["Reduziu o bundle inicial em 40% com code-splitting", "Estabeleceu o design system usado por 6 equipas"],
+        "toolsAndTechnologies": ["React", "TypeScript", "Next.js", "Storybook", "Cypress"]
+      },
+      {
+        "company": "OutSystems",
+        "website": "https://www.outsystems.com",
+        "location": "Lisboa, Portugal",
+        "from": "2017-05",
+        "to": "2020-01",
+        "position": "Engenheira Frontend",
+        "activities": [
+          {
+            "project": "Editor visual low-code",
+            "tasks": ["Desenvolver componentes reutilizáveis", "Melhorar a acessibilidade da interface"]
+          }
+        ],
+        "achievements": ["Elevou a conformidade WCAG do editor para nível AA"],
+        "toolsAndTechnologies": ["React", "JavaScript", "Redux", "Jest"]
+      },
+      {
+        "company": "Blip",
+        "website": "https://www.blip.pt",
+        "location": "Porto, Portugal",
+        "from": "2015-09",
+        "to": "2017-04",
+        "position": "Programadora Web",
+        "activities": [
+          {
+            "project": "Portais de apostas desportivas",
+            "tasks": ["Implementar interfaces responsivas", "Integrar APIs de dados em tempo real"]
+          }
+        ],
+        "achievements": ["Entregou interfaces responsivas para campanhas de grande audiência"],
+        "toolsAndTechnologies": ["JavaScript", "HTML", "CSS", "jQuery"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "Faculdade de Engenharia da Universidade do Porto",
+        "degree": "Mestrado Integrado em Engenharia Informática",
+        "fieldOfStudy": "Sistemas de Informação",
+        "achievements": ["Tese sobre acessibilidade em aplicações web"]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": ["React", "TypeScript", "Next.js", "Redux", "Cypress", "Storybook"],
+      "softSkills": ["Mentoria", "Atenção ao detalhe", "Comunicação com design"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Espanhol", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Design system open-source",
+        "description": "Biblioteca de componentes React acessíveis publicada em npm.",
+        "date": "2022-06",
+        "impact": "Adotada por equipas externas e com milhares de downloads mensais."
+      }
+    ],
+    "interestsAndHobbies": ["Fotografia", "Ilustração digital", "Corrida"],
+    "references": [
+      {
+        "name": "Rui Almeida",
+        "position": "Engineering Manager",
+        "company": "Feedzai",
+        "contact": { "phone": "+351 914 222 333", "email": "rui.almeida@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 45000, "max": 55000 },
+    "candidateClustering": {
+      "primaryCluster": "Frontend Engineering",
+      "secondaryClusters": ["Design Systems", "Web Performance"],
+      "functionalExpertise": ["Arquitetura de UI", "Acessibilidade"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Melhoria de desempenho web", "Padronização de UI"],
+      "industryDomains": ["SaaS", "FinTech"],
+      "environmentFit": ["Equipas remotas", "Produto orientado a design"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Trajetória consistente em frontend com aprofundamento em design systems e performance, com sinais claros de liderança técnica e mentoria."
+    },
+    "searchIndex": {
+      "roles": ["Frontend Engineer", "React Developer", "UI Engineer"],
+      "skills": ["React", "TypeScript", "Next.js", "Redux", "Cypress"],
+      "industries": ["SaaS", "FinTech"]
+    },
+    "tags": ["frontend", "react", "typescript", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro full-stack com perfil de liderança técnica, experiente em desenhar sistemas distribuídos do backend ao frontend. Combina Node.js e React com sólidos conhecimentos de arquitetura em nuvem. Lidera equipas pequenas e define padrões técnicos.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Nuno Cardoso",
+      "role": "Tech Lead Full-Stack",
+      "summary": "Tech lead full-stack com foco em Node.js, React e arquitetura orientada a serviços.",
+      "contact": {
+        "phone": "+351 933 445 090",
+        "email": "nuno.cardoso@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "do Souto",
+          "streetType": "Rua",
+          "city": "Braga",
+          "state": "Braga",
+          "zipCode": "4700-328",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/nuno-cardoso-lead",
+          "github": "https://github.com/nunocardoso",
+          "website": "https://nunocardoso.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["dias úteis ao início da manhã"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Backend", "skills": ["Node.js", "TypeScript", "NestJS", "GraphQL"] },
+      { "category": "Frontend", "skills": ["React", "Next.js", "Redux"] },
+      { "category": "Infraestrutura e nuvem", "skills": ["AWS", "Docker", "Kubernetes"] },
+      { "category": "Bases de dados", "skills": ["PostgreSQL", "MongoDB", "Redis"] },
+      { "category": "Liderança técnica", "skills": ["Revisão de arquitetura", "Mentoria", "Definição de padrões"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Arquitetura full-stack", "Sistemas distribuídos", "Liderança técnica"],
+      "keyResponsibilities": ["Definir a arquitetura de novos serviços", "Orientar decisões técnicas da equipa", "Rever código e mentorar engenheiros"]
+    },
+    "workExperience": [
+      {
+        "company": "Talkdesk",
+        "website": "https://www.talkdesk.com",
+        "location": "Braga, Portugal",
+        "from": "2019-03",
+        "to": "Present",
+        "position": "Tech Lead Full-Stack",
+        "activities": [
+          {
+            "project": "Plataforma de atendimento omnicanal",
+            "tasks": ["Desenhar a arquitetura de microsserviços em Node.js", "Liderar a migração para Kubernetes", "Definir contratos GraphQL entre equipas"]
+          }
+        ],
+        "achievements": ["Liderou a migração de monólito para microsserviços com zero downtime", "Reduziu incidentes de produção em 45%"],
+        "toolsAndTechnologies": ["Node.js", "NestJS", "React", "GraphQL", "AWS", "Kubernetes"]
+      },
+      {
+        "company": "Farfetch",
+        "website": "https://www.farfetch.com",
+        "location": "Porto, Portugal",
+        "from": "2016-01",
+        "to": "2019-02",
+        "position": "Engenheiro Full-Stack Sénior",
+        "activities": [
+          {
+            "project": "Checkout de e-commerce de luxo",
+            "tasks": ["Desenvolver serviços de pagamento", "Otimizar o fluxo de checkout em React"]
+          }
+        ],
+        "achievements": ["Aumentou a taxa de conversão do checkout em 12%"],
+        "toolsAndTechnologies": ["Node.js", "React", "PostgreSQL", "Docker"]
+      },
+      {
+        "company": "Primavera BSS",
+        "website": "https://pt.primaverabss.com",
+        "location": "Braga, Portugal",
+        "from": "2013-09",
+        "to": "2015-12",
+        "position": "Programador Full-Stack",
+        "activities": [
+          {
+            "project": "Software de gestão empresarial",
+            "tasks": ["Desenvolver módulos web e serviços de backend", "Integrar APIs de faturação"]
+          }
+        ],
+        "achievements": ["Entregou módulos de gestão usados por centenas de PME"],
+        "toolsAndTechnologies": ["JavaScript", "C#", "SQL Server"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2013",
+        "institution": "Universidade do Minho",
+        "degree": "Mestrado em Engenharia Informática",
+        "fieldOfStudy": "Engenharia de Software",
+        "achievements": ["Distinção na área de sistemas distribuídos"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Certified Solutions Architect – Associate",
+        "institution": "Amazon Web Services",
+        "year": "2020",
+        "description": "Arquitetura de soluções escaláveis e resilientes na AWS."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Node.js", "TypeScript", "React", "GraphQL", "AWS", "Kubernetes", "PostgreSQL"],
+      "softSkills": ["Liderança técnica", "Pensamento sistémico", "Comunicação"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Framework interno de observabilidade",
+        "description": "Biblioteca partilhada de logging e tracing para microsserviços Node.js.",
+        "date": "2021-03",
+        "impact": "Adotada por 8 equipas e reduziu o tempo médio de diagnóstico de incidentes."
+      }
+    ],
+    "interestsAndHobbies": ["Montanhismo", "Marcenaria", "Podcasts de tecnologia"],
+    "references": [
+      {
+        "name": "Sofia Ribeiro",
+        "position": "Director of Engineering",
+        "company": "Talkdesk",
+        "contact": { "phone": "+351 915 333 444", "email": "sofia.ribeiro@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 60000, "max": 72000 },
+    "candidateClustering": {
+      "primaryCluster": "Full-Stack Engineering",
+      "secondaryClusters": ["Technical Leadership", "Distributed Systems"],
+      "functionalExpertise": ["Arquitetura de software", "Liderança de equipa"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Redução de incidentes", "Aumento de conversão"],
+      "industryDomains": ["SaaS", "E-commerce"],
+      "environmentFit": ["Ambientes de escala", "Equipas multidisciplinares"],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Perfil full-stack maduro com evidência de liderança técnica, decisões de arquitetura e impacto de negócio mensurável ao longo de várias empresas."
+    },
+    "searchIndex": {
+      "roles": ["Tech Lead", "Full-Stack Engineer", "Software Architect"],
+      "skills": ["Node.js", "React", "GraphQL", "AWS", "Kubernetes"],
+      "industries": ["SaaS", "E-commerce"]
+    },
+    "tags": ["full-stack", "tech-lead", "node", "react", "lead"]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro mobile líder com mais de uma década de experiência em iOS e Android, incluindo Flutter para aplicações multiplataforma. Já liderou equipas de mobile e definiu estratégias de arquitetura e CI/CD para apps de grande escala. Forte foco em desempenho e experiência do utilizador.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Ricardo Nunes",
+      "role": "Mobile Engineering Lead",
+      "summary": "Líder de engenharia mobile especializado em iOS, Android e Flutter, com foco em arquitetura e desempenho.",
+      "contact": {
+        "phone": "+351 962 118 447",
+        "email": "ricardo.nunes@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Duque de Ávila",
+          "streetType": "Avenida",
+          "unit": "5 Esq",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1000-138",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ricardo-nunes-mobile",
+          "github": "https://github.com/ricardonunes",
+          "website": "https://ricardonunes.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["dias úteis ao fim do dia"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "iOS", "skills": ["Swift", "SwiftUI", "Combine"] },
+      { "category": "Android", "skills": ["Kotlin", "Jetpack Compose"] },
+      { "category": "Multiplataforma", "skills": ["Flutter", "Dart"] },
+      { "category": "Qualidade e entrega", "skills": ["CI/CD", "Fastlane", "XCTest"] },
+      { "category": "Liderança", "skills": ["Gestão técnica", "Mentoria", "Planeamento de roadmap"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Arquitetura mobile", "Desempenho de apps", "Liderança de equipa mobile"],
+      "keyResponsibilities": ["Definir a arquitetura das aplicações", "Liderar a equipa de mobile", "Estabelecer pipelines de entrega contínua"]
+    },
+    "workExperience": [
+      {
+        "company": "Bold International",
+        "website": "https://www.boldint.com",
+        "location": "Lisboa, Portugal",
+        "from": "2018-06",
+        "to": "Present",
+        "position": "Mobile Engineering Lead",
+        "activities": [
+          {
+            "project": "App de banca digital",
+            "tasks": ["Liderar equipa de 6 engenheiros mobile", "Definir arquitetura modular em Swift e Kotlin", "Implementar pipeline de CI/CD com Fastlane"]
+          }
+        ],
+        "achievements": ["Reduziu o tempo de arranque da app em 50%", "Liderou o lançamento em 4 países com avaliação superior a 4,7 estrelas"],
+        "toolsAndTechnologies": ["Swift", "Kotlin", "Flutter", "Fastlane", "Firebase"]
+      },
+      {
+        "company": "NOS",
+        "website": "https://www.nos.pt",
+        "location": "Lisboa, Portugal",
+        "from": "2014-02",
+        "to": "2018-05",
+        "position": "Engenheiro iOS Sénior",
+        "activities": [
+          {
+            "project": "App de streaming de TV",
+            "tasks": ["Desenvolver funcionalidades de reprodução de vídeo", "Otimizar consumo de memória"]
+          }
+        ],
+        "achievements": ["Aumentou a retenção mensal em 18% com melhorias de desempenho"],
+        "toolsAndTechnologies": ["Swift", "Objective-C", "AVFoundation"]
+      },
+      {
+        "company": "WIT Software",
+        "website": "https://www.wit-software.com",
+        "location": "Coimbra, Portugal",
+        "from": "2011-09",
+        "to": "2014-01",
+        "position": "Programador Mobile",
+        "activities": [
+          {
+            "project": "Aplicações de mensagens para operadoras",
+            "tasks": ["Desenvolver apps Android nativas", "Integrar serviços de comunicação"]
+          }
+        ],
+        "achievements": ["Entregou apps de mensagens para operadoras europeias"],
+        "toolsAndTechnologies": ["Java", "Android SDK"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "Universidade de Coimbra",
+        "degree": "Licenciatura em Engenharia Informática",
+        "fieldOfStudy": "Sistemas Móveis",
+        "achievements": ["Projeto premiado em concurso de aplicações móveis"]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Swift", "SwiftUI", "Kotlin", "Jetpack Compose", "Flutter", "CI/CD"],
+      "softSkills": ["Liderança", "Gestão de pessoas", "Visão de produto"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Francês", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Guia de arquitetura mobile interno",
+        "description": "Documento e template de referência para apps modulares em Swift e Kotlin.",
+        "date": "2020-09",
+        "impact": "Padronizou o arranque de novos projetos e reduziu o tempo de setup em 60%."
+      }
+    ],
+    "interestsAndHobbies": ["Surf", "Fotografia de viagem", "Cozinha"],
+    "references": [
+      {
+        "name": "Marta Lopes",
+        "position": "VP of Engineering",
+        "company": "Bold International",
+        "contact": { "phone": "+351 916 555 777", "email": "marta.lopes@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 62000, "max": 75000 },
+    "candidateClustering": {
+      "primaryCluster": "Mobile Engineering",
+      "secondaryClusters": ["Technical Leadership", "iOS", "Android"],
+      "functionalExpertise": ["Arquitetura mobile", "Liderança de equipa"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Aumento de retenção", "Lançamento internacional"],
+      "industryDomains": ["Banking", "Telecom", "Media"],
+      "environmentFit": ["Equipas de produto", "Ambiente híbrido"],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Década de experiência mobile em iOS e Android com evolução clara para liderança técnica e de pessoas, com impacto de negócio mensurável."
+    },
+    "searchIndex": {
+      "roles": ["Mobile Engineer", "Mobile Lead", "iOS Engineer", "Android Engineer"],
+      "skills": ["Swift", "Kotlin", "Flutter", "CI/CD", "Firebase"],
+      "industries": ["Banking", "Telecom", "Media"]
+    },
+    "tags": ["mobile", "ios", "android", "flutter", "lead"]
+  },
+  {
+    "candidateProfileSummary": "Engenheira de qualidade sénior (SDET) com forte experiência em automação de testes, frameworks end-to-end e integração contínua. Combina conhecimentos de programação com uma mentalidade de qualidade orientada a risco. Atua em produtos SaaS de alto tráfego no Brasil.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Camila Ribeiro",
+      "role": "Engenheira de Qualidade Sénior (SDET)",
+      "summary": "SDET especializada em automação de testes com Selenium, Cypress e Playwright, e integração em pipelines CI/CD.",
+      "contact": {
+        "phone": "+55 11 98877-2211",
+        "email": "camila.ribeiro@example.com.br",
+        "address": {
+          "streetNumber": "455",
+          "streetName": "dos Pinheiros",
+          "streetType": "Rua",
+          "unit": "Apto 72",
+          "city": "São Paulo",
+          "state": "SP",
+          "zipCode": "05422-012",
+          "country": "Brasil"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/camila-ribeiro-qa",
+          "github": "https://github.com/camilaribeiro-qa",
+          "website": "https://camilaribeiro.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["dias úteis ao início da manhã", "sexta à tarde"],
+        "preferredWorkTypes": ["remote"],
+        "preferredContractTypes": ["permanent", "contract"],
+        "willingToRelocate": false,
+        "remoteOnly": true
+      }
+    },
+    "keySkills": [
+      { "category": "Automação de testes", "skills": ["Selenium", "Cypress", "Playwright"] },
+      { "category": "Linguagens", "skills": ["Java", "JavaScript", "Python"] },
+      { "category": "Testes de API e carga", "skills": ["RestAssured", "Postman", "k6"] },
+      { "category": "CI/CD e ferramentas", "skills": ["Jenkins", "GitHub Actions", "Docker"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Automação de testes end-to-end", "Testes de API", "Qualidade em pipelines CI/CD"],
+      "keyResponsibilities": ["Desenhar frameworks de automação", "Integrar testes nos pipelines", "Definir estratégia de qualidade orientada a risco"]
+    },
+    "workExperience": [
+      {
+        "company": "Nubank",
+        "website": "https://www.nubank.com.br",
+        "location": "São Paulo, Brasil",
+        "from": "2020-01",
+        "to": "Present",
+        "position": "Engenheira de Qualidade Sénior (SDET)",
+        "activities": [
+          {
+            "project": "Plataforma de cartões e pagamentos",
+            "tasks": ["Construir framework de testes E2E em Playwright", "Automatizar testes de regressão de API", "Integrar suites de teste em GitHub Actions"]
+          }
+        ],
+        "achievements": ["Reduziu o tempo do ciclo de regressão de 8 horas para 40 minutos", "Aumentou a cobertura de testes automatizados para 75%"],
+        "toolsAndTechnologies": ["Playwright", "Java", "RestAssured", "GitHub Actions", "Docker"]
+      },
+      {
+        "company": "Movile",
+        "website": "https://www.movile.com",
+        "location": "Campinas, Brasil",
+        "from": "2016-08",
+        "to": "2019-12",
+        "position": "Analista de QA",
+        "activities": [
+          {
+            "project": "Aplicações de mensagens e pagamentos",
+            "tasks": ["Automatizar testes com Selenium", "Criar planos de teste orientados a risco"]
+          }
+        ],
+        "achievements": ["Reduziu defeitos em produção em 30% no primeiro ano"],
+        "toolsAndTechnologies": ["Selenium", "JavaScript", "Jenkins"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "Universidade Estadual de Campinas",
+        "degree": "Bacharelado em Ciência da Computação",
+        "fieldOfStudy": "Engenharia de Software",
+        "achievements": ["Trabalho de conclusão sobre testes automatizados"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "ISTQB Certified Tester Foundation Level",
+        "institution": "ISTQB",
+        "year": "2017",
+        "description": "Fundamentos de teste de software e técnicas de qualidade."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Playwright", "Cypress", "Selenium", "Java", "RestAssured", "GitHub Actions"],
+      "softSkills": ["Rigor", "Pensamento crítico", "Colaboração com desenvolvimento"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } },
+        { "language": "Espanhol", "proficiency": { "read": "intermediate", "written": "intermediate", "spoken": "basic" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Framework de automação reutilizável",
+        "description": "Template open-source de testes E2E com relatórios integrados.",
+        "date": "2022-02",
+        "impact": "Reutilizado por várias equipas, acelerando a adoção de testes automatizados."
+      }
+    ],
+    "interestsAndHobbies": ["Escalada", "Jogos de tabuleiro", "Voluntariado em educação técnica"],
+    "references": [
+      {
+        "name": "Bruno Carvalho",
+        "position": "Quality Engineering Manager",
+        "company": "Nubank",
+        "contact": { "phone": "+55 11 97654-3322", "email": "bruno.carvalho@example.com.br" }
+      }
+    ],
+    "salaryExpectation": { "currency": "BRL", "min": 140000, "max": 175000 },
+    "candidateClustering": {
+      "primaryCluster": "Quality Engineering",
+      "secondaryClusters": ["Test Automation", "CI/CD"],
+      "functionalExpertise": ["Automação de testes", "Estratégia de qualidade"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Redução do ciclo de regressão", "Menos defeitos em produção"],
+      "industryDomains": ["FinTech", "SaaS"],
+      "environmentFit": ["Equipas remotas", "Ambientes de alto tráfego"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Perfil SDET sólido com forte componente de programação e automação, impacto claro em velocidade e qualidade de entrega em produtos de escala."
+    },
+    "searchIndex": {
+      "roles": ["QA Engineer", "SDET", "Test Automation Engineer"],
+      "skills": ["Playwright", "Cypress", "Selenium", "Java", "CI/CD"],
+      "industries": ["FinTech", "SaaS"]
+    },
+    "tags": ["qa", "sdet", "test-automation", "senior", "brazil"]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro de dados em progressão, com experiência na construção de pipelines de dados batch e streaming. Domina Python, SQL e ferramentas do ecossistema de dados moderno. Focado em fiabilidade e qualidade dos dados para equipas de analytics.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Diogo Teixeira",
+      "role": "Engenheiro de Dados",
+      "summary": "Engenheiro de dados focado em pipelines com Python, dbt e Airflow sobre data warehouses em nuvem.",
+      "contact": {
+        "phone": "+351 927 664 320",
+        "email": "diogo.teixeira@example.com",
+        "address": {
+          "streetNumber": "63",
+          "streetName": "da Sofia",
+          "streetType": "Rua",
+          "city": "Coimbra",
+          "state": "Coimbra",
+          "zipCode": "3000-389",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/diogo-teixeira-data",
+          "github": "https://github.com/diogoteixeira-data",
+          "website": "https://diogoteixeira.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["dias úteis ao fim do dia"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Linguagens", "skills": ["Python", "SQL", "Scala"] },
+      { "category": "Pipelines e orquestração", "skills": ["Airflow", "dbt", "Apache Spark"] },
+      { "category": "Armazenamento de dados", "skills": ["BigQuery", "Snowflake", "PostgreSQL"] },
+      { "category": "Nuvem e ferramentas", "skills": ["GCP", "Docker", "Git"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Pipelines de dados", "Modelação de dados", "Qualidade de dados"],
+      "keyResponsibilities": ["Construir e manter pipelines ETL/ELT", "Modelar dados com dbt", "Garantir a fiabilidade dos dados"]
+    },
+    "workExperience": [
+      {
+        "company": "Critical Software",
+        "website": "https://www.criticalsoftware.com",
+        "location": "Coimbra, Portugal",
+        "from": "2021-06",
+        "to": "Present",
+        "position": "Engenheiro de Dados",
+        "activities": [
+          {
+            "project": "Plataforma de dados para setor energético",
+            "tasks": ["Desenvolver pipelines em Airflow e Python", "Modelar tabelas analíticas com dbt", "Implementar testes de qualidade de dados"]
+          }
+        ],
+        "achievements": ["Reduziu o tempo de atualização de dados de 6 horas para 30 minutos", "Implementou testes de qualidade que reduziram incidentes de dados em 40%"],
+        "toolsAndTechnologies": ["Python", "Airflow", "dbt", "BigQuery", "GCP"]
+      },
+      {
+        "company": "Deemaze",
+        "website": "https://www.deemaze.com",
+        "location": "Coimbra, Portugal",
+        "from": "2020-07",
+        "to": "2021-05",
+        "position": "Analista de Dados Júnior",
+        "activities": [
+          {
+            "project": "Relatórios de produto",
+            "tasks": ["Escrever consultas SQL para relatórios", "Automatizar exportações de dados"]
+          }
+        ],
+        "achievements": ["Automatizou relatórios semanais poupando tempo manual à equipa"],
+        "toolsAndTechnologies": ["SQL", "Python", "PostgreSQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2020",
+        "institution": "Universidade de Coimbra",
+        "degree": "Licenciatura em Engenharia de Dados e Conhecimento",
+        "fieldOfStudy": "Ciência de Dados",
+        "achievements": ["Projeto final sobre pipelines de dados em tempo real"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Google Cloud Professional Data Engineer",
+        "institution": "Google Cloud",
+        "year": "2022",
+        "description": "Desenho e operação de sistemas de processamento de dados na GCP."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Python", "SQL", "Airflow", "dbt", "BigQuery", "Spark"],
+      "softSkills": ["Rigor analítico", "Autonomia", "Comunicação com stakeholders"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Pipeline de dados de sensores IoT",
+        "description": "Projeto académico de ingestão e agregação de dados de sensores em tempo real.",
+        "date": "2020-06",
+        "impact": "Processava milhares de eventos por segundo com latência inferior a um segundo."
+      }
+    ],
+    "interestsAndHobbies": ["Ciclismo de montanha", "Astronomia", "Culinária"],
+    "references": [
+      {
+        "name": "Helena Matos",
+        "position": "Data Engineering Lead",
+        "company": "Critical Software",
+        "contact": { "phone": "+351 917 888 999", "email": "helena.matos@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 32000, "max": 40000 },
+    "candidateClustering": {
+      "primaryCluster": "Data Engineering",
+      "secondaryClusters": ["ETL", "Analytics Engineering"],
+      "functionalExpertise": ["Pipelines de dados", "Modelação de dados"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Redução de latência de dados", "Melhoria de qualidade de dados"],
+      "industryDomains": ["Energy", "SaaS"],
+      "environmentFit": ["Equipas de dados", "Ambiente híbrido"],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.82,
+      "clusterReasoning": "Engenheiro de dados em fase de consolidação com stack moderna (Airflow, dbt, BigQuery) e resultados iniciais claros em fiabilidade e desempenho de pipelines."
+    },
+    "searchIndex": {
+      "roles": ["Data Engineer", "Analytics Engineer", "ETL Developer"],
+      "skills": ["Python", "SQL", "Airflow", "dbt", "BigQuery", "Spark"],
+      "industries": ["Energy", "SaaS"]
+    },
+    "tags": ["data-engineering", "python", "dbt", "airflow", "junior-mid"]
+  },
+  {
+    "candidateProfileSummary": "Cientista de dados sénior com forte experiência em modelação preditiva, NLP e experimentação. Traduz problemas de negócio em soluções de machine learning acionáveis. Colabora de perto com produto e engenharia para colocar modelos em produção.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Inês Carvalho",
+      "role": "Cientista de Dados Sénior",
+      "summary": "Cientista de dados sénior especializada em modelos preditivos, NLP e experimentação A/B.",
+      "contact": {
+        "phone": "+351 934 210 556",
+        "email": "ines.carvalho@example.com",
+        "address": {
+          "streetNumber": "204",
+          "streetName": "da Liberdade",
+          "streetType": "Avenida",
+          "unit": "3 Frente",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1250-096",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/ines-carvalho-ds",
+          "github": "https://github.com/inescarvalho-ds",
+          "website": "https://inescarvalho.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["dias úteis à hora de almoço"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Machine learning", "skills": ["scikit-learn", "XGBoost", "PyTorch"] },
+      { "category": "Linguagens", "skills": ["Python", "SQL", "R"] },
+      { "category": "NLP e experimentação", "skills": ["spaCy", "Hugging Face", "A/B testing"] },
+      { "category": "MLOps e nuvem", "skills": ["MLflow", "Docker", "AWS SageMaker"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Modelação preditiva", "Processamento de linguagem natural", "Experimentação"],
+      "keyResponsibilities": ["Desenvolver e validar modelos de ML", "Desenhar experiências A/B", "Colaborar na colocação de modelos em produção"]
+    },
+    "workExperience": [
+      {
+        "company": "Unbabel",
+        "website": "https://www.unbabel.com",
+        "location": "Lisboa, Portugal",
+        "from": "2019-04",
+        "to": "Present",
+        "position": "Cientista de Dados Sénior",
+        "activities": [
+          {
+            "project": "Estimativa de qualidade de tradução",
+            "tasks": ["Desenvolver modelos de NLP para avaliação de qualidade", "Desenhar experiências para validar melhorias", "Colaborar com engenharia na produção dos modelos"]
+          }
+        ],
+        "achievements": ["Melhorou a correlação do modelo de qualidade com avaliação humana em 15%", "Reduziu custos de revisão manual em 20%"],
+        "toolsAndTechnologies": ["Python", "PyTorch", "Hugging Face", "MLflow", "AWS SageMaker"]
+      },
+      {
+        "company": "Sky Technology Centre",
+        "website": "https://www.sky.com",
+        "location": "Lisboa, Portugal",
+        "from": "2016-09",
+        "to": "2019-03",
+        "position": "Cientista de Dados",
+        "activities": [
+          {
+            "project": "Recomendação de conteúdos",
+            "tasks": ["Construir modelos de recomendação", "Analisar comportamento de utilizadores"]
+          }
+        ],
+        "achievements": ["Aumentou o tempo de visualização em 10% com melhorias no motor de recomendação"],
+        "toolsAndTechnologies": ["Python", "scikit-learn", "SQL", "Spark"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "Instituto Superior Técnico",
+        "degree": "Mestrado em Matemática Aplicada e Computação",
+        "fieldOfStudy": "Estatística e Machine Learning",
+        "achievements": ["Distinção na tese sobre modelos de linguagem"]
+      },
+      {
+        "year": "2014",
+        "institution": "Instituto Superior Técnico",
+        "degree": "Licenciatura em Matemática Aplicada",
+        "fieldOfStudy": "Matemática",
+        "achievements": ["Bolsa de mérito académico"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Deep Learning Specialization",
+        "institution": "DeepLearning.AI",
+        "year": "2018",
+        "description": "Especialização em redes neuronais e aprendizagem profunda."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Python", "PyTorch", "scikit-learn", "SQL", "MLflow", "spaCy"],
+      "softSkills": ["Pensamento analítico", "Comunicação de resultados", "Colaboração interfuncional"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Alemão", "proficiency": { "read": "basic", "written": "basic", "spoken": "basic" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Modelo de deteção de churn",
+        "description": "Modelo preditivo de cancelamento de clientes com explicabilidade via SHAP.",
+        "date": "2021-11",
+        "impact": "Permitiu ações de retenção que reduziram o churn mensal em 8%."
+      }
+    ],
+    "interestsAndHobbies": ["Corrida de trail", "Piano", "Divulgação científica"],
+    "references": [
+      {
+        "name": "Pedro Antunes",
+        "position": "Head of Data Science",
+        "company": "Unbabel",
+        "contact": { "phone": "+351 918 444 222", "email": "pedro.antunes@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 50000, "max": 62000 },
+    "candidateClustering": {
+      "primaryCluster": "Data Science",
+      "secondaryClusters": ["Machine Learning", "NLP"],
+      "functionalExpertise": ["Modelação preditiva", "Experimentação"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Redução de custos", "Melhoria de retenção"],
+      "industryDomains": ["SaaS", "Media"],
+      "environmentFit": ["Equipas de dados", "Colaboração com produto"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Cientista de dados sénior com base matemática forte, especialização em NLP e histórico de modelos em produção com impacto de negócio quantificado."
+    },
+    "searchIndex": {
+      "roles": ["Data Scientist", "Machine Learning Scientist", "NLP Engineer"],
+      "skills": ["Python", "PyTorch", "scikit-learn", "NLP", "MLflow"],
+      "industries": ["SaaS", "Media"]
+    },
+    "tags": ["data-science", "machine-learning", "nlp", "python", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro de machine learning sénior focado em levar modelos para produção de forma fiável e escalável. Especialista em MLOps, sistemas de recomendação e otimização de inferência. Faz a ponte entre ciência de dados e engenharia de plataforma.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "André Pereira",
+      "role": "Engenheiro de Machine Learning Sénior",
+      "summary": "ML engineer sénior especializado em MLOps, sistemas de recomendação e serving de modelos em escala.",
+      "contact": {
+        "phone": "+351 961 332 148",
+        "email": "andre.pereira@example.com",
+        "address": {
+          "streetNumber": "88",
+          "streetName": "de Cedofeita",
+          "streetType": "Rua",
+          "city": "Porto",
+          "state": "Porto",
+          "zipCode": "4050-174",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/andre-pereira-mle",
+          "github": "https://github.com/andrepereira-mle",
+          "website": "https://andrepereira.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-30",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["dias úteis ao fim da tarde"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent", "contract"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Machine learning", "skills": ["TensorFlow", "PyTorch", "scikit-learn"] },
+      { "category": "MLOps", "skills": ["MLflow", "Kubeflow", "Feature Store"] },
+      { "category": "Engenharia e nuvem", "skills": ["Python", "Kubernetes", "AWS"] },
+      { "category": "Dados", "skills": ["Spark", "Kafka", "SQL"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["MLOps", "Sistemas de recomendação", "Serving de modelos"],
+      "keyResponsibilities": ["Industrializar modelos de ML", "Construir pipelines de treino e inferência", "Otimizar latência e custo de serving"]
+    },
+    "workExperience": [
+      {
+        "company": "Farfetch",
+        "website": "https://www.farfetch.com",
+        "location": "Porto, Portugal",
+        "from": "2019-01",
+        "to": "Present",
+        "position": "Engenheiro de Machine Learning Sénior",
+        "activities": [
+          {
+            "project": "Sistema de recomendação de produtos",
+            "tasks": ["Construir pipelines de treino em Kubeflow", "Otimizar serving de modelos em Kubernetes", "Implementar feature store partilhada"]
+          }
+        ],
+        "achievements": ["Reduziu a latência de inferência em 60%", "Aumentou o click-through das recomendações em 14%"],
+        "toolsAndTechnologies": ["Python", "TensorFlow", "Kubeflow", "Kubernetes", "AWS"]
+      },
+      {
+        "company": "Jumia",
+        "website": "https://www.jumia.com",
+        "location": "Porto, Portugal",
+        "from": "2015-10",
+        "to": "2018-12",
+        "position": "Engenheiro de Machine Learning",
+        "activities": [
+          {
+            "project": "Previsão de procura",
+            "tasks": ["Desenvolver modelos de previsão de vendas", "Automatizar o retreino de modelos"]
+          }
+        ],
+        "achievements": ["Melhorou a precisão da previsão de procura em 12%"],
+        "toolsAndTechnologies": ["Python", "scikit-learn", "Spark", "SQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "Faculdade de Engenharia da Universidade do Porto",
+        "degree": "Mestrado em Engenharia Informática",
+        "fieldOfStudy": "Inteligência Artificial",
+        "achievements": ["Tese sobre sistemas de recomendação escaláveis"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Certified Machine Learning – Specialty",
+        "institution": "Amazon Web Services",
+        "year": "2021",
+        "description": "Desenho e operação de soluções de ML em produção na AWS."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Python", "TensorFlow", "Kubeflow", "Kubernetes", "MLflow", "Spark"],
+      "softSkills": ["Pragmatismo", "Colaboração", "Foco em resultados"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Plataforma interna de feature store",
+        "description": "Serviço partilhado de features para treino e inferência em tempo real.",
+        "date": "2022-05",
+        "impact": "Reduziu o tempo de desenvolvimento de novos modelos em 30%."
+      }
+    ],
+    "interestsAndHobbies": ["Basquetebol", "Robótica", "Café de especialidade"],
+    "references": [
+      {
+        "name": "Cláudia Ferreira",
+        "position": "ML Platform Manager",
+        "company": "Farfetch",
+        "contact": { "phone": "+351 919 111 000", "email": "claudia.ferreira@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 55000, "max": 68000 },
+    "candidateClustering": {
+      "primaryCluster": "Machine Learning Engineering",
+      "secondaryClusters": ["MLOps", "Recommender Systems"],
+      "functionalExpertise": ["Industrialização de ML", "Serving de modelos"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Redução de latência", "Aumento de engagement"],
+      "industryDomains": ["E-commerce", "Retail"],
+      "environmentFit": ["Equipas de plataforma", "Ambiente de escala"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Perfil híbrido entre ciência de dados e engenharia de plataforma, com forte foco em MLOps e resultados de produção mensuráveis em recomendação."
+    },
+    "searchIndex": {
+      "roles": ["Machine Learning Engineer", "MLOps Engineer", "AI Engineer"],
+      "skills": ["Python", "TensorFlow", "Kubeflow", "Kubernetes", "MLflow"],
+      "industries": ["E-commerce", "Retail"]
+    },
+    "tags": ["ml-engineering", "mlops", "recommender-systems", "python", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Diretora de dados e analytics com mais de quinze anos de experiência a construir e liderar equipas de BI e ciência de dados. Define a estratégia de dados, governa a plataforma analítica e liga os dados às decisões de negócio ao nível executivo. Forte experiência em cultura data-driven.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Teresa Gonçalves",
+      "role": "Diretora de Dados e Analytics",
+      "summary": "Líder sénior de dados responsável por estratégia, governação e equipas de BI e data science.",
+      "contact": {
+        "phone": "+351 936 887 214",
+        "email": "teresa.goncalves@example.com",
+        "address": {
+          "streetNumber": "15",
+          "streetName": "Marquês de Pombal",
+          "streetType": "Praça",
+          "unit": "7",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1250-160",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/teresa-goncalves-data",
+          "website": "https://teresagoncalves.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["mediante agendamento prévio"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Estratégia de dados", "skills": ["Data strategy", "Data governance", "KPIs de negócio"] },
+      { "category": "Analytics e BI", "skills": ["Power BI", "Looker", "Tableau"] },
+      { "category": "Plataforma de dados", "skills": ["Snowflake", "dbt", "Airflow"] },
+      { "category": "Liderança", "skills": ["Gestão de equipas", "Gestão de stakeholders", "Planeamento orçamental"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Estratégia de dados", "Governação de dados", "Liderança de equipas de analytics"],
+      "keyResponsibilities": ["Definir a estratégia de dados da organização", "Liderar equipas de BI e ciência de dados", "Garantir a governação e qualidade dos dados"]
+    },
+    "workExperience": [
+      {
+        "company": "Galp",
+        "website": "https://www.galp.com",
+        "location": "Lisboa, Portugal",
+        "from": "2018-02",
+        "to": "Present",
+        "position": "Diretora de Dados e Analytics",
+        "activities": [
+          {
+            "project": "Transformação data-driven",
+            "tasks": ["Definir a estratégia de dados corporativa", "Construir a plataforma de dados em Snowflake", "Liderar equipas de BI e data science com mais de 20 pessoas"]
+          }
+        ],
+        "achievements": ["Estabeleceu a governação de dados que suporta decisões executivas", "Reduziu o tempo de produção de relatórios em 50%"],
+        "toolsAndTechnologies": ["Snowflake", "Power BI", "dbt", "Airflow"]
+      },
+      {
+        "company": "Sonae",
+        "website": "https://www.sonae.pt",
+        "location": "Porto, Portugal",
+        "from": "2012-05",
+        "to": "2018-01",
+        "position": "Head of Business Intelligence",
+        "activities": [
+          {
+            "project": "Analytics de retalho",
+            "tasks": ["Liderar a equipa de BI", "Implementar modelos de reporting de vendas"]
+          }
+        ],
+        "achievements": ["Criou a função de BI e escalou a equipa de 3 para 12 pessoas"],
+        "toolsAndTechnologies": ["Tableau", "SQL Server", "SSIS"]
+      },
+      {
+        "company": "Deloitte",
+        "website": "https://www.deloitte.com",
+        "location": "Lisboa, Portugal",
+        "from": "2008-09",
+        "to": "2012-04",
+        "position": "Consultora de Business Intelligence",
+        "activities": [
+          {
+            "project": "Projetos de reporting para clientes",
+            "tasks": ["Desenhar data marts", "Desenvolver relatórios e dashboards"]
+          }
+        ],
+        "achievements": ["Entregou soluções de BI para clientes de banca e retalho"],
+        "toolsAndTechnologies": ["SQL", "Oracle", "Cognos"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2008",
+        "institution": "Universidade Nova de Lisboa",
+        "degree": "Mestrado em Gestão de Sistemas de Informação",
+        "fieldOfStudy": "Business Intelligence",
+        "achievements": ["Melhor aluna da turma"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "DAMA Certified Data Management Professional",
+        "institution": "DAMA International",
+        "year": "2019",
+        "description": "Certificação em gestão e governação de dados."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Snowflake", "Power BI", "dbt", "SQL", "Airflow"],
+      "softSkills": ["Liderança executiva", "Pensamento estratégico", "Gestão de stakeholders"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Espanhol", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de literacia de dados",
+        "description": "Iniciativa corporativa de formação em dados para equipas de negócio.",
+        "date": "2020-10",
+        "impact": "Formou mais de 400 colaboradores e aumentou a adoção de dashboards em 70%."
+      }
+    ],
+    "interestsAndHobbies": ["Vela", "Leitura de ensaios", "Mentoria de mulheres em tecnologia"],
+    "references": [
+      {
+        "name": "João Almeida",
+        "position": "Chief Information Officer",
+        "company": "Galp",
+        "contact": { "phone": "+351 910 222 111", "email": "joao.almeida@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 95000, "max": 120000 },
+    "candidateClustering": {
+      "primaryCluster": "Data Leadership",
+      "secondaryClusters": ["Business Intelligence", "Data Governance"],
+      "functionalExpertise": ["Estratégia de dados", "Gestão de equipas"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Cultura data-driven", "Decisões executivas suportadas por dados"],
+      "industryDomains": ["Energy", "Retail", "Consulting"],
+      "environmentFit": ["Contexto corporativo", "Liderança executiva"],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Trajetória longa de liderança em dados, da consultoria à direção corporativa, com responsabilidade por estratégia, governação e equipas de grande dimensão."
+    },
+    "searchIndex": {
+      "roles": ["Data Director", "Head of Analytics", "Head of BI"],
+      "skills": ["Data Strategy", "Data Governance", "Power BI", "Snowflake", "SQL"],
+      "industries": ["Energy", "Retail", "Consulting"]
+    },
+    "tags": ["data-leadership", "analytics", "bi", "director", "governance"]
+  },
+  {
+    "candidateProfileSummary": "Gerente de engenharia de dados com sólida experiência técnica e de gestão, responsável por equipas que constroem plataformas de dados na nuvem. Combina conhecimento profundo de arquitetura de dados com liderança de pessoas. Atua no ecossistema de tecnologia brasileiro.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Rafael Almeida",
+      "role": "Gerente de Engenharia de Dados",
+      "summary": "Gerente de engenharia de dados com foco em plataformas em nuvem, arquitetura de dados e liderança de equipas.",
+      "contact": {
+        "phone": "+55 21 99655-4102",
+        "email": "rafael.almeida@example.com.br",
+        "address": {
+          "streetNumber": "1200",
+          "streetName": "Nossa Senhora de Copacabana",
+          "streetType": "Avenida",
+          "unit": "Apto 804",
+          "city": "Rio de Janeiro",
+          "state": "RJ",
+          "zipCode": "22070-002",
+          "country": "Brasil"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/rafael-almeida-data",
+          "github": "https://github.com/rafaelalmeida-data",
+          "website": "https://rafaelalmeida.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["dias úteis ao fim da tarde"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Arquitetura de dados", "skills": ["Data Lakehouse", "Data modeling", "Streaming"] },
+      { "category": "Tecnologias", "skills": ["Spark", "Kafka", "Databricks"] },
+      { "category": "Nuvem", "skills": ["AWS", "Terraform", "Airflow"] },
+      { "category": "Gestão", "skills": ["Liderança de equipas", "Gestão de roadmap", "Contratação técnica"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Arquitetura de plataformas de dados", "Liderança de engenharia", "Streaming de dados"],
+      "keyResponsibilities": ["Liderar a equipa de engenharia de dados", "Definir a arquitetura da plataforma", "Gerir prioridades e entregas"]
+    },
+    "workExperience": [
+      {
+        "company": "iFood",
+        "website": "https://www.ifood.com.br",
+        "location": "Rio de Janeiro, Brasil",
+        "from": "2019-05",
+        "to": "Present",
+        "position": "Gerente de Engenharia de Dados",
+        "activities": [
+          {
+            "project": "Plataforma de dados em tempo real",
+            "tasks": ["Liderar equipa de 10 engenheiros de dados", "Definir arquitetura lakehouse em Databricks", "Implementar pipelines de streaming com Kafka"]
+          }
+        ],
+        "achievements": ["Escalou a plataforma para processar biliões de eventos por dia", "Reduziu o custo de infraestrutura de dados em 25%"],
+        "toolsAndTechnologies": ["Spark", "Kafka", "Databricks", "AWS", "Airflow"]
+      },
+      {
+        "company": "Globo",
+        "website": "https://www.globo.com",
+        "location": "Rio de Janeiro, Brasil",
+        "from": "2015-03",
+        "to": "2019-04",
+        "position": "Engenheiro de Dados Sénior",
+        "activities": [
+          {
+            "project": "Data warehouse de audiência",
+            "tasks": ["Construir pipelines de ingestão em larga escala", "Otimizar consultas analíticas"]
+          }
+        ],
+        "achievements": ["Reduziu o tempo de processamento diário de dados de audiência em 40%"],
+        "toolsAndTechnologies": ["Spark", "Hadoop", "SQL", "Python"]
+      },
+      {
+        "company": "Stone",
+        "website": "https://www.stone.com.br",
+        "location": "Rio de Janeiro, Brasil",
+        "from": "2012-08",
+        "to": "2015-02",
+        "position": "Engenheiro de Dados",
+        "activities": [
+          {
+            "project": "Pipelines de transações de pagamento",
+            "tasks": ["Desenvolver ETL de transações", "Criar relatórios financeiros"]
+          }
+        ],
+        "achievements": ["Automatizou a consolidação diária de transações de pagamento"],
+        "toolsAndTechnologies": ["Python", "SQL", "PostgreSQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2012",
+        "institution": "Universidade Federal do Rio de Janeiro",
+        "degree": "Bacharelado em Engenharia de Computação",
+        "fieldOfStudy": "Sistemas de Dados",
+        "achievements": ["Projeto final sobre processamento distribuído"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Databricks Certified Data Engineer Professional",
+        "institution": "Databricks",
+        "year": "2021",
+        "description": "Certificação avançada em engenharia de dados na plataforma Databricks."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Spark", "Kafka", "Databricks", "AWS", "Airflow", "Python"],
+      "softSkills": ["Liderança de equipas", "Comunicação", "Gestão de prioridades"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } },
+        { "language": "Espanhol", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Framework de qualidade de dados",
+        "description": "Sistema de validação e monitorização de qualidade de dados em streaming.",
+        "date": "2022-08",
+        "impact": "Reduziu incidentes de dados críticos em 50% e melhorou a confiança das equipas de negócio."
+      }
+    ],
+    "interestsAndHobbies": ["Futebol", "Fotografia", "Churrasco com amigos"],
+    "references": [
+      {
+        "name": "Fernanda Souza",
+        "position": "Head of Data",
+        "company": "iFood",
+        "contact": { "phone": "+55 21 98123-4567", "email": "fernanda.souza@example.com.br" }
+      }
+    ],
+    "salaryExpectation": { "currency": "BRL", "min": 320000, "max": 400000 },
+    "candidateClustering": {
+      "primaryCluster": "Data Engineering Leadership",
+      "secondaryClusters": ["Data Platform", "Streaming"],
+      "functionalExpertise": ["Arquitetura de dados", "Gestão de equipas"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Redução de custos de infraestrutura", "Escalabilidade de plataforma"],
+      "industryDomains": ["FoodTech", "Media", "FinTech"],
+      "environmentFit": ["Ambientes de escala", "Equipas remotas"],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Progressão de engenheiro de dados a gerente com responsabilidade por plataforma de grande escala e liderança de equipa, mantendo profundidade técnica."
+    },
+    "searchIndex": {
+      "roles": ["Data Engineering Manager", "Data Platform Lead", "Senior Data Engineer"],
+      "skills": ["Spark", "Kafka", "Databricks", "AWS", "Airflow"],
+      "industries": ["FoodTech", "Media", "FinTech"]
+    },
+    "tags": ["data-engineering", "manager", "databricks", "streaming", "brazil"]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro DevOps sénior com forte experiência em automação de infraestrutura, CI/CD e observabilidade em ambientes cloud. Especialista em Kubernetes, Terraform e AWS. Foca-se em fiabilidade, segurança e velocidade de entrega das equipas de desenvolvimento.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Miguel Rocha",
+      "role": "Engenheiro DevOps Sénior",
+      "summary": "DevOps sénior focado em Kubernetes, Terraform, CI/CD e observabilidade em AWS.",
+      "contact": {
+        "phone": "+351 962 774 013",
+        "email": "miguel.rocha@example.com",
+        "address": {
+          "streetNumber": "34",
+          "streetName": "de Campolide",
+          "streetType": "Rua",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1070-036",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/miguel-rocha-devops",
+          "github": "https://github.com/miguelrocha-devops",
+          "website": "https://miguelrocha.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 45,
+        "interviewAvailability": ["dias úteis ao início da manhã"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent", "contract"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Orquestração", "skills": ["Kubernetes", "Helm", "Docker"] },
+      { "category": "Infraestrutura como código", "skills": ["Terraform", "Ansible", "Pulumi"] },
+      { "category": "CI/CD", "skills": ["GitLab CI", "ArgoCD", "GitHub Actions"] },
+      { "category": "Observabilidade", "skills": ["Prometheus", "Grafana", "ELK"] },
+      { "category": "Nuvem", "skills": ["AWS", "GCP"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Automação de infraestrutura", "CI/CD", "Observabilidade"],
+      "keyResponsibilities": ["Automatizar provisionamento de infraestrutura", "Manter pipelines de entrega contínua", "Garantir monitorização e alertas"]
+    },
+    "workExperience": [
+      {
+        "company": "Ki group",
+        "website": "https://www.ki-group.com",
+        "location": "Lisboa, Portugal",
+        "from": "2019-06",
+        "to": "Present",
+        "position": "Engenheiro DevOps Sénior",
+        "activities": [
+          {
+            "project": "Plataforma de entrega contínua",
+            "tasks": ["Automatizar clusters Kubernetes com Terraform", "Implementar GitOps com ArgoCD", "Construir stack de observabilidade com Prometheus e Grafana"]
+          }
+        ],
+        "achievements": ["Reduziu o tempo de deploy de 2 horas para 10 minutos", "Aumentou a disponibilidade dos serviços para 99,95%"],
+        "toolsAndTechnologies": ["Kubernetes", "Terraform", "ArgoCD", "Prometheus", "AWS"]
+      },
+      {
+        "company": "Nokia",
+        "website": "https://www.nokia.com",
+        "location": "Lisboa, Portugal",
+        "from": "2014-09",
+        "to": "2019-05",
+        "position": "Engenheiro de Sistemas",
+        "activities": [
+          {
+            "project": "Infraestrutura de rede de telecomunicações",
+            "tasks": ["Automatizar provisionamento com Ansible", "Manter pipelines de integração"]
+          }
+        ],
+        "achievements": ["Automatizou o provisionamento reduzindo erros manuais em 70%"],
+        "toolsAndTechnologies": ["Ansible", "Jenkins", "Linux", "Python"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2014",
+        "institution": "Instituto Superior de Engenharia de Lisboa",
+        "degree": "Licenciatura em Engenharia Informática e de Computadores",
+        "fieldOfStudy": "Sistemas e Redes",
+        "achievements": ["Projeto final em automação de infraestrutura"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Kubernetes Administrator (CKA)",
+        "institution": "Cloud Native Computing Foundation",
+        "year": "2020",
+        "description": "Administração de clusters Kubernetes em produção."
+      },
+      {
+        "title": "HashiCorp Certified: Terraform Associate",
+        "institution": "HashiCorp",
+        "year": "2021",
+        "description": "Infraestrutura como código com Terraform."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Kubernetes", "Terraform", "ArgoCD", "Prometheus", "AWS", "Ansible"],
+      "softSkills": ["Resolução de problemas", "Fiabilidade", "Colaboração com desenvolvimento"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Template de plataforma interna",
+        "description": "Módulos Terraform reutilizáveis para provisionar ambientes completos.",
+        "date": "2021-09",
+        "impact": "Reduziu o tempo de criação de novos ambientes de dias para minutos."
+      }
+    ],
+    "interestsAndHobbies": ["Corrida", "Automação doméstica", "Ciclismo"],
+    "references": [
+      {
+        "name": "Patrícia Silva",
+        "position": "Head of Platform",
+        "company": "KI group",
+        "contact": { "phone": "+351 911 333 555", "email": "patricia.silva@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 48000, "max": 60000 },
+    "candidateClustering": {
+      "primaryCluster": "DevOps Engineering",
+      "secondaryClusters": ["Cloud Infrastructure", "CI/CD"],
+      "functionalExpertise": ["Automação de infraestrutura", "Observabilidade"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Redução do tempo de deploy", "Aumento de disponibilidade"],
+      "industryDomains": ["SaaS", "Telecom"],
+      "environmentFit": ["Equipas de plataforma", "Ambiente cloud-native"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "DevOps sénior com stack cloud-native consolidada e resultados claros em velocidade de entrega e fiabilidade, com evolução de sistemas para plataforma."
+    },
+    "searchIndex": {
+      "roles": ["DevOps Engineer", "Platform Engineer", "Cloud Engineer"],
+      "skills": ["Kubernetes", "Terraform", "ArgoCD", "Prometheus", "AWS"],
+      "industries": ["SaaS", "Telecom"]
+    },
+    "tags": ["devops", "kubernetes", "terraform", "aws", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Líder de fiabilidade de sistemas (SRE Lead) com vasta experiência em garantir a disponibilidade e o desempenho de sistemas críticos em larga escala. Define práticas de SRE, SLOs e gestão de incidentes, e lidera equipas de fiabilidade. Combina profundidade técnica com liderança.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Sara Antunes",
+      "role": "SRE Lead",
+      "summary": "Líder de SRE especializada em fiabilidade, SLOs e gestão de incidentes em sistemas de larga escala.",
+      "contact": {
+        "phone": "+351 933 552 176",
+        "email": "sara.antunes@example.com",
+        "address": {
+          "streetNumber": "71",
+          "streetName": "de Santos Pousada",
+          "streetType": "Rua",
+          "unit": "4 Dto",
+          "city": "Porto",
+          "state": "Porto",
+          "zipCode": "4000-478",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sara-antunes-sre",
+          "github": "https://github.com/saraantunes-sre",
+          "website": "https://saraantunes.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["dias úteis ao fim do dia"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Fiabilidade", "skills": ["SLOs", "Error budgets", "Incident management"] },
+      { "category": "Infraestrutura", "skills": ["Kubernetes", "Terraform", "Linux"] },
+      { "category": "Observabilidade", "skills": ["Prometheus", "Grafana", "OpenTelemetry"] },
+      { "category": "Automação", "skills": ["Go", "Python", "Bash"] },
+      { "category": "Liderança", "skills": ["Gestão de equipa", "On-call strategy", "Postmortems"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Engenharia de fiabilidade", "Gestão de incidentes", "Liderança de SRE"],
+      "keyResponsibilities": ["Definir SLOs e políticas de fiabilidade", "Liderar a equipa de SRE e o processo de on-call", "Conduzir postmortems e melhoria contínua"]
+    },
+    "workExperience": [
+      {
+        "company": "Talkdesk",
+        "website": "https://www.talkdesk.com",
+        "location": "Porto, Portugal",
+        "from": "2018-01",
+        "to": "Present",
+        "position": "SRE Lead",
+        "activities": [
+          {
+            "project": "Fiabilidade da plataforma de contact center",
+            "tasks": ["Definir SLOs e error budgets por serviço", "Liderar a equipa de SRE e a estratégia de on-call", "Automatizar remediação de incidentes"]
+          }
+        ],
+        "achievements": ["Melhorou a disponibilidade da plataforma para 99,99%", "Reduziu o tempo médio de resolução de incidentes em 55%"],
+        "toolsAndTechnologies": ["Kubernetes", "Terraform", "Prometheus", "Go", "AWS"]
+      },
+      {
+        "company": "Blip",
+        "website": "https://www.blip.pt",
+        "location": "Porto, Portugal",
+        "from": "2015-02",
+        "to": "2017-12",
+        "position": "Engenheira de Fiabilidade",
+        "activities": [
+          {
+            "project": "Plataformas de apostas de alto tráfego",
+            "tasks": ["Implementar monitorização e alertas", "Otimizar a capacidade dos sistemas"]
+          }
+        ],
+        "achievements": ["Suportou picos de tráfego de grandes eventos sem degradação"],
+        "toolsAndTechnologies": ["Linux", "Prometheus", "Python", "Docker"]
+      },
+      {
+        "company": "PT Inovação",
+        "website": "https://www.alticelabs.com",
+        "location": "Aveiro, Portugal",
+        "from": "2012-09",
+        "to": "2015-01",
+        "position": "Administradora de Sistemas",
+        "activities": [
+          {
+            "project": "Infraestrutura de serviços de telecomunicações",
+            "tasks": ["Gerir servidores Linux", "Automatizar tarefas operacionais"]
+          }
+        ],
+        "achievements": ["Automatizou rotinas operacionais reduzindo o trabalho manual em 50%"],
+        "toolsAndTechnologies": ["Linux", "Bash", "Nagios"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2012",
+        "institution": "Universidade de Aveiro",
+        "degree": "Mestrado em Engenharia de Computadores e Telemática",
+        "fieldOfStudy": "Sistemas Distribuídos",
+        "achievements": ["Tese sobre alta disponibilidade de sistemas"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Kubernetes Administrator (CKA)",
+        "institution": "Cloud Native Computing Foundation",
+        "year": "2019",
+        "description": "Administração de clusters Kubernetes em produção."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Kubernetes", "Terraform", "Prometheus", "Go", "Python", "AWS"],
+      "softSkills": ["Liderança sob pressão", "Comunicação em incidentes", "Pensamento sistémico"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de engenharia de caos",
+        "description": "Iniciativa de testes de resiliência com injeção controlada de falhas.",
+        "date": "2021-06",
+        "impact": "Identificou e corrigiu pontos únicos de falha antes de afetarem clientes."
+      }
+    ],
+    "interestsAndHobbies": ["Escalada", "Kitesurf", "Divulgação de práticas SRE"],
+    "references": [
+      {
+        "name": "Tiago Costa",
+        "position": "Director of Infrastructure",
+        "company": "Talkdesk",
+        "contact": { "phone": "+351 912 444 666", "email": "tiago.costa@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 65000, "max": 80000 },
+    "candidateClustering": {
+      "primaryCluster": "Site Reliability Engineering",
+      "secondaryClusters": ["Infrastructure", "Incident Management"],
+      "functionalExpertise": ["Engenharia de fiabilidade", "Liderança de equipa"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Aumento de disponibilidade", "Redução de tempo de resolução"],
+      "industryDomains": ["SaaS", "Telecom"],
+      "environmentFit": ["Sistemas de larga escala", "Equipas de plataforma"],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Perfil de SRE maduro com progressão de sysadmin a líder de fiabilidade, forte em SLOs, gestão de incidentes e liderança técnica de equipa."
+    },
+    "searchIndex": {
+      "roles": ["Site Reliability Engineer", "SRE Lead", "Infrastructure Engineer"],
+      "skills": ["Kubernetes", "Terraform", "Prometheus", "Go", "AWS"],
+      "industries": ["SaaS", "Telecom"]
+    },
+    "tags": ["sre", "reliability", "kubernetes", "lead", "on-call"]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro de plataforma e cloud sénior focado em construir bases self-service para equipas de desenvolvimento. Especialista em arquitetura multi-conta na AWS, redes cloud e automação. Melhora a produtividade de developers através de plataformas internas robustas.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "João Machado",
+      "role": "Engenheiro de Plataforma Cloud Sénior",
+      "summary": "Platform engineer sénior especializado em AWS, redes cloud e plataformas internas para developers.",
+      "contact": {
+        "phone": "+351 961 220 348",
+        "email": "joao.machado@example.com",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "de Aveiro",
+          "streetType": "Avenida",
+          "city": "Aveiro",
+          "state": "Aveiro",
+          "zipCode": "3800-001",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/joao-machado-platform",
+          "github": "https://github.com/joaomachado-platform",
+          "website": "https://joaomachado.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["dias úteis ao fim da tarde"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Nuvem", "skills": ["AWS", "AWS Organizations", "VPC"] },
+      { "category": "Plataforma", "skills": ["Backstage", "Crossplane", "Kubernetes"] },
+      { "category": "Infraestrutura como código", "skills": ["Terraform", "CDK", "Helm"] },
+      { "category": "Redes e segurança", "skills": ["Networking", "IAM", "Zero Trust"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Engenharia de plataforma", "Arquitetura cloud", "Redes e segurança cloud"],
+      "keyResponsibilities": ["Construir plataformas internas self-service", "Desenhar arquitetura multi-conta na AWS", "Automatizar redes e segurança cloud"]
+    },
+    "workExperience": [
+      {
+        "company": "Vodafone",
+        "website": "https://www.vodafone.pt",
+        "location": "Aveiro, Portugal",
+        "from": "2020-03",
+        "to": "Present",
+        "position": "Engenheiro de Plataforma Cloud Sénior",
+        "activities": [
+          {
+            "project": "Plataforma interna de developers",
+            "tasks": ["Construir portal de developers com Backstage", "Desenhar landing zones multi-conta na AWS", "Automatizar provisionamento com Terraform e CDK"]
+          }
+        ],
+        "achievements": ["Reduziu o tempo de onboarding de novos serviços em 65%", "Padronizou a segurança de rede em mais de 40 contas AWS"],
+        "toolsAndTechnologies": ["AWS", "Terraform", "Backstage", "Kubernetes", "Crossplane"]
+      },
+      {
+        "company": "Ubiwhere",
+        "website": "https://www.ubiwhere.com",
+        "location": "Aveiro, Portugal",
+        "from": "2016-07",
+        "to": "2020-02",
+        "position": "Engenheiro de Cloud",
+        "activities": [
+          {
+            "project": "Plataformas de cidades inteligentes",
+            "tasks": ["Provisionar infraestrutura em AWS", "Configurar redes e VPNs seguras"]
+          }
+        ],
+        "achievements": ["Migrou plataformas para AWS reduzindo custos operacionais em 30%"],
+        "toolsAndTechnologies": ["AWS", "Terraform", "Docker", "Python"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "Universidade de Aveiro",
+        "degree": "Mestrado em Engenharia de Computadores e Telemática",
+        "fieldOfStudy": "Computação em Nuvem",
+        "achievements": ["Tese sobre arquiteturas cloud escaláveis"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Certified Solutions Architect – Professional",
+        "institution": "Amazon Web Services",
+        "year": "2022",
+        "description": "Arquitetura avançada de soluções na AWS."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["AWS", "Terraform", "Backstage", "Kubernetes", "Networking", "Python"],
+      "softSkills": ["Orientação ao developer", "Rigor técnico", "Colaboração"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Catálogo de serviços self-service",
+        "description": "Templates de infraestrutura publicados no portal de developers.",
+        "date": "2022-03",
+        "impact": "Permitiu que as equipas provisionassem infraestrutura sem depender da equipa de plataforma."
+      }
+    ],
+    "interestsAndHobbies": ["Vela", "Eletrónica DIY", "Trilhos pedestres"],
+    "references": [
+      {
+        "name": "Carla Nogueira",
+        "position": "Cloud Engineering Manager",
+        "company": "Vodafone",
+        "contact": { "phone": "+351 913 777 888", "email": "carla.nogueira@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 50000, "max": 62000 },
+    "candidateClustering": {
+      "primaryCluster": "Platform Engineering",
+      "secondaryClusters": ["Cloud Infrastructure", "Developer Experience"],
+      "functionalExpertise": ["Arquitetura cloud", "Plataformas internas"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Melhoria de produtividade de developers", "Padronização de segurança"],
+      "industryDomains": ["Telecom", "SmartCities"],
+      "environmentFit": ["Equipas de plataforma", "Ambiente cloud-native"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Engenheiro de plataforma sénior com foco claro em developer experience e arquitetura cloud multi-conta, com impacto mensurável em onboarding e segurança."
+    },
+    "searchIndex": {
+      "roles": ["Platform Engineer", "Cloud Engineer", "Infrastructure Engineer"],
+      "skills": ["AWS", "Terraform", "Backstage", "Kubernetes", "Networking"],
+      "industries": ["Telecom", "Smart Cities"]
+    },
+    "tags": ["platform-engineering", "cloud", "aws", "terraform", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Gestor de segurança da informação com sólida experiência em cibersegurança, gestão de risco e conformidade. Lidera equipas de segurança e define estratégias de proteção para organizações. Combina conhecimento técnico de segurança ofensiva e defensiva com governação e liderança.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Vera Martins",
+      "role": "Gestora de Segurança da Informação",
+      "summary": "Líder de cibersegurança responsável por estratégia de segurança, gestão de risco e conformidade.",
+      "contact": {
+        "phone": "+351 934 118 907",
+        "email": "vera.martins@example.com",
+        "address": {
+          "streetNumber": "56",
+          "streetName": "de Entrecampos",
+          "streetType": "Avenida",
+          "unit": "8 Esq",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1700-158",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/vera-martins-security",
+          "github": "https://github.com/veramartins-sec",
+          "website": "https://veramartins.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["mediante agendamento prévio"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Governação e risco", "skills": ["ISO 27001", "NIST", "Gestão de risco"] },
+      { "category": "Segurança técnica", "skills": ["Cloud Security", "SIEM", "Pentesting"] },
+      { "category": "Conformidade", "skills": ["RGPD", "Auditorias", "Políticas de segurança"] },
+      { "category": "Liderança", "skills": ["Gestão de equipa", "Resposta a incidentes", "Formação de segurança"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Estratégia de cibersegurança", "Gestão de risco e conformidade", "Resposta a incidentes"],
+      "keyResponsibilities": ["Definir a estratégia de segurança da informação", "Liderar a equipa de segurança e o SOC", "Garantir conformidade regulamentar"]
+    },
+    "workExperience": [
+      {
+        "company": "Millennium bcp",
+        "website": "https://www.millenniumbcp.pt",
+        "location": "Lisboa, Portugal",
+        "from": "2018-04",
+        "to": "Present",
+        "position": "Gestora de Segurança da Informação",
+        "activities": [
+          {
+            "project": "Programa de cibersegurança corporativa",
+            "tasks": ["Definir a estratégia e políticas de segurança", "Liderar o centro de operações de segurança", "Coordenar auditorias e conformidade RGPD"]
+          }
+        ],
+        "achievements": ["Obteve a certificação ISO 27001 para áreas críticas", "Reduziu o tempo de resposta a incidentes em 50%"],
+        "toolsAndTechnologies": ["SIEM", "Cloud Security", "ISO 27001", "NIST"]
+      },
+      {
+        "company": "Portugal Telecom",
+        "website": "https://www.telecom.pt",
+        "location": "Lisboa, Portugal",
+        "from": "2013-06",
+        "to": "2018-03",
+        "position": "Especialista de Segurança",
+        "activities": [
+          {
+            "project": "Proteção de infraestrutura de telecomunicações",
+            "tasks": ["Realizar testes de intrusão", "Implementar controlos de segurança de rede"]
+          }
+        ],
+        "achievements": ["Identificou e corrigiu vulnerabilidades críticas na infraestrutura"],
+        "toolsAndTechnologies": ["Pentesting", "Firewalls", "IDS/IPS"]
+      },
+      {
+        "company": "Deloitte",
+        "website": "https://www.deloitte.com",
+        "location": "Lisboa, Portugal",
+        "from": "2010-09",
+        "to": "2013-05",
+        "position": "Consultora de Segurança da Informação",
+        "activities": [
+          {
+            "project": "Avaliações de risco para clientes",
+            "tasks": ["Conduzir análises de risco", "Elaborar políticas de segurança"]
+          }
+        ],
+        "achievements": ["Entregou avaliações de segurança para clientes de banca e seguros"],
+        "toolsAndTechnologies": ["Risk assessment", "ISO 27001"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2010",
+        "institution": "Universidade de Lisboa",
+        "degree": "Mestrado em Segurança Informática",
+        "fieldOfStudy": "Cibersegurança",
+        "achievements": ["Tese sobre deteção de intrusões"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certified Information Systems Security Professional (CISSP)",
+        "institution": "ISC2",
+        "year": "2016",
+        "description": "Certificação avançada em segurança da informação."
+      },
+      {
+        "title": "Certified Information Security Manager (CISM)",
+        "institution": "ISACA",
+        "year": "2019",
+        "description": "Gestão de programas de segurança da informação."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["ISO 27001", "SIEM", "Cloud Security", "Pentesting", "NIST"],
+      "softSkills": ["Liderança", "Comunicação de risco", "Tomada de decisão sob pressão"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Francês", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de sensibilização em segurança",
+        "description": "Campanha interna de formação e simulações de phishing.",
+        "date": "2021-04",
+        "impact": "Reduziu a taxa de cliques em phishing simulado de 25% para 4%."
+      }
+    ],
+    "interestsAndHobbies": ["Xadrez", "Corrida", "Comunidade de mulheres em cibersegurança"],
+    "references": [
+      {
+        "name": "Luís Ferreira",
+        "position": "Chief Information Security Officer",
+        "company": "Millennium bcp",
+        "contact": { "phone": "+351 914 888 000", "email": "luis.ferreira@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 75000, "max": 95000 },
+    "candidateClustering": {
+      "primaryCluster": "Security Leadership",
+      "secondaryClusters": ["Cybersecurity", "Risk & Compliance"],
+      "functionalExpertise": ["Estratégia de segurança", "Gestão de risco"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Conformidade regulamentar", "Redução de risco cibernético"],
+      "industryDomains": ["Banking", "Telecom"],
+      "environmentFit": ["Contexto regulado", "Liderança de equipa"],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Trajetória sólida em cibersegurança da consultoria à gestão, com liderança de equipas de segurança, governação e responsabilidade por conformidade em setores regulados."
+    },
+    "searchIndex": {
+      "roles": ["Information Security Manager", "Cybersecurity Manager", "Security Lead"],
+      "skills": ["ISO 27001", "SIEM", "Cloud Security", "Risk Management", "NIST"],
+      "industries": ["Banking", "Telecom"]
+    },
+    "tags": ["security", "cybersecurity", "iso27001", "manager", "compliance"]
+  },
+  {
+    "candidateProfileSummary": "Engenheiro de infraestrutura e redes em progressão, com experiência em administração de sistemas Linux, redes e virtualização. Está a evoluir para práticas de cloud e automação. Focado em manter ambientes estáveis e seguros para as equipas.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Bruno Ferreira",
+      "role": "Engenheiro de Infraestrutura e Redes",
+      "summary": "Engenheiro de infraestrutura com base em Linux, redes e virtualização, em transição para cloud e automação.",
+      "contact": {
+        "phone": "+351 927 004 583",
+        "email": "bruno.ferreira@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "de Santo António",
+          "streetType": "Rua",
+          "city": "Faro",
+          "state": "Faro",
+          "zipCode": "8000-283",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/bruno-ferreira-infra",
+          "github": "https://github.com/brunoferreira-infra",
+          "website": "https://brunoferreira.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-20",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["dias úteis a qualquer hora"],
+        "preferredWorkTypes": ["hybrid", "onsite"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Sistemas", "skills": ["Linux", "Windows Server", "VMware"] },
+      { "category": "Redes", "skills": ["TCP/IP", "VLAN", "Firewalls"] },
+      { "category": "Automação", "skills": ["Bash", "Ansible", "PowerShell"] },
+      { "category": "Nuvem", "skills": ["Azure", "Docker"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Administração de sistemas", "Redes", "Virtualização"],
+      "keyResponsibilities": ["Manter servidores e redes", "Automatizar tarefas operacionais", "Apoiar a migração para a nuvem"]
+    },
+    "workExperience": [
+      {
+        "company": "Grupo Visabeira",
+        "website": "https://www.visabeira.com",
+        "location": "Faro, Portugal",
+        "from": "2021-05",
+        "to": "Present",
+        "position": "Engenheiro de Infraestrutura e Redes",
+        "activities": [
+          {
+            "project": "Modernização de infraestrutura interna",
+            "tasks": ["Administrar servidores Linux e Windows", "Configurar redes e firewalls", "Automatizar tarefas com Ansible"]
+          }
+        ],
+        "achievements": ["Automatizou a aplicação de patches em mais de 100 servidores", "Melhorou a segmentação de rede reduzindo a superfície de ataque"],
+        "toolsAndTechnologies": ["Linux", "VMware", "Ansible", "Azure"]
+      },
+      {
+        "company": "Nos Açores",
+        "website": "https://www.nosacores.pt",
+        "location": "Ponta Delgada, Portugal",
+        "from": "2020-06",
+        "to": "2021-04",
+        "position": "Técnico de Suporte de Sistemas",
+        "activities": [
+          {
+            "project": "Suporte de infraestrutura de TI",
+            "tasks": ["Prestar suporte a servidores e estações", "Gerir cópias de segurança"]
+          }
+        ],
+        "achievements": ["Melhorou a fiabilidade das rotinas de backup"],
+        "toolsAndTechnologies": ["Windows Server", "Linux", "Backup"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2020",
+        "institution": "Universidade do Algarve",
+        "degree": "Licenciatura em Engenharia Informática",
+        "fieldOfStudy": "Redes e Sistemas",
+        "achievements": ["Projeto final em automação de infraestrutura"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "CompTIA Network+",
+        "institution": "CompTIA",
+        "year": "2021",
+        "description": "Fundamentos de redes de computadores."
+      },
+      {
+        "title": "Microsoft Certified: Azure Administrator Associate",
+        "institution": "Microsoft",
+        "year": "2023",
+        "description": "Administração de recursos na plataforma Azure."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Linux", "VMware", "Ansible", "Azure", "Networking"],
+      "softSkills": ["Resolução de problemas", "Organização", "Disponibilidade"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Automação de backups",
+        "description": "Scripts e playbooks para automatizar cópias de segurança e restauros de teste.",
+        "date": "2022-07",
+        "impact": "Garantiu restauros testados regularmente, aumentando a confiança na recuperação de desastres."
+      }
+    ],
+    "interestsAndHobbies": ["Mergulho", "Ciclismo", "Eletrónica"],
+    "references": [
+      {
+        "name": "Marta Dias",
+        "position": "IT Manager",
+        "company": "Grupo Visabeira",
+        "contact": { "phone": "+351 915 111 222", "email": "marta.dias@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 26000, "max": 33000 },
+    "candidateClustering": {
+      "primaryCluster": "Infrastructure Engineering",
+      "secondaryClusters": ["Networking", "Systems Administration"],
+      "functionalExpertise": ["Administração de sistemas", "Redes"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Estabilidade de infraestrutura", "Melhoria de segurança de rede"],
+      "industryDomains": ["IT Services", "Telecom"],
+      "environmentFit": ["Equipas de operações", "Ambiente híbrido"],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.8,
+      "clusterReasoning": "Perfil de infraestrutura generalista em fase de consolidação, com base sólida em sistemas e redes e transição clara para cloud e automação."
+    },
+    "searchIndex": {
+      "roles": ["Infrastructure Engineer", "Network Engineer", "Systems Administrator"],
+      "skills": ["Linux", "VMware", "Ansible", "Azure", "Networking"],
+      "industries": ["IT Services", "Telecom"]
+    },
+    "tags": ["infrastructure", "networking", "linux", "azure", "junior-mid"]
+  },
+  {
+    "candidateProfileSummary": "Product owner em progressão, com experiência a traduzir necessidades de negócio em backlogs claros e a colaborar de perto com equipas de engenharia ágeis. Orientada a dados e ao valor para o utilizador. Procura assumir maior responsabilidade sobre a estratégia de produto.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Mariana Lopes",
+      "role": "Product Owner",
+      "summary": "Product owner focada em gestão de backlog, descoberta de produto e colaboração com equipas ágeis.",
+      "contact": {
+        "phone": "+351 926 447 812",
+        "email": "mariana.lopes@example.com",
+        "address": {
+          "streetNumber": "39",
+          "streetName": "de Arroios",
+          "streetType": "Rua",
+          "unit": "1 Dto",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1000-027",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/mariana-lopes-po",
+          "website": "https://marianalopes.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["dias úteis ao fim da tarde"],
+        "preferredWorkTypes": ["hybrid", "remote"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Gestão de produto", "skills": ["Gestão de backlog", "Histórias de utilizador", "Priorização"] },
+      { "category": "Metodologias", "skills": ["Scrum", "Kanban", "Agile"] },
+      { "category": "Descoberta e dados", "skills": ["Entrevistas com utilizadores", "SQL", "Analytics"] },
+      { "category": "Ferramentas", "skills": ["Jira", "Confluence", "Figma"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Gestão de backlog", "Descoberta de produto", "Colaboração ágil"],
+      "keyResponsibilities": ["Gerir e priorizar o backlog", "Escrever histórias de utilizador claras", "Alinhar stakeholders e equipa de engenharia"]
+    },
+    "workExperience": [
+      {
+        "company": "Sword Health",
+        "website": "https://www.swordhealth.com",
+        "location": "Lisboa, Portugal",
+        "from": "2022-06",
+        "to": "Present",
+        "position": "Product Owner",
+        "activities": [
+          {
+            "project": "Aplicação de fisioterapia digital",
+            "tasks": ["Gerir o backlog do produto", "Conduzir entrevistas com utilizadores", "Definir critérios de aceitação com a equipa"]
+          }
+        ],
+        "achievements": ["Aumentou a adesão a exercícios na app em 18%", "Reduziu o tempo de ciclo de entrega das funcionalidades"],
+        "toolsAndTechnologies": ["Jira", "Confluence", "Amplitude", "SQL"]
+      },
+      {
+        "company": "Coverflex",
+        "website": "https://www.coverflex.com",
+        "location": "Lisboa, Portugal",
+        "from": "2021-07",
+        "to": "2022-05",
+        "position": "Analista de Produto Júnior",
+        "activities": [
+          {
+            "project": "Plataforma de benefícios flexíveis",
+            "tasks": ["Analisar métricas de utilização", "Apoiar a priorização do roadmap"]
+          }
+        ],
+        "achievements": ["Identificou oportunidades que originaram novas funcionalidades"],
+        "toolsAndTechnologies": ["Jira", "SQL", "Metabase"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2021",
+        "institution": "Universidade Católica Portuguesa",
+        "degree": "Licenciatura em Gestão",
+        "fieldOfStudy": "Gestão de Empresas",
+        "achievements": ["Especialização em transformação digital"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Professional Scrum Product Owner I (PSPO I)",
+        "institution": "Scrum.org",
+        "year": "2022",
+        "description": "Fundamentos de gestão de produto com Scrum."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Jira", "Confluence", "SQL", "Amplitude", "Figma"],
+      "softSkills": ["Comunicação", "Empatia com o utilizador", "Organização"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } },
+        { "language": "Espanhol", "proficiency": { "read": "intermediate", "written": "intermediate", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Redesenho do fluxo de onboarding",
+        "description": "Iniciativa de melhoria do onboarding com base em investigação de utilizadores.",
+        "date": "2023-05",
+        "impact": "Aumentou a conclusão do onboarding em 22%."
+      }
+    ],
+    "interestsAndHobbies": ["Ioga", "Voluntariado social", "Viagens"],
+    "references": [
+      {
+        "name": "Gonçalo Pinto",
+        "position": "Product Manager",
+        "company": "Sword Health",
+        "contact": { "phone": "+351 916 222 444", "email": "goncalo.pinto@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 30000, "max": 38000 },
+    "candidateClustering": {
+      "primaryCluster": "Product Management",
+      "secondaryClusters": ["Product Ownership", "Agile Delivery"],
+      "functionalExpertise": ["Gestão de backlog", "Descoberta de produto"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Aumento de adesão", "Melhoria de onboarding"],
+      "industryDomains": ["HealthTech", "FinTech"],
+      "environmentFit": ["Equipas ágeis", "Ambiente de produto"],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.79,
+      "clusterReasoning": "Product owner em fase inicial com boa base analítica e de descoberta, resultados iniciais positivos e trajetória clara de crescimento em gestão de produto."
+    },
+    "searchIndex": {
+      "roles": ["Product Owner", "Associate Product Manager", "Product Analyst"],
+      "skills": ["Jira", "SQL", "Amplitude", "Scrum", "Product Discovery"],
+      "industries": ["HealthTech", "FinTech"]
+    },
+    "tags": ["product", "product-owner", "agile", "junior-mid"]
+  },
+  {
+    "candidateProfileSummary": "Product manager sénior com forte experiência em produtos SaaS B2B, da descoberta à entrega. Orienta-se por métricas, conduz descoberta de produto rigorosa e alinha equipas multidisciplinares em torno de uma visão clara. Traduz estratégia em roadmaps executáveis.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Pedro Sousa",
+      "role": "Product Manager Sénior",
+      "summary": "Product manager sénior especializado em SaaS B2B, descoberta de produto e crescimento orientado a métricas.",
+      "contact": {
+        "phone": "+351 961 887 340",
+        "email": "pedro.sousa@example.com",
+        "address": {
+          "streetNumber": "142",
+          "streetName": "da Boavista",
+          "streetType": "Avenida",
+          "unit": "6 Frente",
+          "city": "Porto",
+          "state": "Porto",
+          "zipCode": "4100-113",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/pedro-sousa-pm",
+          "website": "https://pedrosousa.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": ["dias úteis à hora de almoço"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Gestão de produto", "skills": ["Product discovery", "Roadmapping", "Priorização"] },
+      { "category": "Estratégia", "skills": ["Product strategy", "Go-to-market", "Pricing"] },
+      { "category": "Dados", "skills": ["Analytics", "A/B testing", "SQL"] },
+      { "category": "Ferramentas", "skills": ["Jira", "Productboard", "Amplitude"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Estratégia de produto", "Descoberta de produto", "Crescimento orientado a métricas"],
+      "keyResponsibilities": ["Definir a visão e o roadmap do produto", "Conduzir descoberta com clientes", "Alinhar engenharia, design e negócio"]
+    },
+    "workExperience": [
+      {
+        "company": "Cloudflare",
+        "website": "https://www.cloudflare.com",
+        "location": "Lisboa, Portugal",
+        "from": "2020-02",
+        "to": "Present",
+        "position": "Product Manager Sénior",
+        "activities": [
+          {
+            "project": "Produtos de segurança para empresas",
+            "tasks": ["Definir a estratégia e o roadmap do produto", "Conduzir descoberta com clientes enterprise", "Coordenar lançamentos go-to-market"]
+          }
+        ],
+        "achievements": ["Lançou uma funcionalidade que gerou mais de 2 milhões de euros em ARR", "Aumentou a retenção de clientes enterprise em 12%"],
+        "toolsAndTechnologies": ["Jira", "Productboard", "Amplitude", "SQL"]
+      },
+      {
+        "company": "Talkdesk",
+        "website": "https://www.talkdesk.com",
+        "location": "Porto, Portugal",
+        "from": "2017-03",
+        "to": "2020-01",
+        "position": "Product Manager",
+        "activities": [
+          {
+            "project": "Ferramentas de análise de contact center",
+            "tasks": ["Priorizar o backlog com base em dados", "Realizar entrevistas com clientes"]
+          }
+        ],
+        "achievements": ["Aumentou a adoção da funcionalidade de analytics em 35%"],
+        "toolsAndTechnologies": ["Jira", "Mixpanel", "SQL"]
+      },
+      {
+        "company": "Uniplaces",
+        "website": "https://www.uniplaces.com",
+        "location": "Lisboa, Portugal",
+        "from": "2015-09",
+        "to": "2017-02",
+        "position": "Associate Product Manager",
+        "activities": [
+          {
+            "project": "Marketplace de alojamento estudantil",
+            "tasks": ["Analisar o funil de conversão", "Apoiar experiências de otimização"]
+          }
+        ],
+        "achievements": ["Contribuiu para melhorias que aumentaram a conversão do funil"],
+        "toolsAndTechnologies": ["Google Analytics", "SQL", "Optimizely"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "institution": "Universidade do Porto",
+        "degree": "Mestrado em Economia",
+        "fieldOfStudy": "Economia e Gestão",
+        "achievements": ["Distinção na área de estratégia empresarial"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Pragmatic Institute Certified Product Manager",
+        "institution": "Pragmatic Institute",
+        "year": "2019",
+        "description": "Metodologia de gestão de produto orientada ao mercado."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["SQL", "Amplitude", "Jira", "Productboard", "A/B testing"],
+      "softSkills": ["Pensamento estratégico", "Comunicação", "Liderança sem autoridade"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Reposicionamento de produto enterprise",
+        "description": "Iniciativa de reposicionamento com base em investigação de mercado e feedback de clientes.",
+        "date": "2022-04",
+        "impact": "Abriu um novo segmento de mercado e acelerou o crescimento de receita."
+      }
+    ],
+    "interestsAndHobbies": ["Corrida", "Vinhos", "Leitura de estratégia de produto"],
+    "references": [
+      {
+        "name": "Ana Ribeiro",
+        "position": "Director of Product",
+        "company": "Cloudflare",
+        "contact": { "phone": "+351 917 555 111", "email": "ana.ribeiro@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 55000, "max": 70000 },
+    "candidateClustering": {
+      "primaryCluster": "Product Management",
+      "secondaryClusters": ["Product Strategy", "B2B SaaS"],
+      "functionalExpertise": ["Estratégia de produto", "Descoberta de produto"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Crescimento de receita", "Aumento de retenção"],
+      "industryDomains": ["SaaS", "Security"],
+      "environmentFit": ["Equipas de produto", "Ambiente B2B"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Product manager sénior com trajetória consistente em SaaS B2B, forte orientação a métricas e impacto de negócio comprovado em receita e retenção."
+    },
+    "searchIndex": {
+      "roles": ["Product Manager", "Senior Product Manager", "Product Lead"],
+      "skills": ["Product Strategy", "Product Discovery", "SQL", "Amplitude", "A/B Testing"],
+      "industries": ["SaaS", "Security"]
+    },
+    "tags": ["product", "product-manager", "b2b-saas", "senior"]
+  },
+  {
+    "candidateProfileSummary": "Gestor de produto técnico principal (Principal Technical PM) especializado em produtos de plataforma e APIs para developers. Combina profundidade técnica com visão de produto para orientar decisões de arquitetura e estratégia de plataforma. Influencia várias equipas sem autoridade direta.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Filipe Oliveira",
+      "role": "Principal Technical Product Manager",
+      "summary": "Principal technical PM focado em produtos de plataforma, APIs e developer experience.",
+      "contact": {
+        "phone": "+351 933 118 246",
+        "email": "filipe.oliveira@example.com",
+        "address": {
+          "streetNumber": "23",
+          "streetName": "das Laranjeiras",
+          "streetType": "Estrada",
+          "unit": "10 Esq",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1600-136",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/filipe-oliveira-tpm",
+          "github": "https://github.com/filipeoliveira-tpm",
+          "website": "https://filipeoliveira.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["dias úteis ao fim do dia"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Produto de plataforma", "skills": ["Platform strategy", "API product management", "Developer experience"] },
+      { "category": "Técnico", "skills": ["System design", "REST", "GraphQL"] },
+      { "category": "Dados", "skills": ["Analytics", "SQL", "Métricas de plataforma"] },
+      { "category": "Ferramentas", "skills": ["Jira", "Productboard", "Postman"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Estratégia de plataforma", "Gestão de produtos de API", "Developer experience"],
+      "keyResponsibilities": ["Definir a estratégia de produtos de plataforma", "Orientar decisões técnicas e de arquitetura", "Influenciar múltiplas equipas de engenharia"]
+    },
+    "workExperience": [
+      {
+        "company": "OutSystems",
+        "website": "https://www.outsystems.com",
+        "location": "Lisboa, Portugal",
+        "from": "2018-05",
+        "to": "Present",
+        "position": "Principal Technical Product Manager",
+        "activities": [
+          {
+            "project": "Plataforma de APIs para developers",
+            "tasks": ["Definir a estratégia da plataforma de APIs", "Colaborar com arquitetura em decisões técnicas", "Estabelecer métricas de developer experience"]
+          }
+        ],
+        "achievements": ["Liderou o lançamento de uma plataforma de APIs adotada por milhares de developers", "Aumentou a satisfação de developers (DevNPS) em 20 pontos"],
+        "toolsAndTechnologies": ["Productboard", "Jira", "Postman", "SQL"]
+      },
+      {
+        "company": "SAP",
+        "website": "https://www.sap.com",
+        "location": "Lisboa, Portugal",
+        "from": "2014-06",
+        "to": "2018-04",
+        "position": "Technical Product Manager",
+        "activities": [
+          {
+            "project": "Serviços de integração empresarial",
+            "tasks": ["Gerir o roadmap de APIs de integração", "Trabalhar com equipas de engenharia distribuídas"]
+          }
+        ],
+        "achievements": ["Reduziu o tempo de integração de parceiros em 40%"],
+        "toolsAndTechnologies": ["Jira", "REST", "SQL"]
+      },
+      {
+        "company": "Novabase",
+        "website": "https://www.novabase.pt",
+        "location": "Lisboa, Portugal",
+        "from": "2011-09",
+        "to": "2014-05",
+        "position": "Engenheiro de Software",
+        "activities": [
+          {
+            "project": "Sistemas de integração para telecomunicações",
+            "tasks": ["Desenvolver serviços de integração", "Desenhar APIs internas"]
+          }
+        ],
+        "achievements": ["Entregou serviços de integração usados por operadoras"],
+        "toolsAndTechnologies": ["Java", "REST", "SQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2011",
+        "institution": "Instituto Superior Técnico",
+        "degree": "Mestrado Integrado em Engenharia Informática",
+        "fieldOfStudy": "Arquitetura de Software",
+        "achievements": ["Distinção na área de sistemas de integração"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Pragmatic Institute Certified Product Manager",
+        "institution": "Pragmatic Institute",
+        "year": "2017",
+        "description": "Gestão de produto orientada ao mercado."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["System Design", "REST", "GraphQL", "SQL", "Productboard"],
+      "softSkills": ["Influência", "Pensamento estratégico", "Comunicação técnica"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Alemão", "proficiency": { "read": "intermediate", "written": "basic", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de developer experience",
+        "description": "Iniciativa transversal para melhorar a experiência de developers na plataforma.",
+        "date": "2021-10",
+        "impact": "Aumentou a adoção de APIs e reduziu tickets de suporte de integração em 30%."
+      }
+    ],
+    "interestsAndHobbies": ["Xadrez", "Ciclismo de estrada", "Mentoria de PMs técnicos"],
+    "references": [
+      {
+        "name": "Sara Monteiro",
+        "position": "VP of Product",
+        "company": "OutSystems",
+        "contact": { "phone": "+351 918 333 222", "email": "sara.monteiro@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 75000, "max": 92000 },
+    "candidateClustering": {
+      "primaryCluster": "Technical Product Management",
+      "secondaryClusters": ["Platform Product", "Developer Experience"],
+      "functionalExpertise": ["Estratégia de plataforma", "Gestão de produtos de API"],
+      "skillDepth": "tShaped",
+      "businessImpact": ["Adoção de plataforma", "Melhoria de developer experience"],
+      "industryDomains": ["SaaS", "Enterprise Software"],
+      "environmentFit": ["Equipas de plataforma", "Ambiente técnico"],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Trajetória de engenharia para gestão de produto técnico, com profundidade em plataformas e APIs e forte influência transversal ao nível principal."
+    },
+    "searchIndex": {
+      "roles": ["Technical Product Manager", "Principal Product Manager", "Platform Product Manager"],
+      "skills": ["Platform Strategy", "API Product Management", "System Design", "REST", "SQL"],
+      "industries": ["SaaS", "Enterprise Software"]
+    },
+    "tags": ["product", "technical-pm", "platform", "api", "principal"]
+  },
+  {
+    "candidateProfileSummary": "Diretora de produto com mais de quinze anos de experiência a construir e liderar organizações de produto em empresas de tecnologia. Define a visão e a estratégia de produto, alinha-a com os objetivos de negócio e escala equipas de gestão de produto. Forte em liderança executiva e cultura de produto.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Carla Ribeiro",
+      "role": "Diretora de Produto",
+      "summary": "Líder de produto executiva responsável por visão, estratégia e organização de gestão de produto.",
+      "contact": {
+        "phone": "+351 934 771 205",
+        "email": "carla.ribeiro@example.com",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "do Restelo",
+          "streetType": "Avenida",
+          "unit": "12",
+          "city": "Lisboa",
+          "state": "Lisboa",
+          "zipCode": "1400-315",
+          "country": "Portugal"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/carla-ribeiro-product",
+          "website": "https://carlaribeiro.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-02-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": ["mediante agendamento prévio"],
+        "preferredWorkTypes": ["hybrid"],
+        "preferredContractTypes": ["permanent"],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Estratégia de produto", "skills": ["Product vision", "Product strategy", "Portfolio management"] },
+      { "category": "Liderança", "skills": ["Gestão de organizações de produto", "Coaching de PMs", "Gestão de stakeholders"] },
+      { "category": "Negócio", "skills": ["Go-to-market", "Business modeling", "Pricing"] },
+      { "category": "Dados", "skills": ["Métricas de produto", "OKRs", "Analytics"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Estratégia e visão de produto", "Liderança de organizações de produto", "Cultura de produto"],
+      "keyResponsibilities": ["Definir a visão e estratégia de produto", "Liderar e escalar a equipa de produto", "Alinhar produto com objetivos de negócio"]
+    },
+    "workExperience": [
+      {
+        "company": "Feedzai",
+        "website": "https://www.feedzai.com",
+        "location": "Lisboa, Portugal",
+        "from": "2018-01",
+        "to": "Present",
+        "position": "Diretora de Produto",
+        "activities": [
+          {
+            "project": "Portfólio de produtos de prevenção de fraude",
+            "tasks": ["Definir a estratégia de produto do portfólio", "Liderar uma equipa de 15 product managers", "Estabelecer OKRs e métricas de produto"]
+          }
+        ],
+        "achievements": ["Escalou a organização de produto de 4 para 15 PMs", "Liderou a estratégia que triplicou a receita de produto em quatro anos"],
+        "toolsAndTechnologies": ["Productboard", "Jira", "Amplitude"]
+      },
+      {
+        "company": "Talkdesk",
+        "website": "https://www.talkdesk.com",
+        "location": "Lisboa, Portugal",
+        "from": "2013-04",
+        "to": "2017-12",
+        "position": "Head of Product",
+        "activities": [
+          {
+            "project": "Plataforma de contact center na nuvem",
+            "tasks": ["Definir o roadmap estratégico", "Construir a função de gestão de produto"]
+          }
+        ],
+        "achievements": ["Criou a função de produto e lançou vários produtos de sucesso"],
+        "toolsAndTechnologies": ["Jira", "Aha!", "Mixpanel"]
+      },
+      {
+        "company": "Microsoft",
+        "website": "https://www.microsoft.com",
+        "location": "Lisboa, Portugal",
+        "from": "2008-09",
+        "to": "2013-03",
+        "position": "Product Manager",
+        "activities": [
+          {
+            "project": "Soluções de produtividade empresarial",
+            "tasks": ["Gerir o roadmap de funcionalidades", "Coordenar lançamentos regionais"]
+          }
+        ],
+        "achievements": ["Liderou lançamentos regionais de produtos de produtividade"],
+        "toolsAndTechnologies": ["Product analytics", "SQL"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2008",
+        "institution": "Universidade Nova de Lisboa",
+        "degree": "Mestrado em Gestão",
+        "fieldOfStudy": "Gestão e Estratégia",
+        "achievements": ["Melhor aluna do programa de gestão"]
+      }
+    ],
+    "certifications": [],
+    "skillsAndQualifications": {
+      "technicalSkills": ["Product Strategy", "OKRs", "Amplitude", "Productboard"],
+      "softSkills": ["Liderança executiva", "Visão estratégica", "Desenvolvimento de equipas"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "fluent" } },
+        { "language": "Francês", "proficiency": { "read": "fluent", "written": "intermediate", "spoken": "fluent" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Modelo operacional de produto",
+        "description": "Definição de processos, rituais e métricas para escalar a organização de produto.",
+        "date": "2020-06",
+        "impact": "Melhorou a previsibilidade de entrega e a qualidade das decisões de produto."
+      }
+    ],
+    "interestsAndHobbies": ["Vela", "Ópera", "Mentoria de líderes de produto"],
+    "references": [
+      {
+        "name": "Miguel Torres",
+        "position": "Chief Product Officer",
+        "company": "Feedzai",
+        "contact": { "phone": "+351 919 444 333", "email": "miguel.torres@example.com" }
+      }
+    ],
+    "salaryExpectation": { "currency": "EUR", "min": 110000, "max": 140000 },
+    "candidateClustering": {
+      "primaryCluster": "Product Leadership",
+      "secondaryClusters": ["Product Strategy", "Organizational Leadership"],
+      "functionalExpertise": ["Estratégia de produto", "Liderança de organizações"],
+      "skillDepth": "generalist",
+      "businessImpact": ["Crescimento de receita", "Escalabilidade da organização de produto"],
+      "industryDomains": ["SaaS", "FinTech"],
+      "environmentFit": ["Contexto executivo", "Empresas em crescimento"],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "executiveInfluence",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Líder de produto executiva com trajetória longa e progressão clara até direção, responsável por estratégia, crescimento de receita e escala de organizações de produto."
+    },
+    "searchIndex": {
+      "roles": ["Director of Product", "Head of Product", "VP of Product"],
+      "skills": ["Product Strategy", "Product Vision", "OKRs", "Portfolio Management"],
+      "industries": ["SaaS", "FinTech"]
+    },
+    "tags": ["product", "product-leadership", "director", "strategy"]
+  },
+  {
+    "candidateProfileSummary": "Growth product manager sénior focado em aquisição, ativação e retenção em produtos digitais. Conduz experimentação em larga escala e usa dados para acelerar o crescimento. Trabalha na interseção entre produto, marketing e dados no mercado brasileiro.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Lucas Oliveira",
+      "role": "Growth Product Manager Sénior",
+      "summary": "Growth PM sénior especializado em experimentação, funil de crescimento e produtos orientados a dados.",
+      "contact": {
+        "phone": "+55 11 98123-7745",
+        "email": "lucas.oliveira@example.com.br",
+        "address": {
+          "streetNumber": "780",
+          "streetName": "Faria Lima",
+          "streetType": "Avenida",
+          "unit": "Conj 151",
+          "city": "São Paulo",
+          "state": "SP",
+          "zipCode": "01452-000",
+          "country": "Brasil"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/lucas-oliveira-growth",
+          "website": "https://lucasoliveira.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": ["dias úteis ao fim da tarde", "sábado de manhã"],
+        "preferredWorkTypes": ["remote", "hybrid"],
+        "preferredContractTypes": ["permanent", "contract"],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      { "category": "Growth", "skills": ["Growth loops", "AARRR funnel", "Retention"] },
+      { "category": "Experimentação", "skills": ["A/B testing", "Experiment design", "Statistical analysis"] },
+      { "category": "Dados", "skills": ["SQL", "Amplitude", "Mixpanel"] },
+      { "category": "Ferramentas", "skills": ["Jira", "Optimizely", "Looker"] }
+    ],
+    "profiles": {
+      "areasOfExpertise": ["Growth de produto", "Experimentação", "Otimização de funil"],
+      "keyResponsibilities": ["Desenhar e priorizar experiências de crescimento", "Otimizar o funil de aquisição e retenção", "Analisar resultados e escalar aprendizagens"]
+    },
+    "workExperience": [
+      {
+        "company": "Nubank",
+        "website": "https://www.nubank.com.br",
+        "location": "São Paulo, Brasil",
+        "from": "2020-03",
+        "to": "Present",
+        "position": "Growth Product Manager Sénior",
+        "activities": [
+          {
+            "project": "Crescimento de produtos financeiros",
+            "tasks": ["Desenhar experiências de ativação e retenção", "Priorizar o backlog de growth com base em dados", "Escalar experiências vencedoras para milhões de utilizadores"]
+          }
+        ],
+        "achievements": ["Aumentou a ativação de novos clientes em 19%", "Liderou experiências que geraram milhões de reais em receita incremental"],
+        "toolsAndTechnologies": ["SQL", "Amplitude", "Optimizely", "Jira"]
+      },
+      {
+        "company": "QuintoAndar",
+        "website": "https://www.quintoandar.com.br",
+        "location": "São Paulo, Brasil",
+        "from": "2016-07",
+        "to": "2020-02",
+        "position": "Product Manager de Growth",
+        "activities": [
+          {
+            "project": "Aquisição no marketplace imobiliário",
+            "tasks": ["Otimizar o funil de aquisição", "Executar experiências de conversão"]
+          }
+        ],
+        "achievements": ["Melhorou a conversão de leads em 25% ao longo de dois anos"],
+        "toolsAndTechnologies": ["SQL", "Mixpanel", "Google Optimize"]
+      }
+    ],
+    "education": [
+      {
+        "year": "2016",
+        "institution": "Universidade de São Paulo",
+        "degree": "Bacharelado em Engenharia de Produção",
+        "fieldOfStudy": "Engenharia e Gestão",
+        "achievements": ["Trabalho de conclusão sobre modelos de crescimento digital"]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Reforge Growth Series",
+        "institution": "Reforge",
+        "year": "2021",
+        "description": "Programa avançado de estratégias de crescimento de produto."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": ["SQL", "Amplitude", "Optimizely", "Mixpanel", "A/B testing"],
+      "softSkills": ["Pensamento analítico", "Experimentação", "Comunicação com dados"],
+      "languages": [
+        { "language": "Português", "proficiency": { "read": "native", "written": "native", "spoken": "native" } },
+        { "language": "Inglês", "proficiency": { "read": "fluent", "written": "fluent", "spoken": "intermediate" } },
+        { "language": "Espanhol", "proficiency": { "read": "intermediate", "written": "intermediate", "spoken": "intermediate" } }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programa de referências",
+        "description": "Desenho e otimização de um programa de indicação de novos clientes.",
+        "date": "2022-09",
+        "impact": "Tornou-se um dos principais canais de aquisição, com custo por cliente muito abaixo da média."
+      }
+    ],
+    "interestsAndHobbies": ["Corrida", "Fotografia urbana", "Culinária"],
+    "references": [
+      {
+        "name": "Juliana Costa",
+        "position": "Head of Growth",
+        "company": "Nubank",
+        "contact": { "phone": "+55 11 97788-1122", "email": "juliana.costa@example.com.br" }
+      }
+    ],
+    "salaryExpectation": { "currency": "BRL", "min": 280000, "max": 340000 },
+    "candidateClustering": {
+      "primaryCluster": "Growth Product Management",
+      "secondaryClusters": ["Experimentation", "Product Analytics"],
+      "functionalExpertise": ["Growth de produto", "Otimização de funil"],
+      "skillDepth": "specialist",
+      "businessImpact": ["Aumento de ativação", "Receita incremental"],
+      "industryDomains": ["FinTech", "Marketplace"],
+      "environmentFit": ["Equipas de growth", "Ambiente orientado a dados"],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Growth PM sénior com forte cultura de experimentação e dados, com impacto de negócio quantificado em ativação, retenção e aquisição em produtos de escala."
+    },
+    "searchIndex": {
+      "roles": ["Growth Product Manager", "Product Manager", "Growth Lead"],
+      "skills": ["Growth", "A/B Testing", "SQL", "Amplitude", "Experimentation"],
+      "industries": ["FinTech", "Marketplace"]
+    },
+    "tags": ["product", "growth", "experimentation", "senior", "brazil"]
+  }
+]

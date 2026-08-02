@@ -10,12 +10,17 @@ import ai.qorva.core.dto.CVDuplicatesData;
 import ai.qorva.core.dto.CVOutputDTO;
 import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
+import ai.qorva.core.dto.UploadResult;
+import ai.qorva.core.enums.QualityFlagEnum;
 import ai.qorva.core.dto.common.Availability;
 import ai.qorva.core.dto.common.PersonalInformation;
+import ai.qorva.core.enums.ContentDateSourceEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.CVMapper;
 import ai.qorva.core.mapper.OpenAIResultMapper;
+import ai.qorva.core.utils.CVContentDateResolver;
+import ai.qorva.core.utils.CVQualityFlagResolver;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.ai.converter.BeanOutputConverter;
@@ -29,9 +34,11 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;
@@ -47,8 +54,13 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final MatchingReportRepository matchingReportRepository;
     private final ChatsRepository chatsRepository;
     private final UsageMonitoringService usageMonitoringService;
+    private final S3StorageService s3StorageService;
+    private final LibraryQualityCacheEvictor libraryQualityCacheEvictor;
 
     private static final int DEFAULT_MATCH_LIMIT = 10;
+
+    /** Stashes the attachment S3 key between pre- and post-delete hooks (same pattern as existingDTOForUpdate). */
+    private final ThreadLocal<String> attachmentKeyForDelete = new ThreadLocal<>();
 
     @Autowired
     public CVService(
@@ -61,7 +73,9 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         CVMapper cVMapper,
         MatchingReportRepository matchingReportRepository,
         ChatsRepository chatsRepository,
-        UsageMonitoringService usageMonitoringService) {
+        UsageMonitoringService usageMonitoringService,
+        S3StorageService s3StorageService,
+        LibraryQualityCacheEvictor libraryQualityCacheEvictor) {
         super(repository, cvMapper, queryBuilder);
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
@@ -70,6 +84,8 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         this.matchingReportRepository = matchingReportRepository;
         this.chatsRepository = chatsRepository;
         this.usageMonitoringService = usageMonitoringService;
+        this.s3StorageService = s3StorageService;
+        this.libraryQualityCacheEvictor = libraryQualityCacheEvictor;
     }
 
     @Override
@@ -95,21 +111,44 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         if (availability.getRemoteOnly() == null) {
             availability.setRemoteOnly(false);
         }
+
+        // Content-based freshness evidence — applies to every creation path (upload, seeding, API).
+        CVContentDateResolver.resolve(dto);
+        CVQualityFlagResolver.resolve(dto);
     }
 
     @Override
     protected void preProcessUpdateOne(String id, CVDTO newCV) throws QorvaException {
         super.preProcessUpdateOne(id, newCV);
         this.mapper.merge(newCV, getExistingForUpdate());
+        // Flags must never drift from the data — recompute after every merge.
+        CVContentDateResolver.resolve(newCV);
+        CVQualityFlagResolver.resolve(newCV);
+    }
+
+    @Override
+    protected void postProcessCreateOne(CV entity) {
+        this.libraryQualityCacheEvictor.evict(entity.getTenantId());
     }
 
     @Override
     protected void postProcessUpdateOne(CV entity) {
         // Since entity was update we've needed to relaunch the marching report again
         this.jobPostService.markOpenJobPostsAsNeedingReports(entity.getTenantId());
+        this.libraryQualityCacheEvictor.evict(entity.getTenantId());
     }
 
-    public List<CVDTO> upload(List<MultipartFile> files, String tenantId) throws QorvaException {
+    /** Quality flags surfaced as per-file warnings in the upload response. */
+    private static final Set<String> UPLOAD_WARNING_FLAGS = Set.of(
+        QualityFlagEnum.MISSING_PHONE.name(),
+        QualityFlagEnum.MISSING_EMAIL.name(),
+        QualityFlagEnum.MISSING_CONTACT.name(),
+        QualityFlagEnum.NO_WORK_EXPERIENCE.name(),
+        QualityFlagEnum.LOW_AI_CONFIDENCE.name(),
+        QualityFlagEnum.NO_AI_ANALYSIS.name()
+    );
+
+    public List<UploadResult> upload(List<MultipartFile> files, String tenantId) throws QorvaException {
         log.debug("CV Service - Starting file processing for {} files", files.size());
 
         if (files.size() > 100) {
@@ -119,31 +158,97 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
             var futures = files.stream()
-                .<CompletableFuture<CVDTO>>map(file -> CompletableFuture.supplyAsync(() -> {
+                .<CompletableFuture<UploadResult>>map(file -> CompletableFuture.supplyAsync(() -> {
                     try {
-                        return processFile(file, tenantId);
-                    } catch (RuntimeException | QorvaException e) {
+                        return toUploadResult(file, processFile(file, tenantId), tenantId);
+                    } catch (QorvaException e) {
                         log.error("CV Service - Error processing file: {}", file.getOriginalFilename(), e);
-                        return null;
+                        return new UploadResult(file.getOriginalFilename(), UploadResult.STATUS_FAILED,
+                            null, null, List.of(), e.getMessage());
+                    } catch (RuntimeException e) {
+                        log.error("CV Service - Error processing file: {}", file.getOriginalFilename(), e);
+                        return new UploadResult(file.getOriginalFilename(), UploadResult.STATUS_FAILED,
+                            null, null, List.of(), QorvaErrorCodes.CV_EXTRACTION_FAILED);
                     }
                 }, executor))
                 .toList();
 
-            var processedFiles = futures.stream()
-                .map(CompletableFuture::join)
-                .filter(Objects::nonNull)
-                .toList();
+            var results = futures.stream().map(CompletableFuture::join).toList();
 
-            if (processedFiles.isEmpty()) {
+            boolean anyCreated = results.stream()
+                .anyMatch(r -> !UploadResult.STATUS_FAILED.equals(r.status()));
+            if (!anyCreated) {
                 throw new QorvaException(QorvaErrorCodes.CV_NO_FILES_PROCESSED, HttpStatus.INTERNAL_SERVER_ERROR.value(), HttpStatus.INTERNAL_SERVER_ERROR);
             }
 
-            log.debug("CV Service - {} CVs saved - Marking open job posts as needing reports", processedFiles.size());
+            log.debug("CV Service - {} files processed - Marking open job posts as needing reports", results.size());
             jobPostService.markOpenJobPostsAsNeedingReports(tenantId);
 
             log.debug("CV Service - File upload completed");
-            return processedFiles;
+            return results;
         }
+    }
+
+    /** Ingest gate: annotate the freshly created CV with duplicate collision + parse warnings. */
+    private UploadResult toUploadResult(MultipartFile file, CVDTO created, String tenantId) {
+        var warnings = created.getQualityFlags() == null ? List.<String>of()
+            : created.getQualityFlags().stream().filter(UPLOAD_WARNING_FLAGS::contains).toList();
+
+        var contact = created.getPersonalInformation() != null
+            ? created.getPersonalInformation().getContact() : null;
+        var email = contact != null ? contact.getEmail() : null;
+        var phone = contact != null ? contact.getPhone() : null;
+
+        var duplicate = ((CVRepository) this.repository).findContactMatch(
+                new ObjectId(tenantId), email, phone, new ObjectId(created.getId()))
+            .map(existing -> {
+                var existingContact = existing.getPersonalInformation() != null
+                    ? existing.getPersonalInformation().getContact() : null;
+                var matchType = existingContact != null && email != null
+                    && email.equals(existingContact.getEmail()) ? "EMAIL" : "PHONE";
+                return new UploadResult.DuplicateMatch(
+                    existing.getId(),
+                    existing.getPersonalInformation() != null ? existing.getPersonalInformation().getName() : null,
+                    matchType,
+                    existing.getCreatedAt());
+            })
+            .orElse(null);
+
+        return new UploadResult(
+            file.getOriginalFilename(),
+            duplicate != null ? UploadResult.STATUS_DUPLICATE_DETECTED : UploadResult.STATUS_CREATED,
+            created,
+            duplicate,
+            warnings,
+            null);
+    }
+
+    /**
+     * Resolves an upload-time duplicate by keeping the new CV and removing the old copy.
+     * Recruiter knowledge survives: tags from the old copy are merged into the new one.
+     */
+    public CVDTO replaceDuplicate(String newCvId, String oldCvId, String tenantId) throws QorvaException {
+        if (newCvId.equals(oldCvId)) {
+            throw new QorvaException("Cannot replace a CV with itself",
+                HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+        }
+        var newCv = this.findOneById(newCvId);   // tenant ownership asserted inside
+        var oldCv = this.findOneById(oldCvId);
+
+        var mergedTags = new LinkedHashSet<String>();
+        if (newCv.getTags() != null) mergedTags.addAll(newCv.getTags());
+        if (oldCv.getTags() != null) mergedTags.addAll(oldCv.getTags());
+        newCv.setTags(new ArrayList<>(mergedTags));
+
+        var updated = this.updateOne(newCvId, newCv);
+        this.deleteOneById(oldCvId, tenantId);   // cascades reports/chats/S3 + evicts cache
+        return updated;
+    }
+
+    /** Ingest from staged bytes (async candidate submissions) — same pipeline as live uploads. */
+    public CVDTO processFile(byte[] bytes, String originalFilename, String contentType, String tenantId)
+        throws RuntimeException, QorvaException {
+        return processFile(new ai.qorva.core.utils.ByteArrayMultipartFile(bytes, originalFilename, contentType), tenantId);
     }
 
     public CVDTO processFile(MultipartFile file, String tenantId) throws RuntimeException, QorvaException {
@@ -151,7 +256,33 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         String fileContent = fileReaderContext.readFile(file);
 
         log.debug("Processing file: {}", file.getOriginalFilename());
-        return extractCVData(fileContent, tenantId);
+        var cvDtoToPersist = extractCVData(fileContent, tenantId);
+        cvDtoToPersist.setRawText(fileContent);
+
+        // Document metadata date is freshness evidence; work-history dates may override it in preProcessCreateOne.
+        var documentDate = fileReaderContext.readDocumentDate(file);
+        if (documentDate != null) {
+            cvDtoToPersist.setContentDate(documentDate);
+            cvDtoToPersist.setContentDateSource(ContentDateSourceEnum.DOC_METADATA.name());
+        }
+
+        // Best-effort: an S3 outage must not cost the recruiter the parsed CV.
+        try {
+            cvDtoToPersist.setAttachment(this.s3StorageService.uploadCvDocument(tenantId, file));
+        } catch (QorvaException e) {
+            log.warn("CV Service - Could not store original file {} for tenant {} — CV will be saved without attachment",
+                file.getOriginalFilename(), tenantId);
+        }
+
+        try {
+            return createOne(cvDtoToPersist);
+        } catch (QorvaException | RuntimeException e) {
+            // Persisting failed — remove the uploaded object so S3 never holds orphans.
+            if (cvDtoToPersist.getAttachment() != null) {
+                this.s3StorageService.deleteObject(cvDtoToPersist.getAttachment().getS3Key());
+            }
+            throw e;
+        }
     }
 
     private CVDTO extractCVData(String cvContent, String tenantId) throws QorvaException {
@@ -173,7 +304,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         var cvDtoToPersist = this.openAIResultMapper.map(outputDTO);
         cvDtoToPersist.setTenantId(tenantId);
 
-        return createOne(cvDtoToPersist);
+        return cvDtoToPersist;
     }
 
     public List<CVDTO> match(JobPostDTO jobPostDTO) throws QorvaException {
@@ -263,25 +394,17 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     }
 
     public CVDuplicatesData.DuplicatesPage findDuplicates(String tenantId, int page, int pageSize) {
-        var repo = (CVRepository) repository;
-        var emailGroups = repo.findEmailDuplicates(new ObjectId(tenantId)).stream()
-            .map(r -> new CVDuplicatesData.DuplicateGroup("EMAIL", r.matchValue(), r.count(), r.cvs()))
-            .toList();
-        var phoneGroups = repo.findPhoneDuplicates(new ObjectId(tenantId)).stream()
-            .map(r -> new CVDuplicatesData.DuplicateGroup("PHONE", r.matchValue(), r.count(), r.cvs()))
-            .toList();
+        // Paged server-side — never load all groups into memory (libraries can hold tens of thousands of CVs).
+        return ((CVRepository) this.repository).findDuplicateGroups(new ObjectId(tenantId), page, pageSize);
+    }
 
-        var all = new ArrayList<CVDuplicatesData.DuplicateGroup>(emailGroups.size() + phoneGroups.size());
-        all.addAll(emailGroups);
-        all.addAll(phoneGroups);
+    @Override
+    protected void preProcessDeleteOneById(String id, String tenantId) throws QorvaException {
+        super.preProcessDeleteOneById(id, tenantId);
 
-        long total = all.size();
-        int totalPages = pageSize == 0 ? 0 : (int) Math.ceil((double) total / pageSize);
-        int fromIdx = page * pageSize;
-        int toIdx = (int) Math.min(fromIdx + pageSize, total);
-        var content = fromIdx >= total ? List.<CVDuplicatesData.DuplicateGroup>of() : all.subList(fromIdx, toIdx);
-
-        return new CVDuplicatesData.DuplicatesPage(content, page, pageSize, total, totalPages, toIdx < total);
+        // Capture the S3 key now — after the DB delete the reference is gone.
+        var dto = this.findOneById(id);
+        this.attachmentKeyForDelete.set(dto.getAttachment() != null ? dto.getAttachment().getS3Key() : null);
     }
 
     @Override
@@ -293,5 +416,13 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
         var countDeletedChats = this.chatsRepository.deleteByTenantIdAndContextCvId(tenantId, id);
         log.info("Deleted {} chats associated with CV ID: {}", countDeletedChats, id);
+
+        try {
+            this.s3StorageService.deleteObject(this.attachmentKeyForDelete.get());
+        } finally {
+            this.attachmentKeyForDelete.remove();
+        }
+
+        this.libraryQualityCacheEvictor.evict(tenantId);
     }
 }

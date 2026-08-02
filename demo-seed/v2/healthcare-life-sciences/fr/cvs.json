@@ -1,0 +1,6159 @@
+[
+  {
+    "candidateProfileSummary": "Infirmière diplômée d'État avec plus de dix ans d'expérience en réanimation et en soins critiques. Titulaire du diplôme d'État et inscrite à l'Ordre National des Infirmiers, elle maîtrise la prise en charge de patients instables, la surveillance hémodynamique et l'accompagnement des familles. Reconnue pour son sang-froid et sa rigueur dans les protocoles de soins.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Amandine Lefèvre",
+      "role": "Infirmière Diplômée d'État — Réanimation",
+      "summary": "Passionnée par les soins critiques, j'accompagne les patients les plus fragiles avec exigence et humanité. Le travail d'équipe en unité de réanimation est au cœur de ma pratique.",
+      "contact": {
+        "phone": "+33 6 41 27 65 09",
+        "email": "amandine.lefevre@example.com",
+        "address": {
+          "streetNumber": "24",
+          "streetName": "Gambetta",
+          "streetType": "Rue",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69007",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/amandine-lefevre-ide"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine après 18h",
+          "Repos de garde"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Soins critiques",
+        "skills": [
+          "Réanimation",
+          "Surveillance hémodynamique",
+          "Ventilation mécanique"
+        ]
+      },
+      {
+        "category": "Gestes techniques",
+        "skills": [
+          "Pose de voies veineuses",
+          "Aspiration trachéale",
+          "Hémofiltration"
+        ]
+      },
+      {
+        "category": "Sécurité des soins",
+        "skills": [
+          "Prévention des infections nosocomiales",
+          "Gestion de la douleur",
+          "Traçabilité"
+        ]
+      },
+      {
+        "category": "Relationnel",
+        "skills": [
+          "Accompagnement des familles",
+          "Éducation thérapeutique"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Soins de réanimation",
+        "Surveillance de patients instables",
+        "Protocoles d'urgence"
+      ],
+      "keyResponsibilities": [
+        "Assurer la surveillance continue des patients de réanimation",
+        "Administrer et adapter les thérapeutiques prescrites",
+        "Coordonner les soins avec l'équipe médicale"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Hospices Civils de Lyon",
+        "website": "https://www.chu-lyon.fr",
+        "location": "Lyon, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Infirmière DE — Réanimation médicale",
+        "activities": [
+          {
+            "project": "Unité de réanimation polyvalente",
+            "tasks": [
+              "Surveillance hémodynamique et respiratoire des patients ventilés",
+              "Administration des thérapeutiques en soins critiques",
+              "Encadrement des étudiants infirmiers"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participation à la réduction des infections liées aux cathéters via un nouveau protocole",
+          "Référente douleur de l'unité"
+        ],
+        "toolsAndTechnologies": [
+          "DPI Easily",
+          "Scope multiparamétrique",
+          "Respirateur Dräger"
+        ]
+      },
+      {
+        "company": "Centre Hospitalier de Valence",
+        "website": "https://www.ch-valence.fr",
+        "location": "Valence, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Infirmière DE — Soins continus",
+        "activities": [
+          {
+            "project": "Unité de surveillance continue",
+            "tasks": [
+              "Prise en charge de patients post-opératoires",
+              "Surveillance des paramètres vitaux",
+              "Gestion des situations d'urgence"
+            ]
+          }
+        ],
+        "achievements": [
+          "Formation des nouvelles recrues au protocole de surveillance"
+        ],
+        "toolsAndTechnologies": [
+          "DPI Orbis",
+          "Pousse-seringue électrique"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IFSI Croix-Rouge française — Lyon",
+        "degree": "Diplôme d'État d'Infirmier",
+        "fieldOfStudy": "Soins infirmiers",
+        "achievements": [
+          "Mémoire de fin d'études sur la prise en charge de la douleur en réanimation"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Attestation de Formation aux Gestes et Soins d'Urgence niveau 2",
+        "institution": "CESU 69",
+        "year": "@Y-0@",
+        "description": "Prise en charge des urgences vitales en milieu hospitalier."
+      },
+      {
+        "title": "Diplôme Universitaire Plaies et Cicatrisation",
+        "institution": "Université Claude Bernard Lyon 1",
+        "year": "@Y-1@",
+        "description": "Approfondissement de la prise en charge des plaies complexes."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Réanimation",
+        "Ventilation mécanique",
+        "Hémofiltration",
+        "Surveillance hémodynamique"
+      ],
+      "softSkills": [
+        "Sang-froid",
+        "Rigueur",
+        "Empathie",
+        "Travail en équipe"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Protocole de prévention des infections sur cathéter",
+        "description": "Co-construction d'un protocole d'hygiène des voies centrales en réanimation.",
+        "date": "2022",
+        "impact": "Baisse mesurable du taux d'infections liées aux cathéters dans l'unité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Course à pied",
+      "Randonnée",
+      "Bénévolat Croix-Rouge"
+    ],
+    "references": [
+      {
+        "name": "Dr Sophie Marchand",
+        "position": "Praticien Hospitalier — Réanimation",
+        "company": "Hospices Civils de Lyon",
+        "contact": {
+          "phone": "+33 6 12 88 40 51",
+          "email": "sophie.marchand@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 34000,
+      "max": 42000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Critical Care Nursing",
+      "secondaryClusters": [
+        "Intensive Care",
+        "Emergency Care"
+      ],
+      "functionalExpertise": [
+        "Patient Monitoring",
+        "Clinical Care Delivery",
+        "Infection Prevention"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Réduction des infections nosocomiales",
+        "Amélioration de la qualité des soins"
+      ],
+      "industryDomains": [
+        "Hospitals",
+        "Healthcare"
+      ],
+      "environmentFit": [
+        "Hospital",
+        "Clinical"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Parcours cohérent en soins critiques hospitaliers avec expertise en réanimation et prévention des infections."
+    },
+    "searchIndex": {
+      "roles": [
+        "Registered Nurse",
+        "ICU Nurse",
+        "Critical Care Nurse"
+      ],
+      "skills": [
+        "Critical Care",
+        "Mechanical Ventilation",
+        "Hemodynamic Monitoring",
+        "Infection Control"
+      ],
+      "industries": [
+        "Hospitals",
+        "Healthcare"
+      ]
+    },
+    "tags": [
+      "nursing",
+      "icu",
+      "critical-care",
+      "senior",
+      "clinical"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Médecin urgentiste titulaire du Doctorat en médecine et du DES de médecine d'urgence, fort de plus de dix ans d'exercice hospitalier. Expérimenté dans la gestion des urgences vitales, le tri, et la coordination du SMUR. Inscrit au Conseil de l'Ordre des Médecins et impliqué dans la formation des internes.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Karim Benali",
+      "role": "Médecin Urgentiste",
+      "summary": "L'urgence, c'est décider vite et juste au service du patient. J'aime la médecine de première ligne et la transmission auprès des plus jeunes.",
+      "contact": {
+        "phone": "+33 6 78 34 12 90",
+        "email": "karim.benali@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "de la République",
+          "streetType": "Boulevard",
+          "city": "Marseille",
+          "state": "Provence-Alpes-Côte d'Azur",
+          "zipCode": "13001",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/karim-benali-md"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Jours de repos",
+          "En semaine 14h-16h"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Médecine d'urgence",
+        "skills": [
+          "Tri des urgences",
+          "Réanimation cardio-pulmonaire",
+          "Gestion du polytraumatisé"
+        ]
+      },
+      {
+        "category": "Gestes techniques",
+        "skills": [
+          "Intubation",
+          "Échographie clinique",
+          "Suture"
+        ]
+      },
+      {
+        "category": "Coordination",
+        "skills": [
+          "Régulation SMUR",
+          "Gestion de crise",
+          "Encadrement d'internes"
+        ]
+      },
+      {
+        "category": "Imagerie et diagnostic",
+        "skills": [
+          "Lecture ECG",
+          "Interprétation radiologique",
+          "FAST écho"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Urgences vitales",
+        "Médecine pré-hospitalière",
+        "Traumatologie d'urgence"
+      ],
+      "keyResponsibilities": [
+        "Assurer le diagnostic et la prise en charge des urgences",
+        "Coordonner les interventions SMUR",
+        "Former et superviser les internes"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Assistance Publique — Hôpitaux de Marseille",
+        "website": "https://www.ap-hm.fr",
+        "location": "Marseille, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Praticien Hospitalier — Médecine d'urgence",
+        "activities": [
+          {
+            "project": "Service d'Accueil des Urgences",
+            "tasks": [
+              "Prise en charge des urgences vitales et du tri",
+              "Régulation et intervention SMUR",
+              "Supervision des internes et externes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise en place d'un protocole de tri réduisant le délai de prise en charge",
+          "Référent formation en échographie clinique d'urgence"
+        ],
+        "toolsAndTechnologies": [
+          "Échographe portable",
+          "Défibrillateur",
+          "DPI Terminal Urgences"
+        ]
+      },
+      {
+        "company": "Centre Hospitalier d'Aix-en-Provence",
+        "website": "https://www.ch-aix.fr",
+        "location": "Aix-en-Provence, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Assistant spécialiste — Urgences",
+        "activities": [
+          {
+            "project": "Urgences adultes",
+            "tasks": [
+              "Consultations et soins d'urgence",
+              "Gestion des situations critiques",
+              "Rédaction des comptes rendus"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participation à l'accréditation qualité du service"
+        ],
+        "toolsAndTechnologies": [
+          "DPI Résurgences",
+          "Moniteur multiparamétrique"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Faculté de Médecine d'Aix-Marseille",
+        "degree": "Doctorat en Médecine",
+        "fieldOfStudy": "Médecine",
+        "achievements": [
+          "Thèse d'exercice sur le tri aux urgences"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Faculté de Médecine d'Aix-Marseille",
+        "degree": "DES de Médecine d'Urgence",
+        "fieldOfStudy": "Médecine d'urgence",
+        "achievements": [
+          "Spécialisation en médecine pré-hospitalière"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Advanced Cardiovascular Life Support (ACLS)",
+        "institution": "American Heart Association",
+        "year": "@Y-0@",
+        "description": "Prise en charge avancée de l'arrêt cardio-respiratoire."
+      },
+      {
+        "title": "Diplôme Inter-Universitaire d'Échographie",
+        "institution": "Aix-Marseille Université",
+        "year": "@Y-1@",
+        "description": "Échographie clinique appliquée à l'urgence."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Réanimation cardio-pulmonaire",
+        "Intubation",
+        "Échographie clinique",
+        "Tri des urgences"
+      ],
+      "softSkills": [
+        "Prise de décision rapide",
+        "Leadership",
+        "Résistance au stress",
+        "Pédagogie"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Arabe",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Protocole de tri accéléré aux urgences",
+        "description": "Conception d'un circuit court pour les urgences non vitales.",
+        "date": "2021",
+        "impact": "Réduction du délai moyen d'attente aux urgences."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Plongée sous-marine",
+      "Voile",
+      "Lecture scientifique"
+    ],
+    "references": [
+      {
+        "name": "Pr Isabelle Garnier",
+        "position": "Chef de Service Urgences",
+        "company": "AP-HM",
+        "contact": {
+          "phone": "+33 6 45 90 12 34",
+          "email": "isabelle.garnier@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 78000,
+      "max": 95000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Emergency Medicine",
+      "secondaryClusters": [
+        "Pre-hospital Care",
+        "Trauma Care"
+      ],
+      "functionalExpertise": [
+        "Emergency Diagnosis",
+        "Resuscitation",
+        "Clinical Teaching"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Réduction des délais de prise en charge",
+        "Amélioration de la sécurité des soins"
+      ],
+      "industryDomains": [
+        "Hospitals",
+        "Healthcare"
+      ],
+      "environmentFit": [
+        "Hospital",
+        "Clinical"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.93,
+      "clusterReasoning": "Médecin urgentiste expérimenté combinant expertise clinique, régulation SMUR et encadrement pédagogique."
+    },
+    "searchIndex": {
+      "roles": [
+        "Emergency Physician",
+        "Emergency Medicine Doctor",
+        "ER Physician"
+      ],
+      "skills": [
+        "Emergency Medicine",
+        "ACLS",
+        "Point-of-care Ultrasound",
+        "Triage",
+        "Resuscitation"
+      ],
+      "industries": [
+        "Hospitals",
+        "Healthcare"
+      ]
+    },
+    "tags": [
+      "physician",
+      "emergency",
+      "md",
+      "senior",
+      "clinical"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Masseur-kinésithérapeute diplômé d'État avec une solide expérience en rééducation neurologique et orthopédique. Spécialisé dans la reprise fonctionnelle post-opératoire et la prise en charge du sportif. Approche centrée sur le patient et l'autonomisation par l'éducation thérapeutique.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Julie Moreau",
+      "role": "Masseur-Kinésithérapeute DE",
+      "summary": "Redonner du mouvement et de l'autonomie, voilà ce qui m'anime. J'aime construire une rééducation sur mesure et mesurable pour chaque patient.",
+      "contact": {
+        "phone": "+33 6 22 71 45 88",
+        "email": "julie.moreau@example.com",
+        "address": {
+          "streetNumber": "15",
+          "streetName": "Nationale",
+          "streetType": "Rue",
+          "city": "Nantes",
+          "state": "Pays de la Loire",
+          "zipCode": "44000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/julie-moreau-kine"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Mercredi toute la journée",
+          "En semaine après 17h"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "freelance"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Rééducation",
+        "skills": [
+          "Rééducation neurologique",
+          "Rééducation orthopédique",
+          "Kinésithérapie respiratoire"
+        ]
+      },
+      {
+        "category": "Techniques manuelles",
+        "skills": [
+          "Thérapie manuelle",
+          "Drainage lymphatique",
+          "Renforcement musculaire"
+        ]
+      },
+      {
+        "category": "Évaluation",
+        "skills": [
+          "Bilan diagnostic kinésithérapique",
+          "Analyse de la marche",
+          "Tests fonctionnels"
+        ]
+      },
+      {
+        "category": "Prévention",
+        "skills": [
+          "Éducation thérapeutique",
+          "Prévention des chutes"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Rééducation fonctionnelle",
+        "Traumatologie du sport",
+        "Neurologie"
+      ],
+      "keyResponsibilities": [
+        "Réaliser les bilans kinésithérapiques",
+        "Concevoir et conduire les programmes de rééducation",
+        "Assurer l'éducation thérapeutique des patients"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Centre de Rééducation Fonctionnelle Saint-Jacques",
+        "website": "https://example.com/crf-saint-jacques",
+        "location": "Nantes, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Masseur-Kinésithérapeute — Rééducation neuro",
+        "activities": [
+          {
+            "project": "Rééducation post-AVC",
+            "tasks": [
+              "Bilans et programmes de rééducation neurologique",
+              "Rééducation de la marche et de l'équilibre",
+              "Coordination avec l'équipe pluridisciplinaire"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise en place d'ateliers de prévention des chutes",
+          "Amélioration des scores fonctionnels des patients suivis"
+        ],
+        "toolsAndTechnologies": [
+          "Plateforme de posturologie",
+          "Électrostimulation",
+          "Logiciel de bilan"
+        ]
+      },
+      {
+        "company": "Cabinet libéral de kinésithérapie",
+        "website": "https://example.com/cabinet-kine-nantes",
+        "location": "Nantes, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Masseur-Kinésithérapeute libéral",
+        "activities": [
+          {
+            "project": "Rééducation orthopédique et sportive",
+            "tasks": [
+              "Prise en charge post-opératoire",
+              "Rééducation du sportif",
+              "Suivi des pathologies chroniques"
+            ]
+          }
+        ],
+        "achievements": [
+          "Développement d'une patientèle fidèle en traumatologie du sport"
+        ],
+        "toolsAndTechnologies": [
+          "Ondes de choc",
+          "Ultrasons",
+          "Logiciel de gestion de cabinet"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IFM3R — Institut de Formation en Masso-Kinésithérapie",
+        "degree": "Diplôme d'État de Masseur-Kinésithérapeute",
+        "fieldOfStudy": "Masso-kinésithérapie",
+        "achievements": [
+          "Mémoire sur la rééducation de l'équilibre post-AVC"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Diplôme Universitaire Kinésithérapie du Sport",
+        "institution": "Université de Nantes",
+        "year": "@Y-0@",
+        "description": "Prise en charge des pathologies du sportif."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Rééducation neurologique",
+        "Thérapie manuelle",
+        "Analyse de la marche",
+        "Électrostimulation"
+      ],
+      "softSkills": [
+        "Écoute",
+        "Pédagogie",
+        "Patience",
+        "Adaptabilité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Ateliers de prévention des chutes",
+        "description": "Création d'un programme collectif de prévention pour patients âgés.",
+        "date": "2022",
+        "impact": "Diminution des chutes rapportées chez les participants."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Escalade",
+      "Yoga",
+      "Course à pied"
+    ],
+    "references": [
+      {
+        "name": "Dr Antoine Rivière",
+        "position": "Médecin MPR",
+        "company": "CRF Saint-Jacques",
+        "contact": {
+          "phone": "+33 6 90 33 21 45",
+          "email": "antoine.riviere@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 32000,
+      "max": 40000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Physical Therapy",
+      "secondaryClusters": [
+        "Neurological Rehabilitation",
+        "Sports Rehabilitation"
+      ],
+      "functionalExpertise": [
+        "Rehabilitation",
+        "Functional Assessment",
+        "Patient Education"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Amélioration de l'autonomie des patients",
+        "Prévention des chutes"
+      ],
+      "industryDomains": [
+        "Healthcare",
+        "Rehabilitation Centers"
+      ],
+      "environmentFit": [
+        "Clinical",
+        "Outpatient"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Kinésithérapeute confirmé alliant rééducation neurologique hospitalière et pratique libérale en traumatologie du sport."
+    },
+    "searchIndex": {
+      "roles": [
+        "Physiotherapist",
+        "Physical Therapist",
+        "Rehabilitation Specialist"
+      ],
+      "skills": [
+        "Physical Therapy",
+        "Neurological Rehabilitation",
+        "Manual Therapy",
+        "Gait Analysis"
+      ],
+      "industries": [
+        "Healthcare",
+        "Rehabilitation"
+      ]
+    },
+    "tags": [
+      "physiotherapy",
+      "rehabilitation",
+      "allied-health",
+      "senior",
+      "clinical"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Cadre de santé expérimentée, ancienne infirmière DE, pilotant l'organisation des soins et le management d'équipes paramédicales en centre hospitalier. Plus de quinze ans dans le secteur, dont plusieurs à des fonctions d'encadrement. Experte en gestion des plannings, qualité des soins et conduite du changement.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Nathalie Dubois",
+      "role": "Cadre de Santé",
+      "summary": "Manager de proximité, je conçois la qualité des soins comme le fruit d'équipes soutenues et bien organisées. J'aime accompagner les projets de service et le développement des compétences.",
+      "contact": {
+        "phone": "+33 6 55 18 42 76",
+        "email": "nathalie.dubois@example.com",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "des Tilleuls",
+          "streetType": "Avenue",
+          "city": "Strasbourg",
+          "state": "Grand Est",
+          "zipCode": "67000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/nathalie-dubois-cadre"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Management",
+        "skills": [
+          "Encadrement d'équipe paramédicale",
+          "Gestion des plannings",
+          "Conduite du changement"
+        ]
+      },
+      {
+        "category": "Qualité et sécurité",
+        "skills": [
+          "Démarche qualité",
+          "Gestion des risques",
+          "Certification HAS"
+        ]
+      },
+      {
+        "category": "Organisation des soins",
+        "skills": [
+          "Parcours patient",
+          "Optimisation des flux",
+          "Projet de service"
+        ]
+      },
+      {
+        "category": "Ressources humaines",
+        "skills": [
+          "Entretiens annuels",
+          "Plan de formation",
+          "Gestion des conflits"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Management paramédical",
+        "Qualité et gestion des risques",
+        "Organisation des soins"
+      ],
+      "keyResponsibilities": [
+        "Encadrer et animer les équipes paramédicales",
+        "Piloter la qualité et la sécurité des soins",
+        "Gérer les ressources et les plannings du service"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Hôpitaux Universitaires de Strasbourg",
+        "website": "https://www.chru-strasbourg.fr",
+        "location": "Strasbourg, France",
+        "from": "@M-2@",
+        "to": "Present",
+        "position": "Cadre de Santé — Pôle Chirurgie",
+        "activities": [
+          {
+            "project": "Management d'unité de chirurgie",
+            "tasks": [
+              "Encadrement d'une équipe de 35 professionnels",
+              "Pilotage de la démarche qualité et certification HAS",
+              "Gestion des plannings et des effectifs"
+            ]
+          }
+        ],
+        "achievements": [
+          "Conduite de la réorganisation d'un service améliorant les flux patients",
+          "Réussite de la visite de certification HAS du pôle"
+        ],
+        "toolsAndTechnologies": [
+          "Logiciel de planification Chronos",
+          "DPI Easily",
+          "Outils qualité"
+        ]
+      },
+      {
+        "company": "Centre Hospitalier de Colmar",
+        "website": "https://www.ch-colmar.fr",
+        "location": "Colmar, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Cadre de Santé — Médecine",
+        "activities": [
+          {
+            "project": "Encadrement d'unité de médecine",
+            "tasks": [
+              "Management de l'équipe infirmière et aide-soignante",
+              "Suivi des indicateurs qualité",
+              "Gestion des ressources matérielles"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise en place d'un protocole d'accueil des nouveaux arrivants"
+        ],
+        "toolsAndTechnologies": [
+          "DPI Orbis",
+          "Tableurs de gestion"
+        ]
+      },
+      {
+        "company": "Centre Hospitalier de Colmar",
+        "website": "https://www.ch-colmar.fr",
+        "location": "Colmar, France",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Infirmière DE — Médecine interne",
+        "activities": [
+          {
+            "project": "Soins en médecine interne",
+            "tasks": [
+              "Prise en charge globale des patients",
+              "Coordination des soins",
+              "Tutorat des étudiants"
+            ]
+          }
+        ],
+        "achievements": [
+          "Référente hygiène de l'unité"
+        ],
+        "toolsAndTechnologies": [
+          "DPI Orbis"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IFCS — Institut de Formation des Cadres de Santé de Strasbourg",
+        "degree": "Diplôme de Cadre de Santé",
+        "fieldOfStudy": "Management des soins",
+        "achievements": [
+          "Mémoire sur la conduite du changement en unité de soins"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "IFSI de Colmar",
+        "degree": "Diplôme d'État d'Infirmier",
+        "fieldOfStudy": "Soins infirmiers",
+        "achievements": []
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Gestion des plannings",
+        "Démarche qualité",
+        "Certification HAS",
+        "Gestion des risques"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Écoute",
+        "Sens de l'organisation",
+        "Diplomatie"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        },
+        {
+          "language": "Allemand",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Réorganisation du parcours patient en chirurgie",
+        "description": "Refonte des circuits pour fluidifier les admissions et sorties.",
+        "date": "2021",
+        "impact": "Amélioration des délais et de la satisfaction patient."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Randonnée dans les Vosges",
+      "Chorale",
+      "Jardinage"
+    ],
+    "references": [
+      {
+        "name": "Marc Weber",
+        "position": "Directeur des Soins",
+        "company": "HU Strasbourg",
+        "contact": {
+          "phone": "+33 6 33 47 82 10",
+          "email": "marc.weber@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 45000,
+      "max": 55000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Healthcare Management",
+      "secondaryClusters": [
+        "Nursing Management",
+        "Quality Management"
+      ],
+      "functionalExpertise": [
+        "Team Management",
+        "Quality Assurance",
+        "Care Organization"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Amélioration des flux patients",
+        "Réussite de la certification qualité"
+      ],
+      "industryDomains": [
+        "Hospitals",
+        "Healthcare"
+      ],
+      "environmentFit": [
+        "Hospital",
+        "Enterprise"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Cadre de santé expérimentée avec parcours d'infirmière puis d'encadrement, expertise en qualité et management d'équipes."
+    },
+    "searchIndex": {
+      "roles": [
+        "Nurse Manager",
+        "Healthcare Manager",
+        "Head Nurse"
+      ],
+      "skills": [
+        "Team Management",
+        "Quality Management",
+        "HAS Certification",
+        "Care Coordination"
+      ],
+      "industries": [
+        "Hospitals",
+        "Healthcare"
+      ]
+    },
+    "tags": [
+      "nurse-manager",
+      "healthcare-management",
+      "quality",
+      "manager",
+      "clinical"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Infirmier diplômé d'État en début de carrière, formé en soins généraux et motivé par la médecine polyvalente. Première expérience en service de médecine et en stage de chirurgie. Rigoureux, à l'écoute et désireux de se spécialiser en soins aigus.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Thomas Lefebvre",
+      "role": "Infirmier Diplômé d'État",
+      "summary": "Jeune infirmier motivé, j'apporte de l'énergie et de la rigueur à chaque équipe. Je souhaite développer mon expertise clinique auprès de patients aigus.",
+      "contact": {
+        "phone": "+33 6 84 22 09 51",
+        "email": "thomas.lefebvre@example.com",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Victor Hugo",
+          "streetType": "Rue",
+          "city": "Lille",
+          "state": "Hauts-de-France",
+          "zipCode": "59000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/thomas-lefebvre-ide"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Disponible en semaine",
+          "Repos de garde"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "fixedTerm"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Soins généraux",
+        "skills": [
+          "Soins infirmiers de base",
+          "Distribution médicamenteuse",
+          "Pansements"
+        ]
+      },
+      {
+        "category": "Surveillance",
+        "skills": [
+          "Prise des constantes",
+          "Surveillance clinique",
+          "Traçabilité"
+        ]
+      },
+      {
+        "category": "Relationnel",
+        "skills": [
+          "Relation de soins",
+          "Accompagnement patient"
+        ]
+      },
+      {
+        "category": "Sécurité",
+        "skills": [
+          "Hygiène hospitalière",
+          "Prévention des risques"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Soins infirmiers généraux",
+        "Surveillance clinique",
+        "Prise en charge de la douleur"
+      ],
+      "keyResponsibilities": [
+        "Réaliser les soins infirmiers prescrits",
+        "Surveiller l'état clinique des patients",
+        "Assurer la traçabilité des soins"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Centre Hospitalier Universitaire de Lille",
+        "website": "https://www.chu-lille.fr",
+        "location": "Lille, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Infirmier DE — Médecine polyvalente",
+        "activities": [
+          {
+            "project": "Unité de médecine polyvalente",
+            "tasks": [
+              "Réalisation des soins et administration des traitements",
+              "Surveillance clinique et prise des constantes",
+              "Accompagnement des patients et des familles"
+            ]
+          }
+        ],
+        "achievements": [
+          "Intégration rapide dans l'équipe et prise d'autonomie sur les soins"
+        ],
+        "toolsAndTechnologies": [
+          "DPI Sillage",
+          "Pousse-seringue électrique"
+        ]
+      },
+      {
+        "company": "Centre Hospitalier de Roubaix",
+        "website": "https://www.ch-roubaix.fr",
+        "location": "Roubaix, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Étudiant infirmier — Stages",
+        "activities": [
+          {
+            "project": "Stages cliniques (chirurgie, gériatrie)",
+            "tasks": [
+              "Participation aux soins encadrée",
+              "Surveillance post-opératoire",
+              "Aide à la mobilisation des patients"
+            ]
+          }
+        ],
+        "achievements": [
+          "Validation des stages avec appréciations positives"
+        ],
+        "toolsAndTechnologies": [
+          "DPI"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IFSI du CHU de Lille",
+        "degree": "Diplôme d'État d'Infirmier",
+        "fieldOfStudy": "Soins infirmiers",
+        "achievements": [
+          "Mémoire sur la relation soignant-soigné en médecine"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Attestation de Formation aux Gestes et Soins d'Urgence niveau 2",
+        "institution": "CESU 59",
+        "year": "@Y-0@",
+        "description": "Prise en charge des urgences vitales et potentielles."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Soins infirmiers",
+        "Surveillance clinique",
+        "Administration médicamenteuse",
+        "Hygiène hospitalière"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Écoute",
+        "Esprit d'équipe",
+        "Curiosité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Projet d'amélioration de la traçabilité des soins",
+        "description": "Participation à un groupe de travail sur la saisie au lit du patient.",
+        "date": "2023",
+        "impact": "Meilleure complétude des dossiers de soins de l'unité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Football",
+      "Cuisine",
+      "Randonnée"
+    ],
+    "references": [
+      {
+        "name": "Claire Petit",
+        "position": "Cadre de Santé",
+        "company": "CHU de Lille",
+        "contact": {
+          "phone": "+33 6 71 09 55 28",
+          "email": "claire.petit@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 27000,
+      "max": 32000
+    },
+    "candidateClustering": {
+      "primaryCluster": "General Nursing",
+      "secondaryClusters": [
+        "Medical Ward Care"
+      ],
+      "functionalExpertise": [
+        "Clinical Care Delivery",
+        "Patient Monitoring"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Qualité et traçabilité des soins"
+      ],
+      "industryDomains": [
+        "Hospitals",
+        "Healthcare"
+      ],
+      "environmentFit": [
+        "Hospital",
+        "Clinical"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.82,
+      "clusterReasoning": "Infirmier récemment diplômé avec une première expérience hospitalière et une forte volonté d'apprentissage."
+    },
+    "searchIndex": {
+      "roles": [
+        "Registered Nurse",
+        "Staff Nurse",
+        "General Nurse"
+      ],
+      "skills": [
+        "General Nursing",
+        "Patient Monitoring",
+        "Medication Administration",
+        "Hospital Hygiene"
+      ],
+      "industries": [
+        "Hospitals",
+        "Healthcare"
+      ]
+    },
+    "tags": [
+      "nursing",
+      "junior",
+      "general-care",
+      "clinical"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Chercheuse en biologie moléculaire titulaire d'un doctorat, spécialisée dans la découverte de cibles thérapeutiques en oncologie. Plus de dix ans d'expérience en laboratoire académique puis en biotech, avec une expertise en culture cellulaire, PCR et développement de tests biologiques sous environnement GLP. Auteure de plusieurs publications à comité de lecture.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Élodie Girard",
+      "role": "Chercheuse Senior en Biologie Moléculaire",
+      "summary": "Comprendre le vivant à l'échelle moléculaire pour concevoir de nouveaux traitements, c'est ce qui guide mes recherches. J'aime traduire une hypothèse en données robustes et reproductibles.",
+      "contact": {
+        "phone": "+33 6 12 47 83 20",
+        "email": "elodie.girard@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Pasteur",
+          "streetType": "Rue",
+          "city": "Strasbourg",
+          "state": "Grand Est",
+          "zipCode": "67000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/elodie-girard-phd",
+          "website": "https://example.com/elodie-girard-research"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 13h-15h",
+          "Mercredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Biologie moléculaire",
+        "skills": [
+          "PCR",
+          "qPCR",
+          "Clonage moléculaire"
+        ]
+      },
+      {
+        "category": "Culture cellulaire",
+        "skills": [
+          "Culture de lignées",
+          "Tests de viabilité",
+          "Cytométrie en flux"
+        ]
+      },
+      {
+        "category": "Développement de tests",
+        "skills": [
+          "Assay development",
+          "ELISA",
+          "Western blot"
+        ]
+      },
+      {
+        "category": "Analyse de données",
+        "skills": [
+          "GraphPad Prism",
+          "R",
+          "Traitement statistique"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Découverte de cibles en oncologie",
+        "Développement de tests biologiques",
+        "Culture cellulaire"
+      ],
+      "keyResponsibilities": [
+        "Concevoir et conduire les plans d'expérience",
+        "Développer et valider des tests biologiques",
+        "Analyser et présenter les résultats scientifiques"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Transgene",
+        "website": "https://www.transgene.fr",
+        "location": "Illkirch-Graffenstaden, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Chercheuse Senior — Découverte",
+        "activities": [
+          {
+            "project": "Identification de cibles immuno-oncologiques",
+            "tasks": [
+              "Développement de tests cellulaires sous GLP",
+              "Réalisation de PCR et de cytométrie en flux",
+              "Rédaction des rapports d'étude"
+            ]
+          }
+        ],
+        "achievements": [
+          "Développement d'un test cellulaire adopté comme standard de criblage",
+          "Co-auteure de deux publications à comité de lecture"
+        ],
+        "toolsAndTechnologies": [
+          "qPCR",
+          "Cytométrie en flux",
+          "GLP",
+          "GraphPad Prism"
+        ]
+      },
+      {
+        "company": "IGBMC — Institut de Génétique et de Biologie Moléculaire et Cellulaire",
+        "website": "https://www.igbmc.fr",
+        "location": "Illkirch-Graffenstaden, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Doctorante puis Post-doctorante",
+        "activities": [
+          {
+            "project": "Régulation transcriptionnelle en cancérologie",
+            "tasks": [
+              "Clonage et culture de lignées cellulaires",
+              "Analyse d'expression génique",
+              "Encadrement d'étudiants en master"
+            ]
+          }
+        ],
+        "achievements": [
+          "Thèse soutenue avec félicitations",
+          "Première auteure d'un article scientifique"
+        ],
+        "toolsAndTechnologies": [
+          "PCR",
+          "Western blot",
+          "ELISA",
+          "R"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université de Strasbourg",
+        "degree": "Doctorat en Biologie Moléculaire",
+        "fieldOfStudy": "Biologie cellulaire et moléculaire",
+        "achievements": [
+          "Thèse sur la régulation transcriptionnelle en oncologie",
+          "Prix de la meilleure présentation doctorale"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Université de Strasbourg",
+        "degree": "Master en Sciences du Vivant",
+        "fieldOfStudy": "Biologie moléculaire",
+        "achievements": [
+          "Mention Très Bien"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Formation Bonnes Pratiques de Laboratoire (GLP)",
+        "institution": "SGS Academy",
+        "year": "@Y-2@",
+        "description": "Application des principes GLP en laboratoire de recherche."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "PCR",
+        "qPCR",
+        "Cell Culture",
+        "Flow Cytometry",
+        "ELISA",
+        "Western Blot",
+        "GLP"
+      ],
+      "softSkills": [
+        "Rigueur scientifique",
+        "Esprit critique",
+        "Autonomie",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Allemand",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Développement d'un test de criblage immuno-oncologique",
+        "description": "Conception et validation d'un test cellulaire pour le criblage de composés.",
+        "date": "2021",
+        "impact": "Adoption du test comme standard interne de découverte."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Vulgarisation scientifique",
+      "Randonnée",
+      "Piano"
+    ],
+    "references": [
+      {
+        "name": "Dr Vincent Aubert",
+        "position": "Directeur de Recherche",
+        "company": "Transgene",
+        "contact": {
+          "phone": "+33 6 28 44 90 17",
+          "email": "vincent.aubert@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Life Sciences Research",
+      "secondaryClusters": [
+        "Molecular Biology",
+        "Oncology Research"
+      ],
+      "functionalExpertise": [
+        "Assay Development",
+        "Cell Culture",
+        "Target Discovery"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Accélération du criblage de composés",
+        "Contributions scientifiques publiées"
+      ],
+      "industryDomains": [
+        "Biotechnology",
+        "Pharmaceuticals"
+      ],
+      "environmentFit": [
+        "R&D",
+        "Laboratory"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Docteure en biologie moléculaire avec expertise en développement de tests cellulaires et parcours académique puis biotech."
+    },
+    "searchIndex": {
+      "roles": [
+        "Research Scientist",
+        "Molecular Biologist",
+        "Discovery Scientist"
+      ],
+      "skills": [
+        "PCR",
+        "Cell Culture",
+        "Assay Development",
+        "Flow Cytometry",
+        "GLP",
+        "ELISA"
+      ],
+      "industries": [
+        "Biotechnology",
+        "Pharmaceuticals"
+      ]
+    },
+    "tags": [
+      "research",
+      "molecular-biology",
+      "phd",
+      "senior",
+      "life-sciences"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Technicien bioanalytique avec plusieurs années d'expérience en laboratoire de contrôle qualité pharmaceutique. Spécialisé dans les techniques chromatographiques HPLC et les dosages sous environnement GLP. Méthodique et attentif à la conformité et à la traçabilité des résultats.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Yanis Bouchard",
+      "role": "Technicien Bioanalytique",
+      "summary": "La précision analytique est ma signature. J'aime obtenir des données fiables et parfaitement documentées, essentielles à la sécurité des médicaments.",
+      "contact": {
+        "phone": "+33 6 39 71 25 84",
+        "email": "yanis.bouchard@example.com",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "des Sciences",
+          "streetType": "Rue",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69100",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Jeudi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "fixedTerm"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Chromatographie",
+        "skills": [
+          "HPLC",
+          "UPLC",
+          "Chromatographie ionique"
+        ]
+      },
+      {
+        "category": "Dosages",
+        "skills": [
+          "Dosage bioanalytique",
+          "Spectrophotométrie",
+          "Préparation d'échantillons"
+        ]
+      },
+      {
+        "category": "Qualité",
+        "skills": [
+          "GLP",
+          "Traçabilité",
+          "Documentation analytique"
+        ]
+      },
+      {
+        "category": "Instrumentation",
+        "skills": [
+          "Calibration d'équipements",
+          "Maintenance de premier niveau"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Analyses chromatographiques",
+        "Contrôle qualité pharmaceutique",
+        "Dosages bioanalytiques"
+      ],
+      "keyResponsibilities": [
+        "Réaliser les analyses HPLC et les dosages",
+        "Documenter les résultats conformément au GLP",
+        "Assurer la calibration et la maintenance des équipements"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Eurofins Scientific",
+        "website": "https://www.eurofins.fr",
+        "location": "Lyon, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Technicien Bioanalytique — Contrôle Qualité",
+        "activities": [
+          {
+            "project": "Contrôle qualité de principes actifs",
+            "tasks": [
+              "Analyses HPLC et UPLC de lots pharmaceutiques",
+              "Préparation et gestion des échantillons",
+              "Documentation GLP des résultats"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction des non-conformités analytiques grâce à un contrôle renforcé des calibrations"
+        ],
+        "toolsAndTechnologies": [
+          "HPLC",
+          "UPLC",
+          "GLP",
+          "LIMS"
+        ]
+      },
+      {
+        "company": "Laboratoire Aguettant",
+        "website": "https://www.aguettant.fr",
+        "location": "Lyon, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Technicien de Laboratoire — Analyse",
+        "activities": [
+          {
+            "project": "Analyses de routine",
+            "tasks": [
+              "Dosages spectrophotométriques",
+              "Préparation de solutions étalons",
+              "Saisie des résultats dans le LIMS"
+            ]
+          }
+        ],
+        "achievements": [
+          "Optimisation d'une méthode de préparation d'échantillons"
+        ],
+        "toolsAndTechnologies": [
+          "Spectrophotomètre",
+          "HPLC",
+          "LIMS"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IUT Lyon 1",
+        "degree": "BUT Chimie",
+        "fieldOfStudy": "Chimie analytique",
+        "achievements": [
+          "Projet tutoré sur l'optimisation d'une méthode HPLC"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Formation HPLC avancée",
+        "institution": "Agilent Technologies",
+        "year": "@Y-2@",
+        "description": "Développement et validation de méthodes chromatographiques."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "HPLC",
+        "UPLC",
+        "Spectrophotometry",
+        "GLP",
+        "LIMS",
+        "Sample Preparation"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Sens du détail",
+        "Organisation",
+        "Fiabilité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Optimisation d'une méthode de dosage HPLC",
+        "description": "Réduction du temps d'analyse par ajustement des paramètres chromatographiques.",
+        "date": "2024",
+        "impact": "Gain de productivité sur les analyses de routine."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Escalade",
+      "Photographie",
+      "Jeux de stratégie"
+    ],
+    "references": [
+      {
+        "name": "Marion Leroy",
+        "position": "Responsable Laboratoire QC",
+        "company": "Eurofins Scientific",
+        "contact": {
+          "phone": "+33 6 55 71 28 40",
+          "email": "marion.leroy@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 30000,
+      "max": 37000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Bioanalytical Laboratory",
+      "secondaryClusters": [
+        "Analytical Chemistry",
+        "Quality Control"
+      ],
+      "functionalExpertise": [
+        "Chromatography",
+        "Sample Analysis",
+        "GLP Compliance"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Réduction des non-conformités",
+        "Fiabilité des données analytiques"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "CRO"
+      ],
+      "environmentFit": [
+        "Laboratory",
+        "Quality Control"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Technicien bioanalytique maîtrisant les techniques chromatographiques et le référentiel GLP en contrôle qualité pharmaceutique."
+    },
+    "searchIndex": {
+      "roles": [
+        "Bioanalytical Technician",
+        "Laboratory Technician",
+        "QC Analyst"
+      ],
+      "skills": [
+        "HPLC",
+        "UPLC",
+        "GLP",
+        "Sample Preparation",
+        "LIMS"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "CRO"
+      ]
+    },
+    "tags": [
+      "bioanalytical",
+      "laboratory",
+      "hplc",
+      "midlevel",
+      "life-sciences"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Scientifique principal en formulation galénique avec plus de quinze ans d'expérience dans le développement pharmaceutique. Expert du développement de formes solides et injectables, du transfert d'échelle et de l'industrialisation sous environnement GMP. Pilote des projets de développement de la preuve de concept jusqu'au dépôt réglementaire.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Philippe Chevalier",
+      "role": "Scientifique Principal — Formulation Galénique",
+      "summary": "Transformer une molécule prometteuse en médicament robuste et industrialisable, c'est le cœur de mon métier. J'aime relever les défis de stabilité et de mise à l'échelle.",
+      "contact": {
+        "phone": "+33 6 47 12 90 33",
+        "email": "philippe.chevalier@example.com",
+        "address": {
+          "streetNumber": "42",
+          "streetName": "de l'Industrie",
+          "streetType": "Avenue",
+          "city": "Tours",
+          "state": "Centre-Val de Loire",
+          "zipCode": "37000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/philippe-chevalier-galenique"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Formulation",
+        "skills": [
+          "Formes solides orales",
+          "Formes injectables",
+          "Développement galénique"
+        ]
+      },
+      {
+        "category": "Développement pharmaceutique",
+        "skills": [
+          "Transfert d'échelle",
+          "Études de stabilité",
+          "Quality by Design"
+        ]
+      },
+      {
+        "category": "Industrialisation",
+        "skills": [
+          "GMP",
+          "Validation de procédé",
+          "Transfert industriel"
+        ]
+      },
+      {
+        "category": "Caractérisation",
+        "skills": [
+          "Dissolution",
+          "Rhéologie",
+          "Analyse granulométrique"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Formulation galénique",
+        "Développement pharmaceutique",
+        "Industrialisation GMP"
+      ],
+      "keyResponsibilities": [
+        "Piloter le développement galénique des projets",
+        "Conduire les transferts d'échelle et l'industrialisation",
+        "Encadrer scientifiquement l'équipe de formulation"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Servier",
+        "website": "https://www.servier.com",
+        "location": "Tours, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Scientifique Principal — Formulation",
+        "activities": [
+          {
+            "project": "Développement de formes solides orales",
+            "tasks": [
+              "Pilotage du développement galénique de la preuve de concept à l'industrialisation",
+              "Conduite des études de stabilité et Quality by Design",
+              "Encadrement scientifique d'une équipe de formulateurs"
+            ]
+          }
+        ],
+        "achievements": [
+          "Industrialisation réussie de plusieurs formes solides",
+          "Réduction du délai de transfert industriel grâce au Quality by Design"
+        ],
+        "toolsAndTechnologies": [
+          "GMP",
+          "Quality by Design",
+          "Appareil de dissolution",
+          "Granulométrie laser"
+        ]
+      },
+      {
+        "company": "Sanofi",
+        "website": "https://www.sanofi.fr",
+        "location": "Vitry-sur-Seine, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Ingénieur Formulation Senior",
+        "activities": [
+          {
+            "project": "Formes injectables",
+            "tasks": [
+              "Développement de formulations injectables",
+              "Études de compatibilité et de stabilité",
+              "Transfert vers les sites de production"
+            ]
+          }
+        ],
+        "achievements": [
+          "Résolution d'un problème de stabilité critique sur un produit injectable"
+        ],
+        "toolsAndTechnologies": [
+          "GMP",
+          "HPLC",
+          "Rhéomètre"
+        ]
+      },
+      {
+        "company": "Laboratoires Pierre Fabre",
+        "website": "https://www.pierre-fabre.com",
+        "location": "Castres, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Ingénieur Formulation",
+        "activities": [
+          {
+            "project": "Développement de formes topiques",
+            "tasks": [
+              "Formulation de crèmes et gels",
+              "Essais de stabilité",
+              "Documentation de développement"
+            ]
+          }
+        ],
+        "achievements": [
+          "Développement d'une formulation topique brevetée"
+        ],
+        "toolsAndTechnologies": [
+          "Rhéomètre",
+          "HPLC"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université de Paris — Faculté de Pharmacie",
+        "degree": "Docteur en Pharmacie (PharmD)",
+        "fieldOfStudy": "Pharmacie industrielle",
+        "achievements": [
+          "Spécialisation en développement galénique"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "AgroParisTech",
+        "degree": "Mastère Spécialisé",
+        "fieldOfStudy": "Génie des procédés pharmaceutiques",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certification Quality by Design",
+        "institution": "PDA — Parenteral Drug Association",
+        "year": "@Y-4@",
+        "description": "Approche QbD appliquée au développement pharmaceutique."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Pharmaceutical Formulation",
+        "GMP",
+        "Quality by Design",
+        "Stability Studies",
+        "Scale-up",
+        "Dissolution Testing"
+      ],
+      "softSkills": [
+        "Leadership scientifique",
+        "Résolution de problèmes",
+        "Vision produit",
+        "Encadrement"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Industrialisation d'une forme solide orale",
+        "description": "Transfert d'échelle et validation de procédé d'un comprimé à libération modifiée.",
+        "date": "2020",
+        "impact": "Mise sur le marché dans les délais avec un rendement optimisé."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Œnologie",
+      "Course à pied",
+      "Bricolage"
+    ],
+    "references": [
+      {
+        "name": "Dr Catherine Faure",
+        "position": "Directrice Développement Pharmaceutique",
+        "company": "Servier",
+        "contact": {
+          "phone": "+33 6 33 90 22 47",
+          "email": "catherine.faure@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 72000,
+      "max": 88000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Pharmaceutical Formulation",
+      "secondaryClusters": [
+        "Drug Development",
+        "Process Industrialization"
+      ],
+      "functionalExpertise": [
+        "Galenic Formulation",
+        "Scale-up",
+        "GMP Manufacturing"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Industrialisation de nouveaux médicaments",
+        "Réduction des délais de transfert"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Drug Development"
+      ],
+      "environmentFit": [
+        "R&D",
+        "Enterprise"
+      ],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Expert en formulation galénique avec un long parcours en développement pharmaceutique et industrialisation GMP dans de grands laboratoires."
+    },
+    "searchIndex": {
+      "roles": [
+        "Principal Scientist",
+        "Formulation Scientist",
+        "Pharmaceutical Development Scientist"
+      ],
+      "skills": [
+        "Pharmaceutical Formulation",
+        "GMP",
+        "Quality by Design",
+        "Scale-up",
+        "Stability Studies"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Drug Development"
+      ]
+    },
+    "tags": [
+      "formulation",
+      "pharmaceutical",
+      "principal",
+      "gmp",
+      "life-sciences"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Bio-informaticien senior spécialisé dans l'analyse de données de séquençage nouvelle génération et la génomique. Expérience en biotech et en CRO, à l'interface entre biologie et science des données. Maîtrise des pipelines NGS, de Python/R et des environnements cloud pour la recherche en sciences du vivant.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Lucas Fontaine",
+      "role": "Bio-informaticien Senior",
+      "summary": "À la croisée de la biologie et du code, je transforme des montagnes de données génomiques en connaissances exploitables. J'aime concevoir des pipelines robustes et reproductibles.",
+      "contact": {
+        "phone": "+33 6 61 28 47 03",
+        "email": "lucas.fontaine@example.com",
+        "address": {
+          "streetNumber": "6",
+          "streetName": "de la Génétique",
+          "streetType": "Rue",
+          "city": "Évry-Courcouronnes",
+          "state": "Île-de-France",
+          "zipCode": "91000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/lucas-fontaine-bioinfo",
+          "github": "https://github.com/lucasfontaine-bio"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine 13h-15h",
+          "Mercredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Bio-informatique",
+        "skills": [
+          "Analyse NGS",
+          "Génomique",
+          "Variant calling"
+        ]
+      },
+      {
+        "category": "Programmation",
+        "skills": [
+          "Python",
+          "R",
+          "Bash"
+        ]
+      },
+      {
+        "category": "Pipelines et cloud",
+        "skills": [
+          "Nextflow",
+          "Snakemake",
+          "AWS"
+        ]
+      },
+      {
+        "category": "Données et statistiques",
+        "skills": [
+          "Analyse statistique",
+          "Machine learning",
+          "Visualisation"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Analyse de séquençage NGS",
+        "Génomique",
+        "Pipelines reproductibles"
+      ],
+      "keyResponsibilities": [
+        "Concevoir et maintenir les pipelines d'analyse NGS",
+        "Analyser les données génomiques",
+        "Collaborer avec les biologistes sur l'interprétation des résultats"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Genoscope — CEA",
+        "website": "https://www.genoscope.cns.fr",
+        "location": "Évry-Courcouronnes, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Bio-informaticien Senior",
+        "activities": [
+          {
+            "project": "Analyse de génomes à grande échelle",
+            "tasks": [
+              "Développement de pipelines NGS sous Nextflow",
+              "Variant calling et annotation",
+              "Support bio-informatique aux projets de recherche"
+            ]
+          }
+        ],
+        "achievements": [
+          "Automatisation d'un pipeline réduisant fortement le temps d'analyse",
+          "Mise en place d'un environnement d'analyse reproductible sur AWS"
+        ],
+        "toolsAndTechnologies": [
+          "Python",
+          "R",
+          "Nextflow",
+          "AWS"
+        ]
+      },
+      {
+        "company": "Integragen",
+        "website": "https://www.integragen.com",
+        "location": "Évry-Courcouronnes, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Bio-informaticien",
+        "activities": [
+          {
+            "project": "Services d'analyse génomique",
+            "tasks": [
+              "Traitement de données de séquençage",
+              "Développement de scripts d'analyse",
+              "Rédaction de rapports d'analyse pour les clients"
+            ]
+          }
+        ],
+        "achievements": [
+          "Standardisation des workflows d'analyse pour les projets clients"
+        ],
+        "toolsAndTechnologies": [
+          "Python",
+          "R",
+          "Bash",
+          "Snakemake"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université Paris-Saclay",
+        "degree": "Master en Bio-informatique",
+        "fieldOfStudy": "Bio-informatique et biologie des systèmes",
+        "achievements": [
+          "Stage de fin d'études sur l'analyse de variants génomiques"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Certified Cloud Practitioner",
+        "institution": "Amazon Web Services",
+        "year": "@Y-4@",
+        "description": "Fondamentaux du cloud AWS appliqués aux traitements de données."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Python",
+        "R",
+        "Nextflow",
+        "Snakemake",
+        "AWS",
+        "NGS Analysis",
+        "Variant Calling"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Autonomie",
+        "Curiosité",
+        "Communication interdisciplinaire"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Pipeline NGS automatisé et reproductible",
+        "description": "Conception d'un pipeline Nextflow déployé sur le cloud pour l'analyse de génomes.",
+        "date": "2022",
+        "impact": "Réduction majeure du temps de traitement et gain de reproductibilité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Contribution open source",
+      "Échecs",
+      "Vélo"
+    ],
+    "references": [
+      {
+        "name": "Dr Nadia Rahmani",
+        "position": "Responsable Bio-informatique",
+        "company": "Genoscope — CEA",
+        "contact": {
+          "phone": "+33 6 12 90 33 71",
+          "email": "nadia.rahmani@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 52000,
+      "max": 64000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Bioinformatics",
+      "secondaryClusters": [
+        "Genomics",
+        "Computational Biology"
+      ],
+      "functionalExpertise": [
+        "NGS Data Analysis",
+        "Pipeline Development",
+        "Genomic Interpretation"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Automatisation des analyses",
+        "Reproductibilité scientifique"
+      ],
+      "industryDomains": [
+        "Biotechnology",
+        "Genomics"
+      ],
+      "environmentFit": [
+        "R&D",
+        "Laboratory"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Bio-informaticien senior combinant expertise génomique, développement de pipelines NGS et compétences cloud."
+    },
+    "searchIndex": {
+      "roles": [
+        "Bioinformatician",
+        "Computational Biologist",
+        "Genomics Data Scientist"
+      ],
+      "skills": [
+        "Python",
+        "R",
+        "NGS Analysis",
+        "Nextflow",
+        "AWS",
+        "Variant Calling"
+      ],
+      "industries": [
+        "Biotechnology",
+        "Genomics"
+      ]
+    },
+    "tags": [
+      "bioinformatics",
+      "genomics",
+      "ngs",
+      "senior",
+      "life-sciences"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Responsable scientifique en biologie cellulaire, spécialiste de la culture cellulaire et du développement de tests en découverte de médicaments. Plus de quatorze ans d'expérience en biotech, encadrant une équipe de laboratoire et pilotant des projets de criblage phénotypique sous GLP. Reconnu pour sa capacité à structurer et fiabiliser les activités expérimentales.",
+    "personalInformation": {
+      "name": "Sarah Cohen",
+      "role": "Responsable Scientifique — Biologie Cellulaire",
+      "summary": "Encadrer une équipe et faire avancer la découverte de médicaments par des tests biologiques robustes, voilà ce qui me motive. Je crois à la science reproductible et bien documentée.",
+      "contact": {
+        "phone": "+33 6 74 51 28 90",
+        "email": "sarah.cohen@example.com",
+        "address": {
+          "streetNumber": "11",
+          "streetName": "Louis Pasteur",
+          "streetType": "Boulevard",
+          "city": "Grenoble",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "38000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/sarah-cohen-cellbio"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Jeudi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Biologie cellulaire",
+        "skills": [
+          "Culture cellulaire",
+          "Criblage phénotypique",
+          "Ingénierie cellulaire"
+        ]
+      },
+      {
+        "category": "Développement de tests",
+        "skills": [
+          "Assay development",
+          "Cytométrie en flux",
+          "Imagerie à haut contenu"
+        ]
+      },
+      {
+        "category": "Management scientifique",
+        "skills": [
+          "Encadrement d'équipe",
+          "Gestion de projet R&D",
+          "Planification expérimentale"
+        ]
+      },
+      {
+        "category": "Qualité",
+        "skills": [
+          "GLP",
+          "Documentation scientifique",
+          "Validation de tests"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Culture cellulaire",
+        "Criblage en découverte de médicaments",
+        "Management d'équipe de laboratoire"
+      ],
+      "keyResponsibilities": [
+        "Encadrer l'équipe de biologie cellulaire",
+        "Piloter le développement et la validation des tests",
+        "Garantir la qualité et la reproductibilité des expériences"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Aelis Farma",
+        "website": "https://example.com/aelis-farma",
+        "location": "Grenoble, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Responsable Scientifique — Biologie Cellulaire",
+        "activities": [
+          {
+            "project": "Plateforme de criblage phénotypique",
+            "tasks": [
+              "Encadrement d'une équipe de cinq scientifiques",
+              "Développement de tests cellulaires et d'imagerie à haut contenu",
+              "Pilotage des campagnes de criblage sous GLP"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise en place d'une plateforme de criblage phénotypique",
+          "Structuration des pratiques GLP de l'équipe"
+        ],
+        "toolsAndTechnologies": [
+          "Culture cellulaire",
+          "Imagerie à haut contenu",
+          "GLP",
+          "Cytométrie en flux"
+        ]
+      },
+      {
+        "company": "Cellectis",
+        "website": "https://www.cellectis.com",
+        "location": "Paris, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Scientifique — Biologie Cellulaire Senior",
+        "activities": [
+          {
+            "project": "Ingénierie cellulaire",
+            "tasks": [
+              "Développement de lignées cellulaires modifiées",
+              "Tests fonctionnels et cytométrie",
+              "Encadrement d'assistants de recherche"
+            ]
+          }
+        ],
+        "achievements": [
+          "Développement d'un modèle cellulaire réutilisé sur plusieurs projets"
+        ],
+        "toolsAndTechnologies": [
+          "Culture cellulaire",
+          "Cytométrie en flux",
+          "GLP"
+        ]
+      },
+      {
+        "company": "Institut Curie",
+        "website": "https://institut-curie.org",
+        "location": "Paris, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Ingénieure d'Études — Recherche",
+        "activities": [
+          {
+            "project": "Recherche en biologie du cancer",
+            "tasks": [
+              "Culture de lignées tumorales",
+              "Tests de prolifération et de viabilité",
+              "Analyse et présentation des résultats"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution technique à plusieurs publications"
+        ],
+        "toolsAndTechnologies": [
+          "Culture cellulaire",
+          "Western blot"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Sorbonne Université",
+        "degree": "Master en Biologie Cellulaire",
+        "fieldOfStudy": "Biologie cellulaire et physiologie",
+        "achievements": [
+          "Mention Bien"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Formation Bonnes Pratiques de Laboratoire (GLP)",
+        "institution": "SGS Academy",
+        "year": "@Y-4@",
+        "description": "Mise en conformité GLP des activités de laboratoire."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Cell Culture",
+        "High-content Imaging",
+        "Flow Cytometry",
+        "Assay Development",
+        "GLP"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Organisation",
+        "Rigueur",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Mise en place d'une plateforme de criblage phénotypique",
+        "description": "Conception et déploiement d'une plateforme de criblage cellulaire à haut contenu.",
+        "date": "2020",
+        "impact": "Accélération de la découverte de composés candidats."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Randonnée en montagne",
+      "Danse",
+      "Lecture"
+    ],
+    "references": [
+      {
+        "name": "Dr Olivier Mercier",
+        "position": "Directeur Scientifique",
+        "company": "Aelis Farma",
+        "contact": {
+          "phone": "+33 6 90 44 17 28",
+          "email": "olivier.mercier@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 60000,
+      "max": 74000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Cell Biology Research",
+      "secondaryClusters": [
+        "Drug Discovery",
+        "Assay Development"
+      ],
+      "functionalExpertise": [
+        "Cell Culture",
+        "Phenotypic Screening",
+        "Team Leadership"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Accélération de la découverte de composés",
+        "Fiabilisation des pratiques de laboratoire"
+      ],
+      "industryDomains": [
+        "Biotechnology",
+        "Drug Discovery"
+      ],
+      "environmentFit": [
+        "R&D",
+        "Laboratory"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Responsable scientifique en biologie cellulaire encadrant une équipe et pilotant des plateformes de criblage en découverte de médicaments."
+    },
+    "searchIndex": {
+      "roles": [
+        "Cell Biology Team Lead",
+        "Discovery Scientist",
+        "Research Group Leader"
+      ],
+      "skills": [
+        "Cell Culture",
+        "Phenotypic Screening",
+        "High-content Imaging",
+        "Flow Cytometry",
+        "GLP"
+      ],
+      "industries": [
+        "Biotechnology",
+        "Drug Discovery"
+      ]
+    },
+    "tags": [
+      "cell-biology",
+      "drug-discovery",
+      "team-lead",
+      "lead",
+      "life-sciences"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Responsable des affaires réglementaires titulaire de la certification RAC, avec plus de quatorze ans d'expérience dans l'industrie pharmaceutique. Experte des soumissions auprès de l'EMA et des autorités nationales, de la stratégie réglementaire et du management d'équipe. Pilote le cycle de vie réglementaire de produits en Europe.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Claire Dumont",
+      "role": "Responsable Affaires Réglementaires",
+      "summary": "Garantir la conformité tout en accélérant l'accès des patients aux traitements, c'est l'équilibre que je cultive. J'aime bâtir des stratégies réglementaires claires et anticiper les attentes des autorités.",
+      "contact": {
+        "email": "claire.dumont@example.com",
+        "address": {
+          "streetNumber": "20",
+          "streetName": "de la Santé",
+          "streetType": "Rue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75014",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/claire-dumont-regaffairs"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Affaires réglementaires",
+        "skills": [
+          "Soumissions EMA",
+          "Stratégie réglementaire",
+          "Variations et renouvellements"
+        ]
+      },
+      {
+        "category": "Cadre réglementaire",
+        "skills": [
+          "Réglementation EU",
+          "FDA",
+          "eCTD"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Encadrement d'équipe",
+          "Gestion de projet réglementaire",
+          "Interface autorités"
+        ]
+      },
+      {
+        "category": "Cycle de vie produit",
+        "skills": [
+          "Maintien des AMM",
+          "Étiquetage",
+          "Veille réglementaire"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Soumissions réglementaires européennes",
+        "Stratégie réglementaire",
+        "Management d'équipe réglementaire"
+      ],
+      "keyResponsibilities": [
+        "Définir et piloter la stratégie réglementaire des produits",
+        "Coordonner les soumissions et le maintien des AMM",
+        "Encadrer l'équipe des affaires réglementaires"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Ipsen",
+        "website": "https://www.ipsen.com",
+        "location": "Boulogne-Billancourt, France",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Responsable Affaires Réglementaires",
+        "activities": [
+          {
+            "project": "Portefeuille de produits en Europe",
+            "tasks": [
+              "Pilotage des soumissions EMA en format eCTD",
+              "Définition de la stratégie réglementaire des produits",
+              "Encadrement d'une équipe de quatre chargés d'affaires réglementaires"
+            ]
+          }
+        ],
+        "achievements": [
+          "Obtention de plusieurs AMM et extensions d'indication",
+          "Réduction des délais de soumission via un processus harmonisé"
+        ],
+        "toolsAndTechnologies": [
+          "eCTD",
+          "EMA",
+          "Veeva Vault RIM"
+        ]
+      },
+      {
+        "company": "Guerbet",
+        "website": "https://www.guerbet.com",
+        "location": "Villepinte, France",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Chargée d'Affaires Réglementaires Senior",
+        "activities": [
+          {
+            "project": "Produits de diagnostic et médicaments",
+            "tasks": [
+              "Préparation des dossiers de soumission",
+              "Gestion des variations et renouvellements",
+              "Interface avec les autorités nationales"
+            ]
+          }
+        ],
+        "achievements": [
+          "Maintien de la conformité d'un portefeuille produit sans écart majeur"
+        ],
+        "toolsAndTechnologies": [
+          "eCTD",
+          "Réglementation EU"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université Paris-Sud — Faculté de Pharmacie",
+        "degree": "Docteur en Pharmacie (PharmD)",
+        "fieldOfStudy": "Pharmacie — Affaires réglementaires",
+        "achievements": [
+          "Spécialisation en affaires réglementaires"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Regulatory Affairs Certification (RAC)",
+        "institution": "Regulatory Affairs Professionals Society (RAPS)",
+        "year": "@Y-0@",
+        "description": "Certification internationale en affaires réglementaires."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "EMA Submissions",
+        "eCTD",
+        "Regulatory Strategy",
+        "FDA",
+        "Lifecycle Management"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Diplomatie",
+        "Vision stratégique",
+        "Leadership"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Harmonisation du processus de soumission européen",
+        "description": "Standardisation des procédures de soumission eCTD entre pays.",
+        "date": "2021",
+        "impact": "Réduction des délais et amélioration de la qualité des dossiers."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voyages",
+      "Théâtre",
+      "Course à pied"
+    ],
+    "references": [
+      {
+        "name": "Dr Pierre Lambert",
+        "position": "Directeur Réglementaire",
+        "company": "Ipsen",
+        "contact": {
+          "phone": "+33 6 33 71 90 28",
+          "email": "pierre.lambert@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 68000,
+      "max": 82000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Regulatory Affairs",
+      "secondaryClusters": [
+        "Regulatory Strategy",
+        "Lifecycle Management"
+      ],
+      "functionalExpertise": [
+        "Regulatory Submissions",
+        "Regulatory Strategy",
+        "Team Management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Obtention d'AMM",
+        "Réduction des délais de soumission"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Medical Devices"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Regulatory"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Responsable réglementaire certifiée RAC pilotant des soumissions EMA et encadrant une équipe dans l'industrie pharmaceutique."
+    },
+    "searchIndex": {
+      "roles": [
+        "Regulatory Affairs Manager",
+        "Regulatory Affairs Lead",
+        "RA Manager"
+      ],
+      "skills": [
+        "EMA Submissions",
+        "eCTD",
+        "Regulatory Strategy",
+        "FDA",
+        "RAC"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Medical Devices"
+      ]
+    },
+    "tags": [
+      "regulatory-affairs",
+      "rac",
+      "ema",
+      "manager",
+      "quality"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Spécialiste assurance qualité avec près de dix ans d'expérience en environnement GMP dans l'industrie pharmaceutique. Expert de la gestion des déviations, des CAPA et de la revue des dossiers de lot. Contribue à la conformité des sites de production et à la préparation des inspections.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Antoine Rousseau",
+      "role": "Spécialiste Assurance Qualité GMP",
+      "summary": "La qualité n'est pas un contrôle, c'est une culture. J'aime construire des systèmes qualité solides qui protègent le patient et fiabilisent la production.",
+      "contact": {
+        "phone": "+33 6 58 41 27 90",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "des Laboratoires",
+          "streetType": "Rue",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69008",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/antoine-rousseau-qa"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Jeudi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Assurance qualité",
+        "skills": [
+          "Gestion des déviations",
+          "CAPA",
+          "Revue des dossiers de lot"
+        ]
+      },
+      {
+        "category": "Conformité GMP",
+        "skills": [
+          "GMP",
+          "Audits internes",
+          "Préparation d'inspections"
+        ]
+      },
+      {
+        "category": "Documentation",
+        "skills": [
+          "Procédures qualité",
+          "Change control",
+          "Gestion documentaire"
+        ]
+      },
+      {
+        "category": "Amélioration continue",
+        "skills": [
+          "Analyse des causes racines",
+          "Indicateurs qualité"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Assurance qualité GMP",
+        "Gestion des déviations et CAPA",
+        "Préparation aux inspections"
+      ],
+      "keyResponsibilities": [
+        "Traiter les déviations et piloter les CAPA",
+        "Réaliser la revue des dossiers de lot",
+        "Contribuer à la préparation des inspections réglementaires"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Boehringer Ingelheim",
+        "website": "https://www.boehringer-ingelheim.com",
+        "location": "Lyon, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Spécialiste Assurance Qualité",
+        "activities": [
+          {
+            "project": "Assurance qualité production stérile",
+            "tasks": [
+              "Gestion des déviations et pilotage des CAPA",
+              "Revue et libération des dossiers de lot",
+              "Préparation et support des inspections GMP"
+            ]
+          }
+        ],
+        "achievements": [
+          "Réduction du délai de traitement des déviations",
+          "Contribution à une inspection sans écart critique"
+        ],
+        "toolsAndTechnologies": [
+          "GMP",
+          "TrackWise",
+          "CAPA"
+        ]
+      },
+      {
+        "company": "Fareva",
+        "website": "https://www.fareva.com",
+        "location": "Val-de-Reuil, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Assistant Assurance Qualité",
+        "activities": [
+          {
+            "project": "Qualité en sous-traitance pharmaceutique",
+            "tasks": [
+              "Revue documentaire des lots",
+              "Suivi des change controls",
+              "Rédaction et mise à jour des procédures"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration de la complétude documentaire des dossiers de lot"
+        ],
+        "toolsAndTechnologies": [
+          "GMP",
+          "Gestion documentaire"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université de Lyon",
+        "degree": "Master en Ingénierie de la Santé",
+        "fieldOfStudy": "Assurance qualité pharmaceutique",
+        "achievements": [
+          "Stage de fin d'études sur la gestion des CAPA"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Formation Bonnes Pratiques de Fabrication (GMP)",
+        "institution": "IFIS — Institut de Formation des Industries de Santé",
+        "year": "@Y-2@",
+        "description": "Application des GMP en production pharmaceutique."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "GMP",
+        "CAPA",
+        "Deviation Management",
+        "Batch Record Review",
+        "Change Control",
+        "TrackWise"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Sens de l'analyse",
+        "Communication",
+        "Ténacité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Optimisation du processus de gestion des déviations",
+        "description": "Refonte du workflow de traitement des déviations qualité.",
+        "date": "2022",
+        "impact": "Réduction du délai moyen de clôture des déviations."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Course à pied",
+      "Cuisine",
+      "Randonnée"
+    ],
+    "references": [
+      {
+        "name": "Sophie Bernard",
+        "position": "Responsable Assurance Qualité",
+        "company": "Boehringer Ingelheim",
+        "contact": {
+          "phone": "+33 6 44 17 28 90",
+          "email": "sophie.bernard@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 46000,
+      "max": 56000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Quality Assurance",
+      "secondaryClusters": [
+        "GMP Compliance",
+        "Pharmaceutical Manufacturing"
+      ],
+      "functionalExpertise": [
+        "Deviation Management",
+        "CAPA",
+        "Batch Release"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Réduction des délais de déviation",
+        "Réussite des inspections"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Manufacturing"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Manufacturing"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Spécialiste QA maîtrisant la gestion des déviations, les CAPA et la conformité GMP en production pharmaceutique."
+    },
+    "searchIndex": {
+      "roles": [
+        "Quality Assurance Specialist",
+        "QA Officer",
+        "GMP Quality Specialist"
+      ],
+      "skills": [
+        "GMP",
+        "CAPA",
+        "Deviation Management",
+        "Batch Record Review",
+        "TrackWise"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Manufacturing"
+      ]
+    },
+    "tags": [
+      "quality-assurance",
+      "gmp",
+      "capa",
+      "senior",
+      "quality"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Attachée de recherche clinique senior devenue lead CRA, avec plus de treize ans d'expérience en monitoring d'essais cliniques au sein de CRO et de laboratoires. Experte du référentiel ICH-GCP, de la gestion des sites investigateurs et de l'encadrement d'équipes de moniteurs. Garantit la qualité des données et la sécurité des patients tout au long des études.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Marion Lambert",
+      "role": "Lead Clinical Research Associate",
+      "summary": "Veiller à la qualité des données et à la sécurité des patients sur le terrain, c'est le sens de mon métier. J'aime accompagner les moniteurs et fluidifier la relation avec les investigateurs.",
+      "contact": {
+        "phone": "+33 6 71 45 28 09",
+        "email": "marion.lambert@example.com",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "des Essais",
+          "streetType": "Rue",
+          "city": "Nantes",
+          "state": "Pays de la Loire",
+          "zipCode": "44200",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/marion-lambert-cra"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 13h-15h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Recherche clinique",
+        "skills": [
+          "Monitoring d'essais",
+          "ICH-GCP",
+          "Gestion des sites investigateurs"
+        ]
+      },
+      {
+        "category": "Qualité des données",
+        "skills": [
+          "Source Data Verification",
+          "Gestion des écarts",
+          "Suivi des CRF"
+        ]
+      },
+      {
+        "category": "Management",
+        "skills": [
+          "Encadrement de moniteurs",
+          "Coordination d'études",
+          "Formation GCP"
+        ]
+      },
+      {
+        "category": "Réglementaire clinique",
+        "skills": [
+          "Soumissions aux comités d'éthique",
+          "Pharmacovigilance essais",
+          "Documentation TMF"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Monitoring d'essais cliniques",
+        "Conformité ICH-GCP",
+        "Encadrement de moniteurs"
+      ],
+      "keyResponsibilities": [
+        "Superviser le monitoring des sites investigateurs",
+        "Garantir la conformité ICH-GCP et la qualité des données",
+        "Encadrer et former l'équipe de CRA"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "ICON plc",
+        "website": "https://www.iconplc.com",
+        "location": "Nantes, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Lead Clinical Research Associate",
+        "activities": [
+          {
+            "project": "Essais cliniques de phase II/III",
+            "tasks": [
+              "Encadrement d'une équipe de moniteurs",
+              "Supervision du monitoring et de la SDV",
+              "Interface avec les investigateurs et les sponsors"
+            ]
+          }
+        ],
+        "achievements": [
+          "Amélioration de la qualité des données via un plan de monitoring renforcé",
+          "Formation de nouveaux CRA au référentiel ICH-GCP"
+        ],
+        "toolsAndTechnologies": [
+          "ICH-GCP",
+          "Medidata Rave",
+          "CTMS"
+        ]
+      },
+      {
+        "company": "IQVIA",
+        "website": "https://www.iqvia.com",
+        "location": "Courbevoie, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Attachée de Recherche Clinique Senior",
+        "activities": [
+          {
+            "project": "Monitoring multicentrique",
+            "tasks": [
+              "Visites de monitoring sur sites",
+              "Vérification des données sources",
+              "Gestion des écarts et des actions correctives"
+            ]
+          }
+        ],
+        "achievements": [
+          "Gestion réussie d'un portefeuille de sites à fort recrutement"
+        ],
+        "toolsAndTechnologies": [
+          "ICH-GCP",
+          "Medidata Rave",
+          "CTMS"
+        ]
+      },
+      {
+        "company": "Laboratoire Biotrial",
+        "website": "https://www.biotrial.com",
+        "location": "Rennes, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Attachée de Recherche Clinique",
+        "activities": [
+          {
+            "project": "Études de phase précoce",
+            "tasks": [
+              "Suivi des sites investigateurs",
+              "Contrôle de la conformité des documents",
+              "Support à la mise en place des études"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à la mise en place rapide de plusieurs études"
+        ],
+        "toolsAndTechnologies": [
+          "ICH-GCP",
+          "CTMS"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université de Rennes 1",
+        "degree": "Master en Recherche Clinique",
+        "fieldOfStudy": "Recherche clinique et développement",
+        "achievements": [
+          "Stage en monitoring d'essais cliniques"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "ICH-GCP Certification",
+        "institution": "TransCelerate BioPharma",
+        "year": "@Y-4@",
+        "description": "Certification aux Bonnes Pratiques Cliniques internationales."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "ICH-GCP",
+        "Clinical Monitoring",
+        "Source Data Verification",
+        "Medidata Rave",
+        "CTMS",
+        "TMF"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Organisation",
+        "Leadership",
+        "Relationnel"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Plan de monitoring basé sur le risque",
+        "description": "Déploiement d'une approche de monitoring basée sur le risque sur un essai de phase III.",
+        "date": "2022",
+        "impact": "Amélioration de la qualité des données et optimisation des visites."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voile",
+      "Lecture",
+      "Randonnée"
+    ],
+    "references": [
+      {
+        "name": "Dr Hélène Morel",
+        "position": "Clinical Project Manager",
+        "company": "ICON plc",
+        "contact": {
+          "phone": "+33 6 28 90 44 17",
+          "email": "helene.morel@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Clinical Research",
+      "secondaryClusters": [
+        "Clinical Monitoring",
+        "GCP Compliance"
+      ],
+      "functionalExpertise": [
+        "Clinical Monitoring",
+        "GCP Compliance",
+        "Site Management"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Amélioration de la qualité des données",
+        "Encadrement d'équipe de monitoring"
+      ],
+      "industryDomains": [
+        "CRO",
+        "Pharmaceuticals"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Clinical Research"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Lead CRA expérimentée en monitoring d'essais cliniques ICH-GCP et encadrement de moniteurs en environnement CRO."
+    },
+    "searchIndex": {
+      "roles": [
+        "Clinical Research Associate",
+        "Lead CRA",
+        "Clinical Monitor"
+      ],
+      "skills": [
+        "ICH-GCP",
+        "Clinical Monitoring",
+        "Source Data Verification",
+        "Medidata Rave",
+        "CTMS"
+      ],
+      "industries": [
+        "CRO",
+        "Pharmaceuticals"
+      ]
+    },
+    "tags": [
+      "clinical-research",
+      "cra",
+      "ich-gcp",
+      "lead",
+      "quality"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Chargée de pharmacovigilance avec plusieurs années d'expérience dans le traitement des cas de sécurité et la gestion du signal. Maîtrise du codage MedDRA, de la rédaction des rapports de sécurité et du respect des obligations réglementaires EMA. Attentive à la qualité et aux délais réglementaires.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Inès Fournier",
+      "role": "Chargée de Pharmacovigilance",
+      "summary": "Surveiller la sécurité des médicaments après leur mise sur le marché, c'est protéger les patients au quotidien. J'aime la précision qu'exige le traitement des cas de sécurité.",
+      "contact": {
+        "phone": "+33 6 62 47 81 05",
+        "email": "ines.fournier@example.com",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "de la Pharmacovigilance",
+          "streetType": "Rue",
+          "city": "Montpellier",
+          "state": "Occitanie",
+          "zipCode": "34000",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Mercredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Pharmacovigilance",
+        "skills": [
+          "Traitement des cas de sécurité",
+          "Gestion du signal",
+          "Codage MedDRA"
+        ]
+      },
+      {
+        "category": "Réglementaire sécurité",
+        "skills": [
+          "EMA",
+          "PSUR",
+          "Déclarations aux autorités"
+        ]
+      },
+      {
+        "category": "Documentation",
+        "skills": [
+          "Rapports de sécurité",
+          "Bases de données de sécurité",
+          "Suivi des délais"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Évaluation de causalité",
+          "Analyse bénéfice-risque"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Traitement des cas de sécurité",
+        "Codage MedDRA",
+        "Conformité réglementaire PV"
+      ],
+      "keyResponsibilities": [
+        "Traiter et documenter les cas de sécurité",
+        "Assurer le respect des délais réglementaires de déclaration",
+        "Contribuer à la gestion du signal et aux rapports périodiques"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Sanofi",
+        "website": "https://www.sanofi.fr",
+        "location": "Montpellier, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Chargée de Pharmacovigilance",
+        "activities": [
+          {
+            "project": "Traitement des cas de sécurité",
+            "tasks": [
+              "Saisie et codage MedDRA des cas de sécurité",
+              "Évaluation de causalité et suivi des délais réglementaires",
+              "Contribution aux rapports périodiques de sécurité (PSUR)"
+            ]
+          }
+        ],
+        "achievements": [
+          "Respect constant des délais réglementaires de déclaration",
+          "Amélioration de la qualité du codage MedDRA"
+        ],
+        "toolsAndTechnologies": [
+          "MedDRA",
+          "Argus Safety",
+          "EMA"
+        ]
+      },
+      {
+        "company": "PharmaLex",
+        "website": "https://www.pharmalex.com",
+        "location": "Lyon, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Assistante Pharmacovigilance",
+        "activities": [
+          {
+            "project": "Services de pharmacovigilance externalisés",
+            "tasks": [
+              "Enregistrement des cas de sécurité",
+              "Support au suivi des signaux",
+              "Contrôle qualité documentaire"
+            ]
+          }
+        ],
+        "achievements": [
+          "Fiabilisation du suivi des cas pour plusieurs clients"
+        ],
+        "toolsAndTechnologies": [
+          "MedDRA",
+          "Argus Safety"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université de Montpellier",
+        "degree": "Master en Pharmacovigilance",
+        "fieldOfStudy": "Sécurité du médicament",
+        "achievements": [
+          "Stage de fin d'études en pharmacovigilance industrielle"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Formation MedDRA",
+        "institution": "MedDRA MSSO",
+        "year": "@Y-4@",
+        "description": "Codage des événements indésirables selon le dictionnaire MedDRA."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Pharmacovigilance",
+        "MedDRA",
+        "Argus Safety",
+        "PSUR",
+        "Signal Management"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Sens du détail",
+        "Organisation",
+        "Fiabilité"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Amélioration du contrôle qualité du codage",
+        "description": "Mise en place de vérifications croisées sur le codage MedDRA des cas.",
+        "date": "2023",
+        "impact": "Réduction des erreurs de codage et meilleure qualité des données de sécurité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Randonnée",
+      "Photographie",
+      "Bénévolat associatif"
+    ],
+    "references": [
+      {
+        "name": "Dr Julien Roux",
+        "position": "Responsable Pharmacovigilance",
+        "company": "Sanofi",
+        "contact": {
+          "phone": "+33 6 90 28 44 17",
+          "email": "julien.roux@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 38000,
+      "max": 46000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Pharmacovigilance",
+      "secondaryClusters": [
+        "Drug Safety",
+        "Regulatory Compliance"
+      ],
+      "functionalExpertise": [
+        "Case Processing",
+        "Signal Management",
+        "Safety Reporting"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Respect des délais réglementaires",
+        "Qualité des données de sécurité"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "CRO"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Regulatory"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Chargée de pharmacovigilance maîtrisant le traitement des cas de sécurité, le codage MedDRA et les obligations réglementaires."
+    },
+    "searchIndex": {
+      "roles": [
+        "Pharmacovigilance Officer",
+        "Drug Safety Associate",
+        "PV Specialist"
+      ],
+      "skills": [
+        "Pharmacovigilance",
+        "MedDRA",
+        "Argus Safety",
+        "Signal Management",
+        "PSUR"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "CRO"
+      ]
+    },
+    "tags": [
+      "pharmacovigilance",
+      "drug-safety",
+      "meddra",
+      "midlevel",
+      "quality"
+    ]
+  },
+  {
+    "personalInformation": {
+      "name": "Sébastien Girard",
+      "role": "Responsable Validation & Qualification",
+      "summary": "Prouver et documenter que chaque procédé et chaque système fait ce qu'il doit faire, de façon fiable et reproductible : c'est le cœur de la validation. J'aime structurer des programmes de validation solides et pragmatiques.",
+      "contact": {
+        "address": {
+          "streetNumber": "16",
+          "streetName": "de la Qualité",
+          "streetType": "Rue",
+          "city": "Strasbourg",
+          "state": "Grand Est",
+          "zipCode": "67200",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "profiles": {
+      "areasOfExpertise": [
+        "Validation des procédés et des équipements",
+        "Validation informatique (CSV)",
+        "Encadrement d'équipe validation"
+      ],
+      "keyResponsibilities": [
+        "Piloter les programmes de validation et qualification",
+        "Garantir la conformité GxP et l'intégrité des données",
+        "Encadrer l'équipe d'ingénieurs validation"
+      ]
+    },
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Process Validation",
+        "Equipment Qualification",
+        "Computerized System Validation",
+        "GAMP 5",
+        "GMP",
+        "Data Integrity"
+      ],
+      "softSkills": [
+        "Rigueur",
+        "Leadership",
+        "Esprit d'analyse",
+        "Organisation"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programme de remédiation data integrity",
+        "description": "Pilotage d'un plan de mise en conformité de l'intégrité des données sur site.",
+        "date": "2020",
+        "impact": "Levée des écarts et conformité confirmée lors de l'inspection."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Vélo de route",
+      "Bricolage",
+      "Randonnée"
+    ],
+    "references": [
+      {
+        "name": "Dr Valérie Simon",
+        "position": "Directrice Qualité Site",
+        "company": "Lilly France",
+        "contact": {
+          "phone": "+33 6 71 28 90 44",
+          "email": "valerie.simon@example.com"
+        }
+      }
+    ],
+    "searchIndex": {
+      "roles": [
+        "Validation Lead",
+        "Validation Engineer",
+        "Qualification Manager"
+      ],
+      "skills": [
+        "Process Validation",
+        "Equipment Qualification",
+        "Computerized System Validation",
+        "GAMP 5",
+        "GMP",
+        "Data Integrity"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Medical Devices"
+      ]
+    },
+    "tags": [
+      "validation",
+      "gamp5",
+      "gxp",
+      "lead",
+      "quality"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Medical Science Liaison titulaire d'un doctorat en pharmacie, avec plus de dix ans d'expérience en affaires médicales dans l'industrie pharmaceutique. Experte de l'engagement des leaders d'opinion (KOL), de la communication scientifique et du support médical en oncologie. Relais scientifique de confiance entre l'entreprise et la communauté médicale.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Camille Bernard",
+      "role": "Medical Science Liaison — Oncologie",
+      "summary": "Porter la science au plus près des cliniciens et faire remonter le terrain, c'est le rôle passionnant du MSL. J'aime construire des relations scientifiques durables et pertinentes.",
+      "contact": {
+        "phone": "+33 6 29 84 51 07",
+        "email": "camille.bernard@example.com",
+        "address": {
+          "streetNumber": "22",
+          "streetName": "de Médecine",
+          "streetType": "Rue",
+          "city": "Bordeaux",
+          "state": "Nouvelle-Aquitaine",
+          "zipCode": "33000",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/camille-bernard-msl"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 13h-15h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "remote",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Affaires médicales",
+        "skills": [
+          "Engagement KOL",
+          "Communication scientifique",
+          "Support médical"
+        ]
+      },
+      {
+        "category": "Expertise thérapeutique",
+        "skills": [
+          "Oncologie",
+          "Interprétation de données cliniques",
+          "Veille scientifique"
+        ]
+      },
+      {
+        "category": "Relationnel scientifique",
+        "skills": [
+          "Présentations scientifiques",
+          "Advisory boards",
+          "Formation médicale"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "CRM médical",
+          "Veeva CRM",
+          "Analyse de la littérature"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Engagement des leaders d'opinion",
+        "Communication scientifique en oncologie",
+        "Support médical terrain"
+      ],
+      "keyResponsibilities": [
+        "Développer et entretenir les relations avec les KOL",
+        "Communiquer les données scientifiques auprès des cliniciens",
+        "Faire remonter les besoins médicaux du terrain"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Roche",
+        "website": "https://www.roche.fr",
+        "location": "Bordeaux, France",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Medical Science Liaison — Oncologie",
+        "activities": [
+          {
+            "project": "Support médical en oncologie",
+            "tasks": [
+              "Engagement scientifique auprès des KOL en oncologie",
+              "Présentation des données cliniques aux cliniciens",
+              "Participation aux advisory boards et remontée du terrain"
+            ]
+          }
+        ],
+        "achievements": [
+          "Développement d'un réseau solide de KOL régionaux",
+          "Contribution scientifique à plusieurs advisory boards"
+        ],
+        "toolsAndTechnologies": [
+          "Veeva CRM",
+          "KOL Engagement",
+          "PubMed"
+        ]
+      },
+      {
+        "company": "Bristol Myers Squibb",
+        "website": "https://www.bms.com",
+        "location": "Rueil-Malmaison, France",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Chargée d'Information Médicale puis MSL Junior",
+        "activities": [
+          {
+            "project": "Information et support médical",
+            "tasks": [
+              "Réponse aux demandes d'information médicale",
+              "Support scientifique aux équipes terrain",
+              "Veille sur la littérature scientifique"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise en place d'un processus de réponse aux demandes médicales"
+        ],
+        "toolsAndTechnologies": [
+          "CRM médical",
+          "PubMed"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université de Bordeaux — Faculté de Pharmacie",
+        "degree": "Docteur en Pharmacie (PharmD)",
+        "fieldOfStudy": "Pharmacie — Affaires médicales",
+        "achievements": [
+          "Thèse d'exercice en oncologie clinique"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "MSL Certification",
+        "institution": "MSL Society",
+        "year": "@Y-2@",
+        "description": "Certification aux compétences du Medical Science Liaison."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "KOL Engagement",
+        "Scientific Communication",
+        "Oncology",
+        "Veeva CRM",
+        "Clinical Data Interpretation"
+      ],
+      "softSkills": [
+        "Communication",
+        "Écoute",
+        "Rigueur scientifique",
+        "Relationnel"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programme d'engagement KOL en oncologie",
+        "description": "Structuration d'un plan d'engagement scientifique auprès des leaders d'opinion régionaux.",
+        "date": "2022",
+        "impact": "Renforcement de la collaboration scientifique et de la remontée d'insights."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Œnologie",
+      "Randonnée",
+      "Lecture scientifique"
+    ],
+    "references": [
+      {
+        "name": "Dr Laurent Petit",
+        "position": "Directeur Médical",
+        "company": "Roche",
+        "contact": {
+          "phone": "+33 6 44 28 90 17",
+          "email": "laurent.petit@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 78000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Medical Affairs",
+      "secondaryClusters": [
+        "Medical Science Liaison",
+        "Oncology"
+      ],
+      "functionalExpertise": [
+        "KOL Engagement",
+        "Scientific Communication",
+        "Medical Support"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Renforcement du réseau de KOL",
+        "Remontée d'insights médicaux"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Oncology"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Field"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "MSL en oncologie titulaire d'un PharmD, experte de l'engagement KOL et de la communication scientifique en affaires médicales."
+    },
+    "searchIndex": {
+      "roles": [
+        "Medical Science Liaison",
+        "MSL",
+        "Medical Affairs Specialist"
+      ],
+      "skills": [
+        "KOL Engagement",
+        "Scientific Communication",
+        "Oncology",
+        "Veeva CRM",
+        "Clinical Data"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Oncology"
+      ]
+    },
+    "tags": [
+      "medical-affairs",
+      "msl",
+      "oncology",
+      "senior",
+      "commercial"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ingénieur commercial en dispositifs médicaux avec près de dix ans d'expérience dans la vente d'équipements chirurgicaux et de diagnostic auprès des hôpitaux. Expert du cycle de vente hospitalier, de la démonstration technique au bloc et de la gestion des appels d'offres. Solide portefeuille de clients en région et dépassement régulier des objectifs.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Nicolas Petit",
+      "role": "Ingénieur Commercial — Dispositifs Médicaux",
+      "summary": "Aider les équipes soignantes à mieux soigner grâce à la bonne technologie, c'est ce qui me motive. J'aime le contact terrain, le bloc opératoire et la relation de confiance avec les praticiens.",
+      "contact": {
+        "phone": "+33 6 51 27 84 09",
+        "email": "nicolas.petit@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "du Commerce",
+          "streetType": "Avenue",
+          "city": "Lille",
+          "state": "Hauts-de-France",
+          "zipCode": "59800",
+          "country": "France"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine après 17h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Vente médicale",
+        "skills": [
+          "Vente hospitalière",
+          "Gestion de portefeuille clients",
+          "Négociation"
+        ]
+      },
+      {
+        "category": "Expertise produit",
+        "skills": [
+          "Dispositifs chirurgicaux",
+          "Démonstration au bloc",
+          "Support technique"
+        ]
+      },
+      {
+        "category": "Appels d'offres",
+        "skills": [
+          "Réponse aux appels d'offres",
+          "Marchés publics hospitaliers",
+          "Achats hospitaliers"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "CRM",
+          "Salesforce",
+          "Reporting commercial"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Vente de dispositifs médicaux",
+        "Cycle de vente hospitalier",
+        "Support technique au bloc"
+      ],
+      "keyResponsibilities": [
+        "Développer et fidéliser un portefeuille de clients hospitaliers",
+        "Réaliser les démonstrations techniques au bloc opératoire",
+        "Piloter les réponses aux appels d'offres"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Medtronic",
+        "website": "https://www.medtronic.com",
+        "location": "Lille, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Ingénieur Commercial Senior — Chirurgie",
+        "activities": [
+          {
+            "project": "Vente de dispositifs chirurgicaux",
+            "tasks": [
+              "Développement du portefeuille de clients hospitaliers du Nord",
+              "Démonstrations et support technique au bloc opératoire",
+              "Pilotage des réponses aux appels d'offres"
+            ]
+          }
+        ],
+        "achievements": [
+          "Dépassement régulier des objectifs commerciaux annuels",
+          "Gain de plusieurs marchés hospitaliers majeurs"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "CRM",
+          "Appels d'offres"
+        ]
+      },
+      {
+        "company": "B. Braun",
+        "website": "https://www.bbraun.fr",
+        "location": "Saint-Cloud, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Délégué Commercial — Dispositifs Médicaux",
+        "activities": [
+          {
+            "project": "Vente de consommables médicaux",
+            "tasks": [
+              "Prospection et suivi de la clientèle hospitalière",
+              "Présentation des produits aux services de soins",
+              "Suivi des commandes et de la satisfaction client"
+            ]
+          }
+        ],
+        "achievements": [
+          "Développement d'un nouveau secteur géographique"
+        ],
+        "toolsAndTechnologies": [
+          "CRM",
+          "Reporting commercial"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Medical Device Sales",
+        "Salesforce",
+        "CRM",
+        "Hospital Sales",
+        "Tender Management"
+      ],
+      "softSkills": [
+        "Sens du relationnel",
+        "Persévérance",
+        "Négociation",
+        "Autonomie"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Gain d'un marché hospitalier régional majeur",
+        "description": "Conduite de la réponse à un appel d'offres remporté sur plusieurs établissements.",
+        "date": "2022",
+        "impact": "Croissance significative du chiffre d'affaires sur le secteur."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Golf",
+      "Cyclisme",
+      "Voyages"
+    ],
+    "references": [
+      {
+        "name": "Sandrine Leroy",
+        "position": "Directrice Régionale des Ventes",
+        "company": "Medtronic",
+        "contact": {
+          "phone": "+33 6 28 44 90 71",
+          "email": "sandrine.leroy@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 55000,
+      "max": 72000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Medical Device Sales",
+      "secondaryClusters": [
+        "Hospital Sales",
+        "MedTech Commercial"
+      ],
+      "functionalExpertise": [
+        "Hospital Sales",
+        "Tender Management",
+        "Technical Product Support"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Dépassement des objectifs commerciaux",
+        "Gain de marchés hospitaliers"
+      ],
+      "industryDomains": [
+        "Medical Devices",
+        "Healthcare"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Field"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Ingénieur commercial senior en dispositifs médicaux maîtrisant le cycle de vente hospitalier et la gestion des appels d'offres."
+    },
+    "searchIndex": {
+      "roles": [
+        "Medical Device Sales Representative",
+        "Medical Sales Engineer",
+        "Territory Sales Manager"
+      ],
+      "skills": [
+        "Medical Device Sales",
+        "Salesforce",
+        "Hospital Sales",
+        "Tender Management",
+        "CRM"
+      ],
+      "industries": [
+        "Medical Devices",
+        "Healthcare"
+      ]
+    },
+    "tags": [
+      "medical-sales",
+      "medtech",
+      "hospital-sales",
+      "senior",
+      "commercial"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directeur de l'accès au marché et de l'économie de la santé (HEOR) avec plus de dix-sept ans d'expérience dans l'industrie pharmaceutique. Expert des dossiers de valeur, des négociations de prix et remboursement avec le CEPS et de la stratégie d'accès. Pilote des équipes pluridisciplinaires et des soumissions à la HAS.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Laurent Girard",
+      "role": "Directeur Accès au Marché & HEOR",
+      "summary": "Démontrer et défendre la valeur d'un traitement pour garantir l'accès des patients, telle est ma mission. J'aime articuler données cliniques, économiques et stratégie de prix.",
+      "contact": {
+        "phone": "+33 6 47 28 91 05",
+        "email": "laurent.girard@example.com",
+        "address": {
+          "streetNumber": "30",
+          "streetName": "de la Santé Publique",
+          "streetType": "Avenue",
+          "city": "Paris",
+          "state": "Île-de-France",
+          "zipCode": "75015",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/laurent-girard-marketaccess"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-02-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Accès au marché",
+        "skills": [
+          "Stratégie d'accès",
+          "Prix et remboursement",
+          "Négociation CEPS"
+        ]
+      },
+      {
+        "category": "Économie de la santé",
+        "skills": [
+          "HEOR",
+          "Modélisation médico-économique",
+          "Dossiers de valeur"
+        ]
+      },
+      {
+        "category": "Soumissions",
+        "skills": [
+          "Soumissions HAS",
+          "Payer value dossiers",
+          "Évaluation médico-technique"
+        ]
+      },
+      {
+        "category": "Leadership",
+        "skills": [
+          "Management d'équipe",
+          "Stratégie transverse",
+          "Pilotage de projets"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Stratégie d'accès au marché",
+        "Économie de la santé (HEOR)",
+        "Prix et remboursement"
+      ],
+      "keyResponsibilities": [
+        "Définir la stratégie d'accès au marché des produits",
+        "Piloter les dossiers de valeur et soumissions HAS",
+        "Encadrer l'équipe accès au marché et HEOR"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Pfizer",
+        "website": "https://www.pfizer.fr",
+        "location": "Paris, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Directeur Accès au Marché & HEOR",
+        "activities": [
+          {
+            "project": "Stratégie d'accès au marché France",
+            "tasks": [
+              "Définition de la stratégie prix et remboursement",
+              "Pilotage des dossiers de valeur et soumissions HAS",
+              "Encadrement d'une équipe de six personnes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Obtention d'un remboursement favorable sur un produit majeur",
+          "Construction de dossiers de valeur reconnus par les payeurs"
+        ],
+        "toolsAndTechnologies": [
+          "HEOR",
+          "HAS",
+          "CEPS",
+          "Value Dossiers"
+        ]
+      },
+      {
+        "company": "AstraZeneca",
+        "website": "https://www.astrazeneca.fr",
+        "location": "Courbevoie, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Responsable Accès au Marché",
+        "activities": [
+          {
+            "project": "Accès et remboursement",
+            "tasks": [
+              "Élaboration des dossiers de transparence",
+              "Modélisation médico-économique",
+              "Interface avec les autorités de santé"
+            ]
+          }
+        ],
+        "achievements": [
+          "Obtention d'améliorations du service médical rendu (ASMR) sur plusieurs dossiers"
+        ],
+        "toolsAndTechnologies": [
+          "HEOR",
+          "HAS",
+          "Modélisation"
+        ]
+      },
+      {
+        "company": "GSK",
+        "website": "https://www.gsk.com",
+        "location": "Marly-le-Roi, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Chargé d'Économie de la Santé",
+        "activities": [
+          {
+            "project": "Études médico-économiques",
+            "tasks": [
+              "Réalisation d'analyses coût-efficacité",
+              "Revue de la littérature économique",
+              "Support aux dossiers de remboursement"
+            ]
+          }
+        ],
+        "achievements": [
+          "Développement d'un modèle coût-efficacité réutilisé sur plusieurs produits"
+        ],
+        "toolsAndTechnologies": [
+          "HEOR",
+          "Modélisation médico-économique"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université Paris-Dauphine",
+        "degree": "Master en Économie de la Santé",
+        "fieldOfStudy": "Économie et gestion de la santé",
+        "achievements": [
+          "Mémoire sur l'évaluation médico-économique des médicaments"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Université Paris-Sud — Faculté de Pharmacie",
+        "degree": "Master en Sciences Pharmaceutiques",
+        "fieldOfStudy": "Pharmacie",
+        "achievements": []
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Market Access",
+        "HEOR",
+        "Health Economics",
+        "Pricing and Reimbursement",
+        "HAS Submissions",
+        "Value Dossiers"
+      ],
+      "softSkills": [
+        "Vision stratégique",
+        "Leadership",
+        "Négociation",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Stratégie d'accès d'un produit innovant",
+        "description": "Pilotage de la stratégie prix, remboursement et dossier de valeur d'un lancement majeur.",
+        "date": "2021",
+        "impact": "Remboursement obtenu dans des conditions favorables à l'accès des patients."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Voile",
+      "Histoire",
+      "Course à pied"
+    ],
+    "references": [
+      {
+        "name": "Dr Anne Lefèvre",
+        "position": "Directrice Générale France",
+        "company": "Pfizer",
+        "contact": {
+          "phone": "+33 6 90 17 28 44",
+          "email": "anne.lefevre@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 105000,
+      "max": 135000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Market Access",
+      "secondaryClusters": [
+        "Health Economics",
+        "Pricing and Reimbursement"
+      ],
+      "functionalExpertise": [
+        "Market Access Strategy",
+        "Health Economics",
+        "Payer Engagement"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Obtention de remboursements favorables",
+        "Construction de dossiers de valeur"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Public Health"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Strategy"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Directeur accès au marché et HEOR expérimenté, pilotant la stratégie prix-remboursement et les soumissions HAS pour des produits pharmaceutiques."
+    },
+    "searchIndex": {
+      "roles": [
+        "Market Access Director",
+        "HEOR Director",
+        "Head of Market Access"
+      ],
+      "skills": [
+        "Market Access",
+        "HEOR",
+        "Health Economics",
+        "Pricing and Reimbursement",
+        "HAS Submissions"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Public Health"
+      ]
+    },
+    "tags": [
+      "market-access",
+      "heor",
+      "health-economics",
+      "director",
+      "commercial"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Directrice des affaires médicales, médecin de formation, avec plus de dix-sept ans d'expérience dans l'industrie pharmaceutique. Pilote la stratégie médicale, les études post-AMM et les équipes de MSL en aire thérapeutique. Interlocutrice de référence des sociétés savantes et garante de la conformité scientifique et éthique.",
+    "careerStartYear": 2008,
+    "personalInformation": {
+      "name": "Sophie Marchand",
+      "role": "Directrice des Affaires Médicales",
+      "summary": "Faire dialoguer science, éthique et besoins des patients au plus haut niveau, c'est le sens de mon rôle. J'aime construire une stratégie médicale ambitieuse et rigoureuse, et faire grandir les équipes.",
+      "contact": {
+        "email": "sophie.marchand.med@example.com",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "des Affaires Médicales",
+          "streetType": "Rue",
+          "city": "Neuilly-sur-Seine",
+          "state": "Île-de-France",
+          "zipCode": "92200",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/sophie-marchand-medaffairs"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-03-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "En semaine 12h-14h",
+          "Vendredi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Stratégie médicale",
+        "skills": [
+          "Medical strategy",
+          "Plan médical",
+          "Aire thérapeutique"
+        ]
+      },
+      {
+        "category": "Études et données",
+        "skills": [
+          "Études post-AMM",
+          "Real World Evidence",
+          "Publications scientifiques"
+        ]
+      },
+      {
+        "category": "Leadership",
+        "skills": [
+          "Management d'équipe MSL",
+          "Gouvernance médicale",
+          "Conformité et éthique"
+        ]
+      },
+      {
+        "category": "Relations externes",
+        "skills": [
+          "Sociétés savantes",
+          "Advisory boards",
+          "Engagement KOL"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Stratégie des affaires médicales",
+        "Études post-AMM et Real World Evidence",
+        "Management d'équipes médicales"
+      ],
+      "keyResponsibilities": [
+        "Définir et piloter la stratégie médicale de l'aire thérapeutique",
+        "Superviser les études post-AMM et la communication scientifique",
+        "Diriger et développer l'équipe des affaires médicales"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Novartis",
+        "website": "https://www.novartis.fr",
+        "location": "Rueil-Malmaison, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Directrice des Affaires Médicales",
+        "activities": [
+          {
+            "project": "Stratégie médicale aire thérapeutique",
+            "tasks": [
+              "Définition du plan médical et de la stratégie scientifique",
+              "Pilotage des études post-AMM et de la Real World Evidence",
+              "Direction d'une équipe de MSL et de médecins"
+            ]
+          }
+        ],
+        "achievements": [
+          "Structuration d'un plan médical intégré",
+          "Développement d'un programme d'études post-AMM reconnu"
+        ],
+        "toolsAndTechnologies": [
+          "Medical Strategy",
+          "Real World Evidence",
+          "Veeva Vault"
+        ]
+      },
+      {
+        "company": "MSD France",
+        "website": "https://www.msd-france.com",
+        "location": "Courbevoie, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Medical Advisor Senior puis Responsable Médical",
+        "activities": [
+          {
+            "project": "Support médical d'aire thérapeutique",
+            "tasks": [
+              "Support scientifique aux équipes internes et terrain",
+              "Coordination d'advisory boards",
+              "Supervision de la communication médicale"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise en place d'une gouvernance médicale renforcée"
+        ],
+        "toolsAndTechnologies": [
+          "Medical Strategy",
+          "Advisory Boards"
+        ]
+      },
+      {
+        "company": "Sanofi",
+        "website": "https://www.sanofi.fr",
+        "location": "Gentilly, France",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Medical Advisor",
+        "activities": [
+          {
+            "project": "Affaires médicales",
+            "tasks": [
+              "Support scientifique et médical",
+              "Réponse aux demandes d'information médicale",
+              "Contribution aux publications"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à plusieurs publications scientifiques"
+        ],
+        "toolsAndTechnologies": [
+          "Medical Information",
+          "PubMed"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université Paris Descartes — Faculté de Médecine",
+        "degree": "Doctorat en Médecine",
+        "fieldOfStudy": "Médecine",
+        "achievements": [
+          "Thèse d'exercice en médecine interne"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "ESSEC Business School",
+        "degree": "Executive Certificate",
+        "fieldOfStudy": "Management de l'industrie pharmaceutique",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Diplôme Inter-Universitaire de Pharmacologie Médicale",
+        "institution": "Université Paris Descartes",
+        "year": "@Y-4@",
+        "description": "Approfondissement en pharmacologie et développement du médicament."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Medical Strategy",
+        "Real World Evidence",
+        "Post-marketing Studies",
+        "Scientific Communication",
+        "KOL Engagement"
+      ],
+      "softSkills": [
+        "Leadership",
+        "Vision stratégique",
+        "Éthique",
+        "Communication"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Plan médical intégré d'aire thérapeutique",
+        "description": "Conception et déploiement d'un plan médical alignant études, communication et engagement scientifique.",
+        "date": "2021",
+        "impact": "Renforcement de la crédibilité scientifique et de la collaboration avec les experts."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Musique classique",
+      "Voyages",
+      "Course à pied"
+    ],
+    "references": [
+      {
+        "name": "Dr Marc Rousseau",
+        "position": "Directeur Général",
+        "company": "Novartis France",
+        "contact": {
+          "phone": "+33 6 17 44 90 28",
+          "email": "marc.rousseau@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 130000,
+      "max": 175000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Medical Affairs Leadership",
+      "secondaryClusters": [
+        "Medical Strategy",
+        "Real World Evidence"
+      ],
+      "functionalExpertise": [
+        "Medical Strategy",
+        "Team Leadership",
+        "Scientific Governance"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Structuration de la stratégie médicale",
+        "Programmes d'études post-AMM"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Healthcare"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Strategy"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "executiveInfluence",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.93,
+      "clusterReasoning": "Directrice des affaires médicales, médecin de formation, dirigeant la stratégie médicale et les équipes MSL en aire thérapeutique."
+    },
+    "searchIndex": {
+      "roles": [
+        "Medical Affairs Director",
+        "Head of Medical Affairs",
+        "Medical Director"
+      ],
+      "skills": [
+        "Medical Strategy",
+        "Real World Evidence",
+        "Post-marketing Studies",
+        "Scientific Communication",
+        "KOL Engagement"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Healthcare"
+      ]
+    },
+    "tags": [
+      "medical-affairs",
+      "medical-director",
+      "strategy",
+      "director",
+      "commercial"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Visiteur médical junior récemment diplômé, motivé par la promotion éthique du médicament auprès des professionnels de santé. Première expérience réussie en visite médicale de ville, avec un bon sens du relationnel et une connaissance solide des produits. Désireux de progresser vers des responsabilités commerciales élargies.",
+    "careerStartYear": 2023,
+    "personalInformation": {
+      "name": "Léa Roux",
+      "role": "Visiteuse Médicale",
+      "summary": "Créer une relation de confiance avec les médecins et porter une information produit rigoureuse, voilà ce qui m'anime. J'apprends vite et j'aime le terrain.",
+      "contact": {
+        "phone": "+33 6 72 84 51 09",
+        "email": "lea.roux@example.com",
+        "address": {
+          "streetNumber": "4",
+          "streetName": "des Praticiens",
+          "streetType": "Rue",
+          "city": "Toulouse",
+          "state": "Occitanie",
+          "zipCode": "31200",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/lea-roux-vm"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "Disponible en semaine",
+          "Jeudi après-midi"
+        ],
+        "preferredWorkTypes": [
+          "onsite",
+          "hybrid"
+        ],
+        "preferredContractTypes": [
+          "permanent",
+          "fixedTerm"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Visite médicale",
+        "skills": [
+          "Promotion du médicament",
+          "Relation professionnels de santé",
+          "Présentation produit"
+        ]
+      },
+      {
+        "category": "Connaissances",
+        "skills": [
+          "Pharmacologie",
+          "Réglementation de la promotion",
+          "Aires thérapeutiques"
+        ]
+      },
+      {
+        "category": "Commercial",
+        "skills": [
+          "Prospection",
+          "Suivi de secteur",
+          "Reporting d'activité"
+        ]
+      },
+      {
+        "category": "Outils",
+        "skills": [
+          "CRM",
+          "Reporting",
+          "Bureautique"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Visite médicale de ville",
+        "Information et promotion du médicament",
+        "Relation professionnels de santé"
+      ],
+      "keyResponsibilities": [
+        "Promouvoir les produits auprès des médecins et pharmaciens",
+        "Assurer le suivi et le développement d'un secteur",
+        "Rapporter l'activité dans le CRM"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Biogaran",
+        "website": "https://www.biogaran.fr",
+        "location": "Toulouse, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Visiteuse Médicale",
+        "activities": [
+          {
+            "project": "Promotion en médecine de ville",
+            "tasks": [
+              "Visite des médecins généralistes et spécialistes du secteur",
+              "Présentation éthique des produits et des données",
+              "Suivi d'activité et reporting dans le CRM"
+            ]
+          }
+        ],
+        "achievements": [
+          "Atteinte des objectifs de couverture du secteur dès la première année"
+        ],
+        "toolsAndTechnologies": [
+          "CRM",
+          "Reporting"
+        ]
+      },
+      {
+        "company": "Pierre Fabre",
+        "website": "https://www.pierre-fabre.com",
+        "location": "Castres, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Stagiaire — Force de Vente",
+        "activities": [
+          {
+            "project": "Stage en visite médicale",
+            "tasks": [
+              "Accompagnement de visiteurs médicaux sur le terrain",
+              "Préparation des supports de présentation",
+              "Analyse de secteurs commerciaux"
+            ]
+          }
+        ],
+        "achievements": [
+          "Contribution à l'analyse d'un secteur commercial"
+        ],
+        "toolsAndTechnologies": [
+          "CRM",
+          "Bureautique"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Université Toulouse III — Paul Sabatier",
+        "degree": "Licence Professionnelle Visite Médicale",
+        "fieldOfStudy": "Promotion du médicament",
+        "achievements": [
+          "Obtention de la certification professionnelle de visiteur médical"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Certification Professionnelle de la Visite Médicale",
+        "institution": "CPNVM",
+        "year": "@Y-4@",
+        "description": "Certification réglementaire nécessaire à l'exercice de la visite médicale."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Pharmaceutical Sales",
+        "CRM",
+        "Product Promotion",
+        "Pharmacology"
+      ],
+      "softSkills": [
+        "Sens du relationnel",
+        "Motivation",
+        "Écoute",
+        "Organisation"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Développement d'un nouveau secteur de visite",
+        "description": "Prise en main et développement d'un secteur de médecine de ville.",
+        "date": "2024",
+        "impact": "Atteinte des objectifs de couverture et de fréquence de visite."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Danse",
+      "Voyages",
+      "Course à pied"
+    ],
+    "references": [
+      {
+        "name": "David Fontaine",
+        "position": "Responsable Régional des Ventes",
+        "company": "Biogaran",
+        "contact": {
+          "phone": "+33 6 44 90 28 17",
+          "email": "david.fontaine@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 30000,
+      "max": 38000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Pharmaceutical Sales",
+      "secondaryClusters": [
+        "Medical Representative",
+        "Field Sales"
+      ],
+      "functionalExpertise": [
+        "Product Promotion",
+        "Territory Management",
+        "HCP Engagement"
+      ],
+      "skillDepth": "generalist",
+      "businessImpact": [
+        "Atteinte des objectifs de couverture",
+        "Développement de secteur"
+      ],
+      "industryDomains": [
+        "Pharmaceuticals",
+        "Healthcare"
+      ],
+      "environmentFit": [
+        "Enterprise",
+        "Field"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Visiteuse médicale junior récemment certifiée, avec une première expérience de terrain et une forte volonté de progression commerciale."
+    },
+    "searchIndex": {
+      "roles": [
+        "Pharmaceutical Sales Representative",
+        "Medical Representative",
+        "Sales Representative"
+      ],
+      "skills": [
+        "Pharmaceutical Sales",
+        "CRM",
+        "Product Promotion",
+        "Territory Management"
+      ],
+      "industries": [
+        "Pharmaceuticals",
+        "Healthcare"
+      ]
+    },
+    "tags": [
+      "pharma-sales",
+      "medical-rep",
+      "junior",
+      "commercial"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Infirmière diplômée d'État avec plus de dix ans d'expérience en réanimation et en soins critiques. Titulaire du diplôme d'État et inscrite à l'Ordre National des Infirmiers, elle maîtrise la prise en charge de patients instables, la surveillance hémodynamique et l'accompagnement des familles. Reconnue pour son sang-froid et sa rigueur dans les protocoles de soins.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Amandine Lefèvre",
+      "role": "Infirmière Diplômée d'État — Réanimation",
+      "summary": "Passionnée par les soins critiques, j'accompagne les patients les plus fragiles avec exigence et humanité. Le travail d'équipe en unité de réanimation est au cœur de ma pratique.",
+      "contact": {
+        "phone": "+33 6 41 27 65 99",
+        "email": "amandine.lefevre@example.com",
+        "address": {
+          "streetNumber": "24",
+          "streetName": "Gambetta",
+          "streetType": "Rue",
+          "city": "Lyon",
+          "state": "Auvergne-Rhône-Alpes",
+          "zipCode": "69007",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/amandine-lefevre-ide"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "En semaine après 18h",
+          "Repos de garde"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Soins critiques",
+        "skills": [
+          "Réanimation",
+          "Surveillance hémodynamique",
+          "Ventilation mécanique"
+        ]
+      },
+      {
+        "category": "Gestes techniques",
+        "skills": [
+          "Pose de voies veineuses",
+          "Aspiration trachéale",
+          "Hémofiltration"
+        ]
+      },
+      {
+        "category": "Sécurité des soins",
+        "skills": [
+          "Prévention des infections nosocomiales",
+          "Gestion de la douleur",
+          "Traçabilité"
+        ]
+      },
+      {
+        "category": "Relationnel",
+        "skills": [
+          "Accompagnement des familles",
+          "Éducation thérapeutique"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Soins de réanimation",
+        "Surveillance de patients instables",
+        "Protocoles d'urgence"
+      ],
+      "keyResponsibilities": [
+        "Assurer la surveillance continue des patients de réanimation",
+        "Administrer et adapter les thérapeutiques prescrites",
+        "Coordonner les soins avec l'équipe médicale"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Hospices Civils de Lyon",
+        "website": "https://www.chu-lyon.fr",
+        "location": "Lyon, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Infirmière DE — Réanimation médicale",
+        "activities": [
+          {
+            "project": "Unité de réanimation polyvalente",
+            "tasks": [
+              "Surveillance hémodynamique et respiratoire des patients ventilés",
+              "Administration des thérapeutiques en soins critiques",
+              "Encadrement des étudiants infirmiers"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participation à la réduction des infections liées aux cathéters via un nouveau protocole",
+          "Référente douleur de l'unité"
+        ],
+        "toolsAndTechnologies": [
+          "DPI Easily",
+          "Scope multiparamétrique",
+          "Respirateur Dräger"
+        ]
+      },
+      {
+        "company": "Centre Hospitalier de Valence",
+        "website": "https://www.ch-valence.fr",
+        "location": "Valence, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Infirmière DE — Soins continus",
+        "activities": [
+          {
+            "project": "Unité de surveillance continue",
+            "tasks": [
+              "Prise en charge de patients post-opératoires",
+              "Surveillance des paramètres vitaux",
+              "Gestion des situations d'urgence"
+            ]
+          }
+        ],
+        "achievements": [
+          "Formation des nouvelles recrues au protocole de surveillance"
+        ],
+        "toolsAndTechnologies": [
+          "DPI Orbis",
+          "Pousse-seringue électrique"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "IFSI Croix-Rouge française — Lyon",
+        "degree": "Diplôme d'État d'Infirmier",
+        "fieldOfStudy": "Soins infirmiers",
+        "achievements": [
+          "Mémoire de fin d'études sur la prise en charge de la douleur en réanimation"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Attestation de Formation aux Gestes et Soins d'Urgence niveau 2",
+        "institution": "CESU 69",
+        "year": "@Y-4@",
+        "description": "Prise en charge des urgences vitales en milieu hospitalier."
+      },
+      {
+        "title": "Diplôme Universitaire Plaies et Cicatrisation",
+        "institution": "Université Claude Bernard Lyon 1",
+        "year": "@Y-4@",
+        "description": "Approfondissement de la prise en charge des plaies complexes."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Réanimation",
+        "Ventilation mécanique",
+        "Hémofiltration",
+        "Surveillance hémodynamique"
+      ],
+      "softSkills": [
+        "Sang-froid",
+        "Rigueur",
+        "Empathie",
+        "Travail en équipe"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Protocole de prévention des infections sur cathéter",
+        "description": "Co-construction d'un protocole d'hygiène des voies centrales en réanimation.",
+        "date": "2022",
+        "impact": "Baisse mesurable du taux d'infections liées aux cathéters dans l'unité."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Course à pied",
+      "Randonnée",
+      "Bénévolat Croix-Rouge"
+    ],
+    "references": [
+      {
+        "name": "Dr Sophie Marchand",
+        "position": "Praticien Hospitalier — Réanimation",
+        "company": "Hospices Civils de Lyon",
+        "contact": {
+          "phone": "+33 6 12 88 40 51",
+          "email": "sophie.marchand@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 34000,
+      "max": 42000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Critical Care Nursing",
+      "secondaryClusters": [
+        "Intensive Care",
+        "Emergency Care"
+      ],
+      "functionalExpertise": [
+        "Patient Monitoring",
+        "Clinical Care Delivery",
+        "Infection Prevention"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Réduction des infections nosocomiales",
+        "Amélioration de la qualité des soins"
+      ],
+      "industryDomains": [
+        "Hospitals",
+        "Healthcare"
+      ],
+      "environmentFit": [
+        "Hospital",
+        "Clinical"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Parcours cohérent en soins critiques hospitaliers avec expertise en réanimation et prévention des infections."
+    },
+    "searchIndex": {
+      "roles": [
+        "Registered Nurse",
+        "ICU Nurse",
+        "Critical Care Nurse"
+      ],
+      "skills": [
+        "Critical Care",
+        "Mechanical Ventilation",
+        "Hemodynamic Monitoring",
+        "Infection Control"
+      ],
+      "industries": [
+        "Hospitals",
+        "Healthcare"
+      ]
+    },
+    "tags": [
+      "nursing",
+      "icu",
+      "critical-care",
+      "senior",
+      "clinical"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Médecin urgentiste titulaire du Doctorat en médecine et du DES de médecine d'urgence, fort de plus de dix ans d'exercice hospitalier. Expérimenté dans la gestion des urgences vitales, le tri, et la coordination du SMUR. Inscrit au Conseil de l'Ordre des Médecins et impliqué dans la formation des internes.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Karim Benali",
+      "role": "Médecin Urgentiste",
+      "summary": "L'urgence, c'est décider vite et juste au service du patient. J'aime la médecine de première ligne et la transmission auprès des plus jeunes.",
+      "contact": {
+        "phone": "+33 6 78 34 12 90",
+        "email": "karim.benali.personal@example.com",
+        "address": {
+          "streetNumber": "8",
+          "streetName": "de la République",
+          "streetType": "Boulevard",
+          "city": "Marseille",
+          "state": "Provence-Alpes-Côte d'Azur",
+          "zipCode": "13001",
+          "country": "France"
+        },
+        "socialLinks": {
+          "linkedin": "https://linkedin.com/in/karim-benali-md"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "Jours de repos",
+          "En semaine 14h-16h"
+        ],
+        "preferredWorkTypes": [
+          "onsite"
+        ],
+        "preferredContractTypes": [
+          "permanent"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Médecine d'urgence",
+        "skills": [
+          "Tri des urgences",
+          "Réanimation cardio-pulmonaire",
+          "Gestion du polytraumatisé"
+        ]
+      },
+      {
+        "category": "Gestes techniques",
+        "skills": [
+          "Intubation",
+          "Échographie clinique",
+          "Suture"
+        ]
+      },
+      {
+        "category": "Coordination",
+        "skills": [
+          "Régulation SMUR",
+          "Gestion de crise",
+          "Encadrement d'internes"
+        ]
+      },
+      {
+        "category": "Imagerie et diagnostic",
+        "skills": [
+          "Lecture ECG",
+          "Interprétation radiologique",
+          "FAST écho"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Urgences vitales",
+        "Médecine pré-hospitalière",
+        "Traumatologie d'urgence"
+      ],
+      "keyResponsibilities": [
+        "Assurer le diagnostic et la prise en charge des urgences",
+        "Coordonner les interventions SMUR",
+        "Former et superviser les internes"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Assistance Publique — Hôpitaux de Marseille",
+        "website": "https://www.ap-hm.fr",
+        "location": "Marseille, France",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Praticien Hospitalier — Médecine d'urgence",
+        "activities": [
+          {
+            "project": "Service d'Accueil des Urgences",
+            "tasks": [
+              "Prise en charge des urgences vitales et du tri",
+              "Régulation et intervention SMUR",
+              "Supervision des internes et externes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Mise en place d'un protocole de tri réduisant le délai de prise en charge",
+          "Référent formation en échographie clinique d'urgence"
+        ],
+        "toolsAndTechnologies": [
+          "Échographe portable",
+          "Défibrillateur",
+          "DPI Terminal Urgences"
+        ]
+      },
+      {
+        "company": "Centre Hospitalier d'Aix-en-Provence",
+        "website": "https://www.ch-aix.fr",
+        "location": "Aix-en-Provence, France",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Assistant spécialiste — Urgences",
+        "activities": [
+          {
+            "project": "Urgences adultes",
+            "tasks": [
+              "Consultations et soins d'urgence",
+              "Gestion des situations critiques",
+              "Rédaction des comptes rendus"
+            ]
+          }
+        ],
+        "achievements": [
+          "Participation à l'accréditation qualité du service"
+        ],
+        "toolsAndTechnologies": [
+          "DPI Résurgences",
+          "Moniteur multiparamétrique"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Faculté de Médecine d'Aix-Marseille",
+        "degree": "Doctorat en Médecine",
+        "fieldOfStudy": "Médecine",
+        "achievements": [
+          "Thèse d'exercice sur le tri aux urgences"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Faculté de Médecine d'Aix-Marseille",
+        "degree": "DES de Médecine d'Urgence",
+        "fieldOfStudy": "Médecine d'urgence",
+        "achievements": [
+          "Spécialisation en médecine pré-hospitalière"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Advanced Cardiovascular Life Support (ACLS)",
+        "institution": "American Heart Association",
+        "year": "@Y-4@",
+        "description": "Prise en charge avancée de l'arrêt cardio-respiratoire."
+      },
+      {
+        "title": "Diplôme Inter-Universitaire d'Échographie",
+        "institution": "Aix-Marseille Université",
+        "year": "@Y-4@",
+        "description": "Échographie clinique appliquée à l'urgence."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Réanimation cardio-pulmonaire",
+        "Intubation",
+        "Échographie clinique",
+        "Tri des urgences"
+      ],
+      "softSkills": [
+        "Prise de décision rapide",
+        "Leadership",
+        "Résistance au stress",
+        "Pédagogie"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Anglais",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Arabe",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Protocole de tri accéléré aux urgences",
+        "description": "Conception d'un circuit court pour les urgences non vitales.",
+        "date": "2021",
+        "impact": "Réduction du délai moyen d'attente aux urgences."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Plongée sous-marine",
+      "Voile",
+      "Lecture scientifique"
+    ],
+    "references": [
+      {
+        "name": "Pr Isabelle Garnier",
+        "position": "Chef de Service Urgences",
+        "company": "AP-HM",
+        "contact": {
+          "phone": "+33 6 45 90 12 34",
+          "email": "isabelle.garnier@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 78000,
+      "max": 95000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Emergency Medicine",
+      "secondaryClusters": [
+        "Pre-hospital Care",
+        "Trauma Care"
+      ],
+      "functionalExpertise": [
+        "Emergency Diagnosis",
+        "Resuscitation",
+        "Clinical Teaching"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Réduction des délais de prise en charge",
+        "Amélioration de la sécurité des soins"
+      ],
+      "industryDomains": [
+        "Hospitals",
+        "Healthcare"
+      ],
+      "environmentFit": [
+        "Hospital",
+        "Clinical"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "teamLead",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.93,
+      "clusterReasoning": "Médecin urgentiste expérimenté combinant expertise clinique, régulation SMUR et encadrement pédagogique."
+    },
+    "searchIndex": {
+      "roles": [
+        "Emergency Physician",
+        "Emergency Medicine Doctor",
+        "ER Physician"
+      ],
+      "skills": [
+        "Emergency Medicine",
+        "ACLS",
+        "Point-of-care Ultrasound",
+        "Triage",
+        "Resuscitation"
+      ],
+      "industries": [
+        "Hospitals",
+        "Healthcare"
+      ]
+    },
+    "tags": [
+      "physician",
+      "emergency",
+      "md",
+      "senior",
+      "clinical"
+    ]
+  }
+]

@@ -1,0 +1,6522 @@
+[
+ {
+  "candidateProfileSummary": "Consejero delegado con más de veinte años liderando compañías tecnológicas B2B en fases de crecimiento y escalado internacional. Ha dirigido con responsabilidad total sobre la cuenta de resultados (P&L) equipos de más de 400 personas y ha liderado dos rondas de financiación y una venta a un fondo de private equity. Combina visión estratégica de producto con una ejecución comercial disciplinada.",
+  "careerStartYear": 1999,
+  "personalInformation": {
+   "name": "Ricardo Salvador Mendoza",
+   "role": "Consejero Delegado (CEO)",
+   "summary": "Líder ejecutivo orientado al crecimiento rentable, la expansión internacional y la creación de equipos directivos de alto rendimiento en el sector del software empresarial.",
+   "contact": {
+    "phone": "+34 612 004 331",
+    "email": "ricardo.salvador@example.com",
+    "address": {
+     "streetNumber": "18",
+     "streetName": "de Serrano",
+     "streetType": "Calle",
+     "city": "Madrid",
+     "state": "Madrid",
+     "zipCode": "28001",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/ricardosalvadormendoza",
+     "website": "https://ricardosalvador.example.com"
+    }
+   },
+   "availability": {
+    "openToWork": false,
+    "status": "openButNotSearching",
+    "availableFrom": "2027-01-01",
+    "noticePeriodDays": 180,
+    "interviewAvailability": [
+     "Martes por la tarde",
+     "Viernes por la mañana"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent",
+     "boardAppointment"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Liderazgo ejecutivo",
+    "skills": [
+     "Dirección general",
+     "Gestión del P&L",
+     "Gobierno corporativo",
+     "Planificación estratégica"
+    ]
+   },
+   {
+    "category": "Crecimiento y expansión",
+    "skills": [
+     "Escalado internacional",
+     "Fusiones y adquisiciones",
+     "Salida a nuevos mercados",
+     "Desarrollo de negocio"
+    ]
+   },
+   {
+    "category": "Financiación",
+    "skills": [
+     "Rondas de inversión",
+     "Relación con inversores",
+     "Private equity",
+     "Modelización financiera"
+    ]
+   },
+   {
+    "category": "Producto y comercial",
+    "skills": [
+     "Estrategia de producto SaaS",
+     "Go-to-market",
+     "Modelos de suscripción"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección general",
+    "Escalado de compañías SaaS",
+    "Expansión internacional",
+    "Relación con el consejo e inversores"
+   ],
+   "keyResponsibilities": [
+    "Definición de la estrategia corporativa y el plan a tres años",
+    "Responsabilidad total sobre la cuenta de resultados del grupo",
+    "Liderazgo del comité de dirección",
+    "Representación ante el consejo de administración y los inversores"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Nexora Software",
+    "website": "https://www.nexora.example.com",
+    "location": "Madrid, España",
+    "from": "2016-03",
+    "to": "Present",
+    "position": "Consejero Delegado (CEO)",
+    "activities": [
+     {
+      "project": "Escalado internacional y venta a private equity",
+      "tasks": [
+       "Liderazgo de la expansión a Francia, Italia y Latinoamérica",
+       "Dirección del proceso de venta al fondo Aurica Capital",
+       "Definición de la estrategia de producto y precios"
+      ]
+     }
+    ],
+    "achievements": [
+     "Multipliqué por cinco los ingresos recurrentes anuales (ARR) en seis años",
+     "Lideré la venta de la compañía a un fondo de private equity con una valoración de 180 millones de euros",
+     "Reduje la rotación de clientes del 14% al 6% anual"
+    ],
+    "toolsAndTechnologies": [
+     "Salesforce",
+     "NetSuite",
+     "Tableau",
+     "Power BI"
+    ]
+   },
+   {
+    "company": "Grupo Indra",
+    "website": "https://www.indracompany.com",
+    "location": "Madrid, España",
+    "from": "2009-06",
+    "to": "2016-02",
+    "position": "Director General de la división de software",
+    "activities": [
+     {
+      "project": "Transformación de la unidad de software",
+      "tasks": [
+       "Reestructuración de la cuenta de resultados de la división",
+       "Lanzamiento de la línea de producto en la nube",
+       "Consolidación del equipo directivo"
+      ]
+     }
+    ],
+    "achievements": [
+     "Devolví la división a la rentabilidad en dos ejercicios",
+     "Impulsé el paso de licencias a un modelo de suscripción"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Salesforce",
+     "Jira"
+    ]
+   },
+   {
+    "company": "Accenture",
+    "website": "https://www.accenture.com",
+    "location": "Madrid, España",
+    "from": "1999-09",
+    "to": "2009-05",
+    "position": "Socio de consultoría estratégica",
+    "activities": [
+     {
+      "project": "Estrategia y transformación para clientes del IBEX 35",
+      "tasks": [
+       "Dirección de proyectos de transformación digital",
+       "Desarrollo de la cartera de clientes de banca y seguros"
+      ]
+     }
+    ],
+    "achievements": [
+     "Desarrollé una cartera de clientes de más de 30 millones de euros de facturación anual"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Oracle",
+     "Microsoft Project"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2004",
+    "institution": "IESE Business School",
+    "degree": "Executive MBA",
+    "fieldOfStudy": "Dirección general de empresas",
+    "achievements": [
+     "Premio al mejor proyecto de fin de programa sobre modelos de negocio de suscripción"
+    ]
+   },
+   {
+    "year": "1999",
+    "institution": "Universidad Politécnica de Madrid",
+    "degree": "Ingeniería de Telecomunicación",
+    "fieldOfStudy": "Telemática",
+    "achievements": [
+     "Proyecto de fin de carrera sobre arquitecturas de servicios distribuidos"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Corporate Director Certification",
+    "institution": "IESE Business School",
+    "year": "2018",
+    "description": "Programa de formación para consejeros y gobierno corporativo."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Salesforce",
+    "NetSuite",
+    "SAP",
+    "Power BI",
+    "Tableau"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Visión estratégica",
+    "Comunicación ejecutiva",
+    "Toma de decisiones"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    },
+    {
+     "language": "Francés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "intermediate",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Venta a private equity",
+    "description": "Dirección integral del proceso de desinversión y negociación con el fondo comprador.",
+    "date": "2022-11",
+    "impact": "Cierre de la operación con una valoración de 180 millones de euros."
+   },
+   {
+    "title": "Expansión a Latinoamérica",
+    "description": "Apertura de filiales en México y Colombia y creación del equipo directivo local.",
+    "date": "2019-05",
+    "impact": "El 25% de los ingresos del grupo procede hoy de la región."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Vela",
+   "Historia económica",
+   "Golf"
+  ],
+  "references": [
+   {
+    "name": "Elena Vidal",
+    "position": "Socia",
+    "company": "Aurica Capital",
+    "contact": {
+     "phone": "+34 612 771 004",
+     "email": "elena.vidal@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 240000,
+   "max": 340000
+  },
+  "candidateClustering": {
+   "primaryCluster": "General Management",
+   "secondaryClusters": [
+    "SaaS Leadership",
+    "Private Equity Value Creation"
+   ],
+   "functionalExpertise": [
+    "Corporate strategy",
+    "P&L management",
+    "International expansion",
+    "Fundraising"
+   ],
+   "skillDepth": "hybrid",
+   "businessImpact": [
+    "5x ARR growth",
+    "Successful PE exit",
+    "Reduced customer churn"
+   ],
+   "industryDomains": [
+    "Technology",
+    "Enterprise Software"
+   ],
+   "environmentFit": [
+    "Scale-up",
+    "PE-backed",
+    "International"
+   ],
+   "seniorityLevel": "executive",
+   "leadershipAndInfluence": "executiveInfluence",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.94,
+   "clusterReasoning": "Consejero delegado con historial demostrado de escalado internacional de compañías SaaS y una desinversión exitosa a private equity."
+  },
+  "searchIndex": {
+   "roles": [
+    "Chief Executive Officer",
+    "Managing Director",
+    "General Manager"
+   ],
+   "skills": [
+    "P&L Management",
+    "Corporate Strategy",
+    "M&A",
+    "International Expansion",
+    "SaaS"
+   ],
+   "industries": [
+    "Technology",
+    "Enterprise Software",
+    "Private Equity"
+   ]
+  },
+  "tags": [
+   "ceo",
+   "general-management",
+   "saas",
+   "pe-backed",
+   "executive"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Directora gerente con una sólida trayectoria en el sector industrial y de fabricación, con responsabilidad plena sobre plantas productivas y cuentas de resultados superiores a 250 millones de euros. Ha liderado programas de eficiencia operativa, digitalización de fábricas y planes de sostenibilidad. Reconocida por su capacidad de transformar organizaciones industriales manteniendo la rentabilidad.",
+  "careerStartYear": 1998,
+  "personalInformation": {
+   "name": "Marta Elizondo Aguirre",
+   "role": "Directora Gerente (Managing Director)",
+   "summary": "Ejecutiva industrial centrada en la excelencia operativa, la digitalización de la fabricación y la creación de valor sostenible a largo plazo.",
+   "contact": {
+    "phone": "+34 688 213 550",
+    "email": "marta.elizondo@example.com",
+    "address": {
+     "streetNumber": "7",
+     "streetName": "Gran Vía",
+     "streetType": "Calle",
+     "city": "Bilbao",
+     "state": "Vizcaya",
+     "zipCode": "48001",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/martaelizondoaguirre"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-11-01",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Lunes por la tarde",
+     "Miércoles por la mañana"
+    ],
+    "preferredWorkTypes": [
+     "onsite",
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Dirección industrial",
+    "skills": [
+     "Dirección de plantas",
+     "Gestión del P&L industrial",
+     "Lean Manufacturing",
+     "Six Sigma"
+    ]
+   },
+   {
+    "category": "Estrategia",
+    "skills": [
+     "Planificación estratégica",
+     "Transformación operativa",
+     "Sostenibilidad y ESG"
+    ]
+   },
+   {
+    "category": "Cadena de suministro",
+    "skills": [
+     "Aprovisionamiento",
+     "Planificación de la producción",
+     "Gestión de proveedores"
+    ]
+   },
+   {
+    "category": "Personas",
+    "skills": [
+     "Relaciones laborales",
+     "Negociación con comités de empresa",
+     "Desarrollo de equipos directivos"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección general industrial",
+    "Excelencia operativa",
+    "Digitalización de la fabricación",
+    "Sostenibilidad"
+   ],
+   "keyResponsibilities": [
+    "Responsabilidad sobre la cuenta de resultados de las plantas del grupo",
+    "Definición del plan industrial y de inversiones (capex)",
+    "Liderazgo de los programas de mejora continua",
+    "Relación con el comité de dirección y el consejo"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "CIE Automotive",
+    "website": "https://www.cieautomotive.com",
+    "location": "Bilbao, España",
+    "from": "2015-01",
+    "to": "Present",
+    "position": "Directora Gerente (Managing Director)",
+    "activities": [
+     {
+      "project": "Plan de eficiencia y digitalización industrial",
+      "tasks": [
+       "Dirección de seis plantas productivas en España y Portugal",
+       "Despliegue del programa de industria 4.0",
+       "Negociación de los convenios colectivos"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré el margen EBITDA en 4 puntos porcentuales en cuatro años",
+     "Reduje el consumo energético de las plantas en un 18%",
+     "Lideré una inversión de 60 millones de euros en automatización"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Power BI",
+     "MES",
+     "Minitab"
+    ]
+   },
+   {
+    "company": "Gestamp",
+    "website": "https://www.gestamp.com",
+    "location": "Vitoria-Gasteiz, España",
+    "from": "2007-04",
+    "to": "2014-12",
+    "position": "Directora de Operaciones",
+    "activities": [
+     {
+      "project": "Programa Lean corporativo",
+      "tasks": [
+       "Implantación de Lean Manufacturing en la región norte",
+       "Optimización de los flujos logísticos internos"
+      ]
+     }
+    ],
+    "achievements": [
+     "Aumenté la productividad de las líneas en un 22%",
+     "Reduje los desechos de producción en un 30%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Minitab",
+     "MES"
+    ]
+   },
+   {
+    "company": "Robert Bosch",
+    "website": "https://www.bosch.com",
+    "location": "Madrid, España",
+    "from": "1998-09",
+    "to": "2007-03",
+    "position": "Responsable de planta",
+    "activities": [
+     {
+      "project": "Gestión de línea de montaje",
+      "tasks": [
+       "Supervisión de la producción diaria",
+       "Implantación de indicadores de calidad"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje las incidencias de calidad en un 25%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Minitab"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2006",
+    "institution": "Deusto Business School",
+    "degree": "MBA Executive",
+    "fieldOfStudy": "Dirección de operaciones",
+    "achievements": [
+     "Proyecto sobre la aplicación de Lean en la industria de automoción"
+    ]
+   },
+   {
+    "year": "1998",
+    "institution": "Universidad del País Vasco",
+    "degree": "Ingeniería Industrial",
+    "fieldOfStudy": "Organización industrial",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Lean Six Sigma Black Belt",
+    "institution": "ASQ",
+    "year": "2011",
+    "description": "Certificación en metodologías de mejora continua y reducción de la variabilidad."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "Minitab",
+    "MES",
+    "Power BI"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Negociación",
+    "Resolución de problemas",
+    "Orientación a resultados"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    },
+    {
+     "language": "Alemán",
+     "proficiency": {
+      "read": "intermediate",
+      "written": "basic",
+      "spoken": "intermediate"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Programa de descarbonización industrial",
+    "description": "Plan plurianual de reducción de emisiones y eficiencia energética en seis plantas.",
+    "date": "2021-09",
+    "impact": "Reducción del 18% del consumo energético y de las emisiones de CO2."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Montañismo",
+   "Vino y enología",
+   "Lectura de ensayo"
+  ],
+  "references": [
+   {
+    "name": "Iñaki Zubieta",
+    "position": "Presidente del consejo",
+    "company": "CIE Automotive",
+    "contact": {
+     "phone": "+34 688 442 019",
+     "email": "inaki.zubieta@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 200000,
+   "max": 280000
+  },
+  "candidateClustering": {
+   "primaryCluster": "General Management",
+   "secondaryClusters": [
+    "Industrial Operations",
+    "Manufacturing Leadership"
+   ],
+   "functionalExpertise": [
+    "Plant management",
+    "P&L management",
+    "Operational excellence",
+    "Sustainability"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "EBITDA margin improvement",
+    "Energy consumption reduction",
+    "Productivity gains"
+   ],
+   "industryDomains": [
+    "Manufacturing",
+    "Automotive"
+   ],
+   "environmentFit": [
+    "Industrial",
+    "Multi-plant",
+    "Unionized"
+   ],
+   "seniorityLevel": "executive",
+   "leadershipAndInfluence": "executiveInfluence",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.91,
+   "clusterReasoning": "Directora gerente industrial con responsabilidad multi-planta sobre el P&L y un historial de mejora del margen y digitalización de la fabricación."
+  },
+  "searchIndex": {
+   "roles": [
+    "Managing Director",
+    "General Manager",
+    "Plant Director"
+   ],
+   "skills": [
+    "P&L Management",
+    "Lean Manufacturing",
+    "Six Sigma",
+    "Operational Excellence",
+    "SAP"
+   ],
+   "industries": [
+    "Manufacturing",
+    "Automotive",
+    "Industrial"
+   ]
+  },
+  "tags": [
+   "managing-director",
+   "manufacturing",
+   "operations",
+   "lean",
+   "executive"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Director de país (Country Manager) con quince años de experiencia en el sector de gran consumo, liderando filiales de multinacionales en España y México. Responsable de estrategias comerciales, marketing y de la cuenta de resultados de la filial ibérica. Especialista en construcción de marca, expansión de la distribución y gestión de equipos multiculturales.",
+  "careerStartYear": 2005,
+  "personalInformation": {
+   "name": "Alejandro Beltrán Cortázar",
+   "role": "Director de País (Country Manager)",
+   "summary": "Ejecutivo de gran consumo enfocado en el crecimiento de cuota de mercado, la construcción de marca y la dirección de filiales rentables.",
+   "contact": {
+    "phone": "+34 699 340 118",
+    "email": "alejandro.beltran@example.com",
+    "address": {
+     "streetNumber": "233",
+     "streetName": "Diagonal",
+     "streetType": "Avinguda",
+     "city": "Barcelona",
+     "state": "Barcelona",
+     "zipCode": "08018",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/alejandrobeltrancortazar"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-12-01",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Jueves por la mañana",
+     "Viernes por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Dirección de filial",
+    "skills": [
+     "Gestión del P&L de país",
+     "Dirección comercial",
+     "Planificación estratégica"
+    ]
+   },
+   {
+    "category": "Marketing y marca",
+    "skills": [
+     "Estrategia de marca",
+     "Trade marketing",
+     "Marketing digital",
+     "Investigación de mercado"
+    ]
+   },
+   {
+    "category": "Ventas y distribución",
+    "skills": [
+     "Gran distribución",
+     "Key account management",
+     "Expansión de canales"
+    ]
+   },
+   {
+    "category": "Personas",
+    "skills": [
+     "Gestión de equipos multiculturales",
+     "Desarrollo de talento comercial"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección general de filial",
+    "Estrategia comercial",
+    "Gestión de marca",
+    "Gran consumo"
+   ],
+   "keyResponsibilities": [
+    "Responsabilidad sobre la cuenta de resultados de la filial",
+    "Definición de la estrategia comercial y de marketing",
+    "Negociación con las grandes cadenas de distribución",
+    "Liderazgo del comité de dirección local"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Danone",
+    "website": "https://www.danone.com",
+    "location": "Barcelona, España",
+    "from": "2017-02",
+    "to": "Present",
+    "position": "Director de País (España y Portugal)",
+    "activities": [
+     {
+      "project": "Recuperación de cuota de mercado en lácteos",
+      "tasks": [
+       "Rediseño de la estrategia de marca y precios",
+       "Renegociación de los acuerdos con la gran distribución",
+       "Lanzamiento de la gama de productos vegetales"
+      ]
+     }
+    ],
+    "achievements": [
+     "Aumenté la cuota de mercado en 3 puntos en tres años",
+     "Crecí los ingresos de la filial un 28%",
+     "Lideré el lanzamiento más exitoso de la categoría en la región"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Nielsen",
+     "Salesforce",
+     "Power BI"
+    ]
+   },
+   {
+    "company": "Grupo Bimbo",
+    "website": "https://www.grupobimbo.com",
+    "location": "Ciudad de México, México",
+    "from": "2011-05",
+    "to": "2017-01",
+    "position": "Director Comercial Nacional",
+    "activities": [
+     {
+      "project": "Expansión de la distribución nacional",
+      "tasks": [
+       "Dirección de la fuerza de ventas nacional",
+       "Desarrollo de nuevos canales de venta"
+      ]
+     }
+    ],
+    "achievements": [
+     "Amplié la cobertura de distribución a 90.000 nuevos puntos de venta",
+     "Crecí las ventas un 35% en cinco años"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Nielsen",
+     "Salesforce"
+    ]
+   },
+   {
+    "company": "Procter & Gamble",
+    "website": "https://www.pg.com",
+    "location": "Ciudad de México, México",
+    "from": "2005-08",
+    "to": "2011-04",
+    "position": "Responsable de cuentas clave",
+    "activities": [
+     {
+      "project": "Gestión de grandes cadenas de distribución",
+      "tasks": [
+       "Negociación de acuerdos anuales con Walmart y Soriana",
+       "Desarrollo de planes de trade marketing"
+      ]
+     }
+    ],
+    "achievements": [
+     "Crecí la facturación de las cuentas gestionadas un 40%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Nielsen"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2010",
+    "institution": "IPADE Business School",
+    "degree": "MBA",
+    "fieldOfStudy": "Dirección comercial y marketing",
+    "achievements": [
+     "Beca de excelencia académica"
+    ]
+   },
+   {
+    "year": "2005",
+    "institution": "Instituto Tecnológico Autónomo de México (ITAM)",
+    "degree": "Licenciatura en Administración de Empresas",
+    "fieldOfStudy": "Marketing",
+    "achievements": []
+   }
+  ],
+  "certifications": [],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "Nielsen",
+    "Salesforce",
+    "Power BI"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Negociación",
+    "Orientación al cliente",
+    "Adaptabilidad cultural"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Lanzamiento de gama vegetal",
+    "description": "Dirección del lanzamiento de una nueva línea de productos de origen vegetal en el mercado ibérico.",
+    "date": "2021-03",
+    "impact": "Alcanzó el liderazgo de la categoría en 18 meses."
+   },
+   {
+    "title": "Reestructuración comercial",
+    "description": "Rediseño de la organización comercial y del modelo de cobertura de la filial.",
+    "date": "2018-06",
+    "impact": "Incremento del 12% de la eficiencia de la fuerza de ventas."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Ciclismo de carretera",
+   "Gastronomía latinoamericana",
+   "Fotografía de viajes"
+  ],
+  "references": [
+   {
+    "name": "Carmen Ortiz",
+    "position": "Vicepresidenta regional",
+    "company": "Danone",
+    "contact": {
+     "phone": "+34 699 118 220",
+     "email": "carmen.ortiz@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 170000,
+   "max": 230000
+  },
+  "candidateClustering": {
+   "primaryCluster": "General Management",
+   "secondaryClusters": [
+    "Consumer Goods Leadership",
+    "Commercial Strategy"
+   ],
+   "functionalExpertise": [
+    "Country management",
+    "P&L management",
+    "Brand strategy",
+    "Sales leadership"
+   ],
+   "skillDepth": "hybrid",
+   "businessImpact": [
+    "Market share growth",
+    "Revenue growth",
+    "Distribution expansion"
+   ],
+   "industryDomains": [
+    "Consumer Goods",
+    "FMCG"
+   ],
+   "environmentFit": [
+    "Multinational subsidiary",
+    "Consumer",
+    "Multicultural"
+   ],
+   "seniorityLevel": "director",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.9,
+   "clusterReasoning": "Director de país en gran consumo con responsabilidad sobre el P&L de la filial y un historial de crecimiento de cuota de mercado y marca."
+  },
+  "searchIndex": {
+   "roles": [
+    "Country Manager",
+    "General Manager",
+    "Commercial Director"
+   ],
+   "skills": [
+    "P&L Management",
+    "Brand Strategy",
+    "Key Account Management",
+    "Trade Marketing",
+    "Nielsen"
+   ],
+   "industries": [
+    "Consumer Goods",
+    "FMCG",
+    "Retail"
+   ]
+  },
+  "tags": [
+   "country-manager",
+   "general-management",
+   "consumer-goods",
+   "fmcg",
+   "director"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Directora general con más de dieciocho años en el sector sanitario y de dispositivos médicos, con responsabilidad sobre unidades de negocio y hospitales privados. Ha liderado la apertura de nuevos centros, la mejora de la calidad asistencial y la rentabilidad de las operaciones. Combina rigor clínico con una sólida gestión empresarial.",
+  "careerStartYear": 2004,
+  "personalInformation": {
+   "name": "Beatriz Company Sanchís",
+   "role": "Director General (General Manager)",
+   "summary": "Directiva del sector salud orientada a la excelencia asistencial, la eficiencia operativa y el crecimiento sostenible de la red de centros.",
+   "contact": {
+    "phone": "+34 622 550 771",
+    "email": "beatriz.company@example.com",
+    "address": {
+     "streetNumber": "29",
+     "streetName": "de Colón",
+     "streetType": "Carrer",
+     "city": "Valencia",
+     "state": "Valencia",
+     "zipCode": "46004",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/beatrizcompanysanchis"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-10-15",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Martes por la mañana",
+     "Jueves por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "onsite",
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Dirección de centros",
+    "skills": [
+     "Gestión hospitalaria",
+     "Gestión del P&L",
+     "Calidad asistencial",
+     "Acreditaciones sanitarias"
+    ]
+   },
+   {
+    "category": "Estrategia",
+    "skills": [
+     "Planificación estratégica",
+     "Apertura de centros",
+     "Alianzas con aseguradoras"
+    ]
+   },
+   {
+    "category": "Operaciones",
+    "skills": [
+     "Gestión de la ocupación",
+     "Eficiencia clínica",
+     "Compras hospitalarias"
+    ]
+   },
+   {
+    "category": "Personas",
+    "skills": [
+     "Dirección de equipos médicos",
+     "Gestión del talento sanitario"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección general de centros sanitarios",
+    "Calidad asistencial",
+    "Rentabilidad hospitalaria",
+    "Relación con aseguradoras"
+   ],
+   "keyResponsibilities": [
+    "Responsabilidad sobre la cuenta de resultados de los centros",
+    "Garantía de la calidad y la seguridad del paciente",
+    "Negociación con las principales aseguradoras",
+    "Liderazgo del comité de dirección clínico"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Grupo Quirónsalud",
+    "website": "https://www.quironsalud.com",
+    "location": "Valencia, España",
+    "from": "2014-06",
+    "to": "Present",
+    "position": "Director General de la región de Levante",
+    "activities": [
+     {
+      "project": "Crecimiento y calidad de la red de hospitales",
+      "tasks": [
+       "Dirección de cuatro hospitales privados",
+       "Obtención de la acreditación Joint Commission",
+       "Negociación de acuerdos con aseguradoras"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré el margen operativo de la región en 5 puntos",
+     "Lideré la apertura de dos nuevos centros ambulatorios",
+     "Elevé el índice de satisfacción del paciente al 92%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "HIS",
+     "Power BI"
+    ]
+   },
+   {
+    "company": "Vithas",
+    "website": "https://www.vithas.es",
+    "location": "Valencia, España",
+    "from": "2009-03",
+    "to": "2014-05",
+    "position": "Directora de hospital",
+    "activities": [
+     {
+      "project": "Mejora de la eficiencia clínica",
+      "tasks": [
+       "Gestión del cuadro de mando asistencial",
+       "Optimización de los quirófanos y la ocupación"
+      ]
+     }
+    ],
+    "achievements": [
+     "Aumenté la ocupación de quirófanos en un 15%",
+     "Reduje la estancia media hospitalaria"
+    ],
+    "toolsAndTechnologies": [
+     "HIS",
+     "SAP",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Boston Scientific",
+    "website": "https://www.bostonscientific.com",
+    "location": "Madrid, España",
+    "from": "2004-09",
+    "to": "2009-02",
+    "position": "Responsable de unidad de negocio",
+    "activities": [
+     {
+      "project": "Comercialización de dispositivos cardiovasculares",
+      "tasks": [
+       "Gestión de la cartera de productos",
+       "Formación clínica a hospitales"
+      ]
+     }
+    ],
+    "achievements": [
+     "Crecí la unidad de negocio un 30% en cuatro años"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Salesforce"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2012",
+    "institution": "ESADE Business School",
+    "degree": "MBA Executive",
+    "fieldOfStudy": "Gestión sanitaria",
+    "achievements": [
+     "Proyecto sobre modelos de financiación hospitalaria"
+    ]
+   },
+   {
+    "year": "2004",
+    "institution": "Universidad de Valencia",
+    "degree": "Licenciatura en Medicina",
+    "fieldOfStudy": "Medicina",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Diploma en Gestión de Servicios Sanitarios",
+    "institution": "EADA",
+    "year": "2010",
+    "description": "Formación especializada en dirección y economía de la salud."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "HIS",
+    "Power BI",
+    "Excel"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Empatía",
+    "Rigor",
+    "Orientación al paciente"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Acreditación Joint Commission",
+    "description": "Dirección del proyecto de acreditación internacional de calidad y seguridad del paciente.",
+    "date": "2019-11",
+    "impact": "Primer hospital de la región en obtener la acreditación."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Senderismo",
+   "Música clásica",
+   "Divulgación sanitaria"
+  ],
+  "references": [
+   {
+    "name": "Fernando Gil",
+    "position": "Director médico corporativo",
+    "company": "Grupo Quirónsalud",
+    "contact": {
+     "phone": "+34 622 118 990",
+     "email": "fernando.gil@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 160000,
+   "max": 220000
+  },
+  "candidateClustering": {
+   "primaryCluster": "General Management",
+   "secondaryClusters": [
+    "Healthcare Leadership",
+    "Hospital Management"
+   ],
+   "functionalExpertise": [
+    "Hospital management",
+    "P&L management",
+    "Clinical quality",
+    "Payer negotiation"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Operating margin improvement",
+    "Patient satisfaction increase",
+    "New center openings"
+   ],
+   "industryDomains": [
+    "Healthcare",
+    "Medical Devices"
+   ],
+   "environmentFit": [
+    "Hospital network",
+    "Regulated",
+    "Clinical"
+   ],
+   "seniorityLevel": "director",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.89,
+   "clusterReasoning": "Directora general del sector sanitario con formación médica y responsabilidad sobre el P&L de una red de hospitales privados."
+  },
+  "searchIndex": {
+   "roles": [
+    "General Manager",
+    "Hospital Director",
+    "Regional Director"
+   ],
+   "skills": [
+    "P&L Management",
+    "Hospital Management",
+    "Clinical Quality",
+    "Joint Commission",
+    "Healthcare Operations"
+   ],
+   "industries": [
+    "Healthcare",
+    "Hospitals",
+    "Medical Devices"
+   ]
+  },
+  "tags": [
+   "general-manager",
+   "healthcare",
+   "hospital",
+   "clinical-quality",
+   "director"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Presidente ejecutivo y consejero con más de veinticinco años en servicios financieros y en compañías participadas por fondos de private equity. Ha presidido consejos de administración, liderado planes de creación de valor y supervisado varias desinversiones. Aporta una profunda experiencia en gobierno corporativo, estrategia y relación con inversores institucionales.",
+  "careerStartYear": 1996,
+  "personalInformation": {
+   "name": "Ignacio Bárcena del Río",
+   "role": "Presidente Ejecutivo",
+   "summary": "Consejero y presidente ejecutivo especializado en gobierno corporativo, creación de valor en carteras de private equity y estrategia de servicios financieros.",
+   "contact": {
+    "phone": "+34 610 990 442",
+    "email": "ignacio.barcena@example.com",
+    "address": {
+     "streetNumber": "55",
+     "streetName": "de Velázquez",
+     "streetType": "Calle",
+     "city": "Madrid",
+     "state": "Madrid",
+     "zipCode": "28001",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/ignaciobarcenadelrio",
+     "website": "https://ignaciobarcena.example.com"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-09-01",
+    "noticePeriodDays": 120,
+    "interviewAvailability": [
+     "Lunes por la mañana",
+     "Miércoles por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "boardAppointment",
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Gobierno corporativo",
+    "skills": [
+     "Presidencia de consejos",
+     "Gestión de comités",
+     "Cumplimiento normativo",
+     "Relación con reguladores"
+    ]
+   },
+   {
+    "category": "Estrategia y capital",
+    "skills": [
+     "Creación de valor",
+     "Fusiones y adquisiciones",
+     "Desinversiones",
+     "Relación con inversores"
+    ]
+   },
+   {
+    "category": "Servicios financieros",
+    "skills": [
+     "Banca",
+     "Gestión de activos",
+     "Seguros",
+     "Riesgos"
+    ]
+   },
+   {
+    "category": "Liderazgo",
+    "skills": [
+     "Dirección general",
+     "Gestión del P&L",
+     "Planificación estratégica"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Gobierno corporativo",
+    "Creación de valor en private equity",
+    "Estrategia financiera",
+    "Relación con inversores institucionales"
+   ],
+   "keyResponsibilities": [
+    "Presidencia del consejo de administración",
+    "Supervisión de la estrategia y los planes de creación de valor",
+    "Liderazgo de los procesos de desinversión",
+    "Relación con los inversores y los reguladores"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Miura Partners",
+    "website": "https://www.miurapartners.com",
+    "location": "Madrid, España",
+    "from": "2013-01",
+    "to": "Present",
+    "position": "Presidente Ejecutivo de compañías participadas",
+    "activities": [
+     {
+      "project": "Creación de valor en la cartera de private equity",
+      "tasks": [
+       "Presidencia de los consejos de tres compañías participadas",
+       "Diseño de los planes de creación de valor a cien días",
+       "Dirección de dos procesos de desinversión"
+      ]
+     }
+    ],
+    "achievements": [
+     "Lideré desinversiones con múltiplos superiores a 3x el capital invertido",
+     "Presidí la transformación de una compañía de seguros hacia un modelo digital",
+     "Nombrado consejero independiente de dos compañías cotizadas"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Power BI",
+     "Bloomberg"
+    ]
+   },
+   {
+    "company": "Banco Santander",
+    "website": "https://www.santander.com",
+    "location": "Madrid, España",
+    "from": "2003-05",
+    "to": "2012-12",
+    "position": "Director General de Banca de Empresas",
+    "activities": [
+     {
+      "project": "Dirección de la banca de empresas",
+      "tasks": [
+       "Responsabilidad sobre la cuenta de resultados de la división",
+       "Gestión del riesgo de crédito de la cartera"
+      ]
+     }
+    ],
+    "achievements": [
+     "Crecí el margen de la división un 20% en cinco años",
+     "Reduje la morosidad por debajo de la media del sector"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Bloomberg"
+    ]
+   },
+   {
+    "company": "McKinsey & Company",
+    "website": "https://www.mckinsey.com",
+    "location": "Madrid, España",
+    "from": "1996-09",
+    "to": "2003-04",
+    "position": "Socio del área de servicios financieros",
+    "activities": [
+     {
+      "project": "Estrategia para bancos y aseguradoras",
+      "tasks": [
+       "Dirección de proyectos de estrategia corporativa",
+       "Asesoramiento a comités de dirección"
+      ]
+     }
+    ],
+    "achievements": [
+     "Lideré el área de servicios financieros de la oficina de Madrid"
+    ],
+    "toolsAndTechnologies": [
+     "Bloomberg",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "1998",
+    "institution": "Harvard Business School",
+    "degree": "MBA",
+    "fieldOfStudy": "Finanzas y estrategia",
+    "achievements": [
+     "Baker Scholar (primer decil de la promoción)"
+    ]
+   },
+   {
+    "year": "1996",
+    "institution": "Universidad Pontificia Comillas (ICADE)",
+    "degree": "Licenciatura en Derecho y Administración de Empresas (E-3)",
+    "fieldOfStudy": "Derecho y empresa",
+    "achievements": [
+     "Premio extraordinario de fin de carrera"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Programa de Alta Dirección (PADE)",
+    "institution": "IESE Business School",
+    "year": "2011",
+    "description": "Programa de alta dirección para consejeros y primeros ejecutivos."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Bloomberg",
+    "SAP",
+    "Power BI",
+    "Excel"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Visión estratégica",
+    "Influencia",
+    "Ética profesional"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    },
+    {
+     "language": "Francés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "intermediate"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Desinversión de compañía de seguros",
+    "description": "Dirección del proceso de venta de una aseguradora participada tras su transformación digital.",
+    "date": "2020-07",
+    "impact": "Múltiplo de salida superior a 3x sobre el capital invertido."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Ópera",
+   "Filantropía educativa",
+   "Esquí"
+  ],
+  "references": [
+   {
+    "name": "Sofía Nadal",
+    "position": "Managing Partner",
+    "company": "Miura Partners",
+    "contact": {
+     "phone": "+34 610 220 118",
+     "email": "sofia.nadal@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 260000,
+   "max": 380000
+  },
+  "candidateClustering": {
+   "primaryCluster": "General Management",
+   "secondaryClusters": [
+    "Corporate Governance",
+    "Private Equity Value Creation"
+   ],
+   "functionalExpertise": [
+    "Board leadership",
+    "Corporate strategy",
+    "M&A",
+    "Investor relations"
+   ],
+   "skillDepth": "hybrid",
+   "businessImpact": [
+    "Successful PE exits",
+    "Value creation plans",
+    "Digital transformation"
+   ],
+   "industryDomains": [
+    "Financial Services",
+    "Private Equity"
+   ],
+   "environmentFit": [
+    "Board",
+    "PE-backed",
+    "Regulated"
+   ],
+   "seniorityLevel": "executive",
+   "leadershipAndInfluence": "executiveInfluence",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.93,
+   "clusterReasoning": "Presidente ejecutivo y consejero con dilatada experiencia en gobierno corporativo y creación de valor en carteras de private equity de servicios financieros."
+  },
+  "searchIndex": {
+   "roles": [
+    "Executive Chairman",
+    "President",
+    "Board Member"
+   ],
+   "skills": [
+    "Corporate Governance",
+    "M&A",
+    "Value Creation",
+    "Investor Relations",
+    "Strategy"
+   ],
+   "industries": [
+    "Financial Services",
+    "Private Equity",
+    "Banking"
+   ]
+  },
+  "tags": [
+   "president",
+   "chairman",
+   "board",
+   "private-equity",
+   "financial-services",
+   "executive"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Directora de operaciones (COO) con veinte años escalando las operaciones de compañías tecnológicas de alto crecimiento. Ha construido funciones de operaciones, atención al cliente y éxito del cliente para empresas SaaS con miles de clientes. Especialista en eficiencia operativa, sistemas y la creación de organizaciones capaces de crecer rápidamente.",
+  "careerStartYear": 2003,
+  "personalInformation": {
+   "name": "Cristina Vallejo Herranz",
+   "role": "Directora de Operaciones (COO)",
+   "summary": "Ejecutiva de operaciones centrada en escalar procesos, sistemas y equipos en compañías tecnológicas de rápido crecimiento.",
+   "contact": {
+    "phone": "+34 655 110 923",
+    "email": "cristina.vallejo@example.com",
+    "address": {
+     "streetNumber": "120",
+     "streetName": "de Balmes",
+     "streetType": "Carrer",
+     "city": "Barcelona",
+     "state": "Barcelona",
+     "zipCode": "08008",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/cristinavallejoherranz"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-11-15",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Lunes por la tarde",
+     "Jueves por la mañana"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "remote"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Operaciones",
+    "skills": [
+     "Excelencia operativa",
+     "Diseño de procesos",
+     "Escalado organizativo",
+     "Gestión de sistemas"
+    ]
+   },
+   {
+    "category": "Cliente",
+    "skills": [
+     "Éxito del cliente",
+     "Atención al cliente",
+     "Retención y renovación"
+    ]
+   },
+   {
+    "category": "Estrategia",
+    "skills": [
+     "Planificación operativa",
+     "OKR",
+     "Gestión del P&L operativo"
+    ]
+   },
+   {
+    "category": "Datos",
+    "skills": [
+     "Analítica operativa",
+     "KPIs",
+     "Automatización de procesos"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección de operaciones",
+    "Escalado de compañías SaaS",
+    "Éxito del cliente",
+    "Eficiencia operativa"
+   ],
+   "keyResponsibilities": [
+    "Dirección de las operaciones, el soporte y el éxito del cliente",
+    "Diseño de los procesos y sistemas de la compañía",
+    "Responsabilidad sobre los indicadores operativos y de retención",
+    "Liderazgo de la planificación operativa anual"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Factorial",
+    "website": "https://www.factorialhr.com",
+    "location": "Barcelona, España",
+    "from": "2018-04",
+    "to": "Present",
+    "position": "Directora de Operaciones (COO)",
+    "activities": [
+     {
+      "project": "Escalado de las operaciones globales",
+      "tasks": [
+       "Construcción de las funciones de operaciones y éxito del cliente",
+       "Implantación del modelo de OKR",
+       "Automatización de los procesos de onboarding de clientes"
+      ]
+     }
+    ],
+    "achievements": [
+     "Escalé la operación de 50 a 900 empleados",
+     "Reduje el tiempo de activación de clientes en un 45%",
+     "Mejoré la retención neta de ingresos hasta el 115%"
+    ],
+    "toolsAndTechnologies": [
+     "Salesforce",
+     "Zendesk",
+     "Looker",
+     "Workday"
+    ]
+   },
+   {
+    "company": "Wallapop",
+    "website": "https://www.wallapop.com",
+    "location": "Barcelona, España",
+    "from": "2013-06",
+    "to": "2018-03",
+    "position": "VP de Operaciones",
+    "activities": [
+     {
+      "project": "Operaciones de marketplace",
+      "tasks": [
+       "Dirección de las operaciones de confianza y seguridad",
+       "Gestión del soporte a millones de usuarios"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje el coste de soporte por usuario en un 30%",
+     "Escalé el equipo de operaciones a 200 personas"
+    ],
+    "toolsAndTechnologies": [
+     "Zendesk",
+     "Looker",
+     "Jira"
+    ]
+   },
+   {
+    "company": "Amazon",
+    "website": "https://www.amazon.es",
+    "location": "Madrid, España",
+    "from": "2003-09",
+    "to": "2013-05",
+    "position": "Responsable de operaciones logísticas",
+    "activities": [
+     {
+      "project": "Operaciones de centro logístico",
+      "tasks": [
+       "Gestión de la operativa diaria del centro",
+       "Implantación de mejoras de productividad"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré la productividad del centro un 25%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2008",
+    "institution": "ESADE Business School",
+    "degree": "MBA",
+    "fieldOfStudy": "Dirección de operaciones",
+    "achievements": []
+   },
+   {
+    "year": "2003",
+    "institution": "Universitat Politècnica de Catalunya",
+    "degree": "Ingeniería Industrial",
+    "fieldOfStudy": "Organización industrial",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Certified Scrum Master",
+    "institution": "Scrum Alliance",
+    "year": "2015",
+    "description": "Certificación en gestión ágil de proyectos y equipos."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Salesforce",
+    "Zendesk",
+    "Looker",
+    "Workday",
+    "SAP"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Pensamiento sistémico",
+    "Orientación a resultados",
+    "Gestión del cambio"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    },
+    {
+     "language": "Catalán",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Automatización del onboarding de clientes",
+    "description": "Rediseño y automatización integral del proceso de activación de nuevos clientes.",
+    "date": "2021-02",
+    "impact": "Reducción del 45% del tiempo de activación."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Trail running",
+   "Diseño de procesos",
+   "Cocina mediterránea"
+  ],
+  "references": [
+   {
+    "name": "Jordi Puig",
+    "position": "Consejero delegado",
+    "company": "Factorial",
+    "contact": {
+     "phone": "+34 655 442 118",
+     "email": "jordi.puig@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 180000,
+   "max": 250000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Operations Leadership",
+   "secondaryClusters": [
+    "SaaS Operations",
+    "Customer Success"
+   ],
+   "functionalExpertise": [
+    "Operational excellence",
+    "Scaling organizations",
+    "Customer success",
+    "Process design"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Faster customer activation",
+    "Improved net revenue retention",
+    "Organizational scaling"
+   ],
+   "industryDomains": [
+    "Technology",
+    "SaaS"
+   ],
+   "environmentFit": [
+    "Scale-up",
+    "High-growth",
+    "Remote-friendly"
+   ],
+   "seniorityLevel": "executive",
+   "leadershipAndInfluence": "executiveInfluence",
+   "learningVelocity": "veryHigh",
+   "clusterConfidenceScore": 0.92,
+   "clusterReasoning": "Directora de operaciones con historial de escalado de operaciones y éxito del cliente en compañías SaaS de alto crecimiento."
+  },
+  "searchIndex": {
+   "roles": [
+    "Chief Operating Officer",
+    "VP of Operations",
+    "Head of Operations"
+   ],
+   "skills": [
+    "Operational Excellence",
+    "Customer Success",
+    "Process Design",
+    "Scaling",
+    "Salesforce"
+   ],
+   "industries": [
+    "Technology",
+    "SaaS",
+    "Marketplace"
+   ]
+  },
+  "tags": [
+   "coo",
+   "operations",
+   "saas",
+   "customer-success",
+   "executive"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Vicepresidente de operaciones con dieciséis años en entornos industriales y de fabricación de gran volumen. Especialista en Lean, planificación de la producción y gestión de plantas multinacionales. Ha liderado programas de mejora continua que han elevado la productividad y reducido los costes operativos de forma sostenida.",
+  "careerStartYear": 2006,
+  "personalInformation": {
+   "name": "Héctor Palomares Ruiz",
+   "role": "Vicepresidente de Operaciones",
+   "summary": "Líder de operaciones industriales especializado en Lean Manufacturing, planificación de la producción y mejora continua a escala multiplanta.",
+   "contact": {
+    "phone": "+34 676 330 445",
+    "email": "hector.palomares@example.com",
+    "address": {
+     "streetNumber": "14",
+     "streetName": "del Coso",
+     "streetType": "Calle",
+     "city": "Zaragoza",
+     "state": "Zaragoza",
+     "zipCode": "50003",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/hectorpalomaresruiz"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-12-15",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Miércoles por la mañana",
+     "Viernes por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "onsite",
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Operaciones industriales",
+    "skills": [
+     "Lean Manufacturing",
+     "Six Sigma",
+     "Planificación de la producción",
+     "Gestión de plantas"
+    ]
+   },
+   {
+    "category": "Cadena de suministro",
+    "skills": [
+     "Aprovisionamiento",
+     "Gestión de inventarios",
+     "Planificación S&OP"
+    ]
+   },
+   {
+    "category": "Calidad",
+    "skills": [
+     "Sistemas de calidad",
+     "ISO 9001",
+     "Auditorías de proceso"
+    ]
+   },
+   {
+    "category": "Mejora continua",
+    "skills": [
+     "Kaizen",
+     "TPM",
+     "Reducción de costes"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección de operaciones industriales",
+    "Lean Manufacturing",
+    "Planificación de la producción",
+    "Mejora continua"
+   ],
+   "keyResponsibilities": [
+    "Dirección de las operaciones de varias plantas",
+    "Liderazgo de los programas de mejora continua",
+    "Gestión de los indicadores de productividad y coste",
+    "Coordinación de la planificación S&OP"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "BSH Electrodomésticos",
+    "website": "https://www.bsh-group.com",
+    "location": "Zaragoza, España",
+    "from": "2016-02",
+    "to": "Present",
+    "position": "Vicepresidente de Operaciones",
+    "activities": [
+     {
+      "project": "Programa multiplanta de excelencia operativa",
+      "tasks": [
+       "Dirección de las operaciones de tres plantas",
+       "Despliegue del sistema de producción del grupo",
+       "Coordinación del proceso S&OP"
+      ]
+     }
+    ],
+    "achievements": [
+     "Aumenté la productividad global un 20% en cuatro años",
+     "Reduje los costes de no calidad en un 35%",
+     "Mejoré el nivel de servicio al 98%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Minitab",
+     "MES",
+     "Power BI"
+    ]
+   },
+   {
+    "company": "Michelin",
+    "website": "https://www.michelin.com",
+    "location": "Valladolid, España",
+    "from": "2010-03",
+    "to": "2016-01",
+    "position": "Responsable de producción",
+    "activities": [
+     {
+      "project": "Optimización de líneas de fabricación",
+      "tasks": [
+       "Gestión de las líneas de producción",
+       "Implantación de TPM"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje las paradas no planificadas en un 40%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Minitab",
+     "MES"
+    ]
+   },
+   {
+    "company": "Opel España",
+    "website": "https://www.opel.es",
+    "location": "Zaragoza, España",
+    "from": "2006-09",
+    "to": "2010-02",
+    "position": "Ingeniero de procesos",
+    "activities": [
+     {
+      "project": "Mejora de procesos de montaje",
+      "tasks": [
+       "Análisis de tiempos y métodos",
+       "Implantación de estaciones de trabajo estandarizadas"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje el tiempo de ciclo de montaje en un 12%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Minitab"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2013",
+    "institution": "IE Business School",
+    "degree": "Executive MBA",
+    "fieldOfStudy": "Dirección de operaciones",
+    "achievements": []
+   },
+   {
+    "year": "2006",
+    "institution": "Universidad de Zaragoza",
+    "degree": "Ingeniería Industrial",
+    "fieldOfStudy": "Mecánica",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Lean Six Sigma Black Belt",
+    "institution": "ASQ",
+    "year": "2012",
+    "description": "Certificación en mejora continua y control estadístico de procesos."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "Minitab",
+    "MES",
+    "Power BI"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Rigor analítico",
+    "Gestión de equipos",
+    "Orientación a resultados"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    },
+    {
+     "language": "Francés",
+     "proficiency": {
+      "read": "intermediate",
+      "written": "basic",
+      "spoken": "intermediate"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Despliegue del sistema de producción del grupo",
+    "description": "Implantación de un sistema estandarizado de producción Lean en tres plantas.",
+    "date": "2020-04",
+    "impact": "Incremento del 20% de la productividad global."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Ciclismo de montaña",
+   "Bricolaje",
+   "Ajedrez"
+  ],
+  "references": [
+   {
+    "name": "Nuria Sáez",
+    "position": "Directora industrial",
+    "company": "BSH Electrodomésticos",
+    "contact": {
+     "phone": "+34 676 118 220",
+     "email": "nuria.saez@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 130000,
+   "max": 175000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Operations Leadership",
+   "secondaryClusters": [
+    "Manufacturing Operations",
+    "Continuous Improvement"
+   ],
+   "functionalExpertise": [
+    "Lean manufacturing",
+    "Production planning",
+    "Plant management",
+    "Continuous improvement"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Productivity gains",
+    "Cost of poor quality reduction",
+    "Service level improvement"
+   ],
+   "industryDomains": [
+    "Manufacturing",
+    "Automotive",
+    "Consumer Durables"
+   ],
+   "environmentFit": [
+    "Industrial",
+    "Multi-plant",
+    "Lean"
+   ],
+   "seniorityLevel": "lead",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.88,
+   "clusterReasoning": "Vicepresidente de operaciones industriales con experiencia multiplanta y un historial sólido de mejora de la productividad mediante Lean."
+  },
+  "searchIndex": {
+   "roles": [
+    "VP of Operations",
+    "Operations Director",
+    "Head of Manufacturing"
+   ],
+   "skills": [
+    "Lean Manufacturing",
+    "Six Sigma",
+    "Production Planning",
+    "S&OP",
+    "SAP"
+   ],
+   "industries": [
+    "Manufacturing",
+    "Automotive",
+    "Consumer Durables"
+   ]
+  },
+  "tags": [
+   "vp-operations",
+   "manufacturing",
+   "lean",
+   "continuous-improvement",
+   "lead"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Responsable global de cadena de suministro con más de dieciocho años en distribución y gran consumo. Ha diseñado redes logísticas internacionales, liderado la digitalización de la planificación de la demanda y gestionado presupuestos logísticos de más de 300 millones de euros. Experta en resiliencia de la cadena de suministro y sostenibilidad logística.",
+  "careerStartYear": 2004,
+  "personalInformation": {
+   "name": "Nerea Goikoetxea Larrañaga",
+   "role": "Directora Global de Cadena de Suministro",
+   "summary": "Líder de supply chain especializada en el diseño de redes logísticas, la planificación de la demanda y la resiliencia de la cadena de suministro.",
+   "contact": {
+    "phone": "+34 644 220 771",
+    "email": "nerea.goikoetxea@example.com",
+    "address": {
+     "streetNumber": "88",
+     "streetName": "de Alcalá",
+     "streetType": "Calle",
+     "city": "Madrid",
+     "state": "Madrid",
+     "zipCode": "28009",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/nereagoikoetxea"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-10-01",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Martes por la tarde",
+     "Jueves por la mañana"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Cadena de suministro",
+    "skills": [
+     "Diseño de redes logísticas",
+     "Planificación de la demanda",
+     "Gestión de almacenes",
+     "Transporte y distribución"
+    ]
+   },
+   {
+    "category": "Planificación",
+    "skills": [
+     "S&OP",
+     "Gestión de inventarios",
+     "Forecasting"
+    ]
+   },
+   {
+    "category": "Aprovisionamiento",
+    "skills": [
+     "Compras estratégicas",
+     "Gestión de proveedores",
+     "Negociación"
+    ]
+   },
+   {
+    "category": "Sostenibilidad",
+    "skills": [
+     "Logística sostenible",
+     "Reducción de la huella de carbono",
+     "Economía circular"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección de cadena de suministro",
+    "Diseño de redes logísticas",
+    "Planificación de la demanda",
+    "Sostenibilidad logística"
+   ],
+   "keyResponsibilities": [
+    "Dirección de la cadena de suministro global",
+    "Diseño y optimización de la red logística",
+    "Gestión del presupuesto logístico",
+    "Liderazgo del proceso S&OP"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Inditex",
+    "website": "https://www.inditex.com",
+    "location": "Madrid, España",
+    "from": "2015-05",
+    "to": "Present",
+    "position": "Directora Global de Cadena de Suministro",
+    "activities": [
+     {
+      "project": "Digitalización de la planificación y resiliencia logística",
+      "tasks": [
+       "Rediseño de la red logística europea",
+       "Implantación de la planificación de la demanda con inteligencia artificial",
+       "Diseño del plan de resiliencia post-pandemia"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje los plazos de entrega a tienda en un 30%",
+     "Disminuí el stock inmovilizado en 120 millones de euros",
+     "Reduje la huella de carbono logística en un 22%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Blue Yonder",
+     "Power BI",
+     "Kinaxis"
+    ]
+   },
+   {
+    "company": "El Corte Inglés",
+    "website": "https://www.elcorteingles.es",
+    "location": "Madrid, España",
+    "from": "2009-03",
+    "to": "2015-04",
+    "position": "Responsable de Planificación y Logística",
+    "activities": [
+     {
+      "project": "Optimización de inventarios",
+      "tasks": [
+       "Gestión de la planificación de la demanda",
+       "Optimización de los niveles de inventario"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré la rotación de inventario un 18%",
+     "Reduje las roturas de stock en un 25%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Blue Yonder",
+     "Excel"
+    ]
+   },
+   {
+    "company": "DHL Supply Chain",
+    "website": "https://www.dhl.com",
+    "location": "Madrid, España",
+    "from": "2004-09",
+    "to": "2009-02",
+    "position": "Responsable de operaciones logísticas",
+    "activities": [
+     {
+      "project": "Gestión de centros de distribución",
+      "tasks": [
+       "Gestión de la operativa de almacenes",
+       "Coordinación del transporte"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré la productividad de los almacenes un 20%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "WMS"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2011",
+    "institution": "EADA Business School",
+    "degree": "MBA Executive",
+    "fieldOfStudy": "Supply chain management",
+    "achievements": []
+   },
+   {
+    "year": "2004",
+    "institution": "Universidad del País Vasco",
+    "degree": "Ingeniería Industrial",
+    "fieldOfStudy": "Organización industrial",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "APICS CSCP (Certified Supply Chain Professional)",
+    "institution": "APICS",
+    "year": "2013",
+    "description": "Certificación internacional en gestión de la cadena de suministro."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "Blue Yonder",
+    "Kinaxis",
+    "Power BI",
+    "WMS"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Pensamiento analítico",
+    "Negociación",
+    "Gestión del cambio"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    },
+    {
+     "language": "Euskera",
+     "proficiency": {
+      "read": "native",
+      "written": "fluent",
+      "spoken": "native"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Planificación de la demanda con IA",
+    "description": "Implantación de un sistema de previsión de la demanda basado en aprendizaje automático.",
+    "date": "2022-01",
+    "impact": "Mejora del 20% de la precisión de la previsión."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Vela ligera",
+   "Yoga",
+   "Viajes sostenibles"
+  ],
+  "references": [
+   {
+    "name": "Pablo Herrera",
+    "position": "Director de operaciones",
+    "company": "Inditex",
+    "contact": {
+     "phone": "+34 644 118 990",
+     "email": "pablo.herrera@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 140000,
+   "max": 190000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Operations Leadership",
+   "secondaryClusters": [
+    "Supply Chain Management",
+    "Logistics"
+   ],
+   "functionalExpertise": [
+    "Supply chain design",
+    "Demand planning",
+    "Logistics",
+    "Sustainability"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Lead-time reduction",
+    "Inventory reduction",
+    "Carbon footprint reduction"
+   ],
+   "industryDomains": [
+    "Retail",
+    "Consumer Goods",
+    "Logistics"
+   ],
+   "environmentFit": [
+    "Global supply chain",
+    "Retail",
+    "Sustainability-focused"
+   ],
+   "seniorityLevel": "principal",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.9,
+   "clusterReasoning": "Directora global de cadena de suministro con experiencia en diseño de redes logísticas y digitalización de la planificación de la demanda en el sector retail."
+  },
+  "searchIndex": {
+   "roles": [
+    "Head of Supply Chain",
+    "Supply Chain Director",
+    "VP Supply Chain"
+   ],
+   "skills": [
+    "Supply Chain Design",
+    "Demand Planning",
+    "S&OP",
+    "Logistics",
+    "SAP"
+   ],
+   "industries": [
+    "Retail",
+    "Consumer Goods",
+    "Logistics"
+   ]
+  },
+  "tags": [
+   "supply-chain",
+   "operations",
+   "logistics",
+   "retail",
+   "principal"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Director de operaciones con quince años en el sector sanitario y farmacéutico, responsable de operaciones asistenciales, servicios generales y proyectos de mejora de procesos clínicos. Ha liderado la transformación operativa de redes de centros y la implantación de sistemas de gestión hospitalaria. Orientado a la eficiencia sin comprometer la calidad asistencial.",
+  "careerStartYear": 2007,
+  "personalInformation": {
+   "name": "David Aranguren Peña",
+   "role": "Director de Operaciones",
+   "summary": "Directivo de operaciones sanitarias centrado en la eficiencia de los procesos asistenciales y la transformación operativa de redes de centros.",
+   "contact": {
+    "phone": "+34 633 440 118",
+    "email": "david.aranguren@example.com",
+    "address": {
+     "streetNumber": "40",
+     "streetName": "de la Constitución",
+     "streetType": "Avenida",
+     "city": "Sevilla",
+     "state": "Sevilla",
+     "zipCode": "41001",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/davidarangurenpena"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-11-01",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Lunes por la mañana",
+     "Miércoles por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "onsite",
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Operaciones sanitarias",
+    "skills": [
+     "Gestión de procesos clínicos",
+     "Servicios generales",
+     "Gestión de la ocupación",
+     "Continuidad asistencial"
+    ]
+   },
+   {
+    "category": "Mejora de procesos",
+    "skills": [
+     "Lean Healthcare",
+     "Gestión por procesos",
+     "Reducción de listas de espera"
+    ]
+   },
+   {
+    "category": "Sistemas",
+    "skills": [
+     "Implantación de HIS",
+     "Digitalización clínica",
+     "Historia clínica electrónica"
+    ]
+   },
+   {
+    "category": "Calidad y seguridad",
+    "skills": [
+     "Seguridad del paciente",
+     "Acreditaciones",
+     "Gestión de riesgos"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección de operaciones sanitarias",
+    "Mejora de procesos clínicos",
+    "Transformación operativa",
+    "Sistemas de gestión hospitalaria"
+   ],
+   "keyResponsibilities": [
+    "Dirección de las operaciones asistenciales y de soporte",
+    "Liderazgo de los proyectos de mejora de procesos",
+    "Implantación de los sistemas de gestión hospitalaria",
+    "Gestión de los indicadores operativos y de calidad"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Grupo HLA (Asisa)",
+    "website": "https://www.hlahospitales.com",
+    "location": "Sevilla, España",
+    "from": "2016-01",
+    "to": "Present",
+    "position": "Director de Operaciones de la región sur",
+    "activities": [
+     {
+      "project": "Transformación operativa de la red de hospitales",
+      "tasks": [
+       "Rediseño de los procesos asistenciales",
+       "Implantación de la historia clínica electrónica",
+       "Reducción de las listas de espera quirúrgicas"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje las listas de espera quirúrgicas en un 35%",
+     "Implanté la historia clínica electrónica en cinco hospitales",
+     "Mejoré la eficiencia de los quirófanos un 18%"
+    ],
+    "toolsAndTechnologies": [
+     "HIS",
+     "SAP",
+     "Power BI"
+    ]
+   },
+   {
+    "company": "Sanofi",
+    "website": "https://www.sanofi.com",
+    "location": "Barcelona, España",
+    "from": "2011-04",
+    "to": "2015-12",
+    "position": "Responsable de operaciones y servicios",
+    "activities": [
+     {
+      "project": "Optimización de servicios generales",
+      "tasks": [
+       "Gestión de los servicios generales de la planta",
+       "Coordinación de proveedores logísticos"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje los costes de servicios generales un 15%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Cruz Roja Española",
+    "website": "https://www.cruzroja.es",
+    "location": "Sevilla, España",
+    "from": "2007-09",
+    "to": "2011-03",
+    "position": "Coordinador de operaciones",
+    "activities": [
+     {
+      "project": "Coordinación de recursos asistenciales",
+      "tasks": [
+       "Gestión de la logística de recursos",
+       "Coordinación de equipos de campo"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré los tiempos de respuesta operativa un 20%"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "ERP"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2014",
+    "institution": "EOI Escuela de Organización Industrial",
+    "degree": "Máster en Gestión Sanitaria",
+    "fieldOfStudy": "Gestión de servicios de salud",
+    "achievements": []
+   },
+   {
+    "year": "2007",
+    "institution": "Universidad de Sevilla",
+    "degree": "Ingeniería en Organización Industrial",
+    "fieldOfStudy": "Organización industrial",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Lean Healthcare",
+    "institution": "Instituto Lean Management",
+    "year": "2017",
+    "description": "Certificación en aplicación de metodologías Lean al entorno sanitario."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "HIS",
+    "SAP",
+    "Power BI",
+    "ERP"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Orientación a procesos",
+    "Empatía",
+    "Resolución de problemas"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "intermediate",
+      "written": "intermediate",
+      "spoken": "intermediate"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Implantación de la historia clínica electrónica",
+    "description": "Despliegue de la historia clínica electrónica en toda la red de hospitales de la región.",
+    "date": "2020-10",
+    "impact": "Digitalización completa de cinco hospitales."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Running",
+   "Fotografía",
+   "Voluntariado sanitario"
+  ],
+  "references": [
+   {
+    "name": "Ana Belén Ríos",
+    "position": "Directora médica regional",
+    "company": "Grupo HLA",
+    "contact": {
+     "phone": "+34 633 118 220",
+     "email": "anabelen.rios@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 110000,
+   "max": 150000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Operations Leadership",
+   "secondaryClusters": [
+    "Healthcare Operations",
+    "Process Improvement"
+   ],
+   "functionalExpertise": [
+    "Healthcare operations",
+    "Process improvement",
+    "Systems implementation",
+    "Clinical efficiency"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Waiting-list reduction",
+    "Operating-room efficiency",
+    "Digital transformation"
+   ],
+   "industryDomains": [
+    "Healthcare",
+    "Pharmaceutical"
+   ],
+   "environmentFit": [
+    "Hospital network",
+    "Regulated",
+    "Clinical"
+   ],
+   "seniorityLevel": "director",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.87,
+   "clusterReasoning": "Director de operaciones sanitarias con experiencia en transformación de procesos clínicos e implantación de sistemas de gestión hospitalaria."
+  },
+  "searchIndex": {
+   "roles": [
+    "Operations Director",
+    "Head of Operations",
+    "Healthcare Operations Manager"
+   ],
+   "skills": [
+    "Healthcare Operations",
+    "Process Improvement",
+    "Lean Healthcare",
+    "HIS Implementation",
+    "SAP"
+   ],
+   "industries": [
+    "Healthcare",
+    "Pharmaceutical",
+    "Hospitals"
+   ]
+  },
+  "tags": [
+   "operations-director",
+   "healthcare",
+   "process-improvement",
+   "lean",
+   "director"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Directora de operaciones con doce años en logística y compañías participadas por private equity, con experiencia entre Colombia y España. Ha liderado la integración operativa tras adquisiciones, la optimización de redes de distribución y la implantación de indicadores de rendimiento. Reconocida por su capacidad de ejecución en entornos de alta exigencia.",
+  "careerStartYear": 2010,
+  "personalInformation": {
+   "name": "Valentina Restrepo Ossa",
+   "role": "Directora de Operaciones",
+   "summary": "Directiva de operaciones logísticas centrada en la integración post-adquisición, la eficiencia de la distribución y la gestión por indicadores en compañías participadas.",
+   "contact": {
+    "phone": "+34 651 220 447",
+    "email": "valentina.restrepo@example.com",
+    "address": {
+     "streetNumber": "11",
+     "streetName": "de Colón",
+     "streetType": "Carrer",
+     "city": "Valencia",
+     "state": "Valencia",
+     "zipCode": "46004",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/valentinarestrepoossa"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-09-15",
+    "noticePeriodDays": 45,
+    "interviewAvailability": [
+     "Martes por la mañana",
+     "Viernes por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Operaciones logísticas",
+    "skills": [
+     "Gestión de redes de distribución",
+     "Transporte",
+     "Gestión de almacenes",
+     "Última milla"
+    ]
+   },
+   {
+    "category": "Integración",
+    "skills": [
+     "Integración post-adquisición",
+     "Estandarización de procesos",
+     "Gestión del cambio"
+    ]
+   },
+   {
+    "category": "Rendimiento",
+    "skills": [
+     "KPIs operativos",
+     "Cuadros de mando",
+     "Reducción de costes"
+    ]
+   },
+   {
+    "category": "Tecnología",
+    "skills": [
+     "Sistemas WMS/TMS",
+     "Automatización logística",
+     "Analítica de datos"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección de operaciones logísticas",
+    "Integración post-adquisición",
+    "Optimización de redes de distribución",
+    "Gestión por indicadores"
+   ],
+   "keyResponsibilities": [
+    "Dirección de las operaciones de distribución",
+    "Liderazgo de la integración de compañías adquiridas",
+    "Gestión de los indicadores de rendimiento operativo",
+    "Implantación de sistemas WMS y TMS"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Sesé Logística",
+    "website": "https://www.gruposese.com",
+    "location": "Valencia, España",
+    "from": "2018-03",
+    "to": "Present",
+    "position": "Directora de Operaciones",
+    "activities": [
+     {
+      "project": "Integración operativa de adquisiciones",
+      "tasks": [
+       "Integración de dos compañías logísticas adquiridas",
+       "Estandarización de los procesos de almacén",
+       "Implantación de un sistema TMS unificado"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje los costes operativos un 16% tras la integración",
+     "Unifiqué los sistemas de gestión de seis centros",
+     "Mejoré el nivel de servicio de entrega al 97%"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "TMS",
+     "WMS",
+     "Power BI"
+    ]
+   },
+   {
+    "company": "Coordinadora Mercantil",
+    "website": "https://www.coordinadora.com",
+    "location": "Bogotá, Colombia",
+    "from": "2014-02",
+    "to": "2018-02",
+    "position": "Gerente de Operaciones",
+    "activities": [
+     {
+      "project": "Optimización de la red de distribución nacional",
+      "tasks": [
+       "Gestión de la red de centros de distribución",
+       "Optimización de rutas de última milla"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje los costes de transporte un 18%",
+     "Mejoré los plazos de entrega en un 25%"
+    ],
+    "toolsAndTechnologies": [
+     "WMS",
+     "TMS",
+     "Excel"
+    ]
+   },
+   {
+    "company": "DHL Colombia",
+    "website": "https://www.dhl.com",
+    "location": "Bogotá, Colombia",
+    "from": "2010-08",
+    "to": "2014-01",
+    "position": "Coordinadora de operaciones",
+    "activities": [
+     {
+      "project": "Gestión de centro de distribución",
+      "tasks": [
+       "Supervisión de la operativa diaria del centro",
+       "Implantación de indicadores de productividad"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré la productividad del centro un 20%"
+    ],
+    "toolsAndTechnologies": [
+     "WMS",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2016",
+    "institution": "INCAE Business School",
+    "degree": "MBA",
+    "fieldOfStudy": "Operaciones y logística",
+    "achievements": [
+     "Beca de mérito académico"
+    ]
+   },
+   {
+    "year": "2010",
+    "institution": "Universidad de los Andes",
+    "degree": "Ingeniería Industrial",
+    "fieldOfStudy": "Logística y operaciones",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "APICS CPIM",
+    "institution": "APICS",
+    "year": "2017",
+    "description": "Certificación en gestión de producción e inventarios."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "TMS",
+    "WMS",
+    "Power BI"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Ejecución",
+    "Adaptabilidad",
+    "Gestión del cambio"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Integración de compañías adquiridas",
+    "description": "Dirección de la integración operativa y de sistemas de dos compañías logísticas adquiridas.",
+    "date": "2021-06",
+    "impact": "Reducción del 16% de los costes operativos combinados."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Baile latino",
+   "Running",
+   "Cocina colombiana"
+  ],
+  "references": [
+   {
+    "name": "Manuel Ferrer",
+    "position": "Director general",
+    "company": "Sesé Logística",
+    "contact": {
+     "phone": "+34 651 118 990",
+     "email": "manuel.ferrer@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 100000,
+   "max": 140000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Operations Leadership",
+   "secondaryClusters": [
+    "Logistics Operations",
+    "Post-Merger Integration"
+   ],
+   "functionalExpertise": [
+    "Logistics operations",
+    "Post-merger integration",
+    "Distribution networks",
+    "Performance management"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Operating-cost reduction",
+    "Service-level improvement",
+    "Systems unification"
+   ],
+   "industryDomains": [
+    "Logistics",
+    "Private Equity"
+   ],
+   "environmentFit": [
+    "PE-backed",
+    "Logistics",
+    "Post-acquisition"
+   ],
+   "seniorityLevel": "senior",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.86,
+   "clusterReasoning": "Directora de operaciones logísticas con experiencia en integración post-adquisición y optimización de redes de distribución en compañías participadas."
+  },
+  "searchIndex": {
+   "roles": [
+    "Director of Operations",
+    "Operations Manager",
+    "Logistics Director"
+   ],
+   "skills": [
+    "Logistics Operations",
+    "Post-Merger Integration",
+    "Distribution",
+    "WMS",
+    "TMS"
+   ],
+   "industries": [
+    "Logistics",
+    "Private Equity",
+    "Transportation"
+   ]
+  },
+  "tags": [
+   "operations-director",
+   "logistics",
+   "post-merger-integration",
+   "distribution",
+   "senior"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Director financiero (CFO) con más de veinte años en compañías tecnológicas y de alto crecimiento, con experiencia en rondas de financiación, salidas a bolsa y operaciones de M&A. Ha construido funciones financieras escalables, liderado la relación con inversores y aportado disciplina financiera sin frenar el crecimiento. Sólido dominio de IFRS y US GAAP.",
+  "careerStartYear": 2002,
+  "personalInformation": {
+   "name": "Guillermo Trujillo Ferrán",
+   "role": "Director Financiero (CFO)",
+   "summary": "Director financiero especializado en compañías tecnológicas, financiación de crecimiento, relación con inversores y operaciones corporativas.",
+   "contact": {
+    "phone": "+34 618 330 552",
+    "email": "guillermo.trujillo@example.com",
+    "address": {
+     "streetNumber": "62",
+     "streetName": "de Génova",
+     "streetType": "Calle",
+     "city": "Madrid",
+     "state": "Madrid",
+     "zipCode": "28004",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/guillermotrujilloferran"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-12-01",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Lunes por la tarde",
+     "Jueves por la mañana"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Dirección financiera",
+    "skills": [
+     "Planificación financiera (FP&A)",
+     "Gestión del P&L",
+     "Tesorería",
+     "Control de gestión"
+    ]
+   },
+   {
+    "category": "Financiación y M&A",
+    "skills": [
+     "Rondas de inversión",
+     "Salida a bolsa (IPO)",
+     "Fusiones y adquisiciones",
+     "Relación con inversores"
+    ]
+   },
+   {
+    "category": "Normativa",
+    "skills": [
+     "IFRS",
+     "US GAAP",
+     "Consolidación",
+     "Fiscalidad internacional"
+    ]
+   },
+   {
+    "category": "Sistemas",
+    "skills": [
+     "NetSuite",
+     "SAP",
+     "Anaplan",
+     "Power BI"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección financiera de compañías tecnológicas",
+    "Financiación de crecimiento",
+    "Operaciones corporativas (M&A/IPO)",
+    "Relación con inversores"
+   ],
+   "keyResponsibilities": [
+    "Dirección de la función financiera global",
+    "Liderazgo de la relación con inversores y el consejo",
+    "Dirección de las operaciones de financiación y M&A",
+    "Garantía del control interno y del reporting"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Cabify",
+    "website": "https://www.cabify.com",
+    "location": "Madrid, España",
+    "from": "2017-01",
+    "to": "Present",
+    "position": "Director Financiero (CFO)",
+    "activities": [
+     {
+      "project": "Escalado financiero y financiación de crecimiento",
+      "tasks": [
+       "Liderazgo de dos rondas de financiación",
+       "Construcción del equipo de FP&A internacional",
+       "Implantación de NetSuite y del reporting bajo IFRS"
+      ]
+     }
+    ],
+    "achievements": [
+     "Capté más de 250 millones de euros en rondas de financiación",
+     "Reduje el consumo de caja (burn rate) en un 40%",
+     "Implanté el reporting internacional bajo IFRS"
+    ],
+    "toolsAndTechnologies": [
+     "NetSuite",
+     "Anaplan",
+     "Power BI",
+     "IFRS"
+    ]
+   },
+   {
+    "company": "Amadeus IT Group",
+    "website": "https://www.amadeus.com",
+    "location": "Madrid, España",
+    "from": "2009-04",
+    "to": "2016-12",
+    "position": "Director de Control de Gestión",
+    "activities": [
+     {
+      "project": "Control de gestión corporativo",
+      "tasks": [
+       "Dirección del proceso presupuestario del grupo",
+       "Análisis de rentabilidad por línea de negocio"
+      ]
+     }
+    ],
+    "achievements": [
+     "Rediseñé el modelo de control de gestión del grupo",
+     "Mejoré la precisión de las previsiones financieras"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Hyperion",
+     "Power BI"
+    ]
+   },
+   {
+    "company": "KPMG",
+    "website": "https://www.kpmg.com",
+    "location": "Madrid, España",
+    "from": "2002-09",
+    "to": "2009-03",
+    "position": "Gerente de Auditoría",
+    "activities": [
+     {
+      "project": "Auditoría de compañías cotizadas",
+      "tasks": [
+       "Dirección de equipos de auditoría",
+       "Revisión de estados financieros bajo IFRS"
+      ]
+     }
+    ],
+    "achievements": [
+     "Promocionado a gerente en tiempo récord"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "IFRS",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2008",
+    "institution": "London Business School",
+    "degree": "Executive MBA",
+    "fieldOfStudy": "Finanzas corporativas",
+    "achievements": []
+   },
+   {
+    "year": "2002",
+    "institution": "Universidad Autónoma de Madrid",
+    "degree": "Licenciatura en Administración y Dirección de Empresas",
+    "fieldOfStudy": "Finanzas",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Auditor de Cuentas (ROAC)",
+    "institution": "ICAC",
+    "year": "2007",
+    "description": "Inscripción en el Registro Oficial de Auditores de Cuentas."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "NetSuite",
+    "SAP",
+    "Anaplan",
+    "Power BI",
+    "IFRS",
+    "US GAAP"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Rigor financiero",
+    "Visión estratégica",
+    "Comunicación con inversores"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Ronda de financiación Serie E",
+    "description": "Dirección integral del proceso de captación de capital con inversores institucionales.",
+    "date": "2021-09",
+    "impact": "Captación de 150 millones de euros."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Maratón",
+   "Mercados financieros",
+   "Vino"
+  ],
+  "references": [
+   {
+    "name": "Laura Sanz",
+    "position": "Consejera delegada",
+    "company": "Cabify",
+    "contact": {
+     "phone": "+34 618 118 220",
+     "email": "laura.sanz@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 200000,
+   "max": 280000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Finance Leadership",
+   "secondaryClusters": [
+    "Technology CFO",
+    "Corporate Finance"
+   ],
+   "functionalExpertise": [
+    "Financial planning",
+    "Fundraising",
+    "M&A",
+    "Investor relations"
+   ],
+   "skillDepth": "hybrid",
+   "businessImpact": [
+    "Capital raised",
+    "Burn-rate reduction",
+    "IFRS reporting implementation"
+   ],
+   "industryDomains": [
+    "Technology",
+    "Mobility"
+   ],
+   "environmentFit": [
+    "Scale-up",
+    "High-growth",
+    "VC/PE-backed"
+   ],
+   "seniorityLevel": "executive",
+   "leadershipAndInfluence": "executiveInfluence",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.93,
+   "clusterReasoning": "Director financiero de tecnología con experiencia en rondas de financiación, escalado de la función financiera y relación con inversores."
+  },
+  "searchIndex": {
+   "roles": [
+    "Chief Financial Officer",
+    "VP Finance",
+    "Finance Director"
+   ],
+   "skills": [
+    "Financial Planning",
+    "Fundraising",
+    "M&A",
+    "IFRS",
+    "NetSuite"
+   ],
+   "industries": [
+    "Technology",
+    "Mobility",
+    "Startups"
+   ]
+  },
+  "tags": [
+   "cfo",
+   "finance",
+   "technology",
+   "fundraising",
+   "executive"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Vicepresidenta de finanzas con dieciséis años en compañías de gran consumo, especializada en planificación financiera, control de gestión y análisis de rentabilidad por categoría. Ha liderado la transformación de la función de FP&A y la implantación de herramientas de planificación integrada. Combina rigor analítico con una fuerte orientación al negocio.",
+  "careerStartYear": 2006,
+  "personalInformation": {
+   "name": "Patricia Alcaraz Montoro",
+   "role": "Vicepresidenta de Finanzas",
+   "summary": "Líder financiera de gran consumo especializada en planificación financiera, control de gestión y análisis de rentabilidad orientado al negocio.",
+   "contact": {
+    "phone": "+34 627 440 118",
+    "email": "patricia.alcaraz@example.com",
+    "address": {
+     "streetNumber": "205",
+     "streetName": "de Aragó",
+     "streetType": "Carrer",
+     "city": "Barcelona",
+     "state": "Barcelona",
+     "zipCode": "08011",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/patriciaalcarazmontoro"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-10-15",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Miércoles por la tarde",
+     "Viernes por la mañana"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Planificación financiera",
+    "skills": [
+     "FP&A",
+     "Presupuestación",
+     "Previsiones",
+     "Análisis de rentabilidad"
+    ]
+   },
+   {
+    "category": "Control de gestión",
+    "skills": [
+     "Control de costes",
+     "Cuadros de mando",
+     "Análisis de márgenes"
+    ]
+   },
+   {
+    "category": "Normativa",
+    "skills": [
+     "IFRS",
+     "Consolidación",
+     "Reporting corporativo"
+    ]
+   },
+   {
+    "category": "Sistemas",
+    "skills": [
+     "SAP",
+     "Anaplan",
+     "Power BI",
+     "Tableau"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Planificación financiera (FP&A)",
+    "Control de gestión",
+    "Análisis de rentabilidad",
+    "Transformación financiera"
+   ],
+   "keyResponsibilities": [
+    "Dirección del proceso de planificación financiera",
+    "Análisis de la rentabilidad por categoría y cliente",
+    "Liderazgo de la transformación de la función de FP&A",
+    "Reporting a la dirección y el consejo"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Puig",
+    "website": "https://www.puig.com",
+    "location": "Barcelona, España",
+    "from": "2016-03",
+    "to": "Present",
+    "position": "Vicepresidenta de Finanzas",
+    "activities": [
+     {
+      "project": "Transformación de la planificación financiera",
+      "tasks": [
+       "Rediseño del proceso de FP&A global",
+       "Implantación de Anaplan para la planificación integrada",
+       "Análisis de rentabilidad por marca y mercado"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje el ciclo de previsión de 6 a 2 semanas",
+     "Mejoré la precisión de las previsiones en 15 puntos",
+     "Identifiqué oportunidades de margen por 20 millones de euros"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Anaplan",
+     "Power BI",
+     "IFRS"
+    ]
+   },
+   {
+    "company": "Henkel Ibérica",
+    "website": "https://www.henkel.com",
+    "location": "Barcelona, España",
+    "from": "2010-05",
+    "to": "2016-02",
+    "position": "Responsable de Control de Gestión",
+    "activities": [
+     {
+      "project": "Control de gestión comercial",
+      "tasks": [
+       "Análisis de la rentabilidad de las categorías",
+       "Gestión del presupuesto comercial"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré la visibilidad de márgenes por categoría",
+     "Optimicé la inversión promocional"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Hyperion",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Nestlé España",
+    "website": "https://www.nestle.es",
+    "location": "Barcelona, España",
+    "from": "2006-09",
+    "to": "2010-04",
+    "position": "Analista financiera senior",
+    "activities": [
+     {
+      "project": "Análisis financiero de negocio",
+      "tasks": [
+       "Elaboración de análisis de rentabilidad",
+       "Apoyo al proceso presupuestario"
+      ]
+     }
+    ],
+    "achievements": [
+     "Automaticé varios informes de gestión recurrentes"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2013",
+    "institution": "ESADE Business School",
+    "degree": "Máster en Dirección Financiera",
+    "fieldOfStudy": "Finanzas corporativas",
+    "achievements": []
+   },
+   {
+    "year": "2006",
+    "institution": "Universitat Pompeu Fabra",
+    "degree": "Licenciatura en Economía",
+    "fieldOfStudy": "Economía financiera",
+    "achievements": [
+     "Matrícula de honor en econometría"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Anaplan Model Builder",
+    "institution": "Anaplan",
+    "year": "2018",
+    "description": "Certificación en construcción de modelos de planificación integrada."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "Anaplan",
+    "Power BI",
+    "Tableau",
+    "IFRS"
+   ],
+   "softSkills": [
+    "Rigor analítico",
+    "Orientación al negocio",
+    "Comunicación",
+    "Liderazgo de equipos"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    },
+    {
+     "language": "Catalán",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Implantación de Anaplan",
+    "description": "Liderazgo de la implantación de una plataforma de planificación integrada para todo el grupo.",
+    "date": "2020-05",
+    "impact": "Reducción del 60% del tiempo del ciclo de previsión."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Pilates",
+   "Novela histórica",
+   "Cocina saludable"
+  ],
+  "references": [
+   {
+    "name": "Xavier Roca",
+    "position": "Director financiero",
+    "company": "Puig",
+    "contact": {
+     "phone": "+34 627 118 220",
+     "email": "xavier.roca@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 120000,
+   "max": 165000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Finance Leadership",
+   "secondaryClusters": [
+    "FP&A",
+    "Management Control"
+   ],
+   "functionalExpertise": [
+    "Financial planning",
+    "Management control",
+    "Profitability analysis",
+    "Financial transformation"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Faster forecast cycle",
+    "Improved forecast accuracy",
+    "Margin opportunities identified"
+   ],
+   "industryDomains": [
+    "Consumer Goods",
+    "FMCG"
+   ],
+   "environmentFit": [
+    "Corporate finance",
+    "Consumer",
+    "Multinational"
+   ],
+   "seniorityLevel": "lead",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.89,
+   "clusterReasoning": "Vicepresidenta de finanzas de gran consumo especializada en FP&A y control de gestión, con liderazgo de proyectos de transformación financiera."
+  },
+  "searchIndex": {
+   "roles": [
+    "VP Finance",
+    "Head of FP&A",
+    "Finance Director"
+   ],
+   "skills": [
+    "FP&A",
+    "Management Control",
+    "Profitability Analysis",
+    "Anaplan",
+    "IFRS"
+   ],
+   "industries": [
+    "Consumer Goods",
+    "FMCG",
+    "Cosmetics"
+   ]
+  },
+  "tags": [
+   "vp-finance",
+   "finance",
+   "fpa",
+   "consumer-goods",
+   "lead"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Director financiero con más de diecinueve años en el sector industrial y de fabricación, responsable de la contabilidad, la tesorería y el control de costes de grupos con varias plantas. Ha liderado la implantación de ERP financieros, la optimización del circulante y la mejora de la información de gestión. Especialista en costes industriales y financiación bancaria.",
+  "careerStartYear": 2003,
+  "personalInformation": {
+   "name": "Óscar Larrañaga Beristain",
+   "role": "Director Financiero",
+   "summary": "Director financiero industrial especializado en costes de fabricación, gestión del circulante y financiación de grupos multiplanta.",
+   "contact": {
+    "phone": "+34 688 550 220",
+    "email": "oscar.larranaga@example.com",
+    "address": {
+     "streetNumber": "21",
+     "streetName": "de Ercilla",
+     "streetType": "Calle",
+     "city": "Bilbao",
+     "state": "Vizcaya",
+     "zipCode": "48009",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/oscarlarranagaberistain"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-11-15",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Lunes por la mañana",
+     "Jueves por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "onsite",
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Dirección financiera",
+    "skills": [
+     "Contabilidad de grupo",
+     "Tesorería",
+     "Control de gestión",
+     "Costes industriales"
+    ]
+   },
+   {
+    "category": "Financiación",
+    "skills": [
+     "Financiación bancaria",
+     "Gestión del circulante",
+     "Relación con entidades financieras"
+    ]
+   },
+   {
+    "category": "Normativa",
+    "skills": [
+     "PGC",
+     "IFRS",
+     "Consolidación",
+     "Fiscalidad"
+    ]
+   },
+   {
+    "category": "Sistemas",
+    "skills": [
+     "SAP FICO",
+     "Power BI",
+     "Anaplan"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección financiera industrial",
+    "Costes de fabricación",
+    "Gestión del circulante",
+    "Financiación"
+   ],
+   "keyResponsibilities": [
+    "Dirección de la contabilidad, la tesorería y el control de gestión",
+    "Gestión de la financiación y la relación bancaria",
+    "Optimización del circulante del grupo",
+    "Elaboración de la información de gestión para la dirección"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Fagor Ederlan",
+    "website": "https://www.fagorederlan.com",
+    "location": "Mondragón, España",
+    "from": "2014-04",
+    "to": "Present",
+    "position": "Director Financiero",
+    "activities": [
+     {
+      "project": "Optimización financiera del grupo",
+      "tasks": [
+       "Implantación de SAP FICO en todas las plantas",
+       "Optimización del capital circulante",
+       "Renegociación de la financiación bancaria"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje el periodo medio de cobro en 12 días",
+     "Mejoré el coste de la financiación en 80 puntos básicos",
+     "Unifiqué el sistema de costes de cinco plantas"
+    ],
+    "toolsAndTechnologies": [
+     "SAP FICO",
+     "Power BI",
+     "IFRS"
+    ]
+   },
+   {
+    "company": "Tubacex",
+    "website": "https://www.tubacex.com",
+    "location": "Álava, España",
+    "from": "2008-03",
+    "to": "2014-03",
+    "position": "Responsable de Control de Gestión",
+    "activities": [
+     {
+      "project": "Control de costes industriales",
+      "tasks": [
+       "Análisis de costes de producción",
+       "Elaboración del presupuesto industrial"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré la visibilidad de los costes por producto",
+     "Reduje las desviaciones presupuestarias"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Excel"
+    ]
+   },
+   {
+    "company": "Deloitte",
+    "website": "https://www.deloitte.com",
+    "location": "Bilbao, España",
+    "from": "2003-09",
+    "to": "2008-02",
+    "position": "Auditor senior",
+    "activities": [
+     {
+      "project": "Auditoría de grupos industriales",
+      "tasks": [
+       "Revisión de estados financieros",
+       "Análisis de control interno"
+      ]
+     }
+    ],
+    "achievements": [
+     "Especialización en el sector industrial"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2011",
+    "institution": "Deusto Business School",
+    "degree": "Máster en Dirección Financiera",
+    "fieldOfStudy": "Finanzas",
+    "achievements": []
+   },
+   {
+    "year": "2003",
+    "institution": "Universidad de Deusto",
+    "degree": "Licenciatura en Administración y Dirección de Empresas",
+    "fieldOfStudy": "Contabilidad y finanzas",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Auditor de Cuentas (ROAC)",
+    "institution": "ICAC",
+    "year": "2009",
+    "description": "Inscripción en el Registro Oficial de Auditores de Cuentas."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP FICO",
+    "Power BI",
+    "Anaplan",
+    "IFRS",
+    "PGC"
+   ],
+   "softSkills": [
+    "Rigor",
+    "Liderazgo",
+    "Orientación al detalle",
+    "Negociación"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "intermediate",
+      "written": "intermediate",
+      "spoken": "intermediate"
+     }
+    },
+    {
+     "language": "Euskera",
+     "proficiency": {
+      "read": "native",
+      "written": "fluent",
+      "spoken": "native"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Unificación del sistema de costes",
+    "description": "Implantación de un sistema de costes homogéneo para las cinco plantas del grupo.",
+    "date": "2019-03",
+    "impact": "Visibilidad comparable de la rentabilidad por planta y producto."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Pelota vasca",
+   "Gastronomía",
+   "Senderismo"
+  ],
+  "references": [
+   {
+    "name": "Amaia Uriarte",
+    "position": "Directora general",
+    "company": "Fagor Ederlan",
+    "contact": {
+     "phone": "+34 688 118 990",
+     "email": "amaia.uriarte@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 115000,
+   "max": 155000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Finance Leadership",
+   "secondaryClusters": [
+    "Industrial Finance",
+    "Cost Controlling"
+   ],
+   "functionalExpertise": [
+    "Group accounting",
+    "Treasury",
+    "Cost controlling",
+    "Banking relationships"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Working-capital improvement",
+    "Financing-cost reduction",
+    "Cost-system unification"
+   ],
+   "industryDomains": [
+    "Manufacturing",
+    "Industrial"
+   ],
+   "environmentFit": [
+    "Industrial",
+    "Multi-plant",
+    "Corporate finance"
+   ],
+   "seniorityLevel": "director",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "medium",
+   "clusterConfidenceScore": 0.88,
+   "clusterReasoning": "Director financiero industrial con experiencia en costes de fabricación, gestión del circulante y financiación de grupos multiplanta."
+  },
+  "searchIndex": {
+   "roles": [
+    "Finance Director",
+    "CFO",
+    "Head of Controlling"
+   ],
+   "skills": [
+    "Cost Controlling",
+    "Treasury",
+    "Working Capital",
+    "SAP FICO",
+    "IFRS"
+   ],
+   "industries": [
+    "Manufacturing",
+    "Industrial",
+    "Steel"
+   ]
+  },
+  "tags": [
+   "finance-director",
+   "finance",
+   "manufacturing",
+   "cost-controlling",
+   "director"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Controller financiero de grupo con quince años en servicios financieros y aseguradoras, responsable de la consolidación, el reporting regulatorio y el control interno de grupos internacionales. Especialista en IFRS 17, Solvencia II y cierres rápidos. Ha liderado la automatización de los procesos de cierre y la mejora del control interno.",
+  "careerStartYear": 2007,
+  "personalInformation": {
+   "name": "Silvia Marcos Bendito",
+   "role": "Controller Financiero de Grupo",
+   "summary": "Controller de grupo especializada en consolidación, reporting regulatorio y control interno en el sector asegurador y financiero.",
+   "contact": {
+    "phone": "+34 640 220 118",
+    "email": "silvia.marcos@example.com",
+    "address": {
+     "streetNumber": "33",
+     "streetName": "de Alcalá",
+     "streetType": "Calle",
+     "city": "Madrid",
+     "state": "Madrid",
+     "zipCode": "28014",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/silviamarcosbendito"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-10-01",
+    "noticePeriodDays": 45,
+    "interviewAvailability": [
+     "Martes por la mañana",
+     "Jueves por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Consolidación y reporting",
+    "skills": [
+     "Consolidación de grupo",
+     "Reporting regulatorio",
+     "Cierres rápidos",
+     "Cuentas anuales"
+    ]
+   },
+   {
+    "category": "Normativa",
+    "skills": [
+     "IFRS",
+     "IFRS 17",
+     "Solvencia II",
+     "US GAAP"
+    ]
+   },
+   {
+    "category": "Control interno",
+    "skills": [
+     "Control interno (SCIIF)",
+     "Gestión de riesgos financieros",
+     "Auditoría interna"
+    ]
+   },
+   {
+    "category": "Sistemas",
+    "skills": [
+     "SAP",
+     "SAP BPC",
+     "Power BI",
+     "Tagetik"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Consolidación financiera de grupo",
+    "Reporting regulatorio",
+    "Control interno",
+    "Normativa IFRS y Solvencia II"
+   ],
+   "keyResponsibilities": [
+    "Dirección del proceso de consolidación del grupo",
+    "Elaboración del reporting regulatorio y las cuentas anuales",
+    "Supervisión del sistema de control interno",
+    "Coordinación con auditores externos"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "MAPFRE",
+    "website": "https://www.mapfre.com",
+    "location": "Madrid, España",
+    "from": "2015-02",
+    "to": "Present",
+    "position": "Controller Financiero de Grupo",
+    "activities": [
+     {
+      "project": "Implantación de IFRS 17 y cierre rápido",
+      "tasks": [
+       "Liderazgo de la implantación de IFRS 17",
+       "Automatización del proceso de consolidación",
+       "Refuerzo del sistema de control interno"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje el plazo de cierre consolidado de 15 a 8 días",
+     "Lideré con éxito la transición a IFRS 17",
+     "Automaticé la consolidación con SAP BPC"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "SAP BPC",
+     "Power BI",
+     "IFRS"
+    ]
+   },
+   {
+    "company": "Grupo Catalana Occidente",
+    "website": "https://www.grupocatalanaoccidente.com",
+    "location": "Barcelona, España",
+    "from": "2011-03",
+    "to": "2015-01",
+    "position": "Responsable de Consolidación",
+    "activities": [
+     {
+      "project": "Consolidación y reporting regulatorio",
+      "tasks": [
+       "Elaboración de los estados consolidados",
+       "Reporting bajo Solvencia II"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré la calidad del reporting regulatorio",
+     "Reduje las incidencias en la consolidación"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Tagetik",
+     "Excel"
+    ]
+   },
+   {
+    "company": "PwC",
+    "website": "https://www.pwc.com",
+    "location": "Madrid, España",
+    "from": "2007-09",
+    "to": "2011-02",
+    "position": "Auditora senior",
+    "activities": [
+     {
+      "project": "Auditoría de entidades aseguradoras",
+      "tasks": [
+       "Auditoría de estados financieros",
+       "Revisión de provisiones técnicas"
+      ]
+     }
+    ],
+    "achievements": [
+     "Especialización en el sector asegurador"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "IFRS",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2012",
+    "institution": "IE Business School",
+    "degree": "Máster en Auditoría y Contabilidad",
+    "fieldOfStudy": "Contabilidad avanzada",
+    "achievements": []
+   },
+   {
+    "year": "2007",
+    "institution": "Universidad Complutense de Madrid",
+    "degree": "Licenciatura en Administración y Dirección de Empresas",
+    "fieldOfStudy": "Contabilidad y auditoría",
+    "achievements": [
+     "Premio extraordinario fin de carrera"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Auditor de Cuentas (ROAC)",
+    "institution": "ICAC",
+    "year": "2013",
+    "description": "Inscripción en el Registro Oficial de Auditores de Cuentas."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "SAP BPC",
+    "Tagetik",
+    "Power BI",
+    "IFRS",
+    "IFRS 17"
+   ],
+   "softSkills": [
+    "Rigor",
+    "Organización",
+    "Liderazgo de equipos",
+    "Atención al detalle"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Implantación de IFRS 17",
+    "description": "Dirección del proyecto de adaptación de los estados financieros del grupo a la norma IFRS 17.",
+    "date": "2022-06",
+    "impact": "Cumplimiento normativo en plazo y automatización del reporting."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Natación",
+   "Teatro",
+   "Voluntariado financiero"
+  ],
+  "references": [
+   {
+    "name": "Roberto Cano",
+    "position": "Director financiero de grupo",
+    "company": "MAPFRE",
+    "contact": {
+     "phone": "+34 640 118 220",
+     "email": "roberto.cano@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 110000,
+   "max": 150000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Finance Leadership",
+   "secondaryClusters": [
+    "Group Controlling",
+    "Regulatory Reporting"
+   ],
+   "functionalExpertise": [
+    "Consolidation",
+    "Regulatory reporting",
+    "Internal control",
+    "IFRS 17"
+   ],
+   "skillDepth": "specialist",
+   "businessImpact": [
+    "Faster consolidated close",
+    "IFRS 17 transition",
+    "Consolidation automation"
+   ],
+   "industryDomains": [
+    "Financial Services",
+    "Insurance"
+   ],
+   "environmentFit": [
+    "Regulated",
+    "Group controlling",
+    "Corporate finance"
+   ],
+   "seniorityLevel": "principal",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.89,
+   "clusterReasoning": "Controller de grupo con dominio de la consolidación, el reporting regulatorio y las normas IFRS 17 y Solvencia II en el sector asegurador."
+  },
+  "searchIndex": {
+   "roles": [
+    "Group Financial Controller",
+    "Head of Consolidation",
+    "Finance Director"
+   ],
+   "skills": [
+    "Consolidation",
+    "Regulatory Reporting",
+    "IFRS 17",
+    "Solvency II",
+    "SAP BPC"
+   ],
+   "industries": [
+    "Financial Services",
+    "Insurance"
+   ]
+  },
+  "tags": [
+   "group-controller",
+   "finance",
+   "consolidation",
+   "insurance",
+   "principal"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Director financiero con dieciocho años entre el sector sanitario y compañías participadas por private equity, con experiencia en creación de valor, refinanciaciones y adquisiciones. Ha liderado las finanzas de grupos hospitalarios en fase de consolidación y ha sido un socio clave del consejo en la ejecución de la estrategia de crecimiento inorgánico.",
+  "careerStartYear": 2004,
+  "personalInformation": {
+   "name": "Rubén Casanova Peris",
+   "role": "Director Financiero (CFO)",
+   "summary": "Director financiero especializado en el sector sanitario y en compañías participadas por private equity, con foco en creación de valor y M&A.",
+   "contact": {
+    "phone": "+34 654 330 118",
+    "email": "ruben.casanova@example.com",
+    "address": {
+     "streetNumber": "9",
+     "streetName": "de la Alameda",
+     "streetType": "Alameda",
+     "city": "Málaga",
+     "state": "Málaga",
+     "zipCode": "29001",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/rubencasanovaperis"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-12-01",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Miércoles por la mañana",
+     "Viernes por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Dirección financiera",
+    "skills": [
+     "Gestión del P&L",
+     "Tesorería",
+     "Control de gestión",
+     "Planificación financiera"
+    ]
+   },
+   {
+    "category": "Operaciones corporativas",
+    "skills": [
+     "Fusiones y adquisiciones",
+     "Refinanciación",
+     "Due diligence",
+     "Creación de valor"
+    ]
+   },
+   {
+    "category": "Private equity",
+    "skills": [
+     "Reporting a fondos",
+     "Covenants bancarios",
+     "Modelización de LBO"
+    ]
+   },
+   {
+    "category": "Sistemas",
+    "skills": [
+     "SAP",
+     "Power BI",
+     "Anaplan"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Dirección financiera en private equity",
+    "Fusiones y adquisiciones",
+    "Creación de valor",
+    "Sector sanitario"
+   ],
+   "keyResponsibilities": [
+    "Dirección de la función financiera del grupo",
+    "Liderazgo de las adquisiciones y su integración financiera",
+    "Gestión de la deuda y los covenants con las entidades financieras",
+    "Reporting al consejo y al fondo inversor"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Vivalto Salud (grupo participado)",
+    "website": "https://www.vivaltosalud.example.com",
+    "location": "Málaga, España",
+    "from": "2016-01",
+    "to": "Present",
+    "position": "Director Financiero (CFO)",
+    "activities": [
+     {
+      "project": "Consolidación y creación de valor de la plataforma sanitaria",
+      "tasks": [
+       "Liderazgo financiero de siete adquisiciones",
+       "Refinanciación de la deuda del grupo",
+       "Reporting mensual al fondo inversor"
+      ]
+     }
+    ],
+    "achievements": [
+     "Lideré la integración financiera de siete adquisiciones",
+     "Refinancié la deuda del grupo mejorando el coste en 120 puntos básicos",
+     "Contribuí a triplicar el EBITDA del grupo en cinco años"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Power BI",
+     "Anaplan",
+     "IFRS"
+    ]
+   },
+   {
+    "company": "Grupo Ribera Salud",
+    "website": "https://www.riberasalud.com",
+    "location": "Valencia, España",
+    "from": "2009-04",
+    "to": "2015-12",
+    "position": "Director de Control de Gestión",
+    "activities": [
+     {
+      "project": "Control de gestión de concesiones sanitarias",
+      "tasks": [
+       "Análisis de la rentabilidad de las concesiones",
+       "Elaboración del presupuesto del grupo"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré el control de la rentabilidad por centro",
+     "Optimicé el proceso presupuestario"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Excel"
+    ]
+   },
+   {
+    "company": "EY",
+    "website": "https://www.ey.com",
+    "location": "Madrid, España",
+    "from": "2004-09",
+    "to": "2009-03",
+    "position": "Consultor de transacciones",
+    "activities": [
+     {
+      "project": "Due diligence financiera",
+      "tasks": [
+       "Ejecución de procesos de due diligence",
+       "Análisis de calidad de resultados"
+      ]
+     }
+    ],
+    "achievements": [
+     "Participé en más de veinte operaciones de M&A"
+    ],
+    "toolsAndTechnologies": [
+     "Excel",
+     "Capital IQ"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2010",
+    "institution": "IESE Business School",
+    "degree": "MBA",
+    "fieldOfStudy": "Finanzas corporativas",
+    "achievements": []
+   },
+   {
+    "year": "2004",
+    "institution": "Universidad de Málaga",
+    "degree": "Licenciatura en Economía",
+    "fieldOfStudy": "Finanzas",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Chartered Financial Analyst (CFA)",
+    "institution": "CFA Institute",
+    "year": "2012",
+    "description": "Certificación internacional en análisis de inversiones y finanzas corporativas."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP",
+    "Power BI",
+    "Anaplan",
+    "IFRS",
+    "Capital IQ"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Visión estratégica",
+    "Negociación",
+    "Ejecución"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Refinanciación del grupo",
+    "description": "Dirección del proceso de refinanciación de la deuda del grupo con un sindicato bancario.",
+    "date": "2021-04",
+    "impact": "Reducción del coste financiero en 120 puntos básicos."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Pádel",
+   "Mercados de capitales",
+   "Buceo"
+  ],
+  "references": [
+   {
+    "name": "Marta Ibáñez",
+    "position": "Directora de inversiones",
+    "company": "Fondo de private equity",
+    "contact": {
+     "phone": "+34 654 118 220",
+     "email": "marta.ibanez@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 170000,
+   "max": 230000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Finance Leadership",
+   "secondaryClusters": [
+    "Private Equity CFO",
+    "M&A"
+   ],
+   "functionalExpertise": [
+    "M&A",
+    "Value creation",
+    "Refinancing",
+    "Financial planning"
+   ],
+   "skillDepth": "hybrid",
+   "businessImpact": [
+    "EBITDA growth",
+    "Financing-cost reduction",
+    "Acquisition integration"
+   ],
+   "industryDomains": [
+    "Healthcare",
+    "Private Equity"
+   ],
+   "environmentFit": [
+    "PE-backed",
+    "Buy-and-build",
+    "Healthcare"
+   ],
+   "seniorityLevel": "director",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.9,
+   "clusterReasoning": "Director financiero con experiencia en M&A y creación de valor en plataformas sanitarias participadas por private equity."
+  },
+  "searchIndex": {
+   "roles": [
+    "Chief Financial Officer",
+    "Finance Director",
+    "VP Finance"
+   ],
+   "skills": [
+    "M&A",
+    "Value Creation",
+    "Refinancing",
+    "Financial Planning",
+    "IFRS"
+   ],
+   "industries": [
+    "Healthcare",
+    "Private Equity"
+   ]
+  },
+  "tags": [
+   "cfo",
+   "finance",
+   "healthcare",
+   "private-equity",
+   "director"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Director de tecnología (CTO) con más de veinte años construyendo plataformas de software a gran escala, con especial foco en fintech y sistemas de pagos. Ha liderado equipos de ingeniería de más de 200 personas, definido arquitecturas cloud-native y establecido prácticas de seguridad y fiabilidad de nivel bancario. Combina visión técnica con una clara orientación al negocio.",
+  "careerStartYear": 2002,
+  "personalInformation": {
+   "name": "Sergio Montalvo Cifuentes",
+   "role": "Director de Tecnología (CTO)",
+   "summary": "Líder tecnológico especializado en plataformas fintech de alta escala, arquitectura cloud-native y organizaciones de ingeniería de alto rendimiento.",
+   "contact": {
+    "phone": "+34 619 440 118",
+    "email": "sergio.montalvo@example.com",
+    "address": {
+     "streetNumber": "77",
+     "streetName": "de Príncipe de Vergara",
+     "streetType": "Calle",
+     "city": "Madrid",
+     "state": "Madrid",
+     "zipCode": "28006",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/sergiomontalvocifuentes",
+     "github": "https://github.com/smontalvo-cto",
+     "website": "https://sergiomontalvo.example.com"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2027-01-15",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Lunes por la tarde",
+     "Miércoles por la mañana"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "remote"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Estrategia tecnológica",
+    "skills": [
+     "Definición de arquitectura",
+     "Estrategia técnica",
+     "Innovación",
+     "Gestión del roadmap técnico"
+    ]
+   },
+   {
+    "category": "Arquitectura y cloud",
+    "skills": [
+     "Microservicios",
+     "AWS",
+     "Kubernetes",
+     "Event-driven architecture"
+    ]
+   },
+   {
+    "category": "Seguridad y fiabilidad",
+    "skills": [
+     "Ciberseguridad",
+     "PCI DSS",
+     "SRE",
+     "Alta disponibilidad"
+    ]
+   },
+   {
+    "category": "Liderazgo de ingeniería",
+    "skills": [
+     "Gestión de equipos de ingeniería",
+     "Cultura de ingeniería",
+     "Contratación técnica"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Estrategia tecnológica",
+    "Arquitectura de plataformas fintech",
+    "Seguridad y fiabilidad",
+    "Liderazgo de organizaciones de ingeniería"
+   ],
+   "keyResponsibilities": [
+    "Definición de la estrategia y la arquitectura tecnológica",
+    "Liderazgo de la organización de ingeniería",
+    "Garantía de la seguridad y la fiabilidad de la plataforma",
+    "Representación de la tecnología ante el comité de dirección"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Bnext",
+    "website": "https://www.bnext.example.com",
+    "location": "Madrid, España",
+    "from": "2016-05",
+    "to": "Present",
+    "position": "Director de Tecnología (CTO)",
+    "activities": [
+     {
+      "project": "Plataforma de banca digital cloud-native",
+      "tasks": [
+       "Rediseño de la plataforma hacia una arquitectura de microservicios",
+       "Implantación de prácticas de SRE y de seguridad PCI DSS",
+       "Escalado del equipo de ingeniería a más de 200 personas"
+      ]
+     }
+    ],
+    "achievements": [
+     "Escalé la plataforma para soportar millones de transacciones diarias",
+     "Reduje las incidencias de producción en un 60%",
+     "Obtuve la certificación PCI DSS de la plataforma"
+    ],
+    "toolsAndTechnologies": [
+     "AWS",
+     "Kubernetes",
+     "Java",
+     "Kafka",
+     "Terraform"
+    ]
+   },
+   {
+    "company": "BBVA",
+    "website": "https://www.bbva.com",
+    "location": "Madrid, España",
+    "from": "2009-03",
+    "to": "2016-04",
+    "position": "Responsable de Arquitectura Digital",
+    "activities": [
+     {
+      "project": "Transformación digital de la banca",
+      "tasks": [
+       "Definición de la arquitectura de las plataformas digitales",
+       "Liderazgo del programa de APIs bancarias"
+      ]
+     }
+    ],
+    "achievements": [
+     "Lideré el lanzamiento de la plataforma de APIs del banco",
+     "Modernicé la arquitectura de los canales digitales"
+    ],
+    "toolsAndTechnologies": [
+     "Java",
+     "AWS",
+     "Docker",
+     "Kafka"
+    ]
+   },
+   {
+    "company": "Telefónica I+D",
+    "website": "https://www.telefonica.com",
+    "location": "Madrid, España",
+    "from": "2002-09",
+    "to": "2009-02",
+    "position": "Arquitecto de software senior",
+    "activities": [
+     {
+      "project": "Plataformas de servicios de telecomunicaciones",
+      "tasks": [
+       "Diseño de sistemas distribuidos",
+       "Desarrollo de servicios de alta disponibilidad"
+      ]
+     }
+    ],
+    "achievements": [
+     "Diseñé varias plataformas de servicios de gran escala"
+    ],
+    "toolsAndTechnologies": [
+     "Java",
+     "Linux",
+     "Oracle"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2014",
+    "institution": "IE Business School",
+    "degree": "Executive MBA",
+    "fieldOfStudy": "Dirección de tecnología",
+    "achievements": []
+   },
+   {
+    "year": "2002",
+    "institution": "Universidad Politécnica de Madrid",
+    "degree": "Ingeniería Informática",
+    "fieldOfStudy": "Sistemas distribuidos",
+    "achievements": [
+     "Proyecto de fin de carrera con mención de honor"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "AWS Certified Solutions Architect - Professional",
+    "institution": "Amazon Web Services",
+    "year": "2019",
+    "description": "Certificación avanzada en diseño de arquitecturas en la nube."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "AWS",
+    "Kubernetes",
+    "Java",
+    "Kafka",
+    "Terraform",
+    "PCI DSS"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Visión estratégica",
+    "Comunicación técnica",
+    "Toma de decisiones"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Migración a arquitectura de microservicios",
+    "description": "Dirección de la migración de la plataforma monolítica a una arquitectura cloud-native de microservicios.",
+    "date": "2020-08",
+    "impact": "Reducción del 60% de las incidencias y escalado a millones de transacciones diarias."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Ciclismo",
+   "Software libre",
+   "Ajedrez"
+  ],
+  "references": [
+   {
+    "name": "Diego Salas",
+    "position": "Consejero delegado",
+    "company": "Bnext",
+    "contact": {
+     "phone": "+34 619 118 220",
+     "email": "diego.salas@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 190000,
+   "max": 260000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Technology & Product Leadership",
+   "secondaryClusters": [
+    "Fintech Engineering",
+    "Cloud Architecture"
+   ],
+   "functionalExpertise": [
+    "Technology strategy",
+    "Cloud architecture",
+    "Security and reliability",
+    "Engineering leadership"
+   ],
+   "skillDepth": "tShaped",
+   "businessImpact": [
+    "Platform scalability",
+    "Incident reduction",
+    "PCI DSS certification"
+   ],
+   "industryDomains": [
+    "Technology",
+    "Fintech",
+    "Banking"
+   ],
+   "environmentFit": [
+    "Scale-up",
+    "Cloud-native",
+    "Regulated"
+   ],
+   "seniorityLevel": "executive",
+   "leadershipAndInfluence": "executiveInfluence",
+   "learningVelocity": "veryHigh",
+   "clusterConfidenceScore": 0.93,
+   "clusterReasoning": "Director de tecnología con experiencia construyendo plataformas fintech de alta escala, liderando grandes organizaciones de ingeniería y prácticas de seguridad bancaria."
+  },
+  "searchIndex": {
+   "roles": [
+    "Chief Technology Officer",
+    "VP Engineering",
+    "Head of Engineering"
+   ],
+   "skills": [
+    "Technology Strategy",
+    "Cloud Architecture",
+    "AWS",
+    "Kubernetes",
+    "PCI DSS"
+   ],
+   "industries": [
+    "Technology",
+    "Fintech",
+    "Banking"
+   ]
+  },
+  "tags": [
+   "cto",
+   "technology",
+   "fintech",
+   "cloud",
+   "engineering",
+   "executive"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Directora de sistemas de información (CIO) con más de dieciocho años liderando la transformación digital de grupos industriales. Ha dirigido programas globales de ERP, la digitalización de fábricas y estrategias de ciberseguridad corporativa. Especialista en alinear la tecnología con los objetivos de negocio y en gestionar grandes carteras de proyectos.",
+  "careerStartYear": 2005,
+  "personalInformation": {
+   "name": "Rosa Villaverde Ochoa",
+   "role": "Directora de Sistemas de Información (CIO)",
+   "summary": "Directiva de tecnología especializada en transformación digital industrial, programas ERP globales y estrategia de ciberseguridad corporativa.",
+   "contact": {
+    "phone": "+34 636 220 118",
+    "email": "rosa.villaverde@example.com",
+    "address": {
+     "streetNumber": "140",
+     "streetName": "de Provença",
+     "streetType": "Carrer",
+     "city": "Barcelona",
+     "state": "Barcelona",
+     "zipCode": "08036",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/rosavillaverdeochoa"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-11-01",
+    "noticePeriodDays": 90,
+    "interviewAvailability": [
+     "Martes por la tarde",
+     "Jueves por la mañana"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "onsite"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": true,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Estrategia de TI",
+    "skills": [
+     "Estrategia digital",
+     "Gobierno de TI",
+     "Gestión de carteras de proyectos",
+     "Arquitectura empresarial"
+    ]
+   },
+   {
+    "category": "Sistemas corporativos",
+    "skills": [
+     "Programas ERP (SAP S/4HANA)",
+     "CRM",
+     "Integración de sistemas"
+    ]
+   },
+   {
+    "category": "Industria 4.0",
+    "skills": [
+     "Digitalización de fábricas",
+     "IoT industrial",
+     "Analítica de datos"
+    ]
+   },
+   {
+    "category": "Ciberseguridad",
+    "skills": [
+     "Estrategia de ciberseguridad",
+     "Gestión de riesgos de TI",
+     "Cumplimiento (NIS2)"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Estrategia y gobierno de TI",
+    "Programas ERP globales",
+    "Digitalización industrial",
+    "Ciberseguridad corporativa"
+   ],
+   "keyResponsibilities": [
+    "Definición de la estrategia de sistemas de información",
+    "Dirección de los programas de transformación digital",
+    "Gestión de la cartera de proyectos y el presupuesto de TI",
+    "Liderazgo de la estrategia de ciberseguridad"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Grupo Antolin",
+    "website": "https://www.grupoantolin.com",
+    "location": "Barcelona, España",
+    "from": "2015-01",
+    "to": "Present",
+    "position": "Directora de Sistemas de Información (CIO)",
+    "activities": [
+     {
+      "project": "Transformación digital global",
+      "tasks": [
+       "Liderazgo del programa global de migración a SAP S/4HANA",
+       "Despliegue de la digitalización en las plantas",
+       "Definición de la estrategia de ciberseguridad"
+      ]
+     }
+    ],
+    "achievements": [
+     "Lideré la migración a SAP S/4HANA en 25 países",
+     "Reduje los costes de TI un 18% mediante consolidación",
+     "Implanté un modelo de ciberseguridad conforme a NIS2"
+    ],
+    "toolsAndTechnologies": [
+     "SAP S/4HANA",
+     "Azure",
+     "Power BI",
+     "ServiceNow"
+    ]
+   },
+   {
+    "company": "Ficosa",
+    "website": "https://www.ficosa.com",
+    "location": "Barcelona, España",
+    "from": "2010-03",
+    "to": "2014-12",
+    "position": "Responsable de Aplicaciones Corporativas",
+    "activities": [
+     {
+      "project": "Armonización de sistemas corporativos",
+      "tasks": [
+       "Estandarización de los sistemas ERP",
+       "Gestión de proyectos de integración"
+      ]
+     }
+    ],
+    "achievements": [
+     "Unifiqué los sistemas de varias filiales",
+     "Mejoré la disponibilidad de los sistemas"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Oracle",
+     "Azure"
+    ]
+   },
+   {
+    "company": "Everis (NTT Data)",
+    "website": "https://www.nttdata.com",
+    "location": "Madrid, España",
+    "from": "2005-09",
+    "to": "2010-02",
+    "position": "Consultora de sistemas",
+    "activities": [
+     {
+      "project": "Implantaciones de ERP para clientes industriales",
+      "tasks": [
+       "Análisis funcional de procesos",
+       "Implantación de módulos de SAP"
+      ]
+     }
+    ],
+    "achievements": [
+     "Participé en varias implantaciones internacionales de SAP"
+    ],
+    "toolsAndTechnologies": [
+     "SAP",
+     "Excel"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2013",
+    "institution": "ESADE Business School",
+    "degree": "Executive MBA",
+    "fieldOfStudy": "Dirección de sistemas de información",
+    "achievements": []
+   },
+   {
+    "year": "2005",
+    "institution": "Universitat Politècnica de Catalunya",
+    "degree": "Ingeniería Informática",
+    "fieldOfStudy": "Sistemas de información",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "TOGAF Certified",
+    "institution": "The Open Group",
+    "year": "2016",
+    "description": "Certificación en arquitectura empresarial."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "SAP S/4HANA",
+    "Azure",
+    "Power BI",
+    "ServiceNow"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Gestión del cambio",
+    "Visión estratégica",
+    "Comunicación"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    },
+    {
+     "language": "Catalán",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Migración global a SAP S/4HANA",
+    "description": "Dirección del programa mundial de migración del ERP corporativo a SAP S/4HANA.",
+    "date": "2021-11",
+    "impact": "Migración de 25 países con reducción del 18% de los costes de TI."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Fotografía digital",
+   "Domótica",
+   "Viajes culturales"
+  ],
+  "references": [
+   {
+    "name": "Enric Costa",
+    "position": "Director de operaciones",
+    "company": "Grupo Antolin",
+    "contact": {
+     "phone": "+34 636 118 220",
+     "email": "enric.costa@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 150000,
+   "max": 210000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Technology & Product Leadership",
+   "secondaryClusters": [
+    "Digital Transformation",
+    "Enterprise IT"
+   ],
+   "functionalExpertise": [
+    "IT strategy",
+    "ERP programs",
+    "Industrial digitalization",
+    "Cybersecurity"
+   ],
+   "skillDepth": "tShaped",
+   "businessImpact": [
+    "ERP migration",
+    "IT-cost reduction",
+    "Cybersecurity compliance"
+   ],
+   "industryDomains": [
+    "Manufacturing",
+    "Automotive"
+   ],
+   "environmentFit": [
+    "Industrial",
+    "Global",
+    "Enterprise IT"
+   ],
+   "seniorityLevel": "director",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.9,
+   "clusterReasoning": "Directora de sistemas de información con experiencia en programas ERP globales, digitalización industrial y estrategia de ciberseguridad."
+  },
+  "searchIndex": {
+   "roles": [
+    "Chief Information Officer",
+    "IT Director",
+    "Head of Digital Transformation"
+   ],
+   "skills": [
+    "IT Strategy",
+    "SAP S/4HANA",
+    "Digital Transformation",
+    "Cybersecurity",
+    "Enterprise Architecture"
+   ],
+   "industries": [
+    "Manufacturing",
+    "Automotive",
+    "Industrial"
+   ]
+  },
+  "tags": [
+   "cio",
+   "technology",
+   "digital-transformation",
+   "erp",
+   "manufacturing",
+   "director"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Director de producto (CPO) con catorce años definiendo la estrategia de producto de plataformas digitales de consumo con millones de usuarios. Ha liderado equipos de producto, diseño y datos, y ha impulsado modelos de crecimiento basados en la experimentación. Reconocido por convertir la visión de negocio en productos que los usuarios adoran.",
+  "careerStartYear": 2008,
+  "personalInformation": {
+   "name": "Adrián Cendán Vilariño",
+   "role": "Director de Producto (CPO)",
+   "summary": "Líder de producto especializado en plataformas digitales de consumo, estrategia de producto basada en datos y crecimiento mediante experimentación.",
+   "contact": {
+    "phone": "+34 662 220 118",
+    "email": "adrian.cendan@example.com",
+    "address": {
+     "streetNumber": "18",
+     "streetName": "de Russafa",
+     "streetType": "Carrer",
+     "city": "Valencia",
+     "state": "Valencia",
+     "zipCode": "46006",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/adriancendanvilarino",
+     "website": "https://adriancendan.example.com"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-10-01",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Lunes por la mañana",
+     "Jueves por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "remote",
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Estrategia de producto",
+    "skills": [
+     "Visión y estrategia de producto",
+     "Product-market fit",
+     "Roadmap",
+     "Priorización"
+    ]
+   },
+   {
+    "category": "Crecimiento",
+    "skills": [
+     "Growth product",
+     "Experimentación (A/B testing)",
+     "Modelos de monetización",
+     "Analítica de producto"
+    ]
+   },
+   {
+    "category": "Descubrimiento",
+    "skills": [
+     "Investigación de usuarios",
+     "Discovery",
+     "Diseño de experiencia (UX)"
+    ]
+   },
+   {
+    "category": "Liderazgo",
+    "skills": [
+     "Gestión de equipos de producto",
+     "Product operations",
+     "Cultura de producto"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Estrategia de producto digital",
+    "Growth y experimentación",
+    "Descubrimiento de producto",
+    "Liderazgo de equipos de producto"
+   ],
+   "keyResponsibilities": [
+    "Definición de la visión y la estrategia de producto",
+    "Liderazgo de los equipos de producto, diseño y datos",
+    "Impulso del crecimiento mediante la experimentación",
+    "Alineación del producto con los objetivos de negocio"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Glovo",
+    "website": "https://www.glovoapp.com",
+    "location": "Valencia, España",
+    "from": "2018-02",
+    "to": "Present",
+    "position": "Director de Producto (CPO)",
+    "activities": [
+     {
+      "project": "Estrategia de producto y crecimiento de la plataforma",
+      "tasks": [
+       "Definición de la estrategia de producto global",
+       "Implantación de una cultura de experimentación",
+       "Liderazgo de los equipos de producto, diseño y datos"
+      ]
+     }
+    ],
+    "achievements": [
+     "Aumenté la conversión de pedidos un 25% mediante experimentación",
+     "Lideré el lanzamiento de nuevas verticales de negocio",
+     "Escalé el equipo de producto a más de 60 personas"
+    ],
+    "toolsAndTechnologies": [
+     "Amplitude",
+     "Mixpanel",
+     "Figma",
+     "Jira"
+    ]
+   },
+   {
+    "company": "Idealista",
+    "website": "https://www.idealista.com",
+    "location": "Madrid, España",
+    "from": "2013-05",
+    "to": "2018-01",
+    "position": "Head of Product",
+    "activities": [
+     {
+      "project": "Producto del marketplace inmobiliario",
+      "tasks": [
+       "Gestión del roadmap de producto",
+       "Optimización del embudo de conversión"
+      ]
+     }
+    ],
+    "achievements": [
+     "Mejoré la conversión del marketplace un 30%",
+     "Lancé el producto de anuncios destacados"
+    ],
+    "toolsAndTechnologies": [
+     "Amplitude",
+     "Figma",
+     "Jira"
+    ]
+   },
+   {
+    "company": "Tuenti",
+    "website": "https://www.tuenti.com",
+    "location": "Madrid, España",
+    "from": "2008-09",
+    "to": "2013-04",
+    "position": "Product Manager",
+    "activities": [
+     {
+      "project": "Producto de red social",
+      "tasks": [
+       "Definición de funcionalidades de producto",
+       "Análisis del comportamiento de usuarios"
+      ]
+     }
+    ],
+    "achievements": [
+     "Lideré funcionalidades usadas por millones de usuarios"
+    ],
+    "toolsAndTechnologies": [
+     "Mixpanel",
+     "Jira"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2015",
+    "institution": "IE Business School",
+    "degree": "Máster en Gestión de Producto Digital",
+    "fieldOfStudy": "Product management",
+    "achievements": []
+   },
+   {
+    "year": "2008",
+    "institution": "Universidade de Santiago de Compostela",
+    "degree": "Ingeniería Informática",
+    "fieldOfStudy": "Interacción persona-ordenador",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Pragmatic Institute Product Management",
+    "institution": "Pragmatic Institute",
+    "year": "2016",
+    "description": "Certificación en gestión de producto orientada al mercado."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Amplitude",
+    "Mixpanel",
+    "Figma",
+    "Jira",
+    "SQL"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Pensamiento estratégico",
+    "Empatía con el usuario",
+    "Comunicación"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    },
+    {
+     "language": "Gallego",
+     "proficiency": {
+      "read": "native",
+      "written": "fluent",
+      "spoken": "native"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Cultura de experimentación",
+    "description": "Implantación de un modelo sistemático de experimentación (A/B testing) en toda la organización de producto.",
+    "date": "2021-03",
+    "impact": "Incremento del 25% de la conversión de pedidos."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Surf",
+   "Diseño de producto",
+   "Podcasts de tecnología"
+  ],
+  "references": [
+   {
+    "name": "Clara Bermúdez",
+    "position": "Consejera delegada",
+    "company": "Glovo",
+    "contact": {
+     "phone": "+34 662 118 220",
+     "email": "clara.bermudez@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 150000,
+   "max": 200000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Technology & Product Leadership",
+   "secondaryClusters": [
+    "Product Strategy",
+    "Growth"
+   ],
+   "functionalExpertise": [
+    "Product strategy",
+    "Growth",
+    "Product discovery",
+    "Product leadership"
+   ],
+   "skillDepth": "tShaped",
+   "businessImpact": [
+    "Conversion increase",
+    "New verticals launched",
+    "Product-team scaling"
+   ],
+   "industryDomains": [
+    "Technology",
+    "Consumer Internet"
+   ],
+   "environmentFit": [
+    "Scale-up",
+    "Consumer",
+    "Data-driven"
+   ],
+   "seniorityLevel": "senior",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "veryHigh",
+   "clusterConfidenceScore": 0.9,
+   "clusterReasoning": "Director de producto con experiencia definiendo la estrategia de producto de plataformas de consumo a gran escala y liderando el crecimiento mediante experimentación."
+  },
+  "searchIndex": {
+   "roles": [
+    "Chief Product Officer",
+    "VP Product",
+    "Head of Product"
+   ],
+   "skills": [
+    "Product Strategy",
+    "Growth",
+    "Experimentation",
+    "Product Discovery",
+    "Analytics"
+   ],
+   "industries": [
+    "Technology",
+    "Consumer Internet",
+    "Marketplace"
+   ]
+  },
+  "tags": [
+   "cpo",
+   "product",
+   "technology",
+   "growth",
+   "consumer",
+   "senior"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Vicepresidenta de ingeniería con quince años construyendo y liderando organizaciones de software de alto rendimiento en compañías SaaS. Especialista en escalar equipos de ingeniería, mejorar la productividad de desarrollo y elevar la calidad y la fiabilidad del software. Ha liderado migraciones a la nube y la adopción de prácticas modernas de entrega continua.",
+  "careerStartYear": 2008,
+  "personalInformation": {
+   "name": "Lorena Espósito Bravo",
+   "role": "Vicepresidenta de Ingeniería",
+   "summary": "Líder de ingeniería especializada en escalar organizaciones de software, entrega continua y fiabilidad de plataformas SaaS.",
+   "contact": {
+    "phone": "+34 646 330 118",
+    "email": "lorena.esposito@example.com",
+    "address": {
+     "streetNumber": "48",
+     "streetName": "de Fuencarral",
+     "streetType": "Calle",
+     "city": "Madrid",
+     "state": "Madrid",
+     "zipCode": "28004",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/lorenaespositobravo",
+     "github": "https://github.com/lesposito-eng"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "openButNotSearching",
+    "availableFrom": "2026-12-01",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Miércoles por la mañana",
+     "Viernes por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "remote",
+     "hybrid"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Liderazgo de ingeniería",
+    "skills": [
+     "Gestión de organizaciones de ingeniería",
+     "Escalado de equipos",
+     "Contratación técnica",
+     "Cultura de ingeniería"
+    ]
+   },
+   {
+    "category": "Entrega de software",
+    "skills": [
+     "Entrega continua (CI/CD)",
+     "DevOps",
+     "Métricas DORA",
+     "Gestión de la deuda técnica"
+    ]
+   },
+   {
+    "category": "Arquitectura",
+    "skills": [
+     "Microservicios",
+     "AWS",
+     "Kubernetes",
+     "Observabilidad"
+    ]
+   },
+   {
+    "category": "Calidad",
+    "skills": [
+     "Fiabilidad (SRE)",
+     "Testing automatizado",
+     "Seguridad del software"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Liderazgo de organizaciones de ingeniería",
+    "Entrega continua y DevOps",
+    "Escalado de equipos",
+    "Fiabilidad de plataformas"
+   ],
+   "keyResponsibilities": [
+    "Dirección de la organización de ingeniería",
+    "Mejora de la productividad y la calidad del desarrollo",
+    "Definición de las prácticas de entrega continua",
+    "Garantía de la fiabilidad de la plataforma"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "TravelPerk",
+    "website": "https://www.travelperk.com",
+    "location": "Madrid, España",
+    "from": "2018-03",
+    "to": "Present",
+    "position": "Vicepresidenta de Ingeniería",
+    "activities": [
+     {
+      "project": "Escalado de la organización de ingeniería",
+      "tasks": [
+       "Escalado del equipo de ingeniería de 40 a 180 personas",
+       "Implantación de prácticas de entrega continua y métricas DORA",
+       "Migración de la plataforma a Kubernetes"
+      ]
+     }
+    ],
+    "achievements": [
+     "Reduje el tiempo de despliegue (lead time) en un 70%",
+     "Mejoré la fiabilidad de la plataforma al 99,95%",
+     "Escalé la organización de ingeniería a 180 personas"
+    ],
+    "toolsAndTechnologies": [
+     "AWS",
+     "Kubernetes",
+     "Python",
+     "Terraform",
+     "Datadog"
+    ]
+   },
+   {
+    "company": "Idealista",
+    "website": "https://www.idealista.com",
+    "location": "Madrid, España",
+    "from": "2013-06",
+    "to": "2018-02",
+    "position": "Engineering Manager",
+    "activities": [
+     {
+      "project": "Modernización de la plataforma",
+      "tasks": [
+       "Gestión de varios equipos de desarrollo",
+       "Migración de servicios a la nube"
+      ]
+     }
+    ],
+    "achievements": [
+     "Migré la plataforma principal a AWS",
+     "Mejoré la cadencia de entrega de los equipos"
+    ],
+    "toolsAndTechnologies": [
+     "AWS",
+     "Java",
+     "Docker"
+    ]
+   },
+   {
+    "company": "Tuenti",
+    "website": "https://www.tuenti.com",
+    "location": "Madrid, España",
+    "from": "2008-09",
+    "to": "2013-05",
+    "position": "Ingeniera de software senior",
+    "activities": [
+     {
+      "project": "Backend de red social",
+      "tasks": [
+       "Desarrollo de servicios de backend de alta escala",
+       "Optimización del rendimiento"
+      ]
+     }
+    ],
+    "achievements": [
+     "Optimicé servicios usados por millones de usuarios"
+    ],
+    "toolsAndTechnologies": [
+     "Python",
+     "MySQL",
+     "Linux"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2016",
+    "institution": "IE Business School",
+    "degree": "Programa de Liderazgo Directivo",
+    "fieldOfStudy": "Liderazgo tecnológico",
+    "achievements": []
+   },
+   {
+    "year": "2008",
+    "institution": "Universidad de Granada",
+    "degree": "Ingeniería Informática",
+    "fieldOfStudy": "Ingeniería del software",
+    "achievements": [
+     "Proyecto de fin de carrera con matrícula de honor"
+    ]
+   }
+  ],
+  "certifications": [
+   {
+    "title": "Certified Kubernetes Administrator (CKA)",
+    "institution": "The Linux Foundation",
+    "year": "2020",
+    "description": "Certificación en administración de clústeres de Kubernetes."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "AWS",
+    "Kubernetes",
+    "Python",
+    "Terraform",
+    "Datadog"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Mentoría",
+    "Comunicación",
+    "Pensamiento sistémico"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Adopción de entrega continua",
+    "description": "Implantación de prácticas de CI/CD y métricas DORA en toda la organización de ingeniería.",
+    "date": "2021-05",
+    "impact": "Reducción del 70% del tiempo de despliegue."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Escalada",
+   "Comunidades open source",
+   "Cerámica"
+  ],
+  "references": [
+   {
+    "name": "Marc Oller",
+    "position": "Director de tecnología",
+    "company": "TravelPerk",
+    "contact": {
+     "phone": "+34 646 118 220",
+     "email": "marc.oller@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 140000,
+   "max": 190000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Technology & Product Leadership",
+   "secondaryClusters": [
+    "Engineering Leadership",
+    "DevOps"
+   ],
+   "functionalExpertise": [
+    "Engineering leadership",
+    "Continuous delivery",
+    "Team scaling",
+    "Platform reliability"
+   ],
+   "skillDepth": "tShaped",
+   "businessImpact": [
+    "Deployment lead-time reduction",
+    "Reliability improvement",
+    "Engineering-org scaling"
+   ],
+   "industryDomains": [
+    "Technology",
+    "SaaS"
+   ],
+   "environmentFit": [
+    "Scale-up",
+    "Cloud-native",
+    "Remote-friendly"
+   ],
+   "seniorityLevel": "lead",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "veryHigh",
+   "clusterConfidenceScore": 0.91,
+   "clusterReasoning": "Vicepresidenta de ingeniería con historial de escalado de organizaciones de software, entrega continua y mejora de la fiabilidad en compañías SaaS."
+  },
+  "searchIndex": {
+   "roles": [
+    "VP Engineering",
+    "Head of Engineering",
+    "Director of Engineering"
+   ],
+   "skills": [
+    "Engineering Leadership",
+    "Continuous Delivery",
+    "Kubernetes",
+    "AWS",
+    "DevOps"
+   ],
+   "industries": [
+    "Technology",
+    "SaaS",
+    "Travel Tech"
+   ]
+  },
+  "tags": [
+   "vp-engineering",
+   "technology",
+   "engineering",
+   "devops",
+   "saas",
+   "lead"
+  ]
+ },
+ {
+  "candidateProfileSummary": "Vicepresidente de producto con quince años en tecnología aplicada a la salud (health tech), especializado en productos digitales para pacientes y profesionales sanitarios. Ha dirigido la estrategia de producto de plataformas reguladas, equilibrando la innovación con el cumplimiento normativo. Experto en trasladar necesidades clínicas complejas a productos usables y seguros.",
+  "careerStartYear": 2008,
+  "personalInformation": {
+   "name": "Joan Ferrán Estruch",
+   "role": "Vicepresidente de Producto",
+   "summary": "Líder de producto en health tech, especializado en plataformas digitales reguladas para pacientes y profesionales sanitarios.",
+   "contact": {
+    "phone": "+34 663 330 118",
+    "email": "joan.ferran@example.com",
+    "address": {
+     "streetNumber": "102",
+     "streetName": "de la Marina",
+     "streetType": "Carrer",
+     "city": "Barcelona",
+     "state": "Barcelona",
+     "zipCode": "08013",
+     "country": "España"
+    },
+    "socialLinks": {
+     "linkedin": "https://www.linkedin.com/in/joanferranestruch"
+    }
+   },
+   "availability": {
+    "openToWork": true,
+    "status": "activelyLooking",
+    "availableFrom": "2026-11-15",
+    "noticePeriodDays": 60,
+    "interviewAvailability": [
+     "Martes por la mañana",
+     "Jueves por la tarde"
+    ],
+    "preferredWorkTypes": [
+     "hybrid",
+     "remote"
+    ],
+    "preferredContractTypes": [
+     "permanent"
+    ],
+    "willingToRelocate": false,
+    "remoteOnly": false
+   }
+  },
+  "keySkills": [
+   {
+    "category": "Estrategia de producto",
+    "skills": [
+     "Visión y estrategia de producto",
+     "Roadmap",
+     "Priorización",
+     "Product-market fit"
+    ]
+   },
+   {
+    "category": "Health tech",
+    "skills": [
+     "Productos sanitarios digitales",
+     "Software como producto sanitario (SaMD)",
+     "Interoperabilidad (HL7/FHIR)"
+    ]
+   },
+   {
+    "category": "Cumplimiento",
+    "skills": [
+     "Marcado CE de dispositivos médicos",
+     "Protección de datos (RGPD)",
+     "Gestión de riesgos clínicos"
+    ]
+   },
+   {
+    "category": "Descubrimiento",
+    "skills": [
+     "Investigación con usuarios clínicos",
+     "Discovery",
+     "Diseño centrado en el usuario"
+    ]
+   }
+  ],
+  "profiles": {
+   "areasOfExpertise": [
+    "Estrategia de producto en health tech",
+    "Productos digitales sanitarios",
+    "Cumplimiento normativo de producto",
+    "Descubrimiento de producto clínico"
+   ],
+   "keyResponsibilities": [
+    "Definición de la estrategia de producto de la plataforma",
+    "Equilibrio entre innovación y cumplimiento normativo",
+    "Liderazgo de los equipos de producto y diseño",
+    "Colaboración con equipos clínicos y regulatorios"
+   ]
+  },
+  "workExperience": [
+   {
+    "company": "Mediktor",
+    "website": "https://www.mediktor.com",
+    "location": "Barcelona, España",
+    "from": "2018-04",
+    "to": "Present",
+    "position": "Vicepresidente de Producto",
+    "activities": [
+     {
+      "project": "Plataforma de evaluación de síntomas asistida por IA",
+      "tasks": [
+       "Definición de la estrategia de producto de la plataforma",
+       "Obtención del marcado CE como dispositivo médico",
+       "Liderazgo de la interoperabilidad con sistemas hospitalarios"
+      ]
+     }
+    ],
+    "achievements": [
+     "Lideré la obtención del marcado CE de la plataforma",
+     "Amplié el producto a diez mercados internacionales",
+     "Mejoré la satisfacción de los usuarios clínicos al 90%"
+    ],
+    "toolsAndTechnologies": [
+     "Amplitude",
+     "Figma",
+     "Jira",
+     "FHIR"
+    ]
+   },
+   {
+    "company": "Doctoralia (Docplanner)",
+    "website": "https://www.doctoralia.es",
+    "location": "Barcelona, España",
+    "from": "2013-05",
+    "to": "2018-03",
+    "position": "Head of Product",
+    "activities": [
+     {
+      "project": "Marketplace de servicios sanitarios",
+      "tasks": [
+       "Gestión del roadmap de producto",
+       "Optimización de la experiencia de reserva de citas"
+      ]
+     }
+    ],
+    "achievements": [
+     "Aumenté las reservas de citas online un 40%",
+     "Lideré el lanzamiento de la agenda para profesionales"
+    ],
+    "toolsAndTechnologies": [
+     "Amplitude",
+     "Figma",
+     "Jira"
+    ]
+   },
+   {
+    "company": "Grifols",
+    "website": "https://www.grifols.com",
+    "location": "Barcelona, España",
+    "from": "2008-09",
+    "to": "2013-04",
+    "position": "Product Manager de sistemas clínicos",
+    "activities": [
+     {
+      "project": "Sistemas de información clínica",
+      "tasks": [
+       "Gestión de requisitos de producto clínicos",
+       "Coordinación con equipos regulatorios"
+      ]
+     }
+    ],
+    "achievements": [
+     "Lideré el lanzamiento de un sistema de gestión de donantes"
+    ],
+    "toolsAndTechnologies": [
+     "Jira",
+     "HL7"
+    ]
+   }
+  ],
+  "education": [
+   {
+    "year": "2015",
+    "institution": "ESADE Business School",
+    "degree": "Máster en Gestión de Producto Digital",
+    "fieldOfStudy": "Product management",
+    "achievements": []
+   },
+   {
+    "year": "2008",
+    "institution": "Universitat Politècnica de Catalunya",
+    "degree": "Ingeniería Biomédica",
+    "fieldOfStudy": "Tecnología médica",
+    "achievements": []
+   }
+  ],
+  "certifications": [
+   {
+    "title": "ISTQB Foundation",
+    "institution": "ISTQB",
+    "year": "2014",
+    "description": "Certificación en fundamentos de pruebas de software."
+   }
+  ],
+  "skillsAndQualifications": {
+   "technicalSkills": [
+    "Amplitude",
+    "Figma",
+    "Jira",
+    "FHIR",
+    "HL7"
+   ],
+   "softSkills": [
+    "Liderazgo",
+    "Pensamiento estratégico",
+    "Comunicación con equipos clínicos",
+    "Empatía con el usuario"
+   ],
+   "languages": [
+    {
+     "language": "Español",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    },
+    {
+     "language": "Inglés",
+     "proficiency": {
+      "read": "fluent",
+      "written": "fluent",
+      "spoken": "fluent"
+     }
+    },
+    {
+     "language": "Catalán",
+     "proficiency": {
+      "read": "native",
+      "written": "native",
+      "spoken": "native"
+     }
+    }
+   ]
+  },
+  "projectsAndAchievements": [
+   {
+    "title": "Marcado CE de la plataforma",
+    "description": "Dirección del proceso de certificación de la plataforma como dispositivo médico (marcado CE).",
+    "date": "2021-09",
+    "impact": "Habilitó la comercialización de la plataforma en la Unión Europea."
+   }
+  ],
+  "interestsAndHobbies": [
+   "Vela",
+   "Divulgación de salud digital",
+   "Cocina"
+  ],
+  "references": [
+   {
+    "name": "Núria Pons",
+    "position": "Consejera delegada",
+    "company": "Mediktor",
+    "contact": {
+     "phone": "+34 663 118 220",
+     "email": "nuria.pons@example.com"
+    }
+   }
+  ],
+  "salaryExpectation": {
+   "currency": "EUR",
+   "min": 130000,
+   "max": 175000
+  },
+  "candidateClustering": {
+   "primaryCluster": "Technology & Product Leadership",
+   "secondaryClusters": [
+    "Health Tech Product",
+    "Regulated Product Management"
+   ],
+   "functionalExpertise": [
+    "Product strategy",
+    "Digital health products",
+    "Regulatory compliance",
+    "Product discovery"
+   ],
+   "skillDepth": "tShaped",
+   "businessImpact": [
+    "CE marking obtained",
+    "International expansion",
+    "Clinical-user satisfaction"
+   ],
+   "industryDomains": [
+    "Healthcare",
+    "Health Tech"
+   ],
+   "environmentFit": [
+    "Scale-up",
+    "Regulated",
+    "Clinical"
+   ],
+   "seniorityLevel": "lead",
+   "leadershipAndInfluence": "strategicLeader",
+   "learningVelocity": "high",
+   "clusterConfidenceScore": 0.89,
+   "clusterReasoning": "Vicepresidente de producto en health tech con experiencia en plataformas reguladas, marcado CE de dispositivos médicos y expansión internacional."
+  },
+  "searchIndex": {
+   "roles": [
+    "VP Product",
+    "Head of Product",
+    "Chief Product Officer"
+   ],
+   "skills": [
+    "Product Strategy",
+    "Digital Health",
+    "Regulatory Compliance",
+    "FHIR",
+    "Product Discovery"
+   ],
+   "industries": [
+    "Healthcare",
+    "Health Tech",
+    "Medical Devices"
+   ]
+  },
+  "tags": [
+   "vp-product",
+   "product",
+   "health-tech",
+   "regulated",
+   "lead"
+  ]
+ }
+]

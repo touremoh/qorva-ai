@@ -1,6 +1,7 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dto.UserDTO;
+import ai.qorva.core.enums.EmailCategory;
 import ai.qorva.core.enums.EmailTitlesEnum;
 import ai.qorva.core.exception.QorvaException;
 import lombok.extern.slf4j.Slf4j;
@@ -24,8 +25,14 @@ public class AccountCreationNotificationService extends AbstractEmailService imp
 	private String logoUrl;
 
 	@Autowired
-	public AccountCreationNotificationService(OAuth2TokenService oauth2TokenService) {
-		super(oauth2TokenService);
+	public AccountCreationNotificationService(OAuth2TokenService oauth2TokenService, EmailSenderResolver senderResolver) {
+		super(oauth2TokenService, senderResolver);
+	}
+
+	@Override
+	protected EmailCategory getCategory() {
+		// Every email here carries credentials or a credential link (temp password, set-password).
+		return EmailCategory.SECURITY;
 	}
 
 	@Override
@@ -39,7 +46,7 @@ public class AccountCreationNotificationService extends AbstractEmailService imp
 				.replace("{{first_name}}", receiver.getFirstName())
 				.replace("{{app_name}}", "Qorva AI")
 				.replace("{{user_email}}", receiver.getEmail())
-				.replace("{{support_email}}", this.fromEmail);
+				.replace("{{support_email}}", supportEmail());
 
 			String htmlContent = htmlTemplate.replace("{{template_content}}", templateContent);
 			sendEmail(receiver.getEmail(), EmailTitlesEnum.getEmailTitle(languageCode), htmlContent);
@@ -47,6 +54,39 @@ public class AccountCreationNotificationService extends AbstractEmailService imp
 			log.error("Failed to send account creation email to {}", receiver.getEmail(), e);
 			throw new QorvaException(
 				"Failed to send notification to user",
+				e,
+				HttpStatus.INTERNAL_SERVER_ERROR.value(),
+				HttpStatus.INTERNAL_SERVER_ERROR
+			);
+		}
+	}
+
+	public void sendDemoWelcome(UserDTO receiver, Map<String, String> payload, String languageCode) throws QorvaException {
+		String lang = languageCode != null ? languageCode : "en";
+		try {
+			String wrapper = loadHtmlTemplate("templates/emails/user-added-template.html");
+			String content = loadHtmlTemplate("templates/emails/" + lang + "_demo_welcome_content.html");
+
+			String setPasswordUrl = payload != null ? payload.getOrDefault("setPasswordUrl", "") : "";
+			String companyName = payload != null ? payload.getOrDefault("companyName", "") : "";
+
+			content = content
+				.replace("{{logo_url}}", logoUrl)
+				.replace("{{first_name}}", receiver.getFirstName())
+				.replace("{{app_name}}", "Qorva AI")
+				.replace("{{company_name}}", companyName)
+				.replace("{{user_email}}", receiver.getEmail())
+				.replace("{{set_password_url}}", setPasswordUrl)
+				.replace("{{support_email}}", supportEmail())
+				.replace("{{current_year}}", String.valueOf(LocalDate.now().getYear()));
+
+			String html = wrapper.replace("{{template_content}}", content);
+			sendEmail(receiver.getEmail(), EmailTitlesEnum.getEmailTitle(lang, "demo_welcome"), html);
+			log.info("Demo-welcome email sent to email={}", receiver.getEmail());
+		} catch (IOException | MailException e) {
+			log.error("Failed to send demo-welcome email to {}", receiver.getEmail(), e);
+			throw new QorvaException(
+				"Failed to send demo-welcome notification",
 				e,
 				HttpStatus.INTERNAL_SERVER_ERROR.value(),
 				HttpStatus.INTERNAL_SERVER_ERROR
@@ -70,7 +110,7 @@ public class AccountCreationNotificationService extends AbstractEmailService imp
 				.replace("{{company_name}}", companyName)
 				.replace("{{user_email}}", receiver.getEmail())
 				.replace("{{temporary_password}}", tempPassword)
-				.replace("{{support_email}}", this.fromEmail)
+				.replace("{{support_email}}", supportEmail())
 				.replace("{{current_year}}", String.valueOf(LocalDate.now().getYear()));
 
 			String html = wrapper.replace("{{template_content}}", content);

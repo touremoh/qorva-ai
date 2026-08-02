@@ -1,0 +1,161 @@
+[
+  {
+    "title": "Ingénieur Conception Mécanique Senior (SolidWorks/ANSYS)",
+    "description": "Rejoignez notre bureau d'études mécaniques à Lyon pour concevoir des ensembles mécaniques complexes destinés à l'industrie de l'énergie et des équipements lourds. Vous interviendrez de l'avant-projet jusqu'à la mise en production, au sein d'une équipe d'ingénierie exigeante et collaborative.\n\nVotre mission : piloter la conception 3D d'équipements sous pression et de structures mécano-soudées, mener les calculs de dimensionnement et garantir la conformité aux normes en vigueur.\n\nResponsabilités :\n- Modéliser des pièces et assemblages sous SolidWorks et produire les mises en plan cotées (GD&T).\n- Réaliser les simulations éléments finis (statique, thermique, fatigue) sous ANSYS.\n- Rédiger les notes de calcul et les dossiers de définition selon les Eurocodes et directives applicables.\n- Collaborer avec les ateliers de fabrication et les fournisseurs pour l'industrialisation.\n- Encadrer les projeteurs et participer aux revues de conception.\n\nCompétences requises : solide maîtrise de SolidWorks, expérience confirmée en calcul par éléments finis, bonne connaissance des matériaux et procédés de fabrication mécanique. La pratique du GD&T et des tolérances géométriques est attendue.\n\nAtouts appréciés : CATIA V5, connaissance des équipements sous pression (CODAP/ASME), anglais technique.\n\nSéniorité : profil senior, 7 ans d'expérience minimum. Poste basé à Lyon en mode hybride (4 jours sur site, 1 jour en télétravail). Environnement technique stimulant et projets à forte valeur ajoutée.",
+    "scoringRules": {
+      "skills": [
+        { "name": "SolidWorks", "importance": "mandatory", "weight": 0.95, "minYearsOfExperience": 6, "exactSkillOnly": false },
+        { "name": "ANSYS", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Finite Element Analysis", "importance": "important", "weight": 0.75, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "GD&T", "importance": "important", "weight": 0.65, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Mechanical Design", "importance": "important", "weight": 0.7, "minYearsOfExperience": 5, "exactSkillOnly": false },
+        { "name": "CATIA", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Eurocode", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Lyon", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Mechanical Engineering", "Energy", "Industrial Equipment", "Manufacturing"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Ingénieur Structure (Eurocodes/Revit)",
+    "description": "Notre bureau d'études structure à Bruxelles recherche un ingénieur structure pour concevoir et dimensionner des ouvrages de bâtiment et de génie civil (béton armé, charpente métallique) sur des projets tertiaires et résidentiels en Belgique et au Luxembourg.\n\nVotre mission : réaliser les études de structure depuis l'esquisse jusqu'aux plans d'exécution, en garantissant la sécurité, la performance et la conformité réglementaire des ouvrages.\n\nResponsabilités :\n- Dimensionner les structures en béton armé et en acier selon les Eurocodes.\n- Modéliser les ouvrages sous ETABS et STAAD.Pro et exploiter les résultats.\n- Produire les plans de coffrage et de ferraillage sous Revit et AutoCAD.\n- Rédiger les notes de calcul et coordonner avec les architectes et les entreprises.\n- Assurer le suivi technique en phase chantier.\n\nCompétences requises : bonne maîtrise des Eurocodes (EC2, EC3), expérience en modélisation structurelle, pratique d'AutoCAD et de la maquette numérique BIM. Rigueur, autonomie et sens du travail en équipe sont essentiels.\n\nAtouts appréciés : STAAD.Pro, connaissance des géotechniques et des fondations, néerlandais.\n\nSéniorité : profil confirmé (mid), 4 ans d'expérience. Poste basé à Bruxelles en mode hybride (3 jours au bureau). Projets variés et évolution possible vers un rôle de chef de projet.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Eurocode", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "ETABS", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Revit", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "AutoCAD", "importance": "important", "weight": 0.65, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Structural Analysis", "importance": "important", "weight": 0.75, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "STAAD.Pro", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Reinforced Concrete Design", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Bruxelles", "Luxembourg", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Civil Engineering", "Construction", "Architecture", "Building"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.25, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  },
+  {
+    "title": "Ingénieur Électrique Junior (AutoCAD/ETAP)",
+    "description": "Rejoignez notre équipe d'ingénierie électrique à Nantes pour concevoir des installations électriques basse et moyenne tension destinées à des bâtiments industriels et tertiaires. Ce poste est une belle opportunité pour un jeune ingénieur souhaitant se former aux côtés d'experts.\n\nVotre mission : participer à la conception des schémas électriques, aux calculs de dimensionnement et à la préparation des dossiers techniques, sous la supervision d'un ingénieur senior.\n\nResponsabilités :\n- Réaliser les schémas unifilaires et de distribution sous AutoCAD.\n- Effectuer les calculs de bilan de puissance, de câbles et de courts-circuits sous ETAP.\n- Dimensionner les tableaux, protections et cheminements selon la norme NF C 15-100.\n- Participer aux études d'éclairage et à la coordination avec les autres corps d'état.\n- Contribuer à la rédaction des cahiers des charges et des notes de calcul.\n\nCompétences requises : bases solides en électrotechnique, maîtrise d'AutoCAD, connaissance des normes électriques françaises. Curiosité, rigueur et envie d'apprendre sont primordiales.\n\nAtouts appréciés : ETAP, notions d'automatisme (PLC), anglais technique.\n\nSéniorité : profil junior, 0 à 2 ans d'expérience, diplômé d'une école d'ingénieurs. Poste basé à Nantes sur site. Accompagnement et formation continue assurés.",
+    "scoringRules": {
+      "skills": [
+        { "name": "AutoCAD", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Electrical Design", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "ETAP", "importance": "important", "weight": 0.6, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "Low Voltage Systems", "importance": "important", "weight": 0.55, "minYearsOfExperience": 1, "exactSkillOnly": false },
+        { "name": "Electrical Standards", "importance": "important", "weight": 0.5, "minYearsOfExperience": 0, "exactSkillOnly": false },
+        { "name": "PLC", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 0, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Nantes", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Electrical Engineering", "Construction", "Energy", "Building Services"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.5, "experience": 0.2, "location": 0.2, "industry": 0.1 },
+      "filterOpenToWork": true,
+      "availabilityStatuses": ["activelyLooking"]
+    }
+  },
+  {
+    "title": "Ingénieur Process / Amélioration Continue (Lean/Six Sigma)",
+    "description": "Notre site de production à Lille recherche un ingénieur process amélioration continue pour optimiser nos lignes de fabrication et piloter les chantiers de performance industrielle dans un environnement automobile exigeant.\n\nVotre mission : améliorer la productivité, la qualité et la sécurité des procédés de fabrication en déployant les méthodes Lean Manufacturing et Six Sigma sur l'ensemble des ateliers.\n\nResponsabilités :\n- Analyser les flux de production et identifier les gisements de gains (VSM, temps de cycle).\n- Piloter des chantiers Kaizen, SMED et 5S avec les équipes terrain.\n- Mener des projets Six Sigma (DMAIC) et exploiter les données via l'analyse statistique.\n- Optimiser les gammes et les postes de travail, et fiabiliser les standards.\n- Suivre les indicateurs de performance (OEE/TRS) et animer les rituels d'amélioration.\n- Collaborer avec la maintenance, la qualité et l'ERP SAP pour la traçabilité.\n\nCompétences requises : maîtrise des outils Lean Manufacturing, expérience en gestion de projet industriel, aisance avec l'analyse de données. La certification Six Sigma (Green ou Black Belt) est fortement appréciée.\n\nAtouts appréciés : SAP, connaissance de l'industrie automobile (IATF 16949), management d'équipe.\n\nSéniorité : profil confirmé (mid), 5 ans d'expérience. Poste basé à Lille sur site. Rôle transverse à fort impact et perspectives d'évolution vers un poste de responsable performance.",
+    "scoringRules": {
+      "skills": [
+        { "name": "Lean Manufacturing", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Six Sigma", "importance": "mandatory", "weight": 0.85, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Process Improvement", "importance": "important", "weight": 0.75, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Value Stream Mapping", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "SAP", "importance": "nice_to_have", "weight": 0.45, "minYearsOfExperience": 2, "exactSkillOnly": false },
+        { "name": "Project Management", "importance": "important", "weight": 0.55, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Statistical Analysis", "importance": "nice_to_have", "weight": 0.4, "minYearsOfExperience": 2, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 5,
+        "minRelevantYears": 4,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Lille", "Onsite"],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Automotive", "Manufacturing", "Industrial Engineering"],
+        "strictness": "medium"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.25, "location": 0.1, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching"]
+    }
+  },
+  {
+    "title": "Ingénieur HVAC / Génie Climatique (Revit MEP)",
+    "description": "Notre bureau d'études fluides à Toulouse recherche un ingénieur HVAC / génie climatique pour concevoir les installations de chauffage, ventilation et climatisation de bâtiments tertiaires, hospitaliers et industriels.\n\nVotre mission : dimensionner les systèmes CVC performants et durables, de la conception aux plans d'exécution, en intégrant les enjeux d'efficacité énergétique et de confort.\n\nResponsabilités :\n- Réaliser les bilans thermiques et le dimensionnement des réseaux aérauliques et hydrauliques.\n- Concevoir les installations CVC et produire les plans sous Revit MEP et AutoCAD.\n- Sélectionner les équipements (CTA, groupes froids, pompes) et rédiger les CCTP.\n- Mener les simulations thermiques dynamiques et optimiser la performance énergétique.\n- Coordonner la maquette BIM avec les autres lots et assurer le suivi de chantier.\n\nCompétences requises : solide maîtrise du génie climatique, expérience en conception CVC, pratique de Revit MEP et d'AutoCAD. Bonne connaissance de la réglementation thermique (RE2020) et des normes de ventilation.\n\nAtouts appréciés : simulation thermique dynamique, connaissance des systèmes de GTB, anglais technique.\n\nSéniorité : profil confirmé (mid), 4 ans d'expérience. Poste basé à Toulouse en mode hybride (2 jours de télétravail possibles). Projets ambitieux orientés performance énergétique.",
+    "scoringRules": {
+      "skills": [
+        { "name": "HVAC Design", "importance": "mandatory", "weight": 0.9, "minYearsOfExperience": 4, "exactSkillOnly": false },
+        { "name": "Revit", "importance": "mandatory", "weight": 0.8, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "AutoCAD", "importance": "important", "weight": 0.65, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Thermal Analysis", "importance": "important", "weight": 0.7, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Energy Efficiency", "importance": "important", "weight": 0.6, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "MEP Engineering", "importance": "important", "weight": 0.55, "minYearsOfExperience": 3, "exactSkillOnly": false },
+        { "name": "Building Management Systems", "importance": "nice_to_have", "weight": 0.35, "minYearsOfExperience": 1, "exactSkillOnly": false }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": ["Toulouse", "Remote"],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": ["Building Services", "Construction", "Mechanical Engineering", "Energy"],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": { "skills": 0.55, "experience": 0.2, "location": 0.15, "industry": 0.1 },
+      "filterOpenToWork": false,
+      "availabilityStatuses": ["activelyLooking", "openButNotSearching", "freelanceOnly"]
+    }
+  }
+]

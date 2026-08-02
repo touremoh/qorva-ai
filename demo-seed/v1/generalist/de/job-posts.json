@@ -1,0 +1,425 @@
+[
+  {
+    "title": "HR Business Partner (m/w/d)",
+    "description": "Für unseren Standort in München suchen wir eine:n erfahrene:n HR Business Partner:in, die:der unsere Führungskräfte als strategische:r Sparringspartner:in in allen personalrelevanten Themen begleitet.\n\nDeine Mission: Du verantwortest die ganzheitliche HR-Betreuung mehrerer Fachbereiche und übersetzt Geschäftsziele in wirksame People-Strategien.\n\nDeine Aufgaben:\n- Beratung von Führungskräften zu Organisationsentwicklung, Performance Management und Nachfolgeplanung\n- Begleitung des gesamten Mitarbeiterlebenszyklus von Onboarding bis Offboarding\n- Steuerung von Change-Prozessen und Reorganisationen in enger Abstimmung mit dem Management\n- Pflege und Auswertung von Personaldaten in Workday sowie Ableitung von HR-Kennzahlen\n- Zusammenarbeit mit Betriebsrat und Sicherstellung arbeitsrechtlicher Compliance\n\nDein Profil:\n- Abgeschlossenes Studium im Bereich Personalmanagement, Psychologie oder BWL\n- Mindestens 6 Jahre Erfahrung in einer generalistischen HR-Rolle, davon einige Jahre als Business Partner:in\n- Fundierte Kenntnisse im deutschen Arbeitsrecht und in der Zusammenarbeit mit Arbeitnehmervertretungen\n- Sicherer Umgang mit Workday oder einem vergleichbaren HRIS\n- Ausgeprägte Kommunikations- und Stakeholder-Management-Fähigkeiten\n\nNice-to-have: Erfahrung in internationalen Matrixorganisationen und mit SuccessFactors.\n\nArbeitsmodell: Hybrid mit Büro in München und bis zu drei Tagen Remote pro Woche. Wir bieten ein wertschätzendes Umfeld, moderne HR-Systeme und echte Gestaltungsspielräume.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Workday",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "German Labor Law",
+          "importance": "mandatory",
+          "weight": 0.17,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Change Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Performance Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SuccessFactors",
+          "importance": "nice_to_have",
+          "weight": 0.09,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "nice_to_have",
+          "weight": 0.06,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "München",
+          "Augsburg",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Technology",
+          "Shared Service Centres"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Office Manager (m/w/d)",
+    "description": "Für unser wachsendes Büro in Berlin suchen wir eine:n organisierte:n Office Manager:in, die:der den reibungslosen Ablauf unseres Standorts sicherstellt und als zentrale Anlaufstelle für das gesamte Team fungiert.\n\nDeine Mission: Du sorgst dafür, dass sich alle Kolleg:innen auf ein gut organisiertes, einladendes und funktionierendes Büro verlassen können.\n\nDeine Aufgaben:\n- Organisation des täglichen Bürobetriebs inklusive Empfang, Post und Bestellwesen\n- Koordination von Dienstleistern, Facility-Themen und Arbeitsplatzausstattung\n- Planung von internen Events, Meetings und Reisen für das Team\n- Unterstützung der Geschäftsführung bei administrativen und organisatorischen Aufgaben\n- Verwaltung von Rechnungen, Bürobudgets und einfachen buchhalterischen Vorgängen\n\nDein Profil:\n- Abgeschlossene kaufmännische Ausbildung oder vergleichbare Qualifikation\n- Mindestens 2 Jahre Erfahrung im Office Management, Assistenz- oder Empfangsbereich\n- Sehr gute Kenntnisse in MS Office, insbesondere Outlook, Word und Excel\n- Organisationstalent, Hands-on-Mentalität und ausgeprägte Serviceorientierung\n- Sehr gute Deutsch- und gute Englischkenntnisse\n\nNice-to-have: Erfahrung mit Asana oder anderen Tools zur Aufgabenkoordination.\n\nArbeitsmodell: Onsite in Berlin mit gelegentlicher Flexibilität. Wir bieten ein modernes Büro, ein herzliches Team und viel Eigenverantwortung.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "MS Office",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Office Management",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Event Coordination",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Vendor Management",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Travel Coordination",
+          "importance": "nice_to_have",
+          "weight": 0.13,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Asana",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Berlin",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services",
+          "Retail"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.2,
+        "location": 0.2,
+        "industry": 0.05
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Customer Success Manager (m/w/d)",
+    "description": "Für unser SaaS-Unternehmen in Wien suchen wir eine:n engagierte:n Customer Success Manager:in, die:der unsere Geschäftskund:innen langfristig begleitet und ihren Erfolg mit unserer Plattform sicherstellt.\n\nDeine Mission: Du bist die:der vertrauensvolle Ansprechpartner:in für ein Portfolio an Kund:innen und sorgst für hohe Zufriedenheit, Bindung und Wachstum.\n\nDeine Aufgaben:\n- Onboarding neuer Kund:innen und Begleitung durch die gesamte Customer Journey\n- Regelmäßige Business Reviews und proaktive Betreuung zur Steigerung der Produktnutzung\n- Identifikation von Upsell- und Cross-Sell-Potenzialen in Zusammenarbeit mit dem Vertrieb\n- Bearbeitung von Anfragen und Eskalationen über Zendesk und Intercom\n- Sammlung von Kundenfeedback und enge Abstimmung mit Product und Support\n\nDein Profil:\n- Mindestens 3 Jahre Erfahrung im Customer Success, Account Management oder Support\n- Erfahrung im Umgang mit CRM- und Ticketing-Tools wie Zendesk und Intercom\n- Ausgeprägtes Kommunikations- und Beziehungsmanagement\n- Analytische Denkweise und Fähigkeit, Kundendaten in Handlungen zu übersetzen\n- Sehr gute Deutsch- und Englischkenntnisse\n\nNice-to-have: Erfahrung im SaaS-Umfeld und mit Kennzahlen wie Churn und NRR.\n\nArbeitsmodell: Hybrid mit Büro in Wien und bis zu zwei Tagen Remote pro Woche. Wir bieten ein dynamisches Team, ein modernes Produkt und klare Entwicklungsperspektiven.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Customer Success",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Zendesk",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Intercom",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Account Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "CRM",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Wien",
+          "Graz",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services",
+          "Shared Service Centres"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Project Coordinator (m/w/d)",
+    "description": "Für unser Projektbüro in Zürich suchen wir eine:n strukturierte:n Project Coordinator:in, die:der bereichsübergreifende Projekte plant, koordiniert und deren Fortschritt im Blick behält.\n\nDeine Mission: Du hältst mehrere Projekte gleichzeitig auf Kurs und sorgst für transparente Kommunikation zwischen allen Beteiligten.\n\nDeine Aufgaben:\n- Planung, Koordination und Nachverfolgung von Projektaufgaben, Terminen und Meilensteinen\n- Pflege von Projektboards und Statusberichten in Jira und Asana\n- Vorbereitung und Moderation von Projektmeetings sowie Protokollierung von Beschlüssen\n- Koordination von internen Teams und externen Dienstleistern\n- Überwachung von Budgets, Risiken und Abhängigkeiten in Abstimmung mit dem Projektleiter:innen\n\nDein Profil:\n- Abgeschlossenes Studium oder kaufmännische Ausbildung mit Projekterfahrung\n- Mindestens 3 Jahre Erfahrung in der Projektkoordination oder im Projektmanagement-Office\n- Sehr gute Kenntnisse in Jira und Asana sowie in gängigen Projektmethoden\n- Strukturierte, eigenständige Arbeitsweise und ausgeprägtes Organisationstalent\n- Sehr gute Deutsch- und gute Englischkenntnisse\n\nNice-to-have: Zertifizierung nach PRINCE2 oder vergleichbaren Standards.\n\nArbeitsmodell: Hybrid mit Büro in Zürich und flexiblen Remote-Anteilen. Wir bieten spannende Projekte, ein kollegiales Umfeld und viel Verantwortung.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Jira",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Asana",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Project Coordination",
+          "importance": "mandatory",
+          "weight": 0.18,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "PRINCE2",
+          "importance": "nice_to_have",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "nice_to_have",
+          "weight": 0.14,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Zürich",
+          "Basel",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Technology",
+          "Public Sector"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Talent Acquisition Specialist (m/w/d)",
+    "description": "Für unser People-Team in Hamburg suchen wir eine:n motivierte:n Talent Acquisition Specialist:in, die:der unser Wachstum durch die Gewinnung großartiger Talente aktiv mitgestaltet.\n\nDeine Mission: Du verantwortest den gesamten Recruiting-Prozess für verschiedene Fachbereiche und schaffst eine hervorragende Candidate Experience.\n\nDeine Aufgaben:\n- Steuerung des End-to-End-Recruitings von der Bedarfsanalyse bis zum Vertragsangebot\n- Active Sourcing über LinkedIn und weitere Kanäle sowie Aufbau von Talent-Pipelines\n- Pflege von Kandidatendaten und Prozessen im ATS und in SuccessFactors\n- Enge Zusammenarbeit mit Hiring Managern und Beratung zu Auswahlprozessen\n- Mitwirkung an Employer-Branding-Initiativen und Recruiting-Events\n\nDein Profil:\n- Abgeschlossenes Studium oder vergleichbare Qualifikation im HR-Umfeld\n- Mindestens 2 Jahre Erfahrung im Recruiting oder in der Personalberatung\n- Erfahrung im Umgang mit ATS/HRIS-Systemen sowie mit Active Sourcing\n- Kommunikationsstärke, Empathie und ein gutes Gespür für Menschen\n- Sehr gute Deutsch- und Englischkenntnisse\n\nNice-to-have: Erfahrung mit SuccessFactors Recruiting und datengetriebenem Reporting.\n\nArbeitsmodell: Hybrid mit Büro in Hamburg und bis zu drei Tagen Remote pro Woche. Wir bieten ein empathisches Team, moderne Tools und viel Raum für eigene Ideen.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "ATS/HRIS",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Talent Acquisition",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Active Sourcing",
+          "importance": "important",
+          "weight": 0.17,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Stakeholder Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SuccessFactors",
+          "importance": "nice_to_have",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "MS Office",
+          "importance": "nice_to_have",
+          "weight": 0.12,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Hamburg",
+          "Bremen",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Technology",
+          "Non-Profit"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.2,
+        "location": 0.15,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  }
+]

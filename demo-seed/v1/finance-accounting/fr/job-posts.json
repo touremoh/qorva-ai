@@ -1,0 +1,422 @@
+[
+  {
+    "title": "Comptable Général Confirmé (IFRS / SAP FICO)",
+    "description": "Meunier Industries, un groupe industriel de taille intermédiaire dont le siège se situe à Lyon, recherche un Comptable Général confirmé pour renforcer son équipe de reporting groupe.\n\nRattaché au Contrôleur Financier, vous prenez en charge la clôture mensuelle de deux entités juridiques, préparez les écritures et les rapprochements de bilan, et produisez les états financiers statutaires en normes IFRS. Vous tenez le grand livre dans SAP FICO, comptabilisez les charges à payer et les produits constatés d'avance, réconciliez les comptes intercompagnies et appuyez l'audit externe annuel en préparant les dossiers de justification et en répondant aux demandes des commissaires aux comptes.\n\nAu quotidien, vous collaborez avec les équipes fournisseurs et clients pour garder un grand livre propre, calculez les amortissements des immobilisations et contribuez à réduire les délais de clôture grâce à de meilleurs contrôles et une documentation rigoureuse.\n\nProfil recherché : diplômé en comptabilité (DCG/DSCG ou équivalent) avec au moins 3 ans d'expérience en environnement exigeant, une maîtrise concrète du grand livre, une solide connaissance des IFRS et un Excel avancé pour les rapprochements. Une expérience pratique de SAP FICO est indispensable.\n\nApprécié : exposition aux outils de consolidation, environnement industriel ou FMCG, et Power BI pour le reporting.\n\nPoste hybride basé à Lyon (3 jours par semaine sur site), ouvert aux candidats de la région Auvergne-Rhône-Alpes. Nous offrons un accompagnement à la certification, une rémunération compétitive et une évolution claire vers un poste de comptable senior.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "IFRS",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP FICO",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "General Ledger Accounting",
+          "importance": "important",
+          "weight": 0.18,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Month-End Close",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lyon",
+          "Grenoble",
+          "Saint-Étienne",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Consumer Goods",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Analyste FP&A Junior (Excel Modeling / Anaplan)",
+    "description": "Solvia Cloud, une entreprise technologique en forte croissance basée à Paris, recrute un Analyste FP&A junior pour épauler son équipe de finance commerciale alors que l'activité se développe à l'échelle de l'EMEA.\n\nVous construisez et maintenez les modèles mensuels de prévision et de budget, suivez les réalisés par rapport au plan et produisez des analyses d'écarts qui aident les responsables de département à mieux piloter leurs dépenses. En lien étroit avec le Manager FP&A, vous préparez les liasses de reporting pour le comité de direction et les investisseurs, modélisez l'ARR et la rétention par cohorte, et traduisez les leviers opérationnels en récits financiers clairs.\n\nUne part essentielle du poste consiste à améliorer nos outils de planification : migrer les modèles Excel vers Anaplan, construire des tableaux de bord dans Power BI et automatiser le reporting récurrent pour dégager du temps d'analyse.\n\nProfil recherché : 1 à 2 ans d'expérience en FP&A, finance d'entreprise ou un poste analytique exigeant, une modélisation financière avancée sur Excel, et de bonnes qualités de communication et de business partnering. Une aisance avec de grands jeux de données et une compréhension des indicateurs SaaS sont attendues.\n\nApprécié : première expérience d'Anaplan, notions de SQL et exposition à un modèle d'abonnement ou technologique.\n\nPoste hybride basé à Paris (2 jours par semaine sur site), ouvert aux candidats en Île-de-France. Nous offrons de l'equity, un budget de formation et des opportunités d'évolution rapides.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Financial Modeling",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Financial Planning and Analysis",
+          "importance": "important",
+          "weight": 0.18,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Anaplan",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SQL",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 1,
+        "minRelevantYears": 1,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Paris",
+          "Boulogne-Billancourt",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.2,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Auditeur Interne Senior (SOX / ACL / IFRS)",
+    "description": "Banque Ardenne, un établissement financier de premier plan basé à Bruxelles, recherche un Auditeur Interne senior pour rejoindre sa direction de l'audit groupe et couvrir des missions à travers la Belgique et le Luxembourg.\n\nVous pilotez des missions d'audit de bout en bout : cadrage des risques, élaboration du programme de travail, réalisation des tests de contrôle, formalisation des conclusions et suivi des plans d'action. Vous évaluez la conception et l'efficacité opérationnelle des contrôles clés, y compris dans le cadre de la conformité SOX, et rédigez des rapports d'audit clairs à destination du comité d'audit.\n\nVous utilisez des outils d'analyse de données comme ACL pour tester des populations complètes plutôt que des échantillons, identifiez les anomalies et les zones de fraude potentielle, et challengez les propriétaires de processus sur la robustesse de leur environnement de contrôle. Une bonne compréhension des IFRS et des processus financiers est indispensable pour apprécier la matérialité des constats.\n\nProfil recherché : au moins 6 ans d'expérience en audit interne ou en cabinet (Big Four apprécié), une maîtrise des référentiels de contrôle interne et de SOX, une expérience concrète d'ACL ou d'un outil de data analytics équivalent, et d'excellentes capacités rédactionnelles. Une certification CIA ou CISA est un atout.\n\nApprécié : secteur bancaire ou assurance, anglais courant, et exposition à l'audit des systèmes d'information.\n\nPoste hybride basé à Bruxelles, avec déplacements ponctuels au Luxembourg. Rémunération à la hauteur de l'expérience et évolution possible vers un poste de responsable d'audit.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Internal Audit",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SOX Compliance",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ACL",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Internal Controls",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Risk Assessment",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Bruxelles",
+          "Luxembourg",
+          "Anvers",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Banking",
+          "Insurance",
+          "Professional Services"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  },
+  {
+    "title": "Responsable Fiscal / Tax Manager (US GAAP / IFRS)",
+    "description": "Lumen Group, un groupe international de services professionnels dont le siège européen est à Luxembourg, recrute un Responsable Fiscal (Tax Manager) pour piloter sa fonction fiscale sur plusieurs juridictions.\n\nVous prenez en charge la conformité fiscale du groupe : impôt sur les sociétés, TVA intracommunautaire, prix de transfert et obligations déclaratives locales. Vous gérez le calcul de la charge d'impôt courant et différé pour les besoins de consolidation en IFRS et en US GAAP, coordonnez les revues fiscales avec les conseils externes et sécurisez le groupe face aux évolutions réglementaires (BEPS, Pilier 2).\n\nVous êtes le point de contact des administrations fiscales lors des contrôles, préparez la documentation de prix de transfert, optimisez la structure fiscale dans le respect des règles, et accompagnez les opérations de croissance externe sur leurs aspects fiscaux. Vous collaborez étroitement avec la trésorerie et la comptabilité pour garantir un traitement cohérent des flux.\n\nProfil recherché : au moins 7 ans d'expérience en fiscalité, en cabinet et/ou en entreprise, une solide maîtrise de la fiscalité internationale, une bonne compréhension du calcul d'impôt sous IFRS et US GAAP, et une aisance avec les problématiques de prix de transfert. Anglais courant indispensable dans un environnement multiculturel.\n\nApprécié : expérience du secteur des services financiers, connaissance d'un ERP tel que SAP ou Oracle, et exposition à la fiscalité luxembourgeoise.\n\nPoste basé à Luxembourg, en mode hybride, au sein d'une équipe internationale.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Corporate Tax",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 7,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Transfer Pricing",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "US GAAP",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "VAT Compliance",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Oracle",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Luxembourg",
+          "Metz",
+          "Bruxelles",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Banking",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Contrôleur Financier (Financial Controller / Oracle / Power BI)",
+    "description": "Nordis Assurances, une compagnie d'assurance solidement implantée à Lille, recherche un Contrôleur Financier pour prendre la responsabilité du contrôle de gestion et du reporting financier de sa division dommages.\n\nVous supervisez la clôture mensuelle et annuelle, garantissez la fiabilité des états financiers et produisez les analyses de rentabilité par ligne de produit et par canal de distribution. Vous pilotez le processus budgétaire et de réestimé, animez les revues de performance avec les directions opérationnelles et proposez des plans d'action pour améliorer les marges techniques.\n\nVous êtes garant de l'environnement de contrôle interne, renforcez les procédures et la piste d'audit, et travaillez avec les auditeurs internes et externes. Vous exploitez l'ERP Oracle pour fiabiliser les données et développez des tableaux de bord dans Power BI afin de donner aux décideurs une vision claire et actualisée de la performance.\n\nProfil recherché : au moins 5 ans d'expérience en contrôle de gestion ou contrôle financier, une bonne maîtrise des principes comptables (IFRS appréciés), un ERP tel qu'Oracle ou SAP, et un Excel avancé. Un esprit d'analyse rigoureux, le sens du contrôle et de bonnes qualités de communication sont essentiels.\n\nApprécié : expérience du secteur de l'assurance ou de la banque, Power BI avancé, et anglais professionnel.\n\nPoste hybride basé à Lille (3 jours par semaine sur site), ouvert aux candidats des Hauts-de-France. Rémunération attractive et perspectives d'évolution vers un poste de direction financière.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Financial Controlling",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Management Accounting",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Oracle",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Budgeting and Forecasting",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "nice_to_have",
+          "weight": 0.12,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 5,
+        "minRelevantYears": 4,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Lille",
+          "Roubaix",
+          "Bruxelles",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Insurance",
+          "Banking",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  }
+]

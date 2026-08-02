@@ -1,0 +1,434 @@
+[
+  {
+    "title": "Mechanical Design Engineer (SolidWorks/HVAC)",
+    "description": "Azienda leader nella progettazione di sistemi di climatizzazione e macchinari industriali, con sede a Torino, cerca un Mechanical Design Engineer per rafforzare l'ufficio tecnico. Entrerai a far parte di un team affiatato che sviluppa impianti HVAC e componenti meccanici destinati al settore industriale e terziario.\n\nLa tua missione sarà tradurre le specifiche di progetto in soluzioni meccaniche affidabili, efficienti e conformi alle normative vigenti. Lavorerai a stretto contatto con i reparti di produzione, acquisti e qualità.\n\nResponsabilità principali:\n- Progettare componenti e assiemi meccanici in 3D con SolidWorks\n- Redigere disegni tecnici, distinte base e documentazione di produzione\n- Eseguire calcoli termodinamici e dimensionamento di impianti HVAC\n- Realizzare analisi strutturali preliminari con strumenti FEA\n- Supportare i test di collaudo e l'industrializzazione del prodotto\n\nRequisiti richiesti: laurea in Ingegneria Meccanica, buona esperienza con SolidWorks e AutoCAD, conoscenza dei principi di trasmissione del calore e fluidodinamica, familiarità con le tolleranze GD&T.\n\nNice-to-have: esperienza con ANSYS e conoscenza dei sistemi di gestione della qualità.\n\nOffriamo modalità di lavoro ibrida (quattro giorni in sede a Torino), percorso di crescita strutturato e progetti tecnicamente stimolanti. Contesto onsite orientato al prodotto.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "SolidWorks",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AutoCAD",
+          "importance": "mandatory",
+          "weight": 0.75,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "HVAC Design",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GD&T",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Thermodynamics",
+          "importance": "important",
+          "weight": 0.55,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ANSYS",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "FEA",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Torino",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "HVAC",
+          "Industrial Machinery"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Senior Structural Engineer (Eurocode/Revit)",
+    "description": "Studio di ingegneria civile con sede a Milano, specializzato in edifici commerciali e infrastrutture, cerca un Senior Structural Engineer per guidare la progettazione strutturale di commesse complesse. Sarai un punto di riferimento tecnico per il team e per i progettisti junior.\n\nLa tua missione sarà garantire calcoli strutturali robusti, conformi agli Eurocodici e alle Norme Tecniche per le Costruzioni, coordinando le diverse discipline coinvolte nel progetto.\n\nResponsabilità principali:\n- Progettare strutture in cemento armato, acciaio e opere di fondazione\n- Eseguire analisi e verifiche con ETABS, SAP2000 e STAAD.Pro\n- Redigere relazioni di calcolo e modellazione BIM in Revit\n- Coordinare le interferenze con architettura e impianti (MEP)\n- Fare mentoring dei colleghi e presidiare le verifiche di progetto\n\nRequisiti richiesti: laurea magistrale in Ingegneria Civile, solida esperienza di progettazione strutturale, ottima padronanza degli Eurocodici, esperienza con software di analisi agli elementi finiti.\n\nNice-to-have: abilitazione professionale e conoscenza dei processi di direzione lavori in cantiere.\n\nOffriamo un ambiente onsite a Milano con progetti di prestigio, formazione continua e reali prospettive di avanzamento verso ruoli di responsabilità.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Eurocode",
+          "importance": "mandatory",
+          "weight": 0.95,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ETABS",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "STAAD.Pro",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Revit",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Reinforced Concrete Design",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AutoCAD",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP2000",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Milano",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Construction",
+          "Civil Engineering",
+          "Architecture"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Electrical Design Engineer (PLC/SCADA)",
+    "description": "Società di ingegneria impiantistica con sede a Bologna, attiva nell'automazione industriale e nei sistemi di potenza, cerca un Electrical Design Engineer per la progettazione elettrica e di controllo di impianti produttivi. Lavorerai su progetti che spaziano dai quadri di bassa tensione ai sistemi di supervisione.\n\nLa tua missione sarà sviluppare soluzioni elettriche sicure ed efficienti, dalla fase di studio fino alla messa in servizio in campo.\n\nResponsabilità principali:\n- Progettare schemi elettrici e quadri di potenza e controllo\n- Sviluppare logiche di automazione su PLC e sistemi SCADA\n- Dimensionare cavi, protezioni e distribuzione secondo normativa IEC\n- Redigere documentazione tecnica con AutoCAD Electrical ed EPLAN\n- Supportare collaudi e messa in servizio presso i clienti\n\nRequisiti richiesti: laurea in Ingegneria Elettrica o Automazione, esperienza con programmazione PLC (Siemens o Allen-Bradley), conoscenza dei sistemi SCADA e delle normative IEC.\n\nNice-to-have: esperienza con ETAP per studi di rete e conoscenza dei bus di campo industriali.\n\nOffriamo modalità ibrida con base a Bologna e trasferte in cantiere, ambiente tecnico stimolante e formazione sui principali sistemi di automazione.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "PLC Programming",
+          "importance": "mandatory",
+          "weight": 0.9,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SCADA",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "AutoCAD Electrical",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "EPLAN",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IEC Standards",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ETAP",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Bologna",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Industrial Automation",
+          "Power Systems",
+          "Manufacturing"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Process Engineer Junior (Lean/Six Sigma)",
+    "description": "Stabilimento manifatturiero del settore automotive con sede a Modena cerca un Process Engineer Junior da inserire nel team di miglioramento continuo. È l'opportunità ideale per un neolaureato o un profilo con prima esperienza che voglia crescere nell'ambito dell'ingegneria di processo.\n\nLa tua missione sarà supportare l'ottimizzazione delle linee produttive, riducendo sprechi e migliorando efficienza, qualità e sicurezza secondo la filosofia Lean.\n\nResponsabilità principali:\n- Analizzare i cicli di lavoro e i tempi di produzione\n- Supportare progetti di miglioramento con metodologia Lean e Six Sigma\n- Raccogliere e analizzare dati di processo con strumenti statistici\n- Aggiornare distinte base e cicli sul sistema SAP\n- Collaborare con qualità e manutenzione per la risoluzione dei problemi\n\nRequisiti richiesti: laurea in Ingegneria Industriale, Meccanica o Gestionale, conoscenza di base dei principi Lean, buona padronanza di Excel e attitudine all'analisi dei dati.\n\nNice-to-have: certificazione Six Sigma (Yellow o Green Belt) ed esperienza, anche di tirocinio, in ambito produttivo.\n\nOffriamo un contesto onsite a Modena, un percorso di formazione strutturato, affiancamento da parte di ingegneri senior e concrete prospettive di crescita in un gruppo industriale solido.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Lean Manufacturing",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Six Sigma",
+          "importance": "important",
+          "weight": 0.65,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Process Optimization",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Microsoft Excel",
+          "importance": "important",
+          "weight": 0.55,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Statistical Analysis",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 0,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 0,
+        "minRelevantYears": 0,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Modena",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Automotive",
+          "Manufacturing",
+          "Industrial"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.2,
+        "location": 0.15,
+        "industry": 0.2
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Lead Mechanical Engineer (CATIA/ANSYS)",
+    "description": "Gruppo internazionale attivo nella progettazione di macchinari e componenti per il settore aerospaziale e della difesa, con sede a Roma, cerca un Lead Mechanical Engineer che guidi tecnicamente un team di progettazione. Ruolo di riferimento per le scelte ingegneristiche e per la crescita dei progettisti.\n\nLa tua missione sarà definire l'architettura meccanica dei prodotti, garantire il rispetto di requisiti stringenti di performance e affidabilità e coordinare le attività di calcolo e validazione.\n\nResponsabilità principali:\n- Definire l'architettura e le scelte di progetto dei sistemi meccanici\n- Coordinare la modellazione 3D avanzata in CATIA\n- Supervisionare analisi strutturali e termiche con ANSYS\n- Guidare le revisioni di progetto e la gestione dei requisiti\n- Fare mentoring dei progettisti e interfacciarsi con clienti e fornitori\n\nRequisiti richiesti: laurea magistrale in Ingegneria Meccanica o Aerospaziale, lunga esperienza di progettazione, ottima padronanza di CATIA e di strumenti FEA, esperienza nella gestione di team tecnici.\n\nNice-to-have: conoscenza degli standard aerospaziali e di processi di certificazione, esperienza con materiali compositi.\n\nOffriamo modalità ibrida con base a Roma, progetti ad alto contenuto tecnologico, retribuzione competitiva e un percorso verso ruoli di responsabilità crescente.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "CATIA",
+          "importance": "mandatory",
+          "weight": 0.95,
+          "minYearsOfExperience": 7,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ANSYS",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "FEA",
+          "importance": "mandatory",
+          "weight": 0.8,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Mechanical Design",
+          "importance": "mandatory",
+          "weight": 0.85,
+          "minYearsOfExperience": 8,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Team Leadership",
+          "importance": "important",
+          "weight": 0.7,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GD&T",
+          "importance": "important",
+          "weight": 0.6,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Composite Materials",
+          "importance": "nice_to_have",
+          "weight": 0.4,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 8,
+        "minRelevantYears": 7,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Roma",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Aerospace",
+          "Defense",
+          "Manufacturing"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  }
+]

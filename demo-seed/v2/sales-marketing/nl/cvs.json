@@ -1,0 +1,6287 @@
+[
+  {
+    "candidateProfileSummary": "Gedreven Sales Development Representative met bijna vier jaar ervaring in outbound prospectie voor B2B SaaS-bedrijven. Sterk in het kwalificeren van leads via koude e-mails, LinkedIn en telefoon, en het vullen van de pijplijn voor account executives. Behaalt consequent zijn quota voor gekwalificeerde afspraken en werkt gestructureerd met moderne sales-tooling.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Sven Bakker",
+      "role": "Sales Development Representative",
+      "summary": "Energieke SDR gespecialiseerd in outbound prospectie en leadkwalificatie voor SaaS-oplossingen.",
+      "contact": {
+        "phone": "+31 6 21458870",
+        "email": "sven.bakker@example.com",
+        "address": {
+          "streetNumber": "42",
+          "streetName": "Weesperstraat",
+          "streetType": "straat",
+          "unit": "3",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipCode": "1018 DN",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/svenbakker-sdr",
+          "website": "https://svenbakker.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "maandagochtend",
+          "woensdagmiddag",
+          "vrijdag hele dag"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "op kantoor"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Prospectie",
+        "skills": [
+          "Outbound calling",
+          "Koude e-mail",
+          "LinkedIn Sales Navigator",
+          "Leadkwalificatie"
+        ]
+      },
+      {
+        "category": "Sales-tooling",
+        "skills": [
+          "Salesforce",
+          "HubSpot CRM",
+          "Outreach",
+          "Salesloft"
+        ]
+      },
+      {
+        "category": "Communicatie",
+        "skills": [
+          "Gespreksvoering",
+          "Bezwaarbehandeling",
+          "Afsprakenplanning"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Outbound prospectie",
+        "Leadkwalificatie",
+        "Pijplijnopbouw"
+      ],
+      "keyResponsibilities": [
+        "Genereren van gekwalificeerde afspraken voor AE's",
+        "Beheren van outbound cadences",
+        "Onderhouden van CRM-datakwaliteit"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "CloudPeak Software",
+        "website": "https://cloudpeak.example.com",
+        "location": "Amsterdam, Nederland",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Sales Development Representative",
+        "activities": [
+          {
+            "project": "Outbound-motor EMEA",
+            "tasks": [
+              "Opzetten van multi-channel cadences",
+              "Kwalificeren van inbound en outbound leads",
+              "Boeken van demo-afspraken voor account executives"
+            ]
+          }
+        ],
+        "achievements": [
+          "112% quota-attainment op gekwalificeerde afspraken in 2025",
+          "Beste SDR van het kwartaal in Q3 2025"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Outreach",
+          "LinkedIn Sales Navigator",
+          "ZoomInfo"
+        ]
+      },
+      {
+        "company": "Vondel Media Group",
+        "website": "https://vondelmedia.example.com",
+        "location": "Amsterdam, Nederland",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Junior Business Development Representative",
+        "activities": [
+          {
+            "project": "Leadgeneratie MKB",
+            "tasks": [
+              "Uitvoeren van koude belcampagnes",
+              "Onderhouden van CRM-records",
+              "Ondersteunen van accountmanagers bij vervolgacties"
+            ]
+          }
+        ],
+        "achievements": [
+          "Groei van gekwalificeerde pijplijn met 35% in eerste jaar"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot CRM",
+          "Salesloft"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Hogeschool van Amsterdam",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Commerciële Economie",
+        "achievements": [
+          "Afgestudeerd met een 7,8 gemiddeld"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "HubSpot Sales Software Certification",
+        "institution": "HubSpot Academy",
+        "year": "@Y-0@",
+        "description": "Certificering voor effectief gebruik van HubSpot CRM in het salesproces."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "HubSpot CRM",
+        "Outreach",
+        "LinkedIn Sales Navigator"
+      ],
+      "softSkills": [
+        "Doorzettingsvermogen",
+        "Luistervaardigheid",
+        "Zelfstandigheid"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Nieuwe outbound cadence",
+        "description": "Ontwikkelde een verbeterde e-mailcadence voor de EMEA-markt.",
+        "date": "2025-04",
+        "impact": "Verhoging van de responsratio met 18%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Hardlopen",
+      "Podcasts over sales",
+      "Voetbal"
+    ],
+    "references": [
+      {
+        "name": "Laura de Wit",
+        "position": "Sales Manager",
+        "company": "CloudPeak Software",
+        "contact": {
+          "phone": "+31 6 24785512",
+          "email": "laura.dewit@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 38000,
+      "max": 46000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Sales Development",
+      "secondaryClusters": [
+        "Inside Sales",
+        "Lead Generation"
+      ],
+      "functionalExpertise": [
+        "Outbound prospectie",
+        "Leadkwalificatie"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Pijplijngroei",
+        "Quota-attainment"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Snelgroeiende salesteams"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Focus op outbound prospectie en leadkwalificatie met sterke tooling-ervaring wijst duidelijk op een SDR-profiel op junior niveau."
+    },
+    "searchIndex": {
+      "roles": [
+        "Sales Development Representative",
+        "Business Development Representative",
+        "Inside Sales"
+      ],
+      "skills": [
+        "Outbound prospecting",
+        "Lead qualification",
+        "Salesforce",
+        "HubSpot CRM",
+        "Outreach"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B technology"
+      ]
+    },
+    "tags": [
+      "sales",
+      "SDR",
+      "outbound",
+      "SaaS",
+      "junior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ervaren Account Executive met meer dan tien jaar ervaring in het sluiten van complexe B2B-deals binnen de SaaS-sector. Sterk in consultatieve verkoop, onderhandeling en het managen van de volledige salescyclus van pijplijn tot contract. Overtreft consequent jaartargets en bouwt duurzame klantrelaties op.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Charlotte Verhoeven",
+      "role": "Senior Account Executive",
+      "summary": "Consultatieve Account Executive gespecialiseerd in mid-market en enterprise SaaS-deals.",
+      "contact": {
+        "phone": "+31 6 18293745",
+        "email": "charlotte.verhoeven@example.com",
+        "address": {
+          "streetNumber": "17",
+          "streetName": "Oudegracht",
+          "streetType": "gracht",
+          "city": "Utrecht",
+          "state": "Utrecht",
+          "zipCode": "3511 AB",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/charlotteverhoeven"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dinsdagmiddag",
+          "donderdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybride"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Salescyclus",
+        "skills": [
+          "Consultatieve verkoop",
+          "Onderhandeling",
+          "Closing",
+          "Salescycle-management"
+        ]
+      },
+      {
+        "category": "Accountmanagement",
+        "skills": [
+          "Relatiebeheer",
+          "Upselling",
+          "Cross-selling"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "Salesforce",
+          "HubSpot CRM",
+          "Gong",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Pijplijnprognose",
+          "Forecasting",
+          "Territory planning"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Consultatieve verkoop",
+        "Enterprise deals",
+        "Onderhandeling"
+      ],
+      "keyResponsibilities": [
+        "Beheren van de volledige salescyclus",
+        "Sluiten van mid-market en enterprise deals",
+        "Opbouwen van strategische klantrelaties"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Nimbus Analytics",
+        "website": "https://nimbusanalytics.example.com",
+        "location": "Utrecht, Nederland",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Senior Account Executive",
+        "activities": [
+          {
+            "project": "Enterprise expansie Benelux",
+            "tasks": [
+              "Managen van complexe salescycli",
+              "Onderhandelen van meerjarige contracten",
+              "Coördineren met solutions engineers"
+            ]
+          }
+        ],
+        "achievements": [
+          "134% targetrealisatie in boekjaar 2024",
+          "Grootste deal van de regio gesloten ter waarde van 420.000 EUR ARR"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Gong",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "company": "Batavia Solutions",
+        "website": "https://bataviasolutions.example.com",
+        "location": "Amsterdam, Nederland",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Account Executive",
+        "activities": [
+          {
+            "project": "Mid-market verkoop",
+            "tasks": [
+              "Beheren van een portefeuille mid-market prospects",
+              "Voeren van productdemo's",
+              "Opstellen van commerciële voorstellen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Drie opeenvolgende jaren boven quota",
+          "Opgeleid twee nieuwe AE's"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot CRM",
+          "Salesforce"
+        ]
+      },
+      {
+        "company": "Delft Digital",
+        "website": "https://delftdigital.example.com",
+        "location": "Delft, Nederland",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Junior Sales Consultant",
+        "activities": [
+          {
+            "project": "Nieuwe klantwerving",
+            "tasks": [
+              "Kwalificeren van inbound leads",
+              "Ondersteunen van senior sales",
+              "Bijhouden van CRM-gegevens"
+            ]
+          }
+        ],
+        "achievements": [
+          "Snelste rampup van het salesteam"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universiteit Utrecht",
+        "degree": "Master",
+        "fieldOfStudy": "Bedrijfskunde",
+        "achievements": [
+          "Specialisatie Marketing & Sales"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Challenger Sales Certification",
+        "institution": "Challenger Inc.",
+        "year": "@Y-0@",
+        "description": "Certificering in de Challenger-methodiek voor consultatieve verkoop."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "HubSpot CRM",
+        "Gong",
+        "Forecasting"
+      ],
+      "softSkills": [
+        "Overtuigingskracht",
+        "Empathie",
+        "Strategisch denken"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Benelux enterprise-strategie",
+        "description": "Ontwikkelde een accountplan voor enterprise expansie in de Benelux.",
+        "date": "2023-11",
+        "impact": "Toename van gemiddelde dealwaarde met 28%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Zeilen",
+      "Wijnproeven",
+      "Reizen"
+    ],
+    "references": [
+      {
+        "name": "Thomas Groen",
+        "position": "VP Sales",
+        "company": "Nimbus Analytics",
+        "contact": {
+          "phone": "+31 6 33125566",
+          "email": "thomas.groen@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 65000,
+      "max": 80000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Account Executive",
+      "secondaryClusters": [
+        "Enterprise Sales",
+        "Consultative Selling"
+      ],
+      "functionalExpertise": [
+        "Salescycle-management",
+        "Onderhandeling"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Omzetgroei",
+        "Nieuwe klantwerving"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Enterprise sales"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Langdurige ervaring met het sluiten van complexe SaaS-deals en consequent overtreffen van targets duidt op een senior Account Executive."
+    },
+    "searchIndex": {
+      "roles": [
+        "Account Executive",
+        "Enterprise Sales",
+        "Sales Consultant"
+      ],
+      "skills": [
+        "Consultative selling",
+        "Negotiation",
+        "Sales cycle management",
+        "Salesforce",
+        "Forecasting"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B technology"
+      ]
+    },
+    "tags": [
+      "sales",
+      "account-executive",
+      "SaaS",
+      "enterprise",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Toegewijde Key Account Manager met dertien jaar ervaring in het beheren van strategische klantrelaties binnen consumentengoederen en retail. Gespecialiseerd in accountgroei, contractonderhandeling en het coördineren van cross-functionele teams om klantdoelstellingen te realiseren. Bekend om het opbouwen van langdurige partnerships met retailketens.",
+    "careerStartYear": 2013,
+    "personalInformation": {
+      "name": "Willem Janssens",
+      "role": "Key Account Manager",
+      "summary": "Strategische Key Account Manager gericht op accountgroei binnen FMCG en retail.",
+      "contact": {
+        "phone": "+32 478 552134",
+        "email": "willem.janssens@example.be",
+        "address": {
+          "streetNumber": "88",
+          "streetName": "Meir",
+          "streetType": "laan",
+          "city": "Antwerpen",
+          "state": "Antwerpen",
+          "zipCode": "2000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/willemjanssens-kam"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "woensdag hele dag",
+          "vrijdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "op locatie bij klant"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Accountmanagement",
+        "skills": [
+          "Strategisch accountbeheer",
+          "Accountgroei",
+          "Retailonderhandeling"
+        ]
+      },
+      {
+        "category": "Commercieel",
+        "skills": [
+          "Contractonderhandeling",
+          "Categorymanagement",
+          "Prijsstrategie"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "Salesforce",
+          "SAP",
+          "Power BI"
+        ]
+      },
+      {
+        "category": "Samenwerking",
+        "skills": [
+          "Cross-functionele coördinatie",
+          "Stakeholdermanagement"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Strategisch accountbeheer",
+        "Retailonderhandeling",
+        "Accountgroei"
+      ],
+      "keyResponsibilities": [
+        "Beheren van strategische retailaccounts",
+        "Onderhandelen van jaarcontracten",
+        "Realiseren van omzet- en margedoelstellingen"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Vlaamse Zuivel Coöperatie",
+        "website": "https://vlaamsezuivel.example.be",
+        "location": "Antwerpen, België",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Key Account Manager",
+        "activities": [
+          {
+            "project": "Retailpartnerships nationaal",
+            "tasks": [
+              "Beheren van de accounts van grote retailketens",
+              "Onderhandelen van jaarafspraken en promoties",
+              "Coördineren met supply chain en marketing"
+            ]
+          }
+        ],
+        "achievements": [
+          "Accountomzet gegroeid met 22% over drie jaar",
+          "Exclusief schappartnership gesloten met landelijke keten"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "SAP",
+          "Power BI"
+        ]
+      },
+      {
+        "company": "BrusselFoods",
+        "website": "https://brusselfoods.example.be",
+        "location": "Brussel, België",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Account Manager Retail",
+        "activities": [
+          {
+            "project": "Categorygroei",
+            "tasks": [
+              "Beheren van regionale retailaccounts",
+              "Ontwikkelen van categoryplannen",
+              "Uitvoeren van promotieanalyses"
+            ]
+          }
+        ],
+        "achievements": [
+          "Categoryaandeel vergroot met 8 procentpunt"
+        ],
+        "toolsAndTechnologies": [
+          "SAP",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Gentse Handelsmaatschappij",
+        "website": "https://gentsehandel.example.be",
+        "location": "Gent, België",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Junior Accountmedewerker",
+        "activities": [
+          {
+            "project": "Klantondersteuning",
+            "tasks": [
+              "Ondersteunen van accountmanagers",
+              "Verwerken van orders",
+              "Onderhouden van klantdata"
+            ]
+          }
+        ],
+        "achievements": [
+          "Verbetering van orderdoorlooptijd"
+        ],
+        "toolsAndTechnologies": [
+          "SAP"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "KU Leuven",
+        "degree": "Master",
+        "fieldOfStudy": "Handelswetenschappen",
+        "achievements": [
+          "Afstudeerrichting Marketing"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Key Account Management Professional",
+        "institution": "Sales Management Association",
+        "year": "@Y-0@",
+        "description": "Certificering in strategisch key account management."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "SAP",
+        "Power BI",
+        "Excel"
+      ],
+      "softSkills": [
+        "Relatiebeheer",
+        "Onderhandeling",
+        "Strategisch inzicht"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Jaarcontract landelijke keten",
+        "description": "Onderhandelde een meerjarig schapcontract met een nationale retailer.",
+        "date": "2022-09",
+        "impact": "Toename van jaaromzet met 1,2 miljoen EUR."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Wielrennen",
+      "Koken",
+      "Lokale geschiedenis"
+    ],
+    "references": [
+      {
+        "name": "Sophie Maes",
+        "position": "Commercieel Directeur",
+        "company": "Vlaamse Zuivel Coöperatie",
+        "contact": {
+          "phone": "+32 475 998877",
+          "email": "sophie.maes@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 75000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Key Account Management",
+      "secondaryClusters": [
+        "Retail Sales",
+        "Category Management"
+      ],
+      "functionalExpertise": [
+        "Strategisch accountbeheer",
+        "Contractonderhandeling"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Accountgroei",
+        "Margeverbetering"
+      ],
+      "industryDomains": [
+        "Consumer goods",
+        "Retail"
+      ],
+      "environmentFit": [
+        "FMCG",
+        "Retailomgeving"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.87,
+      "clusterReasoning": "Jarenlange ervaring met strategisch beheer van retailaccounts en contractonderhandelingen wijst op een senior Key Account Manager in FMCG."
+    },
+    "searchIndex": {
+      "roles": [
+        "Key Account Manager",
+        "Account Manager",
+        "Retail Sales Manager"
+      ],
+      "skills": [
+        "Strategic account management",
+        "Contract negotiation",
+        "Category management",
+        "Salesforce",
+        "SAP"
+      ],
+      "industries": [
+        "Consumer goods",
+        "Retail",
+        "FMCG"
+      ]
+    },
+    "tags": [
+      "sales",
+      "key-account",
+      "FMCG",
+      "retail",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Resultaatgerichte Business Development Lead met vijftien jaar ervaring in het openen van nieuwe markten en het bouwen van commerciële partnerships in B2B-technologie. Combineert strategische marktanalyse met hands-on dealmaking en leidt een team van business developers. Bewezen trackrecord in het lanceren van nieuwe proposities en het realiseren van omzetgroei in nieuwe segmenten.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Fatima El Amrani",
+      "role": "Business Development Lead",
+      "summary": "Strategische Business Development Lead gericht op marktexpansie en partnerships in B2B-tech.",
+      "contact": {
+        "phone": "+31 6 45872213",
+        "email": "fatima.elamrani@example.com",
+        "address": {
+          "streetNumber": "9",
+          "streetName": "Coolsingel",
+          "streetType": "singel",
+          "city": "Rotterdam",
+          "state": "Zuid-Holland",
+          "zipCode": "3011 AD",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/fatimaelamrani"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "maandagmiddag",
+          "donderdag hele dag"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Business Development",
+        "skills": [
+          "Marktexpansie",
+          "Partnerships",
+          "Go-to-market",
+          "Dealmaking"
+        ]
+      },
+      {
+        "category": "Strategie",
+        "skills": [
+          "Marktanalyse",
+          "Concurrentieanalyse",
+          "Propositieontwikkeling"
+        ]
+      },
+      {
+        "category": "Leiderschap",
+        "skills": [
+          "Teamleiderschap",
+          "Coaching",
+          "Salesenablement"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "Salesforce",
+          "HubSpot CRM",
+          "Tableau"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Marktexpansie",
+        "Strategische partnerships",
+        "Nieuwe proposities"
+      ],
+      "keyResponsibilities": [
+        "Openen van nieuwe markten en segmenten",
+        "Aansturen van het business development-team",
+        "Sluiten van strategische partnerships"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Maasstad Technologies",
+        "website": "https://maasstadtech.example.com",
+        "location": "Rotterdam, Nederland",
+        "from": "@M-2@",
+        "to": "Present",
+        "position": "Business Development Lead",
+        "activities": [
+          {
+            "project": "Marktexpansie DACH",
+            "tasks": [
+              "Ontwikkelen van de go-to-market-strategie voor DACH",
+              "Aansturen van vier business developers",
+              "Onderhandelen van strategische partnerships"
+            ]
+          }
+        ],
+        "achievements": [
+          "Nieuwe markt geopend met 2,4 miljoen EUR ARR in eerste twee jaar",
+          "Vijf strategische partnerships gesloten"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Tableau",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "company": "Schiedam Software",
+        "website": "https://schiedamsoftware.example.com",
+        "location": "Schiedam, Nederland",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Business Development Manager",
+        "activities": [
+          {
+            "project": "Nieuwe verticals",
+            "tasks": [
+              "Identificeren van nieuwe marktsegmenten",
+              "Opbouwen van een partnernetwerk",
+              "Sluiten van strategische deals"
+            ]
+          }
+        ],
+        "achievements": [
+          "Drie nieuwe verticals succesvol betreden"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot CRM",
+          "Salesforce"
+        ]
+      },
+      {
+        "company": "Haarlem Ventures",
+        "website": "https://haarlemventures.example.com",
+        "location": "Haarlem, Nederland",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Business Developer",
+        "activities": [
+          {
+            "project": "Leadgeneratie nieuwe markten",
+            "tasks": [
+              "Onderzoeken van nieuwe marktkansen",
+              "Kwalificeren van strategische leads",
+              "Ondersteunen van de commerciële directie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Basis gelegd voor internationale expansie"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Erasmus Universiteit Rotterdam",
+        "degree": "Master",
+        "fieldOfStudy": "International Business",
+        "achievements": [
+          "Cum laude afgestudeerd"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Erasmus Universiteit Rotterdam",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Bedrijfskunde",
+        "achievements": []
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "HubSpot CRM",
+        "Tableau"
+      ],
+      "softSkills": [
+        "Strategisch denken",
+        "Leiderschap",
+        "Onderhandeling",
+        "Netwerken"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Arabisch",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Go-to-market DACH",
+        "description": "Leidde de marktintroductie in de DACH-regio inclusief partnernetwerk.",
+        "date": "2021-06",
+        "impact": "Realisatie van 2,4 miljoen EUR ARR in twee jaar."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Schaken",
+      "Reizen",
+      "Internationale keuken"
+    ],
+    "references": [
+      {
+        "name": "Bram Kok",
+        "position": "Chief Commercial Officer",
+        "company": "Maasstad Technologies",
+        "contact": {
+          "phone": "+31 6 21993344",
+          "email": "bram.kok@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 85000,
+      "max": 105000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Business Development",
+      "secondaryClusters": [
+        "Market Expansion",
+        "Strategic Partnerships"
+      ],
+      "functionalExpertise": [
+        "Go-to-market",
+        "Partnerships",
+        "Teamleiderschap"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Marktexpansie",
+        "Omzetgroei in nieuwe segmenten"
+      ],
+      "industryDomains": [
+        "B2B technology",
+        "SaaS"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Internationale expansie"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Combinatie van marktexpansie, strategische partnerships en teamleiderschap over vijftien jaar wijst op een Business Development Lead."
+    },
+    "searchIndex": {
+      "roles": [
+        "Business Development Lead",
+        "Business Development Manager",
+        "Partnerships Lead"
+      ],
+      "skills": [
+        "Market expansion",
+        "Go-to-market",
+        "Strategic partnerships",
+        "Team leadership",
+        "Salesforce"
+      ],
+      "industries": [
+        "B2B technology",
+        "SaaS"
+      ]
+    },
+    "tags": [
+      "sales",
+      "business-development",
+      "partnerships",
+      "B2B",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ervaren Sales Manager met zeventien jaar commerciële ervaring, waarvan tien jaar in leidinggevende rollen binnen B2B SaaS en media. Bouwt en coacht high-performing salesteams, stelt commerciële strategieën vast en stuurt op forecasting en quota-attainment. Sterk in het opschalen van teams en het implementeren van salesprocessen.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Diederik Smit",
+      "role": "Sales Manager",
+      "summary": "Commerciële Sales Manager gericht op teamopbouw, forecasting en salesprocessen.",
+      "contact": {
+        "phone": "+31 6 39847721",
+        "email": "diederik.smit@example.com",
+        "address": {
+          "streetNumber": "23",
+          "streetName": "Vughterstraat",
+          "streetType": "straat",
+          "city": "'s-Hertogenbosch",
+          "state": "Noord-Brabant",
+          "zipCode": "5211 EK",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/diederiksmit"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "dinsdag hele dag",
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybride"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Salesleiderschap",
+        "skills": [
+          "Teamopbouw",
+          "Coaching",
+          "Commerciële strategie"
+        ]
+      },
+      {
+        "category": "Sturing",
+        "skills": [
+          "Forecasting",
+          "Quota-management",
+          "Pijplijnreview"
+        ]
+      },
+      {
+        "category": "Proces",
+        "skills": [
+          "Salesproces-optimalisatie",
+          "Sales enablement",
+          "CRM-implementatie"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "Salesforce",
+          "HubSpot CRM",
+          "Gong",
+          "Clari"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Salesleiderschap",
+        "Forecasting",
+        "Teamopbouw"
+      ],
+      "keyResponsibilities": [
+        "Aansturen en coachen van het salesteam",
+        "Vaststellen van de commerciële strategie",
+        "Beheren van forecasting en targets"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Brabant Cloud Services",
+        "website": "https://brabantcloud.example.com",
+        "location": "'s-Hertogenbosch, Nederland",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Sales Manager",
+        "activities": [
+          {
+            "project": "Salesteam opschalen",
+            "tasks": [
+              "Aansturen van een team van tien AE's en SDR's",
+              "Implementeren van een gestructureerd salesproces",
+              "Beheren van kwartaalforecasting"
+            ]
+          }
+        ],
+        "achievements": [
+          "Teamomzet verdubbeld in vier jaar",
+          "Salesproductiviteit verhoogd met 30% door nieuw enablementprogramma"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Gong",
+          "Clari"
+        ]
+      },
+      {
+        "company": "Eindhoven Media",
+        "website": "https://eindhovenmedia.example.com",
+        "location": "Eindhoven, Nederland",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Teamlead Sales",
+        "activities": [
+          {
+            "project": "Regioteam aansturen",
+            "tasks": [
+              "Coachen van accountmanagers",
+              "Vaststellen van regionale targets",
+              "Rapporteren aan de commerciële directie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Beste regioteam twee jaar op rij"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot CRM",
+          "Salesforce"
+        ]
+      },
+      {
+        "company": "Tilburg Trading",
+        "website": "https://tilburgtrading.example.com",
+        "location": "Tilburg, Nederland",
+        "from": "@M-92@",
+        "to": "@M-62@",
+        "position": "Account Manager",
+        "activities": [
+          {
+            "project": "Nieuwe klanten werven",
+            "tasks": [
+              "Beheren van een klantportefeuille",
+              "Sluiten van nieuwe contracten",
+              "Onderhouden van klantrelaties"
+            ]
+          }
+        ],
+        "achievements": [
+          "Consequent boven target"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Tilburg University",
+        "degree": "Master",
+        "fieldOfStudy": "Marketing Management",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Sales Leadership Certificate",
+        "institution": "RSM Executive Education",
+        "year": "@Y-0@",
+        "description": "Executive-programma over het leiden en opschalen van salesteams."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "HubSpot CRM",
+        "Gong",
+        "Clari"
+      ],
+      "softSkills": [
+        "Leiderschap",
+        "Coaching",
+        "Besluitvaardigheid",
+        "Communicatie"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Sales enablementprogramma",
+        "description": "Introduceerde een gestructureerd onboarding- en coachingprogramma voor het salesteam.",
+        "date": "2021-02",
+        "impact": "Verkorting van rampup-tijd met 40%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Golf",
+      "Mentorschap",
+      "Geschiedenis"
+    ],
+    "references": [
+      {
+        "name": "Anouk Peeters",
+        "position": "Managing Director",
+        "company": "Brabant Cloud Services",
+        "contact": {
+          "phone": "+31 6 27554488",
+          "email": "anouk.peeters@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 90000,
+      "max": 110000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Sales Management",
+      "secondaryClusters": [
+        "Sales Leadership",
+        "Sales Enablement"
+      ],
+      "functionalExpertise": [
+        "Teamopbouw",
+        "Forecasting",
+        "Commerciële strategie"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Teamproductiviteit",
+        "Omzetgroei"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "Media"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Groeiende salesorganisaties"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.91,
+      "clusterReasoning": "Tien jaar leidinggevende ervaring met teamopbouw, forecasting en salesprocessen wijst duidelijk op een Sales Manager op managementniveau."
+    },
+    "searchIndex": {
+      "roles": [
+        "Sales Manager",
+        "Sales Team Lead",
+        "Head of Sales"
+      ],
+      "skills": [
+        "Team building",
+        "Forecasting",
+        "Sales enablement",
+        "Quota management",
+        "Salesforce"
+      ],
+      "industries": [
+        "SaaS",
+        "Media",
+        "B2B technology"
+      ]
+    },
+    "tags": [
+      "sales",
+      "sales-manager",
+      "leadership",
+      "SaaS",
+      "manager"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Analytisch ingestelde SEO/SEM-specialist met vijf jaar ervaring in het optimaliseren van organische en betaalde zoekcampagnes voor e-commerce en SaaS. Sterk in keywordonderzoek, technische SEO en het beheren van Google Ads-budgetten met focus op ROAS. Datagedreven en vertrouwd met GA4 en zoekmachine-analyse.",
+    "careerStartYear": 2021,
+    "personalInformation": {
+      "name": "Iris Hendriks",
+      "role": "SEO/SEM Specialist",
+      "summary": "Datagedreven SEO/SEM-specialist gericht op organische groei en betaalde zoekcampagnes.",
+      "contact": {
+        "phone": "+31 6 41228876",
+        "email": "iris.hendriks@example.com",
+        "address": {
+          "streetNumber": "5",
+          "streetName": "Grote Markt",
+          "streetType": "plein",
+          "city": "Groningen",
+          "state": "Groningen",
+          "zipCode": "9711 LV",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/irishendriks-seo"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-15",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "maandag hele dag",
+          "woensdagochtend",
+          "vrijdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "SEO",
+        "skills": [
+          "Keywordonderzoek",
+          "Technische SEO",
+          "On-page optimalisatie",
+          "Linkbuilding"
+        ]
+      },
+      {
+        "category": "SEM",
+        "skills": [
+          "Google Ads",
+          "Bidmanagement",
+          "ROAS-optimalisatie"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "GA4",
+          "Google Search Console",
+          "Looker Studio"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "Ahrefs",
+          "SEMrush",
+          "Screaming Frog"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Zoekmachineoptimalisatie",
+        "Betaalde zoekcampagnes",
+        "Webanalyse"
+      ],
+      "keyResponsibilities": [
+        "Uitvoeren van keywordonderzoek en technische SEO",
+        "Beheren van Google Ads-campagnes",
+        "Rapporteren op basis van GA4-data"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Noorderlicht E-commerce",
+        "website": "https://noorderlicht.example.com",
+        "location": "Groningen, Nederland",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "SEO/SEM Specialist",
+        "activities": [
+          {
+            "project": "Organische groei webshop",
+            "tasks": [
+              "Uitvoeren van technische SEO-audits",
+              "Optimaliseren van productpagina's",
+              "Beheren van Google Ads-campagnes met ROAS-doelstelling"
+            ]
+          }
+        ],
+        "achievements": [
+          "Organisch verkeer met 65% gegroeid in twee jaar",
+          "ROAS verbeterd van 3,2 naar 4,8"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "GA4",
+          "Ahrefs",
+          "Screaming Frog"
+        ]
+      },
+      {
+        "company": "Frisia Digital Agency",
+        "website": "https://frisiadigital.example.com",
+        "location": "Leeuwarden, Nederland",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Junior Search Marketeer",
+        "activities": [
+          {
+            "project": "Klantcampagnes",
+            "tasks": [
+              "Opzetten van zoekcampagnes voor klanten",
+              "Uitvoeren van keywordonderzoek",
+              "Maken van maandelijkse rapportages"
+            ]
+          }
+        ],
+        "achievements": [
+          "Beheerde succesvol acht klantaccounts"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "SEMrush",
+          "Google Search Console"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Hanzehogeschool Groningen",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Communication & Multimedia Design",
+        "achievements": [
+          "Afstudeerproject over zoekmachineoptimalisatie"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Google Ads Search Certification",
+        "institution": "Google",
+        "year": "@Y-2@",
+        "description": "Certificering voor het opzetten en optimaliseren van Google Ads-zoekcampagnes."
+      },
+      {
+        "title": "Google Analytics Certification",
+        "institution": "Google",
+        "year": "@Y-2@",
+        "description": "Certificering voor het gebruik van Google Analytics 4."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Google Ads",
+        "GA4",
+        "Ahrefs",
+        "SEMrush",
+        "Screaming Frog",
+        "Google Search Console"
+      ],
+      "softSkills": [
+        "Analytisch vermogen",
+        "Nauwkeurigheid",
+        "Nieuwsgierigheid"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Technische SEO-migratie",
+        "description": "Leidde de SEO-migratie bij een platformwissel van de webshop.",
+        "date": "2024-05",
+        "impact": "Behoud van 98% van het organische verkeer na migratie."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Fotografie",
+      "Fietsen",
+      "Data-visualisatie"
+    ],
+    "references": [
+      {
+        "name": "Mark de Boer",
+        "position": "Marketing Lead",
+        "company": "Noorderlicht E-commerce",
+        "contact": {
+          "phone": "+31 6 28117744",
+          "email": "mark.deboer@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "Search Marketing",
+      "secondaryClusters": [
+        "SEO",
+        "Paid Search"
+      ],
+      "functionalExpertise": [
+        "Zoekmachineoptimalisatie",
+        "Google Ads"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Organische groei",
+        "ROAS-verbetering"
+      ],
+      "industryDomains": [
+        "E-commerce",
+        "SaaS"
+      ],
+      "environmentFit": [
+        "Digital agency",
+        "E-commerce"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Focus op SEO, Google Ads en webanalyse met vijf jaar ervaring wijst op een SEO/SEM-specialist op midLevel niveau."
+    },
+    "searchIndex": {
+      "roles": [
+        "SEO Specialist",
+        "SEM Specialist",
+        "Search Marketing Specialist"
+      ],
+      "skills": [
+        "SEO",
+        "Google Ads",
+        "Keyword research",
+        "GA4",
+        "Technical SEO",
+        "SEMrush"
+      ],
+      "industries": [
+        "E-commerce",
+        "SaaS",
+        "Digital agency"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "SEO",
+      "SEM",
+      "performance",
+      "midlevel"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ervaren Paid Media Manager met tien jaar ervaring in het plannen en uitvoeren van betaalde mediacampagnes over Google, Meta en programmatic kanalen. Gespecialiseerd in performance marketing met een sterke focus op CAC, ROAS en budgetallocatie voor e-commerce en B2B-tech. Combineert creatieve testing met scherpe data-analyse.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Youssef Bakkali",
+      "role": "Paid Media Manager",
+      "summary": "Performance-gedreven Paid Media Manager gespecialiseerd in multichannel betaalde campagnes.",
+      "contact": {
+        "phone": "+31 6 44772290",
+        "email": "youssef.bakkali@example.com",
+        "address": {
+          "streetNumber": "31",
+          "streetName": "Stationsplein",
+          "streetType": "plein",
+          "city": "Den Haag",
+          "state": "Zuid-Holland",
+          "zipCode": "2515 BV",
+          "country": "Nederland"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "woensdagmiddag",
+          "vrijdag hele dag"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband",
+          "freelance"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Paid Media",
+        "skills": [
+          "Google Ads",
+          "Meta Ads",
+          "Programmatic",
+          "Bidstrategieën"
+        ]
+      },
+      {
+        "category": "Performance",
+        "skills": [
+          "ROAS-optimalisatie",
+          "CAC-beheer",
+          "Budgetallocatie",
+          "Conversieoptimalisatie"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "GA4",
+          "Google Analytics",
+          "Attributiemodellen"
+        ]
+      },
+      {
+        "category": "Creatief",
+        "skills": [
+          "Ad creative testing",
+          "A/B-testen"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Betaalde media",
+        "Performance marketing",
+        "Budgetbeheer"
+      ],
+      "keyResponsibilities": [
+        "Plannen en uitvoeren van betaalde mediacampagnes",
+        "Optimaliseren op ROAS en CAC",
+        "Beheren van mediabudgetten over kanalen"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Hofstad Retail",
+        "website": "https://hofstadretail.example.com",
+        "location": "Den Haag, Nederland",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Paid Media Manager",
+        "activities": [
+          {
+            "project": "Multichannel performance",
+            "tasks": [
+              "Beheren van een mediabudget van 1,5 miljoen EUR per jaar",
+              "Opzetten van programmatic en social campagnes",
+              "Uitvoeren van creative testing"
+            ]
+          }
+        ],
+        "achievements": [
+          "ROAS verbeterd met 40% over twee jaar",
+          "CAC verlaagd met 25%"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "Meta Ads",
+          "GA4",
+          "Google Analytics"
+        ]
+      },
+      {
+        "company": "Delta Media Agency",
+        "website": "https://deltamedia.example.com",
+        "location": "Rotterdam, Nederland",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Performance Marketeer",
+        "activities": [
+          {
+            "project": "Klantcampagnes performance",
+            "tasks": [
+              "Beheren van betaalde campagnes voor meerdere klanten",
+              "Rapporteren op ROAS en conversies",
+              "Optimaliseren van biedstrategieën"
+            ]
+          }
+        ],
+        "achievements": [
+          "Portefeuille van tien klanten met gemiddeld positieve ROAS"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "Meta Ads",
+          "Google Analytics"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Hogeschool Rotterdam",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Commerciële Economie",
+        "achievements": [
+          "Specialisatie Digital Marketing"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Meta Certified Media Buying Professional",
+        "institution": "Meta",
+        "year": "@Y-2@",
+        "description": "Certificering voor het beheren van Meta advertising campagnes."
+      },
+      {
+        "title": "Google Ads Measurement Certification",
+        "institution": "Google",
+        "year": "@Y-2@",
+        "description": "Certificering voor meten en optimaliseren van advertentieresultaten."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Google Ads",
+        "Meta Ads",
+        "GA4",
+        "Google Analytics",
+        "Looker Studio"
+      ],
+      "softSkills": [
+        "Analytisch vermogen",
+        "Creativiteit",
+        "Resultaatgerichtheid"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Programmatic uitrol",
+        "description": "Introduceerde programmatic advertising als nieuw kanaal.",
+        "date": "2022-03",
+        "impact": "Toename van gekwalificeerd verkeer met 30% tegen lagere CPC."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Basketbal",
+      "Sneakers verzamelen",
+      "Elektronische muziek"
+    ],
+    "references": [
+      {
+        "name": "Nadia Visser",
+        "position": "Head of Marketing",
+        "company": "Hofstad Retail",
+        "contact": {
+          "phone": "+31 6 26993311",
+          "email": "nadia.visser@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 55000,
+      "max": 68000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Paid Media",
+      "secondaryClusters": [
+        "Performance Marketing",
+        "Programmatic"
+      ],
+      "functionalExpertise": [
+        "Betaalde media",
+        "ROAS-optimalisatie"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "ROAS-verbetering",
+        "CAC-verlaging"
+      ],
+      "industryDomains": [
+        "E-commerce",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Digital agency",
+        "E-commerce"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Tien jaar ervaring met multichannel betaalde media en sterke focus op performance-metrics wijst op een senior Paid Media Manager."
+    },
+    "searchIndex": {
+      "roles": [
+        "Paid Media Manager",
+        "Performance Marketing Manager",
+        "PPC Manager"
+      ],
+      "skills": [
+        "Google Ads",
+        "Meta Ads",
+        "Programmatic",
+        "ROAS optimization",
+        "GA4"
+      ],
+      "industries": [
+        "E-commerce",
+        "B2B technology",
+        "Digital agency"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "paid-media",
+      "performance",
+      "PPC",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Marketing Automation Specialist met twaalf jaar ervaring in het bouwen van lifecycle- en lead-nurturing programma's in HubSpot en Marketo. Sterk in leadscoring, e-mailautomatisering en het koppelen van marketing- en salesdata. Combineert technische configuratie met strategisch inzicht in de customer journey binnen B2B SaaS.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Eva Vermeulen",
+      "role": "Marketing Automation Specialist",
+      "summary": "Marketing Automation Specialist gericht op lifecycle-programma's en leadnurturing in B2B SaaS.",
+      "contact": {
+        "phone": "+32 486 331209",
+        "email": "eva.vermeulen@example.be",
+        "address": {
+          "streetNumber": "12",
+          "streetName": "Korenmarkt",
+          "streetType": "markt",
+          "city": "Gent",
+          "state": "Oost-Vlaanderen",
+          "zipCode": "9000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/evavermeulen-mops"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "dinsdagochtend",
+          "donderdag hele dag"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Automation",
+        "skills": [
+          "Lifecycle marketing",
+          "Leadnurturing",
+          "E-mailautomatisering",
+          "Workflows"
+        ]
+      },
+      {
+        "category": "Platforms",
+        "skills": [
+          "HubSpot",
+          "Marketo",
+          "Salesforce"
+        ]
+      },
+      {
+        "category": "Data",
+        "skills": [
+          "Leadscoring",
+          "Segmentatie",
+          "Attributie",
+          "CRM-integratie"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Funnelanalyse",
+          "A/B-testen",
+          "Rapportage"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Marketing automation",
+        "Lifecycle marketing",
+        "Leadnurturing"
+      ],
+      "keyResponsibilities": [
+        "Bouwen van geautomatiseerde nurturing-programma's",
+        "Beheren van leadscoring en segmentatie",
+        "Koppelen van marketing- en salesdata"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Flanders SaaS Group",
+        "website": "https://flanderssaas.example.be",
+        "location": "Gent, België",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Marketing Automation Specialist",
+        "activities": [
+          {
+            "project": "Lifecycle-programma's",
+            "tasks": [
+              "Ontwerpen van nurturing-flows in HubSpot",
+              "Opzetten van leadscoringmodellen",
+              "Integreren van marketing- en CRM-data"
+            ]
+          }
+        ],
+        "achievements": [
+          "MQL-naar-SQL conversie verbeterd met 22%",
+          "E-mail engagement verhoogd met 35%"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot",
+          "Salesforce",
+          "Marketo"
+        ]
+      },
+      {
+        "company": "Leuven Digital",
+        "website": "https://leuvendigital.example.be",
+        "location": "Leuven, België",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "E-mail Marketeer",
+        "activities": [
+          {
+            "project": "E-mailprogramma's",
+            "tasks": [
+              "Opzetten van e-mailcampagnes",
+              "Beheren van segmentatie",
+              "Uitvoeren van A/B-testen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Openratio verbeterd met 18%"
+        ],
+        "toolsAndTechnologies": [
+          "Marketo",
+          "Mailchimp"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universiteit Gent",
+        "degree": "Master",
+        "fieldOfStudy": "Communicatiewetenschappen",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "HubSpot Marketing Software Certification",
+        "institution": "HubSpot Academy",
+        "year": "@Y-4@",
+        "description": "Certificering in geavanceerd gebruik van HubSpot voor marketing automation."
+      },
+      {
+        "title": "Marketo Certified Expert",
+        "institution": "Adobe",
+        "year": "@Y-4@",
+        "description": "Certificering als expert in Marketo marketing automation."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "HubSpot",
+        "Marketo",
+        "Salesforce",
+        "Looker Studio"
+      ],
+      "softSkills": [
+        "Analytisch denken",
+        "Structuur",
+        "Samenwerken"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Leadscoringmodel",
+        "description": "Ontwikkelde een gedragsgebaseerd leadscoringmodel gekoppeld aan de CRM.",
+        "date": "2021-08",
+        "impact": "Verbetering van salesefficiëntie door betere leadprioritering."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Yoga",
+      "Lezen",
+      "Tuinieren"
+    ],
+    "references": [
+      {
+        "name": "Pieter Coppens",
+        "position": "Marketing Director",
+        "company": "Flanders SaaS Group",
+        "contact": {
+          "phone": "+32 477 665544",
+          "email": "pieter.coppens@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 52000,
+      "max": 64000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Marketing Automation",
+      "secondaryClusters": [
+        "Lifecycle Marketing",
+        "CRM Marketing"
+      ],
+      "functionalExpertise": [
+        "Leadnurturing",
+        "Marketing automation"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Conversieverbetering",
+        "Funnel-efficiëntie"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "B2B marketingteams"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Twaalf jaar ervaring met HubSpot, Marketo en lifecycle-programma's wijst op een senior Marketing Automation Specialist."
+    },
+    "searchIndex": {
+      "roles": [
+        "Marketing Automation Specialist",
+        "Lifecycle Marketing Manager",
+        "CRM Marketing Manager"
+      ],
+      "skills": [
+        "Marketing automation",
+        "Lead nurturing",
+        "HubSpot",
+        "Marketo",
+        "Lead scoring"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B technology"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "automation",
+      "lifecycle",
+      "SaaS",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Strategische Performance Marketing Lead met veertien jaar ervaring in het aansturen van datagedreven groeicampagnes over betaalde, organische en lifecycle-kanalen. Leidt een team van performance marketeers en stuurt op CAC, LTV en marketing-attributie. Combineert kanaalexpertise met budgetverantwoordelijkheid en strategische planning binnen e-commerce en SaaS.",
+    "careerStartYear": 2012,
+    "personalInformation": {
+      "name": "Ruben de Vries",
+      "role": "Performance Marketing Lead",
+      "summary": "Performance Marketing Lead gericht op datagedreven groei en teamaansturing.",
+      "contact": {
+        "phone": "+31 6 42117789",
+        "email": "ruben.devries@example.com",
+        "address": {
+          "streetNumber": "56",
+          "streetName": "Nieuwezijds Voorburgwal",
+          "streetType": "wal",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipCode": "1012 RD",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/rubendevries-growth"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "maandagmiddag",
+          "woensdag hele dag"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Performance",
+        "skills": [
+          "Multichannel performance",
+          "CAC/LTV-sturing",
+          "Budgetallocatie",
+          "Attributiemodellen"
+        ]
+      },
+      {
+        "category": "Kanalen",
+        "skills": [
+          "Google Ads",
+          "Meta Ads",
+          "Paid social",
+          "Lifecycle marketing"
+        ]
+      },
+      {
+        "category": "Leiderschap",
+        "skills": [
+          "Teamleiderschap",
+          "Coaching",
+          "Strategische planning"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "GA4",
+          "Looker Studio",
+          "Cohortanalyse"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Performance marketing",
+        "Groeistrategie",
+        "Teamleiderschap"
+      ],
+      "keyResponsibilities": [
+        "Aansturen van het performance marketing-team",
+        "Beheren van het volledige performance-budget",
+        "Sturen op CAC, LTV en attributie"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Amstel Commerce",
+        "website": "https://amstelcommerce.example.com",
+        "location": "Amsterdam, Nederland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Performance Marketing Lead",
+        "activities": [
+          {
+            "project": "Groeimotor D2C",
+            "tasks": [
+              "Aansturen van een team van zes performance marketeers",
+              "Beheren van een jaarbudget van 4 miljoen EUR",
+              "Ontwikkelen van attributie- en budgetmodellen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Blended CAC verlaagd met 30% bij gelijkblijvende groei",
+          "Omzet uit betaalde kanalen verdubbeld in drie jaar"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "Meta Ads",
+          "GA4",
+          "Looker Studio"
+        ]
+      },
+      {
+        "company": "Zaanstad Digital",
+        "website": "https://zaanstaddigital.example.com",
+        "location": "Zaandam, Nederland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Senior Performance Marketeer",
+        "activities": [
+          {
+            "project": "Kanaalgroei",
+            "tasks": [
+              "Opschalen van betaalde kanalen",
+              "Opzetten van rapportagedashboards",
+              "Uitvoeren van conversieoptimalisatie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Betaalde omzet met 80% gegroeid"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "Meta Ads",
+          "Google Analytics"
+        ]
+      },
+      {
+        "company": "Purmerend Media",
+        "website": "https://purmerendmedia.example.com",
+        "location": "Purmerend, Nederland",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Online Marketeer",
+        "activities": [
+          {
+            "project": "Campagnebeheer",
+            "tasks": [
+              "Opzetten van online campagnes",
+              "Analyseren van resultaten",
+              "Optimaliseren van landingspagina's"
+            ]
+          }
+        ],
+        "achievements": [
+          "Conversieratio verbeterd met 15%"
+        ],
+        "toolsAndTechnologies": [
+          "Google Ads",
+          "Google Analytics"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Vrije Universiteit Amsterdam",
+        "degree": "Master",
+        "fieldOfStudy": "Marketing",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Google Ads Search Certification",
+        "institution": "Google",
+        "year": "@Y-4@",
+        "description": "Certificering voor zoekcampagnes in Google Ads."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Google Ads",
+        "Meta Ads",
+        "GA4",
+        "Looker Studio",
+        "HubSpot"
+      ],
+      "softSkills": [
+        "Leiderschap",
+        "Strategisch denken",
+        "Analytisch vermogen"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Attributiemodel",
+        "description": "Bouwde een multi-touch attributiemodel voor betere budgetbeslissingen.",
+        "date": "2022-04",
+        "impact": "Efficiëntere budgetverdeling en 20% betere ROI."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Wielrennen",
+      "Data science",
+      "Koffie branden"
+    ],
+    "references": [
+      {
+        "name": "Lisa Meijer",
+        "position": "CMO",
+        "company": "Amstel Commerce",
+        "contact": {
+          "phone": "+31 6 22884411",
+          "email": "lisa.meijer@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 78000,
+      "max": 95000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Performance Marketing",
+      "secondaryClusters": [
+        "Growth Marketing",
+        "Digital Marketing Leadership"
+      ],
+      "functionalExpertise": [
+        "Multichannel performance",
+        "Teamleiderschap"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "CAC-verlaging",
+        "Omzetgroei"
+      ],
+      "industryDomains": [
+        "E-commerce",
+        "SaaS"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "D2C"
+      ],
+      "seniorityLevel": "lead",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Veertien jaar performance-ervaring met budgetverantwoordelijkheid en teamaansturing wijst op een Performance Marketing Lead."
+    },
+    "searchIndex": {
+      "roles": [
+        "Performance Marketing Lead",
+        "Head of Performance Marketing",
+        "Growth Marketing Lead"
+      ],
+      "skills": [
+        "Performance marketing",
+        "Google Ads",
+        "Meta Ads",
+        "CAC optimization",
+        "Attribution modeling",
+        "GA4"
+      ],
+      "industries": [
+        "E-commerce",
+        "SaaS",
+        "D2C"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "performance",
+      "growth",
+      "leadership",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Strategische CRM & Lifecycle Director met achttien jaar ervaring in het opzetten en leiden van customer lifecycle- en retentieprogramma's binnen e-commerce en media. Stuurt op klantwaarde, retentie en cross-sell via geavanceerde segmentatie en marketing automation. Leidt multidisciplinaire CRM-teams en vertaalt datastrategie naar meetbare klantwaardegroei.",
+    "personalInformation": {
+      "name": "Sanne Willemsen",
+      "role": "CRM & Lifecycle Director",
+      "summary": "CRM & Lifecycle Director gericht op retentie, klantwaarde en teamleiderschap.",
+      "contact": {
+        "phone": "+31 6 43229901",
+        "email": "sanne.willemsen@example.com",
+        "address": {
+          "streetNumber": "3",
+          "streetName": "Wilhelminapark",
+          "streetType": "park",
+          "city": "Utrecht",
+          "state": "Utrecht",
+          "zipCode": "3581 NE",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sannewillemsen"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-03-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybride"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "CRM-strategie",
+        "skills": [
+          "Lifecycle marketing",
+          "Retentiestrategie",
+          "Klantwaardegroei",
+          "Loyaliteitsprogramma's"
+        ]
+      },
+      {
+        "category": "Data",
+        "skills": [
+          "Segmentatie",
+          "Predictieve modellen",
+          "Klantdata-platform"
+        ]
+      },
+      {
+        "category": "Leiderschap",
+        "skills": [
+          "Teamleiderschap",
+          "Stakeholdermanagement",
+          "Budgetbeheer"
+        ]
+      },
+      {
+        "category": "Platforms",
+        "skills": [
+          "Salesforce Marketing Cloud",
+          "HubSpot",
+          "Braze"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "CRM-strategie",
+        "Retentie",
+        "Lifecycle marketing"
+      ],
+      "keyResponsibilities": [
+        "Leiden van de CRM- en lifecycle-strategie",
+        "Aansturen van het CRM-team",
+        "Sturen op retentie en klantwaarde"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Randstad Retail Group",
+        "website": "https://randstadretail.example.com",
+        "location": "Utrecht, Nederland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "CRM & Lifecycle Director",
+        "activities": [
+          {
+            "project": "Klantwaardestrategie",
+            "tasks": [
+              "Leiden van een CRM-team van twaalf personen",
+              "Ontwikkelen van de retentiestrategie",
+              "Implementeren van een klantdata-platform"
+            ]
+          }
+        ],
+        "achievements": [
+          "Klantretentie verhoogd met 18 procentpunt",
+          "Loyaliteitsprogramma gelanceerd met 500.000 leden"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce Marketing Cloud",
+          "Braze"
+        ]
+      },
+      {
+        "company": "Media Nova",
+        "website": "https://medianova.example.com",
+        "location": "Hilversum, Nederland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "CRM Manager",
+        "activities": [
+          {
+            "project": "Abonnee-retentie",
+            "tasks": [
+              "Beheren van CRM-campagnes voor abonnees",
+              "Opzetten van winback-programma's",
+              "Aansturen van drie CRM-specialisten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Churn verlaagd met 12%"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot",
+          "Salesforce"
+        ]
+      },
+      {
+        "company": "Amersfoort Publishing",
+        "website": "https://amersfoortpublishing.example.com",
+        "location": "Amersfoort, Nederland",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "CRM Specialist",
+        "activities": [
+          {
+            "project": "Databasemarketing",
+            "tasks": [
+              "Beheren van klantsegmentatie",
+              "Opzetten van gerichte campagnes",
+              "Analyseren van campagneresultaten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Responsratio verbeterd met 20%"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universiteit Utrecht",
+        "degree": "Master",
+        "fieldOfStudy": "Marketing",
+        "achievements": []
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Universiteit Utrecht",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Economie",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Salesforce Marketing Cloud Consultant",
+        "institution": "Salesforce",
+        "year": "@Y-4@",
+        "description": "Certificering als consultant voor Salesforce Marketing Cloud."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce Marketing Cloud",
+        "Braze",
+        "HubSpot",
+        "SQL"
+      ],
+      "softSkills": [
+        "Leiderschap",
+        "Strategisch inzicht",
+        "Stakeholdermanagement"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "basic"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Loyaliteitsprogramma",
+        "description": "Lanceerde een landelijk loyaliteitsprogramma met gepersonaliseerde journeys.",
+        "date": "2020-09",
+        "impact": "500.000 leden en 18% hogere retentie."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Hardlopen",
+      "Moderne kunst",
+      "Reizen"
+    ],
+    "references": [
+      {
+        "name": "Erik Bakker",
+        "position": "Chief Marketing Officer",
+        "company": "Randstad Retail Group",
+        "contact": {
+          "phone": "+31 6 25667788",
+          "email": "erik.bakker@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 105000,
+      "max": 130000
+    },
+    "candidateClustering": {
+      "primaryCluster": "CRM & Lifecycle",
+      "secondaryClusters": [
+        "Retention Marketing",
+        "Marketing Leadership"
+      ],
+      "functionalExpertise": [
+        "CRM-strategie",
+        "Retentie",
+        "Teamleiderschap"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Retentieverbetering",
+        "Klantwaardegroei"
+      ],
+      "industryDomains": [
+        "E-commerce",
+        "Media",
+        "Retail"
+      ],
+      "environmentFit": [
+        "Grote organisatie",
+        "Datagedreven marketing"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.92,
+      "clusterReasoning": "Achttien jaar CRM-ervaring met directie-verantwoordelijkheid voor lifecycle en retentie wijst op een CRM & Lifecycle Director."
+    },
+    "searchIndex": {
+      "roles": [
+        "CRM Director",
+        "Lifecycle Marketing Director",
+        "Head of CRM"
+      ],
+      "skills": [
+        "CRM strategy",
+        "Lifecycle marketing",
+        "Retention",
+        "Segmentation",
+        "Salesforce Marketing Cloud",
+        "Braze"
+      ],
+      "industries": [
+        "E-commerce",
+        "Media",
+        "Retail"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "CRM",
+      "lifecycle",
+      "retention",
+      "director"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Creatieve Social Media Coördinator met drie jaar ervaring in het beheren van organische socialkanalen voor consumentenmerken. Sterk in contentcreatie, community management en het inspelen op trends op Instagram, TikTok en LinkedIn. Combineert een scherp gevoel voor tone-of-voice met basiskennis van social analytics.",
+    "careerStartYear": 2023,
+    "personalInformation": {
+      "name": "Lotte Jansen",
+      "role": "Social Media Coördinator",
+      "summary": "Creatieve Social Media Coördinator gericht op organische content en community management.",
+      "contact": {
+        "email": "lotte.jansen@example.com",
+        "address": {
+          "streetNumber": "18",
+          "streetName": "Haarlemmerdijk",
+          "streetType": "dijk",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipCode": "1013 JD",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/lottejansen-social",
+          "website": "https://lottejansen.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-08-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "maandag hele dag",
+          "dinsdagmiddag",
+          "donderdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "op kantoor"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Social",
+        "skills": [
+          "Contentcreatie",
+          "Community management",
+          "Trendspotting",
+          "Copywriting"
+        ]
+      },
+      {
+        "category": "Platforms",
+        "skills": [
+          "Instagram",
+          "TikTok",
+          "LinkedIn",
+          "Meta Business Suite"
+        ]
+      },
+      {
+        "category": "Creatief",
+        "skills": [
+          "Adobe Creative Suite",
+          "Canva",
+          "Video-editing"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Social analytics",
+          "Rapportage"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Social media",
+        "Contentcreatie",
+        "Community management"
+      ],
+      "keyResponsibilities": [
+        "Beheren van organische socialkanalen",
+        "Creëren van content en captions",
+        "Onderhouden van de community"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Kroon Cosmetics",
+        "website": "https://krooncosmetics.example.com",
+        "location": "Amsterdam, Nederland",
+        "from": "@M-32@",
+        "to": "Present",
+        "position": "Social Media Coördinator",
+        "activities": [
+          {
+            "project": "Merkkanalen social",
+            "tasks": [
+              "Beheren van Instagram- en TikTok-kanalen",
+              "Creëren van dagelijkse content",
+              "Reageren op comments en DM's"
+            ]
+          }
+        ],
+        "achievements": [
+          "Instagram-volgers gegroeid met 45% in een jaar",
+          "TikTok-video met 1,2 miljoen views"
+        ],
+        "toolsAndTechnologies": [
+          "Meta Business Suite",
+          "Adobe Creative Suite",
+          "Canva"
+        ]
+      },
+      {
+        "company": "Amsterdam Lifestyle Agency",
+        "website": "https://amsterdamlifestyle.example.com",
+        "location": "Amsterdam, Nederland",
+        "from": "@M-62@",
+        "to": "@M-32@",
+        "position": "Junior Social Media Medewerker",
+        "activities": [
+          {
+            "project": "Klantkanalen",
+            "tasks": [
+              "Inplannen van social posts",
+              "Ondersteunen bij contentcreatie",
+              "Bijhouden van social kalenders"
+            ]
+          }
+        ],
+        "achievements": [
+          "Beheerde social kalenders voor vijf klanten"
+        ],
+        "toolsAndTechnologies": [
+          "Later",
+          "Canva"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Hogeschool Inholland",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Media & Entertainment Management",
+        "achievements": [
+          "Afstudeerrichting Social Media"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Meta Social Media Marketing Certification",
+        "institution": "Meta",
+        "year": "@Y-0@",
+        "description": "Certificering voor social media marketing op Meta-platforms."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Adobe Creative Suite",
+        "Canva",
+        "Meta Business Suite",
+        "CapCut"
+      ],
+      "softSkills": [
+        "Creativiteit",
+        "Communicatie",
+        "Flexibiliteit"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "TikTok-lancering",
+        "description": "Zette het TikTok-kanaal van het merk op en liet het groeien.",
+        "date": "2024-09",
+        "impact": "Bereik van 3 miljoen weergaven in zes maanden."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Fotografie",
+      "Dansen",
+      "Vintage mode"
+    ],
+    "references": [
+      {
+        "name": "Nina de Groot",
+        "position": "Brand Manager",
+        "company": "Kroon Cosmetics",
+        "contact": {
+          "phone": "+31 6 29334455",
+          "email": "nina.degroot@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 34000,
+      "max": 42000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Social Media",
+      "secondaryClusters": [
+        "Content Creation",
+        "Community Management"
+      ],
+      "functionalExpertise": [
+        "Social media",
+        "Contentcreatie"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Merkbereik",
+        "Engagementgroei"
+      ],
+      "industryDomains": [
+        "Consumer goods",
+        "Media"
+      ],
+      "environmentFit": [
+        "Agency",
+        "Consumentenmerken"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.85,
+      "clusterReasoning": "Drie jaar ervaring met organische socialkanalen en contentcreatie wijst op een junior Social Media Coördinator."
+    },
+    "searchIndex": {
+      "roles": [
+        "Social Media Coordinator",
+        "Social Media Manager",
+        "Content Creator"
+      ],
+      "skills": [
+        "Social media",
+        "Content creation",
+        "Community management",
+        "Instagram",
+        "TikTok",
+        "Adobe Creative Suite"
+      ],
+      "industries": [
+        "Consumer goods",
+        "Media",
+        "Agency"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "social-media",
+      "content",
+      "brand",
+      "junior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ervaren Content Marketeer met tien jaar ervaring in het ontwikkelen van contentstrategieën en redactionele kalenders voor B2B- en consumentenmerken. Sterk in storytelling, SEO-content en het aansturen van freelance schrijvers en designers. Vertaalt merkboodschappen naar content die verkeer, leads en engagement genereert.",
+    "careerStartYear": 2016,
+    "personalInformation": {
+      "name": "Bram Aerts",
+      "role": "Content Marketeer",
+      "summary": "Content Marketeer gespecialiseerd in contentstrategie, storytelling en SEO-content.",
+      "contact": {
+        "phone": "+32 471 883345",
+        "address": {
+          "streetNumber": "27",
+          "streetName": "Bondgenotenlaan",
+          "streetType": "laan",
+          "city": "Leuven",
+          "state": "Vlaams-Brabant",
+          "zipCode": "3000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/bramaerts-content",
+          "website": "https://bramaerts.example.be"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dinsdag hele dag",
+          "vrijdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband",
+          "freelance"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Content",
+        "skills": [
+          "Contentstrategie",
+          "Redactionele kalender",
+          "Storytelling",
+          "Copywriting"
+        ]
+      },
+      {
+        "category": "SEO",
+        "skills": [
+          "SEO-content",
+          "Keywordonderzoek",
+          "Content optimalisatie"
+        ]
+      },
+      {
+        "category": "Kanalen",
+        "skills": [
+          "Blog",
+          "Nieuwsbrief",
+          "Whitepapers",
+          "Video"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "CMS",
+          "Adobe Creative Suite",
+          "SEMrush"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Contentstrategie",
+        "Storytelling",
+        "SEO-content"
+      ],
+      "keyResponsibilities": [
+        "Ontwikkelen van de contentstrategie",
+        "Beheren van de redactionele kalender",
+        "Aansturen van freelance schrijvers en designers"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Ardenne B2B Solutions",
+        "website": "https://ardenneb2b.example.be",
+        "location": "Leuven, België",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Content Marketeer",
+        "activities": [
+          {
+            "project": "Contentmotor B2B",
+            "tasks": [
+              "Ontwikkelen van de contentstrategie",
+              "Schrijven van blogs en whitepapers",
+              "Aansturen van een freelance-team"
+            ]
+          }
+        ],
+        "achievements": [
+          "Organisch blogverkeer verdrievoudigd in drie jaar",
+          "Whitepaper-campagne met 1.200 leads"
+        ],
+        "toolsAndTechnologies": [
+          "CMS",
+          "SEMrush",
+          "Adobe Creative Suite"
+        ]
+      },
+      {
+        "company": "Mechelen Media",
+        "website": "https://mechelenmedia.example.be",
+        "location": "Mechelen, België",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Contentspecialist",
+        "activities": [
+          {
+            "project": "Redactionele content",
+            "tasks": [
+              "Schrijven van artikelen en nieuwsbrieven",
+              "Beheren van de contentkalender",
+              "Optimaliseren van content voor SEO"
+            ]
+          }
+        ],
+        "achievements": [
+          "Nieuwsbrief-abonnees verdubbeld"
+        ],
+        "toolsAndTechnologies": [
+          "CMS",
+          "Mailchimp"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "KU Leuven",
+        "degree": "Master",
+        "fieldOfStudy": "Journalistiek",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "HubSpot Content Marketing Certification",
+        "institution": "HubSpot Academy",
+        "year": "@Y-2@",
+        "description": "Certificering in contentmarketing-strategie en -uitvoering."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "CMS",
+        "SEMrush",
+        "Adobe Creative Suite",
+        "Google Analytics"
+      ],
+      "softSkills": [
+        "Creativiteit",
+        "Taalgevoel",
+        "Organisatievermogen"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Contentplatform",
+        "description": "Bouwde een thought-leadership contentplatform voor het merk.",
+        "date": "2022-06",
+        "impact": "Verdrievoudiging van organisch verkeer en meer inbound leads."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Schrijven",
+      "Podcasts",
+      "Wandelen"
+    ],
+    "references": [
+      {
+        "name": "Katrien Dubois",
+        "position": "Marketing Manager",
+        "company": "Ardenne B2B Solutions",
+        "contact": {
+          "phone": "+32 478 112233",
+          "email": "katrien.dubois@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 48000,
+      "max": 60000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Content Marketing",
+      "secondaryClusters": [
+        "Editorial",
+        "SEO Content"
+      ],
+      "functionalExpertise": [
+        "Contentstrategie",
+        "Storytelling"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Verkeersgroei",
+        "Leadgeneratie"
+      ],
+      "industryDomains": [
+        "B2B technology",
+        "Media"
+      ],
+      "environmentFit": [
+        "B2B marketingteams",
+        "Agency"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Tien jaar ervaring met contentstrategie, redactie en SEO-content wijst op een senior Content Marketeer."
+    },
+    "searchIndex": {
+      "roles": [
+        "Content Marketer",
+        "Content Strategist",
+        "Editorial Manager"
+      ],
+      "skills": [
+        "Content strategy",
+        "Storytelling",
+        "SEO content",
+        "Copywriting",
+        "Editorial calendar"
+      ],
+      "industries": [
+        "B2B technology",
+        "Media",
+        "Agency"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "content",
+      "editorial",
+      "SEO",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Communicatie- en PR-professional met elf jaar ervaring in corporate communicatie, media-relaties en reputatiemanagement voor consumentenmerken en non-profits. Sterk in het ontwikkelen van communicatiestrategieën, het schrijven van persberichten en het begeleiden van woordvoerders. Bekend om het opbouwen van sterke relaties met journalisten en stakeholders.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Marieke Bos",
+      "role": "PR & Communicatie Specialist",
+      "summary": "PR & Communicatie Specialist gericht op media-relaties en reputatiemanagement.",
+      "contact": {
+        "phone": "+31 6 41667788",
+        "email": "marieke.bos@example.com",
+        "address": {
+          "streetNumber": "14",
+          "streetName": "Vrijthof",
+          "streetType": "plein",
+          "city": "Maastricht",
+          "state": "Limburg",
+          "zipCode": "6211 LD",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/mariekebos-pr"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "woensdag hele dag",
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybride"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "PR",
+        "skills": [
+          "Media-relaties",
+          "Persberichten",
+          "Reputatiemanagement",
+          "Crisiscommunicatie"
+        ]
+      },
+      {
+        "category": "Communicatie",
+        "skills": [
+          "Communicatiestrategie",
+          "Woordvoering",
+          "Interne communicatie"
+        ]
+      },
+      {
+        "category": "Content",
+        "skills": [
+          "Copywriting",
+          "Storytelling",
+          "Redactie"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "Meltwater",
+          "Cision",
+          "CMS"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Media-relaties",
+        "Reputatiemanagement",
+        "Communicatiestrategie"
+      ],
+      "keyResponsibilities": [
+        "Ontwikkelen van communicatiestrategieën",
+        "Onderhouden van media-relaties",
+        "Schrijven van persberichten en statements"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Limburg Consumer Brands",
+        "website": "https://limburgbrands.example.com",
+        "location": "Maastricht, Nederland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "PR & Communicatie Specialist",
+        "activities": [
+          {
+            "project": "Corporate communicatie",
+            "tasks": [
+              "Ontwikkelen van de communicatiestrategie",
+              "Onderhouden van perscontacten",
+              "Begeleiden van woordvoerders"
+            ]
+          }
+        ],
+        "achievements": [
+          "Media-aandacht verdubbeld in drie jaar",
+          "Succesvol crisiscommunicatie geleid tijdens productterugroeping"
+        ],
+        "toolsAndTechnologies": [
+          "Meltwater",
+          "Cision"
+        ]
+      },
+      {
+        "company": "Zuiderlicht Foundation",
+        "website": "https://zuiderlicht.example.com",
+        "location": "Heerlen, Nederland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Communicatiemedewerker",
+        "activities": [
+          {
+            "project": "Campagnecommunicatie",
+            "tasks": [
+              "Schrijven van persberichten",
+              "Beheren van social kanalen",
+              "Organiseren van perevenementen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Naamsbekendheid vergroot via landelijke campagne"
+        ],
+        "toolsAndTechnologies": [
+          "CMS",
+          "Mailchimp"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Radboud Universiteit",
+        "degree": "Master",
+        "fieldOfStudy": "Communicatie- en Informatiewetenschappen",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Crisiscommunicatie Certificaat",
+        "institution": "Logeion",
+        "year": "@Y-4@",
+        "description": "Certificaat in strategische crisiscommunicatie."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Meltwater",
+        "Cision",
+        "CMS",
+        "Canva"
+      ],
+      "softSkills": [
+        "Communicatie",
+        "Diplomatie",
+        "Stressbestendigheid"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Reputatiecampagne",
+        "description": "Leidde een campagne om het merkimago te versterken na een crisis.",
+        "date": "2021-10",
+        "impact": "Herstel van merkvertrouwen en positieve media-sentiment."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Theater",
+      "Vrijwilligerswerk",
+      "Wandelen"
+    ],
+    "references": [
+      {
+        "name": "Johan Vos",
+        "position": "Directeur Communicatie",
+        "company": "Limburg Consumer Brands",
+        "contact": {
+          "phone": "+31 6 27889900",
+          "email": "johan.vos@example.com"
+        }
+      }
+    ],
+    "candidateClustering": {
+      "primaryCluster": "PR & Communications",
+      "secondaryClusters": [
+        "Media Relations",
+        "Corporate Communications"
+      ],
+      "functionalExpertise": [
+        "Media-relaties",
+        "Reputatiemanagement"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Merkreputatie",
+        "Media-aandacht"
+      ],
+      "industryDomains": [
+        "Consumer goods",
+        "Media"
+      ],
+      "environmentFit": [
+        "Consumentenmerken",
+        "Non-profit"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.86,
+      "clusterReasoning": "Elf jaar ervaring in PR, media-relaties en reputatiemanagement wijst op een senior PR & Communicatie Specialist."
+    },
+    "searchIndex": {
+      "roles": [
+        "PR Specialist",
+        "Communications Manager",
+        "Media Relations Specialist"
+      ],
+      "skills": [
+        "Public relations",
+        "Media relations",
+        "Corporate communications",
+        "Reputation management",
+        "Crisis communication"
+      ],
+      "industries": [
+        "Consumer goods",
+        "Media",
+        "Non-profit"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "PR",
+      "communications",
+      "brand",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Strategische Brand Manager met zestien jaar ervaring in het bouwen en positioneren van consumentenmerken binnen FMCG. Verantwoordelijk voor merkstrategie, productlanceringen en geïntegreerde campagnes over kanalen. Leidt cross-functionele teams en stuurt op merkgroei, marktaandeel en consumentenvoorkeur. Combineert creatief inzicht met commerciële scherpte.",
+    "careerStartYear": 2010,
+    "personalInformation": {
+      "name": "Thijs van Dijk",
+      "role": "Brand Manager",
+      "summary": "Brand Manager gericht op merkstrategie, positionering en productlanceringen in FMCG.",
+      "contact": {
+        "phone": "+31 6 42998811",
+        "email": "thijs.vandijk@example.com",
+        "address": {
+          "streetNumber": "62",
+          "streetName": "Deldenerstraat",
+          "streetType": "straat",
+          "city": "Enschede",
+          "state": "Overijssel",
+          "zipCode": "7551 AG",
+          "country": "Nederland"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-01-15",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "maandag hele dag",
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybride"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Merkstrategie",
+        "skills": [
+          "Merkpositionering",
+          "Merkarchitectuur",
+          "Merkidentiteit"
+        ]
+      },
+      {
+        "category": "Marketing",
+        "skills": [
+          "Productlanceringen",
+          "Geïntegreerde campagnes",
+          "Go-to-market"
+        ]
+      },
+      {
+        "category": "Leiderschap",
+        "skills": [
+          "Cross-functionele aansturing",
+          "Budgetbeheer",
+          "Bureau-aansturing"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Marktonderzoek",
+          "Consumenteninzichten",
+          "Marktaandeelanalyse"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Merkstrategie",
+        "Productlanceringen",
+        "Geïntegreerde campagnes"
+      ],
+      "keyResponsibilities": [
+        "Vaststellen van de merkstrategie",
+        "Leiden van productlanceringen",
+        "Aansturen van cross-functionele teams en bureaus"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Twente Foods",
+        "website": "https://twentefoods.example.com",
+        "location": "Enschede, Nederland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Brand Manager",
+        "activities": [
+          {
+            "project": "Merkportfolio FMCG",
+            "tasks": [
+              "Ontwikkelen van de merkstrategie",
+              "Leiden van productlanceringen",
+              "Aansturen van creatieve en mediabureaus"
+            ]
+          }
+        ],
+        "achievements": [
+          "Marktaandeel gegroeid met 5 procentpunt",
+          "Succesvolle lancering van een nieuwe productlijn"
+        ],
+        "toolsAndTechnologies": [
+          "Nielsen",
+          "Adobe Creative Suite",
+          "Power BI"
+        ]
+      },
+      {
+        "company": "Deventer Consumer Goods",
+        "website": "https://deventerconsumer.example.com",
+        "location": "Deventer, Nederland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Assistant Brand Manager",
+        "activities": [
+          {
+            "project": "Merkondersteuning",
+            "tasks": [
+              "Ondersteunen van de merkstrategie",
+              "Coördineren van campagnes",
+              "Analyseren van consumenteninzichten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Campagne-effectiviteit verbeterd"
+        ],
+        "toolsAndTechnologies": [
+          "Nielsen",
+          "Excel"
+        ]
+      },
+      {
+        "company": "Zwolle Marketing",
+        "website": "https://zwollemarketing.example.com",
+        "location": "Zwolle, Nederland",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Marketing Trainee",
+        "activities": [
+          {
+            "project": "Marketingondersteuning",
+            "tasks": [
+              "Ondersteunen van marketingcampagnes",
+              "Uitvoeren van marktanalyses",
+              "Coördineren van promotiemateriaal"
+            ]
+          }
+        ],
+        "achievements": [
+          "Traineeship met uitstekende beoordeling afgerond"
+        ],
+        "toolsAndTechnologies": [
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Rijksuniversiteit Groningen",
+        "degree": "Master",
+        "fieldOfStudy": "Marketing Management",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Brand Management Diploma",
+        "institution": "NIMA",
+        "year": "@Y-4@",
+        "description": "NIMA-diploma in strategisch merkmanagement."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Nielsen",
+        "Adobe Creative Suite",
+        "Power BI",
+        "Google Analytics"
+      ],
+      "softSkills": [
+        "Strategisch denken",
+        "Creativiteit",
+        "Leiderschap",
+        "Samenwerken"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Merkherpositionering",
+        "description": "Leidde de herpositionering van een kernmerk in het FMCG-portfolio.",
+        "date": "2021-05",
+        "impact": "Toename van merkvoorkeur en 5 procentpunt marktaandeel."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Koken",
+      "Design",
+      "Hardlopen"
+    ],
+    "references": [
+      {
+        "name": "Femke Hofman",
+        "position": "Marketing Director",
+        "company": "Twente Foods",
+        "contact": {
+          "phone": "+31 6 26445533",
+          "email": "femke.hofman@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 75000,
+      "max": 92000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Brand Management",
+      "secondaryClusters": [
+        "Product Launch",
+        "Integrated Marketing"
+      ],
+      "functionalExpertise": [
+        "Merkstrategie",
+        "Productlanceringen"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Marktaandeelgroei",
+        "Merkvoorkeur"
+      ],
+      "industryDomains": [
+        "Consumer goods",
+        "FMCG"
+      ],
+      "environmentFit": [
+        "FMCG",
+        "Consumentenmerken"
+      ],
+      "seniorityLevel": "manager",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.89,
+      "clusterReasoning": "Zestien jaar ervaring met merkstrategie, productlanceringen en cross-functionele aansturing wijst op een Brand Manager op managementniveau."
+    },
+    "searchIndex": {
+      "roles": [
+        "Brand Manager",
+        "Marketing Manager",
+        "Product Marketing Manager"
+      ],
+      "skills": [
+        "Brand strategy",
+        "Brand positioning",
+        "Product launch",
+        "Integrated marketing",
+        "Market research"
+      ],
+      "industries": [
+        "Consumer goods",
+        "FMCG"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "brand",
+      "FMCG",
+      "strategy",
+      "manager"
+    ]
+  },
+  {
+    "personalInformation": {
+      "name": "Noor El Idrissi",
+      "role": "Brand & Events Lead",
+      "summary": "Brand & Events Lead gericht op merkbeleving, activaties en teamaansturing.",
+      "contact": {
+        "address": {
+          "streetNumber": "8",
+          "streetName": "Wilhelminakade",
+          "streetType": "kade",
+          "city": "Rotterdam",
+          "state": "Zuid-Holland",
+          "zipCode": "3072 AP",
+          "country": "Nederland"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-12-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dinsdagmiddag",
+          "vrijdag hele dag"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "op locatie"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "profiles": {
+      "areasOfExpertise": [
+        "Merkbeleving",
+        "Eventmanagement",
+        "Activaties"
+      ],
+      "keyResponsibilities": [
+        "Aansturen van het brand- en eventteam",
+        "Ontwikkelen van merkactivaties en events",
+        "Bewaken van de merkstrategie in ervaringen"
+      ]
+    },
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Adobe Creative Suite",
+        "Cvent",
+        "Asana",
+        "Canva"
+      ],
+      "softSkills": [
+        "Creativiteit",
+        "Organisatietalent",
+        "Leiderschap",
+        "Stressbestendigheid"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Merkfestival",
+        "description": "Ontwikkelde en leidde een jaarlijks merkfestival als centrale activatie.",
+        "date": "2022-07",
+        "impact": "40% meer bezoekers en sterke merkassociatie."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Muziekfestivals",
+      "Reizen",
+      "Interieurdesign"
+    ],
+    "references": [
+      {
+        "name": "Daan Smits",
+        "position": "Marketing Director",
+        "company": "Rotterdam Festival Group",
+        "contact": {
+          "phone": "+31 6 28112299",
+          "email": "daan.smits@example.com"
+        }
+      }
+    ],
+    "searchIndex": {
+      "roles": [
+        "Brand Manager",
+        "Events Marketing Lead",
+        "Experiential Marketing Lead"
+      ],
+      "skills": [
+        "Brand experience",
+        "Event management",
+        "Brand activation",
+        "Experiential marketing",
+        "Integrated campaigns"
+      ],
+      "industries": [
+        "Media",
+        "Consumer goods",
+        "Agency"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "brand",
+      "events",
+      "experiential",
+      "lead"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Growth Marketeer met zes jaar ervaring in het opzetten en optimaliseren van experimentgedreven groeiprogramma's voor SaaS en marktplaatsen. Sterk in het volledige funnel-denken, A/B-testen en het koppelen van productanalyse aan marketingacties. Combineert een analytische mindset met snelle iteratie en een sterke focus op activatie en retentie.",
+    "careerStartYear": 2020,
+    "personalInformation": {
+      "name": "Tom Peeters",
+      "role": "Growth Marketeer",
+      "summary": "Experimentgedreven Growth Marketeer gericht op activatie, retentie en funnel-optimalisatie.",
+      "contact": {
+        "phone": "+32 489 220145",
+        "email": "tom.peeters@example.be",
+        "address": {
+          "streetNumber": "45",
+          "streetName": "Veldstraat",
+          "streetType": "straat",
+          "city": "Gent",
+          "state": "Oost-Vlaanderen",
+          "zipCode": "9000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/tompeeters-growth",
+          "github": "https://github.com/tompeeters-growth"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "maandagmiddag",
+          "woensdag hele dag",
+          "vrijdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Growth",
+        "skills": [
+          "Groeiexperimenten",
+          "Funnel-optimalisatie",
+          "Activatie",
+          "Retentie"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Product analytics",
+          "A/B-testen",
+          "Cohortanalyse",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Kanalen",
+        "skills": [
+          "Paid acquisition",
+          "Lifecycle marketing",
+          "Referral"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "Mixpanel",
+          "Amplitude",
+          "GA4",
+          "HubSpot"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Growth marketing",
+        "Experimentatie",
+        "Funnel-optimalisatie"
+      ],
+      "keyResponsibilities": [
+        "Opzetten en uitvoeren van groeiexperimenten",
+        "Optimaliseren van de activatie- en retentiefunnel",
+        "Analyseren van productdata voor groeikansen"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Flux Marketplace",
+        "website": "https://fluxmarketplace.example.be",
+        "location": "Gent, België",
+        "from": "@M-40@",
+        "to": "@M-10@",
+        "position": "Growth Marketeer",
+        "activities": [
+          {
+            "project": "Activatie- en retentiegroei",
+            "tasks": [
+              "Opzetten van een experimenteerprogramma",
+              "Optimaliseren van de onboardingfunnel",
+              "Bouwen van analytics-dashboards"
+            ]
+          }
+        ],
+        "achievements": [
+          "Activatieratio verbeterd met 24%",
+          "Retentie na 30 dagen verhoogd met 15%"
+        ],
+        "toolsAndTechnologies": [
+          "Mixpanel",
+          "Amplitude",
+          "GA4"
+        ]
+      },
+      {
+        "company": "Brugge Digital",
+        "website": "https://bruggedigital.example.be",
+        "location": "Brugge, België",
+        "from": "@M-70@",
+        "to": "@M-40@",
+        "position": "Junior Growth Marketeer",
+        "activities": [
+          {
+            "project": "Funnelverbetering",
+            "tasks": [
+              "Uitvoeren van A/B-testen",
+              "Analyseren van conversiedata",
+              "Ondersteunen van acquisitiecampagnes"
+            ]
+          }
+        ],
+        "achievements": [
+          "Conversieratio landingspagina verbeterd met 18%"
+        ],
+        "toolsAndTechnologies": [
+          "Google Analytics",
+          "HubSpot"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Vlerick Business School",
+        "degree": "Master",
+        "fieldOfStudy": "Digital Marketing",
+        "achievements": []
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Universiteit Gent",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Toegepaste Economische Wetenschappen",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Reforge Growth Series",
+        "institution": "Reforge",
+        "year": "@Y-2@",
+        "description": "Programma over experimentgedreven groei en funnel-optimalisatie."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Mixpanel",
+        "Amplitude",
+        "GA4",
+        "SQL",
+        "HubSpot"
+      ],
+      "softSkills": [
+        "Analytisch denken",
+        "Nieuwsgierigheid",
+        "Iteratief werken"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "fluent",
+            "written": "intermediate",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Onboarding-redesign",
+        "description": "Herontwierp de onboardingflow op basis van experimentdata.",
+        "date": "2024-03",
+        "impact": "24% hogere activatie en betere retentie."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Klimmen",
+      "Data-analyse",
+      "Boardgames"
+    ],
+    "references": [
+      {
+        "name": "Sofie Claes",
+        "position": "Head of Growth",
+        "company": "Flux Marketplace",
+        "contact": {
+          "phone": "+32 476 334455",
+          "email": "sofie.claes@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 46000,
+      "max": 58000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Growth Marketing",
+      "secondaryClusters": [
+        "Experimentation",
+        "Product Analytics"
+      ],
+      "functionalExpertise": [
+        "Growth marketing",
+        "Funnel-optimalisatie"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Activatiegroei",
+        "Retentieverbetering"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "E-commerce"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Startup"
+      ],
+      "seniorityLevel": "midLevel",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "veryHigh",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Zes jaar experimentgedreven groei met sterke productanalyse-vaardigheden wijst op een Growth Marketeer op midLevel niveau."
+    },
+    "searchIndex": {
+      "roles": [
+        "Growth Marketer",
+        "Growth Marketing Specialist",
+        "Product Growth Marketer"
+      ],
+      "skills": [
+        "Growth marketing",
+        "Experimentation",
+        "Funnel optimization",
+        "A/B testing",
+        "Product analytics",
+        "Mixpanel"
+      ],
+      "industries": [
+        "SaaS",
+        "E-commerce",
+        "Marketplace"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "growth",
+      "experimentation",
+      "SaaS",
+      "midlevel"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Product Marketing Manager met elf jaar ervaring in het positioneren en lanceren van B2B SaaS-producten. Sterk in messaging, go-to-market-strategie, competitieve analyse en sales enablement. Werkt op het snijvlak van product, sales en marketing en vertaalt klantinzichten naar overtuigende waardeproposities. Bekend om succesvolle productlanceringen en scherpe positionering.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Anouk de Lange",
+      "role": "Product Marketing Manager",
+      "summary": "Product Marketing Manager gericht op positionering, go-to-market en sales enablement in B2B SaaS.",
+      "contact": {
+        "phone": "+31 6 44119933",
+        "email": "anouk.delange@example.com",
+        "address": {
+          "streetNumber": "29",
+          "streetName": "Oosterstraat",
+          "streetType": "straat",
+          "city": "Nijmegen",
+          "state": "Gelderland",
+          "zipCode": "6511 PN",
+          "country": "Nederland"
+        },
+        "socialLinks": {}
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dinsdag hele dag",
+          "donderdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Product Marketing",
+        "skills": [
+          "Positionering",
+          "Messaging",
+          "Waardepropositie",
+          "Go-to-market"
+        ]
+      },
+      {
+        "category": "Onderzoek",
+        "skills": [
+          "Competitieve analyse",
+          "Marktonderzoek",
+          "Klantinterviews"
+        ]
+      },
+      {
+        "category": "Enablement",
+        "skills": [
+          "Sales enablement",
+          "Battle cards",
+          "Productlanceringen"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "HubSpot",
+          "Productboard",
+          "Google Analytics"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Positionering",
+        "Go-to-market",
+        "Sales enablement"
+      ],
+      "keyResponsibilities": [
+        "Ontwikkelen van positionering en messaging",
+        "Leiden van productlanceringen",
+        "Ondersteunen van sales met enablementmateriaal"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Gelderland Software",
+        "website": "https://gelderlandsoftware.example.com",
+        "location": "Nijmegen, Nederland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Product Marketing Manager",
+        "activities": [
+          {
+            "project": "Go-to-market SaaS",
+            "tasks": [
+              "Ontwikkelen van positionering en messaging",
+              "Leiden van productlanceringen",
+              "Maken van sales enablement-materiaal"
+            ]
+          }
+        ],
+        "achievements": [
+          "Succesvolle lancering van drie kernproducten",
+          "Win-rate verbeterd met 12% via nieuwe battle cards"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot",
+          "Productboard",
+          "Google Analytics"
+        ]
+      },
+      {
+        "company": "Arnhem Tech",
+        "website": "https://arnhemtech.example.com",
+        "location": "Arnhem, Nederland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Product Marketeer",
+        "activities": [
+          {
+            "project": "Productpositionering",
+            "tasks": [
+              "Uitvoeren van marktonderzoek",
+              "Ondersteunen van productlanceringen",
+              "Schrijven van productcontent"
+            ]
+          }
+        ],
+        "achievements": [
+          "Positionering aangescherpt op basis van klantinterviews"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot",
+          "Google Analytics"
+        ]
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "HubSpot",
+        "Productboard",
+        "Google Analytics",
+        "Figma"
+      ],
+      "softSkills": [
+        "Strategisch denken",
+        "Communicatie",
+        "Samenwerken"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Go-to-market kernproduct",
+        "description": "Leidde de go-to-market van een nieuw kernproduct.",
+        "date": "2023-04",
+        "impact": "Overtroffen adoptiedoelen in het eerste kwartaal."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Wandelen",
+      "Design thinking",
+      "Podcasts"
+    ],
+    "references": [
+      {
+        "name": "Rick van Leeuwen",
+        "position": "VP Marketing",
+        "company": "Gelderland Software",
+        "contact": {
+          "phone": "+31 6 27665544",
+          "email": "rick.vanleeuwen@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 62000,
+      "max": 76000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Product Marketing",
+      "secondaryClusters": [
+        "Go-to-market",
+        "Sales Enablement"
+      ],
+      "functionalExpertise": [
+        "Positionering",
+        "Go-to-market"
+      ],
+      "skillDepth": "tShaped",
+      "businessImpact": [
+        "Succesvolle lanceringen",
+        "Win-rate verbetering"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "B2B SaaS"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Elf jaar ervaring met positionering, go-to-market en sales enablement in B2B SaaS wijst op een senior Product Marketing Manager."
+    },
+    "searchIndex": {
+      "roles": [
+        "Product Marketing Manager",
+        "Go-to-market Manager",
+        "Product Marketer"
+      ],
+      "skills": [
+        "Product marketing",
+        "Positioning",
+        "Messaging",
+        "Go-to-market",
+        "Sales enablement",
+        "Competitive analysis"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B technology"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "product-marketing",
+      "GTM",
+      "SaaS",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Demand Generation Manager met twaalf jaar ervaring in het bouwen van schaalbare pijplijn-generatie-programma's voor B2B SaaS. Sterk in het orkestreren van campagnes over betaalde, e-mail- en accountgerichte kanalen en het nauw samenwerken met sales. Datagedreven met een scherpe focus op pijplijn, MQL-kwaliteit en marketing-attributie.",
+    "careerStartYear": 2014,
+    "personalInformation": {
+      "name": "Sander Kuipers",
+      "role": "Demand Generation Manager",
+      "summary": "Demand Generation Manager gericht op schaalbare pijplijn-generatie en account-based marketing.",
+      "contact": {
+        "phone": "+31 6 45338822",
+        "email": "sander.kuipers@example.com",
+        "address": {
+          "streetNumber": "11",
+          "streetName": "Steenweg",
+          "streetType": "weg",
+          "city": "Amersfoort",
+          "state": "Utrecht",
+          "zipCode": "3811 NA",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sanderkuipers-demandgen"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-11-15",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "maandag hele dag",
+          "woensdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Demand Gen",
+        "skills": [
+          "Pijplijn-generatie",
+          "Account-based marketing",
+          "Campagne-orchestratie",
+          "Leadfunnel"
+        ]
+      },
+      {
+        "category": "Kanalen",
+        "skills": [
+          "Paid media",
+          "E-mailcampagnes",
+          "Webinars",
+          "Content syndication"
+        ]
+      },
+      {
+        "category": "Data",
+        "skills": [
+          "Marketing-attributie",
+          "MQL-scoring",
+          "Funnelanalyse"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "Marketo",
+          "HubSpot",
+          "Salesforce",
+          "6sense"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Demand generation",
+        "Account-based marketing",
+        "Pijplijn-generatie"
+      ],
+      "keyResponsibilities": [
+        "Bouwen van schaalbare demand gen-programma's",
+        "Orkestreren van multichannel-campagnes",
+        "Sturen op pijplijn en MQL-kwaliteit"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Eemland SaaS",
+        "website": "https://eemlandsaas.example.com",
+        "location": "Amersfoort, Nederland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Demand Generation Manager",
+        "activities": [
+          {
+            "project": "Pijplijn-motor B2B",
+            "tasks": [
+              "Bouwen van geïntegreerde demand gen-campagnes",
+              "Opzetten van een account-based marketingprogramma",
+              "Beheren van marketing-attributie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Marketing-gegenereerde pijplijn met 55% gegroeid",
+          "ABM-programma leverde vijf enterprise-deals op"
+        ],
+        "toolsAndTechnologies": [
+          "Marketo",
+          "Salesforce",
+          "6sense"
+        ]
+      },
+      {
+        "company": "Veluwe Digital",
+        "website": "https://veluwedigital.example.com",
+        "location": "Apeldoorn, Nederland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Campagne Marketeer",
+        "activities": [
+          {
+            "project": "Leadcampagnes",
+            "tasks": [
+              "Opzetten van e-mail- en contentcampagnes",
+              "Beheren van leadfunnels",
+              "Rapporteren op campagneresultaten"
+            ]
+          }
+        ],
+        "achievements": [
+          "MQL-volume met 40% gegroeid"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot",
+          "Salesforce"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universiteit Twente",
+        "degree": "Master",
+        "fieldOfStudy": "Business Administration",
+        "achievements": []
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Marketo",
+        "HubSpot",
+        "Salesforce",
+        "6sense",
+        "Looker Studio"
+      ],
+      "softSkills": [
+        "Analytisch denken",
+        "Samenwerken",
+        "Resultaatgerichtheid"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "ABM-programma",
+        "description": "Zette een account-based marketingprogramma op voor enterprise-accounts.",
+        "date": "2022-09",
+        "impact": "Vijf gesloten enterprise-deals uit doelaccounts."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Mountainbiken",
+      "Koken",
+      "Techblogs"
+    ],
+    "references": [
+      {
+        "name": "Hanneke Vos",
+        "position": "Director of Marketing",
+        "company": "Eemland SaaS",
+        "contact": {
+          "phone": "+31 6 28994433",
+          "email": "hanneke.vos@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 60000,
+      "max": 74000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Demand Generation",
+      "secondaryClusters": [
+        "Account-Based Marketing",
+        "Campaign Management"
+      ],
+      "functionalExpertise": [
+        "Demand generation",
+        "Pijplijn-generatie"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Pijplijngroei",
+        "MQL-kwaliteit"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "B2B SaaS"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "crossFunctionalLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Twaalf jaar ervaring met demand generation, ABM en pijplijn-programma's wijst op een senior Demand Generation Manager."
+    },
+    "searchIndex": {
+      "roles": [
+        "Demand Generation Manager",
+        "Campaign Manager",
+        "ABM Manager"
+      ],
+      "skills": [
+        "Demand generation",
+        "Account-based marketing",
+        "Pipeline generation",
+        "Marketo",
+        "Marketing attribution",
+        "6sense"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B technology"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "demand-generation",
+      "ABM",
+      "SaaS",
+      "senior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ervaren Market Research & Positioning Principal met vijftien jaar ervaring in het vertalen van markt- en consumenteninzichten naar strategische positionering en productstrategie. Diepe expertise in kwalitatief en kwantitatief onderzoek, segmentatie en concurrentieanalyse. Adviseert directie en productteams en fungeert als expert-authority binnen de marketingorganisatie.",
+    "careerStartYear": 2011,
+    "personalInformation": {
+      "name": "Elke Vandenberghe",
+      "role": "Market Research & Positioning Principal",
+      "summary": "Principal in marktonderzoek en positionering, gericht op strategisch inzicht en advies.",
+      "contact": {
+        "email": "elke.vandenberghe@example.be",
+        "address": {
+          "streetNumber": "34",
+          "streetName": "Vismarkt",
+          "streetType": "markt",
+          "city": "Brugge",
+          "state": "West-Vlaanderen",
+          "zipCode": "8000",
+          "country": "België"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/elkevandenberghe"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2027-02-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "woensdag hele dag",
+          "vrijdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "remote"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband",
+          "freelance"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Onderzoek",
+        "skills": [
+          "Kwalitatief onderzoek",
+          "Kwantitatief onderzoek",
+          "Segmentatie",
+          "Concurrentieanalyse"
+        ]
+      },
+      {
+        "category": "Strategie",
+        "skills": [
+          "Positionering",
+          "Productstrategie",
+          "Marktafbakening"
+        ]
+      },
+      {
+        "category": "Advies",
+        "skills": [
+          "Directie-advies",
+          "Workshops",
+          "Inzichtvertaling"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "Qualtrics",
+          "SPSS",
+          "Tableau"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Marktonderzoek",
+        "Positionering",
+        "Segmentatie"
+      ],
+      "keyResponsibilities": [
+        "Leiden van markt- en consumentenonderzoek",
+        "Vertalen van inzichten naar positionering",
+        "Adviseren van directie en productteams"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Kust Consumer Insights",
+        "website": "https://kustinsights.example.be",
+        "location": "Brugge, België",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Market Research & Positioning Principal",
+        "activities": [
+          {
+            "project": "Strategisch inzichtprogramma",
+            "tasks": [
+              "Ontwerpen van onderzoeksprogramma's",
+              "Leiden van segmentatiestudies",
+              "Adviseren van directie over positionering"
+            ]
+          }
+        ],
+        "achievements": [
+          "Nieuwe segmentatie leidde tot herpositionering van het portfolio",
+          "Onderzoeksfunctie opgebouwd als strategische adviespartner"
+        ],
+        "toolsAndTechnologies": [
+          "Qualtrics",
+          "SPSS",
+          "Tableau"
+        ]
+      },
+      {
+        "company": "Kortrijk Research Group",
+        "website": "https://kortrijkresearch.example.be",
+        "location": "Kortrijk, België",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Senior Onderzoeker",
+        "activities": [
+          {
+            "project": "Consumentenonderzoek",
+            "tasks": [
+              "Uitvoeren van kwalitatief en kwantitatief onderzoek",
+              "Analyseren van marktdata",
+              "Presenteren van inzichten aan klanten"
+            ]
+          }
+        ],
+        "achievements": [
+          "Meerdere strategische studies voor A-merken geleid"
+        ],
+        "toolsAndTechnologies": [
+          "SPSS",
+          "Qualtrics"
+        ]
+      },
+      {
+        "company": "Oostende Marketing",
+        "website": "https://oostendemarketing.example.be",
+        "location": "Oostende, België",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Marktonderzoeker",
+        "activities": [
+          {
+            "project": "Marktstudies",
+            "tasks": [
+              "Opzetten van enquêtes",
+              "Verwerken van onderzoeksdata",
+              "Opstellen van rapportages"
+            ]
+          }
+        ],
+        "achievements": [
+          "Onderzoeksprocessen gestandaardiseerd"
+        ],
+        "toolsAndTechnologies": [
+          "SPSS",
+          "Excel"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "KU Leuven",
+        "degree": "Master",
+        "fieldOfStudy": "Marketing Analytics",
+        "achievements": [
+          "Cum laude"
+        ]
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "KU Leuven",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Toegepaste Economische Wetenschappen",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Marktonderzoek Certificaat",
+        "institution": "MOA",
+        "year": "@Y-4@",
+        "description": "Certificaat in professioneel markt- en consumentenonderzoek."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Qualtrics",
+        "SPSS",
+        "Tableau",
+        "SQL"
+      ],
+      "softSkills": [
+        "Analytisch denken",
+        "Strategisch inzicht",
+        "Presentatievaardigheden"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Frans",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Segmentatiestudie",
+        "description": "Leidde een nationale segmentatiestudie die de merkstrategie herdefinieerde.",
+        "date": "2021-11",
+        "impact": "Herpositionering van het volledige merkportfolio."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Zeezeilen",
+      "Filosofie",
+      "Fotografie"
+    ],
+    "references": [
+      {
+        "name": "Wouter Declercq",
+        "position": "Managing Partner",
+        "company": "Kust Consumer Insights",
+        "contact": {
+          "phone": "+32 478 665511",
+          "email": "wouter.declercq@example.be"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 80000,
+      "max": 98000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Market Research",
+      "secondaryClusters": [
+        "Positioning",
+        "Consumer Insights"
+      ],
+      "functionalExpertise": [
+        "Marktonderzoek",
+        "Positionering",
+        "Segmentatie"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Strategische positionering",
+        "Portfolio-optimalisatie"
+      ],
+      "industryDomains": [
+        "Consumer goods",
+        "Media"
+      ],
+      "environmentFit": [
+        "Onderzoeksbureau",
+        "Strategie-afdeling"
+      ],
+      "seniorityLevel": "principal",
+      "leadershipAndInfluence": "strategicLeader",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Vijftien jaar diepgaande onderzoeksexpertise en strategisch adviesrol wijzen op een principal in market research en positionering."
+    },
+    "searchIndex": {
+      "roles": [
+        "Market Research Principal",
+        "Consumer Insights Lead",
+        "Positioning Strategist"
+      ],
+      "skills": [
+        "Market research",
+        "Positioning",
+        "Segmentation",
+        "Competitive analysis",
+        "Qualtrics",
+        "SPSS"
+      ],
+      "industries": [
+        "Consumer goods",
+        "Media",
+        "Market research"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "market-research",
+      "positioning",
+      "insights",
+      "principal"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Strategische Head of Growth met zeventien jaar ervaring in het opschalen van B2B- en consumentenpropositie via geïntegreerde growth-, demand gen- en productmarketing-strategieën. Leidt multidisciplinaire teams van marketeers en analisten en stuurt op omzet, CAC/LTV en pijplijn. Combineert diepgaande data-expertise met commerciële visie op directieniveau.",
+    "careerStartYear": 2009,
+    "personalInformation": {
+      "name": "Karim Haddad",
+      "role": "Head of Growth",
+      "summary": "Head of Growth gericht op schaalbare groeistrategie, teamleiderschap en omzetgroei.",
+      "contact": {
+        "phone": "+31 6 46228877",
+        "email": "karim.haddad@example.com",
+        "address": {
+          "streetNumber": "7",
+          "streetName": "Zuidas",
+          "streetType": "laan",
+          "unit": "12",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipCode": "1082 MA",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/karimhaddad-growth"
+        }
+      },
+      "availability": {
+        "openToWork": false,
+        "status": "notAvailable",
+        "availableFrom": "2027-04-01",
+        "noticePeriodDays": 90,
+        "interviewAvailability": [
+          "donderdagmiddag"
+        ],
+        "preferredWorkTypes": [
+          "hybride"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": true,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Growth-strategie",
+        "skills": [
+          "Groeistrategie",
+          "Demand generation",
+          "Product marketing",
+          "Funnel-strategie"
+        ]
+      },
+      {
+        "category": "Leiderschap",
+        "skills": [
+          "Teamleiderschap",
+          "Strategische planning",
+          "Budgetverantwoordelijkheid"
+        ]
+      },
+      {
+        "category": "Data",
+        "skills": [
+          "CAC/LTV-sturing",
+          "Marketing-attributie",
+          "Forecasting"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "HubSpot",
+          "Salesforce",
+          "Amplitude",
+          "Looker Studio"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Groeistrategie",
+        "Demand generation",
+        "Teamleiderschap"
+      ],
+      "keyResponsibilities": [
+        "Vaststellen van de growth-strategie",
+        "Leiden van het growth- en marketingteam",
+        "Sturen op omzet, CAC en LTV"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Zuidas Ventures",
+        "website": "https://zuidasventures.example.com",
+        "location": "Amsterdam, Nederland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Head of Growth",
+        "activities": [
+          {
+            "project": "Growth-organisatie opbouwen",
+            "tasks": [
+              "Aansturen van een team van veertien marketeers en analisten",
+              "Vaststellen van de meerjarige growth-strategie",
+              "Beheren van een marketingbudget van 8 miljoen EUR"
+            ]
+          }
+        ],
+        "achievements": [
+          "ARR verdrievoudigd in vier jaar",
+          "Blended CAC met 35% verlaagd bij versnelde groei"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot",
+          "Salesforce",
+          "Amplitude"
+        ]
+      },
+      {
+        "company": "Amsterdam Growth Labs",
+        "website": "https://amsterdamgrowth.example.com",
+        "location": "Amsterdam, Nederland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Growth Marketing Manager",
+        "activities": [
+          {
+            "project": "Growth-programma's",
+            "tasks": [
+              "Opzetten van growth-experimenten",
+              "Aansturen van performance- en lifecycle-marketeers",
+              "Rapporteren aan directie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Growth-team van drie naar acht personen gebouwd"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot",
+          "Google Analytics"
+        ]
+      },
+      {
+        "company": "Utrecht Digital Agency",
+        "website": "https://utrechtdigital.example.com",
+        "location": "Utrecht, Nederland",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Online Marketing Specialist",
+        "activities": [
+          {
+            "project": "Digitale campagnes",
+            "tasks": [
+              "Opzetten van digitale campagnes voor klanten",
+              "Analyseren van resultaten",
+              "Optimaliseren van conversie"
+            ]
+          }
+        ],
+        "achievements": [
+          "Consequent bovengemiddelde campagneprestaties"
+        ],
+        "toolsAndTechnologies": [
+          "Google Analytics",
+          "Google Ads"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universiteit van Amsterdam",
+        "degree": "Master",
+        "fieldOfStudy": "Business Economics",
+        "achievements": []
+      },
+      {
+        "year": "@Y-9@",
+        "institution": "Universiteit van Amsterdam",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Economie",
+        "achievements": []
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Executive Growth Leadership",
+        "institution": "INSEAD",
+        "year": "@Y-4@",
+        "description": "Executive-programma over het leiden van growth-organisaties."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "HubSpot",
+        "Salesforce",
+        "Amplitude",
+        "Looker Studio",
+        "SQL"
+      ],
+      "softSkills": [
+        "Leiderschap",
+        "Strategisch denken",
+        "Besluitvaardigheid",
+        "Visie"
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Growth-strategie scale-up",
+        "description": "Ontwikkelde en implementeerde de meerjarige growth-strategie voor een scale-up.",
+        "date": "2022-01",
+        "impact": "Verdrievoudiging van ARR in vier jaar."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Hardlopen",
+      "Startups mentoren",
+      "Schaken"
+    ],
+    "references": [
+      {
+        "name": "Claire Dubois",
+        "position": "CEO",
+        "company": "Zuidas Ventures",
+        "contact": {
+          "phone": "+31 6 29556677",
+          "email": "claire.dubois@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 120000,
+      "max": 150000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Growth Leadership",
+      "secondaryClusters": [
+        "Demand Generation",
+        "Marketing Strategy"
+      ],
+      "functionalExpertise": [
+        "Groeistrategie",
+        "Teamleiderschap",
+        "Demand generation"
+      ],
+      "skillDepth": "hybrid",
+      "businessImpact": [
+        "Omzetgroei",
+        "CAC-verlaging"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Venture-backed"
+      ],
+      "seniorityLevel": "director",
+      "leadershipAndInfluence": "executiveInfluence",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.42,
+      "clusterReasoning": "Zeventien jaar ervaring met het opschalen van groei en het leiden van grote marketingteams op directieniveau wijst op een Head of Growth."
+    },
+    "searchIndex": {
+      "roles": [
+        "Head of Growth",
+        "VP Growth",
+        "Growth Director"
+      ],
+      "skills": [
+        "Growth strategy",
+        "Demand generation",
+        "Product marketing",
+        "CAC optimization",
+        "Team leadership",
+        "Marketing attribution"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B technology"
+      ]
+    },
+    "tags": [
+      "marketing",
+      "growth",
+      "leadership",
+      "strategy",
+      "director"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Gedreven Sales Development Representative met bijna vier jaar ervaring in outbound prospectie voor B2B SaaS-bedrijven. Sterk in het kwalificeren van leads via koude e-mails, LinkedIn en telefoon, en het vullen van de pijplijn voor account executives. Behaalt consequent zijn quota voor gekwalificeerde afspraken en werkt gestructureerd met moderne sales-tooling.",
+    "careerStartYear": 2022,
+    "personalInformation": {
+      "name": "Sven Bakker",
+      "role": "Sales Development Representative",
+      "summary": "Energieke SDR gespecialiseerd in outbound prospectie en leadkwalificatie voor SaaS-oplossingen.",
+      "contact": {
+        "phone": "+31 6 21458899",
+        "email": "sven.bakker@example.com",
+        "address": {
+          "streetNumber": "42",
+          "streetName": "Weesperstraat",
+          "streetType": "straat",
+          "unit": "3",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipCode": "1018 DN",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/svenbakker-sdr",
+          "website": "https://svenbakker.example.com"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "activelyLooking",
+        "availableFrom": "2026-09-01",
+        "noticePeriodDays": 30,
+        "interviewAvailability": [
+          "maandagochtend",
+          "woensdagmiddag",
+          "vrijdag hele dag"
+        ],
+        "preferredWorkTypes": [
+          "hybride",
+          "op kantoor"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Prospectie",
+        "skills": [
+          "Outbound calling",
+          "Koude e-mail",
+          "LinkedIn Sales Navigator",
+          "Leadkwalificatie"
+        ]
+      },
+      {
+        "category": "Sales-tooling",
+        "skills": [
+          "Salesforce",
+          "HubSpot CRM",
+          "Outreach",
+          "Salesloft"
+        ]
+      },
+      {
+        "category": "Communicatie",
+        "skills": [
+          "Gespreksvoering",
+          "Bezwaarbehandeling",
+          "Afsprakenplanning"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Outbound prospectie",
+        "Leadkwalificatie",
+        "Pijplijnopbouw"
+      ],
+      "keyResponsibilities": [
+        "Genereren van gekwalificeerde afspraken voor AE's",
+        "Beheren van outbound cadences",
+        "Onderhouden van CRM-datakwaliteit"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "CloudPeak Software",
+        "website": "https://cloudpeak.example.com",
+        "location": "Amsterdam, Nederland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Sales Development Representative",
+        "activities": [
+          {
+            "project": "Outbound-motor EMEA",
+            "tasks": [
+              "Opzetten van multi-channel cadences",
+              "Kwalificeren van inbound en outbound leads",
+              "Boeken van demo-afspraken voor account executives"
+            ]
+          }
+        ],
+        "achievements": [
+          "112% quota-attainment op gekwalificeerde afspraken in 2025",
+          "Beste SDR van het kwartaal in Q3 2025"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Outreach",
+          "LinkedIn Sales Navigator",
+          "ZoomInfo"
+        ]
+      },
+      {
+        "company": "Vondel Media Group",
+        "website": "https://vondelmedia.example.com",
+        "location": "Amsterdam, Nederland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Junior Business Development Representative",
+        "activities": [
+          {
+            "project": "Leadgeneratie MKB",
+            "tasks": [
+              "Uitvoeren van koude belcampagnes",
+              "Onderhouden van CRM-records",
+              "Ondersteunen van accountmanagers bij vervolgacties"
+            ]
+          }
+        ],
+        "achievements": [
+          "Groei van gekwalificeerde pijplijn met 35% in eerste jaar"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot CRM",
+          "Salesloft"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Hogeschool van Amsterdam",
+        "degree": "Bachelor",
+        "fieldOfStudy": "Commerciële Economie",
+        "achievements": [
+          "Afgestudeerd met een 7,8 gemiddeld"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "HubSpot Sales Software Certification",
+        "institution": "HubSpot Academy",
+        "year": "@Y-4@",
+        "description": "Certificering voor effectief gebruik van HubSpot CRM in het salesproces."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "HubSpot CRM",
+        "Outreach",
+        "LinkedIn Sales Navigator"
+      ],
+      "softSkills": [
+        "Doorzettingsvermogen",
+        "Luistervaardigheid",
+        "Zelfstandigheid"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Nieuwe outbound cadence",
+        "description": "Ontwikkelde een verbeterde e-mailcadence voor de EMEA-markt.",
+        "date": "2025-04",
+        "impact": "Verhoging van de responsratio met 18%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Hardlopen",
+      "Podcasts over sales",
+      "Voetbal"
+    ],
+    "references": [
+      {
+        "name": "Laura de Wit",
+        "position": "Sales Manager",
+        "company": "CloudPeak Software",
+        "contact": {
+          "phone": "+31 6 24785512",
+          "email": "laura.dewit@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 38000,
+      "max": 46000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Sales Development",
+      "secondaryClusters": [
+        "Inside Sales",
+        "Lead Generation"
+      ],
+      "functionalExpertise": [
+        "Outbound prospectie",
+        "Leadkwalificatie"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Pijplijngroei",
+        "Quota-attainment"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Snelgroeiende salesteams"
+      ],
+      "seniorityLevel": "junior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "high",
+      "clusterConfidenceScore": 0.88,
+      "clusterReasoning": "Focus op outbound prospectie en leadkwalificatie met sterke tooling-ervaring wijst duidelijk op een SDR-profiel op junior niveau."
+    },
+    "searchIndex": {
+      "roles": [
+        "Sales Development Representative",
+        "Business Development Representative",
+        "Inside Sales"
+      ],
+      "skills": [
+        "Outbound prospecting",
+        "Lead qualification",
+        "Salesforce",
+        "HubSpot CRM",
+        "Outreach"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B technology"
+      ]
+    },
+    "tags": [
+      "sales",
+      "SDR",
+      "outbound",
+      "SaaS",
+      "junior"
+    ]
+  },
+  {
+    "candidateProfileSummary": "Ervaren Account Executive met meer dan tien jaar ervaring in het sluiten van complexe B2B-deals binnen de SaaS-sector. Sterk in consultatieve verkoop, onderhandeling en het managen van de volledige salescyclus van pijplijn tot contract. Overtreft consequent jaartargets en bouwt duurzame klantrelaties op.",
+    "careerStartYear": 2015,
+    "personalInformation": {
+      "name": "Charlotte Verhoeven",
+      "role": "Senior Account Executive",
+      "summary": "Consultatieve Account Executive gespecialiseerd in mid-market en enterprise SaaS-deals.",
+      "contact": {
+        "phone": "+31 6 18293745",
+        "email": "charlotte.verhoeven.personal@example.com",
+        "address": {
+          "streetNumber": "17",
+          "streetName": "Oudegracht",
+          "streetType": "gracht",
+          "city": "Utrecht",
+          "state": "Utrecht",
+          "zipCode": "3511 AB",
+          "country": "Nederland"
+        },
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/charlotteverhoeven"
+        }
+      },
+      "availability": {
+        "openToWork": true,
+        "status": "openButNotSearching",
+        "availableFrom": "2026-10-01",
+        "noticePeriodDays": 60,
+        "interviewAvailability": [
+          "dinsdagmiddag",
+          "donderdagochtend"
+        ],
+        "preferredWorkTypes": [
+          "hybride"
+        ],
+        "preferredContractTypes": [
+          "vast dienstverband"
+        ],
+        "willingToRelocate": false,
+        "remoteOnly": false
+      }
+    },
+    "keySkills": [
+      {
+        "category": "Salescyclus",
+        "skills": [
+          "Consultatieve verkoop",
+          "Onderhandeling",
+          "Closing",
+          "Salescycle-management"
+        ]
+      },
+      {
+        "category": "Accountmanagement",
+        "skills": [
+          "Relatiebeheer",
+          "Upselling",
+          "Cross-selling"
+        ]
+      },
+      {
+        "category": "Tooling",
+        "skills": [
+          "Salesforce",
+          "HubSpot CRM",
+          "Gong",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "category": "Analyse",
+        "skills": [
+          "Pijplijnprognose",
+          "Forecasting",
+          "Territory planning"
+        ]
+      }
+    ],
+    "profiles": {
+      "areasOfExpertise": [
+        "Consultatieve verkoop",
+        "Enterprise deals",
+        "Onderhandeling"
+      ],
+      "keyResponsibilities": [
+        "Beheren van de volledige salescyclus",
+        "Sluiten van mid-market en enterprise deals",
+        "Opbouwen van strategische klantrelaties"
+      ]
+    },
+    "workExperience": [
+      {
+        "company": "Nimbus Analytics",
+        "website": "https://nimbusanalytics.example.com",
+        "location": "Utrecht, Nederland",
+        "from": "@M-68@",
+        "to": "@M-38@",
+        "position": "Senior Account Executive",
+        "activities": [
+          {
+            "project": "Enterprise expansie Benelux",
+            "tasks": [
+              "Managen van complexe salescycli",
+              "Onderhandelen van meerjarige contracten",
+              "Coördineren met solutions engineers"
+            ]
+          }
+        ],
+        "achievements": [
+          "134% targetrealisatie in boekjaar 2024",
+          "Grootste deal van de regio gesloten ter waarde van 420.000 EUR ARR"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce",
+          "Gong",
+          "LinkedIn Sales Navigator"
+        ]
+      },
+      {
+        "company": "Batavia Solutions",
+        "website": "https://bataviasolutions.example.com",
+        "location": "Amsterdam, Nederland",
+        "from": "@M-98@",
+        "to": "@M-68@",
+        "position": "Account Executive",
+        "activities": [
+          {
+            "project": "Mid-market verkoop",
+            "tasks": [
+              "Beheren van een portefeuille mid-market prospects",
+              "Voeren van productdemo's",
+              "Opstellen van commerciële voorstellen"
+            ]
+          }
+        ],
+        "achievements": [
+          "Drie opeenvolgende jaren boven quota",
+          "Opgeleid twee nieuwe AE's"
+        ],
+        "toolsAndTechnologies": [
+          "HubSpot CRM",
+          "Salesforce"
+        ]
+      },
+      {
+        "company": "Delft Digital",
+        "website": "https://delftdigital.example.com",
+        "location": "Delft, Nederland",
+        "from": "@M-128@",
+        "to": "@M-98@",
+        "position": "Junior Sales Consultant",
+        "activities": [
+          {
+            "project": "Nieuwe klantwerving",
+            "tasks": [
+              "Kwalificeren van inbound leads",
+              "Ondersteunen van senior sales",
+              "Bijhouden van CRM-gegevens"
+            ]
+          }
+        ],
+        "achievements": [
+          "Snelste rampup van het salesteam"
+        ],
+        "toolsAndTechnologies": [
+          "Salesforce"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "year": "@Y-7@",
+        "institution": "Universiteit Utrecht",
+        "degree": "Master",
+        "fieldOfStudy": "Bedrijfskunde",
+        "achievements": [
+          "Specialisatie Marketing & Sales"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Challenger Sales Certification",
+        "institution": "Challenger Inc.",
+        "year": "@Y-4@",
+        "description": "Certificering in de Challenger-methodiek voor consultatieve verkoop."
+      }
+    ],
+    "skillsAndQualifications": {
+      "technicalSkills": [
+        "Salesforce",
+        "HubSpot CRM",
+        "Gong",
+        "Forecasting"
+      ],
+      "softSkills": [
+        "Overtuigingskracht",
+        "Empathie",
+        "Strategisch denken"
+      ],
+      "languages": [
+        {
+          "language": "Nederlands",
+          "proficiency": {
+            "read": "native",
+            "written": "native",
+            "spoken": "native"
+          }
+        },
+        {
+          "language": "Engels",
+          "proficiency": {
+            "read": "fluent",
+            "written": "fluent",
+            "spoken": "fluent"
+          }
+        },
+        {
+          "language": "Duits",
+          "proficiency": {
+            "read": "intermediate",
+            "written": "basic",
+            "spoken": "intermediate"
+          }
+        }
+      ]
+    },
+    "projectsAndAchievements": [
+      {
+        "title": "Benelux enterprise-strategie",
+        "description": "Ontwikkelde een accountplan voor enterprise expansie in de Benelux.",
+        "date": "2023-11",
+        "impact": "Toename van gemiddelde dealwaarde met 28%."
+      }
+    ],
+    "interestsAndHobbies": [
+      "Zeilen",
+      "Wijnproeven",
+      "Reizen"
+    ],
+    "references": [
+      {
+        "name": "Thomas Groen",
+        "position": "VP Sales",
+        "company": "Nimbus Analytics",
+        "contact": {
+          "phone": "+31 6 33125566",
+          "email": "thomas.groen@example.com"
+        }
+      }
+    ],
+    "salaryExpectation": {
+      "currency": "EUR",
+      "min": 65000,
+      "max": 80000
+    },
+    "candidateClustering": {
+      "primaryCluster": "Account Executive",
+      "secondaryClusters": [
+        "Enterprise Sales",
+        "Consultative Selling"
+      ],
+      "functionalExpertise": [
+        "Salescycle-management",
+        "Onderhandeling"
+      ],
+      "skillDepth": "specialist",
+      "businessImpact": [
+        "Omzetgroei",
+        "Nieuwe klantwerving"
+      ],
+      "industryDomains": [
+        "SaaS",
+        "B2B technology"
+      ],
+      "environmentFit": [
+        "Scale-up",
+        "Enterprise sales"
+      ],
+      "seniorityLevel": "senior",
+      "leadershipAndInfluence": "individualContributor",
+      "learningVelocity": "medium",
+      "clusterConfidenceScore": 0.9,
+      "clusterReasoning": "Langdurige ervaring met het sluiten van complexe SaaS-deals en consequent overtreffen van targets duidt op een senior Account Executive."
+    },
+    "searchIndex": {
+      "roles": [
+        "Account Executive",
+        "Enterprise Sales",
+        "Sales Consultant"
+      ],
+      "skills": [
+        "Consultative selling",
+        "Negotiation",
+        "Sales cycle management",
+        "Salesforce",
+        "Forecasting"
+      ],
+      "industries": [
+        "SaaS",
+        "B2B technology"
+      ]
+    },
+    "tags": [
+      "sales",
+      "account-executive",
+      "SaaS",
+      "enterprise",
+      "senior"
+    ]
+  }
+]

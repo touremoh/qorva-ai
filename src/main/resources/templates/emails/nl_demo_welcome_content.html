@@ -1,0 +1,31 @@
+<div class="email-container">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #0A1628;">
+        <tr>
+            <td align="center" style="padding: 28px 40px;">
+                <img src="{{logo_url}}" alt="Qorva AI" width="160" height="42" border="0"
+                     style="display: block; border: 0; height: auto; max-height: 42px; max-width: 160px; width: auto;" />
+            </td>
+        </tr>
+    </table>
+
+    <div class="email-content">
+        <p class="greeting">Hallo {{first_name}},</p>
+        <p>Welkom bij <strong>{{app_name}}</strong>! Uw demo-werkruimte voor <strong>{{company_name}}</strong> staat klaar, vooraf gevuld met voorbeeldkandidaten en vacatures zodat u meteen matchingrapporten kunt uitproberen.</p>
+        <p>Stel uw wachtwoord in met de knop hieronder om uw account te activeren.</p>
+
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin: 32px 0 28px;">
+            <tr>
+                <td align="center">
+                    <a href="{{set_password_url}}" style="display: inline-block; padding: 14px 44px; background-color: #72BB53; color: #FFFFFF; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 15px; letter-spacing: 0.3px; mso-padding-alt: 0; text-align: center;">Mijn wachtwoord instellen</a>
+                </td>
+            </tr>
+        </table>
+
+        <p style="font-size: 13px; color: #64748B; line-height: 1.7;">Deze link is 72 uur geldig en eenmalig te gebruiken. Als deze verloopt, kunt u een nieuwe aanvragen via de inlogpagina.</p>
+
+        <p class="support-line">Vragen? Bereik ons via <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
+    </div>
+    <div class="email-footer">
+        <p>&copy; {{current_year}} {{app_name}}. Alle rechten voorbehouden.</p>
+    </div>
+</div>

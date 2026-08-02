@@ -3,6 +3,8 @@ package ai.qorva.core.service;
 import ai.qorva.core.exception.QorvaException;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.time.Instant;
+
 public class QorvaFileReaderContext {
     private final QorvaFileReader fileReader;
 
@@ -12,5 +14,9 @@ public class QorvaFileReaderContext {
 
     public String readFile(MultipartFile file) throws QorvaException {
         return fileReader.read(file);
+    }
+
+    public Instant readDocumentDate(MultipartFile file) {
+        return fileReader.readDocumentDate(file);
     }
 }

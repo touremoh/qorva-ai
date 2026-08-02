@@ -1,0 +1,440 @@
+[
+  {
+    "title": "Contable Financiero/a (Financial Accountant)",
+    "description": "En una empresa manufacturera con presencia internacional y sede en Madrid, buscamos un/a Contable Financiero/a para incorporarse al equipo de contabilidad general y reporting.\n\nTu misión será garantizar la integridad de los registros contables y contribuir a un cierre mensual y anual preciso y puntual, cumpliendo con la normativa contable local e internacional.\n\nResponsabilidades principales:\n- Ejecutar el ciclo contable completo: asientos, conciliaciones bancarias y de cuentas, y provisiones.\n- Preparar los cierres mensuales y anuales bajo IFRS y normativa local.\n- Elaborar la documentación de soporte para auditorías externas.\n- Mantener el libro mayor y las cuentas de balance debidamente conciliadas en SAP FICO.\n- Colaborar en la mejora de procesos y controles contables.\n\nRequisitos imprescindibles:\n- Entre 3 y 5 años de experiencia en contabilidad general.\n- Conocimiento sólido de IFRS y del plan general contable.\n- Manejo avanzado de Excel y experiencia con un ERP (preferiblemente SAP FICO).\n\nValoramos: experiencia en entornos industriales, conocimientos de US GAAP y titulación en Administración y Dirección de Empresas o similar.\n\nModelo híbrido con tres días presenciales por semana en Madrid. Ofrecemos un entorno estable, formación continua y proyectos de mejora contable con impacto directo.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "General Ledger Accounting",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP FICO",
+          "importance": "important",
+          "weight": 0.18,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Account Reconciliation",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "US GAAP",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Month-End Close",
+          "importance": "nice_to_have",
+          "weight": 0.05,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Madrid",
+          "Barcelona",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Professional Services",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Analista de FP&A (FP&A Analyst) Junior",
+    "description": "Una empresa tecnológica en expansión con oficinas en Barcelona busca un/a Analista de FP&A Junior para reforzar el equipo de planificación financiera y análisis.\n\nTu misión será apoyar los procesos de presupuestación, previsión y reporting de gestión, transformando datos financieros en información útil para la toma de decisiones.\n\nResponsabilidades principales:\n- Colaborar en la elaboración del presupuesto anual y de las previsiones trimestrales.\n- Construir y mantener modelos financieros en Excel para el análisis de ingresos y costes.\n- Preparar informes de desviaciones (real frente a presupuesto) y cuadros de mando en Power BI.\n- Automatizar reportes recurrentes y apoyar el análisis de rentabilidad por línea de negocio.\n- Dar soporte a los responsables de área en sus revisiones mensuales de resultados.\n\nRequisitos imprescindibles:\n- Entre 1 y 3 años de experiencia en FP&A, control de gestión o funciones analíticas similares.\n- Dominio de Excel para modelización financiera.\n- Capacidad analítica y atención al detalle.\n\nValoramos: experiencia con Power BI, conocimientos de Anaplan y familiaridad con entornos SaaS o tecnológicos.\n\nModelo híbrido con dos días presenciales por semana en Barcelona. Ofrecemos un plan de desarrollo claro, mentoría y exposición directa a la dirección financiera.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Financial Modeling",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Budgeting and Forecasting",
+          "importance": "important",
+          "weight": 0.2,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Variance Analysis",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Anaplan",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 1,
+        "minRelevantYears": 1,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Barcelona",
+          "Madrid",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services",
+          "Banking"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Auditor/a Interno/a Senior (Internal Auditor)",
+    "description": "Un grupo bancario de referencia con sede en Madrid busca un/a Auditor/a Interno/a Senior para su departamento de Auditoría Interna y Control.\n\nTu misión será evaluar de forma independiente la eficacia del control interno, la gestión de riesgos y el cumplimiento normativo, aportando recomendaciones de mejora a la alta dirección.\n\nResponsabilidades principales:\n- Planificar y ejecutar auditorías de procesos financieros y operativos basadas en riesgos.\n- Evaluar el diseño y la efectividad de los controles internos, incluyendo el marco SOX.\n- Analizar grandes volúmenes de datos con herramientas de auditoría como ACL.\n- Documentar hallazgos, redactar informes y realizar el seguimiento de los planes de acción.\n- Coordinar con auditoría externa y con las áreas de riesgo y cumplimiento.\n\nRequisitos imprescindibles:\n- Más de 6 años de experiencia en auditoría interna o externa, preferiblemente en banca o servicios financieros.\n- Conocimiento sólido de marcos de control interno y de SOX.\n- Experiencia demostrable en auditoría basada en riesgos.\n\nValoramos: certificación CIA o CISA, experiencia con ACL o herramientas de data analytics, e inglés fluido.\n\nModelo híbrido con presencia regular en Madrid. Ofrecemos un rol de alta visibilidad, interacción con el comité de auditoría y desarrollo profesional continuo.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Internal Audit",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SOX Compliance",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Risk Management",
+          "importance": "important",
+          "weight": 0.17,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Internal Controls",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ACL",
+          "importance": "nice_to_have",
+          "weight": 0.09,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "CIA Certification",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Data Analytics",
+          "importance": "nice_to_have",
+          "weight": 0.07,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Madrid",
+          "Ciudad de México",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Banking",
+          "Insurance",
+          "Financial Services"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.35,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  },
+  {
+    "title": "Analista de Tesorería (Treasury Analyst)",
+    "description": "Una compañía aseguradora con operaciones en España y Latinoamérica busca un/a Analista de Tesorería para su equipo de finanzas corporativas en Valencia.\n\nTu misión será gestionar la liquidez diaria, optimizar los flujos de caja y contribuir a la gestión del riesgo financiero del grupo.\n\nResponsabilidades principales:\n- Elaborar y actualizar las previsiones de tesorería a corto y medio plazo (cash flow forecasting).\n- Gestionar las posiciones bancarias diarias y las operaciones de pago.\n- Apoyar la gestión del riesgo de tipo de cambio y de tipo de interés.\n- Operar y mantener el Treasury Management System, así como la conectividad bancaria.\n- Preparar reporting de tesorería y conciliaciones para el cierre mensual.\n\nRequisitos imprescindibles:\n- Entre 3 y 6 años de experiencia en tesorería o finanzas corporativas.\n- Conocimiento de gestión de liquidez y previsión de flujos de caja.\n- Manejo avanzado de Excel y experiencia con un Treasury Management System.\n\nValoramos: experiencia en el sector asegurador o bancario, conocimientos de instrumentos de cobertura (FX Hedging) e inglés profesional.\n\nModelo híbrido con dos días presenciales por semana en Valencia. Ofrecemos un entorno internacional, proyectos de transformación de tesorería y un plan de carrera sólido.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Cash Flow Forecasting",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Treasury Management Systems",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Liquidity Management",
+          "importance": "important",
+          "weight": 0.18,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "FX Hedging",
+          "importance": "nice_to_have",
+          "weight": 0.13,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Financial Risk Management",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Valencia",
+          "Madrid",
+          "Bogotá"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Insurance",
+          "Banking",
+          "Financial Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Controller Financiero/a (Financial Controller)",
+    "description": "Una empresa de servicios profesionales con fuerte crecimiento y sede en Madrid busca un/a Controller Financiero/a para liderar el control de gestión y el reporting del grupo.\n\nTu misión será garantizar la fiabilidad de la información financiera, dirigir el proceso de cierre y aportar análisis de valor para la toma de decisiones de la dirección.\n\nResponsabilidades principales:\n- Dirigir el cierre mensual y anual, asegurando el cumplimiento de IFRS y normativa local.\n- Supervisar la contabilidad, las conciliaciones y los controles internos del equipo.\n- Elaborar el reporting de gestión, los presupuestos y el análisis de desviaciones.\n- Coordinar auditorías externas y actuar como referente ante la dirección financiera.\n- Impulsar la automatización del reporting con Power BI y la mejora de procesos en SAP FICO.\n\nRequisitos imprescindibles:\n- Más de 7 años de experiencia en control de gestión, contabilidad o auditoría.\n- Dominio de IFRS y sólida experiencia en procesos de cierre y reporting.\n- Experiencia previa liderando o coordinando equipos financieros.\n\nValoramos: experiencia con SAP FICO, conocimientos de US GAAP, dominio de Power BI e inglés fluido.\n\nModelo híbrido con tres días presenciales por semana en Madrid. Ofrecemos un rol de alto impacto, autonomía y participación en proyectos de transformación financiera.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Financial Reporting",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 7,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Management Accounting",
+          "importance": "important",
+          "weight": 0.17,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP FICO",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Internal Controls",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "US GAAP",
+          "importance": "nice_to_have",
+          "weight": 0.08,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "nice_to_have",
+          "weight": 0.06,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Madrid",
+          "Barcelona",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Professional Services",
+          "Technology",
+          "Manufacturing"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  }
+]

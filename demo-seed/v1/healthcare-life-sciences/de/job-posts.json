@@ -1,0 +1,421 @@
+[
+  {
+    "title": "Gesundheits- und Krankenpfleger (m/w/d) - Intensivstation",
+    "description": "Das Universitätsklinikum München, ein großes Haus der Maximalversorgung, sucht eine examinierte Pflegefachkraft (m/w/d) für die interdisziplinäre Intensivstation als Teil eines multiprofessionellen Teams der Intensivmedizin.\n\nIn direkter Berichtslinie an die Stationsleitung versorgen Sie schwerstkranke Patientinnen und Patienten evidenzbasiert und auf hohem fachlichem Niveau. Sie betreuen invasiv beatmete Patienten, überwachen die Hämodynamik, titrieren vasoaktive Medikamente und reagieren souverän auf sich rasch verändernde klinische Situationen. Sie führen sorgfältige pflegerische Assessments durch, dokumentieren lückenlos in der elektronischen Patientenakte und wahren jederzeit Würde und Sicherheit der Patienten.\n\nIm Stationsalltag arbeiten Sie eng mit Intensivmedizinern, Physiotherapeuten und Apothekern in der Visite zusammen, begleiten Angehörige in schwierigen Gesprächen und leiten Nachwuchskräfte sowie Auszubildende an.\n\nErforderlich: eine abgeschlossene Ausbildung als Gesundheits- und Krankenpfleger (m/w/d), mindestens 3 Jahre Berufserfahrung mit einem Schwerpunkt von 2 Jahren im Intensiv- oder Intermediate-Care-Bereich, Kompetenz in maschineller Beatmung und in der erweiterten Reanimation (ALS) sowie ausgeprägte klinische Beurteilungsfähigkeit. Eine Fachweiterbildung Intensivpflege ist von hohem Wert.\n\nWünschenswert: Erfahrung mit Nierenersatzverfahren (CVVH), Beteiligung an klinischen Audits sowie ALS-Instruktorenstatus.\n\nEs handelt sich um eine Präsenzstelle in München im rollierenden Schichtdienst (Tag- und Nachtdienste). Wir bieten Vergütung nach TVöD-K, eine strukturierte Einarbeitung und geförderte Fortbildungen.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Critical Care Nursing",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Registered Nurse License",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": true
+        },
+        {
+          "name": "Mechanical Ventilation",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Advanced Life Support",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Patient Assessment",
+          "importance": "important",
+          "weight": 0.13,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Renal Replacement Therapy",
+          "importance": "nice_to_have",
+          "weight": 0.11,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 2,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "München",
+          "Augsburg",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Hospitals and Clinics",
+          "Healthcare",
+          "Medical Devices"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Bioanalytiker (m/w/d)",
+    "description": "Rheintal Biosciences, ein wachsendes Auftragsforschungsinstitut mit Sitz in Basel, sucht einen Bioanalytiker (m/w/d) für sein reguliertes bioanalytisches Labor zur Unterstützung präklinischer und früher klinischer Studien.\n\nIn Berichtslinie an die bioanalytische Leitung entwickeln, validieren und betreiben Sie quantitative LC-MS/MS- und Ligandenbindungs-Assays zur Bestimmung von Wirkstoff- und Biomarkerkonzentrationen in biologischen Matrices. Sie stellen Kalibrierstandards und QC-Proben her, bedienen und beheben Störungen an analytischen Geräten und erstellen präzise, sauber dokumentierte Datenpakete für regulatorische Einreichungen.\n\nSie arbeiten nach GLP und den einschlägigen GCP-Anforderungen, pflegen sorgfältige Aufzeichnungen im LIMS und elektronischen Laborbuch und unterstützen den Methodentransfer sowie die Studienberichterstattung gemeinsam mit Studienleitung und QA.\n\nErforderlich: ein BSc oder MSc in analytischer Chemie, Biochemie, Pharmakologie oder einer verwandten naturwissenschaftlichen Fachrichtung, mindestens 1 Jahr praktische Laborerfahrung, fundierte Kenntnisse in LC-MS/MS oder ELISA sowie ein solides Verständnis von GLP und Good Documentation Practice. Ausgeprägte Sorgfalt und Datenintegrität sind unerlässlich.\n\nWünschenswert: Erfahrung mit Methodenvalidierung gemäß FDA-/EMA-Bioanalytik-Leitlinien, Vertrautheit mit Watson LIMS oder Analyst-Software sowie Erfahrung mit Biomarker-Assays.\n\nEs handelt sich um eine Präsenzstelle im Labor in Basel, offen für Kandidatinnen und Kandidaten in der gesamten Schweiz. Wir bieten eine strukturierte Einarbeitung, einen klaren wissenschaftlichen Entwicklungspfad und Einblick in ein breites Molekülportfolio.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "LC-MS/MS",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "GLP",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Method Validation",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ELISA",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Good Documentation Practice",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "LIMS",
+          "importance": "nice_to_have",
+          "weight": 0.12,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 1,
+        "minRelevantYears": 1,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Basel",
+          "Zürich",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Contract Research Organization",
+          "Pharmaceuticals",
+          "Biotechnology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.2,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Manager Regulatory Affairs (m/w/d)",
+    "description": "Nordwald Therapeutics, ein biopharmazeutisches Unternehmen mit Hauptsitz in Wien, sucht einen Manager Regulatory Affairs (m/w/d) zur Steuerung von Regulierungsstrategie und Einreichungen über die klinische Pipeline hinweg.\n\nIn Berichtslinie an die Direktion Regulatory Affairs verantworten Sie die Erstellung, Prüfung und das Lifecycle-Management regulatorischer Einreichungen bei FDA und EMA, einschließlich INDs, IMPDs, Briefing-Packages und Amendments. Sie definieren die regulatorische Strategie für zugewiesene Programme, führen Behördeninteraktionen und stellen sicher, dass Einreichungen konform, gut argumentiert und termingerecht im eCTD-Format vorliegen.\n\nSie arbeiten funktionsübergreifend mit klinischen, nichtklinischen, CMC- und Qualitätsteams zusammen, interpretieren die sich wandelnden ICH- und regionalen Leitlinien und liefern der Programmleitung fundierte regulatorische Intelligence. Zudem koordinieren Sie die Beantwortung von Behördenanfragen und überwachen das Submission-Publishing.\n\nErforderlich: mindestens 6 Jahre Erfahrung im Bereich Regulatory Affairs in Pharma, Biotech oder CRO, direkte Erfahrung in der Leitung von FDA- und/oder EMA-Einreichungen, fundierte Kenntnis der ICH-Leitlinien und der eCTD-Struktur sowie ein naturwissenschaftlicher Studienabschluss. Ausgezeichnete wissenschaftliche Schreib- und Stakeholder-Management-Fähigkeiten sind unerlässlich.\n\nWünschenswert: ein höherer Abschluss (MSc/PhD/PharmD), RAC-Zertifizierung, Erfahrung mit Orphan-Drug- oder beschleunigten Zulassungswegen sowie CMC-regulatorische Kenntnisse.\n\nEs handelt sich um eine Hybridrolle in Wien (3 Bürotage pro Woche), offen für Kandidaten in Österreich. Wir bieten eine wettbewerbsfähige Vergütung und die Chance, die Strategie für First-in-Class-Programme mitzugestalten.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Regulatory Submissions",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "FDA Regulations",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "EMA Regulations",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ICH Guidelines",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "eCTD",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "CMC Regulatory Affairs",
+          "importance": "nice_to_have",
+          "weight": 0.11,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Wien",
+          "Graz",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "Contract Research Organization"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.15
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Medical Science Liaison (m/w/d) - Onkologie",
+    "description": "Halden Pharma, ein global tätiges Pharmaunternehmen mit einem Medical-Affairs-Standort in Frankfurt am Main, sucht einen Medical Science Liaison (m/w/d) zur Betreuung des Onkologie-Portfolios in der Region Mitte.\n\nAls feldbasierter wissenschaftlicher Ansprechpartner bauen und pflegen Sie Peer-to-Peer-Beziehungen zu Meinungsbildnern, Onkologen und akademischen Zentren und kommunizieren ausgewogene, evidenzbasierte wissenschaftliche Informationen zu den Substanzen des Unternehmens und zum therapeutischen Umfeld. Sie erfassen klinische Insights aus dem Feld, unterstützen investigator-initiierte Studien, führen medizinische Fortbildungen durch und vertreten Medical Affairs auf Kongressen und in Advisory Boards.\n\nSie übersetzen komplexe Studien- und Real-World-Evidenz in klaren wissenschaftlichen Austausch, beantworten unaufgeforderte medizinische Anfragen und arbeiten mit klinischer Entwicklung und HEOR zusammen, stets unter Einhaltung strenger Compliance- und Pharmakovigilanz-Anforderungen.\n\nErforderlich: ein höherer naturwissenschaftlicher oder klinischer Abschluss (PhD, PharmD oder Approbation), mindestens 4 Jahre Erfahrung in der Onkologie als MSL oder in vergleichbarer klinisch-wissenschaftlicher Rolle, fundiertes Verständnis von Studiendesign und onkologischen Therapien sowie herausragende wissenschaftliche Kommunikationsfähigkeit. Reisebereitschaft innerhalb der Region ist unerlässlich.\n\nWünschenswert: ein etabliertes onkologisches KOL-Netzwerk, HEOR-Kenntnisse sowie Erfahrung mit Produkt-Launches.\n\nEs handelt sich um eine feldbasierte Rolle für die Region Mitte mit häufiger Reisetätigkeit, offen für Kandidaten mit Wohnsitz im oder nahe dem Gebiet. Wir bieten ein attraktives Paket, Bonus und eine wissenschaftlich geprägte Medical-Affairs-Kultur.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Medical Science Liaison",
+          "importance": "mandatory",
+          "weight": 0.24,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Oncology",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trials",
+          "importance": "important",
+          "weight": 0.17,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Scientific Communication",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "KOL Engagement",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "HEOR",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 4,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Frankfurt am Main",
+          "Mannheim",
+          "Köln",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Pharmaceuticals",
+          "Biotechnology",
+          "Medical Devices"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Clinical Research Associate (m/w/d)",
+    "description": "Meridian Clinical Research, ein mittelgroßes Auftragsforschungsinstitut mit einer Niederlassung in Heidelberg, sucht einen Clinical Research Associate (m/w/d) zur Überwachung von Phase-II- und Phase-III-Studien an einem Netzwerk von Prüfzentren.\n\nIn Berichtslinie an die klinische Teamleitung führen Sie Site-Selection-, Initiierungs-, Routine-Monitoring- und Close-out-Besuche durch, prüfen Quelldaten, sichern die Einwilligungs-Compliance und stellen sicher, dass Studien protokollkonform sowie im Einklang mit ICH-GCP und den geltenden Vorschriften durchgeführt werden. Sie steuern die Beziehungen zu den Prüfzentren, treiben Rekrutierung und Datenqualität voran und klären Queries und Protokollabweichungen zeitnah.\n\nSie dokumentieren jeden Besuch in klaren, fristgerechten Monitoring-Berichten, verfolgen Maßnahmen bis zum Abschluss, überwachen die Prüfpräparate-Accountability und eskalieren Risiken an das Studienteam. Regelmäßige Reisen zu Prüfzentren in ganz Deutschland sind zentraler Bestandteil der Rolle.\n\nErforderlich: ein naturwissenschaftlicher oder pflegerischer Abschluss, mindestens 2 Jahre Erfahrung im On-Site-Monitoring klinischer Studien, fundierte Kenntnis von ICH-GCP und des Studienlebenszyklus sowie ausgeprägte organisatorische und kommunikative Fähigkeiten. Ein gültiger Führerschein und Reisebereitschaft sind unerlässlich.\n\nWünschenswert: Erfahrung in den Indikationen Onkologie oder ZNS, Vertrautheit mit risikobasiertem und Remote-Monitoring sowie Erfahrung mit EDC-Systemen wie Medidata Rave.\n\nEs handelt sich um eine Home-Office-Rolle mit häufiger Reisetätigkeit zu Prüfzentren, offen für Kandidaten in ganz Deutschland. Wir bieten ein wettbewerbsfähiges Gehalt, Dienstwagenregelung und ein unterstützendes Clinical-Operations-Team.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "ICH-GCP",
+          "importance": "mandatory",
+          "weight": 0.26,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trial Monitoring",
+          "importance": "mandatory",
+          "weight": 0.22,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Source Data Verification",
+          "importance": "important",
+          "weight": 0.16,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Clinical Trials",
+          "importance": "important",
+          "weight": 0.14,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "EDC Systems",
+          "importance": "important",
+          "weight": 0.12,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Pharmacovigilance",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Heidelberg",
+          "Berlin",
+          "Hamburg",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Contract Research Organization",
+          "Pharmaceuticals",
+          "Biotechnology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "location": 0.15,
+        "industry": 0.1
+      },
+      "filterOpenToWork": true,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  }
+]

@@ -11,6 +11,8 @@ public final class QorvaErrorCodes {
     public static final String AUTH_SUBSCRIPTION_INACTIVE = "error.auth.subscription_inactive";
     public static final String AUTH_USER_NOT_FOUND        = "error.auth.user_not_found";
     public static final String AUTH_USER_LOOKUP_FAILED    = "error.auth.user_lookup_failed";
+    public static final String AUTH_SET_PASSWORD_TOKEN_INVALID = "error.auth.set_password_token_invalid";
+    public static final String AUTH_SET_PASSWORD_TOKEN_USED    = "error.auth.set_password_token_used";
 
     // access
     public static final String ACCESS_FORBIDDEN    = "error.access.forbidden";
@@ -28,6 +30,7 @@ public final class QorvaErrorCodes {
     public static final String CV_NO_FILES_PROCESSED = "error.cv.no_files_processed";
     public static final String CV_CONTENT_EMPTY      = "error.cv.content_empty";
     public static final String CV_EXTRACTION_FAILED  = "error.cv.extraction_failed";
+    public static final String CV_ATTACHMENT_UPLOAD_FAILED = "error.cv.attachment_upload_failed";
 
     // file  (params: {0} = filename)
     public static final String FILE_EMPTY             = "error.file.empty";
