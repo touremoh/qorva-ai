@@ -2,6 +2,7 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.dto.common.SubscriptionInfo;
+import ai.qorva.core.enums.EmailCategory;
 import ai.qorva.core.enums.EmailTitlesEnum;
 import ai.qorva.core.exception.QorvaException;
 import lombok.extern.slf4j.Slf4j;
@@ -39,8 +40,13 @@ public class SubscriptionWelcomeNotificationService extends AbstractEmailService
     private String logoUrl;
 
     @Autowired
-    public SubscriptionWelcomeNotificationService(OAuth2TokenService oauth2TokenService) {
-        super(oauth2TokenService);
+    public SubscriptionWelcomeNotificationService(OAuth2TokenService oauth2TokenService, EmailSenderResolver senderResolver) {
+        super(oauth2TokenService, senderResolver);
+    }
+
+    @Override
+    protected EmailCategory getCategory() {
+        return EmailCategory.BILLING;
     }
 
     @Override
@@ -67,7 +73,7 @@ public class SubscriptionWelcomeNotificationService extends AbstractEmailService
                 .replace("{{plan_name}}", sub.getSubscriptionPlan() != null ? sub.getSubscriptionPlan() : "")
                 .replace("{{billing_cycle}}", billingCycle)
                 .replace("{{next_billing_date}}", nextBillingDate)
-                .replace("{{support_email}}", this.fromEmail)
+                .replace("{{support_email}}", supportEmail())
                 .replace("{{current_year}}", String.valueOf(LocalDate.now().getYear()));
 
             String html = wrapper.replace("{{template_content}}", content);

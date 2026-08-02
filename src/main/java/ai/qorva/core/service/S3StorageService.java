@@ -106,6 +106,44 @@ public class S3StorageService {
         return new AttachmentInfo(key, file.getOriginalFilename(), file.getContentType(), file.getSize());
     }
 
+    /**
+     * Stages a candidate-submitted resume for asynchronous processing under
+     * {@code candidate-submissions/{tenantId}/{requestId}}. Deleted by the worker on
+     * terminal states; an S3 lifecycle rule on the prefix is the cleanup backstop.
+     */
+    public String uploadCandidateSubmission(String tenantId, String requestId, MultipartFile file) throws QorvaException {
+        var key = "candidate-submissions/" + tenantId + "/" + requestId;
+        try {
+            s3Client.putObject(
+                PutObjectRequest.builder()
+                    .bucket(s3Properties.getBucketName())
+                    .key(key)
+                    .contentType(file.getContentType())
+                    .build(),
+                RequestBody.fromInputStream(file.getInputStream(), file.getSize())
+            );
+        } catch (IOException | RuntimeException e) {
+            log.error("S3 - Failed to stage candidate submission for request {}: {}", requestId, e.getMessage());
+            throw new QorvaException(QorvaErrorCodes.CV_ATTACHMENT_UPLOAD_FAILED, e, file.getOriginalFilename());
+        }
+        log.debug("S3 - Candidate submission staged: {}", key);
+        return key;
+    }
+
+    public byte[] fetchObjectBytes(String key) throws QorvaException {
+        try {
+            return s3Client.getObjectAsBytes(
+                GetObjectRequest.builder()
+                    .bucket(s3Properties.getBucketName())
+                    .key(key)
+                    .build()
+            ).asByteArray();
+        } catch (Exception e) {
+            log.error("S3 - Failed to fetch object {}: {}", key, e.getMessage());
+            throw new QorvaException(QorvaErrorCodes.CV_ATTACHMENT_UPLOAD_FAILED, e, key);
+        }
+    }
+
     /** Best-effort delete of a single object; never throws. */
     public void deleteObject(String key) {
         if (!StringUtils.hasText(key)) {

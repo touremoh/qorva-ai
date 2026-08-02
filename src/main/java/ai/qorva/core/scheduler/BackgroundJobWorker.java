@@ -12,6 +12,7 @@ import ai.qorva.core.service.LibraryQualityCacheEvictor;
 import ai.qorva.core.service.OpenAIService;
 import ai.qorva.core.service.TenantService;
 import ai.qorva.core.service.UsageMonitoringService;
+import ai.qorva.core.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.ai.converter.BeanOutputConverter;
@@ -61,6 +62,7 @@ public class BackgroundJobWorker {
 	private final CandidateUpdateService candidateUpdateService;
 	private final CandidateUpdateEmailService candidateUpdateEmailService;
 	private final TenantService tenantService;
+	private final UserService userService;
 
 	public BackgroundJobWorker(
 		MongoTemplate mongoTemplate,
@@ -72,7 +74,8 @@ public class BackgroundJobWorker {
 		LibraryQualityCacheEvictor cacheEvictor,
 		CandidateUpdateService candidateUpdateService,
 		CandidateUpdateEmailService candidateUpdateEmailService,
-		TenantService tenantService
+		TenantService tenantService,
+		UserService userService
 	) {
 		this.mongoTemplate = mongoTemplate;
 		this.cvRepository = cvRepository;
@@ -84,6 +87,7 @@ public class BackgroundJobWorker {
 		this.candidateUpdateService = candidateUpdateService;
 		this.candidateUpdateEmailService = candidateUpdateEmailService;
 		this.tenantService = tenantService;
+		this.userService = userService;
 	}
 
 	@Scheduled(fixedDelayString = "${qorva.jobs.poll-delay-ms:5000}")
@@ -237,6 +241,12 @@ public class BackgroundJobWorker {
 		var ids = cvRepository.findQualityIssueCvIds(new ObjectId(tenantId), issueKey);
 		var tenantName = tenantService.findOneById(tenantId).getTenantName();
 
+		// Recruiter-authored copy snapshotted at submit time; null → built-in localized copy.
+		var customTemplate = StringUtils.hasText(job.getEmailSubject()) && StringUtils.hasText(job.getEmailBody())
+			? new CandidateUpdateEmailService.CustomTemplate(job.getEmailSubject(), job.getEmailBody())
+			: null;
+		var senderName = resolveSenderName(job.getCreatedBy());
+
 		long processed = job.getProcessed(), succeeded = job.getSucceeded(),
 			failed = job.getFailed(), skipped = job.getSkipped();
 		var errorSamples = new ArrayList<String>(job.getErrorSamples() != null ? job.getErrorSamples() : List.of());
@@ -266,7 +276,9 @@ public class BackgroundJobWorker {
 					cv.getPersonalInformation() != null ? cv.getPersonalInformation().getName() : null,
 					tenantName,
 					candidateUpdateService.buildUpdateLink(token),
-					job.getLanguage());
+					job.getLanguage(),
+					customTemplate,
+					senderName);
 				succeeded++;
 				Thread.sleep(SEND_PACE_MS);   // provider-friendly pacing
 			} catch (InterruptedException e) {
@@ -294,6 +306,25 @@ public class BackgroundJobWorker {
 			BackgroundJob.class);
 		log.info("Job {} finished: {} — {} invitations sent, {} failed, {} skipped",
 			job.getId(), finalStatus, succeeded, failed, skipped);
+	}
+
+	/** Full name of the recruiter who launched the campaign — signs the invitation emails. */
+	private String resolveSenderName(String creatorEmail) {
+		if (!StringUtils.hasText(creatorEmail)) {
+			return null;
+		}
+		try {
+			var creator = userService.findByEmail(creatorEmail);
+			if (creator == null) {
+				return null;
+			}
+			var fullName = ((creator.getFirstName() != null ? creator.getFirstName() : "") + " "
+				+ (creator.getLastName() != null ? creator.getLastName() : "")).trim();
+			return fullName.isEmpty() ? null : fullName;
+		} catch (Exception e) {
+			log.warn("Could not resolve campaign sender name for {}: {}", creatorEmail, e.getMessage());
+			return null;
+		}
 	}
 
 	private boolean isCancelled(String jobId) {

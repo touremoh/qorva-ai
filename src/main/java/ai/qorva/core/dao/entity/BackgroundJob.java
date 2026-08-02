@@ -50,6 +50,14 @@ public class BackgroundJob {
 	/** Candidate-facing language for campaign emails (base code, e.g. "en"). */
 	private String language;
 
+	/**
+	 * Snapshot of a recruiter-authored invitation template (campaign jobs only). Copied
+	 * at submit time so editing/deleting the template never changes a running campaign.
+	 * Null → the built-in localized copy.
+	 */
+	private String emailSubject;
+	private String emailBody;
+
 	private String status;
 
 	private long total;

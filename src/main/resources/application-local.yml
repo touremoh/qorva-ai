@@ -119,6 +119,9 @@ stripe:
     cancel-url: http://localhost:5173/billing/cancel
 
 qorva:
+  mail:
+    reply-to: ""          # blank → no Reply-To header, legacy single-sender behavior
+    senders: {}           # unset categories fall back to spring.mail.username/from
   assets:
     logo-url: QORVA_ASSETS_LOGO_URL
   notifications:

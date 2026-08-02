@@ -10,8 +10,9 @@ public final class BackgroundJobData {
 
 	private BackgroundJobData() {}
 
-	/** Submit request; {@code dryRun: true} returns an estimate without creating a job. */
-	public record SubmitRequest(String type, String issueKey, boolean dryRun, String language) {}
+	/** Submit request; {@code dryRun: true} returns an estimate without creating a job.
+	 *  {@code templateId} (campaigns only) selects a recruiter-authored invitation template. */
+	public record SubmitRequest(String type, String issueKey, boolean dryRun, String language, String templateId) {}
 
 	/** Pre-flight cost estimate shown before the user confirms an expensive job. */
 	public record Estimate(

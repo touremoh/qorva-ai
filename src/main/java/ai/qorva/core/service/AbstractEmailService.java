@@ -1,13 +1,13 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dto.UserDTO;
+import ai.qorva.core.enums.EmailCategory;
 import ai.qorva.core.exception.QorvaException;
 import com.microsoft.graph.models.*;
 import com.microsoft.graph.serviceclient.GraphServiceClient;
 import com.microsoft.graph.users.item.sendmail.SendMailPostRequestBody;
 import com.microsoft.kiota.authentication.AuthenticationProvider;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.mail.MailException;
@@ -25,19 +25,22 @@ import java.util.stream.Collectors;
 public abstract class AbstractEmailService {
 
 	protected final OAuth2TokenService oauth2TokenService;
+	protected final EmailSenderResolver senderResolver;
 	protected static final String LEAD_NOTIF_TYPE = "LEAD";
 	protected static final String ACC_NOTIF_TYPE = "ACC";
 
-	@Value("${spring.mail.username}")
-	protected String senderEmail;
-
-	@Value("${spring.mail.from}")
-	protected String fromEmail;
-
-	protected AbstractEmailService(OAuth2TokenService oauth2TokenService) {
+	protected AbstractEmailService(OAuth2TokenService oauth2TokenService, EmailSenderResolver senderResolver) {
 		this.oauth2TokenService = oauth2TokenService;
+		this.senderResolver = senderResolver;
 	}
 
+	/** Which sender identity (security@/billing@/support@/updates@) this service's emails use. */
+	protected abstract EmailCategory getCategory();
+
+	/** The help address injected into templates as {{support_email}}. */
+	protected String supportEmail() {
+		return this.senderResolver.supportEmail();
+	}
 
 	public void sendEmail(String receiverEmail, String subject, String content) throws QorvaException {
 		try {
@@ -56,12 +59,25 @@ public abstract class AbstractEmailService {
 			itemBody.setContentType(BodyType.Html);
 			message.setBody(itemBody);
 
+			var sender = this.senderResolver.resolve(getCategory());
+			// Graph rejects userId != from unless the mailbox has SendAs on the From address.
+			log.debug("Sending {} email via mailbox '{}' with From '{}'", getCategory(), sender.userId(), sender.from());
 
 			// Specify the "From" address (shared mailbox)
 			EmailAddress fromAddress = new EmailAddress();
-			fromAddress.setAddress(this.fromEmail);  // Shared mailbox address
+			fromAddress.setAddress(sender.from());
 			message.setFrom(new Recipient());
 			Objects.requireNonNull(message.getFrom()).setEmailAddress(fromAddress);
+
+			// Replies always funnel to support, whatever the From category is.
+			var replyTo = this.senderResolver.replyTo();
+			if (replyTo != null) {
+				var replyToAddress = new EmailAddress();
+				replyToAddress.setAddress(replyTo);
+				var replyToRecipient = new Recipient();
+				replyToRecipient.setEmailAddress(replyToAddress);
+				message.setReplyTo(List.of(replyToRecipient));
+			}
 
 			var accessToken = this.oauth2TokenService.getAccessToken();
 
@@ -73,7 +89,7 @@ public abstract class AbstractEmailService {
 
 			graphClient
 				.users()
-				.byUserId(this.senderEmail)
+				.byUserId(sender.userId())
 				.sendMail()
 				.post(postRequest);
 		} catch (MailException e) {

@@ -30,6 +30,14 @@ public class CandidateUpdateRequest {
 	public static final String STATUS_COMPLETED = "COMPLETED";
 	public static final String STATUS_EXPIRED = "EXPIRED";
 
+	// Async submission lifecycle (file uploads only; fields-only updates complete synchronously).
+	public static final String STATUS_SUBMITTED = "SUBMITTED";
+	public static final String STATUS_PROCESSING = "PROCESSING";
+	public static final String STATUS_SUBMIT_FAILED = "SUBMIT_FAILED";   // retryable — token not consumed
+
+	public static final String STAGE_PARSING = "PARSING";
+	public static final String STAGE_UPDATING = "UPDATING";
+
 	@Id
 	private String id;
 
@@ -46,8 +54,24 @@ public class CandidateUpdateRequest {
 
 	private String language;
 
+	/** Candidate-submitted fields (Submission JSON), persisted at enqueue time. */
+	private String submissionPayload;
+
+	/** S3 key of the staged resume file; deleted once processing reaches a terminal state. */
+	private String pendingFileKey;
+	private String originalFileName;
+
+	/** PARSING | UPDATING while status is PROCESSING. */
+	private String processingStage;
+	private String processingError;
+
+	/** Worker lease (mirrors BackgroundJob): stale PROCESSING claims are reclaimed. */
+	private String leaseOwner;
+	private Instant leaseExpiresAt;
+
 	private Instant sentAt;
 	private Instant openedAt;
+	private Instant submittedAt;
 	private Instant completedAt;
 	private Instant expiresAt;
 }

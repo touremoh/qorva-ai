@@ -117,6 +117,8 @@ public class UsageMonitoringScheduler {
             .screeningActions(base.getScreeningActions() != null ? base.getScreeningActions() * multiplier : null)
             .aiResumeChats(base.getAiResumeChats() != null ? base.getAiResumeChats() * multiplier : null)
             .talentIntelligenceQueries(base.getTalentIntelligenceQueries() != null ? base.getTalentIntelligenceQueries() * multiplier : null)
+            // Static cap, not monthly consumption — never multiplied by billing cycle.
+            .emailTemplates(base.getEmailTemplates())
             .build();
         return ProductFeatures.builder()
             .seats(source.getSeats())

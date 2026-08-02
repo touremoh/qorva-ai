@@ -35,9 +35,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class PublicCandidateUpdateController {
 
 	private static final int MAX_REQUESTS_PER_MINUTE_PER_IP = 30;
+	// Status polling gets its own, higher budget: at one poll every 3s a single candidate
+	// uses 20/min, and corporate NATs put many candidates behind one IP.
+	private static final int MAX_STATUS_REQUESTS_PER_MINUTE_PER_IP = 120;
 
 	private final CandidateUpdateService candidateUpdateService;
 	private final Cache<String, AtomicInteger> rateLimiter = Caffeine.newBuilder()
+		.expireAfterWrite(Duration.ofMinutes(1))
+		.maximumSize(100_000)
+		.build();
+	private final Cache<String, AtomicInteger> statusRateLimiter = Caffeine.newBuilder()
 		.expireAfterWrite(Duration.ofMinutes(1))
 		.maximumSize(100_000)
 		.build();
@@ -54,6 +61,10 @@ public class PublicCandidateUpdateController {
 		return ResponseEntity.ok(this.candidateUpdateService.getPrefill(token));
 	}
 
+	/**
+	 * Fields-only updates complete synchronously (204 — milliseconds, no LLM). A file
+	 * upload is staged and processed asynchronously (202 — poll {@code /{token}/status}).
+	 */
 	@PostMapping(path = "/{token}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public ResponseEntity<Void> submit(
 		@PathVariable String token,
@@ -61,8 +72,19 @@ public class PublicCandidateUpdateController {
 		@RequestPart(value = "file", required = false) MultipartFile file,
 		HttpServletRequest request) throws QorvaException {
 		enforceRateLimit(request);
-		this.candidateUpdateService.complete(token, submission, file);
-		return ResponseEntity.noContent().build();
+		if (file == null || file.isEmpty()) {
+			this.candidateUpdateService.complete(token, submission, null);
+			return ResponseEntity.noContent().build();
+		}
+		this.candidateUpdateService.enqueue(token, submission, file);
+		return ResponseEntity.accepted().build();
+	}
+
+	@GetMapping(path = "/{token}/status", produces = "application/json")
+	public ResponseEntity<CandidateUpdateData.StatusView> status(
+		@PathVariable String token, HttpServletRequest request) throws QorvaException {
+		enforceRateLimit(request, statusRateLimiter, MAX_STATUS_REQUESTS_PER_MINUTE_PER_IP);
+		return ResponseEntity.ok(this.candidateUpdateService.status(token));
 	}
 
 	@PostMapping(path = "/{token}/unsubscribe")
@@ -73,10 +95,15 @@ public class PublicCandidateUpdateController {
 	}
 
 	private void enforceRateLimit(HttpServletRequest request) throws QorvaException {
+		enforceRateLimit(request, rateLimiter, MAX_REQUESTS_PER_MINUTE_PER_IP);
+	}
+
+	private void enforceRateLimit(HttpServletRequest request, Cache<String, AtomicInteger> limiter, int maxPerMinute)
+		throws QorvaException {
 		var forwarded = request.getHeader("X-Forwarded-For");
 		var ip = forwarded != null && !forwarded.isBlank() ? forwarded.split(",")[0].trim() : request.getRemoteAddr();
-		var counter = rateLimiter.get(ip, k -> new AtomicInteger());
-		if (counter.incrementAndGet() > MAX_REQUESTS_PER_MINUTE_PER_IP) {
+		var counter = limiter.get(ip, k -> new AtomicInteger());
+		if (counter.incrementAndGet() > maxPerMinute) {
 			throw new QorvaException("Too many requests", HttpStatus.TOO_MANY_REQUESTS.value(), HttpStatus.TOO_MANY_REQUESTS);
 		}
 	}

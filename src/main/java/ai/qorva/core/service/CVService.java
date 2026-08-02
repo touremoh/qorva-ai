@@ -245,6 +245,12 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         return updated;
     }
 
+    /** Ingest from staged bytes (async candidate submissions) — same pipeline as live uploads. */
+    public CVDTO processFile(byte[] bytes, String originalFilename, String contentType, String tenantId)
+        throws RuntimeException, QorvaException {
+        return processFile(new ai.qorva.core.utils.ByteArrayMultipartFile(bytes, originalFilename, contentType), tenantId);
+    }
+
     public CVDTO processFile(MultipartFile file, String tenantId) throws RuntimeException, QorvaException {
         var fileReaderContext = new QorvaFileReaderContext(QorvaFileReaderFactory.getFileReader(file));
         String fileContent = fileReaderContext.readFile(file);

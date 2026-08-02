@@ -28,4 +28,7 @@ public final class CandidateUpdateData {
 		Integer salaryMin,
 		Integer salaryMax
 	) {}
+
+	/** Async-submission progress: SUBMITTED | PARSING | UPDATING | DONE | FAILED. */
+	public record StatusView(String state) {}
 }

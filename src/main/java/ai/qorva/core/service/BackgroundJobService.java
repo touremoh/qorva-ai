@@ -1,6 +1,7 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.BackgroundJob;
+import ai.qorva.core.dao.entity.CandidateEmailTemplate;
 import ai.qorva.core.dao.repository.BackgroundJobRepository;
 import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dto.BackgroundJobData;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.time.Instant;
 import java.util.List;
@@ -28,6 +30,7 @@ public class BackgroundJobService {
 	private final BackgroundJobRepository jobRepository;
 	private final CVRepository cvRepository;
 	private final UsageMonitoringService usageMonitoringService;
+	private final CandidateEmailTemplateService candidateEmailTemplateService;
 
 	private static final List<String> ACTIVE_STATUSES =
 		List.of(BackgroundJob.STATUS_PENDING, BackgroundJob.STATUS_RUNNING);
@@ -36,11 +39,13 @@ public class BackgroundJobService {
 	public BackgroundJobService(
 		BackgroundJobRepository jobRepository,
 		CVRepository cvRepository,
-		UsageMonitoringService usageMonitoringService
+		UsageMonitoringService usageMonitoringService,
+		CandidateEmailTemplateService candidateEmailTemplateService
 	) {
 		this.jobRepository = jobRepository;
 		this.cvRepository = cvRepository;
 		this.usageMonitoringService = usageMonitoringService;
+		this.candidateEmailTemplateService = candidateEmailTemplateService;
 	}
 
 	public BackgroundJobData.SubmitResponse submit(String tenantId, String createdBy, BackgroundJobData.SubmitRequest request) throws QorvaException {
@@ -55,6 +60,16 @@ public class BackgroundJobService {
 		}
 		if (isCampaign && issueKey != QualityIssueKeyEnum.OUTDATED && issueKey != QualityIssueKeyEnum.UNKNOWN_FRESHNESS) {
 			throw badRequest("Update campaigns target freshness issues only");
+		}
+
+		// Snapshot the invitation template up front (dry runs validate it too): a template
+		// edited or deleted after submission must never change a running campaign.
+		CandidateEmailTemplate template = null;
+		if (StringUtils.hasText(request.templateId())) {
+			if (!isCampaign) {
+				throw badRequest("Email templates only apply to update campaigns");
+			}
+			template = candidateEmailTemplateService.findOwned(tenantId, request.templateId());
 		}
 
 		var estimate = isReanalyze ? reanalyzeEstimate(tenantId, issueKey) : campaignEstimate(tenantId, issueKey);
@@ -84,6 +99,8 @@ public class BackgroundJobService {
 			.type(request.type())
 			.issueKey(issueKey.name())
 			.language(request.language())
+			.emailSubject(template != null ? template.getSubject() : null)
+			.emailBody(template != null ? template.getBodyText() : null)
 			.status(BackgroundJob.STATUS_PENDING)
 			.total(estimate.affectedCount())
 			.errorSamples(List.of())
