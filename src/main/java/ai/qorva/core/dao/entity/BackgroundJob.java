@@ -28,7 +28,10 @@ public class BackgroundJob {
 
 	public static final String TYPE_REANALYZE = "REANALYZE";
 	public static final String TYPE_CANDIDATE_UPDATE_CAMPAIGN = "CANDIDATE_UPDATE_CAMPAIGN";
+	public static final String TYPE_BULK_CV_UPLOAD = "BULK_CV_UPLOAD";
 
+	/** Collecting staged files; never claimed by the worker (claim query matches PENDING/RUNNING only). */
+	public static final String STATUS_DRAFT = "DRAFT";
 	public static final String STATUS_PENDING = "PENDING";
 	public static final String STATUS_RUNNING = "RUNNING";
 	public static final String STATUS_COMPLETED = "COMPLETED";
@@ -68,6 +71,20 @@ public class BackgroundJob {
 
 	/** Capped sample of per-item failures for diagnostics. */
 	private List<String> errorSamples;
+
+	/** Source files for bulk CV import jobs, staged under staged-cv-uploads/ in S3. */
+	private List<StagedFile> stagedFiles;
+
+	@Getter
+	@Setter
+	@Builder
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class StagedFile {
+		private String s3Key;
+		private String filename;
+		private String contentType;
+	}
 
 	private String failureReason;
 

@@ -31,6 +31,9 @@ public class UsageMonitoringDTO extends AbstractQorvaDTO {
     private String subscriptionTier;
     private UsageFeatures features;
 
+    /** Static plan cap for bulk CV imports — populated per request, not persisted. */
+    private Integer bulkUploadFilesLimit;
+
     @JsonProperty(access = Access.READ_ONLY)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
     private Instant createdAt;
