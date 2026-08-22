@@ -2,6 +2,7 @@ package ai.qorva.core.controller;
 
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.dto.request.AddUserRequest;
+import ai.qorva.core.dto.request.UpdateAuthoritiesRequest;
 import ai.qorva.core.dto.request.UpdatePasswordRequest;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.UserService;
@@ -30,6 +31,14 @@ public class UserController extends AbstractQorvaController<UserDTO> {
     public ResponseEntity<UserDTO> inviteUser(@RequestBody @Valid AddUserRequest request) throws QorvaException {
         var created = userService.addUser(currentTenantId(), request);
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
+    }
+
+    @PutMapping("/{id}/authorities")
+    @PreAuthorize("@accessManager.hasPermission(authentication,'MANAGE_USERS')")
+    public ResponseEntity<Void> updateAuthorities(@PathVariable String id,
+                                                  @RequestBody @Valid UpdateAuthoritiesRequest request) throws QorvaException {
+        userService.updateAuthorities(currentTenantId(), id, request.getAuthorities());
+        return ResponseEntity.noContent().build();
     }
 
     @PatchMapping("/{id}/password")

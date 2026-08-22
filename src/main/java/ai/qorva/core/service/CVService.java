@@ -59,6 +59,13 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
     private static final int DEFAULT_MATCH_LIMIT = 10;
 
+    /**
+     * Cap for the synchronous upload path. Kept at or below Tomcat's max-part-count
+     * (see application.yml) so the request is never rejected at the connector; larger
+     * batches go through the asynchronous bulk-upload job.
+     */
+    public static final int SYNC_UPLOAD_MAX_FILES = 50;
+
     /** Stashes the attachment S3 key between pre- and post-delete hooks (same pattern as existingDTOForUpdate). */
     private final ThreadLocal<String> attachmentKeyForDelete = new ThreadLocal<>();
 
@@ -151,9 +158,16 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     public List<UploadResult> upload(List<MultipartFile> files, String tenantId) throws QorvaException {
         log.debug("CV Service - Starting file processing for {} files", files.size());
 
-        if (files.size() > 100) {
-            log.error("CV Service - Exceeded the maximum of 100 files");
+        if (files.size() > SYNC_UPLOAD_MAX_FILES) {
+            log.error("CV Service - Exceeded the maximum of {} files", SYNC_UPLOAD_MAX_FILES);
             throw new QorvaException(QorvaErrorCodes.CV_MAX_FILES_EXCEEDED);
+        }
+
+        // Whole-batch capacity check: the gate used to run once per request against the
+        // *current* consumption, so a batch could overshoot the plan limit by its own size.
+        if (!usageMonitoringService.hasCapacityFor(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS, files.size())) {
+            log.warn("CV Service - Tenant {} lacks screening-action capacity for {} files", tenantId, files.size());
+            throw new QorvaException(QorvaErrorCodes.USAGE_SCREENING_LIMIT_EXCEEDED, HttpStatus.FORBIDDEN.value(), HttpStatus.FORBIDDEN);
         }
 
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {

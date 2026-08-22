@@ -110,6 +110,22 @@ public class UsageMonitoringService extends AbstractQorvaService<UsageMonitoring
     /**
      * Returns true if the tenant has consumed all allowed units for the given feature in the current period.
      */
+    /**
+     * Returns true if the tenant can consume {@code amount} more units of the feature without
+     * crossing the plan limit. Mirrors {@link #hasExceededLimit}: a missing period or missing
+     * limit means unmetered.
+     */
+    public boolean hasCapacityFor(String tenantId, FeatureKey featureKey, int amount) {
+        return findCurrentPeriodByTenantId(tenantId)
+            .map(dto -> {
+                var metrics = resolveMetrics(dto.getFeatures(), featureKey);
+                if (metrics == null || metrics.getLimit() == null) return true;
+                int consumed = metrics.getConsumed() != null ? metrics.getConsumed() : 0;
+                return consumed + amount <= metrics.getLimit();
+            })
+            .orElse(true);
+    }
+
     public boolean hasExceededLimit(String tenantId, FeatureKey featureKey) {
         return findCurrentPeriodByTenantId(tenantId)
             .map(dto -> {

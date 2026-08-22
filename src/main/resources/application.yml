@@ -1,6 +1,10 @@
 server:
   servlet:
     context-path: /
+  tomcat:
+    # Tomcat >= 10.1.42 defaults maxPartCount to 50; sync uploads send one part per
+    # file (cap 50) and bulk staging chunks are <= 50 files, so 60 leaves headroom.
+    max-part-count: 60
 
 
 management:
