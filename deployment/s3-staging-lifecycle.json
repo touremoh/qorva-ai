@@ -1,0 +1,18 @@
+{
+  "Rules": [
+    {
+      "ID": "expire-abandoned-staged-cv-uploads",
+      "Filter": { "Prefix": "staged-cv-uploads/" },
+      "Status": "Enabled",
+      "Expiration": { "Days": 7 },
+      "AbortIncompleteMultipartUpload": { "DaysAfterInitiation": 1 }
+    },
+    {
+      "ID": "expire-abandoned-candidate-submissions",
+      "Filter": { "Prefix": "candidate-submissions/" },
+      "Status": "Enabled",
+      "Expiration": { "Days": 30 },
+      "AbortIncompleteMultipartUpload": { "DaysAfterInitiation": 1 }
+    }
+  ]
+}

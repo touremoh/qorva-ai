@@ -1,6 +1,5 @@
 package ai.qorva.core.config;
 
-import io.jsonwebtoken.SignatureAlgorithm;
 import jakarta.annotation.PostConstruct;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,6 +28,6 @@ public class JwtConfig {
 	@PostConstruct
 	void init() {
 		byte[] keyBytes = Base64.getDecoder().decode(secret);
-		this.secretKey = new SecretKeySpec(keyBytes, SignatureAlgorithm.HS512.getJcaName());
+		this.secretKey = new SecretKeySpec(keyBytes, "HmacSHA512");
 	}
 }

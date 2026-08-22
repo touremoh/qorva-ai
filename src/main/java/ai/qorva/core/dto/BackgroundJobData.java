@@ -33,6 +33,7 @@ public final class BackgroundJobData {
 		long failed,
 		long skipped,
 		String failureReason,
+		List<String> errorSamples,
 		Instant createdAt,
 		Instant startedAt,
 		Instant finishedAt
@@ -40,7 +41,7 @@ public final class BackgroundJobData {
 		public static JobView from(BackgroundJob job) {
 			return new JobView(job.getId(), job.getType(), job.getIssueKey(), job.getStatus(),
 				job.getTotal(), job.getProcessed(), job.getSucceeded(), job.getFailed(), job.getSkipped(),
-				job.getFailureReason(), job.getCreatedAt(), job.getStartedAt(), job.getFinishedAt());
+				job.getFailureReason(), job.getErrorSamples(), job.getCreatedAt(), job.getStartedAt(), job.getFinishedAt());
 		}
 	}
 
