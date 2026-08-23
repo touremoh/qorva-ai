@@ -22,6 +22,8 @@ public interface ChatMessagesRepository extends QorvaRepository<ChatMessage> {
     /** Deletes every chat message belonging to a tenant (used when purging demo data on upgrade). */
     long deleteByTenantId(String tenantId);
 
+    long deleteByTenantIdAndChatIdIn(String tenantId, java.util.Collection<String> chatIds);
+
     @Query(value = "{ 'tenantId': ?0, 'chatId': ?1 }", sort = "{ 'createdAt': 1 }", fields = "{ 'content': 1, 'role': 1 }")
     Iterable<ChatMessage> streamForContext(String tenantId, String chatId);
 }

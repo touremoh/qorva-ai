@@ -48,6 +48,8 @@ qorva:
       model: ${QORVA_EXTRACTION_MODEL:gpt-4.1-mini}
       # Vision pass runs only on escalated CVs (thin text / missing contact / low confidence).
       vision-model: ${QORVA_EXTRACTION_VISION_MODEL:gpt-4.1-mini}
+    job-description:
+      model: ${QORVA_JOB_DESCRIPTION_MODEL:gpt-5-mini}
   products:
     starter:
       stripe-product-name: Starter

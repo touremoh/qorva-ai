@@ -2,7 +2,9 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.querybuilder.CVQueryBuilder;
+import ai.qorva.core.dao.entity.Chat;
 import ai.qorva.core.dao.repository.CVRepository;
+import ai.qorva.core.dao.repository.ChatMessagesRepository;
 import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dto.CVDTO;
@@ -55,6 +57,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final JobPostService jobPostService;
     private final MatchingReportRepository matchingReportRepository;
     private final ChatsRepository chatsRepository;
+    private final ChatMessagesRepository chatMessagesRepository;
     private final UsageMonitoringService usageMonitoringService;
     private final S3StorageService s3StorageService;
     private final LibraryQualityCacheEvictor libraryQualityCacheEvictor;
@@ -82,10 +85,12 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         CVMapper cVMapper,
         MatchingReportRepository matchingReportRepository,
         ChatsRepository chatsRepository,
+        ChatMessagesRepository chatMessagesRepository,
         UsageMonitoringService usageMonitoringService,
         S3StorageService s3StorageService,
         LibraryQualityCacheEvictor libraryQualityCacheEvictor) {
         super(repository, cvMapper, queryBuilder);
+        this.chatMessagesRepository = chatMessagesRepository;
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
         this.jobPostService = jobPostService;
@@ -529,6 +534,15 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         var countDeletedReports = this.matchingReportRepository.deleteByTenantIdAndCandidateInfoCandidateId(tenantId, id);
         log.info("Deleted {} reports associated with CV ID: {}", countDeletedReports, id);
 
+        // Messages first, while the chat ids are still resolvable — deleting chats alone
+        // used to orphan their messages.
+        var chatIds = this.chatsRepository.findByTenantIdAndContextCvId(tenantId, id).stream()
+            .map(Chat::getId)
+            .toList();
+        if (!chatIds.isEmpty()) {
+            var countDeletedMessages = this.chatMessagesRepository.deleteByTenantIdAndChatIdIn(tenantId, chatIds);
+            log.info("Deleted {} chat messages associated with CV ID: {}", countDeletedMessages, id);
+        }
         var countDeletedChats = this.chatsRepository.deleteByTenantIdAndContextCvId(tenantId, id);
         log.info("Deleted {} chats associated with CV ID: {}", countDeletedChats, id);
 

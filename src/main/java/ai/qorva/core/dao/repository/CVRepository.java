@@ -20,6 +20,8 @@ public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepos
 	/** Deletes every CV belonging to a tenant (used when purging demo data on upgrade). */
 	long deleteByTenantId(String tenantId);
 
+	long countByTenantId(String tenantId);
+
 	@Aggregation(pipeline = {
 		"{ $match: { tenantId: ?0 }}",
 		"{ $unwind: '$tags' }",

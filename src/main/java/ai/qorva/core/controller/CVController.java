@@ -2,10 +2,14 @@ package ai.qorva.core.controller;
 
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVDuplicatesData;
+import ai.qorva.core.dto.LibraryClearData;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.UploadResult;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.CVService;
+import ai.qorva.core.service.LibraryClearService;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import ai.qorva.core.utils.BuildApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,10 +33,29 @@ import java.util.List;
 @CrossOrigin(origins = "${weblink.allowedOrigins}")
 public class CVController extends AbstractQorvaController<CVDTO> {
 
+    private final LibraryClearService libraryClearService;
+
     @Autowired
-    public CVController(CVService service) {
+    public CVController(CVService service, LibraryClearService libraryClearService) {
         super(service);
+        this.libraryClearService = libraryClearService;
 	}
+
+    @GetMapping("/clear-library/preflight")
+    @PreAuthorize("@accessManager.hasPermission(authentication,'DELETE_CV')")
+    public ResponseEntity<LibraryClearData.Preflight> clearLibraryPreflight() {
+        return ResponseEntity.ok(libraryClearService.preflight(currentTenantId()));
+    }
+
+    /** Permanently wipes the resume library and everything derived from it. Jobs and usage survive. */
+    @PostMapping("/clear-library")
+    @PreAuthorize("@accessManager.hasPermission(authentication,'DELETE_CV')")
+    public ResponseEntity<LibraryClearData.Result> clearLibrary(
+        @AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
+        return ResponseEntity.ok(libraryClearService.clear(
+            currentTenantId(),
+            userDetails != null ? userDetails.getUsername() : null));
+    }
 
     @PostMapping(value = "/upload")
     @PreAuthorize("@accessManager.hasPermission(authentication,'ADD_CV') and @accessManager.hasNotExceededScreeningLimit()")

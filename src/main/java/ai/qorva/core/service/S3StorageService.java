@@ -186,7 +186,16 @@ public class S3StorageService {
 
     /** Best-effort removal of every CV document belonging to a tenant; never throws. */
     public void deleteCvDocumentsForTenant(String tenantId) {
-        var prefix = "tenants/" + tenantId + "/cvs/";
+        deleteObjectsByPrefix("tenants/" + tenantId + "/cvs/", "CV documents", tenantId);
+    }
+
+    /** Purges staged candidate-submission files for a tenant (clear-library support). */
+    public void deleteCandidateSubmissionsForTenant(String tenantId) {
+        deleteObjectsByPrefix("candidate-submissions/" + tenantId + "/", "candidate submissions", tenantId);
+    }
+
+    /** Best-effort bulk delete under a prefix; never throws. */
+    private void deleteObjectsByPrefix(String prefix, String label, String tenantId) {
         try {
             String continuationToken = null;
             long deleted = 0;
@@ -212,9 +221,9 @@ public class S3StorageService {
                     ? listResponse.nextContinuationToken()
                     : null;
             } while (continuationToken != null);
-            log.info("S3 - Purged {} CV documents for tenant {}", deleted, tenantId);
+            log.info("S3 - Purged {} {} for tenant {}", deleted, label, tenantId);
         } catch (Exception e) {
-            log.warn("S3 - Failed to purge CV documents for tenant {}: {}", tenantId, e.getMessage());
+            log.warn("S3 - Failed to purge {} for tenant {}: {}", label, tenantId, e.getMessage());
         }
     }
 
