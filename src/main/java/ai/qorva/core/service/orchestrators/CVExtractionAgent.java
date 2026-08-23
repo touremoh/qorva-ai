@@ -43,8 +43,9 @@ public class CVExtractionAgent {
 							.strict(Boolean.FALSE)
 							.build())
 						.build())
-					// Extraction wants determinism, not creativity.
-					.temperature(0.1)
+					// Extraction wants determinism, not creativity — but GPT-5-family models
+					// only accept the default temperature (1), so pick per model family.
+					.temperature(extractionModel.startsWith("gpt-5") ? 1.0 : 0.1)
 					.build())
 				.user(u -> u
 					.text(promptTemplate)

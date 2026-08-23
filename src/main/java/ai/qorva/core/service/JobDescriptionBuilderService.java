@@ -65,7 +65,9 @@ public class JobDescriptionBuilderService {
 			.replace("{extra_notes}", orEmpty(request.getExtraNotes()));
 
 		var content = chatClient.prompt()
-			.options(OpenAiChatOptions.builder().model(model).build())
+			// GPT-5-family models only accept the default temperature (1); leaving it unset
+			// would inherit Spring AI's 0.7 default and be rejected with HTTP 400.
+			.options(OpenAiChatOptions.builder().model(model).temperature(1.0).build())
 			.user(prompt)
 			.call()
 			.content();

@@ -64,7 +64,8 @@ public class CVVisionExtractionAgent {
 							.strict(Boolean.FALSE)
 							.build())
 						.build())
-					.temperature(0.1)
+					// GPT-5-family models only accept the default temperature (1).
+					.temperature(visionModel.startsWith("gpt-5") ? 1.0 : 0.1)
 					.build())
 				.user(u -> u
 					.text(promptTemplate
