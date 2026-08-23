@@ -355,7 +355,13 @@ public class BackgroundJobWorker {
 	private void reanalyzeOne(String cvId, String tenantId, AtomicLong skipped, AtomicLong succeeded) throws Exception {
 		var existing = cvService.findOneById(cvId);
 		if (!StringUtils.hasText(existing.getRawText())) {
-			skipped.incrementAndGet();
+			// No text layer (scanned/designed CV) — these used to be skipped forever.
+			// Vision re-analysis reads the original document from S3 instead.
+			if (cvService.reanalyzeFromOriginal(existing, tenantId)) {
+				succeeded.incrementAndGet();
+			} else {
+				skipped.incrementAndGet();
+			}
 			return;
 		}
 

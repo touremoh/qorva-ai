@@ -20,7 +20,9 @@ import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.CVMapper;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.utils.CVContentDateResolver;
+import ai.qorva.core.utils.CVPageImageRenderer;
 import ai.qorva.core.utils.CVQualityFlagResolver;
+import ai.qorva.core.utils.VisionEscalationPolicy;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.ai.converter.BeanOutputConverter;
@@ -270,7 +272,22 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         String fileContent = fileReaderContext.readFile(file);
 
         log.debug("Processing file: {}", file.getOriginalFilename());
-        var cvDtoToPersist = extractCVData(fileContent, tenantId);
+
+        // Text-only parsing is blind to pixels. A near-empty text layer means a scanned
+        // or fully designed CV — go straight to vision instead of failing on empty text.
+        CVDTO cvDtoToPersist;
+        boolean visionFirst = false;
+        if (VisionEscalationPolicy.isTextTooThin(fileContent)) {
+            var pages = renderForVision(file);
+            if (!pages.isEmpty()) {
+                cvDtoToPersist = extractCVDataFromImages(fileContent, pages, tenantId);
+                visionFirst = true;
+            } else {
+                cvDtoToPersist = extractCVData(fileContent, tenantId);
+            }
+        } else {
+            cvDtoToPersist = extractCVData(fileContent, tenantId);
+        }
         cvDtoToPersist.setRawText(fileContent);
 
         // Document metadata date is freshness evidence; work-history dates may override it in preProcessCreateOne.
@@ -288,8 +305,9 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
                 file.getOriginalFilename(), tenantId);
         }
 
+        CVDTO created;
         try {
-            return createOne(cvDtoToPersist);
+            created = createOne(cvDtoToPersist);
         } catch (QorvaException | RuntimeException e) {
             // Persisting failed — remove the uploaded object so S3 never holds orphans.
             if (cvDtoToPersist.getAttachment() != null) {
@@ -297,6 +315,89 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
             }
             throw e;
         }
+
+        // Text pass done but symptoms of pixel-hidden content (missing contact, low
+        // confidence) — refine with a vision pass. Best-effort: the text result stands
+        // if the refinement fails, and the CV is only billed once.
+        if (!visionFirst && VisionEscalationPolicy.shouldEscalate(fileContent, created.getQualityFlags())) {
+            created = refineWithVision(created, fileContent, file, tenantId);
+        }
+        return created;
+    }
+
+    private List<CVPageImageRenderer.PageImage> renderForVision(MultipartFile file) {
+        try {
+            return CVPageImageRenderer.render(file.getOriginalFilename(), file.getContentType(), file.getBytes());
+        } catch (Exception e) {
+            log.warn("CV Service - Could not read {} for vision rendering: {}", file.getOriginalFilename(), e.getMessage());
+            return List.of();
+        }
+    }
+
+    private CVDTO refineWithVision(CVDTO created, String fileContent, MultipartFile file, String tenantId) {
+        try {
+            var pages = renderForVision(file);
+            if (pages.isEmpty()) {
+                return created;
+            }
+            log.debug("CV Service - Vision refinement for {} ({} page images)", file.getOriginalFilename(), pages.size());
+            var refined = parseExtractionResult(this.openAIService.streamCVVisionExtraction(fileContent, pages), tenantId);
+            // updateOne merges the existing document into null fields and recomputes quality flags.
+            return updateOne(created.getId(), refined);
+        } catch (Exception e) {
+            log.warn("CV Service - Vision refinement failed for {} — keeping the text-pass result: {}",
+                file.getOriginalFilename(), e.getMessage());
+            return created;
+        }
+    }
+
+    /** Vision-first extraction for CVs with no usable text layer. Bills one screening action, like the text pass. */
+    private CVDTO extractCVDataFromImages(String partialText, List<CVPageImageRenderer.PageImage> pages, String tenantId)
+        throws QorvaException {
+        var content = this.openAIService.streamCVVisionExtraction(partialText, pages);
+        if (!StringUtils.hasText(content)) {
+            log.warn("CV vision extraction failed");
+            throw new QorvaException(QorvaErrorCodes.CV_EXTRACTION_FAILED);
+        }
+        incrementUsageSilently(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS);
+        return parseExtractionResult(content, tenantId);
+    }
+
+    /**
+     * Re-analysis fallback for CVs with no usable raw text (scanned/designed documents):
+     * fetches the original from S3 and runs vision extraction over its rendered pages.
+     * Returns false when there is no attachment or nothing renderable — the caller skips.
+     */
+    public boolean reanalyzeFromOriginal(CVDTO existing, String tenantId) {
+        try {
+            var attachment = existing.getAttachment();
+            if (attachment == null || !StringUtils.hasText(attachment.getS3Key())) {
+                return false;
+            }
+            var bytes = this.s3StorageService.fetchObjectBytes(attachment.getS3Key());
+            var pages = CVPageImageRenderer.render(attachment.getFileName(), attachment.getContentType(), bytes);
+            if (pages.isEmpty()) {
+                return false;
+            }
+            var refined = parseExtractionResult(
+                this.openAIService.streamCVVisionExtraction(existing.getRawText(), pages), tenantId);
+            updateOne(existing.getId(), refined);
+            incrementUsageSilently(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS);
+            return true;
+        } catch (Exception e) {
+            log.warn("CV Service - Vision re-analysis from original failed for CV {}: {}", existing.getId(), e.getMessage());
+            return false;
+        }
+    }
+
+    private CVDTO parseExtractionResult(String content, String tenantId) throws QorvaException {
+        if (!StringUtils.hasText(content)) {
+            throw new QorvaException(QorvaErrorCodes.CV_EXTRACTION_FAILED);
+        }
+        var outputConverter = new BeanOutputConverter<>(CVOutputDTO.class);
+        var dto = this.openAIResultMapper.map(outputConverter.convert(content));
+        dto.setTenantId(tenantId);
+        return dto;
     }
 
     private CVDTO extractCVData(String cvContent, String tenantId) throws QorvaException {
