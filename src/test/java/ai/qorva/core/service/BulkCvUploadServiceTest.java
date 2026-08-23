@@ -47,13 +47,14 @@ class BulkCvUploadServiceTest {
 	@Mock private UsageMonitoringService usageMonitoringService;
 	@Mock private TenantService tenantService;
 	@Mock private ProductReferenceService productReferenceService;
+	@Mock private org.springframework.data.mongodb.core.MongoTemplate mongoTemplate;
 
 	private BulkCvUploadService service;
 
 	@BeforeEach
 	void setUp() {
 		service = new BulkCvUploadService(jobRepository, s3StorageService, usageMonitoringService,
-			tenantService, productReferenceService);
+			tenantService, productReferenceService, mongoTemplate);
 	}
 
 	private void givenPlanCap(Integer cap) throws QorvaException {
@@ -134,18 +135,21 @@ class BulkCvUploadServiceTest {
 	// --- staging -------------------------------------------------------------
 
 	@Test
-	void appendRejectsOverPlanCap() throws QorvaException {
+	void appendRollsBackStagedObjectsWhenOverPlanCap() throws QorvaException {
 		givenPlanCap(100);
-		var staged = new java.util.ArrayList<BackgroundJob.StagedFile>();
-		for (int i = 0; i < 99; i++) {
-			staged.add(BackgroundJob.StagedFile.builder().s3Key("k" + i).build());
-		}
-		when(jobRepository.findByIdAndTenantId(JOB_ID, TENANT)).thenReturn(Optional.of(draftJob(staged)));
+		// Job stays DRAFT on re-read, so the guarded update missing means the cap was hit.
+		when(jobRepository.findByIdAndTenantId(JOB_ID, TENANT)).thenReturn(Optional.of(draftJob(List.of())));
+		when(s3StorageService.uploadStagedCv(eq(TENANT), eq(JOB_ID), anyString(), any()))
+			.thenAnswer(inv -> "staged-cv-uploads/" + TENANT + "/" + JOB_ID + "/" + inv.getArgument(2));
+		when(mongoTemplate.updateFirst(any(org.springframework.data.mongodb.core.query.Query.class),
+			any(org.springframework.data.mongodb.core.query.Update.class), eq(BackgroundJob.class)))
+			.thenReturn(com.mongodb.client.result.UpdateResult.acknowledged(0, 0L, null));
 
 		assertThatThrownBy(() -> service.appendFiles(TENANT, JOB_ID, List.of(pdf("a.pdf"), pdf("b.pdf"))))
 			.isInstanceOf(QorvaException.class)
 			.hasMessageContaining(QorvaErrorCodes.BULK_LIMIT_FOR_PLAN);
-		verify(s3StorageService, never()).uploadStagedCv(anyString(), anyString(), anyInt(), any());
+		// The two objects staged before the guarded update failed are cleaned up.
+		verify(s3StorageService, times(2)).deleteObject(anyString());
 	}
 
 	@Test
@@ -160,18 +164,25 @@ class BulkCvUploadServiceTest {
 	}
 
 	@Test
-	void appendStagesFilesToS3AndTracksThem() throws QorvaException {
+	void appendStagesFilesToS3AndAppendsAtomically() throws QorvaException {
 		givenPlanCap(100);
-		when(jobRepository.findByIdAndTenantId(JOB_ID, TENANT)).thenReturn(Optional.of(draftJob(List.of())));
-		when(s3StorageService.uploadStagedCv(eq(TENANT), eq(JOB_ID), anyInt(), any()))
+		var afterAppend = draftJob(List.of(
+			BackgroundJob.StagedFile.builder().s3Key("k0").build(),
+			BackgroundJob.StagedFile.builder().s3Key("k1").build()));
+		when(jobRepository.findByIdAndTenantId(JOB_ID, TENANT))
+			.thenReturn(Optional.of(draftJob(List.of())))
+			.thenReturn(Optional.of(afterAppend));
+		when(s3StorageService.uploadStagedCv(eq(TENANT), eq(JOB_ID), anyString(), any()))
 			.thenAnswer(inv -> "staged-cv-uploads/" + TENANT + "/" + JOB_ID + "/" + inv.getArgument(2));
+		when(mongoTemplate.updateFirst(any(org.springframework.data.mongodb.core.query.Query.class),
+			any(org.springframework.data.mongodb.core.query.Update.class), eq(BackgroundJob.class)))
+			.thenReturn(com.mongodb.client.result.UpdateResult.acknowledged(1, 1L, null));
 
 		var resp = service.appendFiles(TENANT, JOB_ID, List.of(pdf("a.pdf"), pdf("b.pdf")));
 
 		assertThat(resp.stagedCount()).isEqualTo(2);
 		assertThat(resp.maxFiles()).isEqualTo(100);
-		verify(s3StorageService, times(2)).uploadStagedCv(eq(TENANT), eq(JOB_ID), anyInt(), any());
-		verify(jobRepository).save(any(BackgroundJob.class));
+		verify(s3StorageService, times(2)).uploadStagedCv(eq(TENANT), eq(JOB_ID), anyString(), any());
 	}
 
 	// --- start ---------------------------------------------------------------

@@ -9,6 +9,10 @@ import ai.qorva.core.exception.QorvaException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -17,6 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Lifecycle of asynchronous bulk CV imports: a DRAFT job collects staged files in
@@ -42,6 +47,7 @@ public class BulkCvUploadService {
 	private final UsageMonitoringService usageMonitoringService;
 	private final TenantService tenantService;
 	private final ProductReferenceService productReferenceService;
+	private final MongoTemplate mongoTemplate;
 
 	@Autowired
 	public BulkCvUploadService(
@@ -49,13 +55,15 @@ public class BulkCvUploadService {
 		S3StorageService s3StorageService,
 		UsageMonitoringService usageMonitoringService,
 		TenantService tenantService,
-		ProductReferenceService productReferenceService
+		ProductReferenceService productReferenceService,
+		MongoTemplate mongoTemplate
 	) {
 		this.jobRepository = jobRepository;
 		this.s3StorageService = s3StorageService;
 		this.usageMonitoringService = usageMonitoringService;
 		this.tenantService = tenantService;
 		this.productReferenceService = productReferenceService;
+		this.mongoTemplate = mongoTemplate;
 	}
 
 	/** Max files per bulk import for this tenant's plan (same resolution as the email-template cap). */
@@ -94,34 +102,62 @@ public class BulkCvUploadService {
 	}
 
 	public BulkCvUploadData.StageResponse appendFiles(String tenantId, String jobId, List<MultipartFile> files) throws QorvaException {
-		var job = findOwnedDraft(tenantId, jobId);
+		findOwnedDraft(tenantId, jobId);
 		if (files == null || files.isEmpty()) {
 			throw new QorvaException(QorvaErrorCodes.BULK_JOB_NO_FILES, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
 		}
-
-		var staged = job.getStagedFiles() != null ? new ArrayList<>(job.getStagedFiles()) : new ArrayList<BackgroundJob.StagedFile>();
 		int maxFiles = maxFilesForTenant(tenantId);
-		if (staged.size() + files.size() > maxFiles) {
-			throw new QorvaException(QorvaErrorCodes.BULK_LIMIT_FOR_PLAN,
-				HttpStatus.FORBIDDEN.value(), HttpStatus.FORBIDDEN, maxFiles);
-		}
 
+		// Stage to S3 first under collision-free keys, then append atomically — the client
+		// uploads chunks in parallel, so two requests must never lose each other's files.
+		var items = new ArrayList<BackgroundJob.StagedFile>();
 		for (var file : files) {
 			if (file.isEmpty()) {
 				continue;
 			}
-			var key = s3StorageService.uploadStagedCv(tenantId, jobId, staged.size(), file);
-			staged.add(BackgroundJob.StagedFile.builder()
+			var key = s3StorageService.uploadStagedCv(tenantId, jobId, UUID.randomUUID().toString(), file);
+			items.add(BackgroundJob.StagedFile.builder()
 				.s3Key(key)
 				.filename(file.getOriginalFilename())
 				.contentType(file.getContentType())
 				.build());
 		}
+		if (items.isEmpty()) {
+			throw new QorvaException(QorvaErrorCodes.BULK_JOB_NO_FILES, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+		}
 
-		job.setStagedFiles(staged);
-		job.setTotal(staged.size());
-		jobRepository.save(job);
-		return new BulkCvUploadData.StageResponse(jobId, staged.size(), maxFiles);
+		// Atomic push with a size guard: element [maxFiles - n] existing would mean the
+		// append exceeds the plan cap, so the update matches nothing and we roll back.
+		int guardIndex = Math.max(0, maxFiles - items.size());
+		var query = Query.query(Criteria.where("_id").is(jobId)
+			.and("status").is(BackgroundJob.STATUS_DRAFT)
+			.and("stagedFiles." + guardIndex).exists(false));
+		var update = new Update()
+			.push("stagedFiles").each(items.toArray())
+			.inc("total", items.size());
+		var result = mongoTemplate.updateFirst(query, update, BackgroundJob.class);
+
+		if (result.getModifiedCount() == 0) {
+			items.forEach(item -> {
+				try {
+					s3StorageService.deleteObject(item.getS3Key());
+				} catch (Exception e) {
+					log.warn("Could not roll back staged object {}: {}", item.getS3Key(), e.getMessage());
+				}
+			});
+			// The job was a DRAFT moments ago, so a miss means either a concurrent start
+			// or the plan cap — re-read to report the right error.
+			var current = findOwned(tenantId, jobId);
+			if (!BackgroundJob.STATUS_DRAFT.equals(current.getStatus())) {
+				throw new QorvaException(QorvaErrorCodes.BULK_JOB_NOT_DRAFT, HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			}
+			throw new QorvaException(QorvaErrorCodes.BULK_LIMIT_FOR_PLAN,
+				HttpStatus.FORBIDDEN.value(), HttpStatus.FORBIDDEN, maxFiles);
+		}
+
+		var refreshed = findOwned(tenantId, jobId);
+		int stagedCount = refreshed.getStagedFiles() != null ? refreshed.getStagedFiles().size() : 0;
+		return new BulkCvUploadData.StageResponse(jobId, stagedCount, maxFiles);
 	}
 
 	public BulkCvUploadData.StartResponse start(String tenantId, String jobId) throws QorvaException {
@@ -193,9 +229,13 @@ public class BulkCvUploadService {
 		}
 	}
 
-	private BackgroundJob findOwnedDraft(String tenantId, String jobId) throws QorvaException {
-		var job = jobRepository.findByIdAndTenantId(jobId, tenantId)
+	private BackgroundJob findOwned(String tenantId, String jobId) throws QorvaException {
+		return jobRepository.findByIdAndTenantId(jobId, tenantId)
 			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.BULK_JOB_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+	}
+
+	private BackgroundJob findOwnedDraft(String tenantId, String jobId) throws QorvaException {
+		var job = findOwned(tenantId, jobId);
 		if (!BackgroundJob.STATUS_DRAFT.equals(job.getStatus())) {
 			throw new QorvaException(QorvaErrorCodes.BULK_JOB_NOT_DRAFT, HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
 		}

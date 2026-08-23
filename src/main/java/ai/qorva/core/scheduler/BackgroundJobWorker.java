@@ -30,6 +30,7 @@ import org.springframework.util.StringUtils;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
@@ -52,6 +53,17 @@ public class BackgroundJobWorker {
 	private static final int BATCH_SIZE = 10;
 	private static final int LLM_CONCURRENCY = 3;
 	private static final int ERROR_SAMPLE_CAP = 20;
+	/** Bulk imports: cancellation/quota re-checked every N submissions, progress written every N completions. */
+	private static final int BULK_CONTROL_CHECK_EVERY = 20;
+	private static final int BULK_HEARTBEAT_EVERY = 10;
+
+	/**
+	 * Bulk imports get their own, larger LLM budget: unlike re-analyze (which shares the
+	 * instance with interactive uploads by design), a bulk import is the tenant's primary
+	 * activity while it runs. Still far below the HTTP pool's 50-per-route ceiling.
+	 */
+	@org.springframework.beans.factory.annotation.Value("${qorva.jobs.bulk-llm-concurrency:10}")
+	private int bulkLlmConcurrency = 10;
 	private static final long SEND_PACE_MS = 150;   // ≤ ~7 emails/sec toward the provider
 
 	private final MongoTemplate mongoTemplate;
@@ -231,60 +243,75 @@ public class BackgroundJobWorker {
 		var succeeded = new AtomicLong(job.getSucceeded());
 		var failed = new AtomicLong(job.getFailed());
 		var skipped = new AtomicLong(job.getSkipped());
-		var errorSamples = new ArrayList<String>(job.getErrorSamples() != null ? job.getErrorSamples() : List.of());
-		var llmPermits = new Semaphore(LLM_CONCURRENCY);
+		var errorSamples = Collections.synchronizedList(
+			new ArrayList<String>(job.getErrorSamples() != null ? job.getErrorSamples() : List.of()));
+		var llmPermits = new Semaphore(bulkLlmConcurrency);
 		boolean quotaExhausted = false;
 
 		// Resume support: a reclaimed lease continues after the already-processed prefix.
 		int startFrom = (int) Math.min(processed.get(), files.size());
+		int submitted = startFrom;
 
+		// Sliding-window pipeline: the submitting thread blocks on a permit, so at most
+		// bulkLlmConcurrency files are in flight and a slow file never idles the others
+		// (the old per-10 join barrier did). Control checks are throttled on submission;
+		// progress heartbeats ride on completions.
 		try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
-			for (int from = startFrom; from < files.size(); from += BATCH_SIZE) {
-				if (isCancelled(job.getId())) {
-					log.info("Job {} cancelled — stopping after {} files", job.getId(), processed.get());
-					return;
+			var futures = new ArrayList<CompletableFuture<Void>>(files.size() - startFrom);
+			for (int i = startFrom; i < files.size(); i++) {
+				if ((i - startFrom) % BULK_CONTROL_CHECK_EVERY == 0) {
+					if (isCancelled(job.getId())) {
+						log.info("Job {} cancelled — stopping after {} files", job.getId(), processed.get());
+						CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
+						return;
+					}
+					if (usageMonitoringService.hasExceededLimit(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS)) {
+						quotaExhausted = true;
+						break;
+					}
 				}
-				if (usageMonitoringService.hasExceededLimit(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS)) {
-					quotaExhausted = true;
-					long remainder = files.size() - processed.get();
-					skipped.addAndGet(remainder);
-					processed.addAndGet(remainder);
-					files.subList(from, files.size()).forEach(this::deleteStagedQuietly);
+				try {
+					llmPermits.acquire();
+				} catch (InterruptedException e) {
+					Thread.currentThread().interrupt();
 					break;
 				}
-
-				var batch = files.subList(from, Math.min(from + BATCH_SIZE, files.size()));
-				var futures = batch.stream()
-					.map(staged -> CompletableFuture.runAsync(() -> {
+				final var staged = files.get(i);
+				futures.add(CompletableFuture.runAsync(() -> {
+					try {
 						try {
-							llmPermits.acquire();
-							try {
-								var bytes = s3StorageService.fetchObjectBytes(staged.getS3Key());
-								cvService.processFile(bytes, staged.getFilename(), staged.getContentType(), tenantId);
-								succeeded.incrementAndGet();
-							} finally {
-								llmPermits.release();
-							}
-							deleteStagedQuietly(staged);
-						} catch (InterruptedException e) {
-							Thread.currentThread().interrupt();
-							failed.incrementAndGet();
-						} catch (Exception e) {
-							failed.incrementAndGet();
-							if (errorSamples.size() < ERROR_SAMPLE_CAP) {
-								errorSamples.add(staged.getFilename() + ": " + e.getMessage());
-							}
-							deleteStagedQuietly(staged);
-							log.warn("Job {} — bulk import failed for {}", job.getId(), staged.getFilename(), e);
+							var bytes = s3StorageService.fetchObjectBytes(staged.getS3Key());
+							cvService.processFile(bytes, staged.getFilename(), staged.getContentType(), tenantId);
+							succeeded.incrementAndGet();
 						} finally {
-							processed.incrementAndGet();
+							llmPermits.release();
 						}
-					}, executor))
-					.toList();
-				CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
-
-				heartbeat(job.getId(), processed.get(), succeeded.get(), failed.get(), skipped.get(), errorSamples);
+						deleteStagedQuietly(staged);
+					} catch (Exception e) {
+						failed.incrementAndGet();
+						if (errorSamples.size() < ERROR_SAMPLE_CAP) {
+							errorSamples.add(staged.getFilename() + ": " + e.getMessage());
+						}
+						deleteStagedQuietly(staged);
+						log.warn("Job {} — bulk import failed for {}", job.getId(), staged.getFilename(), e);
+					} finally {
+						long done = processed.incrementAndGet();
+						if (done % BULK_HEARTBEAT_EVERY == 0) {
+							heartbeat(job.getId(), done, succeeded.get(), failed.get(), skipped.get(),
+								List.copyOf(errorSamples));
+						}
+					}
+				}, executor));
+				submitted = i + 1;
 			}
+			CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
+		}
+
+		if (quotaExhausted) {
+			long remainder = files.size() - submitted;
+			skipped.addAndGet(remainder);
+			processed.addAndGet(remainder);
+			files.subList(submitted, files.size()).forEach(this::deleteStagedQuietly);
 		}
 
 		var finalStatus = (failed.get() > 0 || quotaExhausted)
@@ -296,7 +323,7 @@ public class BackgroundJobWorker {
 			.set("succeeded", succeeded.get())
 			.set("failed", failed.get())
 			.set("skipped", skipped.get())
-			.set("errorSamples", errorSamples)
+			.set("errorSamples", List.copyOf(errorSamples))
 			.set("finishedAt", Instant.now());
 		if (quotaExhausted) {
 			update.set("failureReason", "quota_exceeded");

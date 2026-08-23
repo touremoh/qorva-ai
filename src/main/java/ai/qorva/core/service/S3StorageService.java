@@ -135,8 +135,8 @@ public class S3StorageService {
      * Deleted by the worker as each file resolves; an S3 lifecycle rule on the prefix is the
      * cleanup backstop for crashed or abandoned jobs.
      */
-    public String uploadStagedCv(String tenantId, String jobId, int index, MultipartFile file) throws QorvaException {
-        var key = "staged-cv-uploads/" + tenantId + "/" + jobId + "/" + index;
+    public String uploadStagedCv(String tenantId, String jobId, String fileId, MultipartFile file) throws QorvaException {
+        var key = "staged-cv-uploads/" + tenantId + "/" + jobId + "/" + fileId;
         try {
             s3Client.putObject(
                 PutObjectRequest.builder()
