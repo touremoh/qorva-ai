@@ -10,6 +10,7 @@ import ai.qorva.core.utils.JwtUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.lang.Strings;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -74,7 +75,17 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 			if (Strings.hasText(authorizationHeader) && authorizationHeader.startsWith("Bearer ")) {
 				String token = authorizationHeader.substring(7);
 				if (Strings.hasText(token) && !token.equals("null")) {
-					Claims claims = JwtUtils.extractAllClaims(token, jwtConfig.getSecretKey());
+					// An expired/garbage token must never 500 the request: proceed
+					// unauthenticated — public routes (e.g. /auth/login) go through, and
+					// protected routes fail with the normal 401/403 instead.
+					Claims claims;
+					try {
+						claims = JwtUtils.extractAllClaims(token, jwtConfig.getSecretKey());
+					} catch (JwtException | IllegalArgumentException e) {
+						logger.debug("Rejected JWT on " + request.getRequestURI() + ": " + e.getMessage());
+						chain.doFilter(request, response);
+						return;
+					}
 
 					String username = claims.getSubject();
 					String tenantId = claims.get(TENANT_ID, String.class);
