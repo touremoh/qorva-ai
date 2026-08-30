@@ -1,11 +1,14 @@
 package ai.qorva.core.controller;
 
+import ai.qorva.core.dto.JobDescriptionData;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.common.ScoringRules;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.service.JobDescriptionBuilderService;
 import ai.qorva.core.service.JobPostService;
 import ai.qorva.core.service.ScoringRulesPrefillService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -30,11 +33,26 @@ import org.springframework.web.bind.annotation.RestController;
 public class JobPostController extends AbstractQorvaController<JobPostDTO> {
 
     private final ScoringRulesPrefillService scoringRulesPrefillService;
+    private final JobDescriptionBuilderService jobDescriptionBuilderService;
 
     @Autowired
-    public JobPostController(JobPostService service, ScoringRulesPrefillService scoringRulesPrefillService) {
+    public JobPostController(JobPostService service, ScoringRulesPrefillService scoringRulesPrefillService,
+                             JobDescriptionBuilderService jobDescriptionBuilderService) {
         super(service);
         this.scoringRulesPrefillService = scoringRulesPrefillService;
+        this.jobDescriptionBuilderService = jobDescriptionBuilderService;
+    }
+
+    /**
+     * AI job-description builder: structured inputs -> ready-to-edit JD + suggested
+     * scoring rules. Free feature (unmetered) — screening actions bill at screening time.
+     */
+    @PostMapping("/description/generate")
+    @PreAuthorize("@accessManager.hasPermission(authentication,'ADD_JOB')")
+    public ResponseEntity<JobDescriptionData.GenerateResponse> generateDescription(
+            @RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language,
+            @RequestBody @Valid JobDescriptionData.GenerateRequest request) throws QorvaException {
+        return ResponseEntity.ok(this.jobDescriptionBuilderService.generate(currentTenantId(), request, language));
     }
 
     public record SuggestScoringRulesRequest(String title, String description) {}

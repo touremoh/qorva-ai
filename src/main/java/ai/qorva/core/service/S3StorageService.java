@@ -130,6 +130,30 @@ public class S3StorageService {
         return key;
     }
 
+    /**
+     * Stages one file of a bulk CV import under {@code staged-cv-uploads/{tenantId}/{jobId}/{index}}.
+     * Deleted by the worker as each file resolves; an S3 lifecycle rule on the prefix is the
+     * cleanup backstop for crashed or abandoned jobs.
+     */
+    public String uploadStagedCv(String tenantId, String jobId, String fileId, MultipartFile file) throws QorvaException {
+        var key = "staged-cv-uploads/" + tenantId + "/" + jobId + "/" + fileId;
+        try {
+            s3Client.putObject(
+                PutObjectRequest.builder()
+                    .bucket(s3Properties.getBucketName())
+                    .key(key)
+                    .contentType(file.getContentType())
+                    .build(),
+                RequestBody.fromInputStream(file.getInputStream(), file.getSize())
+            );
+        } catch (IOException | RuntimeException e) {
+            log.error("S3 - Failed to stage bulk upload file for job {}: {}", jobId, e.getMessage());
+            throw new QorvaException(QorvaErrorCodes.CV_ATTACHMENT_UPLOAD_FAILED, e, file.getOriginalFilename());
+        }
+        log.debug("S3 - Bulk upload file staged: {}", key);
+        return key;
+    }
+
     public byte[] fetchObjectBytes(String key) throws QorvaException {
         try {
             return s3Client.getObjectAsBytes(
@@ -162,7 +186,16 @@ public class S3StorageService {
 
     /** Best-effort removal of every CV document belonging to a tenant; never throws. */
     public void deleteCvDocumentsForTenant(String tenantId) {
-        var prefix = "tenants/" + tenantId + "/cvs/";
+        deleteObjectsByPrefix("tenants/" + tenantId + "/cvs/", "CV documents", tenantId);
+    }
+
+    /** Purges staged candidate-submission files for a tenant (clear-library support). */
+    public void deleteCandidateSubmissionsForTenant(String tenantId) {
+        deleteObjectsByPrefix("candidate-submissions/" + tenantId + "/", "candidate submissions", tenantId);
+    }
+
+    /** Best-effort bulk delete under a prefix; never throws. */
+    private void deleteObjectsByPrefix(String prefix, String label, String tenantId) {
         try {
             String continuationToken = null;
             long deleted = 0;
@@ -188,9 +221,9 @@ public class S3StorageService {
                     ? listResponse.nextContinuationToken()
                     : null;
             } while (continuationToken != null);
-            log.info("S3 - Purged {} CV documents for tenant {}", deleted, tenantId);
+            log.info("S3 - Purged {} {} for tenant {}", deleted, label, tenantId);
         } catch (Exception e) {
-            log.warn("S3 - Failed to purge CV documents for tenant {}: {}", tenantId, e.getMessage());
+            log.warn("S3 - Failed to purge {} for tenant {}: {}", label, tenantId, e.getMessage());
         }
     }
 

@@ -8,7 +8,9 @@ import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.service.orchestrators.CVExtractionAgent;
+import ai.qorva.core.service.orchestrators.CVVisionExtractionAgent;
 import ai.qorva.core.service.orchestrators.ReportGenerationAgent;
+import ai.qorva.core.utils.CVPageImageRenderer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
@@ -27,12 +29,17 @@ import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_5_CHAT_L
 public class OpenAIService {
 
 	private final CVExtractionAgent cvExtractionAgent;
+	private final CVVisionExtractionAgent cvVisionExtractionAgent;
 	private final ReportGenerationAgent reportGenerationAgent;
 	private final ChatClient chatClient;
 	private final OpenAIResultMapper mapper;
 
 	public String streamCVExtraction(String cvContent) {
 		return cvExtractionAgent.extract(cvContent);
+	}
+
+	public String streamCVVisionExtraction(String partialText, java.util.List<CVPageImageRenderer.PageImage> pages) {
+		return cvVisionExtractionAgent.extract(partialText, pages);
 	}
 
 	public MatchingReportDetails generateReport(String cvDetails, String jobDescription, String languageCode, ScoringRules scoringRules) {

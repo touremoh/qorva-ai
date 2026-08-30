@@ -13,4 +13,6 @@ public interface QualityIssueStateRepository extends MongoRepository<QualityIssu
 	Optional<QualityIssueState> findByTenantIdAndIssueKey(String tenantId, String issueKey);
 
 	long deleteByTenantIdAndIssueKey(String tenantId, String issueKey);
+
+	long deleteByTenantId(String tenantId);
 }

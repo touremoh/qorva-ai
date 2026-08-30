@@ -56,6 +56,19 @@ public final class QorvaErrorCodes {
     // ai
     public static final String AI_REQUEST_FAILED = "error.ai.request_failed";
 
+    // usage
+    public static final String USAGE_SCREENING_LIMIT_EXCEEDED = "error.usage.screening_limit_exceeded";
+
+    // library clear
+    public static final String CV_CLEAR_BLOCKED_BY_ACTIVE_JOB = "error.cv.clear_blocked_by_active_job";
+
+    // bulk upload
+    public static final String BULK_LIMIT_FOR_PLAN     = "error.cv.bulk_limit_for_plan";
+    public static final String BULK_JOB_ACTIVE_EXISTS  = "error.cv.bulk_job_active_exists";
+    public static final String BULK_JOB_NOT_FOUND      = "error.cv.bulk_job_not_found";
+    public static final String BULK_JOB_NOT_DRAFT      = "error.cv.bulk_job_not_draft";
+    public static final String BULK_JOB_NO_FILES       = "error.cv.bulk_job_no_files";
+
     // company
     public static final String COMPANY_LOGO_UPLOAD_FAILED = "error.company.logo_upload_failed";
     public static final String COMPANY_LOGO_NOT_FOUND     = "error.company.logo_not_found";

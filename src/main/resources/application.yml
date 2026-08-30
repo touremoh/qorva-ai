@@ -1,6 +1,10 @@
 server:
   servlet:
     context-path: /
+  tomcat:
+    # Tomcat >= 10.1.42 defaults maxPartCount to 50; sync uploads send one part per
+    # file (cap 50) and bulk staging chunks are <= 50 files, so 60 leaves headroom.
+    max-part-count: 60
 
 
 management:
@@ -37,6 +41,15 @@ mongock:
   migration-scan-package: ai.qorva.core.migrations
 
 qorva:
+  ai:
+    extraction:
+      # Text pass runs on every CV; switch to a nano-tier model after benchmarking —
+      # the vision pass below catches what a smaller model fumbles.
+      model: ${QORVA_EXTRACTION_MODEL:gpt-4.1-mini}
+      # Vision pass runs only on escalated CVs (thin text / missing contact / low confidence).
+      vision-model: ${QORVA_EXTRACTION_VISION_MODEL:gpt-4.1-mini}
+    job-description:
+      model: ${QORVA_JOB_DESCRIPTION_MODEL:gpt-5-mini}
   products:
     starter:
       stripe-product-name: Starter
@@ -47,6 +60,7 @@ qorva:
           ai-resume-chats: 500
           talent-intelligence-queries: 1000
           email-templates: 3
+          bulk-upload-files: 100
         overage:
           enabled: false
           screening-action-price: 0.0
@@ -61,6 +75,7 @@ qorva:
           ai-resume-chats: 1500
           talent-intelligence-queries: 3000
           email-templates: 15
+          bulk-upload-files: 300
         overage:
           enabled: true
           screening-action-price: 0.02
@@ -75,6 +90,7 @@ qorva:
           ai-resume-chats: 4000
           talent-intelligence-queries: 8000
           email-templates: 50
+          bulk-upload-files: 1000
         overage:
           enabled: true
           screening-action-price: 0.02

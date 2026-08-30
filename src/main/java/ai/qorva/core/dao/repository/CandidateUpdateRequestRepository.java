@@ -11,4 +11,6 @@ public interface CandidateUpdateRequestRepository extends MongoRepository<Candid
 	Optional<CandidateUpdateRequest> findByTokenHash(String tokenHash);
 
 	boolean existsByTenantIdAndCvIdAndStatusIn(String tenantId, String cvId, List<String> statuses);
+
+	long deleteByTenantId(String tenantId);
 }

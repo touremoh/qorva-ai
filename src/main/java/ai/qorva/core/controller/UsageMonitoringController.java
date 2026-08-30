@@ -3,6 +3,7 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.UsageMonitoringDTO;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.service.BulkCvUploadService;
 import ai.qorva.core.service.UsageMonitoringService;
 import ai.qorva.core.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -23,11 +24,14 @@ public class UsageMonitoringController {
 
 	private final UsageMonitoringService usageMonitoringService;
 	private final UserService userService;
+	private final BulkCvUploadService bulkCvUploadService;
 
 	@Autowired
-	public UsageMonitoringController(UsageMonitoringService usageMonitoringService, UserService userService) {
+	public UsageMonitoringController(UsageMonitoringService usageMonitoringService, UserService userService,
+	                                 BulkCvUploadService bulkCvUploadService) {
 		this.usageMonitoringService = usageMonitoringService;
 		this.userService = userService;
+		this.bulkCvUploadService = bulkCvUploadService;
 	}
 
 	@GetMapping(path = "/current", produces = "application/json")
@@ -35,6 +39,10 @@ public class UsageMonitoringController {
 	public ResponseEntity<UsageMonitoringDTO> getCurrentUsageMonitoring(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
 		var userInfo = Optional.ofNullable(this.userService.findOneByCriteria(UserDTO.builder().email(userDetails.getUsername()).build()))
 			.orElseThrow(() -> new QorvaException("User not found"));
-		return ResponseEntity.ok(this.usageMonitoringService.findCurrentPeriodByTenantId(userInfo.getTenantId()).orElse(null));
+		var usage = this.usageMonitoringService.findCurrentPeriodByTenantId(userInfo.getTenantId()).orElse(null);
+		if (usage != null) {
+			usage.setBulkUploadFilesLimit(bulkCvUploadService.maxFilesForTenant(userInfo.getTenantId()));
+		}
+		return ResponseEntity.ok(usage);
 	}
 }

@@ -8,8 +8,10 @@ import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.service.CandidateUpdateEmailService;
 import ai.qorva.core.service.CandidateUpdateService;
+import ai.qorva.core.service.JobPostService;
 import ai.qorva.core.service.LibraryQualityCacheEvictor;
 import ai.qorva.core.service.OpenAIService;
+import ai.qorva.core.service.S3StorageService;
 import ai.qorva.core.service.TenantService;
 import ai.qorva.core.service.UsageMonitoringService;
 import ai.qorva.core.service.UserService;
@@ -28,6 +30,7 @@ import org.springframework.util.StringUtils;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
@@ -50,6 +53,17 @@ public class BackgroundJobWorker {
 	private static final int BATCH_SIZE = 10;
 	private static final int LLM_CONCURRENCY = 3;
 	private static final int ERROR_SAMPLE_CAP = 20;
+	/** Bulk imports: cancellation/quota re-checked every N submissions, progress written every N completions. */
+	private static final int BULK_CONTROL_CHECK_EVERY = 20;
+	private static final int BULK_HEARTBEAT_EVERY = 10;
+
+	/**
+	 * Bulk imports get their own, larger LLM budget: unlike re-analyze (which shares the
+	 * instance with interactive uploads by design), a bulk import is the tenant's primary
+	 * activity while it runs. Still far below the HTTP pool's 50-per-route ceiling.
+	 */
+	@org.springframework.beans.factory.annotation.Value("${qorva.jobs.bulk-llm-concurrency:10}")
+	private int bulkLlmConcurrency = 10;
 	private static final long SEND_PACE_MS = 150;   // ≤ ~7 emails/sec toward the provider
 
 	private final MongoTemplate mongoTemplate;
@@ -63,6 +77,8 @@ public class BackgroundJobWorker {
 	private final CandidateUpdateEmailService candidateUpdateEmailService;
 	private final TenantService tenantService;
 	private final UserService userService;
+	private final S3StorageService s3StorageService;
+	private final JobPostService jobPostService;
 
 	public BackgroundJobWorker(
 		MongoTemplate mongoTemplate,
@@ -75,7 +91,9 @@ public class BackgroundJobWorker {
 		CandidateUpdateService candidateUpdateService,
 		CandidateUpdateEmailService candidateUpdateEmailService,
 		TenantService tenantService,
-		UserService userService
+		UserService userService,
+		S3StorageService s3StorageService,
+		JobPostService jobPostService
 	) {
 		this.mongoTemplate = mongoTemplate;
 		this.cvRepository = cvRepository;
@@ -88,6 +106,8 @@ public class BackgroundJobWorker {
 		this.candidateUpdateEmailService = candidateUpdateEmailService;
 		this.tenantService = tenantService;
 		this.userService = userService;
+		this.s3StorageService = s3StorageService;
+		this.jobPostService = jobPostService;
 	}
 
 	@Scheduled(fixedDelayString = "${qorva.jobs.poll-delay-ms:5000}")
@@ -103,6 +123,8 @@ public class BackgroundJobWorker {
 				runReanalyze(job);
 			} else if (BackgroundJob.TYPE_CANDIDATE_UPDATE_CAMPAIGN.equals(job.getType())) {
 				runCampaign(job);
+			} else if (BackgroundJob.TYPE_BULK_CV_UPLOAD.equals(job.getType())) {
+				runBulkUpload(job);
 			} else {
 				fail(job, "unsupported_job_type");
 			}
@@ -207,11 +229,139 @@ public class BackgroundJobWorker {
 			job.getId(), finalStatus, succeeded.get(), processed.get(), failed.get(), skipped.get());
 	}
 
+	/**
+	 * Bulk CV import: drains the job's staged S3 files through the same pipeline as live
+	 * uploads (parse → LLM extraction → S3 attachment → persist). When the tenant's
+	 * screening-action quota runs out mid-job, the remainder is skipped — never silently
+	 * billed — and the job finishes COMPLETED_WITH_ERRORS with reason quota_exceeded.
+	 */
+	private void runBulkUpload(BackgroundJob job) {
+		var tenantId = job.getTenantId();
+		var files = job.getStagedFiles() != null ? job.getStagedFiles() : List.<BackgroundJob.StagedFile>of();
+
+		var processed = new AtomicLong(job.getProcessed());
+		var succeeded = new AtomicLong(job.getSucceeded());
+		var failed = new AtomicLong(job.getFailed());
+		var skipped = new AtomicLong(job.getSkipped());
+		var errorSamples = Collections.synchronizedList(
+			new ArrayList<String>(job.getErrorSamples() != null ? job.getErrorSamples() : List.of()));
+		var llmPermits = new Semaphore(bulkLlmConcurrency);
+		boolean quotaExhausted = false;
+
+		// Resume support: a reclaimed lease continues after the already-processed prefix.
+		int startFrom = (int) Math.min(processed.get(), files.size());
+		int submitted = startFrom;
+
+		// Sliding-window pipeline: the submitting thread blocks on a permit, so at most
+		// bulkLlmConcurrency files are in flight and a slow file never idles the others
+		// (the old per-10 join barrier did). Control checks are throttled on submission;
+		// progress heartbeats ride on completions.
+		try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+			var futures = new ArrayList<CompletableFuture<Void>>(files.size() - startFrom);
+			for (int i = startFrom; i < files.size(); i++) {
+				if ((i - startFrom) % BULK_CONTROL_CHECK_EVERY == 0) {
+					if (isCancelled(job.getId())) {
+						log.info("Job {} cancelled — stopping after {} files", job.getId(), processed.get());
+						CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
+						return;
+					}
+					if (usageMonitoringService.hasExceededLimit(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS)) {
+						quotaExhausted = true;
+						break;
+					}
+				}
+				try {
+					llmPermits.acquire();
+				} catch (InterruptedException e) {
+					Thread.currentThread().interrupt();
+					break;
+				}
+				final var staged = files.get(i);
+				futures.add(CompletableFuture.runAsync(() -> {
+					try {
+						try {
+							var bytes = s3StorageService.fetchObjectBytes(staged.getS3Key());
+							cvService.processFile(bytes, staged.getFilename(), staged.getContentType(), tenantId);
+							succeeded.incrementAndGet();
+						} finally {
+							llmPermits.release();
+						}
+						deleteStagedQuietly(staged);
+					} catch (Exception e) {
+						failed.incrementAndGet();
+						if (errorSamples.size() < ERROR_SAMPLE_CAP) {
+							errorSamples.add(staged.getFilename() + ": " + e.getMessage());
+						}
+						deleteStagedQuietly(staged);
+						log.warn("Job {} — bulk import failed for {}", job.getId(), staged.getFilename(), e);
+					} finally {
+						long done = processed.incrementAndGet();
+						if (done % BULK_HEARTBEAT_EVERY == 0) {
+							heartbeat(job.getId(), done, succeeded.get(), failed.get(), skipped.get(),
+								List.copyOf(errorSamples));
+						}
+					}
+				}, executor));
+				submitted = i + 1;
+			}
+			CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
+		}
+
+		if (quotaExhausted) {
+			long remainder = files.size() - submitted;
+			skipped.addAndGet(remainder);
+			processed.addAndGet(remainder);
+			files.subList(submitted, files.size()).forEach(this::deleteStagedQuietly);
+		}
+
+		var finalStatus = (failed.get() > 0 || quotaExhausted)
+			? BackgroundJob.STATUS_COMPLETED_WITH_ERRORS
+			: BackgroundJob.STATUS_COMPLETED;
+		var update = new Update()
+			.set("status", finalStatus)
+			.set("processed", processed.get())
+			.set("succeeded", succeeded.get())
+			.set("failed", failed.get())
+			.set("skipped", skipped.get())
+			.set("errorSamples", List.copyOf(errorSamples))
+			.set("finishedAt", Instant.now());
+		if (quotaExhausted) {
+			update.set("failureReason", "quota_exceeded");
+		}
+		mongoTemplate.updateFirst(Query.query(Criteria.where("_id").is(job.getId())), update, BackgroundJob.class);
+
+		if (succeeded.get() > 0) {
+			try {
+				jobPostService.markOpenJobPostsAsNeedingReports(tenantId);
+			} catch (Exception e) {
+				log.warn("Job {} — could not mark job posts as needing reports", job.getId(), e);
+			}
+			cacheEvictor.evict(tenantId);
+		}
+		log.info("Job {} finished: {} — {}/{} imported, {} failed, {} skipped{}",
+			job.getId(), finalStatus, succeeded.get(), processed.get(), failed.get(), skipped.get(),
+			quotaExhausted ? " (quota exhausted)" : "");
+	}
+
+	private void deleteStagedQuietly(BackgroundJob.StagedFile staged) {
+		try {
+			s3StorageService.deleteObject(staged.getS3Key());
+		} catch (Exception e) {
+			log.warn("Could not delete staged object {}: {}", staged.getS3Key(), e.getMessage());
+		}
+	}
+
 	/** Re-runs LLM extraction from stored rawText; the normal update path preserves tags/attachment/VERIFIED. */
 	private void reanalyzeOne(String cvId, String tenantId, AtomicLong skipped, AtomicLong succeeded) throws Exception {
 		var existing = cvService.findOneById(cvId);
 		if (!StringUtils.hasText(existing.getRawText())) {
-			skipped.incrementAndGet();
+			// No text layer (scanned/designed CV) — these used to be skipped forever.
+			// Vision re-analysis reads the original document from S3 instead.
+			if (cvService.reanalyzeFromOriginal(existing, tenantId)) {
+				succeeded.incrementAndGet();
+			} else {
+				skipped.incrementAndGet();
+			}
 			return;
 		}
 

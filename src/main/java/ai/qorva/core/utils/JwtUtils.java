@@ -5,7 +5,6 @@ import ai.qorva.core.dto.JwtDTO;
 import ai.qorva.core.dto.TenantDTO;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.experimental.UtilityClass;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.util.StringUtils;
@@ -57,7 +56,7 @@ public class JwtUtils {
 	}
 
 	public Claims extractAllClaims(String token, SecretKey jwtSecret) {
-		return Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
+		return Jwts.parser().verifyWith(jwtSecret).build().parseSignedClaims(token).getPayload();
 	}
 
 	public Boolean isTokenExpired(String token, SecretKey jwtSecret) {
@@ -77,12 +76,14 @@ public class JwtUtils {
 	}
 
 	private String createToken(Map<String, Object> claims, String subject, JwtConfig jwtConfig) {
+		// signWith(key) picks the strongest HMAC alg the key supports (>=64 bytes -> HS512),
+		// so existing secrets keep working; jjwt 0.12 rejects keys under 32 bytes outright.
 		return Jwts.builder()
-			.setClaims(claims)
-			.setSubject(subject)
-			.setIssuedAt(new Date(System.currentTimeMillis()))
-			.setExpiration(new Date(System.currentTimeMillis() + jwtConfig.getTimeToLiveInMillis()))
-			.signWith(SignatureAlgorithm.HS512, jwtConfig.getSecretKey())
+			.claims(claims)
+			.subject(subject)
+			.issuedAt(new Date(System.currentTimeMillis()))
+			.expiration(new Date(System.currentTimeMillis() + jwtConfig.getTimeToLiveInMillis()))
+			.signWith(jwtConfig.getSecretKey())
 			.compact();
 	}
 
@@ -101,11 +102,11 @@ public class JwtUtils {
 		claims.put(PURPOSE, PURPOSE_SET_PASSWORD);
 		claims.put(CREDENTIAL_VERSION, credentialVersion);
 		return Jwts.builder()
-			.setClaims(claims)
-			.setSubject(userId)
-			.setIssuedAt(new Date(System.currentTimeMillis()))
-			.setExpiration(new Date(System.currentTimeMillis() + jwtConfig.getSetPasswordTtlInMillis()))
-			.signWith(SignatureAlgorithm.HS512, jwtConfig.getSecretKey())
+			.claims(claims)
+			.subject(userId)
+			.issuedAt(new Date(System.currentTimeMillis()))
+			.expiration(new Date(System.currentTimeMillis() + jwtConfig.getSetPasswordTtlInMillis()))
+			.signWith(jwtConfig.getSecretKey())
 			.compact();
 	}
 

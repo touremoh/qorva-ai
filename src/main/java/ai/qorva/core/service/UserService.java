@@ -13,7 +13,10 @@ import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.UserMapper;
 import ai.qorva.core.dao.querybuilder.UserQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
+import ai.qorva.core.dto.common.UserAuthority;
 import org.bson.types.ObjectId;
+
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -167,6 +170,19 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 
 		user.setEncryptedPassword(passwordEncoder.encode(newPassword));
 		repository.save(user);
+	}
+
+	public void updateAuthorities(String tenantId, String userId, List<UserAuthority> authorities) throws QorvaException {
+		var user = repository.findById(new ObjectId(userId))
+			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+
+		if (!tenantId.equals(user.getTenantId())) {
+			throw new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+		}
+
+		user.setAuthorities(authorities);
+		repository.save(user);
+		log.info("User authorities updated: tenantId={} userId={}", tenantId, userId);
 	}
 
 	public UserDTO findByEmail(String email) {

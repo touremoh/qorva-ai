@@ -48,4 +48,8 @@ public interface ChatsRepository extends QorvaRepository<Chat> {
 
     /** Deletes every chat belonging to a tenant (used when purging demo data on upgrade). */
     long deleteByTenantId(String tenantId);
+
+    java.util.List<ai.qorva.core.dao.entity.Chat> findByTenantIdAndContextCvId(String tenantId, String contextCvId);
+
+    long countByTenantId(String tenantId);
 }

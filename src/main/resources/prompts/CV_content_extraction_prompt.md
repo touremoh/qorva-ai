@@ -90,13 +90,13 @@ Focus on actual capability, organizational value, and measurable impact rather t
    - Do not include generic interpersonal terms like "Teamwork" or "Communication" in `searchIndex.skills`.
    - `searchIndex` is a machine-search layer only — the display fields (`keySkills`, `candidateClustering`, `profiles`) stay in the CV's original language.
 
-CV Content:
-```{cv_data}```
-
 Expected Output JSON Schema:
 ***{output_format}***
 
 The output language must match the CV language, with one exception: the `searchIndex` field (see instruction 5) MUST always be populated in English regardless of the CV's language.
+
+CV Content:
+```{cv_data}```
 
 Before returning the final JSON:
 - Validate schema consistency

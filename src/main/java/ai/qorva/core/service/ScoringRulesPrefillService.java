@@ -67,6 +67,14 @@ public class ScoringRulesPrefillService {
 		return rules;
 	}
 
+	/**
+	 * Unmetered variant for internal chaining (the AI job-description builder is a free
+	 * feature; its scoring-rules leg must not silently bill a screening action).
+	 */
+	public ScoringRules suggestUnmetered(String title, String description) throws QorvaException {
+		return doSuggest(title, description);
+	}
+
 	private ScoringRules doSuggest(String title, String description) throws QorvaException {
 		if (!StringUtils.hasText(description)) {
 			throw new QorvaException("Job description is required",
