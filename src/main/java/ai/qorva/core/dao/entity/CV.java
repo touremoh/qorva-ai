@@ -71,6 +71,9 @@ public class CV implements QorvaEntity {
     /** Archived CVs are excluded from quality reporting and matching. */
     private Boolean archived;
 
+    /** Source links when this CV was imported from an external ATS (see AtsRef). */
+    private List<AtsRef> atsRefs;
+
     private float[] embedding;
 
     @Field("score")

@@ -1,0 +1,78 @@
+{
+  "collMod": "ats_outbound_tasks",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "ats_outbound_tasks",
+      "required": ["tenantId", "connectionId", "provider", "status", "attempts", "createdAt"],
+      "properties": {
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "Owning tenant ObjectId"
+        },
+        "connectionId": {
+          "bsonType": "string",
+          "description": "ats_connections document id as hex string — tasks are deleted with their connection"
+        },
+        "provider": {
+          "bsonType": "string",
+          "description": "AtsProviderEnum value the task is pushed to"
+        },
+        "cvId": {
+          "bsonType": ["string", "null"],
+          "description": "Qorva CV the score belongs to"
+        },
+        "externalCandidateId": {
+          "bsonType": ["string", "null"],
+          "description": "Candidate id in the external ATS"
+        },
+        "externalApplicationId": {
+          "bsonType": ["string", "null"],
+          "description": "Application/opportunity id, when the provider separates it from the candidate"
+        },
+        "jobTitle": {
+          "bsonType": ["string", "null"],
+          "description": "Job post title quoted in the note pushed to the ATS"
+        },
+        "score": {
+          "bsonType": ["double", "null"],
+          "description": "Final matching-report score"
+        },
+        "headline": {
+          "bsonType": ["string", "null"],
+          "description": "Report headline quoted in the note pushed to the ATS"
+        },
+        "reportUrl": {
+          "bsonType": ["string", "null"],
+          "description": "Deep link back to the Qorva report"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "PENDING | SENDING | SENT | FAILED"
+        },
+        "attempts": {
+          "bsonType": "int",
+          "description": "Send attempts made so far — capped by AtsOutboundTask.MAX_ATTEMPTS"
+        },
+        "nextAttemptAt": {
+          "bsonType": ["date", "null"],
+          "description": "Earliest time the drain may claim this task (exponential backoff)"
+        },
+        "lastError": {
+          "bsonType": ["string", "null"],
+          "description": "Error message from the most recent failed attempt"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Timestamp when the write-back was enqueued"
+        },
+        "sentAt": {
+          "bsonType": ["date", "null"],
+          "description": "Timestamp of the successful push to the ATS"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

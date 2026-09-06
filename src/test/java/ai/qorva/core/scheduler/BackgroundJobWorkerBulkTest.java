@@ -58,6 +58,7 @@ class BackgroundJobWorkerBulkTest {
 	@Mock private UserService userService;
 	@Mock private S3StorageService s3StorageService;
 	@Mock private JobPostService jobPostService;
+	@Mock private ai.qorva.core.service.ats.AtsSyncService atsSyncService;
 
 	private BackgroundJobWorker worker;
 
@@ -65,7 +66,7 @@ class BackgroundJobWorkerBulkTest {
 	void setUp() {
 		worker = new BackgroundJobWorker(mongoTemplate, cvRepository, cvService, openAIService,
 			openAIResultMapper, usageMonitoringService, cacheEvictor, candidateUpdateService,
-			candidateUpdateEmailService, tenantService, userService, s3StorageService, jobPostService);
+			candidateUpdateEmailService, tenantService, userService, s3StorageService, jobPostService, atsSyncService);
 	}
 
 	private BackgroundJob bulkJob() {

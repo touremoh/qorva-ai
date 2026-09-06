@@ -13,7 +13,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.oauth2.jwt.JwtException;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.JwtException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -75,7 +76,19 @@ public class AuthenticationService {
 	public Boolean isTokenValid(String authorizationHeader) throws QorvaException {
 		if (StringUtils.hasText(authorizationHeader) && authorizationHeader.startsWith("Bearer ")) {
 			String token = authorizationHeader.substring(7);
-			if (Boolean.TRUE.equals(JwtUtils.isTokenExpired(token, jwtConfig.getSecretKey()))) {
+			boolean expired;
+			try {
+				expired = Boolean.TRUE.equals(JwtUtils.isTokenExpired(token, jwtConfig.getSecretKey()));
+			} catch (ExpiredJwtException ex) {
+				// jjwt refuses to parse an expired token at all, so expiry arrives here rather
+				// than as a true return value.
+				expired = true;
+			} catch (JwtException ex) {
+				// Malformed, truncated or wrongly signed: a failed auth check, not a server
+				// fault — the same answer refreshToken gives for the same input.
+				throw new QorvaException(QorvaErrorCodes.AUTH_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+			}
+			if (expired) {
 				throw new QorvaException(QorvaErrorCodes.AUTH_TOKEN_EXPIRED, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
 			}
 			return true;

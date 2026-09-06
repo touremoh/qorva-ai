@@ -20,7 +20,7 @@ public class V2026072703CreateBackgroundJobsCollection extends AbstractQorvaDbMi
 	@Execution
 	public void execute(MongoDatabase db) {
 		log.info("V20260727_03 – creating {} collection", COLLECTION);
-		db.createCollection(COLLECTION);
+		createCollectionIfAbsent(db, COLLECTION);
 		var jobs = db.getCollection(COLLECTION);
 		// Worker claim path: PENDING jobs or RUNNING jobs whose lease expired.
 		jobs.createIndex(new Document("status", 1).append("leaseExpiresAt", 1),

@@ -18,4 +18,7 @@ public class FeatureLimits {
 
     /** Max files per asynchronous bulk CV import job (static cap, not consumption). */
     private Integer bulkUploadFiles;
+
+    /** Max simultaneous ATS integrations per workspace (static cap, not consumption). */
+    private Integer atsConnections;
 }

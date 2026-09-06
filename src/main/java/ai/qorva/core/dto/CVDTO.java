@@ -62,6 +62,10 @@ public class CVDTO extends AbstractQorvaDTO {
     @JsonProperty(access = Access.READ_ONLY)
     private Boolean archived;
 
+    /** Source links when the CV was imported from an external ATS. */
+    @JsonProperty(access = Access.READ_ONLY)
+    private List<AtsRef> atsRefs;
+
     private List<String> tags;
 
     @JsonProperty(access = Access.READ_ONLY)

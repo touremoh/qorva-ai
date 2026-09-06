@@ -14,6 +14,7 @@ import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.UploadResult;
 import ai.qorva.core.enums.QualityFlagEnum;
+import ai.qorva.core.dto.common.AtsRef;
 import ai.qorva.core.dto.common.Availability;
 import ai.qorva.core.dto.common.PersonalInformation;
 import ai.qorva.core.enums.ContentDateSourceEnum;
@@ -246,7 +247,9 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
     /**
      * Resolves an upload-time duplicate by keeping the new CV and removing the old copy.
-     * Recruiter knowledge survives: tags from the old copy are merged into the new one.
+     * Recruiter knowledge survives: tags and ATS links from the old copy are merged into
+     * the new one — a candidate can be linked to several ATSs, and losing a link makes the
+     * next sync of that provider re-import and re-extract the same person.
      */
     public CVDTO replaceDuplicate(String newCvId, String oldCvId, String tenantId) throws QorvaException {
         if (newCvId.equals(oldCvId)) {
@@ -260,6 +263,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         if (newCv.getTags() != null) mergedTags.addAll(newCv.getTags());
         if (oldCv.getTags() != null) mergedTags.addAll(oldCv.getTags());
         newCv.setTags(new ArrayList<>(mergedTags));
+        newCv.setAtsRefs(AtsRef.merge(newCv.getAtsRefs(), oldCv.getAtsRefs()));
 
         var updated = this.updateOne(newCvId, newCv);
         this.deleteOneById(oldCvId, tenantId);   // cascades reports/chats/S3 + evicts cache

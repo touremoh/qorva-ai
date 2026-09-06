@@ -33,6 +33,9 @@ public class JobPost implements QorvaEntity {
     private ScoringRules scoringRules;
     private Boolean matchingReportsNeeded;
 
+    /** Source link when this job was imported from an external ATS. */
+    private ai.qorva.core.dto.common.AtsRef atsRef;
+
     @CreatedDate
     private Instant createdAt;
 

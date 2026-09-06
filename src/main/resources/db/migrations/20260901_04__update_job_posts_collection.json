@@ -1,0 +1,239 @@
+{
+  "collMod": "job_posts",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "job_posts",
+      "required": [
+        "title",
+        "tenantId",
+        "status",
+        "createdAt",
+        "lastUpdatedAt",
+        "createdBy",
+        "lastUpdatedBy"
+      ],
+      "properties": {
+        "jobReference": {
+          "bsonType": "string",
+          "description": "unique job reference identifier, generated on creation"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "must be a valid ObjectId and is required"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "scoringRules": {
+          "bsonType": "object",
+          "description": "AI screening scoring configuration",
+          "properties": {
+            "skills": {
+              "bsonType": "array",
+              "description": "list of skill requirements",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "name": {
+                    "bsonType": "string"
+                  },
+                  "importance": {
+                    "bsonType": "string",
+                    "enum": [
+                      "mandatory",
+                      "important",
+                      "nice_to_have"
+                    ],
+                    "description": "must be a valid string and is required"
+                  },
+                  "weight": {
+                    "bsonType": "double"
+                  },
+                  "minYearsOfExperience": {
+                    "bsonType": "int"
+                  },
+                  "exactSkillOnly": {
+                    "bsonType": "bool"
+                  }
+                }
+              }
+            },
+            "experienceRequirements": {
+              "bsonType": "object",
+              "properties": {
+                "minYearsOfExperience": {
+                  "bsonType": "int"
+                },
+                "minRelevantYears": {
+                  "bsonType": "int"
+                },
+                "seniorityLevel": {
+                  "bsonType": "string",
+                  "enum": [
+                    "junior",
+                    "mid",
+                    "senior"
+                  ],
+                  "description": "must be a valid string"
+                }
+              }
+            },
+            "locationPreferences": {
+              "bsonType": "object",
+              "properties": {
+                "allowedLocations": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "string",
+                    "description": "must be a string and is required"
+                  }
+                },
+                "remoteAllowed": {
+                  "bsonType": "bool",
+                  "description": "must be a boolean and is required"
+                },
+                "strictness": {
+                  "bsonType": "string",
+                  "enum": [
+                    "strict",
+                    "medium",
+                    "relaxed"
+                  ],
+                  "description": "must be a valid string and is required"
+                }
+              }
+            },
+            "industryPreferences": {
+              "bsonType": "object",
+              "properties": {
+                "preferredIndustries": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "string",
+                    "description": "must be a string and is required"
+                  }
+                },
+                "strictness": {
+                  "bsonType": "string",
+                  "enum": [
+                    "strict",
+                    "medium",
+                    "relaxed"
+                  ],
+                  "description": "must be a valid string and is required"
+                }
+              }
+            },
+            "scoringWeight": {
+              "bsonType": "object",
+              "properties": {
+                "skills": {
+                  "bsonType": "double"
+                },
+                "experience": {
+                  "bsonType": "double"
+                },
+                "location": {
+                  "bsonType": "double"
+                },
+                "industry": {
+                  "bsonType": "double"
+                }
+              }
+            },
+            "filterOpenToWork": {
+              "bsonType": "bool",
+              "description": "when true, exclude candidates not open to work"
+            },
+            "availabilityStatuses": {
+              "bsonType": "array",
+              "description": "availability statuses used to filter candidates during matching",
+              "items": {
+                "bsonType": "string",
+                "enum": [
+                  "activelyLooking",
+                  "openButNotSearching",
+                  "notAvailable",
+                  "freelanceOnly"
+                ]
+              }
+            }
+          }
+        },
+        "matchingReportsNeeded": {
+          "bsonType": "bool",
+          "description": "when true, matching reports generation is enabled for this job post"
+        },
+        "atsRef": {
+          "bsonType": "object",
+          "description": "source link when this job post was imported from an external ATS",
+          "properties": {
+            "provider": {
+              "bsonType": "string",
+              "description": "ATS provider key, e.g. greenhouse"
+            },
+            "connectionId": {
+              "bsonType": "string",
+              "description": "id of the ats_connections document"
+            },
+            "externalId": {
+              "bsonType": "string",
+              "description": "job id in the external ATS"
+            },
+            "externalApplicationId": {
+              "bsonType": "string",
+              "description": "unused for job posts, kept for shape parity with cvs"
+            },
+            "externalUrl": {
+              "bsonType": "string",
+              "description": "deep link to the job in the ATS UI"
+            },
+            "resumeContentHash": {
+              "bsonType": "string",
+              "description": "unused for job posts, kept for shape parity with cvs"
+            },
+            "lastImportedAt": {
+              "bsonType": "date",
+              "description": "last time this job was imported or refreshed"
+            }
+          }
+        },
+        "embedding": {
+          "bsonType": "array",
+          "description": "vector embedding for semantic search",
+          "items": {
+            "bsonType": "double"
+          }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

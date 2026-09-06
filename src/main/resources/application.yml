@@ -61,6 +61,7 @@ qorva:
           talent-intelligence-queries: 1000
           email-templates: 3
           bulk-upload-files: 100
+          ats-connections: 1
         overage:
           enabled: false
           screening-action-price: 0.0
@@ -76,6 +77,7 @@ qorva:
           talent-intelligence-queries: 3000
           email-templates: 15
           bulk-upload-files: 300
+          ats-connections: 3
         overage:
           enabled: true
           screening-action-price: 0.02
@@ -91,6 +93,7 @@ qorva:
           talent-intelligence-queries: 8000
           email-templates: 50
           bulk-upload-files: 1000
+          ats-connections: 7
         overage:
           enabled: true
           screening-action-price: 0.02
@@ -98,3 +101,33 @@ qorva:
           intelligence-query-price: 0.50
 
 
+  # ATS integrations. The credentials key has a dev-only default; tst/prd override it
+  # from the environment (see application-tst.yml / application-prd.yml).
+  ats:
+    credentials-key: ${ATS_CREDENTIALS_ENCRYPTION_KEY:local-dev-only-ats-credentials-key}
+    public-base-url: ${ATS_PUBLIC_BASE_URL:http://localhost:8080}
+    sync-interval-minutes: ${ATS_SYNC_INTERVAL_MINUTES:30}
+    initial-sync-guard: ${ATS_INITIAL_SYNC_GUARD:500}
+    # Harvest API version — bump without a rebuild if Greenhouse moves the base path.
+    # OAuth connections use the first; customer-generated API keys use the second.
+    greenhouse-harvest-base-url: ${GREENHOUSE_HARVEST_BASE_URL:https://harvest.greenhouse.io/v3}
+    greenhouse-harvest-api-key-base-url: ${GREENHOUSE_HARVEST_API_KEY_BASE_URL:https://harvest.greenhouse.io/v1}
+    oauth:
+      greenhouse:
+        client-id: ${GREENHOUSE_CLIENT_ID:}
+        client-secret: ${GREENHOUSE_CLIENT_SECRET:}
+        # Must match the redirect URI and scopes approved on the Greenhouse app registration.
+        redirect-uri: ${GREENHOUSE_REDIRECT_URI:}
+        scopes: ${GREENHOUSE_SCOPES:}
+      zoho_recruit:
+        client-id: ${ATS_ZOHO_CLIENT_ID:}
+        client-secret: ${ATS_ZOHO_CLIENT_SECRET:}
+        # Override only if the URI registered in the Zoho API console differs from
+        # ${ATS_PUBLIC_BASE_URL}/integrations/zoho_recruit/oauth/callback — Zoho matches it exactly.
+        redirect-uri: ${ATS_ZOHO_REDIRECT_URI:}
+        scopes: ${ATS_ZOHO_SCOPES:}
+      lever:
+        client-id: ${ATS_LEVER_CLIENT_ID:}
+        client-secret: ${ATS_LEVER_CLIENT_SECRET:}
+        redirect-uri: ${ATS_LEVER_REDIRECT_URI:}
+        scopes: ${ATS_LEVER_SCOPES:}

@@ -18,13 +18,13 @@ public class V2026072704CreateCandidateUpdateCollections extends AbstractQorvaDb
 	@Execution
 	public void execute(MongoDatabase db) {
 		log.info("V20260727_04 – creating candidate_update_requests and suppressed_emails collections");
-		db.createCollection("candidate_update_requests");
+		createCollectionIfAbsent(db, "candidate_update_requests");
 		var requests = db.getCollection("candidate_update_requests");
 		requests.createIndex(new Document("tokenHash", 1), new IndexOptions().unique(true).name("token_hash_idx"));
 		requests.createIndex(new Document("tenantId", 1).append("cvId", 1).append("status", 1),
 			new IndexOptions().name("tenant_cv_status_idx"));
 
-		db.createCollection("suppressed_emails");
+		createCollectionIfAbsent(db, "suppressed_emails");
 		db.getCollection("suppressed_emails").createIndex(
 			new Document("tenantId", 1).append("email", 1),
 			new IndexOptions().unique(true).name("tenant_email_idx"));

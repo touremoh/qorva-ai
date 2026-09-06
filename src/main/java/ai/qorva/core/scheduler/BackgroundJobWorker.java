@@ -15,6 +15,7 @@ import ai.qorva.core.service.S3StorageService;
 import ai.qorva.core.service.TenantService;
 import ai.qorva.core.service.UsageMonitoringService;
 import ai.qorva.core.service.UserService;
+import ai.qorva.core.service.ats.AtsSyncService;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.ai.converter.BeanOutputConverter;
@@ -79,6 +80,7 @@ public class BackgroundJobWorker {
 	private final UserService userService;
 	private final S3StorageService s3StorageService;
 	private final JobPostService jobPostService;
+	private final AtsSyncService atsSyncService;
 
 	public BackgroundJobWorker(
 		MongoTemplate mongoTemplate,
@@ -93,7 +95,8 @@ public class BackgroundJobWorker {
 		TenantService tenantService,
 		UserService userService,
 		S3StorageService s3StorageService,
-		JobPostService jobPostService
+		JobPostService jobPostService,
+		AtsSyncService atsSyncService
 	) {
 		this.mongoTemplate = mongoTemplate;
 		this.cvRepository = cvRepository;
@@ -108,6 +111,7 @@ public class BackgroundJobWorker {
 		this.userService = userService;
 		this.s3StorageService = s3StorageService;
 		this.jobPostService = jobPostService;
+		this.atsSyncService = atsSyncService;
 	}
 
 	@Scheduled(fixedDelayString = "${qorva.jobs.poll-delay-ms:5000}")
@@ -125,6 +129,8 @@ public class BackgroundJobWorker {
 				runCampaign(job);
 			} else if (BackgroundJob.TYPE_BULK_CV_UPLOAD.equals(job.getType())) {
 				runBulkUpload(job);
+			} else if (BackgroundJob.TYPE_ATS_SYNC.equals(job.getType())) {
+				atsSyncService.executeSync(job);
 			} else {
 				fail(job, "unsupported_job_type");
 			}

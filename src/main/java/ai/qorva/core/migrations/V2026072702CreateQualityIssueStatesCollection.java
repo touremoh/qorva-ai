@@ -20,7 +20,7 @@ public class V2026072702CreateQualityIssueStatesCollection extends AbstractQorva
 	@Execution
 	public void execute(MongoDatabase db) {
 		log.info("V20260727_02 – creating {} collection", COLLECTION);
-		db.createCollection(COLLECTION);
+		createCollectionIfAbsent(db, COLLECTION);
 		db.getCollection(COLLECTION).createIndex(
 			new Document("tenantId", 1).append("issueKey", 1),
 			new IndexOptions().unique(true).name("tenant_issue_key_idx"));

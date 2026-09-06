@@ -29,6 +29,7 @@ public class BackgroundJob {
 	public static final String TYPE_REANALYZE = "REANALYZE";
 	public static final String TYPE_CANDIDATE_UPDATE_CAMPAIGN = "CANDIDATE_UPDATE_CAMPAIGN";
 	public static final String TYPE_BULK_CV_UPLOAD = "BULK_CV_UPLOAD";
+	public static final String TYPE_ATS_SYNC = "ATS_SYNC";
 
 	/** Collecting staged files; never claimed by the worker (claim query matches PENDING/RUNNING only). */
 	public static final String STATUS_DRAFT = "DRAFT";
@@ -87,6 +88,12 @@ public class BackgroundJob {
 	}
 
 	private String failureReason;
+
+	/** ATS sync jobs: the AtsConnection being synced. */
+	private String connectionId;
+
+	/** ATS sync jobs: what started it — SCHEDULED | MANUAL | WEBHOOK. */
+	private String trigger;
 
 	private String leaseOwner;
 	private Instant leaseExpiresAt;

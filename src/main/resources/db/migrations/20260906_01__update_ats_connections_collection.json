@@ -1,0 +1,141 @@
+{
+  "collMod": "ats_connections",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "ats_connections",
+      "required": [
+        "tenantId",
+        "provider",
+        "status",
+        "encryptedCredentials",
+        "webhookSecret",
+        "createdAt",
+        "lastUpdatedAt",
+        "createdBy",
+        "lastUpdatedBy"
+      ],
+      "properties": {
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "Owning tenant ObjectId \u2014 one connection per provider per tenant"
+        },
+        "provider": {
+          "bsonType": "string",
+          "description": "AtsProviderEnum value \u2014 greenhouse | recruitee | workable | manatal | bamboohr | zoho_recruit | lever | ashby"
+        },
+        "displayName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Optional recruiter-facing label for the connection"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "CONNECTED | AUTH_ERROR | DISABLED"
+        },
+        "encryptedCredentials": {
+          "bsonType": "string",
+          "description": "AES-GCM encrypted AtsCredentials JSON (base64) \u2014 plaintext credentials are never stored"
+        },
+        "settings": {
+          "bsonType": [
+            "object",
+            "null"
+          ],
+          "description": "Per-connection sync behaviour",
+          "properties": {
+            "autoImport": {
+              "bsonType": [
+                "bool",
+                "null"
+              ],
+              "description": "Scheduler enqueues periodic delta syncs when true"
+            },
+            "importJobs": {
+              "bsonType": [
+                "bool",
+                "null"
+              ],
+              "description": "Import open ATS jobs as Qorva job posts"
+            },
+            "writeBackScores": {
+              "bsonType": [
+                "bool",
+                "null"
+              ],
+              "description": "Push matching-report scores back to the ATS as candidate notes"
+            },
+            "initialSyncConfirmed": {
+              "bsonType": [
+                "bool",
+                "null"
+              ],
+              "description": "Explicit confirmation for a first sync exceeding the tenant's remaining screening quota"
+            }
+          }
+        },
+        "syncState": {
+          "bsonType": [
+            "object",
+            "null"
+          ],
+          "description": "Cursors and outcome of the most recent sync",
+          "properties": {
+            "candidatesCursor": {
+              "bsonType": [
+                "string",
+                "null"
+              ],
+              "description": "Provider-native cursor for the candidates stream"
+            },
+            "jobsCursor": {
+              "bsonType": [
+                "string",
+                "null"
+              ],
+              "description": "Provider-native cursor for the jobs stream"
+            },
+            "lastSyncAt": {
+              "bsonType": [
+                "date",
+                "null"
+              ],
+              "description": "Completion timestamp of the most recent sync"
+            },
+            "lastSyncError": {
+              "bsonType": [
+                "string",
+                "null"
+              ],
+              "description": "Error message from the most recent failed sync"
+            }
+          }
+        },
+        "webhookSecret": {
+          "bsonType": "string",
+          "description": "Random per-connection secret authenticating inbound webhooks (HMAC key or URL token)"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

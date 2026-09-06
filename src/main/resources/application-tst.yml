@@ -119,3 +119,24 @@ qorva:
     prefix: demo-seed
     version: v2
     fallback-language: en
+  ats:
+    credentials-key: ${ATS_CREDENTIALS_ENCRYPTION_KEY}
+    public-base-url: ${ATS_PUBLIC_BASE_URL}
+    greenhouse-harvest-base-url: ${GREENHOUSE_HARVEST_BASE_URL:https://harvest.greenhouse.io/v3}
+    greenhouse-harvest-api-key-base-url: ${GREENHOUSE_HARVEST_API_KEY_BASE_URL:https://harvest.greenhouse.io/v1}
+    oauth:
+      greenhouse:
+        client-id: ${GREENHOUSE_CLIENT_ID:}
+        client-secret: ${GREENHOUSE_CLIENT_SECRET:}
+        redirect-uri: ${GREENHOUSE_REDIRECT_URI:}
+        scopes: ${GREENHOUSE_SCOPES:}
+      zoho_recruit:
+        client-id: ${ATS_ZOHO_CLIENT_ID:}
+        client-secret: ${ATS_ZOHO_CLIENT_SECRET:}
+        redirect-uri: ${ATS_ZOHO_REDIRECT_URI:}
+        scopes: ${ATS_ZOHO_SCOPES:}
+      lever:
+        client-id: ${ATS_LEVER_CLIENT_ID:}
+        client-secret: ${ATS_LEVER_CLIENT_SECRET:}
+        redirect-uri: ${ATS_LEVER_REDIRECT_URI:}
+        scopes: ${ATS_LEVER_SCOPES:}

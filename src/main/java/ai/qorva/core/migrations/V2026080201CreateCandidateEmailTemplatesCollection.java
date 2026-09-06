@@ -18,7 +18,7 @@ public class V2026080201CreateCandidateEmailTemplatesCollection extends Abstract
 	@Execution
 	public void execute(MongoDatabase db) {
 		log.info("V20260802_01 – creating candidate_email_templates collection");
-		db.createCollection("candidate_email_templates");
+		createCollectionIfAbsent(db, "candidate_email_templates");
 		db.getCollection("candidate_email_templates").createIndex(
 			new Document("tenantId", 1).append("name", 1),
 			new IndexOptions().unique(true).name("tenant_name_idx"));

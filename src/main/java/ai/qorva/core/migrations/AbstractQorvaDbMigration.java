@@ -7,6 +7,7 @@ import org.bson.BsonDocument;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
@@ -15,14 +16,40 @@ public abstract class AbstractQorvaDbMigration {
 
 	protected static final String BASE_PATH = "/db/migrations/";
 
+	/**
+	 * Ensures the collection exists, then applies its DDL file. Creation is skipped when the
+	 * collection is already there — Spring Data creates a collection implicitly on the first
+	 * write, so any environment that ran a feature before its changeunit was written already
+	 * has it, and an unconditional createCollection fails with CollectionAlreadyExists (48)
+	 * and takes the whole migration run down with it.
+	 */
 	public void createCollection(MongoDatabase db, String collectionName, String executionMessage, String fileName) {
 		log.info(executionMessage);
 
-		// Create the collection
-		db.createCollection(collectionName);
+		if (collectionExists(db, collectionName)) {
+			log.info("Collection {} already exists — applying validator only", collectionName);
+		} else {
+			db.createCollection(collectionName);
+		}
 
 		// Load data
 		this.updateCollection(db, fileName, executionMessage);
+	}
+
+	protected boolean collectionExists(MongoDatabase db, String collectionName) {
+		return db.listCollectionNames().into(new ArrayList<>()).contains(collectionName);
+	}
+
+	/**
+	 * Creates a collection that carries no DDL file, skipping it when already present.
+	 * Index creation by the caller is idempotent as long as name and keys are unchanged.
+	 */
+	protected void createCollectionIfAbsent(MongoDatabase db, String collectionName) {
+		if (collectionExists(db, collectionName)) {
+			log.info("Collection {} already exists — creating indexes only", collectionName);
+			return;
+		}
+		db.createCollection(collectionName);
 	}
 
 	public void updateCollection(MongoDatabase db, String fileName, String executionMessage) {

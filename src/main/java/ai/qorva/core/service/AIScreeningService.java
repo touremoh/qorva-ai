@@ -4,6 +4,7 @@ import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.service.ats.AtsWriteBackService;
 import ai.qorva.core.utils.QorvaUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,14 +27,16 @@ public class AIScreeningService {
 	private final MatchingReportService matchingReportService;
 	private final JobPostService jobPostService;
 	private final UsageMonitoringService usageMonitoringService;
+	private final AtsWriteBackService atsWriteBackService;
 
 	@Autowired
-	public AIScreeningService(CVService cvService, OpenAIService openAIService, MatchingReportService matchingReportService, JobPostService jobPostService, UsageMonitoringService usageMonitoringService) {
+	public AIScreeningService(CVService cvService, OpenAIService openAIService, MatchingReportService matchingReportService, JobPostService jobPostService, UsageMonitoringService usageMonitoringService, AtsWriteBackService atsWriteBackService) {
 		this.cvService = cvService;
 		this.openAIService = openAIService;
 		this.matchingReportService = matchingReportService;
 		this.jobPostService = jobPostService;
 		this.usageMonitoringService = usageMonitoringService;
+		this.atsWriteBackService = atsWriteBackService;
 	}
 
 	public void startScreeningProcess(String tenantId, String languageCode) throws QorvaException {
@@ -91,6 +94,7 @@ public class AIScreeningService {
 		var analysisDetails = generateReportWithLimit(cv, jobPost, languageCode);
 		incrementUsageSilently(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS);
 		this.matchingReportService.upsertReport(jobPost, analysisDetails, cv);
+		this.atsWriteBackService.maybeEnqueue(cv, jobPost, analysisDetails);
 	}
 
 	private MatchingReportDetails generateReportWithLimit(CVDTO cv, JobPostDTO jobPost, String languageCode) throws QorvaException {

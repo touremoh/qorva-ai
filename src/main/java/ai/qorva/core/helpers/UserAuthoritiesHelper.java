@@ -53,6 +53,9 @@ public class UserAuthoritiesHelper {
 		// ATS Export Reports
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.ATS_REPORT_EXPORT.getValue(), ALLOWED.getValue()));
 
+		// ATS Integrations
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.MANAGE_INTEGRATIONS.getValue(), ALLOWED.getValue()));
+
 		// Billing
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.UPDATE_SUBSCRIPTION.getValue(), ALLOWED.getValue()));
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.CANCEL_SUBSCRIPTION.getValue(), ALLOWED.getValue()));

@@ -69,6 +69,18 @@ public final class QorvaErrorCodes {
     public static final String BULK_JOB_NOT_DRAFT      = "error.cv.bulk_job_not_draft";
     public static final String BULK_JOB_NO_FILES       = "error.cv.bulk_job_no_files";
 
+    // ats integrations
+    public static final String ATS_PROVIDER_UNKNOWN          = "error.ats.provider_unknown";
+    public static final String ATS_CONNECTION_NOT_FOUND      = "error.ats.connection_not_found";
+    public static final String ATS_CONNECTION_EXISTS         = "error.ats.connection_exists";
+    public static final String ATS_CONNECTION_LIMIT_FOR_PLAN = "error.ats.connection_limit_for_plan";
+    public static final String ATS_CONNECTION_NOT_CONNECTED  = "error.ats.connection_not_connected";
+    public static final String ATS_SYNC_ACTIVE_EXISTS        = "error.ats.sync_active_exists";
+    public static final String ATS_AUTH_FAILED               = "error.ats.auth_failed";
+    public static final String ATS_API_ERROR                 = "error.ats.api_error";
+    public static final String ATS_OAUTH_STATE_INVALID       = "error.ats.oauth_state_invalid";
+    public static final String ATS_OAUTH_NOT_CONFIGURED      = "error.ats.oauth_not_configured";
+
     // company
     public static final String COMPANY_LOGO_UPLOAD_FAILED = "error.company.logo_upload_failed";
     public static final String COMPANY_LOGO_NOT_FOUND     = "error.company.logo_not_found";
