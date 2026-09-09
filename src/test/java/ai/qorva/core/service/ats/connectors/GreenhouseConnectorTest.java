@@ -2,10 +2,12 @@ package ai.qorva.core.service.ats.connectors;
 
 import ai.qorva.core.config.AtsProperties;
 import ai.qorva.core.enums.AtsProviderEnum;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.ats.AtsCredentials;
 import ai.qorva.core.service.ats.AtsHttpClient;
 import ai.qorva.core.service.ats.AtsWebhookVerifier;
+import ai.qorva.core.service.ats.GreenhouseTokenService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,6 +21,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.anyMap;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.contains;
@@ -32,13 +35,14 @@ class GreenhouseConnectorTest {
 	private final ObjectMapper objectMapper = new ObjectMapper();
 
 	@Mock private AtsHttpClient http;
+	@Mock private GreenhouseTokenService tokenService;
 
 	private GreenhouseConnector connector;
 	private final AtsCredentials credentials = AtsCredentials.builder().accessToken("gh-access-token").build();
 
 	@BeforeEach
 	void setUp() {
-		connector = new GreenhouseConnector(http, objectMapper, new AtsProperties());
+		connector = new GreenhouseConnector(http, objectMapper, new AtsProperties(), tokenService);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -61,18 +65,34 @@ class GreenhouseConnectorTest {
 	}
 
 	@Test
-	void customerApiKeyCredentialsUseBasicAuthOnTheKeyBase() throws Exception {
+	void clientCredentialsAreExchangedForABearerTokenOnTheV3Base() throws Exception {
+		var clientCredentials = AtsCredentials.builder().clientId("id").clientSecret("secret").build();
+		when(tokenService.canMint(clientCredentials)).thenReturn(true);
+		when(tokenService.accessToken(clientCredentials)).thenReturn("minted-token");
 		when(http.getJson(eq(AtsProviderEnum.GREENHOUSE), contains("/candidates?"), anyMap()))
 			.thenReturn(objectMapper.readTree("[]"));
 
-		connector.listCandidates(AtsCredentials.builder().apiKey("k").build(), null);
+		connector.listCandidates(clientCredentials, null);
 
 		var headers = ArgumentCaptor.forClass(Map.class);
 		var url = ArgumentCaptor.forClass(String.class);
 		verify(http).getJson(eq(AtsProviderEnum.GREENHOUSE), url.capture(), headers.capture());
-		assertThat((String) asMap(headers.getValue()).get("Authorization")).startsWith("Basic ");
-		// Keys authenticate against v1; only OAuth connections go to the v3 base.
-		assertThat(url.getValue()).startsWith("https://harvest.greenhouse.io/v1/candidates");
+		assertThat(asMap(headers.getValue())).containsEntry("Authorization", "Bearer minted-token");
+		assertThat(url.getValue()).startsWith("https://harvest.greenhouse.io/v3/candidates");
+	}
+
+	/**
+	 * Harvest v1 and v2 were switched off on 31 August 2026. A connection still holding one
+	 * of their API keys has nothing left to authenticate with, so it must fail as an auth
+	 * error rather than quietly calling a v3 endpoint the key was never valid for.
+	 */
+	@Test
+	void aLegacyHarvestApiKeyNoLongerAuthenticates() {
+		var legacy = AtsCredentials.builder().apiKey("v1-key").build();
+
+		assertThatThrownBy(() -> connector.listCandidates(legacy, null))
+			.isInstanceOf(QorvaException.class)
+			.hasMessage(QorvaErrorCodes.ATS_AUTH_FAILED);
 	}
 
 	@Test

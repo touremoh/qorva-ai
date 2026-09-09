@@ -21,6 +21,10 @@ public final class AtsIntegrationData {
 		String authKind,
 		boolean supportsApiKey,
 		boolean oauthAvailable,
+		/* Signed providers verify an HMAC, so the tenant must paste Qorva's webhook secret
+		 * into the ATS; the rest authenticate by the token already inside the webhook URL and
+		 * have no secret to copy. Read from the same enum flag the connector checks. */
+		boolean webhooksSigned,
 		boolean available,
 		boolean connected
 	) {}
@@ -33,13 +37,21 @@ public final class AtsIntegrationData {
 		List<String> zohoRegions
 	) {}
 
+	/**
+	 * apiKey carries the single token most providers use; clientId/clientSecret are the
+	 * Greenhouse Harvest v3 pair. Exactly one of the two shapes is required per provider.
+	 */
 	public record CreateRequest(
 		String provider,
 		String displayName,
 		String apiKey,
+		String clientId,
+		String clientSecret,
 		String subdomain,
 		String companyId,
-		String onBehalfOfUserId
+		String onBehalfOfUserId,
+		/* Lever's account signing token, when the tenant supplies it by hand. */
+		String webhookSigningSecret
 	) {}
 
 	public record UpdateRequest(
@@ -48,7 +60,9 @@ public final class AtsIntegrationData {
 		Boolean importJobs,
 		Boolean writeBackScores,
 		Boolean initialSyncConfirmed,
-		Boolean enabled
+		Boolean enabled,
+		/* Lever's account signing token; setting it re-registers the webhooks. */
+		String webhookSigningSecret
 	) {}
 
 	public record ConnectionView(
@@ -65,17 +79,27 @@ public final class AtsIntegrationData {
 		/* What the tenant pastes into the ATS webhook settings. */
 		String webhookUrl,
 		String webhookSecret,
+		/* True when Qorva creates this provider's webhooks itself, so the tab shows a status
+		 * line instead of manual instructions. */
+		boolean webhooksManaged,
+		boolean webhooksRegistered,
+		String webhookError,
 		Instant createdAt
 	) {
-		public static ConnectionView from(AtsConnection c, String webhookUrl) {
+		public static ConnectionView from(AtsConnection c, String webhookUrl, boolean webhooksManaged) {
 			var settings = c.getSettings() != null ? c.getSettings() : new AtsConnection.Settings();
 			var sync = c.getSyncState() != null ? c.getSyncState() : new AtsConnection.SyncState();
+			var hooks = c.getWebhookState();
 			return new ConnectionView(
 				c.getId(), c.getProvider(), c.getDisplayName(), c.getStatus(),
 				settings.getAutoImport(), settings.getImportJobs(), settings.getWriteBackScores(),
 				settings.getInitialSyncConfirmed(),
 				sync.getLastSyncAt(), sync.getLastSyncError(),
-				webhookUrl, c.getWebhookSecret(), c.getCreatedAt());
+				webhookUrl, c.getWebhookSecret(),
+				webhooksManaged,
+				hooks != null && hooks.getRegisteredAt() != null,
+				hooks != null ? hooks.getLastError() : null,
+				c.getCreatedAt());
 		}
 	}
 

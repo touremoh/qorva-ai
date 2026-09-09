@@ -3,8 +3,10 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dao.entity.AtsConnection;
 import ai.qorva.core.dao.repository.AtsConnectionRepository;
 import ai.qorva.core.enums.AtsProviderEnum;
+import ai.qorva.core.service.ats.AtsConnectionService;
 import ai.qorva.core.service.ats.AtsConnectorRegistry;
 import ai.qorva.core.service.ats.AtsSyncService;
+import ai.qorva.core.service.ats.AtsWebhookService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -28,15 +30,21 @@ public class AtsPublicController {
 	private final AtsConnectionRepository connectionRepository;
 	private final AtsConnectorRegistry registry;
 	private final AtsSyncService syncService;
+	private final AtsConnectionService connectionService;
+	private final AtsWebhookService webhookService;
 
 	public AtsPublicController(
 		AtsConnectionRepository connectionRepository,
 		AtsConnectorRegistry registry,
-		AtsSyncService syncService
+		AtsSyncService syncService,
+		AtsConnectionService connectionService,
+		AtsWebhookService webhookService
 	) {
 		this.connectionRepository = connectionRepository;
 		this.registry = registry;
 		this.syncService = syncService;
+		this.connectionService = connectionService;
+		this.webhookService = webhookService;
 	}
 
 	@PostMapping("/webhooks/{connectionId}")
@@ -59,7 +67,11 @@ public class AtsPublicController {
 				return ResponseEntity.ok().build();
 			}
 
-			var event = registry.get(provider).parseWebhook(headers, body, connection.getWebhookSecret());
+			// Which key proves authenticity differs per provider — Workable signs with the
+			// account token, Lever with its own signing token — so ask rather than assume.
+			var signingSecret = webhookService.signingSecret(
+				connection, connectionService.decryptCredentials(connection));
+			var event = registry.get(provider).parseWebhook(headers, body, signingSecret);
 			if (event.isPresent() && AtsConnection.STATUS_CONNECTED.equals(connection.getStatus())) {
 				syncService.enqueueQuietly(connection, AtsSyncService.TRIGGER_WEBHOOK);
 			}

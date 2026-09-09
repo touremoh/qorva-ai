@@ -2,6 +2,7 @@ package ai.qorva.core.service.ats.connectors;
 
 import ai.qorva.core.config.AtsProperties;
 import ai.qorva.core.enums.AtsProviderEnum;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.ats.AtsConnector;
 import ai.qorva.core.service.ats.AtsCredentials;
@@ -13,27 +14,34 @@ import ai.qorva.core.service.ats.AtsModels.AtsPage;
 import ai.qorva.core.service.ats.AtsModels.AtsWebhookEvent;
 import ai.qorva.core.service.ats.AtsModels.MatchWriteBack;
 import ai.qorva.core.service.ats.AtsWebhookVerifier;
+import ai.qorva.core.service.ats.GreenhouseTokenService;
 import ai.qorva.core.service.ats.SyncCursor;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
-import java.nio.charset.StandardCharsets;
 import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.Map;
 import java.util.Optional;
 
 /**
- * Greenhouse Harvest API (v3), authorized through the Greenhouse OAuth app: the recruiter
- * consents in Greenhouse and the resulting bearer token carries the scopes approved for the
- * app registration. A legacy Harvest API key is still accepted (HTTP Basic, key as username)
- * for connections created before the OAuth switch. Webhooks are signed with the shared
- * secret ("Signature: sha256 <hex>"). Note writes act as the token's own user unless an
- * explicit On-Behalf-Of Greenhouse user id was stored with the credentials.
+ * Greenhouse Harvest API v3. The tenant creates their own client id and secret in Dev
+ * Center ("Unlisted vendor") and Qorva exchanges them for short-lived bearer tokens via the
+ * client-credentials grant — no partner approval and no consent redirect.
+ *
+ * <p>Harvest v1 and v2 were switched off on 31 August 2026, so the API keys those versions
+ * issued no longer authenticate anything; connections still holding one surface as an auth
+ * error and must be re-created with v3 credentials. Tokens obtained through the older
+ * partner authorization-code flow are still honoured where present.</p>
+ *
+ * <p>Webhooks are signed with the shared secret ("Signature: sha256 &lt;hex&gt;"). Note
+ * writes act as the token's own user unless an explicit On-Behalf-Of Greenhouse user id was
+ * stored with the credentials.</p>
  */
 @Slf4j
 @Component
@@ -43,29 +51,19 @@ public class GreenhouseConnector implements AtsConnector {
 
 	private final AtsHttpClient http;
 	private final ObjectMapper objectMapper;
+	private final GreenhouseTokenService tokenService;
+	private final String base;
 
-	/** Harvest base for OAuth bearer tokens, and for customer API keys — both configurable. */
-	private final String oauthBase;
-	private final String apiKeyBase;
-
-	public GreenhouseConnector(AtsHttpClient http, ObjectMapper objectMapper, AtsProperties properties) {
+	public GreenhouseConnector(AtsHttpClient http, ObjectMapper objectMapper, AtsProperties properties,
+		GreenhouseTokenService tokenService) {
 		this.http = http;
 		this.objectMapper = objectMapper;
-		this.oauthBase = trimSlash(properties.getGreenhouseHarvestBaseUrl());
-		this.apiKeyBase = trimSlash(properties.getGreenhouseHarvestApiKeyBaseUrl());
+		this.tokenService = tokenService;
+		this.base = trimSlash(properties.getGreenhouseHarvestBaseUrl());
 	}
 
 	private static String trimSlash(String url) {
 		return url.endsWith("/") ? url.substring(0, url.length() - 1) : url;
-	}
-
-	/** OAuth and API-key connections can sit on different Harvest versions. */
-	private String base(AtsCredentials credentials) {
-		return isOauth(credentials) ? oauthBase : apiKeyBase;
-	}
-
-	private boolean isOauth(AtsCredentials credentials) {
-		return credentials.getAccessToken() != null && !credentials.getAccessToken().isBlank();
 	}
 
 	@Override
@@ -73,25 +71,32 @@ public class GreenhouseConnector implements AtsConnector {
 		return AtsProviderEnum.GREENHOUSE;
 	}
 
-	private Map<String, String> auth(AtsCredentials credentials) {
-		if (isOauth(credentials)) {
+	/**
+	 * Every v3 call is a bearer token. It comes from the tenant's client credentials, or is
+	 * one already held from the partner authorization-code flow. A stored Harvest v1 API key
+	 * is not a fallback — that surface is gone — so it fails here as an auth error rather
+	 * than being sent to an endpoint that no longer exists.
+	 */
+	private Map<String, String> auth(AtsCredentials credentials) throws QorvaException {
+		if (tokenService.canMint(credentials)) {
+			return Map.of("Authorization", "Bearer " + tokenService.accessToken(credentials));
+		}
+		if (StringUtils.hasText(credentials.getAccessToken())) {
 			return Map.of("Authorization", "Bearer " + credentials.getAccessToken());
 		}
-		// Customer-generated Harvest API key: Basic with the key as username, empty password.
-		var token = Base64.getEncoder()
-			.encodeToString((credentials.getApiKey() + ":").getBytes(StandardCharsets.UTF_8));
-		return Map.of("Authorization", "Basic " + token);
+		throw new QorvaException(QorvaErrorCodes.ATS_AUTH_FAILED,
+			HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
 	}
 
 	@Override
 	public void validate(AtsCredentials credentials) throws QorvaException {
-		http.getJson(provider(), base(credentials) + "/candidates?per_page=1", auth(credentials));
+		http.getJson(provider(), base + "/candidates?per_page=1", auth(credentials));
 	}
 
 	@Override
 	public AtsPage<AtsJob> listJobs(AtsCredentials credentials, String cursor) throws QorvaException {
 		var parsed = SyncCursor.parse(cursor);
-		var url = base(credentials) + "/jobs?per_page=" + PAGE_SIZE + "&page=" + parsed.page();
+		var url = base + "/jobs?per_page=" + PAGE_SIZE + "&page=" + parsed.page();
 		var body = http.getJson(provider(), url, auth(credentials));
 		var jobs = new ArrayList<AtsJob>();
 		for (JsonNode node : body) {
@@ -114,7 +119,7 @@ public class GreenhouseConnector implements AtsConnector {
 	@Override
 	public AtsPage<AtsCandidate> listCandidates(AtsCredentials credentials, String cursor) throws QorvaException {
 		var parsed = SyncCursor.parse(cursor);
-		var url = base(credentials) + "/candidates?per_page=" + PAGE_SIZE + "&page=" + parsed.page()
+		var url = base + "/candidates?per_page=" + PAGE_SIZE + "&page=" + parsed.page()
 			+ (parsed.updatedAfter() != null ? "&updated_after=" + parsed.updatedAfter() : "");
 		var body = http.getJson(provider(), url, auth(credentials));
 		var candidates = new ArrayList<AtsCandidate>();
@@ -174,17 +179,18 @@ public class GreenhouseConnector implements AtsConnector {
 		var note = new java.util.HashMap<String, Object>();
 		note.put("body", NoteFormat.text(payload));
 		note.put("visibility", "public");
-		// OAuth tokens author the note as the authorizing user; a stored user id (API-key
-		// connections, or an explicit author) still wins when present.
-		if (credentials.getOnBehalfOfUserId() != null && !credentials.getOnBehalfOfUserId().isBlank()) {
+		// Harvest attributes every write to a Greenhouse user: the same id the v3 token was
+		// minted for. A legacy authorization-code token already carries its authorizing user,
+		// so only client-credential connections are blocked when no id was stored.
+		if (StringUtils.hasText(credentials.getOnBehalfOfUserId())) {
 			headers.put("On-Behalf-Of", credentials.getOnBehalfOfUserId());
 			note.put("user_id", credentials.getOnBehalfOfUserId());
-		} else if (!isOauth(credentials)) {
-			log.warn("Greenhouse write-back skipped: API-key connection without an On-Behalf-Of user id");
+		} else if (!StringUtils.hasText(credentials.getAccessToken())) {
+			log.warn("Greenhouse write-back skipped: no Greenhouse user id stored to attribute the note to");
 			return;
 		}
 		http.postJson(provider(),
-			base(credentials) + "/candidates/" + payload.externalCandidateId() + "/activity_feed/notes",
+			base + "/candidates/" + payload.externalCandidateId() + "/activity_feed/notes",
 			headers, note);
 	}
 

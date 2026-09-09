@@ -57,8 +57,11 @@ class AtsConnectionServiceTest {
 		productProperties.setPro(plan("Pro", 3));
 		productProperties.setScale(plan("Scale", 7));
 		var cipher = new CredentialsCipher(properties, new ObjectMapper().findAndRegisterModules());
+		// A real webhook service, not a mock: it owns webhookUrl, and the mocked connector
+		// reports no registration support, so nothing reaches a provider.
+		var webhookService = new AtsWebhookService(connectionRepository, registry, cipher, properties);
 		service = new AtsConnectionService(connectionRepository, outboundTaskRepository, registry,
-			cipher, properties, tenantService, productReferenceService, productProperties);
+			cipher, properties, tenantService, productReferenceService, productProperties, webhookService);
 	}
 
 	private static QorvaProductProperties.ProductPlanConfig plan(String stripeName, int atsConnections) {
@@ -91,7 +94,7 @@ class AtsConnectionServiceTest {
 
 	/** Manatal is the simplest API-key provider: key only, no subdomain or company id. */
 	private AtsIntegrationData.CreateRequest apiKeyRequest() {
-		return new AtsIntegrationData.CreateRequest("manatal", null, "mt-key", null, null, null);
+		return new AtsIntegrationData.CreateRequest("manatal", null, "mt-key", null, null, null, null, null, null);
 	}
 
 	@Test
@@ -139,57 +142,65 @@ class AtsConnectionServiceTest {
 	@Test
 	void subdomainMustBeAPlainPathSegment() throws QorvaException {
 		var request = new AtsIntegrationData.CreateRequest(
-			"bamboohr", null, "key", "evil.example.com/path", null, null);
+			"bamboohr", null, "key", null, null, "evil.example.com/path", null, null, null);
 
 		assertThatThrownBy(() -> service.create(TENANT, request, "user"))
 			.isInstanceOf(QorvaException.class)
 			.hasMessage(QorvaErrorCodes.HTTP_VALIDATION);
 	}
 
+	/** Zoho is the only provider left with no customer-generated credential to paste. */
 	@Test
 	void oauthOnlyProvidersCannotBeCreatedWithAnApiKey() {
-		for (String provider : new String[]{"zoho_recruit", "lever"}) {
-			var request = new AtsIntegrationData.CreateRequest(provider, null, "key", null, null, null);
+		var request = new AtsIntegrationData.CreateRequest("zoho_recruit", null, "key", null, null, null, null, null, null);
 
-			assertThatThrownBy(() -> service.create(TENANT, request, "user"))
-				.isInstanceOf(QorvaException.class)
-				.hasMessage(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN);
-		}
+		assertThatThrownBy(() -> service.create(TENANT, request, "user"))
+			.isInstanceOf(QorvaException.class)
+			.hasMessage(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN);
 		verify(connectionRepository, never()).save(any());
 	}
 
 	@Test
-	void greenhouseAcceptsACustomerGeneratedHarvestKeyWhileTheOauthAppIsUnapproved() throws QorvaException {
+	void greenhouseAcceptsCustomerGeneratedHarvestV3ClientCredentials() throws QorvaException {
 		givenPlanCap(3);
 		when(connectionRepository.existsByTenantIdAndProvider(TENANT, "greenhouse")).thenReturn(false);
 		when(connectionRepository.countByTenantId(TENANT)).thenReturn(0L);
 		when(registry.get(AtsProviderEnum.GREENHOUSE)).thenReturn(connector);
 		when(connectionRepository.save(any())).thenAnswer(inv -> inv.getArgument(0));
-		var request = new AtsIntegrationData.CreateRequest("greenhouse", null, "gh-key", null, null, "4321");
+		var request = new AtsIntegrationData.CreateRequest(
+			"greenhouse", null, null, "gh-client", "gh-secret", null, null, "4321", null);
 
 		var view = service.create(TENANT, request, "user");
 
 		verify(connector).validate(any(AtsCredentials.class));
 		assertThat(view.provider()).isEqualTo("greenhouse");
 		assertThat(view.status()).isEqualTo(AtsConnection.STATUS_CONNECTED);
-		assertThat(view.toString()).doesNotContain("gh-key");
+		assertThat(view.toString()).doesNotContain("gh-secret");
 	}
 
 	@Test
 	void catalogOffersOauthOnlyOnceAClientIsConfigured() {
-		var greenhouse = catalogEntry("greenhouse");
-		assertThat(greenhouse.supportsApiKey()).isTrue();
-		// No client id registered yet: the UI must fall back to the key form, not a dead button.
-		assertThat(greenhouse.oauthAvailable()).isFalse();
+		var zoho = catalogEntry("zoho_recruit");
+		// No client id registered yet: the card must stay inert rather than show a dead button.
+		assertThat(zoho.oauthAvailable()).isFalse();
+		assertThat(zoho.supportsApiKey()).isFalse();
 
 		var client = new AtsProperties.OauthClient();
-		client.setClientId("gh-client");
-		properties.getOauth().put("greenhouse", client);
-		assertThat(catalogEntry("greenhouse").oauthAvailable()).isTrue();
+		client.setClientId("zoho-client");
+		properties.getOauth().put("zoho_recruit", client);
+		assertThat(catalogEntry("zoho_recruit").oauthAvailable()).isTrue();
+	}
 
-		assertThat(catalogEntry("lever").supportsApiKey()).isFalse();
-		assertThat(catalogEntry("manatal").supportsApiKey()).isTrue();
-		assertThat(catalogEntry("manatal").oauthAvailable()).isFalse();
+	/**
+	 * Greenhouse and Lever both speak OAuth on the wire but connect through the credentials
+	 * form, so neither may advertise a consent redirect the UI would prefer over the form.
+	 */
+	@Test
+	void credentialFormProvidersNeverOfferOauth() {
+		for (String provider : new String[]{"greenhouse", "lever", "manatal", "ashby"}) {
+			assertThat(catalogEntry(provider).supportsApiKey()).as(provider).isTrue();
+			assertThat(catalogEntry(provider).oauthAvailable()).as(provider).isFalse();
+		}
 	}
 
 	@Test

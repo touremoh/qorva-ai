@@ -1,6 +1,7 @@
 package ai.qorva.core.service.ats.connectors;
 
 import ai.qorva.core.enums.AtsProviderEnum;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.ats.AtsConnector;
 import ai.qorva.core.service.ats.AtsCredentials;
@@ -11,14 +12,19 @@ import ai.qorva.core.service.ats.AtsModels.AtsJob;
 import ai.qorva.core.service.ats.AtsModels.AtsPage;
 import ai.qorva.core.service.ats.AtsModels.AtsWebhookEvent;
 import ai.qorva.core.service.ats.AtsModels.MatchWriteBack;
+import ai.qorva.core.service.ats.AtsModels.WebhookRegistration;
 import ai.qorva.core.service.ats.AtsWebhookVerifier;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -28,6 +34,7 @@ import java.util.Optional;
  * store as the continuation cursor (it stays on the fixed workable.com host). Webhooks
  * are signed with X-Workable-Signature (HMAC-SHA256 hex).
  */
+@Slf4j
 @Component
 public class WorkableConnector implements AtsConnector {
 
@@ -129,6 +136,80 @@ public class WorkableConnector implements AtsConnector {
 			Map.of("body", NoteFormat.text(payload)));
 	}
 
+	/** Recruiting events; the employee/onboarding ones belong to Workable's HRIS side. */
+	private static final List<String> WEBHOOK_EVENTS = List.of("candidate_created", "candidate_moved");
+
+	@Override
+	public boolean supportsWebhookRegistration() {
+		return true;
+	}
+
+	/**
+	 * Subscriptions need the numeric account id, which is not the subdomain — it comes from
+	 * /accounts and is cached on the credentials so later re-registrations skip the lookup.
+	 * Empty job_shortcode and stage_slug mean "every job, every stage".
+	 *
+	 * <p>Workable answers 409 when the target URL is already subscribed for an event. That is
+	 * the desired end state, so it counts as success; the id is simply not recoverable from a
+	 * conflict, and the existing subscription keeps working because the URL is unchanged.</p>
+	 */
+	@Override
+	public WebhookRegistration registerWebhooks(AtsCredentials credentials, String callbackUrl, String secret)
+		throws QorvaException {
+		var accountId = accountId(credentials);
+		var ids = new ArrayList<String>();
+		for (var event : WEBHOOK_EVENTS) {
+			var created = http.postJsonIgnoringConflict(provider(), base(credentials) + "/subscriptions",
+				auth(credentials), Map.of(
+					"event", event,
+					"target", callbackUrl,
+					"args", Map.of("account_id", accountId, "job_shortcode", "", "stage_slug", "")));
+			if (created.isEmpty()) {
+				log.info("Workable subscription for {} already exists on this URL", event);
+				continue;
+			}
+			var id = created.get().path("id").asText(null);
+			if (id != null) {
+				ids.add(id);
+			}
+		}
+		return WebhookRegistration.of(ids);
+	}
+
+	@Override
+	public void unregisterWebhooks(AtsCredentials credentials, List<String> externalIds) {
+		for (var id : externalIds) {
+			try {
+				http.delete(provider(), base(credentials) + "/subscriptions/" + id, auth(credentials));
+			} catch (Exception e) {
+				log.warn("Workable subscription {} could not be removed: {}", id, e.getMessage());
+			}
+		}
+	}
+
+	/** Resolves and caches the account id the subscriptions API insists on. */
+	private String accountId(AtsCredentials credentials) throws QorvaException {
+		if (StringUtils.hasText(credentials.getAccountId())) {
+			return credentials.getAccountId();
+		}
+		var body = http.getJson(provider(), base(credentials) + "/accounts", auth(credentials));
+		var accounts = body.path("accounts");
+		var id = accounts.isArray() && !accounts.isEmpty()
+			? accounts.get(0).path("id").asText(null)
+			: body.path("id").asText(null);
+		if (!StringUtils.hasText(id)) {
+			throw new QorvaException(QorvaErrorCodes.ATS_API_ERROR,
+				HttpStatus.BAD_GATEWAY.value(), HttpStatus.BAD_GATEWAY);
+		}
+		credentials.setAccountId(id);
+		return id;
+	}
+
+	/**
+	 * Workable signs with the account token that created the subscription — not with a secret
+	 * we choose — so the connection's own webhookSecret is the wrong key here. The engine
+	 * passes the API key in as webhookSecret for this provider; see AtsWebhookService.
+	 */
 	@Override
 	public Optional<AtsWebhookEvent> parseWebhook(HttpHeaders headers, byte[] body, String webhookSecret) {
 		var provided = headers.getFirst("X-Workable-Signature");

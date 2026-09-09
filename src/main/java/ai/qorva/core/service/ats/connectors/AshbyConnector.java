@@ -11,6 +11,7 @@ import ai.qorva.core.service.ats.AtsModels.AtsJob;
 import ai.qorva.core.service.ats.AtsModels.AtsPage;
 import ai.qorva.core.service.ats.AtsModels.AtsWebhookEvent;
 import ai.qorva.core.service.ats.AtsModels.MatchWriteBack;
+import ai.qorva.core.service.ats.AtsModels.WebhookRegistration;
 import ai.qorva.core.service.ats.AtsWebhookVerifier;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,6 +24,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -198,6 +200,54 @@ public class AshbyConnector implements AtsConnector {
 			"candidateId", payload.externalCandidateId(),
 			"note", NoteFormat.text(payload),
 			"sendNotifications", false));
+	}
+
+	/**
+	 * Events worth a delta sync. Submissions and stage moves are what change a candidate's
+	 * standing; the rest of Ashby's catalogue (offers, surveys, HRIS pushes) would only
+	 * trigger pulls that find nothing new.
+	 */
+	private static final List<String> WEBHOOK_TYPES =
+		List.of("applicationSubmit", "applicationUpdate", "candidateStageChange", "candidateHire");
+
+	@Override
+	public boolean supportsWebhookRegistration() {
+		return true;
+	}
+
+	/**
+	 * Ashby takes the signing key from us, so the secret registered here is the same one
+	 * parseWebhook verifies against — nothing has to be read back and stored.
+	 *
+	 * <p>Requires the apiKeysWrite permission on the key. Without it Ashby rejects the call
+	 * and the connection falls back to scheduled syncing with the error on the card.</p>
+	 */
+	@Override
+	public WebhookRegistration registerWebhooks(AtsCredentials credentials, String callbackUrl, String secret)
+		throws QorvaException {
+		var ids = new ArrayList<String>();
+		for (var type : WEBHOOK_TYPES) {
+			var body = http.postJson(provider(), BASE + "/webhook.create", auth(credentials), Map.of(
+				"webhookType", type,
+				"requestUrl", callbackUrl,
+				"secretToken", secret));
+			var id = body.path("results").path("id").asText(body.path("id").asText(null));
+			if (id != null) {
+				ids.add(id);
+			}
+		}
+		return WebhookRegistration.of(ids);
+	}
+
+	@Override
+	public void unregisterWebhooks(AtsCredentials credentials, List<String> externalIds) {
+		for (var id : externalIds) {
+			try {
+				http.postJson(provider(), BASE + "/webhook.delete", auth(credentials), Map.of("webhookId", id));
+			} catch (Exception e) {
+				log.warn("Ashby webhook {} could not be removed: {}", id, e.getMessage());
+			}
+		}
 	}
 
 	@Override

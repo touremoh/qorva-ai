@@ -11,23 +11,37 @@ import ai.qorva.core.service.ats.AtsModels.AtsJob;
 import ai.qorva.core.service.ats.AtsModels.AtsPage;
 import ai.qorva.core.service.ats.AtsModels.AtsWebhookEvent;
 import ai.qorva.core.service.ats.AtsModels.MatchWriteBack;
+import ai.qorva.core.service.ats.AtsModels.WebhookRegistration;
 import ai.qorva.core.service.ats.AtsWebhookVerifier;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
+import java.nio.charset.StandardCharsets;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Base64;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 /**
- * Lever v1. OAuth2 Bearer via the partner program (AtsOauthService refreshes tokens).
- * Opportunities are the candidate stream; offset paging via the API's own next token,
+ * Lever v1, authenticating either way the customer can offer.
+ *
+ * <p>An API key a Super Admin generates in Settings → Integrations and API → API
+ * Credentials is HTTP Basic with the key as the username and an empty password. That path
+ * needs nothing from Lever beyond the customer's own admin rights, so it is what tenants
+ * use until Qorva is an approved Lever partner. Partner OAuth bearer tokens are used when
+ * present and refreshed by AtsOauthService.</p>
+ *
+ * <p>Opportunities are the candidate stream; offset paging via the API's own next token,
  * delta via updated_at_start (epoch millis). Webhook payloads are signed: token +
- * triggeredAt HMAC-signed with the webhook's signature secret.
+ * triggeredAt HMAC-signed with the webhook's signature secret.</p>
  */
+@Slf4j
 @Component
 public class LeverConnector implements AtsConnector {
 
@@ -49,7 +63,13 @@ public class LeverConnector implements AtsConnector {
 	}
 
 	private Map<String, String> auth(AtsCredentials credentials) {
-		return Map.of("Authorization", "Bearer " + credentials.getAccessToken());
+		if (StringUtils.hasText(credentials.getAccessToken())) {
+			return Map.of("Authorization", "Bearer " + credentials.getAccessToken());
+		}
+		// Customer-generated API key: Basic with the key as username and no password.
+		var token = Base64.getEncoder()
+			.encodeToString((credentials.getApiKey() + ":").getBytes(StandardCharsets.UTF_8));
+		return Map.of("Authorization", "Basic " + token);
 	}
 
 	@Override
@@ -144,6 +164,61 @@ public class LeverConnector implements AtsConnector {
 			Map.of("value", NoteFormat.text(payload)));
 	}
 
+	/** Events that change where a candidate stands; contact/interview noise is left out. */
+	private static final List<String> WEBHOOK_EVENTS =
+		List.of("applicationCreated", "candidateStageChange", "candidateHired", "candidateArchiveChange");
+
+	@Override
+	public boolean supportsWebhookRegistration() {
+		return true;
+	}
+
+	/**
+	 * Lever creates the subscription happily, but the signing token is the awkward part: it
+	 * belongs to the account, not the webhook, and Lever's own documentation points at the
+	 * settings screen for it. Some responses do carry it under configuration.signatureToken,
+	 * so it is read back opportunistically and returned for storage; when it is absent the
+	 * caller keeps whatever the tenant pasted in by hand, and a connection with neither
+	 * cannot verify a delivery.
+	 */
+	@Override
+	public WebhookRegistration registerWebhooks(AtsCredentials credentials, String callbackUrl, String secret)
+		throws QorvaException {
+		var ids = new ArrayList<String>();
+		String signingSecret = null;
+		for (var event : WEBHOOK_EVENTS) {
+			var body = http.postJson(provider(), BASE + "/webhooks", auth(credentials), Map.of(
+				"url", callbackUrl,
+				"event", event));
+			var data = body.has("data") ? body.path("data") : body;
+			var id = data.path("id").asText(null);
+			if (id != null) {
+				ids.add(id);
+			}
+			var token = data.path("configuration").path("signatureToken").asText(
+				data.path("signatureToken").asText(null));
+			if (StringUtils.hasText(token)) {
+				signingSecret = token;
+			}
+		}
+		return new WebhookRegistration(ids, signingSecret);
+	}
+
+	@Override
+	public void unregisterWebhooks(AtsCredentials credentials, List<String> externalIds) {
+		for (var id : externalIds) {
+			try {
+				http.delete(provider(), BASE + "/webhooks/" + id, auth(credentials));
+			} catch (Exception e) {
+				log.warn("Lever webhook {} could not be removed: {}", id, e.getMessage());
+			}
+		}
+	}
+
+	/**
+	 * Verified with Lever's account signing token, not the connection's generated secret —
+	 * Lever picks the key. AtsWebhookService passes the stored token in as webhookSecret.
+	 */
 	@Override
 	public Optional<AtsWebhookEvent> parseWebhook(HttpHeaders headers, byte[] body, String webhookSecret) {
 		try {

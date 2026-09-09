@@ -8,8 +8,10 @@ import ai.qorva.core.service.ats.AtsModels.AtsJob;
 import ai.qorva.core.service.ats.AtsModels.AtsPage;
 import ai.qorva.core.service.ats.AtsModels.AtsWebhookEvent;
 import ai.qorva.core.service.ats.AtsModels.MatchWriteBack;
+import ai.qorva.core.service.ats.AtsModels.WebhookRegistration;
 import org.springframework.http.HttpHeaders;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -39,4 +41,29 @@ public interface AtsConnector {
 	 * the caller answers 200 either way so probers learn nothing.
 	 */
 	Optional<AtsWebhookEvent> parseWebhook(HttpHeaders headers, byte[] body, String webhookSecret);
+
+	/**
+	 * True when this provider exposes an API for creating its own webhook subscriptions, so
+	 * the tenant never has to configure one by hand. False keeps the manual instructions the
+	 * Integrations tab shows.
+	 */
+	default boolean supportsWebhookRegistration() {
+		return false;
+	}
+
+	/**
+	 * Subscribe callbackUrl to the events this connector cares about, using secret as the
+	 * signing key where the provider lets us choose one. Implementations must be safe to call
+	 * again: the caller unregisters the previous ids first, but a provider that rejects a
+	 * duplicate target (Workable answers 409) should treat that as success, not an error.
+	 */
+	default WebhookRegistration registerWebhooks(AtsCredentials credentials, String callbackUrl, String secret)
+		throws QorvaException {
+		throw new UnsupportedOperationException(provider() + " cannot register webhooks");
+	}
+
+	/** Best-effort removal of previously registered subscriptions; never throws. */
+	default void unregisterWebhooks(AtsCredentials credentials, List<String> externalIds) {
+		// Providers without registration have nothing to clean up.
+	}
 }

@@ -29,15 +29,15 @@ public class AtsProperties {
 	/** First sync stops for confirmation above this many candidates. */
 	private int initialSyncGuard = 500;
 
-	/** Greenhouse Harvest base URL for OAuth connections — configurable so a version bump needs no rebuild. */
+	/** Greenhouse Harvest base URL — configurable so a version bump needs no rebuild. */
 	private String greenhouseHarvestBaseUrl = "https://harvest.greenhouse.io/v3";
 
 	/**
-	 * Greenhouse Harvest base URL for customer-generated API keys, which authenticate
-	 * against the long-standing v1 Harvest surface. Kept separate from the OAuth base so a
-	 * tenant can connect with their own key while the partner app is still under review.
+	 * Where Greenhouse mints Harvest v3 bearer tokens from a tenant's own client id and
+	 * secret. This is auth.greenhouse.io, deliberately not the api.greenhouse.io host the
+	 * partner authorization-code flow uses — they are different endpoints.
 	 */
-	private String greenhouseHarvestApiKeyBaseUrl = "https://harvest.greenhouse.io/v1";
+	private String greenhouseTokenUrl = "https://auth.greenhouse.io/token";
 
 	/** OAuth client registrations keyed by provider value (greenhouse, zoho_recruit, lever). */
 	private Map<String, OauthClient> oauth = new HashMap<>();

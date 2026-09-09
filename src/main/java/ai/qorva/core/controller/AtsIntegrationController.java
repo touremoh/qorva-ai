@@ -97,6 +97,17 @@ public class AtsIntegrationController {
 		return ResponseEntity.ok(syncService.listRuns(TenantContextHolder.getTenantId(), id));
 	}
 
+	/**
+	 * Retry automatic webhook registration after a failure — a provider outage, or an API key
+	 * that was missing a webhook permission until the tenant fixed it.
+	 */
+	@PostMapping(path = "/connections/{id}/webhooks", produces = "application/json")
+	@PreAuthorize("@accessManager.hasPermission(authentication,'MANAGE_INTEGRATIONS')")
+	public ResponseEntity<AtsIntegrationData.ConnectionView> registerWebhooks(@PathVariable String id)
+		throws QorvaException {
+		return ResponseEntity.ok(connectionService.registerWebhooks(TenantContextHolder.getTenantId(), id));
+	}
+
 	@PostMapping(path = "/connections/oauth/start", produces = "application/json")
 	@PreAuthorize("@accessManager.hasPermission(authentication,'MANAGE_INTEGRATIONS')")
 	public ResponseEntity<AtsIntegrationData.OauthStartResponse> oauthStart(

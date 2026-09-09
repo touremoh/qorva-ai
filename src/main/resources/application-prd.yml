@@ -132,7 +132,7 @@ qorva:
     credentials-key: ${ATS_CREDENTIALS_ENCRYPTION_KEY}
     public-base-url: ${ATS_PUBLIC_BASE_URL}
     greenhouse-harvest-base-url: ${GREENHOUSE_HARVEST_BASE_URL:https://harvest.greenhouse.io/v3}
-    greenhouse-harvest-api-key-base-url: ${GREENHOUSE_HARVEST_API_KEY_BASE_URL:https://harvest.greenhouse.io/v1}
+    greenhouse-token-url: ${GREENHOUSE_TOKEN_URL:https://auth.greenhouse.io/token}
     oauth:
       greenhouse:
         client-id: ${GREENHOUSE_CLIENT_ID:}

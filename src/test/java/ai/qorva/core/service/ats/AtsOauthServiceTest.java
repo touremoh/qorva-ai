@@ -21,8 +21,10 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyMap;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -123,12 +125,26 @@ class AtsOauthServiceTest {
 
 	@Test
 	void refreshWithoutARefreshTokenFailsAsAnAuthError() {
-		var connection = AtsConnection.builder().id("c1").provider("greenhouse").build();
+		var connection = AtsConnection.builder().id("c1").provider("zoho_recruit").build();
 		var stale = AtsCredentials.builder().accessToken("old").tokenExpiresAt(Instant.now().minusSeconds(60)).build();
 
 		assertThatThrownBy(() -> service.ensureFreshToken(connection, stale))
 			.isInstanceOf(QorvaException.class)
 			.hasMessage(QorvaErrorCodes.ATS_AUTH_FAILED);
+	}
+
+	/**
+	 * Greenhouse tokens are minted per call from the tenant's client credentials, so there is
+	 * nothing here to refresh and no refresh token to miss — this must pass the credentials
+	 * through untouched rather than fail the sync before it starts.
+	 */
+	@Test
+	void greenhouseClientCredentialsAreLeftForTheConnectorToExchange() throws QorvaException {
+		var connection = AtsConnection.builder().id("c1").provider("greenhouse").build();
+		var credentials = AtsCredentials.builder().clientId("id").clientSecret("secret").build();
+
+		assertThat(service.ensureFreshToken(connection, credentials)).isSameAs(credentials);
+		verify(connectionRepository, never()).save(any());
 	}
 
 	// ------------------------------------------------------------------ Zoho datacenters

@@ -9,6 +9,7 @@ import ai.qorva.core.exception.QorvaException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -238,7 +239,10 @@ public class AtsOauthService {
 	 */
 	public AtsCredentials ensureFreshToken(AtsConnection connection, AtsCredentials credentials) throws QorvaException {
 		var provider = AtsProviderEnum.fromValue(connection.getProvider());
-		if (provider.getAuthKind() != AtsProviderEnum.AuthKind.OAUTH2) {
+		// Greenhouse and Lever moved to credential forms, but connections made through their
+		// partner redirect flows still hold refresh tokens and must keep being refreshed.
+		if (provider.getAuthKind() != AtsProviderEnum.AuthKind.OAUTH2
+			&& !StringUtils.hasText(credentials.getRefreshToken())) {
 			return credentials;
 		}
 		var expiry = credentials.getTokenExpiresAt();

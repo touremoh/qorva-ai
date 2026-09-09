@@ -52,6 +52,7 @@ public class AtsConnectionService {
 	private final TenantService tenantService;
 	private final ProductReferenceService productReferenceService;
 	private final QorvaProductProperties productProperties;
+	private final AtsWebhookService webhookService;
 	private final SecureRandom random = new SecureRandom();
 
 	public AtsConnectionService(
@@ -62,7 +63,8 @@ public class AtsConnectionService {
 		AtsProperties properties,
 		TenantService tenantService,
 		ProductReferenceService productReferenceService,
-		QorvaProductProperties productProperties
+		QorvaProductProperties productProperties,
+		AtsWebhookService webhookService
 	) {
 		this.connectionRepository = connectionRepository;
 		this.outboundTaskRepository = outboundTaskRepository;
@@ -72,6 +74,7 @@ public class AtsConnectionService {
 		this.tenantService = tenantService;
 		this.productReferenceService = productReferenceService;
 		this.productProperties = productProperties;
+		this.webhookService = webhookService;
 	}
 
 	/**
@@ -130,7 +133,7 @@ public class AtsConnectionService {
 			boolean connected = connections.stream().anyMatch(c -> c.getProvider().equals(provider.getValue()));
 			providers.add(new AtsIntegrationData.ProviderView(
 				provider.getValue(), provider.getAuthKind().name(),
-				provider.supportsApiKey(), oauthAvailable(provider),
+				provider.supportsApiKey(), oauthAvailable(provider), provider.signsWebhooks(),
 				max > connections.size() || connected, connected));
 		}
 		return new AtsIntegrationData.ProviderCatalog(
@@ -151,7 +154,7 @@ public class AtsConnectionService {
 
 	public AtsIntegrationData.ConnectionList list(String tenantId) {
 		var views = connectionRepository.findByTenantIdOrderByCreatedAtAsc(tenantId).stream()
-			.map(c -> ConnectionView.from(c, webhookUrl(c)))
+			.map(c -> ConnectionView.from(c, webhookUrl(c), webhooksManaged(c)))
 			.toList();
 		return new AtsIntegrationData.ConnectionList(views);
 	}
@@ -162,25 +165,28 @@ public class AtsConnectionService {
 		if (!provider.supportsApiKey()) {
 			throw badRequest(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN);
 		}
-		if (!StringUtils.hasText(request.apiKey())) {
-			throw badRequest(QorvaErrorCodes.HTTP_VALIDATION);
-		}
 		assertPathSegment(request.subdomain());
 		assertPathSegment(request.companyId());
 		requireProviderFields(provider, request);
 		assertCreatable(tenantId, provider);
 
 		var credentials = AtsCredentials.builder()
-			.apiKey(request.apiKey().trim())
+			.apiKey(trimOrNull(request.apiKey()))
+			.clientId(trimOrNull(request.clientId()))
+			.clientSecret(trimOrNull(request.clientSecret()))
 			.subdomain(trimOrNull(request.subdomain()))
 			.companyId(trimOrNull(request.companyId()))
 			.onBehalfOfUserId(trimOrNull(request.onBehalfOfUserId()))
+			.webhookSigningSecret(trimOrNull(request.webhookSigningSecret()))
 			.build();
 		registry.get(provider).validate(credentials);
 
 		var connection = save(tenantId, provider, request.displayName(), credentials, createdBy);
 		log.info("ATS connection {} ({}) created for tenant {}", connection.getId(), provider, tenantId);
-		return ConnectionView.from(connection, webhookUrl(connection));
+		// Best-effort: a provider that cannot take the subscription right now leaves the
+		// connection working on scheduled syncs, with a retry offered in the UI.
+		webhookService.register(connection);
+		return ConnectionView.from(connection, webhookUrl(connection), webhooksManaged(connection));
 	}
 
 	/** OAuth callback path: credentials already exchanged and validated upstream. */
@@ -188,7 +194,9 @@ public class AtsConnectionService {
 		throws QorvaException {
 		assertCreatable(tenantId, provider);
 		registry.get(provider).validate(credentials);
-		return save(tenantId, provider, null, credentials, "oauth-callback");
+		var connection = save(tenantId, provider, null, credentials, "oauth-callback");
+		webhookService.register(connection);
+		return connection;
 	}
 
 	private void assertCreatable(String tenantId, AtsProviderEnum provider) throws QorvaException {
@@ -240,8 +248,20 @@ public class AtsConnectionService {
 		if (request.enabled() != null && !AtsConnection.STATUS_AUTH_ERROR.equals(connection.getStatus())) {
 			connection.setStatus(request.enabled() ? AtsConnection.STATUS_CONNECTED : AtsConnection.STATUS_DISABLED);
 		}
+
+		// A signing token the tenant pasted is credential material: it goes into the encrypted
+		// blob, and the webhooks are re-registered so deliveries start verifying against it.
+		boolean signingSecretChanged = StringUtils.hasText(request.webhookSigningSecret());
+		if (signingSecretChanged) {
+			var credentials = cipher.decrypt(connection.getEncryptedCredentials());
+			credentials.setWebhookSigningSecret(request.webhookSigningSecret().trim());
+			connection.setEncryptedCredentials(cipher.encrypt(credentials));
+		}
 		connectionRepository.save(connection);
-		return ConnectionView.from(connection, webhookUrl(connection));
+		if (signingSecretChanged) {
+			webhookService.register(connection);
+		}
+		return ConnectionView.from(connection, webhookUrl(connection), webhooksManaged(connection));
 	}
 
 	public ConnectionView test(String tenantId, String connectionId) throws QorvaException {
@@ -258,11 +278,21 @@ public class AtsConnectionService {
 			throw e;
 		}
 		connectionRepository.save(connection);
-		return ConnectionView.from(connection, webhookUrl(connection));
+		return ConnectionView.from(connection, webhookUrl(connection), webhooksManaged(connection));
+	}
+
+	/** Manual retry of webhook registration; returns the connection with its refreshed state. */
+	public ConnectionView registerWebhooks(String tenantId, String connectionId) throws QorvaException {
+		var connection = findOwned(tenantId, connectionId);
+		webhookService.register(connection);
+		return ConnectionView.from(connection, webhookUrl(connection), webhooksManaged(connection));
 	}
 
 	public void delete(String tenantId, String connectionId) throws QorvaException {
 		var connection = findOwned(tenantId, connectionId);
+		// Before the row goes: otherwise the tenant is left with subscriptions in their ATS
+		// pointing at an endpoint that will never acknowledge them again.
+		webhookService.unregister(connection);
 		outboundTaskRepository.deleteByConnectionId(connection.getId());
 		connectionRepository.delete(connection);
 		log.info("ATS connection {} deleted for tenant {} (imported CVs kept)", connectionId, tenantId);
@@ -291,17 +321,28 @@ public class AtsConnectionService {
 	 * by the token in the URL itself, so only they get it appended.
 	 */
 	public String webhookUrl(AtsConnection connection) {
-		var base = properties.getPublicBaseUrl() + "/public/ats/webhooks/" + connection.getId();
-		var provider = AtsProviderEnum.fromValue(connection.getProvider());
-		return provider.signsWebhooks() ? base : base + "?token=" + connection.getWebhookSecret();
+		return webhookService.webhookUrl(connection);
+	}
+
+	/**
+	 * Which credential fields this provider cannot be connected without. Greenhouse is the
+	 * one that takes a client id and secret instead of a single key — everything else needs
+	 * an apiKey, plus the path segment its base URL is built from.
+	 */
+	private boolean webhooksManaged(AtsConnection connection) {
+		return webhookService.supportsRegistration(AtsProviderEnum.fromValue(connection.getProvider()));
 	}
 
 	private void requireProviderFields(AtsProviderEnum provider, AtsIntegrationData.CreateRequest request)
 		throws QorvaException {
 		boolean missing = switch (provider) {
-			case WORKABLE, BAMBOOHR -> !StringUtils.hasText(request.subdomain());
-			case RECRUITEE -> !StringUtils.hasText(request.companyId());
-			default -> false;
+			case GREENHOUSE -> !StringUtils.hasText(request.clientId())
+				|| !StringUtils.hasText(request.clientSecret());
+			case WORKABLE, BAMBOOHR -> !StringUtils.hasText(request.apiKey())
+				|| !StringUtils.hasText(request.subdomain());
+			case RECRUITEE -> !StringUtils.hasText(request.apiKey())
+				|| !StringUtils.hasText(request.companyId());
+			default -> !StringUtils.hasText(request.apiKey());
 		};
 		if (missing) {
 			throw badRequest(QorvaErrorCodes.HTTP_VALIDATION);

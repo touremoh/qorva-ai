@@ -16,7 +16,9 @@ import org.springframework.web.client.RestClient;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Supplier;
 
 /**
@@ -69,6 +71,14 @@ public class AtsHttpClient {
 			.body(byte[].class));
 	}
 
+	/** DELETE for providers whose webhook subscriptions are REST resources (Manatal, Lever). */
+	public void delete(AtsProviderEnum provider, String url, Map<String, String> headers) throws QorvaException {
+		execute(provider, () -> restClient.delete().uri(url)
+			.headers(h -> apply(headers, h))
+			.retrieve()
+			.body(String.class));
+	}
+
 	public JsonNode postJson(AtsProviderEnum provider, String url, Map<String, String> headers, Object payload) throws QorvaException {
 		var body = execute(provider, () -> restClient.post().uri(url)
 			.headers(h -> apply(headers, h))
@@ -79,8 +89,42 @@ public class AtsHttpClient {
 		return readTree(body);
 	}
 
+	/**
+	 * POST that treats 409 Conflict as an acceptable outcome, for "create if absent" calls
+	 * like Workable's webhook subscriptions: a conflict means the resource we wanted already
+	 * exists, which is the end state we were after. Returns empty in that case.
+	 */
+	public Optional<JsonNode> postJsonIgnoringConflict(AtsProviderEnum provider, String url,
+		Map<String, String> headers, Object payload) throws QorvaException {
+		var conflict = new AtomicBoolean(false);
+		var body = execute(provider, () -> {
+			try {
+				return restClient.post().uri(url)
+					.headers(h -> apply(headers, h))
+					.contentType(MediaType.APPLICATION_JSON)
+					.body(payload)
+					.retrieve()
+					.body(String.class);
+			} catch (HttpClientErrorException.Conflict e) {
+				// Swallowed here so execute() never sees it as a failure worth retrying.
+				conflict.set(true);
+				return null;
+			}
+		});
+		return conflict.get() ? Optional.empty() : Optional.of(readTree(body));
+	}
+
 	/** application/x-www-form-urlencoded POST — OAuth token endpoints. */
 	public JsonNode postForm(AtsProviderEnum provider, String url, Map<String, String> form) throws QorvaException {
+		return postForm(provider, url, null, form);
+	}
+
+	/**
+	 * Form POST with extra headers — token endpoints that authenticate the client itself
+	 * (Greenhouse Harvest v3 sends client id and secret as HTTP Basic, not as form fields).
+	 */
+	public JsonNode postForm(AtsProviderEnum provider, String url, Map<String, String> headers,
+		Map<String, String> form) throws QorvaException {
 		var encoded = new StringBuilder();
 		form.forEach((k, v) -> {
 			if (!encoded.isEmpty()) encoded.append('&');
@@ -90,6 +134,7 @@ public class AtsHttpClient {
 		});
 		var body = execute(provider, () -> restClient.post().uri(url)
 			.contentType(MediaType.APPLICATION_FORM_URLENCODED)
+			.headers(h -> apply(headers, h))
 			.body(encoded.toString())
 			.retrieve()
 			.body(String.class));

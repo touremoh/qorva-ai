@@ -50,4 +50,20 @@ public final class AtsModels {
 
 	/** Parsed inbound webhook: enough to decide whether a targeted delta sync is worth enqueueing. */
 	public record AtsWebhookEvent(String type, String externalId) {}
+
+	/**
+	 * What a provider handed back when Qorva registered its webhooks.
+	 *
+	 * <p>externalIds are the subscriptions to delete when the connection goes away — without
+	 * them a disconnect would leave dead endpoints configured in the customer's ATS.</p>
+	 *
+	 * <p>signingSecret is set only when the provider insists on choosing the HMAC key itself
+	 * (Lever). Providers that accept ours (Ashby) or sign with a credential we already hold
+	 * (Workable) leave it null, and the caller keeps what it had.</p>
+	 */
+	public record WebhookRegistration(List<String> externalIds, String signingSecret) {
+		public static WebhookRegistration of(List<String> externalIds) {
+			return new WebhookRegistration(externalIds, null);
+		}
+	}
 }

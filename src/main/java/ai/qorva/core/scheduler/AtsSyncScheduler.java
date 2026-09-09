@@ -4,6 +4,7 @@ import ai.qorva.core.config.AtsProperties;
 import ai.qorva.core.dao.entity.AtsConnection;
 import ai.qorva.core.dao.repository.AtsConnectionRepository;
 import ai.qorva.core.service.ats.AtsSyncService;
+import ai.qorva.core.service.ats.AtsWebhookService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -22,12 +23,14 @@ public class AtsSyncScheduler {
 
 	private final AtsConnectionRepository connectionRepository;
 	private final AtsSyncService syncService;
+	private final AtsWebhookService webhookService;
 	private final AtsProperties properties;
 
 	public AtsSyncScheduler(AtsConnectionRepository connectionRepository, AtsSyncService syncService,
-		AtsProperties properties) {
+		AtsWebhookService webhookService, AtsProperties properties) {
 		this.connectionRepository = connectionRepository;
 		this.syncService = syncService;
+		this.webhookService = webhookService;
 		this.properties = properties;
 	}
 
@@ -36,6 +39,9 @@ public class AtsSyncScheduler {
 		var connections = connectionRepository.findByStatus(AtsConnection.STATUS_CONNECTED);
 		var due = Instant.now().minus(properties.getSyncIntervalMinutes(), ChronoUnit.MINUTES);
 		for (var connection : connections) {
+			// Puts webhooks back when registration failed earlier or the public base URL moved.
+			webhookService.reconcile(connection);
+
 			var settings = connection.getSettings();
 			if (settings == null || !Boolean.TRUE.equals(settings.getAutoImport())) {
 				continue;

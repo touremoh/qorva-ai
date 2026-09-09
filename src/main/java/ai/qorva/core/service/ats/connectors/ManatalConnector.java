@@ -11,13 +11,16 @@ import ai.qorva.core.service.ats.AtsModels.AtsJob;
 import ai.qorva.core.service.ats.AtsModels.AtsPage;
 import ai.qorva.core.service.ats.AtsModels.AtsWebhookEvent;
 import ai.qorva.core.service.ats.AtsModels.MatchWriteBack;
+import ai.qorva.core.service.ats.AtsModels.WebhookRegistration;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -26,6 +29,7 @@ import java.util.Optional;
  * complete URL on the fixed api.manatal.com host, stored verbatim as the continuation
  * cursor. No signed webhooks: the ?token= URL secret is checked in the controller.
  */
+@Slf4j
 @Component
 public class ManatalConnector implements AtsConnector {
 
@@ -118,6 +122,61 @@ public class ManatalConnector implements AtsConnector {
 			BASE + "/candidates/" + payload.externalCandidateId() + "/notes/",
 			auth(credentials),
 			Map.of("content", NoteFormat.text(payload)));
+	}
+
+	/**
+	 * Manatal's webhook API ("manahook") lives on its own host, not under the Open API base.
+	 * The Token credential is the same one.
+	 */
+	private static final String WEBHOOK_BASE = "https://manahook.api.manatal.com/v1/webhooks/";
+
+	/**
+	 * One subscription per model+action pair — Manatal has no "all events" form. Matches are
+	 * how a candidate reaches a job here, so their create and move both matter.
+	 */
+	private static final List<String[]> WEBHOOK_EVENTS = List.of(
+		new String[]{"candidate", "create"},
+		new String[]{"candidate", "update"},
+		new String[]{"match", "create"},
+		new String[]{"match", "moved"},
+		new String[]{"job", "status_update"});
+
+	@Override
+	public boolean supportsWebhookRegistration() {
+		return true;
+	}
+
+	/**
+	 * Manatal returns no signing secret and signs nothing, so authenticity rests entirely on
+	 * the token already embedded in callbackUrl — which is why the URL handed to it must be
+	 * the tokenised one AtsConnectionService builds for unsigned providers.
+	 */
+	@Override
+	public WebhookRegistration registerWebhooks(AtsCredentials credentials, String callbackUrl, String secret)
+		throws QorvaException {
+		var ids = new ArrayList<String>();
+		for (var event : WEBHOOK_EVENTS) {
+			var body = http.postJson(provider(), WEBHOOK_BASE, auth(credentials), Map.of(
+				"model", event[0],
+				"action", event[1],
+				"target_url", callbackUrl));
+			var id = body.path("id").asText(null);
+			if (id != null) {
+				ids.add(id);
+			}
+		}
+		return WebhookRegistration.of(ids);
+	}
+
+	@Override
+	public void unregisterWebhooks(AtsCredentials credentials, List<String> externalIds) {
+		for (var id : externalIds) {
+			try {
+				http.delete(provider(), WEBHOOK_BASE + id + "/", auth(credentials));
+			} catch (Exception e) {
+				log.warn("Manatal webhook {} could not be removed: {}", id, e.getMessage());
+			}
+		}
 	}
 
 	@Override

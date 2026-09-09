@@ -8,21 +8,23 @@ import lombok.Getter;
  * tenant input is limited to path segments (subdomain / company id), validated in
  * AtsConnectionService, so no tenant-controlled host ever reaches the HTTP client.
  *
- * <p>A provider can support both flows. Greenhouse is OAuth-first — one click, but it
- * needs a partner app Greenhouse has approved — and also accepts a Harvest API key the
- * customer generates in their own Dev Center, which needs no approval from anyone. The
- * connect UI offers OAuth where a client is configured and the key form otherwise.</p>
+ * <p>A provider can support both flows, and authKind names the one the connect UI offers.
+ * Greenhouse and Lever are credential-form providers even though both speak OAuth on the
+ * wire: Greenhouse Harvest v3 takes a client id and secret the customer creates themselves
+ * and exchanges them for tokens with the client-credentials grant, and Lever takes an API
+ * key a Super Admin generates. Neither needs partner approval, which is exactly why they
+ * are preferred over the redirect flows their partner programs would require.</p>
  */
 @Getter
 public enum AtsProviderEnum {
 
-	GREENHOUSE("greenhouse", AuthKind.OAUTH2, true, true),
+	GREENHOUSE("greenhouse", AuthKind.API_KEY, true, true),
 	RECRUITEE("recruitee", AuthKind.API_KEY, true, false),
 	WORKABLE("workable", AuthKind.API_KEY, true, true),
 	MANATAL("manatal", AuthKind.API_KEY, true, false),
 	BAMBOOHR("bamboohr", AuthKind.API_KEY, true, false),
 	ZOHO_RECRUIT("zoho_recruit", AuthKind.OAUTH2, false, false),
-	LEVER("lever", AuthKind.OAUTH2, false, true),
+	LEVER("lever", AuthKind.API_KEY, true, true),
 	ASHBY("ashby", AuthKind.API_KEY, true, true);
 
 	public enum AuthKind { API_KEY, OAUTH2 }

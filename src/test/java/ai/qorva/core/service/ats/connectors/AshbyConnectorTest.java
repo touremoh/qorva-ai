@@ -202,4 +202,37 @@ class AshbyConnectorTest {
 		assertThat(connector.parseWebhook(bad, body, "hook-secret")).isEmpty();
 		assertThat(connector.parseWebhook(new HttpHeaders(), body, "hook-secret")).isEmpty();
 	}
+
+	/**
+	 * Ashby takes our secret as the signing key, which is the whole reason it needs no
+	 * follow-up: what we register is exactly what parseWebhook already verifies against.
+	 */
+	@Test
+	void webhookRegistrationSendsOurOwnSecretAsTheSigningToken() throws Exception {
+		when(http.postJson(eq(AtsProviderEnum.ASHBY), contains("/webhook.create"), anyMap(), any()))
+			.thenReturn(objectMapper.readTree("{\"results\": {\"id\": \"wh_1\"}}"));
+
+		var registration = connector.registerWebhooks(credentials, "https://api.qorva.test/hook", "qorva-secret");
+
+		var payload = ArgumentCaptor.forClass(Object.class);
+		verify(http, org.mockito.Mockito.atLeastOnce())
+			.postJson(eq(AtsProviderEnum.ASHBY), contains("/webhook.create"), anyMap(), payload.capture());
+		var sent = asMap(payload.getValue());
+		assertThat(sent).containsEntry("requestUrl", "https://api.qorva.test/hook");
+		assertThat(sent).containsEntry("secretToken", "qorva-secret");
+		assertThat(sent.get("webhookType")).isNotNull();
+		// One subscription per event type, and no provider-chosen key to store.
+		assertThat(registration.externalIds()).isNotEmpty().allMatch("wh_1"::equals);
+		assertThat(registration.signingSecret()).isNull();
+	}
+
+	@Test
+	void unregisterDeletesEveryStoredSubscription() throws Exception {
+		connector.unregisterWebhooks(credentials, java.util.List.of("wh_1", "wh_2"));
+
+		verify(http).postJson(eq(AtsProviderEnum.ASHBY), contains("/webhook.delete"), anyMap(),
+			eq(Map.of("webhookId", "wh_1")));
+		verify(http).postJson(eq(AtsProviderEnum.ASHBY), contains("/webhook.delete"), anyMap(),
+			eq(Map.of("webhookId", "wh_2")));
+	}
 }

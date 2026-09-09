@@ -15,6 +15,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.time.Instant;
+import java.util.List;
 
 /**
  * A tenant's link to one external ATS. Credentials are stored only as an AES-GCM
@@ -55,6 +56,9 @@ public class AtsConnection implements QorvaEntity {
 	/** Random per-connection secret used to authenticate inbound webhooks. */
 	private String webhookSecret;
 
+	/** What Qorva registered with the provider, when webhooks are created automatically. */
+	private WebhookState webhookState;
+
 	@Getter
 	@Setter
 	@Builder
@@ -72,6 +76,28 @@ public class AtsConnection implements QorvaEntity {
 		 * quota (or the configured guard) require an explicit confirmation with this flag.
 		 */
 		private Boolean initialSyncConfirmed;
+	}
+
+	/**
+	 * Bookkeeping for automatically registered webhooks. Holds no secrets — the signing key a
+	 * provider hands back lives in the encrypted credentials blob.
+	 */
+	@Getter
+	@Setter
+	@Builder
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class WebhookState {
+		/** Provider-side subscription ids, needed to remove them again on disconnect. */
+		private List<String> externalIds;
+		/**
+		 * The callback URL these subscriptions point at. Compared against the current one so a
+		 * changed ATS_PUBLIC_BASE_URL re-registers instead of silently going deaf.
+		 */
+		private String registeredUrl;
+		private Instant registeredAt;
+		/** Why the last registration attempt failed; null once one succeeds. */
+		private String lastError;
 	}
 
 	@Getter
