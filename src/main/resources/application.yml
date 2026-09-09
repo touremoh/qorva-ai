@@ -50,6 +50,12 @@ qorva:
       vision-model: ${QORVA_EXTRACTION_VISION_MODEL:gpt-4.1-mini}
     job-description:
       model: ${QORVA_JOB_DESCRIPTION_MODEL:gpt-5-mini}
+    insights:
+      follow-up:
+        # Only the previous turn is replayed as context, and only for this long — past it the
+        # recruiter has moved on and inherited filters would silently narrow a fresh question.
+        frame-ttl-minutes: ${QORVA_INSIGHTS_FRAME_TTL_MINUTES:30}
+        max-previous-question-length: ${QORVA_INSIGHTS_MAX_PREVIOUS_QUESTION_LENGTH:300}
   products:
     starter:
       stripe-product-name: Starter

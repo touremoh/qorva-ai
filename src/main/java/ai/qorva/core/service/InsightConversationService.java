@@ -2,9 +2,9 @@ package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.InsightConversationTurn;
 import ai.qorva.core.dao.repository.InsightConversationTurnRepository;
+import ai.qorva.core.dto.ConversationFrame;
 import ai.qorva.core.dto.InsightConversationSummaryDTO;
 import ai.qorva.core.dto.InsightConversationTurnDTO;
-import ai.qorva.core.dto.InsightIntent;
 import ai.qorva.core.dto.InsightResponseDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +23,7 @@ public class InsightConversationService {
 
     private final InsightConversationTurnRepository repository;
 
-    public void saveTurn(String conversationId, String tenantId, String initiatedBy, String title, String question, InsightIntent intent, InsightResponseDTO response) {
+    public void saveTurn(String conversationId, String tenantId, String initiatedBy, String title, String question, ConversationFrame frame, InsightResponseDTO response) {
         try {
             InsightConversationTurn turn = new InsightConversationTurn();
             turn.setConversationId(conversationId);
@@ -31,11 +31,39 @@ public class InsightConversationService {
             turn.setInitiatedBy(initiatedBy);
             turn.setTitle(title);
             turn.setQuestion(question);
-            turn.setIntent(intent);
+            turn.setEnglishQuestion(frame.englishQuestion());
+            turn.setIntent(frame.intent());
+            turn.setQueryParams(frame.params());
+            turn.setAwaitingClarification(frame.awaitingClarification());
             turn.setResponse(response);
             repository.save(turn);
         } catch (Exception e) {
             log.error("Failed to persist conversation turn for conversationId={}: {}", conversationId, e.getMessage());
+        }
+    }
+
+    /**
+     * The state carried into the next question: intent and filters of the most recent turn only.
+     * Returns null when there is nothing to carry, which makes the question stand on its own.
+     */
+    public ConversationFrame findLatestFrame(String conversationId, String tenantId, String initiatedBy) {
+        if (conversationId == null || conversationId.isBlank()) {
+            return null;
+        }
+        try {
+            return repository.findFirstByConversationIdAndTenantIdAndInitiatedByOrderByCreatedAtDesc(conversationId, tenantId, initiatedBy)
+                .map(turn -> new ConversationFrame(
+                    // Turns written before conversation state was persisted only have the raw question.
+                    turn.getEnglishQuestion() != null ? turn.getEnglishQuestion() : turn.getQuestion(),
+                    turn.getIntent(),
+                    turn.getQueryParams(),
+                    turn.isAwaitingClarification(),
+                    turn.getCreatedAt()
+                ))
+                .orElse(null);
+        } catch (Exception e) {
+            log.error("Failed to load previous turn for conversationId={}: {}", conversationId, e.getMessage());
+            return null;
         }
     }
 

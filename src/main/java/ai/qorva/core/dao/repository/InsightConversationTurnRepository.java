@@ -6,6 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface InsightConversationTurnRepository extends MongoRepository<InsightConversationTurn, ObjectId> {
@@ -13,6 +14,9 @@ public interface InsightConversationTurnRepository extends MongoRepository<Insig
     List<InsightConversationTurn> findByConversationIdAndTenantIdAndInitiatedByOrderByCreatedAtAsc(String conversationId, String tenantId, String initiatedBy);
 
     List<InsightConversationTurn> findByTenantIdAndInitiatedByOrderByCreatedAtAsc(String tenantId, String initiatedBy);
+
+    /** Most recent turn of a conversation — the only turn replayed as context for the next question. */
+    Optional<InsightConversationTurn> findFirstByConversationIdAndTenantIdAndInitiatedByOrderByCreatedAtDesc(String conversationId, String tenantId, String initiatedBy);
 
     void deleteByConversationIdAndTenantIdAndInitiatedBy(String conversationId, String tenantId, String initiatedBy);
 

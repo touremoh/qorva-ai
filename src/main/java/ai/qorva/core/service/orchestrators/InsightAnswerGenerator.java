@@ -33,13 +33,28 @@ public class InsightAnswerGenerator {
 	private final ObjectMapper objectMapper;
 
 	public AnswerGenerationResult generate(InsightHandlerResult result, InsightIntent intent, String originalQuestion) {
-		return generate(result, intent, originalQuestion, null);
+		return generate(result, intent, originalQuestion, originalQuestion, null);
 	}
 
 	public AnswerGenerationResult generate(
 			InsightHandlerResult result,
 			InsightIntent intent,
 			String originalQuestion,
+			MentionResolver.ResolvedMentions resolvedMentions
+	) {
+		return generate(result, intent, originalQuestion, originalQuestion, resolvedMentions);
+	}
+
+	/**
+	 * @param originalQuestion what the recruiter actually typed — carries the language to answer in,
+	 *                         and may be an elliptical follow-up such as "java development"
+	 * @param resolvedQuestion the same request made self-contained, in English — carries the meaning
+	 */
+	public AnswerGenerationResult generate(
+			InsightHandlerResult result,
+			InsightIntent intent,
+			String originalQuestion,
+			String resolvedQuestion,
 			MentionResolver.ResolvedMentions resolvedMentions
 	) {
 		var converter = new BeanOutputConverter<>(AnswerGenerationResult.class);
@@ -52,6 +67,7 @@ public class InsightAnswerGenerator {
 			String renderedPrompt = promptTemplate
 				.replace("{{intent}}", intent.name())
 				.replace("{{question}}", originalQuestion)
+				.replace("{{resolved_question}}", resolvedQuestion != null ? resolvedQuestion : originalQuestion)
 				.replace("{{handler_result_json}}", resultJson)
 				.replace("{{mention_context}}", mentionContextJson);
 

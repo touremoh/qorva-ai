@@ -61,6 +61,7 @@ public class QorvaConfig {
 			// Get Library Insights prompts
 			var intentClassifierPrompt = this.readFile("Intent_classifier_prompt.md");
 			var insightAnswerGeneratorPrompt = this.readFile("Insight_answer_generator_prompt.md");
+			var followUpResolverPrompt = this.readFile("Insight_followup_resolver_prompt.md");
 			var entityExtractorPrompts = Map.of(
 				InsightIntent.TALENT_POOL_INTELLIGENCE, this.readFile("Entity_extractor_TALENT_POOL_INTELLIGENCE.md"),
 				InsightIntent.SKILL_GAP_ANALYSIS,       this.readFile("Entity_extractor_SKILL_GAP_ANALYSIS.md"),
@@ -81,6 +82,7 @@ public class QorvaConfig {
 				.intentClassifierPrompt(intentClassifierPrompt)
 				.entityExtractorPrompts(entityExtractorPrompts)
 				.insightAnswerGeneratorPrompt(insightAnswerGeneratorPrompt)
+				.followUpResolverPrompt(followUpResolverPrompt)
 				.build();
 		} catch (IOException e) {
 			throw new QorvaException("Unable to read file", e);

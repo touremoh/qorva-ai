@@ -18,6 +18,7 @@ public class QorvaPromptContextHolder implements Serializable {
 	private String intentClassifierPrompt;
 	private Map<InsightIntent, String> entityExtractorPrompts;
 	private String insightAnswerGeneratorPrompt;
+	private String followUpResolverPrompt;
 
 	public String getEntityExtractorPrompt(InsightIntent intent) {
 		if (entityExtractorPrompts == null) return "";

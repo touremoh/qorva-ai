@@ -1,0 +1,337 @@
+{
+  "collMod": "insight_conversation_turns",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "insight_conversation_turns",
+      "required": [
+        "conversationId",
+        "tenantId",
+        "initiatedBy",
+        "question",
+        "intent",
+        "response",
+        "createdAt"
+      ],
+      "properties": {
+        "conversationId": {
+          "bsonType": "string",
+          "description": "UUID grouping multiple turns into a single conversation session"
+        },
+        "title": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "AI-generated conversation title; set on the first turn only, null on subsequent turns"
+        },
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "Owning tenant — must be a valid ObjectId and is required"
+        },
+        "initiatedBy": {
+          "bsonType": "string",
+          "description": "Email of the user who asked the question — used for per-user history segregation"
+        },
+        "question": {
+          "bsonType": "string",
+          "description": "The original natural-language question asked by the user"
+        },
+        "englishQuestion": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "The question after translation and follow-up resolution; replayed as the next turn's context"
+        },
+        "intent": {
+          "bsonType": "string",
+          "description": "The classified intent resolved from the question"
+        },
+        "queryParams": {
+          "bsonType": [
+            "object",
+            "null"
+          ],
+          "description": "Filters resolved for this turn; replayed as the carried frame under the next turn's own extraction",
+          "properties": {
+            "skills": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "roles": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "industries": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "languages": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "companies": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "degreeLevels": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "institutions": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "tags": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "requiredSkills": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "requiredIndustries": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "applicantNumbers": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "seniority": {
+              "bsonType": [
+                "string",
+                "null"
+              ]
+            },
+            "skillDepth": {
+              "bsonType": [
+                "string",
+                "null"
+              ]
+            },
+            "leadershipLevel": {
+              "bsonType": [
+                "string",
+                "null"
+              ]
+            },
+            "openToWork": {
+              "bsonType": [
+                "bool",
+                "null"
+              ]
+            },
+            "availabilityStatus": {
+              "bsonType": [
+                "string",
+                "null"
+              ]
+            },
+            "location": {
+              "bsonType": [
+                "string",
+                "null"
+              ]
+            },
+            "minYearsExperience": {
+              "bsonType": [
+                "int",
+                "long",
+                "null"
+              ]
+            },
+            "limit": {
+              "bsonType": [
+                "int",
+                "long",
+                "null"
+              ]
+            },
+            "clarificationQuestion": {
+              "bsonType": [
+                "string",
+                "null"
+              ]
+            },
+            "jobPostReference": {
+              "bsonType": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "awaitingClarification": {
+          "bsonType": [
+            "bool",
+            "null"
+          ],
+          "description": "True when this turn asked the user for specifics — the next utterance answers it"
+        },
+        "response": {
+          "bsonType": "object",
+          "description": "The full insight response returned to the user",
+          "properties": {
+            "conversationId": {
+              "bsonType": "string"
+            },
+            "intent": {
+              "bsonType": "string"
+            },
+            "answerText": {
+              "bsonType": "string"
+            },
+            "totalCandidateCount": {
+              "bsonType": "long"
+            },
+            "disclaimer": {
+              "bsonType": [
+                "string",
+                "null"
+              ]
+            },
+            "followUpQuestions": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "candidates": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "id": {
+                    "bsonType": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "applicantNumber": {
+                    "bsonType": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "name": {
+                    "bsonType": "string"
+                  },
+                  "currentRole": {
+                    "bsonType": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "topSkills": {
+                    "bsonType": "array",
+                    "items": {
+                      "bsonType": "string"
+                    }
+                  },
+                  "seniorityLevel": {
+                    "bsonType": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "matchScore": {
+                    "bsonType": [
+                      "double",
+                      "null"
+                    ]
+                  },
+                  "locationHint": {
+                    "bsonType": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            },
+            "metrics": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "label": {
+                    "bsonType": "string"
+                  },
+                  "value": {
+                    "bsonType": "string"
+                  },
+                  "unit": {
+                    "bsonType": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            },
+            "charts": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "chartType": {
+                    "bsonType": "string"
+                  },
+                  "title": {
+                    "bsonType": "string"
+                  },
+                  "labels": {
+                    "bsonType": "array",
+                    "items": {
+                      "bsonType": "string"
+                    }
+                  },
+                  "values": {
+                    "bsonType": "array"
+                  }
+                }
+              }
+            },
+            "rawData": {
+              "bsonType": [
+                "object",
+                "null"
+              ],
+              "description": "Intent-specific structured data; populated for CANDIDATE_COMPARISON, null for all other intents"
+            }
+          }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Timestamp of when the turn was persisted"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

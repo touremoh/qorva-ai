@@ -1,5 +1,6 @@
 package ai.qorva.core.dao.entity;
 
+import ai.qorva.core.dto.CVQueryParams;
 import ai.qorva.core.dto.InsightIntent;
 import ai.qorva.core.dto.InsightResponseDTO;
 import lombok.AllArgsConstructor;
@@ -39,7 +40,10 @@ public class InsightConversationTurn implements QorvaEntity {
     private String initiatedBy;  // email of the user who asked the question
 
     private String question;
+    private String englishQuestion;   // the question after translation and follow-up resolution; replayed as the next turn's context
     private InsightIntent intent;
+    private CVQueryParams queryParams; // filters resolved for this turn; merged under the next turn's own extraction
+    private boolean awaitingClarification; // this turn asked the user for specifics — the next utterance answers it
     private InsightResponseDTO response;
 
     @CreatedDate

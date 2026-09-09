@@ -9,6 +9,15 @@ Detect the language of the recruiter's original question and write `answerText`,
 
 ---
 
+## Follow-up questions
+`Original question` is what the recruiter typed. When it is an elliptical follow-up (a bare fragment such as "java development", or a delta such as "only in Belgium"), `Resolved question` restates it in full, in English.
+
+- Take the **meaning** of the request from `Resolved question`, and the **language** to answer in from `Original question`.
+- Answer as a continuation of the conversation — do not restate the resolved question back to the recruiter or point out that it was reformulated.
+- When the two are identical, ignore this section.
+
+---
+
 ## Instructions
 
 ### answerText
@@ -65,5 +74,6 @@ The recruiter may `@`-mention specific candidates or jobs in their question. Whe
 
 Intent: {{intent}}
 Original question: {{question}}
+Resolved question: {{resolved_question}}
 Analysis result: {{handler_result_json}}
 Referenced entities (mention_context): {{mention_context}}

@@ -1,6 +1,7 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dto.*;
+import ai.qorva.core.service.orchestrators.FollowUpResolver;
 import ai.qorva.core.service.orchestrators.InsightAnswerGenerator;
 import ai.qorva.core.service.orchestrators.InsightEntityExtractor;
 import ai.qorva.core.service.orchestrators.InsightIntentClassifier;
@@ -27,6 +28,7 @@ public class LibraryInsightsService {
 	private final InsightConversationService conversationService;
 	private final QuestionTranslatorService questionTranslator;
 	private final MentionResolver mentionResolver;
+	private final FollowUpResolver followUpResolver;
 
 	public InsightResponseDTO  ask(InsightRequestDTO request, String tenantId, String userId) {
 		String conversationId = request.conversationId() != null
@@ -41,8 +43,14 @@ public class LibraryInsightsService {
 
 			log.info("Translated question to English: {}. Original: {}", englishQuestion, request.question());
 
-			InsightIntent intent = intentClassifier.classify(englishQuestion);
-			CVQueryParams params = entityExtractor.extract(englishQuestion, intent);
+			// Classification and extraction are single-shot, so an elliptical follow-up ("java development")
+			// has to be made self-contained first — from the previous turn's frame alone, never the transcript.
+			ConversationFrame previousFrame = conversationService.findLatestFrame(request.conversationId(), tenantId, userId);
+			FollowUpResolver.Resolution resolution = followUpResolver.resolve(englishQuestion, previousFrame);
+			String resolvedQuestion = resolution.question();
+
+			InsightIntent intent = intentClassifier.classify(resolvedQuestion);
+			CVQueryParams params = resolveParams(resolvedQuestion, intent, resolution);
 
 			if (params.needsClarification()) {
 				// Translate clarification back only when the original question wasn't English
@@ -54,13 +62,15 @@ public class LibraryInsightsService {
 					conversationId, intent, clarificationText,
 					List.of(), 0, List.of(), List.of(), List.of(), null, null
 				);
-				conversationService.saveTurn(conversationId, tenantId, userId, null, request.question(), intent, clarification);
+				// Flagged as awaiting clarification so the next utterance is read as the answer to it.
+				ConversationFrame frame = new ConversationFrame(resolvedQuestion, intent, params, true, null);
+				conversationService.saveTurn(conversationId, tenantId, userId, null, request.question(), frame, clarification);
 				return clarification;
 			}
 
 			MentionResolver.ResolvedMentions resolvedMentions = mentionResolver.resolve(request.mentionsOrEmpty(), tenantId);
 			InsightHandlerResult result = insightRouter.route(intent).handle(params, tenantObjectId, resolvedMentions);
-			AnswerGenerationResult answer = answerGenerator.generate(result, intent, request.question(), resolvedMentions);
+			AnswerGenerationResult answer = answerGenerator.generate(result, intent, request.question(), resolvedQuestion, resolvedMentions);
 
 			usageMonitoringService.incrementUsage(tenantId, UsageMonitoringService.FeatureKey.TALENT_INTELLIGENCE_QUERIES, 1);
 
@@ -79,7 +89,8 @@ public class LibraryInsightsService {
 
 			// Title is only set on the first turn of a new conversation
 			String title = request.conversationId() == null ? answer.conversationTitle() : null;
-			conversationService.saveTurn(conversationId, tenantId, userId, title, request.question(), intent, response);
+			ConversationFrame frame = new ConversationFrame(resolvedQuestion, intent, params, false, null);
+			conversationService.saveTurn(conversationId, tenantId, userId, title, request.question(), frame, response);
 
 			return response;
 		} catch (Exception e) {
@@ -91,5 +102,27 @@ public class LibraryInsightsService {
 				List.of(), 0, List.of(), List.of(), List.of(), null, null
 			);
 		}
+	}
+
+	/**
+	 * Extracts filters from the resolved question, then lets the previous turn's filters fill the
+	 * slots this turn left empty — that is what keeps "top 10" alive across "show me the top 10
+	 * profiles" → "java development". A general recruiting question carries nothing over: it runs no
+	 * query, and inheriting filters into it would only leak the previous topic into the next answer.
+	 */
+	private CVQueryParams resolveParams(String resolvedQuestion, InsightIntent intent, FollowUpResolver.Resolution resolution) {
+		CVQueryParams extracted = entityExtractor.extract(resolvedQuestion, intent);
+
+		if (intent == InsightIntent.GENERAL_RECRUITING_QUESTION || !resolution.continuation()) {
+			return extracted;
+		}
+
+		CVQueryParams merged = extracted.mergeOnto(resolution.carriedParams());
+
+		// A follow-up that inherited concrete filters is no longer too broad to answer, even when
+		// the extractor judged the fragment alone to be.
+		return merged.needsClarification() && merged.hasAnyFilter()
+			? merged.withoutClarification()
+			: merged;
 	}
 }
