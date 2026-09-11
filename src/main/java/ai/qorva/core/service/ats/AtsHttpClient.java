@@ -11,8 +11,10 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
+import org.springframework.web.client.RestClientResponseException;
 import org.springframework.web.client.RestClient;
 
+import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
@@ -45,6 +47,9 @@ public class AtsHttpClient {
 
 	private static final int MAX_RETRIES = 3;
 
+	/** Enough of a provider error body to identify the cause, short enough not to flood the log. */
+	private static final int MAX_LOGGED_BODY = 500;
+
 	private final RestClient restClient;
 	private final ObjectMapper objectMapper;
 	private final Map<AtsProviderEnum, Object> paceLocks = new ConcurrentHashMap<>();
@@ -56,7 +61,8 @@ public class AtsHttpClient {
 	}
 
 	public JsonNode getJson(AtsProviderEnum provider, String url, Map<String, String> headers) throws QorvaException {
-		var body = execute(provider, () -> restClient.get().uri(url)
+		var target = uri(url);
+		var body = execute(provider, url, () -> restClient.get().uri(target)
 			.headers(h -> apply(headers, h))
 			.accept(MediaType.APPLICATION_JSON)
 			.retrieve()
@@ -65,7 +71,8 @@ public class AtsHttpClient {
 	}
 
 	public byte[] getBytes(AtsProviderEnum provider, String url, Map<String, String> headers) throws QorvaException {
-		return execute(provider, () -> restClient.get().uri(url)
+		var target = uri(url);
+		return execute(provider, url, () -> restClient.get().uri(target)
 			.headers(h -> apply(headers, h))
 			.retrieve()
 			.body(byte[].class));
@@ -73,14 +80,16 @@ public class AtsHttpClient {
 
 	/** DELETE for providers whose webhook subscriptions are REST resources (Manatal, Lever). */
 	public void delete(AtsProviderEnum provider, String url, Map<String, String> headers) throws QorvaException {
-		execute(provider, () -> restClient.delete().uri(url)
+		var target = uri(url);
+		execute(provider, url, () -> restClient.delete().uri(target)
 			.headers(h -> apply(headers, h))
 			.retrieve()
 			.body(String.class));
 	}
 
 	public JsonNode postJson(AtsProviderEnum provider, String url, Map<String, String> headers, Object payload) throws QorvaException {
-		var body = execute(provider, () -> restClient.post().uri(url)
+		var target = uri(url);
+		var body = execute(provider, url, () -> restClient.post().uri(target)
 			.headers(h -> apply(headers, h))
 			.contentType(MediaType.APPLICATION_JSON)
 			.body(payload)
@@ -96,10 +105,11 @@ public class AtsHttpClient {
 	 */
 	public Optional<JsonNode> postJsonIgnoringConflict(AtsProviderEnum provider, String url,
 		Map<String, String> headers, Object payload) throws QorvaException {
+		var target = uri(url);
 		var conflict = new AtomicBoolean(false);
-		var body = execute(provider, () -> {
+		var body = execute(provider, url, () -> {
 			try {
-				return restClient.post().uri(url)
+				return restClient.post().uri(target)
 					.headers(h -> apply(headers, h))
 					.contentType(MediaType.APPLICATION_JSON)
 					.body(payload)
@@ -125,6 +135,7 @@ public class AtsHttpClient {
 	 */
 	public JsonNode postForm(AtsProviderEnum provider, String url, Map<String, String> headers,
 		Map<String, String> form) throws QorvaException {
+		var target = uri(url);
 		var encoded = new StringBuilder();
 		form.forEach((k, v) -> {
 			if (!encoded.isEmpty()) encoded.append('&');
@@ -132,13 +143,30 @@ public class AtsHttpClient {
 				.append('=')
 				.append(URLEncoder.encode(v, StandardCharsets.UTF_8));
 		});
-		var body = execute(provider, () -> restClient.post().uri(url)
+		var body = execute(provider, url, () -> restClient.post().uri(target)
 			.contentType(MediaType.APPLICATION_FORM_URLENCODED)
 			.headers(h -> apply(headers, h))
 			.body(encoded.toString())
 			.retrieve()
 			.body(String.class));
 		return readTree(body);
+	}
+
+	/**
+	 * Connectors hand over fully built, already-escaped URLs, so they have to reach the wire byte
+	 * for byte. Spring's {@code uri(String)} overload treats its argument as a URI *template* and
+	 * re-escapes it, which turns the {@code %2F} separators of a pre-signed link's
+	 * {@code X-Amz-Credential=AKID%2F20260911%2Feu-central-1%2Fs3%2Faws4_request} into
+	 * {@code %252F}. S3 decodes that back to literal "%2F" text, finds no path separators and
+	 * rejects the request with AuthorizationQueryParametersError — which is how every Recruitee
+	 * resume download failed with a 400. Passing a {@link URI} skips template handling entirely.
+	 */
+	private URI uri(String url) throws QorvaException {
+		try {
+			return URI.create(url);
+		} catch (IllegalArgumentException e) {
+			throw apiError("malformed url " + endpoint(url));
+		}
 	}
 
 	private void apply(Map<String, String> headers, org.springframework.http.HttpHeaders target) {
@@ -155,7 +183,7 @@ public class AtsHttpClient {
 		}
 	}
 
-	private <T> T execute(AtsProviderEnum provider, Supplier<T> call) throws QorvaException {
+	private <T> T execute(AtsProviderEnum provider, String url, Supplier<T> call) throws QorvaException {
 		for (int attempt = 0; ; attempt++) {
 			pace(provider);
 			try {
@@ -169,23 +197,45 @@ public class AtsHttpClient {
 					backoff(attempt);
 					continue;
 				}
-				log.warn("ATS {} request failed with {}", provider, e.getStatusCode());
+				// The provider says why it refused in the body; without it a 4xx is undiagnosable.
+				log.warn("ATS {} request failed with {} on {} — {}",
+					provider, e.getStatusCode(), endpoint(url), responseBody(e));
 				throw apiError(e.getStatusCode().toString());
 			} catch (HttpServerErrorException e) {
 				if (attempt < MAX_RETRIES) {
 					backoff(attempt);
 					continue;
 				}
+				log.warn("ATS {} request failed with {} on {} — {}",
+					provider, e.getStatusCode(), endpoint(url), responseBody(e));
 				throw apiError(e.getStatusCode().toString());
 			} catch (Exception e) {
 				if (attempt < MAX_RETRIES) {
 					backoff(attempt);
 					continue;
 				}
-				log.warn("ATS {} request failed: {}", provider, e.getMessage());
+				log.warn("ATS {} request failed on {}: {}", provider, endpoint(url), e.getMessage());
 				throw apiError(e.getMessage());
 			}
 		}
+	}
+
+	/** Query string dropped: resume links are pre-signed and their signature is a credential. */
+	private static String endpoint(String url) {
+		if (url == null) {
+			return "unknown";
+		}
+		int query = url.indexOf('?');
+		return query < 0 ? url : url.substring(0, query) + "?…";
+	}
+
+	private static String responseBody(RestClientResponseException e) {
+		var body = e.getResponseBodyAsString(StandardCharsets.UTF_8);
+		if (body == null || body.isBlank()) {
+			return "<empty body>";
+		}
+		body = body.replaceAll("\\s+", " ").trim();
+		return body.length() <= MAX_LOGGED_BODY ? body : body.substring(0, MAX_LOGGED_BODY) + "…";
 	}
 
 	private QorvaException apiError(String detail) {

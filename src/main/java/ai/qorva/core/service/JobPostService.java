@@ -48,7 +48,12 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
     @Override
     protected void preProcessUpdateOne(String id, JobPostDTO newJobPost) throws QorvaException {
         super.preProcessUpdateOne(id, newJobPost);
-        this.mapper.merge(newJobPost, getExistingForUpdate());
+        var existing = getExistingForUpdate();
+        this.mapper.merge(newJobPost, existing);
+        // The ATS link belongs to the sync engine. Taking the stored value back rather than
+        // trusting the payload keeps an edit from unlinking an imported job — which left the
+        // job_reference unique index holding a reference the next sync could no longer match.
+        newJobPost.setAtsRef(existing != null ? existing.getAtsRef() : null);
         newJobPost.setMatchingReportsNeeded(isJobPostOpen(newJobPost));
     }
 

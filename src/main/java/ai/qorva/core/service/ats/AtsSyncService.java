@@ -9,6 +9,7 @@ import ai.qorva.core.dao.repository.AtsConnectionRepository;
 import ai.qorva.core.dao.repository.BackgroundJobRepository;
 import ai.qorva.core.dto.BackgroundJobData;
 import ai.qorva.core.dto.common.AtsRef;
+import ai.qorva.core.dto.common.ScoringRules;
 import ai.qorva.core.enums.AtsProviderEnum;
 import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -16,6 +17,7 @@ import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.service.JobPostService;
 import ai.qorva.core.service.LibraryQualityCacheEvictor;
+import ai.qorva.core.service.ScoringRulesPrefillService;
 import ai.qorva.core.service.UsageMonitoringService;
 import ai.qorva.core.service.ats.AtsModels.AtsCandidate;
 import lombok.extern.slf4j.Slf4j;
@@ -67,6 +69,7 @@ public class AtsSyncService {
 	private final JobPostService jobPostService;
 	private final UsageMonitoringService usageMonitoringService;
 	private final LibraryQualityCacheEvictor cacheEvictor;
+	private final ScoringRulesPrefillService scoringRulesPrefillService;
 	private final AtsProperties properties;
 	private final MongoTemplate mongoTemplate;
 
@@ -80,6 +83,7 @@ public class AtsSyncService {
 		JobPostService jobPostService,
 		UsageMonitoringService usageMonitoringService,
 		LibraryQualityCacheEvictor cacheEvictor,
+		ScoringRulesPrefillService scoringRulesPrefillService,
 		AtsProperties properties,
 		MongoTemplate mongoTemplate
 	) {
@@ -92,6 +96,7 @@ public class AtsSyncService {
 		this.jobPostService = jobPostService;
 		this.usageMonitoringService = usageMonitoringService;
 		this.cacheEvictor = cacheEvictor;
+		this.scoringRulesPrefillService = scoringRulesPrefillService;
 		this.properties = properties;
 		this.mongoTemplate = mongoTemplate;
 	}
@@ -241,25 +246,63 @@ public class AtsSyncService {
 				if (atsJob.externalId() == null || !StringUtils.hasText(atsJob.title())) {
 					continue;
 				}
-				upsertJobPost(connection, atsJob);
+				try {
+					upsertJobPost(connection, atsJob);
+				} catch (Exception e) {
+					// Candidate imports already survive one bad record; jobs did not, so a single
+					// unusable offer failed the whole run and took the candidate sync with it.
+					log.warn("ATS sync — could not import job {} on {}: {}",
+						atsJob.externalId(), connection.getProvider(), e.getMessage());
+					sample(counters, "Job " + atsJob.externalId() + ": " + e.getMessage());
+				}
 			}
 			cursor = page.nextCursor();
 		} while (cursor != null);
 	}
 
-	private void upsertJobPost(AtsConnection connection, AtsModels.AtsJob atsJob) {
-		var query = Query.query(Criteria.where("tenantId").is(new ObjectId(connection.getTenantId()))
+	// Package-private so the import rules can be asserted without driving a whole sync run.
+	void upsertJobPost(AtsConnection connection, AtsModels.AtsJob atsJob) {
+		var tenantId = new ObjectId(connection.getTenantId());
+		var jobReference = jobReference(atsJob);
+		var query = Query.query(Criteria.where("tenantId").is(tenantId)
 			.and("atsRef.provider").is(connection.getProvider())
 			.and("atsRef.externalId").is(atsJob.externalId()));
 		var existing = mongoTemplate.findOne(query, JobPost.class);
+
+		// jobReference is unique per tenant, so a row already holding this one has to be adopted
+		// rather than inserted beside — the insert would only fail on the index. A job whose
+		// atsRef was dropped by an earlier update lands here and gets re-linked below.
+		if (existing == null) {
+			var byReference = Query.query(Criteria.where("tenantId").is(tenantId)
+				.and("jobReference").is(jobReference));
+			var orphan = mongoTemplate.findOne(byReference, JobPost.class);
+			if (orphan != null) {
+				log.info("ATS sync — re-linking job {} to {} {}",
+					orphan.getId(), connection.getProvider(), atsJob.externalId());
+				existing = orphan;
+				query = byReference;
+			}
+		}
+
 		var status = atsJob.open() ? JobPostStatusEnum.OPEN.getStatus() : JobPostStatusEnum.CLOSED.getStatus();
 		if (existing != null) {
 			var update = new Update()
 				.set("title", atsJob.title())
 				.set("status", status)
+				// Rewritten every run: it re-links an orphan and keeps lastImportedAt honest.
+				.set("atsRef", atsRef(connection, atsJob))
 				.set("lastUpdatedAt", Instant.now());
 			if (StringUtils.hasText(atsJob.description())) {
 				update.set("description", atsJob.description());
+			}
+			// Backfills a job imported before its criteria could be drafted — one whose
+			// description only arrived on a later sync. Rules already there are left alone:
+			// they may have been tuned by hand, and an import must not undo that.
+			if (existing.getScoringRules() == null) {
+				var rules = suggestScoringRules(atsJob);
+				if (rules != null) {
+					update.set("scoringRules", rules);
+				}
 			}
 			mongoTemplate.updateFirst(query, update, JobPost.class);
 			return;
@@ -268,19 +311,55 @@ public class AtsSyncService {
 		jobPost.setTenantId(connection.getTenantId());
 		jobPost.setTitle(atsJob.title());
 		jobPost.setDescription(atsJob.description());
-		jobPost.setJobReference("ATS-" + atsJob.externalId());
+		jobPost.setScoringRules(suggestScoringRules(atsJob));
+		jobPost.setJobReference(jobReference);
 		jobPost.setStatus(status);
 		jobPost.setMatchingReportsNeeded(atsJob.open());
-		jobPost.setAtsRef(AtsRef.builder()
+		jobPost.setAtsRef(atsRef(connection, atsJob));
+		jobPost.setCreatedAt(Instant.now());
+		jobPost.setCreatedBy("ats-sync");
+		mongoTemplate.insert(jobPost);
+	}
+
+	/** The tenant-unique reference an imported job carries, derived from the ATS record's own id. */
+	private static String jobReference(AtsModels.AtsJob atsJob) {
+		return "ATS-" + atsJob.externalId();
+	}
+
+	private static AtsRef atsRef(AtsConnection connection, AtsModels.AtsJob atsJob) {
+		return AtsRef.builder()
 			.provider(connection.getProvider())
 			.connectionId(connection.getId())
 			.externalId(atsJob.externalId())
 			.externalUrl(atsJob.externalUrl())
 			.lastImportedAt(Instant.now())
-			.build());
-		jobPost.setCreatedAt(Instant.now());
-		jobPost.setCreatedBy("ats-sync");
-		mongoTemplate.insert(jobPost);
+			.build();
+	}
+
+	/**
+	 * Drafts the matching criteria the creation wizard would have produced. An imported job
+	 * never passes through that wizard, so without this it is screened — it is flagged
+	 * matchingReportsNeeded when open — against no criteria at all: an unfiltered shortlist in
+	 * CVService.match and an empty scoring_rules in the report prompt, with nothing to say so.
+	 *
+	 * <p>Unmetered on purpose: the wizard bills a screening action because a recruiter asked
+	 * for the suggestion, whereas an import drafts rules for jobs nobody requested and would
+	 * otherwise charge a tenant once per offer on the sync.</p>
+	 *
+	 * <p>Returns null rather than throwing — a job worth importing must not be lost because the
+	 * model was unavailable, and the next sync backfills what this one could not draft.</p>
+	 */
+	private ScoringRules suggestScoringRules(AtsModels.AtsJob atsJob) {
+		if (!StringUtils.hasText(atsJob.description())) {
+			return null;
+		}
+		try {
+			return scoringRulesPrefillService.suggestUnmetered(atsJob.title(), atsJob.description());
+		} catch (Exception e) {
+			log.warn("ATS sync — could not draft scoring rules for job {}: {}",
+				atsJob.externalId(), e.getMessage());
+			return null;
+		}
 	}
 
 	private Outcome syncCandidates(BackgroundJob job, AtsConnection connection, AtsConnector connector,

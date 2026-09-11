@@ -14,8 +14,10 @@ import ai.qorva.core.service.ats.AtsModels.MatchWriteBack;
 import ai.qorva.core.service.ats.SyncCursor;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import java.time.Instant;
 import java.util.ArrayList;
@@ -28,6 +30,7 @@ import java.util.Optional;
  * AtsPublicController before parseWebhook is called. Offset paging; no updated-after
  * filter, so every run rescans and relies on the engine's per-candidate change skip.
  */
+@Slf4j
 @Component
 public class RecruiteeConnector implements AtsConnector {
 
@@ -65,15 +68,57 @@ public class RecruiteeConnector implements AtsConnector {
 		var body = http.getJson(provider(), base(credentials) + "/offers", auth(credentials));
 		var jobs = new ArrayList<AtsJob>();
 		for (JsonNode node : body.path("offers")) {
+			var externalId = node.path("id").asText();
 			jobs.add(new AtsJob(
-				node.path("id").asText(),
+				externalId,
 				node.path("title").asText(null),
-				node.path("description").asText(null),
+				adBody(credentials, externalId, node),
 				"published".equalsIgnoreCase(node.path("status").asText("")),
 				parseTime(node.path("updated_at").asText(null)),
 				node.path("careers_url").asText(null)));
 		}
 		return new AtsPage<>(jobs, null);
+	}
+
+	/**
+	 * The offers index returns an abridged offer whose ad body is absent, which is why imported
+	 * jobs landed with a title and no description. Falls back to the single-offer read, which
+	 * carries the full record, and only for the offers whose list entry really is missing it.
+	 */
+	private String adBody(AtsCredentials credentials, String externalId, JsonNode listNode) {
+		var fromList = joinAdBody(listNode);
+		if (fromList != null) {
+			return fromList;
+		}
+		try {
+			var detail = http.getJson(provider(),
+				base(credentials) + "/offers/" + externalId, auth(credentials));
+			// Single reads wrap the record; tolerate both shapes rather than depend on the envelope.
+			return joinAdBody(detail.has("offer") ? detail.path("offer") : detail);
+		} catch (QorvaException e) {
+			// A job worth importing minus its description beats failing the whole sync.
+			log.warn("Recruitee — could not read offer {} for its description: {}", externalId, e.getMessage());
+			return null;
+		}
+	}
+
+	/**
+	 * Recruitee splits the ad across two HTML blocks — the pitch in {@code description} and the
+	 * must-haves in {@code requirements}. Screening needs both, so they are joined; a job kept
+	 * only its pitch would be matched against half its criteria.
+	 */
+	private String joinAdBody(JsonNode offer) {
+		var description = text(offer.path("description"));
+		var requirements = text(offer.path("requirements"));
+		if (description == null) {
+			return requirements;
+		}
+		return requirements == null ? description : description + "\n\n" + requirements;
+	}
+
+	private String text(JsonNode node) {
+		var value = node.asText(null);
+		return StringUtils.hasText(value) ? value : null;
 	}
 
 	@Override

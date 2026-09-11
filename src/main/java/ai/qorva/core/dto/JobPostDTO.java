@@ -1,5 +1,6 @@
 package ai.qorva.core.dto;
 
+import ai.qorva.core.dto.common.AtsRef;
 import ai.qorva.core.dto.common.ScoringRules;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -26,6 +27,14 @@ public class JobPostDTO extends AbstractQorvaDTO {
 
     private ScoringRules scoringRules;
     private Boolean matchingReportsNeeded;
+
+    /**
+     * Link back to the ATS record this job was imported from. Present on the DTO only so an
+     * update cannot drop it: the whole document is rewritten from this object on save, so a
+     * field missing here is erased in Mongo. Owned by the sync engine — JobPostService
+     * overwrites whatever a client sends with what is already stored.
+     */
+    private AtsRef atsRef;
     private String title;
     private String description;
     private String createdBy;
