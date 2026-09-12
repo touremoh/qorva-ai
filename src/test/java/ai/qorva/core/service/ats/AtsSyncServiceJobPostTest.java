@@ -69,8 +69,19 @@ class AtsSyncServiceJobPostTest {
 	}
 
 	private static AtsModels.AtsJob job(String description) {
-		return new AtsModels.AtsJob("2744061", "Senior Marketer", description, true,
+		return job(description, true);
+	}
+
+	private static AtsModels.AtsJob job(String description, boolean open) {
+		return new AtsModels.AtsJob("2744061", "Senior Marketer", description, open,
 			Instant.parse("2026-09-11T20:54:30Z"), "https://acme.recruitee.com/o/senior-marketer");
+	}
+
+	private static JobPost existingJob(String status) {
+		var existing = new JobPost();
+		existing.setStatus(status);
+		existing.setScoringRules(new ScoringRules());
+		return existing;
 	}
 
 	private JobPost captureInserted() {
@@ -192,5 +203,49 @@ class AtsSyncServiceJobPostTest {
 		service.upsertJobPost(connection(), job("<p>Own the funnel.</p>"));
 
 		assertThat(captureSet()).containsKey("atsRef");
+	}
+
+	/**
+	 * The screening only ever clears the flag on open jobs, so a job closed by the sync with
+	 * its flag still set was never cleared — and the app counted it as pending on every poll,
+	 * stalling each matching run at its timeout.
+	 */
+	@Test
+	void closingAJobClearsItsScreeningFlag() {
+		when(mongoTemplate.findOne(any(Query.class), eq(JobPost.class))).thenReturn(existingJob("open"));
+
+		service.upsertJobPost(connection(), job("<p>Own the funnel.</p>", false));
+
+		assertThat(captureSet()).containsEntry("status", "closed").containsEntry("matchingReportsNeeded", false);
+	}
+
+	/** A job reopened in the ATS is back in the running and must be screened again. */
+	@Test
+	void reopeningAJobQueuesItForScreening() {
+		when(mongoTemplate.findOne(any(Query.class), eq(JobPost.class))).thenReturn(existingJob("closed"));
+
+		service.upsertJobPost(connection(), job("<p>Own the funnel.</p>", true));
+
+		assertThat(captureSet()).containsEntry("status", "open").containsEntry("matchingReportsNeeded", true);
+	}
+
+	/** A routine sync must not re-queue every open job it touches — the flag is left alone. */
+	@Test
+	void anOpenJobThatStaysOpenKeepsItsFlag() {
+		when(mongoTemplate.findOne(any(Query.class), eq(JobPost.class))).thenReturn(existingJob("open"));
+
+		service.upsertJobPost(connection(), job("<p>Own the funnel.</p>", true));
+
+		assertThat(captureSet()).doesNotContainKey("matchingReportsNeeded");
+	}
+
+	/** An imported job that is already closed in the ATS never enters the screening queue. */
+	@Test
+	void aNewClosedJobIsImportedUnflagged() {
+		service.upsertJobPost(connection(), job(null, false));
+
+		var inserted = captureInserted();
+		assertThat(inserted.getStatus()).isEqualTo("closed");
+		assertThat(inserted.getMatchingReportsNeeded()).isFalse();
 	}
 }

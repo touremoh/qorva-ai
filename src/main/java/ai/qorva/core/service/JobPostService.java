@@ -37,7 +37,7 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
         super.preProcessCreateOne(dto);
         dto.setJobReference(UUID.randomUUID().toString().toUpperCase(Locale.ROOT));
         dto.setStatus(JobPostStatusEnum.OPEN.getStatus());
-        dto.setMatchingReportsNeeded(true);
+        dto.setMatchingReportsNeeded(matchingReportsNeededFor(dto.getStatus()));
     }
 
     @Override
@@ -54,7 +54,7 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
         // trusting the payload keeps an edit from unlinking an imported job — which left the
         // job_reference unique index holding a reference the next sync could no longer match.
         newJobPost.setAtsRef(existing != null ? existing.getAtsRef() : null);
-        newJobPost.setMatchingReportsNeeded(isJobPostOpen(newJobPost));
+        newJobPost.setMatchingReportsNeeded(matchingReportsNeededFor(newJobPost.getStatus()));
     }
 
     @Override
@@ -97,7 +97,14 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
         });
     }
 
-    private boolean isJobPostOpen(JobPostDTO jobPostDTO) {
-        return JobPostStatusEnum.OPEN.getStatus().equals(jobPostDTO.getStatus());
+    /**
+     * The one rule tying the screening flag to a job's status: only an open job is ever
+     * screened. Every writer of {@code status} — the API edit path above and the ATS sync —
+     * must derive the flag from here. The screening run only clears the flag on open jobs
+     * (see {@code findJobPostsNeedingReports}), so a closed job left flagged is never
+     * cleared, and the app counts it as pending on every poll until its timeout.
+     */
+    public static boolean matchingReportsNeededFor(String status) {
+        return JobPostStatusEnum.OPEN.getStatus().equals(status);
     }
 }

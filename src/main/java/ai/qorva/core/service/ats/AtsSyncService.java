@@ -292,6 +292,16 @@ public class AtsSyncService {
 				// Rewritten every run: it re-links an orphan and keeps lastImportedAt honest.
 				.set("atsRef", atsRef(connection, atsJob))
 				.set("lastUpdatedAt", Instant.now());
+			// The flag follows the status transition. Closing must clear it: the screening
+			// only ever clears open jobs, so a closed job left flagged stayed pending in the
+			// app for good and stalled every matching run at its timeout. Reopening re-queues
+			// the job. A job that stays open keeps its flag, so a routine sync does not
+			// re-screen everything it touches.
+			if (!JobPostService.matchingReportsNeededFor(status)) {
+				update.set("matchingReportsNeeded", false);
+			} else if (!JobPostService.matchingReportsNeededFor(existing.getStatus())) {
+				update.set("matchingReportsNeeded", true);
+			}
 			if (StringUtils.hasText(atsJob.description())) {
 				update.set("description", atsJob.description());
 			}
@@ -314,7 +324,7 @@ public class AtsSyncService {
 		jobPost.setScoringRules(suggestScoringRules(atsJob));
 		jobPost.setJobReference(jobReference);
 		jobPost.setStatus(status);
-		jobPost.setMatchingReportsNeeded(atsJob.open());
+		jobPost.setMatchingReportsNeeded(JobPostService.matchingReportsNeededFor(status));
 		jobPost.setAtsRef(atsRef(connection, atsJob));
 		jobPost.setCreatedAt(Instant.now());
 		jobPost.setCreatedBy("ats-sync");
