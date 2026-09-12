@@ -5,6 +5,7 @@ import ai.qorva.core.dao.specifications.MongoSpecification;
 import ai.qorva.core.dao.specifications.MongoSpecificationExecutorImpl;
 import ai.qorva.core.dao.specifications.QorvaRepositorySpecification;
 import ai.qorva.core.dto.CVDuplicatesData;
+import ai.qorva.core.dto.CVFilterOptionsData;
 import ai.qorva.core.enums.ContentDateSourceEnum;
 import ai.qorva.core.enums.QualityFlagEnum;
 import ai.qorva.core.enums.QualityIssueKeyEnum;
@@ -25,6 +26,7 @@ import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
 
 import java.time.Instant;
+import java.time.Year;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -36,7 +38,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Repository
-public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, SimilaritySearchRepository, TextSearchRepository, CVQualityRepository {
+public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, SimilaritySearchRepository, TextSearchRepository, CVQualityRepository, CVFilterOptionsRepository {
 
 	private final MongoTemplate mongoTemplate;
 	private final MongoSpecificationExecutorImpl<CV> delegate;
@@ -398,5 +400,132 @@ public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, Simil
 		}
 
 		return query;
+	}
+
+	// -------------------------------------------------------------------------
+	// Filter options (facets for the CV list rail)
+	// -------------------------------------------------------------------------
+
+	/** Value facets are capped so a 50k-skill tenant does not ship a megabyte of options. */
+	private static final int VALUE_FACET_LIMIT = 300;
+
+	@Override
+	public CVFilterOptionsData filterOptions(ObjectId tenantId, boolean archived) {
+		var pipeline = List.of(
+			new Document("$match", new Document("tenantId", tenantId)
+				.append("archived", archived ? Boolean.TRUE : new Document("$ne", true))),
+			new Document("$facet", new Document()
+				.append("seniority", enumFacet("candidateClustering.seniorityLevel"))
+				.append("leadership", enumFacet("candidateClustering.leadershipAndInfluence"))
+				.append("availability", enumFacet("personalInformation.availability.status"))
+				.append("skillDepth", enumFacet("candidateClustering.skillDepth"))
+				.append("industries", valueFacet("searchIndex.industries"))
+				.append("locations", valueFacet("searchIndex.locations"))
+				.append("skills", valueFacet("searchIndex.skills"))
+				.append("tags", tagsFacet())
+				.append("sources", sourcesFacet())
+				.append("experience", experienceFacet())));
+
+		var facet = mongoTemplate.getCollection(mongoTemplate.getCollectionName(CV.class))
+			.aggregate(pipeline).allowDiskUse(true).first();
+		if (facet == null) {
+			return CVFilterOptionsData.empty();
+		}
+		return new CVFilterOptionsData(
+			options(facet, "seniority", true),
+			options(facet, "leadership", true),
+			options(facet, "availability", true),
+			options(facet, "skillDepth", true),
+			options(facet, "industries", false),
+			options(facet, "locations", false),
+			options(facet, "skills", false),
+			options(facet, "tags", false),
+			options(facet, "sources", false),
+			experienceRange(facet));
+	}
+
+	/** One bucket per raw value, null bucket kept so the UI can offer "Not analysed (n)". */
+	private static List<Document> enumFacet(String field) {
+		return List.of(
+			new Document("$group", new Document("_id", "$" + field).append("n", new Document("$sum", 1))),
+			new Document("$project", new Document("_id", 0).append("value", "$_id").append("n", 1)),
+			new Document("$sort", new Document("n", -1).append("value", 1)));
+	}
+
+	/**
+	 * Distinct array elements, case-folded. Counted once per CV (a CV listing "Fintech" and
+	 * "FinTech" is one row for the case-insensitive filter, so it must be one count here), and
+	 * displayed with the most frequent original casing.
+	 */
+	private static List<Document> valueFacet(String field) {
+		return List.of(
+			new Document("$project", new Document("vals", new Document("$ifNull", List.of("$" + field, List.of())))),
+			new Document("$unwind", "$vals"),
+			new Document("$group", new Document("_id", new Document("doc", "$_id").append("lower", new Document("$toLower", "$vals")))
+				.append("original", new Document("$first", "$vals"))),
+			new Document("$group", new Document("_id", new Document("lower", "$_id.lower").append("original", "$original"))
+				.append("n", new Document("$sum", 1))),
+			new Document("$sort", new Document("n", -1)),
+			new Document("$group", new Document("_id", "$_id.lower")
+				.append("value", new Document("$first", "$_id.original"))
+				.append("n", new Document("$sum", "$n"))),
+			new Document("$sort", new Document("n", -1).append("value", 1)),
+			new Document("$limit", VALUE_FACET_LIMIT),
+			new Document("$project", new Document("_id", 0).append("value", 1).append("n", 1)));
+	}
+
+	/** Tags are user-typed and matched exactly, so no case folding — sorted alphabetically like /cvs/tags. */
+	private static List<Document> tagsFacet() {
+		return List.of(
+			new Document("$project", new Document("vals", new Document("$setUnion",
+				List.of(new Document("$ifNull", List.of("$tags", List.of())), List.of())))),
+			new Document("$unwind", "$vals"),
+			new Document("$group", new Document("_id", "$vals").append("n", new Document("$sum", 1))),
+			new Document("$project", new Document("_id", 0).append("value", "$_id").append("n", 1)),
+			new Document("$sort", new Document("value", 1)));
+	}
+
+	/** "MANUAL" for CVs without an ATS reference, otherwise each distinct provider on the CV. */
+	private static List<Document> sourcesFacet() {
+		var hasRefs = new Document("$gt", List.of(
+			new Document("$size", new Document("$ifNull", List.of("$atsRefs", List.of()))), 0));
+		return List.of(
+			new Document("$project", new Document("providers", new Document("$cond", List.of(
+				hasRefs,
+				new Document("$setUnion", List.of("$atsRefs.provider", List.of())),
+				List.of("MANUAL"))))),
+			new Document("$unwind", "$providers"),
+			new Document("$group", new Document("_id", "$providers").append("n", new Document("$sum", 1))),
+			new Document("$project", new Document("_id", 0).append("value", "$_id").append("n", 1)),
+			new Document("$sort", new Document("n", -1)));
+	}
+
+	private static List<Document> experienceFacet() {
+		return List.of(
+			new Document("$match", new Document("careerStartYear", new Document("$ne", null))),
+			new Document("$group", new Document("_id", null)
+				.append("minStart", new Document("$min", "$careerStartYear"))
+				.append("maxStart", new Document("$max", "$careerStartYear"))));
+	}
+
+	private static List<CVFilterOptionsData.Option> options(Document facet, String key, boolean keepNullBucket) {
+		return facet.getList(key, Document.class).stream()
+			.map(d -> new CVFilterOptionsData.Option(d.getString("value"), d.get("n", Number.class).longValue()))
+			.filter(o -> keepNullBucket || (o.value() != null && !o.value().isBlank()))
+			.toList();
+	}
+
+	private static CVFilterOptionsData.ExperienceRange experienceRange(Document facet) {
+		var rows = facet.getList("experience", Document.class);
+		if (rows.isEmpty()) {
+			return new CVFilterOptionsData.ExperienceRange(null, null);
+		}
+		int thisYear = Year.now().getValue();
+		var row = rows.getFirst();
+		Integer minStart = row.get("minStart", Number.class) == null ? null : row.get("minStart", Number.class).intValue();
+		Integer maxStart = row.get("maxStart", Number.class) == null ? null : row.get("maxStart", Number.class).intValue();
+		return new CVFilterOptionsData.ExperienceRange(
+			maxStart == null ? null : Math.max(0, thisYear - maxStart),
+			minStart == null ? null : Math.max(0, thisYear - minStart));
 	}
 }

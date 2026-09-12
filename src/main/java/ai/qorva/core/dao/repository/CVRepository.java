@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.repository.Query;
 import java.util.List;
 
 
-public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepository, CVQualityRepository {
+public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepository, CVQualityRepository, CVFilterOptionsRepository {
 
 	@Query(value = "{ '$text': { $search: ?0 }, 'tenantId': ?1, 'archived': { '$ne': true } }")
 	Page<CV> searchAll(String searchTerms, String tenantId, Pageable pageable);

@@ -9,6 +9,7 @@ import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVDuplicatesData;
+import ai.qorva.core.dto.CVFilterOptionsData;
 import ai.qorva.core.dto.CVOutputDTO;
 import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
@@ -31,7 +32,9 @@ import org.bson.types.ObjectId;
 import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -42,6 +45,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
@@ -452,6 +456,31 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         return matchingCVs.stream().map(cvMapper::map).toList();
     }
 
+    /**
+     * The CV list is sorted server-side so a sort applies to the whole result set, not the
+     * current page. Only whitelisted keys are honoured; anything else falls back to the default.
+     * "experience" sorts on careerStartYear ascending because an earlier start means more years.
+     */
+    @Override
+    protected Page<CV> processFindAll(Map<String, String> params) throws QorvaException {
+        int pageNumber = Integer.parseInt(params.getOrDefault("pageNumber", "0"));
+        int pageSize = Integer.parseInt(params.getOrDefault("pageSize", "25"));
+        var pageable = PageRequest.of(pageNumber, pageSize, listSort(params.get("sort")));
+        return this.repository.findAll(this.queryBuilder.buildQuery(params), pageable);
+    }
+
+    static Sort listSort(String sortParam) {
+        String[] parts = sortParam == null ? new String[0] : sortParam.split(",");
+        String key = parts.length > 0 ? parts[0].trim() : "";
+        boolean asc = parts.length > 1 && "asc".equalsIgnoreCase(parts[1].trim());
+        return switch (key) {
+            case "name" -> Sort.by(asc ? Sort.Direction.ASC : Sort.Direction.DESC, "personalInformation.name");
+            case "experience" -> Sort.by(asc ? Sort.Direction.DESC : Sort.Direction.ASC, "careerStartYear");
+            case "createdAt" -> Sort.by(asc ? Sort.Direction.ASC : Sort.Direction.DESC, "createdAt");
+            default -> Sort.by(asc ? Sort.Direction.ASC : Sort.Direction.DESC, "lastUpdatedAt");
+        };
+    }
+
     public Page<CVDTO> searchAll(String tenantId, String searchTerms, int pageSize, int pageNumber) throws QorvaException {
         try {
             preProcessSearchAll(tenantId, searchTerms, pageSize, pageNumber);
@@ -475,6 +504,11 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
     protected void postProcessSearchAll(Page<CV> entities) {
         log.debug("postProcessSearchAll: {} CV found", entities.getContent().size());
+    }
+
+    /** Distinct values (with counts) the list filters can be built from — see CVFilterOptionsData. */
+    public CVFilterOptionsData filterOptions(String tenantId, boolean archived) {
+        return ((CVRepository) this.repository).filterOptions(new ObjectId(tenantId), archived);
     }
 
     public List<String> findAllTagsByTenantId(String tenantId) {

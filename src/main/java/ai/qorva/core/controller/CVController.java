@@ -2,6 +2,7 @@ package ai.qorva.core.controller;
 
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVDuplicatesData;
+import ai.qorva.core.dto.CVFilterOptionsData;
 import ai.qorva.core.dto.LibraryClearData;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.UploadResult;
@@ -112,12 +113,20 @@ public class CVController extends AbstractQorvaController<CVDTO> {
         return super.deleteOneById(id);
     }
 
+    /** Free-text lookup used by the resume-chat candidate picker and Talent Intelligence @mentions. */
     @GetMapping("/search")
     public ResponseEntity<QorvaRequestResponse> searchAll(
         @RequestParam("searchTerms") String searchTerms,
         @RequestParam("pageSize") int pageSize,
         @RequestParam("pageNumber") int pageNumber) throws QorvaException {
         return BuildApiResponse.from(((CVService) this.service).searchAll(currentTenantId(), searchTerms, pageSize, pageNumber));
+    }
+
+    /** Distinct values + counts for the list filter rail; mirrors the archived toggle of GET /cvs. */
+    @GetMapping("/filter-options")
+    public ResponseEntity<CVFilterOptionsData> filterOptions(
+        @RequestParam(defaultValue = "false") boolean archived) {
+        return ResponseEntity.ok(((CVService) service).filterOptions(currentTenantId(), archived));
     }
 
     @GetMapping("/duplicates")
