@@ -498,6 +498,11 @@
           "type": "array",
           "description": "English-normalized industry sector labels aggregated from: candidateClustering.industryDomains (translated to English), and industries inferred from all workExperience[*] entries. Use standard English labels (e.g. 'Banking', 'Financial Services', 'Healthcare'). MUST be in English.",
           "items": { "type": "string" }
+        },
+        "locations": {
+          "type": "array",
+          "description": "Where the candidate is based, as English place names from personalInformation.contact.address: the city, the state/region, the country, and the continent (e.g. ['Brussels', 'Brussels-Capital', 'Belgium', 'Europe']). Use the English exonym ('Munich' not 'München', 'Belgium' not 'Belgique'). Empty array when the CV gives no location. MUST be in English.",
+          "items": { "type": "string" }
         }
       }
     }

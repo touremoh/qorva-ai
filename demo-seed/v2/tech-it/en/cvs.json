@@ -277,11 +277,18 @@
         "Redis",
         "REST APIs",
         "Docker",
-        "JUnit"
+        "JUnit",
+        "Computer Science"
       ],
       "industries": [
         "Fintech",
         "Software"
+      ],
+      "locations": [
+        "London",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -606,11 +613,18 @@
         "Spring Boot",
         "GraphQL",
         "AWS",
-        "PostgreSQL"
+        "PostgreSQL",
+        "Software Engineering"
       ],
       "industries": [
         "Retail",
         "Software"
+      ],
+      "locations": [
+        "Manchester",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -915,12 +929,19 @@
         "Tailwind CSS",
         "Web Accessibility",
         "Core Web Vitals",
-        "Playwright"
+        "Playwright",
+        "Computer Science"
       ],
       "industries": [
         "Healthcare",
         "E-commerce",
         "Software"
+      ],
+      "locations": [
+        "Dublin",
+        "Leinster",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -1234,12 +1255,19 @@
         "Combine",
         "Objective-C",
         "Fastlane",
-        "Mobile Architecture"
+        "Mobile Architecture",
+        "Electrical Engineering and Computer Sciences"
       ],
       "industries": [
         "Consumer Apps",
         "Mobility",
         "Software"
+      ],
+      "locations": [
+        "San Francisco",
+        "California",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -1541,11 +1569,18 @@
         "Java",
         "Performance Testing",
         "k6",
-        "CI/CD"
+        "CI/CD",
+        "Computer Science"
       ],
       "industries": [
         "Enterprise Software",
         "Software"
+      ],
+      "locations": [
+        "Austin",
+        "Texas",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -1829,12 +1864,19 @@
         "Airflow",
         "Snowflake",
         "AWS",
-        "Kafka"
+        "Kafka",
+        "Mathematics and Computer Science"
       ],
       "industries": [
         "Retail",
         "Analytics",
         "Software"
+      ],
+      "locations": [
+        "Bristol",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -2134,12 +2176,19 @@
         "A/B Testing",
         "Causal Inference",
         "MLflow",
-        "AWS SageMaker"
+        "AWS SageMaker",
+        "Statistics",
+        "Mathematics"
       ],
       "industries": [
         "E-commerce",
         "Retail",
         "Software"
+      ],
+      "locations": [
+        "New York",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -2436,11 +2485,18 @@
         "Kubernetes",
         "MLOps",
         "Recommendation Systems",
-        "NLP"
+        "NLP",
+        "Computer Science (Machine Learning)"
       ],
       "industries": [
         "Software",
         "E-commerce"
+      ],
+      "locations": [
+        "Dublin",
+        "Leinster",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -2755,12 +2811,19 @@
         "Data Modelling",
         "Metrics Governance",
         "BigQuery",
-        "Tableau"
+        "Tableau",
+        "Economics and Statistics"
       ],
       "industries": [
         "Financial Services",
         "Insurance",
         "Analytics"
+      ],
+      "locations": [
+        "Leeds",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -3070,12 +3133,20 @@
         "Looker",
         "Tableau",
         "SQL",
-        "Business Intelligence"
+        "Business Intelligence",
+        "Business Analytics",
+        "Statistics"
       ],
       "industries": [
         "Healthcare",
         "Retail",
         "Analytics"
+      ],
+      "locations": [
+        "Boston",
+        "Massachusetts",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -3358,10 +3429,17 @@
         "CI/CD",
         "GitHub Actions",
         "ArgoCD",
-        "Bash"
+        "Bash",
+        "Cloud Computing"
       ],
       "industries": [
         "Software"
+      ],
+      "locations": [
+        "Cork",
+        "Munster",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -3678,11 +3756,18 @@
         "Terraform",
         "Go",
         "SLOs",
-        "Incident Response"
+        "Incident Response",
+        "Computer Engineering"
       ],
       "industries": [
         "Media",
         "Software"
+      ],
+      "locations": [
+        "London",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -3971,11 +4056,18 @@
         "Crossplane",
         "Backstage",
         "Go",
-        "Networking"
+        "Networking",
+        "Computer Engineering"
       ],
       "industries": [
         "Software",
         "SaaS"
+      ],
+      "locations": [
+        "Seattle",
+        "Washington",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -4283,12 +4375,19 @@
         "SIEM",
         "AWS Security",
         "Terraform",
-        "IAM"
+        "IAM",
+        "Computer Science"
       ],
       "industries": [
         "Financial Services",
         "Cybersecurity",
         "Software"
+      ],
+      "locations": [
+        "Edinburgh",
+        "Scotland",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -4403,12 +4502,19 @@
         "VMware",
         "Networking",
         "Hybrid Cloud",
-        "Direct Connect"
+        "Direct Connect",
+        "Network Engineering Technology"
       ],
       "industries": [
         "Logistics",
         "Telecommunications",
         "Software"
+      ],
+      "locations": [
+        "Chicago",
+        "Illinois",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -4687,12 +4793,19 @@
         "SQL",
         "Amplitude",
         "A/B Testing",
-        "Figma"
+        "Figma",
+        "Business and Management"
       ],
       "industries": [
         "HR Tech",
         "SaaS",
         "Software"
+      ],
+      "locations": [
+        "Brighton",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -4974,12 +5087,19 @@
         "Scrum",
         "Stakeholder Management",
         "Jira",
-        "User Stories"
+        "User Stories",
+        "Business Information Systems"
       ],
       "industries": [
         "Insurance",
         "Financial Services",
         "Software"
+      ],
+      "locations": [
+        "Galway",
+        "Connacht",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -5252,12 +5372,19 @@
         "Developer Experience",
         "SQL",
         "Amplitude",
-        "Looker"
+        "Looker",
+        "Computer Science"
       ],
       "industries": [
         "Fintech",
         "Developer Tools",
         "Software"
+      ],
+      "locations": [
+        "Denver",
+        "Colorado",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -5562,12 +5689,19 @@
         "SQL",
         "Amplitude",
         "Mixpanel",
-        "Retention"
+        "Retention",
+        "Economics"
       ],
       "industries": [
         "EdTech",
         "Media",
         "Software"
+      ],
+      "locations": [
+        "London",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -5854,12 +5988,19 @@
         "Pricing Strategy",
         "OKRs",
         "SQL",
-        "Amplitude"
+        "Amplitude",
+        "Strategy and Entrepreneurship",
+        "Information Systems"
       ],
       "industries": [
         "Marketplaces",
         "SaaS",
         "Software"
+      ],
+      "locations": [
+        "New York",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -6147,11 +6288,18 @@
         "Redis",
         "REST APIs",
         "Docker",
-        "JUnit"
+        "JUnit",
+        "Computer Science"
       ],
       "industries": [
         "Fintech",
         "Software"
+      ],
+      "locations": [
+        "London",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -6476,11 +6624,18 @@
         "Spring Boot",
         "GraphQL",
         "AWS",
-        "PostgreSQL"
+        "PostgreSQL",
+        "Software Engineering"
       ],
       "industries": [
         "Retail",
         "Software"
+      ],
+      "locations": [
+        "Manchester",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [

@@ -17,6 +17,8 @@ Any business sector, vertical, or market domain used to scope the report. Accept
 
 **Disambiguation**: Only extract `industries` when it describes the **candidate pool's domain** ("our fintech talent", "healthcare profiles"). When industry names the **client or project**, return `[]`.
 
+An academic discipline named as what the candidate studied ("economics", "law", "psychology") is a field of study, not a sector: it goes in `skills`, and `industries` stays `[]`.
+
 Return `[]` if not mentioned.
 
 ### `seniority` — string or null

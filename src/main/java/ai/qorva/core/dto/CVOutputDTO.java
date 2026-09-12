@@ -133,7 +133,8 @@ public record CVOutputDTO(
     public record SearchIndex(
         @JsonProperty("roles") String[] roles,
         @JsonProperty("skills") String[] skills,
-        @JsonProperty("industries") String[] industries) {
+        @JsonProperty("industries") String[] industries,
+        @JsonProperty("locations") String[] locations) {
     }
 
     public record CandidateClustering(

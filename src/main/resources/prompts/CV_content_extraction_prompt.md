@@ -74,7 +74,7 @@ Focus on actual capability, organizational value, and measurable impact rather t
    - `skillsAndQualifications.technicalSkills` and `skillsAndQualifications.softSkills`
    - Every `workExperience[*].toolsAndTechnologies` entry across the **entire career history** — include tools from all jobs, not just the current one
    - `profiles.areasOfExpertise` and `candidateClustering.functionalExpertise`
-   - `education[*].fieldOfStudy`
+   - `education[*].fieldOfStudy` — every field of study, translated to English ("Sciences économiques" → "Economics", "Informatique" → "Computer Science"). This is the only place a recruiter's "economics graduates" or "in the field of law" can match, so never leave it out.
    - Skills implied by role titles (e.g., "Node.js Developer" → include "Node.js"; "Data Scientist" → include "Python", "machine learning")
 
    **`searchIndex.industries`** — Aggregate English-normalized industry sector labels from ALL of the following sources:
@@ -82,6 +82,8 @@ Focus on actual capability, organizational value, and measurable impact rather t
    - Industries inferred from every `workExperience[*].company` and associated context across the candidate's full career history
 
    Use standard English sector vocabulary (e.g., "Banking", "Financial Services", "Healthcare", "Retail", "Logistics") regardless of the language the industry was written in on the CV.
+
+   **`searchIndex.locations`** — Where the candidate is based, taken from `personalInformation.contact.address`, as English place names at every level: the city, the state/region, the country, and the continent (e.g. `["Brussels", "Brussels-Capital", "Belgium", "Europe"]`, `["Munich", "Bavaria", "Germany", "Europe"]`). Use the English exonym even when the CV writes the local name ("München" → "Munich", "Belgique" → "Belgium", "Lisboa" → "Lisbon"). Leave it empty when the CV gives no location — never guess one from a phone prefix or an employer.
 
    **Rules for `searchIndex` — non-negotiable:**
    - **Always English. No exceptions.** Never output French, Dutch, German, Spanish, or any other language in this field.

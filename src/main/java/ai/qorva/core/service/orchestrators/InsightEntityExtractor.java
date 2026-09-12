@@ -13,7 +13,7 @@ import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.openai.api.ResponseFormat;
 import org.springframework.stereotype.Service;
 
-import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_1_MINI;
+import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_1;
 
 @Slf4j
 @Service
@@ -36,8 +36,10 @@ public class InsightEntityExtractor {
 			String renderedPrompt = promptTemplate.replace("{{question}}", question);
 
 			String content = chatClient.prompt()
+				// Extraction is the one decision that changes results (which filters run), and the prompt
+				// is the largest in the pipeline. It gets the full model; the other insight calls stay on mini.
 				.options(OpenAiChatOptions.builder()
-					.model(GPT_4_1_MINI)
+					.model(GPT_4_1)
 					.responseFormat(ResponseFormat.builder()
 						.type(ResponseFormat.Type.JSON_SCHEMA)
 						.jsonSchema(ResponseFormat.JsonSchema.builder()

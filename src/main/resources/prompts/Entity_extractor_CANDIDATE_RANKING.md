@@ -31,6 +31,12 @@ When the user says "experience in X", "background in X", "knowledge of X", treat
 - "Salesforce experience" → `skills: ["Salesforce", "CRM"]`
 - "fintech background" → `skills: []`, `industries: ["Fintech"]`
 
+**Fields of study and academic disciplines** — "in the field of X", "X graduates", "studied X", "a degree in X", "X background" where X is an academic discipline (economics, law, psychology, mathematics, chemistry, history, linguistics, ...) also go in `skills`. The candidate's field of study is indexed as a skill, so this is the only field that finds them. Add one or two close variants a CV might carry. A discipline is **never** an industry — do not duplicate it into `industries`. "X graduates" says what they studied, not how senior they are: leave `seniority` null, and set `degreeLevels` only when a level is actually named.
+- "in the field of economics" → `skills: ["economics", "economic analysis"]`, `industries: []`
+- "economics graduates" → `skills: ["economics", "economic analysis"]`, `industries: []`, `seniority: null`, `degreeLevels: []`
+- "people with a master's in psychology" → `skills: ["psychology"]`, `degreeLevels: ["master"]`
+- "law graduates from KU Leuven" → `skills: ["law", "legal"]`, `institutions: ["KU Leuven"]`
+
 ### `requiredSkills` — array of strings
 Skills the candidate MUST have ALL of (AND semantics). Use only when the user explicitly says "both X and Y", "X AND Y", or "combine X with Y" for skills. A single skill always goes in `skills`, never here.
 
@@ -74,7 +80,7 @@ General expansion examples:
 ### `seniority` — string or null
 | What the user says | Normalized value |
 |---|---|
-| junior, entry-level, graduate, intern | `junior` |
+| junior, entry-level, recent graduate, new grad, intern | `junior` |
 | mid-level, intermediate, 3-5 years | `midLevel` |
 | senior, experienced, 5+ years | `senior` |
 | lead, tech lead, team lead | `lead` |
@@ -109,6 +115,8 @@ City, country, region, or remote/on-site: `"Belgium"`, `"remote"`, `"Europe"`.
 Any business sector, vertical, or market domain where the candidate has worked (OR semantics — matching any one is sufficient). Accept any term the user mentions — e-commerce, gaming, logistics, manufacturing, insurance are all valid. Normalize to Title Case. You are not limited to a predefined list. The system automatically expands umbrella terms to their stored-level variants (e.g., "financial services" → Fintech, Banking, Insurance).
 
 **Disambiguation**: Only extract `industries` when the industry describes the **candidate's own background or experience** ("with banking experience", "who worked in fintech"). When industry names the **client or project** ("for a fintech client", "to staff a healthcare engagement"), return `[]`.
+
+An academic discipline named as what the candidate studied ("economics", "law", "psychology") is a field of study, not a sector: it goes in `skills`, and `industries` stays `[]`.
 
 ### `requiredIndustries` — array of strings
 Industries the candidate MUST have experience in ALL of (AND semantics). Use only when the user says "both X and Y industries", "X AND Y background", or explicitly combines two industry terms with AND. Output the term as the user stated it — the system handles expansion to stored-level variants.
@@ -151,7 +159,7 @@ Employer history: "worked at Google", "ex-McKinsey".
 | associate, HND | `associate` |
 
 ### `institutions` — array of strings
-University names: "from KU Leuven", "MIT graduates".
+University names: "from KU Leuven", "MIT graduates". A discipline ("economics graduates") is not an institution — it goes in `skills`.
 
 ---
 
@@ -301,6 +309,23 @@ University names: "from KU Leuven", "MIT graduates".
 
 ---
 
+**Question:** "Show me top profiles in the field of economics"
+
+```json
+{
+  "skills": ["economics", "economic analysis"],
+  "roles": [],
+  "limit": null, "seniority": null, "location": null, "industries": [],
+  "skillDepth": null, "leadershipLevel": null, "openToWork": null, "availabilityStatus": null,
+  "languages": [], "companies": [], "degreeLevels": [], "institutions": [],
+  "minYearsExperience": null, "tags": []
+}
+```
+
+> "field of economics" is a field of study → `skills`. "Economics" is not an industry, so `industries` stays `[]` — putting it there would require a sector match no economics graduate has. "top" without a number leaves `limit` null.
+
+---
+
 **Question:** "Find HR business partners who have worked at Deloitte or McKinsey."
 
 ```json
@@ -328,7 +353,7 @@ Examples of too-vague questions and what to set:
 - "Do we have good candidates?" → `"clarificationQuestion": "To search our talent pool effectively, could you specify what kind of candidates you need? For instance, a technology stack, a job title, or an industry would help."`
 - "What candidates do we have?" → `"clarificationQuestion": "To give you a useful answer, could you narrow down what you're looking for? For example: a specific technology, a seniority level, a location, or an industry."`
 
-If the question contains at least one concrete filter (a technology, role, seniority, location, industry, etc.), set `clarificationQuestion` to `null` and proceed with normal extraction.
+If the question contains at least one concrete filter (a technology, role, seniority, location, industry, field of study, etc.), set `clarificationQuestion` to `null` and proceed with normal extraction. "Show me profiles in the field of economics" is not vague: "economics" is a field of study and goes in `skills`.
 
 **Important**: Set `clarificationQuestion` only when ALL fields (`skills`, `requiredSkills`, `roles`, `industries`, `requiredIndustries`, `seniority`, `location`, and all others) are empty/null simultaneously. If even one field has a concrete value, set `clarificationQuestion` to `null` and proceed — partial ambiguity about one aspect of the question is not a reason to ask for clarification.
 

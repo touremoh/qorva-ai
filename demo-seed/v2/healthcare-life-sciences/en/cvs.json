@@ -269,11 +269,18 @@
         "Medication administration",
         "IV cannulation",
         "NEWS2 escalation",
-        "Wound care"
+        "Wound care",
+        "Adult Nursing"
       ],
       "industries": [
         "Hospitals & clinics",
         "Public health"
+      ],
+      "locations": [
+        "Manchester",
+        "Greater Manchester",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -570,11 +577,18 @@
         "Clinical governance",
         "Bronchoscopy",
         "Service leadership",
-        "Quality improvement"
+        "Quality improvement",
+        "Medicine"
       ],
       "industries": [
         "Hospitals & clinics",
         "Public health"
+      ],
+      "locations": [
+        "Edinburgh",
+        "Scotland",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -860,10 +874,18 @@
         "Therapeutic exercise",
         "Movement screening",
         "Dry needling",
-        "Gait training"
+        "Gait training",
+        "Physical Therapy",
+        "Exercise Science"
       ],
       "industries": [
         "Hospitals & clinics"
+      ],
+      "locations": [
+        "Boston",
+        "Massachusetts",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -1137,11 +1159,19 @@
         "Symptom management",
         "Care coordination",
         "Survivorship care",
-        "Patient education"
+        "Patient education",
+        "General Nursing",
+        "Oncology Nursing"
       ],
       "industries": [
         "Hospitals & clinics",
         "Public health"
+      ],
+      "locations": [
+        "Dublin",
+        "Leinster",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -1412,10 +1442,17 @@
         "ECMO support",
         "Arterial blood gas analysis",
         "Airway management",
-        "Pulmonary function testing"
+        "Pulmonary function testing",
+        "Respiratory Therapy"
       ],
       "industries": [
         "Hospitals & clinics"
+      ],
+      "locations": [
+        "Chicago",
+        "Illinois",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -1696,11 +1733,19 @@
         "CRISPR",
         "Flow cytometry",
         "Assay development",
-        "qPCR"
+        "qPCR",
+        "Cancer Biology",
+        "Biochemistry"
       ],
       "industries": [
         "Pharmaceuticals",
         "Biotech"
+      ],
+      "locations": [
+        "Cambridge",
+        "Cambridgeshire",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -1976,12 +2021,20 @@
         "HPLC",
         "Method validation",
         "GLP",
-        "Chromatography data systems"
+        "Chromatography data systems",
+        "Analytical Chemistry",
+        "Chemistry"
       ],
       "industries": [
         "Pharmaceuticals",
         "CRO",
         "Biotech"
+      ],
+      "locations": [
+        "Durham",
+        "North Carolina",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -2256,12 +2309,19 @@
         "Python",
         "R",
         "Nextflow",
-        "Variant calling"
+        "Variant calling",
+        "Bioinformatics"
       ],
       "industries": [
         "Biotech",
         "Public health",
         "Pharmaceuticals"
+      ],
+      "locations": [
+        "Oxford",
+        "Oxfordshire",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -2548,11 +2608,19 @@
         "Lyophilisation",
         "Design of Experiments",
         "Technology transfer",
-        "Dissolution testing"
+        "Dissolution testing",
+        "Pharmaceutical Sciences",
+        "Pharmacy"
       ],
       "industries": [
         "Pharmaceuticals",
         "Biotech"
+      ],
+      "locations": [
+        "Princeton",
+        "New Jersey",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -2829,11 +2897,18 @@
         "PCR",
         "Cell culture",
         "Protein purification",
-        "SDS-PAGE"
+        "SDS-PAGE",
+        "Biotechnology"
       ],
       "industries": [
         "Biotech",
         "Pharmaceuticals"
+      ],
+      "locations": [
+        "Cork",
+        "Munster",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -3118,11 +3193,19 @@
         "eCTD submissions",
         "Regulatory strategy",
         "Variations management",
-        "Labelling"
+        "Labelling",
+        "Pharmacology",
+        "Biomedical Science"
       ],
       "industries": [
         "Pharmaceuticals",
         "Medical devices"
+      ],
+      "locations": [
+        "Reading",
+        "Berkshire",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -3391,11 +3474,18 @@
         "Batch record review",
         "Deviation management",
         "CAPA",
-        "Change control"
+        "Change control",
+        "Biology"
       ],
       "industries": [
         "Pharmaceuticals",
         "Biotech"
+      ],
+      "locations": [
+        "Philadelphia",
+        "Pennsylvania",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -3668,11 +3758,18 @@
         "Source data verification",
         "ICH-GCP",
         "Risk-based monitoring",
-        "EDC systems"
+        "EDC systems",
+        "Pharmacology"
       ],
       "industries": [
         "CRO",
         "Pharmaceuticals"
+      ],
+      "locations": [
+        "Leeds",
+        "West Yorkshire",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -3947,11 +4044,18 @@
         "MedDRA coding",
         "Signal detection",
         "Adverse event reporting",
-        "Argus Safety"
+        "Argus Safety",
+        "Pharmacology"
       ],
       "industries": [
         "CRO",
         "Pharmaceuticals"
+      ],
+      "locations": [
+        "Galway",
+        "Connacht",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -4061,12 +4165,20 @@
         "Process validation",
         "IQ/OQ/PQ",
         "GAMP 5",
-        "Data integrity"
+        "Data integrity",
+        "Biomedical Engineering",
+        "Chemical Engineering"
       ],
       "industries": [
         "Pharmaceuticals",
         "Medical devices",
         "Biotech"
+      ],
+      "locations": [
+        "Cambridge",
+        "Massachusetts",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -4350,11 +4462,19 @@
         "KOL engagement",
         "Clinical data interpretation",
         "Medical education",
-        "CRM"
+        "CRM",
+        "Immunology",
+        "Biomedical Science"
       ],
       "industries": [
         "Pharmaceuticals",
         "Biotech"
+      ],
+      "locations": [
+        "Birmingham",
+        "West Midlands",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -4602,11 +4722,18 @@
         "Consultative selling",
         "In-theatre support",
         "Contract negotiation",
-        "CRM"
+        "CRM",
+        "Marketing"
       ],
       "industries": [
         "Medical devices",
         "Hospitals & clinics"
+      ],
+      "locations": [
+        "Atlanta",
+        "Georgia",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -4882,11 +5009,19 @@
         "Value dossiers",
         "HTA submissions",
         "Budget impact modelling",
-        "Pricing strategy"
+        "Pricing strategy",
+        "Health Economics",
+        "Pharmacology"
       ],
       "industries": [
         "Pharmaceuticals",
         "Biotech"
+      ],
+      "locations": [
+        "London",
+        "Greater London",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -5185,11 +5320,19 @@
         "Evidence generation",
         "Publication planning",
         "Field medical management",
-        "KOL engagement"
+        "KOL engagement",
+        "Pharmacy",
+        "Biochemistry"
       ],
       "industries": [
         "Pharmaceuticals",
         "Biotech"
+      ],
+      "locations": [
+        "Bridgewater",
+        "New Jersey",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -5458,11 +5601,18 @@
         "Systematic literature review",
         "Real-world data analysis",
         "Budget impact modelling",
-        "Markov models"
+        "Markov models",
+        "Health Economics",
+        "Economics"
       ],
       "industries": [
         "Pharmaceuticals",
         "CRO"
+      ],
+      "locations": [
+        "Bristol",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -5743,11 +5893,18 @@
         "Medication administration",
         "IV cannulation",
         "NEWS2 escalation",
-        "Wound care"
+        "Wound care",
+        "Adult Nursing"
       ],
       "industries": [
         "Hospitals & clinics",
         "Public health"
+      ],
+      "locations": [
+        "Manchester",
+        "Greater Manchester",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -6044,11 +6201,18 @@
         "Clinical governance",
         "Bronchoscopy",
         "Service leadership",
-        "Quality improvement"
+        "Quality improvement",
+        "Medicine"
       ],
       "industries": [
         "Hospitals & clinics",
         "Public health"
+      ],
+      "locations": [
+        "Edinburgh",
+        "Scotland",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [

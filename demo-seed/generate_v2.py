@@ -112,6 +112,41 @@ def degrade(cv, idx):
         cv["candidateClustering"]["clusterConfidenceScore"] = 0.42
 
 
+# ---------------------------------------------------------------------------
+# searchIndex enrichment — the talent intelligence engine reads ONLY searchIndex.*, in English.
+# v1 authors left two things out of it that the CV extraction prompt mandates: every field of
+# study (so "economics graduates" can match) and where the candidate is based (so "in Belgium"
+# can match; the raw address is a nested document in the CV's language). Only the `en` files
+# carry English raw values to copy from, so only those are enriched here — the other six
+# languages need authored English values (see .idea/docs/demo-seed-fixtures.md).
+# ---------------------------------------------------------------------------
+ENRICH_LANGS = {"en"}
+CONTINENT = {"United Kingdom": "Europe", "Ireland": "Europe", "United States": "North America"}
+
+
+def _append_unique(values, extra):
+    seen = {v.strip().lower() for v in values}
+    for v in extra:
+        if v and v.strip().lower() not in seen:
+            values.append(v.strip())
+            seen.add(v.strip().lower())
+
+
+def enrich_search_index(cv, lang):
+    if lang not in ENRICH_LANGS:
+        return
+    index = cv.setdefault("searchIndex", {"roles": [], "skills": [], "industries": []})
+    fields = [e.get("fieldOfStudy") for e in cv.get("education") or []]
+    _append_unique(index.setdefault("skills", []), fields)
+
+    address = ((cv.get("personalInformation") or {}).get("contact") or {}).get("address") or {}
+    country = address.get("country")
+    if country and country not in CONTINENT:
+        raise SystemExit(f"no continent mapped for country {country!r} — extend CONTINENT")
+    _append_unique(index.setdefault("locations", []),
+                   [address.get("city"), address.get("state"), country, CONTINENT.get(country)])
+
+
 def make_clones(cvs):
     """Two duplicate personas: an old re-upload (same email) and a same-phone twin."""
     email_dup = copy.deepcopy(cvs[EMAIL_DUP_OF])
@@ -128,11 +163,12 @@ def make_clones(cvs):
     return [email_dup, phone_dup]
 
 
-def transform(cvs):
+def transform(cvs, lang):
     if len(cvs) != 20:
         raise SystemExit(f"expected 20 CVs, found {len(cvs)}")
     cvs = copy.deepcopy(cvs) + make_clones(cvs)
     for idx, cv in enumerate(cvs):
+        enrich_search_index(cv, lang)  # before degrade(): the bad-parse persona keeps its index
         degrade(cv, idx)
         rewrite_dates(cv, idx)
     return cvs
@@ -186,7 +222,7 @@ def main():
     for src in sorted(V1.glob("*/*/cvs.json")):
         dst = V2 / src.relative_to(V1)
         dst.parent.mkdir(parents=True, exist_ok=True)
-        cvs = transform(json.loads(src.read_text()))
+        cvs = transform(json.loads(src.read_text()), lang=src.parent.name)
         dst.write_text(json.dumps(cvs, ensure_ascii=False, indent=2) + "\n")
         job_posts = src.parent / "job-posts.json"
         if job_posts.exists():

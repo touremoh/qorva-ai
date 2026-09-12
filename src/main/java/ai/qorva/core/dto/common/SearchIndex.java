@@ -16,4 +16,6 @@ public class SearchIndex implements Serializable {
     private List<String> roles;
     private List<String> skills;
     private List<String> industries;
+    /** City, region, country and continent in English — the only location field a talent intelligence query reads. */
+    private List<String> locations;
 }

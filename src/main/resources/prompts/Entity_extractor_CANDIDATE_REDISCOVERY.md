@@ -74,6 +74,8 @@ Any business sector, vertical, or market domain where the candidate has worked (
 
 **Disambiguation**: Only extract `industries` when the industry describes the **candidate's own background or experience** ("with banking experience", "who worked in fintech"). When industry names the **client or project** ("for a fintech client", "to staff a healthcare engagement"), return `[]`.
 
+An academic discipline named as what the candidate studied ("economics", "law", "psychology") is a field of study, not a sector: it goes in `skills`, and `industries` stays `[]`.
+
 ### `requiredIndustries` — array of strings
 Industries the candidate MUST have experience in ALL of (AND semantics). Use only when the user says "both X and Y industries", "X AND Y background", or explicitly combines two industry terms with AND. Output the term as the user stated it — the system handles expansion to stored-level variants.
 

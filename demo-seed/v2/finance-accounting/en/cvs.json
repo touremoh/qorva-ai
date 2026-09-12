@@ -269,11 +269,18 @@
         "Bank reconciliations",
         "VAT",
         "Month-end close",
-        "Excel"
+        "Excel",
+        "Accounting and Finance"
       ],
       "industries": [
         "Retail",
         "Professional services"
+      ],
+      "locations": [
+        "Leeds",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -562,11 +569,18 @@
         "SAP FICO",
         "NetSuite",
         "Consolidation",
-        "Statutory reporting"
+        "Statutory reporting",
+        "Accounting"
       ],
       "industries": [
         "Manufacturing",
         "Food production"
+      ],
+      "locations": [
+        "Manchester",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -883,11 +897,19 @@
         "SAP FICO",
         "SOX",
         "Month-end close",
-        "Consolidation"
+        "Consolidation",
+        "Business Administration, Accounting",
+        "Accounting (CPA pathway)"
       ],
       "industries": [
         "Technology",
         "Manufacturing"
+      ],
+      "locations": [
+        "San Francisco",
+        "California",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -1167,11 +1189,18 @@
         "Oracle",
         "Power Query",
         "Regulatory reporting",
-        "Reconciliations"
+        "Reconciliations",
+        "Accounting and Finance"
       ],
       "industries": [
         "Insurance",
         "Financial services"
+      ],
+      "locations": [
+        "Birmingham",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -1438,11 +1467,18 @@
         "Accounts payable",
         "Accounts receivable",
         "Collections",
-        "US GAAP"
+        "US GAAP",
+        "Accounting"
       ],
       "industries": [
         "Logistics",
         "Distribution"
+      ],
+      "locations": [
+        "Chicago",
+        "Illinois",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -1714,11 +1750,18 @@
         "Excel",
         "Financial modelling",
         "Forecasting",
-        "Budgeting"
+        "Budgeting",
+        "Economics"
       ],
       "industries": [
         "Technology",
         "Retail"
+      ],
+      "locations": [
+        "Edinburgh",
+        "Scotland",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -2003,11 +2046,18 @@
         "SQL",
         "Financial modelling",
         "DCF",
-        "Forecasting"
+        "Forecasting",
+        "Finance"
       ],
       "industries": [
         "Healthcare",
         "Technology"
+      ],
+      "locations": [
+        "Boston",
+        "Massachusetts",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -2291,11 +2341,18 @@
         "Excel",
         "Budgeting",
         "Forecasting",
-        "Commercial finance"
+        "Commercial finance",
+        "Business and Finance"
       ],
       "industries": [
         "Retail",
         "Consumer goods"
+      ],
+      "locations": [
+        "Bristol",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -2581,11 +2638,18 @@
         "SQL",
         "Excel",
         "Business partnering",
-        "Forecasting"
+        "Forecasting",
+        "Commerce and Accounting"
       ],
       "industries": [
         "Technology",
         "Professional services"
+      ],
+      "locations": [
+        "Dublin",
+        "Leinster",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -2863,11 +2927,18 @@
         "Excel",
         "Financial modelling",
         "Forecasting",
-        "Profitability analysis"
+        "Profitability analysis",
+        "Finance"
       ],
       "industries": [
         "Banking",
         "Insurance"
+      ],
+      "locations": [
+        "Charlotte",
+        "North Carolina",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -3141,11 +3212,18 @@
         "IDEA",
         "Controls testing",
         "Risk assessment",
-        "Internal audit"
+        "Internal audit",
+        "Accounting and Finance"
       ],
       "industries": [
         "Banking",
         "Manufacturing"
+      ],
+      "locations": [
+        "Nottingham",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -3437,11 +3515,17 @@
         "COSO",
         "ACL",
         "IDEA",
-        "Financial statement audit"
+        "Financial statement audit",
+        "Accounting"
       ],
       "industries": [
         "Professional services",
         "Financial services"
+      ],
+      "locations": [
+        "New York",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -3741,11 +3825,18 @@
         "SOX",
         "ACL",
         "Risk-based auditing",
-        "Internal audit"
+        "Internal audit",
+        "Accounting and Finance"
       ],
       "industries": [
         "Financial services",
         "Retail"
+      ],
+      "locations": [
+        "London",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -4029,11 +4120,18 @@
         "ACL",
         "IDEA",
         "Enterprise risk management",
-        "Internal controls"
+        "Internal controls",
+        "Accounting"
       ],
       "industries": [
         "Technology",
         "Banking"
+      ],
+      "locations": [
+        "Dallas",
+        "Texas",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -4145,11 +4243,18 @@
         "IDEA",
         "Power BI",
         "Risk-based auditing",
-        "Internal audit"
+        "Internal audit",
+        "Finance"
       ],
       "industries": [
         "Pharmaceuticals",
         "Financial services"
+      ],
+      "locations": [
+        "Cork",
+        "Munster",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -4425,11 +4530,18 @@
         "Corporation tax",
         "VAT",
         "Transfer pricing",
-        "Making Tax Digital"
+        "Making Tax Digital",
+        "Law"
       ],
       "industries": [
         "Manufacturing",
         "Professional services"
+      ],
+      "locations": [
+        "Manchester",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -4684,11 +4796,19 @@
         "SAP",
         "Federal tax",
         "State and local tax",
-        "Tax provision"
+        "Tax provision",
+        "Business, Accounting",
+        "Taxation"
       ],
       "industries": [
         "Technology",
         "Professional services"
+      ],
+      "locations": [
+        "Seattle",
+        "Washington",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -4988,11 +5108,18 @@
         "FX risk management",
         "Debt and funding",
         "Cash management",
-        "Hedging"
+        "Hedging",
+        "Economics and Finance"
       ],
       "industries": [
         "Manufacturing",
         "Banking"
+      ],
+      "locations": [
+        "London",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -5276,11 +5403,17 @@
         "Cash management",
         "Liquidity forecasting",
         "Debt compliance",
-        "Treasury operations"
+        "Treasury operations",
+        "Finance"
       ],
       "industries": [
         "Consumer goods",
         "Retail"
+      ],
+      "locations": [
+        "New York",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -5541,11 +5674,18 @@
         "BEPS",
         "Pillar Two",
         "SAP",
-        "Tax controversy"
+        "Tax controversy",
+        "Economics and Management"
       ],
       "industries": [
         "Technology",
         "Manufacturing"
+      ],
+      "locations": [
+        "London",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -5826,11 +5966,18 @@
         "Bank reconciliations",
         "VAT",
         "Month-end close",
-        "Excel"
+        "Excel",
+        "Accounting and Finance"
       ],
       "industries": [
         "Retail",
         "Professional services"
+      ],
+      "locations": [
+        "Leeds",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -6119,11 +6266,18 @@
         "SAP FICO",
         "NetSuite",
         "Consolidation",
-        "Statutory reporting"
+        "Statutory reporting",
+        "Accounting"
       ],
       "industries": [
         "Manufacturing",
         "Food production"
+      ],
+      "locations": [
+        "Manchester",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [

@@ -289,11 +289,18 @@
         "SuccessFactors",
         "Employee relations",
         "Organisational design",
-        "Workforce planning"
+        "Workforce planning",
+        "Human Resource Management"
       ],
       "industries": [
         "Retail",
         "Professional services"
+      ],
+      "locations": [
+        "Birmingham",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -571,11 +578,18 @@
         "Workday Recruiting",
         "LinkedIn Recruiter",
         "ATS",
-        "Sourcing"
+        "Sourcing",
+        "Business and Management"
       ],
       "industries": [
         "Shared services",
         "Recruitment"
+      ],
+      "locations": [
+        "Dublin",
+        "Leinster",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -892,11 +906,19 @@
         "Cornerstone OnDemand",
         "Instructional design",
         "LMS administration",
-        "Facilitation"
+        "Facilitation",
+        "Education and Psychology",
+        "Adult Learning and Development"
       ],
       "industries": [
         "Technology",
         "Non-profit"
+      ],
+      "locations": [
+        "Boston",
+        "Massachusetts",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -1189,11 +1211,18 @@
         "SAP SuccessFactors",
         "Job evaluation",
         "Benchmarking",
-        "Benefits administration"
+        "Benefits administration",
+        "Economics"
       ],
       "industries": [
         "Financial services",
         "Retail"
+      ],
+      "locations": [
+        "Manchester",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -1501,11 +1530,18 @@
         "SuccessFactors",
         "ServiceNow HR",
         "HRIS implementation",
-        "Process automation"
+        "Process automation",
+        "Business and HR Management"
       ],
       "industries": [
         "Shared services",
         "Healthcare"
+      ],
+      "locations": [
+        "Bristol",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -1779,11 +1815,18 @@
         "SharePoint",
         "Concur",
         "Facilities coordination",
-        "Event planning"
+        "Event planning",
+        "Business Administration"
       ],
       "industries": [
         "Technology",
         "Professional services"
+      ],
+      "locations": [
+        "Edinburgh",
+        "Scotland",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -2059,11 +2102,17 @@
         "Concur",
         "DocuSign",
         "Diary management",
-        "Travel coordination"
+        "Travel coordination",
+        "Communications"
       ],
       "industries": [
         "Financial services",
         "Technology"
+      ],
+      "locations": [
+        "New York",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -2312,11 +2361,18 @@
         "Data entry",
         "Scheduling",
         "CRM",
-        "Record keeping"
+        "Record keeping",
+        "Business Administration"
       ],
       "industries": [
         "Professional services",
         "Retail"
+      ],
+      "locations": [
+        "Galway",
+        "Connacht",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -2613,11 +2669,18 @@
         "Health and safety",
         "Contractor management",
         "Budget control",
-        "Compliance"
+        "Compliance",
+        "Facilities Management"
       ],
       "industries": [
         "Property",
         "Public sector"
+      ],
+      "locations": [
+        "Nottingham",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -2881,11 +2944,18 @@
         "Reception",
         "Visitor management",
         "Switchboard",
-        "Administration"
+        "Administration",
+        "Business and Administration"
       ],
       "industries": [
         "Professional services",
         "Hospitality"
+      ],
+      "locations": [
+        "Leeds",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -3187,11 +3257,18 @@
         "Intercom",
         "Salesforce Service Cloud",
         "CSAT",
-        "Workforce planning"
+        "Workforce planning",
+        "Business and Management"
       ],
       "industries": [
         "Technology",
         "Telecommunications"
+      ],
+      "locations": [
+        "Cardiff",
+        "Wales",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -3469,11 +3546,18 @@
         "Gainsight",
         "Retention",
         "Expansion",
-        "NPS"
+        "NPS",
+        "Marketing"
       ],
       "industries": [
         "SaaS",
         "B2B Technology"
+      ],
+      "locations": [
+        "Austin",
+        "Texas",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -3769,11 +3853,18 @@
         "HubSpot CRM",
         "Account management",
         "Client retention",
-        "Delivery oversight"
+        "Delivery oversight",
+        "Marketing and Management"
       ],
       "industries": [
         "Professional services",
         "Marketing"
+      ],
+      "locations": [
+        "Cork",
+        "Munster",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -4037,11 +4128,18 @@
         "CRM",
         "Complaint handling",
         "Live chat",
-        "First-contact resolution"
+        "First-contact resolution",
+        "Customer Service and Business"
       ],
       "industries": [
         "Utilities",
         "Retail"
+      ],
+      "locations": [
+        "Liverpool",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -4149,11 +4247,18 @@
         "Gainsight",
         "Zendesk",
         "Retention",
-        "Renewal strategy"
+        "Renewal strategy",
+        "Management"
       ],
       "industries": [
         "SaaS",
         "B2B Technology"
+      ],
+      "locations": [
+        "London",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -4463,11 +4568,18 @@
         "Asana",
         "Microsoft Project",
         "PRINCE2",
-        "Governance"
+        "Governance",
+        "Business Management"
       ],
       "industries": [
         "Professional services",
         "Logistics"
+      ],
+      "locations": [
+        "Manchester",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -4729,11 +4841,18 @@
         "Confluence",
         "SQL",
         "Power BI",
-        "Process mapping"
+        "Process mapping",
+        "Information Systems"
       ],
       "industries": [
         "Financial services",
         "Retail"
+      ],
+      "locations": [
+        "Chicago",
+        "Illinois",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -5034,11 +5153,19 @@
         "Power BI",
         "Process excellence",
         "Capacity planning",
-        "Continuous improvement"
+        "Continuous improvement",
+        "Business Administration",
+        "Operations Management"
       ],
       "industries": [
         "Shared services",
         "Professional services"
+      ],
+      "locations": [
+        "Bristol",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -5351,11 +5478,18 @@
         "Jira",
         "Power BI",
         "PRINCE2",
-        "Portfolio governance"
+        "Portfolio governance",
+        "Information Technology and Management"
       ],
       "industries": [
         "Professional services",
         "Public sector"
+      ],
+      "locations": [
+        "Galway",
+        "Connacht",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -5614,11 +5748,18 @@
         "Jira",
         "Microsoft Excel",
         "Process improvement",
-        "Order management"
+        "Order management",
+        "Business and Operations Management"
       ],
       "industries": [
         "Retail",
         "Distribution"
+      ],
+      "locations": [
+        "Bristol",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -5919,11 +6060,18 @@
         "SuccessFactors",
         "Employee relations",
         "Organisational design",
-        "Workforce planning"
+        "Workforce planning",
+        "Human Resource Management"
       ],
       "industries": [
         "Retail",
         "Professional services"
+      ],
+      "locations": [
+        "Birmingham",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -6201,11 +6349,18 @@
         "Workday Recruiting",
         "LinkedIn Recruiter",
         "ATS",
-        "Sourcing"
+        "Sourcing",
+        "Business and Management"
       ],
       "industries": [
         "Shared services",
         "Recruitment"
+      ],
+      "locations": [
+        "Dublin",
+        "Leinster",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [

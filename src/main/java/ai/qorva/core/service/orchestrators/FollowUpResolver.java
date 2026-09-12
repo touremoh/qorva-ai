@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 import java.util.List;
 import java.util.Map;
 
@@ -50,6 +51,29 @@ public class FollowUpResolver {
 	@Value("${qorva.ai.insights.follow-up.max-previous-question-length:300}")
 	private int maxPreviousQuestionLength;
 
+	/*
+	 * These read the English translation, never the recruiter's own words: resolve() runs after
+	 * QuestionTranslatorService.toEnglish, so matching on English is sound whatever the user typed.
+	 */
+
+	/** Marks an utterance that names what it wants — it could have opened the conversation. */
+	private static final List<String> REQUEST_SIGNALS = List.of(
+		"how many", "how much", "do we have", "are there", "show me", "give me", "get me",
+		"find ", "list ", "which ", "who ", "what ", "identify", "rank ", "compare "
+	);
+
+	/** Points back at the previous answer, so the utterance cannot stand without it. */
+	private static final List<String> BACK_REFERENCES = List.of(
+		" them", " those", " these", " they ", " it ", " him", " her",
+		"the ones", "the one ", "of them", "among them", "the second", "the first"
+	);
+
+	/** Adjusts the previous request rather than making a new one. */
+	private static final List<String> DELTA_MARKERS = List.of(
+		"instead", "only", "just ", "also", "same but", "make it",
+		"narrow", "widen", "exclude", "without", "rather than"
+	);
+
 	/**
 	 * @param question       the question the rest of the pipeline should run on
 	 * @param carriedParams  filters from the previous turn to merge under the freshly extracted
@@ -80,6 +104,16 @@ public class FollowUpResolver {
 			return new Resolution(spliced, previousFrame.params(), true);
 		}
 
+		// A complete question is not a follow-up, however closely it follows. Folding one into the
+		// previous turn changes what was asked — a "how many" merged onto a "show me" came back as
+		// a profile list built from both questions' entities. Settled here rather than in the
+		// prompt because sharing a subject reads as continuity to a model, and because deciding
+		// it in code costs nothing instead of a call.
+		if (isSelfContained(englishQuestion)) {
+			log.debug("Utterance stands on its own; not treating it as a follow-up: {}", englishQuestion);
+			return Resolution.standalone(englishQuestion);
+		}
+
 		FollowUpResolution resolution = classifyFollowUp(englishQuestion, previousFrame);
 		if (resolution == null || !resolution.isRefinement()) {
 			return Resolution.standalone(englishQuestion);
@@ -91,6 +125,18 @@ public class FollowUpResolver {
 		}
 		log.info("Resolved follow-up to: {} (reason: {})", rewritten, resolution.reason());
 		return new Resolution(rewritten, previousFrame.params(), true);
+	}
+
+	/**
+	 * True when the utterance names both what it wants and what it wants it about. A back
+	 * reference ("who among them") or a delta on the previous request ("show me 20 instead")
+	 * disqualifies it however complete it otherwise looks, and those cases go to the model.
+	 */
+	private boolean isSelfContained(String englishQuestion) {
+		var normalized = " " + englishQuestion.toLowerCase(Locale.ROOT).trim() + " ";
+		return REQUEST_SIGNALS.stream().anyMatch(normalized::contains)
+			&& BACK_REFERENCES.stream().noneMatch(normalized::contains)
+			&& DELTA_MARKERS.stream().noneMatch(normalized::contains);
 	}
 
 	private FollowUpResolution classifyFollowUp(String englishQuestion, ConversationFrame previousFrame) {

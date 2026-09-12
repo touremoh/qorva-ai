@@ -273,11 +273,18 @@
         "GD&T",
         "AutoCAD",
         "FEA",
-        "DFM"
+        "DFM",
+        "Mechanical Engineering"
       ],
       "industries": [
         "Automotive",
         "Manufacturing"
+      ],
+      "locations": [
+        "Coventry",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -555,11 +562,18 @@
         "AutoCAD",
         "HVAC",
         "ASHRAE",
-        "Energy Modelling"
+        "Energy Modelling",
+        "Mechanical Engineering"
       ],
       "industries": [
         "Construction",
         "Building Services"
+      ],
+      "locations": [
+        "Chicago",
+        "Illinois",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -846,11 +860,18 @@
         "ANSYS",
         "FEA",
         "GD&T",
-        "Powertrain"
+        "Powertrain",
+        "Automotive Engineering"
       ],
       "industries": [
         "Automotive",
         "Electric Vehicles"
+      ],
+      "locations": [
+        "Warwick",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -1125,11 +1146,18 @@
         "Vibration Analysis",
         "RCM",
         "Lean",
-        "Hydraulics"
+        "Hydraulics",
+        "Mechanical Engineering"
       ],
       "industries": [
         "Manufacturing",
         "FMCG"
+      ],
+      "locations": [
+        "Manchester",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -1391,11 +1419,18 @@
         "Fusion 360",
         "FEA",
         "GD&T",
-        "3D Printing"
+        "3D Printing",
+        "Mechanical Engineering"
       ],
       "industries": [
         "Consumer Hardware",
         "Product Development"
+      ],
+      "locations": [
+        "San Francisco",
+        "California",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -1665,11 +1700,18 @@
         "Revit",
         "AutoCAD",
         "Eurocodes",
-        "BIM"
+        "BIM",
+        "Civil Engineering"
       ],
       "industries": [
         "Construction",
         "Buildings"
+      ],
+      "locations": [
+        "Manchester",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -1944,11 +1986,18 @@
         "AutoCAD",
         "Total Station",
         "Setting Out",
-        "Reinforced Concrete"
+        "Reinforced Concrete",
+        "Civil Engineering"
       ],
       "industries": [
         "Construction",
         "Infrastructure"
+      ],
+      "locations": [
+        "Dublin",
+        "Leinster",
+        "Ireland",
+        "Europe"
       ]
     },
     "tags": [
@@ -2212,11 +2261,19 @@
         "AutoCAD",
         "Eurocode 7",
         "Foundation Design",
-        "Slope Stability"
+        "Slope Stability",
+        "Civil Engineering",
+        "Soil Mechanics"
       ],
       "industries": [
         "Infrastructure",
         "Construction"
+      ],
+      "locations": [
+        "Bristol",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -2484,11 +2541,18 @@
         "AutoCAD",
         "DMRB",
         "Highway Design",
-        "Drainage"
+        "Drainage",
+        "Civil Engineering"
       ],
       "industries": [
         "Infrastructure",
         "Transport"
+      ],
+      "locations": [
+        "Leeds",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -2759,11 +2823,18 @@
         "EPA SWMM",
         "HEC-RAS",
         "ArcGIS",
-        "Hydrology"
+        "Hydrology",
+        "Civil Engineering"
       ],
       "industries": [
         "Water",
         "Infrastructure"
+      ],
+      "locations": [
+        "Seattle",
+        "Washington",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -3024,11 +3095,18 @@
         "DIgSILENT PowerFactory",
         "MATLAB",
         "AutoCAD Electrical",
-        "Protection Coordination"
+        "Protection Coordination",
+        "Electrical & Electronic Engineering"
       ],
       "industries": [
         "Utilities",
         "Renewable Energy"
+      ],
+      "locations": [
+        "Glasgow",
+        "Scotland",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -3298,11 +3376,18 @@
         "Revit",
         "Dialux",
         "BS 7671",
-        "Lighting Design"
+        "Lighting Design",
+        "Electrical & Electronic Engineering"
       ],
       "industries": [
         "Construction",
         "Building Services"
+      ],
+      "locations": [
+        "Birmingham",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -3568,11 +3653,18 @@
         "PLC",
         "SCADA",
         "Siemens TIA Portal",
-        "Functional Safety"
+        "Functional Safety",
+        "Electrical & Electronic Engineering"
       ],
       "industries": [
         "Water",
         "Oil and Gas"
+      ],
+      "locations": [
+        "Aberdeen",
+        "Scotland",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -3860,11 +3952,18 @@
         "MATLAB",
         "SPICE",
         "PCB Layout",
-        "Power Electronics"
+        "Power Electronics",
+        "Electrical Engineering"
       ],
       "industries": [
         "Medical Devices",
         "Industrial Electronics"
+      ],
+      "locations": [
+        "Austin",
+        "Texas",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -3973,11 +4072,18 @@
         "PVsyst",
         "DIgSILENT PowerFactory",
         "AutoCAD Electrical",
-        "HV/LV Design"
+        "HV/LV Design",
+        "Electrical & Electronic Engineering"
       ],
       "industries": [
         "Renewable Energy",
         "Utilities"
+      ],
+      "locations": [
+        "Bristol",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -4243,11 +4349,18 @@
         "Minitab",
         "MES",
         "5S",
-        "Value Stream Mapping"
+        "Value Stream Mapping",
+        "Industrial Engineering"
       ],
       "industries": [
         "Automotive",
         "Electronics Manufacturing"
+      ],
+      "locations": [
+        "Detroit",
+        "Michigan",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -4498,11 +4611,18 @@
         "APQP",
         "PPAP",
         "FMEA",
-        "Six Sigma"
+        "Six Sigma",
+        "Manufacturing Engineering"
       ],
       "industries": [
         "Aerospace",
         "Automotive"
+      ],
+      "locations": [
+        "Chester",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -4761,11 +4881,18 @@
         "Minitab",
         "SAP",
         "Kaizen",
-        "Value Stream Mapping"
+        "Value Stream Mapping",
+        "Industrial & Systems Engineering"
       ],
       "industries": [
         "Manufacturing",
         "Distribution"
+      ],
+      "locations": [
+        "Columbus",
+        "Ohio",
+        "United States",
+        "North America"
       ]
     },
     "tags": [
@@ -5036,11 +5163,18 @@
         "MRP",
         "Lean",
         "Inventory Optimisation",
-        "S&OP"
+        "S&OP",
+        "Industrial Engineering"
       ],
       "industries": [
         "Manufacturing",
         "Supply Chain"
+      ],
+      "locations": [
+        "Leeds",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -5299,11 +5433,18 @@
         "Lean",
         "Six Sigma",
         "Production Planning",
-        "5S"
+        "5S",
+        "Manufacturing Engineering"
       ],
       "industries": [
         "Automotive",
         "Manufacturing"
+      ],
+      "locations": [
+        "Coventry",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -5588,11 +5729,18 @@
         "GD&T",
         "AutoCAD",
         "FEA",
-        "DFM"
+        "DFM",
+        "Mechanical Engineering"
       ],
       "industries": [
         "Automotive",
         "Manufacturing"
+      ],
+      "locations": [
+        "Coventry",
+        "England",
+        "United Kingdom",
+        "Europe"
       ]
     },
     "tags": [
@@ -5870,11 +6018,18 @@
         "AutoCAD",
         "HVAC",
         "ASHRAE",
-        "Energy Modelling"
+        "Energy Modelling",
+        "Mechanical Engineering"
       ],
       "industries": [
         "Construction",
         "Building Services"
+      ],
+      "locations": [
+        "Chicago",
+        "Illinois",
+        "United States",
+        "North America"
       ]
     },
     "tags": [

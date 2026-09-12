@@ -10,9 +10,11 @@ import java.time.Year;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Builds MongoDB Criteria from CVQueryParams using a dimension-based, multi-field approach.
@@ -24,6 +26,10 @@ import java.util.stream.Collectors;
  * Skill dimension  → searchIndex.skills | searchIndex.roles (technology in a role title implies the skill)
  * Role  dimension  → searchIndex.roles
  * Industry filter  → searchIndex.industries
+ * Location filter  → searchIndex.locations (city, region, country, continent — in English)
+ *
+ * Raw CV fields stay in the CV's own language, so text filters never read them; the two
+ * exceptions (degree, language) use patterns that cover the main European spellings.
  */
 @Slf4j
 @Component
@@ -51,11 +57,13 @@ public class InsightCVQueryBuilder {
 	private static final Map<String, List<String>> INDUSTRY_EXPANSION = Map.ofEntries(
 		Map.entry("financial services", List.of("Fintech", "FinTech", "Banking", "Insurance", "Finance", "Financial Services", "Financial Technology")),
 		Map.entry("finance",            List.of("Fintech", "FinTech", "Banking", "Insurance", "Finance", "Financial Services", "Financial Technology")),
-		Map.entry("healthcare",         List.of("Healthcare", "Health", "Medical", "Pharma", "Pharmaceutical", "Bioinformatics", "Life Sciences")),
-		Map.entry("health",             List.of("Healthcare", "Health", "Medical", "Pharma", "Pharmaceutical")),
+		Map.entry("healthcare",         List.of("Healthcare", "Health", "Medical", "Pharma", "Pharmaceutical", "Bioinformatics", "Life Sciences", "Hospital", "Clinic", "Biotech", "CRO")),
+		Map.entry("health",             List.of("Healthcare", "Health", "Medical", "Pharma", "Pharmaceutical", "Hospital", "Clinic")),
+		Map.entry("pharma",             List.of("Pharma", "Pharmaceutical", "Biotech", "Life Sciences", "CRO")),
+		Map.entry("life sciences",      List.of("Life Sciences", "Biotech", "Pharma", "Pharmaceutical", "Bioinformatics", "CRO")),
 		Map.entry("retail",             List.of("Retail", "E-Commerce", "eCommerce", "Consumer Goods")),
 		Map.entry("e-commerce",         List.of("E-Commerce", "eCommerce", "Retail", "Consumer Goods")),
-		Map.entry("energy",             List.of("Energy", "Oil & Gas", "Renewables", "Utilities", "Clean Energy")),
+		Map.entry("energy",             List.of("Energy", "Oil & Gas", "Oil and Gas", "Renewable", "Utilities", "Clean Energy")),
 		Map.entry("manufacturing",      List.of("Manufacturing", "Industrial", "Automotive", "Aerospace")),
 		Map.entry("media",              List.of("Media", "Entertainment", "Gaming", "Publishing", "Broadcasting")),
 		Map.entry("entertainment",      List.of("Entertainment", "Media", "Gaming", "Publishing")),
@@ -73,14 +81,16 @@ public class InsightCVQueryBuilder {
 	);
 
 	// Degree-level regex patterns keyed by normalized value
+	// Degrees are the one raw field a text filter reads, so each pattern lists the abbreviations
+	// and the main European spellings a CV carries (BEng, BComm, Licence, Laurea, Diplom…).
+	// Abbreviations are word-bounded so "BA" does not fire inside "MBA" or "Bachelor".
 	private static final Map<String, String> DEGREE_PATTERNS = Map.of(
-		"bachelor",  "bachelor|BSc|B\\.S\\.|B\\.A\\.|undergraduate|licenc|licens",
-		"master",    "master|MSc|M\\.S\\.|M\\.A\\.|graduate|magistere",
-		"phd",       "ph\\.?d\\.?|doctorat|doctora|DPhil|D\\.Phil",
-		"mba",       "MBA|master of business",
-		"associate", "associate|HND|HNC"
+		"bachelor",  "bachelor|bachelier|bachiller|bacharel|\\bB\\.?\\s?(Sc|S|A|Eng|E|Comm|Com|BA|Tech|Ed|Fin|N)\\b|\\bMBBS\\b|\\bMBChB\\b|\\bLLB\\b|undergraduate|licenc|licens|diplomatura|laurea triennale|\\bgrado\\b|ingenier.a t.cnica",
+		"master",    "m.st[eè]re?\\b|\\bM\\.?\\s?(Sc|S|A|Eng|E|Phil|Res|Ed|Fin|Tech|St)\\b|(?<!under)graduate|magist|maestr|mestrado|laurea(?! triennale)|\\bDiplom\\b|diplomingenieur|dipl\\.?-?ing|dipl.me d.ing|staatsexamen|^ingenier.a(?! t.cnica)",
+		"phd",       "ph\\.?d\\.?|doctor|docteur|doktor|dottorato|doutoramento|\\bDPhil\\b|D\\.Phil|\\bDr\\.?\\s?(rer|phil|ing|med|sc)|promotion",
+		"mba",       "\\bE?MBA\\b|master of business",
+		"associate", "associate|\\bHND\\b|\\bHNC\\b|\\bBTS\\b|\\bDUT\\b|\\bBUT\\b|\\bAAS\\b|foundation degree|higher certificate"
 	);
-
 	public Criteria build(ObjectId tenantId, CVQueryParams params) {
 		log.debug("Building CV query for tenantId: {}, params: {}", tenantId, params);
 
@@ -101,11 +111,12 @@ public class InsightCVQueryBuilder {
 			conditions.add(roleDimension(params.roles()));
 		}
 
-		if (params.industries() != null && !params.industries().isEmpty()) {
-			List<Criteria> ic = params.industries().stream()
+		List<String> industries = withoutSkillDuplicates(params.industries(), params);
+		if (!industries.isEmpty()) {
+			List<Criteria> ic = industries.stream()
 				.flatMap(ind -> expandIndustry(ind).stream())
 				.distinct()
-				.map(v -> Criteria.where("searchIndex.industries").regex(escape(v), "i"))
+				.map(v -> Criteria.where("searchIndex.industries").regex(prefixBounded(v), "i"))
 				.collect(Collectors.toList());
 			conditions.add(new Criteria().orOperator(ic.toArray(new Criteria[0])));
 		}
@@ -153,8 +164,10 @@ public class InsightCVQueryBuilder {
 		if (params.availabilityStatus() != null) {
 			conditions.add(Criteria.where("personalInformation.availability.status").is(params.availabilityStatus()));
 		}
-		if (params.location() != null) {
-			conditions.add(Criteria.where("personalInformation.contact").regex(escape(params.location()), "i"));
+		if (params.location() != null && !params.location().isBlank()) {
+			// contact.address is a nested document in the CV's language; a regex on it can never
+			// match. searchIndex.locations lists city, region, country and continent in English.
+			conditions.add(Criteria.where("searchIndex.locations").regex(prefixBounded(params.location()), "i"));
 		}
 		if (params.minYearsExperience() != null) {
 			conditions.add(Criteria.where("careerStartYear").lte(Year.now().getValue() - params.minYearsExperience()));
@@ -172,7 +185,7 @@ public class InsightCVQueryBuilder {
 		if (params.requiredIndustries() != null && !params.requiredIndustries().isEmpty()) {
 			params.requiredIndustries().forEach(ind -> {
 				List<Criteria> variantCriteria = expandIndustry(ind).stream()
-					.map(v -> Criteria.where("searchIndex.industries").regex(escape(v), "i"))
+					.map(v -> Criteria.where("searchIndex.industries").regex(prefixBounded(v), "i"))
 					.collect(Collectors.toList());
 				conditions.add(variantCriteria.size() == 1
 					? variantCriteria.get(0)
@@ -230,6 +243,48 @@ public class InsightCVQueryBuilder {
 			return new Criteria().orOperator(termFields.toArray(new Criteria[0]));
 		}).collect(Collectors.toList());
 		return new Criteria().orOperator(perTerm.toArray(new Criteria[0]));
+	}
+
+	/**
+	 * Drops industry terms that the extractor also emitted as a skill. That duplication is the
+	 * extractor hedging on a term that is not a sector at all ("economics" came back as both
+	 * {@code skills: ["economics"]} and {@code industries: ["Economics"]}), and because industries
+	 * are AND'd onto the skill dimension the hedge turned into a filter no candidate could pass:
+	 * a field of study is indexed under {@code searchIndex.skills}, never under
+	 * {@code searchIndex.industries}. Terms that only appear under industries are kept as-is.
+	 */
+	private static List<String> withoutSkillDuplicates(List<String> industries, CVQueryParams params) {
+		if (industries == null || industries.isEmpty()) {
+			return List.of();
+		}
+		Set<String> skillTerms = Stream.concat(
+				params.skills() != null ? params.skills().stream() : Stream.empty(),
+				params.requiredSkills() != null ? params.requiredSkills().stream() : Stream.empty())
+			.map(s -> s.toLowerCase(Locale.ROOT).trim())
+			.collect(Collectors.toSet());
+		if (skillTerms.isEmpty()) {
+			return industries;
+		}
+		List<String> kept = industries.stream()
+			.filter(ind -> !skillTerms.contains(ind.toLowerCase(Locale.ROOT).trim()))
+			.collect(Collectors.toList());
+		if (kept.size() != industries.size()) {
+			log.debug("Ignoring industry terms already searched as skills: {}", industries.stream().filter(i -> !kept.contains(i)).toList());
+		}
+		return kept;
+	}
+
+	/**
+	 * A term that must start a word in the stored label. Plain substring matching let "IT"
+	 * fire inside "Hospitality", "Utilities" and "Recruitment"; a leading boundary stops that
+	 * while still letting "Pharma" reach "Pharmaceuticals" and "Hospital" reach "Hospitals".
+	 * Short tokens are acronyms, and a prefix match on those ("IT" in "Italy", "CRO" in
+	 * "Croatia") is noise, so they are bounded on both sides.
+	 */
+	static String prefixBounded(String term) {
+		String trimmed = term.trim();
+		String pattern = "\\b" + escape(trimmed);
+		return trimmed.length() <= 3 ? pattern + "\\b" : pattern;
 	}
 
 	/** Escapes MongoDB regex metacharacters in a literal search term. */

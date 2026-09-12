@@ -18,6 +18,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
 
 @ExtendWith(MockitoExtension.class)
@@ -86,6 +87,55 @@ class FollowUpResolverTest {
 		assertThat(resolution.question()).isEqualTo("java development");
 		assertThat(resolution.continuation()).isFalse();
 		verifyNoInteractions(chatClient);
+	}
+
+	private static ConversationFrame answeredFrame(String question) {
+		return new ConversationFrame(question, InsightIntent.CANDIDATE_RANKING,
+			CVQueryParams.empty(), false, Instant.now());
+	}
+
+	/**
+	 * The regression this guards: "how many economics graduates do we have?" asked seconds after
+	 * "show me the top candidates in the field of economics" was folded into one rewrite asking
+	 * for both, which classified as a profile list and returned nothing. Sharing a subject is not
+	 * continuity — a complete question stands on its own.
+	 */
+	@Test
+	void aCompleteQuestionOnTheSameSubjectIsNotAFollowUp() {
+		var frame = answeredFrame("show me the top candidates in the field of economics");
+
+		var resolution = resolver.resolve("how many economics graduates do we have?", frame);
+
+		assertThat(resolution.question()).isEqualTo("how many economics graduates do we have?");
+		assertThat(resolution.continuation()).isFalse();
+		assertThat(resolution.carriedParams()).isNull();
+		// The prompt is never even loaded: the decision is made before the model is consulted.
+		verifyNoInteractions(promptContextHolder);
+		verifyNoInteractions(chatClient);
+	}
+
+	@Test
+	void aBareFragmentIsStillResolvedAgainstThePreviousTurn() {
+		// No request of its own, so it cannot stand alone — this must reach the model.
+		resolver.resolve("java development", answeredFrame("show me the top 10 profiles"));
+
+		verify(promptContextHolder).getFollowUpResolverPrompt();
+	}
+
+	@Test
+	void aQuestionPointingBackAtThePreviousAnswerIsNotSelfContained() {
+		// "who" looks like a complete request until "among them" is read.
+		resolver.resolve("who among them is based in Belgium?", answeredFrame("show me java profiles"));
+
+		verify(promptContextHolder).getFollowUpResolverPrompt();
+	}
+
+	@Test
+	void aDeltaOnThePreviousRequestIsNotSelfContained() {
+		// "show me 20 instead" reads as a complete request but only adjusts the previous one.
+		resolver.resolve("show me 20 instead", answeredFrame("show me the top 10 java profiles"));
+
+		verify(promptContextHolder).getFollowUpResolverPrompt();
 	}
 
 	@Test
