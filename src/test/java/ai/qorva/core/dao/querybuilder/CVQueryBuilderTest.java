@@ -99,6 +99,17 @@ class CVQueryBuilderTest {
 	}
 
 	@Test
+	void quickSearchIsAQuotedContainsAcrossIdentityFieldsAndComposesWithFilters() {
+		String q = json(params("q", "C++ dev", "seniority", "senior"));
+
+		assertThat(q).contains("\\\\QC++ dev\\\\E");
+		assertThat(q).contains("personalInformation.name").contains("searchIndex.skills").contains("applicantNumber");
+		assertThat(q).contains("$or");
+		// the rail filter is still applied alongside the search, not replaced by it
+		assertThat(q).contains("candidateClustering.seniorityLevel");
+	}
+
+	@Test
 	void archivedDefaultsToActiveOnly() {
 		assertThat(json(params())).contains("\"archived\": {\"$ne\": true}");
 		assertThat(json(params("archived", "true"))).contains("\"archived\": true");

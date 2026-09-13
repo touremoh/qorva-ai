@@ -32,6 +32,7 @@ public class CVQueryBuilder implements QorvaQueryBuilder<CV> {
 			.where(CVSpecifications.tenantIdEquals(params.get("tenantId")))
 			.and(CVSpecifications.archivedEquals("true".equals(params.get("archived"))))
 			.and(CVSpecifications.applicantNumberEquals(params.get("applicantNumber")))
+			.and(CVSpecifications.quickSearch(params.get("q")))
 			.and(CVSpecifications.nameContains(params.get("name")))
 			.and(CVSpecifications.hasRoleOrPosition(params.get("role")))
 			.and(CVSpecifications.seniorityIn(list(params.get("seniority"))))

@@ -74,6 +74,29 @@ public final class CVSpecifications {
 		return () -> Criteria.where("careerStartYear").lte(latestAllowedStartYear);
 	}
 
+	/**
+	 * Quick search box above the CV list: a literal, case-insensitive "contains" across the few
+	 * fields a recruiter types from memory. Composes with the rail filters (AND), unlike the
+	 * $text endpoint, and never stems or tokenises so the hit count is what it looks like.
+	 */
+	public static MongoSpecification<CV> quickSearch(String term) {
+		if (term == null || term.isBlank()) {
+			return MongoSpecifications.empty();
+		}
+		String pattern = Pattern.quote(term.trim());
+		List<String> fields = List.of(
+			"personalInformation.name",
+			"personalInformation.role",
+			"personalInformation.contact.email",
+			"applicantNumber",
+			"searchIndex.roles",
+			"searchIndex.skills",
+			"tags");
+		return () -> new Criteria().orOperator(fields.stream()
+			.map(f -> Criteria.where(f).regex(pattern, "i"))
+			.toArray(Criteria[]::new));
+	}
+
 	public static MongoSpecification<CV> hasMaxYearOfExperience(Integer maxYears) {
 		if (maxYears == null || maxYears < 0) {
 			return MongoSpecifications.empty();
