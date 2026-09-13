@@ -23,6 +23,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
+import java.util.Objects;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -100,16 +101,22 @@ public class StripeSubscriptionUpdatedHandler implements StripeEventHandler {
 				persistEventInDb(tenantDTO, subscriptionId, customerId, subscriptionStatus, eventId);
 
 			} else {
-				var currentStatus = tenantDTO.getSubscriptionInfo().getSubscriptionStatus();
-				if (!currentStatus.equals(subscriptionStatus)) {
-					log.debug("Subscription status changed from {} to {} for customer {}", currentStatus, subscriptionStatus, customerId);
+				// Same plan: a status change OR a renewal. A renewal keeps status "active" but moves
+				// the period — it must be written too, or usage metering keeps reading the old one.
+				var subscriptionInfo = tenantDTO.getSubscriptionInfo();
+				var currentStatus = subscriptionInfo.getSubscriptionStatus();
+				var periodStart = subItem.getCurrentPeriodStart() != null ? Instant.ofEpochSecond(subItem.getCurrentPeriodStart()) : null;
+				var periodEnd = subItem.getCurrentPeriodEnd() != null ? Instant.ofEpochSecond(subItem.getCurrentPeriodEnd()) : null;
+				boolean statusChanged = !Objects.equals(currentStatus, subscriptionStatus);
+				boolean periodChanged = !Objects.equals(subscriptionInfo.getCurrentPeriodStart(), periodStart)
+					|| !Objects.equals(subscriptionInfo.getCurrentPeriodEnd(), periodEnd);
+				if (statusChanged || periodChanged) {
+					log.debug("Subscription {} for customer {}: status {} -> {}, period {} -> {}",
+						subscriptionId, customerId, currentStatus, subscriptionStatus, subscriptionInfo.getCurrentPeriodEnd(), periodEnd);
 
-					var subscriptionInfo = tenantDTO.getSubscriptionInfo();
 					subscriptionInfo.setSubscriptionStatus(subscriptionStatus);
-					subscriptionInfo.setCurrentPeriodStart(subItem.getCurrentPeriodStart() != null
-						? Instant.ofEpochSecond(subItem.getCurrentPeriodStart()) : null);
-					subscriptionInfo.setCurrentPeriodEnd(subItem.getCurrentPeriodEnd() != null
-						? Instant.ofEpochSecond(subItem.getCurrentPeriodEnd()) : null);
+					subscriptionInfo.setCurrentPeriodStart(periodStart);
+					subscriptionInfo.setCurrentPeriodEnd(periodEnd);
 					subscriptionInfo.setCancelAtPeriodEnd(sub.getCancelAtPeriodEnd());
 					tenantDTO.setSubscriptionInfo(subscriptionInfo);
 

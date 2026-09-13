@@ -66,7 +66,7 @@ public class UsageMonitoringService extends AbstractQorvaService<UsageMonitoring
     public Optional<UsageMonitoringDTO> findCurrentPeriodByTenantId(String tenantId) {
         var now = Instant.now();
         return usageMonitoringRepository
-            .findByTenantIdAndCurrentPeriodStartLessThanEqualAndCurrentPeriodEndGreaterThan(tenantId, now, now)
+            .findFirstByTenantIdAndCurrentPeriodStartLessThanEqualAndCurrentPeriodEndGreaterThanOrderByCurrentPeriodEndDesc(tenantId, now, now)
             .map(mapper::map);
     }
 

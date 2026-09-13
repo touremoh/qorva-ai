@@ -40,9 +40,11 @@ public class UsageMonitoringController {
 		var userInfo = Optional.ofNullable(this.userService.findOneByCriteria(UserDTO.builder().email(userDetails.getUsername()).build()))
 			.orElseThrow(() -> new QorvaException("User not found"));
 		var usage = this.usageMonitoringService.findCurrentPeriodByTenantId(userInfo.getTenantId()).orElse(null);
-		if (usage != null) {
-			usage.setBulkUploadFilesLimit(bulkCvUploadService.maxFilesForTenant(userInfo.getTenantId()));
+		if (usage == null) {
+			// No active period for this tenant: say so explicitly rather than a 200 with an empty body.
+			return ResponseEntity.noContent().build();
 		}
+		usage.setBulkUploadFilesLimit(bulkCvUploadService.maxFilesForTenant(userInfo.getTenantId()));
 		return ResponseEntity.ok(usage);
 	}
 }

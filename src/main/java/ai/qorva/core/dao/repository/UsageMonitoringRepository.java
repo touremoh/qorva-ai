@@ -9,7 +9,8 @@ import java.util.Optional;
 @Repository
 public interface UsageMonitoringRepository extends QorvaRepository<UsageMonitoring> {
 
-    Optional<UsageMonitoring> findByTenantIdAndCurrentPeriodStartLessThanEqualAndCurrentPeriodEndGreaterThan(
+    /** Newest active period wins: overlapping documents (e.g. from a stale-period rollover) must not turn into a 500. */
+    Optional<UsageMonitoring> findFirstByTenantIdAndCurrentPeriodStartLessThanEqualAndCurrentPeriodEndGreaterThanOrderByCurrentPeriodEndDesc(
         String tenantId, Instant periodStart, Instant periodEnd
     );
 
