@@ -12,11 +12,11 @@ import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.openai.api.ResponseFormat;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
-import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_5_MINI;
 
 @Slf4j
 @Service
@@ -27,6 +27,9 @@ public class ReportGenerationAgent {
 	private final QorvaPromptContextHolder promptContextHolder;
 	private final OpenAIResultMapper mapper;
 
+	@Value("${qorva.ai.report.model:gpt-5.6-terra}")
+	private String model;
+
 	public MatchingReportDetails generate(String cvDetails, String jobDescription, String languageCode, ScoringRules scoringRules) {
 		var outputConverter = new BeanOutputConverter<>(MatchingReportResponse.class);
 		var reportGenerationPrompt = promptContextHolder.getReportGenerationPrompt();
@@ -35,7 +38,7 @@ public class ReportGenerationAgent {
 
 		var apiResponse = chatClient.prompt()
 			.options(OpenAiChatOptions.builder()
-				.model(GPT_5_MINI)
+				.model(model)
 				.responseFormat(ResponseFormat.builder()
 					.type(ResponseFormat.Type.JSON_SCHEMA)
 					.jsonSchema(ResponseFormat.JsonSchema.builder()

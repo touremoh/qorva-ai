@@ -23,6 +23,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -128,7 +129,8 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 				searchCriteria.getCandidateInfo().getCandidateId()
 			);
 		if (response.isEmpty()) {
-			throw new QorvaException(QorvaErrorCodes.REPORT_RESUME_MATCH_NOT_FOUND);
+			// Expected state (the resume-chat dialog probes for a report before creating a chat) — a 404, not a 500.
+			throw new QorvaException(QorvaErrorCodes.REPORT_RESUME_MATCH_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
 		}
 		return this.mapper.map(response.get());
 	}

@@ -46,10 +46,13 @@ public class QorvaExceptionHandler extends ResponseEntityExceptionHandler {
 
 	@ExceptionHandler(value = {QorvaException.class})
 	protected ResponseEntity<Object> handleQorvaException(QorvaException ex, HttpServletRequest request) {
-		log.error("QorvaException: {}", ex.getMessage(), ex);
-
 		Locale locale = resolveLocale(request);
 		QorvaErrorsEnum errorEnum = QorvaErrorsEnum.getByCode(ex.getHttpStatusCode());
+		if (Objects.nonNull(errorEnum) && errorEnum.getHttpStatus().is4xxClientError()) {
+			log.warn("QorvaException {} on {}: {}", errorEnum.getCode(), request.getRequestURI(), ex.getMessage());
+		} else {
+			log.error("QorvaException: {}", ex.getMessage(), ex);
+		}
 
 		String errorCode = StringUtils.hasText(ex.getMessage())
 			? ex.getMessage()

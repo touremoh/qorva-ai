@@ -48,8 +48,20 @@ qorva:
       model: ${QORVA_EXTRACTION_MODEL:gpt-4.1-mini}
       # Vision pass runs only on escalated CVs (thin text / missing contact / low confidence).
       vision-model: ${QORVA_EXTRACTION_VISION_MODEL:gpt-4.1-mini}
+    # gpt-5-mini's snapshot shuts down 2026-12-11; gpt-5.6-terra is OpenAI's listed replacement.
     job-description:
-      model: ${QORVA_JOB_DESCRIPTION_MODEL:gpt-5-mini}
+      model: ${QORVA_JOB_DESCRIPTION_MODEL:gpt-5.6-terra}
+    report:
+      model: ${QORVA_REPORT_MODEL:gpt-5.6-terra}
+    resume-chat:
+      # gpt-5-chat-latest was shut down 2026-07-23; gpt-5.6-sol is OpenAI's listed replacement.
+      model: ${QORVA_RESUME_CHAT_MODEL:gpt-5.6-sol}
+      history-token-budget: ${QORVA_RESUME_CHAT_HISTORY_TOKEN_BUDGET:8000}
+      keep-recent-messages: ${QORVA_RESUME_CHAT_KEEP_RECENT_MESSAGES:6}
+      summary-trigger-tokens: ${QORVA_RESUME_CHAT_SUMMARY_TRIGGER_TOKENS:6000}
+      summary-model: ${QORVA_RESUME_CHAT_SUMMARY_MODEL:gpt-4.1-mini}
+      summary-max-tokens: ${QORVA_RESUME_CHAT_SUMMARY_MAX_TOKENS:1200}
+      context-token-warn: ${QORVA_RESUME_CHAT_CONTEXT_TOKEN_WARN:12000}
     insights:
       follow-up:
         # Only the previous turn is replayed as context, and only for this long — past it the

@@ -3,6 +3,7 @@ package ai.qorva.core.dao.entity;
 
 import ai.qorva.core.dto.common.ChatContext;
 import ai.qorva.core.dto.common.ChatMetadata;
+import ai.qorva.core.dto.common.ChatSummary;
 import ai.qorva.core.dto.common.Participant;
 import ai.qorva.core.enums.ChatStatus;
 import lombok.*;
@@ -40,6 +41,9 @@ public class Chat implements QorvaEntity {
     private List<Participant> participants;
 
     private ChatMetadata metadata;
+
+    /** Rolling summary of the turns no longer sent verbatim to the model; null until the first compaction. */
+    private ChatSummary summary;
 
     @CreatedDate
     private Instant createdAt;

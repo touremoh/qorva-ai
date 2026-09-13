@@ -25,10 +25,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionTemplate;
 
 import java.time.Instant;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static java.util.Optional.ofNullable;
 
@@ -41,8 +42,10 @@ public class ChatService {
     private final ChatMessagesRepository chatMessagesRepository;
     private final ChatMapper chatMapper;
     private final ChatMessageMapper chatMessageMapper;
-    private final ChatAgent agent; // see below
+    private final ChatAgent agent;
+    private final ChatSummaryService chatSummaryService;
     private final UserRepository userRepository;
+    private final TransactionTemplate transactionTemplate;
 
     @Transactional
     public ChatDTO createChat(CreateChatRequest req, String username) throws QorvaException {
@@ -80,17 +83,6 @@ public class ChatService {
 
         chat = chatsRepository.save(chat);
 
-        // Optional system seed message describing context (helps LLM)
-        ChatMessage system = ChatMessage.builder()
-                .tenantId(req.getTenantId())
-                .chatId(chat.getId())
-                .role(ChatUserRole.SYSTEM)
-                .content(buildSystemPreamble(chat))
-                .createdAt(Instant.now())
-                .build();
-
-        chatMessagesRepository.save(system);
-
         return chatMapper.map(chat);
     }
 
@@ -108,41 +100,54 @@ public class ChatService {
         return chatMapper.map(chat);
     }
 
-    @Transactional
+    /**
+     * One turn. Deliberately not transactional as a whole: the model call can take tens of
+     * seconds and MongoDB aborts transactions after 60 s, which used to fail the save of an
+     * answer that had actually arrived. The USER message is written first and survives a
+     * failed model call; the reply and the chat touch are committed together afterwards.
+     */
     public ChatMessageDTO postUserMessage(String tenantId, String chatId, PostUserMessageRequest req) throws QorvaException {
-        // Get the userId
         var userId = ofNullable(userRepository.findByEmail(req.getUsername())).orElseThrow(() -> new QorvaException(QorvaErrorCodes.USER_NOT_FOUND)).getId();
 
-        // Get the chat
         Chat chat = ofNullable(chatsRepository.findOneByTenantAndId(tenantId, chatId))
-                .orElseThrow(() -> new QorvaException("Chat not found"));
+                .orElseThrow(() -> new QorvaException(QorvaErrorCodes.CHAT_NOT_FOUND));
 
-        // Save USER message
-        ChatMessage userMsg = ChatMessage.builder()
-                .tenantId(tenantId)
-                .chatId(chatId)
-                .role(ChatUserRole.USER)
-                .participantId(userId)
-                .content(req.getContent())
-                .createdAt(Instant.now())
-                .build();
-        userMsg = chatMessagesRepository.save(userMsg);
-
+        // A retry after a failed model call re-posts the same text: reuse the unanswered row instead of duplicating it.
+        ChatMessage newest = chatMessagesRepository.findFirstByTenantIdAndChatIdOrderByCreatedAtDesc(tenantId, chatId);
+        ChatMessage userMsg = isUnansweredDuplicate(newest, req.getContent())
+                ? newest
+                : chatMessagesRepository.save(ChatMessage.builder()
+                        .tenantId(tenantId)
+                        .chatId(chatId)
+                        .role(ChatUserRole.USER)
+                        .participantId(userId)
+                        .content(req.getContent())
+                        .createdAt(Instant.now())
+                        .build());
         log.debug("User message saved with ID: {}", userMsg.getId());
 
-        // Build a conversation window (trim if long)
-        List<ChatMessage> context = buildConversationWindow(tenantId, chatId);
+        // Summary + bounded window instead of the whole transcript
+        List<ChatMessage> unsummarised = chatSummaryService.loadUnsummarised(chat);
+        ChatMessage assistant = agent.answer(chat, ChatSummaryService.summaryText(chat), unsummarised);
 
-        // Call LLM with CV + Job + ResumeMatch context
-        ChatMessage assistant = agent.answer(chat, context);
+        ChatMessage saved = transactionTemplate.execute(status -> {
+            ChatMessage persisted = chatMessagesRepository.save(assistant);
+            chat.setLastUpdatedBy(userId);
+            chat.setLastUpdatedAt(Instant.now());
+            chatsRepository.save(chat);
+            return persisted;
+        });
 
-        assistant = chatMessagesRepository.save(assistant);
+        unsummarised.add(saved);
+        if (chatSummaryService.shouldCompact(unsummarised)) {
+            chatSummaryService.compactAsync(tenantId, chatId);
+        }
 
-        // Update chat lastUpdated
-        chat.setLastUpdatedBy(req.getUsername());
-        chatsRepository.save(chat);
+        return chatMessageMapper.map(saved);
+    }
 
-        return chatMessageMapper.map(assistant);
+    private static boolean isUnansweredDuplicate(ChatMessage newest, String content) {
+        return newest != null && newest.getRole() == ChatUserRole.USER && Objects.equals(newest.getContent(), content);
     }
 
     public Page<ChatMessageDTO> getMessages(String tenantId, String chatId, Pageable pageable) throws QorvaException {
@@ -172,34 +177,5 @@ public class ChatService {
         chat.setLastUpdatedBy(actor);
         chat.setLastUpdatedAt(Instant.now());
         return chatMapper.map(chatsRepository.save(chat));
-    }
-
-    // ------- Helpers -------
-
-    private String buildSystemPreamble(Chat chat) {
-
-        return """
-            You are Qorva AI, an assistant that answers questions about a candidate's CV in relation to a job post and a resume match analysis.
-            Use ONLY the provided context and conversation history. If unsure, say so.
-            The chat language is the user's language.
-            Context IDs: cvId=%s, jobPostId=%s, matchingReportId=%s.
-            """.formatted(
-                chat.getContext().getCvId(),
-                chat.getContext().getJobPostId(),
-                chat.getContext().getMatchingReportId()
-        );
-    }
-
-    private List<ChatMessage> buildConversationWindow(String tenantId, String chatId) {
-        // Simple windowing: stream all; you can trim by token budget later
-        List<ChatMessage> all = new ArrayList<>();
-        chatMessagesRepository.streamForContext(tenantId, chatId).forEach(all::add);
-
-        // Optionally trim to last N messages or token estimate
-        final int MAX_MSG = 100;
-        if (all.size() > MAX_MSG) {
-            return all.subList(all.size() - MAX_MSG, all.size());
-        }
-        return all;
     }
 }

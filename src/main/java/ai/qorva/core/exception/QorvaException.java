@@ -54,4 +54,14 @@ public class QorvaException extends Exception {
 		this.message = messageKey;
 		this.status = status;
 	}
+
+	/**
+	 * Lombok's getter for the {@code message} field shadows {@link Throwable#getMessage()}, so
+	 * constructors that only set the superclass message used to surface as "QorvaException: null"
+	 * and the handler fell back to a generic 500. Always return the key.
+	 */
+	@Override
+	public String getMessage() {
+		return message != null ? message : super.getMessage();
+	}
 }

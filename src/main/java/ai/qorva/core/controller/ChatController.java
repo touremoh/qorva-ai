@@ -74,12 +74,13 @@ public class ChatController {
         return chatService.postUserMessage(req.getTenantId(), chatId, req);
     }
 
+    /** Newest first: page 0 is what the recruiter sees on opening a chat, higher pages are "load older". */
     @GetMapping("/{chatId}/messages")
     @PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_MESSAGE')")
     public Page<ChatMessageDTO> getMessages(@PathVariable String chatId,
                                             @RequestParam(defaultValue = "0") int page,
                                             @RequestParam(defaultValue = "50") int size) throws QorvaException {
-        Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.ASC, "createdAt"));
+        Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "createdAt"));
         return chatService.getMessages(currentTenantId(), chatId, pageable);
     }
 

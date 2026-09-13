@@ -39,11 +39,6 @@ public interface OpenAIResultMapper {
 
 	RedFlag map(MatchingReportResponse.RedFlag redFlag);
 
-	@Mapping(target = "promptTokens", expression = "java(java.lang.Long.valueOf(0))")
-	@Mapping(target = "completionTokens", expression = "java(java.lang.Long.valueOf(0))")
-	@Mapping(target = "model", expression = "java(org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_5_CHAT_LATEST.getValue())")
-	ChatResult map(OpenAIChatResponse data);
-
 	Set<String> VALID_AVAILABILITY_STATUSES = Set.of(
 		"activelyLooking", "openButNotSearching", "notAvailable", "freelanceOnly"
 	);

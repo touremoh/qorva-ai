@@ -34,7 +34,7 @@ public class JobDescriptionBuilderService {
 	private final String promptTemplate;
 
 	/** JD writing is a fluency task — mini tier earns its keep here (same as report generation). */
-	@Value("${qorva.ai.job-description.model:gpt-5-mini}")
+	@Value("${qorva.ai.job-description.model:gpt-5.6-terra}")
 	private String model;
 
 	public JobDescriptionBuilderService(ChatClient chatClient,
