@@ -14,6 +14,7 @@ import ai.qorva.core.dto.common.CandidateInfo;
 import ai.qorva.core.dto.common.KeySkill;
 import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.enums.ApplicationStatusEnum;
+import ai.qorva.core.enums.NoteTargetTypeEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.MatchingReportMapper;
@@ -35,13 +36,15 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 	protected final UserService userService;
 	protected final TenantService tenantService;
 	protected final ChatsRepository chatsRepository;
+	protected final NoteService noteService;
 
 	@Autowired
-	public MatchingReportService(MatchingReportRepository repository, MatchingReportMapper mapper, MatchingReportQueryBuilder queryBuilder, UserService userService, TenantService tenantService, ChatsRepository chatsRepository) {
+	public MatchingReportService(MatchingReportRepository repository, MatchingReportMapper mapper, MatchingReportQueryBuilder queryBuilder, UserService userService, TenantService tenantService, ChatsRepository chatsRepository, NoteService noteService) {
 		super(repository, mapper, queryBuilder);
 		this.userService = userService;
 		this.tenantService = tenantService;
 		this.chatsRepository = chatsRepository;
+		this.noteService = noteService;
 	}
 
 	@Override
@@ -183,16 +186,14 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 	@Override
 	protected void postProcessDeleteOneById(String id, String tenantId) throws QorvaException {
 		log.info("Deleted Resume Match with ID: {}", id);
-
-		var existing = this.findOneById(id);
-
-		if (existing == null) {
-			throw new QorvaException(QorvaErrorCodes.REPORT_MATCH_NOT_FOUND_BY_ID, id);
-		}
+		// Existence and tenant ownership were checked in preProcessDeleteOneById; looking the
+		// report up again here (as this used to) throws 404 once the row is gone.
 
 		// Delete chat associated with this Report
 		var countDeletedChats = this.chatsRepository.deleteByTenantIdAndContextMatchingReportId(tenantId, id);
-
 		log.info("Deleted {} chats associated with Resume Match ID: {}", countDeletedChats, id);
+
+		var countDeletedNotes = this.noteService.deleteForTarget(tenantId, NoteTargetTypeEnum.MATCHING_REPORT, id);
+		log.info("Deleted {} notes associated with Resume Match ID: {}", countDeletedNotes, id);
 	}
 }

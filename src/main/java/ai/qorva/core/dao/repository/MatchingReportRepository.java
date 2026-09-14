@@ -90,6 +90,15 @@ public interface MatchingReportRepository extends QorvaRepository<MatchingReport
 	})
 	DashboardData.JobPostCount countDistinctJobPosts(ObjectId tenantId);
 
+	/** Id-only projection for cascades that need the report ids before the reports go. */
+	interface IdOnly {
+		String getId();
+	}
+
+	List<IdOnly> findByTenantIdAndJobPostId(String tenantId, String jobPostId);
+
+	List<IdOnly> findByTenantIdAndCandidateInfoCandidateId(String tenantId, String candidateId);
+
 	/**
 	 * Deletes all resume matches for a given tenant and job post.
 	 */

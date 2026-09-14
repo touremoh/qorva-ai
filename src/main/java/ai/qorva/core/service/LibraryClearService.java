@@ -8,6 +8,7 @@ import ai.qorva.core.dao.repository.ChatMessagesRepository;
 import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.InsightConversationTurnRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
+import ai.qorva.core.dao.repository.NoteRepository;
 import ai.qorva.core.dao.repository.QualityIssueStateRepository;
 import ai.qorva.core.dto.LibraryClearData;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -43,6 +44,7 @@ public class LibraryClearService {
 	private final InsightConversationTurnRepository insightConversationTurnRepository;
 	private final CandidateUpdateRequestRepository candidateUpdateRequestRepository;
 	private final QualityIssueStateRepository qualityIssueStateRepository;
+	private final NoteRepository noteRepository;
 	private final BackgroundJobRepository backgroundJobRepository;
 	private final S3StorageService s3StorageService;
 	private final LibraryQualityCacheEvictor cacheEvictor;
@@ -75,10 +77,11 @@ public class LibraryClearService {
 		long insightTurns = insightConversationTurnRepository.deleteByTenantId(tenantId);
 		long updateRequests = candidateUpdateRequestRepository.deleteByTenantId(tenantId);
 		long issueStates = qualityIssueStateRepository.deleteByTenantId(tenantId);
+		long notes = noteRepository.deleteByTenantId(tenantId);   // every note targets a CV or a report
 		cacheEvictor.evict(tenantId);
 
-		log.info("Library cleared for tenant={}: cvs={} reports={} chats={} messages={} insights={} updateRequests={} issueStates={}",
-			tenantId, cvs, reports, chats, chatMessages, insightTurns, updateRequests, issueStates);
-		return new LibraryClearData.Result(cvs, reports, chats, chatMessages, insightTurns, updateRequests, issueStates);
+		log.info("Library cleared for tenant={}: cvs={} reports={} chats={} messages={} insights={} updateRequests={} issueStates={} notes={}",
+			tenantId, cvs, reports, chats, chatMessages, insightTurns, updateRequests, issueStates, notes);
+		return new LibraryClearData.Result(cvs, reports, chats, chatMessages, insightTurns, updateRequests, issueStates, notes);
 	}
 }

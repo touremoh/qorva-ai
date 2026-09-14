@@ -40,6 +40,7 @@ class JobPostServiceAtsRefTest {
 	@Mock private JobPostQueryBuilder queryBuilder;
 	@Mock private MatchingReportRepository matchingReportRepository;
 	@Mock private ChatsRepository chatsRepository;
+	@Mock private NoteService noteService;
 
 	private JobPostService service;
 
@@ -47,7 +48,7 @@ class JobPostServiceAtsRefTest {
 	void setUp() {
 		// The real generated mapper: the point of the test is what mapping actually carries over.
 		service = new JobPostService(repository, new JobPostMapperImpl(), queryBuilder,
-			matchingReportRepository, chatsRepository);
+			matchingReportRepository, chatsRepository, noteService);
 	}
 
 	private JobPost storedImportedJob() {

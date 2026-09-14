@@ -1,0 +1,44 @@
+{
+  "collMod": "notes",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "notes",
+      "required": ["tenantId", "targetType", "targetId", "text", "authorEmail", "createdAt", "lastUpdatedAt"],
+      "properties": {
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "owning tenant, required"
+        },
+        "targetType": {
+          "bsonType": "string",
+          "enum": ["CV", "MATCHING_REPORT"],
+          "description": "what the note is attached to"
+        },
+        "targetId": {
+          "bsonType": "string",
+          "description": "id of the CV or matching report, as a string"
+        },
+        "text": {
+          "bsonType": "string",
+          "minLength": 1,
+          "maxLength": 4000,
+          "description": "the note body"
+        },
+        "authorName": {
+          "bsonType": "string",
+          "description": "display name captured at creation"
+        },
+        "authorEmail": {
+          "bsonType": "string",
+          "description": "audit createdBy — the author's login email"
+        },
+        "createdAt": { "bsonType": "date" },
+        "lastUpdatedAt": { "bsonType": "date" },
+        "lastUpdatedBy": { "bsonType": "string" }
+      }
+    }
+  },
+  "validationLevel": "moderate",
+  "validationAction": "error"
+}

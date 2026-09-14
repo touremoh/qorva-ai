@@ -53,6 +53,12 @@ public final class QorvaErrorCodes {
     public static final String CHAT_OWNER_REQUIRED = "error.chat.owner_required";
     public static final String CHAT_ACTOR_NOT_FOUND = "error.chat.actor_not_found";
 
+    // notes
+    public static final String NOTE_TARGET_TYPE_INVALID = "error.note.target_type_invalid";
+    public static final String NOTE_TEXT_INVALID        = "error.note.text_invalid";
+    public static final String NOTE_NOT_FOUND           = "error.note.not_found";
+    public static final String NOTE_NOT_AUTHOR          = "error.note.not_author";
+
     // ai
     public static final String AI_REQUEST_FAILED = "error.ai.request_failed";
 

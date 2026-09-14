@@ -16,6 +16,7 @@ public final class LibraryClearData {
 		long chatMessages,
 		long insightTurns,
 		long candidateUpdateRequests,
-		long qualityIssueStates
+		long qualityIssueStates,
+		long notes
 	) {}
 }

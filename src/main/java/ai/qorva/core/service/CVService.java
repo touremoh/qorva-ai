@@ -19,6 +19,7 @@ import ai.qorva.core.dto.common.AtsRef;
 import ai.qorva.core.dto.common.Availability;
 import ai.qorva.core.dto.common.PersonalInformation;
 import ai.qorva.core.enums.ContentDateSourceEnum;
+import ai.qorva.core.enums.NoteTargetTypeEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.CVMapper;
@@ -66,6 +67,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final UsageMonitoringService usageMonitoringService;
     private final S3StorageService s3StorageService;
     private final LibraryQualityCacheEvictor libraryQualityCacheEvictor;
+    private final NoteService noteService;
 
     private static final int DEFAULT_MATCH_LIMIT = 10;
 
@@ -93,8 +95,10 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         ChatMessagesRepository chatMessagesRepository,
         UsageMonitoringService usageMonitoringService,
         S3StorageService s3StorageService,
-        LibraryQualityCacheEvictor libraryQualityCacheEvictor) {
+        LibraryQualityCacheEvictor libraryQualityCacheEvictor,
+        NoteService noteService) {
         super(repository, cvMapper, queryBuilder);
+        this.noteService = noteService;
         this.chatMessagesRepository = chatMessagesRepository;
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
@@ -270,6 +274,9 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         newCv.setAtsRefs(AtsRef.merge(newCv.getAtsRefs(), oldCv.getAtsRefs()));
 
         var updated = this.updateOne(newCvId, newCv);
+        // Recruiter notes follow the same rule as tags: move them before the old copy is deleted.
+        var movedNotes = this.noteService.retarget(tenantId, NoteTargetTypeEnum.CV, oldCvId, newCvId);
+        log.info("Moved {} notes from CV {} to CV {}", movedNotes, oldCvId, newCvId);
         this.deleteOneById(oldCvId, tenantId);   // cascades reports/chats/S3 + evicts cache
         return updated;
     }
@@ -569,8 +576,16 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     protected void postProcessDeleteOneById(String id, String tenantId) throws QorvaException {
         log.info("Deleted CV with ID: {}", id);
 
+        // Report ids first: their note threads can only be found while the reports still exist.
+        var reportIds = this.matchingReportRepository.findByTenantIdAndCandidateInfoCandidateId(tenantId, id).stream()
+            .map(MatchingReportRepository.IdOnly::getId)
+            .toList();
         var countDeletedReports = this.matchingReportRepository.deleteByTenantIdAndCandidateInfoCandidateId(tenantId, id);
         log.info("Deleted {} reports associated with CV ID: {}", countDeletedReports, id);
+
+        var countDeletedNotes = this.noteService.deleteForTarget(tenantId, NoteTargetTypeEnum.CV, id)
+            + this.noteService.deleteForTargets(tenantId, NoteTargetTypeEnum.MATCHING_REPORT, reportIds);
+        log.info("Deleted {} notes associated with CV ID: {} and its reports", countDeletedNotes, id);
 
         // Messages first, while the chat ids are still resolvable — deleting chats alone
         // used to orphan their messages.

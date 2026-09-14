@@ -6,6 +6,7 @@ import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dao.repository.InsightConversationTurnRepository;
 import ai.qorva.core.dao.repository.JobPostRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
+import ai.qorva.core.dao.repository.NoteRepository;
 import ai.qorva.core.dao.repository.UsageMonitoringRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,7 @@ public class DemoDataPurgeService {
 	private final InsightConversationTurnRepository insightConversationTurnRepository;
 	private final UsageMonitoringRepository usageMonitoringRepository;
 	private final S3StorageService s3StorageService;
+	private final NoteRepository noteRepository;
 
 	@Autowired
 	public DemoDataPurgeService(
@@ -37,8 +39,10 @@ public class DemoDataPurgeService {
 		ChatMessagesRepository chatMessagesRepository,
 		InsightConversationTurnRepository insightConversationTurnRepository,
 		UsageMonitoringRepository usageMonitoringRepository,
-		S3StorageService s3StorageService
+		S3StorageService s3StorageService,
+		NoteRepository noteRepository
 	) {
+		this.noteRepository = noteRepository;
 		this.cvRepository = cvRepository;
 		this.jobPostRepository = jobPostRepository;
 		this.matchingReportRepository = matchingReportRepository;
@@ -60,8 +64,9 @@ public class DemoDataPurgeService {
 		long messages = safeDelete("chat_messages", () -> chatMessagesRepository.deleteByTenantId(tenantId));
 		long turns = safeDelete("insight_conversation_turns", () -> insightConversationTurnRepository.deleteByTenantId(tenantId));
 		long usage = safeDelete("usage_monitoring", () -> usageMonitoringRepository.deleteByTenantId(tenantId));
-		log.info("Demo data purged for tenant={}: cvs={} jobs={} reports={} chats={} messages={} insights={} usage={}",
-			tenantId, cvs, jobs, reports, chats, messages, turns, usage);
+		long notes = safeDelete("notes", () -> noteRepository.deleteByTenantId(tenantId));
+		log.info("Demo data purged for tenant={}: cvs={} jobs={} reports={} chats={} messages={} insights={} usage={} notes={}",
+			tenantId, cvs, jobs, reports, chats, messages, turns, usage, notes);
 	}
 
 	private long safeDelete(String collection, java.util.function.LongSupplier delete) {
