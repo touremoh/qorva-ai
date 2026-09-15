@@ -95,9 +95,10 @@ public class JwtUtils {
 	/**
 	 * Mints a single-purpose, time-boxed set-password token. The subject is the user id and the
 	 * {@code cv} claim pins the user's current credential version so the token becomes invalid once
-	 * the password is changed (single-use).
+	 * the password is changed (single-use). {@code ttlInMillis} lets activation links (days) and
+	 * password-reset links (an hour) share the same token.
 	 */
-	public String generateSetPasswordToken(String userId, int credentialVersion, JwtConfig jwtConfig) {
+	public String generateSetPasswordToken(String userId, int credentialVersion, JwtConfig jwtConfig, long ttlInMillis) {
 		Map<String, Object> claims = new HashMap<>();
 		claims.put(PURPOSE, PURPOSE_SET_PASSWORD);
 		claims.put(CREDENTIAL_VERSION, credentialVersion);
@@ -105,7 +106,7 @@ public class JwtUtils {
 			.claims(claims)
 			.subject(userId)
 			.issuedAt(new Date(System.currentTimeMillis()))
-			.expiration(new Date(System.currentTimeMillis() + jwtConfig.getSetPasswordTtlInMillis()))
+			.expiration(new Date(System.currentTimeMillis() + ttlInMillis))
 			.signWith(jwtConfig.getSecretKey())
 			.compact();
 	}

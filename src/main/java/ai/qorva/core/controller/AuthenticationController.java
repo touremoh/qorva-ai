@@ -3,6 +3,7 @@ package ai.qorva.core.controller;
 
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.UserDTO;
+import ai.qorva.core.dto.request.ForgotPasswordRequest;
 import ai.qorva.core.dto.request.ResendSetPasswordRequest;
 import ai.qorva.core.dto.request.SetPasswordRequest;
 import ai.qorva.core.exception.QorvaException;
@@ -55,6 +56,13 @@ public class AuthenticationController {
 	@PostMapping(path = "/password/resend", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<QorvaRequestResponse> resendSetPassword(@RequestBody @Valid ResendSetPasswordRequest request) {
 		this.setPasswordService.resend(request.getEmail());
+		// Always return success to avoid leaking which emails are registered
+		return BuildApiResponse.from(true);
+	}
+
+	@PostMapping(path = "/password/forgot", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<QorvaRequestResponse> forgotPassword(@RequestBody @Valid ForgotPasswordRequest request) {
+		this.setPasswordService.requestReset(request.getEmail());
 		// Always return success to avoid leaking which emails are registered
 		return BuildApiResponse.from(true);
 	}

@@ -3,6 +3,8 @@ package ai.qorva.core.dao.specifications;
 import ai.qorva.core.dao.entity.PendingEmailNotification;
 import org.springframework.data.mongodb.core.query.Criteria;
 
+import java.time.Instant;
+
 public final class PendingEmailNotificationSpecifications {
 
     private PendingEmailNotificationSpecifications() {
@@ -31,5 +33,10 @@ public final class PendingEmailNotificationSpecifications {
 
     public static MongoSpecification<PendingEmailNotification> attemptsLessThan(int maxAttempts) {
         return () -> Criteria.where("attempts").lt(maxAttempts);
+    }
+
+    public static MongoSpecification<PendingEmailNotification> createdAfter(Instant after) {
+        if (after == null) return MongoSpecifications.empty();
+        return () -> Criteria.where("createdAt").gt(after);
     }
 }

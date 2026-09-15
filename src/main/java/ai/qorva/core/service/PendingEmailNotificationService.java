@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.util.List;
 import java.util.Map;
@@ -71,6 +72,16 @@ public class PendingEmailNotificationService extends AbstractQorvaService<Pendin
             PendingEmailNotificationSpecifications.attemptsLessThan(DEFAULT_MAX_ATTEMPTS)
         );
         return repository.findAll(spec).stream().map(mapper::map).toList();
+    }
+
+    /** True when a notification of {@code type} was queued for {@code userId} within the last {@code window}. */
+    public boolean existsRecent(String userId, EmailNotificationType type, Duration window) {
+        var spec = MongoSpecifications.allOf(
+            PendingEmailNotificationSpecifications.userIdEquals(userId),
+            PendingEmailNotificationSpecifications.notificationTypeEquals(type.name()),
+            PendingEmailNotificationSpecifications.createdAfter(Instant.now().minus(window))
+        );
+        return repository.exists(spec);
     }
 
     public void markSent(String id) throws QorvaException {

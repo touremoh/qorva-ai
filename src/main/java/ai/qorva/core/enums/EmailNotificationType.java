@@ -5,5 +5,6 @@ public enum EmailNotificationType {
     SUBSCRIPTION_UPDATED,
     SUBSCRIPTION_RENEWAL,
     USER_ADDED,
-    DEMO_WELCOME
+    DEMO_WELCOME,
+    PASSWORD_RESET
 }

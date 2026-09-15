@@ -61,6 +61,11 @@ public class EmailNotificationDispatcher {
                 if (svc == null) throw new QorvaException("AccountCreationNotificationService unavailable");
                 svc.sendDemoWelcome(userDTO, notification.getPayload(), lang);
             }
+            case PASSWORD_RESET -> {
+                var svc = accountCreationNotifier.getIfAvailable();
+                if (svc == null) throw new QorvaException("AccountCreationNotificationService unavailable");
+                svc.sendPasswordReset(userDTO, notification.getPayload(), lang);
+            }
             default -> throw new QorvaException("No handler registered for notification type: " + type);
         }
     }

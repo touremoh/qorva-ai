@@ -169,6 +169,8 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		}
 
 		user.setEncryptedPassword(passwordEncoder.encode(newPassword));
+		// Bump the credential version so any outstanding set-password / reset link dies with the old password.
+		user.setPasswordCredentialVersion(user.getPasswordCredentialVersionOrZero() + 1);
 		repository.save(user);
 	}
 

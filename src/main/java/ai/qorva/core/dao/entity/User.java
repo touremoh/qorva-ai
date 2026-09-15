@@ -41,6 +41,11 @@ public class User implements QorvaEntity {
      */
     private Integer passwordCredentialVersion;
 
+    /** Version to embed in / compare against a set-password token; legacy users have no version yet. */
+    public int getPasswordCredentialVersionOrZero() {
+        return passwordCredentialVersion != null ? passwordCredentialVersion : 0;
+    }
+
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
 

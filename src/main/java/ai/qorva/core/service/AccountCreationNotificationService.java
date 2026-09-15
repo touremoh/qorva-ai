@@ -94,6 +94,36 @@ public class AccountCreationNotificationService extends AbstractEmailService imp
 		}
 	}
 
+	public void sendPasswordReset(UserDTO receiver, Map<String, String> payload, String languageCode) throws QorvaException {
+		String lang = languageCode != null ? languageCode : "en";
+		try {
+			String wrapper = loadHtmlTemplate("templates/emails/user-added-template.html");
+			String content = loadHtmlTemplate("templates/emails/" + lang + "_password_reset_content.html");
+
+			String resetPasswordUrl = payload != null ? payload.getOrDefault("resetPasswordUrl", "") : "";
+
+			content = content
+				.replace("{{logo_url}}", logoUrl)
+				.replace("{{first_name}}", receiver.getFirstName())
+				.replace("{{app_name}}", "Qorva AI")
+				.replace("{{reset_password_url}}", resetPasswordUrl)
+				.replace("{{support_email}}", supportEmail())
+				.replace("{{current_year}}", String.valueOf(LocalDate.now().getYear()));
+
+			String html = wrapper.replace("{{template_content}}", content);
+			sendEmail(receiver.getEmail(), EmailTitlesEnum.getEmailTitle(lang, "password_reset"), html);
+			log.info("Password-reset email sent to email={}", receiver.getEmail());
+		} catch (IOException | MailException e) {
+			log.error("Failed to send password-reset email to {}", receiver.getEmail(), e);
+			throw new QorvaException(
+				"Failed to send password-reset notification",
+				e,
+				HttpStatus.INTERNAL_SERVER_ERROR.value(),
+				HttpStatus.INTERNAL_SERVER_ERROR
+			);
+		}
+	}
+
 	public void sendUserAdded(UserDTO receiver, Map<String, String> payload, String languageCode) throws QorvaException {
 		String lang = languageCode != null ? languageCode : "en";
 		try {

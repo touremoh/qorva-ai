@@ -21,6 +21,9 @@ public class JwtConfig {
 	/** TTL for single-use set-password tokens. Default 72h. */
 	private long setPasswordTtlInMillis = 259200000L;
 
+	/** TTL for single-use password-reset tokens (forgot password). Default 1h. */
+	private long passwordResetTtlInMillis = 3600000L;
+
 	private String secret; // b64 Secret key
 
 	private SecretKey secretKey;

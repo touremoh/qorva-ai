@@ -17,24 +17,35 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.Duration;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
 /**
  * Issues and consumes single-use, time-boxed set-password links. Used to let a freshly created
- * demo user choose their own password (no password is ever emailed), and reusable as the basis
- * for a future "forgot password" flow.
+ * demo user choose their own password (no password is ever emailed) and to reset a forgotten
+ * password. Both flows share one token and one consume endpoint; only the TTL and the email differ.
  */
 @Slf4j
 @Service
 public class SetPasswordService {
 
-	/** Statuses for which a set-password link may be (re)issued. */
+	/** Statuses for which an activation (set-password) link may be (re)issued. */
 	private static final Set<String> ELIGIBLE_STATUSES = Set.of(
 		UserStatusEnum.DEMO.getValue(),
 		UserStatusEnum.PENDING_SUBSCRIPTION.getValue()
 	);
+
+	/** Statuses for which no password may be reset or set: the account must not come back to life through a link. */
+	static final Set<String> BLOCKED_STATUSES = Set.of(
+		UserStatusEnum.DELETED.getValue(),
+		UserStatusEnum.INACTIVE.getValue(),
+		UserStatusEnum.LOCKED.getValue()
+	);
+
+	/** Minimum gap between two reset emails for the same user; requests inside it are silently dropped. */
+	static final Duration RESET_COOLDOWN = Duration.ofMinutes(2);
 
 	private final UserRepository userRepository;
 	private final PasswordEncoder passwordEncoder;
@@ -88,11 +99,40 @@ public class SetPasswordService {
 
 	private void enqueue(User user) {
 		var lang = resolveLang(user);
-		var url = buildSetPasswordUrl(issueTokenForUser(user), lang);
+		var token = issueTokenForUser(user, jwtConfig.getSetPasswordTtlInMillis());
+		var url = buildLinkUrl(token, lang, "set-password");
 		String companyName = resolveCompanyName(user.getTenantId());
 		pendingEmailNotificationService.createPending(
 			user.getTenantId(), user.getId(), EmailNotificationType.DEMO_WELCOME, lang,
 			Map.of("setPasswordUrl", url, "companyName", companyName)
+		);
+	}
+
+	/**
+	 * Forgot-password entry point: queues a PASSWORD_RESET email with a short-lived link. Silent no-op
+	 * for an unknown email, a blocked account status, or a request inside {@link #RESET_COOLDOWN} —
+	 * the caller always answers "success" so nothing leaks about which emails are registered.
+	 */
+	public void requestReset(String email) {
+		var user = userRepository.findByEmail(email);
+		if (user == null) {
+			log.info("Password reset requested for unknown email – ignoring");
+			return;
+		}
+		if (BLOCKED_STATUSES.contains(user.getUserAccountStatus())) {
+			log.info("Password reset requested for blocked user status={} – ignoring", user.getUserAccountStatus());
+			return;
+		}
+		if (pendingEmailNotificationService.existsRecent(user.getId(), EmailNotificationType.PASSWORD_RESET, RESET_COOLDOWN)) {
+			log.info("Password reset requested inside cooldown for userId={} – ignoring", user.getId());
+			return;
+		}
+		var lang = resolveLang(user);
+		var token = issueTokenForUser(user, jwtConfig.getPasswordResetTtlInMillis());
+		var url = buildLinkUrl(token, lang, "reset-password");
+		pendingEmailNotificationService.createPending(
+			user.getTenantId(), user.getId(), EmailNotificationType.PASSWORD_RESET, lang,
+			Map.of("resetPasswordUrl", url, "companyName", resolveCompanyName(user.getTenantId()))
 		);
 	}
 
@@ -116,9 +156,14 @@ public class SetPasswordService {
 		var user = userRepository.findById(new ObjectId(userId))
 			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED));
 
+		// The status may have changed between issue and consume; a blocked account keeps its link useless.
+		if (BLOCKED_STATUSES.contains(user.getUserAccountStatus())) {
+			throw new QorvaException(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+		}
+
 		int tokenVersion = claims.get(JwtUtils.CREDENTIAL_VERSION, Integer.class) != null
 			? claims.get(JwtUtils.CREDENTIAL_VERSION, Integer.class) : 0;
-		int currentVersion = user.getPasswordCredentialVersion() != null ? user.getPasswordCredentialVersion() : 0;
+		int currentVersion = user.getPasswordCredentialVersionOrZero();
 		if (tokenVersion != currentVersion) {
 			throw new QorvaException(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_USED, HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
 		}
@@ -129,14 +174,14 @@ public class SetPasswordService {
 		log.info("Password set for userId={} (credential version {} -> {})", userId, currentVersion, currentVersion + 1);
 	}
 
-	private String issueTokenForUser(User user) {
-		int version = user.getPasswordCredentialVersion() != null ? user.getPasswordCredentialVersion() : 0;
-		return JwtUtils.generateSetPasswordToken(user.getId(), version, jwtConfig);
+	private String issueTokenForUser(User user, long ttlInMillis) {
+		return JwtUtils.generateSetPasswordToken(user.getId(), user.getPasswordCredentialVersionOrZero(), jwtConfig, ttlInMillis);
 	}
 
-	private String buildSetPasswordUrl(String token, String lang) {
+	/** {@code path} is the app route segment (set-password / reset-password) — string-coupled with App.jsx. */
+	private String buildLinkUrl(String token, String lang, String path) {
 		var base = appBaseUrl.endsWith("/") ? appBaseUrl.substring(0, appBaseUrl.length() - 1) : appBaseUrl;
-		return base + "/" + lang + "/set-password?token=" + token;
+		return base + "/" + lang + "/" + path + "?token=" + token;
 	}
 
 	private String resolveLang(User user) {
