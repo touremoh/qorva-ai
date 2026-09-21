@@ -6,6 +6,7 @@ import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dao.repository.InsightConversationTurnRepository;
 import ai.qorva.core.dao.repository.JobPostRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
+import ai.qorva.core.dao.repository.CandidateOutreachRepository;
 import ai.qorva.core.dao.repository.NoteRepository;
 import ai.qorva.core.dao.repository.UsageMonitoringRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -29,6 +30,7 @@ public class DemoDataPurgeService {
 	private final UsageMonitoringRepository usageMonitoringRepository;
 	private final S3StorageService s3StorageService;
 	private final NoteRepository noteRepository;
+	private final CandidateOutreachRepository candidateOutreachRepository;
 
 	@Autowired
 	public DemoDataPurgeService(
@@ -40,9 +42,11 @@ public class DemoDataPurgeService {
 		InsightConversationTurnRepository insightConversationTurnRepository,
 		UsageMonitoringRepository usageMonitoringRepository,
 		S3StorageService s3StorageService,
-		NoteRepository noteRepository
+		NoteRepository noteRepository,
+		CandidateOutreachRepository candidateOutreachRepository
 	) {
 		this.noteRepository = noteRepository;
+		this.candidateOutreachRepository = candidateOutreachRepository;
 		this.cvRepository = cvRepository;
 		this.jobPostRepository = jobPostRepository;
 		this.matchingReportRepository = matchingReportRepository;
@@ -65,8 +69,9 @@ public class DemoDataPurgeService {
 		long turns = safeDelete("insight_conversation_turns", () -> insightConversationTurnRepository.deleteByTenantId(tenantId));
 		long usage = safeDelete("usage_monitoring", () -> usageMonitoringRepository.deleteByTenantId(tenantId));
 		long notes = safeDelete("notes", () -> noteRepository.deleteByTenantId(tenantId));
-		log.info("Demo data purged for tenant={}: cvs={} jobs={} reports={} chats={} messages={} insights={} usage={} notes={}",
-			tenantId, cvs, jobs, reports, chats, messages, turns, usage, notes);
+		long outreach = safeDelete("candidate_outreach", () -> candidateOutreachRepository.deleteByTenantId(tenantId));
+		log.info("Demo data purged for tenant={}: cvs={} jobs={} reports={} chats={} messages={} insights={} usage={} notes={} outreach={}",
+			tenantId, cvs, jobs, reports, chats, messages, turns, usage, notes, outreach);
 	}
 
 	private long safeDelete(String collection, java.util.function.LongSupplier delete) {

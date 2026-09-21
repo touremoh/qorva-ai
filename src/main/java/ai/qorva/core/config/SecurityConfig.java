@@ -65,7 +65,8 @@ public class SecurityConfig {
 					"/stripe/**",
 					"/actuator/**",
 					"/public/**",
-					"/integrations/*/oauth/callback"
+					"/integrations/*/oauth/callback",
+					"/integrations/mailbox/*/oauth/callback"
 				).permitAll() // Publicly accessible routes
 
 				.anyRequest().authenticated()

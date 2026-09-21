@@ -7,6 +7,7 @@ import ai.qorva.core.dao.repository.ChatMessagesRepository;
 import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.InsightConversationTurnRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
+import ai.qorva.core.dao.repository.CandidateOutreachRepository;
 import ai.qorva.core.dao.repository.NoteRepository;
 import ai.qorva.core.dao.repository.QualityIssueStateRepository;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -39,6 +40,7 @@ class LibraryClearServiceTest {
 	@Mock private CandidateUpdateRequestRepository candidateUpdateRequestRepository;
 	@Mock private QualityIssueStateRepository qualityIssueStateRepository;
 	@Mock private NoteRepository noteRepository;
+	@Mock private CandidateOutreachRepository candidateOutreachRepository;
 	@Mock private BackgroundJobRepository backgroundJobRepository;
 	@Mock private S3StorageService s3StorageService;
 	@Mock private LibraryQualityCacheEvictor cacheEvictor;
@@ -49,7 +51,8 @@ class LibraryClearServiceTest {
 	void setUp() {
 		service = new LibraryClearService(cvRepository, matchingReportRepository, chatsRepository,
 			chatMessagesRepository, insightConversationTurnRepository, candidateUpdateRequestRepository,
-			qualityIssueStateRepository, noteRepository, backgroundJobRepository, s3StorageService, cacheEvictor);
+			qualityIssueStateRepository, noteRepository, candidateOutreachRepository, backgroundJobRepository,
+			s3StorageService, cacheEvictor);
 	}
 
 	@Test

@@ -48,7 +48,10 @@ public enum UserActionsEnum {
 	CANCEL_SUBSCRIPTION("CANCEL_SUBSCRIPTION"),
 
 	// Library Insights
-	VIEW_LIBRARY_INSIGHTS("VIEW_LIBRARY_INSIGHTS");
+	VIEW_LIBRARY_INSIGHTS("VIEW_LIBRARY_INSIGHTS"),
+
+	// Candidate outreach (email a candidate from the CV list / matching report)
+	CONTACT_CANDIDATE("CONTACT_CANDIDATE");
 
 	UserActionsEnum(String value) {
 		this.value = value;

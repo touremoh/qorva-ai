@@ -128,6 +128,12 @@ qorva:
     prefix: demo-seed
     version: v2
     fallback-language: en
+  mailbox:
+    credentials-key: ${MAILBOX_CREDENTIALS_ENCRYPTION_KEY}
+    microsoft:
+      client-id: ${MAILBOX_OAUTH_MICROSOFT_CLIENT_ID:}
+      client-secret: ${MAILBOX_OAUTH_MICROSOFT_CLIENT_SECRET:}
+      authority: ${MAILBOX_OAUTH_MICROSOFT_AUTHORITY:https://login.microsoftonline.com/common}
   ats:
     credentials-key: ${ATS_CREDENTIALS_ENCRYPTION_KEY}
     public-base-url: ${ATS_PUBLIC_BASE_URL}

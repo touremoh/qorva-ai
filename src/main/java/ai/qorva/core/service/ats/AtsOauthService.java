@@ -6,6 +6,7 @@ import ai.qorva.core.dao.repository.AtsConnectionRepository;
 import ai.qorva.core.enums.AtsProviderEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.security.OauthStateSigner;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,6 @@ import org.springframework.util.StringUtils;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.time.Instant;
-import java.util.Base64;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -160,16 +160,7 @@ public class AtsOauthService {
 
 	public StateClaims validateState(String state) throws QorvaException {
 		try {
-			int dot = state.lastIndexOf('.');
-			var payload = state.substring(0, dot);
-			var signature = state.substring(dot + 1);
-			var expected = AtsWebhookVerifier.hmacHex(
-				payload.getBytes(StandardCharsets.UTF_8), properties.getCredentialsKey());
-			if (!AtsWebhookVerifier.matches(expected, signature)) {
-				throw new IllegalStateException("bad signature");
-			}
-			var decoded = new String(Base64.getUrlDecoder().decode(payload), StandardCharsets.UTF_8);
-			var parts = decoded.split("\\|");
+			var parts = stateSigner().verify(state);
 			if (Instant.now().getEpochSecond() > Long.parseLong(parts[2])) {
 				throw new IllegalStateException("expired");
 			}
@@ -345,12 +336,13 @@ public class AtsOauthService {
 	}
 
 	private String signState(String tenantId, AtsProviderEnum provider, String datacenter) {
-		var payload = Base64.getUrlEncoder().withoutPadding().encodeToString(
-			(tenantId + "|" + provider.getValue() + "|"
-				+ (Instant.now().getEpochSecond() + STATE_TTL_SECONDS) + "|" + UUID.randomUUID()
-				+ "|" + (datacenter != null ? datacenter : ""))
-				.getBytes(StandardCharsets.UTF_8));
-		return payload + "." + AtsWebhookVerifier.hmacHex(
-			payload.getBytes(StandardCharsets.UTF_8), properties.getCredentialsKey());
+		return stateSigner().sign(List.of(tenantId, provider.getValue(),
+			String.valueOf(Instant.now().getEpochSecond() + STATE_TTL_SECONDS), UUID.randomUUID().toString(),
+			datacenter != null ? datacenter : ""));
+	}
+
+	/** Same key as the credentials cipher, as before the signer was shared with the mailbox flow. */
+	private OauthStateSigner stateSigner() {
+		return new OauthStateSigner(properties.getCredentialsKey());
 	}
 }

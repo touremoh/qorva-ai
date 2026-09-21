@@ -59,6 +59,21 @@ public final class QorvaErrorCodes {
     public static final String NOTE_NOT_FOUND           = "error.note.not_found";
     public static final String NOTE_NOT_AUTHOR          = "error.note.not_author";
 
+    // candidate outreach
+    public static final String OUTREACH_INTENT_INVALID  = "error.outreach.intent_invalid";
+    public static final String OUTREACH_DRAFT_FAILED    = "error.outreach.draft_failed";
+    public static final String OUTREACH_NO_EMAIL        = "error.outreach.no_email";
+    public static final String OUTREACH_SUPPRESSED      = "error.outreach.suppressed";
+    public static final String OUTREACH_VIA_INVALID     = "error.outreach.via_invalid";
+
+    // connected mailbox
+    public static final String MAILBOX_PROVIDER_UNKNOWN   = "error.mailbox.provider_unknown";
+    public static final String MAILBOX_NOT_CONFIGURED     = "error.mailbox.not_configured";
+    public static final String MAILBOX_NOT_CONNECTED      = "error.mailbox.not_connected";
+    public static final String MAILBOX_REAUTH_REQUIRED    = "error.mailbox.reauth_required";
+    public static final String MAILBOX_SEND_FAILED        = "error.mailbox.send_failed";
+    public static final String MAILBOX_OAUTH_STATE_INVALID = "error.mailbox.oauth_state_invalid";
+
     // ai
     public static final String AI_REQUEST_FAILED = "error.ai.request_failed";
 

@@ -1,0 +1,55 @@
+{
+  "collMod": "candidate_outreach",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "candidate_outreach",
+      "required": ["tenantId", "cvId", "channel", "status", "via", "senderEmail", "createdAt"],
+      "properties": {
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "owning tenant, required"
+        },
+        "cvId": {
+          "bsonType": "string",
+          "description": "id of the contacted CV, as a string"
+        },
+        "jobPostId": { "bsonType": "string" },
+        "matchingReportId": { "bsonType": "string" },
+        "channel": {
+          "bsonType": "string",
+          "enum": ["EMAIL"],
+          "description": "contact channel"
+        },
+        "status": {
+          "bsonType": "string",
+          "enum": ["SENT", "EXTERNAL_OPENED", "FAILED"],
+          "description": "SENT through a connected mailbox, EXTERNAL_OPENED handed off to the recruiter's own client, FAILED provider error"
+        },
+        "to": { "bsonType": "string" },
+        "subject": { "bsonType": "string", "maxLength": 200 },
+        "body": { "bsonType": "string", "maxLength": 8000 },
+        "via": {
+          "bsonType": "string",
+          "enum": ["GMAIL", "OUTLOOK_WEB", "MAILTO", "CONNECTED_MICROSOFT"],
+          "description": "which client or connection carried the message"
+        },
+        "providerMessageId": { "bsonType": "string" },
+        "providerThreadId": { "bsonType": "string" },
+        "providerWebLink": { "bsonType": "string" },
+        "error": { "bsonType": "string" },
+        "senderName": {
+          "bsonType": "string",
+          "description": "display name captured at creation"
+        },
+        "senderEmail": {
+          "bsonType": "string",
+          "description": "audit createdBy — the recruiter's login email"
+        },
+        "createdAt": { "bsonType": "date" }
+      }
+    }
+  },
+  "validationLevel": "moderate",
+  "validationAction": "error"
+}

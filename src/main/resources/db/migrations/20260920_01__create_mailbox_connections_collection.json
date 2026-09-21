@@ -1,0 +1,43 @@
+{
+  "collMod": "mailbox_connections",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "mailbox_connections",
+      "required": ["tenantId", "userId", "provider", "encryptedTokens", "status"],
+      "properties": {
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "owning tenant, required"
+        },
+        "userId": {
+          "bsonType": "string",
+          "description": "owning user — the only one who may send through this connection"
+        },
+        "provider": {
+          "bsonType": "string",
+          "enum": ["MICROSOFT"],
+          "description": "mail provider"
+        },
+        "emailAddress": {
+          "bsonType": "string",
+          "description": "the mailbox authorised at consent"
+        },
+        "encryptedTokens": {
+          "bsonType": "string",
+          "description": "AES-GCM blob of the OAuth tokens — never returned by the API"
+        },
+        "status": {
+          "bsonType": "string",
+          "enum": ["ACTIVE", "REAUTH_REQUIRED"]
+        },
+        "lastError": { "bsonType": "string" },
+        "connectedAt": { "bsonType": "date" },
+        "lastUsedAt": { "bsonType": "date" },
+        "lastUpdatedAt": { "bsonType": "date" }
+      }
+    }
+  },
+  "validationLevel": "moderate",
+  "validationAction": "error"
+}

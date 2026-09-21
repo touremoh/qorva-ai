@@ -53,6 +53,9 @@ qorva:
       model: ${QORVA_JOB_DESCRIPTION_MODEL:gpt-5.6-terra}
     report:
       model: ${QORVA_REPORT_MODEL:gpt-5.6-terra}
+    # Candidate outreach drafts: short personal prose, mini tier is plenty; unmetered like the JD builder.
+    outreach:
+      model: ${QORVA_OUTREACH_MODEL:gpt-4.1-mini}
     resume-chat:
       # gpt-5-chat-latest was shut down 2026-07-23; gpt-5.6-sol is OpenAI's listed replacement.
       model: ${QORVA_RESUME_CHAT_MODEL:gpt-5.6-sol}
@@ -118,6 +121,18 @@ qorva:
           chat-price: 0.10
           intelligence-query-price: 0.50
 
+
+  # Connected mailboxes (recruiters send candidate outreach as themselves). Microsoft 365 only for
+  # now: a *multi-tenant* Entra app registration with delegated Mail.Send — never the OFFICE_365_*
+  # app, which holds application-level Mail.Send on Qorva's own tenant. The redirect URI handed to
+  # Microsoft is {qorva.ats.public-base-url}/integrations/mailbox/microsoft/oauth/callback.
+  mailbox:
+    credentials-key: ${MAILBOX_CREDENTIALS_ENCRYPTION_KEY}
+    microsoft:
+      client-id: ${MAILBOX_OAUTH_MICROSOFT_CLIENT_ID}
+      client-secret: ${MAILBOX_OAUTH_MICROSOFT_CLIENT_SECRET}
+      # "common" = any organisation + personal accounts; "organizations" refuses personal Outlook.com.
+      authority: ${MAILBOX_OAUTH_MICROSOFT_AUTHORITY:https://login.microsoftonline.com/common}
 
   # ATS integrations. The credentials key has a dev-only default; tst/prd override it
   # from the environment (see application-tst.yml / application-prd.yml).

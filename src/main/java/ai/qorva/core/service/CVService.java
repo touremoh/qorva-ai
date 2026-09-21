@@ -68,6 +68,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final S3StorageService s3StorageService;
     private final LibraryQualityCacheEvictor libraryQualityCacheEvictor;
     private final NoteService noteService;
+    private final CandidateOutreachService candidateOutreachService;
 
     private static final int DEFAULT_MATCH_LIMIT = 10;
 
@@ -96,9 +97,11 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         UsageMonitoringService usageMonitoringService,
         S3StorageService s3StorageService,
         LibraryQualityCacheEvictor libraryQualityCacheEvictor,
-        NoteService noteService) {
+        NoteService noteService,
+        CandidateOutreachService candidateOutreachService) {
         super(repository, cvMapper, queryBuilder);
         this.noteService = noteService;
+        this.candidateOutreachService = candidateOutreachService;
         this.chatMessagesRepository = chatMessagesRepository;
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
@@ -277,6 +280,8 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         // Recruiter notes follow the same rule as tags: move them before the old copy is deleted.
         var movedNotes = this.noteService.retarget(tenantId, NoteTargetTypeEnum.CV, oldCvId, newCvId);
         log.info("Moved {} notes from CV {} to CV {}", movedNotes, oldCvId, newCvId);
+        var movedOutreach = this.candidateOutreachService.retarget(tenantId, oldCvId, newCvId);
+        log.info("Moved {} outreach rows from CV {} to CV {}", movedOutreach, oldCvId, newCvId);
         this.deleteOneById(oldCvId, tenantId);   // cascades reports/chats/S3 + evicts cache
         return updated;
     }
@@ -586,6 +591,9 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         var countDeletedNotes = this.noteService.deleteForTarget(tenantId, NoteTargetTypeEnum.CV, id)
             + this.noteService.deleteForTargets(tenantId, NoteTargetTypeEnum.MATCHING_REPORT, reportIds);
         log.info("Deleted {} notes associated with CV ID: {} and its reports", countDeletedNotes, id);
+
+        var countDeletedOutreach = this.candidateOutreachService.deleteForCv(tenantId, id);
+        log.info("Deleted {} outreach rows associated with CV ID: {}", countDeletedOutreach, id);
 
         // Messages first, while the chat ids are still resolvable — deleting chats alone
         // used to orphan their messages.

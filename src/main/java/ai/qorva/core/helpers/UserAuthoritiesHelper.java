@@ -63,6 +63,9 @@ public class UserAuthoritiesHelper {
 		// Library Insights
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_LIBRARY_INSIGHTS.getValue(), ALLOWED.getValue()));
 
+		// Candidate outreach
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.CONTACT_CANDIDATE.getValue(), ALLOWED.getValue()));
+
 		return authorities;
 	}
 
