@@ -12,7 +12,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.TimeUnit;
+
+import static ai.qorva.core.service.AsyncFallbacks.withFallback;
 
 @Slf4j
 @Service
@@ -52,66 +53,55 @@ public class DashboardService {
 		var subscriptionStatus = tenantInfo.getSubscriptionInfo().getSubscriptionStatus();
 		var tenantId = userInfo.getTenantId();
 
-		var totalCvs = CompletableFuture.supplyAsync(() -> {
+		var totalCvs = withFallback(CompletableFuture.supplyAsync(() -> {
 			try { return this.cvService.countAll(tenantId); }
 			catch (QorvaException e) { throw new RuntimeException(e); }
-		}, dashboardExecutor);
+		}, dashboardExecutor), TIMEOUT_SECONDS, 0L, "totalCVs");
 
-		var totalJobPosts = CompletableFuture.supplyAsync(() -> {
+		var totalJobPosts = withFallback(CompletableFuture.supplyAsync(() -> {
 			try { return this.jobPostService.countAll(tenantId); }
 			catch (QorvaException e) { throw new RuntimeException(e); }
-		}, dashboardExecutor);
+		}, dashboardExecutor), TIMEOUT_SECONDS, 0L, "totalJobsPosted");
 
-		var totalMatchingReports = CompletableFuture.supplyAsync(() -> {
+		var totalMatchingReports = withFallback(CompletableFuture.supplyAsync(() -> {
 			try { return this.matchingReportService.countAll(tenantId); }
 			catch (QorvaException e) { throw new RuntimeException(e); }
-		}, dashboardExecutor);
+		}, dashboardExecutor), TIMEOUT_SECONDS, 0L, "totalResumeAnalysis");
 
-		var totalUsers = CompletableFuture.supplyAsync(() -> {
+		var totalUsers = withFallback(CompletableFuture.supplyAsync(() -> {
 			try { return this.userService.countAll(tenantId); }
 			catch (QorvaException e) { throw new RuntimeException(e); }
-		}, dashboardExecutor);
+		}, dashboardExecutor), TIMEOUT_SECONDS, 0L, "totalUsers");
 
-		var skillReports = CompletableFuture.supplyAsync(
+		CompletableFuture<List<DashboardData.SkillReport>> skillReports = withFallback(CompletableFuture.supplyAsync(
 			() -> this.cvService.getSkillReportByTenantId(tenantId),
 			dashboardExecutor
-		);
+		), TIMEOUT_SECONDS, List.of(), "skillsReport");
 
-		var skillDepthReport = CompletableFuture.supplyAsync(
+		CompletableFuture<List<DashboardData.ClusteringCategoryReport>> skillDepthReport = withFallback(CompletableFuture.supplyAsync(
 			() -> this.cvService.getSkillDepthReportByTenantId(tenantId),
 			dashboardExecutor
-		);
+		), TIMEOUT_SECONDS, List.of(), "skillDepthReport");
 
-		var seniorityLevelReport = CompletableFuture.supplyAsync(
+		CompletableFuture<List<DashboardData.ClusteringCategoryReport>> seniorityLevelReport = withFallback(CompletableFuture.supplyAsync(
 			() -> this.cvService.getSeniorityLevelReportByTenantId(tenantId),
 			dashboardExecutor
-		);
+		), TIMEOUT_SECONDS, List.of(), "seniorityLevelReport");
 
-		var leadershipReport = CompletableFuture.supplyAsync(
+		CompletableFuture<List<DashboardData.ClusteringCategoryReport>> leadershipReport = withFallback(CompletableFuture.supplyAsync(
 			() -> this.cvService.getLeadershipReportByTenantId(tenantId),
 			dashboardExecutor
-		);
+		), TIMEOUT_SECONDS, List.of(), "leadershipReport");
 
-		var learningVelocityReport = CompletableFuture.supplyAsync(
+		CompletableFuture<List<DashboardData.ClusteringCategoryReport>> learningVelocityReport = withFallback(CompletableFuture.supplyAsync(
 			() -> this.cvService.getLearningVelocityReportByTenantId(tenantId),
 			dashboardExecutor
-		);
+		), TIMEOUT_SECONDS, List.of(), "learningVelocityReport");
 
-		var jobPostReports = CompletableFuture.supplyAsync(
+		CompletableFuture<List<DashboardData.ApplicationPerJobPostReport>> jobPostReports = withFallback(CompletableFuture.supplyAsync(
 			() -> this.matchingReportService.getApplicationsPerJobPost(tenantId),
 			dashboardExecutor
-		);
-
-		totalCvs.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
-		totalJobPosts.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
-		totalUsers.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
-		totalMatchingReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
-		skillReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
-		skillDepthReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
-		seniorityLevelReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
-		leadershipReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
-		learningVelocityReport.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
-		jobPostReports.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
+		), TIMEOUT_SECONDS, List.of(), "jobPostsReport");
 
 		CompletableFuture.allOf(
 			totalCvs,

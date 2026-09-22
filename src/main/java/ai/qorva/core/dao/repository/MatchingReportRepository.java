@@ -49,9 +49,8 @@ public interface MatchingReportRepository extends QorvaRepository<MatchingReport
 			"'foreignField': '_id', " +
 			"'as': 'job' } }",
 		"{ '$unwind': '$job' }",
-		"{ '$group': { '_id': '$job.title', 'totalMatch': { '$sum': 1 } } }",
-		"{ '$project': { 'jobPostTitle': '$_id', 'totalMatch': 1, '_id': 0 } }",
-		"{ '$sort': { 'totalMatch': -1 } }"
+		"{ '$group': { '_id': '$job._id', 'jobPostTitle': { '$first': '$job.title' }, 'totalMatch': { '$sum': 1 } } }",
+		"{ '$sort': { 'totalMatch': -1, 'jobPostTitle': 1, '_id': 1 } }"
 	})
 	List<DashboardData.ApplicationPerJobPostReport> getApplicationsPerJobPost(ObjectId tenantId);
 
@@ -60,8 +59,12 @@ public interface MatchingReportRepository extends QorvaRepository<MatchingReport
 	 * Pipeline:
 	 *  1. Filter by tenant
 	 *  2. Sort by score desc so $push preserves ranking
-	 *  3. Group by jobPostId, collecting all candidates
-	 *  4. Slice to the first 5 per group
+	 *  3. Group by jobPostId, collecting all candidates and the best score
+	 *  4. Order jobs by their best score (then id) so skip/limit paging is stable
+	 *  5. Slice to the first 5 per group
+	 * The group key stays in {@code _id} and reaches the DTO through its {@code @Id jobPostId}:
+	 * projecting a field named {@code jobPostId} would be mapped against the entity's OBJECT_ID
+	 * {@code jobPostId} and fail (see MatchingReportDashboardAggregationMappingTest).
 	 */
 	@Aggregation(pipeline = {
 		"{ '$match': { 'tenantId': ?0 } }",
@@ -69,16 +72,17 @@ public interface MatchingReportRepository extends QorvaRepository<MatchingReport
 		"{ '$group': { " +
 			"'_id': '$jobPostId', " +
 			"'jobPostTitle': { '$first': '$jobPostTitle' }, " +
+			"'bestScore': { '$first': '$matchingReportDetails.decisionSummary.finalScore' }, " +
 			"'topCandidates': { '$push': { " +
 				"'candidateId': '$candidateInfo.candidateId', " +
 				"'candidateName': '$candidateInfo.candidateName', " +
 				"'score': '$matchingReportDetails.decisionSummary.finalScore' " +
 			"} } " +
 		"} }",
+		"{ '$sort': { 'bestScore': -1, '_id': 1 } }",
 		"{ '$project': { " +
 			"'jobPostTitle': 1, " +
-			"'topCandidates': { '$slice': [ '$topCandidates', 5 ] }, " +
-			"'_id': 0 " +
+			"'topCandidates': { '$slice': [ '$topCandidates', 5 ] } " +
 		"} }"
 	})
 	Slice<DashboardData.TopCandidatesPerJobReport> getTopCandidatesPerJobPost(ObjectId tenantId, Pageable pageable);

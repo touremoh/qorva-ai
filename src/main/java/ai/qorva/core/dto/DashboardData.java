@@ -1,6 +1,7 @@
 package ai.qorva.core.dto;
 
 import lombok.Builder;
+import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
@@ -23,11 +24,14 @@ public record DashboardData(
 
 	public record JobPostCount(long total) {}
 
-	public record ApplicationPerJobPostReport(String jobPostTitle, int totalMatch) {}
+	/** {@code jobPostId} is read from the aggregation's {@code _id} (group key). */
+	public record ApplicationPerJobPostReport(@Id String jobPostId, String jobPostTitle, int totalMatch) {}
 
 	public record SkillReport(String skill, int totalMatch) {}
 
+	/** {@code jobPostId} is read from the aggregation's {@code _id} (group key). */
 	public record TopCandidatesPerJobReport(
+		@Id String jobPostId,
 		String jobPostTitle,
 		List<TopCandidate> topCandidates
 	) {}

@@ -120,11 +120,13 @@ public class LibraryQualityService {
 		var duplicateStats = CompletableFuture.supplyAsync(
 			() -> this.cvRepository.duplicateStats(tenantObjectId), dashboardExecutor);
 
-		totalActive.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> 0L);
-		flagCounts.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> List.of());
-		freshnessBuckets.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS).exceptionally(ex -> Map.of());
-		duplicateStats.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS)
-			.exceptionally(ex -> new CVDuplicatesData.DuplicateStats(0, 0));
+		// Fail fast rather than fall back: a zero/empty stand-in would render as a real (and cached)
+		// score — e.g. totalActive = 0 reads as "library is empty". orTimeout completes these
+		// futures exceptionally, so the joins below throw and nothing is cached.
+		totalActive.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS);
+		flagCounts.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS);
+		freshnessBuckets.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS);
+		duplicateStats.orTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS);
 
 		CompletableFuture.allOf(totalActive, flagCounts, freshnessBuckets, duplicateStats).join();
 
