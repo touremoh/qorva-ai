@@ -13,6 +13,14 @@ public final class QorvaErrorCodes {
     public static final String AUTH_USER_LOOKUP_FAILED    = "error.auth.user_lookup_failed";
     public static final String AUTH_SET_PASSWORD_TOKEN_INVALID = "error.auth.set_password_token_invalid";
     public static final String AUTH_SET_PASSWORD_TOKEN_USED    = "error.auth.set_password_token_used";
+    public static final String AUTH_MFA_CHALLENGE_INVALID = "error.auth.mfa_challenge_invalid";
+    public static final String AUTH_MFA_CODE_INVALID      = "error.auth.mfa_code_invalid";
+    public static final String AUTH_MFA_TOO_MANY_ATTEMPTS = "error.auth.mfa_too_many_attempts";
+    public static final String AUTH_MFA_RESEND_TOO_SOON   = "error.auth.mfa_resend_too_soon";
+    public static final String AUTH_MFA_TOO_MANY_CODES    = "error.auth.mfa_too_many_codes";
+    public static final String AUTH_MFA_DELIVERY_FAILED   = "error.auth.mfa_delivery_failed";
+    public static final String MFA_ALREADY_ENABLED        = "error.mfa.already_enabled";
+    public static final String MFA_ALREADY_DISABLED       = "error.mfa.already_disabled";
 
     // access
     public static final String ACCESS_FORBIDDEN    = "error.access.forbidden";
@@ -122,4 +130,6 @@ public final class QorvaErrorCodes {
     public static final String HTTP_CONFLICT     = "error.http.conflict";
     public static final String HTTP_VALIDATION   = "error.http.validation";
     public static final String HTTP_UNEXPECTED   = "error.http.unexpected";
+    public static final String HTTP_TOO_MANY_REQUESTS   = "error.http.too_many_requests";
+    public static final String HTTP_SERVICE_UNAVAILABLE = "error.http.service_unavailable";
 }

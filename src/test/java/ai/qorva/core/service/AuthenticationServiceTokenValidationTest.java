@@ -33,6 +33,7 @@ class AuthenticationServiceTokenValidationTest {
 	@Mock private AuthenticationManager authenticationManager;
 	@Mock private UserMapper userMapper;
 	@Mock private TenantService tenantService;
+	@Mock private MfaService mfaService;
 
 	private JwtConfig jwtConfig;
 	private AuthenticationService service;
@@ -48,7 +49,7 @@ class AuthenticationServiceTokenValidationTest {
 		jwtConfig.setSecret(Base64.getEncoder().encodeToString(keyBytes));
 		jwtConfig.setSecretKey(new SecretKeySpec(keyBytes, "HmacSHA512"));
 		service = new AuthenticationService(userDetailsService, userRepository, authenticationManager,
-			jwtConfig, userMapper, tenantService);
+			jwtConfig, userMapper, tenantService, mfaService);
 	}
 
 	private String token(long expiresInMillis) {

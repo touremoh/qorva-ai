@@ -38,6 +38,10 @@ public class UserDTO extends AbstractQorvaDTO {
     @JsonProperty(access = Access.WRITE_ONLY)
     private Integer passwordCredentialVersion;
 
+    /** Read-only: switched only through /users/me/mfa with a verified code, never by a user update. */
+    @JsonProperty(access = Access.READ_ONLY)
+    private Boolean mfaEnabled;
+
     List<UserAuthority> authorities;
 
     @JsonProperty(access = Access.READ_ONLY)

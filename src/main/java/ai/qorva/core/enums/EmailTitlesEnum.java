@@ -45,7 +45,15 @@ public enum EmailTitlesEnum {
 	IT_PASSWORD_RESET("it", "password_reset", "Reimposta la tua password Qorva AI"),
 	ES_PASSWORD_RESET("es", "password_reset", "Restablece tu contraseña de Qorva AI"),
 	PT_PASSWORD_RESET("pt", "password_reset", "Redefina a sua palavra-passe Qorva AI"),
-	NL_PASSWORD_RESET("nl", "password_reset", "Stel uw Qorva AI-wachtwoord opnieuw in");
+	NL_PASSWORD_RESET("nl", "password_reset", "Stel uw Qorva AI-wachtwoord opnieuw in"),
+
+	EN_MFA_CODE("en", "mfa_code", "Your Qorva AI verification code"),
+	FR_MFA_CODE("fr", "mfa_code", "Votre code de vérification Qorva AI"),
+	DE_MFA_CODE("de", "mfa_code", "Ihr Qorva AI-Bestätigungscode"),
+	IT_MFA_CODE("it", "mfa_code", "Il tuo codice di verifica Qorva AI"),
+	ES_MFA_CODE("es", "mfa_code", "Tu código de verificación de Qorva AI"),
+	PT_MFA_CODE("pt", "mfa_code", "O seu código de verificação Qorva AI"),
+	NL_MFA_CODE("nl", "mfa_code", "Uw Qorva AI-verificatiecode");
 
 	EmailTitlesEnum(String languageCode, String emailType, String emailTitle) {
 		this.languageCode = languageCode;

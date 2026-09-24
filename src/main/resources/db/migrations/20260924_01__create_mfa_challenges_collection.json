@@ -1,0 +1,39 @@
+{
+  "collMod": "mfa_challenges",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "mfa_challenges",
+      "required": ["tenantId", "userId", "purpose", "codeHash", "attempts", "sends", "expiresAt", "createdAt"],
+      "properties": {
+        "tenantId": {
+          "bsonType": "objectId",
+          "description": "tenant of the user, required"
+        },
+        "userId": {
+          "bsonType": "string",
+          "description": "user the code was emailed to"
+        },
+        "purpose": {
+          "bsonType": "string",
+          "enum": ["LOGIN", "ENABLE", "DISABLE"]
+        },
+        "codeHash": {
+          "bsonType": "string",
+          "description": "BCrypt hash of the emailed code — the code itself is never stored"
+        },
+        "attempts": { "bsonType": "int" },
+        "sends": { "bsonType": "int" },
+        "lastSentAt": { "bsonType": "date" },
+        "expiresAt": {
+          "bsonType": "date",
+          "description": "TTL index removes the row after this instant"
+        },
+        "consumedAt": { "bsonType": "date" },
+        "createdAt": { "bsonType": "date" }
+      }
+    }
+  },
+  "validationLevel": "moderate",
+  "validationAction": "error"
+}

@@ -1,6 +1,7 @@
 package ai.qorva.core.controller;
 
 
+import ai.qorva.core.dto.MfaData;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.dto.request.ForgotPasswordRequest;
@@ -35,6 +36,17 @@ public class AuthenticationController {
 	@PostMapping(path = "/login", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<QorvaRequestResponse> authenticate(@RequestBody UserDTO userDTO) throws QorvaException {
 		return BuildApiResponse.from(this.authenticationService.authenticate(userDTO));
+	}
+
+	/** Second sign-in step for accounts with email MFA on. Public: the challenge id is the credential. */
+	@PostMapping(path = "/mfa/verify", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<QorvaRequestResponse> verifyMfa(@RequestBody @Valid MfaData.VerifyRequest request) throws QorvaException {
+		return BuildApiResponse.from(this.authenticationService.verifyMfa(request.getChallengeId(), request.getCode()));
+	}
+
+	@PostMapping(path = "/mfa/resend", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<QorvaRequestResponse> resendMfa(@RequestBody @Valid MfaData.ResendRequest request) throws QorvaException {
+		return BuildApiResponse.from(this.authenticationService.resendMfa(request.getChallengeId()));
 	}
 
 	@PostMapping(path = "/token/validate", produces = MediaType.APPLICATION_JSON_VALUE)

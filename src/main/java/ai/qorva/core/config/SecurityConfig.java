@@ -62,6 +62,8 @@ public class SecurityConfig {
 					"/auth/login",
 					"/auth/token/validate",
 					"/auth/password/**",
+					"/auth/mfa/verify",
+					"/auth/mfa/resend",
 					"/stripe/**",
 					"/actuator/**",
 					"/public/**",

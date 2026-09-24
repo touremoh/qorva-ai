@@ -46,6 +46,19 @@ public class User implements QorvaEntity {
         return passwordCredentialVersion != null ? passwordCredentialVersion : 0;
     }
 
+    /**
+     * Email MFA opt-in. A {@code Boolean} on purpose: the generic user update merges only null
+     * fields from the stored document, so a primitive would reset to false on every profile save.
+     * Only {@code MfaService} changes it, after a verified code.
+     */
+    private Boolean mfaEnabled;
+    private Instant mfaEnabledAt;
+
+    /** Legacy users have no flag yet: off. */
+    public boolean isMfaEnabledOrFalse() {
+        return Boolean.TRUE.equals(mfaEnabled);
+    }
+
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
 

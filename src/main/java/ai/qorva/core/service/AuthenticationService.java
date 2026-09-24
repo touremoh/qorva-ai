@@ -1,8 +1,10 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.config.JwtConfig;
+import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.AuthResponse;
+import ai.qorva.core.dto.MfaData;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
@@ -28,32 +30,59 @@ public class AuthenticationService {
 	private final JwtConfig jwtConfig;
 	private final UserMapper userMapper;
 	private final TenantService tenantService;
+	private final MfaService mfaService;
 
 	@Autowired
 	public AuthenticationService(
 		QorvaUserDetailsService userDetailsService,
 		UserRepository userRepository,
 		AuthenticationManager authenticationManager,
-		JwtConfig jwtConfig, UserMapper userMapper, TenantService tenantService) {
+		JwtConfig jwtConfig, UserMapper userMapper, TenantService tenantService, MfaService mfaService) {
 		this.userDetailsService = userDetailsService;
 		this.userRepository = userRepository;
 		this.authenticationManager = authenticationManager;
 		this.jwtConfig = jwtConfig;
 		this.userMapper = userMapper;
 		this.tenantService = tenantService;
+		this.mfaService = mfaService;
 	}
 
+	/**
+	 * Password step. With email MFA off this signs the user in as before; with it on, no token is
+	 * minted yet — a code is emailed and the response only carries the challenge to answer.
+	 */
 	public AuthResponse authenticate(UserDTO userDTO) throws QorvaException {
+		User user;
 		try {
 			// Authenticate user
 			this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userDTO.getEmail(), userDTO.getRawPassword()));
 
-			// Get the authenticated user's details
-			UserDetails userDetails = this.userDetailsService.loadUserByUsername(userDTO.getEmail());
-
 			// Retrieve the tenantId from the database
-			var user = Optional.ofNullable(this.userRepository.findByEmail(userDTO.getEmail()))
-				               .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
+			user = Optional.ofNullable(this.userRepository.findByEmail(userDTO.getEmail()))
+				           .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
+		} catch (Exception e) {
+			throw new QorvaException(QorvaErrorCodes.AUTH_FAILED, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+		}
+
+		if (user.isMfaEnabledOrFalse()) {
+			return AuthResponse.mfaRequired(this.mfaService.issueLogin(user));
+		}
+		return completeLogin(user);
+	}
+
+	/** Second step of an MFA sign-in: a valid code yields exactly what a plain login returns. */
+	public AuthResponse verifyMfa(String challengeId, String code) throws QorvaException {
+		return completeLogin(this.mfaService.verifyLogin(challengeId, code));
+	}
+
+	public MfaData.Challenge resendMfa(String challengeId) throws QorvaException {
+		return this.mfaService.resendLogin(challengeId);
+	}
+
+	private AuthResponse completeLogin(User user) throws QorvaException {
+		try {
+			// Get the authenticated user's details
+			UserDetails userDetails = this.userDetailsService.loadUserByUsername(user.getEmail());
 
 			// Get the tenant status from the database and the subscription plan
 			var tenant = Optional.ofNullable(this.tenantService.findOneById(user.getTenantId()))
