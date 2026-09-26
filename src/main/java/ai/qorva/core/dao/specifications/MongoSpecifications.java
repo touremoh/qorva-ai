@@ -14,6 +14,11 @@ public final class MongoSpecifications {
         return new EmptyMongoSpecification<>();
     }
 
+    /** True for a missing or empty specification, i.e. one that matches every document. */
+    public static boolean isEmpty(MongoSpecification<?> specification) {
+        return specification == null || specification instanceof EmptyMongoSpecification;
+    }
+
     public static <T> MongoSpecification<T> allOf(List<MongoSpecification<T>> specifications) {
         List<Criteria> criteria = specifications.stream()
             .filter(spec -> spec != null && !(spec instanceof EmptyMongoSpecification))

@@ -19,6 +19,8 @@ import org.springframework.data.mongodb.MongoDatabaseFactory;
 import org.springframework.data.mongodb.MongoTransactionManager;
 import org.springframework.data.mongodb.core.convert.MongoCustomConversions;
 import org.springframework.data.mongodb.config.EnableMongoAuditing;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import ai.qorva.core.dao.repository.QorvaMongoRepositoryImpl;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import java.math.BigDecimal;
@@ -32,6 +34,7 @@ import static org.springframework.ai.openai.api.OpenAiApi.EmbeddingModel.TEXT_EM
 @Configuration
 @EnableMongock // For MongoDB migration
 @EnableMongoAuditing(dateTimeProviderRef = "auditingDateTimeProvider")
+@EnableMongoRepositories(basePackages = "ai.qorva.core.dao.repository", repositoryBaseClass = QorvaMongoRepositoryImpl.class)
 public class MongoConfig {
 
     @Value("${spring.ai.openai.api-key}")

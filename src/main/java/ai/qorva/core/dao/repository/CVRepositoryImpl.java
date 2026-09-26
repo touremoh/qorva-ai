@@ -1,9 +1,6 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.CV;
-import ai.qorva.core.dao.specifications.MongoSpecification;
-import ai.qorva.core.dao.specifications.MongoSpecificationExecutorImpl;
-import ai.qorva.core.dao.specifications.QorvaRepositorySpecification;
 import ai.qorva.core.dto.CVDuplicatesData;
 import ai.qorva.core.dto.CVFilterOptionsData;
 import ai.qorva.core.enums.ContentDateSourceEnum;
@@ -38,45 +35,13 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Repository
-public class CVRepositoryImpl implements QorvaRepositorySpecification<CV>, SimilaritySearchRepository, TextSearchRepository, CVQualityRepository, CVFilterOptionsRepository {
+public class CVRepositoryImpl implements SimilaritySearchRepository, TextSearchRepository, CVQualityRepository, CVFilterOptionsRepository {
 
 	private final MongoTemplate mongoTemplate;
-	private final MongoSpecificationExecutorImpl<CV> delegate;
 
 	@Autowired
 	public CVRepositoryImpl(MongoTemplate mongoTemplate) {
 		this.mongoTemplate = mongoTemplate;
-		this.delegate = new MongoSpecificationExecutorImpl<>(mongoTemplate, CV.class);
-	}
-
-	@Override
-	public List<CV> findAll(MongoSpecification<CV> specification) {
-		return delegate.findAll(specification);
-	}
-
-	@Override
-	public List<CV> findAll(MongoSpecification<CV> specification, Sort sort) {
-		return this.delegate.findAll(specification, sort);
-	}
-
-	@Override
-	public Page<CV> findAll(MongoSpecification<CV> specification, Pageable pageable) {
-		return this.delegate.findAll(specification, pageable);
-	}
-
-	@Override
-	public Optional<CV> findOne(MongoSpecification<CV> specification) {
-		return this.delegate.findOne(specification);
-	}
-
-	@Override
-	public boolean exists(MongoSpecification<CV> specification) {
-		return this.delegate.exists(specification);
-	}
-
-	@Override
-	public long count(MongoSpecification<CV> specification) {
-		return this.delegate.count(specification);
 	}
 
 	@Override
