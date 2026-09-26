@@ -18,6 +18,7 @@ import ai.qorva.core.service.S3StorageService;
 import ai.qorva.core.service.ScoringRulesPrefillService;
 import ai.qorva.core.service.StripeEventsService;
 import ai.qorva.core.service.TenantService;
+import ai.qorva.core.service.AuthenticationService;
 import ai.qorva.core.service.UserService;
 import ai.qorva.core.utils.JwtUtils;
 import org.bson.types.ObjectId;
@@ -76,6 +77,7 @@ class SecurityRoutingWebMvcTest {
 	@MockitoBean private QorvaUserDetailsService userDetailsService;
 	@MockitoBean(name = "accessManager") private QorvaApiAccessManager accessManager;
 	@MockitoBean private UserService userService;
+	@MockitoBean private AuthenticationService authenticationService;
 	@MockitoBean private TenantService tenantService;
 	@MockitoBean private S3StorageService s3StorageService;
 	@MockitoBean private StripeEventsService stripeEventsService;

@@ -4,6 +4,7 @@ import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.security.QorvaUserDetails;
 import ai.qorva.core.mapper.UserMapper;
 import io.jsonwebtoken.Jwts;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,6 +20,7 @@ import java.util.Date;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.Mockito.when;
 
 /**
  * /auth/token/validate must answer every bad token as a failed auth check. Anything that
@@ -61,9 +63,23 @@ class AuthenticationServiceTokenValidationTest {
 			.compact();
 	}
 
+	private static QorvaUserDetails user(String status) {
+		boolean enabled = !"LOCKED".equals(status);
+		return new QorvaUserDetails("recruiter@example.com", "$pw", enabled, true, enabled, java.util.List.of(), null, 0);
+	}
+
 	@Test
 	void aLiveTokenIsValid() throws QorvaException {
+		when(userDetailsService.loadUserByUsername("recruiter@example.com")).thenReturn(user("ACTIVE"));
 		assertThat(service.isTokenValid("Bearer " + token(3_600_000))).isTrue();
+	}
+
+	@Test
+	void aLiveTokenOfALockedAccountIsInvalid() {
+		when(userDetailsService.loadUserByUsername("recruiter@example.com")).thenReturn(user("LOCKED"));
+		assertThatThrownBy(() -> service.isTokenValid("Bearer " + token(3_600_000)))
+			.isInstanceOf(QorvaException.class)
+			.hasMessage(QorvaErrorCodes.AUTH_TOKEN_INVALID);
 	}
 
 	@Test

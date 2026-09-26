@@ -262,7 +262,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
      */
     public CVDTO replaceDuplicate(String newCvId, String oldCvId, String tenantId) throws QorvaException {
         if (newCvId.equals(oldCvId)) {
-            throw QorvaErrors.badRequest("Cannot replace a CV with itself");
+            throw QorvaErrors.badRequest(QorvaErrorCodes.CV_REPLACE_SELF);
         }
         var newCv = this.findOneById(newCvId);   // tenant ownership asserted inside
         var oldCv = this.findOneById(oldCvId);

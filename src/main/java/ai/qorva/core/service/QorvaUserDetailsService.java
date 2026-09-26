@@ -54,7 +54,8 @@ public class QorvaUserDetailsService implements UserDetailsService {
 				!user.getUserAccountStatus().equals(UserStatusEnum.DELETED.getValue()),
 				!user.getUserAccountStatus().equals(UserStatusEnum.LOCKED.getValue()),
 				grantedAuthorities,
-				user.getTenantId());
+				user.getTenantId(),
+				user.getPasswordCredentialVersionOrZero());
 		} catch (AuthenticationException e) {
 			throw new UsernameNotFoundException(AUTH_USER_LOOKUP_FAILED, e);
 		}

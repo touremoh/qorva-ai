@@ -11,6 +11,7 @@ import ai.qorva.core.service.TenantService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -44,6 +45,8 @@ public class TenantController extends AbstractQorvaController<TenantDTO> {
             .build();
     }
 
+    // The company's public identity (name, logo, contact details) is an admin decision, like managing users.
+    @PreAuthorize("@accessManager.hasPermission(authentication,'MANAGE_USERS')")
     @PatchMapping(value = "/profile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<TenantDTO> updateProfile(
         @RequestPart("profile") TenantProfileUpdateDTO profile,

@@ -1,5 +1,6 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaErrors;
 
 import ai.qorva.core.security.TenantScope;
@@ -207,7 +208,7 @@ public class CandidateUpdateService {
 			payload = objectMapper.writeValueAsString(
 				submission != null ? submission : new CandidateUpdateData.Submission(null, null, null, null, null, null, null));
 		} catch (Exception e) {
-			throw QorvaErrors.badRequest("Invalid submission", e);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.CANDIDATE_UPDATE_INVALID_SUBMISSION, e);
 		}
 
 		var previousStatus = claim(request);
@@ -300,7 +301,7 @@ public class CandidateUpdateService {
 		var name = file.getOriginalFilename();
 		var lower = name != null ? name.toLowerCase() : "";
 		if (!lower.endsWith(".pdf") && !lower.endsWith(".docx")) {
-			throw QorvaErrors.badRequest("Unsupported file type — please upload a .pdf or .docx resume");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.CANDIDATE_UPDATE_UNSUPPORTED_FILE);
 		}
 	}
 
@@ -373,7 +374,7 @@ public class CandidateUpdateService {
 
 	/** Deliberately generic — public endpoints must not reveal whether a token ever existed. */
 	private QorvaException notFound() {
-		return QorvaErrors.notFound("Link not found or no longer valid");
+		return QorvaErrors.notFound(QorvaErrorCodes.CANDIDATE_UPDATE_LINK_INVALID);
 	}
 
 	static String sha256(String value) {

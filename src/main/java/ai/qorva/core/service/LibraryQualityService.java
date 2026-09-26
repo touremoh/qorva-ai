@@ -1,5 +1,6 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaErrors;
 
 import ai.qorva.core.config.CacheConfig;
@@ -173,7 +174,7 @@ public class LibraryQualityService {
 
 	public IssueCVPage getIssueCVs(String tenantId, QualityIssueKeyEnum issueKey, int pageNumber, int pageSize) throws QorvaException {
 		if (issueKey == QualityIssueKeyEnum.DUPLICATES) {
-			throw QorvaErrors.badRequest("Duplicates are served by the /cvs/duplicates endpoint");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_DUPLICATES_SEPARATE);
 		}
 		var page = this.cvRepository.findQualityIssueCVs(
 			new ObjectId(tenantId), issueKey, PageRequest.of(pageNumber, pageSize));
@@ -281,7 +282,7 @@ public class LibraryQualityService {
 				if (request.issueKey() != null) {
 					var issueKey = parseIssueKey(request.issueKey());
 					if (issueKey == QualityIssueKeyEnum.DUPLICATES) {
-						throw QorvaErrors.badRequest("Duplicates cannot be bulk-archived — resolve them individually");
+						throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_DUPLICATES_NOT_BULK);
 					}
 					yield this.cvRepository.bulkSetArchived(tenantObjectId, issueKey, null, true);
 				}
@@ -295,12 +296,11 @@ public class LibraryQualityService {
 			case ACTION_CONFIRM_CURRENT -> {
 				requireIds(ids);
 				if (ids.size() > MAX_CONFIRM_CURRENT_PER_CALL) {
-					throw QorvaErrors.badRequest("Confirm-current is limited to " + MAX_CONFIRM_CURRENT_PER_CALL
-						+ " resumes per call — verification must reflect actual review");
+					throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_CONFIRM_CURRENT_LIMIT, MAX_CONFIRM_CURRENT_PER_CALL);
 				}
 				yield this.cvRepository.bulkConfirmCurrent(tenantObjectId, ids);
 			}
-			default -> throw QorvaErrors.badRequest("Unknown action: " + request.action());
+			default -> throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_UNKNOWN_ACTION, request.action());
 		};
 
 		this.cacheEvictor.evict(tenantId);
@@ -330,7 +330,7 @@ public class LibraryQualityService {
 		try {
 			return QualityIssueKeyEnum.valueOf(issueKey);
 		} catch (IllegalArgumentException | NullPointerException e) {
-			throw QorvaErrors.badRequest("Unknown issue key: " + issueKey);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_UNKNOWN_ISSUE, issueKey);
 		}
 	}
 
@@ -345,7 +345,7 @@ public class LibraryQualityService {
 		try {
 			return ids.stream().map(ObjectId::new).toList();
 		} catch (IllegalArgumentException e) {
-			throw QorvaErrors.badRequest("Invalid CV id in request");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_INVALID_CV_ID);
 		}
 	}
 

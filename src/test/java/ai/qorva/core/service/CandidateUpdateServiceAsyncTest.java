@@ -6,6 +6,7 @@ import ai.qorva.core.dao.repository.SuppressedEmailRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CandidateUpdateData;
 import ai.qorva.core.enums.ContentDateSourceEnum;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -115,7 +116,7 @@ class CandidateUpdateServiceAsyncTest {
 
 		assertThatThrownBy(() -> service.enqueue(TOKEN, null, exe))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("Unsupported file type");
+			.hasMessage(QorvaErrorCodes.CANDIDATE_UPDATE_UNSUPPORTED_FILE);
 		verify(requestRepository, never()).save(any());
 	}
 
@@ -125,7 +126,7 @@ class CandidateUpdateServiceAsyncTest {
 
 		assertThatThrownBy(() -> service.enqueue(TOKEN, null, pdf()))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("no longer valid");
+			.hasMessage(QorvaErrorCodes.CANDIDATE_UPDATE_LINK_INVALID);
 	}
 
 	@Test
@@ -167,7 +168,7 @@ class CandidateUpdateServiceAsyncTest {
 
 		assertThatThrownBy(() -> service.status(TOKEN))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("no longer valid");
+			.hasMessage(QorvaErrorCodes.CANDIDATE_UPDATE_LINK_INVALID);
 	}
 
 	@Test

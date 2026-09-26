@@ -1,5 +1,6 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaErrors;
 
 import ai.qorva.core.dto.common.ScoringRules;
@@ -79,7 +80,7 @@ public class ScoringRulesPrefillService {
 
 	private ScoringRules doSuggest(String title, String description) throws QorvaException {
 		if (!StringUtils.hasText(description)) {
-			throw QorvaErrors.badRequest("Job description is required");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.JOB_DESCRIPTION_REQUIRED);
 		}
 		var converter = new BeanOutputConverter<>(ScoringRules.class);
 		var prompt = promptTemplate

@@ -277,7 +277,7 @@ class AtsOauthServiceTest {
 		var url = service.buildConsentUrl(AtsProviderEnum.GREENHOUSE, TENANT);
 		var state = url.substring(url.indexOf("&state=") + "&state=".length());
 
-		assertThatThrownBy(() -> service.validateState(state.substring(0, state.length() - 2) + "ff"))
+		assertThatThrownBy(() -> service.validateState(state.substring(0, state.length() - 1) + (state.endsWith("0") ? "1" : "0")))
 			.isInstanceOf(QorvaException.class)
 			.hasMessage(QorvaErrorCodes.ATS_OAUTH_STATE_INVALID);
 	}

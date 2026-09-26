@@ -15,6 +15,11 @@ public final class QorvaErrors {
 		return of(messageKey, HttpStatus.BAD_REQUEST);
 	}
 
+	/** A 400 whose message key takes MessageFormat arguments ({0}, {1}…). */
+	public static QorvaException badRequest(String messageKey, Object... params) {
+		return new QorvaException(messageKey, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST, params);
+	}
+
 	public static QorvaException unauthorized(String messageKey) {
 		return of(messageKey, HttpStatus.UNAUTHORIZED);
 	}

@@ -1,5 +1,6 @@
 package ai.qorva.core.utils;
 
+import ai.qorva.core.security.QorvaUserDetails;
 import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dto.JwtDTO;
 import ai.qorva.core.dto.TenantDTO;
@@ -19,7 +20,7 @@ import java.util.function.Function;
 @UtilityClass
 public class JwtUtils {
 
-	String TENANT_ID = "tenantId";
+	public String TENANT_ID = "tenantId";
 	String SUBSCRIPTION_PLAN = "subscriptionPlan";
 	String SUBSCRIPTION_STATUS = "subscriptionStatus";
 
@@ -55,6 +56,9 @@ public class JwtUtils {
 		Map<String, Object> claims = new HashMap<>();
 		claims.put(TYPE, TYPE_ACCESS);
 		claims.put(TENANT_ID, tenantDTO.getId());
+		if (userDetails instanceof QorvaUserDetails qorvaUser) {
+			claims.put(CREDENTIAL_VERSION, qorvaUser.getCredentialVersion());
+		}
 
 		var subscriptionInfo = tenantDTO.getSubscriptionInfo();
 		if (Objects.nonNull(subscriptionInfo) && StringUtils.hasText(subscriptionInfo.getSubscriptionPlan())) {

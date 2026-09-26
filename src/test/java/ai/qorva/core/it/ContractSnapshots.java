@@ -44,20 +44,9 @@ public final class ContractSnapshots {
 	}
 
 	public static void assertMatches(String name, int status, String body) {
-		assertMatches(name, status, body, Map.of());
-	}
-
-	/**
-	 * @param rankedArrays top-level body arrays the API orders by a count but leaves ties in
-	 *                     database order (field name → the count it is ranked by). Ties are put in a
-	 *                     canonical order before comparing, so the ranking is still checked but the
-	 *                     order among equal counts is not.
-	 */
-	public static void assertMatches(String name, int status, String body, Map<String, String> rankedArrays) {
 		var actual = JsonNodeFactory.instance.objectNode();
 		actual.put("status", status);
 		var parsed = parse(body);
-		rankedArrays.forEach((field, spec) -> canonicaliseTies(parsed.get(field), spec));
 		actual.set("body", normalise(parsed, new HashMap<>()));
 		var canonical = sortKeys(actual);
 		var file = DIR.resolve(name + ".json");
@@ -101,29 +90,6 @@ public final class ContractSnapshots {
 		return node;
 	}
 
-	/**
-	 * {@code spec} is the rank field, optionally followed by {@code ",cutoff"} for a top-N list: then
-	 * the last group of equal ranks is dropped too, because which tied items make the cut is arbitrary.
-	 */
-	private static void canonicaliseTies(JsonNode array, String spec) {
-		if (array == null || !array.isArray()) {
-			return;
-		}
-		var parts = spec.split(",");
-		var rankField = parts[0];
-		var items = new java.util.ArrayList<JsonNode>();
-		array.forEach(items::add);
-		items.sort(java.util.Comparator
-			.comparingDouble((JsonNode n) -> -n.path(rankField).asDouble())
-			.thenComparing(JsonNode::toString));
-		if (parts.length > 1 && "cutoff".equals(parts[1]) && !items.isEmpty()) {
-			var lastRank = items.getLast().path(rankField).asDouble();
-			items.removeIf(n -> n.path(rankField).asDouble() == lastRank);
-		}
-		var target = (ArrayNode) array;
-		target.removeAll();
-		items.forEach(target::add);
-	}
 
 	private static JsonNode parse(String body) {
 		if (body == null || body.isBlank()) {

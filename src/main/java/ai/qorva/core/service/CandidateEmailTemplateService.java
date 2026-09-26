@@ -1,5 +1,6 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaErrors;
 
 import ai.qorva.core.dao.entity.CandidateEmailTemplate;
@@ -74,7 +75,7 @@ public class CandidateEmailTemplateService {
 		validate(request);
 		enforcePlanLimit(tenantId);
 		if (templateRepository.existsByTenantIdAndName(tenantId, request.name().trim())) {
-			throw QorvaErrors.badRequest("A template with this name already exists");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.EMAIL_TEMPLATE_NAME_EXISTS);
 		}
 		var now = Instant.now();
 		var saved = templateRepository.save(CandidateEmailTemplate.builder()
@@ -96,7 +97,7 @@ public class CandidateEmailTemplateService {
 		var template = findOwned(tenantId, templateId);
 		var newName = request.name().trim();
 		if (!newName.equals(template.getName()) && templateRepository.existsByTenantIdAndName(tenantId, newName)) {
-			throw QorvaErrors.badRequest("A template with this name already exists");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.EMAIL_TEMPLATE_NAME_EXISTS);
 		}
 		template.setName(newName);
 		template.setSubject(request.subject().trim());
@@ -163,33 +164,33 @@ public class CandidateEmailTemplateService {
 	/** Used by campaign submission to snapshot subject/body onto the job. */
 	public CandidateEmailTemplate findOwned(String tenantId, String templateId) throws QorvaException {
 		return templateRepository.findByIdInTenant(templateId, tenantId)
-			.orElseThrow(() -> QorvaErrors.notFound("Template not found"));
+			.orElseThrow(() -> QorvaErrors.notFound(QorvaErrorCodes.EMAIL_TEMPLATE_NOT_FOUND));
 	}
 
 	// -------------------------------------------------------------------------
 
 	private void validate(CandidateEmailTemplateData.SaveRequest request) throws QorvaException {
 		if (request == null || !StringUtils.hasText(request.name())) {
-			throw QorvaErrors.badRequest("Template name is required");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.EMAIL_TEMPLATE_NAME_REQUIRED);
 		}
 		if (request.name().trim().length() > NAME_MAX) {
-			throw QorvaErrors.badRequest("Template name must be at most " + NAME_MAX + " characters");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.EMAIL_TEMPLATE_NAME_TOO_LONG, NAME_MAX);
 		}
 		validateContent(request.subject(), request.bodyText());
 	}
 
 	private void validateContent(String subject, String bodyText) throws QorvaException {
 		if (!StringUtils.hasText(subject)) {
-			throw QorvaErrors.badRequest("Subject is required");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.EMAIL_TEMPLATE_SUBJECT_REQUIRED);
 		}
 		if (subject.trim().length() > SUBJECT_MAX) {
-			throw QorvaErrors.badRequest("Subject must be at most " + SUBJECT_MAX + " characters");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.EMAIL_TEMPLATE_SUBJECT_TOO_LONG, SUBJECT_MAX);
 		}
 		if (!StringUtils.hasText(bodyText)) {
-			throw QorvaErrors.badRequest("Message body is required");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.EMAIL_TEMPLATE_BODY_REQUIRED);
 		}
 		if (bodyText.length() > BODY_MAX) {
-			throw QorvaErrors.badRequest("Message body must be at most " + BODY_MAX + " characters");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.EMAIL_TEMPLATE_BODY_TOO_LONG, BODY_MAX);
 		}
 		validatePlaceholders(subject);
 		validatePlaceholders(bodyText);
@@ -200,7 +201,7 @@ public class CandidateEmailTemplateService {
 		while (matcher.find()) {
 			var token = matcher.group(1).trim();
 			if (!ALLOWED_PLACEHOLDERS.contains(token)) {
-				throw QorvaErrors.badRequest("Unknown placeholder {{" + token + "}} — allowed: {{candidate_name}}, {{company_name}}");
+				throw QorvaErrors.badRequest(QorvaErrorCodes.EMAIL_TEMPLATE_UNKNOWN_PLACEHOLDER, token);
 			}
 		}
 	}
@@ -213,8 +214,7 @@ public class CandidateEmailTemplateService {
 	private void enforcePlanLimit(String tenantId) throws QorvaException {
 		var limit = resolveTemplateLimit(tenantId);
 		if (limit != null && templateRepository.countByTenantId(tenantId) >= limit) {
-			throw QorvaErrors.badRequest("Your plan allows up to " + limit
-				+ " email templates — delete one or upgrade to create more");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.EMAIL_TEMPLATE_LIMIT_REACHED, limit);
 		}
 	}
 

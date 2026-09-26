@@ -39,6 +39,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HexFormat;
 import java.util.List;
+import ai.qorva.core.utils.JobDescriptionHtml;
 
 /**
  * The ATS sync engine. Runs inside a BackgroundJob claimed by BackgroundJobWorker, so
@@ -303,7 +304,7 @@ public class AtsSyncService {
 				update.set("matchingReportsNeeded", true);
 			}
 			if (StringUtils.hasText(atsJob.description())) {
-				update.set("description", atsJob.description());
+				update.set("description", JobDescriptionHtml.sanitize(atsJob.description()));
 			}
 			// Backfills a job imported before its criteria could be drafted — one whose
 			// description only arrived on a later sync. Rules already there are left alone:
@@ -320,7 +321,7 @@ public class AtsSyncService {
 		var jobPost = new JobPost();
 		jobPost.setTenantId(connection.getTenantId());
 		jobPost.setTitle(atsJob.title());
-		jobPost.setDescription(atsJob.description());
+		jobPost.setDescription(JobDescriptionHtml.sanitize(atsJob.description()));
 		jobPost.setScoringRules(suggestScoringRules(atsJob));
 		jobPost.setJobReference(jobReference);
 		jobPost.setStatus(status);

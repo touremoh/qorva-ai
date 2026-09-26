@@ -1,5 +1,7 @@
 package ai.qorva.core.controller;
 
+import org.springframework.security.core.Authentication;
+import ai.qorva.core.service.AuthenticationService;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.dto.request.AddUserRequest;
@@ -31,11 +33,13 @@ public class UserController extends AbstractQorvaController<UserDTO> {
     private static final String MANAGE_USERS = "MANAGE_USERS";
 
     private final UserService userService;
+    private final AuthenticationService authenticationService;
 
     @Autowired
-    public UserController(UserService service) {
+    public UserController(UserService service, AuthenticationService authenticationService) {
         super(service);
         this.userService = service;
+        this.authenticationService = authenticationService;
     }
 
     /*
@@ -66,11 +70,13 @@ public class UserController extends AbstractQorvaController<UserDTO> {
         return ResponseEntity.noContent().build();
     }
 
+    /** Changes the caller's own password and answers with a fresh token: the old ones stop working. */
     @PatchMapping("/{id}/password")
-    public ResponseEntity<Void> updatePassword(@PathVariable String id,
-                                               @RequestBody @Valid UpdatePasswordRequest req) throws QorvaException {
-        userService.updatePassword(currentTenantId(), id, req.getCurrentPassword(), req.getNewPassword());
-        return ResponseEntity.noContent().build();
+    public ResponseEntity<QorvaRequestResponse> updatePassword(@PathVariable String id,
+                                               @RequestBody @Valid UpdatePasswordRequest req,
+                                               Authentication authentication) throws QorvaException {
+        userService.updatePassword(currentTenantId(), id, authentication.getName(), req.getCurrentPassword(), req.getNewPassword());
+        return BuildApiResponse.from(authenticationService.issueAccessToken(authentication.getName()));
     }
 
     @Override

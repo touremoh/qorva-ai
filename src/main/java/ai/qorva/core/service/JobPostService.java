@@ -4,6 +4,7 @@ import ai.qorva.core.dao.entity.JobPost;
 import ai.qorva.core.dao.repository.JobPostRepository;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.enums.JobPostStatusEnum;
+import ai.qorva.core.utils.JobDescriptionHtml;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.JobPostMapper;
 import ai.qorva.core.service.cascade.CascadeRegistry;
@@ -32,6 +33,7 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
     @Override
     protected void preProcessCreateOne(JobPostDTO dto) throws QorvaException {
         super.preProcessCreateOne(dto);
+        dto.setDescription(JobDescriptionHtml.sanitize(dto.getDescription()));
         dto.setJobReference(UUID.randomUUID().toString().toUpperCase(Locale.ROOT));
         dto.setStatus(JobPostStatusEnum.OPEN.getStatus());
         dto.setMatchingReportsNeeded(matchingReportsNeededFor(dto.getStatus()));
@@ -51,6 +53,7 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
         // trusting the payload keeps an edit from unlinking an imported job — which left the
         // job_reference unique index holding a reference the next sync could no longer match.
         newJobPost.setAtsRef(existing != null ? existing.getAtsRef() : null);
+        newJobPost.setDescription(JobDescriptionHtml.sanitize(newJobPost.getDescription()));
         newJobPost.setMatchingReportsNeeded(matchingReportsNeededFor(newJobPost.getStatus()));
     }
 

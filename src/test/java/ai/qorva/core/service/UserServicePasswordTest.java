@@ -28,6 +28,7 @@ class UserServicePasswordTest {
 
 	private static final String TENANT = new ObjectId().toHexString();
 	private static final String USER_ID = new ObjectId().toHexString();
+	private static final String EMAIL = "ada@a.qorva.test";
 
 	@Mock private UserRepository userRepository;
 	@Mock private UserMapper userMapper;
@@ -50,7 +51,7 @@ class UserServicePasswordTest {
 		when(passwordEncoder.matches("old", "$old")).thenReturn(true);
 		when(passwordEncoder.encode("new")).thenReturn("$new");
 
-		service.updatePassword(TENANT, USER_ID, "old", "new");
+		service.updatePassword(TENANT, USER_ID, EMAIL, "old", "new");
 
 		verify(userRepository).save(user);
 		assertThat(user.getEncryptedPassword()).isEqualTo("$new");
@@ -64,7 +65,7 @@ class UserServicePasswordTest {
 		when(passwordEncoder.matches("old", "$old")).thenReturn(true);
 		when(passwordEncoder.encode("new")).thenReturn("$new");
 
-		service.updatePassword(TENANT, USER_ID, "old", "new");
+		service.updatePassword(TENANT, USER_ID, EMAIL, "old", "new");
 
 		assertThat(user.getPasswordCredentialVersion()).isEqualTo(1);
 	}
@@ -74,9 +75,20 @@ class UserServicePasswordTest {
 		when(userRepository.findByIdInTenant(USER_ID, TENANT)).thenReturn(Optional.of(user(2)));
 		when(passwordEncoder.matches("wrong", "$old")).thenReturn(false);
 
-		assertThatThrownBy(() -> service.updatePassword(TENANT, USER_ID, "wrong", "new"))
+		assertThatThrownBy(() -> service.updatePassword(TENANT, USER_ID, EMAIL, "wrong", "new"))
 			.isInstanceOf(QorvaException.class)
 			.hasMessage(QorvaErrorCodes.USER_PASSWORD_INCORRECT);
+		verify(userRepository, never()).save(any());
+	}
+
+	@Test
+	void updatePassword_ofAnotherUser_isRefusedBeforeCheckingAnything() {
+		when(userRepository.findByIdInTenant(USER_ID, TENANT)).thenReturn(Optional.of(user(2)));
+
+		assertThatThrownBy(() -> service.updatePassword(TENANT, USER_ID, "someone.else@a.qorva.test", "old", "new"))
+			.isInstanceOf(QorvaException.class)
+			.hasMessage(QorvaErrorCodes.ACCESS_FORBIDDEN);
+		verify(passwordEncoder, never()).matches(any(), any());
 		verify(userRepository, never()).save(any());
 	}
 
@@ -84,6 +96,7 @@ class UserServicePasswordTest {
 		var user = new User();
 		user.setId(USER_ID);
 		user.setTenantId(TENANT);
+		user.setEmail(EMAIL);
 		user.setEncryptedPassword("$old");
 		user.setPasswordCredentialVersion(version);
 		return user;

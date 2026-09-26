@@ -1,5 +1,6 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaErrors;
 
 import ai.qorva.core.dao.entity.BackgroundJob;
@@ -58,14 +59,14 @@ public class BackgroundJobService {
 		boolean isReanalyze = BackgroundJob.TYPE_REANALYZE.equals(request.type());
 		boolean isCampaign = BackgroundJob.TYPE_CANDIDATE_UPDATE_CAMPAIGN.equals(request.type());
 		if (!isReanalyze && !isCampaign) {
-			throw QorvaErrors.badRequest("Unsupported job type: " + request.type());
+			throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_UNSUPPORTED_TYPE, request.type());
 		}
 		var issueKey = parseIssueKey(request.issueKey());
 		if (issueKey == QualityIssueKeyEnum.DUPLICATES) {
-			throw QorvaErrors.badRequest("Duplicates are resolved individually, not via jobs");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_DUPLICATES_INDIVIDUAL);
 		}
 		if (isCampaign && issueKey != QualityIssueKeyEnum.OUTDATED && issueKey != QualityIssueKeyEnum.UNKNOWN_FRESHNESS) {
-			throw QorvaErrors.badRequest("Update campaigns target freshness issues only");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_CAMPAIGN_FRESHNESS_ONLY);
 		}
 
 		// Snapshot the invitation template up front (dry runs validate it too): a template
@@ -73,7 +74,7 @@ public class BackgroundJobService {
 		CandidateEmailTemplate template = null;
 		if (StringUtils.hasText(request.templateId())) {
 			if (!isCampaign) {
-				throw QorvaErrors.badRequest("Email templates only apply to update campaigns");
+				throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_TEMPLATE_CAMPAIGN_ONLY);
 			}
 			template = candidateEmailTemplateService.findOwned(tenantId, request.templateId());
 		}
@@ -85,18 +86,17 @@ public class BackgroundJobService {
 		}
 
 		if (jobRepository.existsByTenantIdAndTypeAndStatusIn(tenantId, request.type(), ACTIVE_STATUSES)) {
-			throw QorvaErrors.conflict("A job of this type is already running for your workspace");
+			throw QorvaErrors.conflict(QorvaErrorCodes.BACKGROUND_JOB_ALREADY_RUNNING);
 		}
 		if (isReanalyze) {
 			if (estimate.remainingQuota() != null && estimate.estimatedActions() > estimate.remainingQuota()) {
-				throw QorvaErrors.badRequest("This job would exceed your remaining screening-action quota ("
-					+ estimate.estimatedActions() + " needed, " + estimate.remainingQuota() + " left)");
+				throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_QUOTA_EXCEEDED, estimate.estimatedActions(), estimate.remainingQuota());
 			}
 			if (estimate.estimatedActions() == 0) {
-				throw QorvaErrors.badRequest("No re-analyzable resumes match this issue");
+				throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_NO_REANALYZABLE);
 			}
 		} else if (estimate.affectedCount() == 0) {
-			throw QorvaErrors.badRequest("No resumes match this issue");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_NO_RESUMES);
 		}
 
 		var job = jobRepository.save(BackgroundJob.builder()
@@ -156,7 +156,7 @@ public class BackgroundJobService {
 		try {
 			return QualityIssueKeyEnum.valueOf(issueKey);
 		} catch (IllegalArgumentException | NullPointerException e) {
-			throw QorvaErrors.badRequest("Unknown issue key: " + issueKey);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_UNKNOWN_ISSUE, issueKey);
 		}
 	}
 

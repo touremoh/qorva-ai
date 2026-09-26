@@ -155,15 +155,20 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		this.mapper.merge(userDTO, getExistingForUpdate());
 	}
 
-	public void updatePassword(String tenantId, String userId, String currentPassword, String newPassword) throws QorvaException {
+	/** A user changes their own password; the credential version bump ends their other sessions. */
+	public void updatePassword(String tenantId, String userId, String actorEmail, String currentPassword, String newPassword) throws QorvaException {
 		var user = userOfTenant(tenantId, userId);
+		if (actorEmail == null || !actorEmail.equalsIgnoreCase(user.getEmail())) {
+			throw QorvaErrors.forbidden(QorvaErrorCodes.ACCESS_FORBIDDEN);
+		}
 
 		if (!passwordEncoder.matches(currentPassword, user.getEncryptedPassword())) {
 			throw QorvaErrors.unauthorized(QorvaErrorCodes.USER_PASSWORD_INCORRECT);
 		}
 
 		user.setEncryptedPassword(passwordEncoder.encode(newPassword));
-		// Bump the credential version so any outstanding set-password / reset link dies with the old password.
+		// Bump the credential version: outstanding set-password / reset links and every access token
+		// issued before the change stop working (the caller gets a fresh token).
 		user.setPasswordCredentialVersion(user.getPasswordCredentialVersionOrZero() + 1);
 		repository.save(user);
 	}

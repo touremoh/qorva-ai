@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.dto.JwtDTO;
+import ai.qorva.core.security.AccessTokenPolicy;
 import ai.qorva.core.exception.QorvaErrors;
 
 import ai.qorva.core.security.TenantScope;
@@ -19,6 +21,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.JwtException;
 import org.springframework.stereotype.Service;
@@ -124,20 +127,51 @@ public class AuthenticationService {
 			if (expired) {
 				throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_TOKEN_EXPIRED);
 			}
+			// Signed and unexpired is not enough: a session ended by a password change, a locked
+			// account or a set-password link must send the app back to sign-in too.
+			var claims = JwtUtils.extractAllClaims(token, jwtConfig.getSecretKey());
+			UserDetails userDetails;
+			try {
+				userDetails = this.userDetailsService.loadUserByUsername(claims.getSubject());
+			} catch (UsernameNotFoundException unknown) {
+				throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_TOKEN_INVALID);
+			}
+			if (!AccessTokenPolicy.accepts(claims, userDetails)) {
+				throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_TOKEN_INVALID);
+			}
 			return true;
 		}
 		return false;
+	}
+
+	/** A fresh access token for a signed-in user, e.g. after they changed their password. */
+	public JwtDTO issueAccessToken(String email) throws QorvaException {
+		var userDetails = this.userDetailsService.loadUserByUsername(email);
+		var user = Optional.ofNullable(this.userRepository.findByEmail(email))
+			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
+		var tenant = TenantScope.callAs(user.getTenantId(), () -> this.tenantService.findOneById(user.getTenantId()));
+		return JwtUtils.generateAndBuildToken(userDetails, this.jwtConfig, tenant);
 	}
 
 	public AuthResponse refreshToken(String authorizationHeader) throws QorvaException {
 		if (StringUtils.hasText(authorizationHeader) && authorizationHeader.startsWith("Bearer ")) {
 			String token = authorizationHeader.substring(7);
 			try {
-				// Extract the username
-				String username = JwtUtils.extractUsername(token, this.jwtConfig.getSecretKey());
+				var claims = JwtUtils.extractAllClaims(token, this.jwtConfig.getSecretKey());
+				String username = claims.getSubject();
 
 				// Load user details to issue a new token
-				UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
+				UserDetails userDetails;
+				try {
+					userDetails = this.userDetailsService.loadUserByUsername(username);
+				} catch (UsernameNotFoundException unknown) {
+					throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_TOKEN_INVALID);
+				}
+				// Only a token the API would still accept can be renewed: never a set-password link,
+				// a locked account's token, or a session ended by a password change.
+				if (!AccessTokenPolicy.accepts(claims, userDetails)) {
+					throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_TOKEN_INVALID);
+				}
 
 				// Retrieve the tenantId from the database
 				var user = Optional.ofNullable(this.userRepository.findByEmail(username))

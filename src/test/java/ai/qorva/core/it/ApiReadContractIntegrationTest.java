@@ -9,7 +9,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Stream;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -38,30 +37,15 @@ class ApiReadContractIntegrationTest extends AbstractIntegrationTest {
 		viewer = fixture.bearer(a.viewerEmail(), a.tenantId());
 	}
 
-	private record Route(String name, MockHttpServletRequestBuilder request, Map<String, String> rankedArrays) {
-		Route(String name, MockHttpServletRequestBuilder request) {
-			this(name, request, Map.of());
-		}
+	private record Route(String name, MockHttpServletRequestBuilder request) {
 	}
 
-	/**
-	 * The dashboard ranks by counts and leaves equal counts in database order; the skills list is a
-	 * top 10, so which tied skills make the cut varies too (a deterministic tie-break is a follow-up).
-	 */
-	private static final Map<String, String> DASHBOARD_RANKINGS = Map.of(
-		"skillsReport", "totalMatch,cutoff",
-		"jobPostsReport", "totalMatch",
-		"skillDepthReport", "count",
-		"seniorityLevelReport", "count",
-		"leadershipReport", "count",
-		"learningVelocityReport", "count");
 
 	@TestFactory
 	Stream<DynamicTest> ownerReads() {
 		return routes().stream().map(route -> DynamicTest.dynamicTest(route.name(), () -> {
 			var response = mvc.perform(route.request().header("Authorization", owner)).andReturn().getResponse();
-			ContractSnapshots.assertMatches("read." + route.name(), response.getStatus(), response.getContentAsString(),
-				route.rankedArrays());
+			ContractSnapshots.assertMatches("read." + route.name(), response.getStatus(), response.getContentAsString());
 		}));
 	}
 
@@ -113,7 +97,7 @@ class ApiReadContractIntegrationTest extends AbstractIntegrationTest {
 			new Route("chats.allowed", get("/chats/allowed")),
 			new Route("chats.one", get("/chats/" + a.chatId())),
 			new Route("chats.messages", get("/chats/" + a.chatId() + "/messages").param("page", "0").param("size", "50")),
-			new Route("dashboard.data", get("/dashboard/data"), DASHBOARD_RANKINGS),
+			new Route("dashboard.data", get("/dashboard/data")),
 			new Route("dashboard.topCandidates", get("/dashboard/top-candidates").param("pageNumber", "0").param("pageSize", "5")),
 			new Route("emailTemplates.list", get("/email-templates/candidate-update")),
 			new Route("insights.conversations", get("/library-insights/conversations")),

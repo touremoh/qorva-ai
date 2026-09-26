@@ -89,16 +89,38 @@ public class GreenhouseConnector implements AtsConnector {
 		throw QorvaErrors.unauthorized(QorvaErrorCodes.ATS_AUTH_FAILED);
 	}
 
+	@FunctionalInterface
+	private interface AuthedCall<T> {
+		T call(Map<String, String> authHeaders) throws QorvaException;
+	}
+
+	/**
+	 * Runs a call with a bearer token. A minted token Greenhouse rejects (revoked, or the secret
+	 * was rotated) is dropped from the cache and the call is retried once with a fresh one; a
+	 * second rejection is a real credentials problem and goes back to the caller.
+	 */
+	private <T> T withToken(AtsCredentials credentials, AuthedCall<T> call) throws QorvaException {
+		try {
+			return call.call(auth(credentials));
+		} catch (QorvaException e) {
+			if (!QorvaErrorCodes.ATS_AUTH_FAILED.equals(e.getMessage()) || !tokenService.canMint(credentials)) {
+				throw e;
+			}
+			tokenService.invalidate(credentials);
+			return call.call(auth(credentials));
+		}
+	}
+
 	@Override
 	public void validate(AtsCredentials credentials) throws QorvaException {
-		http.getJson(provider(), base + "/candidates?per_page=1", auth(credentials));
+		withToken(credentials, headers -> http.getJson(provider(), base + "/candidates?per_page=1", headers));
 	}
 
 	@Override
 	public AtsPage<AtsJob> listJobs(AtsCredentials credentials, String cursor) throws QorvaException {
 		var parsed = SyncCursor.parse(cursor);
 		var url = base + "/jobs?per_page=" + PAGE_SIZE + "&page=" + parsed.page();
-		var body = http.getJson(provider(), url, auth(credentials));
+		var body = withToken(credentials, headers -> http.getJson(provider(), url, headers));
 		var jobs = new ArrayList<AtsJob>();
 		for (JsonNode node : body) {
 			var content = new StringBuilder();
@@ -122,7 +144,7 @@ public class GreenhouseConnector implements AtsConnector {
 		var parsed = SyncCursor.parse(cursor);
 		var url = base + "/candidates?per_page=" + PAGE_SIZE + "&page=" + parsed.page()
 			+ (parsed.updatedAfter() != null ? "&updated_after=" + parsed.updatedAfter() : "");
-		var body = http.getJson(provider(), url, auth(credentials));
+		var body = withToken(credentials, headers -> http.getJson(provider(), url, headers));
 		var candidates = new ArrayList<AtsCandidate>();
 		for (JsonNode node : body) {
 			String resumeUrl = null;
@@ -176,23 +198,28 @@ public class GreenhouseConnector implements AtsConnector {
 
 	@Override
 	public void pushMatchResult(AtsCredentials credentials, MatchWriteBack payload) throws QorvaException {
-		var headers = new java.util.HashMap<>(auth(credentials));
 		var note = new java.util.HashMap<String, Object>();
 		note.put("body", NoteFormat.text(payload));
 		note.put("visibility", "public");
 		// Harvest attributes every write to a Greenhouse user: the same id the v3 token was
 		// minted for. A legacy authorization-code token already carries its authorizing user,
 		// so only client-credential connections are blocked when no id was stored.
-		if (StringUtils.hasText(credentials.getOnBehalfOfUserId())) {
-			headers.put("On-Behalf-Of", credentials.getOnBehalfOfUserId());
-			note.put("user_id", credentials.getOnBehalfOfUserId());
+		var onBehalfOf = credentials.getOnBehalfOfUserId();
+		if (StringUtils.hasText(onBehalfOf)) {
+			note.put("user_id", onBehalfOf);
 		} else if (!StringUtils.hasText(credentials.getAccessToken())) {
 			log.warn("Greenhouse write-back skipped: no Greenhouse user id stored to attribute the note to");
 			return;
 		}
-		http.postJson(provider(),
-			base + "/candidates/" + payload.externalCandidateId() + "/activity_feed/notes",
-			headers, note);
+		withToken(credentials, auth -> {
+			var headers = new java.util.HashMap<>(auth);
+			if (StringUtils.hasText(onBehalfOf)) {
+				headers.put("On-Behalf-Of", onBehalfOf);
+			}
+			return http.postJson(provider(),
+				base + "/candidates/" + payload.externalCandidateId() + "/activity_feed/notes",
+				headers, note);
+		});
 	}
 
 	@Override

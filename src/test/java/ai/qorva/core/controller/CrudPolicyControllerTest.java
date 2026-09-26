@@ -49,7 +49,7 @@ class CrudPolicyControllerTest {
 
 	@BeforeEach
 	void setUp() {
-		users = new UserController(userService);
+		users = new UserController(userService, null);
 		users.setAccessManager(accessManager);
 		tenants = new TenantController(tenantService, s3StorageService);
 		tenants.setAccessManager(accessManager);
