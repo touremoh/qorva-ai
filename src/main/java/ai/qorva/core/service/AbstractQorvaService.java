@@ -337,6 +337,9 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
             );
         assertBelongsToCurrentTenant(existing);
 
+        // The document saved is the one whose ownership was just checked: an id in the payload
+        // must never redirect the write to another document (or another tenant's).
+        newResource.setId(existing.getId());
         // Prevent the caller from overriding the tenantId on the saved document
         newResource.setTenantId(existing.getTenantId());
 

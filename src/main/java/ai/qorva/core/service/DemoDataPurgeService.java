@@ -59,6 +59,10 @@ public class DemoDataPurgeService {
 
 	/** Deletes every recruitment-related document for the tenant. Best-effort per collection. */
 	public void purgeAll(String tenantId) {
+		// Every delete below is scoped by tenantId; a blank one must never reach them.
+		if (tenantId == null || tenantId.isBlank()) {
+			throw new IllegalArgumentException("Demo purge requires a tenant id");
+		}
 		log.info("Purging demo data for tenant={}", tenantId);
 		long cvs = safeDelete("cvs", () -> cvRepository.deleteByTenantId(tenantId));
 		s3StorageService.deleteCvDocumentsForTenant(tenantId); // best-effort, never throws

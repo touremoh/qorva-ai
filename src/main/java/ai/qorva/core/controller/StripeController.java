@@ -2,7 +2,6 @@ package ai.qorva.core.controller;
 
 import ai.qorva.core.dto.PortalSession;
 import ai.qorva.core.dto.QorvaRequestResponse;
-import ai.qorva.core.dto.StripeEventLogDTO;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.StripeEventsService;
 import ai.qorva.core.utils.BuildApiResponse;
@@ -21,14 +20,20 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping("/stripe")
-public class StripeController extends AbstractQorvaController<StripeEventLogDTO> {
+public class StripeController {
 
 	@Value("${stripe.webhook.secret}")
 	protected String stripeWebhookSecret;
 
+	private final StripeEventsService service;
+
+	/*
+	 * Deliberately not an AbstractQorvaController: /stripe/webhook and the checkout return pages are
+	 * public, and the generic CRUD over stripe_event_logs must never be reachable from outside.
+	 */
 	@Autowired
 	public StripeController(StripeEventsService service) {
-		super(service);
+		this.service = service;
 	}
 
 	@PostMapping("/webhook")
@@ -38,7 +43,7 @@ public class StripeController extends AbstractQorvaController<StripeEventLogDTO>
 	) {
 		try {
 			Event event = Webhook.constructEvent(payload, sigHeader, stripeWebhookSecret);
-			return ResponseEntity.ok(((StripeEventsService) this.service).handleEvent(event));
+			return ResponseEntity.ok(this.service.handleEvent(event));
 		} catch (SignatureVerificationException e) {
 			log.error("Stripe signature verification error", e);
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid signature");
@@ -62,16 +67,16 @@ public class StripeController extends AbstractQorvaController<StripeEventLogDTO>
 		return BuildApiResponse.from(java.util.Map.of("status", "canceled"));
 	}
 
-	/** Step 10: authenticated endpoint to get current subscription status. */
+	/** Step 10: current subscription status (authenticated — only the webhook and checkout pages are public). */
 	@GetMapping("/subscription/status")
 	public ResponseEntity<QorvaRequestResponse> getSubscriptionStatus(
 		@AuthenticationPrincipal UserDetails userDetails
 	) throws QorvaException {
-		return BuildApiResponse.from(((StripeEventsService) this.service).getSubscriptionStatus(userDetails));
+		return BuildApiResponse.from(this.service.getSubscriptionStatus(userDetails));
 	}
 
 	@PostMapping("/portal-session")
 	public ResponseEntity<PortalSession> createPortalSession(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
-		return ResponseEntity.ok(((StripeEventsService) this.service).buildStripePortalSessionUrl(userDetails));
+		return ResponseEntity.ok(this.service.buildStripePortalSessionUrl(userDetails));
 	}
 }

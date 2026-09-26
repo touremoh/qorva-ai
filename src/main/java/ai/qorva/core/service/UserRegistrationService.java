@@ -19,6 +19,7 @@ import com.stripe.param.checkout.SessionCreateParams;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.bson.types.ObjectId;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -93,7 +94,8 @@ public class UserRegistrationService {
 				// Idempotent re-registration of a demo account: just re-send the set-password link
 				log.info("Re-registration of demo user {} – re-sending set-password link", existingUser.getId());
 				setPasswordService.enqueueDemoWelcome(existingUser.getId());
-				return new DemoRegistrationResponseDTO(true, dto.getEmail(), existingUser.getTenantId(), existingUser.getId());
+				// No ids: this route is public, so knowing an email must not reveal the account's tenant/user ids.
+				return new DemoRegistrationResponseDTO(true, dto.getEmail(), null, null);
 			}
 			throw new QorvaException(QorvaErrorCodes.USER_ALREADY_EXISTS, HttpStatus.NOT_ACCEPTABLE.value(), HttpStatus.NOT_ACCEPTABLE);
 		}
@@ -156,6 +158,10 @@ public class UserRegistrationService {
 		log.info("Renewing checkout session for tenant: {} user: {}", dto.getTenantId(), dto.getUserId());
 
 		resolveProductByPriceId(dto.getPriceId());
+		// Public route (called before sign-in, without a token): the pair in the body is the only
+		// credential, so it must be a real user of that tenant. The completed checkout activates
+		// this user and, for a demo account, purges the tenant's sample data.
+		assertUserBelongsToTenant(dto.getUserId(), dto.getTenantId());
 
 		var tenant = tenantService.findOneById(dto.getTenantId());
 		if (tenant == null || !StringUtils.hasText(tenant.getStripeCustomerId())) {
@@ -166,6 +172,17 @@ public class UserRegistrationService {
 		log.info("New checkout session created for tenant: {}", dto.getTenantId());
 
 		return new RegistrationResponseDTO(checkoutUrl, dto.getTenantId(), dto.getUserId());
+	}
+
+	private void assertUserBelongsToTenant(String userId, String tenantId) throws QorvaException {
+		var belongs = ObjectId.isValid(userId) && ObjectId.isValid(tenantId)
+			&& Optional.ofNullable(userService.findOneById(userId))
+				.map(user -> tenantId.equals(user.getTenantId()))
+				.orElse(false);
+		if (!belongs) {
+			log.warn("Checkout session refused: user {} is not a user of tenant {}", userId, tenantId);
+			throw new QorvaException(QorvaErrorCodes.HTTP_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+		}
 	}
 
 	// -------------------------------------------------------------------------

@@ -3,6 +3,8 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.TenantDTO;
 import ai.qorva.core.dto.TenantProfileUpdateDTO;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.security.CrudOperation;
+import ai.qorva.core.security.CrudPolicy;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.S3StorageService;
 import ai.qorva.core.service.TenantService;
@@ -29,6 +31,18 @@ public class TenantController extends AbstractQorvaController<TenantDTO> {
 		this.s3StorageService = s3StorageService;
     }
 
+
+    /*
+     * The app only reads its own tenant (the service rejects any other id). Tenants are created by
+     * registration, their subscription is written by Stripe handlers, and the profile has its own
+     * route below, so every other generic operation stays closed.
+     */
+    @Override
+    protected CrudPolicy crudPolicy() {
+        return CrudPolicy.builder()
+            .allowAuthenticated(CrudOperation.GET_ONE)
+            .build();
+    }
 
     @PatchMapping(value = "/profile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<TenantDTO> updateProfile(
