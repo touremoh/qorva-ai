@@ -8,11 +8,6 @@ public final class UserSpecifications {
 		throw new UnsupportedOperationException("Utility class");
 	}
 
-	public static MongoSpecification<User> tenantIdEquals(String tenantId) {
-		if (tenantId == null || tenantId.isBlank()) return MongoSpecifications.empty();
-		return () -> Criteria.where("tenantId").is(tenantId);
-	}
-
 	public static MongoSpecification<User> firstNameContains(String firstName) {
 		if (firstName == null || firstName.isBlank()) return MongoSpecifications.empty();
 		return () -> Criteria.where("firstName").regex(firstName, "i");

@@ -11,11 +11,6 @@ public final class PendingEmailNotificationSpecifications {
         throw new UnsupportedOperationException("Utility class");
     }
 
-    public static MongoSpecification<PendingEmailNotification> tenantIdEquals(String tenantId) {
-        if (tenantId == null || tenantId.isBlank()) return MongoSpecifications.empty();
-        return () -> Criteria.where("tenantId").is(tenantId);
-    }
-
     public static MongoSpecification<PendingEmailNotification> statusEquals(String status) {
         if (status == null || status.isBlank()) return MongoSpecifications.empty();
         return () -> Criteria.where("status").is(status);

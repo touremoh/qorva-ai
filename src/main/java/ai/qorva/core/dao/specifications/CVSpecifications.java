@@ -16,13 +16,6 @@ public final class CVSpecifications {
 		throw new UnsupportedOperationException("Utility class");
 	}
 
-	public static MongoSpecification<CV> tenantIdEquals(String tenantId) {
-		if (tenantId == null || tenantId.isBlank()) {
-			return MongoSpecifications.empty();
-		}
-		return () -> Criteria.where("tenantId").is(tenantId);
-	}
-
 	/** Archived filter: the CV list shows active CVs by default; archived only on request. */
 	public static MongoSpecification<CV> archivedEquals(boolean archived) {
 		return archived

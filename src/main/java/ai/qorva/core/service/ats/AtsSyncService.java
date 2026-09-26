@@ -159,7 +159,7 @@ public class AtsSyncService {
 
 	/** Entry point called by BackgroundJobWorker with a claimed RUNNING job. */
 	public void executeSync(BackgroundJob job) {
-		var connectionOpt = connectionRepository.findById(job.getConnectionId());
+		var connectionOpt = connectionRepository.findByIdInTenant(job.getConnectionId(), job.getTenantId());
 		if (connectionOpt.isEmpty()) {
 			finish(job.getId(), BackgroundJob.STATUS_FAILED, new Counters(), "connection_deleted");
 			return;

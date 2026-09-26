@@ -85,7 +85,7 @@ public class AIScreeningService {
 				CompletableFuture.allOf(candidateFutures).join();
 			}
 
-			jobPostService.clearMatchingReportsNeeded(jobPost.getId());
+			jobPostService.clearMatchingReportsNeeded(jobPost.getId(), tenantId);
 			log.debug("Screening done for job post {} ({} candidates)", jobPost.getId(), matchingCVs.size());
 		} catch (QorvaException e) {
 			log.error("Error processing job post {}", jobPost.getId(), e);

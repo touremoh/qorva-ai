@@ -3,6 +3,7 @@ package ai.qorva.core.dao.querybuilder;
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.specifications.CVSpecifications;
 import ai.qorva.core.dao.specifications.MongoSpecification;
+import ai.qorva.core.dao.specifications.MongoSpecifications;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -29,7 +30,7 @@ public class CVQueryBuilder implements QorvaQueryBuilder<CV> {
 		log.debug("CVQueryBuilder.buildQuery params: {}", params);
 
 		return MongoSpecification
-			.where(CVSpecifications.tenantIdEquals(params.get("tenantId")))
+			.where(MongoSpecifications.<CV>ownedBy(params.get("tenantId")))
 			.and(CVSpecifications.archivedEquals("true".equals(params.get("archived"))))
 			.and(CVSpecifications.applicantNumberEquals(params.get("applicantNumber")))
 			.and(CVSpecifications.quickSearch(params.get("q")))

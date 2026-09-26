@@ -12,6 +12,7 @@ import ai.qorva.core.dao.querybuilder.MatchingReportQueryBuilder;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dao.specifications.MatchingReportSpecifications;
 import ai.qorva.core.dao.specifications.MongoSpecification;
+import ai.qorva.core.dao.specifications.MongoSpecifications;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
@@ -165,7 +166,7 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 	}
 
 	public List<MatchingReportDTO> findAllForExport(String tenantId, String jobPostId) {
-		var spec = MongoSpecification.where(MatchingReportSpecifications.tenantIdEquals(tenantId))
+		var spec = MongoSpecification.where(MongoSpecifications.<MatchingReport>ownedBy(tenantId))
 			.and(MatchingReportSpecifications.jobPostIdEquals(jobPostId));
 		return renderFindAll(this.repository.findAll(spec));
 	}

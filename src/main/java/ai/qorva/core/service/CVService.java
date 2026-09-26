@@ -10,6 +10,7 @@ import ai.qorva.core.security.TenantScope;
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.querybuilder.CVQueryBuilder;
 import ai.qorva.core.dao.repository.CVRepository;
+import ai.qorva.core.dao.specifications.MongoSpecifications;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVDuplicatesData;
 import ai.qorva.core.dto.CVFilterOptionsData;
@@ -474,7 +475,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         int pageNumber = Integer.parseInt(params.getOrDefault("pageNumber", "0"));
         int pageSize = Integer.parseInt(params.getOrDefault("pageSize", "25"));
         var pageable = PageRequest.of(pageNumber, pageSize, listSort(params.get("sort")));
-        return this.repository.findAll(this.queryBuilder.buildQuery(params), pageable);
+        return this.repository.findAll(MongoSpecifications.allOf(this.queryBuilder.buildQuery(params), inTenantScope()), pageable);
     }
 
     static Sort listSort(String sortParam) {

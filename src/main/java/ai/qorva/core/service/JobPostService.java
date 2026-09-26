@@ -10,7 +10,6 @@ import ai.qorva.core.service.cascade.CascadeRegistry;
 import ai.qorva.core.service.cascade.CascadeResource;
 import ai.qorva.core.dao.querybuilder.JobPostQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -85,8 +84,8 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
         log.debug("Marked {} open job posts as needing reports for tenant={}", entities.size(), tenantId);
     }
 
-    public void clearMatchingReportsNeeded(String jobPostId) {
-        (this.repository).findById(new ObjectId(jobPostId)).ifPresent(e -> {
+    public void clearMatchingReportsNeeded(String jobPostId, String tenantId) {
+        this.repository.findByIdInTenant(jobPostId, tenantId).ifPresent(e -> {
             e.setMatchingReportsNeeded(false);
             this.repository.save(e);
         });
