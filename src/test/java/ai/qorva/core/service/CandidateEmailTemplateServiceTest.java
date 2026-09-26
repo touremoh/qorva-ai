@@ -108,7 +108,7 @@ class CandidateEmailTemplateServiceTest {
 	@Test
 	void update_renameToExistingName_isRejected() {
 		var existing = CandidateEmailTemplate.builder().id("t1").tenantId(TENANT).name("Old").build();
-		when(repository.findByIdAndTenantId("t1", TENANT)).thenReturn(Optional.of(existing));
+		when(repository.findByIdInTenant("t1", TENANT)).thenReturn(Optional.of(existing));
 		when(repository.existsByTenantIdAndName(TENANT, "Taken")).thenReturn(true);
 
 		assertThatThrownBy(() -> service.update(TENANT, "t1",
@@ -120,7 +120,7 @@ class CandidateEmailTemplateServiceTest {
 	@Test
 	void update_keepingOwnName_isAllowed() throws Exception {
 		var existing = CandidateEmailTemplate.builder().id("t1").tenantId(TENANT).name("Mine").build();
-		when(repository.findByIdAndTenantId("t1", TENANT)).thenReturn(Optional.of(existing));
+		when(repository.findByIdInTenant("t1", TENANT)).thenReturn(Optional.of(existing));
 		when(repository.save(any())).thenAnswer(inv -> inv.getArgument(0));
 
 		var view = service.update(TENANT, "t1", request("Mine", "New subject", "New body"));
@@ -180,7 +180,7 @@ class CandidateEmailTemplateServiceTest {
 
 	@Test
 	void findOwned_otherTenant_throwsNotFound() {
-		when(repository.findByIdAndTenantId("t1", TENANT)).thenReturn(Optional.empty());
+		when(repository.findByIdInTenant("t1", TENANT)).thenReturn(Optional.empty());
 
 		assertThatThrownBy(() -> service.findOwned(TENANT, "t1"))
 			.isInstanceOf(QorvaException.class)

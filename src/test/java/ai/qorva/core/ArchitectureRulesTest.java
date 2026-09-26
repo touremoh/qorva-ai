@@ -47,15 +47,10 @@ class ArchitectureRulesTest {
 			.check(production);
 	}
 
-	/**
-	 * Controllers go through services, never straight to a repository. One known exception: the
-	 * public ATS webhook looks its connection up by id before any tenant is known — refactor phase 5
-	 * moves that into a service that runs under the connection's tenant, then remove the exemption.
-	 */
+	/** Controllers go through services, never straight to a repository. */
 	@Test
 	void controllersDoNotUseRepositories() {
 		noClasses().that().resideInAPackage("ai.qorva.core.controller..")
-			.and().doNotHaveSimpleName("AtsPublicController")
 			.should().dependOnClassesThat().resideInAPackage("ai.qorva.core.dao.repository..")
 			.check(production);
 	}

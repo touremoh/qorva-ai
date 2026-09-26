@@ -160,7 +160,7 @@ public class CandidateEmailTemplateService {
 
 	/** Used by campaign submission to snapshot subject/body onto the job. */
 	public CandidateEmailTemplate findOwned(String tenantId, String templateId) throws QorvaException {
-		return templateRepository.findByIdAndTenantId(templateId, tenantId)
+		return templateRepository.findByIdInTenant(templateId, tenantId)
 			.orElseThrow(() -> new QorvaException("Template not found",
 				HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
 	}

@@ -1,7 +1,6 @@
 package ai.qorva.core.it;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestFactory;
@@ -41,11 +40,7 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 		attacker = fixture.bearer(b.ownerEmail(), b.tenantId());
 	}
 
-	private record Attack(String name, MockHttpServletRequestBuilder request, boolean mayAnswerEmpty, boolean knownServerError) {
-		Attack(String name, MockHttpServletRequestBuilder request, boolean mayAnswerEmpty) {
-			this(name, request, mayAnswerEmpty, false);
-		}
-	}
+	private record Attack(String name, MockHttpServletRequestBuilder request, boolean mayAnswerEmpty) {}
 
 	@TestFactory
 	Stream<DynamicTest> everyIdTakingRouteRefusesTheOtherTenantsData() {
@@ -55,9 +50,7 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 			var response = mvc.perform(attack.request().header("Authorization", attacker)).andReturn().getResponse();
 			var body = response.getContentAsString();
 
-			if (attack.knownServerError()) {
-				assertThat(response.getStatus()).as("%s → %s", attack.name(), body).isIn(500, 400, 403, 404);
-			} else if (!attack.mayAnswerEmpty()) {
+			if (!attack.mayAnswerEmpty()) {
 				assertThat(response.getStatus()).as("%s → %s", attack.name(), body).isIn(REFUSED);
 			}
 			assertNoIdentifierOfTenantA(attack.name(), body);
@@ -86,19 +79,15 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 		}));
 	}
 
-	/**
-	 * S11: chat creation stores the cv/job/report ids from the body without checking they belong to
-	 * the caller's tenant. Nothing leaks today (the context is loaded through tenant-checked reads),
-	 * but the stored reference is cross-tenant. Fixed in refactor phase 5 — then enable this test.
-	 */
+	/** S11: a chat's context may only name the caller's own CV, job and report. */
 	@Test
-	@Disabled("S11 — chat creation does not validate foreign ids yet (refactor phase 5)")
 	void chatCannotBeCreatedOnTheOtherTenantsCandidate() throws Exception {
 		var response = mvc.perform(post("/chats").header("Authorization", attacker).contentType(MediaType.APPLICATION_JSON)
 			.content("""
 				{"title":"x","cvId":"%s","jobPostId":"%s","participants":[{"userId":"%s","role":"OWNER"}],"language":"en"}
 				""".formatted(a.cvId(), a.jobId(), b.ownerId()))).andReturn().getResponse();
 		assertThat(response.getStatus()).isIn(REFUSED);
+		assertThat(fixture.fingerprint(a.tenantId())).doesNotContain(b.ownerId());
 	}
 
 	private List<Attack> attacks() {
@@ -134,10 +123,10 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 			refused("notes.update", put("/notes/" + a.noteId()).contentType(json)
 				.content("{\"targetType\":\"CV\",\"targetId\":\"" + cv + "\",\"text\":\"pwned\"}")),
 			refused("notes.delete", delete("/notes/" + a.noteId())),
-			refusedWith500("chat.get", get("/chats/" + a.chatId())),
-			refusedWith500("chat.messages", get("/chats/" + a.chatId() + "/messages").param("page", "0").param("size", "50")),
-			refusedWith500("chat.status", patch("/chats/" + a.chatId() + "/status").param("status", "CLOSED")),
-			refusedWith500("chat.delete", delete("/chats/" + a.chatId())),
+			refused("chat.get", get("/chats/" + a.chatId())),
+			refused("chat.messages", get("/chats/" + a.chatId() + "/messages").param("page", "0").param("size", "50")),
+			refused("chat.status", patch("/chats/" + a.chatId() + "/status").param("status", "CLOSED")),
+			refused("chat.delete", delete("/chats/" + a.chatId())),
 			answersEmpty("insights.conversation", get("/library-insights/conversations/" + a.conversationId())),
 			answersEmpty("insights.conversationDelete", delete("/library-insights/conversations/" + a.conversationId())),
 			refused("template.update", put("/email-templates/candidate-update/" + a.templateId()).contentType(json)
@@ -155,15 +144,6 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 			refused("outreach.external", post("/candidate-outreach/external").contentType(json)
 				.content("{\"cvId\":\"" + cv + "\",\"via\":\"GMAIL\",\"to\":\"x@example.com\",\"subject\":\"s\",\"body\":\"b\"}"))
 		);
-	}
-
-	/**
-	 * S13: the chat service throws "not found" without an HTTP status, so a foreign (or unknown) chat
-	 * id answers 500 instead of 404. Refused all the same — nothing leaks and nothing changes — but
-	 * the status is wrong. Phase 6 maps it to 404; then move these back to {@link #refused}.
-	 */
-	private static Attack refusedWith500(String name, MockHttpServletRequestBuilder request) {
-		return new Attack(name, request, false, true);
 	}
 
 	private static Attack refused(String name, MockHttpServletRequestBuilder request) {

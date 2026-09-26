@@ -19,8 +19,6 @@ public interface ChatsRepository extends QorvaRepository<Chat> {
     @Query(value = "{ 'tenantId': ?0, 'status': ?1 }")
     Page<Chat> findByTenantAndStatus(String tenantId, ChatStatus status, Pageable pageable);
 
-    @Query(value = "{ 'tenantId': ?0, '_id': ?1 }")
-    Chat findOneByTenantAndId(String tenantId, String chatId);
 
     /**
      * Deletes chats associated with a specific tenant and context job post ID.

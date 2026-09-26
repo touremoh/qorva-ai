@@ -41,7 +41,7 @@ public class BackgroundJobQueries {
 	}
 
 	public BackgroundJob require(String tenantId, String jobId, String notFoundMessage) throws QorvaException {
-		return repository.findByIdAndTenantId(jobId, tenantId)
+		return repository.findByIdInTenant(jobId, tenantId)
 			.orElseThrow(() -> new QorvaException(notFoundMessage, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
 	}
 

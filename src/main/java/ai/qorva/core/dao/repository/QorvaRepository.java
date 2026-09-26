@@ -13,10 +13,6 @@ import java.util.List;
 @NoRepositoryBean
 public interface QorvaRepository<E extends QorvaEntity> extends MongoRepository<E, ObjectId>, QorvaRepositorySpecification<E>, OwnedLookup<E> {
 
-	/** @deprecated Use {@link #findByIdInAndTenantId} to enforce tenant isolation. */
-	@Deprecated
-	List<E> findByIdIn(Collection<String> ids);
-
 	@Query("{ '_id': { '$in': ?0 }, 'tenantId': ?1 }")
 	List<E> findByIdInAndTenantId(Collection<String> ids, String tenantId);
 

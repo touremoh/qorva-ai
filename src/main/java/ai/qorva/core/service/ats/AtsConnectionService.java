@@ -299,7 +299,7 @@ public class AtsConnectionService {
 	}
 
 	public AtsConnection findOwned(String tenantId, String connectionId) throws QorvaException {
-		return connectionRepository.findByIdAndTenantId(connectionId, tenantId)
+		return connectionRepository.findByIdInTenant(connectionId, tenantId)
 			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.ATS_CONNECTION_NOT_FOUND,
 				HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
 	}
