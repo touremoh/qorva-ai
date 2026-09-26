@@ -2,18 +2,14 @@ package ai.qorva.core.dao.querybuilder;
 
 import ai.qorva.core.dao.entity.QorvaEntity;
 import ai.qorva.core.dao.specifications.MongoSpecification;
-import ai.qorva.core.dao.specifications.MongoSpecifications;
-import org.springframework.data.mongodb.core.query.Criteria;
 
 import java.util.Map;
 
+/**
+ * Turns a resource's list/search params into a query. The tenant criterion is not this builder's job:
+ * the generic service always adds its own {@code inTenantScope()} on top of whatever is built here.
+ */
 public interface QorvaQueryBuilder<E extends QorvaEntity> {
 
-	default MongoSpecification<E> buildQuery(Map<String, String> params) {
-		String tenantId = params == null ? null : params.get("tenantId");
-		if (tenantId == null || tenantId.isBlank()) {
-			return MongoSpecifications.empty();
-		}
-		return () -> Criteria.where("tenantId").is(tenantId);
-	}
+	MongoSpecification<E> buildQuery(Map<String, String> params);
 }

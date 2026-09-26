@@ -1,5 +1,7 @@
 package ai.qorva.core.service.ats;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.dao.entity.AtsConnection;
 import ai.qorva.core.dao.entity.AtsOutboundTask;
 import ai.qorva.core.dao.repository.AtsConnectionRepository;
@@ -80,7 +82,7 @@ public class AtsWriteBackService {
 			Double score = details.getDecisionSummary() != null ? details.getDecisionSummary().getFinalScore() : null;
 			String headline = details.getDecisionSummary() != null ? details.getDecisionSummary().getReportHeadline() : null;
 			for (var ref : cv.getAtsRefs()) {
-				var connection = connectionRepository.findById(ref.getConnectionId()).orElse(null);
+				var connection = connectionRepository.findByIdInTenant(ref.getConnectionId(), cv.getTenantId()).orElse(null);
 				if (connection == null
 					|| !AtsConnection.STATUS_CONNECTED.equals(connection.getStatus())
 					|| connection.getSettings() == null
@@ -120,7 +122,7 @@ public class AtsWriteBackService {
 		for (var candidate : due) {
 			var claimed = claim(candidate.getId());
 			if (claimed != null) {
-				send(claimed);
+				TenantScope.runAs(claimed.getTenantId(), () -> send(claimed));
 			}
 		}
 	}
@@ -147,7 +149,7 @@ public class AtsWriteBackService {
 
 	private void send(AtsOutboundTask task) {
 		try {
-			var connection = connectionRepository.findById(task.getConnectionId()).orElse(null);
+			var connection = connectionRepository.findByIdInTenant(task.getConnectionId(), task.getTenantId()).orElse(null);
 			if (connection == null) {
 				markFailed(task, "connection_deleted");
 				return;

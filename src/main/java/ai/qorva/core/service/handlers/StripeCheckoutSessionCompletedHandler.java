@@ -33,6 +33,16 @@ import java.util.Optional;
 @Service
 public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler {
 
+	@Override
+	public java.util.Set<String> eventTypes() {
+		return java.util.Set.of("checkout.session.completed");
+	}
+
+	@Override
+	public Class<? extends StripeObject> objectType() {
+		return com.stripe.model.checkout.Session.class;
+	}
+
 	private final TenantService tenantService;
 	private final StripeEventLogRepository repository;
 	private final StripeEventMapper evtMapper;
@@ -137,13 +147,21 @@ public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler
 		log.info("Checkout completed for tenant={} subscriptionId={} status={}", tenantId, subscriptionId, subscriptionStatus);
 	}
 
-	private Optional<User> activateUser(String tenantId, String userId, String customerEmail) {
+	// Package-private for tests: the tenant/user binding is the part of this handler worth pinning.
+	Optional<User> activateUser(String tenantId, String userId, String customerEmail) {
 		var user = Optional.ofNullable(userId)
 			.flatMap(id -> userRepository.findById(new ObjectId(id)))
 			.orElseGet(() -> Objects.nonNull(customerEmail) ? userRepository.findByEmail(customerEmail) : null);
 
 		if (user == null) {
 			log.warn("Could not find user by userId={} or email={} – skipping activation", userId, customerEmail);
+			return Optional.empty();
+		}
+		// The session names the tenant (client_reference_id) and the user (metadata) separately: only
+		// activate — and, for a demo account, purge — when that user really belongs to that tenant.
+		if (tenantId == null || !tenantId.equals(user.getTenantId())) {
+			log.error("Checkout session tenant {} does not match user {} (tenant {}) – skipping activation and purge",
+				tenantId, user.getId(), user.getTenantId());
 			return Optional.empty();
 		}
 

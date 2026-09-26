@@ -1,9 +1,15 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.Chat;
 import ai.qorva.core.dao.entity.ChatMessage;
 import ai.qorva.core.dao.repository.ChatMessagesRepository;
+import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dao.repository.ChatsRepository;
+import ai.qorva.core.dao.repository.JobPostRepository;
+import ai.qorva.core.dao.repository.MatchingReportRepository;
+import ai.qorva.core.dao.repository.OwnedLookup;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.ChatDTO;
 import ai.qorva.core.dto.ChatMessageDTO;
@@ -23,6 +29,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionTemplate;
@@ -46,9 +53,16 @@ public class ChatService {
     private final ChatSummaryService chatSummaryService;
     private final UserRepository userRepository;
     private final TransactionTemplate transactionTemplate;
+    private final CVRepository cvRepository;
+    private final JobPostRepository jobPostRepository;
+    private final MatchingReportRepository matchingReportRepository;
 
     @Transactional
     public ChatDTO createChat(CreateChatRequest req, String username) throws QorvaException {
+        // The chat's context is read on every turn: it may only name the caller's own documents.
+        requireInTenant(cvRepository, req.getCvId(), req.getTenantId());
+        requireInTenant(jobPostRepository, req.getJobPostId(), req.getTenantId());
+        requireInTenant(matchingReportRepository, req.getMatchingReportId(), req.getTenantId());
         if (req.getParticipants().stream().noneMatch(p -> "OWNER".equalsIgnoreCase(p.getRole().name()))) {
             throw new QorvaException(QorvaErrorCodes.CHAT_OWNER_REQUIRED);
         }
@@ -95,9 +109,7 @@ public class ChatService {
     }
 
     public ChatDTO getChat(String tenantId, String chatId) throws QorvaException {
-        Chat chat = ofNullable(chatsRepository.findOneByTenantAndId(tenantId, chatId))
-            .orElseThrow(() -> new QorvaException("Chat not found"));
-        return chatMapper.map(chat);
+        return chatMapper.map(requireChat(tenantId, chatId));
     }
 
     /**
@@ -109,8 +121,7 @@ public class ChatService {
     public ChatMessageDTO postUserMessage(String tenantId, String chatId, PostUserMessageRequest req) throws QorvaException {
         var userId = ofNullable(userRepository.findByEmail(req.getUsername())).orElseThrow(() -> new QorvaException(QorvaErrorCodes.USER_NOT_FOUND)).getId();
 
-        Chat chat = ofNullable(chatsRepository.findOneByTenantAndId(tenantId, chatId))
-                .orElseThrow(() -> new QorvaException(QorvaErrorCodes.CHAT_NOT_FOUND));
+        Chat chat = requireChat(tenantId, chatId);
 
         // A retry after a failed model call re-posts the same text: reuse the unanswered row instead of duplicating it.
         ChatMessage newest = chatMessagesRepository.findFirstByTenantIdAndChatIdOrderByCreatedAtDesc(tenantId, chatId);
@@ -146,14 +157,25 @@ public class ChatService {
         return chatMessageMapper.map(saved);
     }
 
+    /** An optional context id must name a document of the tenant; a foreign and a missing one are the same 404. */
+    private static void requireInTenant(OwnedLookup<?> repository, String id, String tenantId) throws QorvaException {
+        if (id != null && !id.isBlank() && repository.findByIdInTenant(id, tenantId).isEmpty()) {
+            throw QorvaErrors.notFound(QorvaErrorCodes.HTTP_NOT_FOUND);
+        }
+    }
+
+    /** The chat if it belongs to the tenant; a missing and a foreign chat are the same 404. */
+    private Chat requireChat(String tenantId, String chatId) throws QorvaException {
+        return chatsRepository.findByIdInTenant(chatId, tenantId)
+            .orElseThrow(() -> QorvaErrors.notFound(QorvaErrorCodes.CHAT_NOT_FOUND));
+    }
+
     private static boolean isUnansweredDuplicate(ChatMessage newest, String content) {
         return newest != null && newest.getRole() == ChatUserRole.USER && Objects.equals(newest.getContent(), content);
     }
 
     public Page<ChatMessageDTO> getMessages(String tenantId, String chatId, Pageable pageable) throws QorvaException {
-        if (chatsRepository.findOneByTenantAndId(tenantId, chatId) == null) {
-            throw new QorvaException(QorvaErrorCodes.CHAT_NOT_FOUND);
-        }
+        requireChat(tenantId, chatId);
         return chatMessagesRepository
             .findPageByTenantAndChatIdExcludingSystemMessage(tenantId, chatId, ChatUserRole.SYSTEM.name(), pageable)
             .map(chatMessageMapper::map);
@@ -161,8 +183,7 @@ public class ChatService {
 
     @Transactional
     public void deleteChat(String tenantId, String chatId) throws QorvaException {
-        Chat chat = ofNullable(chatsRepository.findOneByTenantAndId(tenantId, chatId))
-            .orElseThrow(() -> new QorvaException("Chat not found"));
+        Chat chat = requireChat(tenantId, chatId);
         long deleted = chatMessagesRepository.deleteByTenantIdAndChatId(tenantId, chatId);
         chatsRepository.delete(chat);
         log.debug("Deleted chat {} with {} messages", chatId, deleted);
@@ -171,8 +192,7 @@ public class ChatService {
     @Transactional
     public ChatDTO updateStatus(String tenantId, String chatId, ChatStatus status, String username) throws QorvaException {
         var actor = ofNullable(userRepository.findByEmail(username)).orElseThrow(() -> new QorvaException(QorvaErrorCodes.CHAT_ACTOR_NOT_FOUND)).getId();
-        Chat chat = ofNullable(chatsRepository.findOneByTenantAndId(tenantId, chatId))
-            .orElseThrow(() -> new QorvaException("Chat not found"));
+        Chat chat = requireChat(tenantId, chatId);
         chat.setStatus(status);
         chat.setLastUpdatedBy(actor);
         chat.setLastUpdatedAt(Instant.now());

@@ -1,5 +1,7 @@
 package ai.qorva.core.controller;
 
+import ai.qorva.core.utils.Paging;
+
 import ai.qorva.core.dto.ChatDTO;
 import ai.qorva.core.dto.ChatMessageDTO;
 import ai.qorva.core.dto.request.CreateChatRequest;
@@ -12,7 +14,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
@@ -48,7 +49,7 @@ public class ChatController {
     public Page<ChatDTO> listChats(@RequestParam(defaultValue = "0") int page,
                                    @RequestParam(defaultValue = "25") int size,
                                    @RequestParam(required = false) ChatStatus status) throws QorvaException {
-        Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "lastUpdatedAt"));
+        Pageable pageable = Paging.of(page, size, Sort.by(Sort.Direction.DESC, "lastUpdatedAt"));
         return chatService.listChats(currentTenantId(), currentUsername(), status, pageable);
     }
 
@@ -80,7 +81,7 @@ public class ChatController {
     public Page<ChatMessageDTO> getMessages(@PathVariable String chatId,
                                             @RequestParam(defaultValue = "0") int page,
                                             @RequestParam(defaultValue = "50") int size) throws QorvaException {
-        Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "createdAt"));
+        Pageable pageable = Paging.of(page, size, Sort.by(Sort.Direction.DESC, "createdAt"));
         return chatService.getMessages(currentTenantId(), chatId, pageable);
     }
 

@@ -24,7 +24,6 @@ public final class QorvaErrorCodes {
 
     // access
     public static final String ACCESS_FORBIDDEN    = "error.access.forbidden";
-    public static final String ACCESS_CROSS_TENANT = "error.access.cross_tenant";
 
     // user
     public static final String USER_ALREADY_EXISTS      = "error.user.already_exists";
@@ -44,7 +43,6 @@ public final class QorvaErrorCodes {
     public static final String FILE_EMPTY             = "error.file.empty";
     public static final String FILE_PDF_READ_FAILED   = "error.file.pdf_read_failed";
     public static final String FILE_WORD_READ_FAILED  = "error.file.word_read_failed";
-    public static final String FILE_READ_FAILED       = "error.file.read_failed";
     public static final String FILE_NAME_NULL         = "error.file.name_null";
     public static final String FILE_UNSUPPORTED_TYPE  = "error.file.unsupported_type";
 
@@ -52,7 +50,6 @@ public final class QorvaErrorCodes {
     public static final String REPORT_JOB_ID_REQUIRED          = "error.report.job_id_required";
     public static final String REPORT_CANDIDATE_INFO_REQUIRED   = "error.report.candidate_info_required";
     public static final String REPORT_RESUME_MATCH_NOT_FOUND    = "error.report.resume_match_not_found";
-    public static final String REPORT_MATCH_NOT_FOUND_BY_ID     = "error.report.match_not_found_by_id";
     public static final String REPORT_NO_REPORTS_FOR_JOB        = "error.report.no_reports_for_job";
     public static final String REPORT_CSV_EXPORT_FAILED         = "error.report.csv_export_failed";
 
@@ -132,4 +129,35 @@ public final class QorvaErrorCodes {
     public static final String HTTP_UNEXPECTED   = "error.http.unexpected";
     public static final String HTTP_TOO_MANY_REQUESTS   = "error.http.too_many_requests";
     public static final String HTTP_SERVICE_UNAVAILABLE = "error.http.service_unavailable";
+
+    // domain validation (phase 9)
+    public static final String EMAIL_TEMPLATE_NAME_EXISTS               = "error.email_template.name_exists";
+    public static final String EMAIL_TEMPLATE_NOT_FOUND                 = "error.email_template.not_found";
+    public static final String EMAIL_TEMPLATE_NAME_REQUIRED             = "error.email_template.name_required";
+    public static final String EMAIL_TEMPLATE_NAME_TOO_LONG             = "error.email_template.name_too_long";
+    public static final String EMAIL_TEMPLATE_SUBJECT_REQUIRED          = "error.email_template.subject_required";
+    public static final String EMAIL_TEMPLATE_SUBJECT_TOO_LONG          = "error.email_template.subject_too_long";
+    public static final String EMAIL_TEMPLATE_BODY_REQUIRED             = "error.email_template.body_required";
+    public static final String EMAIL_TEMPLATE_BODY_TOO_LONG             = "error.email_template.body_too_long";
+    public static final String EMAIL_TEMPLATE_UNKNOWN_PLACEHOLDER       = "error.email_template.unknown_placeholder";
+    public static final String EMAIL_TEMPLATE_LIMIT_REACHED             = "error.email_template.limit_reached";
+    public static final String QUALITY_DUPLICATES_SEPARATE              = "error.library_quality.duplicates_endpoint";
+    public static final String QUALITY_DUPLICATES_NOT_BULK              = "error.library_quality.duplicates_not_bulk";
+    public static final String QUALITY_CONFIRM_CURRENT_LIMIT            = "error.library_quality.confirm_current_limit";
+    public static final String QUALITY_UNKNOWN_ACTION                   = "error.library_quality.unknown_action";
+    public static final String QUALITY_UNKNOWN_ISSUE                    = "error.library_quality.unknown_issue";
+    public static final String QUALITY_INVALID_CV_ID                    = "error.library_quality.invalid_cv_id";
+    public static final String CV_REPLACE_SELF                          = "error.cv.replace_self";
+    public static final String JOB_DESCRIPTION_REQUIRED                 = "error.job.description_required";
+    public static final String BACKGROUND_JOB_UNSUPPORTED_TYPE          = "error.background_job.unsupported_type";
+    public static final String BACKGROUND_JOB_DUPLICATES_INDIVIDUAL     = "error.background_job.duplicates_individual";
+    public static final String BACKGROUND_JOB_CAMPAIGN_FRESHNESS_ONLY   = "error.background_job.campaign_freshness_only";
+    public static final String BACKGROUND_JOB_TEMPLATE_CAMPAIGN_ONLY    = "error.background_job.template_campaign_only";
+    public static final String BACKGROUND_JOB_ALREADY_RUNNING           = "error.background_job.already_running";
+    public static final String BACKGROUND_JOB_QUOTA_EXCEEDED            = "error.background_job.quota_exceeded";
+    public static final String BACKGROUND_JOB_NO_REANALYZABLE           = "error.background_job.no_reanalyzable";
+    public static final String BACKGROUND_JOB_NO_RESUMES                = "error.background_job.no_resumes";
+    public static final String CANDIDATE_UPDATE_INVALID_SUBMISSION      = "error.candidate_update.invalid_submission";
+    public static final String CANDIDATE_UPDATE_UNSUPPORTED_FILE        = "error.candidate_update.unsupported_file";
+    public static final String CANDIDATE_UPDATE_LINK_INVALID            = "error.candidate_update.link_invalid";
 }

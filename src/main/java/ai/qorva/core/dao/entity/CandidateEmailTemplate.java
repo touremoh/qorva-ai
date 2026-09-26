@@ -25,7 +25,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "candidate_email_templates")
-public class CandidateEmailTemplate {
+public class CandidateEmailTemplate implements QorvaEntity {
 
 	@Id
 	private String id;

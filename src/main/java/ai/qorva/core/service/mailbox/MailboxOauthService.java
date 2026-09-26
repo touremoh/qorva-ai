@@ -1,5 +1,7 @@
 package ai.qorva.core.service.mailbox;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.config.AtsProperties;
 import ai.qorva.core.config.MailboxProperties;
 import ai.qorva.core.enums.MailboxProviderEnum;
@@ -90,8 +92,7 @@ public class MailboxOauthService {
 			}
 			return new StateClaims(parts[0], parts[1], provider);
 		} catch (Exception e) {
-			throw new QorvaException(QorvaErrorCodes.MAILBOX_OAUTH_STATE_INVALID,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.MAILBOX_OAUTH_STATE_INVALID);
 		}
 	}
 
@@ -204,8 +205,7 @@ public class MailboxOauthService {
 	}
 
 	static QorvaException reauthRequired() {
-		return new QorvaException(QorvaErrorCodes.MAILBOX_REAUTH_REQUIRED,
-			HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+		return QorvaErrors.conflict(QorvaErrorCodes.MAILBOX_REAUTH_REQUIRED);
 	}
 
 	private static String abbreviate(String text) {

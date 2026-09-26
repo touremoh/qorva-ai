@@ -35,10 +35,7 @@ public class OpenAiHttpClientConfig {
 
 	@Bean(destroyMethod = "close")
 	public CloseableHttpClient qorvaHttpClient(PoolingHttpClientConnectionManager connectionManager) {
-		var requestConfig = RequestConfig.custom()
-			.setConnectionRequestTimeout(Timeout.ofSeconds(30))
-			.setResponseTimeout(Timeout.ofSeconds(60))
-			.build();
+		var requestConfig = requestConfig().build();
 
 		return HttpClientBuilder.create()
 			.setConnectionManager(connectionManager)
@@ -46,6 +43,13 @@ public class OpenAiHttpClientConfig {
 			.evictIdleConnections(TimeValue.ofSeconds(45))
 			.evictExpiredConnections()
 			.build();
+	}
+
+	/** The request timeouts every outbound call uses; callers that need more (no redirects) start from this. */
+	public static RequestConfig.Builder requestConfig() {
+		return RequestConfig.custom()
+			.setConnectionRequestTimeout(Timeout.ofSeconds(30))
+			.setResponseTimeout(Timeout.ofSeconds(60));
 	}
 
 	@Bean

@@ -1,0 +1,35 @@
+{
+  "body" : {
+    "content" : [ {
+      "contentDate" : "<ts>",
+      "email" : "priya.krishnan@example.com",
+      "id" : "<id:1>",
+      "lastUpdatedAt" : "<ts>",
+      "name" : "Priya Krishnan",
+      "phone" : null,
+      "role" : "Group Product Manager, Growth"
+    }, {
+      "contentDate" : null,
+      "email" : null,
+      "id" : "<id:2>",
+      "lastUpdatedAt" : "<ts>",
+      "name" : "Angela Petrova",
+      "phone" : null,
+      "role" : "Infrastructure Engineering Manager"
+    }, {
+      "contentDate" : "<ts>",
+      "email" : "aoibhinn.murphy@example.ie",
+      "id" : "<id:3>",
+      "lastUpdatedAt" : "<ts>",
+      "name" : "Aoibhinn Murphy",
+      "phone" : null,
+      "role" : "DevOps Engineer"
+    } ],
+    "hasNext" : false,
+    "pageNumber" : 0,
+    "pageSize" : 20,
+    "totalElements" : 3,
+    "totalPages" : 1
+  },
+  "status" : 200
+}

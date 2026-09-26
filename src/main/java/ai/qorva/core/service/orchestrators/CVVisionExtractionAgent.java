@@ -8,8 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.content.Media;
 import org.springframework.ai.converter.BeanOutputConverter;
-import org.springframework.ai.openai.OpenAiChatOptions;
-import org.springframework.ai.openai.api.ResponseFormat;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.stereotype.Service;
@@ -54,19 +52,8 @@ public class CVVisionExtractionAgent {
 
 		try {
 			return chatClient.prompt()
-				.options(OpenAiChatOptions.builder()
-					.model(visionModel)
-					.responseFormat(ResponseFormat.builder()
-						.type(ResponseFormat.Type.JSON_SCHEMA)
-						.jsonSchema(ResponseFormat.JsonSchema.builder()
-							.name("cv_parser")
-							.schema(converter.getJsonSchema())
-							.strict(Boolean.FALSE)
-							.build())
-						.build())
-					// GPT-5-family models only accept the default temperature (1).
-					.temperature(visionModel.startsWith("gpt-5") ? 1.0 : 0.1)
-					.build())
+				// GPT-5-family models only accept the default temperature (1).
+				.options(StructuredOutput.options(visionModel, "cv_parser", converter.getJsonSchema(), false, StructuredOutput.temperatureFor(visionModel, 0.1)))
 				.user(u -> u
 					.text(promptTemplate
 						+ "\n\nThe attached images are the CV's rendered pages; they are authoritative."

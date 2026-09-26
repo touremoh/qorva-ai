@@ -1,5 +1,6 @@
 package ai.qorva.core.dao.specifications;
 
+import ai.qorva.core.security.TenantScope;
 import org.springframework.data.mongodb.core.query.Criteria;
 
 import java.util.ArrayList;
@@ -12,6 +13,26 @@ public final class MongoSpecifications {
 
     public static <T> MongoSpecification<T> empty() {
         return new EmptyMongoSpecification<>();
+    }
+
+    /**
+     * The documents owned by {@code tenantId}. Without a tenant this is not "every document": it is
+     * reported through {@link TenantScope#missing} (refused when fail-closed) unless the code runs in
+     * a declared system scope, and only then falls back to no tenant filter.
+     */
+    public static <T> MongoSpecification<T> ownedBy(String tenantId) {
+        if (tenantId != null && !tenantId.isBlank()) {
+            return () -> Criteria.where("tenantId").is(tenantId);
+        }
+        if (!TenantScope.isSystem()) {
+            TenantScope.missing("a tenant-owned query");
+        }
+        return empty();
+    }
+
+    /** True for a missing or empty specification, i.e. one that matches every document. */
+    public static boolean isEmpty(MongoSpecification<?> specification) {
+        return specification == null || specification instanceof EmptyMongoSpecification;
     }
 
     public static <T> MongoSpecification<T> allOf(List<MongoSpecification<T>> specifications) {

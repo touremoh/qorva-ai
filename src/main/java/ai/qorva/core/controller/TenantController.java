@@ -3,12 +3,15 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.TenantDTO;
 import ai.qorva.core.dto.TenantProfileUpdateDTO;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.security.CrudOperation;
+import ai.qorva.core.security.CrudPolicy;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.S3StorageService;
 import ai.qorva.core.service.TenantService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +33,20 @@ public class TenantController extends AbstractQorvaController<TenantDTO> {
     }
 
 
+    /*
+     * The app only reads its own tenant (the service rejects any other id). Tenants are created by
+     * registration, their subscription is written by Stripe handlers, and the profile has its own
+     * route below, so every other generic operation stays closed.
+     */
+    @Override
+    protected CrudPolicy crudPolicy() {
+        return CrudPolicy.builder()
+            .allowAuthenticated(CrudOperation.GET_ONE)
+            .build();
+    }
+
+    // The company's public identity (name, logo, contact details) is an admin decision, like managing users.
+    @PreAuthorize("@accessManager.hasPermission(authentication,'MANAGE_USERS')")
     @PatchMapping(value = "/profile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<TenantDTO> updateProfile(
         @RequestPart("profile") TenantProfileUpdateDTO profile,

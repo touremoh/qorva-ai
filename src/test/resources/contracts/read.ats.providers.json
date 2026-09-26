@@ -1,0 +1,73 @@
+{
+  "body" : {
+    "maxConnections" : 3,
+    "providers" : [ {
+      "authKind" : "API_KEY",
+      "available" : true,
+      "connected" : false,
+      "oauthAvailable" : false,
+      "provider" : "greenhouse",
+      "supportsApiKey" : true,
+      "webhooksSigned" : true
+    }, {
+      "authKind" : "API_KEY",
+      "available" : true,
+      "connected" : false,
+      "oauthAvailable" : false,
+      "provider" : "recruitee",
+      "supportsApiKey" : true,
+      "webhooksSigned" : false
+    }, {
+      "authKind" : "API_KEY",
+      "available" : true,
+      "connected" : false,
+      "oauthAvailable" : false,
+      "provider" : "workable",
+      "supportsApiKey" : true,
+      "webhooksSigned" : true
+    }, {
+      "authKind" : "API_KEY",
+      "available" : true,
+      "connected" : false,
+      "oauthAvailable" : false,
+      "provider" : "manatal",
+      "supportsApiKey" : true,
+      "webhooksSigned" : false
+    }, {
+      "authKind" : "API_KEY",
+      "available" : true,
+      "connected" : false,
+      "oauthAvailable" : false,
+      "provider" : "bamboohr",
+      "supportsApiKey" : true,
+      "webhooksSigned" : false
+    }, {
+      "authKind" : "OAUTH2",
+      "available" : true,
+      "connected" : false,
+      "oauthAvailable" : false,
+      "provider" : "zoho_recruit",
+      "supportsApiKey" : false,
+      "webhooksSigned" : false
+    }, {
+      "authKind" : "API_KEY",
+      "available" : true,
+      "connected" : false,
+      "oauthAvailable" : false,
+      "provider" : "lever",
+      "supportsApiKey" : true,
+      "webhooksSigned" : true
+    }, {
+      "authKind" : "API_KEY",
+      "available" : true,
+      "connected" : false,
+      "oauthAvailable" : false,
+      "provider" : "ashby",
+      "supportsApiKey" : true,
+      "webhooksSigned" : true
+    } ],
+    "usedConnections" : 0,
+    "zohoRegions" : [ "com", "eu", "in", "com.au", "jp", "ca", "sa", "com.cn" ]
+  },
+  "status" : 200
+}

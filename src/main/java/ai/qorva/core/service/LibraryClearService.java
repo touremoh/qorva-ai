@@ -1,16 +1,15 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
+import ai.qorva.core.service.cascade.CascadeRegistry;
+import ai.qorva.core.service.cascade.PurgeScope;
+
 import ai.qorva.core.dao.entity.BackgroundJob;
 import ai.qorva.core.dao.repository.BackgroundJobRepository;
 import ai.qorva.core.dao.repository.CVRepository;
-import ai.qorva.core.dao.repository.CandidateUpdateRequestRepository;
-import ai.qorva.core.dao.repository.ChatMessagesRepository;
 import ai.qorva.core.dao.repository.ChatsRepository;
-import ai.qorva.core.dao.repository.InsightConversationTurnRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
-import ai.qorva.core.dao.repository.CandidateOutreachRepository;
-import ai.qorva.core.dao.repository.NoteRepository;
-import ai.qorva.core.dao.repository.QualityIssueStateRepository;
 import ai.qorva.core.dto.LibraryClearData;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
@@ -28,7 +27,8 @@ import java.util.List;
  * quality-issue dismissals. Job posts and usage counters deliberately survive — jobs
  * are the recruiter's own work, usage is billing history.
  *
- * Scoped sibling of DemoDataPurgeService.purgeAll (which also wipes jobs and usage).
+ * The collections come from {@link CascadeRegistry#purgeTenant} with {@link PurgeScope#LIBRARY}, the
+ * same participants the demo purge uses with a wider scope.
  */
 @Slf4j
 @Service
@@ -41,13 +41,8 @@ public class LibraryClearService {
 	private final CVRepository cvRepository;
 	private final MatchingReportRepository matchingReportRepository;
 	private final ChatsRepository chatsRepository;
-	private final ChatMessagesRepository chatMessagesRepository;
-	private final InsightConversationTurnRepository insightConversationTurnRepository;
-	private final CandidateUpdateRequestRepository candidateUpdateRequestRepository;
-	private final QualityIssueStateRepository qualityIssueStateRepository;
-	private final NoteRepository noteRepository;
-	private final CandidateOutreachRepository candidateOutreachRepository;
 	private final BackgroundJobRepository backgroundJobRepository;
+	private final CascadeRegistry cascadeRegistry;
 	private final S3StorageService s3StorageService;
 	private final LibraryQualityCacheEvictor cacheEvictor;
 
@@ -63,28 +58,25 @@ public class LibraryClearService {
 		for (var type : List.of(BackgroundJob.TYPE_BULK_CV_UPLOAD, BackgroundJob.TYPE_REANALYZE,
 			BackgroundJob.TYPE_CANDIDATE_UPDATE_CAMPAIGN)) {
 			if (backgroundJobRepository.existsByTenantIdAndTypeAndStatusIn(tenantId, type, ACTIVE_JOB_STATUSES)) {
-				throw new QorvaException(QorvaErrorCodes.CV_CLEAR_BLOCKED_BY_ACTIVE_JOB,
-					HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+				throw QorvaErrors.conflict(QorvaErrorCodes.CV_CLEAR_BLOCKED_BY_ACTIVE_JOB);
 			}
 		}
 
 		log.warn("Clearing resume library for tenant={} requested by {}", tenantId, requestedBy);
 
-		long cvs = cvRepository.deleteByTenantId(tenantId);
+		var deleted = cascadeRegistry.purgeTenant(tenantId, PurgeScope.LIBRARY, false);
 		s3StorageService.deleteCvDocumentsForTenant(tenantId);           // best-effort, never throws
 		s3StorageService.deleteCandidateSubmissionsForTenant(tenantId);  // best-effort, never throws
-		long reports = matchingReportRepository.deleteByTenantId(tenantId);
-		long chatMessages = chatMessagesRepository.deleteByTenantId(tenantId);
-		long chats = chatsRepository.deleteByTenantId(tenantId);
-		long insightTurns = insightConversationTurnRepository.deleteByTenantId(tenantId);
-		long updateRequests = candidateUpdateRequestRepository.deleteByTenantId(tenantId);
-		long issueStates = qualityIssueStateRepository.deleteByTenantId(tenantId);
-		long notes = noteRepository.deleteByTenantId(tenantId);   // every note targets a CV or a report
-		long outreach = candidateOutreachRepository.deleteByTenantId(tenantId);   // every row targets a CV
 		cacheEvictor.evict(tenantId);
 
-		log.info("Library cleared for tenant={}: cvs={} reports={} chats={} messages={} insights={} updateRequests={} issueStates={} notes={} outreach={}",
-			tenantId, cvs, reports, chats, chatMessages, insightTurns, updateRequests, issueStates, notes, outreach);
-		return new LibraryClearData.Result(cvs, reports, chats, chatMessages, insightTurns, updateRequests, issueStates, notes);
+		log.info("Library cleared for tenant={}: {}", tenantId, deleted);
+		return new LibraryClearData.Result(
+			count(deleted, "cvs"), count(deleted, "matching_reports"), count(deleted, "chats"),
+			count(deleted, "chat_messages"), count(deleted, "insight_conversation_turns"),
+			count(deleted, "candidate_update_requests"), count(deleted, "quality_issue_states"), count(deleted, "notes"));
+	}
+
+	private static long count(java.util.Map<String, Long> deleted, String collection) {
+		return deleted.getOrDefault(collection, 0L);
 	}
 }

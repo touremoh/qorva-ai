@@ -26,6 +26,7 @@ import org.springframework.transaction.support.TransactionTemplate;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -53,19 +54,23 @@ class ChatServiceTest {
 	@Mock private UserRepository userRepository;
 	@Mock private TransactionTemplate transactionTemplate;
 
+	@Mock private ai.qorva.core.dao.repository.CVRepository cvRepository;
+	@Mock private ai.qorva.core.dao.repository.JobPostRepository jobPostRepository;
+	@Mock private ai.qorva.core.dao.repository.MatchingReportRepository matchingReportRepository;
+
 	private ChatService service;
 	private Chat chat;
 
 	@BeforeEach
 	void setUp() {
 		service = new ChatService(chatsRepository, chatMessagesRepository, chatMapper, chatMessageMapper,
-			agent, chatSummaryService, userRepository, transactionTemplate);
+			agent, chatSummaryService, userRepository, transactionTemplate, cvRepository, jobPostRepository, matchingReportRepository);
 		chat = Chat.builder().id(CHAT_ID).tenantId(TENANT).build();
 
 		var user = new User();
 		user.setId("user-1");
 		when(userRepository.findByEmail("me@qorva.ai")).thenReturn(user);
-		when(chatsRepository.findOneByTenantAndId(TENANT, CHAT_ID)).thenReturn(chat);
+		when(chatsRepository.findByIdInTenant(CHAT_ID, TENANT)).thenReturn(Optional.of(chat));
 		when(chatMessagesRepository.save(any(ChatMessage.class))).thenAnswer(inv -> {
 			ChatMessage m = inv.getArgument(0);
 			if (m.getId() == null) m.setId(m.getRole() + "-saved");

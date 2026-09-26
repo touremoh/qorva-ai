@@ -6,11 +6,9 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 import java.util.Optional;
 
-public interface CandidateEmailTemplateRepository extends MongoRepository<CandidateEmailTemplate, String> {
+public interface CandidateEmailTemplateRepository extends MongoRepository<CandidateEmailTemplate, String>, OwnedLookup<CandidateEmailTemplate> {
 
 	List<CandidateEmailTemplate> findByTenantIdOrderByNameAsc(String tenantId);
-
-	Optional<CandidateEmailTemplate> findByIdAndTenantId(String id, String tenantId);
 
 	boolean existsByTenantIdAndName(String tenantId, String name);
 

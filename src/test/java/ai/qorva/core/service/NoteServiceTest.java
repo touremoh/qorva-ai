@@ -67,7 +67,7 @@ class NoteServiceTest {
 
 	@Test
 	void create_onOwnCv_persistsTrimmedTextWithAuthorName() throws QorvaException {
-		when(cvRepository.findById(new ObjectId(CV_ID))).thenReturn(Optional.of(cv(TENANT)));
+		when(cvRepository.findByIdInTenant(CV_ID, TENANT)).thenReturn(Optional.of(cv(TENANT)));
 		var alice = new User();
 		alice.setFirstName("Alice");
 		alice.setLastName("Martin");
@@ -87,7 +87,8 @@ class NoteServiceTest {
 
 	@Test
 	void create_onAnotherTenantsReport_isNotFound_noExistenceOracle() {
-		when(matchingReportRepository.findById(new ObjectId(REPORT_ID))).thenReturn(Optional.of(report(OTHER_TENANT)));
+		// The report exists in OTHER_TENANT; looked up in the caller's tenant it is not found.
+		when(matchingReportRepository.findByIdInTenant(REPORT_ID, TENANT)).thenReturn(Optional.empty());
 
 		assertThatThrownBy(() -> service.create(TENANT, ALICE, new NoteRequest("MATCHING_REPORT", REPORT_ID, "hello")))
 			.isInstanceOf(QorvaException.class)
@@ -118,7 +119,7 @@ class NoteServiceTest {
 		authenticateAs(BOB, "MODIFY_CV:ALLOWED");
 		when(accessManager.hasPermission(any(), anyString())).thenReturn(true);
 		var note = note(ALICE);
-		when(noteRepository.findById(note.getId())).thenReturn(Optional.of(note));
+		when(noteRepository.findByIdInTenant(note.getId(), TENANT)).thenReturn(Optional.of(note));
 
 		assertThatThrownBy(() -> service.delete(TENANT, BOB, note.getId()))
 			.isInstanceOf(QorvaException.class)
@@ -131,7 +132,7 @@ class NoteServiceTest {
 		authenticateAs(ALICE, "MODIFY_CV:ALLOWED");
 		when(accessManager.hasPermission(any(), anyString())).thenReturn(true);
 		var note = note(ALICE);
-		when(noteRepository.findById(note.getId())).thenReturn(Optional.of(note));
+		when(noteRepository.findByIdInTenant(note.getId(), TENANT)).thenReturn(Optional.of(note));
 
 		service.delete(TENANT, ALICE, note.getId());
 
@@ -143,7 +144,7 @@ class NoteServiceTest {
 		authenticateAs(ALICE);
 		when(accessManager.hasPermission(any(), anyString())).thenReturn(false);
 		var note = note(ALICE);
-		when(noteRepository.findById(note.getId())).thenReturn(Optional.of(note));
+		when(noteRepository.findByIdInTenant(note.getId(), TENANT)).thenReturn(Optional.of(note));
 
 		assertThatThrownBy(() -> service.update(TENANT, ALICE, note.getId(), new NoteRequest(null, null, "edited")))
 			.isInstanceOf(QorvaException.class)
@@ -155,8 +156,8 @@ class NoteServiceTest {
 	void update_ofNoteFromAnotherTenant_isNotFound() {
 		authenticateAs(ALICE);
 		var note = note(ALICE);
-		note.setTenantId(OTHER_TENANT);
-		when(noteRepository.findById(note.getId())).thenReturn(Optional.of(note));
+		// The note exists in OTHER_TENANT; looked up in the caller's tenant it is not found.
+		when(noteRepository.findByIdInTenant(note.getId(), TENANT)).thenReturn(Optional.empty());
 
 		assertThatThrownBy(() -> service.update(TENANT, ALICE, note.getId(), new NoteRequest(null, null, "edited")))
 			.isInstanceOf(QorvaException.class)

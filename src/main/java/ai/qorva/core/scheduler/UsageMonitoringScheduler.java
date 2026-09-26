@@ -1,5 +1,7 @@
 package ai.qorva.core.scheduler;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.dao.entity.Tenant;
 import ai.qorva.core.dao.repository.TenantRepository;
 import ai.qorva.core.dto.common.FeatureLimits;
@@ -60,7 +62,7 @@ public class UsageMonitoringScheduler {
 
         for (var tenant : tenants) {
             try {
-                if (processForTenant(tenant)) {
+                if (TenantScope.callAs(tenant.getId(), () -> processForTenant(tenant))) {
                     initialized++;
                 } else {
                     skipped++;

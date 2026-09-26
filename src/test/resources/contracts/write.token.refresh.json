@@ -1,0 +1,172 @@
+{
+  "body" : {
+    "code" : 200,
+    "data" : {
+      "jwt" : {
+        "access_token" : "<jwt>",
+        "expires_in" : "<epoch>",
+        "ext_expires_in" : 0,
+        "token_type" : "Bearer"
+      },
+      "mfa" : null,
+      "user" : {
+        "authorities" : [ {
+          "action" : "VIEW_DASHBOARD",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "ADD_CV",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_CV",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MODIFY_CV",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "DELETE_CV",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "ADD_JOB",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_JOB",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MODIFY_JOB",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "DELETE_JOB",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "GENERATE_REPORT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_REPORT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MODIFY_REPORT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "DELETE_REPORT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "START_CHAT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_CHAT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_MESSAGE",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "REPLY_MESSAGE",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MODIFY_CHAT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "DELETE_CHAT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_USERS",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MANAGE_USERS",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "ATS_REPORT_EXPORT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MANAGE_INTEGRATIONS",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "UPDATE_SUBSCRIPTION",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "CANCEL_SUBSCRIPTION",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_LIBRARY_INSIGHTS",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "CONTACT_CANDIDATE",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        } ],
+        "communicationLanguage" : "en",
+        "createdAt" : "<ts>",
+        "createdBy" : "owner@a.qorva.test",
+        "email" : "owner@a.qorva.test",
+        "firstName" : "Olivia",
+        "id" : "<id:1>",
+        "lastName" : "Owner-A",
+        "lastUpdatedAt" : "<ts>",
+        "lastUpdatedBy" : "owner@a.qorva.test",
+        "mfaEnabled" : null,
+        "tenant" : {
+          "companyAddress" : null,
+          "companyLogoUrl" : null,
+          "contactEmail" : "contact@acme-tech-talent.test",
+          "createdAt" : "<ts>",
+          "createdBy" : "qorva",
+          "id" : "<id:2>",
+          "lastUpdatedAt" : "<ts>",
+          "lastUpdatedBy" : "qorva",
+          "organizationId" : null,
+          "organizationSize" : "11-50",
+          "phoneNumber" : null,
+          "recruitmentType" : "AGENCY",
+          "stripeCustomerId" : "cus_test_953546736",
+          "subscriptionInfo" : {
+            "accountManager" : null,
+            "billingCycle" : "month",
+            "cancelAtPeriodEnd" : false,
+            "currentPeriodEnd" : "<ts>",
+            "currentPeriodStart" : "<ts>",
+            "planCode" : "price_test_pro",
+            "price" : null,
+            "priceId" : "price_test_pro",
+            "subscriptionEndDate" : null,
+            "subscriptionId" : "sub_test_953546736",
+            "subscriptionPlan" : "Pro",
+            "subscriptionStartDate" : null,
+            "subscriptionStatus" : "active"
+          },
+          "tenantId" : "<id:2>",
+          "tenantName" : "Acme Tech Talent",
+          "websiteUrl" : "https://acme-tech-talent.test"
+        },
+        "tenantId" : "<id:2>",
+        "userAccountStatus" : "ACTIVE"
+      }
+    },
+    "timestamp" : "<ts>"
+  },
+  "status" : 200
+}

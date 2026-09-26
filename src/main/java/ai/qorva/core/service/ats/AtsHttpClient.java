@@ -1,5 +1,11 @@
 package ai.qorva.core.service.ats;
 
+import ai.qorva.core.config.OpenAiHttpClientConfig;
+import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
+import org.apache.hc.client5.http.protocol.HttpClientContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+
 import ai.qorva.core.enums.AtsProviderEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
@@ -58,6 +64,26 @@ public class AtsHttpClient {
 	public AtsHttpClient(RestClient.Builder builder, ObjectMapper objectMapper) {
 		this.restClient = builder.build();
 		this.objectMapper = objectMapper;
+	}
+
+	/**
+	 * The application's client, with redirects off: provider APIs answer directly, and a redirect must
+	 * never carry a tenant's credential headers to another host.
+	 */
+	@Autowired
+	public AtsHttpClient(RestClient.Builder builder, ObjectMapper objectMapper, CloseableHttpClient httpClient) {
+		this(builder.clone().requestFactory(withoutRedirects(httpClient)), objectMapper);
+	}
+
+	private static HttpComponentsClientHttpRequestFactory withoutRedirects(CloseableHttpClient httpClient) {
+		var factory = new HttpComponentsClientHttpRequestFactory(httpClient);
+		var noRedirects = OpenAiHttpClientConfig.requestConfig().setRedirectsEnabled(false).build();
+		factory.setHttpContextFactory((method, uri) -> {
+			var context = HttpClientContext.create();
+			context.setRequestConfig(noRedirects);
+			return context;
+		});
+		return factory;
 	}
 
 	public JsonNode getJson(AtsProviderEnum provider, String url, Map<String, String> headers) throws QorvaException {
@@ -162,11 +188,18 @@ public class AtsHttpClient {
 	 * resume download failed with a 400. Passing a {@link URI} skips template handling entirely.
 	 */
 	private URI uri(String url) throws QorvaException {
+		URI target;
 		try {
-			return URI.create(url);
+			target = URI.create(url);
 		} catch (IllegalArgumentException e) {
 			throw apiError("malformed url " + endpoint(url));
 		}
+		var refusal = OutboundUrlGuard.refusal(target);
+		if (refusal != null) {
+			log.warn("ATS call to {} refused: {}", endpoint(url), refusal);
+			throw apiError("refused url " + endpoint(url));
+		}
+		return target;
 	}
 
 	private void apply(Map<String, String> headers, org.springframework.http.HttpHeaders target) {

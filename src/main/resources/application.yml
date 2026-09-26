@@ -41,6 +41,11 @@ mongock:
   migration-scan-package: ai.qorva.core.migrations
 
 qorva:
+  # Tenant isolation for code running without a tenant (TenantScope). false = log a warning with the
+  # stack and allow (historical behaviour); true = refuse. Soak on tst with false, fix every warning
+  # ("No tenant in scope for …"), then set QORVA_TENANCY_FAIL_CLOSED=true on tst, then prd.
+  tenancy:
+    fail-closed: ${QORVA_TENANCY_FAIL_CLOSED:false}
   ai:
     extraction:
       # Text pass runs on every CV; switch to a nano-tier model after benchmarking —

@@ -23,6 +23,16 @@ import java.util.Optional;
 @Service
 public class StripeSubscriptionCreatedHandler implements StripeEventHandler {
 
+	@Override
+	public java.util.Set<String> eventTypes() {
+		return java.util.Set.of("customer.subscription.created");
+	}
+
+	@Override
+	public Class<? extends StripeObject> objectType() {
+		return com.stripe.model.Subscription.class;
+	}
+
 	private final StripeEventLogRepository repository;
 	private final StripeEventMapper evtMapper;
 	private final UserRepository userRepository;

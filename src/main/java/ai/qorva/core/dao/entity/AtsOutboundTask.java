@@ -23,7 +23,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "ats_outbound_tasks")
-public class AtsOutboundTask {
+public class AtsOutboundTask implements QorvaEntity {
 
 	public static final String STATUS_PENDING = "PENDING";
 	/** Claimed by a drain and in flight; reclaimable once the claim lease expires. */

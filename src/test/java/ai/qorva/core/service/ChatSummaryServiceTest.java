@@ -16,6 +16,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -68,7 +69,7 @@ class ChatSummaryServiceTest {
 		Chat chat = Chat.builder().id(CHAT_ID).tenantId(TENANT)
 			.summary(ChatSummary.builder().text("old").messageCount(4).upToMessageCreatedAt(Instant.ofEpochSecond(-1)).build())
 			.build();
-		when(chatsRepository.findOneByTenantAndId(TENANT, CHAT_ID)).thenReturn(chat);
+		when(chatsRepository.findByIdInTenant(CHAT_ID, TENANT)).thenReturn(Optional.of(chat));
 		when(chatMessagesRepository.streamForContextAfter(eq(TENANT), eq(CHAT_ID), eq("SYSTEM"), any())).thenReturn(tail(8));
 		when(summarizerAgent.summarize(eq("old"), anyList())).thenReturn("merged");
 
@@ -87,7 +88,7 @@ class ChatSummaryServiceTest {
 		Chat before = Chat.builder().id(CHAT_ID).tenantId(TENANT).build();
 		Chat after = Chat.builder().id(CHAT_ID).tenantId(TENANT)
 			.summary(ChatSummary.builder().text("newer").upToMessageCreatedAt(Instant.ofEpochSecond(7)).build()).build();
-		when(chatsRepository.findOneByTenantAndId(TENANT, CHAT_ID)).thenReturn(before, after);
+		when(chatsRepository.findByIdInTenant(CHAT_ID, TENANT)).thenReturn(Optional.of(before), Optional.of(after));
 		when(chatMessagesRepository.streamForContext(TENANT, CHAT_ID, "SYSTEM")).thenReturn(tail(8));
 		when(summarizerAgent.summarize(any(), anyList())).thenReturn("merged");
 
@@ -98,7 +99,7 @@ class ChatSummaryServiceTest {
 
 	@Test
 	void aFailingSummarizerIsSwallowedByTheAsyncEntryPoint() {
-		when(chatsRepository.findOneByTenantAndId(TENANT, CHAT_ID)).thenReturn(Chat.builder().id(CHAT_ID).tenantId(TENANT).build());
+		when(chatsRepository.findByIdInTenant(CHAT_ID, TENANT)).thenReturn(Optional.of(Chat.builder().id(CHAT_ID).tenantId(TENANT).build()));
 		when(chatMessagesRepository.streamForContext(TENANT, CHAT_ID, "SYSTEM")).thenReturn(tail(8));
 		when(summarizerAgent.summarize(any(), anyList())).thenThrow(new IllegalStateException("boom"));
 

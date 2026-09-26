@@ -1,5 +1,6 @@
 package ai.qorva.core.utils;
 
+import ai.qorva.core.security.QorvaUserDetails;
 import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dto.JwtDTO;
 import ai.qorva.core.dto.TenantDTO;
@@ -19,31 +20,19 @@ import java.util.function.Function;
 @UtilityClass
 public class JwtUtils {
 
-	String TENANT_ID = "tenantId";
+	public String TENANT_ID = "tenantId";
 	String SUBSCRIPTION_PLAN = "subscriptionPlan";
 	String SUBSCRIPTION_STATUS = "subscriptionStatus";
 
 	public String PURPOSE = "purpose";
+	/** Token type: access tokens carry {@value #TYPE_ACCESS}; single-purpose tokens carry a {@code purpose} instead. */
+	public String TYPE = "typ";
+	public String TYPE_ACCESS = "access";
 	public String CREDENTIAL_VERSION = "cv";
 	public String PURPOSE_SET_PASSWORD = "SET_PASSWORD";
 
-	public String extractToken(String bearerToken) {
-		if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
-			return bearerToken.substring(7);
-		}
-		return null;
-	}
-
 	public String extractUsername(String token, SecretKey jwtSecret) {
 		return extractClaim(token, Claims::getSubject, jwtSecret);
-	}
-
-	public String extractTenantId(String token, SecretKey jwtSecret) {
-		return extractClaim(token, claims -> claims.get(TENANT_ID, String.class), jwtSecret);
-	}
-
-	public String extractSubscriptionPlan(String token, SecretKey jwtSecret) {
-		return extractClaim(token, claims -> claims.get(SUBSCRIPTION_PLAN, String.class), jwtSecret);
 	}
 
 	public Date extractExpiration(String token, SecretKey jwtSecret) {
@@ -65,7 +54,11 @@ public class JwtUtils {
 
 	public String generateToken(UserDetails userDetails, JwtConfig jwtConfig, TenantDTO tenantDTO) {
 		Map<String, Object> claims = new HashMap<>();
+		claims.put(TYPE, TYPE_ACCESS);
 		claims.put(TENANT_ID, tenantDTO.getId());
+		if (userDetails instanceof QorvaUserDetails qorvaUser) {
+			claims.put(CREDENTIAL_VERSION, qorvaUser.getCredentialVersion());
+		}
 
 		var subscriptionInfo = tenantDTO.getSubscriptionInfo();
 		if (Objects.nonNull(subscriptionInfo) && StringUtils.hasText(subscriptionInfo.getSubscriptionPlan())) {

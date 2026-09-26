@@ -3,9 +3,8 @@ package ai.qorva.core.controller;
 import ai.qorva.core.enums.AtsProviderEnum;
 import ai.qorva.core.service.ats.AtsConnectionService;
 import ai.qorva.core.service.ats.AtsOauthService;
-import lombok.extern.slf4j.Slf4j;
+import ai.qorva.core.security.TenantScope;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,7 +21,6 @@ import java.net.URI;
  * Nothing here is trusted beyond the HMAC-signed state: it carries the tenant and the
  * provider, and a path provider that disagrees with it is rejected.
  */
-@Slf4j
 @RestController
 public class AtsOauthCallbackController {
 
@@ -48,26 +46,16 @@ public class AtsOauthCallbackController {
 		@RequestParam(name = "accounts-server", required = false) String accountsServer,
 		@RequestParam(name = "error", required = false) String error
 	) {
-		String result;
-		try {
-			if (error != null || code == null || state == null) {
-				result = "denied";
-			} else {
-				var claims = oauthService.validateState(state);
-				if (provider != null && AtsProviderEnum.fromValue(provider) != claims.provider()) {
-					throw new IllegalStateException("provider mismatch between callback path and state");
-				}
-				var credentials = oauthService.exchangeCode(
-					claims.provider(), code, accountsServer, claims.datacenter());
-				connectionService.createFromOauth(claims.tenantId(), claims.provider(), credentials);
-				result = "connected";
+		return OauthCallbackRedirect.handle("ATS", error, code, state, appBaseUrl + "/?atsOauth=", () -> {
+			var claims = oauthService.validateState(state);
+			if (provider != null && AtsProviderEnum.fromValue(provider) != claims.provider()) {
+				throw new IllegalStateException("provider mismatch between callback path and state");
 			}
-		} catch (Exception e) {
-			log.warn("ATS OAuth callback failed: {}", e.getMessage());
-			result = "failed";
-		}
-		return ResponseEntity.status(HttpStatus.FOUND)
-			.location(URI.create(appBaseUrl + "/?atsOauth=" + result))
-			.build();
+			// The signed state names the tenant: the connection is created in its scope.
+			TenantScope.runAs(claims.tenantId(), () -> {
+				var credentials = oauthService.exchangeCode(claims.provider(), code, accountsServer, claims.datacenter());
+				connectionService.createFromOauth(claims.tenantId(), claims.provider(), credentials);
+			});
+		});
 	}
 }

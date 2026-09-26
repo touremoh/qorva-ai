@@ -3,6 +3,7 @@ package ai.qorva.core.service;
 import ai.qorva.core.dao.entity.CandidateEmailTemplate;
 import ai.qorva.core.dao.repository.CandidateEmailTemplateRepository;
 import ai.qorva.core.dto.CandidateEmailTemplateData;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -69,7 +70,7 @@ class CandidateEmailTemplateServiceTest {
 		assertThatThrownBy(() -> service.create(TENANT, "a@b.c",
 			request("Name", "Subject", "Hi {{candidat_name}}")))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("Unknown placeholder");
+			.hasMessage(QorvaErrorCodes.EMAIL_TEMPLATE_UNKNOWN_PLACEHOLDER);
 		verify(repository, never()).save(any());
 	}
 
@@ -80,7 +81,7 @@ class CandidateEmailTemplateServiceTest {
 		assertThatThrownBy(() -> service.create(TENANT, "a@b.c",
 			request("Name", "Subject", "Body")))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("already exists");
+			.hasMessage(QorvaErrorCodes.EMAIL_TEMPLATE_NAME_EXISTS);
 	}
 
 	@Test
@@ -98,29 +99,29 @@ class CandidateEmailTemplateServiceTest {
 		assertThatThrownBy(() -> service.create(TENANT, "a@b.c",
 			request("Name", "s".repeat(151), "Body")))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("150");
+			.hasMessage(QorvaErrorCodes.EMAIL_TEMPLATE_SUBJECT_TOO_LONG);
 		assertThatThrownBy(() -> service.create(TENANT, "a@b.c",
 			request("Name", "Subject", "b".repeat(4001))))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("4000");
+			.hasMessage(QorvaErrorCodes.EMAIL_TEMPLATE_BODY_TOO_LONG);
 	}
 
 	@Test
 	void update_renameToExistingName_isRejected() {
 		var existing = CandidateEmailTemplate.builder().id("t1").tenantId(TENANT).name("Old").build();
-		when(repository.findByIdAndTenantId("t1", TENANT)).thenReturn(Optional.of(existing));
+		when(repository.findByIdInTenant("t1", TENANT)).thenReturn(Optional.of(existing));
 		when(repository.existsByTenantIdAndName(TENANT, "Taken")).thenReturn(true);
 
 		assertThatThrownBy(() -> service.update(TENANT, "t1",
 			request("Taken", "Subject", "Body")))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("already exists");
+			.hasMessage(QorvaErrorCodes.EMAIL_TEMPLATE_NAME_EXISTS);
 	}
 
 	@Test
 	void update_keepingOwnName_isAllowed() throws Exception {
 		var existing = CandidateEmailTemplate.builder().id("t1").tenantId(TENANT).name("Mine").build();
-		when(repository.findByIdAndTenantId("t1", TENANT)).thenReturn(Optional.of(existing));
+		when(repository.findByIdInTenant("t1", TENANT)).thenReturn(Optional.of(existing));
 		when(repository.save(any())).thenAnswer(inv -> inv.getArgument(0));
 
 		var view = service.update(TENANT, "t1", request("Mine", "New subject", "New body"));
@@ -137,7 +138,7 @@ class CandidateEmailTemplateServiceTest {
 		assertThatThrownBy(() -> service.create(TENANT, "a@b.c",
 			request("Name", "Subject", "Body")))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("up to 3");
+			.hasMessage(QorvaErrorCodes.EMAIL_TEMPLATE_LIMIT_REACHED);
 		verify(repository, never()).save(any());
 	}
 
@@ -180,10 +181,10 @@ class CandidateEmailTemplateServiceTest {
 
 	@Test
 	void findOwned_otherTenant_throwsNotFound() {
-		when(repository.findByIdAndTenantId("t1", TENANT)).thenReturn(Optional.empty());
+		when(repository.findByIdInTenant("t1", TENANT)).thenReturn(Optional.empty());
 
 		assertThatThrownBy(() -> service.findOwned(TENANT, "t1"))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("not found");
+			.hasMessage(QorvaErrorCodes.EMAIL_TEMPLATE_NOT_FOUND);
 	}
 }

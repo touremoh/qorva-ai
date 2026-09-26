@@ -1,11 +1,18 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
+import ai.qorva.core.utils.Paging;
+
+import ai.qorva.core.service.cascade.CascadeRegistry;
+import ai.qorva.core.service.cascade.CascadeResource;
+
 import ai.qorva.core.dao.entity.MatchingReport;
 import ai.qorva.core.dao.querybuilder.MatchingReportQueryBuilder;
-import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dao.specifications.MatchingReportSpecifications;
 import ai.qorva.core.dao.specifications.MongoSpecification;
+import ai.qorva.core.dao.specifications.MongoSpecifications;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
@@ -14,7 +21,6 @@ import ai.qorva.core.dto.common.CandidateInfo;
 import ai.qorva.core.dto.common.KeySkill;
 import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.enums.ApplicationStatusEnum;
-import ai.qorva.core.enums.NoteTargetTypeEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.MatchingReportMapper;
@@ -28,6 +34,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.util.List;
 import java.util.*;
 
 @Slf4j
@@ -35,16 +42,14 @@ import java.util.*;
 public class MatchingReportService extends AbstractQorvaService<MatchingReportDTO, MatchingReport> {
 	protected final UserService userService;
 	protected final TenantService tenantService;
-	protected final ChatsRepository chatsRepository;
-	protected final NoteService noteService;
+	private final CascadeRegistry cascadeRegistry;
 
 	@Autowired
-	public MatchingReportService(MatchingReportRepository repository, MatchingReportMapper mapper, MatchingReportQueryBuilder queryBuilder, UserService userService, TenantService tenantService, ChatsRepository chatsRepository, NoteService noteService) {
+	public MatchingReportService(MatchingReportRepository repository, MatchingReportMapper mapper, MatchingReportQueryBuilder queryBuilder, UserService userService, TenantService tenantService, CascadeRegistry cascadeRegistry) {
 		super(repository, mapper, queryBuilder);
 		this.userService = userService;
 		this.tenantService = tenantService;
-		this.chatsRepository = chatsRepository;
-		this.noteService = noteService;
+		this.cascadeRegistry = cascadeRegistry;
 	}
 
 	@Override
@@ -133,7 +138,7 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 			);
 		if (response.isEmpty()) {
 			// Expected state (the resume-chat dialog probes for a report before creating a chat) — a 404, not a 500.
-			throw new QorvaException(QorvaErrorCodes.REPORT_RESUME_MATCH_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+			throw QorvaErrors.notFound(QorvaErrorCodes.REPORT_RESUME_MATCH_NOT_FOUND);
 		}
 		return this.mapper.map(response.get());
 	}
@@ -145,9 +150,8 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 			var searchTerms = params.get("searchTerms");
 			var tenantId = params.get("tenantId");
 			var jobPostId = params.get("jobPostId");
-			int pageSize = Integer.parseInt(params.get("pageSize"));
-			int pageNumber = Integer.parseInt(params.get("pageNumber"));
-			var pageable = PageRequest.of(pageNumber, pageSize, Sort.by("lastUpdatedAt").descending());
+			var pageable = Paging.of(Paging.param(params, "pageNumber", 0), Paging.param(params, "pageSize", 10),
+				Sort.by("lastUpdatedAt").descending());
 
 			// Process
 			Page<MatchingReport> results = (jobPostId == null || jobPostId.isBlank())
@@ -162,7 +166,7 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 	}
 
 	public List<MatchingReportDTO> findAllForExport(String tenantId, String jobPostId) {
-		var spec = MongoSpecification.where(MatchingReportSpecifications.tenantIdEquals(tenantId))
+		var spec = MongoSpecification.where(MongoSpecifications.<MatchingReport>ownedBy(tenantId))
 			.and(MatchingReportSpecifications.jobPostIdEquals(jobPostId));
 		return renderFindAll(this.repository.findAll(spec));
 	}
@@ -186,14 +190,7 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 	@Override
 	protected void postProcessDeleteOneById(String id, String tenantId) throws QorvaException {
 		log.info("Deleted Resume Match with ID: {}", id);
-		// Existence and tenant ownership were checked in preProcessDeleteOneById; looking the
-		// report up again here (as this used to) throws 404 once the row is gone.
-
-		// Delete chat associated with this Report
-		var countDeletedChats = this.chatsRepository.deleteByTenantIdAndContextMatchingReportId(tenantId, id);
-		log.info("Deleted {} chats associated with Resume Match ID: {}", countDeletedChats, id);
-
-		var countDeletedNotes = this.noteService.deleteForTarget(tenantId, NoteTargetTypeEnum.MATCHING_REPORT, id);
-		log.info("Deleted {} notes associated with Resume Match ID: {}", countDeletedNotes, id);
+		// Its notes and its chats (with their messages).
+		this.cascadeRegistry.parentsDeleted(CascadeResource.MATCHING_REPORT, tenantId, List.of(id));
 	}
 }

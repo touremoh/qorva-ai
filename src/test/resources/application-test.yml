@@ -1,0 +1,100 @@
+# Profile for the integration test suite (AbstractIntegrationTest). MongoDB comes from Testcontainers
+# (@ServiceConnection), every external service gets an inert placeholder, and nothing here is a secret.
+
+spring:
+  ai:
+    openai:
+      api-key: test-openai-key
+      embedding:
+        options:
+          model: text-embedding-3-large
+    model:
+      embedding: openai
+  mail:
+    host: localhost
+    port: 2525
+    username: test@qorva.test
+    from: test@qorva.test
+  security:
+    oauth2:
+      client:
+        registration:
+          office365:
+            client-id: test
+            client-secret: test
+            scope: test
+            authorization-grant-type: client_credentials
+        provider:
+          office365:
+            token-uri: http://localhost/token
+            authorization-uri: http://localhost/authorize
+            user-info-uri: http://localhost/userinfo
+
+weblink:
+  allowedOrigins: http://localhost:5173
+  appBaseUrl: http://localhost:5173
+
+jwt:
+  secret: cXVvcnZhLXRlc3Qtc2VjcmV0LXF1b3J2YS10ZXN0LXNlY3JldC1xdW9ydmEtdGVzdC1zZWNyZXQtcXVvcnZhLXRlc3Q=
+  timeToLiveInMillis: 3600000
+
+office365:
+  client-id: test
+  client-secret: test
+  scope: test
+  authorization-grant-type: client_credentials
+  token-uri: http://localhost/token
+  authorization-uri: http://localhost/authorize
+  user-info-uri: http://localhost/userinfo
+
+stripe:
+  secret-key: sk_test_placeholder
+  webhook:
+    secret: whsec_test
+  session:
+    return-url: http://localhost:5173/app/settings
+  checkout:
+    success-url: http://localhost:5173/billing/success?session_id={CHECKOUT_SESSION_ID}
+    cancel-url: http://localhost:5173/billing/cancel
+
+aws:
+  s3:
+    bucket-name: qorva-test
+    region: eu-west-1
+
+qorva:
+  # The suite enforces tenant isolation: any tenant-scoped code running without a tenant fails the test.
+  tenancy:
+    fail-closed: true
+  mail:
+    reply-to: ""
+    senders: {}
+  assets:
+    logo-url: http://localhost/logo.png
+  notifications:
+    enabled: true
+  demo-seed:
+    enabled: false
+    prefix: demo-seed
+    version: v2
+    fallback-language: en
+  mailbox:
+    credentials-key: test-mailbox-credentials-key
+    microsoft:
+      client-id: ""
+      client-secret: ""
+  ats:
+    credentials-key: test-ats-credentials-key
+    scheduler-poll-delay-ms: 86400000
+    outbound-poll-delay-ms: 86400000
+  # Workers stay idle during tests: each test drives the code it checks.
+  jobs:
+    poll-delay-ms: 86400000
+  candidate-submissions:
+    poll-delay-ms: 86400000
+
+logging:
+  level:
+    org.mongodb.driver: WARN
+    org.testcontainers: WARN
+    io.mongock: WARN

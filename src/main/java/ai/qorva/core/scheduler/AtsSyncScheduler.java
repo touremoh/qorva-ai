@@ -1,5 +1,7 @@
 package ai.qorva.core.scheduler;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.config.AtsProperties;
 import ai.qorva.core.dao.entity.AtsConnection;
 import ai.qorva.core.dao.repository.AtsConnectionRepository;
@@ -39,17 +41,22 @@ public class AtsSyncScheduler {
 		var connections = connectionRepository.findByStatus(AtsConnection.STATUS_CONNECTED);
 		var due = Instant.now().minus(properties.getSyncIntervalMinutes(), ChronoUnit.MINUTES);
 		for (var connection : connections) {
-			// Puts webhooks back when registration failed earlier or the public base URL moved.
-			webhookService.reconcile(connection);
+			// Each connection belongs to one tenant: reconcile and enqueue in its scope.
+			TenantScope.runAs(connection.getTenantId(), () -> enqueueIfDue(connection, due));
+		}
+	}
 
-			var settings = connection.getSettings();
-			if (settings == null || !Boolean.TRUE.equals(settings.getAutoImport())) {
-				continue;
-			}
-			var lastSync = connection.getSyncState() != null ? connection.getSyncState().getLastSyncAt() : null;
-			if (lastSync == null || lastSync.isBefore(due)) {
-				syncService.enqueueQuietly(connection, AtsSyncService.TRIGGER_SCHEDULED);
-			}
+	private void enqueueIfDue(AtsConnection connection, Instant due) {
+		// Puts webhooks back when registration failed earlier or the public base URL moved.
+		webhookService.reconcile(connection);
+
+		var settings = connection.getSettings();
+		if (settings == null || !Boolean.TRUE.equals(settings.getAutoImport())) {
+			return;
+		}
+		var lastSync = connection.getSyncState() != null ? connection.getSyncState().getLastSyncAt() : null;
+		if (lastSync == null || lastSync.isBefore(due)) {
+			syncService.enqueueQuietly(connection, AtsSyncService.TRIGGER_SCHEDULED);
 		}
 	}
 }

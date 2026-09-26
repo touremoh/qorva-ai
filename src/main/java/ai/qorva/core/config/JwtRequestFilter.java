@@ -4,6 +4,7 @@ import ai.qorva.core.dto.QorvaErrorResponse;
 import ai.qorva.core.enums.SubscriptionStatus;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.security.LanguageContextHolder;
+import ai.qorva.core.security.AccessTokenPolicy;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.QorvaUserDetailsService;
 import ai.qorva.core.utils.JwtUtils;
@@ -90,10 +91,11 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 					String username = claims.getSubject();
 					String tenantId = claims.get(TENANT_ID, String.class);
 
-					if (Strings.hasText(username) && SecurityContextHolder.getContext().getAuthentication() == null) {
+					if (Strings.hasText(username) && AccessTokenPolicy.isAccessToken(claims) && SecurityContextHolder.getContext().getAuthentication() == null) {
 						UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
-						if (Boolean.TRUE.equals(JwtUtils.isTokenValid(token, userDetails, jwtConfig.getSecretKey()))) {
+						if (Boolean.TRUE.equals(JwtUtils.isTokenValid(token, userDetails, jwtConfig.getSecretKey()))
+							&& AccessTokenPolicy.accepts(claims, userDetails)) {
 							// Merge subscription-level authorities (from JWT) with action-level authorities (from UserDetails)
 							List<GrantedAuthority> authorities = new ArrayList<>(userDetails.getAuthorities());
 
@@ -125,6 +127,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 			LanguageContextHolder.clear();
 		}
 	}
+
 
 	private boolean isSubscriptionBlocked(String subscriptionStatus, String requestUri) {
 		if (!Strings.hasText(subscriptionStatus) || !BLOCKED_STATUSES.contains(subscriptionStatus)) {

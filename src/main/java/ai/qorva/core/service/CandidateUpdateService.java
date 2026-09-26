@@ -1,5 +1,10 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrorCodes;
+import ai.qorva.core.exception.QorvaErrors;
+
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.dao.entity.CandidateUpdateRequest;
 import ai.qorva.core.dao.entity.SuppressedEmail;
 import ai.qorva.core.dao.repository.CandidateUpdateRequestRepository;
@@ -15,6 +20,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.FindAndModifyOptions;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
@@ -47,6 +57,7 @@ public class CandidateUpdateService {
 	private final LibraryQualityCacheEvictor cacheEvictor;
 	private final S3StorageService s3StorageService;
 	private final ObjectMapper objectMapper;
+	private final MongoTemplate mongoTemplate;
 
 	@Value("${weblink.appBaseUrl}")
 	private String appBaseUrl;
@@ -66,8 +77,10 @@ public class CandidateUpdateService {
 		CVService cvService,
 		LibraryQualityCacheEvictor cacheEvictor,
 		S3StorageService s3StorageService,
-		ObjectMapper objectMapper
+		ObjectMapper objectMapper,
+		MongoTemplate mongoTemplate
 	) {
+		this.mongoTemplate = mongoTemplate;
 		this.requestRepository = requestRepository;
 		this.suppressedEmailRepository = suppressedEmailRepository;
 		this.cvService = cvService;
@@ -137,17 +150,48 @@ public class CandidateUpdateService {
 	/** Applies the candidate's update; an optional newer CV file replaces the old document entirely. */
 	public void complete(String token, CandidateUpdateData.Submission submission, MultipartFile newCvFile) throws QorvaException {
 		var request = findValidRequest(token);
-		var tenantId = request.getTenantId();
-		var cvId = request.getCvId();
+		var previousStatus = claim(request);
+		try {
+			var tenantId = request.getTenantId();
+			var cvId = request.getCvId();
 
-		if (newCvFile != null && !newCvFile.isEmpty()) {
-			// Newer document: run it through the normal ingest pipeline, then replace the old copy.
-			var created = cvService.processFile(newCvFile, tenantId);
-			cvService.replaceDuplicate(created.getId(), cvId, tenantId);
-			cvId = created.getId();
+			if (newCvFile != null && !newCvFile.isEmpty()) {
+				// Newer document: run it through the normal ingest pipeline, then replace the old copy.
+				var created = cvService.processFile(newCvFile, tenantId);
+				cvService.replaceDuplicate(created.getId(), cvId, tenantId);
+				cvId = created.getId();
+			}
+
+			applyAndComplete(request, submission, cvId);
+		} catch (QorvaException | RuntimeException e) {
+			release(request, previousStatus);
+			throw e;
 		}
+	}
 
-		applyAndComplete(request, submission, cvId);
+	/**
+	 * Takes the link for this submission atomically: of two concurrent submissions of the same link,
+	 * only one gets it — the other sees it gone (404). Returns the status to go back to on failure.
+	 */
+	private String claim(CandidateUpdateRequest request) throws QorvaException {
+		var previousStatus = request.getStatus();
+		var claimed = mongoTemplate.findAndModify(
+			Query.query(Criteria.where("_id").is(request.getId()).and("status").is(previousStatus)),
+			new Update().set("status", CandidateUpdateRequest.STATUS_PROCESSING).unset("processingStage"),
+			FindAndModifyOptions.options().returnNew(true),
+			CandidateUpdateRequest.class);
+		if (claimed == null) {
+			throw notFound();
+		}
+		return previousStatus;
+	}
+
+	/** A submission that failed before it was recorded leaves the link usable, as before. */
+	private void release(CandidateUpdateRequest request, String previousStatus) {
+		mongoTemplate.updateFirst(
+			Query.query(Criteria.where("_id").is(request.getId()).and("status").is(CandidateUpdateRequest.STATUS_PROCESSING)),
+			new Update().set("status", previousStatus),
+			CandidateUpdateRequest.class);
 	}
 
 	/**
@@ -164,11 +208,17 @@ public class CandidateUpdateService {
 			payload = objectMapper.writeValueAsString(
 				submission != null ? submission : new CandidateUpdateData.Submission(null, null, null, null, null, null, null));
 		} catch (Exception e) {
-			throw new QorvaException("Invalid submission", e,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.CANDIDATE_UPDATE_INVALID_SUBMISSION, e);
 		}
 
-		var fileKey = s3StorageService.uploadCandidateSubmission(request.getTenantId(), request.getId(), file);
+		var previousStatus = claim(request);
+		String fileKey;
+		try {
+			fileKey = s3StorageService.uploadCandidateSubmission(request.getTenantId(), request.getId(), file);
+		} catch (RuntimeException e) {
+			release(request, previousStatus);
+			throw e;
+		}
 
 		request.setSubmissionPayload(payload);
 		request.setPendingFileKey(fileKey);
@@ -225,6 +275,11 @@ public class CandidateUpdateService {
 
 	private void applyAndComplete(CandidateUpdateRequest request, CandidateUpdateData.Submission submission, String cvId)
 		throws QorvaException {
+		TenantScope.runAs(request.getTenantId(), () -> applyInScope(request, submission, cvId));
+	}
+
+	private void applyInScope(CandidateUpdateRequest request, CandidateUpdateData.Submission submission, String cvId)
+		throws QorvaException {
 		var cv = cvService.findOneById(cvId);
 		applySubmission(cv, submission);
 		cv.setContentDate(Instant.now());
@@ -246,8 +301,7 @@ public class CandidateUpdateService {
 		var name = file.getOriginalFilename();
 		var lower = name != null ? name.toLowerCase() : "";
 		if (!lower.endsWith(".pdf") && !lower.endsWith(".docx")) {
-			throw new QorvaException("Unsupported file type — please upload a .pdf or .docx resume",
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.CANDIDATE_UPDATE_UNSUPPORTED_FILE);
 		}
 	}
 
@@ -314,14 +368,13 @@ public class CandidateUpdateService {
 	}
 
 	private CVDTO loadCv(CandidateUpdateRequest request) throws QorvaException {
-		// No tenant context on public calls — CVService skips the tenant assert; the token IS the authorization.
-		return cvService.findOneById(request.getCvId());
+		// Public, token-authorised call: the token's request names the tenant, so read in its scope.
+		return TenantScope.callAs(request.getTenantId(), () -> cvService.findOneById(request.getCvId()));
 	}
 
 	/** Deliberately generic — public endpoints must not reveal whether a token ever existed. */
 	private QorvaException notFound() {
-		return new QorvaException("Link not found or no longer valid",
-			HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+		return QorvaErrors.notFound(QorvaErrorCodes.CANDIDATE_UPDATE_LINK_INVALID);
 	}
 
 	static String sha256(String value) {

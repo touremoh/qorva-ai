@@ -52,8 +52,7 @@ public class ScreeningContextProviderImpl implements ScreeningContextProvider {
 	private Optional<MatchingReportDTO> findReport(Chat chat) {
 		var ctx = chat.getContext();
 		if (StringUtils.hasText(ctx.getMatchingReportId())) {
-			return matchingReportRepository.findById(new ObjectId(ctx.getMatchingReportId()))
-				.filter(r -> chat.getTenantId().equals(r.getTenantId()))
+			return matchingReportRepository.findByIdInTenant(ctx.getMatchingReportId(), chat.getTenantId())
 				.map(matchingReportMapper::map);
 		}
 		if (!ObjectId.isValid(chat.getTenantId()) || !ObjectId.isValid(ctx.getJobPostId())) {

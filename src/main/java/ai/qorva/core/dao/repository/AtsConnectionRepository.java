@@ -6,11 +6,9 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 import java.util.Optional;
 
-public interface AtsConnectionRepository extends MongoRepository<AtsConnection, String> {
+public interface AtsConnectionRepository extends MongoRepository<AtsConnection, String>, OwnedLookup<AtsConnection> {
 
 	List<AtsConnection> findByTenantIdOrderByCreatedAtAsc(String tenantId);
-
-	Optional<AtsConnection> findByIdAndTenantId(String id, String tenantId);
 
 	boolean existsByTenantIdAndProvider(String tenantId, String provider);
 

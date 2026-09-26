@@ -1,5 +1,7 @@
 package ai.qorva.core.service.ats;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.config.AtsProperties;
 import ai.qorva.core.dao.entity.AtsConnection;
 import ai.qorva.core.dao.entity.BackgroundJob;
@@ -37,6 +39,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HexFormat;
 import java.util.List;
+import ai.qorva.core.utils.JobDescriptionHtml;
 
 /**
  * The ATS sync engine. Runs inside a BackgroundJob claimed by BackgroundJobWorker, so
@@ -107,12 +110,10 @@ public class AtsSyncService {
 		throws QorvaException {
 		var connection = connectionService.findOwned(tenantId, connectionId);
 		if (!AtsConnection.STATUS_CONNECTED.equals(connection.getStatus())) {
-			throw new QorvaException(QorvaErrorCodes.ATS_CONNECTION_NOT_CONNECTED,
-				HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.ATS_CONNECTION_NOT_CONNECTED);
 		}
 		if (jobRepository.existsByConnectionIdAndStatusIn(connectionId, ACTIVE_STATUSES)) {
-			throw new QorvaException(QorvaErrorCodes.ATS_SYNC_ACTIVE_EXISTS,
-				HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.ATS_SYNC_ACTIVE_EXISTS);
 		}
 		var job = jobRepository.save(BackgroundJob.builder()
 			.tenantId(tenantId)
@@ -159,7 +160,7 @@ public class AtsSyncService {
 
 	/** Entry point called by BackgroundJobWorker with a claimed RUNNING job. */
 	public void executeSync(BackgroundJob job) {
-		var connectionOpt = connectionRepository.findById(job.getConnectionId());
+		var connectionOpt = connectionRepository.findByIdInTenant(job.getConnectionId(), job.getTenantId());
 		if (connectionOpt.isEmpty()) {
 			finish(job.getId(), BackgroundJob.STATUS_FAILED, new Counters(), "connection_deleted");
 			return;
@@ -303,7 +304,7 @@ public class AtsSyncService {
 				update.set("matchingReportsNeeded", true);
 			}
 			if (StringUtils.hasText(atsJob.description())) {
-				update.set("description", atsJob.description());
+				update.set("description", JobDescriptionHtml.sanitize(atsJob.description()));
 			}
 			// Backfills a job imported before its criteria could be drafted — one whose
 			// description only arrived on a later sync. Rules already there are left alone:
@@ -320,7 +321,7 @@ public class AtsSyncService {
 		var jobPost = new JobPost();
 		jobPost.setTenantId(connection.getTenantId());
 		jobPost.setTitle(atsJob.title());
-		jobPost.setDescription(atsJob.description());
+		jobPost.setDescription(JobDescriptionHtml.sanitize(atsJob.description()));
 		jobPost.setScoringRules(suggestScoringRules(atsJob));
 		jobPost.setJobReference(jobReference);
 		jobPost.setStatus(status);

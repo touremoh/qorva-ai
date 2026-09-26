@@ -9,11 +9,6 @@ public final class UsageMonitoringSpecifications {
         throw new UnsupportedOperationException("Utility class");
     }
 
-    public static MongoSpecification<UsageMonitoring> tenantIdEquals(String tenantId) {
-        if (tenantId == null || tenantId.isBlank()) return MongoSpecifications.empty();
-        return () -> Criteria.where("tenantId").is(tenantId);
-    }
-
     public static MongoSpecification<UsageMonitoring> subscriptionTierEquals(String tier) {
         if (tier == null || tier.isBlank()) return MongoSpecifications.empty();
         return () -> Criteria.where("subscriptionTier").is(tier);
