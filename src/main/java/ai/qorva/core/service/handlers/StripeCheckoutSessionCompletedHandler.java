@@ -33,6 +33,16 @@ import java.util.Optional;
 @Service
 public class StripeCheckoutSessionCompletedHandler implements StripeEventHandler {
 
+	@Override
+	public java.util.Set<String> eventTypes() {
+		return java.util.Set.of("checkout.session.completed");
+	}
+
+	@Override
+	public Class<? extends StripeObject> objectType() {
+		return com.stripe.model.checkout.Session.class;
+	}
+
 	private final TenantService tenantService;
 	private final StripeEventLogRepository repository;
 	private final StripeEventMapper evtMapper;

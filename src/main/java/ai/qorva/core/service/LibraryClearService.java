@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.service.cascade.CascadeRegistry;
 import ai.qorva.core.service.cascade.PurgeScope;
 
@@ -56,8 +58,7 @@ public class LibraryClearService {
 		for (var type : List.of(BackgroundJob.TYPE_BULK_CV_UPLOAD, BackgroundJob.TYPE_REANALYZE,
 			BackgroundJob.TYPE_CANDIDATE_UPDATE_CAMPAIGN)) {
 			if (backgroundJobRepository.existsByTenantIdAndTypeAndStatusIn(tenantId, type, ACTIVE_JOB_STATUSES)) {
-				throw new QorvaException(QorvaErrorCodes.CV_CLEAR_BLOCKED_BY_ACTIVE_JOB,
-					HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+				throw QorvaErrors.conflict(QorvaErrorCodes.CV_CLEAR_BLOCKED_BY_ACTIVE_JOB);
 			}
 		}
 

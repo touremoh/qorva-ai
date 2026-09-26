@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.service.cascade.CascadeRegistry;
 import ai.qorva.core.service.cascade.CascadeResource;
 
@@ -181,7 +183,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         // *current* consumption, so a batch could overshoot the plan limit by its own size.
         if (!usageMonitoringService.hasCapacityFor(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS, files.size())) {
             log.warn("CV Service - Tenant {} lacks screening-action capacity for {} files", tenantId, files.size());
-            throw new QorvaException(QorvaErrorCodes.USAGE_SCREENING_LIMIT_EXCEEDED, HttpStatus.FORBIDDEN.value(), HttpStatus.FORBIDDEN);
+            throw QorvaErrors.forbidden(QorvaErrorCodes.USAGE_SCREENING_LIMIT_EXCEEDED);
         }
 
         try (var executor = TenantScope.propagating(Executors.newVirtualThreadPerTaskExecutor())) {
@@ -259,8 +261,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
      */
     public CVDTO replaceDuplicate(String newCvId, String oldCvId, String tenantId) throws QorvaException {
         if (newCvId.equals(oldCvId)) {
-            throw new QorvaException("Cannot replace a CV with itself",
-                HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+            throw QorvaErrors.badRequest("Cannot replace a CV with itself");
         }
         var newCv = this.findOneById(newCvId);   // tenant ownership asserted inside
         var oldCv = this.findOneById(oldCvId);

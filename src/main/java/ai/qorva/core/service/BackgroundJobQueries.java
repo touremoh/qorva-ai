@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.BackgroundJob;
 import ai.qorva.core.dao.repository.BackgroundJobRepository;
 import ai.qorva.core.dto.BackgroundJobData;
@@ -42,7 +44,7 @@ public class BackgroundJobQueries {
 
 	public BackgroundJob require(String tenantId, String jobId, String notFoundMessage) throws QorvaException {
 		return repository.findByIdInTenant(jobId, tenantId)
-			.orElseThrow(() -> new QorvaException(notFoundMessage, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+			.orElseThrow(() -> QorvaErrors.notFound(notFoundMessage));
 	}
 
 	public BackgroundJobData.JobView get(String tenantId, String jobId, String notFoundMessage) throws QorvaException {

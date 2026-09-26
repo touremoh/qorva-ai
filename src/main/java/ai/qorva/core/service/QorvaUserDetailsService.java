@@ -5,7 +5,7 @@ import ai.qorva.core.enums.UserStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
+import ai.qorva.core.security.QorvaUserDetails;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -46,16 +46,15 @@ public class QorvaUserDetailsService implements UserDetailsService {
 					.collect(Collectors.toCollection(ArrayList::new))
 				: new ArrayList<SimpleGrantedAuthority>();
 
-			// Convert userDTO into Spring Security User
-			return User
-					.builder()
-						.username(user.getEmail())
-						.password(user.getEncryptedPassword())
-						.disabled(isUserDisabled(user))
-				        .accountExpired(user.getUserAccountStatus().equals(UserStatusEnum.DELETED.getValue()))
-						.accountLocked(user.getUserAccountStatus().equals(UserStatusEnum.LOCKED.getValue()))
-						.authorities(grantedAuthorities)
-					.build();
+			// Spring Security user, carrying the tenant so a token's tenant claim can be checked against it
+			return new QorvaUserDetails(
+				user.getEmail(),
+				user.getEncryptedPassword(),
+				!isUserDisabled(user),
+				!user.getUserAccountStatus().equals(UserStatusEnum.DELETED.getValue()),
+				!user.getUserAccountStatus().equals(UserStatusEnum.LOCKED.getValue()),
+				grantedAuthorities,
+				user.getTenantId());
 		} catch (AuthenticationException e) {
 			throw new UsernameNotFoundException(AUTH_USER_LOOKUP_FAILED, e);
 		}

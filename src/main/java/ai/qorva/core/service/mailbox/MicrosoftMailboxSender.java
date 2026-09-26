@@ -1,5 +1,7 @@
 package ai.qorva.core.service.mailbox;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.MailboxConnection;
 import ai.qorva.core.enums.MailboxProviderEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -105,8 +107,7 @@ public class MicrosoftMailboxSender implements MailboxSender {
 		log.warn("Graph error {} ({}) for mailbox {}", status, code,
 			connection != null ? connection.getEmailAddress() : "?");
 		if (status == 401 || "InvalidAuthenticationToken".equals(code)) {
-			return new QorvaException(QorvaErrorCodes.MAILBOX_REAUTH_REQUIRED,
-				HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			return QorvaErrors.conflict(QorvaErrorCodes.MAILBOX_REAUTH_REQUIRED);
 		}
 		return new QorvaException(QorvaErrorCodes.MAILBOX_SEND_FAILED,
 			HttpStatus.BAD_GATEWAY.value(), HttpStatus.BAD_GATEWAY);

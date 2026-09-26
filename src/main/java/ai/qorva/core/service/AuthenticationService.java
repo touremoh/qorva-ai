@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.security.TenantScope;
 
 import ai.qorva.core.config.JwtConfig;
@@ -63,7 +65,7 @@ public class AuthenticationService {
 			user = Optional.ofNullable(this.userRepository.findByEmail(userDTO.getEmail()))
 				           .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
 		} catch (Exception e) {
-			throw new QorvaException(QorvaErrorCodes.AUTH_FAILED, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+			throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_FAILED);
 		}
 
 		if (user.isMfaEnabledOrFalse()) {
@@ -100,7 +102,7 @@ public class AuthenticationService {
 			// Build AuthResponse
 			return new AuthResponse(jwt, authenticatedUserInfo);
 		} catch (Exception e) {
-			throw new QorvaException(QorvaErrorCodes.AUTH_FAILED, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+			throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_FAILED);
 		}
 	}
 
@@ -117,10 +119,10 @@ public class AuthenticationService {
 			} catch (JwtException ex) {
 				// Malformed, truncated or wrongly signed: a failed auth check, not a server
 				// fault — the same answer refreshToken gives for the same input.
-				throw new QorvaException(QorvaErrorCodes.AUTH_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+				throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_TOKEN_INVALID);
 			}
 			if (expired) {
-				throw new QorvaException(QorvaErrorCodes.AUTH_TOKEN_EXPIRED, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+				throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_TOKEN_EXPIRED);
 			}
 			return true;
 		}
@@ -155,9 +157,9 @@ public class AuthenticationService {
 				// return results
 				return new AuthResponse(jwt, authenticatedUserInfo);
 			} catch (JwtException ex) {
-				throw new QorvaException(QorvaErrorCodes.AUTH_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+				throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_TOKEN_INVALID);
 			}
 		}
-		throw new QorvaException(QorvaErrorCodes.AUTH_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+		throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_TOKEN_INVALID);
 	}
 }

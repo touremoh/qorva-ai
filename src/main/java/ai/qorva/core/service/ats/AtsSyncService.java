@@ -1,5 +1,7 @@
 package ai.qorva.core.service.ats;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.config.AtsProperties;
 import ai.qorva.core.dao.entity.AtsConnection;
 import ai.qorva.core.dao.entity.BackgroundJob;
@@ -107,12 +109,10 @@ public class AtsSyncService {
 		throws QorvaException {
 		var connection = connectionService.findOwned(tenantId, connectionId);
 		if (!AtsConnection.STATUS_CONNECTED.equals(connection.getStatus())) {
-			throw new QorvaException(QorvaErrorCodes.ATS_CONNECTION_NOT_CONNECTED,
-				HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.ATS_CONNECTION_NOT_CONNECTED);
 		}
 		if (jobRepository.existsByConnectionIdAndStatusIn(connectionId, ACTIVE_STATUSES)) {
-			throw new QorvaException(QorvaErrorCodes.ATS_SYNC_ACTIVE_EXISTS,
-				HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.ATS_SYNC_ACTIVE_EXISTS);
 		}
 		var job = jobRepository.save(BackgroundJob.builder()
 			.tenantId(tenantId)

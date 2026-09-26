@@ -19,7 +19,6 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
@@ -37,7 +36,7 @@ import java.util.concurrent.Semaphore;
 @Component
 public class CandidateSubmissionWorker {
 
-	private static final String INSTANCE_ID = UUID.randomUUID().toString();
+	private static final String INSTANCE_ID = WorkerInstance.ID;
 	private static final Duration LEASE = Duration.ofMinutes(3);
 	private static final int CLAIM_BATCH = 5;
 	private static final int LLM_CONCURRENCY = 3;

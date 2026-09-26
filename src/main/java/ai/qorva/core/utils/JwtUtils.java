@@ -24,6 +24,9 @@ public class JwtUtils {
 	String SUBSCRIPTION_STATUS = "subscriptionStatus";
 
 	public String PURPOSE = "purpose";
+	/** Token type: access tokens carry {@value #TYPE_ACCESS}; single-purpose tokens carry a {@code purpose} instead. */
+	public String TYPE = "typ";
+	public String TYPE_ACCESS = "access";
 	public String CREDENTIAL_VERSION = "cv";
 	public String PURPOSE_SET_PASSWORD = "SET_PASSWORD";
 
@@ -65,6 +68,7 @@ public class JwtUtils {
 
 	public String generateToken(UserDetails userDetails, JwtConfig jwtConfig, TenantDTO tenantDTO) {
 		Map<String, Object> claims = new HashMap<>();
+		claims.put(TYPE, TYPE_ACCESS);
 		claims.put(TENANT_ID, tenantDTO.getId());
 
 		var subscriptionInfo = tenantDTO.getSubscriptionInfo();

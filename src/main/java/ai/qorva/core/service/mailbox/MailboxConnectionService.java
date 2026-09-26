@@ -1,5 +1,7 @@
 package ai.qorva.core.service.mailbox;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.MailboxConnection;
 import ai.qorva.core.dao.repository.MailboxConnectionRepository;
 import ai.qorva.core.dao.repository.UserRepository;
@@ -106,12 +108,10 @@ public class MailboxConnectionService {
 	public MailboxSender.SendResult send(String tenantId, String username, String to, String subject, String body)
 		throws QorvaException {
 		var connection = findMine(tenantId, username)
-			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.MAILBOX_NOT_CONNECTED,
-				HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+			.orElseThrow(() -> QorvaErrors.notFound(QorvaErrorCodes.MAILBOX_NOT_CONNECTED));
 		var provider = MailboxProviderEnum.fromValue(connection.getProvider());
 		if (provider == null) {
-			throw new QorvaException(QorvaErrorCodes.MAILBOX_PROVIDER_UNKNOWN,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.MAILBOX_PROVIDER_UNKNOWN);
 		}
 		try {
 			var refreshed = oauthService.ensureFreshToken(provider, tokenCipher.decrypt(connection.getEncryptedTokens()));
@@ -150,7 +150,7 @@ public class MailboxConnectionService {
 	private String requireUserId(String username) throws QorvaException {
 		var userId = userIdOf(username);
 		if (userId == null) {
-			throw new QorvaException(QorvaErrorCodes.HTTP_FORBIDDEN, HttpStatus.FORBIDDEN.value(), HttpStatus.FORBIDDEN);
+			throw QorvaErrors.forbidden(QorvaErrorCodes.HTTP_FORBIDDEN);
 		}
 		return userId;
 	}
@@ -158,8 +158,7 @@ public class MailboxConnectionService {
 	private MailboxSender sender(MailboxProviderEnum provider) throws QorvaException {
 		var sender = senders.get(provider);
 		if (sender == null) {
-			throw new QorvaException(QorvaErrorCodes.MAILBOX_PROVIDER_UNKNOWN,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.MAILBOX_PROVIDER_UNKNOWN);
 		}
 		return sender;
 	}
@@ -167,8 +166,7 @@ public class MailboxConnectionService {
 	private static MailboxProviderEnum parseProvider(String value) throws QorvaException {
 		var provider = MailboxProviderEnum.fromValue(value);
 		if (provider == null) {
-			throw new QorvaException(QorvaErrorCodes.MAILBOX_PROVIDER_UNKNOWN,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.MAILBOX_PROVIDER_UNKNOWN);
 		}
 		return provider;
 	}

@@ -1,5 +1,7 @@
 package ai.qorva.core.service.ats.connectors;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.config.AtsProperties;
 import ai.qorva.core.enums.AtsProviderEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -84,8 +86,7 @@ public class GreenhouseConnector implements AtsConnector {
 		if (StringUtils.hasText(credentials.getAccessToken())) {
 			return Map.of("Authorization", "Bearer " + credentials.getAccessToken());
 		}
-		throw new QorvaException(QorvaErrorCodes.ATS_AUTH_FAILED,
-			HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+		throw QorvaErrors.unauthorized(QorvaErrorCodes.ATS_AUTH_FAILED);
 	}
 
 	@Override

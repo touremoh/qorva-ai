@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.UserDTO;
@@ -157,7 +159,7 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		var user = userOfTenant(tenantId, userId);
 
 		if (!passwordEncoder.matches(currentPassword, user.getEncryptedPassword())) {
-			throw new QorvaException(QorvaErrorCodes.USER_PASSWORD_INCORRECT, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+			throw QorvaErrors.unauthorized(QorvaErrorCodes.USER_PASSWORD_INCORRECT);
 		}
 
 		user.setEncryptedPassword(passwordEncoder.encode(newPassword));
@@ -176,7 +178,7 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 
 	private User userOfTenant(String tenantId, String userId) throws QorvaException {
 		return repository.findByIdInTenant(userId, tenantId)
-			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+			.orElseThrow(() -> QorvaErrors.notFound(QorvaErrorCodes.USER_NOT_FOUND));
 	}
 
 	public UserDTO findByEmail(String email) {

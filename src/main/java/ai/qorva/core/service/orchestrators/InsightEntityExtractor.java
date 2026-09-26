@@ -9,8 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.converter.BeanOutputConverter;
-import org.springframework.ai.openai.OpenAiChatOptions;
-import org.springframework.ai.openai.api.ResponseFormat;
 import org.springframework.stereotype.Service;
 
 import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_1;
@@ -38,18 +36,7 @@ public class InsightEntityExtractor {
 			String content = chatClient.prompt()
 				// Extraction is the one decision that changes results (which filters run), and the prompt
 				// is the largest in the pipeline. It gets the full model; the other insight calls stay on mini.
-				.options(OpenAiChatOptions.builder()
-					.model(GPT_4_1)
-					.responseFormat(ResponseFormat.builder()
-						.type(ResponseFormat.Type.JSON_SCHEMA)
-						.jsonSchema(ResponseFormat.JsonSchema.builder()
-							.name("entity_extractor")
-							.schema(converter.getJsonSchema())
-							.strict(Boolean.FALSE)
-							.build())
-						.build())
-					.temperature(0.0)
-					.build())
+				.options(StructuredOutput.options(GPT_4_1, "entity_extractor", converter.getJsonSchema(), false, 0.0))
 				.messages(new UserMessage(renderedPrompt))
 				.call()
 				.content();

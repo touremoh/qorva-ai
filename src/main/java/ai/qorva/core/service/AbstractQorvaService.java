@@ -4,6 +4,7 @@ import ai.qorva.core.dao.entity.QorvaEntity;
 import ai.qorva.core.dao.repository.QorvaRepository;
 import ai.qorva.core.dto.QorvaDTO;
 import ai.qorva.core.enums.QorvaErrorsEnum;
+import ai.qorva.core.exception.QorvaErrors;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.AbstractQorvaMapper;
 import ai.qorva.core.dao.querybuilder.QorvaQueryBuilder;
@@ -439,6 +440,11 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     // -------------------------------------------------------------------------
 
     protected QorvaException wrapException(Exception e, String message) {
+        if (e instanceof IllegalArgumentException) {
+            // Invalid input (failed Assert, bad parameter): the caller's mistake, not a server error.
+            log.warn("{}: {}", message, e.getMessage());
+            return QorvaErrors.badRequest(e.getMessage(), e);
+        }
         log.error(message, e);
         return new QorvaException(message, e);
     }

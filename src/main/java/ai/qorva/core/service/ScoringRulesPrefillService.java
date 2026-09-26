@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dto.common.ScoringRules;
 import ai.qorva.core.dto.common.ScoringWeight;
 import ai.qorva.core.dto.common.SkillRequirement;
@@ -77,8 +79,7 @@ public class ScoringRulesPrefillService {
 
 	private ScoringRules doSuggest(String title, String description) throws QorvaException {
 		if (!StringUtils.hasText(description)) {
-			throw new QorvaException("Job description is required",
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest("Job description is required");
 		}
 		var converter = new BeanOutputConverter<>(ScoringRules.class);
 		var prompt = promptTemplate

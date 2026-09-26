@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.BackgroundJob;
 import ai.qorva.core.dao.repository.BackgroundJobRepository;
 import ai.qorva.core.dto.BackgroundJobData;
@@ -87,7 +89,7 @@ public class BulkCvUploadService {
 
 	public BulkCvUploadData.CreateResponse create(String tenantId, String createdBy) throws QorvaException {
 		if (jobRepository.existsByTenantIdAndTypeAndStatusIn(tenantId, BackgroundJob.TYPE_BULK_CV_UPLOAD, ACTIVE_STATUSES)) {
-			throw new QorvaException(QorvaErrorCodes.BULK_JOB_ACTIVE_EXISTS, HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.BULK_JOB_ACTIVE_EXISTS);
 		}
 		var job = jobRepository.save(BackgroundJob.builder()
 			.tenantId(tenantId)
@@ -106,7 +108,7 @@ public class BulkCvUploadService {
 	public BulkCvUploadData.StageResponse appendFiles(String tenantId, String jobId, List<MultipartFile> files) throws QorvaException {
 		findOwnedDraft(tenantId, jobId);
 		if (files == null || files.isEmpty()) {
-			throw new QorvaException(QorvaErrorCodes.BULK_JOB_NO_FILES, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.BULK_JOB_NO_FILES);
 		}
 		int maxFiles = maxFilesForTenant(tenantId);
 
@@ -125,7 +127,7 @@ public class BulkCvUploadService {
 				.build());
 		}
 		if (items.isEmpty()) {
-			throw new QorvaException(QorvaErrorCodes.BULK_JOB_NO_FILES, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.BULK_JOB_NO_FILES);
 		}
 
 		// Atomic push with a size guard: element [maxFiles - n] existing would mean the
@@ -151,7 +153,7 @@ public class BulkCvUploadService {
 			// or the plan cap — re-read to report the right error.
 			var current = findOwned(tenantId, jobId);
 			if (!BackgroundJob.STATUS_DRAFT.equals(current.getStatus())) {
-				throw new QorvaException(QorvaErrorCodes.BULK_JOB_NOT_DRAFT, HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+				throw QorvaErrors.conflict(QorvaErrorCodes.BULK_JOB_NOT_DRAFT);
 			}
 			throw new QorvaException(QorvaErrorCodes.BULK_LIMIT_FOR_PLAN,
 				HttpStatus.FORBIDDEN.value(), HttpStatus.FORBIDDEN, maxFiles);
@@ -166,14 +168,13 @@ public class BulkCvUploadService {
 		var job = findOwnedDraft(tenantId, jobId);
 		var staged = job.getStagedFiles();
 		if (staged == null || staged.isEmpty()) {
-			throw new QorvaException(QorvaErrorCodes.BULK_JOB_NO_FILES, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.BULK_JOB_NO_FILES);
 		}
 
 		// The worker gates per file and skips the remainder when quota runs out; refusing
 		// here only when nothing at all can be processed keeps partial imports possible.
 		if (!usageMonitoringService.hasCapacityFor(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS, 1)) {
-			throw new QorvaException(QorvaErrorCodes.USAGE_SCREENING_LIMIT_EXCEEDED,
-				HttpStatus.FORBIDDEN.value(), HttpStatus.FORBIDDEN);
+			throw QorvaErrors.forbidden(QorvaErrorCodes.USAGE_SCREENING_LIMIT_EXCEEDED);
 		}
 
 		job.setStatus(BackgroundJob.STATUS_PENDING);
@@ -224,7 +225,7 @@ public class BulkCvUploadService {
 	private BackgroundJob findOwnedDraft(String tenantId, String jobId) throws QorvaException {
 		var job = findOwned(tenantId, jobId);
 		if (!BackgroundJob.STATUS_DRAFT.equals(job.getStatus())) {
-			throw new QorvaException(QorvaErrorCodes.BULK_JOB_NOT_DRAFT, HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.BULK_JOB_NOT_DRAFT);
 		}
 		return job;
 	}

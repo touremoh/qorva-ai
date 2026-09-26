@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.Chat;
 import ai.qorva.core.dao.entity.ChatMessage;
 import ai.qorva.core.dao.repository.ChatMessagesRepository;
@@ -158,14 +160,14 @@ public class ChatService {
     /** An optional context id must name a document of the tenant; a foreign and a missing one are the same 404. */
     private static void requireInTenant(OwnedLookup<?> repository, String id, String tenantId) throws QorvaException {
         if (id != null && !id.isBlank() && repository.findByIdInTenant(id, tenantId).isEmpty()) {
-            throw new QorvaException(QorvaErrorCodes.HTTP_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+            throw QorvaErrors.notFound(QorvaErrorCodes.HTTP_NOT_FOUND);
         }
     }
 
     /** The chat if it belongs to the tenant; a missing and a foreign chat are the same 404. */
     private Chat requireChat(String tenantId, String chatId) throws QorvaException {
         return chatsRepository.findByIdInTenant(chatId, tenantId)
-            .orElseThrow(() -> new QorvaException(QorvaErrorCodes.CHAT_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+            .orElseThrow(() -> QorvaErrors.notFound(QorvaErrorCodes.CHAT_NOT_FOUND));
     }
 
     private static boolean isUnansweredDuplicate(ChatMessage newest, String content) {

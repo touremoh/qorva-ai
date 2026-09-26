@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.Note;
 import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
@@ -110,16 +112,15 @@ public class NoteService {
 	/** Loads a note for edit/delete: must exist in this tenant, be the caller's own, and the caller must hold the target's write authority. */
 	private Note loadOwn(String tenantId, String authorEmail, String noteId) throws QorvaException {
 		var note = noteRepository.findByIdInTenant(noteId, tenantId)
-			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.NOTE_NOT_FOUND,
-				HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+			.orElseThrow(() -> QorvaErrors.notFound(QorvaErrorCodes.NOTE_NOT_FOUND));
 
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		if (!noteAccess.canWrite(auth, NoteTargetTypeEnum.fromValue(note.getTargetType()))) {
-			throw new QorvaException(QorvaErrorCodes.HTTP_FORBIDDEN, HttpStatus.FORBIDDEN.value(), HttpStatus.FORBIDDEN);
+			throw QorvaErrors.forbidden(QorvaErrorCodes.HTTP_FORBIDDEN);
 		}
 		if (!Objects.equals(note.getAuthorEmail(), authorEmail)) {
 			log.warn("User {} tried to modify note {} owned by {}", authorEmail, noteId, note.getAuthorEmail());
-			throw new QorvaException(QorvaErrorCodes.NOTE_NOT_AUTHOR, HttpStatus.FORBIDDEN.value(), HttpStatus.FORBIDDEN);
+			throw QorvaErrors.forbidden(QorvaErrorCodes.NOTE_NOT_AUTHOR);
 		}
 		return note;
 	}
@@ -149,8 +150,7 @@ public class NoteService {
 	private static NoteTargetTypeEnum parseType(String value) throws QorvaException {
 		var type = NoteTargetTypeEnum.fromValue(value);
 		if (type == null) {
-			throw new QorvaException(QorvaErrorCodes.NOTE_TARGET_TYPE_INVALID,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.NOTE_TARGET_TYPE_INVALID);
 		}
 		return type;
 	}
@@ -158,13 +158,12 @@ public class NoteService {
 	private static String cleanText(String text) throws QorvaException {
 		var cleaned = text == null ? "" : text.strip();
 		if (cleaned.isEmpty() || cleaned.length() > MAX_TEXT_LENGTH) {
-			throw new QorvaException(QorvaErrorCodes.NOTE_TEXT_INVALID,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.NOTE_TEXT_INVALID);
 		}
 		return cleaned;
 	}
 
 	private static QorvaException notFound() {
-		return new QorvaException(QorvaErrorCodes.HTTP_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+		return QorvaErrors.notFound(QorvaErrorCodes.HTTP_NOT_FOUND);
 	}
 }

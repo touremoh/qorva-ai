@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.security.TenantScope;
 
 import ai.qorva.core.config.QorvaProductProperties;
@@ -197,7 +199,7 @@ public class UserRegistrationService {
 
 	private QorvaException checkoutRefused(String userId, String tenantId) {
 		log.warn("Checkout session refused: user {} is not a user of tenant {}", userId, tenantId);
-		return new QorvaException(QorvaErrorCodes.HTTP_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+		return QorvaErrors.notFound(QorvaErrorCodes.HTTP_NOT_FOUND);
 	}
 
 	// -------------------------------------------------------------------------

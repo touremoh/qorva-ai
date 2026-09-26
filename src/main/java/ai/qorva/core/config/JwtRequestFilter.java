@@ -4,6 +4,7 @@ import ai.qorva.core.dto.QorvaErrorResponse;
 import ai.qorva.core.enums.SubscriptionStatus;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.security.LanguageContextHolder;
+import ai.qorva.core.security.QorvaUserDetails;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.QorvaUserDetailsService;
 import ai.qorva.core.utils.JwtUtils;
@@ -90,10 +91,11 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 					String username = claims.getSubject();
 					String tenantId = claims.get(TENANT_ID, String.class);
 
-					if (Strings.hasText(username) && SecurityContextHolder.getContext().getAuthentication() == null) {
+					if (Strings.hasText(username) && isAccessToken(claims) && SecurityContextHolder.getContext().getAuthentication() == null) {
 						UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
-						if (Boolean.TRUE.equals(JwtUtils.isTokenValid(token, userDetails, jwtConfig.getSecretKey()))) {
+						if (Boolean.TRUE.equals(JwtUtils.isTokenValid(token, userDetails, jwtConfig.getSecretKey()))
+							&& isUsable(userDetails) && belongsToTenant(userDetails, tenantId)) {
 							// Merge subscription-level authorities (from JWT) with action-level authorities (from UserDetails)
 							List<GrantedAuthority> authorities = new ArrayList<>(userDetails.getAuthorities());
 
@@ -124,6 +126,29 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 			TenantContextHolder.clear();
 			LanguageContextHolder.clear();
 		}
+	}
+
+	/**
+	 * Only access tokens authenticate a request. Single-purpose tokens (set-password links) carry a
+	 * {@code purpose}; access tokens carry {@code typ=access} — tokens minted before that claim existed
+	 * have neither and stay valid until they expire.
+	 */
+	static boolean isAccessToken(Claims claims) {
+		if (claims.get(JwtUtils.PURPOSE) != null) {
+			return false;
+		}
+		var type = claims.get(JwtUtils.TYPE, String.class);
+		return type == null || JwtUtils.TYPE_ACCESS.equals(type);
+	}
+
+	/** A deactivated, locked or deleted account stops working at once, not when its token expires. */
+	private static boolean isUsable(UserDetails userDetails) {
+		return userDetails.isEnabled() && userDetails.isAccountNonLocked() && userDetails.isAccountNonExpired();
+	}
+
+	/** The tenant a token names must still be the user's own. */
+	private static boolean belongsToTenant(UserDetails userDetails, String tenantId) {
+		return !(userDetails instanceof QorvaUserDetails qorvaUser) || java.util.Objects.equals(qorvaUser.getTenantId(), tenantId);
 	}
 
 	private boolean isSubscriptionBlocked(String subscriptionStatus, String requestUri) {

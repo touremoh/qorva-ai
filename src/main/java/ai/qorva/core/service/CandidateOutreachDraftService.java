@@ -1,5 +1,9 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.service.orchestrators.StructuredOutput;
+
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CandidateOutreachData;
@@ -75,8 +79,7 @@ public class CandidateOutreachDraftService {
 	                                                  String fallbackLanguage) throws QorvaException {
 		var intent = OutreachIntentEnum.fromValue(request.getIntent());
 		if (intent == null) {
-			throw new QorvaException(QorvaErrorCodes.OUTREACH_INTENT_INVALID,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.OUTREACH_INTENT_INVALID);
 		}
 		var language = StringUtils.hasText(request.getLanguage()) ? request.getLanguage() : fallbackLanguage;
 
@@ -163,7 +166,7 @@ public class CandidateOutreachDraftService {
 
 	/** GPT-5-family models only accept the default temperature (1); mini/4.x models take a lower one. */
 	static double temperatureFor(String model) {
-		return model != null && model.startsWith("gpt-5") ? 1.0 : 0.7;
+		return StructuredOutput.temperatureFor(model, 0.7);
 	}
 
 	private String resolveSenderName(String email) {

@@ -17,6 +17,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class StripeInvoicePaymentFailedHandler implements StripeEventHandler {
 
+	@Override
+	public java.util.Set<String> eventTypes() {
+		return java.util.Set.of("invoice.payment_failed");
+	}
+
+	@Override
+	public Class<? extends StripeObject> objectType() {
+		return com.stripe.model.Invoice.class;
+	}
+
 	private static final String EVENT_TYPE = "invoice.payment_failed";
 
 	private final TenantService tenantService;

@@ -1,5 +1,9 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
+import ai.qorva.core.utils.Paging;
+
 import ai.qorva.core.service.cascade.CascadeRegistry;
 import ai.qorva.core.service.cascade.CascadeResource;
 
@@ -133,7 +137,7 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 			);
 		if (response.isEmpty()) {
 			// Expected state (the resume-chat dialog probes for a report before creating a chat) — a 404, not a 500.
-			throw new QorvaException(QorvaErrorCodes.REPORT_RESUME_MATCH_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+			throw QorvaErrors.notFound(QorvaErrorCodes.REPORT_RESUME_MATCH_NOT_FOUND);
 		}
 		return this.mapper.map(response.get());
 	}
@@ -145,9 +149,8 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 			var searchTerms = params.get("searchTerms");
 			var tenantId = params.get("tenantId");
 			var jobPostId = params.get("jobPostId");
-			int pageSize = Integer.parseInt(params.get("pageSize"));
-			int pageNumber = Integer.parseInt(params.get("pageNumber"));
-			var pageable = PageRequest.of(pageNumber, pageSize, Sort.by("lastUpdatedAt").descending());
+			var pageable = Paging.of(Paging.param(params, "pageNumber", 0), Paging.param(params, "pageSize", 10),
+				Sort.by("lastUpdatedAt").descending());
 
 			// Process
 			Page<MatchingReport> results = (jobPostId == null || jobPostId.isBlank())

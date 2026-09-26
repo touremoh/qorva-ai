@@ -25,6 +25,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
  */
 class PurgeContractIntegrationTest extends AbstractIntegrationTest {
 
+	/** Collections that never hold tenant data; per-tenant counts leave them out. */
+	private static final java.util.Set<String> GLOBAL_COLLECTIONS = java.util.Set.of("stripe_webhook_events", "stripe_product_references");
+
 	@Autowired private TwoTenantFixture fixture;
 	@Autowired private MongoTemplate mongo;
 	@Autowired private DemoDataPurgeService demoDataPurgeService;
@@ -84,7 +87,7 @@ class PurgeContractIntegrationTest extends AbstractIntegrationTest {
 		var counts = new TreeMap<String, Long>();
 		var filter = new Document("$or", List.of(new Document("tenantId", new ObjectId(tenantId)), new Document("tenantId", tenantId)));
 		for (var name : mongo.getCollectionNames()) {
-			if (name.startsWith("mongock") || name.startsWith("system.")) continue;
+			if (name.startsWith("mongock") || name.startsWith("system.") || GLOBAL_COLLECTIONS.contains(name)) continue;
 			counts.put(name, mongo.getCollection(name).countDocuments(filter));
 		}
 		return new Document(counts).toJson();

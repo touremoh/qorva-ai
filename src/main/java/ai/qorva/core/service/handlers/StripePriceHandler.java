@@ -6,24 +6,35 @@ import ai.qorva.core.service.ProductReferenceService;
 import com.stripe.model.Price;
 import com.stripe.model.StripeObject;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Set;
+
+/** price.created / price.updated: keeps each product's prices in the local catalogue. */
 @Slf4j
 @Service
-public class StripePriceCreatedHandler implements StripeEventHandler {
+public class StripePriceHandler implements StripeEventHandler {
 
 	private final ProductReferenceService productReferenceService;
 
-	@Autowired
-	public StripePriceCreatedHandler(ProductReferenceService productReferenceService) {
+	public StripePriceHandler(ProductReferenceService productReferenceService) {
 		this.productReferenceService = productReferenceService;
+	}
+
+	@Override
+	public Set<String> eventTypes() {
+		return Set.of("price.created", "price.updated");
+	}
+
+	@Override
+	public Class<? extends StripeObject> objectType() {
+		return Price.class;
 	}
 
 	@Override
 	public void handle(StripeObject obj) throws QorvaException {
 		Price price = (Price) obj;
-		log.info("Handling price.created stripePriceId={}", price.getId());
+		log.info("Handling price event stripePriceId={}", price.getId());
 		productReferenceService.upsertPrice(price.getProduct(), buildStripePrice(price));
 	}
 

@@ -1,0 +1,28 @@
+{
+  "collMod": "stripe_webhook_events",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "stripe_webhook_events",
+      "required": ["_id", "eventType", "status", "createdAt"],
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "the Stripe event id (evt_…): one row per event, which is what makes delivery idempotent"
+        },
+        "eventType": { "bsonType": "string" },
+        "status": {
+          "bsonType": "string",
+          "enum": ["PROCESSING", "PROCESSED"]
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "TTL index removes the row 30 days later, well past Stripe's 3-day retry window"
+        },
+        "processedAt": { "bsonType": "date" }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

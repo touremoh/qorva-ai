@@ -35,7 +35,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.UUID;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
@@ -51,7 +51,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @Component
 public class BackgroundJobWorker {
 
-	private static final String INSTANCE_ID = UUID.randomUUID().toString();
+	private static final String INSTANCE_ID = WorkerInstance.ID;
 	private static final Duration LEASE = Duration.ofMinutes(2);
 	private static final int BATCH_SIZE = 10;
 	private static final int LLM_CONCURRENCY = 3;
@@ -133,18 +133,27 @@ public class BackgroundJobWorker {
 		}
 	}
 
+	@FunctionalInterface
+	private interface JobRunner {
+		void run(BackgroundJob job) throws Exception;
+	}
+
+	/** Job type → how to run it. A new job type is one entry here. */
+	private Map<String, JobRunner> runners() {
+		return Map.of(
+			BackgroundJob.TYPE_REANALYZE, this::runReanalyze,
+			BackgroundJob.TYPE_CANDIDATE_UPDATE_CAMPAIGN, this::runCampaign,
+			BackgroundJob.TYPE_BULK_CV_UPLOAD, this::runBulkUpload,
+			BackgroundJob.TYPE_ATS_SYNC, atsSyncService::executeSync);
+	}
+
 	private void run(BackgroundJob job) throws Exception {
-		if (BackgroundJob.TYPE_REANALYZE.equals(job.getType())) {
-			runReanalyze(job);
-		} else if (BackgroundJob.TYPE_CANDIDATE_UPDATE_CAMPAIGN.equals(job.getType())) {
-			runCampaign(job);
-		} else if (BackgroundJob.TYPE_BULK_CV_UPLOAD.equals(job.getType())) {
-			runBulkUpload(job);
-		} else if (BackgroundJob.TYPE_ATS_SYNC.equals(job.getType())) {
-			atsSyncService.executeSync(job);
-		} else {
+		var runner = runners().get(job.getType());
+		if (runner == null) {
 			fail(job, "unsupported_job_type");
+			return;
 		}
+		runner.run(job);
 	}
 
 	/** Atomic claim: PENDING, or RUNNING with an expired lease (crashed worker). */

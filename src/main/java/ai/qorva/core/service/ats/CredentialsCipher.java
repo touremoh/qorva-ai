@@ -1,11 +1,9 @@
 package ai.qorva.core.service.ats;
 
 import ai.qorva.core.config.AtsProperties;
-import ai.qorva.core.exception.QorvaErrorCodes;
-import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.security.SecretBlobCipher;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.http.HttpStatus;
+import ai.qorva.core.security.JsonSecretCipher;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,31 +13,9 @@ import org.springframework.stereotype.Component;
  * Losing the key invalidates every stored connection — tenants would simply reconnect.
  */
 @Component
-public class CredentialsCipher {
-
-	private final SecretBlobCipher cipher;
-	private final ObjectMapper objectMapper;
+public class CredentialsCipher extends JsonSecretCipher<AtsCredentials> {
 
 	public CredentialsCipher(AtsProperties properties, ObjectMapper objectMapper) {
-		this.cipher = new SecretBlobCipher(properties.getCredentialsKey(), "qorva.ats.credentials-key");
-		this.objectMapper = objectMapper;
-	}
-
-	public String encrypt(AtsCredentials credentials) throws QorvaException {
-		try {
-			return cipher.encrypt(objectMapper.writeValueAsBytes(credentials));
-		} catch (Exception e) {
-			throw new QorvaException(QorvaErrorCodes.HTTP_UNEXPECTED,
-				HttpStatus.INTERNAL_SERVER_ERROR.value(), HttpStatus.INTERNAL_SERVER_ERROR);
-		}
-	}
-
-	public AtsCredentials decrypt(String encryptedBlob) throws QorvaException {
-		try {
-			return objectMapper.readValue(cipher.decrypt(encryptedBlob), AtsCredentials.class);
-		} catch (Exception e) {
-			throw new QorvaException(QorvaErrorCodes.HTTP_UNEXPECTED,
-				HttpStatus.INTERNAL_SERVER_ERROR.value(), HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+		super(properties.getCredentialsKey(), "qorva.ats.credentials-key", AtsCredentials.class, objectMapper);
 	}
 }

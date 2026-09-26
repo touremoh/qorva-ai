@@ -1,5 +1,7 @@
 package ai.qorva.core.controller;
 
+import ai.qorva.core.utils.Paging;
+
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVDuplicatesData;
 import ai.qorva.core.dto.CVFilterOptionsData;
@@ -97,7 +99,7 @@ public class CVController extends AbstractQorvaController<CVDTO> {
         @RequestParam("searchTerms") String searchTerms,
         @RequestParam("pageSize") int pageSize,
         @RequestParam("pageNumber") int pageNumber) throws QorvaException {
-        return BuildApiResponse.from(((CVService) this.service).searchAll(currentTenantId(), searchTerms, pageSize, pageNumber));
+        return BuildApiResponse.from(((CVService) this.service).searchAll(currentTenantId(), searchTerms, Paging.size(pageSize), Paging.page(pageNumber)));
     }
 
     /** Distinct values + counts for the list filter rail; mirrors the archived toggle of GET /cvs. */
@@ -113,7 +115,7 @@ public class CVController extends AbstractQorvaController<CVDTO> {
     public ResponseEntity<CVDuplicatesData.DuplicatesPage> findDuplicates(
         @RequestParam(defaultValue = "0") int pageNumber,
         @RequestParam(defaultValue = "20") int pageSize) {
-        return ResponseEntity.ok(((CVService) service).findDuplicates(currentTenantId(), pageNumber, pageSize));
+        return ResponseEntity.ok(((CVService) service).findDuplicates(currentTenantId(), Paging.page(pageNumber), Paging.size(pageSize)));
     }
 
     @GetMapping("/tags")

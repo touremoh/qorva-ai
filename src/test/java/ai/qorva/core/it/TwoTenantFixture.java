@@ -66,9 +66,8 @@ public class TwoTenantFixture {
 	public static final String PASSWORD = "Correct-Horse-9";
 	public static final Instant BASE_TIME = Instant.parse("2026-09-15T08:00:00Z");
 
-	/** Collections that belong to Mongock or are global; everything else is wiped before each seed. */
-	private static final Set<String> KEPT_COLLECTIONS = Set.of(
-		"mongockChangeLog", "mongockLock", "stripe_product_references");
+	/** Mongock's own collections; everything else (the global catalogue and ledger included) is wiped before each seed. */
+	private static final Set<String> KEPT_COLLECTIONS = Set.of("mongockChangeLog", "mongockLock");
 
 	private final MongoTemplate mongo;
 	private final CVService cvService;

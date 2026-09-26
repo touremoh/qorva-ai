@@ -17,6 +17,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class StripeSubscriptionPausedHandler implements StripeEventHandler {
 
+	@Override
+	public java.util.Set<String> eventTypes() {
+		return java.util.Set.of("customer.subscription.paused");
+	}
+
+	@Override
+	public Class<? extends StripeObject> objectType() {
+		return com.stripe.model.Subscription.class;
+	}
+
 	private final TenantService tenantService;
 	private final StripeEventLogRepository repository;
 	private final StripeEventMapper evtMapper;

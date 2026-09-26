@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.entity.CandidateOutreach;
 import ai.qorva.core.dao.repository.CVRepository;
@@ -81,8 +83,7 @@ public class CandidateOutreachService {
 	                                            CandidateOutreachData.ExternalRequest request) throws QorvaException {
 		var via = OutreachViaEnum.fromHandoffValue(request.getVia());
 		if (via == null) {
-			throw new QorvaException(QorvaErrorCodes.OUTREACH_VIA_INVALID,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.OUTREACH_VIA_INVALID);
 		}
 		loadCv(tenantId, request.getCvId());
 		assertNotSuppressed(tenantId, request.getTo());
@@ -159,19 +160,17 @@ public class CandidateOutreachService {
 
 	private void assertNotSuppressed(String tenantId, String email) throws QorvaException {
 		if (!StringUtils.hasText(email)) {
-			throw new QorvaException(QorvaErrorCodes.OUTREACH_NO_EMAIL,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.OUTREACH_NO_EMAIL);
 		}
 		if (isSuppressed(tenantId, email)) {
-			throw new QorvaException(QorvaErrorCodes.OUTREACH_SUPPRESSED,
-				HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.OUTREACH_SUPPRESSED);
 		}
 	}
 
 	/** A wrong tenant and a missing document answer the same way: no existence oracle. */
 	private CV loadCv(String tenantId, String cvId) throws QorvaException {
 		return cvRepository.findByIdInTenant(cvId, tenantId)
-			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.HTTP_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+			.orElseThrow(() -> QorvaErrors.notFound(QorvaErrorCodes.HTTP_NOT_FOUND));
 	}
 
 	/** Same rule as {@code CandidateUpdateService.isSuppressed}: the list is tenant-scoped and lower-cased. */

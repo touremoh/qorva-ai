@@ -10,8 +10,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.converter.BeanOutputConverter;
-import org.springframework.ai.openai.OpenAiChatOptions;
-import org.springframework.ai.openai.api.ResponseFormat;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -37,18 +35,7 @@ public class ReportGenerationAgent {
 		var scoringRulesJson = scoringRules != null ? QorvaUtils.toJSON(scoringRules) : "";
 
 		var apiResponse = chatClient.prompt()
-			.options(OpenAiChatOptions.builder()
-				.model(model)
-				.responseFormat(ResponseFormat.builder()
-					.type(ResponseFormat.Type.JSON_SCHEMA)
-					.jsonSchema(ResponseFormat.JsonSchema.builder()
-						.name("report_generation")
-						.schema(outputConverter.getJsonSchema())
-						.strict(Boolean.TRUE)
-						.build())
-					.build())
-				.temperature(1.0)
-				.build())
+			.options(StructuredOutput.options(model, "report_generation", outputConverter.getJsonSchema(), true, 1.0))
 			.user(u -> u
 				.text(reportGenerationPrompt)
 				.param("cv_data", cvDetails)
