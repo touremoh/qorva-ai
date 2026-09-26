@@ -13,4 +13,6 @@ public interface CandidateUpdateRequestRepository extends MongoRepository<Candid
 	boolean existsByTenantIdAndCvIdAndStatusIn(String tenantId, String cvId, List<String> statuses);
 
 	long deleteByTenantId(String tenantId);
+
+	long deleteByTenantIdAndCvIdIn(String tenantId, java.util.Collection<String> cvIds);
 }

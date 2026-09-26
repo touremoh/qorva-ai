@@ -93,18 +93,8 @@ public class NoteService {
 	// Cascade helpers — called by the services that own the annotated documents
 	// -------------------------------------------------------------------------
 
-	public long deleteForTarget(String tenantId, NoteTargetTypeEnum type, String targetId) {
-		return noteRepository.deleteByTenantIdAndTargetTypeAndTargetId(tenantId, type.name(), targetId);
-	}
 
-	public long deleteForTargets(String tenantId, NoteTargetTypeEnum type, Collection<String> targetIds) {
-		if (targetIds == null || targetIds.isEmpty()) return 0L;
-		return noteRepository.deleteByTenantIdAndTargetTypeAndTargetIdIn(tenantId, type.name(), targetIds);
-	}
 
-	public long deleteForTenant(String tenantId) {
-		return noteRepository.deleteByTenantId(tenantId);
-	}
 
 	/** Moves a thread to another document of the same type (duplicate resolution keeps recruiter knowledge). */
 	public long retarget(String tenantId, NoteTargetTypeEnum type, String fromTargetId, String toTargetId) {
@@ -119,8 +109,7 @@ public class NoteService {
 
 	/** Loads a note for edit/delete: must exist in this tenant, be the caller's own, and the caller must hold the target's write authority. */
 	private Note loadOwn(String tenantId, String authorEmail, String noteId) throws QorvaException {
-		var note = noteRepository.findById(noteId)
-			.filter(n -> Objects.equals(n.getTenantId(), tenantId))
+		var note = noteRepository.findByIdInTenant(noteId, tenantId)
 			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.NOTE_NOT_FOUND,
 				HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
 
@@ -139,13 +128,12 @@ public class NoteService {
 		if (!ObjectId.isValid(targetId)) {
 			throw notFound();
 		}
-		var oid = new ObjectId(targetId);
-		var owner = switch (type) {
-			case CV -> cvRepository.findById(oid).map(cv -> cv.getTenantId()).orElse(null);
-			case MATCHING_REPORT -> matchingReportRepository.findById(oid).map(r -> r.getTenantId()).orElse(null);
+		// The tenant is part of the lookup: a wrong tenant and a missing document answer the same way.
+		var exists = switch (type) {
+			case CV -> cvRepository.findByIdInTenant(targetId, tenantId).isPresent();
+			case MATCHING_REPORT -> matchingReportRepository.findByIdInTenant(targetId, tenantId).isPresent();
 		};
-		// A wrong tenant and a missing document answer the same way: no existence oracle.
-		if (!Objects.equals(owner, tenantId)) {
+		if (!exists) {
 			throw notFound();
 		}
 	}

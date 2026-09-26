@@ -10,8 +10,17 @@ import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dao.repository.CandidateOutreachRepository;
 import ai.qorva.core.dao.repository.NoteRepository;
 import ai.qorva.core.dao.repository.QualityIssueStateRepository;
+import ai.qorva.core.dao.repository.JobPostRepository;
+import ai.qorva.core.dao.repository.UsageMonitoringRepository;
 import ai.qorva.core.exception.QorvaErrorCodes;
+import ai.qorva.core.service.cascade.CandidateCascade;
+import ai.qorva.core.service.cascade.CascadeRegistry;
+import ai.qorva.core.service.cascade.ChatCascade;
+import ai.qorva.core.service.cascade.MatchingReportCascade;
+import ai.qorva.core.service.cascade.NoteCascade;
+import ai.qorva.core.service.cascade.TenantDataPurge;
 import ai.qorva.core.exception.QorvaException;
+import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -45,14 +54,23 @@ class LibraryClearServiceTest {
 	@Mock private S3StorageService s3StorageService;
 	@Mock private LibraryQualityCacheEvictor cacheEvictor;
 
+	@Mock private JobPostRepository jobPostRepository;
+	@Mock private UsageMonitoringRepository usageMonitoringRepository;
+
 	private LibraryClearService service;
 
 	@BeforeEach
 	void setUp() {
+		// The real registry and participants over mocked repositories: the test checks what actually gets deleted.
+		var cascadeRegistry = new CascadeRegistry(List.of(
+			new MatchingReportCascade(matchingReportRepository),
+			new ChatCascade(chatsRepository, chatMessagesRepository),
+			new NoteCascade(noteRepository),
+			new CandidateCascade(candidateOutreachRepository, candidateUpdateRequestRepository),
+			new TenantDataPurge(cvRepository, insightConversationTurnRepository, qualityIssueStateRepository,
+				jobPostRepository, usageMonitoringRepository)));
 		service = new LibraryClearService(cvRepository, matchingReportRepository, chatsRepository,
-			chatMessagesRepository, insightConversationTurnRepository, candidateUpdateRequestRepository,
-			qualityIssueStateRepository, noteRepository, candidateOutreachRepository, backgroundJobRepository,
-			s3StorageService, cacheEvictor);
+			backgroundJobRepository, cascadeRegistry, s3StorageService, cacheEvictor);
 	}
 
 	@Test
@@ -102,5 +120,7 @@ class LibraryClearServiceTest {
 		verify(s3StorageService).deleteCvDocumentsForTenant(TENANT);
 		verify(s3StorageService).deleteCandidateSubmissionsForTenant(TENANT);
 		verify(cacheEvictor).evict(TENANT);
+		verify(jobPostRepository, never()).deleteByTenantId(anyString());
+		verify(usageMonitoringRepository, never()).deleteByTenantId(anyString());
 	}
 }

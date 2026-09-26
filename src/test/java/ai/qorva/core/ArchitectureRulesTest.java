@@ -67,4 +67,16 @@ class ArchitectureRulesTest {
 			.should().beAnnotatedWith(RestController.class)
 			.check(production);
 	}
+
+	/**
+	 * Tenant-wide deletes happen in one place, the cascade package (CascadeRegistry#purgeTenant), so
+	 * what "clear the library" and "purge a demo" remove can no longer drift apart.
+	 */
+	@Test
+	void tenantWideDeletesOnlyInTheCascadeRegistry() {
+		noClasses().that().resideOutsideOfPackage("ai.qorva.core.service.cascade..")
+			.should().callMethodWhere(com.tngtech.archunit.core.domain.JavaCall.Predicates.target(
+				com.tngtech.archunit.core.domain.properties.HasName.Predicates.name("deleteByTenantId")))
+			.check(production);
+	}
 }

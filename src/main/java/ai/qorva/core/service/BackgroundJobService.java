@@ -10,7 +10,6 @@ import ai.qorva.core.exception.QorvaException;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -32,6 +31,10 @@ public class BackgroundJobService {
 	private final UsageMonitoringService usageMonitoringService;
 	private final CandidateEmailTemplateService candidateEmailTemplateService;
 
+	private static final String JOB_NOT_FOUND = "Job not found";
+
+	private final BackgroundJobQueries jobs;
+
 	private static final List<String> ACTIVE_STATUSES =
 		List.of(BackgroundJob.STATUS_PENDING, BackgroundJob.STATUS_RUNNING);
 
@@ -43,6 +46,7 @@ public class BackgroundJobService {
 		CandidateEmailTemplateService candidateEmailTemplateService
 	) {
 		this.jobRepository = jobRepository;
+		this.jobs = new BackgroundJobQueries(jobRepository);
 		this.cvRepository = cvRepository;
 		this.usageMonitoringService = usageMonitoringService;
 		this.candidateEmailTemplateService = candidateEmailTemplateService;
@@ -136,28 +140,15 @@ public class BackgroundJobService {
 	}
 
 	public BackgroundJobData.JobList list(String tenantId) {
-		var jobs = jobRepository.findByTenantIdOrderByCreatedAtDesc(tenantId, PageRequest.of(0, 10)).stream()
-			.map(BackgroundJobData.JobView::from)
-			.toList();
-		return new BackgroundJobData.JobList(jobs);
+		return jobs.recent(tenantId);
 	}
 
 	public BackgroundJobData.JobView get(String tenantId, String jobId) throws QorvaException {
-		return jobRepository.findByIdAndTenantId(jobId, tenantId)
-			.map(BackgroundJobData.JobView::from)
-			.orElseThrow(() -> new QorvaException("Job not found", HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+		return jobs.get(tenantId, jobId, JOB_NOT_FOUND);
 	}
 
 	public BackgroundJobData.JobView cancel(String tenantId, String jobId) throws QorvaException {
-		var job = jobRepository.findByIdAndTenantId(jobId, tenantId)
-			.orElseThrow(() -> new QorvaException("Job not found", HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
-		if (ACTIVE_STATUSES.contains(job.getStatus())) {
-			job.setStatus(BackgroundJob.STATUS_CANCELLED);
-			job.setFinishedAt(Instant.now());
-			jobRepository.save(job);
-			log.info("Background job {} cancelled by tenant {}", jobId, tenantId);
-		}
-		return BackgroundJobData.JobView.from(job);
+		return jobs.cancel(tenantId, jobId, JOB_NOT_FOUND, ACTIVE_STATUSES, job -> { });
 	}
 
 	private QualityIssueKeyEnum parseIssueKey(String issueKey) throws QorvaException {

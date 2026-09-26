@@ -8,7 +8,6 @@ import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -39,6 +38,8 @@ public class BulkCvUploadService {
 	/** Staging chunks stay at or below the sync-upload cap so Tomcat's part limit never bites. */
 	public static final int MAX_FILES_PER_CHUNK = CVService.SYNC_UPLOAD_MAX_FILES;
 
+	private final BackgroundJobQueries jobs;
+
 	private static final List<String> ACTIVE_STATUSES =
 		List.of(BackgroundJob.STATUS_DRAFT, BackgroundJob.STATUS_PENDING, BackgroundJob.STATUS_RUNNING);
 
@@ -59,6 +60,7 @@ public class BulkCvUploadService {
 		MongoTemplate mongoTemplate
 	) {
 		this.jobRepository = jobRepository;
+		this.jobs = new BackgroundJobQueries(jobRepository);
 		this.s3StorageService = s3StorageService;
 		this.usageMonitoringService = usageMonitoringService;
 		this.tenantService = tenantService;
@@ -189,30 +191,16 @@ public class BulkCvUploadService {
 	}
 
 	public BackgroundJobData.JobView get(String tenantId, String jobId) throws QorvaException {
-		var job = jobRepository.findByIdAndTenantId(jobId, tenantId)
-			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.BULK_JOB_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
-		return BackgroundJobData.JobView.from(job);
+		return jobs.get(tenantId, jobId, QorvaErrorCodes.BULK_JOB_NOT_FOUND);
 	}
 
+	/** The tenant's recent bulk uploads (the type is part of the query, so other jobs never crowd them out). */
 	public BackgroundJobData.JobList list(String tenantId) {
-		var jobs = jobRepository.findByTenantIdOrderByCreatedAtDesc(tenantId, PageRequest.of(0, 10)).stream()
-			.filter(job -> BackgroundJob.TYPE_BULK_CV_UPLOAD.equals(job.getType()))
-			.map(BackgroundJobData.JobView::from)
-			.toList();
-		return new BackgroundJobData.JobList(jobs);
+		return jobs.recent(tenantId, BackgroundJob.TYPE_BULK_CV_UPLOAD);
 	}
 
 	public BackgroundJobData.JobView cancel(String tenantId, String jobId) throws QorvaException {
-		var job = jobRepository.findByIdAndTenantId(jobId, tenantId)
-			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.BULK_JOB_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
-		if (ACTIVE_STATUSES.contains(job.getStatus())) {
-			job.setStatus(BackgroundJob.STATUS_CANCELLED);
-			job.setFinishedAt(Instant.now());
-			jobRepository.save(job);
-			deleteStagedObjects(job);
-			log.info("Bulk upload job {} cancelled by tenant {}", jobId, tenantId);
-		}
-		return BackgroundJobData.JobView.from(job);
+		return jobs.cancel(tenantId, jobId, QorvaErrorCodes.BULK_JOB_NOT_FOUND, ACTIVE_STATUSES, this::deleteStagedObjects);
 	}
 
 	/** Best-effort: deleteObject is idempotent, so files the worker already removed are no-ops. */
@@ -230,8 +218,7 @@ public class BulkCvUploadService {
 	}
 
 	private BackgroundJob findOwned(String tenantId, String jobId) throws QorvaException {
-		return jobRepository.findByIdAndTenantId(jobId, tenantId)
-			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.BULK_JOB_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+		return jobs.require(tenantId, jobId, QorvaErrorCodes.BULK_JOB_NOT_FOUND);
 	}
 
 	private BackgroundJob findOwnedDraft(String tenantId, String jobId) throws QorvaException {

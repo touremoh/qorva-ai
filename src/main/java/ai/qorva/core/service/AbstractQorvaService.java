@@ -7,6 +7,9 @@ import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.AbstractQorvaMapper;
 import ai.qorva.core.dao.querybuilder.QorvaQueryBuilder;
+import ai.qorva.core.dao.specifications.MongoSpecification;
+import ai.qorva.core.dao.specifications.MongoSpecifications;
+import org.springframework.data.mongodb.core.query.Criteria;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.security.TenantScope;
 import io.jsonwebtoken.lang.Strings;
@@ -53,28 +56,46 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         return TenantContextHolder.getTenantId();
     }
 
+    /** The field holding the owning tenant; the Tenant resource itself overrides this with its id. */
+    protected String tenantField() {
+        return "tenantId";
+    }
+
     /**
-     * Enforces tenant ownership. Code without a tenant in scope must have declared itself
-     * cross-tenant ({@link TenantScope#runAsSystem}); anything else is reported by
-     * {@link TenantScope#missing} (refused when fail-closed, logged otherwise).
+     * The documents this code may see: those of the tenant in scope. Inside a declared system scope
+     * ({@link TenantScope#runAsSystem}) that is every document; anywhere else without a tenant it is
+     * reported by {@link TenantScope#missing} (refused when fail-closed, unfiltered otherwise).
      */
-    protected void assertBelongsToCurrentTenant(E entity) throws QorvaException {
-        var currentTenantId = getCurrentTenantId();
-        if (!Strings.hasText(currentTenantId)) {
-            if (!TenantScope.isSystem()) {
-                TenantScope.missing("ownership check on " + entity.getClass().getSimpleName() + " " + entity.getId());
-            }
-            return;
+    protected MongoSpecification<E> inTenantScope() {
+        var tenantId = getCurrentTenantId();
+        if (Strings.hasText(tenantId)) {
+            return () -> Criteria.where(tenantField()).is(tenantId);
         }
-        if (!currentTenantId.equals(entity.getTenantId())) {
-            log.warn("Cross-tenant access attempt: resource {} belongs to tenant {} but current tenant is {}",
-                entity.getId(), entity.getTenantId(), currentTenantId);
-            throw new QorvaException(
-                QorvaErrorsEnum.FORBIDDEN.getMessage(),
-                QorvaErrorsEnum.FORBIDDEN.getHttpStatus().value(),
-                QorvaErrorsEnum.FORBIDDEN.getHttpStatus()
-            );
+        if (!TenantScope.isSystem()) {
+            TenantScope.missing(getClass().getSimpleName() + " query");
         }
+        return MongoSpecifications.empty();
+    }
+
+    /** The document with this id if it belongs to the tenant in scope — the tenant is part of the query. */
+    protected Optional<E> findOwned(String id) {
+        if (id == null || !ObjectId.isValid(id)) {
+            return Optional.empty();
+        }
+        MongoSpecification<E> byId = () -> Criteria.where("_id").is(new ObjectId(id));
+        var found = this.repository.findOne(MongoSpecifications.allOf(byId, inTenantScope()));
+        if (found.isEmpty() && Strings.hasText(getCurrentTenantId()) && this.repository.existsById(new ObjectId(id))) {
+            // Same answer as a missing id (no existence leak), but worth a line in the logs.
+            log.warn("Cross-tenant access attempt: {} {} is not in tenant {}", getClass().getSimpleName(), id, getCurrentTenantId());
+        }
+        return found;
+    }
+
+    private E requireOwned(String id) throws QorvaException {
+        return findOwned(id).orElseThrow(() -> new QorvaException(
+            RESOURCE_NOT_FOUND.getMessage(),
+            RESOURCE_NOT_FOUND.getHttpStatus().value(),
+            RESOURCE_NOT_FOUND.getHttpStatus()));
     }
 
     // -------------------------------------------------------------------------
@@ -86,16 +107,7 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         try {
             preProcessFindOneById(id);
 
-            E entity = this.repository
-                .findById(new ObjectId(id))
-                .orElseThrow(() -> new QorvaException(
-                    RESOURCE_NOT_FOUND.getMessage(),
-                    RESOURCE_NOT_FOUND.getHttpStatus().value(),
-                    RESOURCE_NOT_FOUND.getHttpStatus())
-                );
-
-            // Tenant isolation: reject if entity belongs to a different tenant
-            assertBelongsToCurrentTenant(entity);
+            E entity = requireOwned(id);
 
             postProcessFindOneById(entity);
             return renderFindOneById(entity);
@@ -259,7 +271,8 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         int pageNumber = Integer.parseInt(params.getOrDefault("pageNumber", "0"));
         int pageSize = Integer.parseInt(params.getOrDefault("pageSize", "25"));
         var pageable = PageRequest.of(pageNumber, pageSize, Sort.by("lastUpdatedAt").descending());
-        return this.repository.findAll(this.queryBuilder.buildQuery(params), pageable);
+        // The tenant criterion is added here, whatever the resource's query builder does with the params.
+        return this.repository.findAll(MongoSpecifications.allOf(this.queryBuilder.buildQuery(params), inTenantScope()), pageable);
     }
 
     protected void postProcessFindAll(Page<E> entities) throws QorvaException {
@@ -278,13 +291,8 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     public List<D> findAllByIds(List<String> ids) throws QorvaException {
         try {
             preProcessFindAllByIds(ids);
-            var tenantId = getCurrentTenantId();
-            if (!Strings.hasText(tenantId) && !TenantScope.isSystem()) {
-                TenantScope.missing("findAllByIds");
-            }
-            List<E> entities = Strings.hasText(tenantId)
-                ? this.repository.findByIdInAndTenantId(ids, tenantId)
-                : this.repository.findByIdIn(ids);
+            MongoSpecification<E> byIds = () -> Criteria.where("_id").in(ids.stream().filter(ObjectId::isValid).map(ObjectId::new).toList());
+            List<E> entities = this.repository.findAll(MongoSpecifications.allOf(byIds, inTenantScope()));
             postProcessFindAllByIds(entities);
             return renderFindAll(entities);
         } catch (QorvaException e) {
@@ -328,15 +336,8 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         Assert.notNull(id, "id must not be null");
         Assert.notNull(newResource, "Input Data must not be null");
 
-        // Fetch existing entity and verify tenant ownership before allowing the update
-        E existing = this.repository
-            .findById(new ObjectId(id))
-            .orElseThrow(() -> new QorvaException(
-                RESOURCE_NOT_FOUND.getMessage(),
-                RESOURCE_NOT_FOUND.getHttpStatus().value(),
-                RESOURCE_NOT_FOUND.getHttpStatus())
-            );
-        assertBelongsToCurrentTenant(existing);
+        // Only a document of the tenant in scope can be updated; anything else is simply not found.
+        E existing = requireOwned(id);
 
         // The document saved is the one whose ownership was just checked: an id in the payload
         // must never redirect the write to another document (or another tenant's).
@@ -376,12 +377,10 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         Assert.notNull(id, "id must not be null");
         Assert.notNull(tenantId, "Tenant id must not be null");
 
-        var entity = Optional.ofNullable(this.findOneById(id))
-            .orElseThrow(() -> new QorvaException("Resource not found with id: " + id));
+        var entity = requireOwned(id);
 
-        // findOneById already calls assertBelongsToCurrentTenant, but we also guard here
-        // via the explicit tenantId parameter for callers that supply it directly.
-        if (!entity.getTenantId().equals(tenantId)) {
+        // The caller's tenant must also be the owner (it is the tenant in scope for API calls).
+        if (!tenantId.equals(entity.getTenantId())) {
             log.warn("Resource {} does not belong to tenant {}", id, tenantId);
             throw new QorvaException(
                 "Impossible to delete this resource",

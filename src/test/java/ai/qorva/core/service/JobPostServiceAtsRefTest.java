@@ -1,12 +1,14 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.dao.specifications.MongoSpecification;
+
+import ai.qorva.core.service.cascade.CascadeRegistry;
+
 import ai.qorva.core.security.TenantScope;
 
 import ai.qorva.core.dao.entity.JobPost;
 import ai.qorva.core.dao.querybuilder.JobPostQueryBuilder;
-import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.JobPostRepository;
-import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.common.AtsRef;
 import ai.qorva.core.mapper.JobPostMapperImpl;
@@ -40,17 +42,14 @@ class JobPostServiceAtsRefTest {
 
 	@Mock private JobPostRepository repository;
 	@Mock private JobPostQueryBuilder queryBuilder;
-	@Mock private MatchingReportRepository matchingReportRepository;
-	@Mock private ChatsRepository chatsRepository;
-	@Mock private NoteService noteService;
+	@Mock private CascadeRegistry cascadeRegistry;
 
 	private JobPostService service;
 
 	@BeforeEach
 	void setUp() {
 		// The real generated mapper: the point of the test is what mapping actually carries over.
-		service = new JobPostService(repository, new JobPostMapperImpl(), queryBuilder,
-			matchingReportRepository, chatsRepository, noteService);
+		service = new JobPostService(repository, new JobPostMapperImpl(), queryBuilder, cascadeRegistry);
 	}
 
 	private JobPost storedImportedJob() {
@@ -69,8 +68,13 @@ class JobPostServiceAtsRefTest {
 		return stored;
 	}
 
+	@SuppressWarnings("unchecked")
+	private static MongoSpecification<JobPost> anySpecification() {
+		return any(MongoSpecification.class);
+	}
+
 	private JobPost saveUpdate(JobPostDTO payload) throws Exception {
-		when(repository.findById(new ObjectId(JOB_ID))).thenReturn(Optional.of(storedImportedJob()));
+		when(repository.findOne(anySpecification())).thenReturn(Optional.of(storedImportedJob()));
 		when(repository.save(any(JobPost.class))).thenAnswer(call -> call.getArgument(0));
 
 		TenantScope.runAs(TENANT_ID, () -> service.updateOne(JOB_ID, payload));

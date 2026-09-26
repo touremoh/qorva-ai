@@ -46,7 +46,7 @@ class UserServicePasswordTest {
 	@Test
 	void updatePassword_bumpsCredentialVersion_soOutstandingResetLinksDie() throws QorvaException {
 		var user = user(2);
-		when(userRepository.findById(new ObjectId(USER_ID))).thenReturn(Optional.of(user));
+		when(userRepository.findByIdInTenant(USER_ID, TENANT)).thenReturn(Optional.of(user));
 		when(passwordEncoder.matches("old", "$old")).thenReturn(true);
 		when(passwordEncoder.encode("new")).thenReturn("$new");
 
@@ -60,7 +60,7 @@ class UserServicePasswordTest {
 	@Test
 	void updatePassword_legacyUserWithoutVersion_startsAtOne() throws QorvaException {
 		var user = user(null);
-		when(userRepository.findById(new ObjectId(USER_ID))).thenReturn(Optional.of(user));
+		when(userRepository.findByIdInTenant(USER_ID, TENANT)).thenReturn(Optional.of(user));
 		when(passwordEncoder.matches("old", "$old")).thenReturn(true);
 		when(passwordEncoder.encode("new")).thenReturn("$new");
 
@@ -71,7 +71,7 @@ class UserServicePasswordTest {
 
 	@Test
 	void updatePassword_wrongCurrentPassword_isRejected() {
-		when(userRepository.findById(new ObjectId(USER_ID))).thenReturn(Optional.of(user(2)));
+		when(userRepository.findByIdInTenant(USER_ID, TENANT)).thenReturn(Optional.of(user(2)));
 		when(passwordEncoder.matches("wrong", "$old")).thenReturn(false);
 
 		assertThatThrownBy(() -> service.updatePassword(TENANT, USER_ID, "wrong", "new"))

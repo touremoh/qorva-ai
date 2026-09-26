@@ -5,7 +5,6 @@ import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.dto.request.AddUserRequest;
 import ai.qorva.core.enums.EmailNotificationType;
-import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.enums.SubscriptionPlanEnum;
 import ai.qorva.core.enums.UserStatusEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -14,7 +13,6 @@ import ai.qorva.core.mapper.UserMapper;
 import ai.qorva.core.dao.querybuilder.UserQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
 import ai.qorva.core.dto.common.UserAuthority;
-import org.bson.types.ObjectId;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +23,6 @@ import org.springframework.util.StringUtils;
 
 import java.security.SecureRandom;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 
 @Slf4j
@@ -157,12 +154,7 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 	}
 
 	public void updatePassword(String tenantId, String userId, String currentPassword, String newPassword) throws QorvaException {
-		var user = repository.findById(new ObjectId(userId))
-			.orElseThrow(() -> new QorvaException("User not found", HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
-
-		if (!tenantId.equals(user.getTenantId())) {
-			throw new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
-		}
+		var user = userOfTenant(tenantId, userId);
 
 		if (!passwordEncoder.matches(currentPassword, user.getEncryptedPassword())) {
 			throw new QorvaException(QorvaErrorCodes.USER_PASSWORD_INCORRECT, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
@@ -175,16 +167,16 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 	}
 
 	public void updateAuthorities(String tenantId, String userId, List<UserAuthority> authorities) throws QorvaException {
-		var user = repository.findById(new ObjectId(userId))
-			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
-
-		if (!tenantId.equals(user.getTenantId())) {
-			throw new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
-		}
+		var user = userOfTenant(tenantId, userId);
 
 		user.setAuthorities(authorities);
 		repository.save(user);
 		log.info("User authorities updated: tenantId={} userId={}", tenantId, userId);
+	}
+
+	private User userOfTenant(String tenantId, String userId) throws QorvaException {
+		return repository.findByIdInTenant(userId, tenantId)
+			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
 	}
 
 	public UserDTO findByEmail(String email) {

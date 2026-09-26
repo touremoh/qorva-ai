@@ -1,14 +1,13 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.service.cascade.CascadeRegistry;
+import ai.qorva.core.service.cascade.CascadeResource;
+
 import ai.qorva.core.security.TenantScope;
 
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.querybuilder.CVQueryBuilder;
-import ai.qorva.core.dao.entity.Chat;
 import ai.qorva.core.dao.repository.CVRepository;
-import ai.qorva.core.dao.repository.ChatMessagesRepository;
-import ai.qorva.core.dao.repository.ChatsRepository;
-import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVDuplicatesData;
 import ai.qorva.core.dto.CVFilterOptionsData;
@@ -63,9 +62,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final OpenAIService openAIService;
     private final OpenAIResultMapper openAIResultMapper;
     private final JobPostService jobPostService;
-    private final MatchingReportRepository matchingReportRepository;
-    private final ChatsRepository chatsRepository;
-    private final ChatMessagesRepository chatMessagesRepository;
+    private final CascadeRegistry cascadeRegistry;
     private final UsageMonitoringService usageMonitoringService;
     private final S3StorageService s3StorageService;
     private final LibraryQualityCacheEvictor libraryQualityCacheEvictor;
@@ -93,9 +90,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         OpenAIResultMapper openAIResultMapper,
         JobPostService jobPostService,
         CVMapper cVMapper,
-        MatchingReportRepository matchingReportRepository,
-        ChatsRepository chatsRepository,
-        ChatMessagesRepository chatMessagesRepository,
+        CascadeRegistry cascadeRegistry,
         UsageMonitoringService usageMonitoringService,
         S3StorageService s3StorageService,
         LibraryQualityCacheEvictor libraryQualityCacheEvictor,
@@ -104,13 +99,11 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         super(repository, cvMapper, queryBuilder);
         this.noteService = noteService;
         this.candidateOutreachService = candidateOutreachService;
-        this.chatMessagesRepository = chatMessagesRepository;
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
         this.jobPostService = jobPostService;
         this.cvMapper = cVMapper;
-        this.matchingReportRepository = matchingReportRepository;
-        this.chatsRepository = chatsRepository;
+        this.cascadeRegistry = cascadeRegistry;
         this.usageMonitoringService = usageMonitoringService;
         this.s3StorageService = s3StorageService;
         this.libraryQualityCacheEvictor = libraryQualityCacheEvictor;
@@ -583,31 +576,8 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     protected void postProcessDeleteOneById(String id, String tenantId) throws QorvaException {
         log.info("Deleted CV with ID: {}", id);
 
-        // Report ids first: their note threads can only be found while the reports still exist.
-        var reportIds = this.matchingReportRepository.findByTenantIdAndCandidateInfoCandidateId(tenantId, id).stream()
-            .map(MatchingReportRepository.IdOnly::getId)
-            .toList();
-        var countDeletedReports = this.matchingReportRepository.deleteByTenantIdAndCandidateInfoCandidateId(tenantId, id);
-        log.info("Deleted {} reports associated with CV ID: {}", countDeletedReports, id);
-
-        var countDeletedNotes = this.noteService.deleteForTarget(tenantId, NoteTargetTypeEnum.CV, id)
-            + this.noteService.deleteForTargets(tenantId, NoteTargetTypeEnum.MATCHING_REPORT, reportIds);
-        log.info("Deleted {} notes associated with CV ID: {} and its reports", countDeletedNotes, id);
-
-        var countDeletedOutreach = this.candidateOutreachService.deleteForCv(tenantId, id);
-        log.info("Deleted {} outreach rows associated with CV ID: {}", countDeletedOutreach, id);
-
-        // Messages first, while the chat ids are still resolvable — deleting chats alone
-        // used to orphan their messages.
-        var chatIds = this.chatsRepository.findByTenantIdAndContextCvId(tenantId, id).stream()
-            .map(Chat::getId)
-            .toList();
-        if (!chatIds.isEmpty()) {
-            var countDeletedMessages = this.chatMessagesRepository.deleteByTenantIdAndChatIdIn(tenantId, chatIds);
-            log.info("Deleted {} chat messages associated with CV ID: {}", countDeletedMessages, id);
-        }
-        var countDeletedChats = this.chatsRepository.deleteByTenantIdAndContextCvId(tenantId, id);
-        log.info("Deleted {} chats associated with CV ID: {}", countDeletedChats, id);
+        // Its reports (and their notes and chats), notes, chats (and messages), outreach and update requests.
+        this.cascadeRegistry.parentsDeleted(CascadeResource.CV, tenantId, List.of(id));
 
         try {
             this.s3StorageService.deleteObject(this.attachmentKeyForDelete.get());

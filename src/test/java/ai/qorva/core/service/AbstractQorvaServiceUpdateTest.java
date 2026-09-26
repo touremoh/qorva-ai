@@ -3,6 +3,7 @@ package ai.qorva.core.service;
 import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.querybuilder.UserQueryBuilder;
 import ai.qorva.core.dao.repository.UserRepository;
+import ai.qorva.core.dao.specifications.MongoSpecification;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.UserMapper;
@@ -60,7 +61,7 @@ class AbstractQorvaServiceUpdateTest {
 
 	@Test
 	void updateOne_payloadIdIsIgnored_theCheckedDocumentIsTheOneSaved() throws QorvaException {
-		when(userRepository.findById(new ObjectId(PATH_ID))).thenReturn(Optional.of(user(PATH_ID, TENANT)));
+		when(userRepository.findOne(anySpecification())).thenReturn(Optional.of(user(PATH_ID, TENANT)));
 		when(userMapper.map(any(User.class))).thenReturn(new UserDTO());
 		var saved = ArgumentCaptor.forClass(UserDTO.class);
 		when(userMapper.map(saved.capture())).thenReturn(new User());
@@ -78,12 +79,31 @@ class AbstractQorvaServiceUpdateTest {
 	}
 
 	@Test
+	@SuppressWarnings("unchecked")
+	void theLookupQueryItselfCarriesTheTenant() throws QorvaException {
+		var query = ArgumentCaptor.forClass(MongoSpecification.class);
+		when(userRepository.findOne(query.capture())).thenReturn(Optional.of(user(PATH_ID, TENANT)));
+		when(userMapper.map(any(User.class))).thenReturn(new UserDTO());
+
+		service.findOneById(PATH_ID);
+
+		var criteria = query.getValue().toCriteria().getCriteriaObject().toJson();
+		assertThat(criteria).contains("\"tenantId\": \"" + TENANT + "\"").contains(PATH_ID);
+	}
+
+	@Test
 	void updateOne_documentOfAnotherTenant_isRejectedBeforeAnyWrite() {
-		when(userRepository.findById(new ObjectId(PATH_ID))).thenReturn(Optional.of(user(PATH_ID, OTHER_TENANT)));
+		// The tenant is part of the query, so another tenant's document is simply not found.
+		when(userRepository.findOne(anySpecification())).thenReturn(Optional.empty());
 
 		assertThatThrownBy(() -> service.updateOne(PATH_ID, new UserDTO()))
 			.isInstanceOf(QorvaException.class);
 		verify(userRepository, never()).save(any());
+	}
+
+	@SuppressWarnings("unchecked")
+	private static MongoSpecification<User> anySpecification() {
+		return any(MongoSpecification.class);
 	}
 
 	private static User user(String id, String tenantId) {

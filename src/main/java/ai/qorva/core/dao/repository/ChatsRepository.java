@@ -51,5 +51,11 @@ public interface ChatsRepository extends QorvaRepository<Chat> {
 
     java.util.List<ai.qorva.core.dao.entity.Chat> findByTenantIdAndContextCvId(String tenantId, String contextCvId);
 
+    java.util.List<ai.qorva.core.dao.entity.Chat> findByTenantIdAndContextJobPostId(String tenantId, String contextJobPostId);
+
+    java.util.List<ai.qorva.core.dao.entity.Chat> findByTenantIdAndContextMatchingReportId(String tenantId, String contextMatchingReportId);
+
     long countByTenantId(String tenantId);
+
+    long deleteByTenantIdAndIdIn(String tenantId, java.util.Collection<String> ids);
 }

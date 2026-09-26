@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
 /**
@@ -20,6 +21,8 @@ class ApiWriteContractIntegrationTest extends AbstractIntegrationTest {
 
 	@Autowired
 	private TwoTenantFixture fixture;
+	@Autowired
+	private org.springframework.data.mongodb.core.MongoTemplate mongo;
 
 	private TwoTenantFixture.SeededTenant a;
 	private String owner;
@@ -56,6 +59,7 @@ class ApiWriteContractIntegrationTest extends AbstractIntegrationTest {
 		snap("cvDelete.notesAfter", owner, get("/notes").param("targetType", "CV").param("targetId", a.cvId()));
 		snap("cvDelete.chatsAfter", owner, get("/chats").param("page", "0").param("size", "25"));
 		snap("cvDelete.dashboardCounts", owner, get("/cvs/clear-library/preflight"));
+		assertThat(OrphanCheck.find(mongo)).as("dangling references after a CV delete").isEmpty();
 	}
 
 	@Test
@@ -76,6 +80,7 @@ class ApiWriteContractIntegrationTest extends AbstractIntegrationTest {
 		snap("jobDelete.response", owner, delete("/jobs/" + a.jobId()));
 		snap("jobDelete.reportsAfter", owner, get("/matching-reports").param("pageNumber", "0").param("pageSize", "10"));
 		snap("jobDelete.chatsAfter", owner, get("/chats").param("page", "0").param("size", "25"));
+		assertThat(OrphanCheck.find(mongo)).as("dangling references after a job delete").isEmpty();
 	}
 
 	@Test
@@ -83,6 +88,7 @@ class ApiWriteContractIntegrationTest extends AbstractIntegrationTest {
 		snap("reportDelete.response", owner, delete("/matching-reports/" + a.reportId()));
 		snap("reportDelete.reportsAfter", owner, get("/matching-reports").param("pageNumber", "0").param("pageSize", "10"));
 		snap("reportDelete.chatsAfter", owner, get("/chats").param("page", "0").param("size", "25"));
+		assertThat(OrphanCheck.find(mongo)).as("dangling references after a report delete").isEmpty();
 	}
 
 	@Test

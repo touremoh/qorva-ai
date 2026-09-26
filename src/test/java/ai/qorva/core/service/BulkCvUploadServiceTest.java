@@ -245,4 +245,24 @@ class BulkCvUploadServiceTest {
 		verify(s3StorageService).deleteObject("k0");
 		verify(s3StorageService).deleteObject("k1");
 	}
+
+	@Test
+	void list_asksTheDatabaseForBulkUploadsOnly_soOtherJobsCannotCrowdThemOut() {
+		var upload = new ai.qorva.core.dao.entity.BackgroundJob();
+		upload.setId("job-1");
+		upload.setTenantId(TENANT);
+		upload.setType(ai.qorva.core.dao.entity.BackgroundJob.TYPE_BULK_CV_UPLOAD);
+		upload.setStatus(ai.qorva.core.dao.entity.BackgroundJob.STATUS_COMPLETED);
+		org.mockito.Mockito.when(jobRepository.findByTenantIdAndTypeOrderByCreatedAtDesc(
+				org.mockito.ArgumentMatchers.eq(TENANT),
+				org.mockito.ArgumentMatchers.eq(ai.qorva.core.dao.entity.BackgroundJob.TYPE_BULK_CV_UPLOAD),
+				org.mockito.ArgumentMatchers.any()))
+			.thenReturn(java.util.List.of(upload));
+
+		var list = service.list(TENANT);
+
+		org.assertj.core.api.Assertions.assertThat(list.jobs()).hasSize(1);
+		org.mockito.Mockito.verify(jobRepository, org.mockito.Mockito.never())
+			.findByTenantIdOrderByCreatedAtDesc(org.mockito.ArgumentMatchers.anyString(), org.mockito.ArgumentMatchers.any());
+	}
 }

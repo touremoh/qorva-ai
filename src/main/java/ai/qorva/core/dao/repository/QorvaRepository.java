@@ -11,7 +11,7 @@ import java.util.Collection;
 import java.util.List;
 
 @NoRepositoryBean
-public interface QorvaRepository<E extends QorvaEntity> extends MongoRepository<E, ObjectId>, QorvaRepositorySpecification<E> {
+public interface QorvaRepository<E extends QorvaEntity> extends MongoRepository<E, ObjectId>, QorvaRepositorySpecification<E>, OwnedLookup<E> {
 
 	/** @deprecated Use {@link #findByIdInAndTenantId} to enforce tenant isolation. */
 	@Deprecated

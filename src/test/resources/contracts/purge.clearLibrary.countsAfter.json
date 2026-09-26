@@ -1,0 +1,28 @@
+{
+  "body" : {
+    "ats_connections" : 0,
+    "ats_outbound_tasks" : 0,
+    "background_jobs" : 0,
+    "candidate_email_templates" : 1,
+    "candidate_outreach" : 0,
+    "candidate_update_requests" : 0,
+    "chat_messages" : 0,
+    "chats" : 0,
+    "cvs" : 0,
+    "insight_conversation_turns" : 0,
+    "job_posts" : 5,
+    "mailbox_connections" : 0,
+    "matching_reports" : 0,
+    "mfa_challenges" : 0,
+    "notes" : 0,
+    "pending_email_notifications" : 0,
+    "quality_issue_states" : 0,
+    "stripe_event_logs" : 0,
+    "stripe_product_references" : 0,
+    "suppressed_emails" : 0,
+    "tenants" : 0,
+    "usage_monitoring" : 1,
+    "users" : 2
+  },
+  "status" : 200
+}

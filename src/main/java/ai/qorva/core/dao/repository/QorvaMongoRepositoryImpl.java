@@ -8,7 +8,9 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.query.MongoEntityInformation;
 import org.springframework.data.mongodb.repository.support.SimpleMongoRepository;
 
@@ -19,9 +21,9 @@ import java.util.Optional;
  * Base class of every repository (registered as {@code repositoryBaseClass} in {@code MongoConfig}):
  * the Spring Data CRUD plus the {@link MongoSpecification} queries, implemented once for all entities.
  * A repository interface that extends {@link QorvaRepositorySpecification} gets them without a
- * hand-written {@code *RepositoryImpl}.
+ * hand-written {@code *RepositoryImpl}; one extending {@link OwnedLookup} gets the tenant-scoped id lookup.
  */
-public class QorvaMongoRepositoryImpl<T, ID> extends SimpleMongoRepository<T, ID> implements QorvaRepositorySpecification<T> {
+public class QorvaMongoRepositoryImpl<T, ID> extends SimpleMongoRepository<T, ID> implements QorvaRepositorySpecification<T>, OwnedLookup<T> {
 
 	private final MongoOperations mongoOperations;
 	private final Class<T> entityClass;
@@ -63,6 +65,16 @@ public class QorvaMongoRepositoryImpl<T, ID> extends SimpleMongoRepository<T, ID
 	@Override
 	public long count(MongoSpecification<T> specification) {
 		return mongoOperations.count(query(specification), entityClass);
+	}
+
+	@Override
+	public Optional<T> findByIdInTenant(String id, String tenantId) {
+		if (id == null || !ObjectId.isValid(id) || tenantId == null || tenantId.isBlank()) {
+			return Optional.empty();
+		}
+		// The entity class maps tenantId to its stored type (ObjectId or string) for the comparison.
+		var query = new Query(Criteria.where("_id").is(new ObjectId(id)).and("tenantId").is(tenantId));
+		return Optional.ofNullable(mongoOperations.findOne(query, entityClass));
 	}
 
 	private static <T> Query query(MongoSpecification<T> specification) {
