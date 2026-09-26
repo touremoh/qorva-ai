@@ -30,27 +30,6 @@ public final class CVSpecifications {
 			: () -> Criteria.where("archived").ne(true);
 	}
 
-	public static MongoSpecification<CV> hasSkills(Collection<String> skills) {
-		if (skills == null || skills.isEmpty()) {
-			return MongoSpecifications.empty();
-		}
-		return () -> Criteria.where("skills").all(skills);
-	}
-
-	public static MongoSpecification<CV> hasAnySkill(Collection<String> skills) {
-		if (skills == null || skills.isEmpty()) {
-			return MongoSpecifications.empty();
-		}
-		List<Pattern> patterns = skills.stream()
-			.filter(s -> s != null && !s.isBlank())
-			.map(s -> Pattern.compile(Pattern.quote(s.trim()), Pattern.CASE_INSENSITIVE))
-			.toList();
-		if (patterns.isEmpty()) {
-			return MongoSpecifications.empty();
-		}
-		return () -> Criteria.where("skillsAndQualifications.technicalSkills").in(patterns);
-	}
-
 	public static MongoSpecification<CV> nameContains(String keyword) {
 		if (keyword == null || keyword.isBlank()) {
 			return MongoSpecifications.empty();

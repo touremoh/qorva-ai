@@ -11,8 +11,6 @@ management:
 spring:
   main:
     allow-bean-definition-overriding: true
-  webflux:
-    timeout: 60s
 
   data:
     mongodb:
@@ -20,12 +18,6 @@ spring:
       database: dbname
 
   ai:
-    vectorstore:
-      mongodb:
-        initialize-schema: false
-        collection-name: cvs
-        index-name: cvs_search_index
-        path-name: embedding
 
     openai:
       api-key: API_KEY
@@ -86,10 +78,6 @@ logging:
       qorva:
         core: DEBUG
 
-regex:
-  email: EMAIL_CHECK_REGEX
-  password: PASSWORD_CHECK_REGEX
-  activationCode: ACTIVATION_CODE_REGEX
 
 weblink:
   allowedOrigins: http://localhost:5173,http://localhost:5174

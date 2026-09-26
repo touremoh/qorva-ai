@@ -1,7 +1,6 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.Chat;
-import ai.qorva.core.enums.ChatStatus;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.*;
@@ -15,9 +14,6 @@ public interface ChatsRepository extends QorvaRepository<Chat> {
 
     @Query(value = "{ 'tenantId': ?0, 'participants.userId': ?1, 'status': ?2 }")
     Page<Chat> findByTenantAndParticipantAndStatus(String tenantId, String userId, String status, Pageable pageable);
-
-    @Query(value = "{ 'tenantId': ?0, 'status': ?1 }")
-    Page<Chat> findByTenantAndStatus(String tenantId, ChatStatus status, Pageable pageable);
 
 
     /**

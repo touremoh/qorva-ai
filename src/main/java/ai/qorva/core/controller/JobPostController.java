@@ -69,7 +69,7 @@ public class JobPostController extends AbstractQorvaController<JobPostDTO> {
     @Override
     protected CrudPolicy crudPolicy() {
         return CrudPolicy.builder()
-            .allow("VIEW_JOB", GET_ONE, LIST, SEARCH, FIND_BY_IDS, EXISTS)
+            .allow("VIEW_JOB", GET_ONE, LIST)
             .allow("ADD_JOB", CREATE)
             .allow("MODIFY_JOB", UPDATE)
             .allow("DELETE_JOB", DELETE)

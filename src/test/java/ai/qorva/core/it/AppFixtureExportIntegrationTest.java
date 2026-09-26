@@ -62,7 +62,6 @@ class AppFixtureExportIntegrationTest extends AbstractIntegrationTest {
 			get("/chats/" + a.chatId()), get("/chats/" + a.chatId() + "/messages").param("page", "0").param("size", "50")));
 		a.cvIds().forEach(id -> requests.add(get("/cvs/" + id)));
 		a.jobIds().forEach(id -> requests.add(get("/jobs/" + id)));
-		a.reportIds().forEach(id -> requests.add(get("/matching-reports/" + id)));
 
 		for (var request : requests) {
 			var built = request.buildRequest(null);

@@ -40,9 +40,6 @@ public class UsageMonitoringService extends AbstractQorvaService<UsageMonitoring
             return fieldPath + ".cumulative";
         }
 
-        public String limitPath() {
-            return fieldPath + ".limit";
-        }
     }
 
     private final UsageMonitoringRepository usageMonitoringRepository;

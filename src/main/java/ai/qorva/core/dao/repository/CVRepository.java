@@ -23,15 +23,6 @@ public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepos
 	long countByTenantId(String tenantId);
 
 	@Aggregation(pipeline = {
-		"{ $match: { tenantId: ?0 }}",
-		"{ $unwind: '$tags' }",
-		"{ $group: { _id: null, allTags: { $addToSet: '$tags' }}}",
-		"{ $project: { _id: 0, tags: '$allTags' }}",
-		"{ $sort: { tags: 1 } }"
-	})
-	List<String> findAllTagsByTenantId(ObjectId tenantId);
-
-	@Aggregation(pipeline = {
 		"{ '$match': { 'tenantId': ?0 } }",
 		"{ '$unwind': '$keySkills' }",
 		"{ '$unwind': '$keySkills.skills' }",

@@ -519,10 +519,6 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         return ((CVRepository) this.repository).filterOptions(new ObjectId(tenantId), archived);
     }
 
-    public List<String> findAllTagsByTenantId(String tenantId) {
-        return ((CVRepository) this.repository).findAllTagsByTenantId(new ObjectId(tenantId));
-    }
-
     public List<DashboardData.SkillReport> getSkillReportByTenantId(String tenantId) {
         return ((CVRepository) this.repository).getSkillReportByTenantId(new ObjectId(tenantId));
     }

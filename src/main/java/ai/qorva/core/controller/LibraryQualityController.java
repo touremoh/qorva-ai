@@ -103,7 +103,6 @@ public class LibraryQualityController {
 		return ResponseEntity.ok(this.backgroundJobService.list(TenantContextHolder.getTenantId()));
 	}
 
-	@GetMapping(path = "/jobs/{jobId}", produces = "application/json")
 	@PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_DASHBOARD')")
 	public ResponseEntity<BackgroundJobData.JobView> getJob(@PathVariable String jobId) throws QorvaException {
 		return ResponseEntity.ok(this.backgroundJobService.get(TenantContextHolder.getTenantId(), jobId));

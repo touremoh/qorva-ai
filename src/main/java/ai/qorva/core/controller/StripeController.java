@@ -69,14 +69,6 @@ public class StripeController {
 		return BuildApiResponse.from(java.util.Map.of("status", "canceled"));
 	}
 
-	/** Step 10: current subscription status (authenticated — only the webhook and checkout pages are public). */
-	@GetMapping("/subscription/status")
-	public ResponseEntity<QorvaRequestResponse> getSubscriptionStatus(
-		@AuthenticationPrincipal UserDetails userDetails
-	) throws QorvaException {
-		return BuildApiResponse.from(this.service.getSubscriptionStatus(userDetails));
-	}
-
 	@PostMapping("/portal-session")
 	public ResponseEntity<PortalSession> createPortalSession(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
 		return ResponseEntity.ok(this.service.buildStripePortalSessionUrl(userDetails));

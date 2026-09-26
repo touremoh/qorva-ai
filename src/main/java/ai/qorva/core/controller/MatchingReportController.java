@@ -29,21 +29,16 @@ public class MatchingReportController extends AbstractQorvaController<MatchingRe
 		this.atsExportService = atsExportService;
 	}
 
-	/* Reads need VIEW_REPORT and writes their own action; demo users only hold GENERATE_REPORT / VIEW_REPORT. */
+	/*
+	 * Reports are created by screening (/ai/start-screening), never through the generic CRUD: the app
+	 * lists, searches and deletes them. VIEW_REPORT to read, DELETE_REPORT to delete.
+	 */
 	@Override
 	protected CrudPolicy crudPolicy() {
 		return CrudPolicy.builder()
-			.allow("VIEW_REPORT", GET_ONE, LIST, SEARCH, FIND_BY_IDS, EXISTS)
-			.allow("GENERATE_REPORT", CREATE)
-			.allow("MODIFY_REPORT", UPDATE)
+			.allow("VIEW_REPORT", LIST, SEARCH)
 			.allow("DELETE_REPORT", DELETE)
 			.build();
-	}
-
-	@GetMapping("/check/monthly-usage")
-	@PreAuthorize("@accessManager.hasPermission(authentication,'VIEW_REPORT')")
-	public ResponseEntity<QorvaRequestResponse> checkCVAnalysisMonthlyUsageLimit() throws QorvaException {
-		return null;
 	}
 
 	@GetMapping("/search")

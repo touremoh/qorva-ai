@@ -24,7 +24,6 @@ public final class QorvaErrorCodes {
 
     // access
     public static final String ACCESS_FORBIDDEN    = "error.access.forbidden";
-    public static final String ACCESS_CROSS_TENANT = "error.access.cross_tenant";
 
     // user
     public static final String USER_ALREADY_EXISTS      = "error.user.already_exists";
@@ -44,7 +43,6 @@ public final class QorvaErrorCodes {
     public static final String FILE_EMPTY             = "error.file.empty";
     public static final String FILE_PDF_READ_FAILED   = "error.file.pdf_read_failed";
     public static final String FILE_WORD_READ_FAILED  = "error.file.word_read_failed";
-    public static final String FILE_READ_FAILED       = "error.file.read_failed";
     public static final String FILE_NAME_NULL         = "error.file.name_null";
     public static final String FILE_UNSUPPORTED_TYPE  = "error.file.unsupported_type";
 
@@ -52,7 +50,6 @@ public final class QorvaErrorCodes {
     public static final String REPORT_JOB_ID_REQUIRED          = "error.report.job_id_required";
     public static final String REPORT_CANDIDATE_INFO_REQUIRED   = "error.report.candidate_info_required";
     public static final String REPORT_RESUME_MATCH_NOT_FOUND    = "error.report.resume_match_not_found";
-    public static final String REPORT_MATCH_NOT_FOUND_BY_ID     = "error.report.match_not_found_by_id";
     public static final String REPORT_NO_REPORTS_FOR_JOB        = "error.report.no_reports_for_job";
     public static final String REPORT_CSV_EXPORT_FAILED         = "error.report.csv_export_failed";
 

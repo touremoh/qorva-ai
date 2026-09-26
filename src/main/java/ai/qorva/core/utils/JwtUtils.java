@@ -30,23 +30,8 @@ public class JwtUtils {
 	public String CREDENTIAL_VERSION = "cv";
 	public String PURPOSE_SET_PASSWORD = "SET_PASSWORD";
 
-	public String extractToken(String bearerToken) {
-		if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
-			return bearerToken.substring(7);
-		}
-		return null;
-	}
-
 	public String extractUsername(String token, SecretKey jwtSecret) {
 		return extractClaim(token, Claims::getSubject, jwtSecret);
-	}
-
-	public String extractTenantId(String token, SecretKey jwtSecret) {
-		return extractClaim(token, claims -> claims.get(TENANT_ID, String.class), jwtSecret);
-	}
-
-	public String extractSubscriptionPlan(String token, SecretKey jwtSecret) {
-		return extractClaim(token, claims -> claims.get(SUBSCRIPTION_PLAN, String.class), jwtSecret);
 	}
 
 	public Date extractExpiration(String token, SecretKey jwtSecret) {

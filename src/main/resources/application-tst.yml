@@ -16,12 +16,6 @@ spring:
         enabled: true
     model:
       embedding: openai
-    vectorstore:
-      mongodb:
-        initialize-schema: false
-        collection-name: ${SPRING_AI_VECTOR_COLL_NAME}
-        index-name: ${SPRING_AI_VECTOR_INDEX}
-        path-name: ${SPRING_AI_VECTOR_PATH_NAME}
 
   mail:
     host: ${MAIL_HOST}
@@ -65,10 +59,6 @@ logging:
       qorva:
         core: INFO
 
-regex:
-  email: ${EMAIL_CHECK_REGEX}
-  password: ${PASSWORD_CHECK_REGEX}
-  activationCode: ${ACTIVATION_CODE_REGEX}
 
 weblink:
   allowedOrigins: ${ALLOWED_ORIGINS}

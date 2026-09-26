@@ -18,7 +18,6 @@ import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.aggregation.AggregationOperation;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.TextCriteria;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
 
@@ -32,10 +31,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Repository
-public class CVRepositoryImpl implements SimilaritySearchRepository, TextSearchRepository, CVQualityRepository, CVFilterOptionsRepository {
+public class CVRepositoryImpl implements SimilaritySearchRepository, CVQualityRepository, CVFilterOptionsRepository {
 
 	private final MongoTemplate mongoTemplate;
 
@@ -88,21 +86,6 @@ public class CVRepositoryImpl implements SimilaritySearchRepository, TextSearchR
 			Aggregation.newAggregation(CV.class, vectorSearch, addScore, Aggregation.match(matchCriteria), Aggregation.limit(limit)),
 			CV.class
 		).getMappedResults();
-	}
-
-	@Override
-	public List<CV> textSearch(List<String> textTerms, List<String> industryTerms, ObjectId tenantId, int limit) {
-		Query query = buildTextQuery(textTerms, industryTerms, tenantId);
-		if (query == null) return List.of();
-		query.limit(limit);
-		return mongoTemplate.find(query, CV.class);
-	}
-
-	@Override
-	public long textSearchCount(List<String> textTerms, List<String> industryTerms, ObjectId tenantId) {
-		Query query = buildTextQuery(textTerms, industryTerms, tenantId);
-		if (query == null) return 0L;
-		return mongoTemplate.count(query, CV.class);
 	}
 
 	// -------------------------------------------------------------------------
@@ -346,25 +329,6 @@ public class CVRepositoryImpl implements SimilaritySearchRepository, TextSearchR
 			doc.get("_id") != null ? doc.get("_id").toString() : null,
 			doc.get("count", Number.class).intValue(),
 			cvs);
-	}
-
-	private Query buildTextQuery(List<String> textTerms, List<String> industryTerms, ObjectId tenantId) {
-		if (textTerms == null || textTerms.isEmpty()) {
-			return null;
-		}
-		String searchPhrase = String.join(" ", textTerms);
-		Query query = new Query(Criteria.where("tenantId").is(tenantId).and("archived").ne(true));
-		query.addCriteria(TextCriteria.forDefaultLanguage().matchingAny(searchPhrase));
-
-		// AND filter: at least one industry term must appear in industryDomains
-		if (industryTerms != null && !industryTerms.isEmpty()) {
-			List<Criteria> industryCriteria = industryTerms.stream()
-				.map(term -> Criteria.where("candidateClustering.industryDomains").regex(term, "i"))
-				.collect(Collectors.toList());
-			query.addCriteria(new Criteria().orOperator(industryCriteria.toArray(new Criteria[0])));
-		}
-
-		return query;
 	}
 
 	// -------------------------------------------------------------------------

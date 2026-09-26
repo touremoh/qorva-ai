@@ -79,14 +79,14 @@ public class CVController extends AbstractQorvaController<CVDTO> {
     }
 
     /*
-     * Reads need VIEW_CV and writes their own action, so demo users (who lack ADD_CV/MODIFY_CV/DELETE_CV)
-     * cannot mutate data. CVs are created through /upload, never through the generic POST.
+     * Reads need VIEW_CV and writes their own action, so demo users (who lack MODIFY_CV/DELETE_CV)
+     * cannot mutate data. CVs are created through /upload; the generic create, search, ids and exists
+     * routes are closed (nothing calls them).
      */
     @Override
     protected CrudPolicy crudPolicy() {
         return CrudPolicy.builder()
-            .allow("VIEW_CV", GET_ONE, LIST, SEARCH, FIND_BY_IDS, EXISTS)
-            .allow("ADD_CV", CREATE)
+            .allow("VIEW_CV", GET_ONE, LIST)
             .allow("MODIFY_CV", UPDATE)
             .allow("DELETE_CV", DELETE)
             .build();
@@ -116,12 +116,6 @@ public class CVController extends AbstractQorvaController<CVDTO> {
         @RequestParam(defaultValue = "0") int pageNumber,
         @RequestParam(defaultValue = "20") int pageSize) {
         return ResponseEntity.ok(((CVService) service).findDuplicates(currentTenantId(), Paging.page(pageNumber), Paging.size(pageSize)));
-    }
-
-    @GetMapping("/tags")
-    @PreAuthorize("@accessManager.hasPermission(authentication,'VIEW_CV')")
-    public ResponseEntity<QorvaRequestResponse> findAllTagsByTenantId() {
-        return BuildApiResponse.from(((CVService) this.service).findAllTagsByTenantId(currentTenantId()));
     }
 
 }

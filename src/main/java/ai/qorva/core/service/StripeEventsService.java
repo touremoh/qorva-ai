@@ -56,20 +56,6 @@ public class StripeEventsService {
 		return dispatcher.dispatch(event);
 	}
 
-	// Step 10: return current subscription status for the authenticated user
-	public SubscriptionStatusResponseDTO getSubscriptionStatus(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
-		var user = Optional.ofNullable(userRepository.findByEmail(userDetails.getUsername()))
-			.orElseThrow(() -> new QorvaException("User not found"));
-		var tenant = tenantService.findOneById(user.getTenantId());
-		var info = tenant.getSubscriptionInfo();
-		return new SubscriptionStatusResponseDTO(
-			info.getSubscriptionStatus(),
-			info.getSubscriptionPlan(),
-			info.getCurrentPeriodEnd(),
-			info.getCancelAtPeriodEnd()
-		);
-	}
-
 	public PortalSession buildStripePortalSessionUrl(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
 		var user = Optional.ofNullable(userRepository.findByEmail(userDetails.getUsername()))
 			.orElseThrow(() -> new QorvaException("User not found"));
