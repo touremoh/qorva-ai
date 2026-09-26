@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.dao.entity.CandidateUpdateRequest;
 import ai.qorva.core.dao.entity.SuppressedEmail;
 import ai.qorva.core.dao.repository.CandidateUpdateRequestRepository;
@@ -225,6 +227,11 @@ public class CandidateUpdateService {
 
 	private void applyAndComplete(CandidateUpdateRequest request, CandidateUpdateData.Submission submission, String cvId)
 		throws QorvaException {
+		TenantScope.runAs(request.getTenantId(), () -> applyInScope(request, submission, cvId));
+	}
+
+	private void applyInScope(CandidateUpdateRequest request, CandidateUpdateData.Submission submission, String cvId)
+		throws QorvaException {
 		var cv = cvService.findOneById(cvId);
 		applySubmission(cv, submission);
 		cv.setContentDate(Instant.now());
@@ -314,8 +321,8 @@ public class CandidateUpdateService {
 	}
 
 	private CVDTO loadCv(CandidateUpdateRequest request) throws QorvaException {
-		// No tenant context on public calls — CVService skips the tenant assert; the token IS the authorization.
-		return cvService.findOneById(request.getCvId());
+		// Public, token-authorised call: the token's request names the tenant, so read in its scope.
+		return TenantScope.callAs(request.getTenantId(), () -> cvService.findOneById(request.getCvId()));
 	}
 
 	/** Deliberately generic — public endpoints must not reveal whether a token ever existed. */

@@ -1,5 +1,7 @@
 package ai.qorva.core.service.ats;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.dao.entity.AtsConnection;
 import ai.qorva.core.dao.entity.AtsOutboundTask;
 import ai.qorva.core.dao.repository.AtsConnectionRepository;
@@ -120,7 +122,7 @@ public class AtsWriteBackService {
 		for (var candidate : due) {
 			var claimed = claim(candidate.getId());
 			if (claimed != null) {
-				send(claimed);
+				TenantScope.runAs(claimed.getTenantId(), () -> send(claimed));
 			}
 		}
 	}

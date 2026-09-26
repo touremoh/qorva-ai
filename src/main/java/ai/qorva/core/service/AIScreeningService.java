@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.common.MatchingReportDetails;
@@ -51,7 +53,7 @@ public class AIScreeningService {
 
 		// Virtual threads: each job post (and each candidate within it) runs as a
 		// separate virtual thread, yielding on OpenAI I/O. All job posts run concurrently.
-		try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+		try (var executor = TenantScope.propagating(Executors.newVirtualThreadPerTaskExecutor())) {
 			var jobFutures = jobPosts.stream()
 				.map(jp -> CompletableFuture.runAsync(() -> processJobPost(jp, tenantId, languageCode, executor), executor))
 				.toArray(CompletableFuture[]::new);

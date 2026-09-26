@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.dao.entity.JobPost;
 import ai.qorva.core.dao.querybuilder.JobPostQueryBuilder;
 import ai.qorva.core.dao.repository.ChatsRepository;
@@ -71,7 +73,7 @@ class JobPostServiceAtsRefTest {
 		when(repository.findById(new ObjectId(JOB_ID))).thenReturn(Optional.of(storedImportedJob()));
 		when(repository.save(any(JobPost.class))).thenAnswer(call -> call.getArgument(0));
 
-		service.updateOne(JOB_ID, payload);
+		TenantScope.runAs(TENANT_ID, () -> service.updateOne(JOB_ID, payload));
 
 		var captor = ArgumentCaptor.forClass(JobPost.class);
 		verify(repository).save(captor.capture());

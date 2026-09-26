@@ -1,5 +1,7 @@
 package ai.qorva.core.scheduler;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.dao.entity.BackgroundJob;
 import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dto.CVOutputDTO;
@@ -123,20 +125,25 @@ public class BackgroundJobWorker {
 		log.info("Job {} claimed by {} (type={} issueKey={} tenant={})",
 			job.getId(), INSTANCE_ID, job.getType(), job.getIssueKey(), job.getTenantId());
 		try {
-			if (BackgroundJob.TYPE_REANALYZE.equals(job.getType())) {
-				runReanalyze(job);
-			} else if (BackgroundJob.TYPE_CANDIDATE_UPDATE_CAMPAIGN.equals(job.getType())) {
-				runCampaign(job);
-			} else if (BackgroundJob.TYPE_BULK_CV_UPLOAD.equals(job.getType())) {
-				runBulkUpload(job);
-			} else if (BackgroundJob.TYPE_ATS_SYNC.equals(job.getType())) {
-				atsSyncService.executeSync(job);
-			} else {
-				fail(job, "unsupported_job_type");
-			}
+			// A job belongs to one tenant: everything it does runs in that tenant's scope.
+			TenantScope.runAs(job.getTenantId(), () -> run(job));
 		} catch (Exception e) {
 			log.error("Job {} crashed", job.getId(), e);
 			fail(job, "internal_error");
+		}
+	}
+
+	private void run(BackgroundJob job) throws Exception {
+		if (BackgroundJob.TYPE_REANALYZE.equals(job.getType())) {
+			runReanalyze(job);
+		} else if (BackgroundJob.TYPE_CANDIDATE_UPDATE_CAMPAIGN.equals(job.getType())) {
+			runCampaign(job);
+		} else if (BackgroundJob.TYPE_BULK_CV_UPLOAD.equals(job.getType())) {
+			runBulkUpload(job);
+		} else if (BackgroundJob.TYPE_ATS_SYNC.equals(job.getType())) {
+			atsSyncService.executeSync(job);
+		} else {
+			fail(job, "unsupported_job_type");
 		}
 	}
 
@@ -176,7 +183,7 @@ public class BackgroundJobWorker {
 		var errorSamples = new ArrayList<String>(job.getErrorSamples() != null ? job.getErrorSamples() : List.of());
 		var llmPermits = new Semaphore(LLM_CONCURRENCY);
 
-		try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+		try (var executor = TenantScope.propagating(Executors.newVirtualThreadPerTaskExecutor())) {
 			for (int from = 0; from < ids.size(); from += BATCH_SIZE) {
 				if (isCancelled(job.getId())) {
 					log.info("Job {} cancelled — stopping after {} items", job.getId(), processed.get());
@@ -262,7 +269,7 @@ public class BackgroundJobWorker {
 		// bulkLlmConcurrency files are in flight and a slow file never idles the others
 		// (the old per-10 join barrier did). Control checks are throttled on submission;
 		// progress heartbeats ride on completions.
-		try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+		try (var executor = TenantScope.propagating(Executors.newVirtualThreadPerTaskExecutor())) {
 			var futures = new ArrayList<CompletableFuture<Void>>(files.size() - startFrom);
 			for (int i = startFrom; i < files.size(); i++) {
 				if ((i - startFrom) % BULK_CONTROL_CHECK_EVERY == 0) {

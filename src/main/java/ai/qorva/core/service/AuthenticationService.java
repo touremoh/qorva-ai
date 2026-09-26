@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.UserRepository;
@@ -84,9 +86,9 @@ public class AuthenticationService {
 			// Get the authenticated user's details
 			UserDetails userDetails = this.userDetailsService.loadUserByUsername(user.getEmail());
 
-			// Get the tenant status from the database and the subscription plan
-			var tenant = Optional.ofNullable(this.tenantService.findOneById(user.getTenantId()))
-				                 .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
+			// Sign-in happens before any token exists: the verified user's own tenant is the scope.
+			var tenant = TenantScope.callAs(user.getTenantId(), () -> Optional.ofNullable(this.tenantService.findOneById(user.getTenantId()))
+				                 .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND)));
 
 			// Generate a JWT including tenantId
 			var jwt = JwtUtils.generateAndBuildToken(userDetails, jwtConfig, tenant);
@@ -139,9 +141,9 @@ public class AuthenticationService {
 				var user = Optional.ofNullable(this.userRepository.findByEmail(username))
 					               .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
 
-				// Get the tenant status from the database and the subscription plan
-				var tenant = Optional.ofNullable(this.tenantService.findOneById(user.getTenantId()))
-					                 .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
+				// Get the tenant status and subscription plan, in the user's own tenant scope
+				var tenant = TenantScope.callAs(user.getTenantId(), () -> Optional.ofNullable(this.tenantService.findOneById(user.getTenantId()))
+					                 .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND)));
 
 				// Add subscription status to the JWT
 				var authenticatedUserInfo = this.userMapper.map(user);

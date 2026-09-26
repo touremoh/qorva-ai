@@ -1,14 +1,11 @@
 package ai.qorva.core.it;
 
-import org.bson.Document;
-import org.bson.types.ObjectId;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
@@ -31,8 +28,6 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 
 	@Autowired
 	private TwoTenantFixture fixture;
-	@Autowired
-	private MongoTemplate mongo;
 
 	private TwoTenantFixture.SeededTenant a;
 	private TwoTenantFixture.SeededTenant b;
@@ -203,18 +198,7 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 			.noneMatch(body::contains);
 	}
 
-	/** Every document of tenant A, in every collection, as one string. Any change shows up here. */
 	private String fingerprintOfTenantA() {
-		var sb = new StringBuilder();
-		var tenant = new ObjectId(a.tenantId());
-		for (var name : mongo.getCollectionNames().stream().sorted().toList()) {
-			if (name.startsWith("mongock") || name.startsWith("system.")) continue;
-			var filter = new Document("$or", List.of(
-				new Document("tenantId", tenant), new Document("tenantId", a.tenantId()), new Document("_id", tenant)));
-			for (var doc : mongo.getCollection(name).find(filter).sort(new Document("_id", 1))) {
-				sb.append(name).append(':').append(doc.toJson()).append('\n');
-			}
-		}
-		return sb.toString();
+		return fixture.fingerprint(a.tenantId());
 	}
 }

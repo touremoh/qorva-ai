@@ -1,4 +1,6 @@
-package ai.qorva.core.config;// e.g., in a @Configuration class
+package ai.qorva.core.config;
+
+import ai.qorva.core.security.TenantScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,7 +12,7 @@ public class DashboardConcurrencyConfig {
 
     @Bean(destroyMethod = "close")
     public ExecutorService dashboardExecutor() {
-        // One virtual thread per task — perfect for I/O-bound DB calls
-        return Executors.newVirtualThreadPerTaskExecutor();
+        // One virtual thread per task (I/O-bound DB calls), each running in the requesting tenant's scope
+        return TenantScope.propagating(Executors.newVirtualThreadPerTaskExecutor());
     }
 }

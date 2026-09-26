@@ -131,6 +131,21 @@ public class TwoTenantFixture {
 		}
 	}
 
+	/** Every document of the tenant, in every collection, as one string: any change to its data shows up here. */
+	public String fingerprint(String tenantId) {
+		var sb = new StringBuilder();
+		var tenant = new ObjectId(tenantId);
+		for (var name : mongo.getCollectionNames().stream().sorted().toList()) {
+			if (name.startsWith("mongock") || name.startsWith("system.")) continue;
+			var filter = new Document("$or", List.of(
+				new Document("tenantId", tenant), new Document("tenantId", tenantId), new Document("_id", tenant)));
+			for (var doc : mongo.getCollection(name).find(filter).sort(new Document("_id", 1))) {
+				sb.append(name).append(':').append(doc.toJson()).append('\n');
+			}
+		}
+		return sb.toString();
+	}
+
 	/** A signed access token for the user, built exactly as login builds it. */
 	public String bearer(String email, String tenantId) {
 		var userDetails = userDetailsService.loadUserByUsername(email);

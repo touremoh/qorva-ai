@@ -28,10 +28,13 @@ class ArchitectureRulesTest {
 			.importPackages("ai.qorva.core");
 	}
 
-	/** Only the JWT filter decides which tenant a request acts for; nothing may switch it ad hoc. */
+	/**
+	 * Only the JWT filter (requests) and TenantScope (everything else, with restore) set the tenant;
+	 * nothing may switch it ad hoc.
+	 */
 	@Test
-	void onlyTheJwtFilterSetsTheTenantContext() {
-		noClasses().that().doNotHaveSimpleName("JwtRequestFilter")
+	void onlyTheJwtFilterAndTenantScopeSetTheTenantContext() {
+		noClasses().that().doNotHaveSimpleName("JwtRequestFilter").and().doNotHaveSimpleName("TenantScope")
 			.should().callMethod(TenantContextHolder.class, "setTenantId", String.class)
 			.check(production);
 	}

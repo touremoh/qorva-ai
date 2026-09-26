@@ -8,6 +8,7 @@ import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.AbstractQorvaMapper;
 import ai.qorva.core.dao.querybuilder.QorvaQueryBuilder;
 import ai.qorva.core.security.TenantContextHolder;
+import ai.qorva.core.security.TenantScope;
 import io.jsonwebtoken.lang.Strings;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
@@ -47,23 +48,22 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
     // Tenant context helper
     // -------------------------------------------------------------------------
 
-    /**
-     * Returns the tenant ID of the current request, or {@code null} when there is no
-     * authenticated context (e.g. login, registration, Stripe webhook).
-     */
+    /** The tenant in scope ({@link TenantScope}), or {@code null} outside one. */
     protected String getCurrentTenantId() {
         return TenantContextHolder.getTenantId();
     }
 
     /**
-     * Enforces tenant ownership when a tenant context is present.
-     * If no context exists (public/system flows such as login or webhook processing),
-     * the check is skipped — Spring Security already protects those routes at the HTTP layer.
+     * Enforces tenant ownership. Code without a tenant in scope must have declared itself
+     * cross-tenant ({@link TenantScope#runAsSystem}); anything else is reported by
+     * {@link TenantScope#missing} (refused when fail-closed, logged otherwise).
      */
     protected void assertBelongsToCurrentTenant(E entity) throws QorvaException {
         var currentTenantId = getCurrentTenantId();
         if (!Strings.hasText(currentTenantId)) {
-            // No authenticated context — public or internal/system call; skip ownership check.
+            if (!TenantScope.isSystem()) {
+                TenantScope.missing("ownership check on " + entity.getClass().getSimpleName() + " " + entity.getId());
+            }
             return;
         }
         if (!currentTenantId.equals(entity.getTenantId())) {
@@ -279,8 +279,9 @@ public abstract class AbstractQorvaService<D extends QorvaDTO, E extends QorvaEn
         try {
             preProcessFindAllByIds(ids);
             var tenantId = getCurrentTenantId();
-            // When a tenant context is present, filter by tenant; otherwise fall back to unfiltered
-            // (public/system callers — Spring Security already restricts which routes reach here).
+            if (!Strings.hasText(tenantId) && !TenantScope.isSystem()) {
+                TenantScope.missing("findAllByIds");
+            }
             List<E> entities = Strings.hasText(tenantId)
                 ? this.repository.findByIdInAndTenantId(ids, tenantId)
                 : this.repository.findByIdIn(ids);

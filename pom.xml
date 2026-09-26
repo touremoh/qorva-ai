@@ -200,6 +200,12 @@
             <artifactId>mongodb</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- Launcher API for FailClosedTenancyForAllTests (tenant isolation enforced in every test). -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>com.tngtech.archunit</groupId>
             <artifactId>archunit-junit5</artifactId>

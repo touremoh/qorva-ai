@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.config.QorvaProductProperties;
 import ai.qorva.core.config.StripeProperties;
 import ai.qorva.core.dto.*;
@@ -158,9 +160,16 @@ public class UserRegistrationService {
 		log.info("Renewing checkout session for tenant: {} user: {}", dto.getTenantId(), dto.getUserId());
 
 		resolveProductByPriceId(dto.getPriceId());
+		if (!ObjectId.isValid(dto.getUserId()) || !ObjectId.isValid(dto.getTenantId())) {
+			throw checkoutRefused(dto.getUserId(), dto.getTenantId());
+		}
 		// Public route (called before sign-in, without a token): the pair in the body is the only
-		// credential, so it must be a real user of that tenant. The completed checkout activates
-		// this user and, for a demo account, purges the tenant's sample data.
+		// credential. Everything runs in the claimed tenant's scope, where only its own users resolve.
+		return TenantScope.callAs(dto.getTenantId(), () -> renewInTenantScope(dto));
+	}
+
+	private RegistrationResponseDTO renewInTenantScope(CheckoutSessionRequestDTO dto) throws QorvaException {
+		// The completed checkout activates this user and, for a demo account, purges the tenant's sample data.
 		assertUserBelongsToTenant(dto.getUserId(), dto.getTenantId());
 
 		var tenant = tenantService.findOneById(dto.getTenantId());
@@ -175,14 +184,20 @@ public class UserRegistrationService {
 	}
 
 	private void assertUserBelongsToTenant(String userId, String tenantId) throws QorvaException {
-		var belongs = ObjectId.isValid(userId) && ObjectId.isValid(tenantId)
-			&& Optional.ofNullable(userService.findOneById(userId))
-				.map(user -> tenantId.equals(user.getTenantId()))
-				.orElse(false);
-		if (!belongs) {
-			log.warn("Checkout session refused: user {} is not a user of tenant {}", userId, tenantId);
-			throw new QorvaException(QorvaErrorCodes.HTTP_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+		UserDTO user;
+		try {
+			user = userService.findOneById(userId);
+		} catch (QorvaException notFoundOrOtherTenant) {
+			user = null;
 		}
+		if (user == null || !tenantId.equals(user.getTenantId())) {
+			throw checkoutRefused(userId, tenantId);
+		}
+	}
+
+	private QorvaException checkoutRefused(String userId, String tenantId) {
+		log.warn("Checkout session refused: user {} is not a user of tenant {}", userId, tenantId);
+		return new QorvaException(QorvaErrorCodes.HTTP_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
 	}
 
 	// -------------------------------------------------------------------------
@@ -241,7 +256,10 @@ public class UserRegistrationService {
 			return;
 		}
 		log.warn("Registration failed – initiating cleanup for tenant: {}", tenant.getId());
+		TenantScope.runAs(tenant.getId(), () -> removeFailedRegistration(tenant, user));
+	}
 
+	private void removeFailedRegistration(TenantDTO tenant, UserDTO user) {
 		if (user != null) {
 			try {
 				userService.deleteOneById(user.getId(), user.getTenantId());

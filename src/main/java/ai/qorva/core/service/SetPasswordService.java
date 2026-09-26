@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.UserRepository;
@@ -190,7 +192,8 @@ public class SetPasswordService {
 
 	private String resolveCompanyName(String tenantId) {
 		try {
-			var tenant = tenantService.findOneById(tenantId);
+			// Also reached from public password flows: read the user's own tenant in its scope.
+			var tenant = TenantScope.callAs(tenantId, () -> tenantService.findOneById(tenantId));
 			return tenant.getTenantName() != null ? tenant.getTenantName() : "";
 		} catch (Exception e) {
 			log.warn("Could not resolve tenant name for tenantId={}", tenantId);

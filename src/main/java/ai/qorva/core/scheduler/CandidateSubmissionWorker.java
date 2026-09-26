@@ -1,5 +1,7 @@
 package ai.qorva.core.scheduler;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.dao.entity.CandidateUpdateRequest;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.service.CandidateUpdateService;
@@ -70,7 +72,8 @@ public class CandidateSubmissionWorker {
 					try {
 						llmPermits.acquire();
 						try {
-							processOne(request);
+							// Each submission belongs to its own tenant; the batch may mix tenants.
+							TenantScope.runAs(request.getTenantId(), () -> processOne(request));
 						} finally {
 							llmPermits.release();
 						}

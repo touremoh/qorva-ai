@@ -3,6 +3,7 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.PortalSession;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.security.TenantScope;
 import ai.qorva.core.service.StripeEventsService;
 import ai.qorva.core.utils.BuildApiResponse;
 import com.stripe.exception.SignatureVerificationException;
@@ -43,7 +44,8 @@ public class StripeController {
 	) {
 		try {
 			Event event = Webhook.constructEvent(payload, sigHeader, stripeWebhookSecret);
-			return ResponseEntity.ok(this.service.handleEvent(event));
+			// Signed by Stripe; handlers find their tenant through Stripe ids, so this is declared cross-tenant work.
+			return ResponseEntity.ok(TenantScope.callAsSystem("stripe webhook " + event.getType(), () -> this.service.handleEvent(event)));
 		} catch (SignatureVerificationException e) {
 			log.error("Stripe signature verification error", e);
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid signature");

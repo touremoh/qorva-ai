@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.querybuilder.CVQueryBuilder;
 import ai.qorva.core.dao.entity.Chat;
@@ -189,7 +191,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
             throw new QorvaException(QorvaErrorCodes.USAGE_SCREENING_LIMIT_EXCEEDED, HttpStatus.FORBIDDEN.value(), HttpStatus.FORBIDDEN);
         }
 
-        try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+        try (var executor = TenantScope.propagating(Executors.newVirtualThreadPerTaskExecutor())) {
             var futures = files.stream()
                 .<CompletableFuture<UploadResult>>map(file -> CompletableFuture.supplyAsync(() -> {
                     try {

@@ -63,6 +63,9 @@ aws:
     region: eu-west-1
 
 qorva:
+  # The suite enforces tenant isolation: any tenant-scoped code running without a tenant fails the test.
+  tenancy:
+    fail-closed: true
   mail:
     reply-to: ""
     senders: {}
