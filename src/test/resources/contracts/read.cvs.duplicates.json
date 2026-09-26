@@ -1,0 +1,45 @@
+{
+  "body" : {
+    "content" : [ {
+      "count" : 2,
+      "cvs" : [ {
+        "createdAt" : "<ts>",
+        "cvId" : "<id:1>",
+        "email" : "hannah.fletcher.personal@example.com",
+        "name" : "Hannah Fletcher",
+        "phone" : "+44 7700 900233"
+      }, {
+        "createdAt" : "<ts>",
+        "cvId" : "<id:2>",
+        "email" : "hannah.fletcher@example.com",
+        "name" : "Hannah Fletcher",
+        "phone" : "+44 7700 900233"
+      } ],
+      "matchType" : "PHONE",
+      "matchValue" : "+44 7700 900233"
+    }, {
+      "count" : 2,
+      "cvs" : [ {
+        "createdAt" : "<ts>",
+        "cvId" : "<id:3>",
+        "email" : "oliver.whitfield@example.com",
+        "name" : "Oliver Whitfield",
+        "phone" : "+44 7700 900199"
+      }, {
+        "createdAt" : "<ts>",
+        "cvId" : "<id:4>",
+        "email" : "oliver.whitfield@example.com",
+        "name" : "Oliver Whitfield",
+        "phone" : "+44 7700 900142"
+      } ],
+      "matchType" : "EMAIL",
+      "matchValue" : "oliver.whitfield@example.com"
+    } ],
+    "hasNext" : false,
+    "pageNumber" : 0,
+    "pageSize" : 20,
+    "totalElements" : 2,
+    "totalPages" : 1
+  },
+  "status" : 200
+}

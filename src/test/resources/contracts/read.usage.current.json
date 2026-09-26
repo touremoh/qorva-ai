@@ -1,0 +1,32 @@
+{
+  "body" : {
+    "bulkUploadFilesLimit" : 100,
+    "createdAt" : "<ts>",
+    "createdBy" : "owner@a.qorva.test",
+    "currentPeriodEnd" : "<ts>",
+    "currentPeriodStart" : "<ts>",
+    "features" : {
+      "aiResumeChats" : {
+        "consumed" : 0,
+        "cumulative" : 0,
+        "limit" : 1500
+      },
+      "screeningActions" : {
+        "consumed" : 0,
+        "cumulative" : 0,
+        "limit" : 10000
+      },
+      "talentIntelligenceQueries" : {
+        "consumed" : 0,
+        "cumulative" : 0,
+        "limit" : 3000
+      }
+    },
+    "id" : "<id:1>",
+    "lastUpdatedAt" : "<ts>",
+    "lastUpdatedBy" : "owner@a.qorva.test",
+    "subscriptionTier" : "Pro",
+    "tenantId" : "<id:2>"
+  },
+  "status" : 200
+}

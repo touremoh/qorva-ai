@@ -1,0 +1,62 @@
+{
+  "body" : {
+    "code" : 200,
+    "data" : {
+      "candidateInfo" : {
+        "candidateClustering" : {
+          "businessImpact" : [ "Improved batch job performance", "Increased test coverage" ],
+          "clusterConfidenceScore" : 0.83,
+          "clusterReasoning" : "Consistent Java and Spring Boot backend work with growing testing maturity places this candidate firmly in early-career backend engineering.",
+          "environmentFit" : [ "Startup", "SaaS" ],
+          "functionalExpertise" : [ "Service development", "Relational data modelling", "Automated testing" ],
+          "industryDomains" : [ "Fintech", "Digital agencies" ],
+          "leadershipAndInfluence" : "individualContributor",
+          "learningVelocity" : "high",
+          "primaryCluster" : "Backend Engineering",
+          "secondaryClusters" : [ "Distributed Systems", "API Development" ],
+          "seniorityLevel" : "junior",
+          "skillDepth" : "generalist"
+        },
+        "candidateId" : "<id:3>",
+        "candidateName" : "Oliver Whitfield",
+        "candidateProfileSummary" : "Backend software engineer with three years of experience building REST and event-driven services in Java and Spring Boot. Comfortable owning features end to end, from database schema to production monitoring. Keen on clean code, testing discipline and steadily growing into system design.",
+        "nbYearsExperience" : 4,
+        "skills" : [ "Java", "Spring Boot", "REST APIs", "JPA/Hibernate", "PostgreSQL", "Redis", "Flyway", "JUnit 5", "Mockito", "Testcontainers", "Git", "Maven", "Docker", "GitHub Actions" ]
+      },
+      "createdAt" : "<ts>",
+      "createdBy" : "owner@a.qorva.test",
+      "id" : "<id:1>",
+      "jobPostId" : "<id:2>",
+      "jobPostTitle" : "Senior Backend Engineer (Java/Spring)",
+      "lastUpdatedAt" : "<ts>",
+      "lastUpdatedBy" : "owner@a.qorva.test",
+      "matchingReportDetails" : {
+        "decisionSummary" : {
+          "confidenceLevel" : "high",
+          "detailedSummary" : null,
+          "finalScore" : 82.0,
+          "recommendation" : "interview",
+          "reportHeadline" : "Strong match",
+          "shortVerdict" : "Recommend interview"
+        },
+        "detailsID" : "<uuid>",
+        "experienceMatch" : null,
+        "industryMatch" : null,
+        "locationMatch" : null,
+        "missingSkills" : null,
+        "redFlags" : null,
+        "skillsMatch" : {
+          "matchingSkills" : [ "Java", "Kubernetes" ],
+          "score" : 82.0,
+          "scoreSummary" : "Core stack overlap"
+        },
+        "strengths" : null,
+        "weaknesses" : null
+      },
+      "status" : "NEW",
+      "tenantId" : "<id:4>"
+    },
+    "timestamp" : "<ts>"
+  },
+  "status" : 200
+}

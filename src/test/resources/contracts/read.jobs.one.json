@@ -1,0 +1,82 @@
+{
+  "body" : {
+    "code" : 200,
+    "data" : {
+      "atsRef" : null,
+      "createdAt" : "<ts>",
+      "createdBy" : "owner@a.qorva.test",
+      "description" : "Nimbus Ledger, a London-based fintech scaling its payments platform, is hiring a Senior Backend Engineer to own the services that move money for our UK and Irish customers.\n\nYou will design, build, and operate high-throughput microservices in Java 21 and Spring Boot, backed by PostgreSQL and event streaming with Kafka. Day to day you will lead the technical design of new payment flows, harden reliability and observability, and mentor two mid-level engineers through code review and pairing.\n\nWe expect strong fundamentals in distributed systems, transactional correctness, and API design (REST and event-driven). Our stack runs on AWS behind Kubernetes; comfort reasoning about idempotency, retries, and eventual consistency is essential.\n\nRequired: 6+ years building production JVM services, deep Spring Boot and Spring Data experience, solid SQL, and a track record shipping resilient services at scale. Nice-to-have: Kafka, Kubernetes, and experience in regulated financial environments.\n\nThis is a hybrid role based in London (2 days per week in office) open to candidates across the UK and Ireland. We offer a strong salary band, equity, and a generous learning budget.",
+      "id" : "<id:1>",
+      "jobReference" : "<uuid>",
+      "lastUpdatedAt" : "<ts>",
+      "lastUpdatedBy" : "owner@a.qorva.test",
+      "matchingReportsNeeded" : true,
+      "scoringRules" : {
+        "availabilityStatuses" : [ "activelyLooking", "openButNotSearching" ],
+        "experienceRequirements" : {
+          "minRelevantYears" : 5,
+          "minYearsOfExperience" : 6,
+          "seniorityLevel" : "senior"
+        },
+        "filterOpenToWork" : true,
+        "industryPreferences" : {
+          "preferredIndustries" : [ "Fintech", "Financial Services", "Payments" ],
+          "strictness" : "medium"
+        },
+        "locationPreferences" : {
+          "allowedLocations" : [ "London", "Dublin", "Manchester", "Remote" ],
+          "remoteAllowed" : true,
+          "strictness" : "medium"
+        },
+        "scoringWeight" : {
+          "experience" : 0.3,
+          "industry" : 0.1,
+          "location" : 0.1,
+          "skills" : 0.5
+        },
+        "skills" : [ {
+          "exactSkillOnly" : false,
+          "importance" : "mandatory",
+          "minYearsOfExperience" : 6,
+          "name" : "Java",
+          "weight" : 0.3
+        }, {
+          "exactSkillOnly" : false,
+          "importance" : "mandatory",
+          "minYearsOfExperience" : 5,
+          "name" : "Spring Boot",
+          "weight" : 0.25
+        }, {
+          "exactSkillOnly" : false,
+          "importance" : "important",
+          "minYearsOfExperience" : 4,
+          "name" : "PostgreSQL",
+          "weight" : 0.15
+        }, {
+          "exactSkillOnly" : false,
+          "importance" : "important",
+          "minYearsOfExperience" : 2,
+          "name" : "Kafka",
+          "weight" : 0.12
+        }, {
+          "exactSkillOnly" : false,
+          "importance" : "nice_to_have",
+          "minYearsOfExperience" : 2,
+          "name" : "AWS",
+          "weight" : 0.1
+        }, {
+          "exactSkillOnly" : false,
+          "importance" : "nice_to_have",
+          "minYearsOfExperience" : 1,
+          "name" : "Kubernetes",
+          "weight" : 0.08
+        } ]
+      },
+      "status" : "open",
+      "tenantId" : "<id:2>",
+      "title" : "Senior Backend Engineer (Java/Spring)"
+    },
+    "timestamp" : "<ts>"
+  },
+  "status" : 200
+}

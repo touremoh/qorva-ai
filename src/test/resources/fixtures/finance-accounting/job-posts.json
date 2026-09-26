@@ -1,0 +1,419 @@
+[
+  {
+    "title": "Financial Accountant",
+    "description": "We are looking for a diligent Financial Accountant to join our finance team in London and take shared ownership of the general ledger, month-end close and statutory reporting.\n\nYour mission: You will ensure accurate, timely and compliant financial records under IFRS and UK GAAP, acting as a trusted point of contact for accounting matters across the group.\n\nWhat you will do:\n- Own the preparation of monthly, quarterly and year-end close, including journals, accruals and prepayments\n- Perform balance sheet reconciliations, fixed asset accounting and intercompany matching\n- Support statutory account preparation and the annual external audit process\n- Maintain and improve processes and the chart of accounts within SAP FICO\n- Partner with tax, treasury and FP&A colleagues on cross-functional deliverables\n\nAbout you:\n- Part-qualified or newly qualified accountant (ACA, ACCA or CIMA) or equivalent experience\n- At least 4 years of experience in financial accounting within a corporate or professional services environment\n- Solid working knowledge of IFRS and UK GAAP reporting requirements\n- Hands-on experience with SAP FICO and strong Excel skills, including pivot tables and lookups\n\nNice to have: Exposure to consolidation tools and group reporting.\n\nWork policy: Hybrid with an office in London and up to two days remote per week. We offer a collaborative environment, modern systems and genuine development prospects.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "SAP FICO",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "UK GAAP",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Financial Reporting",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Consolidation",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 4,
+        "minRelevantYears": 4,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "London",
+          "Reading",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Professional Services",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "FP&A Analyst",
+    "description": "Our fast-growing technology company in Dublin is looking for an analytically minded FP&A Analyst to support leadership with reliable numbers, forecasts and decision-ready insight.\n\nYour mission: You will sit at the intersection of numbers and strategy, building planning models, analysing variances and making financial dynamics tangible for the wider business.\n\nWhat you will do:\n- Support the annual budgeting process and rolling forecasts across revenue, cost and cash\n- Build and maintain financial models that underpin planning and scenario analysis\n- Prepare monthly reporting, including plan-versus-actual variance analysis and commentary\n- Develop dashboards and KPIs in Power BI for management and business partners\n- Partner with sales, marketing and operations teams to inform commercial decisions\n\nAbout you:\n- Degree in finance, economics, accounting or a related field\n- At least 2 years of experience in FP&A, commercial finance or management accounting\n- Strong financial modeling capability and advanced Excel skills\n- Experience with BI tools such as Power BI and ideally planning software such as Anaplan\n\nNice to have: SQL knowledge and experience in a SaaS or scale-up environment.\n\nWork policy: Hybrid with a modern office in Dublin and flexible remote days. We offer steep learning curves, direct access to leadership and real ownership.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Financial Modeling",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Budgeting and Forecasting",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Anaplan",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SQL",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 1,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 2,
+        "minRelevantYears": 2,
+        "seniorityLevel": "junior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Dublin",
+          "Cork",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "relaxed"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Technology",
+          "Professional Services",
+          "Banking"
+        ],
+        "strictness": "relaxed"
+      },
+      "scoringWeight": {
+        "skills": 0.55,
+        "experience": 0.25,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "freelanceOnly"
+      ]
+    }
+  },
+  {
+    "title": "Internal Auditor / Risk & Compliance Analyst",
+    "description": "The group internal audit function of an international insurance group in New York is looking for a thorough Internal Auditor with a focus on risk and compliance.\n\nYour mission: You will examine processes, controls and systems, surface risks and deliver actionable recommendations to strengthen the internal control environment.\n\nWhat you will do:\n- Plan and execute risk-based audits across financial and business processes\n- Assess the effectiveness of the internal control system and SOX-relevant controls\n- Perform data analytics to detect anomalies and exceptions using ACL and Excel\n- Produce clear audit reports and track remediation of agreed actions\n- Collaborate with business units, external auditors and the compliance function\n\nAbout you:\n- Degree in accounting, finance, economics or a related field\n- At least 3 years of experience in internal audit, external audit or risk management\n- Working knowledge of SOX, internal controls and risk-based audit methodologies\n- Analytical mindset and experience with data analytics tools such as ACL\n\nNice to have: Certifications such as CIA or CISA and experience in the insurance sector.\n\nWork policy: Onsite with an office in New York, with limited flexibility. We offer an international environment, varied audit topics and clear development paths.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Internal Audit",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SOX",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Risk Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Internal Controls",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "ACL",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Excel",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 3,
+        "minRelevantYears": 3,
+        "seniorityLevel": "mid"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "New York",
+          "Boston",
+          "Onsite"
+        ],
+        "remoteAllowed": false,
+        "strictness": "strict"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Insurance",
+          "Banking",
+          "Professional Services"
+        ],
+        "strictness": "strict"
+      },
+      "scoringWeight": {
+        "skills": 0.45,
+        "experience": 0.35,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  },
+  {
+    "title": "Tax Manager",
+    "description": "The corporate headquarters of a manufacturing group in Chicago is looking for an experienced Tax Manager to own tax matters and work closely with treasury.\n\nYour mission: You will steer the group's tax strategy, ensure compliance across multiple jurisdictions and, together with treasury, optimize liquidity and group financing.\n\nWhat you will do:\n- Own ongoing tax advisory, tax returns and the management of tax audits\n- Calculate and account for deferred tax under IFRS and US GAAP and support group tax reporting\n- Manage transfer pricing and cross-border tax matters\n- Partner with treasury on cash management, hedging and group financing\n- Act as the point of contact for tax authorities, advisors and external auditors\n\nAbout you:\n- Degree with a focus on tax, accounting or a CPA / equivalent tax qualification\n- At least 6 years of experience in corporate tax, ideally with treasury exposure\n- Strong knowledge of domestic and international tax law and of US GAAP and IFRS\n- Confident with SAP and common tax and treasury systems\n\nNice to have: Experience with transfer pricing and treasury management systems.\n\nWork policy: Hybrid with an office in Chicago and flexible remote days. We offer a responsible key role with an international scope and direct reporting into finance leadership.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Tax Compliance",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 6,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "US GAAP",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Transfer Pricing",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Treasury Management",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP",
+          "importance": "nice_to_have",
+          "weight": 0.15,
+          "minYearsOfExperience": 4,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Cash Management",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 6,
+        "minRelevantYears": 5,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Chicago",
+          "Milwaukee",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Manufacturing",
+          "Professional Services",
+          "Technology"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching",
+        "notAvailable"
+      ]
+    }
+  },
+  {
+    "title": "Financial Controller",
+    "description": "An established banking institution in Manchester is looking for an assertive Financial Controller to own financial steering and support leadership with reliable analysis.\n\nYour mission: You will be a sparring partner for senior management, own the controlling framework and provide transparency over results, cost and profitability.\n\nWhat you will do:\n- Own operational and strategic controlling as well as management reporting\n- Lead the budgeting and forecasting process in partnership with business units\n- Analyse cost centres, contribution margins and the profitability of business lines\n- Evolve reporting structures and build dashboards in Power BI\n- Ensure alignment between controlling and financial accounting under IFRS\n\nAbout you:\n- Degree in finance, accounting or economics, and ideally a qualification such as ACA, ACCA or CIMA\n- At least 7 years of experience in controlling or financial planning, including a leadership role\n- Strong knowledge of financial modeling, IFRS and modern reporting tools\n- Confident with SAP FICO and business intelligence tools such as Power BI\n\nNice to have: Experience in financial services and with planning software such as Anaplan.\n\nWork policy: Hybrid with an office in Manchester and up to two days remote per week. We offer a hands-on leadership role with high visibility and a long-term perspective.",
+    "scoringRules": {
+      "skills": [
+        {
+          "name": "Controlling",
+          "importance": "mandatory",
+          "weight": 0.25,
+          "minYearsOfExperience": 7,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "IFRS",
+          "importance": "mandatory",
+          "weight": 0.2,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Financial Modeling",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "SAP FICO",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 5,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Power BI",
+          "importance": "important",
+          "weight": 0.15,
+          "minYearsOfExperience": 3,
+          "exactSkillOnly": false
+        },
+        {
+          "name": "Anaplan",
+          "importance": "nice_to_have",
+          "weight": 0.1,
+          "minYearsOfExperience": 2,
+          "exactSkillOnly": false
+        }
+      ],
+      "experienceRequirements": {
+        "minYearsOfExperience": 7,
+        "minRelevantYears": 6,
+        "seniorityLevel": "senior"
+      },
+      "locationPreferences": {
+        "allowedLocations": [
+          "Manchester",
+          "Leeds",
+          "Remote"
+        ],
+        "remoteAllowed": true,
+        "strictness": "medium"
+      },
+      "industryPreferences": {
+        "preferredIndustries": [
+          "Banking",
+          "Insurance",
+          "Professional Services"
+        ],
+        "strictness": "medium"
+      },
+      "scoringWeight": {
+        "skills": 0.5,
+        "experience": 0.3,
+        "location": 0.1,
+        "industry": 0.1
+      },
+      "filterOpenToWork": false,
+      "availabilityStatuses": [
+        "activelyLooking",
+        "openButNotSearching"
+      ]
+    }
+  }
+]

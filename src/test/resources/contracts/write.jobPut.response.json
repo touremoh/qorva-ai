@@ -1,0 +1,82 @@
+{
+  "body" : {
+    "code" : 200,
+    "data" : {
+      "atsRef" : null,
+      "createdAt" : "<ts>",
+      "createdBy" : "owner@a.qorva.test",
+      "description" : "<p>Updated.</p>",
+      "id" : "<id:1>",
+      "jobReference" : "<uuid>",
+      "lastUpdatedAt" : "<ts>",
+      "lastUpdatedBy" : "owner@a.qorva.test",
+      "matchingReportsNeeded" : true,
+      "scoringRules" : {
+        "availabilityStatuses" : [ "activelyLooking", "openButNotSearching" ],
+        "experienceRequirements" : {
+          "minRelevantYears" : 5,
+          "minYearsOfExperience" : 6,
+          "seniorityLevel" : "senior"
+        },
+        "filterOpenToWork" : true,
+        "industryPreferences" : {
+          "preferredIndustries" : [ "Fintech", "Financial Services", "Payments" ],
+          "strictness" : "medium"
+        },
+        "locationPreferences" : {
+          "allowedLocations" : [ "London", "Dublin", "Manchester", "Remote" ],
+          "remoteAllowed" : true,
+          "strictness" : "medium"
+        },
+        "scoringWeight" : {
+          "experience" : 0.3,
+          "industry" : 0.1,
+          "location" : 0.1,
+          "skills" : 0.5
+        },
+        "skills" : [ {
+          "exactSkillOnly" : false,
+          "importance" : "mandatory",
+          "minYearsOfExperience" : 6,
+          "name" : "Java",
+          "weight" : 0.3
+        }, {
+          "exactSkillOnly" : false,
+          "importance" : "mandatory",
+          "minYearsOfExperience" : 5,
+          "name" : "Spring Boot",
+          "weight" : 0.25
+        }, {
+          "exactSkillOnly" : false,
+          "importance" : "important",
+          "minYearsOfExperience" : 4,
+          "name" : "PostgreSQL",
+          "weight" : 0.15
+        }, {
+          "exactSkillOnly" : false,
+          "importance" : "important",
+          "minYearsOfExperience" : 2,
+          "name" : "Kafka",
+          "weight" : 0.12
+        }, {
+          "exactSkillOnly" : false,
+          "importance" : "nice_to_have",
+          "minYearsOfExperience" : 2,
+          "name" : "AWS",
+          "weight" : 0.1
+        }, {
+          "exactSkillOnly" : false,
+          "importance" : "nice_to_have",
+          "minYearsOfExperience" : 1,
+          "name" : "Kubernetes",
+          "weight" : 0.08
+        } ]
+      },
+      "status" : "open",
+      "tenantId" : "<id:2>",
+      "title" : "Senior Backend Engineer (Java)"
+    },
+    "timestamp" : "<ts>"
+  },
+  "status" : 200
+}

@@ -1,0 +1,798 @@
+{
+  "body" : {
+    "availability" : [ {
+      "count" : 13,
+      "value" : "openButNotSearching"
+    }, {
+      "count" : 9,
+      "value" : "activelyLooking"
+    } ],
+    "experience" : {
+      "max" : 18,
+      "min" : 3
+    },
+    "industries" : [ {
+      "count" : 20,
+      "value" : "Software"
+    }, {
+      "count" : 5,
+      "value" : "Retail"
+    }, {
+      "count" : 3,
+      "value" : "Analytics"
+    }, {
+      "count" : 3,
+      "value" : "E-commerce"
+    }, {
+      "count" : 3,
+      "value" : "Financial Services"
+    }, {
+      "count" : 3,
+      "value" : "Fintech"
+    }, {
+      "count" : 3,
+      "value" : "SaaS"
+    }, {
+      "count" : 2,
+      "value" : "Healthcare"
+    }, {
+      "count" : 2,
+      "value" : "Insurance"
+    }, {
+      "count" : 2,
+      "value" : "Media"
+    }, {
+      "count" : 1,
+      "value" : "Consumer Apps"
+    }, {
+      "count" : 1,
+      "value" : "Cybersecurity"
+    }, {
+      "count" : 1,
+      "value" : "Developer Tools"
+    }, {
+      "count" : 1,
+      "value" : "EdTech"
+    }, {
+      "count" : 1,
+      "value" : "Enterprise Software"
+    }, {
+      "count" : 1,
+      "value" : "HR Tech"
+    }, {
+      "count" : 1,
+      "value" : "Logistics"
+    }, {
+      "count" : 1,
+      "value" : "Marketplaces"
+    }, {
+      "count" : 1,
+      "value" : "Mobility"
+    }, {
+      "count" : 1,
+      "value" : "Telecommunications"
+    } ],
+    "leadership" : [ {
+      "count" : 7,
+      "value" : "crossFunctionalLeader"
+    }, {
+      "count" : 6,
+      "value" : "individualContributor"
+    }, {
+      "count" : 4,
+      "value" : "teamLead"
+    }, {
+      "count" : 2,
+      "value" : "executiveInfluence"
+    }, {
+      "count" : 2,
+      "value" : "strategicLeader"
+    }, {
+      "count" : 1,
+      "value" : null
+    } ],
+    "locations" : [ {
+      "count" : 14,
+      "value" : "Europe"
+    }, {
+      "count" : 10,
+      "value" : "United Kingdom"
+    }, {
+      "count" : 9,
+      "value" : "England"
+    }, {
+      "count" : 8,
+      "value" : "North America"
+    }, {
+      "count" : 8,
+      "value" : "United States"
+    }, {
+      "count" : 4,
+      "value" : "Ireland"
+    }, {
+      "count" : 4,
+      "value" : "London"
+    }, {
+      "count" : 2,
+      "value" : "Dublin"
+    }, {
+      "count" : 2,
+      "value" : "Leinster"
+    }, {
+      "count" : 2,
+      "value" : "Manchester"
+    }, {
+      "count" : 2,
+      "value" : "New York"
+    }, {
+      "count" : 1,
+      "value" : "Austin"
+    }, {
+      "count" : 1,
+      "value" : "Boston"
+    }, {
+      "count" : 1,
+      "value" : "Brighton"
+    }, {
+      "count" : 1,
+      "value" : "Bristol"
+    }, {
+      "count" : 1,
+      "value" : "California"
+    }, {
+      "count" : 1,
+      "value" : "Chicago"
+    }, {
+      "count" : 1,
+      "value" : "Colorado"
+    }, {
+      "count" : 1,
+      "value" : "Connacht"
+    }, {
+      "count" : 1,
+      "value" : "Cork"
+    }, {
+      "count" : 1,
+      "value" : "Denver"
+    }, {
+      "count" : 1,
+      "value" : "Edinburgh"
+    }, {
+      "count" : 1,
+      "value" : "Galway"
+    }, {
+      "count" : 1,
+      "value" : "Illinois"
+    }, {
+      "count" : 1,
+      "value" : "Leeds"
+    }, {
+      "count" : 1,
+      "value" : "Massachusetts"
+    }, {
+      "count" : 1,
+      "value" : "Munster"
+    }, {
+      "count" : 1,
+      "value" : "San Francisco"
+    }, {
+      "count" : 1,
+      "value" : "Scotland"
+    }, {
+      "count" : 1,
+      "value" : "Seattle"
+    }, {
+      "count" : 1,
+      "value" : "Texas"
+    }, {
+      "count" : 1,
+      "value" : "Washington"
+    } ],
+    "seniority" : [ {
+      "count" : 9,
+      "value" : "senior"
+    }, {
+      "count" : 3,
+      "value" : "junior"
+    }, {
+      "count" : 2,
+      "value" : "director"
+    }, {
+      "count" : 2,
+      "value" : "lead"
+    }, {
+      "count" : 2,
+      "value" : "midLevel"
+    }, {
+      "count" : 2,
+      "value" : "principal"
+    }, {
+      "count" : 1,
+      "value" : null
+    }, {
+      "count" : 1,
+      "value" : "manager"
+    } ],
+    "skillDepth" : [ {
+      "count" : 8,
+      "value" : "tShaped"
+    }, {
+      "count" : 5,
+      "value" : "generalist"
+    }, {
+      "count" : 5,
+      "value" : "specialist"
+    }, {
+      "count" : 3,
+      "value" : "hybrid"
+    }, {
+      "count" : 1,
+      "value" : null
+    } ],
+    "skills" : [ {
+      "count" : 8,
+      "value" : "SQL"
+    }, {
+      "count" : 6,
+      "value" : "AWS"
+    }, {
+      "count" : 6,
+      "value" : "Computer Science"
+    }, {
+      "count" : 5,
+      "value" : "Java"
+    }, {
+      "count" : 4,
+      "value" : "Amplitude"
+    }, {
+      "count" : 4,
+      "value" : "Kubernetes"
+    }, {
+      "count" : 4,
+      "value" : "PostgreSQL"
+    }, {
+      "count" : 4,
+      "value" : "Spring Boot"
+    }, {
+      "count" : 4,
+      "value" : "Terraform"
+    }, {
+      "count" : 3,
+      "value" : "A/B Testing"
+    }, {
+      "count" : 3,
+      "value" : "Docker"
+    }, {
+      "count" : 3,
+      "value" : "Looker"
+    }, {
+      "count" : 3,
+      "value" : "Python"
+    }, {
+      "count" : 3,
+      "value" : "React"
+    }, {
+      "count" : 3,
+      "value" : "Snowflake"
+    }, {
+      "count" : 3,
+      "value" : "TypeScript"
+    }, {
+      "count" : 3,
+      "value" : "dbt"
+    }, {
+      "count" : 2,
+      "value" : "CI/CD"
+    }, {
+      "count" : 2,
+      "value" : "Computer Engineering"
+    }, {
+      "count" : 2,
+      "value" : "Go"
+    }, {
+      "count" : 2,
+      "value" : "GraphQL"
+    }, {
+      "count" : 2,
+      "value" : "JUnit"
+    }, {
+      "count" : 2,
+      "value" : "Networking"
+    }, {
+      "count" : 2,
+      "value" : "Next.js"
+    }, {
+      "count" : 2,
+      "value" : "Node.js"
+    }, {
+      "count" : 2,
+      "value" : "Playwright"
+    }, {
+      "count" : 2,
+      "value" : "PyTorch"
+    }, {
+      "count" : 2,
+      "value" : "REST APIs"
+    }, {
+      "count" : 2,
+      "value" : "Redis"
+    }, {
+      "count" : 2,
+      "value" : "Roadmapping"
+    }, {
+      "count" : 2,
+      "value" : "Software Engineering"
+    }, {
+      "count" : 2,
+      "value" : "Statistics"
+    }, {
+      "count" : 2,
+      "value" : "Tableau"
+    }, {
+      "count" : 1,
+      "value" : "API Product Management"
+    }, {
+      "count" : 1,
+      "value" : "AWS SageMaker"
+    }, {
+      "count" : 1,
+      "value" : "AWS Security"
+    }, {
+      "count" : 1,
+      "value" : "Agile"
+    }, {
+      "count" : 1,
+      "value" : "Airflow"
+    }, {
+      "count" : 1,
+      "value" : "Apache Spark"
+    }, {
+      "count" : 1,
+      "value" : "Application Security"
+    }, {
+      "count" : 1,
+      "value" : "ArgoCD"
+    }, {
+      "count" : 1,
+      "value" : "BGP"
+    }, {
+      "count" : 1,
+      "value" : "Backlog Management"
+    }, {
+      "count" : 1,
+      "value" : "Backstage"
+    }, {
+      "count" : 1,
+      "value" : "Bash"
+    }, {
+      "count" : 1,
+      "value" : "BigQuery"
+    }, {
+      "count" : 1,
+      "value" : "Business Analytics"
+    }, {
+      "count" : 1,
+      "value" : "Business Information Systems"
+    }, {
+      "count" : 1,
+      "value" : "Business Intelligence"
+    }, {
+      "count" : 1,
+      "value" : "Business and Management"
+    }, {
+      "count" : 1,
+      "value" : "Causal Inference"
+    }, {
+      "count" : 1,
+      "value" : "Cloud Computing"
+    }, {
+      "count" : 1,
+      "value" : "Cloud Security"
+    }, {
+      "count" : 1,
+      "value" : "Combine"
+    }, {
+      "count" : 1,
+      "value" : "Computer Science (Machine Learning)"
+    }, {
+      "count" : 1,
+      "value" : "Core Web Vitals"
+    }, {
+      "count" : 1,
+      "value" : "Crossplane"
+    }, {
+      "count" : 1,
+      "value" : "Data Governance"
+    }, {
+      "count" : 1,
+      "value" : "Data Modelling"
+    }, {
+      "count" : 1,
+      "value" : "Data Strategy"
+    }, {
+      "count" : 1,
+      "value" : "Developer Experience"
+    }, {
+      "count" : 1,
+      "value" : "Direct Connect"
+    }, {
+      "count" : 1,
+      "value" : "Economics"
+    }, {
+      "count" : 1,
+      "value" : "Economics and Statistics"
+    }, {
+      "count" : 1,
+      "value" : "Electrical Engineering and Computer Sciences"
+    }, {
+      "count" : 1,
+      "value" : "Experimentation"
+    }, {
+      "count" : 1,
+      "value" : "Fastlane"
+    }, {
+      "count" : 1,
+      "value" : "Figma"
+    }, {
+      "count" : 1,
+      "value" : "GCP"
+    }, {
+      "count" : 1,
+      "value" : "GitHub Actions"
+    }, {
+      "count" : 1,
+      "value" : "Grafana"
+    }, {
+      "count" : 1,
+      "value" : "Hybrid Cloud"
+    }, {
+      "count" : 1,
+      "value" : "IAM"
+    }, {
+      "count" : 1,
+      "value" : "Incident Response"
+    }, {
+      "count" : 1,
+      "value" : "Information Systems"
+    }, {
+      "count" : 1,
+      "value" : "Jira"
+    }, {
+      "count" : 1,
+      "value" : "Kafka"
+    }, {
+      "count" : 1,
+      "value" : "MLOps"
+    }, {
+      "count" : 1,
+      "value" : "MLflow"
+    }, {
+      "count" : 1,
+      "value" : "MPLS"
+    }, {
+      "count" : 1,
+      "value" : "Mathematics"
+    }, {
+      "count" : 1,
+      "value" : "Mathematics and Computer Science"
+    }, {
+      "count" : 1,
+      "value" : "Metrics Governance"
+    }, {
+      "count" : 1,
+      "value" : "Mixpanel"
+    }, {
+      "count" : 1,
+      "value" : "Mobile Architecture"
+    }, {
+      "count" : 1,
+      "value" : "NLP"
+    }, {
+      "count" : 1,
+      "value" : "Network Engineering Technology"
+    }, {
+      "count" : 1,
+      "value" : "OKRs"
+    }, {
+      "count" : 1,
+      "value" : "Objective-C"
+    }, {
+      "count" : 1,
+      "value" : "OpenTelemetry"
+    }, {
+      "count" : 1,
+      "value" : "Performance Testing"
+    }, {
+      "count" : 1,
+      "value" : "Platform Strategy"
+    }, {
+      "count" : 1,
+      "value" : "Pricing Strategy"
+    }, {
+      "count" : 1,
+      "value" : "Prioritisation"
+    }, {
+      "count" : 1,
+      "value" : "Product Discovery"
+    }, {
+      "count" : 1,
+      "value" : "Product Strategy"
+    }, {
+      "count" : 1,
+      "value" : "Product Vision"
+    }, {
+      "count" : 1,
+      "value" : "Product-Led Growth"
+    }, {
+      "count" : 1,
+      "value" : "Prometheus"
+    }, {
+      "count" : 1,
+      "value" : "Recommendation Systems"
+    }, {
+      "count" : 1,
+      "value" : "Retention"
+    }, {
+      "count" : 1,
+      "value" : "SAST"
+    }, {
+      "count" : 1,
+      "value" : "SD-WAN"
+    }, {
+      "count" : 1,
+      "value" : "SIEM"
+    }, {
+      "count" : 1,
+      "value" : "SLOs"
+    }, {
+      "count" : 1,
+      "value" : "Scrum"
+    }, {
+      "count" : 1,
+      "value" : "Selenium"
+    }, {
+      "count" : 1,
+      "value" : "Stakeholder Management"
+    }, {
+      "count" : 1,
+      "value" : "Strategy and Entrepreneurship"
+    }, {
+      "count" : 1,
+      "value" : "Swift"
+    }, {
+      "count" : 1,
+      "value" : "SwiftUI"
+    }, {
+      "count" : 1,
+      "value" : "Tailwind CSS"
+    }, {
+      "count" : 1,
+      "value" : "TensorFlow"
+    }, {
+      "count" : 1,
+      "value" : "Test Automation"
+    }, {
+      "count" : 1,
+      "value" : "Threat Modelling"
+    }, {
+      "count" : 1,
+      "value" : "Transformers"
+    }, {
+      "count" : 1,
+      "value" : "UIKit"
+    }, {
+      "count" : 1,
+      "value" : "User Stories"
+    }, {
+      "count" : 1,
+      "value" : "VMware"
+    }, {
+      "count" : 1,
+      "value" : "Vue.js"
+    }, {
+      "count" : 1,
+      "value" : "Web Accessibility"
+    }, {
+      "count" : 1,
+      "value" : "k6"
+    }, {
+      "count" : 1,
+      "value" : "scikit-learn"
+    } ],
+    "sources" : [ {
+      "count" : 22,
+      "value" : "MANUAL"
+    } ],
+    "tags" : [ {
+      "count" : 1,
+      "value" : "accessibility"
+    }, {
+      "count" : 1,
+      "value" : "agile"
+    }, {
+      "count" : 1,
+      "value" : "analytics-engineering"
+    }, {
+      "count" : 1,
+      "value" : "api"
+    }, {
+      "count" : 1,
+      "value" : "appsec"
+    }, {
+      "count" : 2,
+      "value" : "aws"
+    }, {
+      "count" : 2,
+      "value" : "backend"
+    }, {
+      "count" : 1,
+      "value" : "bi"
+    }, {
+      "count" : 1,
+      "value" : "cloud"
+    }, {
+      "count" : 1,
+      "value" : "cloud-security"
+    }, {
+      "count" : 1,
+      "value" : "data-engineering"
+    }, {
+      "count" : 1,
+      "value" : "data-leadership"
+    }, {
+      "count" : 1,
+      "value" : "data-science"
+    }, {
+      "count" : 2,
+      "value" : "dbt"
+    }, {
+      "count" : 1,
+      "value" : "devops"
+    }, {
+      "count" : 2,
+      "value" : "director"
+    }, {
+      "count" : 1,
+      "value" : "discovery"
+    }, {
+      "count" : 2,
+      "value" : "experimentation"
+    }, {
+      "count" : 1,
+      "value" : "frontend"
+    }, {
+      "count" : 2,
+      "value" : "full-stack"
+    }, {
+      "count" : 1,
+      "value" : "governance"
+    }, {
+      "count" : 1,
+      "value" : "growth"
+    }, {
+      "count" : 1,
+      "value" : "hybrid-cloud"
+    }, {
+      "count" : 1,
+      "value" : "infrastructure"
+    }, {
+      "count" : 1,
+      "value" : "ios"
+    }, {
+      "count" : 2,
+      "value" : "java"
+    }, {
+      "count" : 3,
+      "value" : "junior"
+    }, {
+      "count" : 2,
+      "value" : "kubernetes"
+    }, {
+      "count" : 2,
+      "value" : "lead"
+    }, {
+      "count" : 1,
+      "value" : "leadership"
+    }, {
+      "count" : 1,
+      "value" : "looker"
+    }, {
+      "count" : 2,
+      "value" : "machine-learning"
+    }, {
+      "count" : 2,
+      "value" : "manager"
+    }, {
+      "count" : 2,
+      "value" : "midlevel"
+    }, {
+      "count" : 1,
+      "value" : "mlops"
+    }, {
+      "count" : 1,
+      "value" : "mobile"
+    }, {
+      "count" : 1,
+      "value" : "networking"
+    }, {
+      "count" : 1,
+      "value" : "nlp"
+    }, {
+      "count" : 1,
+      "value" : "observability"
+    }, {
+      "count" : 1,
+      "value" : "platform"
+    }, {
+      "count" : 1,
+      "value" : "platform-engineering"
+    }, {
+      "count" : 2,
+      "value" : "principal"
+    }, {
+      "count" : 1,
+      "value" : "product-leadership"
+    }, {
+      "count" : 2,
+      "value" : "product-management"
+    }, {
+      "count" : 1,
+      "value" : "product-owner"
+    }, {
+      "count" : 1,
+      "value" : "python"
+    }, {
+      "count" : 1,
+      "value" : "qa"
+    }, {
+      "count" : 3,
+      "value" : "react"
+    }, {
+      "count" : 1,
+      "value" : "remote"
+    }, {
+      "count" : 2,
+      "value" : "saas"
+    }, {
+      "count" : 1,
+      "value" : "scrum"
+    }, {
+      "count" : 1,
+      "value" : "sdet"
+    }, {
+      "count" : 1,
+      "value" : "security"
+    }, {
+      "count" : 9,
+      "value" : "senior"
+    }, {
+      "count" : 1,
+      "value" : "snowflake"
+    }, {
+      "count" : 2,
+      "value" : "spring-boot"
+    }, {
+      "count" : 1,
+      "value" : "sre"
+    }, {
+      "count" : 1,
+      "value" : "strategy"
+    }, {
+      "count" : 1,
+      "value" : "swift"
+    }, {
+      "count" : 1,
+      "value" : "technical-product-manager"
+    }, {
+      "count" : 2,
+      "value" : "terraform"
+    }, {
+      "count" : 1,
+      "value" : "test-automation"
+    }, {
+      "count" : 2,
+      "value" : "typescript"
+    } ]
+  },
+  "status" : 200
+}

@@ -1,0 +1,53 @@
+{
+  "body" : {
+    "content" : [ {
+      "context" : {
+        "cvId" : "<id:3>",
+        "jobPostId" : "<id:4>",
+        "matchingReportId" : "<id:5>"
+      },
+      "createdAt" : "<ts>",
+      "createdBy" : "owner@a.qorva.test",
+      "id" : "<id:1>",
+      "lastUpdatedAt" : "<ts>",
+      "lastUpdatedBy" : "owner@a.qorva.test",
+      "metadata" : {
+        "language" : "en",
+        "tags" : [ ]
+      },
+      "participants" : [ {
+        "role" : "OWNER",
+        "userId" : "<id:6>"
+      } ],
+      "status" : "OPEN",
+      "tenantId" : "<id:2>",
+      "title" : "Screening follow-up"
+    } ],
+    "empty" : false,
+    "first" : true,
+    "last" : true,
+    "number" : 0,
+    "numberOfElements" : 1,
+    "pageable" : {
+      "offset" : 0,
+      "pageNumber" : 0,
+      "pageSize" : 25,
+      "paged" : true,
+      "sort" : {
+        "empty" : false,
+        "sorted" : true,
+        "unsorted" : false
+      },
+      "unpaged" : false
+    },
+    "size" : 25,
+    "sort" : {
+      "empty" : false,
+      "sorted" : true,
+      "unsorted" : false
+    },
+    "totalElements" : 1,
+    "totalPages" : 1
+  },
+  "status" : 200
+}

@@ -1,0 +1,22 @@
+{
+  "body" : {
+    "code" : 200,
+    "data" : {
+      "atsRef" : null,
+      "createdAt" : "<ts>",
+      "createdBy" : "owner@a.qorva.test",
+      "description" : "<p>Own our Kubernetes platform.</p>",
+      "id" : "<id:1>",
+      "jobReference" : "<uuid>",
+      "lastUpdatedAt" : "<ts>",
+      "lastUpdatedBy" : "owner@a.qorva.test",
+      "matchingReportsNeeded" : true,
+      "scoringRules" : null,
+      "status" : "open",
+      "tenantId" : "<id:2>",
+      "title" : "Staff Platform Engineer"
+    },
+    "timestamp" : "<ts>"
+  },
+  "status" : 200
+}
