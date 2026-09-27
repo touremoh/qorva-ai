@@ -1,0 +1,51 @@
+{
+  "body" : {
+    "content" : [ {
+      "chatId" : "<id:3>",
+      "content" : "Kubernetes, Go and incident response stand out.",
+      "createdAt" : "<ts>",
+      "id" : "<id:1>",
+      "metadata" : null,
+      "participantId" : null,
+      "role" : "ASSISTANT",
+      "tenantId" : "<id:2>",
+      "tokens" : null
+    }, {
+      "chatId" : "<id:3>",
+      "content" : "What are this candidate's strongest skills for the role?",
+      "createdAt" : "<ts>",
+      "id" : "<id:4>",
+      "metadata" : null,
+      "participantId" : "<id:5>",
+      "role" : "USER",
+      "tenantId" : "<id:2>",
+      "tokens" : null
+    } ],
+    "empty" : false,
+    "first" : true,
+    "last" : true,
+    "number" : 0,
+    "numberOfElements" : 2,
+    "pageable" : {
+      "offset" : 0,
+      "pageNumber" : 0,
+      "pageSize" : 50,
+      "paged" : true,
+      "sort" : {
+        "empty" : false,
+        "sorted" : true,
+        "unsorted" : false
+      },
+      "unpaged" : false
+    },
+    "size" : 50,
+    "sort" : {
+      "empty" : false,
+      "sorted" : true,
+      "unsorted" : false
+    },
+    "totalElements" : 2,
+    "totalPages" : 1
+  },
+  "status" : 200
+}

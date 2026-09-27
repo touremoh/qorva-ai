@@ -1,0 +1,40 @@
+{
+  "body" : {
+    "code" : 200,
+    "data" : {
+      "companyAddress" : null,
+      "companyLogoUrl" : null,
+      "contactEmail" : "contact@acme-tech-talent.test",
+      "createdAt" : "<ts>",
+      "createdBy" : "qorva",
+      "id" : "<id:1>",
+      "lastUpdatedAt" : "<ts>",
+      "lastUpdatedBy" : "qorva",
+      "organizationId" : null,
+      "organizationSize" : "11-50",
+      "phoneNumber" : null,
+      "recruitmentType" : "AGENCY",
+      "stripeCustomerId" : "cus_test_953546736",
+      "subscriptionInfo" : {
+        "accountManager" : null,
+        "billingCycle" : "month",
+        "cancelAtPeriodEnd" : false,
+        "currentPeriodEnd" : "<ts>",
+        "currentPeriodStart" : "<ts>",
+        "planCode" : "price_test_pro",
+        "price" : null,
+        "priceId" : "price_test_pro",
+        "subscriptionEndDate" : null,
+        "subscriptionId" : "sub_test_953546736",
+        "subscriptionPlan" : "Pro",
+        "subscriptionStartDate" : null,
+        "subscriptionStatus" : "active"
+      },
+      "tenantId" : "<id:1>",
+      "tenantName" : "Acme Tech Talent",
+      "websiteUrl" : "https://acme-tech-talent.test"
+    },
+    "timestamp" : "<ts>"
+  },
+  "status" : 200
+}

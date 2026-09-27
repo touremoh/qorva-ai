@@ -1,5 +1,7 @@
 package ai.qorva.core.service.ats;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.config.AtsProperties;
 import ai.qorva.core.config.QorvaProductProperties;
 import ai.qorva.core.dao.entity.AtsConnection;
@@ -163,7 +165,7 @@ public class AtsConnectionService {
 		throws QorvaException {
 		var provider = parseProvider(request.provider());
 		if (!provider.supportsApiKey()) {
-			throw badRequest(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN);
 		}
 		assertPathSegment(request.subdomain());
 		assertPathSegment(request.companyId());
@@ -201,8 +203,7 @@ public class AtsConnectionService {
 
 	private void assertCreatable(String tenantId, AtsProviderEnum provider) throws QorvaException {
 		if (connectionRepository.existsByTenantIdAndProvider(tenantId, provider.getValue())) {
-			throw new QorvaException(QorvaErrorCodes.ATS_CONNECTION_EXISTS,
-				HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.ATS_CONNECTION_EXISTS);
 		}
 		int max = maxConnectionsForTenant(tenantId);
 		if (connectionRepository.countByTenantId(tenantId) >= max) {
@@ -299,9 +300,8 @@ public class AtsConnectionService {
 	}
 
 	public AtsConnection findOwned(String tenantId, String connectionId) throws QorvaException {
-		return connectionRepository.findByIdAndTenantId(connectionId, tenantId)
-			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.ATS_CONNECTION_NOT_FOUND,
-				HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+		return connectionRepository.findByIdInTenant(connectionId, tenantId)
+			.orElseThrow(() -> QorvaErrors.notFound(QorvaErrorCodes.ATS_CONNECTION_NOT_FOUND));
 	}
 
 	public AtsCredentials decryptCredentials(AtsConnection connection) throws QorvaException {
@@ -345,13 +345,13 @@ public class AtsConnectionService {
 			default -> !StringUtils.hasText(request.apiKey());
 		};
 		if (missing) {
-			throw badRequest(QorvaErrorCodes.HTTP_VALIDATION);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.HTTP_VALIDATION);
 		}
 	}
 
 	private void assertPathSegment(String value) throws QorvaException {
 		if (StringUtils.hasText(value) && !PATH_SEGMENT.matcher(value.trim()).matches()) {
-			throw badRequest(QorvaErrorCodes.HTTP_VALIDATION);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.HTTP_VALIDATION);
 		}
 	}
 
@@ -359,13 +359,10 @@ public class AtsConnectionService {
 		try {
 			return AtsProviderEnum.fromValue(value);
 		} catch (Exception e) {
-			throw badRequest(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN);
 		}
 	}
 
-	private QorvaException badRequest(String code) {
-		return new QorvaException(code, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
-	}
 
 	private String trimOrNull(String value) {
 		return StringUtils.hasText(value) ? value.trim() : null;

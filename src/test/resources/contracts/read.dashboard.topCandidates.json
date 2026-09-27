@@ -1,0 +1,27 @@
+{
+  "body" : {
+    "content" : [ {
+      "jobPostId" : "<id:1>",
+      "jobPostTitle" : "Senior Backend Engineer (Java/Spring)",
+      "topCandidates" : [ {
+        "candidateId" : "<id:2>",
+        "candidateName" : "Oliver Whitfield",
+        "score" : 82
+      }, {
+        "candidateId" : "<id:3>",
+        "candidateName" : "Hannah Fletcher",
+        "score" : 64
+      }, {
+        "candidateId" : "<id:4>",
+        "candidateName" : "Cian O'Sullivan",
+        "score" : 41
+      } ]
+    } ],
+    "hasNext" : false,
+    "pageNumber" : 0,
+    "pageSize" : 5,
+    "totalElements" : 1,
+    "totalPages" : 1
+  },
+  "status" : 200
+}

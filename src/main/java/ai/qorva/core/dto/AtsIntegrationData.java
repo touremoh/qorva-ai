@@ -1,7 +1,6 @@
 package ai.qorva.core.dto;
 
 import ai.qorva.core.dao.entity.AtsConnection;
-import ai.qorva.core.enums.AtsProviderEnum;
 
 import java.time.Instant;
 import java.util.List;
@@ -110,9 +109,4 @@ public final class AtsIntegrationData {
 
 	public record OauthStartResponse(String consentUrl) {}
 
-	public record TestResponse(String status) {}
-
-	public static String authKindOf(String provider) {
-		return AtsProviderEnum.fromValue(provider).getAuthKind().name();
-	}
 }

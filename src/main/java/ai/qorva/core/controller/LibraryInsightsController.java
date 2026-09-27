@@ -11,6 +11,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +29,7 @@ public class LibraryInsightsController {
 	private final InsightConversationService conversationService;
 
 	@PostMapping("/ask")
-	//@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_LIBRARY_INSIGHTS')")
+	@PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_LIBRARY_INSIGHTS')")
 	public ResponseEntity<InsightResponseDTO> ask(@Valid @RequestBody InsightRequestDTO request) {
 		String tenantId = TenantContextHolder.getTenantId();
 		String userId = SecurityContextHolder.getContext().getAuthentication().getName();
@@ -37,7 +38,7 @@ public class LibraryInsightsController {
 	}
 
 	@GetMapping("/conversations")
-	//@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_LIBRARY_INSIGHTS')")
+	@PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_LIBRARY_INSIGHTS')")
 	public ResponseEntity<List<InsightConversationSummaryDTO>> getAllConversations() {
 		String tenantId = TenantContextHolder.getTenantId();
 		String userId = SecurityContextHolder.getContext().getAuthentication().getName();
@@ -45,7 +46,7 @@ public class LibraryInsightsController {
 	}
 
 	@GetMapping("/conversations/{conversationId}")
-	//@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_LIBRARY_INSIGHTS')")
+	@PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_LIBRARY_INSIGHTS')")
 	public ResponseEntity<List<InsightConversationTurnDTO>> getConversationHistory(@PathVariable String conversationId) {
 		String tenantId = TenantContextHolder.getTenantId();
 		String userId = SecurityContextHolder.getContext().getAuthentication().getName();
@@ -54,7 +55,7 @@ public class LibraryInsightsController {
 	}
 
 	@DeleteMapping("/conversations/{conversationId}")
-	//@PreAuthorize("@accessManager.hasAuthority(authentication, 'VIEW_LIBRARY_INSIGHTS')")
+	@PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_LIBRARY_INSIGHTS')")
 	public ResponseEntity<Void> deleteConversation(@PathVariable String conversationId) {
 		String tenantId = TenantContextHolder.getTenantId();
 		String userId = SecurityContextHolder.getContext().getAuthentication().getName();

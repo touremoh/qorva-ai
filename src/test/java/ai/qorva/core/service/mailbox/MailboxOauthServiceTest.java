@@ -58,7 +58,7 @@ class MailboxOauthServiceTest {
 		var url = service.buildConsentUrl(MailboxProviderEnum.MICROSOFT, TENANT, USER);
 		var state = url.substring(url.indexOf("&state=") + "&state=".length());
 
-		assertThatThrownBy(() -> service.validateState(state.substring(0, state.length() - 2) + "ff"))
+		assertThatThrownBy(() -> service.validateState(state.substring(0, state.length() - 1) + (state.endsWith("0") ? "1" : "0")))
 			.isInstanceOf(QorvaException.class)
 			.hasMessage(QorvaErrorCodes.MAILBOX_OAUTH_STATE_INVALID);
 	}

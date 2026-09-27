@@ -3,6 +3,7 @@ package ai.qorva.core.dao.querybuilder;
 import ai.qorva.core.dao.entity.JobPost;
 import ai.qorva.core.dao.specifications.JobPostSpecifications;
 import ai.qorva.core.dao.specifications.MongoSpecification;
+import ai.qorva.core.dao.specifications.MongoSpecifications;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -13,7 +14,7 @@ public class JobPostQueryBuilder implements QorvaQueryBuilder<JobPost> {
 	@Override
 	public MongoSpecification<JobPost> buildQuery(Map<String, String> params) {
 		return MongoSpecification
-			.where(JobPostSpecifications.tenantIdEquals(params.get("tenantId")))
+			.where(MongoSpecifications.<JobPost>ownedBy(params.get("tenantId")))
 			.and(JobPostSpecifications.titleContains(params.get("title")))
 			.and(JobPostSpecifications.descriptionContains(params.get("description")))
 			.and(JobPostSpecifications.statusEquals(params.get("status")))

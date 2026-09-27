@@ -8,11 +8,6 @@ public final class JobPostSpecifications {
 		throw new UnsupportedOperationException("Utility class");
 	}
 
-	public static MongoSpecification<JobPost> tenantIdEquals(String tenantId) {
-		if (tenantId == null || tenantId.isBlank()) return MongoSpecifications.empty();
-		return () -> Criteria.where("tenantId").is(tenantId);
-	}
-
 	public static MongoSpecification<JobPost> titleContains(String title) {
 		if (title == null || title.isBlank()) return MongoSpecifications.empty();
 		return () -> Criteria.where("title").regex(title, "i");

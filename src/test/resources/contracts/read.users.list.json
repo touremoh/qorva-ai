@@ -1,0 +1,189 @@
+{
+  "body" : {
+    "code" : 200,
+    "data" : {
+      "content" : [ {
+        "authorities" : [ {
+          "action" : "VIEW_DASHBOARD",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_CV",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_JOB",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_REPORT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        } ],
+        "communicationLanguage" : "en",
+        "createdAt" : "<ts>",
+        "createdBy" : "owner@a.qorva.test",
+        "email" : "viewer@a.qorva.test",
+        "firstName" : "Victor",
+        "id" : "<id:1>",
+        "lastName" : "Viewer-A",
+        "lastUpdatedAt" : "<ts>",
+        "lastUpdatedBy" : "owner@a.qorva.test",
+        "mfaEnabled" : null,
+        "tenant" : null,
+        "tenantId" : "<id:2>",
+        "userAccountStatus" : "ACTIVE"
+      }, {
+        "authorities" : [ {
+          "action" : "VIEW_DASHBOARD",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "ADD_CV",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_CV",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MODIFY_CV",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "DELETE_CV",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "ADD_JOB",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_JOB",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MODIFY_JOB",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "DELETE_JOB",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "GENERATE_REPORT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_REPORT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MODIFY_REPORT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "DELETE_REPORT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "START_CHAT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_CHAT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_MESSAGE",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "REPLY_MESSAGE",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MODIFY_CHAT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "DELETE_CHAT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_USERS",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MANAGE_USERS",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "ATS_REPORT_EXPORT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "MANAGE_INTEGRATIONS",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "UPDATE_SUBSCRIPTION",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "CANCEL_SUBSCRIPTION",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "VIEW_LIBRARY_INSIGHTS",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "CONTACT_CANDIDATE",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
+        } ],
+        "communicationLanguage" : "en",
+        "createdAt" : "<ts>",
+        "createdBy" : "owner@a.qorva.test",
+        "email" : "owner@a.qorva.test",
+        "firstName" : "Olivia",
+        "id" : "<id:3>",
+        "lastName" : "Owner-A",
+        "lastUpdatedAt" : "<ts>",
+        "lastUpdatedBy" : "owner@a.qorva.test",
+        "mfaEnabled" : null,
+        "tenant" : null,
+        "tenantId" : "<id:2>",
+        "userAccountStatus" : "ACTIVE"
+      } ],
+      "empty" : false,
+      "first" : true,
+      "last" : true,
+      "number" : 0,
+      "numberOfElements" : 2,
+      "pageable" : {
+        "offset" : 0,
+        "pageNumber" : 0,
+        "pageSize" : 25,
+        "paged" : true,
+        "sort" : {
+          "empty" : false,
+          "sorted" : true,
+          "unsorted" : false
+        },
+        "unpaged" : false
+      },
+      "size" : 25,
+      "sort" : {
+        "empty" : false,
+        "sorted" : true,
+        "unsorted" : false
+      },
+      "totalElements" : 2,
+      "totalPages" : 1
+    },
+    "timestamp" : "<ts>"
+  },
+  "status" : 200
+}

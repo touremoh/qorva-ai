@@ -16,39 +16,11 @@ public final class CVSpecifications {
 		throw new UnsupportedOperationException("Utility class");
 	}
 
-	public static MongoSpecification<CV> tenantIdEquals(String tenantId) {
-		if (tenantId == null || tenantId.isBlank()) {
-			return MongoSpecifications.empty();
-		}
-		return () -> Criteria.where("tenantId").is(tenantId);
-	}
-
 	/** Archived filter: the CV list shows active CVs by default; archived only on request. */
 	public static MongoSpecification<CV> archivedEquals(boolean archived) {
 		return archived
 			? () -> Criteria.where("archived").is(true)
 			: () -> Criteria.where("archived").ne(true);
-	}
-
-	public static MongoSpecification<CV> hasSkills(Collection<String> skills) {
-		if (skills == null || skills.isEmpty()) {
-			return MongoSpecifications.empty();
-		}
-		return () -> Criteria.where("skills").all(skills);
-	}
-
-	public static MongoSpecification<CV> hasAnySkill(Collection<String> skills) {
-		if (skills == null || skills.isEmpty()) {
-			return MongoSpecifications.empty();
-		}
-		List<Pattern> patterns = skills.stream()
-			.filter(s -> s != null && !s.isBlank())
-			.map(s -> Pattern.compile(Pattern.quote(s.trim()), Pattern.CASE_INSENSITIVE))
-			.toList();
-		if (patterns.isEmpty()) {
-			return MongoSpecifications.empty();
-		}
-		return () -> Criteria.where("skillsAndQualifications.technicalSkills").in(patterns);
 	}
 
 	public static MongoSpecification<CV> nameContains(String keyword) {

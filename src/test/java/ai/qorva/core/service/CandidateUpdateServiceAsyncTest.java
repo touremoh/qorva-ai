@@ -6,6 +6,7 @@ import ai.qorva.core.dao.repository.SuppressedEmailRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CandidateUpdateData;
 import ai.qorva.core.enums.ContentDateSourceEnum;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -50,12 +51,22 @@ class CandidateUpdateServiceAsyncTest {
 	@Mock
 	private S3StorageService s3StorageService;
 
+	@Mock
+	private org.springframework.data.mongodb.core.MongoTemplate mongoTemplate;
+
 	private CandidateUpdateService service;
 
 	@BeforeEach
 	void setUp() {
 		service = new CandidateUpdateService(requestRepository, suppressedEmailRepository,
-			cvService, cacheEvictor, s3StorageService, new ObjectMapper());
+			cvService, cacheEvictor, s3StorageService, new ObjectMapper(), mongoTemplate);
+		// The atomic claim succeeds unless a test says another submission took the link first.
+		org.mockito.Mockito.lenient().when(mongoTemplate.findAndModify(
+				org.mockito.ArgumentMatchers.any(org.springframework.data.mongodb.core.query.Query.class),
+				org.mockito.ArgumentMatchers.any(org.springframework.data.mongodb.core.query.Update.class),
+				org.mockito.ArgumentMatchers.any(org.springframework.data.mongodb.core.FindAndModifyOptions.class),
+				org.mockito.ArgumentMatchers.eq(CandidateUpdateRequest.class)))
+			.thenReturn(new CandidateUpdateRequest());
 	}
 
 	private CandidateUpdateRequest request(String status) {
@@ -105,7 +116,7 @@ class CandidateUpdateServiceAsyncTest {
 
 		assertThatThrownBy(() -> service.enqueue(TOKEN, null, exe))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("Unsupported file type");
+			.hasMessage(QorvaErrorCodes.CANDIDATE_UPDATE_UNSUPPORTED_FILE);
 		verify(requestRepository, never()).save(any());
 	}
 
@@ -115,7 +126,7 @@ class CandidateUpdateServiceAsyncTest {
 
 		assertThatThrownBy(() -> service.enqueue(TOKEN, null, pdf()))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("no longer valid");
+			.hasMessage(QorvaErrorCodes.CANDIDATE_UPDATE_LINK_INVALID);
 	}
 
 	@Test
@@ -157,7 +168,7 @@ class CandidateUpdateServiceAsyncTest {
 
 		assertThatThrownBy(() -> service.status(TOKEN))
 			.isInstanceOf(QorvaException.class)
-			.hasMessageContaining("no longer valid");
+			.hasMessage(QorvaErrorCodes.CANDIDATE_UPDATE_LINK_INVALID);
 	}
 
 	@Test
@@ -179,5 +190,23 @@ class CandidateUpdateServiceAsyncTest {
 		assertThat(req.getPendingFileKey()).isNull();
 		verify(requestRepository).save(req);
 		verify(cacheEvictor).evict(TENANT);
+	}
+
+	@Test
+	void enqueue_lostToAConcurrentSubmission_behavesAsNotFound_andStagesNothing() throws Exception {
+		var req = request(CandidateUpdateRequest.STATUS_SENT);
+		stubLookup(req);
+		org.mockito.Mockito.when(mongoTemplate.findAndModify(
+				org.mockito.ArgumentMatchers.any(org.springframework.data.mongodb.core.query.Query.class),
+				org.mockito.ArgumentMatchers.any(org.springframework.data.mongodb.core.query.Update.class),
+				org.mockito.ArgumentMatchers.any(org.springframework.data.mongodb.core.FindAndModifyOptions.class),
+				org.mockito.ArgumentMatchers.eq(CandidateUpdateRequest.class)))
+			.thenReturn(null);
+		var file = new org.springframework.mock.web.MockMultipartFile("file", "cv.pdf", "application/pdf", new byte[]{1});
+
+		org.assertj.core.api.Assertions.assertThatThrownBy(() -> service.enqueue(TOKEN, null, file))
+			.isInstanceOf(ai.qorva.core.exception.QorvaException.class);
+		org.mockito.Mockito.verify(s3StorageService, org.mockito.Mockito.never())
+			.uploadCandidateSubmission(org.mockito.ArgumentMatchers.any(), org.mockito.ArgumentMatchers.any(), org.mockito.ArgumentMatchers.any());
 	}
 }

@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.Collection;
 import java.util.List;
 
-public interface NoteRepository extends MongoRepository<Note, String> {
+public interface NoteRepository extends MongoRepository<Note, String>, OwnedLookup<Note> {
 
 	List<Note> findByTenantIdAndTargetTypeAndTargetIdOrderByCreatedAtDesc(String tenantId, String targetType, String targetId);
 

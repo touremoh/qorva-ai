@@ -138,7 +138,7 @@ class BulkCvUploadServiceTest {
 	void appendRollsBackStagedObjectsWhenOverPlanCap() throws QorvaException {
 		givenPlanCap(100);
 		// Job stays DRAFT on re-read, so the guarded update missing means the cap was hit.
-		when(jobRepository.findByIdAndTenantId(JOB_ID, TENANT)).thenReturn(Optional.of(draftJob(List.of())));
+		when(jobRepository.findByIdInTenant(JOB_ID, TENANT)).thenReturn(Optional.of(draftJob(List.of())));
 		when(s3StorageService.uploadStagedCv(eq(TENANT), eq(JOB_ID), anyString(), any()))
 			.thenAnswer(inv -> "staged-cv-uploads/" + TENANT + "/" + JOB_ID + "/" + inv.getArgument(2));
 		when(mongoTemplate.updateFirst(any(org.springframework.data.mongodb.core.query.Query.class),
@@ -156,7 +156,7 @@ class BulkCvUploadServiceTest {
 	void appendRejectsWhenJobNotDraft() {
 		var job = draftJob(List.of());
 		job.setStatus(BackgroundJob.STATUS_RUNNING);
-		when(jobRepository.findByIdAndTenantId(JOB_ID, TENANT)).thenReturn(Optional.of(job));
+		when(jobRepository.findByIdInTenant(JOB_ID, TENANT)).thenReturn(Optional.of(job));
 
 		assertThatThrownBy(() -> service.appendFiles(TENANT, JOB_ID, List.of(pdf("a.pdf"))))
 			.isInstanceOf(QorvaException.class)
@@ -169,7 +169,7 @@ class BulkCvUploadServiceTest {
 		var afterAppend = draftJob(List.of(
 			BackgroundJob.StagedFile.builder().s3Key("k0").build(),
 			BackgroundJob.StagedFile.builder().s3Key("k1").build()));
-		when(jobRepository.findByIdAndTenantId(JOB_ID, TENANT))
+		when(jobRepository.findByIdInTenant(JOB_ID, TENANT))
 			.thenReturn(Optional.of(draftJob(List.of())))
 			.thenReturn(Optional.of(afterAppend));
 		when(s3StorageService.uploadStagedCv(eq(TENANT), eq(JOB_ID), anyString(), any()))
@@ -189,7 +189,7 @@ class BulkCvUploadServiceTest {
 
 	@Test
 	void startRejectsEmptyJob() {
-		when(jobRepository.findByIdAndTenantId(JOB_ID, TENANT)).thenReturn(Optional.of(draftJob(List.of())));
+		when(jobRepository.findByIdInTenant(JOB_ID, TENANT)).thenReturn(Optional.of(draftJob(List.of())));
 		assertThatThrownBy(() -> service.start(TENANT, JOB_ID))
 			.isInstanceOf(QorvaException.class)
 			.hasMessageContaining(QorvaErrorCodes.BULK_JOB_NO_FILES);
@@ -198,7 +198,7 @@ class BulkCvUploadServiceTest {
 	@Test
 	void startBlocksWhenNoScreeningCapacityAtAll() {
 		var staged = List.of(BackgroundJob.StagedFile.builder().s3Key("k0").build());
-		when(jobRepository.findByIdAndTenantId(JOB_ID, TENANT)).thenReturn(Optional.of(draftJob(staged)));
+		when(jobRepository.findByIdInTenant(JOB_ID, TENANT)).thenReturn(Optional.of(draftJob(staged)));
 		when(usageMonitoringService.hasCapacityFor(TENANT, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS, 1))
 			.thenReturn(false);
 
@@ -213,7 +213,7 @@ class BulkCvUploadServiceTest {
 		for (int i = 0; i < 10; i++) {
 			staged.add(BackgroundJob.StagedFile.builder().s3Key("k" + i).build());
 		}
-		when(jobRepository.findByIdAndTenantId(JOB_ID, TENANT)).thenReturn(Optional.of(draftJob(staged)));
+		when(jobRepository.findByIdInTenant(JOB_ID, TENANT)).thenReturn(Optional.of(draftJob(staged)));
 		when(usageMonitoringService.hasCapacityFor(TENANT, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS, 1))
 			.thenReturn(true);
 		var usage = new UsageMonitoringDTO();
@@ -237,12 +237,32 @@ class BulkCvUploadServiceTest {
 			BackgroundJob.StagedFile.builder().s3Key("k0").build(),
 			BackgroundJob.StagedFile.builder().s3Key("k1").build());
 		var job = draftJob(staged);
-		when(jobRepository.findByIdAndTenantId(JOB_ID, TENANT)).thenReturn(Optional.of(job));
+		when(jobRepository.findByIdInTenant(JOB_ID, TENANT)).thenReturn(Optional.of(job));
 
 		var view = service.cancel(TENANT, JOB_ID);
 
 		assertThat(view.status()).isEqualTo(BackgroundJob.STATUS_CANCELLED);
 		verify(s3StorageService).deleteObject("k0");
 		verify(s3StorageService).deleteObject("k1");
+	}
+
+	@Test
+	void list_asksTheDatabaseForBulkUploadsOnly_soOtherJobsCannotCrowdThemOut() {
+		var upload = new ai.qorva.core.dao.entity.BackgroundJob();
+		upload.setId("job-1");
+		upload.setTenantId(TENANT);
+		upload.setType(ai.qorva.core.dao.entity.BackgroundJob.TYPE_BULK_CV_UPLOAD);
+		upload.setStatus(ai.qorva.core.dao.entity.BackgroundJob.STATUS_COMPLETED);
+		org.mockito.Mockito.when(jobRepository.findByTenantIdAndTypeOrderByCreatedAtDesc(
+				org.mockito.ArgumentMatchers.eq(TENANT),
+				org.mockito.ArgumentMatchers.eq(ai.qorva.core.dao.entity.BackgroundJob.TYPE_BULK_CV_UPLOAD),
+				org.mockito.ArgumentMatchers.any()))
+			.thenReturn(java.util.List.of(upload));
+
+		var list = service.list(TENANT);
+
+		org.assertj.core.api.Assertions.assertThat(list.jobs()).hasSize(1);
+		org.mockito.Mockito.verify(jobRepository, org.mockito.Mockito.never())
+			.findByTenantIdOrderByCreatedAtDesc(org.mockito.ArgumentMatchers.anyString(), org.mockito.ArgumentMatchers.any());
 	}
 }

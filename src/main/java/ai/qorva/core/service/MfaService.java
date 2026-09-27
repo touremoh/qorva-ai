@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.config.MfaProperties;
 import ai.qorva.core.dao.entity.MfaChallenge;
 import ai.qorva.core.dao.entity.User;
@@ -267,17 +269,17 @@ public class MfaService {
 	private User currentUser(String tenantId, String email) throws QorvaException {
 		var user = userRepository.findByEmail(email);
 		if (user == null || tenantId == null || !tenantId.equals(user.getTenantId())) {
-			throw new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+			throw QorvaErrors.notFound(QorvaErrorCodes.USER_NOT_FOUND);
 		}
 		return user;
 	}
 
 	private static void assertCanChange(User user, boolean enable) throws QorvaException {
 		if (enable && user.isMfaEnabledOrFalse()) {
-			throw new QorvaException(QorvaErrorCodes.MFA_ALREADY_ENABLED, HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.MFA_ALREADY_ENABLED);
 		}
 		if (!enable && !user.isMfaEnabledOrFalse()) {
-			throw new QorvaException(QorvaErrorCodes.MFA_ALREADY_DISABLED, HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.MFA_ALREADY_DISABLED);
 		}
 	}
 
@@ -329,7 +331,7 @@ public class MfaService {
 	}
 
 	private static QorvaException invalidChallenge() {
-		return new QorvaException(QorvaErrorCodes.AUTH_MFA_CHALLENGE_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+		return QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_MFA_CHALLENGE_INVALID);
 	}
 
 	private static QorvaException tooManyRequests(String errorCode) {

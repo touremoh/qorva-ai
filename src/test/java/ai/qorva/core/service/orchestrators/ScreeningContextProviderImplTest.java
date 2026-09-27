@@ -79,7 +79,7 @@ class ScreeningContextProviderImplTest {
 		assertThat(ctx.reportStale()).isFalse();
 		assertThat(ctx.cvText()).contains("Java dev");
 		assertThat(ctx.jobText()).contains("Backend");
-		verify(matchingReportRepository, never()).findById(any());
+		verify(matchingReportRepository, never()).findByIdInTenant(any(), any());
 	}
 
 	@Test
@@ -97,7 +97,7 @@ class ScreeningContextProviderImplTest {
 	void loadsALinkedReportByIdAndFlagsItStaleWhenTheCvIsNewer() throws QorvaException {
 		var entity = new MatchingReport();
 		entity.setTenantId(TENANT);
-		when(matchingReportRepository.findById(new ObjectId(REPORT))).thenReturn(Optional.of(entity));
+		when(matchingReportRepository.findByIdInTenant(REPORT, TENANT)).thenReturn(Optional.of(entity));
 		when(matchingReportMapper.map(entity)).thenReturn(reportDto(50.0, Instant.parse("2026-08-01T00:00:00Z")));
 
 		var ctx = provider.load(chat(REPORT));
@@ -108,9 +108,8 @@ class ScreeningContextProviderImplTest {
 
 	@Test
 	void ignoresALinkedReportFromAnotherTenant() throws QorvaException {
-		var entity = new MatchingReport();
-		entity.setTenantId(new ObjectId().toHexString());
-		when(matchingReportRepository.findById(new ObjectId(REPORT))).thenReturn(Optional.of(entity));
+		// The report belongs to another tenant: looked up in the chat's tenant it is not found.
+		when(matchingReportRepository.findByIdInTenant(REPORT, TENANT)).thenReturn(Optional.empty());
 
 		var ctx = provider.load(chat(REPORT));
 

@@ -24,7 +24,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "background_jobs")
-public class BackgroundJob {
+public class BackgroundJob implements QorvaEntity {
 
 	public static final String TYPE_REANALYZE = "REANALYZE";
 	public static final String TYPE_CANDIDATE_UPDATE_CAMPAIGN = "CANDIDATE_UPDATE_CAMPAIGN";

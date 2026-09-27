@@ -1,0 +1,7 @@
+{
+  "body" : {
+    "html" : "<div style=\"font-family:Arial,sans-serif;max-width:520px;margin:0 auto;color:#0f172a;\">\n  <p>Hello Alex,</p>\n  <p style=\"color:#475569;line-height:1.6;\">Line &lt;b&gt;one&lt;/b&gt;<br>Line two</p>\n  <p style=\"text-align:center;margin:28px 0;\">\n    <a href=\"http://localhost:5173/candidate-update/preview\" style=\"background:#629C44;color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:bold;\">Update my profile</a>\n  </p>\n  <p style=\"color:#475569;line-height:1.7;margin:28px 0 0 0;\">Best regards,<br><span style=\"font-weight:bold;color:#0f172a;\">Olivia Owner-A</span><br><span style=\"color:#64748b;\">Acme Tech Talent</span></p>\n  <p style=\"color:#94a3b8;font-size:12px;line-height:1.5;border-top:1px solid #e2e8f0;padding-top:12px;margin-top:24px;\">\n    <a href=\"http://localhost:5173/candidate-update/preview?unsubscribe=true\" style=\"color:#94a3b8;\">If you prefer not to be contacted again, click here to unsubscribe.</a>\n  </p>\n</div>\n",
+    "subject" : "Hello Alex"
+  },
+  "status" : 200
+}

@@ -2,6 +2,7 @@ package ai.qorva.core.dao.querybuilder;
 
 import ai.qorva.core.dao.entity.PendingEmailNotification;
 import ai.qorva.core.dao.specifications.MongoSpecification;
+import ai.qorva.core.dao.specifications.MongoSpecifications;
 import ai.qorva.core.dao.specifications.PendingEmailNotificationSpecifications;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,7 @@ public class PendingEmailNotificationQueryBuilder implements QorvaQueryBuilder<P
     @Override
     public MongoSpecification<PendingEmailNotification> buildQuery(Map<String, String> params) {
         return MongoSpecification
-            .where(PendingEmailNotificationSpecifications.tenantIdEquals(params.get("tenantId")))
+            .where(MongoSpecifications.<PendingEmailNotification>ownedBy(params.get("tenantId")))
             .and(PendingEmailNotificationSpecifications.statusEquals(params.get("status")))
             .and(PendingEmailNotificationSpecifications.notificationTypeEquals(params.get("notificationType")))
             .and(PendingEmailNotificationSpecifications.userIdEquals(params.get("userId")));

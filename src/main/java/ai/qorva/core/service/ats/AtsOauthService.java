@@ -1,5 +1,7 @@
 package ai.qorva.core.service.ats;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.config.AtsProperties;
 import ai.qorva.core.dao.entity.AtsConnection;
 import ai.qorva.core.dao.repository.AtsConnectionRepository;
@@ -42,6 +44,12 @@ public class AtsOauthService {
 	 * happen on its host. Only keys from this map ever reach the HTTP client — the region a
 	 * tenant picks is looked up here, never concatenated into a URL.
 	 */
+	/** Zoho's API hosts per data centre (the values api_domain may take). */
+	private static final java.util.Set<String> ZOHO_API_HOSTS = java.util.Set.of(
+		"https://www.zohoapis.com", "https://www.zohoapis.eu", "https://www.zohoapis.in",
+		"https://www.zohoapis.com.au", "https://www.zohoapis.jp", "https://www.zohoapis.ca",
+		"https://www.zohoapis.sa", "https://www.zohoapis.com.cn");
+
 	private static final Map<String, String> ZOHO_ACCOUNTS_HOSTS = Map.of(
 		"com", "https://accounts.zoho.com",
 		"eu", "https://accounts.zoho.eu",
@@ -146,8 +154,7 @@ public class AtsOauthService {
 				+ "&audience=" + URLEncoder.encode("https://api.lever.co/v1/", StandardCharsets.UTF_8)
 				+ "&prompt=consent"
 				+ "&state=" + state;
-			default -> throw new QorvaException(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			default -> throw QorvaErrors.badRequest(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN);
 		};
 	}
 
@@ -169,8 +176,7 @@ public class AtsOauthService {
 			var datacenter = parts.length > 4 && !parts[4].isBlank() ? parts[4] : null;
 			return new StateClaims(parts[0], AtsProviderEnum.fromValue(parts[1]), datacenter);
 		} catch (Exception e) {
-			throw new QorvaException(QorvaErrorCodes.ATS_OAUTH_STATE_INVALID,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.ATS_OAUTH_STATE_INVALID);
 		}
 	}
 
@@ -195,8 +201,7 @@ public class AtsOauthService {
 			case GREENHOUSE -> GREENHOUSE_TOKEN_URL;
 			case LEVER -> LEVER_TOKEN_URL;
 			case ZOHO_RECRUIT -> zohoHost + "/oauth/v2/token";
-			default -> throw new QorvaException(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			default -> throw QorvaErrors.badRequest(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN);
 		};
 		var body = http.postForm(provider, tokenUrl, Map.of(
 			"grant_type", "authorization_code",
@@ -211,8 +216,20 @@ public class AtsOauthService {
 			.refreshToken(body.path("refresh_token").asText(null))
 			.tokenExpiresAt(Instant.now().plusSeconds(body.path("expires_in").asLong(3600)))
 			.datacenter(zoho ? datacenterOf(zohoHost) : null)
-			.apiDomain(zoho ? body.path("api_domain").asText(null) : null)
+			.apiDomain(zoho ? knownZohoApiDomain(body.path("api_domain").asText(null)) : null)
 			.build();
+	}
+
+	/**
+	 * Zoho's api_domain (where the bearer token is sent), accepted only when it is one of Zoho's API
+	 * hosts; anything else is dropped and the connector uses its datacenter default.
+	 */
+	static String knownZohoApiDomain(String apiDomain) {
+		if (apiDomain == null || apiDomain.isBlank()) {
+			return null;
+		}
+		var normalized = apiDomain.trim().replaceAll("/+$", "");
+		return ZOHO_API_HOSTS.contains(normalized) ? normalized : null;
 	}
 
 	/** The callback's accounts-server value, accepted only when it is a host we know. */
@@ -249,8 +266,7 @@ public class AtsOauthService {
 			case GREENHOUSE -> GREENHOUSE_TOKEN_URL;
 			case LEVER -> LEVER_TOKEN_URL;
 			case ZOHO_RECRUIT -> zohoAccountsHost(credentials.getDatacenter()) + "/oauth/v2/token";
-			default -> throw new QorvaException(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			default -> throw QorvaErrors.badRequest(QorvaErrorCodes.ATS_PROVIDER_UNKNOWN);
 		};
 		var body = http.postForm(provider, tokenUrl, Map.of(
 			"grant_type", "refresh_token",
@@ -265,8 +281,9 @@ public class AtsOauthService {
 		credentials.setTokenExpiresAt(Instant.now().plusSeconds(body.path("expires_in").asLong(3600)));
 		// Zoho repeats api_domain on refresh; keep it current rather than trusting the value
 		// captured at consent, and never overwrite a good one with a missing field.
-		if (body.path("api_domain").asText(null) != null) {
-			credentials.setApiDomain(body.path("api_domain").asText());
+		var apiDomain = knownZohoApiDomain(body.path("api_domain").asText(null));
+		if (apiDomain != null) {
+			credentials.setApiDomain(apiDomain);
 		}
 		connection.setEncryptedCredentials(cipher.encrypt(credentials));
 		connectionRepository.save(connection);
@@ -315,8 +332,7 @@ public class AtsOauthService {
 		}
 		var normalized = region.trim().toLowerCase();
 		if (!ZOHO_ACCOUNTS_HOSTS.containsKey(normalized)) {
-			throw new QorvaException(QorvaErrorCodes.HTTP_VALIDATION,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.HTTP_VALIDATION);
 		}
 		return normalized;
 	}

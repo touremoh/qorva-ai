@@ -19,7 +19,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "suppressed_emails")
-public class SuppressedEmail {
+public class SuppressedEmail implements QorvaEntity {
 
 	public static final String REASON_UNSUBSCRIBED = "UNSUBSCRIBED";
 	public static final String REASON_BOUNCED = "BOUNCED";

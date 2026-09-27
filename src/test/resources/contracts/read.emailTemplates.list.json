@@ -1,0 +1,15 @@
+{
+  "body" : {
+    "limit" : null,
+    "templates" : [ {
+      "bodyText" : "Hello {{candidate_name}},\n\nCould you confirm your availability?\n\n{{company_name}}",
+      "createdAt" : "<ts>",
+      "createdBy" : "owner@a.qorva.test",
+      "id" : "<id:1>",
+      "name" : "Quarterly availability check",
+      "subject" : "Is your profile still up to date, {{candidate_name}}?",
+      "updatedAt" : "<ts>"
+    } ]
+  },
+  "status" : 200
+}

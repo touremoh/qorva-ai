@@ -23,7 +23,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "quality_issue_states")
-public class QualityIssueState {
+public class QualityIssueState implements QorvaEntity {
 
 	@Id
 	private String id;

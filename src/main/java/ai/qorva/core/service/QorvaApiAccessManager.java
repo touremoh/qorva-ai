@@ -1,7 +1,6 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.enums.SubscriptionStatus;
-import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.security.TenantContextHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,20 +66,4 @@ public class QorvaApiAccessManager {
 		}
 	}
 
-	/** Step 11: grants access only if the tenant's subscription is active or trialing. */
-	public boolean hasActiveSubscription(String tenantId) {
-		if (tenantId == null) {
-			return false;
-		}
-		try {
-			var tenant = tenantService.findOneById(tenantId);
-			var status = tenant.getSubscriptionInfo() != null
-				? tenant.getSubscriptionInfo().getSubscriptionStatus()
-				: null;
-			return ACTIVE_SUBSCRIPTION_STATUSES.contains(status);
-		} catch (QorvaException e) {
-			log.warn("Could not verify subscription status for tenantId={}", tenantId, e);
-			return false;
-		}
-	}
 }

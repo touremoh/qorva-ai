@@ -1,14 +1,8 @@
 package ai.qorva.core.service;
 
-import ai.qorva.core.dao.repository.ChatMessagesRepository;
-import ai.qorva.core.dao.repository.ChatsRepository;
-import ai.qorva.core.dao.repository.CVRepository;
-import ai.qorva.core.dao.repository.InsightConversationTurnRepository;
-import ai.qorva.core.dao.repository.JobPostRepository;
-import ai.qorva.core.dao.repository.MatchingReportRepository;
-import ai.qorva.core.dao.repository.CandidateOutreachRepository;
-import ai.qorva.core.dao.repository.NoteRepository;
-import ai.qorva.core.dao.repository.UsageMonitoringRepository;
+import ai.qorva.core.service.cascade.CascadeRegistry;
+import ai.qorva.core.service.cascade.PurgeScope;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,65 +15,24 @@ import org.springframework.stereotype.Service;
 @Service
 public class DemoDataPurgeService {
 
-	private final CVRepository cvRepository;
-	private final JobPostRepository jobPostRepository;
-	private final MatchingReportRepository matchingReportRepository;
-	private final ChatsRepository chatsRepository;
-	private final ChatMessagesRepository chatMessagesRepository;
-	private final InsightConversationTurnRepository insightConversationTurnRepository;
-	private final UsageMonitoringRepository usageMonitoringRepository;
+	private final CascadeRegistry cascadeRegistry;
 	private final S3StorageService s3StorageService;
-	private final NoteRepository noteRepository;
-	private final CandidateOutreachRepository candidateOutreachRepository;
 
 	@Autowired
-	public DemoDataPurgeService(
-		CVRepository cvRepository,
-		JobPostRepository jobPostRepository,
-		MatchingReportRepository matchingReportRepository,
-		ChatsRepository chatsRepository,
-		ChatMessagesRepository chatMessagesRepository,
-		InsightConversationTurnRepository insightConversationTurnRepository,
-		UsageMonitoringRepository usageMonitoringRepository,
-		S3StorageService s3StorageService,
-		NoteRepository noteRepository,
-		CandidateOutreachRepository candidateOutreachRepository
-	) {
-		this.noteRepository = noteRepository;
-		this.candidateOutreachRepository = candidateOutreachRepository;
-		this.cvRepository = cvRepository;
-		this.jobPostRepository = jobPostRepository;
-		this.matchingReportRepository = matchingReportRepository;
-		this.chatsRepository = chatsRepository;
-		this.chatMessagesRepository = chatMessagesRepository;
-		this.insightConversationTurnRepository = insightConversationTurnRepository;
-		this.usageMonitoringRepository = usageMonitoringRepository;
+	public DemoDataPurgeService(CascadeRegistry cascadeRegistry, S3StorageService s3StorageService) {
+		this.cascadeRegistry = cascadeRegistry;
 		this.s3StorageService = s3StorageService;
 	}
 
 	/** Deletes every recruitment-related document for the tenant. Best-effort per collection. */
 	public void purgeAll(String tenantId) {
-		log.info("Purging demo data for tenant={}", tenantId);
-		long cvs = safeDelete("cvs", () -> cvRepository.deleteByTenantId(tenantId));
-		s3StorageService.deleteCvDocumentsForTenant(tenantId); // best-effort, never throws
-		long jobs = safeDelete("job_posts", () -> jobPostRepository.deleteByTenantId(tenantId));
-		long reports = safeDelete("matching_reports", () -> matchingReportRepository.deleteByTenantId(tenantId));
-		long chats = safeDelete("chats", () -> chatsRepository.deleteByTenantId(tenantId));
-		long messages = safeDelete("chat_messages", () -> chatMessagesRepository.deleteByTenantId(tenantId));
-		long turns = safeDelete("insight_conversation_turns", () -> insightConversationTurnRepository.deleteByTenantId(tenantId));
-		long usage = safeDelete("usage_monitoring", () -> usageMonitoringRepository.deleteByTenantId(tenantId));
-		long notes = safeDelete("notes", () -> noteRepository.deleteByTenantId(tenantId));
-		long outreach = safeDelete("candidate_outreach", () -> candidateOutreachRepository.deleteByTenantId(tenantId));
-		log.info("Demo data purged for tenant={}: cvs={} jobs={} reports={} chats={} messages={} insights={} usage={} notes={} outreach={}",
-			tenantId, cvs, jobs, reports, chats, messages, turns, usage, notes, outreach);
-	}
-
-	private long safeDelete(String collection, java.util.function.LongSupplier delete) {
-		try {
-			return delete.getAsLong();
-		} catch (Exception e) {
-			log.warn("Failed to purge {} for tenant during upgrade", collection, e);
-			return 0L;
+		// Every delete is scoped by tenantId; a blank one must never reach them.
+		if (tenantId == null || tenantId.isBlank()) {
+			throw new IllegalArgumentException("Demo purge requires a tenant id");
 		}
+		log.info("Purging demo data for tenant={}", tenantId);
+		var deleted = cascadeRegistry.purgeTenant(tenantId, PurgeScope.RECRUITMENT, true);
+		s3StorageService.deleteCvDocumentsForTenant(tenantId); // best-effort, never throws
+		log.info("Demo data purged for tenant={}: {}", tenantId, deleted);
 	}
 }

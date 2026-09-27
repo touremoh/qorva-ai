@@ -36,6 +36,12 @@ public class TenantService extends AbstractQorvaService<TenantDTO,Tenant> {
 		}
 	}
 
+	/** A tenant owns itself: its id is its tenant. */
+	@Override
+	protected String tenantField() {
+		return "_id";
+	}
+
 	@Override
 	protected void preProcessUpdateOne(String id, TenantDTO dto) throws QorvaException {
 		super.preProcessUpdateOne(id, dto);

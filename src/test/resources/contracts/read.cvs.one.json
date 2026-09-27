@@ -1,0 +1,178 @@
+{
+  "body" : {
+    "code" : 200,
+    "data" : {
+      "applicantNumber" : "<uuid>",
+      "archived" : null,
+      "atsRefs" : null,
+      "attachment" : null,
+      "candidateClustering" : {
+        "businessImpact" : [ "Improved batch job performance", "Increased test coverage" ],
+        "clusterConfidenceScore" : 0.83,
+        "clusterReasoning" : "Consistent Java and Spring Boot backend work with growing testing maturity places this candidate firmly in early-career backend engineering.",
+        "environmentFit" : [ "Startup", "SaaS" ],
+        "functionalExpertise" : [ "Service development", "Relational data modelling", "Automated testing" ],
+        "industryDomains" : [ "Fintech", "Digital agencies" ],
+        "leadershipAndInfluence" : "individualContributor",
+        "learningVelocity" : "high",
+        "primaryCluster" : "Backend Engineering",
+        "secondaryClusters" : [ "Distributed Systems", "API Development" ],
+        "seniorityLevel" : "junior",
+        "skillDepth" : "generalist"
+      },
+      "candidateProfileSummary" : "Backend software engineer with three years of experience building REST and event-driven services in Java and Spring Boot. Comfortable owning features end to end, from database schema to production monitoring. Keen on clean code, testing discipline and steadily growing into system design.",
+      "careerStartYear" : 2022,
+      "certifications" : [ {
+        "description" : "Foundational certification in core Java language features.",
+        "institution" : "Oracle",
+        "title" : "Oracle Certified Associate, Java SE 8 Programmer",
+        "year" : "2026"
+      } ],
+      "contentDate" : "<ts>",
+      "contentDateSource" : "WORK_HISTORY",
+      "createdAt" : "<ts>",
+      "createdBy" : "owner@a.qorva.test",
+      "education" : [ {
+        "achievements" : [ "First-class honours", "Final-year project on distributed caching" ],
+        "degree" : "BSc",
+        "fieldOfStudy" : "Computer Science",
+        "institution" : "University of Leeds",
+        "year" : "2019"
+      } ],
+      "id" : "<id:1>",
+      "interestsAndHobbies" : [ "Bouldering", "Chess", "Home-lab tinkering" ],
+      "keySkills" : [ {
+        "category" : "Backend Development",
+        "skills" : [ "Java", "Spring Boot", "REST APIs", "JPA/Hibernate" ]
+      }, {
+        "category" : "Data Stores",
+        "skills" : [ "PostgreSQL", "Redis", "Flyway" ]
+      }, {
+        "category" : "Testing",
+        "skills" : [ "JUnit 5", "Mockito", "Testcontainers" ]
+      }, {
+        "category" : "Tooling",
+        "skills" : [ "Git", "Maven", "Docker", "GitHub Actions" ]
+      } ],
+      "lastUpdatedAt" : "<ts>",
+      "lastUpdatedBy" : "owner@a.qorva.test",
+      "nbYearsOfExperience" : 4,
+      "personalInformation" : {
+        "availability" : {
+          "availableFrom" : "2026-09-01",
+          "interviewAvailability" : [ "Weekday evenings", "Friday afternoons" ],
+          "noticePeriodDays" : 30,
+          "openToWork" : true,
+          "preferredContractTypes" : [ "permanent" ],
+          "preferredWorkTypes" : [ "hybrid", "remote" ],
+          "remoteOnly" : false,
+          "status" : "activelyLooking",
+          "willingToRelocate" : false
+        },
+        "contact" : {
+          "address" : {
+            "city" : "London",
+            "country" : "United Kingdom",
+            "state" : "England",
+            "streetName" : "Hoxton",
+            "streetNumber" : "48",
+            "streetType" : "Square",
+            "unit" : null,
+            "zipCode" : "N1 6PB"
+          },
+          "email" : "oliver.whitfield@example.com",
+          "phone" : "+44 7700 900142",
+          "socialLinks" : {
+            "github" : "https://github.com/owhitfield-dev",
+            "linkedin" : "https://www.linkedin.com/in/oliver-whitfield",
+            "website" : "https://oliverwhitfield.example.com"
+          }
+        },
+        "name" : "Oliver Whitfield",
+        "role" : "Backend Software Engineer",
+        "summary" : "Java backend developer who enjoys turning fuzzy requirements into reliable, well-tested services and learning from senior engineers through code review."
+      },
+      "profiles" : {
+        "areasOfExpertise" : [ "Service development", "Relational data modelling", "Automated testing" ],
+        "keyResponsibilities" : [ "Implement and maintain backend microservices", "Write unit and integration tests", "Participate in code reviews and on-call rotations" ]
+      },
+      "projectsAndAchievements" : [ {
+        "date" : "2024-02",
+        "description" : "A small Java library implementing token-bucket rate limiting for Spring applications.",
+        "impact" : "Adopted by two internal teams for API throttling.",
+        "title" : "Open-source rate limiter"
+      } ],
+      "qualityFlags" : [ ],
+      "references" : [ {
+        "company" : "Ordio Payments",
+        "contact" : {
+          "email" : "priya.anand@example.com",
+          "phone" : "+44 7700 900188"
+        },
+        "name" : "Priya Anand",
+        "position" : "Engineering Manager"
+      } ],
+      "salaryExpectation" : {
+        "currency" : "GBP",
+        "max" : 58000,
+        "min" : 48000
+      },
+      "searchIndex" : {
+        "industries" : [ "Fintech", "Software" ],
+        "locations" : [ "London", "England", "United Kingdom", "Europe" ],
+        "roles" : [ "Backend Engineer", "Java Developer", "Software Engineer" ],
+        "skills" : [ "Java", "Spring Boot", "PostgreSQL", "Redis", "REST APIs", "Docker", "JUnit", "Computer Science" ]
+      },
+      "skillsAndQualifications" : {
+        "languages" : [ {
+          "language" : "English",
+          "proficiency" : {
+            "read" : "native",
+            "spoken" : "native",
+            "written" : "native"
+          }
+        }, {
+          "language" : "Spanish",
+          "proficiency" : {
+            "read" : "intermediate",
+            "spoken" : "intermediate",
+            "written" : "basic"
+          }
+        } ],
+        "softSkills" : [ "Curiosity", "Collaboration", "Attention to detail" ],
+        "technicalSkills" : [ "Java", "Spring Boot", "PostgreSQL", "Redis", "Docker", "REST APIs", "JUnit" ]
+      },
+      "tags" : [ "java", "spring-boot", "backend", "junior" ],
+      "tenantId" : "<id:2>",
+      "workExperience" : [ {
+        "achievements" : [ "Reduced reconciliation job runtime by 35% by batching database writes", "Raised service unit-test coverage from 48% to 78%" ],
+        "activities" : [ {
+          "project" : "Merchant settlement service",
+          "tasks" : [ "Built Spring Boot endpoints for settlement reconciliation", "Modelled ledger tables and wrote Flyway migrations", "Added Testcontainers-based integration tests" ]
+        } ],
+        "company" : "Ordio Payments",
+        "from" : "2024-01",
+        "location" : "London, United Kingdom",
+        "position" : "Backend Software Engineer",
+        "to" : "Present",
+        "toolsAndTechnologies" : [ "Java", "Spring Boot", "PostgreSQL", "Redis", "Docker", "GitHub Actions" ],
+        "website" : "https://ordio.example.com"
+      }, {
+        "achievements" : [ "Shipped first production feature within two months of joining" ],
+        "activities" : [ {
+          "project" : "Client CMS platform",
+          "tasks" : [ "Implemented CRUD APIs for content models", "Fixed bugs reported by QA", "Wrote documentation for internal endpoints" ]
+        } ],
+        "company" : "Brightloop Studio",
+        "from" : "2021-07",
+        "location" : "London, United Kingdom",
+        "position" : "Junior Software Engineer",
+        "to" : "2024-01",
+        "toolsAndTechnologies" : [ "Java", "Spring Boot", "MySQL", "Git" ],
+        "website" : "https://brightloop.example.com"
+      } ]
+    },
+    "timestamp" : "<ts>"
+  },
+  "status" : 200
+}

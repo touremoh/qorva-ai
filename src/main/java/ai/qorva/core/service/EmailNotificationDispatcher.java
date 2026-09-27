@@ -6,7 +6,6 @@ import ai.qorva.core.enums.EmailNotificationType;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,7 +39,7 @@ public class EmailNotificationDispatcher {
         var type = EmailNotificationType.valueOf(notification.getNotificationType());
         String lang = notification.getLanguageCode();
 
-        var user = userRepository.findById(new ObjectId(notification.getUserId()))
+        var user = userRepository.findByIdInTenant(notification.getUserId(), notification.getTenantId())
             .orElseThrow(() -> new QorvaException("User not found for userId=" + notification.getUserId()));
         var userDTO = userMapper.map(user);
 

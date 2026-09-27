@@ -1,0 +1,15 @@
+{
+  "body" : {
+    "limit" : null,
+    "templates" : [ {
+      "bodyText" : "Hi {{candidate_name}}, please update your CV at {{company_name}}.",
+      "createdAt" : "<ts>",
+      "createdBy" : "owner@a.qorva.test",
+      "id" : "<id:1>",
+      "name" : "Second template",
+      "subject" : "Update, {{candidate_name}}?",
+      "updatedAt" : "<ts>"
+    } ]
+  },
+  "status" : 200
+}

@@ -1,5 +1,8 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrorCodes;
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.config.CacheConfig;
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.entity.QualityIssueState;
@@ -171,10 +174,7 @@ public class LibraryQualityService {
 
 	public IssueCVPage getIssueCVs(String tenantId, QualityIssueKeyEnum issueKey, int pageNumber, int pageSize) throws QorvaException {
 		if (issueKey == QualityIssueKeyEnum.DUPLICATES) {
-			throw new QorvaException(
-				"Duplicates are served by the /cvs/duplicates endpoint",
-				HttpStatus.BAD_REQUEST.value(),
-				HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_DUPLICATES_SEPARATE);
 		}
 		var page = this.cvRepository.findQualityIssueCVs(
 			new ObjectId(tenantId), issueKey, PageRequest.of(pageNumber, pageSize));
@@ -282,7 +282,7 @@ public class LibraryQualityService {
 				if (request.issueKey() != null) {
 					var issueKey = parseIssueKey(request.issueKey());
 					if (issueKey == QualityIssueKeyEnum.DUPLICATES) {
-						throw badRequest("Duplicates cannot be bulk-archived — resolve them individually");
+						throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_DUPLICATES_NOT_BULK);
 					}
 					yield this.cvRepository.bulkSetArchived(tenantObjectId, issueKey, null, true);
 				}
@@ -296,12 +296,11 @@ public class LibraryQualityService {
 			case ACTION_CONFIRM_CURRENT -> {
 				requireIds(ids);
 				if (ids.size() > MAX_CONFIRM_CURRENT_PER_CALL) {
-					throw badRequest("Confirm-current is limited to " + MAX_CONFIRM_CURRENT_PER_CALL
-						+ " resumes per call — verification must reflect actual review");
+					throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_CONFIRM_CURRENT_LIMIT, MAX_CONFIRM_CURRENT_PER_CALL);
 				}
 				yield this.cvRepository.bulkConfirmCurrent(tenantObjectId, ids);
 			}
-			default -> throw badRequest("Unknown action: " + request.action());
+			default -> throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_UNKNOWN_ACTION, request.action());
 		};
 
 		this.cacheEvictor.evict(tenantId);
@@ -331,13 +330,13 @@ public class LibraryQualityService {
 		try {
 			return QualityIssueKeyEnum.valueOf(issueKey);
 		} catch (IllegalArgumentException | NullPointerException e) {
-			throw badRequest("Unknown issue key: " + issueKey);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_UNKNOWN_ISSUE, issueKey);
 		}
 	}
 
 	private void requireIds(List<ObjectId> ids) throws QorvaException {
 		if (ids.isEmpty()) {
-			throw badRequest("cvIds must not be empty for this action");
+			throw QorvaErrors.badRequest("cvIds must not be empty for this action");
 		}
 	}
 
@@ -346,13 +345,10 @@ public class LibraryQualityService {
 		try {
 			return ids.stream().map(ObjectId::new).toList();
 		} catch (IllegalArgumentException e) {
-			throw badRequest("Invalid CV id in request");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_INVALID_CV_ID);
 		}
 	}
 
-	private QorvaException badRequest(String message) {
-		return new QorvaException(message, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
-	}
 
 	// -------------------------------------------------------------------------
 	// Issues

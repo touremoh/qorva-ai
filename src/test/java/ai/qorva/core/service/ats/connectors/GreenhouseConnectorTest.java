@@ -26,6 +26,8 @@ import static org.mockito.ArgumentMatchers.anyMap;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.contains;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -189,5 +191,48 @@ class GreenhouseConnectorTest {
 	void webhookWithoutSignatureHeaderIsDropped() {
 		assertThat(connector.parseWebhook(new HttpHeaders(), "{}".getBytes(StandardCharsets.UTF_8), "s"))
 			.isEmpty();
+	}
+
+	private static QorvaException authFailed() {
+		return new QorvaException(QorvaErrorCodes.ATS_AUTH_FAILED, 502, org.springframework.http.HttpStatus.BAD_GATEWAY);
+	}
+
+	@Test
+	void aRejectedMintedToken_isDroppedAndTheCallRetriedOnceWithAFreshOne() throws Exception {
+		var clientCredentials = AtsCredentials.builder().clientId("id").clientSecret("secret").build();
+		when(tokenService.canMint(clientCredentials)).thenReturn(true);
+		when(tokenService.accessToken(clientCredentials)).thenReturn("stale", "fresh");
+		when(http.getJson(eq(AtsProviderEnum.GREENHOUSE), contains("/candidates?"), anyMap()))
+			.thenThrow(authFailed())
+			.thenReturn(objectMapper.readTree("[]"));
+
+		connector.validate(clientCredentials);
+
+		verify(tokenService).invalidate(clientCredentials);
+		var headers = ArgumentCaptor.forClass(Map.class);
+		verify(http, times(2)).getJson(eq(AtsProviderEnum.GREENHOUSE), anyString(), headers.capture());
+		assertThat(asMap(headers.getAllValues().get(1))).containsEntry("Authorization", "Bearer fresh");
+	}
+
+	@Test
+	void aSecondRejection_isACredentialsProblemAndReachesTheCaller() throws Exception {
+		var clientCredentials = AtsCredentials.builder().clientId("id").clientSecret("secret").build();
+		when(tokenService.canMint(clientCredentials)).thenReturn(true);
+		when(tokenService.accessToken(clientCredentials)).thenReturn("stale", "fresh");
+		when(http.getJson(eq(AtsProviderEnum.GREENHOUSE), anyString(), anyMap())).thenThrow(authFailed());
+
+		assertThatThrownBy(() -> connector.validate(clientCredentials))
+			.isInstanceOf(QorvaException.class)
+			.hasMessage(QorvaErrorCodes.ATS_AUTH_FAILED);
+		verify(http, times(2)).getJson(eq(AtsProviderEnum.GREENHOUSE), anyString(), anyMap());
+	}
+
+	@Test
+	void aHeldOauthToken_isNotRetried() throws Exception {
+		when(http.getJson(eq(AtsProviderEnum.GREENHOUSE), anyString(), anyMap())).thenThrow(authFailed());
+
+		assertThatThrownBy(() -> connector.validate(credentials)).isInstanceOf(QorvaException.class);
+		verify(http, times(1)).getJson(eq(AtsProviderEnum.GREENHOUSE), anyString(), anyMap());
+		verify(tokenService, never()).invalidate(credentials);
 	}
 }

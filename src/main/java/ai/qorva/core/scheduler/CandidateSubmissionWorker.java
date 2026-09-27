@@ -1,5 +1,7 @@
 package ai.qorva.core.scheduler;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.dao.entity.CandidateUpdateRequest;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.service.CandidateUpdateService;
@@ -17,7 +19,6 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
@@ -35,7 +36,7 @@ import java.util.concurrent.Semaphore;
 @Component
 public class CandidateSubmissionWorker {
 
-	private static final String INSTANCE_ID = UUID.randomUUID().toString();
+	private static final String INSTANCE_ID = WorkerInstance.ID;
 	private static final Duration LEASE = Duration.ofMinutes(3);
 	private static final int CLAIM_BATCH = 5;
 	private static final int LLM_CONCURRENCY = 3;
@@ -70,7 +71,8 @@ public class CandidateSubmissionWorker {
 					try {
 						llmPermits.acquire();
 						try {
-							processOne(request);
+							// Each submission belongs to its own tenant; the batch may mix tenants.
+							TenantScope.runAs(request.getTenantId(), () -> processOne(request));
 						} finally {
 							llmPermits.release();
 						}

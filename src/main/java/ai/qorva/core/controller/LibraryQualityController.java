@@ -1,5 +1,7 @@
 package ai.qorva.core.controller;
 
+import ai.qorva.core.utils.Paging;
+
 import ai.qorva.core.dto.BackgroundJobData;
 import ai.qorva.core.dto.LibraryQualityReport;
 import ai.qorva.core.enums.QualityIssueKeyEnum;
@@ -101,7 +103,6 @@ public class LibraryQualityController {
 		return ResponseEntity.ok(this.backgroundJobService.list(TenantContextHolder.getTenantId()));
 	}
 
-	@GetMapping(path = "/jobs/{jobId}", produces = "application/json")
 	@PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_DASHBOARD')")
 	public ResponseEntity<BackgroundJobData.JobView> getJob(@PathVariable String jobId) throws QorvaException {
 		return ResponseEntity.ok(this.backgroundJobService.get(TenantContextHolder.getTenantId(), jobId));
@@ -120,6 +121,6 @@ public class LibraryQualityController {
 		@RequestParam(defaultValue = "0") int pageNumber,
 		@RequestParam(defaultValue = "20") int pageSize) throws QorvaException {
 		return ResponseEntity.ok(this.libraryQualityService.getIssueCVs(
-			TenantContextHolder.getTenantId(), issueKey, pageNumber, Math.min(Math.max(pageSize, 1), 100)));
+			TenantContextHolder.getTenantId(), issueKey, Paging.page(pageNumber), Paging.size(pageSize)));
 	}
 }

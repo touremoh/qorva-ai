@@ -1,7 +1,6 @@
 package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.Chat;
-import ai.qorva.core.enums.ChatStatus;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.*;
@@ -16,11 +15,6 @@ public interface ChatsRepository extends QorvaRepository<Chat> {
     @Query(value = "{ 'tenantId': ?0, 'participants.userId': ?1, 'status': ?2 }")
     Page<Chat> findByTenantAndParticipantAndStatus(String tenantId, String userId, String status, Pageable pageable);
 
-    @Query(value = "{ 'tenantId': ?0, 'status': ?1 }")
-    Page<Chat> findByTenantAndStatus(String tenantId, ChatStatus status, Pageable pageable);
-
-    @Query(value = "{ 'tenantId': ?0, '_id': ?1 }")
-    Chat findOneByTenantAndId(String tenantId, String chatId);
 
     /**
      * Deletes chats associated with a specific tenant and context job post ID.
@@ -51,5 +45,11 @@ public interface ChatsRepository extends QorvaRepository<Chat> {
 
     java.util.List<ai.qorva.core.dao.entity.Chat> findByTenantIdAndContextCvId(String tenantId, String contextCvId);
 
+    java.util.List<ai.qorva.core.dao.entity.Chat> findByTenantIdAndContextJobPostId(String tenantId, String contextJobPostId);
+
+    java.util.List<ai.qorva.core.dao.entity.Chat> findByTenantIdAndContextMatchingReportId(String tenantId, String contextMatchingReportId);
+
     long countByTenantId(String tenantId);
+
+    long deleteByTenantIdAndIdIn(String tenantId, java.util.Collection<String> ids);
 }

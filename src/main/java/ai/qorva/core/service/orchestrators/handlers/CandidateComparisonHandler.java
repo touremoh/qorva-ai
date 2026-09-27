@@ -7,6 +7,7 @@ import ai.qorva.core.dao.repository.JobPostRepository;
 import ai.qorva.core.dao.specifications.CVSpecifications;
 import ai.qorva.core.dao.specifications.JobPostSpecifications;
 import ai.qorva.core.dao.specifications.MongoSpecification;
+import ai.qorva.core.dao.specifications.MongoSpecifications;
 import ai.qorva.core.dto.*;
 import ai.qorva.core.dto.common.Certification;
 import ai.qorva.core.dto.common.SkillRequirement;
@@ -46,7 +47,7 @@ public class CandidateComparisonHandler implements InsightHandler {
                 return clarificationResult("Please provide at least 2 candidates to compare — either @-mention them by name or use their reference numbers (e.g. 'Compare REF-001 and REF-002').");
             }
             cvs = cvRepository.findAll(
-                MongoSpecification.where(CVSpecifications.tenantIdEquals(tenantIdStr))
+                MongoSpecification.where(MongoSpecifications.<CV>ownedBy(tenantIdStr))
                     .and(CVSpecifications.applicantNumberIn(applicantNumbers))
             );
             if (cvs.size() < 2) {
@@ -62,7 +63,7 @@ public class CandidateComparisonHandler implements InsightHandler {
             jobPostSnapshot = buildJobPostSnapshot(mentions.jobs().get(0));
         } else if (params.jobPostReference() != null && !params.jobPostReference().isBlank()) {
             Optional<JobPost> jobPost = jobPostRepository.findOne(
-                MongoSpecification.where(JobPostSpecifications.tenantIdEquals(tenantIdStr))
+                MongoSpecification.where(MongoSpecifications.<JobPost>ownedBy(tenantIdStr))
                     .and(JobPostSpecifications.jobReferenceEquals(params.jobPostReference()))
             );
             if (jobPost.isEmpty()) {

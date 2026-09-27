@@ -1,5 +1,7 @@
 package ai.qorva.core.controller;
 
+import ai.qorva.core.utils.Paging;
+
 import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.DashboardService;
@@ -36,6 +38,6 @@ public class DashboardController {
 		@AuthenticationPrincipal UserDetails userDetails,
 		@RequestParam(defaultValue = "0") int pageNumber,
 		@RequestParam(defaultValue = "5") int pageSize) throws QorvaException {
-		return ResponseEntity.ok(this.dashboardService.getTopCandidatesPerJobPost(userDetails, pageNumber, pageSize));
+		return ResponseEntity.ok(this.dashboardService.getTopCandidatesPerJobPost(userDetails, Paging.page(pageNumber), Paging.size(pageSize)));
 	}
 }

@@ -3,16 +3,14 @@ package ai.qorva.core.controller;
 import ai.qorva.core.enums.MailboxProviderEnum;
 import ai.qorva.core.service.mailbox.MailboxConnectionService;
 import ai.qorva.core.service.mailbox.MailboxOauthService;
-import lombok.extern.slf4j.Slf4j;
+import ai.qorva.core.security.TenantScope;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.net.URI;
 
 /**
  * Unauthenticated OAuth redirect target for connected mailboxes, registered with the provider as
@@ -20,7 +18,6 @@ import java.net.URI;
  * Nothing here is trusted beyond the HMAC-signed state, which carries tenant, user and provider;
  * a path provider that disagrees with it is rejected. Lands back on Account settings › Profile.
  */
-@Slf4j
 @RestController
 public class MailboxOauthCallbackController {
 
@@ -45,24 +42,13 @@ public class MailboxOauthCallbackController {
 		@RequestParam(name = "state", required = false) String state,
 		@RequestParam(name = "error", required = false) String error
 	) {
-		String result;
-		try {
-			if (error != null || code == null || state == null) {
-				result = "denied";
-			} else {
-				var claims = oauthService.validateState(state);
-				if (MailboxProviderEnum.fromValue(provider) != claims.provider()) {
-					throw new IllegalStateException("provider mismatch between callback path and state");
-				}
-				connectionService.createFromOauth(claims, code);
-				result = "connected";
+		return OauthCallbackRedirect.handle("Mailbox", error, code, state, appBaseUrl + "/app/settings?mailboxOauth=", () -> {
+			var claims = oauthService.validateState(state);
+			if (MailboxProviderEnum.fromValue(provider) != claims.provider()) {
+				throw new IllegalStateException("provider mismatch between callback path and state");
 			}
-		} catch (Exception e) {
-			log.warn("Mailbox OAuth callback failed: {}", e.getMessage());
-			result = "failed";
-		}
-		return ResponseEntity.status(HttpStatus.FOUND)
-			.location(URI.create(appBaseUrl + "/app/settings?mailboxOauth=" + result))
-			.build();
+			// The signed state names the tenant and user: the connection is created in that tenant's scope.
+			TenantScope.runAs(claims.tenantId(), () -> connectionService.createFromOauth(claims, code));
+		});
 	}
 }

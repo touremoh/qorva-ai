@@ -12,11 +12,6 @@ public interface ChatMessagesRepository extends QorvaRepository<ChatMessage> {
     @Query(value = "{ 'tenantId': ?0, 'chatId': ?1, 'role': { $ne: ?2 }  }")
     Page<ChatMessage> findPageByTenantAndChatIdExcludingSystemMessage(String tenantId, String chatId, String role, Pageable pageable);
 
-    @Query(value = "{ 'tenantId': ?0, 'chatId': ?1 }", sort = "{ 'createdAt': -1 }", fields = "{ '_id': 1 }")
-    Page<ChatMessage> findIdsByTenantAndChatIdDesc(String tenantId, String chatId, Pageable pageable);
-
-    long countByTenantIdAndChatId(String tenantId, String chatId);
-
     ChatMessage findFirstByTenantIdAndChatIdOrderByCreatedAtDesc(String tenantId, String chatId);
 
     long deleteByTenantIdAndChatId(String tenantId, String chatId);

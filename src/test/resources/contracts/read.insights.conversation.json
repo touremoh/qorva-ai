@@ -1,0 +1,19 @@
+{
+  "body" : [ {
+    "answerText" : "You have 4 senior backend engineers.",
+    "candidates" : [ ],
+    "charts" : [ ],
+    "conversationId" : "<id:2>",
+    "createdAt" : "<ts>",
+    "disclaimer" : null,
+    "followUpQuestions" : [ "Which of them are available now?" ],
+    "id" : "<id:1>",
+    "initiatedBy" : "owner@a.qorva.test",
+    "intent" : "TALENT_POOL_INTELLIGENCE",
+    "metrics" : [ ],
+    "question" : "How many senior backend engineers do we have?",
+    "rawData" : { },
+    "totalCandidateCount" : 4
+  } ],
+  "status" : 200
+}

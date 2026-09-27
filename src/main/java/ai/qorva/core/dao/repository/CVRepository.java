@@ -23,21 +23,12 @@ public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepos
 	long countByTenantId(String tenantId);
 
 	@Aggregation(pipeline = {
-		"{ $match: { tenantId: ?0 }}",
-		"{ $unwind: '$tags' }",
-		"{ $group: { _id: null, allTags: { $addToSet: '$tags' }}}",
-		"{ $project: { _id: 0, tags: '$allTags' }}",
-		"{ $sort: { tags: 1 } }"
-	})
-	List<String> findAllTagsByTenantId(ObjectId tenantId);
-
-	@Aggregation(pipeline = {
 		"{ '$match': { 'tenantId': ?0 } }",
 		"{ '$unwind': '$keySkills' }",
 		"{ '$unwind': '$keySkills.skills' }",
 		"{ '$group': { '_id': '$keySkills.skills', 'totalMatch': { '$sum': 1 } } }",
 		"{ '$project': { 'skill': '$_id', 'totalMatch': 1, '_id': 0 } }",
-		"{ '$sort': { 'totalMatch': -1 } }",
+		"{ '$sort': { 'totalMatch': -1, 'skill': 1 } }",
 		"{ '$limit': 10 }"
 	})
 	List<DashboardData.SkillReport> getSkillReportByTenantId(ObjectId tenantId);
@@ -46,7 +37,7 @@ public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepos
 		"{ '$match': { 'tenantId': ?0, 'candidateClustering.skillDepth': { '$exists': true, '$ne': null } } }",
 		"{ '$group': { '_id': '$candidateClustering.skillDepth', 'count': { '$sum': 1 } } }",
 		"{ '$project': { 'name': '$_id', 'count': 1, 'percentage': { '$literal': 0.0 }, '_id': 0 } }",
-		"{ '$sort': { 'count': -1 } }"
+		"{ '$sort': { 'count': -1, 'name': 1 } }"
 	})
 	List<DashboardData.ClusteringCategoryReport> getSkillDepthReportByTenantId(ObjectId tenantId);
 
@@ -54,7 +45,7 @@ public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepos
 		"{ '$match': { 'tenantId': ?0, 'candidateClustering.seniorityLevel': { '$exists': true, '$ne': null } } }",
 		"{ '$group': { '_id': '$candidateClustering.seniorityLevel', 'count': { '$sum': 1 } } }",
 		"{ '$project': { 'name': '$_id', 'count': 1, 'percentage': { '$literal': 0.0 }, '_id': 0 } }",
-		"{ '$sort': { 'count': -1 } }"
+		"{ '$sort': { 'count': -1, 'name': 1 } }"
 	})
 	List<DashboardData.ClusteringCategoryReport> getSeniorityLevelReportByTenantId(ObjectId tenantId);
 
@@ -62,7 +53,7 @@ public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepos
 		"{ '$match': { 'tenantId': ?0, 'candidateClustering.leadershipAndInfluence': { '$exists': true, '$ne': null } } }",
 		"{ '$group': { '_id': '$candidateClustering.leadershipAndInfluence', 'count': { '$sum': 1 } } }",
 		"{ '$project': { 'name': '$_id', 'count': 1, 'percentage': { '$literal': 0.0 }, '_id': 0 } }",
-		"{ '$sort': { 'count': -1 } }"
+		"{ '$sort': { 'count': -1, 'name': 1 } }"
 	})
 	List<DashboardData.ClusteringCategoryReport> getLeadershipReportByTenantId(ObjectId tenantId);
 
@@ -70,7 +61,7 @@ public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepos
 		"{ '$match': { 'tenantId': ?0, 'candidateClustering.learningVelocity': { '$exists': true, '$ne': null } } }",
 		"{ '$group': { '_id': '$candidateClustering.learningVelocity', 'count': { '$sum': 1 } } }",
 		"{ '$project': { 'name': '$_id', 'count': 1, 'percentage': { '$literal': 0.0 }, '_id': 0 } }",
-		"{ '$sort': { 'count': -1 } }"
+		"{ '$sort': { 'count': -1, 'name': 1 } }"
 	})
 	List<DashboardData.ClusteringCategoryReport> getLearningVelocityReportByTenantId(ObjectId tenantId);
 

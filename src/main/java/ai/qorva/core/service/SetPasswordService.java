@@ -1,5 +1,9 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.UserRepository;
@@ -145,27 +149,27 @@ public class SetPasswordService {
 		try {
 			claims = JwtUtils.extractAllClaims(token, jwtConfig.getSecretKey());
 		} catch (Exception e) {
-			throw new QorvaException(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+			throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_INVALID);
 		}
 
 		if (!JwtUtils.PURPOSE_SET_PASSWORD.equals(claims.get(JwtUtils.PURPOSE, String.class))) {
-			throw new QorvaException(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+			throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_INVALID);
 		}
 
 		var userId = claims.getSubject();
 		var user = userRepository.findById(new ObjectId(userId))
-			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED));
+			.orElseThrow(() -> QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_INVALID));
 
 		// The status may have changed between issue and consume; a blocked account keeps its link useless.
 		if (BLOCKED_STATUSES.contains(user.getUserAccountStatus())) {
-			throw new QorvaException(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_INVALID, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+			throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_INVALID);
 		}
 
 		int tokenVersion = claims.get(JwtUtils.CREDENTIAL_VERSION, Integer.class) != null
 			? claims.get(JwtUtils.CREDENTIAL_VERSION, Integer.class) : 0;
 		int currentVersion = user.getPasswordCredentialVersionOrZero();
 		if (tokenVersion != currentVersion) {
-			throw new QorvaException(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_USED, HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.AUTH_SET_PASSWORD_TOKEN_USED);
 		}
 
 		user.setEncryptedPassword(passwordEncoder.encode(newPassword));
@@ -190,7 +194,8 @@ public class SetPasswordService {
 
 	private String resolveCompanyName(String tenantId) {
 		try {
-			var tenant = tenantService.findOneById(tenantId);
+			// Also reached from public password flows: read the user's own tenant in its scope.
+			var tenant = TenantScope.callAs(tenantId, () -> tenantService.findOneById(tenantId));
 			return tenant.getTenantName() != null ? tenant.getTenantName() : "";
 		} catch (Exception e) {
 			log.warn("Could not resolve tenant name for tenantId={}", tenantId);

@@ -10,7 +10,6 @@ import org.springframework.data.mongodb.repository.Aggregation;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,16 +22,6 @@ public interface MatchingReportRepository extends QorvaRepository<MatchingReport
 	@Query(value = "{ '$text': { '$search': ?0 }, 'tenantId': ?1 }")
 	Page<MatchingReport> searchAll(String searchTerms, String tenantId, Pageable pageable);
 
-
-	/**
-	 * Count all ResumeMatch docs for this tenant, whose createdAt
-	 * is between startOfMonth (inclusive) and endOfMonth (inclusive).
-	 */
-	long countByTenantIdAndCreatedAtBetween(
-		String tenantId,
-		Instant startOfMonth,
-		Instant   endOfMonth
-	);
 
 	@Query(value = "{ 'tenantId': ?0, 'jobPostId': ?1, 'candidateInfo.candidateId': ?2 }")
 	Optional<MatchingReport> findOneByTenantIdAndJobPostIdAndCandidateInfoCandidateId(

@@ -1,5 +1,7 @@
 package ai.qorva.core.scheduler;
 
+import ai.qorva.core.security.TenantScope;
+
 import ai.qorva.core.service.EmailNotificationDispatcher;
 import ai.qorva.core.service.PendingEmailNotificationService;
 import lombok.extern.slf4j.Slf4j;
@@ -38,7 +40,7 @@ public class PendingEmailNotificationScheduler {
 
         for (var notification : pending) {
             try {
-                dispatcher.dispatch(notification);
+                TenantScope.runAs(notification.getTenantId(), () -> dispatcher.dispatch(notification));
                 pendingEmailService.markSent(notification.getId());
                 sent++;
                 log.info("Notification dispatched: id={} type={} userId={}",

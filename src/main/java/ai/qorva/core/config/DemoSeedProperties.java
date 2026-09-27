@@ -25,7 +25,7 @@ public class DemoSeedProperties {
 	private String prefix = "demo-seed";
 
 	/** Fixture set version segment (allows non-breaking fixture updates). */
-	private String version = "v1";
+	private String version = "v2";
 
 	/** Language used when a requested (segment, language) fixture set is missing. */
 	private String fallbackLanguage = "en";

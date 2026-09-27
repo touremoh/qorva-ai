@@ -1,17 +1,16 @@
 package ai.qorva.core.service;
 
 import ai.qorva.core.dao.entity.JobPost;
-import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.JobPostRepository;
-import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.enums.JobPostStatusEnum;
-import ai.qorva.core.enums.NoteTargetTypeEnum;
+import ai.qorva.core.utils.JobDescriptionHtml;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.JobPostMapper;
+import ai.qorva.core.service.cascade.CascadeRegistry;
+import ai.qorva.core.service.cascade.CascadeResource;
 import ai.qorva.core.dao.querybuilder.JobPostQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,21 +22,18 @@ import java.util.UUID;
 @Service
 public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
 
-    private final MatchingReportRepository matchingReportRepository;
-    private final ChatsRepository chatsRepository;
-    private final NoteService noteService;
+    private final CascadeRegistry cascadeRegistry;
 
     @Autowired
-    public JobPostService(JobPostRepository repository, JobPostMapper mapper, JobPostQueryBuilder queryBuilder, MatchingReportRepository matchingReportRepository, ChatsRepository chatsRepository, NoteService noteService) {
+    public JobPostService(JobPostRepository repository, JobPostMapper mapper, JobPostQueryBuilder queryBuilder, CascadeRegistry cascadeRegistry) {
         super(repository, mapper, queryBuilder);
-        this.matchingReportRepository = matchingReportRepository;
-        this.chatsRepository = chatsRepository;
-        this.noteService = noteService;
+        this.cascadeRegistry = cascadeRegistry;
     }
 
     @Override
     protected void preProcessCreateOne(JobPostDTO dto) throws QorvaException {
         super.preProcessCreateOne(dto);
+        dto.setDescription(JobDescriptionHtml.sanitize(dto.getDescription()));
         dto.setJobReference(UUID.randomUUID().toString().toUpperCase(Locale.ROOT));
         dto.setStatus(JobPostStatusEnum.OPEN.getStatus());
         dto.setMatchingReportsNeeded(matchingReportsNeededFor(dto.getStatus()));
@@ -57,6 +53,7 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
         // trusting the payload keeps an edit from unlinking an imported job — which left the
         // job_reference unique index holding a reference the next sync could no longer match.
         newJobPost.setAtsRef(existing != null ? existing.getAtsRef() : null);
+        newJobPost.setDescription(JobDescriptionHtml.sanitize(newJobPost.getDescription()));
         newJobPost.setMatchingReportsNeeded(matchingReportsNeededFor(newJobPost.getStatus()));
     }
 
@@ -68,20 +65,10 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
     @Override
     protected void postProcessDeleteOneById(String id, String tenantId) {
         log.info("JobPost deleted with ID: {}", id);
-
-        // Report ids first: their note threads can only be found while the reports still exist.
-        var reportIds = this.matchingReportRepository.findByTenantIdAndJobPostId(tenantId, id).stream()
-            .map(MatchingReportRepository.IdOnly::getId)
-            .toList();
-        var countDeletedReports = this.matchingReportRepository.deleteByTenantIdAndJobPostId(tenantId, id);
-        log.info("Deleted {} CV report for job post {}", countDeletedReports, id);
-
-        var countDeletedNotes = this.noteService.deleteForTargets(tenantId, NoteTargetTypeEnum.MATCHING_REPORT, reportIds);
-        log.info("Deleted {} notes on the reports of job post {}", countDeletedNotes, id);
-
-        var countDeletedChats = this.chatsRepository.deleteByTenantIdAndContextJobPostId(tenantId, id);
-        log.info("Deleted {} chats for job post {}", countDeletedChats, id);
+        // Its reports (and their notes and chats) and its chats (and their messages).
+        this.cascadeRegistry.parentsDeleted(CascadeResource.JOB_POST, tenantId, List.of(id));
     }
+
 
     public List<JobPostDTO> findJobPostsNeedingReports(String tenantId) {
         return ((JobPostRepository) this.repository)
@@ -100,8 +87,8 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
         log.debug("Marked {} open job posts as needing reports for tenant={}", entities.size(), tenantId);
     }
 
-    public void clearMatchingReportsNeeded(String jobPostId) {
-        (this.repository).findById(new ObjectId(jobPostId)).ifPresent(e -> {
+    public void clearMatchingReportsNeeded(String jobPostId, String tenantId) {
+        this.repository.findByIdInTenant(jobPostId, tenantId).ifPresent(e -> {
             e.setMatchingReportsNeeded(false);
             this.repository.save(e);
         });

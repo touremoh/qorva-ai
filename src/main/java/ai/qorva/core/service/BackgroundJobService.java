@@ -1,5 +1,8 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrorCodes;
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.BackgroundJob;
 import ai.qorva.core.dao.entity.CandidateEmailTemplate;
 import ai.qorva.core.dao.repository.BackgroundJobRepository;
@@ -10,7 +13,6 @@ import ai.qorva.core.exception.QorvaException;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -32,6 +34,10 @@ public class BackgroundJobService {
 	private final UsageMonitoringService usageMonitoringService;
 	private final CandidateEmailTemplateService candidateEmailTemplateService;
 
+	private static final String JOB_NOT_FOUND = "Job not found";
+
+	private final BackgroundJobQueries jobs;
+
 	private static final List<String> ACTIVE_STATUSES =
 		List.of(BackgroundJob.STATUS_PENDING, BackgroundJob.STATUS_RUNNING);
 
@@ -43,6 +49,7 @@ public class BackgroundJobService {
 		CandidateEmailTemplateService candidateEmailTemplateService
 	) {
 		this.jobRepository = jobRepository;
+		this.jobs = new BackgroundJobQueries(jobRepository);
 		this.cvRepository = cvRepository;
 		this.usageMonitoringService = usageMonitoringService;
 		this.candidateEmailTemplateService = candidateEmailTemplateService;
@@ -52,14 +59,14 @@ public class BackgroundJobService {
 		boolean isReanalyze = BackgroundJob.TYPE_REANALYZE.equals(request.type());
 		boolean isCampaign = BackgroundJob.TYPE_CANDIDATE_UPDATE_CAMPAIGN.equals(request.type());
 		if (!isReanalyze && !isCampaign) {
-			throw badRequest("Unsupported job type: " + request.type());
+			throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_UNSUPPORTED_TYPE, request.type());
 		}
 		var issueKey = parseIssueKey(request.issueKey());
 		if (issueKey == QualityIssueKeyEnum.DUPLICATES) {
-			throw badRequest("Duplicates are resolved individually, not via jobs");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_DUPLICATES_INDIVIDUAL);
 		}
 		if (isCampaign && issueKey != QualityIssueKeyEnum.OUTDATED && issueKey != QualityIssueKeyEnum.UNKNOWN_FRESHNESS) {
-			throw badRequest("Update campaigns target freshness issues only");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_CAMPAIGN_FRESHNESS_ONLY);
 		}
 
 		// Snapshot the invitation template up front (dry runs validate it too): a template
@@ -67,7 +74,7 @@ public class BackgroundJobService {
 		CandidateEmailTemplate template = null;
 		if (StringUtils.hasText(request.templateId())) {
 			if (!isCampaign) {
-				throw badRequest("Email templates only apply to update campaigns");
+				throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_TEMPLATE_CAMPAIGN_ONLY);
 			}
 			template = candidateEmailTemplateService.findOwned(tenantId, request.templateId());
 		}
@@ -79,19 +86,17 @@ public class BackgroundJobService {
 		}
 
 		if (jobRepository.existsByTenantIdAndTypeAndStatusIn(tenantId, request.type(), ACTIVE_STATUSES)) {
-			throw new QorvaException("A job of this type is already running for your workspace",
-				HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.BACKGROUND_JOB_ALREADY_RUNNING);
 		}
 		if (isReanalyze) {
 			if (estimate.remainingQuota() != null && estimate.estimatedActions() > estimate.remainingQuota()) {
-				throw badRequest("This job would exceed your remaining screening-action quota ("
-					+ estimate.estimatedActions() + " needed, " + estimate.remainingQuota() + " left)");
+				throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_QUOTA_EXCEEDED, estimate.estimatedActions(), estimate.remainingQuota());
 			}
 			if (estimate.estimatedActions() == 0) {
-				throw badRequest("No re-analyzable resumes match this issue");
+				throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_NO_REANALYZABLE);
 			}
 		} else if (estimate.affectedCount() == 0) {
-			throw badRequest("No resumes match this issue");
+			throw QorvaErrors.badRequest(QorvaErrorCodes.BACKGROUND_JOB_NO_RESUMES);
 		}
 
 		var job = jobRepository.save(BackgroundJob.builder()
@@ -136,39 +141,23 @@ public class BackgroundJobService {
 	}
 
 	public BackgroundJobData.JobList list(String tenantId) {
-		var jobs = jobRepository.findByTenantIdOrderByCreatedAtDesc(tenantId, PageRequest.of(0, 10)).stream()
-			.map(BackgroundJobData.JobView::from)
-			.toList();
-		return new BackgroundJobData.JobList(jobs);
+		return jobs.recent(tenantId);
 	}
 
 	public BackgroundJobData.JobView get(String tenantId, String jobId) throws QorvaException {
-		return jobRepository.findByIdAndTenantId(jobId, tenantId)
-			.map(BackgroundJobData.JobView::from)
-			.orElseThrow(() -> new QorvaException("Job not found", HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
+		return jobs.get(tenantId, jobId, JOB_NOT_FOUND);
 	}
 
 	public BackgroundJobData.JobView cancel(String tenantId, String jobId) throws QorvaException {
-		var job = jobRepository.findByIdAndTenantId(jobId, tenantId)
-			.orElseThrow(() -> new QorvaException("Job not found", HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
-		if (ACTIVE_STATUSES.contains(job.getStatus())) {
-			job.setStatus(BackgroundJob.STATUS_CANCELLED);
-			job.setFinishedAt(Instant.now());
-			jobRepository.save(job);
-			log.info("Background job {} cancelled by tenant {}", jobId, tenantId);
-		}
-		return BackgroundJobData.JobView.from(job);
+		return jobs.cancel(tenantId, jobId, JOB_NOT_FOUND, ACTIVE_STATUSES, job -> { });
 	}
 
 	private QualityIssueKeyEnum parseIssueKey(String issueKey) throws QorvaException {
 		try {
 			return QualityIssueKeyEnum.valueOf(issueKey);
 		} catch (IllegalArgumentException | NullPointerException e) {
-			throw badRequest("Unknown issue key: " + issueKey);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.QUALITY_UNKNOWN_ISSUE, issueKey);
 		}
 	}
 
-	private QorvaException badRequest(String message) {
-		return new QorvaException(message, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
-	}
 }

@@ -1,0 +1,126 @@
+{
+  "body" : {
+    "jobPostsReport" : [ {
+      "jobPostId" : "<id:1>",
+      "jobPostTitle" : "Senior Backend Engineer (Java/Spring)",
+      "totalMatch" : 3
+    } ],
+    "leadershipReport" : [ {
+      "count" : 7,
+      "name" : "crossFunctionalLeader",
+      "percentage" : 33.3
+    }, {
+      "count" : 6,
+      "name" : "individualContributor",
+      "percentage" : 28.6
+    }, {
+      "count" : 4,
+      "name" : "teamLead",
+      "percentage" : 19.0
+    }, {
+      "count" : 2,
+      "name" : "executiveInfluence",
+      "percentage" : 9.5
+    }, {
+      "count" : 2,
+      "name" : "strategicLeader",
+      "percentage" : 9.5
+    } ],
+    "learningVelocityReport" : [ {
+      "count" : 14,
+      "name" : "high",
+      "percentage" : 66.7
+    }, {
+      "count" : 5,
+      "name" : "medium",
+      "percentage" : 23.8
+    }, {
+      "count" : 2,
+      "name" : "veryHigh",
+      "percentage" : 9.5
+    } ],
+    "seniorityLevelReport" : [ {
+      "count" : 9,
+      "name" : "senior",
+      "percentage" : 42.9
+    }, {
+      "count" : 3,
+      "name" : "junior",
+      "percentage" : 14.3
+    }, {
+      "count" : 2,
+      "name" : "director",
+      "percentage" : 9.5
+    }, {
+      "count" : 2,
+      "name" : "lead",
+      "percentage" : 9.5
+    }, {
+      "count" : 2,
+      "name" : "midLevel",
+      "percentage" : 9.5
+    }, {
+      "count" : 2,
+      "name" : "principal",
+      "percentage" : 9.5
+    }, {
+      "count" : 1,
+      "name" : "manager",
+      "percentage" : 4.8
+    } ],
+    "skillDepthReport" : [ {
+      "count" : 8,
+      "name" : "tShaped",
+      "percentage" : 38.1
+    }, {
+      "count" : 5,
+      "name" : "generalist",
+      "percentage" : 23.8
+    }, {
+      "count" : 5,
+      "name" : "specialist",
+      "percentage" : 23.8
+    }, {
+      "count" : 3,
+      "name" : "hybrid",
+      "percentage" : 14.3
+    } ],
+    "skillsReport" : [ {
+      "skill" : "Python",
+      "totalMatch" : 10
+    }, {
+      "skill" : "SQL",
+      "totalMatch" : 7
+    }, {
+      "skill" : "AWS",
+      "totalMatch" : 6
+    }, {
+      "skill" : "Docker",
+      "totalMatch" : 6
+    }, {
+      "skill" : "GitHub Actions",
+      "totalMatch" : 5
+    }, {
+      "skill" : "Java",
+      "totalMatch" : 5
+    }, {
+      "skill" : "Go",
+      "totalMatch" : 4
+    }, {
+      "skill" : "Kubernetes",
+      "totalMatch" : 4
+    }, {
+      "skill" : "Looker",
+      "totalMatch" : 4
+    }, {
+      "skill" : "PostgreSQL",
+      "totalMatch" : 4
+    } ],
+    "subscriptionStatus" : "active",
+    "totalCVs" : 22,
+    "totalJobsPosted" : 5,
+    "totalResumeAnalysis" : 3,
+    "totalUsers" : 2
+  },
+  "status" : 200
+}

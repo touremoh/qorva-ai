@@ -1,0 +1,27 @@
+{
+  "body" : {
+    "candidateName" : "Oliver Whitfield",
+    "email" : "oliver.whitfield@example.com",
+    "history" : [ {
+      "body" : "Hi there",
+      "channel" : "EMAIL",
+      "createdAt" : "<ts>",
+      "cvId" : "<id:2>",
+      "error" : null,
+      "id" : "<id:1>",
+      "jobPostId" : null,
+      "matchingReportId" : null,
+      "providerWebLink" : null,
+      "senderEmail" : "owner@a.qorva.test",
+      "senderName" : "Olivia Owner-A",
+      "status" : "EXTERNAL_OPENED",
+      "subject" : "Hello",
+      "to" : "candidate@example.com",
+      "via" : "GMAIL"
+    } ],
+    "mailbox" : "NONE",
+    "mailboxAddress" : null,
+    "suppressed" : false
+  },
+  "status" : 200
+}

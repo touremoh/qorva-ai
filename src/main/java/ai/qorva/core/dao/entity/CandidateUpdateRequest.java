@@ -23,7 +23,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "candidate_update_requests")
-public class CandidateUpdateRequest {
+public class CandidateUpdateRequest implements QorvaEntity {
 
 	public static final String STATUS_SENT = "SENT";
 	public static final String STATUS_OPENED = "OPENED";

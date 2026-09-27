@@ -1,0 +1,143 @@
+{
+  "body" : {
+    "code" : 200,
+    "data" : {
+      "content" : [ {
+        "candidateInfo" : {
+          "candidateClustering" : {
+            "businessImpact" : [ "Improved accessibility compliance", "Improved web vitals" ],
+            "clusterConfidenceScore" : 0.88,
+            "clusterReasoning" : "Sustained specialisation in accessible, performant frontend work across React and Vue marks a senior frontend specialist.",
+            "environmentFit" : [ "SaaS", "Remote-first" ],
+            "functionalExpertise" : [ "SPA architecture", "Accessibility", "Frontend performance" ],
+            "industryDomains" : [ "Healthcare", "E-commerce" ],
+            "leadershipAndInfluence" : "individualContributor",
+            "learningVelocity" : "high",
+            "primaryCluster" : "Frontend Engineering",
+            "secondaryClusters" : [ "Web Accessibility", "Web Performance" ],
+            "seniorityLevel" : "senior",
+            "skillDepth" : "specialist"
+          },
+          "candidateId" : "<id:3>",
+          "candidateName" : "Cian O'Sullivan",
+          "candidateProfileSummary" : "Frontend engineer specialising in performant, accessible single-page applications. Nine years building design-system-driven UIs in React and Vue with strong attention to interaction detail and Core Web Vitals. Comfortable partnering closely with designers and product managers.",
+          "nbYearsExperience" : 10,
+          "skills" : [ "React", "Vue.js", "TypeScript", "Svelte", "CSS Architecture", "Tailwind CSS", "Framer Motion", "WCAG Accessibility", "Core Web Vitals", "Webpack", "Vite", "Lighthouse", "Jest", "Playwright", "Storybook" ]
+        },
+        "createdAt" : "<ts>",
+        "createdBy" : "owner@a.qorva.test",
+        "id" : "<id:1>",
+        "jobPostId" : "<id:2>",
+        "jobPostTitle" : "Senior Backend Engineer (Java/Spring)",
+        "lastUpdatedAt" : "<ts>",
+        "lastUpdatedBy" : "owner@a.qorva.test",
+        "matchingReportDetails" : {
+          "decisionSummary" : {
+            "confidenceLevel" : "high",
+            "detailedSummary" : null,
+            "finalScore" : 41.0,
+            "recommendation" : "reject",
+            "reportHeadline" : "Weak match",
+            "shortVerdict" : "Hold"
+          },
+          "detailsID" : "<uuid>",
+          "experienceMatch" : null,
+          "industryMatch" : null,
+          "locationMatch" : null,
+          "missingSkills" : null,
+          "redFlags" : null,
+          "skillsMatch" : {
+            "matchingSkills" : [ "Java", "Kubernetes" ],
+            "score" : 41.0,
+            "scoreSummary" : "Core stack overlap"
+          },
+          "strengths" : null,
+          "weaknesses" : null
+        },
+        "status" : "NEW",
+        "tenantId" : "<id:4>"
+      }, {
+        "candidateInfo" : {
+          "candidateClustering" : {
+            "businessImpact" : [ "Improved web performance", "Reduced defect rates" ],
+            "clusterConfidenceScore" : 0.9,
+            "clusterReasoning" : "Deep frontend expertise paired with solid backend delivery and mentoring signals a T-shaped senior full-stack engineer.",
+            "environmentFit" : [ "Scale-up", "SaaS" ],
+            "functionalExpertise" : [ "Full-stack web development", "Design systems", "CI/CD" ],
+            "industryDomains" : [ "Retail", "SaaS" ],
+            "leadershipAndInfluence" : "teamLead",
+            "learningVelocity" : "high",
+            "primaryCluster" : "Full-Stack Engineering",
+            "secondaryClusters" : [ "Frontend Engineering", "Web Performance" ],
+            "seniorityLevel" : "senior",
+            "skillDepth" : "tShaped"
+          },
+          "candidateId" : "<id:6>",
+          "candidateName" : "Hannah Fletcher",
+          "candidateProfileSummary" : "Full-stack engineer with over a decade of experience delivering customer-facing web applications across the JavaScript and Java ecosystems. Comfortable across React frontends, Node and Spring backends, and the CI/CD that ships them. Enjoys mentoring and setting pragmatic engineering standards.",
+          "nbYearsExperience" : 11,
+          "skills" : [ "React", "TypeScript", "Next.js", "Redux", "Accessibility", "Node.js", "Java", "Spring Boot", "GraphQL", "PostgreSQL", "MongoDB", "Prisma", "Docker", "GitHub Actions", "AWS", "Cypress" ]
+        },
+        "createdAt" : "<ts>",
+        "createdBy" : "owner@a.qorva.test",
+        "id" : "<id:5>",
+        "jobPostId" : "<id:2>",
+        "jobPostTitle" : "Senior Backend Engineer (Java/Spring)",
+        "lastUpdatedAt" : "<ts>",
+        "lastUpdatedBy" : "owner@a.qorva.test",
+        "matchingReportDetails" : {
+          "decisionSummary" : {
+            "confidenceLevel" : "high",
+            "detailedSummary" : null,
+            "finalScore" : 64.0,
+            "recommendation" : "may_be",
+            "reportHeadline" : "Partial match",
+            "shortVerdict" : "Hold"
+          },
+          "detailsID" : "<uuid>",
+          "experienceMatch" : null,
+          "industryMatch" : null,
+          "locationMatch" : null,
+          "missingSkills" : null,
+          "redFlags" : null,
+          "skillsMatch" : {
+            "matchingSkills" : [ "Java", "Kubernetes" ],
+            "score" : 64.0,
+            "scoreSummary" : "Core stack overlap"
+          },
+          "strengths" : null,
+          "weaknesses" : null
+        },
+        "status" : "NEW",
+        "tenantId" : "<id:4>"
+      } ],
+      "empty" : false,
+      "first" : true,
+      "last" : true,
+      "number" : 0,
+      "numberOfElements" : 2,
+      "pageable" : {
+        "offset" : 0,
+        "pageNumber" : 0,
+        "pageSize" : 10,
+        "paged" : true,
+        "sort" : {
+          "empty" : false,
+          "sorted" : true,
+          "unsorted" : false
+        },
+        "unpaged" : false
+      },
+      "size" : 10,
+      "sort" : {
+        "empty" : false,
+        "sorted" : true,
+        "unsorted" : false
+      },
+      "totalElements" : 2,
+      "totalPages" : 1
+    },
+    "timestamp" : "<ts>"
+  },
+  "status" : 200
+}

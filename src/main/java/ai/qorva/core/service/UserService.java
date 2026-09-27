@@ -1,11 +1,12 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.dto.request.AddUserRequest;
 import ai.qorva.core.enums.EmailNotificationType;
-import ai.qorva.core.enums.QorvaErrorsEnum;
 import ai.qorva.core.enums.SubscriptionPlanEnum;
 import ai.qorva.core.enums.UserStatusEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -14,7 +15,6 @@ import ai.qorva.core.mapper.UserMapper;
 import ai.qorva.core.dao.querybuilder.UserQueryBuilder;
 import lombok.extern.slf4j.Slf4j;
 import ai.qorva.core.dto.common.UserAuthority;
-import org.bson.types.ObjectId;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,6 @@ import org.springframework.util.StringUtils;
 
 import java.security.SecureRandom;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 
 @Slf4j
@@ -156,35 +155,35 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		this.mapper.merge(userDTO, getExistingForUpdate());
 	}
 
-	public void updatePassword(String tenantId, String userId, String currentPassword, String newPassword) throws QorvaException {
-		var user = repository.findById(new ObjectId(userId))
-			.orElseThrow(() -> new QorvaException("User not found", HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
-
-		if (!tenantId.equals(user.getTenantId())) {
-			throw new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+	/** A user changes their own password; the credential version bump ends their other sessions. */
+	public void updatePassword(String tenantId, String userId, String actorEmail, String currentPassword, String newPassword) throws QorvaException {
+		var user = userOfTenant(tenantId, userId);
+		if (actorEmail == null || !actorEmail.equalsIgnoreCase(user.getEmail())) {
+			throw QorvaErrors.forbidden(QorvaErrorCodes.ACCESS_FORBIDDEN);
 		}
 
 		if (!passwordEncoder.matches(currentPassword, user.getEncryptedPassword())) {
-			throw new QorvaException(QorvaErrorCodes.USER_PASSWORD_INCORRECT, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+			throw QorvaErrors.unauthorized(QorvaErrorCodes.USER_PASSWORD_INCORRECT);
 		}
 
 		user.setEncryptedPassword(passwordEncoder.encode(newPassword));
-		// Bump the credential version so any outstanding set-password / reset link dies with the old password.
+		// Bump the credential version: outstanding set-password / reset links and every access token
+		// issued before the change stop working (the caller gets a fresh token).
 		user.setPasswordCredentialVersion(user.getPasswordCredentialVersionOrZero() + 1);
 		repository.save(user);
 	}
 
 	public void updateAuthorities(String tenantId, String userId, List<UserAuthority> authorities) throws QorvaException {
-		var user = repository.findById(new ObjectId(userId))
-			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND));
-
-		if (!tenantId.equals(user.getTenantId())) {
-			throw new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
-		}
+		var user = userOfTenant(tenantId, userId);
 
 		user.setAuthorities(authorities);
 		repository.save(user);
 		log.info("User authorities updated: tenantId={} userId={}", tenantId, userId);
+	}
+
+	private User userOfTenant(String tenantId, String userId) throws QorvaException {
+		return repository.findByIdInTenant(userId, tenantId)
+			.orElseThrow(() -> QorvaErrors.notFound(QorvaErrorCodes.USER_NOT_FOUND));
 	}
 
 	public UserDTO findByEmail(String email) {

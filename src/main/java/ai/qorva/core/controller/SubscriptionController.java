@@ -1,5 +1,7 @@
 package ai.qorva.core.controller;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.request.UpgradeRequestDTO;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -39,13 +41,13 @@ public class SubscriptionController {
 	public ResponseEntity<QorvaRequestResponse> upgrade(@RequestBody @Valid UpgradeRequestDTO request) throws QorvaException {
 		var tenantId = TenantContextHolder.getTenantId();
 		if (!StringUtils.hasText(tenantId)) {
-			throw new QorvaException(QorvaErrorCodes.HTTP_UNAUTHORIZED, HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED);
+			throw QorvaErrors.unauthorized(QorvaErrorCodes.HTTP_UNAUTHORIZED);
 		}
 
 		var email = SecurityContextHolder.getContext().getAuthentication().getName();
 		var user = userService.findByEmail(email);
 		if (user == null) {
-			throw new QorvaException(QorvaErrorCodes.USER_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
+			throw QorvaErrors.notFound(QorvaErrorCodes.USER_NOT_FOUND);
 		}
 
 		return BuildApiResponse.from(registrationService.upgrade(tenantId, user.getId(), request.getPriceId()));

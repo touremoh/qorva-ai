@@ -6,8 +6,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.converter.BeanOutputConverter;
-import org.springframework.ai.openai.OpenAiChatOptions;
-import org.springframework.ai.openai.api.ResponseFormat;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -33,20 +31,8 @@ public class CVExtractionAgent {
 
 		try {
 			return chatClient.prompt()
-				.options(OpenAiChatOptions.builder()
-					.model(extractionModel)
-					.responseFormat(ResponseFormat.builder()
-						.type(ResponseFormat.Type.JSON_SCHEMA)
-						.jsonSchema(ResponseFormat.JsonSchema.builder()
-							.name("cv_parser")
-							.schema(converter.getJsonSchema())
-							.strict(Boolean.FALSE)
-							.build())
-						.build())
-					// Extraction wants determinism, not creativity — but GPT-5-family models
-					// only accept the default temperature (1), so pick per model family.
-					.temperature(extractionModel.startsWith("gpt-5") ? 1.0 : 0.1)
-					.build())
+				// Extraction wants determinism: the lowest temperature the model family accepts.
+				.options(StructuredOutput.options(extractionModel, "cv_parser", converter.getJsonSchema(), false, StructuredOutput.temperatureFor(extractionModel, 0.1)))
 				.user(u -> u
 					.text(promptTemplate)
 					.param("cv_data", cvContent)

@@ -74,7 +74,7 @@ class CandidateOutreachServiceTest {
 
 	@Test
 	void contextReportsEmailSuppressionMailboxAndHistory() throws QorvaException {
-		when(cvRepository.findById(new ObjectId(CV_ID))).thenReturn(Optional.of(cvWithEmail(" Ada@Example.com ")));
+		when(cvRepository.findByIdInTenant(CV_ID, TENANT)).thenReturn(Optional.of(cvWithEmail(" Ada@Example.com ")));
 		when(suppressedEmailRepository.existsByTenantIdAndEmail(TENANT, "ada@example.com")).thenReturn(true);
 		when(mailboxConnectionService.composerState(TENANT, USERNAME))
 			.thenReturn(new MailboxConnectionService.ComposerState(MailboxState.MICROSOFT, "jane@acme.test"));
@@ -93,9 +93,8 @@ class CandidateOutreachServiceTest {
 
 	@Test
 	void foreignTenantCvReadsAsNotFound() {
-		var cv = cvWithEmail("a@b.c");
-		cv.setTenantId("other");
-		when(cvRepository.findById(new ObjectId(CV_ID))).thenReturn(Optional.of(cv));
+		// The CV exists in another tenant; looked up in the caller's tenant it is not found.
+		when(cvRepository.findByIdInTenant(CV_ID, TENANT)).thenReturn(Optional.empty());
 
 		assertThatThrownBy(() -> service.context(TENANT, USERNAME, CV_ID))
 			.isInstanceOf(QorvaException.class)
@@ -104,7 +103,7 @@ class CandidateOutreachServiceTest {
 
 	@Test
 	void externalHandoffRefusesSuppressedAddress() {
-		when(cvRepository.findById(new ObjectId(CV_ID))).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
+		when(cvRepository.findByIdInTenant(CV_ID, TENANT)).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
 		when(suppressedEmailRepository.existsByTenantIdAndEmail(TENANT, "ada@example.com")).thenReturn(true);
 		var request = new CandidateOutreachData.ExternalRequest();
 		request.setCvId(CV_ID);
@@ -131,7 +130,7 @@ class CandidateOutreachServiceTest {
 
 	@Test
 	void externalHandoffIsRecordedWithSenderName() throws QorvaException {
-		when(cvRepository.findById(new ObjectId(CV_ID))).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
+		when(cvRepository.findByIdInTenant(CV_ID, TENANT)).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
 		when(suppressedEmailRepository.existsByTenantIdAndEmail(anyString(), anyString())).thenReturn(false);
 		var user = new User();
 		user.setFirstName("Jane");
@@ -158,7 +157,7 @@ class CandidateOutreachServiceTest {
 
 	@Test
 	void sendLogsSentRowWithProviderIds() throws QorvaException {
-		when(cvRepository.findById(new ObjectId(CV_ID))).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
+		when(cvRepository.findByIdInTenant(CV_ID, TENANT)).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
 		when(suppressedEmailRepository.existsByTenantIdAndEmail(anyString(), anyString())).thenReturn(false);
 		when(mailboxConnectionService.send(TENANT, USERNAME, "ada@example.com", "Hi", "Body"))
 			.thenReturn(new MailboxSender.SendResult("msg-1", "conv-1", "https://outlook.office.com/x"));
@@ -181,7 +180,7 @@ class CandidateOutreachServiceTest {
 
 	@Test
 	void sendFailureIsLoggedAsFailedAndRethrown() throws QorvaException {
-		when(cvRepository.findById(new ObjectId(CV_ID))).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
+		when(cvRepository.findByIdInTenant(CV_ID, TENANT)).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
 		when(suppressedEmailRepository.existsByTenantIdAndEmail(anyString(), anyString())).thenReturn(false);
 		when(mailboxConnectionService.send(any(), any(), any(), any(), any()))
 			.thenThrow(new QorvaException(QorvaErrorCodes.MAILBOX_REAUTH_REQUIRED, 409, org.springframework.http.HttpStatus.CONFLICT));
@@ -204,7 +203,7 @@ class CandidateOutreachServiceTest {
 
 	@Test
 	void missingConnectionIsNotLoggedAsAnAttempt() throws QorvaException {
-		when(cvRepository.findById(new ObjectId(CV_ID))).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
+		when(cvRepository.findByIdInTenant(CV_ID, TENANT)).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
 		when(suppressedEmailRepository.existsByTenantIdAndEmail(anyString(), anyString())).thenReturn(false);
 		when(mailboxConnectionService.send(any(), any(), any(), any(), any()))
 			.thenThrow(new QorvaException(QorvaErrorCodes.MAILBOX_NOT_CONNECTED, 404, org.springframework.http.HttpStatus.NOT_FOUND));

@@ -68,7 +68,7 @@ public class ChatSummaryService {
 	 * slice: the second one sees the advanced cut-off and does nothing.
 	 */
 	public void compact(String tenantId, String chatId) {
-		Chat chat = chatsRepository.findOneByTenantAndId(tenantId, chatId);
+		Chat chat = chatsRepository.findByIdInTenant(chatId, tenantId).orElse(null);
 		if (chat == null) {
 			return;
 		}
@@ -84,7 +84,7 @@ public class ChatSummaryService {
 		String text = summarizerAgent.summarize(previous, slice);
 
 		// Re-read before writing: another turn may have compacted meanwhile.
-		Chat fresh = chatsRepository.findOneByTenantAndId(tenantId, chatId);
+		Chat fresh = chatsRepository.findByIdInTenant(chatId, tenantId).orElse(null);
 		if (fresh == null) {
 			return;
 		}

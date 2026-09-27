@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.exception.QorvaErrors;
+
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.entity.CandidateOutreach;
 import ai.qorva.core.dao.repository.CVRepository;
@@ -14,7 +16,6 @@ import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.CandidateOutreachMapper;
 import ai.qorva.core.service.mailbox.MailboxConnectionService;
 import lombok.extern.slf4j.Slf4j;
-import org.bson.types.ObjectId;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,6 @@ import java.time.Instant;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 
 /**
  * Recruiter → candidate outreach: the composer's context, the hand-off log, and sending through
@@ -83,8 +83,7 @@ public class CandidateOutreachService {
 	                                            CandidateOutreachData.ExternalRequest request) throws QorvaException {
 		var via = OutreachViaEnum.fromHandoffValue(request.getVia());
 		if (via == null) {
-			throw new QorvaException(QorvaErrorCodes.OUTREACH_VIA_INVALID,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.OUTREACH_VIA_INVALID);
 		}
 		loadCv(tenantId, request.getCvId());
 		assertNotSuppressed(tenantId, request.getTo());
@@ -129,18 +128,8 @@ public class CandidateOutreachService {
 	// Cascade helpers — called by the services that own the CV documents
 	// -------------------------------------------------------------------------
 
-	public long deleteForCv(String tenantId, String cvId) {
-		return repository.deleteByTenantIdAndCvId(tenantId, cvId);
-	}
 
-	public long deleteForCvs(String tenantId, Collection<String> cvIds) {
-		if (cvIds == null || cvIds.isEmpty()) return 0L;
-		return repository.deleteByTenantIdAndCvIdIn(tenantId, cvIds);
-	}
 
-	public long deleteForTenant(String tenantId) {
-		return repository.deleteByTenantId(tenantId);
-	}
 
 	/** Duplicate resolution keeps the contact trail on the CV that survives. */
 	public long retarget(String tenantId, String fromCvId, String toCvId) {
@@ -171,22 +160,17 @@ public class CandidateOutreachService {
 
 	private void assertNotSuppressed(String tenantId, String email) throws QorvaException {
 		if (!StringUtils.hasText(email)) {
-			throw new QorvaException(QorvaErrorCodes.OUTREACH_NO_EMAIL,
-				HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST);
+			throw QorvaErrors.badRequest(QorvaErrorCodes.OUTREACH_NO_EMAIL);
 		}
 		if (isSuppressed(tenantId, email)) {
-			throw new QorvaException(QorvaErrorCodes.OUTREACH_SUPPRESSED,
-				HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT);
+			throw QorvaErrors.conflict(QorvaErrorCodes.OUTREACH_SUPPRESSED);
 		}
 	}
 
 	/** A wrong tenant and a missing document answer the same way: no existence oracle. */
 	private CV loadCv(String tenantId, String cvId) throws QorvaException {
-		var cv = ObjectId.isValid(cvId) ? cvRepository.findById(new ObjectId(cvId)).orElse(null) : null;
-		if (cv == null || !Objects.equals(cv.getTenantId(), tenantId)) {
-			throw new QorvaException(QorvaErrorCodes.HTTP_NOT_FOUND, HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND);
-		}
-		return cv;
+		return cvRepository.findByIdInTenant(cvId, tenantId)
+			.orElseThrow(() -> QorvaErrors.notFound(QorvaErrorCodes.HTTP_NOT_FOUND));
 	}
 
 	/** Same rule as {@code CandidateUpdateService.isSuppressed}: the list is tenant-scoped and lower-cased. */

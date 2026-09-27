@@ -77,7 +77,7 @@ class AtsWriteBackServiceTest {
 
 	@Test
 	void enqueuedNoteLinksToTheReportsScreenNotTheAppRoot() {
-		when(connectionRepository.findById("conn-1")).thenReturn(Optional.of(connectedWithWriteBack()));
+		when(connectionRepository.findByIdInTenant("conn-1", "64b0c1a2e4b0f2a1b2c3d4e5")).thenReturn(Optional.of(connectedWithWriteBack()));
 		var jobPost = new JobPostDTO();
 		jobPost.setTitle("Backend Engineer");
 
@@ -130,6 +130,6 @@ class AtsWriteBackServiceTest {
 		assertThat(query.getValue().getQueryObject().toString()).contains("SENDING", "PENDING", "nextAttemptAt");
 		var applied = update.getValue().getUpdateObject().toString();
 		assertThat(applied).contains("nextAttemptAt", "attempts");
-		verify(connectionRepository, never()).findById(any());
+		verify(connectionRepository, never()).findByIdInTenant(any(), any());
 	}
 }

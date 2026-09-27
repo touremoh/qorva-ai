@@ -8,11 +8,6 @@ public final class MatchingReportSpecifications {
 		throw new UnsupportedOperationException("Utility class");
 	}
 
-	public static MongoSpecification<MatchingReport> tenantIdEquals(String tenantId) {
-		if (tenantId == null || tenantId.isBlank()) return MongoSpecifications.empty();
-		return () -> Criteria.where("tenantId").is(tenantId);
-	}
-
 	public static MongoSpecification<MatchingReport> jobPostIdEquals(String jobPostId) {
 		if (jobPostId == null || jobPostId.isBlank()) return MongoSpecifications.empty();
 		return () -> Criteria.where("jobPostId").is(jobPostId);

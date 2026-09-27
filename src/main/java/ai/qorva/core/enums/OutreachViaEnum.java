@@ -17,10 +17,6 @@ public enum OutreachViaEnum {
 		this.connected = connected;
 	}
 
-	public boolean isConnected() {
-		return connected;
-	}
-
 	/** Hand-off values only — the ones a client may report through {@code POST /candidate-outreach/external}. */
 	public static OutreachViaEnum fromHandoffValue(String value) {
 		if (value == null) return null;

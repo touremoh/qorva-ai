@@ -21,7 +21,7 @@ class OauthStateSignerTest {
 	@Test
 	void tamperedSignatureIsRejected() {
 		var state = signer.sign(List.of("tenant", "user"));
-		var tampered = state.substring(0, state.length() - 2) + "ff";
+		var tampered = state.substring(0, state.length() - 1) + (state.endsWith("0") ? "1" : "0");
 
 		assertThatThrownBy(() -> signer.verify(tampered)).isInstanceOf(IllegalStateException.class);
 	}
