@@ -137,12 +137,16 @@ public class UserRegistrationService {
 	 */
 	public RegistrationResponseDTO upgrade(String tenantId, String userId, String priceId) throws QorvaException {
 		log.info("Upgrade requested: tenant={} user={} priceId={}", tenantId, userId, priceId);
+		// Tenant context is present (authenticated user); findOneById enforces ownership.
+		var user = userService.findOneById(userId);
+		// Paying tenants change plans in the Stripe portal. A checkout from here would open a second
+		// subscription with a fresh trial on the same customer, so only a demo account may convert.
+		if (!UserStatusEnum.DEMO.getValue().equals(user.getUserAccountStatus())) {
+			throw QorvaErrors.forbidden(QorvaErrorCodes.BILLING_UPGRADE_DEMO_ONLY);
+		}
 		resolveProductByPriceId(priceId);
 
 		var tenant = tenantService.findOneById(tenantId);
-
-		// Tenant context is present (authenticated demo user); findOneById enforces ownership.
-		var user = userService.findOneById(userId);
 
 		String stripeCustomerId = tenant.getStripeCustomerId();
 		if (!StringUtils.hasText(stripeCustomerId)) {

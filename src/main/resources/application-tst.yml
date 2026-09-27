@@ -66,7 +66,7 @@ weblink:
 
 jwt:
   secret: ${JWT_SECRET}
-  timeToLiveInMillis: 360000
+  timeToLiveInMillis: ${JWT_TIME_TO_LIVE_IN_MILLIS:3600000}
 
 stripe:
   secret-key: ${STRIPE_SECRET_KEY}
@@ -84,6 +84,10 @@ aws:
     region: ${AWS_S3_REGION}
 
 qorva:
+  # Tenant-scoped code without a tenant is refused (fail-closed). QORVA_TENANCY_FAIL_CLOSED=false
+  # is the emergency switch back to log-only; application.yml keeps false for local runs.
+  tenancy:
+    fail-closed: ${QORVA_TENANCY_FAIL_CLOSED:true}
   mail:
     reply-to: ${MAIL_REPLY_TO:}
     senders:

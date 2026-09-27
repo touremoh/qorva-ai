@@ -5,6 +5,8 @@ import ai.qorva.core.config.QorvaProductProperties;
 import ai.qorva.core.dto.CheckoutSessionRequestDTO;
 import ai.qorva.core.dto.ProductReferenceDTO;
 import ai.qorva.core.dto.UserDTO;
+import ai.qorva.core.enums.UserStatusEnum;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.AccountRegistrationMapper;
 import org.bson.types.ObjectId;
@@ -17,6 +19,7 @@ import org.springframework.http.HttpStatus;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.Mockito.lenient;
 import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
@@ -44,7 +47,7 @@ class UserRegistrationServiceCheckoutTest {
 	void setUp() throws QorvaException {
 		service = new UserRegistrationService(userService, tenantService, productReferenceService, accountRegistrationMapper,
 			stripeProperties, setPasswordService, demoSeedService, usageMonitoringService, qorvaProductProperties);
-		when(productReferenceService.findByStripePriceId("price_1")).thenReturn(new ProductReferenceDTO());
+		lenient().when(productReferenceService.findByStripePriceId("price_1")).thenReturn(new ProductReferenceDTO());
 	}
 
 	@Test
@@ -61,6 +64,21 @@ class UserRegistrationServiceCheckoutTest {
 	void malformedIds_areRefused() {
 		assertNotFound(request("not-an-id", USER_ID));
 		assertNotFound(request(TENANT, "not-an-id"));
+		verifyNoInteractions(tenantService);
+	}
+
+	@Test
+	void upgrade_byAPayingAccount_isRefusedBeforeStripeIsTouched() throws QorvaException {
+		var user = new UserDTO();
+		user.setTenantId(TENANT);
+		user.setUserAccountStatus(UserStatusEnum.ACTIVE.getValue());
+		when(userService.findOneById(USER_ID)).thenReturn(user);
+
+		assertThatThrownBy(() -> service.upgrade(TENANT, USER_ID, "price_1"))
+			.isInstanceOfSatisfying(QorvaException.class, e -> {
+				assertThat(e.getHttpStatusCode()).isEqualTo(HttpStatus.FORBIDDEN.value());
+				assertThat(e.getMessage()).isEqualTo(QorvaErrorCodes.BILLING_UPGRADE_DEMO_ONLY);
+			});
 		verifyNoInteractions(tenantService);
 	}
 

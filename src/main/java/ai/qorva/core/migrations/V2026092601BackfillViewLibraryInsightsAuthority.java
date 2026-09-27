@@ -34,7 +34,16 @@ public class V2026092601BackfillViewLibraryInsightsAuthority extends AbstractQor
 
 	@Execution
 	public void execute(MongoDatabase db) {
-		var users = db.getCollection(COLLECTION);
+		log.info("V20260926_01 – granted {} to {} users", ACTION, grantToViewCvHolders(db));
+	}
+
+	/** Grants the action to every VIEW_CV holder who lacks it; returns how many users changed. Idempotent. */
+	static long grantToViewCvHolders(MongoDatabase db) {
+		return grantToViewCvHolders(db, COLLECTION);
+	}
+
+	static long grantToViewCvHolders(MongoDatabase db, String collection) {
+		var users = db.getCollection(collection);
 		var granted = 0L;
 		var candidates = users.find(Filters.and(
 			Filters.eq("authorities.action", VIEW_CV),
@@ -46,8 +55,7 @@ public class V2026092601BackfillViewLibraryInsightsAuthority extends AbstractQor
 				Updates.push("authorities", authority(roleOfViewCv(user))));
 			granted += result.getModifiedCount();
 		}
-
-		log.info("V20260926_01 – granted {} to {} users", ACTION, granted);
+		return granted;
 	}
 
 	@RollbackExecution

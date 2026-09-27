@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
@@ -69,6 +70,7 @@ public class StripeController {
 		return BuildApiResponse.from(java.util.Map.of("status", "canceled"));
 	}
 
+	@PreAuthorize("@accessManager.hasPermission(authentication,'UPDATE_SUBSCRIPTION')")
 	@PostMapping("/portal-session")
 	public ResponseEntity<PortalSession> createPortalSession(@AuthenticationPrincipal UserDetails userDetails) throws QorvaException {
 		return ResponseEntity.ok(this.service.buildStripePortalSessionUrl(userDetails));

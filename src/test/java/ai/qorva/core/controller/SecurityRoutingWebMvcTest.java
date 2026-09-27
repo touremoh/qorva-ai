@@ -132,6 +132,20 @@ class SecurityRoutingWebMvcTest {
 	}
 
 	@Test
+	void stripePortalSession_withoutUpdateSubscription_isForbidden() throws Exception {
+		when(accessManager.hasPermission(any(), eq("UPDATE_SUBSCRIPTION"))).thenReturn(false);
+		mvc.perform(post("/stripe/portal-session").header("Authorization", token)).andExpect(status().isForbidden());
+		verify(stripeEventsService, never()).buildStripePortalSessionUrl(any());
+	}
+
+	@Test
+	void stripePortalSession_withUpdateSubscription_opensThePortal() throws Exception {
+		when(accessManager.hasPermission(any(), eq("UPDATE_SUBSCRIPTION"))).thenReturn(true);
+		mvc.perform(post("/stripe/portal-session").header("Authorization", token)).andExpect(status().isOk());
+		verify(stripeEventsService).buildStripePortalSessionUrl(any());
+	}
+
+	@Test
 	void tenantsList_isClosed() throws Exception {
 		mvc.perform(get("/tenants").header("Authorization", token)).andExpect(status().isNotFound());
 		verifyNoInteractions(tenantService);
