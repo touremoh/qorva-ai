@@ -61,6 +61,9 @@ qorva:
     # Candidate outreach drafts: short personal prose, mini tier is plenty; unmetered like the JD builder.
     outreach:
       model: ${QORVA_OUTREACH_MODEL:gpt-4.1-mini}
+    # Library Quality AI summary: one English generation per report state + translations; unmetered.
+    library-quality-insight:
+      model: ${QORVA_LIBRARY_QUALITY_INSIGHT_MODEL:gpt-4.1-mini}
     resume-chat:
       # gpt-5-chat-latest was shut down 2026-07-23; gpt-5.6-sol is OpenAI's listed replacement.
       model: ${QORVA_RESUME_CHAT_MODEL:gpt-5.6-sol}

@@ -148,6 +148,7 @@ public final class QorvaErrorCodes {
     public static final String QUALITY_UNKNOWN_ACTION                   = "error.library_quality.unknown_action";
     public static final String QUALITY_UNKNOWN_ISSUE                    = "error.library_quality.unknown_issue";
     public static final String QUALITY_INVALID_CV_ID                    = "error.library_quality.invalid_cv_id";
+    public static final String QUALITY_INSIGHT_UNAVAILABLE              = "error.library_quality.insight_unavailable";
     public static final String CV_REPLACE_SELF                          = "error.cv.replace_self";
     public static final String JOB_DESCRIPTION_REQUIRED                 = "error.job.description_required";
     public static final String BACKGROUND_JOB_UNSUPPORTED_TYPE          = "error.background_job.unsupported_type";
