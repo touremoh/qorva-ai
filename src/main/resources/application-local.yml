@@ -85,7 +85,7 @@ weblink:
 
 jwt:
   secret: JWT_SECRET
-  timeToLiveInMillis: 360000
+  timeToLiveInMillis: ${JWT_TIME_TO_LIVE_IN_MILLIS:3600000}
 
 office365:
   client-id: client-id

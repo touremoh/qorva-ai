@@ -118,6 +118,7 @@ public final class QorvaErrorCodes {
     public static final String BILLING_CHECKOUT_FAILED           = "error.billing.checkout_failed";
     public static final String BILLING_PRICE_ID_REQUIRED         = "error.billing.price_id_required";
     public static final String BILLING_NO_STRIPE_CUSTOMER        = "error.billing.no_stripe_customer";
+    public static final String BILLING_UPGRADE_DEMO_ONLY         = "error.billing.upgrade_demo_only";
 
     // http / generic
     public static final String HTTP_NOT_FOUND   = "error.http.not_found";

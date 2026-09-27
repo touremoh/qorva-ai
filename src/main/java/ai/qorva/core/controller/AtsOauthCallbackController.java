@@ -46,7 +46,7 @@ public class AtsOauthCallbackController {
 		@RequestParam(name = "accounts-server", required = false) String accountsServer,
 		@RequestParam(name = "error", required = false) String error
 	) {
-		return OauthCallbackRedirect.handle("ATS", error, code, state, appBaseUrl + "/?atsOauth=", () -> {
+		return OauthCallbackRedirect.handle("ATS", error, code, state, appBaseUrl + "/app/settings?tab=integrations&atsOauth=", () -> {
 			var claims = oauthService.validateState(state);
 			if (provider != null && AtsProviderEnum.fromValue(provider) != claims.provider()) {
 				throw new IllegalStateException("provider mismatch between callback path and state");
