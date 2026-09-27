@@ -64,6 +64,12 @@ qorva:
     # Library Quality AI summary: one English generation per report state + translations; unmetered.
     library-quality-insight:
       model: ${QORVA_LIBRARY_QUALITY_INSIGHT_MODEL:gpt-4.1-mini}
+    # Usage Monitoring AI summary: one English generation per (coarse) usage state; unmetered.
+    usage-insight:
+      model: ${QORVA_USAGE_INSIGHT_MODEL:gpt-4.1-mini}
+    # Translates every AI summary (Library Quality, Usage) from its English original.
+    insight-translation:
+      model: ${QORVA_INSIGHT_TRANSLATION_MODEL:gpt-4.1-mini}
     resume-chat:
       # gpt-5-chat-latest was shut down 2026-07-23; gpt-5.6-sol is OpenAI's listed replacement.
       model: ${QORVA_RESUME_CHAT_MODEL:gpt-5.6-sol}

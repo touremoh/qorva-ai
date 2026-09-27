@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.Aggregation;
 import org.springframework.data.mongodb.repository.Query;
 
+import java.time.Instant;
 import java.util.List;
 
 
@@ -21,6 +22,10 @@ public interface CVRepository extends QorvaRepository<CV>, SimilaritySearchRepos
 	long deleteByTenantId(String tenantId);
 
 	long countByTenantId(String tenantId);
+
+	/** Resumes added since {@code since}, archived ones included — they were analysed all the same. */
+	@Query(value = "{ 'tenantId': { $oid: '?0' }, 'createdAt': { $gte: ?1 } }", count = true)
+	long countCreatedSince(String tenantId, Instant since);
 
 	@Aggregation(pipeline = {
 		"{ '$match': { 'tenantId': ?0 } }",
