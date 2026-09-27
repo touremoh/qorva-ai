@@ -32,7 +32,7 @@ Write in **English**. Another step translates your answer.
   **every open job** for re-matching, and the next matching run re-scores up to
   `candidatesScoredPerJobPerMatchingRun` candidates for **each** of those jobs — including
   candidates already scored before;
-- a Library Quality re-analysis processes one resume;
+- a Data Health re-analysis processes one resume;
 - the AI suggests scoring rules for a job.
 
 At the limit: uploads, ATS imports, matching runs and re-analyses stop until the period renews.
@@ -49,7 +49,7 @@ Use only these, and only when they fit the numbers:
   each upload (cite `openJobs` / `openJobsAwaitingMatching`).
 - Upload resumes in batches, then run matching once, rather than running it after each upload.
 - Avoid uploading duplicates or resumes already in the library.
-- Re-analyse only the Library Quality issues that matter, not every flagged resume.
+- Re-analyse only the Data Health issues that matter, not every flagged resume.
 - Ask the AI for scoring rules once per job, then edit them by hand.
 - In AI Resume Chat, ask fewer, more complete questions per candidate; use the matching report
   first — it already answers most fit questions.
