@@ -3,14 +3,17 @@ package ai.qorva.core.controller;
 import ai.qorva.core.utils.Paging;
 
 import ai.qorva.core.dto.BackgroundJobData;
+import ai.qorva.core.dto.LibraryQualityInsight;
 import ai.qorva.core.dto.LibraryQualityReport;
 import ai.qorva.core.enums.QualityIssueKeyEnum;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.BackgroundJobService;
+import ai.qorva.core.service.LibraryQualityInsightService;
 import ai.qorva.core.service.LibraryQualityService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -20,6 +23,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,11 +36,14 @@ public class LibraryQualityController {
 
 	private final LibraryQualityService libraryQualityService;
 	private final BackgroundJobService backgroundJobService;
+	private final LibraryQualityInsightService insightService;
 
 	@Autowired
-	public LibraryQualityController(LibraryQualityService libraryQualityService, BackgroundJobService backgroundJobService) {
+	public LibraryQualityController(LibraryQualityService libraryQualityService, BackgroundJobService backgroundJobService,
+	                                LibraryQualityInsightService insightService) {
 		this.libraryQualityService = libraryQualityService;
 		this.backgroundJobService = backgroundJobService;
+		this.insightService = insightService;
 	}
 
 	@GetMapping(produces = "application/json")
@@ -55,6 +62,19 @@ public class LibraryQualityController {
 		var report = this.libraryQualityService.getReport(TenantContextHolder.getTenantId());
 		var openIssues = (int) report.issues().stream().filter(i -> !i.dismissed()).count();
 		return ResponseEntity.ok(new LibraryQualityReport.Summary(openIssues));
+	}
+
+	/**
+	 * AI summary of the report in the caller's language: 204 for an empty library, 503
+	 * ({@code error.library_quality.insight_unavailable}) when the model cannot answer.
+	 */
+	@GetMapping(path = "/insight", produces = "application/json")
+	@PreAuthorize("@accessManager.hasPermission(authentication, 'VIEW_DASHBOARD')")
+	public ResponseEntity<LibraryQualityInsight> getInsight(
+		@RequestHeader(value = HttpHeaders.ACCEPT_LANGUAGE, defaultValue = "en") String language) throws QorvaException {
+		return this.insightService.getInsight(TenantContextHolder.getTenantId(), language)
+			.map(ResponseEntity::ok)
+			.orElseGet(() -> ResponseEntity.noContent().build());
 	}
 
 	/** Bulk remediation: ARCHIVE (criteria or ids), UNARCHIVE (ids), CONFIRM_CURRENT (ids, capped). */

@@ -5,12 +5,15 @@ import ai.qorva.core.config.SecurityConfig;
 import ai.qorva.core.dto.TenantDTO;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.service.ATSExportService;
+import ai.qorva.core.service.BackgroundJobService;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.service.InsightConversationService;
 import ai.qorva.core.service.JobDescriptionBuilderService;
 import ai.qorva.core.service.JobPostService;
 import ai.qorva.core.service.LibraryClearService;
 import ai.qorva.core.service.LibraryInsightsService;
+import ai.qorva.core.service.LibraryQualityInsightService;
+import ai.qorva.core.service.LibraryQualityService;
 import ai.qorva.core.service.MatchingReportService;
 import ai.qorva.core.service.QorvaApiAccessManager;
 import ai.qorva.core.service.QorvaUserDetailsService;
@@ -37,6 +40,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -56,7 +60,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @WebMvcTest(controllers = {
 	UserController.class, TenantController.class, StripeController.class,
-	CVController.class, JobPostController.class, MatchingReportController.class, LibraryInsightsController.class
+	CVController.class, JobPostController.class, MatchingReportController.class, LibraryInsightsController.class,
+	LibraryQualityController.class
 })
 @Import({SecurityConfig.class, JwtConfig.class})
 @TestPropertySource(properties = {
@@ -90,6 +95,9 @@ class SecurityRoutingWebMvcTest {
 	@MockitoBean private ATSExportService atsExportService;
 	@MockitoBean private LibraryInsightsService libraryInsightsService;
 	@MockitoBean private InsightConversationService insightConversationService;
+	@MockitoBean private LibraryQualityService libraryQualityService;
+	@MockitoBean private BackgroundJobService backgroundJobService;
+	@MockitoBean private LibraryQualityInsightService libraryQualityInsightService;
 
 	private String token;
 
@@ -169,6 +177,22 @@ class SecurityRoutingWebMvcTest {
 		when(accessManager.hasPermission(any(), eq("VIEW_LIBRARY_INSIGHTS"))).thenReturn(false);
 		mvc.perform(get("/library-insights/conversations").header("Authorization", token)).andExpect(status().isForbidden());
 		verifyNoInteractions(insightConversationService);
+	}
+
+	@Test
+	void libraryQualityInsight_withoutViewDashboard_isForbidden() throws Exception {
+		when(accessManager.hasPermission(any(), eq("VIEW_DASHBOARD"))).thenReturn(false);
+		mvc.perform(get("/library-quality/insight").header("Authorization", token)).andExpect(status().isForbidden());
+		verifyNoInteractions(libraryQualityInsightService);
+	}
+
+	@Test
+	void libraryQualityInsight_passesTheCallersLanguage_andAnswers204ForAnEmptyLibrary() throws Exception {
+		when(accessManager.hasPermission(any(), eq("VIEW_DASHBOARD"))).thenReturn(true);
+		when(libraryQualityInsightService.getInsight(TENANT, "fr")).thenReturn(Optional.empty());
+		mvc.perform(get("/library-quality/insight").header("Authorization", token).header("Accept-Language", "fr"))
+			.andExpect(status().isNoContent());
+		verify(libraryQualityInsightService).getInsight(TENANT, "fr");
 	}
 
 	@Test
