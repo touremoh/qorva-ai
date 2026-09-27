@@ -6,6 +6,7 @@ import ai.qorva.core.dto.TenantDTO;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.service.ATSExportService;
 import ai.qorva.core.service.BackgroundJobService;
+import ai.qorva.core.service.BulkCvUploadService;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.service.InsightConversationService;
 import ai.qorva.core.service.JobDescriptionBuilderService;
@@ -21,6 +22,8 @@ import ai.qorva.core.service.S3StorageService;
 import ai.qorva.core.service.ScoringRulesPrefillService;
 import ai.qorva.core.service.StripeEventsService;
 import ai.qorva.core.service.TenantService;
+import ai.qorva.core.service.UsageInsightService;
+import ai.qorva.core.service.UsageMonitoringService;
 import ai.qorva.core.service.AuthenticationService;
 import ai.qorva.core.service.UserService;
 import ai.qorva.core.utils.JwtUtils;
@@ -61,7 +64,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(controllers = {
 	UserController.class, TenantController.class, StripeController.class,
 	CVController.class, JobPostController.class, MatchingReportController.class, LibraryInsightsController.class,
-	LibraryQualityController.class
+	LibraryQualityController.class, UsageMonitoringController.class
 })
 @Import({SecurityConfig.class, JwtConfig.class})
 @TestPropertySource(properties = {
@@ -98,6 +101,9 @@ class SecurityRoutingWebMvcTest {
 	@MockitoBean private LibraryQualityService libraryQualityService;
 	@MockitoBean private BackgroundJobService backgroundJobService;
 	@MockitoBean private LibraryQualityInsightService libraryQualityInsightService;
+	@MockitoBean private UsageMonitoringService usageMonitoringService;
+	@MockitoBean private BulkCvUploadService bulkCvUploadService;
+	@MockitoBean private UsageInsightService usageInsightService;
 
 	private String token;
 
@@ -193,6 +199,22 @@ class SecurityRoutingWebMvcTest {
 		mvc.perform(get("/library-quality/insight").header("Authorization", token).header("Accept-Language", "fr"))
 			.andExpect(status().isNoContent());
 		verify(libraryQualityInsightService).getInsight(TENANT, "fr");
+	}
+
+	@Test
+	void usageInsight_withoutViewDashboard_isForbidden() throws Exception {
+		when(accessManager.hasPermission(any(), eq("VIEW_DASHBOARD"))).thenReturn(false);
+		mvc.perform(get("/usage-monitoring/insight").header("Authorization", token)).andExpect(status().isForbidden());
+		verifyNoInteractions(usageInsightService);
+	}
+
+	@Test
+	void usageInsight_passesTheCallersLanguage_andAnswers204WithoutAPeriod() throws Exception {
+		when(accessManager.hasPermission(any(), eq("VIEW_DASHBOARD"))).thenReturn(true);
+		when(usageInsightService.getInsight(TENANT, "de")).thenReturn(Optional.empty());
+		mvc.perform(get("/usage-monitoring/insight").header("Authorization", token).header("Accept-Language", "de"))
+			.andExpect(status().isNoContent());
+		verify(usageInsightService).getInsight(TENANT, "de");
 	}
 
 	@Test

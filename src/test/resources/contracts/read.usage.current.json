@@ -1,5 +1,6 @@
 {
   "body" : {
+    "billingCycle" : "month",
     "bulkUploadFilesLimit" : 100,
     "createdAt" : "<ts>",
     "createdBy" : "owner@a.qorva.test",
@@ -20,6 +21,23 @@
         "consumed" : 0,
         "cumulative" : 0,
         "limit" : 3000
+      }
+    },
+    "forecast" : {
+      "aiResumeChats" : {
+        "limitReachedOn" : null,
+        "projectedConsumed" : 0,
+        "status" : "ON_TRACK"
+      },
+      "screeningActions" : {
+        "limitReachedOn" : null,
+        "projectedConsumed" : 0,
+        "status" : "ON_TRACK"
+      },
+      "talentIntelligenceQueries" : {
+        "limitReachedOn" : null,
+        "projectedConsumed" : 0,
+        "status" : "ON_TRACK"
       }
     },
     "id" : "<id:1>",

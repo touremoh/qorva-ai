@@ -11,6 +11,7 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.time.Instant;
+import java.util.Map;
 
 @Getter
 @Setter
@@ -33,6 +34,12 @@ public class UsageMonitoringDTO extends AbstractQorvaDTO {
 
     /** Static plan cap for bulk CV imports — populated per request, not persisted. */
     private Integer bulkUploadFilesLimit;
+
+    /** {@code month} or {@code year} (yearly limits cover the whole year) — populated per request, not persisted. */
+    private String billingCycle;
+
+    /** Per meter, where it is heading at the current pace — populated per request, not persisted. */
+    private Map<String, UsageForecast> forecast;
 
     @JsonProperty(access = Access.READ_ONLY)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")

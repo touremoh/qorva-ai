@@ -84,6 +84,7 @@ public final class QorvaErrorCodes {
 
     // usage
     public static final String USAGE_SCREENING_LIMIT_EXCEEDED = "error.usage.screening_limit_exceeded";
+    public static final String USAGE_INSIGHT_UNAVAILABLE = "error.usage.insight_unavailable";
 
     // library clear
     public static final String CV_CLEAR_BLOCKED_BY_ACTIVE_JOB = "error.cv.clear_blocked_by_active_job";

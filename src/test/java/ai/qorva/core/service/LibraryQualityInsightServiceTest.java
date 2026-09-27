@@ -8,7 +8,9 @@ import ai.qorva.core.dto.LibraryQualityReport.QualityIssue;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaErrors;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.service.orchestrators.InsightTranslationAgent;
 import ai.qorva.core.service.orchestrators.LibraryQualityInsightAgent;
+import ai.qorva.core.dto.InsightTexts;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
@@ -36,15 +38,17 @@ class LibraryQualityInsightServiceTest {
 
 	private LibraryQualityService reports;
 	private LibraryQualityInsightAgent agent;
+	private InsightTranslationAgent translator;
 	private LibraryQualityInsightService service;
 
 	@BeforeEach
 	void setUp() throws QorvaException {
 		reports = mock(LibraryQualityService.class);
 		agent = mock(LibraryQualityInsightAgent.class);
-		service = new LibraryQualityInsightService(reports, agent);
+		translator = mock(InsightTranslationAgent.class);
+		service = new LibraryQualityInsightService(reports, agent, translator);
 		when(agent.generate(any())).thenReturn(draft());
-		when(agent.translate(any(), eq("fr"))).thenReturn(new LibraryQualityInsight.Texts(
+		when(translator.translate(any(), eq("fr"), any())).thenReturn(new InsightTexts(
 			"Titre", "Explication", List.of("Relancer l'analyse", "Archiver")));
 	}
 
@@ -75,7 +79,7 @@ class LibraryQualityInsightServiceTest {
 		service.getInsight(TENANT, "fr");
 
 		verify(agent, times(2)).generate(any());
-		verify(agent, times(2)).translate(any(), eq("fr"));
+		verify(translator, times(2)).translate(any(), eq("fr"), any());
 	}
 
 	@Test
@@ -87,7 +91,7 @@ class LibraryQualityInsightServiceTest {
 		service.getInsight(TENANT, "fr");
 
 		verify(agent, times(1)).generate(any());
-		verify(agent, times(1)).translate(any(), eq("fr"));
+		verify(translator, times(1)).translate(any(), eq("fr"), any());
 		assertThat(french.language()).isEqualTo("fr");
 		assertThat(french.headline()).isEqualTo("Titre");
 		assertThat(french.recommendations()).extracting(LibraryQualityInsight.Recommendation::issueKey)
@@ -97,7 +101,7 @@ class LibraryQualityInsightServiceTest {
 	@Test
 	void failedTranslation_fallsBackToEnglish() throws QorvaException {
 		when(reports.getReport(TENANT)).thenReturn(report(100, 3));
-		when(agent.translate(any(), eq("de"))).thenThrow(unavailable());
+		when(translator.translate(any(), eq("de"), any())).thenThrow(unavailable());
 
 		var insight = service.getInsight(TENANT, "de").orElseThrow();
 
@@ -157,14 +161,6 @@ class LibraryQualityInsightServiceTest {
 		assertThat(insight.recommendations()).hasSize(4);
 		assertThat(insight.recommendations()).extracting(LibraryQualityInsight.Recommendation::issueKey)
 			.containsExactly("MISSING_EMAIL", null, null, null);
-	}
-
-	@Test
-	void normalizeLanguage_keepsSupportedPrimaryTags() {
-		assertThat(LibraryQualityInsightService.normalizeLanguage("fr-FR,fr;q=0.9")).isEqualTo("fr");
-		assertThat(LibraryQualityInsightService.normalizeLanguage("NL")).isEqualTo("nl");
-		assertThat(LibraryQualityInsightService.normalizeLanguage("ja")).isEqualTo("en");
-		assertThat(LibraryQualityInsightService.normalizeLanguage(null)).isEqualTo("en");
 	}
 
 	private static QorvaException unavailable() {

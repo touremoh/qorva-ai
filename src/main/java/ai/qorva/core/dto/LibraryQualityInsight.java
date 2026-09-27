@@ -30,7 +30,4 @@ public record LibraryQualityInsight(
 		String text,
 		String issueKey
 	) {}
-
-	/** The texts of a {@link Draft}, as sent to and returned by the translation call. */
-	public record Texts(String headline, String explanation, List<String> recommendations) {}
 }
