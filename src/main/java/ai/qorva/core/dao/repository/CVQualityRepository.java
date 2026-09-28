@@ -2,6 +2,7 @@ package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dto.CVDuplicatesData;
+import ai.qorva.core.dto.common.ContactKeys;
 import ai.qorva.core.enums.QualityIssueKeyEnum;
 import org.bson.types.ObjectId;
 import org.springframework.data.domain.Page;
@@ -36,9 +37,9 @@ public interface CVQualityRepository {
 
 	/**
 	 * Ingest-time duplicate lookup: the first non-archived CV (excluding {@code excludeId})
-	 * sharing the given email or phone. Two indexed point lookups — O(1) per uploaded file.
+	 * sharing the given normalised email or phone key. Two indexed point lookups — O(1) per uploaded file.
 	 */
-	Optional<CV> findContactMatch(ObjectId tenantId, String email, String phone, ObjectId excludeId);
+	Optional<CV> findContactMatch(ObjectId tenantId, ContactKeys keys, ObjectId excludeId);
 
 	/**
 	 * Bulk archive/unarchive. Criteria mode ({@code issueKey} set) archives every CV matching

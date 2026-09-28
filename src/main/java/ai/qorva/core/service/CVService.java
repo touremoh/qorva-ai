@@ -31,6 +31,7 @@ import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.utils.CVContentDateResolver;
 import ai.qorva.core.utils.CVPageImageRenderer;
 import ai.qorva.core.utils.CVQualityFlagResolver;
+import ai.qorva.core.utils.ContactNormalizer;
 import ai.qorva.core.utils.VisionEscalationPolicy;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
@@ -140,6 +141,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         // Content-based freshness evidence — applies to every creation path (upload, seeding, API).
         CVContentDateResolver.resolve(dto);
         CVQualityFlagResolver.resolve(dto);
+        dto.setContactKeys(ContactNormalizer.keysOf(dto.getPersonalInformation()));
     }
 
     @Override
@@ -149,6 +151,8 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         // Flags must never drift from the data — recompute after every merge.
         CVContentDateResolver.resolve(newCV);
         CVQualityFlagResolver.resolve(newCV);
+        // After the merge, so a changed or removed contact never leaves a stale key behind.
+        newCV.setContactKeys(ContactNormalizer.keysOf(newCV.getPersonalInformation()));
     }
 
     @Override
@@ -226,18 +230,13 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         var warnings = created.getQualityFlags() == null ? List.<String>of()
             : created.getQualityFlags().stream().filter(UPLOAD_WARNING_FLAGS::contains).toList();
 
-        var contact = created.getPersonalInformation() != null
-            ? created.getPersonalInformation().getContact() : null;
-        var email = contact != null ? contact.getEmail() : null;
-        var phone = contact != null ? contact.getPhone() : null;
-
+        var keys = created.getContactKeys();
         var duplicate = ((CVRepository) this.repository).findContactMatch(
-                new ObjectId(tenantId), email, phone, new ObjectId(created.getId()))
+                new ObjectId(tenantId), keys, new ObjectId(created.getId()))
             .map(existing -> {
-                var existingContact = existing.getPersonalInformation() != null
-                    ? existing.getPersonalInformation().getContact() : null;
-                var matchType = existingContact != null && email != null
-                    && email.equals(existingContact.getEmail()) ? "EMAIL" : "PHONE";
+                var existingKeys = existing.getContactKeys();
+                var matchType = keys != null && keys.getEmail() != null && existingKeys != null
+                    && keys.getEmail().equals(existingKeys.getEmail()) ? "EMAIL" : "PHONE";
                 return new UploadResult.DuplicateMatch(
                     existing.getId(),
                     existing.getPersonalInformation() != null ? existing.getPersonalInformation().getName() : null,

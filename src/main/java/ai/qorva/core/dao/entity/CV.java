@@ -68,6 +68,9 @@ public class CV implements QorvaEntity {
     /** Denormalized quality defects (see QualityFlagEnum), recomputed on every write. */
     private List<String> qualityFlags;
 
+    /** Normalised email/phone for duplicate detection (ContactNormalizer), recomputed on every write. */
+    private ContactKeys contactKeys;
+
     /** Archived CVs are excluded from quality reporting and matching. */
     private Boolean archived;
 
