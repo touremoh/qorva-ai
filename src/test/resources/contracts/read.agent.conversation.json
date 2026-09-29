@@ -1,0 +1,35 @@
+{
+  "body" : [ {
+    "canApprove" : false,
+    "canCancel" : false,
+    "conversationId" : "<id:2>",
+    "createdAt" : "<ts>",
+    "failureReason" : null,
+    "finalAnswer" : "One strong Java candidate.",
+    "finishedAt" : "<ts>",
+    "goal" : "Who are our best Java candidates?",
+    "id" : "<id:1>",
+    "mentions" : [ ],
+    "origin" : "CHAT",
+    "status" : "COMPLETED",
+    "steps" : [ {
+      "kind" : "TOOL_CALL",
+      "links" : [ {
+        "id" : "<id:3>",
+        "label" : "Candidate",
+        "type" : "CV"
+      } ],
+      "seq" : 1,
+      "state" : "OK",
+      "summaryKey" : "agent.step.search_cvs",
+      "summaryParams" : {
+        "count" : "1"
+      },
+      "tool" : "search_cvs"
+    } ],
+    "stoppedEarly" : false,
+    "title" : "Best Java candidates",
+    "userEmail" : "owner@a.qorva.test"
+  } ],
+  "status" : 200
+}

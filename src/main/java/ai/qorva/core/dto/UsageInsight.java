@@ -17,7 +17,7 @@ public record UsageInsight(
 	Instant generatedAt
 ) {
 
-	/** One action; {@code feature} names the meter it saves (screeningActions, aiResumeChats, talentIntelligenceQueries), or null. */
+	/** One action; {@code feature} names the meter it saves (screeningActions, aiResumeChats, talentIntelligenceQueries, agentRuns), or null. */
 	public record Recommendation(String text, String feature) {}
 
 	/** What the model writes (English). */

@@ -9,6 +9,9 @@ import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.core.importer.ImportOption;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Set;
@@ -40,6 +43,18 @@ class ArchitectureRulesTest {
 		noClasses().that().doNotHaveSimpleName("JwtRequestFilter").and().doNotHaveSimpleName("TenantScope")
 			.should().callMethod(TenantContextHolder.class, "setTenantId", String.class)
 			.orShould().callMethod(TenantContextHolder.class, "clear")
+			.check(production);
+	}
+
+	/**
+	 * Only the JWT filter (requests) and the Copilot execution scope (agent runs, with clean-up) act as a
+	 * user: anything else that installed an Authentication would bypass the token checks.
+	 */
+	@Test
+	void onlyTheJwtFilterAndTheAgentScopeAuthenticateAUser() {
+		noClasses().that().doNotHaveSimpleName("JwtRequestFilter").and().doNotHaveSimpleName("AgentExecutionScope")
+			.should().callMethod(SecurityContextHolder.class, "setContext", SecurityContext.class)
+			.orShould().callMethod(SecurityContext.class, "setAuthentication", Authentication.class)
 			.check(production);
 	}
 

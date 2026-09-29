@@ -14,7 +14,7 @@ Write in **English**. Another step translates your answer.
   the limits cover the whole year.
 - `periodStart`, `periodEnd`, `daysLeft` — the current billing period.
 - `meters` — one entry per allowance, keyed `screeningActions`, `aiResumeChats`,
-  `talentIntelligenceQueries`, with `limit` (null = not metered), `consumed`, `percentUsed`,
+  `talentIntelligenceQueries`, `agentRuns` (may be absent), with `limit` (null = not metered), `consumed`, `percentUsed`,
   `pace` and, when the pace is known, `projectedAtPeriodEnd` and `limitReachedOn`.
   - `pace`: `TOO_EARLY` (period just started, no projection), `ON_TRACK` (≤ 80 % projected),
     `WATCH` (80–100 % projected), `WILL_EXCEED` (projected past the limit, on `limitReachedOn`),
@@ -42,6 +42,11 @@ At the limit: new messages are refused until renewal.
 
 **Talent Intelligence** (`talentIntelligenceQueries`) — one unit per question asked.
 
+**Copilot runs** (`agentRuns`) — one unit per task Copilot works on, whether the recruiter asked for
+it in chat or a standing rule started it. The actions Copilot takes during a run (for example a
+matching run) also count against their own allowance. At the limit: new Copilot tasks are refused
+until renewal.
+
 ## Levers the recruiter really has
 
 Use only these, and only when they fit the numbers:
@@ -55,6 +60,7 @@ Use only these, and only when they fit the numbers:
   first — it already answers most fit questions.
 - In Talent Intelligence, ask one precise question rather than several narrow ones; reuse answers
   already given.
+- In Copilot, give one complete task per request rather than several small ones.
 
 ---
 
@@ -67,7 +73,7 @@ Use only these, and only when they fit the numbers:
   moving (connect it to the drivers when they explain it).
 - `recommendations`: two to four levers from the list above, most useful first, each one
   imperative sentence tailored to the numbers. Set `feature` to the allowance it saves
-  (`screeningActions`, `aiResumeChats`, `talentIntelligenceQueries`) or null.
+  (`screeningActions`, `aiResumeChats`, `talentIntelligenceQueries`, `agentRuns`) or null.
 - Focus on meters with pace `WILL_EXCEED`, `REACHED` or `WATCH`. When every meter is `ON_TRACK` or
   `TOO_EARLY`, say the account is comfortably within its plan and give at most two light tips.
 - A meter `REACHED`: say plainly what is blocked and that it resets on `periodEnd`; the last

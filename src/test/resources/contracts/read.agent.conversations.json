@@ -1,0 +1,9 @@
+{
+  "body" : [ {
+    "conversationId" : "<id:1>",
+    "lastActivityAt" : "<ts>",
+    "lastStatus" : "COMPLETED",
+    "title" : "Best Java candidates"
+  } ],
+  "status" : 200
+}

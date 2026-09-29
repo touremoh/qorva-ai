@@ -116,7 +116,13 @@ class ApiReadContractIntegrationTest extends AbstractIntegrationTest {
 			new Route("tenants.logo", get("/tenants/logo")),
 			new Route("ats.providers", get("/ats/providers")),
 			new Route("ats.connections", get("/ats/connections")),
-			new Route("outreach.context", get("/candidate-outreach/context").param("cvId", a.cvId()))
+			new Route("outreach.context", get("/candidate-outreach/context").param("cvId", a.cvId())),
+			new Route("agent.availability", get("/agent/availability")),
+			new Route("agent.conversations", get("/agent/conversations")),
+			new Route("agent.conversation", get("/agent/conversations/" + a.agentConversationId())),
+			new Route("agent.run", get("/agent/runs/" + a.agentRunId())),
+			new Route("agent.runs.team", get("/agent/runs").param("scope", "team")),
+			new Route("agent.pendingApproval", get("/agent/runs/pending-approval/count"))
 		);
 	}
 }

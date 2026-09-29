@@ -1,0 +1,37 @@
+{
+  "collMod": "agent_runs",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "agent_runs",
+      "required": ["tenantId", "userEmail", "conversationId", "origin", "goal", "status"],
+      "properties": {
+        "tenantId": { "bsonType": "objectId", "description": "owning tenant, required" },
+        "userEmail": { "bsonType": "string", "description": "the user the run acts for" },
+        "conversationId": { "bsonType": "string" },
+        "title": { "bsonType": ["string", "null"] },
+        "origin": { "bsonType": "string", "enum": ["CHAT", "RULE"] },
+        "language": { "bsonType": ["string", "null"] },
+        "goal": { "bsonType": "string" },
+        "status": {
+          "bsonType": "string",
+          "enum": ["QUEUED", "RUNNING", "AWAITING_APPROVAL", "COMPLETED", "FAILED", "CANCELLED", "EXPIRED"]
+        },
+        "mentions": { "bsonType": ["array", "null"] },
+        "steps": { "bsonType": ["array", "null"] },
+        "history": { "bsonType": ["array", "null"], "description": "model conversation — never returned by the API" },
+        "finalAnswer": { "bsonType": ["string", "null"] },
+        "failureReason": { "bsonType": ["string", "null"] },
+        "leaseOwner": { "bsonType": ["string", "null"] },
+        "leaseExpiresAt": { "bsonType": ["date", "null"] },
+        "cancelRequested": { "bsonType": ["bool", "null"] },
+        "createdAt": { "bsonType": "date" },
+        "startedAt": { "bsonType": ["date", "null"] },
+        "finishedAt": { "bsonType": ["date", "null"] },
+        "lastUpdatedAt": { "bsonType": "date" }
+      }
+    }
+  },
+  "validationLevel": "moderate",
+  "validationAction": "error"
+}

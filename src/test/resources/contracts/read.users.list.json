@@ -142,6 +142,10 @@
           "action" : "CONTACT_CANDIDATE",
           "permission" : "ALLOWED",
           "role" : "ACCOUNT_OWNER"
+        }, {
+          "action" : "USE_AGENT",
+          "permission" : "ALLOWED",
+          "role" : "ACCOUNT_OWNER"
         } ],
         "communicationLanguage" : "en",
         "createdAt" : "<ts>",

@@ -1,10 +1,10 @@
 package ai.qorva.core.config;
 
 import ai.qorva.core.dto.QorvaErrorResponse;
-import ai.qorva.core.enums.SubscriptionStatus;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.security.LanguageContextHolder;
 import ai.qorva.core.security.AccessTokenPolicy;
+import ai.qorva.core.security.SubscriptionGate;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.QorvaUserDetailsService;
 import ai.qorva.core.utils.JwtUtils;
@@ -35,7 +35,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.Set;
 
 @Configuration
 public class JwtRequestFilter extends OncePerRequestFilter {
@@ -43,12 +42,6 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 	protected static final String TENANT_ID = "tenantId";
 	protected static final String SUBSCRIPTION_PLAN = "subscriptionPlan";
 	protected static final String SUBSCRIPTION_STATUS = "subscriptionStatus";
-
-	/** Subscription statuses that block access to the application. */
-	private static final Set<String> BLOCKED_STATUSES = Set.of(
-		SubscriptionStatus.CANCELED.getValue(),
-		SubscriptionStatus.PAST_DUE.getValue()
-	);
 
 	/** URI prefixes that bypass subscription enforcement (auth, webhook, public portal). */
 	private static final List<String> SUBSCRIPTION_EXEMPT_PREFIXES = List.of(
@@ -130,7 +123,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
 
 	private boolean isSubscriptionBlocked(String subscriptionStatus, String requestUri) {
-		if (!Strings.hasText(subscriptionStatus) || !BLOCKED_STATUSES.contains(subscriptionStatus)) {
+		if (!SubscriptionGate.blocks(subscriptionStatus)) {
 			return false;
 		}
 		return SUBSCRIPTION_EXEMPT_PREFIXES.stream().noneMatch(requestUri::startsWith);

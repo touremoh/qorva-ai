@@ -1,0 +1,22 @@
+{
+  "body" : {
+    "items" : [ {
+      "canCancel" : false,
+      "conversationId" : "<id:2>",
+      "createdAt" : "<ts>",
+      "failureReason" : null,
+      "finishedAt" : "<ts>",
+      "goal" : "Who are our best Java candidates?",
+      "id" : "<id:1>",
+      "origin" : "CHAT",
+      "status" : "COMPLETED",
+      "stepCount" : 2,
+      "title" : "Best Java candidates",
+      "userEmail" : "owner@a.qorva.test"
+    } ],
+    "page" : 0,
+    "size" : 20,
+    "total" : 1
+  },
+  "status" : 200
+}

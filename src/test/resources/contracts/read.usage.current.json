@@ -7,6 +7,11 @@
     "currentPeriodEnd" : "<ts>",
     "currentPeriodStart" : "<ts>",
     "features" : {
+      "agentRuns" : {
+        "consumed" : 0,
+        "cumulative" : 0,
+        "limit" : 500
+      },
       "aiResumeChats" : {
         "consumed" : 0,
         "cumulative" : 0,
@@ -24,6 +29,11 @@
       }
     },
     "forecast" : {
+      "agentRuns" : {
+        "limitReachedOn" : null,
+        "projectedConsumed" : 0,
+        "status" : "ON_TRACK"
+      },
       "aiResumeChats" : {
         "limitReachedOn" : null,
         "projectedConsumed" : 0,

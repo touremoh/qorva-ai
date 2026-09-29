@@ -1,0 +1,185 @@
+package ai.qorva.core.dao.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.FieldType;
+
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * One Copilot task: the user's goal, what the agent did step by step, and the model conversation
+ * needed to resume it on any instance. Written by the API (create, cancel request) and by the
+ * worker that holds its lease (everything else).
+ */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Document(collection = "agent_runs")
+public class AgentRun implements QorvaEntity {
+
+	public static final String STATUS_QUEUED = "QUEUED";
+	public static final String STATUS_RUNNING = "RUNNING";
+	public static final String STATUS_AWAITING_APPROVAL = "AWAITING_APPROVAL";
+	public static final String STATUS_COMPLETED = "COMPLETED";
+	public static final String STATUS_FAILED = "FAILED";
+	public static final String STATUS_CANCELLED = "CANCELLED";
+	public static final String STATUS_EXPIRED = "EXPIRED";
+
+	/** A user has at most one run in these states at a time. */
+	public static final List<String> ACTIVE_STATUSES = List.of(STATUS_QUEUED, STATUS_RUNNING, STATUS_AWAITING_APPROVAL);
+
+	public static final String ORIGIN_CHAT = "CHAT";
+
+	@Id
+	private String id;
+
+	@Field(targetType = FieldType.OBJECT_ID)
+	private String tenantId;
+
+	private String conversationId;
+	/** First goal of the conversation, shortened; set on every run of it for cheap listing. */
+	private String title;
+	private String userEmail;
+	private String language;
+	private String origin;
+
+	private String goal;
+	private List<Mention> mentions = new ArrayList<>();
+
+	private String status;
+	private List<Step> steps = new ArrayList<>();
+	/** Model conversation, needed to continue the run; never exposed through the API. */
+	private List<HistoryMessage> history = new ArrayList<>();
+	private String finalAnswer;
+	/** Error key when the run FAILED, e.g. error.agent.* — shown translated by the app. */
+	private String failureReason;
+	/** True when a budget ended the run before the model finished. */
+	private Boolean stoppedEarly;
+
+	private Tokens tokens = new Tokens();
+	private int stepCount;
+	private int toolCallCount;
+	private long runningMillis;
+	/** The run counts once against the agentRuns meter, when its first model call is made. */
+	private boolean metered;
+
+	private String leaseOwner;
+	private Instant leaseExpiresAt;
+	private boolean cancelRequested;
+
+	@CreatedDate
+	private Instant createdAt;
+	private Instant startedAt;
+	private Instant finishedAt;
+
+	@LastModifiedDate
+	private Instant lastUpdatedAt;
+
+	@CreatedBy
+	private String createdBy;
+
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class Mention {
+		/** CV or JOB. */
+		private String type;
+		private String id;
+		private String name;
+	}
+
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class Step {
+		public static final String KIND_TOOL_CALL = "TOOL_CALL";
+		public static final String STATE_EXECUTING = "EXECUTING";
+		public static final String STATE_OK = "OK";
+		public static final String STATE_ERROR = "ERROR";
+
+		private int seq;
+		private String kind;
+		private String tool;
+		private String tier;
+		private String state;
+		/** i18n key of the user-facing line for this step (e.g. agent.step.search_cvs), translated by the app. */
+		private String summaryKey;
+		/** Values interpolated into the summary, e.g. {count: "12"}. */
+		private java.util.Map<String, String> summaryParams = new java.util.LinkedHashMap<>();
+		private List<Link> links = new ArrayList<>();
+		private String error;
+		private Instant startedAt;
+		private Instant finishedAt;
+	}
+
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class Link {
+		/** CV, JOB or REPORT. */
+		private String type;
+		private String id;
+		private String label;
+	}
+
+	/** One model message, in a shape Mongo can store and the runner can turn back into Spring AI messages. */
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class HistoryMessage {
+		/** system, user, assistant or tool. */
+		private String role;
+		private String text;
+		private List<ToolCall> toolCalls;
+		private List<ToolResult> toolResults;
+	}
+
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class ToolCall {
+		private String id;
+		private String name;
+		private String arguments;
+	}
+
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class ToolResult {
+		private String id;
+		private String name;
+		private String data;
+	}
+
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class Tokens {
+		private long prompt;
+		private long completion;
+		private String model;
+
+		public long total() {
+			return prompt + completion;
+		}
+	}
+}
