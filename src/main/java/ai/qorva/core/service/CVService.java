@@ -86,6 +86,9 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     /** Stashes the attachment S3 key between pre- and post-delete hooks (same pattern as existingDTOForUpdate). */
     private final ThreadLocal<String> attachmentKeyForDelete = new ThreadLocal<>();
 
+    /** Whether the update in progress changed the matching input — set in preProcessUpdateOne, read in postProcessUpdateOne. */
+    private final ThreadLocal<Boolean> matchingInputChanged = new ThreadLocal<>();
+
     @Autowired
     public CVService(
         CVRepository repository,
@@ -147,12 +150,15 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     @Override
     protected void preProcessUpdateOne(String id, CVDTO newCV) throws QorvaException {
         super.preProcessUpdateOne(id, newCV);
+        // Before the merge: it shares nested objects between the two DTOs, and the resolvers below may mutate them.
+        String matchingBefore = CvMatchingView.fingerprint(getExistingForUpdate());
         this.mapper.merge(newCV, getExistingForUpdate());
         // Flags must never drift from the data — recompute after every merge.
         CVContentDateResolver.resolve(newCV);
         CVQualityFlagResolver.resolve(newCV);
         // After the merge, so a changed or removed contact never leaves a stale key behind.
         newCV.setContactKeys(ContactNormalizer.keysOf(newCV.getPersonalInformation()));
+        this.matchingInputChanged.set(!matchingBefore.equals(CvMatchingView.fingerprint(newCV)));
     }
 
     @Override
@@ -162,9 +168,16 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
     @Override
     protected void postProcessUpdateOne(CV entity) {
-        // Since entity was update we've needed to relaunch the marching report again
-        this.jobPostService.markOpenJobPostsAsNeedingReports(entity.getTenantId());
-        this.libraryQualityCacheEvictor.evict(entity.getTenantId());
+        try {
+            // Only a change to what the reports are computed from warrants re-screening: a tag-only
+            // edit used to re-flag every open job and cost a screening action per re-scored candidate.
+            if (!Boolean.FALSE.equals(this.matchingInputChanged.get())) {
+                this.jobPostService.markOpenJobPostsAsNeedingReports(entity.getTenantId());
+            }
+            this.libraryQualityCacheEvictor.evict(entity.getTenantId());
+        } finally {
+            this.matchingInputChanged.remove();
+        }
     }
 
     /** Quality flags surfaced as per-file warnings in the upload response. */

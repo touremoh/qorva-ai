@@ -107,8 +107,9 @@ public class AIScreeningService {
 			throw new QorvaException("Interrupted while waiting to generate report for candidate " + cv.getId(), e);
 		}
 		try {
+			// The matching view, not the whole CV: recruiter tags ("shortlist", "rejected") must not bias the score.
 			return this.openAIService.generateReport(
-				QorvaUtils.toJSON(cv),
+				QorvaUtils.toJSON(CvMatchingView.of(cv)),
 				jobPost.toJobTitleAndDescription(),
 				languageCode,
 				jobPost.getScoringRules()
