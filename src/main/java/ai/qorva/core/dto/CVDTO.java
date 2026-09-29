@@ -2,6 +2,7 @@ package ai.qorva.core.dto;
 
 import ai.qorva.core.dto.common.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import java.time.Year;
@@ -58,6 +59,10 @@ public class CVDTO extends AbstractQorvaDTO {
 
     @JsonProperty(access = Access.READ_ONLY)
     private List<String> qualityFlags;
+
+    /** Normalised email/phone for duplicate detection — internal, never part of the API. */
+    @JsonIgnore
+    private ContactKeys contactKeys;
 
     @JsonProperty(access = Access.READ_ONLY)
     private Boolean archived;

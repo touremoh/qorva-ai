@@ -2,6 +2,7 @@ package ai.qorva.core.dao.repository;
 
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dto.CVDuplicatesData;
+import ai.qorva.core.dto.common.ContactKeys;
 import ai.qorva.core.dto.CVFilterOptionsData;
 import ai.qorva.core.enums.ContentDateSourceEnum;
 import ai.qorva.core.enums.QualityFlagEnum;
@@ -34,6 +35,11 @@ import java.util.Optional;
 
 @Repository
 public class CVRepositoryImpl implements SimilaritySearchRepository, CVQualityRepository, CVFilterOptionsRepository {
+
+	/** Duplicates compare normalised contact keys (ContactNormalizer), not the text as extracted. */
+	static final String EMAIL_KEY = "contactKeys.email";
+	static final String PHONE_KEY = "contactKeys.phone";
+
 
 	private final MongoTemplate mongoTemplate;
 
@@ -187,9 +193,9 @@ public class CVRepositoryImpl implements SimilaritySearchRepository, CVQualityRe
 	@Override
 	public CVDuplicatesData.DuplicateStats duplicateStats(ObjectId tenantId) {
 		var pipeline = new ArrayList<Document>();
-		pipeline.addAll(duplicateGroupStages(tenantId, "personalInformation.contact.email", false));
+		pipeline.addAll(duplicateGroupStages(tenantId, EMAIL_KEY, false));
 		pipeline.add(new Document("$unionWith", new Document("coll", "cvs")
-			.append("pipeline", duplicateGroupStages(tenantId, "personalInformation.contact.phone", false))));
+			.append("pipeline", duplicateGroupStages(tenantId, PHONE_KEY, false))));
 		pipeline.add(new Document("$group", new Document("_id", null)
 			.append("groupCount", new Document("$sum", 1))
 			.append("excessCount", new Document("$sum", new Document("$subtract", List.of("$count", 1))))));
@@ -207,9 +213,9 @@ public class CVRepositoryImpl implements SimilaritySearchRepository, CVQualityRe
 	@Override
 	public CVDuplicatesData.DuplicatesPage findDuplicateGroups(ObjectId tenantId, int pageNumber, int pageSize) {
 		var pipeline = new ArrayList<Document>();
-		pipeline.addAll(duplicateGroupStages(tenantId, "personalInformation.contact.email", true));
+		pipeline.addAll(duplicateGroupStages(tenantId, EMAIL_KEY, true));
 		pipeline.add(new Document("$addFields", new Document("matchType", "EMAIL")));
-		var phoneStages = new ArrayList<>(duplicateGroupStages(tenantId, "personalInformation.contact.phone", true));
+		var phoneStages = new ArrayList<>(duplicateGroupStages(tenantId, PHONE_KEY, true));
 		phoneStages.add(new Document("$addFields", new Document("matchType", "PHONE")));
 		pipeline.add(new Document("$unionWith", new Document("coll", "cvs").append("pipeline", phoneStages)));
 		pipeline.add(new Document("$sort", new Document("count", -1).append("_id", 1)));
@@ -238,13 +244,13 @@ public class CVRepositoryImpl implements SimilaritySearchRepository, CVQualityRe
 	}
 
 	@Override
-	public Optional<CV> findContactMatch(ObjectId tenantId, String email, String phone, ObjectId excludeId) {
+	public Optional<CV> findContactMatch(ObjectId tenantId, ContactKeys keys, ObjectId excludeId) {
 		var contactMatches = new ArrayList<Criteria>();
-		if (email != null && !email.isBlank()) {
-			contactMatches.add(Criteria.where("personalInformation.contact.email").is(email));
+		if (keys != null && keys.getEmail() != null) {
+			contactMatches.add(Criteria.where(EMAIL_KEY).is(keys.getEmail()));
 		}
-		if (phone != null && !phone.isBlank()) {
-			contactMatches.add(Criteria.where("personalInformation.contact.phone").is(phone));
+		if (keys != null && keys.getPhone() != null) {
+			contactMatches.add(Criteria.where(PHONE_KEY).is(keys.getPhone()));
 		}
 		if (contactMatches.isEmpty()) {
 			return Optional.empty();
@@ -261,6 +267,7 @@ public class CVRepositoryImpl implements SimilaritySearchRepository, CVQualityRe
 			.include("personalInformation.name")
 			.include("personalInformation.contact.email")
 			.include("personalInformation.contact.phone")
+			.include("contactKeys")
 			.include("createdAt");
 		return Optional.ofNullable(mongoTemplate.findOne(query, CV.class));
 	}
@@ -324,9 +331,13 @@ public class CVRepositoryImpl implements SimilaritySearchRepository, CVQualityRe
 				cv.getString("phone"),
 				cv.getDate("createdAt") != null ? cv.getDate("createdAt").toInstant() : null))
 			.toList();
+		// Show what recruiters recognise — the newest resume's own email/phone — never the normalised key.
+		var matchType = doc.getString("matchType");
+		var newest = cvs.isEmpty() ? null : cvs.getFirst();
+		var shown = newest == null ? null : "PHONE".equals(matchType) ? newest.phone() : newest.email();
 		return new CVDuplicatesData.DuplicateGroup(
-			doc.getString("matchType"),
-			doc.get("_id") != null ? doc.get("_id").toString() : null,
+			matchType,
+			shown != null ? shown : doc.get("_id") != null ? doc.get("_id").toString() : null,
 			doc.get("count", Number.class).intValue(),
 			cvs);
 	}
