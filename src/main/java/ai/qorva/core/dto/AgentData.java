@@ -32,8 +32,27 @@ public final class AgentData {
 
 	public record LinkView(String type, String id, String label) {}
 
+	public record DraftView(String cvId, String jobId, String subject, String body) {}
+
 	public record StepView(int seq, String kind, String tool, String state, String summaryKey,
-	                       Map<String, String> summaryParams, List<LinkView> links) {}
+	                       Map<String, String> summaryParams, List<LinkView> links, DraftView draft) {}
+
+	/** An approval card: what the tool proposes, as checked when it was proposed. */
+	public record ActionView(String actionId, int stepSeq, String tool, String status, String argsHash,
+	                         Map<String, Object> preview, String reason) {}
+
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	public static class DecisionRequest {
+		/** The argsHash of the card the user decided on: a changed or re-proposed action is refused. */
+		private String argsHash;
+		/** Email cards only: the user's edits (null = unchanged). */
+		private String subject;
+		private String body;
+		/** Reject only. */
+		private String reason;
+	}
 
 	public record RunView(
 		String id,
@@ -45,6 +64,8 @@ public final class AgentData {
 		String goal,
 		List<MentionView> mentions,
 		List<StepView> steps,
+		List<ActionView> pendingActions,
+		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC") Instant approvalExpiresAt,
 		String finalAnswer,
 		String failureReason,
 		boolean stoppedEarly,

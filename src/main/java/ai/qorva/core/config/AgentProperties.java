@@ -50,4 +50,10 @@ public class AgentProperties {
 
 	/** Max length of a goal typed by the user. */
 	private int maxGoalLength = 2000;
+
+	/** Emails to candidates one run may send (each one approved by the user). */
+	private int maxOutboundPerRun = 10;
+
+	/** An approval card left unanswered this long ends the run as EXPIRED. */
+	private int approvalTtlHours = 24;
 }

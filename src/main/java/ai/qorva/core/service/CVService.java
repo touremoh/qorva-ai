@@ -74,7 +74,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final CandidateOutreachService candidateOutreachService;
 
     /** Candidates scored per job in one matching run — each one is a Matching Action (see UsageInsightService). */
-    static final int DEFAULT_MATCH_LIMIT = 10;
+    public static final int DEFAULT_MATCH_LIMIT = 10;
 
     /**
      * Cap for the synchronous upload path. Kept at or below Tomcat's max-part-count

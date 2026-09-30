@@ -1,5 +1,6 @@
 {
   "body" : [ {
+    "approvalExpiresAt" : null,
     "canApprove" : false,
     "canCancel" : false,
     "conversationId" : "<id:2>",
@@ -11,8 +12,10 @@
     "id" : "<id:1>",
     "mentions" : [ ],
     "origin" : "CHAT",
+    "pendingActions" : [ ],
     "status" : "COMPLETED",
     "steps" : [ {
+      "draft" : null,
       "kind" : "TOOL_CALL",
       "links" : [ {
         "id" : "<id:3>",

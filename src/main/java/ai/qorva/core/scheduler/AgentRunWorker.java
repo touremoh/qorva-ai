@@ -41,6 +41,14 @@ public class AgentRunWorker {
 		if (!properties.isEnabled()) {
 			return;
 		}
+		try {
+			long expired = store.expireApprovals();
+			if (expired > 0) {
+				log.info("agent runs expired waiting for approval: {}", expired);
+			}
+		} catch (RuntimeException e) {
+			log.error("agent worker could not expire approvals", e);
+		}
 		while (slots.tryAcquire()) {
 			AgentRun run;
 			try {

@@ -36,6 +36,9 @@ public class AgentRunService {
 	/** Previous exchanges of a conversation replayed to the model, so follow-ups ("tag them") have context. */
 	static final int CONTEXT_RUNS = 3;
 	static final int TITLE_LENGTH = 80;
+	static final int MAX_SUBJECT = 200;
+	static final int MAX_BODY = 8000;
+	static final int MAX_REASON = 500;
 	private static final int CONVERSATION_SCAN = 500;
 
 	private final AgentRunRepository repository;
@@ -113,7 +116,9 @@ public class AgentRunService {
 
 	public AgentData.RunView get(String tenantId, String userEmail, boolean teamView, String runId) throws QorvaException {
 		var run = visible(tenantId, userEmail, teamView, runId);
-		return view(run, userEmail.equals(run.getUserEmail()));
+		boolean mine = userEmail.equals(run.getUserEmail());
+		// Admins viewing the team may cancel someone else's run, never approve for them.
+		return view(run, mine || teamView, mine);
 	}
 
 	public AgentData.RunView cancel(String tenantId, String userEmail, boolean teamView, String runId) throws QorvaException {
@@ -122,6 +127,42 @@ public class AgentRunService {
 			log.info("agent-run {} cancel requested by {}", run.getId(), userEmail);
 		}
 		return view(visible(tenantId, userEmail, teamView, runId), userEmail.equals(run.getUserEmail()));
+	}
+
+	public AgentData.RunView approve(String tenantId, String userEmail, String runId, String actionId,
+	                                 AgentData.DecisionRequest request) throws QorvaException {
+		var run = visible(tenantId, userEmail, false, runId);
+		var subject = trimToNull(request.getSubject());
+		var body = trimToNull(request.getBody());
+		if ((subject != null && subject.length() > MAX_SUBJECT) || (body != null && body.length() > MAX_BODY)
+			|| (request.getSubject() != null && subject == null) || (request.getBody() != null && body == null)) {
+			throw QorvaErrors.badRequest(QorvaErrorCodes.AGENT_ACTION_INVALID);
+		}
+		if (!store.decide(tenantId, run.getId(), actionId, request.getArgsHash(), AgentRunStore.Decision.APPROVED, subject, body, null)) {
+			throw QorvaErrors.conflict(QorvaErrorCodes.AGENT_ACTION_STALE);
+		}
+		log.info("agent-run {} action {} approved by {}", run.getId(), actionId, userEmail);
+		worker.wakeUp();
+		return view(visible(tenantId, userEmail, false, runId), true);
+	}
+
+	public AgentData.RunView reject(String tenantId, String userEmail, String runId, String actionId,
+	                                AgentData.DecisionRequest request) throws QorvaException {
+		var run = visible(tenantId, userEmail, false, runId);
+		var reason = trimToNull(request.getReason());
+		if (reason != null && reason.length() > MAX_REASON) {
+			throw QorvaErrors.badRequest(QorvaErrorCodes.AGENT_ACTION_INVALID);
+		}
+		if (!store.decide(tenantId, run.getId(), actionId, request.getArgsHash(), AgentRunStore.Decision.REJECTED, null, null, reason)) {
+			throw QorvaErrors.conflict(QorvaErrorCodes.AGENT_ACTION_STALE);
+		}
+		log.info("agent-run {} action {} rejected by {}", run.getId(), actionId, userEmail);
+		worker.wakeUp();
+		return view(visible(tenantId, userEmail, false, runId), true);
+	}
+
+	private static String trimToNull(String value) {
+		return value == null || value.isBlank() ? null : value.strip();
 	}
 
 	public AgentData.RunPage list(String tenantId, String userEmail, boolean team, String status, String origin,
@@ -212,7 +253,7 @@ public class AgentRunService {
 		var history = new ArrayList<AgentRun.HistoryMessage>();
 		var context = previous.stream().filter(r -> AgentRun.STATUS_COMPLETED.equals(r.getStatus()) && r.getFinalAnswer() != null).toList();
 		for (var prior : context.subList(Math.max(0, context.size() - CONTEXT_RUNS), context.size())) {
-			history.add(AgentHistory.user(prior.getGoal()));
+			history.add(AgentHistory.user(userMessageOf(prior)));
 			history.add(new AgentRun.HistoryMessage(AgentHistory.ASSISTANT, prior.getFinalAnswer(), null, null));
 		}
 		var text = new StringBuilder(goal);
@@ -226,6 +267,18 @@ public class AgentRunService {
 		}
 		history.add(AgentHistory.user(text.toString()));
 		return history;
+	}
+
+	/**
+	 * The message the recruiter actually sent in that run, with the records it mentioned (ids included), so a
+	 * follow-up like "check all candidates above 60%" still knows which job. Older runs fall back to the goal.
+	 */
+	static String userMessageOf(AgentRun run) {
+		return run.getHistory().reversed().stream()
+			.filter(m -> AgentHistory.USER.equals(m.getRole()) && m.getText() != null)
+			.map(AgentRun.HistoryMessage::getText)
+			.findFirst()
+			.orElse(run.getGoal());
 	}
 
 	static String title(String goal) {
@@ -245,16 +298,27 @@ public class AgentRunService {
 		return AgentRun.ACTIVE_STATUSES.contains(run.getStatus());
 	}
 
-	static AgentData.RunView view(AgentRun run, boolean mayCancel) {
+	static AgentData.RunView view(AgentRun run, boolean mine) {
+		return view(run, mine, mine);
+	}
+
+	static AgentData.RunView view(AgentRun run, boolean mayCancel, boolean mayApprove) {
 		return new AgentData.RunView(
 			run.getId(), run.getConversationId(), run.getTitle(), run.getOrigin(), run.getUserEmail(), run.getStatus(),
 			run.getGoal(),
 			run.getMentions().stream().map(m -> new AgentData.MentionView(m.getType(), m.getId(), m.getName())).toList(),
 			run.getSteps().stream().map(s -> new AgentData.StepView(s.getSeq(), s.getKind(), s.getTool(), s.getState(),
 				s.getSummaryKey(), s.getSummaryParams(),
-				s.getLinks().stream().map(l -> new AgentData.LinkView(l.getType(), l.getId(), l.getLabel())).toList())).toList(),
+				s.getLinks().stream().map(l -> new AgentData.LinkView(l.getType(), l.getId(), l.getLabel())).toList(),
+				s.getDraft() == null ? null : new AgentData.DraftView(s.getDraft().getCvId(), s.getDraft().getJobId(),
+					s.getDraft().getSubject(), s.getDraft().getBody()))).toList(),
+			run.getPendingActions().stream().map(a -> new AgentData.ActionView(a.getActionId(), a.getStepSeq(), a.getTool(),
+				a.getStatus(), a.getArgsHash(), a.getPreview(), a.getReason())).toList(),
+			run.getApprovalExpiresAt(),
 			run.getFinalAnswer(), run.getFailureReason(), Boolean.TRUE.equals(run.getStoppedEarly()),
-			mayCancel && active(run) && !run.isCancelRequested(), false,
+			mayCancel && active(run) && !run.isCancelRequested(),
+			// Only the run's own user decides: the action runs as them (their mailbox, their quota).
+			mayApprove && AgentRun.STATUS_AWAITING_APPROVAL.equals(run.getStatus()),
 			run.getCreatedAt(), run.getFinishedAt());
 	}
 

@@ -71,6 +71,9 @@ public class CandidateOutreach implements QorvaEntity {
 	/** Display name captured at creation so readers never need VIEW_USERS to see who wrote it. */
 	private String senderName;
 
+	/** Set when Copilot sent the message (after the user approved it); null for everything sent by hand. */
+	private String agentRunId;
+
 	@CreatedBy
 	private String senderEmail;
 

@@ -1,6 +1,7 @@
 package ai.qorva.core.service.agent;
 
 import ai.qorva.core.service.QorvaApiAccessManager;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.Comparator;
@@ -8,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 /** Every {@link AgentTool} bean, filtered down to what a given user may use right now. */
+@Slf4j
 @Component
 public class AgentToolRegistry {
 
@@ -31,6 +33,16 @@ public class AgentToolRegistry {
 	private boolean isAllowed(AgentTool tool, AgentToolContext ctx) {
 		return tool.requiredActions().stream()
 			.allMatch(action -> accessManager.hasPermission(ctx.authentication(), action.getValue()))
-			&& tool.available(ctx);
+			&& isAvailable(tool, ctx);
+	}
+
+	/** An availability check that fails (e.g. the mailbox lookup) hides that tool; it must not fail the run. */
+	private static boolean isAvailable(AgentTool tool, AgentToolContext ctx) {
+		try {
+			return tool.available(ctx);
+		} catch (RuntimeException e) {
+			log.warn("agent tool {} availability check failed; tool hidden: {}", tool.name(), e.toString());
+			return false;
+		}
 	}
 }

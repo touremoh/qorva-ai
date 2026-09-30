@@ -53,6 +53,23 @@ class AgentToolRegistryTest {
 	}
 
 	@Test
+	void aFailingAvailabilityCheckHidesTheToolInsteadOfFailingTheRun() {
+		var broken = new AgentTool() {
+			public String name() { return "send_outreach_email"; }
+			public String description() { return ""; }
+			public String inputSchema() { return "{}"; }
+			public AgentRiskTier tier() { return AgentRiskTier.APPROVAL; }
+			public Set<UserActionsEnum> requiredActions() { return Set.of(); }
+			public boolean available(AgentToolContext ctx) { throw new IllegalStateException("mailbox lookup failed"); }
+			public AgentToolResult execute(JsonNode args, AgentToolContext ctx) { return null; }
+		};
+		var withBroken = new AgentToolRegistry(List.of(broken), new QorvaApiAccessManager(null, null));
+
+		assertThat(withBroken.allowedFor(as())).isEmpty();
+		assertThat(withBroken.allowed("send_outreach_email", as())).isEmpty();
+	}
+
+	@Test
 	void executionReChecksTheRight() {
 		assertThat(registry.allowed("list_reports", as("VIEW_CV:ALLOWED"))).isEmpty();
 		assertThat(registry.allowed("list_reports", as("VIEW_REPORT:ALLOWED"))).isPresent();

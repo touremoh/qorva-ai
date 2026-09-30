@@ -14,6 +14,14 @@ import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.time.Duration;
+import java.util.HexFormat;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.UUID;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.Instant;
@@ -81,6 +89,10 @@ public class AgentRunner {
 		long accountedUntil = claimStart;
 		repairInterrupted(run);
 		int consecutiveErrors = trailingErrors(run);
+		// A run the user has just decided on: carry out the approved actions before asking the model again.
+		if (!run.getPendingActions().isEmpty() && !resumeDecisions(run, ctx)) {
+			return;
+		}
 
 		while (true) {
 			if (store.isCancelRequested(run)) {
@@ -120,7 +132,27 @@ public class AgentRunner {
 			}
 
 			var results = new ArrayList<AgentRun.ToolResult>();
+			var pending = new ArrayList<AgentRun.PendingAction>();
+			int pendingOutbound = 0;
 			for (var call : assistant.getToolCalls()) {
+				var approvalTool = registry.allowed(call.name(), ctx).filter(t -> t.tier() == AgentRiskTier.APPROVAL);
+				if (approvalTool.isPresent()) {
+					var tool = approvalTool.get();
+					var step = startStep(run, call);
+					step.setTier(AgentRiskTier.APPROVAL.name());
+					var preview = tool.outbound() && run.getOutboundCount() + pendingOutbound >= properties.getMaxOutboundPerRun()
+						? AgentToolResult.error("The limit of " + properties.getMaxOutboundPerRun() + " emails per task is reached.")
+						: preview(tool, call, ctx);
+					if (!preview.ok()) {
+						completeStep(step, preview);
+						results.add(new AgentRun.ToolResult(call.id(), call.name(), toModelJson(preview)));
+						consecutiveErrors++;
+						continue;
+					}
+					if (tool.outbound()) pendingOutbound++;
+					pending.add(propose(step, call, preview));
+					continue;
+				}
 				var step = startStep(run, call);
 				if (!store.saveProgress(run)) {
 					log.warn("agent-run {} lost its lease before {}", run.getId(), call.name());
@@ -133,6 +165,19 @@ public class AgentRunner {
 					step.getTier(), step.getState(), System.currentTimeMillis() - t0);
 				results.add(new AgentRun.ToolResult(call.id(), call.name(), toModelJson(result)));
 				consecutiveErrors = result.ok() ? 0 : consecutiveErrors + 1;
+			}
+			if (!pending.isEmpty()) {
+				// The turn's tool message is completed on resume, when every pending action has an outcome.
+				run.setPendingActions(pending);
+				run.setPendingToolResults(results);
+				run.setStatus(AgentRun.STATUS_AWAITING_APPROVAL);
+				run.setApprovalExpiresAt(Instant.now().plus(Duration.ofHours(properties.getApprovalTtlHours())));
+				if (store.pause(run)) {
+					log.info("agent-run {} awaiting approval actions={}", run.getId(), pending.size());
+				} else {
+					log.warn("agent-run {} lost its lease before pausing", run.getId());
+				}
+				return;
 			}
 			run.getHistory().add(AgentHistory.toolResults(results));
 
@@ -159,12 +204,134 @@ public class AgentRunner {
 		return step;
 	}
 
+	/** Turns an approval call into a card: the step shows what is proposed, the action waits for the user. */
+	private AgentRun.PendingAction propose(AgentRun.Step step, AssistantMessage.ToolCall call, AgentToolResult preview) {
+		completeStep(step, preview);
+		step.setState(AgentRun.Step.STATE_PENDING);
+		step.setFinishedAt(null);
+		var action = new AgentRun.PendingAction();
+		action.setActionId(UUID.randomUUID().toString());
+		action.setStepSeq(step.getSeq());
+		action.setToolCallId(call.id());
+		action.setTool(call.name());
+		action.setArgsJson(call.arguments() == null ? "{}" : call.arguments());
+		action.setArgsHash(argsHash(call.name(), action.getArgsJson()));
+		action.setPreview(objectMapper.convertValue(preview.data(), new TypeReference<LinkedHashMap<String, Object>>() {}));
+		action.setStatus(AgentRun.PendingAction.PENDING);
+		return action;
+	}
+
+	/**
+	 * Carries out the user's decisions, in the order proposed: approved actions are re-checked and executed (each
+	 * persisted as EXECUTING first, never replayed), rejected ones are reported as declined. Then the turn's tool
+	 * message is completed. Returns false if the lease was lost.
+	 */
+	private boolean resumeDecisions(AgentRun run, AgentToolContext ctx) {
+		var results = new ArrayList<>(run.getPendingToolResults());
+		for (var action : run.getPendingActions()) {
+			var step = run.getSteps().stream().filter(s -> s.getSeq() == action.getStepSeq()).findFirst().orElseGet(AgentRun.Step::new);
+			switch (action.getStatus()) {
+				case AgentRun.PendingAction.APPROVED -> {
+					action.setStatus(AgentRun.PendingAction.EXECUTING);
+					step.setState(AgentRun.Step.STATE_EXECUTING);
+					step.setStartedAt(Instant.now());
+					if (!store.saveProgress(run)) return false;
+					var tool = registry.allowed(action.getTool(), ctx);
+					var result = executeApproved(action, ctx);
+					completeStep(step, result);
+					if (result.ok() && tool.map(AgentTool::outbound).orElse(false)) {
+						run.setOutboundCount(run.getOutboundCount() + 1);
+					}
+					action.setResultJson(toModelJson(result));
+					action.setStatus(AgentRun.PendingAction.DONE);
+					log.info("agent-run {} approved action tool={} state={}", run.getId(), action.getTool(), step.getState());
+					if (!store.saveProgress(run)) return false;
+				}
+				case AgentRun.PendingAction.REJECTED -> {
+					step.setState(AgentRun.Step.STATE_REJECTED);
+					step.setFinishedAt(Instant.now());
+					var declined = new LinkedHashMap<String, Object>();
+					declined.put("declined", true);
+					declined.put("reason", action.getReason());
+					action.setResultJson(toModelJson(AgentToolResult.ok(declined, null, Map.of(), List.of())));
+					action.setStatus(AgentRun.PendingAction.DONE);
+				}
+				case AgentRun.PendingAction.EXECUTING -> {
+					// The worker died while executing it: the outcome is unknown and it is never retried.
+					step.setState(AgentRun.Step.STATE_ERROR);
+					step.setSummaryKey("agent.step.interrupted");
+					step.setError(INTERRUPTED);
+					action.setResultJson("{\"error\":\"" + INTERRUPTED + "\"}");
+					action.setStatus(AgentRun.PendingAction.DONE);
+				}
+				default -> {
+					// DONE (already carried out before a crash) keeps its result; PENDING cannot be resumed.
+					if (action.getResultJson() == null) {
+						action.setResultJson("{\"error\":\"No decision was made.\"}");
+					}
+				}
+			}
+			results.add(new AgentRun.ToolResult(action.getToolCallId(), action.getTool(), action.getResultJson()));
+		}
+		run.getHistory().add(AgentHistory.toolResults(results));
+		run.setPendingActions(new ArrayList<>());
+		run.setPendingToolResults(new ArrayList<>());
+		run.setApprovalExpiresAt(null);
+		return store.saveProgress(run);
+	}
+
+	private AgentToolResult executeApproved(AgentRun.PendingAction action, AgentToolContext ctx) {
+		var tool = registry.allowed(action.getTool(), ctx);
+		if (tool.isEmpty()) {
+			return AgentToolResult.error("This action is no longer allowed for this user.");
+		}
+		try {
+			var args = objectMapper.readTree(action.getArgsJson());
+			// The situation may have changed since the card was shown (suppression, mailbox, quota): check again.
+			var check = tool.get().preview(args, ctx);
+			if (!check.ok()) return check;
+			return tool.get().execute(args, ctx, new AgentApproval(action.getEditedSubject(), action.getEditedBody()));
+		} catch (JsonProcessingException e) {
+			return AgentToolResult.error("Arguments are not valid JSON");
+		} catch (QorvaException e) {
+			return AgentToolResult.error(e.getMessage() != null ? e.getMessage() : "The request was refused");
+		} catch (RuntimeException e) {
+			log.error("agent approved action {} failed", action.getTool(), e);
+			return AgentToolResult.error("The action failed unexpectedly");
+		}
+	}
+
+	private AgentToolResult preview(AgentTool tool, AssistantMessage.ToolCall call, AgentToolContext ctx) {
+		try {
+			var args = call.arguments() == null || call.arguments().isBlank()
+				? objectMapper.createObjectNode() : objectMapper.readTree(call.arguments());
+			return tool.preview(args, ctx);
+		} catch (JsonProcessingException e) {
+			return AgentToolResult.error("Arguments are not valid JSON");
+		} catch (QorvaException e) {
+			return AgentToolResult.error(e.getMessage() != null ? e.getMessage() : "The request was refused");
+		} catch (RuntimeException e) {
+			log.error("agent tool {} preview failed", call.name(), e);
+			return AgentToolResult.error("The action could not be prepared");
+		}
+	}
+
+	static String argsHash(String tool, String argsJson) {
+		try {
+			var digest = MessageDigest.getInstance("SHA-256").digest((tool + "\n" + argsJson).getBytes(StandardCharsets.UTF_8));
+			return HexFormat.of().formatHex(digest);
+		} catch (NoSuchAlgorithmException e) {
+			throw new IllegalStateException(e);
+		}
+	}
+
 	private static void completeStep(AgentRun.Step step, AgentToolResult result) {
 		step.setState(result.ok() ? AgentRun.Step.STATE_OK : AgentRun.Step.STATE_ERROR);
 		step.setSummaryKey(result.summaryKey());
 		step.setSummaryParams(result.summaryParams() != null ? new java.util.LinkedHashMap<>(result.summaryParams()) : new java.util.LinkedHashMap<>());
 		step.setLinks(result.links() != null ? new ArrayList<>(result.links()) : new ArrayList<>());
 		step.setError(result.error());
+		step.setDraft(result.draft());
 		step.setFinishedAt(Instant.now());
 	}
 
@@ -174,8 +341,8 @@ public class AgentRunner {
 			return AgentToolResult.error("Tool not available: " + call.name());
 		}
 		if (tool.get().tier() == AgentRiskTier.APPROVAL) {
-			// The approval pause is not built yet: an approval tool must never run unattended.
-			return AgentToolResult.error("This action needs the user's approval, which is not available yet.");
+			// Approval tools only ever run through a decided PendingAction (resumeDecisions), never directly.
+			return AgentToolResult.error("This action needs the user's approval.");
 		}
 		JsonNode args;
 		try {
@@ -216,7 +383,7 @@ public class AgentRunner {
 				s.setFinishedAt(Instant.now());
 			});
 		var history = run.getHistory();
-		if (!history.isEmpty()) {
+		if (!history.isEmpty() && run.getPendingActions().isEmpty()) {
 			var last = history.getLast();
 			if (AgentHistory.ASSISTANT.equals(last.getRole()) && last.getToolCalls() != null && !last.getToolCalls().isEmpty()) {
 				history.add(AgentHistory.toolResults(last.getToolCalls().stream()

@@ -5,6 +5,9 @@ import ai.qorva.core.security.TenantScope;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.common.MatchingReportDetails;
+import ai.qorva.core.enums.JobPostStatusEnum;
+import ai.qorva.core.exception.QorvaErrorCodes;
+import ai.qorva.core.exception.QorvaErrors;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.ats.AtsWriteBackService;
 import ai.qorva.core.utils.QorvaUtils;
@@ -12,6 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -61,6 +66,36 @@ public class AIScreeningService {
 		}
 
 		log.info("Screening process completed for tenant={}", tenantId);
+	}
+
+	/**
+	 * Matching for the chosen open jobs only (Copilot's start_screening), with the same per-job work as the
+	 * tenant-wide run. Checks the plan itself — this path has no controller guard. Returns the jobs screened;
+	 * closed or unknown jobs are skipped (ids resolve in the current tenant only).
+	 */
+	public List<JobPostDTO> screenJobs(String tenantId, List<String> jobIds, String languageCode) throws QorvaException {
+		var jobs = new ArrayList<JobPostDTO>();
+		for (var id : jobIds) {
+			var job = jobPostService.findOneById(id);
+			if (JobPostStatusEnum.OPEN.getStatus().equals(job.getStatus())) {
+				jobs.add(job);
+			}
+		}
+		if (jobs.isEmpty()) {
+			return List.of();
+		}
+		int estimate = jobs.size() * CVService.DEFAULT_MATCH_LIMIT;
+		if (!usageMonitoringService.hasCapacityFor(tenantId, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS, estimate)) {
+			throw QorvaErrors.forbidden(QorvaErrorCodes.USAGE_SCREENING_LIMIT_EXCEEDED);
+		}
+		log.info("Screening {} chosen job(s) for tenant={}", jobs.size(), tenantId);
+		try (var executor = TenantScope.propagating(Executors.newVirtualThreadPerTaskExecutor())) {
+			var jobFutures = jobs.stream()
+				.map(jp -> CompletableFuture.runAsync(() -> processJobPost(jp, tenantId, languageCode, executor), executor))
+				.toArray(CompletableFuture[]::new);
+			CompletableFuture.allOf(jobFutures).join();
+		}
+		return List.copyOf(jobs);
 	}
 
 	private void processJobPost(JobPostDTO jobPost, String tenantId, String languageCode, Executor executor) {

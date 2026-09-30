@@ -33,4 +33,22 @@ public interface AgentTool {
 	}
 
 	AgentToolResult execute(JsonNode args, AgentToolContext ctx) throws QorvaException;
+
+	/**
+	 * APPROVAL tier only: checks the call and returns what the approval card shows (never acts). An error result
+	 * goes back to the model instead of a card. Called when the action is proposed and again just before executing.
+	 */
+	default AgentToolResult preview(JsonNode args, AgentToolContext ctx) throws QorvaException {
+		throw new UnsupportedOperationException(name() + " has no approval preview");
+	}
+
+	/** APPROVAL tier: executes with the edits the user made on the card. */
+	default AgentToolResult execute(JsonNode args, AgentToolContext ctx, AgentApproval approval) throws QorvaException {
+		return execute(args, ctx);
+	}
+
+	/** True for tools that send something to a candidate; they count against max-outbound-per-run. */
+	default boolean outbound() {
+		return false;
+	}
 }

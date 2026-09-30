@@ -21,6 +21,14 @@ import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import ai.qorva.core.dto.CandidateOutreachData;
+import ai.qorva.core.service.mailbox.MailboxConnectionService;
+import ai.qorva.core.service.mailbox.MailboxSender;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 import java.time.Instant;
 import java.util.List;
@@ -42,6 +50,9 @@ class AgentApiIntegrationTest extends AbstractIntegrationTest {
 
 	@MockitoBean
 	private ChatModel chatModel;
+	/** The only fake beyond the model: nothing leaves the test through a real mailbox. */
+	@MockitoBean
+	private MailboxConnectionService mailboxService;
 
 	@Autowired
 	private TwoTenantFixture fixture;
@@ -60,6 +71,8 @@ class AgentApiIntegrationTest extends AbstractIntegrationTest {
 		a = seeded.a();
 		b = seeded.b();
 		owner = fixture.bearer(a.ownerEmail(), a.tenantId());
+		when(mailboxService.composerState(anyString(), anyString()))
+			.thenReturn(new MailboxConnectionService.ComposerState(CandidateOutreachData.MailboxState.NONE, null));
 		// Scripted model: first turn searches, once it has a tool result it answers.
 		when(chatModel.call(any(Prompt.class))).thenAnswer(inv -> {
 			var messages = inv.<Prompt>getArgument(0).getInstructions();
@@ -256,5 +269,91 @@ class AgentApiIntegrationTest extends AbstractIntegrationTest {
 			Document.class, "notes");
 		assertThat(note).isNotNull();
 		assertThat(note.getString("authorEmail")).isEqualTo(a.ownerEmail());
+	}
+
+	@Test
+	void anEmailWaitsForApprovalThenGoesToTheProfileAddressWithTheRecruitersEdits() throws Exception {
+		when(mailboxService.composerState(anyString(), anyString()))
+			.thenReturn(new MailboxConnectionService.ComposerState(CandidateOutreachData.MailboxState.MICROSOFT, a.ownerEmail()));
+		when(mailboxService.send(anyString(), anyString(), anyString(), anyString(), anyString()))
+			.thenReturn(new MailboxSender.SendResult("msg-1", "thread-1", "https://outlook.test/msg-1"));
+		when(chatModel.call(any(Prompt.class))).thenAnswer(inv -> {
+			var messages = inv.<Prompt>getArgument(0).getInstructions();
+			if (messages.getLast().getMessageType() == MessageType.TOOL) {
+				return new ChatResponse(List.of(new Generation(new AssistantMessage("Sent the intro."))));
+			}
+			return new ChatResponse(List.of(new Generation(new AssistantMessage("", Map.of(), List.of(
+				new AssistantMessage.ToolCall("call_1", "function", "send_outreach_email",
+					"{\"cvId\":\"%s\",\"subject\":\"Intro\",\"body\":\"Hello\",\"to\":\"attacker@evil.test\"}".formatted(a.cvId())))))));
+		});
+		var cv = mongo.findById(new ObjectId(a.cvId()), Document.class, "cvs");
+		var candidateEmail = cv.get("personalInformation", Document.class).get("contact", Document.class).getString("email");
+
+		var paused = awaitFinished(owner, start(owner, "{\"goal\":\"Email the top candidate an intro\"}").path("id").asText());
+
+		assertThat(paused.path("status").asText()).isEqualTo("AWAITING_APPROVAL");
+		assertThat(paused.path("canApprove").asBoolean()).isTrue();
+		var action = paused.path("pendingActions").get(0);
+		assertThat(action.path("preview").path("to").asText()).isEqualTo(candidateEmail);
+		// The card and the whole run view carry the profile's address only; the model's "to" is ignored.
+		assertThat(paused.toString()).doesNotContain("attacker@evil.test");
+		verify(mailboxService, never()).send(anyString(), anyString(), anyString(), anyString(), anyString());
+		var runId = paused.path("id").asText();
+		var decide = "/agent/runs/" + runId + "/actions/" + action.path("actionId").asText();
+
+		// A decision on arguments the recruiter did not see is refused.
+		var stale = mvc.perform(post(decide + "/approve").header("Authorization", owner).contentType(JSON)
+			.content("{\"argsHash\":\"not-the-one\"}")).andReturn().getResponse();
+		assertThat(stale.getStatus()).isEqualTo(409);
+
+		mvc.perform(post(decide + "/approve").header("Authorization", owner).contentType(JSON)
+			.content("{\"argsHash\":\"%s\",\"body\":\"Hello, edited\"}".formatted(action.path("argsHash").asText())));
+		var done = awaitFinished(owner, runId);
+
+		assertThat(done.path("status").asText()).isEqualTo("COMPLETED");
+		verify(mailboxService, times(1)).send(anyString(), eq(a.ownerEmail()), eq(candidateEmail), eq("Intro"), eq("Hello, edited"));
+		var sent = mongo.findOne(Query.query(Criteria.where("cvId").is(a.cvId()).and("agentRunId").is(runId)), Document.class, "candidate_outreach");
+		assertThat(sent).isNotNull();
+		assertThat(sent.getString("status")).isEqualTo("SENT");
+
+		// Deciding again on the same card is refused: it is already done.
+		var again = mvc.perform(post(decide + "/reject").header("Authorization", owner).contentType(JSON)
+			.content("{\"argsHash\":\"%s\"}".formatted(action.path("argsHash").asText()))).andReturn().getResponse();
+		assertThat(again.getStatus()).isEqualTo(409);
+	}
+
+	@Test
+	void onlyTheRunsOwnUserMayDecide() throws Exception {
+		var run = mongo.findById(new ObjectId(a.agentRunId()), AgentRun.class);
+		var action = new AgentRun.PendingAction();
+		action.setActionId("act-1");
+		action.setArgsHash("h");
+		action.setStatus(AgentRun.PendingAction.PENDING);
+		action.setTool("send_outreach_email");
+		mongo.updateFirst(Query.query(Criteria.where("_id").is(new ObjectId(run.getId()))),
+			new Update().set("status", AgentRun.STATUS_AWAITING_APPROVAL).set("pendingActions", List.of(action)), AgentRun.class);
+		grantUseAgentToViewer();
+		var viewer = fixture.bearer(a.viewerEmail(), a.tenantId());
+
+		var response = mvc.perform(post("/agent/runs/" + run.getId() + "/actions/act-1/approve").header("Authorization", viewer)
+			.contentType(JSON).content("{\"argsHash\":\"h\"}")).andReturn().getResponse();
+
+		assertThat(response.getStatus()).isEqualTo(404);
+		assertThat(mongo.findById(new ObjectId(run.getId()), AgentRun.class).getPendingActions().getFirst().getStatus())
+			.isEqualTo(AgentRun.PendingAction.PENDING);
+	}
+
+	@Test
+	void aFollowUpStillKnowsTheRecordsMentionedEarlierInTheConversation() throws Exception {
+		var first = start(owner, "{\"goal\":\"It is for this job\",\"mentions\":[{\"type\":\"JOB\",\"id\":\"%s\"}]}".formatted(a.jobId()));
+		awaitFinished(owner, first.path("id").asText());
+
+		var second = start(owner, "{\"goal\":\"Check all candidates above 60%%\",\"conversationId\":\"%s\"}"
+			.formatted(first.path("conversationId").asText()));
+		awaitFinished(owner, second.path("id").asText());
+
+		var replayed = mongo.findById(new ObjectId(second.path("id").asText()), AgentRun.class).getHistory().getFirst();
+		assertThat(replayed.getRole()).isEqualTo("user");
+		assertThat(replayed.getText()).startsWith("It is for this job").contains("jobId=" + a.jobId());
 	}
 }

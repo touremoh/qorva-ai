@@ -99,11 +99,18 @@ public class CandidateOutreachService {
 	/** Send as the recruiter through their connected mailbox and log the result either way. */
 	public CandidateOutreachData.SendResponse send(String tenantId, String username,
 	                                                CandidateOutreachData.SendRequest request) throws QorvaException {
+		return send(tenantId, username, request, null);
+	}
+
+	/** Same, from a Copilot run the user approved; the history row records the run. */
+	public CandidateOutreachData.SendResponse send(String tenantId, String username,
+	                                                CandidateOutreachData.SendRequest request, String agentRunId) throws QorvaException {
 		loadCv(tenantId, request.getCvId());
 		assertNotSuppressed(tenantId, request.getTo());
 
 		var row = row(tenantId, username, request.getCvId(), request.getJobPostId(), request.getMatchingReportId(),
-			request.getTo(), request.getSubject(), request.getBody(), OutreachViaEnum.CONNECTED_MICROSOFT);
+			request.getTo(), request.getSubject(), request.getBody(), OutreachViaEnum.CONNECTED_MICROSOFT)
+			.agentRunId(agentRunId);
 		try {
 			var result = mailboxConnectionService.send(tenantId, username, request.getTo(), request.getSubject(), request.getBody());
 			var saved = repository.save(row

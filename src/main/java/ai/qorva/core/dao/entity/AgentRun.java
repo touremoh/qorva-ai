@@ -67,6 +67,14 @@ public class AgentRun implements QorvaEntity {
 	/** True when a budget ended the run before the model finished. */
 	private Boolean stoppedEarly;
 
+	/** Approval actions of the turn that paused the run; decided by the user, executed by the worker on resume. */
+	private List<PendingAction> pendingActions = new ArrayList<>();
+	/** Results of the same turn's non-approval calls, held until the pending actions are decided (one tool message per turn). */
+	private List<ToolResult> pendingToolResults = new ArrayList<>();
+	private Instant approvalExpiresAt;
+	/** Messages sent to candidates in this run (capped by qorva.ai.agent.max-outbound-per-run). */
+	private int outboundCount;
+
 	private Tokens tokens = new Tokens();
 	private int stepCount;
 	private int toolCallCount;
@@ -109,6 +117,10 @@ public class AgentRun implements QorvaEntity {
 		public static final String STATE_EXECUTING = "EXECUTING";
 		public static final String STATE_OK = "OK";
 		public static final String STATE_ERROR = "ERROR";
+		/** Proposed approval action, waiting for the user. */
+		public static final String STATE_PENDING = "PENDING";
+		public static final String STATE_REJECTED = "REJECTED";
+		public static final String STATE_EXPIRED = "EXPIRED";
 
 		private int seq;
 		private String kind;
@@ -120,9 +132,53 @@ public class AgentRun implements QorvaEntity {
 		/** Values interpolated into the summary, e.g. {count: "12"}. */
 		private java.util.Map<String, String> summaryParams = new java.util.LinkedHashMap<>();
 		private List<Link> links = new ArrayList<>();
+		/** Email draft produced by the step, so the app can open it in the composer. */
+		private Draft draft;
 		private String error;
 		private Instant startedAt;
 		private Instant finishedAt;
+	}
+
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class Draft {
+		private String cvId;
+		private String jobId;
+		private String subject;
+		private String body;
+	}
+
+	/** An approval-tier call waiting for (or decided by) the run's user. */
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class PendingAction {
+		public static final String PENDING = "PENDING";
+		public static final String APPROVED = "APPROVED";
+		public static final String REJECTED = "REJECTED";
+		/** Execution started; if the worker died here, the outcome is unknown and it is never retried. */
+		public static final String EXECUTING = "EXECUTING";
+		public static final String DONE = "DONE";
+
+		private String actionId;
+		private int stepSeq;
+		private String toolCallId;
+		private String tool;
+		private String argsJson;
+		/** Binds a decision to exactly the arguments the user saw. */
+		private String argsHash;
+		/** What the card shows, built and checked by the tool when the action was proposed. */
+		private java.util.Map<String, Object> preview = new java.util.LinkedHashMap<>();
+		private String status;
+		private String editedSubject;
+		private String editedBody;
+		private String reason;
+		private Instant decidedAt;
+		/** The result sent to the model, once executed or declined. */
+		private String resultJson;
 	}
 
 	@Getter
