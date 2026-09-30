@@ -81,7 +81,7 @@ qorva:
       context-token-warn: ${QORVA_RESUME_CHAT_CONTEXT_TOKEN_WARN:12000}
     # Copilot (AI agent). Off until QORVA_AGENT_ENABLED=true; every run is bounded by the budgets below.
     agent:
-      enabled: ${QORVA_AGENT_ENABLED:true}
+      enabled: ${QORVA_AGENT_ENABLED:false}
       model: ${QORVA_AGENT_MODEL:gpt-5.6-terra}
       # gpt-5.x refuses function tools on chat completions unless this is 'none'.
       reasoning-effort: ${QORVA_AGENT_REASONING_EFFORT:none}
