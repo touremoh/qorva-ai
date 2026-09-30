@@ -24,7 +24,8 @@ public class UsageMonitoringService extends AbstractQorvaService<UsageMonitoring
     public enum FeatureKey {
         SCREENING_ACTIONS("features.screeningActions"),
         AI_RESUME_CHATS("features.aiResumeChats"),
-        TALENT_INTELLIGENCE_QUERIES("features.talentIntelligenceQueries");
+        TALENT_INTELLIGENCE_QUERIES("features.talentIntelligenceQueries"),
+        AGENT_RUNS("features.agentRuns");
 
         private final String fieldPath;
 
@@ -152,6 +153,11 @@ public class UsageMonitoringService extends AbstractQorvaService<UsageMonitoring
                 .consumed(0)
                 .cumulative(cumulative(previous, FeatureKey.TALENT_INTELLIGENCE_QUERIES))
                 .build())
+            .agentRuns(UsageFeatureMetrics.builder()
+                .limit(limits != null ? limits.getAgentRuns() : null)
+                .consumed(0)
+                .cumulative(cumulative(previous, FeatureKey.AGENT_RUNS))
+                .build())
             .build();
     }
 
@@ -167,6 +173,7 @@ public class UsageMonitoringService extends AbstractQorvaService<UsageMonitoring
             case SCREENING_ACTIONS -> features.getScreeningActions();
             case AI_RESUME_CHATS -> features.getAiResumeChats();
             case TALENT_INTELLIGENCE_QUERIES -> features.getTalentIntelligenceQueries();
+            case AGENT_RUNS -> features.getAgentRuns();
         };
     }
 }

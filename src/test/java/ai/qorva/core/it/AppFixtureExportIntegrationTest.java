@@ -58,6 +58,8 @@ class AppFixtureExportIntegrationTest extends AbstractIntegrationTest {
 			get("/tenants/" + a.tenantId()), get("/ats/providers"), get("/ats/connections"),
 			get("/registrations/products"), get("/notes").param("targetType", "CV").param("targetId", a.cvId()),
 			get("/candidate-outreach/context").param("cvId", a.cvId()),
+			get("/agent/availability"), get("/agent/conversations"), get("/agent/runs").param("scope", "mine"),
+			get("/agent/conversations/" + a.agentConversationId()), get("/agent/runs/" + a.agentRunId()),
 			get("/library-insights/conversations/" + a.conversationId()),
 			get("/chats/" + a.chatId()), get("/chats/" + a.chatId() + "/messages").param("page", "0").param("size", "50")));
 		a.cvIds().forEach(id -> requests.add(get("/cvs/" + id)));

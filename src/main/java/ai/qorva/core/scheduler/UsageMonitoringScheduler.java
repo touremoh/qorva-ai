@@ -159,6 +159,7 @@ public class UsageMonitoringScheduler {
             .screeningActions(base.getScreeningActions() != null ? base.getScreeningActions() * multiplier : null)
             .aiResumeChats(base.getAiResumeChats() != null ? base.getAiResumeChats() * multiplier : null)
             .talentIntelligenceQueries(base.getTalentIntelligenceQueries() != null ? base.getTalentIntelligenceQueries() * multiplier : null)
+            .agentRuns(base.getAgentRuns() != null ? base.getAgentRuns() * multiplier : null)
             // Static caps, not monthly consumption — never multiplied by billing cycle.
             .emailTemplates(base.getEmailTemplates())
             .bulkUploadFiles(base.getBulkUploadFiles())

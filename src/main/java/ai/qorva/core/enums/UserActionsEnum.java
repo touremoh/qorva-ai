@@ -51,7 +51,10 @@ public enum UserActionsEnum {
 	VIEW_LIBRARY_INSIGHTS("VIEW_LIBRARY_INSIGHTS"),
 
 	// Candidate outreach (email a candidate from the CV list / matching report)
-	CONTACT_CANDIDATE("CONTACT_CANDIDATE");
+	CONTACT_CANDIDATE("CONTACT_CANDIDATE"),
+
+	// Copilot (AI agent that works on goals and acts on the user's behalf)
+	USE_AGENT("USE_AGENT");
 
 	UserActionsEnum(String value) {
 		this.value = value;

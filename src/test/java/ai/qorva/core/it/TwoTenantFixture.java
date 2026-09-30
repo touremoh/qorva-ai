@@ -5,6 +5,7 @@ import ai.qorva.core.config.QorvaProductProperties;
 import ai.qorva.core.dao.entity.CandidateEmailTemplate;
 import ai.qorva.core.dao.entity.Chat;
 import ai.qorva.core.dao.entity.ChatMessage;
+import ai.qorva.core.dao.entity.AgentRun;
 import ai.qorva.core.dao.entity.InsightConversationTurn;
 import ai.qorva.core.dao.entity.Note;
 import ai.qorva.core.dao.entity.Tenant;
@@ -102,7 +103,8 @@ public class TwoTenantFixture {
 		String ownerId, String ownerEmail,
 		String viewerId, String viewerEmail,
 		List<String> cvIds, List<String> jobIds, List<String> reportIds,
-		String noteId, String templateId, String chatId, String conversationId
+		String noteId, String templateId, String chatId, String conversationId,
+		String agentRunId, String agentConversationId
 	) {
 		public String cvId() { return cvIds.getFirst(); }
 		public String jobId() { return jobIds.getFirst(); }
@@ -196,10 +198,11 @@ public class TwoTenantFixture {
 		var templateId = insertTemplate(tenantId, ownerEmail);
 		var chatId = insertChat(tenantId, ownerId, cvIds.getFirst(), jobs.getFirst().getId(), reportIds.getFirst());
 		var conversationId = insertConversation(tenantId, ownerEmail);
+		var agentRun = insertAgentRun(tenantId, ownerEmail, cvIds.getFirst());
 
 		return new SeededTenant(tenantId, name, ownerId, ownerEmail, viewerId, viewerEmail,
 			List.copyOf(cvIds), jobs.stream().map(JobPostDTO::getId).toList(), List.copyOf(reportIds),
-			noteId, templateId, chatId, conversationId);
+			noteId, templateId, chatId, conversationId, agentRun.getId(), agentRun.getConversationId());
 	}
 
 	private String insertTenant(String name) {
@@ -307,6 +310,34 @@ public class TwoTenantFixture {
 			List.of("Which of them are available now?"), null, Map.of()));
 		mongo.insert(turn);
 		return conversationId;
+	}
+
+	private AgentRun insertAgentRun(String tenantId, String userEmail, String cvId) {
+		var run = new AgentRun();
+		run.setTenantId(tenantId);
+		run.setUserEmail(userEmail);
+		run.setConversationId(new ObjectId().toHexString());
+		run.setTitle("Best Java candidates");
+		run.setOrigin(AgentRun.ORIGIN_CHAT);
+		run.setLanguage("en");
+		run.setGoal("Who are our best Java candidates?");
+		run.setStatus(AgentRun.STATUS_COMPLETED);
+		var step = new AgentRun.Step();
+		step.setSeq(1);
+		step.setKind(AgentRun.Step.KIND_TOOL_CALL);
+		step.setTool("search_cvs");
+		step.setState(AgentRun.Step.STATE_OK);
+		step.setSummaryKey("agent.step.search_cvs");
+		step.setSummaryParams(new java.util.LinkedHashMap<>(Map.of("count", "1")));
+		step.setLinks(new ArrayList<>(List.of(new AgentRun.Link("CV", cvId, "Candidate"))));
+		run.getSteps().add(step);
+		run.setFinalAnswer("One strong Java candidate.");
+		run.setStepCount(2);
+		run.setToolCallCount(1);
+		run.setMetered(true);
+		run.setCreatedAt(BASE_TIME);
+		run.setFinishedAt(BASE_TIME);
+		return mongo.insert(run);
 	}
 
 	private static MatchingReportDetails reportDetails(double score) {

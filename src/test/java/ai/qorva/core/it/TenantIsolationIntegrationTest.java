@@ -71,7 +71,8 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 			get("/dashboard/data"), get("/dashboard/top-candidates").param("pageNumber", "0").param("pageSize", "50"),
 			get("/chats").param("page", "0").param("size", "100"),
 			get("/library-insights/conversations"), get("/library-quality"), get("/library-quality/summary"),
-			get("/email-templates/candidate-update"), get("/users"), get("/usage-monitoring/current")
+			get("/email-templates/candidate-update"), get("/users"), get("/usage-monitoring/current"),
+			get("/agent/conversations"), get("/agent/runs").param("scope", "team"), get("/agent/availability")
 		).map(request -> DynamicTest.dynamicTest(request.buildRequest(null).getRequestURI(), () -> {
 			var response = mvc.perform(request.header("Authorization", attacker)).andReturn().getResponse();
 			assertThat(response.getStatus()).isBetween(200, 299);
@@ -142,7 +143,14 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 			refused("tenant.get", get("/tenants/" + a.tenantId())),
 			refused("outreach.context", get("/candidate-outreach/context").param("cvId", cv)),
 			refused("outreach.external", post("/candidate-outreach/external").contentType(json)
-				.content("{\"cvId\":\"" + cv + "\",\"via\":\"GMAIL\",\"to\":\"x@example.com\",\"subject\":\"s\",\"body\":\"b\"}"))
+				.content("{\"cvId\":\"" + cv + "\",\"via\":\"GMAIL\",\"to\":\"x@example.com\",\"subject\":\"s\",\"body\":\"b\"}")),
+			refused("agent.run.get", get("/agent/runs/" + a.agentRunId())),
+			refused("agent.run.cancel", post("/agent/runs/" + a.agentRunId() + "/cancel")),
+			answersEmpty("agent.conversation", get("/agent/conversations/" + a.agentConversationId())),
+			answersEmpty("agent.conversationDelete", delete("/agent/conversations/" + a.agentConversationId())),
+			// Mentions of another tenant's records are dropped, never resolved (the agent is off in tests: 503).
+			refused("agent.run.startMentioningForeignCv", post("/agent/runs").contentType(json)
+				.content("{\"goal\":\"Tell me about this candidate\",\"mentions\":[{\"type\":\"CV\",\"id\":\"" + cv + "\"}]}"), true)
 		);
 	}
 

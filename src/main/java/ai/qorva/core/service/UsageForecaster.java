@@ -24,7 +24,7 @@ public final class UsageForecaster {
 	private UsageForecaster() {
 	}
 
-	/** Keyed like {@code features} in the API: screeningActions, aiResumeChats, talentIntelligenceQueries. */
+	/** Keyed like {@code features} in the API: screeningActions, aiResumeChats, talentIntelligenceQueries, agentRuns. */
 	public static Map<String, UsageForecast> forecast(UsageMonitoringDTO usage, Instant now) {
 		var forecasts = new LinkedHashMap<String, UsageForecast>();
 		var features = usage.getFeatures();
@@ -34,6 +34,7 @@ public final class UsageForecaster {
 		put(forecasts, "screeningActions", features.getScreeningActions(), usage, now);
 		put(forecasts, "aiResumeChats", features.getAiResumeChats(), usage, now);
 		put(forecasts, "talentIntelligenceQueries", features.getTalentIntelligenceQueries(), usage, now);
+		put(forecasts, "agentRuns", features.getAgentRuns(), usage, now);
 		return forecasts;
 	}
 

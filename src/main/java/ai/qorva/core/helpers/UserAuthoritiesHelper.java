@@ -66,6 +66,9 @@ public class UserAuthoritiesHelper {
 		// Candidate outreach
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.CONTACT_CANDIDATE.getValue(), ALLOWED.getValue()));
 
+		// Copilot
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.USE_AGENT.getValue(), ALLOWED.getValue()));
+
 		return authorities;
 	}
 

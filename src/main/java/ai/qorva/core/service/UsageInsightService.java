@@ -40,7 +40,7 @@ import java.util.stream.Collectors;
 public class UsageInsightService {
 
 	static final int MAX_RECOMMENDATIONS = 4;
-	static final Set<String> METERS = Set.of("screeningActions", "aiResumeChats", "talentIntelligenceQueries");
+	static final Set<String> METERS = Set.of("screeningActions", "aiResumeChats", "talentIntelligenceQueries", "agentRuns");
 
 	private final UsageMonitoringService usageMonitoringService;
 	private final TenantService tenantService;
@@ -125,6 +125,7 @@ public class UsageInsightService {
 		meter(meters, "screeningActions", features.getScreeningActions(), forecast);
 		meter(meters, "aiResumeChats", features.getAiResumeChats(), forecast);
 		meter(meters, "talentIntelligenceQueries", features.getTalentIntelligenceQueries(), forecast);
+		meter(meters, "agentRuns", features.getAgentRuns(), forecast);
 		return new UsageInsight.Input(
 			usage.getSubscriptionTier(),
 			billingCycle,
@@ -171,6 +172,7 @@ public class UsageInsightService {
 		meters.put("screeningActions", features.getScreeningActions());
 		meters.put("aiResumeChats", features.getAiResumeChats());
 		meters.put("talentIntelligenceQueries", features.getTalentIntelligenceQueries());
+		meters.put("agentRuns", features.getAgentRuns());
 		var perMeter = meters.entrySet().stream()
 			.filter(e -> e.getValue() != null)
 			.map(e -> {

@@ -79,6 +79,17 @@ qorva:
       summary-model: ${QORVA_RESUME_CHAT_SUMMARY_MODEL:gpt-4.1-mini}
       summary-max-tokens: ${QORVA_RESUME_CHAT_SUMMARY_MAX_TOKENS:1200}
       context-token-warn: ${QORVA_RESUME_CHAT_CONTEXT_TOKEN_WARN:12000}
+    # Copilot (AI agent). Off until QORVA_AGENT_ENABLED=true; every run is bounded by the budgets below.
+    agent:
+      enabled: ${QORVA_AGENT_ENABLED:false}
+      model: ${QORVA_AGENT_MODEL:gpt-5.6-terra}
+      max-steps: ${QORVA_AGENT_MAX_STEPS:20}
+      max-tool-calls: ${QORVA_AGENT_MAX_TOOL_CALLS:40}
+      max-tokens: ${QORVA_AGENT_MAX_TOKENS:200000}
+      max-running-seconds: ${QORVA_AGENT_MAX_RUNNING_SECONDS:600}
+      tool-result-max-chars: ${QORVA_AGENT_TOOL_RESULT_MAX_CHARS:6000}
+      worker-concurrency: ${QORVA_AGENT_WORKER_CONCURRENCY:4}
+      poll-delay-ms: ${QORVA_AGENT_POLL_DELAY_MS:5000}
     insights:
       follow-up:
         # Only the previous turn is replayed as context, and only for this long — past it the
@@ -94,6 +105,7 @@ qorva:
           screening-actions: 2000
           ai-resume-chats: 500
           talent-intelligence-queries: 1000
+          agent-runs: 100
           email-templates: 3
           bulk-upload-files: 100
           ats-connections: 1
@@ -110,6 +122,7 @@ qorva:
           screening-actions: 10000
           ai-resume-chats: 1500
           talent-intelligence-queries: 3000
+          agent-runs: 500
           email-templates: 15
           bulk-upload-files: 300
           ats-connections: 3
@@ -126,6 +139,7 @@ qorva:
           screening-actions: 25000
           ai-resume-chats: 4000
           talent-intelligence-queries: 8000
+          agent-runs: 2000
           email-templates: 50
           bulk-upload-files: 1000
           ats-connections: 7

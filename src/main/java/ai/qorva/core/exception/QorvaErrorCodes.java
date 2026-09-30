@@ -85,6 +85,7 @@ public final class QorvaErrorCodes {
     // usage
     public static final String USAGE_SCREENING_LIMIT_EXCEEDED = "error.usage.screening_limit_exceeded";
     public static final String USAGE_INSIGHT_UNAVAILABLE = "error.usage.insight_unavailable";
+    public static final String USAGE_AGENT_LIMIT_EXCEEDED = "error.usage.agent_limit_exceeded";
 
     // library clear
     public static final String CV_CLEAR_BLOCKED_BY_ACTIVE_JOB = "error.cv.clear_blocked_by_active_job";
@@ -163,4 +164,15 @@ public final class QorvaErrorCodes {
     public static final String CANDIDATE_UPDATE_INVALID_SUBMISSION      = "error.candidate_update.invalid_submission";
     public static final String CANDIDATE_UPDATE_UNSUPPORTED_FILE        = "error.candidate_update.unsupported_file";
     public static final String CANDIDATE_UPDATE_LINK_INVALID            = "error.candidate_update.link_invalid";
+
+    // Copilot (AI agent)
+    public static final String AGENT_DISABLED                           = "error.agent.disabled";
+    public static final String AGENT_RUN_ACTIVE                         = "error.agent.run_active";
+    public static final String AGENT_RUN_NOT_FOUND                      = "error.agent.run_not_found";
+    public static final String AGENT_GOAL_INVALID                       = "error.agent.goal_invalid";
+    public static final String AGENT_CONVERSATION_ACTIVE                = "error.agent.conversation_active";
+    public static final String AGENT_TEAM_SCOPE_FORBIDDEN               = "error.agent.team_scope_forbidden";
+    public static final String AGENT_USER_UNAVAILABLE                   = "error.agent.user_unavailable";
+    public static final String AGENT_MODEL_FAILED                       = "error.agent.model_failed";
+    public static final String AGENT_TOO_MANY_ERRORS                    = "error.agent.too_many_errors";
 }
