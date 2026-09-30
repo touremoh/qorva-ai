@@ -30,6 +30,7 @@ public class CandidateOutreachDTO {
 	private String error;
 	private String senderName;
 	private String senderEmail;
+	private String agentRunId;
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
 	private Instant createdAt;

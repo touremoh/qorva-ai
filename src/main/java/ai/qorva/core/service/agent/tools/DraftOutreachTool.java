@@ -92,7 +92,9 @@ public class DraftOutreachTool implements AgentTool {
 		data.put("body", draft.body());
 		data.put("sent", false);
 		var name = CvProjections.name(cv);
-		return AgentToolResult.ok(data, "agent.step.draft_outreach", Map.of("name", name != null ? name : ""),
-			List.of(new AgentRun.Link("CV", cv.getId(), name)));
+		// The draft travels with the step so the recruiter can open it, prefilled, in the email composer.
+		return AgentToolResult.okWithDraft(data, "agent.step.draft_outreach", Map.of("name", name != null ? name : ""),
+			List.of(new AgentRun.Link("CV", cv.getId(), name)),
+			new AgentRun.Draft(cv.getId(), request.getJobPostId(), draft.subject(), draft.body()));
 	}
 }

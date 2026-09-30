@@ -214,6 +214,7 @@ class AgentRunnerTest {
 			.allSatisfy(s -> assertThat(s.getState()).isEqualTo(AgentRun.Step.STATE_ERROR));
 	}
 
+	/** An approval tool without a preview can never become a card, and so never runs. */
 	@Test
 	void anApprovalToolNeverRunsUnattended() {
 		var executed = new AtomicInteger();

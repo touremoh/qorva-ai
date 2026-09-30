@@ -91,6 +91,18 @@ public class AgentController {
 		return ResponseEntity.ok(agentRunService.cancel(currentTenantId(), currentUsername(), canViewTeam(), id));
 	}
 
+	@PostMapping("/runs/{id}/actions/{actionId}/approve")
+	public ResponseEntity<AgentData.RunView> approve(@PathVariable String id, @PathVariable String actionId,
+	                                                 @RequestBody AgentData.DecisionRequest request) throws QorvaException {
+		return ResponseEntity.ok(agentRunService.approve(currentTenantId(), currentUsername(), id, actionId, request));
+	}
+
+	@PostMapping("/runs/{id}/actions/{actionId}/reject")
+	public ResponseEntity<AgentData.RunView> reject(@PathVariable String id, @PathVariable String actionId,
+	                                                @RequestBody AgentData.DecisionRequest request) throws QorvaException {
+		return ResponseEntity.ok(agentRunService.reject(currentTenantId(), currentUsername(), id, actionId, request));
+	}
+
 	@GetMapping("/conversations")
 	public ResponseEntity<List<AgentData.ConversationSummary>> conversations() {
 		return ResponseEntity.ok(agentRunService.conversations(currentTenantId(), currentUsername()));

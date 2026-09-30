@@ -146,6 +146,10 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 				.content("{\"cvId\":\"" + cv + "\",\"via\":\"GMAIL\",\"to\":\"x@example.com\",\"subject\":\"s\",\"body\":\"b\"}")),
 			refused("agent.run.get", get("/agent/runs/" + a.agentRunId())),
 			refused("agent.run.cancel", post("/agent/runs/" + a.agentRunId() + "/cancel")),
+			refused("agent.action.approve", post("/agent/runs/" + a.agentRunId() + "/actions/any/approve").contentType(json)
+				.content("{\"argsHash\":\"any\"}")),
+			refused("agent.action.reject", post("/agent/runs/" + a.agentRunId() + "/actions/any/reject").contentType(json)
+				.content("{\"argsHash\":\"any\"}")),
 			answersEmpty("agent.conversation", get("/agent/conversations/" + a.agentConversationId())),
 			answersEmpty("agent.conversationDelete", delete("/agent/conversations/" + a.agentConversationId())),
 			// Mentions of another tenant's records are dropped, never resolved (the agent is off in tests: 503).

@@ -1,5 +1,6 @@
 {
   "body" : {
+    "agentRunId" : null,
     "body" : "Hi there",
     "channel" : "EMAIL",
     "createdAt" : "<ts>",

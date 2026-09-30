@@ -3,6 +3,7 @@
     "candidateName" : "Oliver Whitfield",
     "email" : "oliver.whitfield@example.com",
     "history" : [ {
+      "agentRunId" : null,
       "body" : "Hi there",
       "channel" : "EMAIL",
       "createdAt" : "<ts>",

@@ -92,6 +92,8 @@ qorva:
       tool-result-max-chars: ${QORVA_AGENT_TOOL_RESULT_MAX_CHARS:6000}
       worker-concurrency: ${QORVA_AGENT_WORKER_CONCURRENCY:4}
       poll-delay-ms: ${QORVA_AGENT_POLL_DELAY_MS:5000}
+      max-outbound-per-run: ${QORVA_AGENT_MAX_OUTBOUND_PER_RUN:10}
+      approval-ttl-hours: ${QORVA_AGENT_APPROVAL_TTL_HOURS:24}
     insights:
       follow-up:
         # Only the previous turn is replayed as context, and only for this long — past it the

@@ -1,6 +1,7 @@
 package ai.qorva.core.service.agent;
 
 import ai.qorva.core.dao.entity.AgentRun;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.scheduler.WorkerInstance;
 import org.bson.types.ObjectId;
 import org.springframework.data.domain.Sort;
@@ -60,6 +61,63 @@ public class AgentRunStore {
 		return mongoTemplate.updateFirst(owned(run), update, AgentRun.class).getMatchedCount() == 1;
 	}
 
+	/**
+	 * The run waits for the user: progress and pending actions saved, lease released so no worker holds it while
+	 * nobody is deciding. Only {@link #decide} brings it back to QUEUED.
+	 */
+	public boolean pause(AgentRun run) {
+		var now = Instant.now();
+		var update = progress(run)
+			.unset("leaseOwner")
+			.unset("leaseExpiresAt")
+			.set("lastUpdatedAt", now);
+		return mongoTemplate.updateFirst(owned(run), update, AgentRun.class).getMatchedCount() == 1;
+	}
+
+	public enum Decision { APPROVED, REJECTED }
+
+	/**
+	 * Records the user's decision on one pending action, only if the run is still waiting, the action is still
+	 * pending and its arguments are the ones the user saw. When no action is left pending the run is re-queued.
+	 * Returns false when the action is stale (already decided, changed, expired or cancelled).
+	 */
+	public boolean decide(String tenantId, String runId, String actionId, String argsHash, Decision decision,
+	                      String editedSubject, String editedBody, String reason) {
+		var now = Instant.now();
+		var action = Criteria.where("actionId").is(actionId).and("argsHash").is(argsHash).and("status").is(AgentRun.PendingAction.PENDING);
+		var query = Query.query(Criteria.where("_id").is(new ObjectId(runId)).and("tenantId").is(new ObjectId(tenantId))
+			.and("status").is(AgentRun.STATUS_AWAITING_APPROVAL).and("pendingActions").elemMatch(action));
+		var update = new Update()
+			.set("pendingActions.$.status", decision.name())
+			.set("pendingActions.$.decidedAt", now)
+			.set("lastUpdatedAt", now);
+		if (decision == Decision.APPROVED) {
+			update.set("pendingActions.$.editedSubject", editedSubject).set("pendingActions.$.editedBody", editedBody);
+		} else {
+			update.set("pendingActions.$.reason", reason);
+		}
+		if (mongoTemplate.updateFirst(query, update, AgentRun.class).getModifiedCount() != 1) {
+			return false;
+		}
+		// Idempotent: concurrent last decisions may both get here; the run is queued once either way.
+		mongoTemplate.updateFirst(Query.query(Criteria.where("_id").is(new ObjectId(runId)).and("tenantId").is(new ObjectId(tenantId))
+				.and("status").is(AgentRun.STATUS_AWAITING_APPROVAL)
+				.and("pendingActions").not().elemMatch(Criteria.where("status").is(AgentRun.PendingAction.PENDING))),
+			new Update().set("status", AgentRun.STATUS_QUEUED).set("lastUpdatedAt", now), AgentRun.class);
+		return true;
+	}
+
+	/** Runs whose approval cards went unanswered past their deadline end as EXPIRED. Cross-tenant sweep. */
+	public long expireApprovals() {
+		var now = Instant.now();
+		var result = mongoTemplate.updateMulti(
+			Query.query(Criteria.where("status").is(AgentRun.STATUS_AWAITING_APPROVAL).and("approvalExpiresAt").lt(now)),
+			new Update().set("status", AgentRun.STATUS_EXPIRED).set("failureReason", QorvaErrorCodes.AGENT_APPROVAL_EXPIRED)
+				.set("finishedAt", now).set("lastUpdatedAt", now),
+			AgentRun.class);
+		return result.getModifiedCount();
+	}
+
 	/** Final write: terminal status, lease released. */
 	public boolean finish(AgentRun run) {
 		var now = Instant.now();
@@ -80,13 +138,14 @@ public class AgentRunStore {
 	}
 
 	/**
-	 * A queued run is cancelled at once; a running one is flagged and stops at its next step.
+	 * A queued run, or one waiting for approval (no worker holds it), is cancelled at once; a running one is
+	 * flagged and stops at its next step.
 	 * Returns false when the run is not active (already finished).
 	 */
 	public boolean requestCancel(String tenantId, String runId) {
 		var now = Instant.now();
 		var byId = Criteria.where("_id").is(new ObjectId(runId)).and("tenantId").is(new ObjectId(tenantId));
-		var queued = mongoTemplate.updateFirst(Query.query(new Criteria().andOperator(byId, Criteria.where("status").is(AgentRun.STATUS_QUEUED))),
+		var queued = mongoTemplate.updateFirst(Query.query(new Criteria().andOperator(byId, Criteria.where("status").in(AgentRun.STATUS_QUEUED, AgentRun.STATUS_AWAITING_APPROVAL))),
 			new Update().set("status", AgentRun.STATUS_CANCELLED).set("cancelRequested", true)
 				.set("finishedAt", now).set("lastUpdatedAt", now), AgentRun.class);
 		if (queued.getModifiedCount() == 1) return true;
@@ -115,6 +174,10 @@ public class AgentRunStore {
 			.set("stepCount", run.getStepCount())
 			.set("toolCallCount", run.getToolCallCount())
 			.set("runningMillis", run.getRunningMillis())
-			.set("metered", run.isMetered());
+			.set("metered", run.isMetered())
+			.set("pendingActions", run.getPendingActions())
+			.set("pendingToolResults", run.getPendingToolResults())
+			.set("approvalExpiresAt", run.getApprovalExpiresAt())
+			.set("outboundCount", run.getOutboundCount());
 	}
 }

@@ -175,4 +175,7 @@ public final class QorvaErrorCodes {
     public static final String AGENT_USER_UNAVAILABLE                   = "error.agent.user_unavailable";
     public static final String AGENT_MODEL_FAILED                       = "error.agent.model_failed";
     public static final String AGENT_TOO_MANY_ERRORS                    = "error.agent.too_many_errors";
+    public static final String AGENT_ACTION_STALE                       = "error.agent.action_stale";
+    public static final String AGENT_ACTION_INVALID                     = "error.agent.action_invalid";
+    public static final String AGENT_APPROVAL_EXPIRED                   = "error.agent.approval_expired";
 }

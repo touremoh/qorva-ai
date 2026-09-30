@@ -50,7 +50,7 @@ public class AgentExecutionScope {
 			LanguageContextHolder.setLanguage(run.getLanguage());
 			try {
 				assertSubscriptionActive(run);
-				return work.call(new AgentToolContext(run.getTenantId(), run.getUserEmail(), run.getLanguage(), authentication));
+				return work.call(new AgentToolContext(run.getTenantId(), run.getUserEmail(), run.getLanguage(), authentication, run.getId()));
 			} finally {
 				SecurityContextHolder.clearContext();
 				LanguageContextHolder.clear();
