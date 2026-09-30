@@ -288,6 +288,9 @@ class AgentRunnerTest {
 
 		assertThat(run.getStatus()).isEqualTo(AgentRun.STATUS_FAILED);
 		assertThat(run.getFailureReason()).isEqualTo(QorvaErrorCodes.AGENT_MODEL_FAILED);
+		// A run the model never worked on is not billed.
+		assertThat(run.isMetered()).isFalse();
+		verify(usageMonitoringService, never()).incrementUsage(any(), any(), anyInt());
 	}
 
 	@Test

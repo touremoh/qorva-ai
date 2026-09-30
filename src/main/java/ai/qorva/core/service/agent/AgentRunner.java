@@ -97,7 +97,6 @@ public class AgentRunner {
 			}
 
 			var tools = registry.allowedFor(ctx);
-			meterOnce(run);
 			ChatResponse response;
 			try {
 				response = modelClient.call(AgentHistory.toMessages(systemPrompt(run), run.getHistory()), tools);
@@ -106,6 +105,8 @@ public class AgentRunner {
 				fail(run, QorvaErrorCodes.AGENT_MODEL_FAILED);
 				return;
 			}
+			// Only a run the model actually worked on counts against the plan.
+			meterOnce(run);
 			recordTokens(run, response);
 			run.setStepCount(run.getStepCount() + 1);
 			AssistantMessage assistant = response.getResult().getOutput();

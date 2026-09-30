@@ -225,4 +225,36 @@ class AgentApiIntegrationTest extends AbstractIntegrationTest {
 			.andReturn().getResponse().getStatus()).isEqualTo(204);
 		assertThat(mongo.count(Query.query(Criteria.where("conversationId").is(conversationId)), AgentRun.class)).isZero();
 	}
+
+	@Test
+	void writeToolsChangeOnlyTheCallersRecordsAsTheUser() throws Exception {
+		when(chatModel.call(any(Prompt.class))).thenAnswer(inv -> {
+			var messages = inv.<Prompt>getArgument(0).getInstructions();
+			if (messages.getLast().getMessageType() == MessageType.TOOL) {
+				return new ChatResponse(List.of(new Generation(new AssistantMessage("Tagged and noted."))));
+			}
+			return new ChatResponse(List.of(new Generation(new AssistantMessage("", Map.of(), List.of(
+				new AssistantMessage.ToolCall("call_1", "function", "add_cv_tags",
+					"{\"cvIds\":[\"%s\",\"%s\"],\"tags\":[\"agent-shortlist\"]}".formatted(a.cvId(), b.cvId())),
+				new AssistantMessage.ToolCall("call_2", "function", "add_note",
+					"{\"cvId\":\"%s\",\"text\":\"Shortlisted by Copilot.\"}".formatted(a.cvId())))))));
+		});
+
+		var run = awaitFinished(owner, start(owner, "{\"goal\":\"Tag the best candidate and note why\"}").path("id").asText());
+
+		assertThat(run.path("status").asText()).isEqualTo("COMPLETED");
+		assertThat(run.path("steps").findValuesAsText("summaryKey")).containsExactly("agent.step.add_cv_tags", "agent.step.add_note");
+		assertThat(run.path("steps").get(0).path("summaryParams").path("count").asText()).isEqualTo("1");
+
+		var mine = mongo.findById(new ObjectId(a.cvId()), Document.class, "cvs");
+		assertThat(mine.getList("tags", String.class)).contains("agent-shortlist");
+		assertThat(mine.getString("lastUpdatedBy")).isEqualTo(a.ownerEmail());
+		var theirs = mongo.findById(new ObjectId(b.cvId()), Document.class, "cvs");
+		assertThat(theirs.getList("tags", String.class, List.of())).doesNotContain("agent-shortlist");
+
+		var note = mongo.findOne(Query.query(Criteria.where("targetId").is(a.cvId()).and("text").is("Shortlisted by Copilot.")),
+			Document.class, "notes");
+		assertThat(note).isNotNull();
+		assertThat(note.getString("authorEmail")).isEqualTo(a.ownerEmail());
+	}
 }
