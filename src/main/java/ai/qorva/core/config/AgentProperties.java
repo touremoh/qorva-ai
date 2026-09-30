@@ -21,6 +21,12 @@ public class AgentProperties {
 	/** Model that plans and calls tools. Must support tool calling. */
 	private String model = "gpt-5.6-terra";
 
+	/**
+	 * Sent explicitly with every call. GPT-5.x models reject function tools on /v1/chat/completions unless it
+	 * is "none" (they apply their own default otherwise). Blank: the field is not sent.
+	 */
+	private String reasoningEffort = "none";
+
 	/** Model turns per run. */
 	private int maxSteps = 20;
 

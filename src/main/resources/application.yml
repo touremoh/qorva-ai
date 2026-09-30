@@ -83,6 +83,8 @@ qorva:
     agent:
       enabled: ${QORVA_AGENT_ENABLED:true}
       model: ${QORVA_AGENT_MODEL:gpt-5.6-terra}
+      # gpt-5.x refuses function tools on chat completions unless this is 'none'.
+      reasoning-effort: ${QORVA_AGENT_REASONING_EFFORT:none}
       max-steps: ${QORVA_AGENT_MAX_STEPS:20}
       max-tool-calls: ${QORVA_AGENT_MAX_TOOL_CALLS:40}
       max-tokens: ${QORVA_AGENT_MAX_TOKENS:200000}

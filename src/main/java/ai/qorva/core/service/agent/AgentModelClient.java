@@ -10,6 +10,7 @@ import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.tool.ToolCallback;
 import org.springframework.ai.tool.definition.ToolDefinition;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 
@@ -30,13 +31,20 @@ public class AgentModelClient {
 	}
 
 	public ChatResponse call(List<Message> messages, List<AgentTool> tools) {
-		var options = OpenAiChatOptions.builder()
+		return chatModel.call(new Prompt(messages, options(tools)));
+	}
+
+	OpenAiChatOptions options(List<AgentTool> tools) {
+		var builder = OpenAiChatOptions.builder()
 			.model(properties.getModel())
 			.temperature(StructuredOutput.temperatureFor(properties.getModel(), 0.2))
 			.toolCallbacks(tools.stream().map(AgentModelClient::declared).toList())
-			.internalToolExecutionEnabled(false)
-			.build();
-		return chatModel.call(new Prompt(messages, options));
+			.internalToolExecutionEnabled(false);
+		// Not sending it lets the model apply its own reasoning default, and OpenAI then refuses the tools (HTTP 400).
+		if (StringUtils.hasText(properties.getReasoningEffort())) {
+			builder.reasoningEffort(properties.getReasoningEffort().strip());
+		}
+		return builder.build();
 	}
 
 	/** Declares a tool to the model without giving Spring AI a way to run it. */
