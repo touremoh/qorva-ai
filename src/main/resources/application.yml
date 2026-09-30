@@ -81,7 +81,7 @@ qorva:
       context-token-warn: ${QORVA_RESUME_CHAT_CONTEXT_TOKEN_WARN:12000}
     # Copilot (AI agent). Off until QORVA_AGENT_ENABLED=true; every run is bounded by the budgets below.
     agent:
-      enabled: ${QORVA_AGENT_ENABLED:false}
+      enabled: ${QORVA_AGENT_ENABLED:true}
       model: ${QORVA_AGENT_MODEL:gpt-5.6-terra}
       max-steps: ${QORVA_AGENT_MAX_STEPS:20}
       max-tool-calls: ${QORVA_AGENT_MAX_TOOL_CALLS:40}
