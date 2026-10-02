@@ -94,6 +94,16 @@ qorva:
       poll-delay-ms: ${QORVA_AGENT_POLL_DELAY_MS:5000}
       max-outbound-per-run: ${QORVA_AGENT_MAX_OUTBOUND_PER_RUN:10}
       approval-ttl-hours: ${QORVA_AGENT_APPROVAL_TTL_HOURS:24}
+      # Standing rules (background Copilot tasks). Off until QORVA_AGENT_RULES_ENABLED=true, and only with the agent on.
+      rules:
+        enabled: ${QORVA_AGENT_RULES_ENABLED:false}
+        poll-delay-ms: ${QORVA_AGENT_RULES_POLL_DELAY_MS:60000}
+        max-per-tenant: ${QORVA_AGENT_RULES_MAX_PER_TENANT:20}
+        batch-size: ${QORVA_AGENT_RULES_BATCH_SIZE:25}
+        default-daily-run-cap: ${QORVA_AGENT_RULES_DEFAULT_DAILY_RUN_CAP:20}
+        max-daily-run-cap: ${QORVA_AGENT_RULES_MAX_DAILY_RUN_CAP:100}
+        approval-ttl-hours: ${QORVA_AGENT_RULES_APPROVAL_TTL_HOURS:72}
+        digest-every-minutes: ${QORVA_AGENT_RULES_DIGEST_EVERY_MINUTES:60}
     insights:
       follow-up:
         # Only the previous turn is replayed as context, and only for this long — past it the

@@ -40,6 +40,8 @@ public class AgentRun implements QorvaEntity {
 	public static final List<String> ACTIVE_STATUSES = List.of(STATUS_QUEUED, STATUS_RUNNING, STATUS_AWAITING_APPROVAL);
 
 	public static final String ORIGIN_CHAT = "CHAT";
+	/** Started by a standing rule (AgentRule), as the rule's owner. */
+	public static final String ORIGIN_RULE = "RULE";
 
 	@Id
 	private String id;
@@ -53,6 +55,11 @@ public class AgentRun implements QorvaEntity {
 	private String userEmail;
 	private String language;
 	private String origin;
+	/** RULE runs: the rule that started it, and its name at the time. */
+	private String ruleId;
+	private String ruleName;
+	/** The recruiter's time zone (from the browser), used when a chat proposes a scheduled rule. */
+	private String timeZone;
 
 	private String goal;
 	private List<Mention> mentions = new ArrayList<>();
@@ -74,6 +81,8 @@ public class AgentRun implements QorvaEntity {
 	private Instant approvalExpiresAt;
 	/** Messages sent to candidates in this run (capped by qorva.ai.agent.max-outbound-per-run). */
 	private int outboundCount;
+	/** RULE runs: when the owner was emailed about this pause; cleared on every new pause. */
+	private Instant notifiedAt;
 
 	private Tokens tokens = new Tokens();
 	private int stepCount;

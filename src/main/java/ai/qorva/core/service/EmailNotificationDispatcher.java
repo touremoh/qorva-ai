@@ -19,6 +19,7 @@ public class EmailNotificationDispatcher {
     private final TenantService tenantService;
     private final ObjectProvider<SubscriptionWelcomeNotificationService> subscriptionWelcomeNotifier;
     private final ObjectProvider<AccountCreationNotificationService> accountCreationNotifier;
+    private final ObjectProvider<AgentApprovalDigestNotificationService> agentDigestNotifier;
 
     @Autowired
     public EmailNotificationDispatcher(
@@ -26,13 +27,15 @@ public class EmailNotificationDispatcher {
         UserMapper userMapper,
         TenantService tenantService,
         ObjectProvider<SubscriptionWelcomeNotificationService> subscriptionWelcomeNotifier,
-        ObjectProvider<AccountCreationNotificationService> accountCreationNotifier
+        ObjectProvider<AccountCreationNotificationService> accountCreationNotifier,
+        ObjectProvider<AgentApprovalDigestNotificationService> agentDigestNotifier
     ) {
         this.userRepository = userRepository;
         this.userMapper = userMapper;
         this.tenantService = tenantService;
         this.subscriptionWelcomeNotifier = subscriptionWelcomeNotifier;
         this.accountCreationNotifier = accountCreationNotifier;
+        this.agentDigestNotifier = agentDigestNotifier;
     }
 
     public void dispatch(PendingEmailNotificationDTO notification) throws QorvaException {
@@ -64,6 +67,11 @@ public class EmailNotificationDispatcher {
                 var svc = accountCreationNotifier.getIfAvailable();
                 if (svc == null) throw new QorvaException("AccountCreationNotificationService unavailable");
                 svc.sendPasswordReset(userDTO, notification.getPayload(), lang);
+            }
+            case AGENT_APPROVAL_DIGEST -> {
+                var svc = agentDigestNotifier.getIfAvailable();
+                if (svc == null) throw new QorvaException("AgentApprovalDigestNotificationService unavailable");
+                svc.send(notification.getTenantId(), userDTO, lang);
             }
             default -> throw new QorvaException("No handler registered for notification type: " + type);
         }

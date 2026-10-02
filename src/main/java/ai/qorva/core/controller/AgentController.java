@@ -65,6 +65,7 @@ public class AgentController {
 		@RequestParam(defaultValue = "mine") String scope,
 		@RequestParam(required = false) String status,
 		@RequestParam(required = false) String origin,
+		@RequestParam(required = false) String ruleId,
 		@RequestParam(required = false) String userEmail,
 		@RequestParam(defaultValue = "0") int page,
 		@RequestParam(defaultValue = "20") int size) throws QorvaException {
@@ -73,7 +74,7 @@ public class AgentController {
 			throw QorvaErrors.forbidden(QorvaErrorCodes.AGENT_TEAM_SCOPE_FORBIDDEN);
 		}
 		return ResponseEntity.ok(agentRunService.list(currentTenantId(), currentUsername(), team, status, origin,
-			userEmail, page, size));
+			ruleId, userEmail, page, size));
 	}
 
 	@GetMapping("/runs/pending-approval/count")

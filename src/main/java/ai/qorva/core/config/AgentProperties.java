@@ -56,4 +56,26 @@ public class AgentProperties {
 
 	/** An approval card left unanswered this long ends the run as EXPIRED. */
 	private int approvalTtlHours = 24;
+
+	/** Standing rules: Copilot tasks started by a trigger instead of a chat message. */
+	private Rules rules = new Rules();
+
+	@Getter
+	@Setter
+	public static class Rules {
+		/** Second switch, under {@code enabled}: off → no rule fires, creating one answers 503; chat is unaffected. */
+		private boolean enabled = false;
+		/** How often due rules are checked for new records. */
+		private long pollDelayMs = 60_000;
+		/** Rules one company may have. */
+		private int maxPerTenant = 20;
+		/** Records handed to one rule run (a 300-CV import = 12 runs, not 300). */
+		private int batchSize = 25;
+		private int defaultDailyRunCap = 20;
+		private int maxDailyRunCap = 100;
+		/** Rule runs wait longer than chat runs: nobody is watching when they pause. */
+		private int approvalTtlHours = 72;
+		/** At most one "waiting for your approval" email per user in this window. */
+		private int digestEveryMinutes = 60;
+	}
 }

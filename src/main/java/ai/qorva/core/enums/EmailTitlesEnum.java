@@ -53,7 +53,15 @@ public enum EmailTitlesEnum {
 	IT_MFA_CODE("it", "mfa_code", "Il tuo codice di verifica Qorva AI"),
 	ES_MFA_CODE("es", "mfa_code", "Tu código de verificación de Qorva AI"),
 	PT_MFA_CODE("pt", "mfa_code", "O seu código de verificação Qorva AI"),
-	NL_MFA_CODE("nl", "mfa_code", "Uw Qorva AI-verificatiecode");
+	NL_MFA_CODE("nl", "mfa_code", "Uw Qorva AI-verificatiecode"),
+
+	EN_AGENT_APPROVAL_DIGEST("en", "agent_approval_digest", "Copilot is waiting for your approval"),
+	FR_AGENT_APPROVAL_DIGEST("fr", "agent_approval_digest", "Copilot attend votre validation"),
+	DE_AGENT_APPROVAL_DIGEST("de", "agent_approval_digest", "Copilot wartet auf Ihre Freigabe"),
+	IT_AGENT_APPROVAL_DIGEST("it", "agent_approval_digest", "Copilot attende la tua approvazione"),
+	ES_AGENT_APPROVAL_DIGEST("es", "agent_approval_digest", "Copilot espera tu aprobación"),
+	PT_AGENT_APPROVAL_DIGEST("pt", "agent_approval_digest", "O Copilot aguarda a sua aprovação"),
+	NL_AGENT_APPROVAL_DIGEST("nl", "agent_approval_digest", "Copilot wacht op uw goedkeuring");
 
 	EmailTitlesEnum(String languageCode, String emailType, String emailTitle) {
 		this.languageCode = languageCode;

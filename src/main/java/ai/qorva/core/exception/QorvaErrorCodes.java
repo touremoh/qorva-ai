@@ -178,4 +178,8 @@ public final class QorvaErrorCodes {
     public static final String AGENT_ACTION_STALE                       = "error.agent.action_stale";
     public static final String AGENT_ACTION_INVALID                     = "error.agent.action_invalid";
     public static final String AGENT_APPROVAL_EXPIRED                   = "error.agent.approval_expired";
+    public static final String AGENT_RULES_DISABLED                     = "error.agent.rules_disabled";
+    public static final String AGENT_RULE_NOT_FOUND                     = "error.agent.rule_not_found";
+    public static final String AGENT_RULE_INVALID                       = "error.agent.rule_invalid";
+    public static final String AGENT_RULE_LIMIT_REACHED                 = "error.agent.rule_limit_reached";
 }
