@@ -1,6 +1,7 @@
 package ai.qorva.core.service.agent;
 
 import ai.qorva.core.config.AgentProperties;
+import ai.qorva.core.dao.entity.AgentRule;
 import ai.qorva.core.dao.entity.AgentRun;
 import ai.qorva.core.dao.repository.AgentRunRepository;
 import ai.qorva.core.dto.AgentData;
@@ -20,6 +21,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -69,7 +71,8 @@ public class AgentRunService {
 			.filter(m -> m != null && m.getLimit() != null)
 			.map(m -> Math.max(0, m.getLimit() - (m.getConsumed() != null ? m.getConsumed() : 0)))
 			.orElse(null);
-		return new AgentData.Availability(properties.isEnabled(), false, remaining, teamView);
+		return new AgentData.Availability(properties.isEnabled(),
+			properties.isEnabled() && properties.getRules().isEnabled(), remaining, teamView);
 	}
 
 	public AgentData.RunView start(String tenantId, String userEmail, String language, AgentData.StartRunRequest request)
@@ -81,7 +84,9 @@ public class AgentRunService {
 		if (goal.isEmpty() || goal.length() > properties.getMaxGoalLength()) {
 			throw QorvaErrors.badRequest(QorvaErrorCodes.AGENT_GOAL_INVALID);
 		}
-		if (mongoTemplate.exists(Query.query(mine(tenantId, userEmail).and("status").in(AgentRun.ACTIVE_STATUSES)), AgentRun.class)) {
+		// One chat task at a time; runs started by the user's rules don't block their chat.
+		if (mongoTemplate.exists(Query.query(mine(tenantId, userEmail).and("origin").is(AgentRun.ORIGIN_CHAT)
+			.and("status").in(AgentRun.ACTIVE_STATUSES)), AgentRun.class)) {
 			throw QorvaErrors.conflict(QorvaErrorCodes.AGENT_RUN_ACTIVE);
 		}
 		if (!usageMonitoringService.hasCapacityFor(tenantId, UsageMonitoringService.FeatureKey.AGENT_RUNS, 1)) {
@@ -96,6 +101,7 @@ public class AgentRunService {
 		run.setUserEmail(userEmail);
 		run.setLanguage(language);
 		run.setOrigin(AgentRun.ORIGIN_CHAT);
+		run.setTimeZone(validZone(request.getTimeZone()));
 		run.setGoal(goal);
 		run.setMentions(mentions);
 		run.setStatus(AgentRun.STATUS_QUEUED);
@@ -112,6 +118,33 @@ public class AgentRunService {
 		log.info("agent-run {} queued (tenant={} conversation={})", saved.getId(), tenantId, saved.getConversationId());
 		worker.wakeUp();
 		return view(saved, true);
+	}
+
+	/**
+	 * Queues a run for a standing rule, as its owner. The scheduler has checked the owner, the plan and the rule's
+	 * caps, and recorded the records in the firing ledger under {@code runId}.
+	 */
+	public AgentRun startFromRule(AgentRule rule, String runId, String goal, String message, List<AgentRun.Mention> mentions) {
+		var run = new AgentRun();
+		run.setId(runId);
+		run.setTenantId(rule.getTenantId());
+		run.setUserEmail(rule.getOwnerEmail());
+		run.setLanguage(rule.getLanguage());
+		run.setOrigin(AgentRun.ORIGIN_RULE);
+		run.setRuleId(rule.getId());
+		run.setRuleName(rule.getName());
+		run.setGoal(goal);
+		run.setMentions(new ArrayList<>(mentions));
+		run.setStatus(AgentRun.STATUS_QUEUED);
+		run.setConversationId(UUID.randomUUID().toString());
+		run.setTitle(title(rule.getName()));
+		// A preset id makes Spring Data treat the run as existing, so the creation date is set here.
+		run.setCreatedAt(Instant.now());
+		run.setHistory(new ArrayList<>(List.of(AgentHistory.user(message))));
+		var saved = repository.save(run);
+		log.info("agent-run {} queued by rule {} (tenant={} mentions={})", saved.getId(), rule.getId(), rule.getTenantId(), mentions.size());
+		worker.wakeUp();
+		return saved;
 	}
 
 	public AgentData.RunView get(String tenantId, String userEmail, boolean teamView, String runId) throws QorvaException {
@@ -166,11 +199,12 @@ public class AgentRunService {
 	}
 
 	public AgentData.RunPage list(String tenantId, String userEmail, boolean team, String status, String origin,
-	                              String user, int page, int size) {
+	                              String ruleId, String user, int page, int size) {
 		var criteria = team ? tenant(tenantId) : mine(tenantId, userEmail);
 		if (team && user != null && !user.isBlank()) criteria = criteria.and("userEmail").is(user);
 		if (status != null && !status.isBlank()) criteria = criteria.and("status").is(status);
 		if (origin != null && !origin.isBlank()) criteria = criteria.and("origin").is(origin);
+		if (ruleId != null && !ruleId.isBlank()) criteria = criteria.and("ruleId").is(ruleId);
 		int safeSize = Math.max(1, Math.min(50, size));
 		int safePage = Math.max(0, page);
 		var query = Query.query(criteria);
@@ -281,6 +315,15 @@ public class AgentRunService {
 			.orElse(run.getGoal());
 	}
 
+	private static String validZone(String zoneId) {
+		if (zoneId == null || zoneId.isBlank() || zoneId.length() > 64) return null;
+		try {
+			return java.time.ZoneId.of(zoneId.strip()).getId();
+		} catch (java.time.DateTimeException e) {
+			return null;
+		}
+	}
+
 	static String title(String goal) {
 		var oneLine = goal.replaceAll("\\s+", " ").strip();
 		return oneLine.length() <= TITLE_LENGTH ? oneLine : oneLine.substring(0, TITLE_LENGTH - 1) + "…";
@@ -304,8 +347,8 @@ public class AgentRunService {
 
 	static AgentData.RunView view(AgentRun run, boolean mayCancel, boolean mayApprove) {
 		return new AgentData.RunView(
-			run.getId(), run.getConversationId(), run.getTitle(), run.getOrigin(), run.getUserEmail(), run.getStatus(),
-			run.getGoal(),
+			run.getId(), run.getConversationId(), run.getTitle(), run.getOrigin(), run.getRuleId(), run.getRuleName(),
+			run.getUserEmail(), run.getStatus(), run.getGoal(),
 			run.getMentions().stream().map(m -> new AgentData.MentionView(m.getType(), m.getId(), m.getName())).toList(),
 			run.getSteps().stream().map(s -> new AgentData.StepView(s.getSeq(), s.getKind(), s.getTool(), s.getState(),
 				s.getSummaryKey(), s.getSummaryParams(),
@@ -324,7 +367,7 @@ public class AgentRunService {
 
 	private static AgentData.RunSummary summary(AgentRun run, boolean mayCancel) {
 		return new AgentData.RunSummary(run.getId(), run.getConversationId(), run.getTitle(), run.getOrigin(),
-			run.getUserEmail(), run.getStatus(), run.getGoal(), run.getStepCount(), run.getFailureReason(),
+			run.getRuleId(), run.getRuleName(), run.getUserEmail(), run.getStatus(), run.getGoal(), run.getStepCount(), run.getFailureReason(),
 			mayCancel && active(run) && !run.isCancelRequested(), run.getCreatedAt(), run.getFinishedAt());
 	}
 }

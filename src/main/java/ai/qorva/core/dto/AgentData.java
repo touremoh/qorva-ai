@@ -25,6 +25,8 @@ public final class AgentData {
 		private List<MentionView> mentions = new ArrayList<>();
 		/** Continue this conversation; absent or unknown starts a new one. */
 		private String conversationId;
+		/** IANA zone of the browser (e.g. Europe/Paris), used when the chat proposes a scheduled rule. */
+		private String timeZone;
 	}
 
 	/** CV or JOB. */
@@ -59,6 +61,8 @@ public final class AgentData {
 		String conversationId,
 		String title,
 		String origin,
+		String ruleId,
+		String ruleName,
 		String userEmail,
 		String status,
 		String goal,
@@ -80,6 +84,8 @@ public final class AgentData {
 		String conversationId,
 		String title,
 		String origin,
+		String ruleId,
+		String ruleName,
 		String userEmail,
 		String status,
 		String goal,
@@ -98,4 +104,56 @@ public final class AgentData {
 		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC") Instant lastActivityAt) {}
 
 	public record Count(long count) {}
+
+	/** What a rule watches. Fields not used by {@code type} are ignored. */
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	public static class TriggerRequest {
+		private String type;
+		private String source;
+		private String jobPostId;
+		private Integer minScore;
+		private Boolean recommendedOnly;
+		private String frequency;
+		private Integer hour;
+		private Integer weekday;
+		private String zoneId;
+		private String connectionId;
+	}
+
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	public static class RuleRequest {
+		private String name;
+		private TriggerRequest trigger;
+		private String goalTemplate;
+		/** Null: the default cap. */
+		private Integer dailyRunCap;
+	}
+
+	public record TriggerView(String type, String source, String jobPostId, String jobTitle, Integer minScore,
+	                          Boolean recommendedOnly, String frequency, Integer hour, Integer weekday, String zoneId,
+	                          String connectionId, String connectionName) {}
+
+	public record RuleView(
+		String id,
+		String name,
+		String ownerEmail,
+		TriggerView trigger,
+		String goalTemplate,
+		int dailyRunCap,
+		String status,
+		String pausedReason,
+		int runsToday,
+		int skippedToday,
+		String lastRunId,
+		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC") Instant lastFiredAt,
+		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC") Instant nextRunAt,
+		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC") Instant createdAt,
+		/** Owner only: edit and delete. */
+		boolean canEdit,
+		/** Owner, or a user who manages users: pause and resume. */
+		boolean canPause) {}
 }

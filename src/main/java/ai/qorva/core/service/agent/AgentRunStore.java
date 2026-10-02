@@ -70,6 +70,8 @@ public class AgentRunStore {
 		var update = progress(run)
 			.unset("leaseOwner")
 			.unset("leaseExpiresAt")
+			// A new pause of a rule run is news for its owner's digest email.
+			.unset("notifiedAt")
 			.set("lastUpdatedAt", now);
 		return mongoTemplate.updateFirst(owned(run), update, AgentRun.class).getMatchedCount() == 1;
 	}

@@ -13,6 +13,8 @@
     "mentions" : [ ],
     "origin" : "CHAT",
     "pendingActions" : [ ],
+    "ruleId" : null,
+    "ruleName" : null,
     "status" : "COMPLETED",
     "steps" : [ {
       "draft" : null,

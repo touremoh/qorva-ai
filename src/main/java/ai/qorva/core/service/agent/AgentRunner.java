@@ -171,7 +171,7 @@ public class AgentRunner {
 				run.setPendingActions(pending);
 				run.setPendingToolResults(results);
 				run.setStatus(AgentRun.STATUS_AWAITING_APPROVAL);
-				run.setApprovalExpiresAt(Instant.now().plus(Duration.ofHours(properties.getApprovalTtlHours())));
+				run.setApprovalExpiresAt(Instant.now().plus(Duration.ofHours(approvalTtlHours(run))));
 				if (store.pause(run)) {
 					log.info("agent-run {} awaiting approval actions={}", run.getId(), pending.size());
 				} else {
@@ -455,11 +455,34 @@ public class AgentRunner {
 			run.getStepCount(), run.getToolCallCount(), run.getTokens().getPrompt(), run.getTokens().getCompletion());
 	}
 
+	/** Rule runs wait longer: nobody is watching when they pause. */
+	private int approvalTtlHours(AgentRun run) {
+		return AgentRun.ORIGIN_RULE.equals(run.getOrigin())
+			? properties.getRules().getApprovalTtlHours() : properties.getApprovalTtlHours();
+	}
+
 	String systemPrompt(AgentRun run) {
-		return systemPromptTemplate
+		var prompt = systemPromptTemplate
 			.replace("{{today}}", LocalDate.now(ZoneOffset.UTC).toString())
 			.replace("{{language}}", languageName(run.getLanguage()));
+		if (AgentRun.ORIGIN_RULE.equals(run.getOrigin())) {
+			prompt += RULE_BLOCK.replace("{{rule}}", run.getRuleName() != null ? run.getRuleName() : "")
+				.replace("{{ttl}}", String.valueOf(approvalTtlHours(run)));
+		}
+		return prompt;
 	}
+
+	private static final String RULE_BLOCK = """
+
+		## Started by a standing rule
+
+		This task was started automatically by the recruiter's standing rule "{{rule}}", not typed in the chat.
+		The recruiter is not watching while you work:
+		- Act only on the records listed in the message; do not look for other work.
+		- Do not ask questions: if something is unclear, do the safe part and say what you left out.
+		- Approval actions wait for the recruiter for up to {{ttl}} hours; propose each one once.
+		- Finish with a short summary of what you did and what is waiting for approval.
+		""";
 
 	private static final Map<String, String> LANGUAGES = Map.of(
 		"en", "English", "fr", "French", "de", "German", "es", "Spanish", "it", "Italian", "nl", "Dutch", "pt", "Portuguese");

@@ -140,6 +140,22 @@ class AgentRunnerApprovalTest {
 	}
 
 	@Test
+	void aRuleRunWaitsLongerForApprovalAndIsToldNobodyIsWatching() {
+		when(modelClient.call(anyList(), anyList())).thenReturn(calls(call("c1", "send_outreach_email")));
+		var chat = run();
+		runner.run(chat);
+		var rule = run();
+		rule.setOrigin(AgentRun.ORIGIN_RULE);
+		rule.setRuleName("Invite strong matches");
+		runner.run(rule);
+
+		assertThat(java.time.Duration.between(chat.getApprovalExpiresAt(), rule.getApprovalExpiresAt()).toHours())
+			.isEqualTo(properties.getRules().getApprovalTtlHours() - properties.getApprovalTtlHours());
+		assertThat(runner.systemPrompt(rule)).contains("standing rule \"Invite strong matches\"").contains("72 hours");
+		assertThat(runner.systemPrompt(chat)).doesNotContain("standing rule");
+	}
+
+	@Test
 	void aMixedTurnRunsTheReadAndPausesOnTheSend() {
 		when(modelClient.call(anyList(), anyList())).thenReturn(calls(call("c1", "get_cv"), call("c2", "send_outreach_email")));
 		var run = run();
