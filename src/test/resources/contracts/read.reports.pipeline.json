@@ -1,0 +1,85 @@
+{
+  "body" : {
+    "columns" : [ {
+      "count" : 3,
+      "items" : [ {
+        "candidateId" : "<id:3>",
+        "candidateName" : "Oliver Whitfield",
+        "createdAt" : "<ts>",
+        "id" : "<id:1>",
+        "jobPostId" : "<id:2>",
+        "jobPostTitle" : "Senior Backend Engineer (Java/Spring)",
+        "lastMove" : null,
+        "outdated" : false,
+        "recommendation" : "interview",
+        "score" : 82.0,
+        "status" : "NEW",
+        "statusChangedAt" : null
+      }, {
+        "candidateId" : "<id:5>",
+        "candidateName" : "Hannah Fletcher",
+        "createdAt" : "<ts>",
+        "id" : "<id:4>",
+        "jobPostId" : "<id:2>",
+        "jobPostTitle" : "Senior Backend Engineer (Java/Spring)",
+        "lastMove" : null,
+        "outdated" : false,
+        "recommendation" : "may_be",
+        "score" : 64.0,
+        "status" : "NEW",
+        "statusChangedAt" : null
+      }, {
+        "candidateId" : "<id:7>",
+        "candidateName" : "Cian O'Sullivan",
+        "createdAt" : "<ts>",
+        "id" : "<id:6>",
+        "jobPostId" : "<id:2>",
+        "jobPostTitle" : "Senior Backend Engineer (Java/Spring)",
+        "lastMove" : null,
+        "outdated" : false,
+        "recommendation" : "reject",
+        "score" : 41.0,
+        "status" : "NEW",
+        "statusChangedAt" : null
+      } ],
+      "nextCursor" : null,
+      "status" : "NEW"
+    }, {
+      "count" : 0,
+      "items" : [ ],
+      "nextCursor" : null,
+      "status" : "CONTACTED"
+    }, {
+      "count" : 0,
+      "items" : [ ],
+      "nextCursor" : null,
+      "status" : "SHORTLISTED"
+    }, {
+      "count" : 0,
+      "items" : [ ],
+      "nextCursor" : null,
+      "status" : "INTERVIEWING"
+    }, {
+      "count" : 0,
+      "items" : [ ],
+      "nextCursor" : null,
+      "status" : "OFFERED"
+    }, {
+      "count" : 0,
+      "items" : [ ],
+      "nextCursor" : null,
+      "status" : "HIRED"
+    }, {
+      "count" : 0,
+      "items" : [ ],
+      "nextCursor" : null,
+      "status" : "REJECTED"
+    }, {
+      "count" : 0,
+      "items" : [ ],
+      "nextCursor" : null,
+      "status" : "WITHDRAWN"
+    } ]
+  },
+  "status" : 200
+}

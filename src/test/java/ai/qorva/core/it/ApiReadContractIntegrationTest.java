@@ -85,6 +85,9 @@ class ApiReadContractIntegrationTest extends AbstractIntegrationTest {
 			new Route("jobs.list", get("/jobs").param("pageNumber", "0").param("pageSize", "25")),
 			new Route("jobs.one", get("/jobs/" + a.jobId())),
 			new Route("reports.list", get("/matching-reports").param("pageNumber", "0").param("pageSize", "10")),
+			new Route("reports.pipeline", get("/matching-reports/pipeline")),
+			// A page that reaches the end: a cursor encodes ids, which differ on every run.
+			new Route("reports.pipeline.column", get("/matching-reports/pipeline/NEW").param("size", "5")),
 			new Route("reports.list.byJob", get("/matching-reports").param("pageNumber", "0").param("pageSize", "10")
 				.param("jobPostId", a.jobId())),
 			new Route("reports.search", get("/matching-reports/search").param("pageNumber", "0").param("pageSize", "10")

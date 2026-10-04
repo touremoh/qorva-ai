@@ -3,11 +3,13 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.MatchingReportDTO;
 import ai.qorva.core.dto.MatchingRunData;
+import ai.qorva.core.dto.PipelineBoardData;
 import ai.qorva.core.enums.ReportStatusChannel;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.security.CrudPolicy;
 import ai.qorva.core.service.ATSExportService;
 import ai.qorva.core.service.MatchingReportService;
+import ai.qorva.core.service.PipelineBoardService;
 import ai.qorva.core.service.UserService;
 import ai.qorva.core.utils.BuildApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,25 +29,30 @@ public class MatchingReportController extends AbstractQorvaController<MatchingRe
 
 	private final ATSExportService atsExportService;
 	private final UserService userService;
+	private final PipelineBoardService pipelineBoardService;
 
 	@Autowired
-	public MatchingReportController(MatchingReportService service, ATSExportService atsExportService, UserService userService) {
+	public MatchingReportController(MatchingReportService service, ATSExportService atsExportService, UserService userService,
+	                                PipelineBoardService pipelineBoardService) {
 		super(service);
 		this.atsExportService = atsExportService;
 		this.userService = userService;
+		this.pipelineBoardService = pipelineBoardService;
 	}
 
-	public record StatusRequest(String status) {
+	/** {@code expectedStatus}: where the caller saw the candidate; a different stored status answers 409. */
+	public record StatusRequest(String status, String expectedStatus) {
 	}
 
 	/*
 	 * Reports are created by matching runs (/ai/matching-runs), never through the generic CRUD: the app
-	 * lists, searches and deletes them. VIEW_REPORT to read, DELETE_REPORT to delete.
+	 * lists, searches, reads one (the pipeline board's side panel) and deletes them. VIEW_REPORT to read,
+	 * DELETE_REPORT to delete.
 	 */
 	@Override
 	protected CrudPolicy crudPolicy() {
 		return CrudPolicy.builder()
-			.allow("VIEW_REPORT", LIST, SEARCH)
+			.allow("VIEW_REPORT", GET_ONE, LIST, SEARCH)
 			.allow("DELETE_REPORT", DELETE)
 			.build();
 	}
@@ -72,7 +79,30 @@ public class MatchingReportController extends AbstractQorvaController<MatchingRe
 		var email = SecurityContextHolder.getContext().getAuthentication().getName();
 		var actor = MatchingReportService.StatusActor.of(userService.findByEmail(email), email);
 		return ResponseEntity.ok(((MatchingReportService) this.service).changeStatus(
-			currentTenantId(), id, request == null ? null : request.status(), actor, ReportStatusChannel.APP));
+			currentTenantId(), id, request == null ? null : request.status(), request == null ? null : request.expectedStatus(),
+			actor, ReportStatusChannel.APP));
+	}
+
+	/** The pipeline board: every status column with its exact count and first page of cards. */
+	@GetMapping("/pipeline")
+	@PreAuthorize("@accessManager.hasPermission(authentication,'VIEW_REPORT')")
+	public ResponseEntity<PipelineBoardData.Board> pipeline(@RequestParam(required = false) String jobPostId,
+	                                                        @RequestParam(required = false) String q,
+	                                                        @RequestParam(defaultValue = "false") boolean hideOutdated) throws QorvaException {
+		return ResponseEntity.ok(pipelineBoardService.board(currentTenantId(), new PipelineBoardService.Filter(jobPostId, q, hideOutdated)));
+	}
+
+	/** One more page of a column, after {@code cursor} (from the previous page). */
+	@GetMapping("/pipeline/{status}")
+	@PreAuthorize("@accessManager.hasPermission(authentication,'VIEW_REPORT')")
+	public ResponseEntity<PipelineBoardData.Column> pipelineColumn(@PathVariable String status,
+	                                                               @RequestParam(required = false) String jobPostId,
+	                                                               @RequestParam(required = false) String q,
+	                                                               @RequestParam(defaultValue = "false") boolean hideOutdated,
+	                                                               @RequestParam(required = false) String cursor,
+	                                                               @RequestParam(required = false) Integer size) throws QorvaException {
+		return ResponseEntity.ok(pipelineBoardService.column(currentTenantId(), status,
+			new PipelineBoardService.Filter(jobPostId, q, hideOutdated), cursor, size));
 	}
 
 	@GetMapping("/export/csv")
