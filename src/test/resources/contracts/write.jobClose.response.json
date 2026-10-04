@@ -8,9 +8,14 @@
       "description" : "<p>Updated.</p>",
       "id" : "<id:1>",
       "jobReference" : "<uuid>",
+      "lastMatchedAt" : null,
       "lastUpdatedAt" : "<ts>",
       "lastUpdatedBy" : "owner@a.qorva.test",
       "matchingReportsNeeded" : false,
+      "matchingStaleAt" : "<ts>",
+      "matchingStaleReason" : "NEVER_RUN",
+      "matchingTopN" : null,
+      "newCandidateCount" : 0,
       "scoringRules" : {
         "availabilityStatuses" : [ "activelyLooking", "openButNotSearching" ],
         "experienceRequirements" : {

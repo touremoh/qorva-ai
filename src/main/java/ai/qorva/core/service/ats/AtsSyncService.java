@@ -14,6 +14,7 @@ import ai.qorva.core.dto.common.AtsRef;
 import ai.qorva.core.dto.common.ScoringRules;
 import ai.qorva.core.enums.AtsProviderEnum;
 import ai.qorva.core.enums.JobPostStatusEnum;
+import ai.qorva.core.enums.MatchingStaleReasonEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.CVService;
@@ -39,6 +40,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HexFormat;
 import java.util.List;
+import java.util.Objects;
 import ai.qorva.core.utils.JobDescriptionHtml;
 
 /**
@@ -199,12 +201,9 @@ public class AtsSyncService {
 				connectionRepository.save(connection);
 			}
 
+			// Imported CVs are queued for the matching staleness sweep on creation, which flags only the
+			// jobs they would enter the top N of.
 			if (counters.succeeded > 0) {
-				try {
-					jobPostService.markOpenJobPostsAsNeedingReports(connection.getTenantId());
-				} catch (Exception e) {
-					log.warn("ATS sync {} — could not mark job posts as needing reports", job.getId(), e);
-				}
 				cacheEvictor.evict(connection.getTenantId());
 			}
 
@@ -298,13 +297,15 @@ public class AtsSyncService {
 			// app for good and stalled every matching run at its timeout. Reopening re-queues
 			// the job. A job that stays open keeps its flag, so a routine sync does not
 			// re-screen everything it touches.
+			// Reopening is flagged below through flagStale, which also starts the job's "needs matching" episode.
 			if (!JobPostService.matchingReportsNeededFor(status)) {
 				update.set("matchingReportsNeeded", false);
-			} else if (!JobPostService.matchingReportsNeededFor(existing.getStatus())) {
-				update.set("matchingReportsNeeded", true);
 			}
+			boolean contentChanged = !Objects.equals(existing.getTitle(), atsJob.title());
 			if (StringUtils.hasText(atsJob.description())) {
-				update.set("description", JobDescriptionHtml.sanitize(atsJob.description()));
+				var description = JobDescriptionHtml.sanitize(atsJob.description());
+				contentChanged |= !Objects.equals(existing.getDescription(), description);
+				update.set("description", description);
 			}
 			// Backfills a job imported before its criteria could be drafted — one whose
 			// description only arrived on a later sync. Rules already there are left alone:
@@ -313,9 +314,16 @@ public class AtsSyncService {
 				var rules = suggestScoringRules(atsJob);
 				if (rules != null) {
 					update.set("scoringRules", rules);
+					contentChanged = true;
 				}
 			}
 			mongoTemplate.updateFirst(query, update, JobPost.class);
+			// Same rule as an edit in the app: a reopened job, or one whose matching input changed, has stale results.
+			boolean reopened = !JobPostService.matchingReportsNeededFor(existing.getStatus());
+			if (JobPostService.matchingReportsNeededFor(status) && (reopened || contentChanged)) {
+				jobPostService.flagStale(connection.getTenantId(), existing.getId(), existing.getLastMatchedAt() == null
+					? MatchingStaleReasonEnum.NEVER_RUN : MatchingStaleReasonEnum.JOB_CHANGED, null);
+			}
 			return;
 		}
 		var jobPost = new JobPost();
@@ -326,6 +334,8 @@ public class AtsSyncService {
 		jobPost.setJobReference(jobReference);
 		jobPost.setStatus(status);
 		jobPost.setMatchingReportsNeeded(JobPostService.matchingReportsNeededFor(status));
+		jobPost.setMatchingStaleReason(MatchingStaleReasonEnum.NEVER_RUN.name());
+		jobPost.setMatchingStaleAt(Instant.now());
 		jobPost.setAtsRef(atsRef(connection, atsJob));
 		jobPost.setCreatedAt(Instant.now());
 		jobPost.setCreatedBy("ats-sync");

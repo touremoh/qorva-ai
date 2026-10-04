@@ -37,6 +37,25 @@ public class MatchingReport implements QorvaEntity {
 
     private String status;
 
+    /** True once the candidate left the job's latest results; the report stays until the recruiter deletes it. */
+    private Boolean outdated;
+
+    /** {@code MatchingOutdatedReasonEnum} name. */
+    private String outdatedReason;
+
+    private Instant outdatedAt;
+
+    /** The score before the last re-scoring, so the list can show what moved. */
+    private Double previousFinalScore;
+
+    private Instant rescoredAt;
+
+    /** Hash of everything the report was generated from — an equal hash means it can be reused for free. */
+    private String inputFingerprint;
+
+    /** Hash of the candidate's side alone, to tell when an edit made this report stale. */
+    private String cvFingerprint;
+
     @CreatedDate
     private Instant createdAt;
 

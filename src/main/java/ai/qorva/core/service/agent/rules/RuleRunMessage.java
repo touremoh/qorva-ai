@@ -45,6 +45,17 @@ public record RuleRunMessage(String goal, String message, List<AgentRun.Mention>
 		return names.isEmpty() ? (type.equals("CV") ? "the candidates listed below" : "the job") : names;
 	}
 
+	/** A stale reason as the model reads it. */
+	static String reasonText(String reason) {
+		return switch (reason) {
+			case "NEVER_RUN" -> "never matched";
+			case "JOB_CHANGED" -> "the job changed";
+			case "NEW_CANDIDATES" -> "new candidates would rank in its top results";
+			case "CANDIDATE_CHANGED" -> "candidates in its results changed";
+			default -> "its results are out of date";
+		};
+	}
+
 	/** One line on what fired, for the model. */
 	static String describe(AgentRule.Trigger trigger) {
 		return switch (trigger.getType()) {
@@ -58,6 +69,9 @@ public record RuleRunMessage(String goal, String message, List<AgentRun.Mention>
 			case AgentRule.TRIGGER_ATS_SYNC_FINISHED -> "an ATS import finished";
 			case AgentRule.TRIGGER_SCHEDULE -> (AgentRule.Trigger.WEEKLY.equals(trigger.getFrequency()) ? "weekly" : "daily")
 				+ " schedule at " + trigger.getHour() + ":00 (" + trigger.getZoneId() + ")";
+			case AgentRule.TRIGGER_JOB_NEEDS_MATCHING -> (trigger.getJobTitle() != null ? "the job " + trigger.getJobTitle() : "a job")
+				+ " needs matching" + (trigger.getStaleReasons() != null
+					? " (" + String.join(", ", trigger.getStaleReasons().stream().map(RuleRunMessage::reasonText).toList()) + ")" : "");
 			default -> trigger.getType();
 		};
 	}

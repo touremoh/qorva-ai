@@ -22,4 +22,10 @@ public class FeatureLimits {
 
     /** Max simultaneous ATS integrations per workspace (static cap, not consumption). */
     private Integer atsConnections;
+
+    /** Most candidates one matching run may report per job (static cap, not consumption). */
+    private Integer matchingTopNMax;
+
+    /** Top N preselected when a job has never been matched. */
+    private Integer matchingTopNDefault;
 }

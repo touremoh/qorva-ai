@@ -5,14 +5,12 @@ import ai.qorva.core.dao.entity.BackgroundJob;
 import ai.qorva.core.dto.BackgroundJobData;
 import ai.qorva.core.dto.CandidateOutreachData;
 import ai.qorva.core.dto.JobPostDTO;
-import ai.qorva.core.dto.UsageMonitoringDTO;
-import ai.qorva.core.dto.common.UsageFeatureMetrics;
-import ai.qorva.core.dto.common.UsageFeatures;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaErrors;
 import ai.qorva.core.service.AIScreeningService;
 import ai.qorva.core.service.CandidateOutreachService;
 import ai.qorva.core.service.JobPostService;
+import ai.qorva.core.service.MatchingTopNPolicy;
 import ai.qorva.core.service.UsageMonitoringService;
 import ai.qorva.core.service.agent.AgentApproval;
 import ai.qorva.core.service.agent.AgentToolContext;
@@ -31,7 +29,6 @@ import org.mockito.quality.Strictness;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -54,6 +51,7 @@ class ApprovalToolsTest {
 	@Mock private AIScreeningService screeningService;
 	@Mock private JobPostService jobPostService;
 	@Mock private UsageMonitoringService usageMonitoringService;
+	@Mock private MatchingTopNPolicy topNPolicy;
 	@Mock private AtsConnectionService connectionService;
 	@Mock private AtsSyncService syncService;
 
@@ -147,45 +145,64 @@ class ApprovalToolsTest {
 		return job;
 	}
 
-	private void remaining(int limit, int consumed) {
-		var usage = new UsageMonitoringDTO();
-		usage.setFeatures(UsageFeatures.builder()
-			.screeningActions(UsageFeatureMetrics.builder().limit(limit).consumed(consumed).build()).build());
-		when(usageMonitoringService.findCurrentPeriodByTenantId(TENANT)).thenReturn(Optional.of(usage));
+	private StartScreeningTool startScreening() {
+		return new StartScreeningTool(screeningService, jobPostService, usageMonitoringService, topNPolicy);
+	}
+
+	/** One open job whose top 10 holds 7 new candidates and 3 unchanged reports. */
+	private void givenOpenJobWithSevenNewReports() throws Exception {
+		when(jobPostService.findOneById("job-1")).thenReturn(job("job-1", "open"));
+		when(topNPolicy.limitsFor(TENANT)).thenReturn(new MatchingTopNPolicy.Limits(20, 10));
+		when(topNPolicy.resolve(eq(TENANT), any(), any())).thenReturn(10);
+		when(screeningService.estimate(any(), eq(10), eq("en")))
+			.thenReturn(List.of(new AIScreeningService.JobEstimate("job-1", "Backend Lead", 10, 7, 3, false)));
 	}
 
 	@Test
-	void theMatchingCardShowsTheJobsTheEstimateAndWhatIsLeft() throws Exception {
-		when(jobPostService.findOneById("job-1")).thenReturn(job("job-1", "open"));
-		remaining(100, 40);
+	void theMatchingCardShowsTheJobsTheTopNTheEstimateAndWhatIsLeft() throws Exception {
+		givenOpenJobWithSevenNewReports();
+		when(usageMonitoringService.remaining(TENANT, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS)).thenReturn(60);
 
-		var card = new StartScreeningTool(screeningService, jobPostService, usageMonitoringService).preview(args("{\"jobIds\":[\"job-1\"]}"), CTX);
+		var card = startScreening().preview(args("{\"jobIds\":[\"job-1\"]}"), CTX);
 
 		assertThat(card.ok()).isTrue();
-		assertThat(map(card.data())).containsEntry("estimatedActions", 10).containsEntry("remainingActions", 60);
+		// Only the new reports are charged; the unchanged ones are reused for free.
+		assertThat(map(card.data())).containsEntry("estimatedActions", 7).containsEntry("reusedReports", 3)
+			.containsEntry("remainingActions", 60);
+		assertThat(map(card.data()).get("jobs").toString()).contains("topN=10");
 	}
 
 	@Test
 	void closedJobsUnknownJobsAndNotEnoughQuotaAreRefused() throws Exception {
-		var tool = new StartScreeningTool(screeningService, jobPostService, usageMonitoringService);
+		var tool = startScreening();
+		givenOpenJobWithSevenNewReports();
 		when(jobPostService.findOneById("closed")).thenReturn(job("closed", "closed"));
 		when(jobPostService.findOneById("foreign")).thenThrow(QorvaErrors.notFound(QorvaErrorCodes.AGENT_RUN_NOT_FOUND));
-		when(jobPostService.findOneById("job-1")).thenReturn(job("job-1", "open"));
 
 		assertThat(tool.preview(args("{\"jobIds\":[\"closed\"]}"), CTX).ok()).isFalse();
 		assertThat(tool.preview(args("{\"jobIds\":[\"foreign\"]}"), CTX).ok()).isFalse();
-		remaining(100, 95);
+		when(usageMonitoringService.remaining(TENANT, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS)).thenReturn(5);
 		assertThat(tool.preview(args("{\"jobIds\":[\"job-1\"]}"), CTX).ok()).isFalse();
 	}
 
 	@Test
-	void approvedMatchingScreensOnlyTheChosenJobs() throws Exception {
-		when(screeningService.screenJobs(TENANT, List.of("job-1", "job-2"), "en")).thenReturn(List.of(job("job-1", "open")));
+	void aTopNOffTheStepsOrAboveThePlanIsRefused() throws Exception {
+		givenOpenJobWithSevenNewReports();
+		when(usageMonitoringService.remaining(TENANT, UsageMonitoringService.FeatureKey.SCREENING_ACTIONS)).thenReturn(null);
 
-		var result = new StartScreeningTool(screeningService, jobPostService, usageMonitoringService)
-			.execute(args("{\"jobIds\":[\"job-1\",\"job-2\",\"job-1\"]}"), CTX, AgentApproval.UNCHANGED);
+		assertThat(startScreening().preview(args("{\"jobIds\":[\"job-1\"],\"topN\":25}"), CTX).ok()).isFalse();
+		assertThat(startScreening().preview(args("{\"jobIds\":[\"job-1\"],\"topN\":12}"), CTX).ok()).isFalse();
+		assertThat(startScreening().preview(args("{\"jobIds\":[\"job-1\"],\"topN\":20}"), CTX).ok()).isTrue();
+	}
 
-		verify(screeningService).screenJobs(TENANT, List.of("job-1", "job-2"), "en");
+	@Test
+	void approvedMatchingScreensOnlyTheChosenJobsAtTheChosenTopN() throws Exception {
+		when(screeningService.screenJobs(TENANT, List.of("job-1", "job-2"), 15, "en")).thenReturn(List.of(job("job-1", "open")));
+
+		var result = startScreening()
+			.execute(args("{\"jobIds\":[\"job-1\",\"job-2\",\"job-1\"],\"topN\":15}"), CTX, AgentApproval.UNCHANGED);
+
+		verify(screeningService).screenJobs(TENANT, List.of("job-1", "job-2"), 15, "en");
 		assertThat(result.summaryParams()).containsEntry("count", "1");
 	}
 

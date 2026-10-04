@@ -6,7 +6,7 @@ import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.service.CandidateUpdateEmailService;
 import ai.qorva.core.service.CandidateUpdateService;
-import ai.qorva.core.service.JobPostService;
+import ai.qorva.core.service.MatchingRunService;
 import ai.qorva.core.service.LibraryQualityCacheEvictor;
 import ai.qorva.core.service.OpenAIService;
 import ai.qorva.core.service.S3StorageService;
@@ -57,7 +57,7 @@ class BackgroundJobWorkerBulkTest {
 	@Mock private TenantService tenantService;
 	@Mock private UserService userService;
 	@Mock private S3StorageService s3StorageService;
-	@Mock private JobPostService jobPostService;
+	@Mock private MatchingRunService matchingRunService;
 	@Mock private ai.qorva.core.service.ats.AtsSyncService atsSyncService;
 
 	private BackgroundJobWorker worker;
@@ -66,7 +66,7 @@ class BackgroundJobWorkerBulkTest {
 	void setUp() {
 		worker = new BackgroundJobWorker(mongoTemplate, cvRepository, cvService, openAIService,
 			openAIResultMapper, usageMonitoringService, cacheEvictor, candidateUpdateService,
-			candidateUpdateEmailService, tenantService, userService, s3StorageService, jobPostService, atsSyncService);
+			candidateUpdateEmailService, tenantService, userService, s3StorageService, matchingRunService, atsSyncService);
 	}
 
 	private BackgroundJob bulkJob() {
@@ -116,7 +116,6 @@ class BackgroundJobWorkerBulkTest {
 		verify(cvService).processFile(any(byte[].class), eq("b.pdf"), eq("application/pdf"), eq(TENANT));
 		verify(s3StorageService).deleteObject("s/0");
 		verify(s3StorageService).deleteObject("s/1");
-		verify(jobPostService).markOpenJobPostsAsNeedingReports(TENANT);
 		verify(cacheEvictor).evict(TENANT);
 
 		var finalSet = lastFinalUpdate();
@@ -137,7 +136,6 @@ class BackgroundJobWorkerBulkTest {
 		verify(cvService, never()).processFile(any(byte[].class), anyString(), anyString(), anyString());
 		// Staged objects are cleaned up even though nothing was processed.
 		verify(s3StorageService, times(2)).deleteObject(anyString());
-		verify(jobPostService, never()).markOpenJobPostsAsNeedingReports(anyString());
 
 		var finalSet = lastFinalUpdate();
 		assertThat(finalSet.getString("status")).isEqualTo(BackgroundJob.STATUS_COMPLETED_WITH_ERRORS);

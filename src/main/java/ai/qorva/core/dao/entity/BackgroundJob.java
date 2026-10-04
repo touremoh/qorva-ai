@@ -30,6 +30,7 @@ public class BackgroundJob implements QorvaEntity {
 	public static final String TYPE_CANDIDATE_UPDATE_CAMPAIGN = "CANDIDATE_UPDATE_CAMPAIGN";
 	public static final String TYPE_BULK_CV_UPLOAD = "BULK_CV_UPLOAD";
 	public static final String TYPE_ATS_SYNC = "ATS_SYNC";
+	public static final String TYPE_MATCHING = "MATCHING";
 
 	/** Collecting staged files; never claimed by the worker (claim query matches PENDING/RUNNING only). */
 	public static final String STATUS_DRAFT = "DRAFT";
@@ -88,6 +89,13 @@ public class BackgroundJob implements QorvaEntity {
 	}
 
 	private String failureReason;
+
+	/** Matching runs: the job posts to match and the Top N for each. */
+	private List<String> jobIds;
+	private Integer topN;
+
+	/** Matching runs: reports reused unchanged (not charged); {@code succeeded} counts the regenerated ones. */
+	private long reused;
 
 	/** ATS sync jobs: the AtsConnection being synced. */
 	private String connectionId;

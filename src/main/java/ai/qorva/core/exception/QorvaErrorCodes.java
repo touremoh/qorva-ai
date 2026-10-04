@@ -161,6 +161,16 @@ public final class QorvaErrorCodes {
     public static final String BACKGROUND_JOB_QUOTA_EXCEEDED            = "error.background_job.quota_exceeded";
     public static final String BACKGROUND_JOB_NO_REANALYZABLE           = "error.background_job.no_reanalyzable";
     public static final String BACKGROUND_JOB_NO_RESUMES                = "error.background_job.no_resumes";
+
+    // Matching runs
+    public static final String MATCHING_TOP_N_INVALID                   = "error.matching.top_n_invalid";
+    public static final String MATCHING_TOP_N_NOT_IN_PLAN               = "error.matching.top_n_not_in_plan";
+    public static final String MATCHING_NO_JOBS                         = "error.matching.no_jobs";
+    public static final String MATCHING_TOO_MANY_JOBS                   = "error.matching.too_many_jobs";
+    public static final String MATCHING_JOB_NOT_OPEN                    = "error.matching.job_not_open";
+    public static final String MATCHING_RUN_ACTIVE                      = "error.matching.run_active";
+    public static final String MATCHING_QUOTA_EXCEEDED                  = "error.matching.quota_exceeded";
+    public static final String MATCHING_RUN_NOT_FOUND                   = "error.matching.run_not_found";
     public static final String CANDIDATE_UPDATE_INVALID_SUBMISSION      = "error.candidate_update.invalid_submission";
     public static final String CANDIDATE_UPDATE_UNSUPPORTED_FILE        = "error.candidate_update.unsupported_file";
     public static final String CANDIDATE_UPDATE_LINK_INVALID            = "error.candidate_update.link_invalid";

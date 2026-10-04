@@ -164,6 +164,8 @@ public class UsageMonitoringScheduler {
             .emailTemplates(base.getEmailTemplates())
             .bulkUploadFiles(base.getBulkUploadFiles())
             .atsConnections(base.getAtsConnections())
+            .matchingTopNMax(base.getMatchingTopNMax())
+            .matchingTopNDefault(base.getMatchingTopNDefault())
             .build();
         return ProductFeatures.builder()
             .seats(source.getSeats())

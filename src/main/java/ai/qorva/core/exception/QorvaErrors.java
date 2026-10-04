@@ -28,6 +28,11 @@ public final class QorvaErrors {
 		return of(messageKey, HttpStatus.FORBIDDEN);
 	}
 
+	/** A 403 whose message key takes MessageFormat arguments ({0}, {1}…). */
+	public static QorvaException forbidden(String messageKey, Object... params) {
+		return new QorvaException(messageKey, HttpStatus.FORBIDDEN.value(), HttpStatus.FORBIDDEN, params);
+	}
+
 	public static QorvaException notFound(String messageKey) {
 		return of(messageKey, HttpStatus.NOT_FOUND);
 	}

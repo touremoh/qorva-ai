@@ -72,7 +72,7 @@ public class CVRepositoryImpl implements SimilaritySearchRepository, CVQualityRe
 			new Document("score", new Document("$meta", "vectorSearchScore")));
 
 		List<Criteria> matchConditions = new ArrayList<>();
-		matchConditions.add(Criteria.where("score").gte(0.5));
+		matchConditions.add(Criteria.where("score").gte(MIN_MATCH_SCORE));
 		// Archived candidates must never surface in job matching — that is the point of archiving.
 		matchConditions.add(Criteria.where("archived").ne(true));
 

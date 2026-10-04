@@ -1,0 +1,39 @@
+{
+  "collMod": "agent_rules",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "agent_rules",
+      "required": ["tenantId", "ownerEmail", "name", "trigger", "goalTemplate", "status"],
+      "properties": {
+        "tenantId": { "bsonType": "objectId", "description": "owning tenant, required" },
+        "ownerEmail": { "bsonType": "string", "description": "the user the rule runs as" },
+        "language": { "bsonType": ["string", "null"] },
+        "name": { "bsonType": "string" },
+        "trigger": {
+          "bsonType": "object",
+          "required": ["type"],
+          "properties": {
+            "type": { "bsonType": "string", "enum": ["CV_ADDED", "CV_SCORED", "SCHEDULE", "ATS_SYNC_FINISHED", "JOB_NEEDS_MATCHING"] },
+            "staleReasons": { "bsonType": ["array", "null"], "items": { "bsonType": "string", "enum": ["NEVER_RUN", "JOB_CHANGED", "NEW_CANDIDATES", "CANDIDATE_CHANGED"] } }
+          }
+        },
+        "goalTemplate": { "bsonType": "string" },
+        "dailyRunCap": { "bsonType": ["int", "long"] },
+        "autoApproveMatching": { "bsonType": ["bool", "null"] },
+        "autoApproveMaxActions": { "bsonType": ["int", "long", "null"] },
+        "status": { "bsonType": "string", "enum": ["ACTIVE", "PAUSED"] },
+        "pausedReason": { "bsonType": ["string", "null"] },
+        "watermark": { "bsonType": ["date", "null"] },
+        "nextRunAt": { "bsonType": ["date", "null"] },
+        "leaseOwner": { "bsonType": ["string", "null"] },
+        "leaseExpiresAt": { "bsonType": ["date", "null"] },
+        "nextCheckAt": { "bsonType": ["date", "null"] },
+        "createdAt": { "bsonType": "date" },
+        "lastUpdatedAt": { "bsonType": "date" }
+      }
+    }
+  },
+  "validationLevel": "moderate",
+  "validationAction": "error"
+}

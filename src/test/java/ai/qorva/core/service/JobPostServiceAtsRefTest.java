@@ -13,6 +13,7 @@ import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.common.AtsRef;
 import ai.qorva.core.mapper.JobPostMapperImpl;
 import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -43,13 +44,14 @@ class JobPostServiceAtsRefTest {
 	@Mock private JobPostRepository repository;
 	@Mock private JobPostQueryBuilder queryBuilder;
 	@Mock private CascadeRegistry cascadeRegistry;
+	@Mock private MongoTemplate mongoTemplate;
 
 	private JobPostService service;
 
 	@BeforeEach
 	void setUp() {
 		// The real generated mapper: the point of the test is what mapping actually carries over.
-		service = new JobPostService(repository, new JobPostMapperImpl(), queryBuilder, cascadeRegistry);
+		service = new JobPostService(repository, new JobPostMapperImpl(), queryBuilder, cascadeRegistry, mongoTemplate);
 	}
 
 	private JobPost storedImportedJob() {

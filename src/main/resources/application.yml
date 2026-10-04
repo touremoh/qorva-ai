@@ -110,6 +110,15 @@ qorva:
         # recruiter has moved on and inherited filters would silently narrow a fresh question.
         frame-ttl-minutes: ${QORVA_INSIGHTS_FRAME_TTL_MINUTES:30}
         max-previous-question-length: ${QORVA_INSIGHTS_MAX_PREVIOUS_QUESTION_LENGTH:300}
+  # Smart flagging: a new or edited CV flags only the jobs whose top N it would enter. It is compared once
+  # Atlas has (re)embedded it (≤ 10 s observed; the grace keeps an edit from being compared on its old
+  # vector); a CV still without an embedding after the timeout flags every open job instead.
+  matching:
+    staleness:
+      poll-delay-ms: ${QORVA_MATCHING_STALENESS_POLL_DELAY_MS:60000}
+      grace-seconds: ${QORVA_MATCHING_STALENESS_GRACE_SECONDS:30}
+      embedding-timeout-minutes: ${QORVA_MATCHING_STALENESS_EMBEDDING_TIMEOUT_MINUTES:5}
+      batch-size: 200
   products:
     starter:
       stripe-product-name: Starter
@@ -123,6 +132,8 @@ qorva:
           email-templates: 3
           bulk-upload-files: 100
           ats-connections: 1
+          matching-top-n-max: 10
+          matching-top-n-default: 10
         overage:
           enabled: false
           screening-action-price: 0.0
@@ -140,6 +151,8 @@ qorva:
           email-templates: 15
           bulk-upload-files: 300
           ats-connections: 3
+          matching-top-n-max: 20
+          matching-top-n-default: 10
         overage:
           enabled: true
           screening-action-price: 0.02
@@ -157,6 +170,8 @@ qorva:
           email-templates: 50
           bulk-upload-files: 1000
           ats-connections: 7
+          matching-top-n-max: 30
+          matching-top-n-default: 10
         overage:
           enabled: true
           screening-action-price: 0.02

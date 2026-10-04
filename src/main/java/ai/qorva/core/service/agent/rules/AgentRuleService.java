@@ -6,6 +6,7 @@ import ai.qorva.core.dao.repository.AgentRuleFiringRepository;
 import ai.qorva.core.dao.repository.AgentRuleRepository;
 import ai.qorva.core.dto.AgentData;
 import ai.qorva.core.enums.JobPostStatusEnum;
+import ai.qorva.core.enums.MatchingStaleReasonEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaErrors;
 import ai.qorva.core.exception.QorvaException;
@@ -26,6 +27,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneOffset;
 import java.time.ZoneId;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -38,6 +40,9 @@ import java.util.Objects;
 public class AgentRuleService {
 
 	static final int MAX_NAME = 100;
+	/** Pre-approved matching: most actions one matching may cost without asking, and the default when unset. */
+	static final int MAX_AUTO_APPROVE_ACTIONS = 500;
+	static final int DEFAULT_AUTO_APPROVE_ACTIONS = 50;
 
 	private final AgentRuleRepository repository;
 	private final AgentRuleFiringRepository firings;
@@ -165,10 +170,18 @@ public class AgentRuleService {
 		int cap = request.getDailyRunCap() != null ? request.getDailyRunCap() : rules.getDefaultDailyRunCap();
 		if (cap < 1 || cap > rules.getMaxDailyRunCap()) throw invalid();
 		var trigger = trigger(request.getTrigger());
+		boolean autoApprove = Boolean.TRUE.equals(request.getAutoApproveMatching());
+		Integer maxActions = null;
+		if (autoApprove) {
+			maxActions = request.getAutoApproveMaxActions() != null ? request.getAutoApproveMaxActions() : DEFAULT_AUTO_APPROVE_ACTIONS;
+			if (maxActions < 1 || maxActions > MAX_AUTO_APPROVE_ACTIONS) throw invalid();
+		}
 		rule.setName(name);
 		rule.setGoalTemplate(goal);
 		rule.setDailyRunCap(cap);
 		rule.setTrigger(trigger);
+		rule.setAutoApproveMatching(autoApprove ? Boolean.TRUE : null);
+		rule.setAutoApproveMaxActions(maxActions);
 	}
 
 	private AgentRule.Trigger trigger(AgentData.TriggerRequest request) throws QorvaException {
@@ -217,6 +230,21 @@ public class AgentRuleService {
 						? connection.getDisplayName() : connection.getProvider());
 				}
 			}
+			case AgentRule.TRIGGER_JOB_NEEDS_MATCHING -> {
+				var reasons = request.getStaleReasons() == null ? List.<String>of()
+					: request.getStaleReasons().stream().filter(Objects::nonNull).map(String::strip).distinct().toList();
+				var known = Arrays.stream(MatchingStaleReasonEnum.values()).map(Enum::name).toList();
+				if (!known.containsAll(reasons)) throw invalid();
+				// Every reason picked is the same as none picked: store null, "all of them".
+				trigger.setStaleReasons(reasons.isEmpty() || reasons.containsAll(known) ? null : reasons);
+				var jobId = trim(request.getJobPostId());
+				if (jobId != null) {
+					var job = jobPostService.findOneById(validId(jobId));
+					if (!JobPostStatusEnum.OPEN.getStatus().equals(job.getStatus())) throw invalid();
+					trigger.setJobPostId(job.getId());
+					trigger.setJobTitle(job.getTitle());
+				}
+			}
 			default -> throw invalid();
 		}
 		return trigger;
@@ -255,7 +283,8 @@ public class AgentRuleService {
 			&& Objects.equals(a.getJobPostId(), b.getJobPostId()) && Objects.equals(a.getMinScore(), b.getMinScore())
 			&& Objects.equals(a.getRecommendedOnly(), b.getRecommendedOnly()) && Objects.equals(a.getFrequency(), b.getFrequency())
 			&& Objects.equals(a.getHour(), b.getHour()) && Objects.equals(a.getWeekday(), b.getWeekday())
-			&& Objects.equals(a.getZoneId(), b.getZoneId()) && Objects.equals(a.getConnectionId(), b.getConnectionId());
+			&& Objects.equals(a.getZoneId(), b.getZoneId()) && Objects.equals(a.getConnectionId(), b.getConnectionId())
+			&& Objects.equals(a.getStaleReasons(), b.getStaleReasons());
 	}
 
 	private AgentRule visible(String tenantId, String userEmail, boolean team, String id) throws QorvaException {
@@ -288,7 +317,7 @@ public class AgentRuleService {
 	public static AgentData.TriggerView triggerView(AgentRule.Trigger t) {
 		return new AgentData.TriggerView(t.getType(), t.getSource(), t.getJobPostId(), t.getJobTitle(), t.getMinScore(),
 			t.getRecommendedOnly(), t.getFrequency(), t.getHour(), t.getWeekday(), t.getZoneId(), t.getConnectionId(),
-			t.getConnectionName());
+			t.getConnectionName(), t.getStaleReasons());
 	}
 
 	static AgentData.RuleView view(AgentRule rule, String userEmail, boolean team) {
@@ -296,7 +325,8 @@ public class AgentRuleService {
 		var today = LocalDate.now(ZoneOffset.UTC).toString();
 		boolean countsToday = today.equals(rule.getCountersDay());
 		return new AgentData.RuleView(rule.getId(), rule.getName(), rule.getOwnerEmail(), triggerView(rule.getTrigger()),
-			rule.getGoalTemplate(), rule.getDailyRunCap(), rule.getStatus(), rule.getPausedReason(),
+			rule.getGoalTemplate(), rule.getDailyRunCap(), Boolean.TRUE.equals(rule.getAutoApproveMatching()),
+			rule.getAutoApproveMaxActions(), rule.getStatus(), rule.getPausedReason(),
 			countsToday ? rule.getRunsToday() : 0, countsToday ? rule.getSkippedToday() : 0, rule.getLastRunId(),
 			rule.getLastFiredAt(), rule.getNextRunAt(), rule.getCreatedAt(), mine, mine || team);
 	}

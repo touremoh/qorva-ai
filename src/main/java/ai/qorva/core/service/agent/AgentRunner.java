@@ -30,6 +30,7 @@ import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * The agent loop for one claimed run: ask the model, execute the tools it calls, feed the results
@@ -147,6 +148,21 @@ public class AgentRunner {
 						completeStep(step, preview);
 						results.add(new AgentRun.ToolResult(call.id(), call.name(), toModelJson(preview)));
 						consecutiveErrors++;
+						continue;
+					}
+					if (preApproved(run, tool, preview)) {
+						// The rule's owner approved this in advance (within a cost cap): carry it out now.
+						if (!store.saveProgress(run)) {
+							log.warn("agent-run {} lost its lease before {}", run.getId(), call.name());
+							return;
+						}
+						var result = executePreApproved(tool, call, ctx);
+						completeStep(step, result);
+						step.setAutoApproved(Boolean.TRUE);
+						log.info("agent-run {} step={} tool={} pre-approved by rule {} state={}", run.getId(), step.getSeq(),
+							step.getTool(), run.getRuleId(), step.getState());
+						results.add(new AgentRun.ToolResult(call.id(), call.name(), toModelJson(result)));
+						consecutiveErrors = result.ok() ? 0 : consecutiveErrors + 1;
 						continue;
 					}
 					if (tool.outbound()) pendingOutbound++;
@@ -297,6 +313,37 @@ public class AgentRunner {
 			return AgentToolResult.error(e.getMessage() != null ? e.getMessage() : "The request was refused");
 		} catch (RuntimeException e) {
 			log.error("agent approved action {} failed", action.getTool(), e);
+			return AgentToolResult.error("The action failed unexpectedly");
+		}
+	}
+
+	/**
+	 * Whether a rule run may carry out this approval-tier call without asking: only matching (start_screening),
+	 * only when its rule pre-approved matching, and only when the preview says it costs no more than the rule's cap.
+	 * Anything else — another tool, a dearer matching, a chat run — waits for the recruiter as usual.
+	 */
+	static boolean preApproved(AgentRun run, AgentTool tool, AgentToolResult preview) {
+		if (!AgentRun.ORIGIN_RULE.equals(run.getOrigin()) || run.getAutoApproveMaxActions() == null) return false;
+		if (!PRE_APPROVABLE_TOOLS.contains(tool.name())) return false;
+		return preview.data() instanceof Map<?, ?> card
+			&& card.get("estimatedActions") instanceof Number cost
+			&& cost.intValue() <= run.getAutoApproveMaxActions();
+	}
+
+	/** Tools a rule may pre-approve. Matching only: its cost is known up front and bounded by the plan's Top N. */
+	static final Set<String> PRE_APPROVABLE_TOOLS = Set.of("start_screening");
+
+	private AgentToolResult executePreApproved(AgentTool tool, AssistantMessage.ToolCall call, AgentToolContext ctx) {
+		try {
+			var args = call.arguments() == null || call.arguments().isBlank()
+				? objectMapper.createObjectNode() : objectMapper.readTree(call.arguments());
+			return tool.execute(args, ctx, AgentApproval.UNCHANGED);
+		} catch (JsonProcessingException e) {
+			return AgentToolResult.error("Arguments are not valid JSON");
+		} catch (QorvaException e) {
+			return AgentToolResult.error(e.getMessage() != null ? e.getMessage() : "The request was refused");
+		} catch (RuntimeException e) {
+			log.error("agent pre-approved action {} failed", call.name(), e);
 			return AgentToolResult.error("The action failed unexpectedly");
 		}
 	}
@@ -468,9 +515,17 @@ public class AgentRunner {
 		if (AgentRun.ORIGIN_RULE.equals(run.getOrigin())) {
 			prompt += RULE_BLOCK.replace("{{rule}}", run.getRuleName() != null ? run.getRuleName() : "")
 				.replace("{{ttl}}", String.valueOf(approvalTtlHours(run)));
+			if (run.getAutoApproveMaxActions() != null) {
+				prompt += PRE_APPROVED_BLOCK.replace("{{max}}", String.valueOf(run.getAutoApproveMaxActions()));
+			}
 		}
 		return prompt;
 	}
+
+	private static final String PRE_APPROVED_BLOCK = """
+		- The recruiter pre-approved matching for this rule: start_screening runs at once when it costs at most
+		  {{max}} matching actions (dearer ones wait for approval). Pass the Top N the goal asks for as topN.
+		""";
 
 	private static final String RULE_BLOCK = """
 

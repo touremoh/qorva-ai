@@ -219,14 +219,19 @@ class AtsSyncServiceJobPostTest {
 		assertThat(captureSet()).containsEntry("status", "closed").containsEntry("matchingReportsNeeded", false);
 	}
 
-	/** A job reopened in the ATS is back in the running and must be screened again. */
+	/**
+	 * A job reopened in the ATS is back in the running and must be screened again. Flagged through
+	 * flagStale, which also starts its "needs matching" episode (what JOB_NEEDS_MATCHING rules fire on).
+	 */
 	@Test
 	void reopeningAJobQueuesItForScreening() {
 		when(mongoTemplate.findOne(any(Query.class), eq(JobPost.class))).thenReturn(existingJob("closed"));
 
 		service.upsertJobPost(connection(), job("<p>Own the funnel.</p>", true));
 
-		assertThat(captureSet()).containsEntry("status", "open").containsEntry("matchingReportsNeeded", true);
+		assertThat(captureSet()).containsEntry("status", "open");
+		org.mockito.Mockito.verify(jobPostService).flagStale(any(), any(),
+			eq(ai.qorva.core.enums.MatchingStaleReasonEnum.NEVER_RUN), org.mockito.ArgumentMatchers.isNull());
 	}
 
 	/** A routine sync must not re-queue every open job it touches — the flag is left alone. */

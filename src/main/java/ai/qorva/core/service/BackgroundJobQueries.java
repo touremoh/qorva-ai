@@ -37,6 +37,11 @@ public class BackgroundJobQueries {
 		return toList(repository.findByTenantIdOrderByCreatedAtDesc(tenantId, PageRequest.of(0, RECENT_JOBS)));
 	}
 
+	/** The most recent jobs of every type but one — filtered in the query too. */
+	public BackgroundJobData.JobList recentExcept(String tenantId, String type) {
+		return toList(repository.findByTenantIdAndTypeNotOrderByCreatedAtDesc(tenantId, type, PageRequest.of(0, RECENT_JOBS)));
+	}
+
 	/** The most recent jobs of one type — filtered in the query, so older jobs of other types never crowd them out. */
 	public BackgroundJobData.JobList recent(String tenantId, String type) {
 		return toList(repository.findByTenantIdAndTypeOrderByCreatedAtDesc(tenantId, type, PageRequest.of(0, RECENT_JOBS)));

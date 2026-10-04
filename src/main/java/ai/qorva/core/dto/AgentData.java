@@ -37,7 +37,7 @@ public final class AgentData {
 	public record DraftView(String cvId, String jobId, String subject, String body) {}
 
 	public record StepView(int seq, String kind, String tool, String state, String summaryKey,
-	                       Map<String, String> summaryParams, List<LinkView> links, DraftView draft) {}
+	                       Map<String, String> summaryParams, List<LinkView> links, DraftView draft, boolean autoApproved) {}
 
 	/** An approval card: what the tool proposes, as checked when it was proposed. */
 	public record ActionView(String actionId, int stepSeq, String tool, String status, String argsHash,
@@ -120,6 +120,8 @@ public final class AgentData {
 		private Integer weekday;
 		private String zoneId;
 		private String connectionId;
+		/** JOB_NEEDS_MATCHING: stale reasons that fire it; null or empty = all. */
+		private List<String> staleReasons;
 	}
 
 	@Getter
@@ -131,11 +133,14 @@ public final class AgentData {
 		private String goalTemplate;
 		/** Null: the default cap. */
 		private Integer dailyRunCap;
+		/** Run matching without asking, up to {@code autoApproveMaxActions} actions per matching. */
+		private Boolean autoApproveMatching;
+		private Integer autoApproveMaxActions;
 	}
 
 	public record TriggerView(String type, String source, String jobPostId, String jobTitle, Integer minScore,
 	                          Boolean recommendedOnly, String frequency, Integer hour, Integer weekday, String zoneId,
-	                          String connectionId, String connectionName) {}
+	                          String connectionId, String connectionName, List<String> staleReasons) {}
 
 	public record RuleView(
 		String id,
@@ -144,6 +149,8 @@ public final class AgentData {
 		TriggerView trigger,
 		String goalTemplate,
 		int dailyRunCap,
+		boolean autoApproveMatching,
+		Integer autoApproveMaxActions,
 		String status,
 		String pausedReason,
 		int runsToday,

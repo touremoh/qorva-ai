@@ -28,6 +28,14 @@ public class ReportGenerationAgent {
 	@Value("${qorva.ai.report.model:gpt-5.6-terra}")
 	private String model;
 
+	/**
+	 * What a report is generated with besides its inputs — the model, the prompt and the output format.
+	 * Part of every report's input fingerprint, so changing any of them stops stored reports from being reused.
+	 */
+	public String version() {
+		return model + "\n" + promptContextHolder.getReportGenerationPrompt() + "\n" + promptContextHolder.getReportOutputFormat();
+	}
+
 	public MatchingReportDetails generate(String cvDetails, String jobDescription, String languageCode, ScoringRules scoringRules) {
 		var outputConverter = new BeanOutputConverter<>(MatchingReportResponse.class);
 		var reportGenerationPrompt = promptContextHolder.getReportGenerationPrompt();

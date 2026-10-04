@@ -81,6 +81,13 @@ public class CVDTO extends AbstractQorvaDTO {
     @JsonProperty(access = Access.WRITE_ONLY)
     private float[] embedding;
 
+    /** Matching staleness sweep bookkeeping — internal, kept on the DTO so an update does not erase it. */
+    @JsonIgnore
+    private Boolean matchCheckPending;
+
+    @JsonIgnore
+    private Instant matchCheckPendingSince;
+
     @JsonProperty(access = Access.READ_ONLY)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
     private Instant createdAt;

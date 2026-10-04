@@ -133,6 +133,8 @@ public class AgentRunService {
 		run.setOrigin(AgentRun.ORIGIN_RULE);
 		run.setRuleId(rule.getId());
 		run.setRuleName(rule.getName());
+		// The pre-approval as it is now: editing the rule later never changes a run already started.
+		run.setAutoApproveMaxActions(Boolean.TRUE.equals(rule.getAutoApproveMatching()) ? rule.getAutoApproveMaxActions() : null);
 		run.setGoal(goal);
 		run.setMentions(new ArrayList<>(mentions));
 		run.setStatus(AgentRun.STATUS_QUEUED);
@@ -354,7 +356,7 @@ public class AgentRunService {
 				s.getSummaryKey(), s.getSummaryParams(),
 				s.getLinks().stream().map(l -> new AgentData.LinkView(l.getType(), l.getId(), l.getLabel())).toList(),
 				s.getDraft() == null ? null : new AgentData.DraftView(s.getDraft().getCvId(), s.getDraft().getJobId(),
-					s.getDraft().getSubject(), s.getDraft().getBody()))).toList(),
+					s.getDraft().getSubject(), s.getDraft().getBody()), Boolean.TRUE.equals(s.getAutoApproved()))).toList(),
 			run.getPendingActions().stream().map(a -> new AgentData.ActionView(a.getActionId(), a.getStepSeq(), a.getTool(),
 				a.getStatus(), a.getArgsHash(), a.getPreview(), a.getReason())).toList(),
 			run.getApprovalExpiresAt(),

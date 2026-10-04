@@ -44,7 +44,7 @@ class ApiWriteContractIntegrationTest extends AbstractIntegrationTest {
 	}
 
 	@Test
-	void cvPatch_updatesTheCv_andFlagsOpenJobsForRescreening() throws Exception {
+	void cvPatch_updatesTheCv_andLeavesJobFlagsToTheMatchingSweep() throws Exception {
 		snap("cvPatch.response", owner, patch("/cvs/" + a.cvId()).contentType(JSON)
 			.content("{\"tags\":[\"shortlist\",\"java\"],\"candidateProfileSummary\":\"Updated summary.\"}"));
 		snap("cvPatch.cvAfter", owner, get("/cvs/" + a.cvId()));

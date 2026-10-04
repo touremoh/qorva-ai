@@ -53,6 +53,11 @@
         "strengths" : null,
         "weaknesses" : null
       },
+      "outdated" : null,
+      "outdatedAt" : null,
+      "outdatedReason" : null,
+      "previousFinalScore" : null,
+      "rescoredAt" : null,
       "status" : "NEW",
       "tenantId" : "<id:4>"
     },

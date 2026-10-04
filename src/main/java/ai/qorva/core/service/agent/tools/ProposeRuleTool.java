@@ -43,9 +43,13 @@ public class ProposeRuleTool implements AgentTool {
 			+ "time its trigger fires: CV_ADDED (new candidates; source ANY, ATS or MANUAL), CV_SCORED (candidates scored on "
 			+ "a job — jobId from list_jobs, or any job — with minScore 0-100 and/or recommendedOnly = recommended for an "
 			+ "interview), SCHEDULE (DAILY or WEEKLY at hour 0-23, weekday 1=Monday..7), ATS_SYNC_FINISHED (an ATS import "
-			+ "finished; connectionId from list_ats_connections, or any). The goal is what the task must do; it may use "
-			+ "{{candidates}}, {{job}}, {{count}} and {{sync}}, filled in when it fires. The recruiter approves the rule "
-			+ "before it exists; it never acts on records that existed before.";
+			+ "finished; connectionId from list_ats_connections, or any), JOB_NEEDS_MATCHING (an open job's matching results "
+			+ "became out of date — jobId or any job; staleReasons any of NEVER_RUN = new job, JOB_CHANGED, NEW_CANDIDATES, "
+			+ "CANDIDATE_CHANGED, all when omitted). The goal is what the task must do; it may use {{candidates}}, {{job}}, "
+			+ "{{count}} and {{sync}}, filled in when it fires — e.g. \"Run matching for {{job}} with the top 5 candidates\". "
+			+ "Matching normally waits for the recruiter's approval; set autoApproveMatching (with autoApproveMaxActions, the "
+			+ "most one matching may cost) only when the recruiter asks for it to run without asking. The recruiter approves "
+			+ "the rule before it exists; it never acts on records that existed before.";
 	}
 
 	@Override
@@ -55,7 +59,7 @@ public class ProposeRuleTool implements AgentTool {
 			  "name":{"type":"string","description":"Short name, e.g. Invite strong Java matches"},
 			  "goal":{"type":"string","description":"What each task does, e.g. Draft an interview invitation for {{candidates}} for {{job}}."},
 			  "trigger":{"type":"object","properties":{
-			    "type":{"type":"string","enum":["CV_ADDED","CV_SCORED","SCHEDULE","ATS_SYNC_FINISHED"]},
+			    "type":{"type":"string","enum":["CV_ADDED","CV_SCORED","SCHEDULE","ATS_SYNC_FINISHED","JOB_NEEDS_MATCHING"]},
 			    "source":{"type":"string","enum":["ANY","ATS","MANUAL"]},
 			    "jobId":{"type":"string"},
 			    "minScore":{"type":"integer","minimum":0,"maximum":100},
@@ -63,9 +67,12 @@ public class ProposeRuleTool implements AgentTool {
 			    "frequency":{"type":"string","enum":["DAILY","WEEKLY"]},
 			    "hour":{"type":"integer","minimum":0,"maximum":23},
 			    "weekday":{"type":"integer","minimum":1,"maximum":7},
-			    "connectionId":{"type":"string"}},
+			    "connectionId":{"type":"string"},
+			    "staleReasons":{"type":"array","items":{"type":"string","enum":["NEVER_RUN","JOB_CHANGED","NEW_CANDIDATES","CANDIDATE_CHANGED"]}}},
 			   "required":["type"],"additionalProperties":false},
-			  "dailyRunCap":{"type":"integer","minimum":1,"description":"Max tasks per day (default 20)"}},
+			  "dailyRunCap":{"type":"integer","minimum":1,"description":"Max tasks per day (default 20)"},
+			  "autoApproveMatching":{"type":"boolean","description":"Run matching without asking the recruiter"},
+			  "autoApproveMaxActions":{"type":"integer","minimum":1,"maximum":500,"description":"Most matching actions one matching may cost without asking (default 50)"}},
 			 "required":["name","goal","trigger"],"additionalProperties":false}""";
 	}
 
@@ -99,6 +106,10 @@ public class ProposeRuleTool implements AgentTool {
 		card.put("trigger", trigger);
 		card.put("goalTemplate", request.getGoalTemplate().strip());
 		card.put("dailyRunCap", request.getDailyRunCap());
+		if (Boolean.TRUE.equals(request.getAutoApproveMatching())) {
+			card.put("autoApproveMatching", true);
+			card.put("autoApproveMaxActions", request.getAutoApproveMaxActions());
+		}
 		return AgentToolResult.ok(card, "agent.step.propose_rule", Map.of("name", request.getName().strip()), List.of());
 	}
 
@@ -123,6 +134,8 @@ public class ProposeRuleTool implements AgentTool {
 		request.setName(ToolArgs.text(args, "name"));
 		request.setGoalTemplate(ToolArgs.text(args, "goal"));
 		request.setDailyRunCap(ToolArgs.optionalInteger(args, "dailyRunCap"));
+		request.setAutoApproveMatching(args.path("autoApproveMatching").asBoolean(false) ? Boolean.TRUE : null);
+		request.setAutoApproveMaxActions(ToolArgs.optionalInteger(args, "autoApproveMaxActions"));
 		var t = args.path("trigger");
 		var trigger = new AgentData.TriggerRequest();
 		trigger.setType(ToolArgs.text(t, "type"));
@@ -136,6 +149,8 @@ public class ProposeRuleTool implements AgentTool {
 		// The schedule runs in the recruiter's own time zone, as their browser reported it.
 		trigger.setZoneId(ctx.timeZone());
 		trigger.setConnectionId(ToolArgs.text(t, "connectionId"));
+		var reasons = ToolArgs.list(t, "staleReasons");
+		trigger.setStaleReasons(reasons.isEmpty() ? null : reasons);
 		request.setTrigger(trigger);
 		return request;
 	}

@@ -124,6 +124,15 @@ public class UsageMonitoringService extends AbstractQorvaService<UsageMonitoring
             .orElse(true);
     }
 
+    /** What the current period has left of a metered feature; null when it has no limit (or no period). */
+    public Integer remaining(String tenantId, FeatureKey featureKey) {
+        return findCurrentPeriodByTenantId(tenantId)
+            .map(dto -> resolveMetrics(dto.getFeatures(), featureKey))
+            .filter(metrics -> metrics.getLimit() != null)
+            .map(metrics -> Math.max(0, metrics.getLimit() - (metrics.getConsumed() != null ? metrics.getConsumed() : 0)))
+            .orElse(null);
+    }
+
     public boolean hasExceededLimit(String tenantId, FeatureKey featureKey) {
         return findCurrentPeriodByTenantId(tenantId)
             .map(dto -> {
