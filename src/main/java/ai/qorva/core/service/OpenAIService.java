@@ -38,6 +38,11 @@ public class OpenAIService {
 		return cvVisionExtractionAgent.extract(partialText, pages);
 	}
 
+	/** See {@link ReportGenerationAgent#version()}. */
+	public String reportVersion() {
+		return reportGenerationAgent.version();
+	}
+
 	public MatchingReportDetails generateReport(String cvDetails, String jobDescription, String languageCode, ScoringRules scoringRules) {
 		return reportGenerationAgent.generate(cvDetails, jobDescription, languageCode, scoringRules);
 	}

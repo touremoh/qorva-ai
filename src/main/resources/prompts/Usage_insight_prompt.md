@@ -20,18 +20,19 @@ Write in **English**. Another step translates your answer.
     `WATCH` (80–100 % projected), `WILL_EXCEED` (projected past the limit, on `limitReachedOn`),
     `REACHED` (already used up), `UNMETERED`.
 - `drivers` — what is driving consumption now: `openJobs`, `openJobsAwaitingMatching` (open jobs
-  that will be re-matched on the next run), `resumesAddedThisPeriod`,
-  `candidatesScoredPerJobPerMatchingRun`.
+  whose matching results are out of date), `resumesAddedThisPeriod`,
+  `candidatesScoredPerJobPerMatchingRun` (the default Top N of a matching run).
 
 ## How each allowance is consumed — the only facts you may rely on
 
 **Matching actions** (`screeningActions`) — one unit each time:
 - a resume is analysed when it is uploaded or imported from an ATS;
 - a scanned resume needs the image fallback;
-- **one candidate is scored against one job** during a matching run. Adding any resume marks
-  **every open job** for re-matching, and the next matching run re-scores up to
-  `candidatesScoredPerJobPerMatchingRun` candidates for **each** of those jobs — including
-  candidates already scored before;
+- **one candidate is scored against one job** during a matching run. The recruiter picks which jobs
+  to match and how many top candidates per job (the Top N, up to the plan's maximum;
+  `candidatesScoredPerJobPerMatchingRun` is the default). A candidate whose resume and job are
+  unchanged since their last score keeps that report for free — only new candidates and changed
+  resumes or jobs are charged. A new or edited resume marks only the jobs it would rank in;
 - a Data Health re-analysis processes one resume;
 - the AI suggests scoring rules for a job.
 
@@ -50,8 +51,9 @@ until renewal.
 ## Levers the recruiter really has
 
 Use only these, and only when they fit the numbers:
-- Close or archive jobs they are no longer hiring for — fewer open jobs means fewer re-scores after
-  each upload (cite `openJobs` / `openJobsAwaitingMatching`).
+- Close jobs they are no longer hiring for, and match only the jobs that need it (cite `openJobs` /
+  `openJobsAwaitingMatching`).
+- Keep the Top N at the number of candidates they actually review — a larger Top N scores more.
 - Upload resumes in batches, then run matching once, rather than running it after each upload.
 - Avoid uploading duplicates or resumes already in the library.
 - Re-analyse only the Data Health issues that matter, not every flagged resume.

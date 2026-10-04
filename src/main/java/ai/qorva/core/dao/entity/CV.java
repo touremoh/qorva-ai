@@ -79,6 +79,11 @@ public class CV implements QorvaEntity {
 
     private float[] embedding;
 
+    /** Set when the CV is created or its matching input changes; cleared by the matching staleness sweep. */
+    private Boolean matchCheckPending;
+
+    private Instant matchCheckPendingSince;
+
     @Field("score")
     private Double score;
 

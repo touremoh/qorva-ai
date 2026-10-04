@@ -10,6 +10,7 @@ import ai.qorva.core.security.TenantScope;
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.querybuilder.CVQueryBuilder;
 import ai.qorva.core.dao.repository.CVRepository;
+import ai.qorva.core.dao.specifications.MongoSpecification;
 import ai.qorva.core.dao.specifications.MongoSpecifications;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.CVDuplicatesData;
@@ -22,6 +23,7 @@ import ai.qorva.core.enums.QualityFlagEnum;
 import ai.qorva.core.dto.common.AtsRef;
 import ai.qorva.core.dto.common.Availability;
 import ai.qorva.core.dto.common.PersonalInformation;
+import ai.qorva.core.dto.common.ScoringRules;
 import ai.qorva.core.enums.ContentDateSourceEnum;
 import ai.qorva.core.enums.NoteTargetTypeEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -35,6 +37,7 @@ import ai.qorva.core.utils.ContactNormalizer;
 import ai.qorva.core.utils.VisionEscalationPolicy;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -47,7 +50,9 @@ import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
@@ -65,7 +70,6 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
     private final OpenAIService openAIService;
     private final OpenAIResultMapper openAIResultMapper;
-    private final JobPostService jobPostService;
     private final CascadeRegistry cascadeRegistry;
     private final UsageMonitoringService usageMonitoringService;
     private final S3StorageService s3StorageService;
@@ -73,7 +77,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     private final NoteService noteService;
     private final CandidateOutreachService candidateOutreachService;
 
-    /** Candidates scored per job in one matching run — each one is a Matching Action (see UsageInsightService). */
+    /** Default Top N of a matching run on every plan (see MatchingTopNPolicy) — each new report is a Matching Action. */
     public static final int DEFAULT_MATCH_LIMIT = 10;
 
     /**
@@ -86,9 +90,6 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     /** Stashes the attachment S3 key between pre- and post-delete hooks (same pattern as existingDTOForUpdate). */
     private final ThreadLocal<String> attachmentKeyForDelete = new ThreadLocal<>();
 
-    /** Whether the update in progress changed the matching input — set in preProcessUpdateOne, read in postProcessUpdateOne. */
-    private final ThreadLocal<Boolean> matchingInputChanged = new ThreadLocal<>();
-
     @Autowired
     public CVService(
         CVRepository repository,
@@ -96,7 +97,6 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         CVQueryBuilder queryBuilder,
         OpenAIService openAIService,
         OpenAIResultMapper openAIResultMapper,
-        JobPostService jobPostService,
         CVMapper cVMapper,
         CascadeRegistry cascadeRegistry,
         UsageMonitoringService usageMonitoringService,
@@ -109,7 +109,6 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         this.candidateOutreachService = candidateOutreachService;
         this.openAIService = openAIService;
         this.openAIResultMapper = openAIResultMapper;
-        this.jobPostService = jobPostService;
         this.cvMapper = cVMapper;
         this.cascadeRegistry = cascadeRegistry;
         this.usageMonitoringService = usageMonitoringService;
@@ -145,6 +144,16 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         CVContentDateResolver.resolve(dto);
         CVQualityFlagResolver.resolve(dto);
         dto.setContactKeys(ContactNormalizer.keysOf(dto.getPersonalInformation()));
+        markMatchCheckPending(dto);
+    }
+
+    /**
+     * Queues the CV for the matching staleness sweep, which flags only the jobs whose top N it would enter
+     * (once Atlas has embedded it) — every creation path and every matching-relevant edit goes through here.
+     */
+    private static void markMatchCheckPending(CVDTO cv) {
+        cv.setMatchCheckPending(true);
+        cv.setMatchCheckPendingSince(Instant.now());
     }
 
     @Override
@@ -158,7 +167,11 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         CVQualityFlagResolver.resolve(newCV);
         // After the merge, so a changed or removed contact never leaves a stale key behind.
         newCV.setContactKeys(ContactNormalizer.keysOf(newCV.getPersonalInformation()));
-        this.matchingInputChanged.set(!matchingBefore.equals(CvMatchingView.fingerprint(newCV)));
+        // Only a change to what the reports are computed from warrants re-screening: a tag-only edit used to
+        // re-flag every open job and cost a screening action per re-scored candidate.
+        if (!matchingBefore.equals(CvMatchingView.fingerprint(newCV))) {
+            markMatchCheckPending(newCV);
+        }
     }
 
     @Override
@@ -168,16 +181,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
 
     @Override
     protected void postProcessUpdateOne(CV entity) {
-        try {
-            // Only a change to what the reports are computed from warrants re-screening: a tag-only
-            // edit used to re-flag every open job and cost a screening action per re-scored candidate.
-            if (!Boolean.FALSE.equals(this.matchingInputChanged.get())) {
-                this.jobPostService.markOpenJobPostsAsNeedingReports(entity.getTenantId());
-            }
-            this.libraryQualityCacheEvictor.evict(entity.getTenantId());
-        } finally {
-            this.matchingInputChanged.remove();
-        }
+        this.libraryQualityCacheEvictor.evict(entity.getTenantId());
     }
 
     /** Quality flags surfaced as per-file warnings in the upload response. */
@@ -230,8 +234,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
                 throw new QorvaException(QorvaErrorCodes.CV_NO_FILES_PROCESSED, HttpStatus.INTERNAL_SERVER_ERROR.value(), HttpStatus.INTERNAL_SERVER_ERROR);
             }
 
-            log.debug("CV Service - {} files processed - Marking open job posts as needing reports", results.size());
-            jobPostService.markOpenJobPostsAsNeedingReports(tenantId);
+            log.debug("CV Service - {} files processed", results.size());
 
             log.debug("CV Service - File upload completed");
             return results;
@@ -457,7 +460,15 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         return cvDtoToPersist;
     }
 
-    public List<CVDTO> match(JobPostDTO jobPostDTO) throws QorvaException {
+    /** A matched candidate and its similarity to the job ({@code vectorSearchScore}, 0..1). */
+    public record ScoredCv(CVDTO cv, double score) {
+    }
+
+    /**
+     * The job's best {@code limit} candidates, most similar first: above the similarity floor, not archived,
+     * within the job's availability filters. Fewer than {@code limit} when not enough candidates qualify.
+     */
+    public List<ScoredCv> match(JobPostDTO jobPostDTO, int limit) throws QorvaException {
         var rules = jobPostDTO.getScoringRules();
         Boolean filterOpenToWork = rules != null ? rules.getFilterOpenToWork() : null;
         var includedStatuses = rules != null ? rules.getAvailabilityStatuses() : null;
@@ -467,7 +478,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
             new ObjectId(jobPostDTO.getTenantId()),
             filterOpenToWork,
             includedStatuses,
-            DEFAULT_MATCH_LIMIT
+            limit
         );
 
         if (Objects.isNull(matchingCVs) || matchingCVs.isEmpty()) {
@@ -475,7 +486,22 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
             return List.of();
         }
 
-        return matchingCVs.stream().map(cvMapper::map).toList();
+        return matchingCVs.stream()
+            .map(cv -> new ScoredCv(cvMapper.map(cv), cv.getScore() != null ? cv.getScore() : 0d))
+            .toList();
+    }
+
+    /** Of these candidates, the ones that still exist in the tenant and pass the job's eligibility rules. */
+    public Set<String> stillEligible(Collection<String> cvIds, ScoringRules rules) {
+        if (cvIds.isEmpty()) {
+            return Set.of();
+        }
+        MongoSpecification<CV> byIds = () -> Criteria.where("_id").in(cvIds.stream().filter(ObjectId::isValid).map(ObjectId::new).toList());
+        return this.repository.findAll(MongoSpecifications.allOf(byIds, inTenantScope())).stream()
+            .map(cvMapper::map)
+            .filter(cv -> CvEligibility.eligible(cv, rules))
+            .map(CVDTO::getId)
+            .collect(java.util.stream.Collectors.toSet());
     }
 
     /**

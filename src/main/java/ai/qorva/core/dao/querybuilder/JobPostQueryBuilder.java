@@ -18,6 +18,7 @@ public class JobPostQueryBuilder implements QorvaQueryBuilder<JobPost> {
 			.and(JobPostSpecifications.titleContains(params.get("title")))
 			.and(JobPostSpecifications.descriptionContains(params.get("description")))
 			.and(JobPostSpecifications.statusEquals(params.get("status")))
-			.and(JobPostSpecifications.createdByEquals(params.get("createdBy")));
+			.and(JobPostSpecifications.createdByEquals(params.get("createdBy")))
+			.and(JobPostSpecifications.matchingReportsNeededEquals(params.get("matchingReportsNeeded")));
 	}
 }

@@ -140,8 +140,9 @@ public class BackgroundJobService {
 		return new BackgroundJobData.Estimate(affected, noRawText, affected - noRawText, remaining);
 	}
 
+	/** Matching runs have their own page and endpoints; frequent as they are, they would hide the library's jobs. */
 	public BackgroundJobData.JobList list(String tenantId) {
-		return jobs.recent(tenantId);
+		return jobs.recentExcept(tenantId, BackgroundJob.TYPE_MATCHING);
 	}
 
 	public BackgroundJobData.JobView get(String tenantId, String jobId) throws QorvaException {

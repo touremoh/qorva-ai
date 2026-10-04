@@ -3,6 +3,7 @@ package ai.qorva.core.dto;
 import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.dto.common.CandidateInfo;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import lombok.AllArgsConstructor;
@@ -26,6 +27,30 @@ public class MatchingReportDTO extends AbstractQorvaDTO {
     private String tenantId;
     private MatchingReportDetails matchingReportDetails;
     private String status;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private Boolean outdated;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private String outdatedReason;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant outdatedAt;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private Double previousFinalScore;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant rescoredAt;
+
+    // Internal: kept on the DTO only so an update does not erase them.
+    @JsonIgnore
+    private String inputFingerprint;
+
+    @JsonIgnore
+    private String cvFingerprint;
 
     @JsonProperty(access = Access.READ_ONLY)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")

@@ -19,6 +19,7 @@ public class MatchingReportQueryBuilder implements QorvaQueryBuilder<MatchingRep
 			.and(MatchingReportSpecifications.statusEquals(params.get("status")))
 			.and(MatchingReportSpecifications.candidateNameContains(params.get("candidateName")))
 			.and(MatchingReportSpecifications.recommendationEquals(params.get("recommendation")))
-			.and(MatchingReportSpecifications.confidenceLevelEquals(params.get("confidenceLevel")));
+			.and(MatchingReportSpecifications.confidenceLevelEquals(params.get("confidenceLevel")))
+			.and(MatchingReportSpecifications.outdatedEquals(params.get("outdated")));
 	}
 }

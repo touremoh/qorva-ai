@@ -25,6 +25,14 @@ public final class JobPostSpecifications {
 		return () -> Criteria.where("status").is(status);
 	}
 
+	/** "true": jobs whose matching results are out of date; "false": the up-to-date ones; blank: both. */
+	public static MongoSpecification<JobPost> matchingReportsNeededEquals(String needed) {
+		if (needed == null || needed.isBlank()) return MongoSpecifications.empty();
+		return Boolean.parseBoolean(needed)
+			? () -> Criteria.where("matchingReportsNeeded").is(true)
+			: () -> Criteria.where("matchingReportsNeeded").ne(true);
+	}
+
 	public static MongoSpecification<JobPost> createdByEquals(String createdBy) {
 		if (createdBy == null || createdBy.isBlank()) return MongoSpecifications.empty();
 		return () -> Criteria.where("createdBy").is(createdBy);

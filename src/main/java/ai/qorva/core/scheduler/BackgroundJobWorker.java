@@ -10,7 +10,7 @@ import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.service.CandidateUpdateEmailService;
 import ai.qorva.core.service.CandidateUpdateService;
-import ai.qorva.core.service.JobPostService;
+import ai.qorva.core.service.MatchingRunService;
 import ai.qorva.core.service.LibraryQualityCacheEvictor;
 import ai.qorva.core.service.OpenAIService;
 import ai.qorva.core.service.S3StorageService;
@@ -81,7 +81,7 @@ public class BackgroundJobWorker {
 	private final TenantService tenantService;
 	private final UserService userService;
 	private final S3StorageService s3StorageService;
-	private final JobPostService jobPostService;
+	private final MatchingRunService matchingRunService;
 	private final AtsSyncService atsSyncService;
 
 	public BackgroundJobWorker(
@@ -97,7 +97,7 @@ public class BackgroundJobWorker {
 		TenantService tenantService,
 		UserService userService,
 		S3StorageService s3StorageService,
-		JobPostService jobPostService,
+		MatchingRunService matchingRunService,
 		AtsSyncService atsSyncService
 	) {
 		this.mongoTemplate = mongoTemplate;
@@ -112,7 +112,7 @@ public class BackgroundJobWorker {
 		this.tenantService = tenantService;
 		this.userService = userService;
 		this.s3StorageService = s3StorageService;
-		this.jobPostService = jobPostService;
+		this.matchingRunService = matchingRunService;
 		this.atsSyncService = atsSyncService;
 	}
 
@@ -144,7 +144,8 @@ public class BackgroundJobWorker {
 			BackgroundJob.TYPE_REANALYZE, this::runReanalyze,
 			BackgroundJob.TYPE_CANDIDATE_UPDATE_CAMPAIGN, this::runCampaign,
 			BackgroundJob.TYPE_BULK_CV_UPLOAD, this::runBulkUpload,
-			BackgroundJob.TYPE_ATS_SYNC, atsSyncService::executeSync);
+			BackgroundJob.TYPE_ATS_SYNC, atsSyncService::executeSync,
+			BackgroundJob.TYPE_MATCHING, matchingRunService::execute);
 	}
 
 	private void run(BackgroundJob job) throws Exception {
@@ -352,12 +353,8 @@ public class BackgroundJobWorker {
 		}
 		mongoTemplate.updateFirst(Query.query(Criteria.where("_id").is(job.getId())), update, BackgroundJob.class);
 
+		// Imported CVs are queued for the matching staleness sweep on creation.
 		if (succeeded.get() > 0) {
-			try {
-				jobPostService.markOpenJobPostsAsNeedingReports(tenantId);
-			} catch (Exception e) {
-				log.warn("Job {} — could not mark job posts as needing reports", job.getId(), e);
-			}
 			cacheEvictor.evict(tenantId);
 		}
 		log.info("Job {} finished: {} — {}/{} imported, {} failed, {} skipped{}",

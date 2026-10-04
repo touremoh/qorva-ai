@@ -31,7 +31,7 @@ public interface MatchingReportRepository extends QorvaRepository<MatchingReport
 	);
 
 	@Aggregation(pipeline = {
-		"{ '$match': { 'tenantId': ?0 } }",
+		"{ '$match': { 'tenantId': ?0, 'outdated': { '$ne': true } } }",
 		"{ '$lookup': { " +
 			"'from': 'job_posts', " +
 			"'localField': 'jobPostId', " +
@@ -46,7 +46,7 @@ public interface MatchingReportRepository extends QorvaRepository<MatchingReport
 	/**
 	 * Returns the top 5 candidates per job posting, ranked by overall score descending.
 	 * Pipeline:
-	 *  1. Filter by tenant
+	 *  1. Filter by tenant, current results only (outdated reports left the job's top N)
 	 *  2. Sort by score desc so $push preserves ranking
 	 *  3. Group by jobPostId, collecting all candidates and the best score
 	 *  4. Order jobs by their best score (then id) so skip/limit paging is stable
@@ -56,7 +56,7 @@ public interface MatchingReportRepository extends QorvaRepository<MatchingReport
 	 * {@code jobPostId} and fail (see MatchingReportDashboardAggregationMappingTest).
 	 */
 	@Aggregation(pipeline = {
-		"{ '$match': { 'tenantId': ?0 } }",
+		"{ '$match': { 'tenantId': ?0, 'outdated': { '$ne': true } } }",
 		"{ '$sort': { 'matchingReportDetails.decisionSummary.finalScore': -1 } }",
 		"{ '$group': { " +
 			"'_id': '$jobPostId', " +
@@ -77,7 +77,7 @@ public interface MatchingReportRepository extends QorvaRepository<MatchingReport
 	Slice<DashboardData.TopCandidatesPerJobReport> getTopCandidatesPerJobPost(ObjectId tenantId, Pageable pageable);
 
 	@Aggregation(pipeline = {
-		"{ '$match': { 'tenantId': ?0 } }",
+		"{ '$match': { 'tenantId': ?0, 'outdated': { '$ne': true } } }",
 		"{ '$group': { '_id': '$jobPostId' } }",
 		"{ '$group': { '_id': null, 'total': { '$sum': 1 } } }"
 	})

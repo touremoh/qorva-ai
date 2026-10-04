@@ -92,7 +92,7 @@ public class ListReportsTool implements AgentTool {
 		var data = new LinkedHashMap<String, Object>();
 		data.put("total", total);
 		data.put("reports", reports.stream().map(r -> ReportProjections.summary(r.getId(), r.getJobPostId(),
-			r.getJobPostTitle(), r.getCandidateInfo(), r.getMatchingReportDetails())).toList());
+			r.getJobPostTitle(), r.getCandidateInfo(), r.getMatchingReportDetails(), r.getOutdated())).toList());
 		var links = reports.stream().limit(10).map(r -> new AgentRun.Link("REPORT", r.getId(),
 			r.getCandidateInfo() != null ? r.getCandidateInfo().getCandidateName() : null)).toList();
 		return AgentToolResult.ok(data, "agent.step.list_reports", Map.of("count", String.valueOf(total)), links);

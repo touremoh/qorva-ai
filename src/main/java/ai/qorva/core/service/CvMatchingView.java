@@ -32,6 +32,8 @@ final class CvMatchingView {
 		view.setContentDateSource(null);
 		view.setQualityFlags(null);
 		view.setContactKeys(null);
+		view.setMatchCheckPending(null);
+		view.setMatchCheckPendingSince(null);
 		view.setCreatedAt(null);
 		view.setCreatedBy(null);
 		view.setLastUpdatedAt(null);

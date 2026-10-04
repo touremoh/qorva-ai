@@ -49,6 +49,7 @@ class AppFixtureExportIntegrationTest extends AbstractIntegrationTest {
 			get("/cvs"), get("/cvs/filter-options"), get("/cvs/duplicates"), get("/cvs/bulk-uploads"),
 			get("/cvs/clear-library/preflight"), get("/cvs/search").param("searchTerms", "engineer").param("pageSize", "8").param("pageNumber", "0"),
 			get("/jobs").param("pageNumber", "0").param("pageSize", "25"),
+			get("/ai/matching-runs/options"), get("/ai/matching-runs").param("active", "true"),
 			get("/matching-reports").param("pageNumber", "0").param("pageSize", "10"),
 			get("/chats").param("page", "0").param("size", "25"), get("/chats/allowed"),
 			get("/dashboard/data"), get("/dashboard/top-candidates").param("pageNumber", "0").param("pageSize", "5"),

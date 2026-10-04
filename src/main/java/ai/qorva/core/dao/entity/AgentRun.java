@@ -58,6 +58,8 @@ public class AgentRun implements QorvaEntity {
 	/** RULE runs: the rule that started it, and its name at the time. */
 	private String ruleId;
 	private String ruleName;
+	/** RULE runs: the rule's matching pre-approval at the time it fired — max actions per matching, null = none. */
+	private Integer autoApproveMaxActions;
 	/** The recruiter's time zone (from the browser), used when a chat proposes a scheduled rule. */
 	private String timeZone;
 
@@ -135,6 +137,8 @@ public class AgentRun implements QorvaEntity {
 		private String kind;
 		private String tool;
 		private String tier;
+		/** An approval-tier action carried out without asking, under its rule's pre-approval. */
+		private Boolean autoApproved;
 		private String state;
 		/** i18n key of the user-facing line for this step (e.g. agent.step.search_cvs), translated by the app. */
 		private String summaryKey;

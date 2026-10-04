@@ -294,4 +294,63 @@ class AgentRuleIntegrationTest extends AbstractIntegrationTest {
 		tick();
 		assertThat(mongo.count(digests, PendingEmailNotification.class)).isEqualTo(1);
 	}
+
+	/** Every job matched and up to date, so only what the test does makes one stale. */
+	private void everyJobMatched() {
+		mongo.updateMulti(new Query(), new Update().set("matchingReportsNeeded", false).unset("matchingStaleReason")
+			.unset("matchingStaleAt").set("lastMatchedAt", new java.util.Date()), "job_posts");
+	}
+
+	private void editJob(String jobId, String title) throws Exception {
+		var response = mvc.perform(put("/jobs/" + jobId).header("Authorization", owner).contentType(JSON)
+			.content("{\"title\":\"%s\",\"description\":\"<p>Updated.</p>\",\"status\":\"open\"}".formatted(title)))
+			.andReturn().getResponse();
+		assertThat(response.getStatus()).as(response.getContentAsString()).isEqualTo(200);
+	}
+
+	@Test
+	void aChangedJobFiresItsRuleOncePerEpisodeWithMatchingPreApproved() throws Exception {
+		everyJobMatched();
+		var rule = createRule(owner, """
+			{"name":"Re-match changed jobs","goalTemplate":"Run matching for {{job}} with the top 5 candidates.",
+			 "autoApproveMatching":true,"autoApproveMaxActions":30,
+			 "trigger":{"type":"JOB_NEEDS_MATCHING","staleReasons":["JOB_CHANGED"]}}""");
+		assertThat(rule.path("autoApproveMatching").asBoolean()).isTrue();
+		assertThat(rule.path("autoApproveMaxActions").asInt()).isEqualTo(30);
+		assertThat(rule.path("trigger").path("staleReasons")).hasSize(1);
+
+		tick();
+		assertThat(ruleRuns()).isEmpty();
+
+		editJob(a.jobId(), "Senior Backend Engineer (Java)");
+		tick();
+
+		var runs = ruleRuns();
+		assertThat(runs).hasSize(1);
+		assertThat(runs.getFirst().getAutoApproveMaxActions()).isEqualTo(30);
+		assertThat(runs.getFirst().getGoal()).endsWith("with the top 5 candidates.");
+		assertThat(runs.getFirst().getMentions()).extracting(AgentRun.Mention::getId).containsExactly(a.jobId());
+
+		// Same episode: never again, even before the job is matched.
+		awaitRuleRunsIdle();
+		tick();
+		assertThat(ruleRuns()).hasSize(1);
+	}
+
+	@Test
+	void aJobRuleFiresOnlyForTheReasonsItWatches() throws Exception {
+		everyJobMatched();
+		createRule(owner, """
+			{"name":"New jobs","goalTemplate":"Run matching for {{job}}.",
+			 "trigger":{"type":"JOB_NEEDS_MATCHING","staleReasons":["NEVER_RUN"]}}""");
+
+		editJob(a.jobId(), "Senior Backend Engineer (Java)");
+		tick();
+		assertThat(ruleRuns()).isEmpty();
+
+		var invalid = mvc.perform(post("/agent/rules").header("Authorization", owner).contentType(JSON).content("""
+			{"name":"Bad","goalTemplate":"x","trigger":{"type":"JOB_NEEDS_MATCHING","staleReasons":["SOMETIMES"]}}"""))
+			.andReturn().getResponse();
+		assertThat(invalid.getStatus()).isEqualTo(400);
+	}
 }

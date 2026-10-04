@@ -2,6 +2,7 @@ package ai.qorva.core.controller;
 
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.MatchingReportDTO;
+import ai.qorva.core.dto.MatchingRunData;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.security.CrudPolicy;
 import ai.qorva.core.service.ATSExportService;
@@ -30,7 +31,7 @@ public class MatchingReportController extends AbstractQorvaController<MatchingRe
 	}
 
 	/*
-	 * Reports are created by screening (/ai/start-screening), never through the generic CRUD: the app
+	 * Reports are created by matching runs (/ai/matching-runs), never through the generic CRUD: the app
 	 * lists, searches and deletes them. VIEW_REPORT to read, DELETE_REPORT to delete.
 	 */
 	@Override
@@ -46,6 +47,14 @@ public class MatchingReportController extends AbstractQorvaController<MatchingRe
 	public ResponseEntity<QorvaRequestResponse> searchAll(@RequestParam Map<String, String> params) throws QorvaException {
 		params.put("tenantId", currentTenantId());
 		return BuildApiResponse.from(((MatchingReportService) this.service).searchAll(params));
+	}
+
+	/** Deletes the job's outdated reports (with their notes and chats) in one go. */
+	@DeleteMapping("/outdated")
+	@PreAuthorize("@accessManager.hasPermission(authentication,'DELETE_REPORT')")
+	public ResponseEntity<MatchingRunData.DeleteOutdatedResponse> deleteOutdated(@RequestParam String jobPostId) throws QorvaException {
+		return ResponseEntity.ok(new MatchingRunData.DeleteOutdatedResponse(
+			((MatchingReportService) this.service).deleteOutdated(currentTenantId(), jobPostId)));
 	}
 
 	@GetMapping("/export/csv")

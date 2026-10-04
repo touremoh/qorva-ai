@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.service.AIScreeningService;
-import ai.qorva.core.service.CVService;
+import ai.qorva.core.service.MatchingTopNPolicy;
 import ai.qorva.core.service.JobPostService;
 import ai.qorva.core.service.UsageMonitoringService;
 
@@ -25,7 +25,7 @@ import java.util.Set;
 
 /**
  * Runs matching for the chosen open jobs — spends matching actions, so it goes through an approval card showing
- * the jobs, the estimated cost and what the plan has left.
+ * the jobs, their Top N, the estimated cost (only new or changed reports are charged) and what the plan has left.
  */
 @Component
 public class StartScreeningTool implements AgentTool {
@@ -35,12 +35,14 @@ public class StartScreeningTool implements AgentTool {
 	private final AIScreeningService screeningService;
 	private final JobPostService jobPostService;
 	private final UsageMonitoringService usageMonitoringService;
+	private final MatchingTopNPolicy topNPolicy;
 
 	public StartScreeningTool(AIScreeningService screeningService, JobPostService jobPostService,
-	                          UsageMonitoringService usageMonitoringService) {
+	                          UsageMonitoringService usageMonitoringService, MatchingTopNPolicy topNPolicy) {
 		this.screeningService = screeningService;
 		this.jobPostService = jobPostService;
 		this.usageMonitoringService = usageMonitoringService;
+		this.topNPolicy = topNPolicy;
 	}
 
 	@Override
@@ -50,8 +52,9 @@ public class StartScreeningTool implements AgentTool {
 
 	@Override
 	public String description() {
-		return "Run matching for up to 10 open jobs: scores the best-fitting candidates against each job and writes "
-			+ "matching reports. Costs up to " + CVService.DEFAULT_MATCH_LIMIT + " matching actions per job, so the "
+		return "Run matching for up to 10 open jobs: scores each job's top N best-fitting candidates and writes matching "
+			+ "reports. topN (5, 10, 15… up to the plan's maximum) is optional — by default each job keeps its last Top N, "
+			+ "or the plan default. Only new or changed reports cost a matching action (unchanged ones are reused), so the "
 			+ "recruiter approves it first. Use list_reports afterwards to read the results.";
 	}
 
@@ -59,7 +62,8 @@ public class StartScreeningTool implements AgentTool {
 	public String inputSchema() {
 		return """
 			{"type":"object","properties":{
-			  "jobIds":{"type":"array","items":{"type":"string"},"minItems":1,"maxItems":10}
+			  "jobIds":{"type":"array","items":{"type":"string"},"minItems":1,"maxItems":10},
+			  "topN":{"type":"integer","minimum":5,"maximum":30,"multipleOf":5}
 			},"required":["jobIds"],"additionalProperties":false}""";
 	}
 
@@ -78,6 +82,14 @@ public class StartScreeningTool implements AgentTool {
 		var ids = ToolArgs.list(args, "jobIds").stream().distinct().toList();
 		if (ids.isEmpty()) return AgentToolResult.error("jobIds is required");
 		if (ids.size() > MAX_JOBS) return AgentToolResult.error("At most " + MAX_JOBS + " jobs at a time");
+		var requestedTopN = ToolArgs.optionalInteger(args, "topN");
+		if (requestedTopN != null) {
+			var max = topNPolicy.limitsFor(ctx.tenantId()).max();
+			if (requestedTopN < MatchingTopNPolicy.STEP || requestedTopN % MatchingTopNPolicy.STEP != 0 || requestedTopN > max) {
+				return AgentToolResult.error("topN must be a multiple of " + MatchingTopNPolicy.STEP + " between "
+					+ MatchingTopNPolicy.STEP + " and " + max + " on this plan.");
+			}
+		}
 
 		var jobs = new ArrayList<JobPostDTO>();
 		for (var id : ids) {
@@ -92,16 +104,26 @@ public class StartScreeningTool implements AgentTool {
 			}
 			jobs.add(job);
 		}
-		int estimate = jobs.size() * CVService.DEFAULT_MATCH_LIMIT;
-		Integer remaining = remainingActions(ctx.tenantId());
+		var cards = new ArrayList<Map<String, Object>>();
+		int estimate = 0;
+		int reused = 0;
+		for (var job : jobs) {
+			int topN = topNPolicy.resolve(ctx.tenantId(), requestedTopN, job.getMatchingTopN());
+			var cost = screeningService.estimate(List.of(job), topN, ctx.language()).getFirst();
+			estimate += cost.newReports();
+			reused += cost.reusedReports();
+			cards.add(Map.of("jobId", job.getId(), "title", job.getTitle() != null ? job.getTitle() : "", "topN", topN));
+		}
+		Integer remaining = usageMonitoringService.remaining(ctx.tenantId(), UsageMonitoringService.FeatureKey.SCREENING_ACTIONS);
 		if (remaining != null && remaining < estimate) {
 			return AgentToolResult.error("Not enough matching actions left this period: up to " + estimate + " needed, "
 				+ remaining + " remaining.");
 		}
 
 		var card = new LinkedHashMap<String, Object>();
-		card.put("jobs", jobs.stream().map(j -> Map.of("jobId", j.getId(), "title", j.getTitle() != null ? j.getTitle() : "")).toList());
+		card.put("jobs", cards);
 		card.put("estimatedActions", estimate);
+		card.put("reusedReports", reused);
 		card.put("remainingActions", remaining);
 		return AgentToolResult.ok(card, "agent.step.start_screening", Map.of("count", String.valueOf(jobs.size())),
 			jobs.stream().map(j -> new AgentRun.Link("JOB", j.getId(), j.getTitle())).toList());
@@ -115,19 +137,11 @@ public class StartScreeningTool implements AgentTool {
 	@Override
 	public AgentToolResult execute(JsonNode args, AgentToolContext ctx, AgentApproval approval) throws QorvaException {
 		var ids = ToolArgs.list(args, "jobIds").stream().distinct().toList();
-		var screened = screeningService.screenJobs(ctx.tenantId(), ids, ctx.language());
+		var screened = screeningService.screenJobs(ctx.tenantId(), ids, ToolArgs.optionalInteger(args, "topN"), ctx.language());
 		var data = new LinkedHashMap<String, Object>();
 		data.put("screenedJobs", screened.stream().map(j -> Map.of("jobId", j.getId(), "title", j.getTitle() != null ? j.getTitle() : "")).toList());
 		data.put("next", "Use list_reports with each jobId to read the new scores.");
 		return AgentToolResult.ok(data, "agent.step.screening_done", Map.of("count", String.valueOf(screened.size())),
 			screened.stream().map(j -> new AgentRun.Link("JOB", j.getId(), j.getTitle())).toList());
-	}
-
-	private Integer remainingActions(String tenantId) {
-		return usageMonitoringService.findCurrentPeriodByTenantId(tenantId)
-			.map(p -> p.getFeatures() != null ? p.getFeatures().getScreeningActions() : null)
-			.filter(m -> m != null && m.getLimit() != null)
-			.map(m -> Math.max(0, m.getLimit() - (m.getConsumed() != null ? m.getConsumed() : 0)))
-			.orElse(null);
 	}
 }

@@ -17,6 +17,7 @@
     "ruleName" : null,
     "status" : "COMPLETED",
     "steps" : [ {
+      "autoApproved" : false,
       "draft" : null,
       "kind" : "TOOL_CALL",
       "links" : [ {

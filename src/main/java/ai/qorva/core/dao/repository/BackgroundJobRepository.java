@@ -13,7 +13,11 @@ public interface BackgroundJobRepository extends MongoRepository<BackgroundJob, 
 
 	List<BackgroundJob> findByTenantIdAndTypeOrderByCreatedAtDesc(String tenantId, String type, Pageable pageable);
 
+	List<BackgroundJob> findByTenantIdAndTypeNotOrderByCreatedAtDesc(String tenantId, String type, Pageable pageable);
+
 	boolean existsByTenantIdAndTypeAndStatusIn(String tenantId, String type, List<String> statuses);
+
+	List<BackgroundJob> findByTenantIdAndTypeAndStatusIn(String tenantId, String type, List<String> statuses);
 
 	boolean existsByConnectionIdAndStatusIn(String connectionId, List<String> statuses);
 

@@ -11,6 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.time.Instant;
+import java.util.List;
 
 @Getter
 @Setter
@@ -32,6 +33,23 @@ public class JobPost implements QorvaEntity {
 
     private ScoringRules scoringRules;
     private Boolean matchingReportsNeeded;
+
+    /** Why the results are out of date ({@code MatchingStaleReasonEnum}); null once matched. */
+    private String matchingStaleReason;
+
+    /** When the results became out of date (or for a stronger reason) — one "needs matching" episode, for rules. */
+    private Instant matchingStaleAt;
+
+    /** Top N of the last run — the next run's default. */
+    private Integer matchingTopN;
+
+    private Instant lastMatchedAt;
+
+    /** Similarity a new candidate must reach to enter the current top N (the N-th result, or the floor). */
+    private Double matchingCutoffScore;
+
+    /** Candidates seen since the last run that would enter its top N (capped; the count feeds the badge). */
+    private List<String> newCandidateIds;
 
     /** Source link when this job was imported from an external ATS. */
     private ai.qorva.core.dto.common.AtsRef atsRef;

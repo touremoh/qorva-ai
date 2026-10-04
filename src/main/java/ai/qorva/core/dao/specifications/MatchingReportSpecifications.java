@@ -32,4 +32,12 @@ public final class MatchingReportSpecifications {
 		if (confidenceLevel == null || confidenceLevel.isBlank()) return MongoSpecifications.empty();
 		return () -> Criteria.where("matchingReportDetails.decisionSummary.confidenceLevel").is(confidenceLevel);
 	}
+
+	/** "true": only reports that left the job's latest results; "false": only current ones; blank: both. */
+	public static MongoSpecification<MatchingReport> outdatedEquals(String outdated) {
+		if (outdated == null || outdated.isBlank()) return MongoSpecifications.empty();
+		return Boolean.parseBoolean(outdated)
+			? () -> Criteria.where("outdated").is(true)
+			: () -> Criteria.where("outdated").ne(true);
+	}
 }

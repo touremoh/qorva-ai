@@ -31,7 +31,10 @@ public class AgentRule implements QorvaEntity {
 	public static final String TRIGGER_CV_SCORED = "CV_SCORED";
 	public static final String TRIGGER_SCHEDULE = "SCHEDULE";
 	public static final String TRIGGER_ATS_SYNC_FINISHED = "ATS_SYNC_FINISHED";
-	public static final List<String> TRIGGERS = List.of(TRIGGER_CV_ADDED, TRIGGER_CV_SCORED, TRIGGER_SCHEDULE, TRIGGER_ATS_SYNC_FINISHED);
+	/** An open job's matching results became out of date (MatchingStaleReasonEnum), once per episode. */
+	public static final String TRIGGER_JOB_NEEDS_MATCHING = "JOB_NEEDS_MATCHING";
+	public static final List<String> TRIGGERS = List.of(TRIGGER_CV_ADDED, TRIGGER_CV_SCORED, TRIGGER_SCHEDULE, TRIGGER_ATS_SYNC_FINISHED,
+		TRIGGER_JOB_NEEDS_MATCHING);
 
 	public static final String STATUS_ACTIVE = "ACTIVE";
 	public static final String STATUS_PAUSED = "PAUSED";
@@ -63,6 +66,13 @@ public class AgentRule implements QorvaEntity {
 	private Trigger trigger;
 	private String goalTemplate;
 	private int dailyRunCap;
+
+	/**
+	 * Pre-approval by the owner: the rule's runs start matching (start_screening) without waiting for approval,
+	 * as long as one matching costs at most {@code autoApproveMaxActions} actions; dearer ones still wait.
+	 */
+	private Boolean autoApproveMatching;
+	private Integer autoApproveMaxActions;
 
 	private String status;
 	private String pausedReason;
@@ -109,7 +119,7 @@ public class AgentRule implements QorvaEntity {
 		private String type;
 		/** CV_ADDED: ANY, ATS (imported) or MANUAL (uploaded). */
 		private String source;
-		/** CV_SCORED: one job, or any job when null. */
+		/** CV_SCORED and JOB_NEEDS_MATCHING: one job, or any job when null. */
 		private String jobPostId;
 		private String jobTitle;
 		/** CV_SCORED: final score at or above this (0–100). */
@@ -124,5 +134,7 @@ public class AgentRule implements QorvaEntity {
 		/** ATS_SYNC_FINISHED: one connection, or any when null. */
 		private String connectionId;
 		private String connectionName;
+		/** JOB_NEEDS_MATCHING: which stale reasons fire it (MatchingStaleReasonEnum names); null = all of them. */
+		private List<String> staleReasons;
 	}
 }
