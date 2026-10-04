@@ -1,5 +1,8 @@
 package ai.qorva.core.service.orchestrators;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import ai.qorva.core.dto.InsightIntent;
 import ai.qorva.core.dto.IntentClassificationResult;
 import ai.qorva.core.dto.QorvaPromptContextHolder;
@@ -18,7 +21,7 @@ import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_1_MINI
 @RequiredArgsConstructor
 public class InsightIntentClassifier {
 
-	private final ChatClient chatClient;
+	@Qualifier("interactiveChatClient") private final ChatClient chatClient;
 	private final QorvaPromptContextHolder promptContextHolder;
 	private final ObjectMapper objectMapper;
 
@@ -30,6 +33,7 @@ public class InsightIntentClassifier {
 			String renderedPrompt = promptTemplate.replace("{{question}}", question);
 
 			String content = chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "insight_intent"))
 				.options(StructuredOutput.options(GPT_4_1_MINI, "intent_classifier", converter.getJsonSchema(), false, 0.0))
 				.messages(new UserMessage(renderedPrompt))
 				.call()

@@ -1,5 +1,8 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaErrors;
 
@@ -54,7 +57,7 @@ public class ScoringRulesPrefillService {
 	private final String promptTemplate;
 
 	@Autowired
-	public ScoringRulesPrefillService(ChatClient chatClient, UsageMonitoringService usageMonitoringService) throws QorvaException {
+	public ScoringRulesPrefillService(@Qualifier("interactiveChatClient") ChatClient chatClient, UsageMonitoringService usageMonitoringService) throws QorvaException {
 		this.chatClient = chatClient;
 		this.usageMonitoringService = usageMonitoringService;
 		this.promptTemplate = readPrompt();
@@ -88,7 +91,8 @@ public class ScoringRulesPrefillService {
 			.replace("{job_description}", description)
 			.replace("{format}", converter.getFormat());
 
-		var content = chatClient.prompt().user(prompt).call().content();
+		var content = chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "scoring_rules_prefill")).user(prompt).call().content();
 		if (!StringUtils.hasText(content)) {
 			throw new QorvaException("Scoring rules suggestion failed",
 				HttpStatus.INTERNAL_SERVER_ERROR.value(), HttpStatus.INTERNAL_SERVER_ERROR);

@@ -161,6 +161,16 @@ public class AtsConnectionService {
 		return new AtsIntegrationData.ConnectionList(views);
 	}
 
+	/** "Synced with Greenhouse · 12 min ago" where recruiters work; empty when the tenant has no ATS. */
+	public AtsIntegrationData.SyncStatusList syncStatus(String tenantId) {
+		var views = connectionRepository.findByTenantIdOrderByCreatedAtAsc(tenantId).stream()
+			.map(c -> new AtsIntegrationData.SyncStatusView(c.getProvider(), c.getDisplayName(), c.getStatus(),
+				c.getSyncState() != null ? c.getSyncState().getLastSyncAt() : null,
+				c.getSyncState() != null ? c.getSyncState().getLastSyncError() : null))
+			.toList();
+		return new AtsIntegrationData.SyncStatusList(views);
+	}
+
 	public ConnectionView create(String tenantId, AtsIntegrationData.CreateRequest request, String createdBy)
 		throws QorvaException {
 		var provider = parseProvider(request.provider());

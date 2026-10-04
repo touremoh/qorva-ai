@@ -72,6 +72,9 @@ public record RuleRunMessage(String goal, String message, List<AgentRun.Mention>
 			case AgentRule.TRIGGER_JOB_NEEDS_MATCHING -> (trigger.getJobTitle() != null ? "the job " + trigger.getJobTitle() : "a job")
 				+ " needs matching" + (trigger.getStaleReasons() != null
 					? " (" + String.join(", ", trigger.getStaleReasons().stream().map(RuleRunMessage::reasonText).toList()) + ")" : "");
+			case AgentRule.TRIGGER_REPORT_STATUS_CHANGED -> "a candidate's status changed"
+				+ (trigger.getToStatuses() != null ? " to " + String.join(" or ", trigger.getToStatuses()) : "")
+				+ (trigger.getJobTitle() != null ? " on the job " + trigger.getJobTitle() : "");
 			default -> trigger.getType();
 		};
 	}

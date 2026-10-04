@@ -59,6 +59,9 @@
       "previousFinalScore" : null,
       "rescoredAt" : null,
       "status" : "NEW",
+      "statusChangedAt" : null,
+      "statusChangedBy" : null,
+      "statusHistory" : null,
       "tenantId" : "<id:4>"
     },
     "timestamp" : "<ts>"

@@ -353,4 +353,47 @@ class AgentRuleIntegrationTest extends AbstractIntegrationTest {
 			.andReturn().getResponse();
 		assertThat(invalid.getStatus()).isEqualTo(400);
 	}
+
+	private void setStatus(String reportId, String status) throws Exception {
+		var response = mvc.perform(patch("/matching-reports/" + reportId + "/status").header("Authorization", owner)
+			.contentType(JSON).content("{\"status\":\"" + status + "\"}")).andReturn().getResponse();
+		assertThat(response.getStatus()).as(response.getContentAsString()).isEqualTo(200);
+	}
+
+	@Test
+	void aStatusRuleFiresOncePerChangeOnlyForTheStatusesItWatchesAndNeverForCopilotsOwnChanges() throws Exception {
+		var rule = createRule(owner, """
+			{"name":"Prep interviews","goalTemplate":"Draft interview questions for {{candidates}} for {{job}}.",
+			 "trigger":{"type":"REPORT_STATUS_CHANGED","toStatuses":["INTERVIEWING"],"jobPostId":"%s"}}""".formatted(a.jobId()));
+		assertThat(rule.path("trigger").path("toStatuses")).hasSize(1);
+
+		setStatus(a.reportIds().get(0), "SHORTLISTED");
+		tick();
+		assertThat(ruleRuns()).as("not a watched status").isEmpty();
+
+		setStatus(a.reportIds().get(0), "INTERVIEWING");
+		tick();
+		var runs = ruleRuns();
+		assertThat(runs).hasSize(1);
+		assertThat(runs.getFirst().getMentions()).extracting(AgentRun.Mention::getId).containsExactlyInAnyOrder(a.cvIds().getFirst(), a.jobId());
+		assertThat(runs.getFirst().getHistory().getFirst().getText()).contains("from SHORTLISTED to INTERVIEWING");
+
+		// The same change is never seen twice.
+		awaitRuleRunsIdle();
+		mongo.updateMulti(new Query(), new Update().set("status", AgentRun.STATUS_COMPLETED), AgentRun.class);
+		tick();
+		assertThat(ruleRuns()).hasSize(1);
+
+		// A Copilot run moving a candidate never fires a status rule (loop guard).
+		mongo.updateFirst(Query.query(Criteria.where("_id").is(new ObjectId(a.reportIds().get(1)))),
+			new Update().set("status", "INTERVIEWING").set("statusChangedAt", new java.util.Date())
+				.set("statusChangedBy", "copilot:" + new ObjectId().toHexString()), "matching_reports");
+		tick();
+		assertThat(ruleRuns()).hasSize(1);
+
+		var invalid = mvc.perform(post("/agent/rules").header("Authorization", owner).contentType(JSON).content("""
+			{"name":"Bad","goalTemplate":"x","trigger":{"type":"REPORT_STATUS_CHANGED","toStatuses":["MAYBE"]}}"""))
+			.andReturn().getResponse();
+		assertThat(invalid.getStatus()).isEqualTo(400);
+	}
 }

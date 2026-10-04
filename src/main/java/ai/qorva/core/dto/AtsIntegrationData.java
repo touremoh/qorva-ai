@@ -104,6 +104,11 @@ public final class AtsIntegrationData {
 
 	public record ConnectionList(List<ConnectionView> connections) {}
 
+	/** What recruiters see of a connection: no settings, no credentials, no webhook details. */
+	public record SyncStatusView(String provider, String displayName, String status, Instant lastSyncAt, String lastSyncError) {}
+
+	public record SyncStatusList(List<SyncStatusView> connections) {}
+
 	/** region is the provider datacenter to authenticate against (Zoho only; null elsewhere). */
 	public record OauthStartRequest(String provider, String region) {}
 

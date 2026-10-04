@@ -57,8 +57,9 @@ public class GetReportTool implements AgentTool {
 		var report = matchingReportService.findOneById(id);
 		var details = report.getMatchingReportDetails();
 		var data = ReportProjections.summary(report.getId(), report.getJobPostId(), report.getJobPostTitle(),
-			report.getCandidateInfo(), details, report.getOutdated());
+			report.getCandidateInfo(), details, report.getOutdated(), report.getStatus());
 		if (details != null) {
+			data.put("statusHistory", report.getStatusHistory());
 			data.put("decision", details.getDecisionSummary());
 			data.put("strengths", details.getStrengths());
 			data.put("weaknesses", details.getWeaknesses());

@@ -1,5 +1,8 @@
 package ai.qorva.core.service.orchestrators;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import ai.qorva.core.dto.CVQueryParams;
 import ai.qorva.core.dto.InsightIntent;
 import ai.qorva.core.dto.QorvaPromptContextHolder;
@@ -18,7 +21,7 @@ import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_1;
 @RequiredArgsConstructor
 public class InsightEntityExtractor {
 
-	private final ChatClient chatClient;
+	@Qualifier("interactiveChatClient") private final ChatClient chatClient;
 	private final QorvaPromptContextHolder promptContextHolder;
 	private final ObjectMapper objectMapper;
 
@@ -34,6 +37,7 @@ public class InsightEntityExtractor {
 			String renderedPrompt = promptTemplate.replace("{{question}}", question);
 
 			String content = chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "insight_entities"))
 				// Extraction is the one decision that changes results (which filters run), and the prompt
 				// is the largest in the pipeline. It gets the full model; the other insight calls stay on mini.
 				.options(StructuredOutput.options(GPT_4_1, "entity_extractor", converter.getJsonSchema(), false, 0.0))

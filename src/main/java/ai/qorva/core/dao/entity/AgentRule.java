@@ -33,8 +33,10 @@ public class AgentRule implements QorvaEntity {
 	public static final String TRIGGER_ATS_SYNC_FINISHED = "ATS_SYNC_FINISHED";
 	/** An open job's matching results became out of date (MatchingStaleReasonEnum), once per episode. */
 	public static final String TRIGGER_JOB_NEEDS_MATCHING = "JOB_NEEDS_MATCHING";
+	/** A candidate's pipeline status on a job changed (by a person: Copilot's own changes never fire it). */
+	public static final String TRIGGER_REPORT_STATUS_CHANGED = "REPORT_STATUS_CHANGED";
 	public static final List<String> TRIGGERS = List.of(TRIGGER_CV_ADDED, TRIGGER_CV_SCORED, TRIGGER_SCHEDULE, TRIGGER_ATS_SYNC_FINISHED,
-		TRIGGER_JOB_NEEDS_MATCHING);
+		TRIGGER_JOB_NEEDS_MATCHING, TRIGGER_REPORT_STATUS_CHANGED);
 
 	public static final String STATUS_ACTIVE = "ACTIVE";
 	public static final String STATUS_PAUSED = "PAUSED";
@@ -119,7 +121,7 @@ public class AgentRule implements QorvaEntity {
 		private String type;
 		/** CV_ADDED: ANY, ATS (imported) or MANUAL (uploaded). */
 		private String source;
-		/** CV_SCORED and JOB_NEEDS_MATCHING: one job, or any job when null. */
+		/** CV_SCORED, JOB_NEEDS_MATCHING and REPORT_STATUS_CHANGED: one job, or any job when null. */
 		private String jobPostId;
 		private String jobTitle;
 		/** CV_SCORED: final score at or above this (0–100). */
@@ -136,5 +138,7 @@ public class AgentRule implements QorvaEntity {
 		private String connectionName;
 		/** JOB_NEEDS_MATCHING: which stale reasons fire it (MatchingStaleReasonEnum names); null = all of them. */
 		private List<String> staleReasons;
+		/** REPORT_STATUS_CHANGED: the statuses that fire it (ApplicationStatusEnum names); null = any. */
+		private List<String> toStatuses;
 	}
 }

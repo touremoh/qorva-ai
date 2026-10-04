@@ -29,7 +29,7 @@ public class AgentRuleFiring implements QorvaEntity {
 	private String tenantId;
 
 	private String ruleId;
-	/** cvId (CV_ADDED), cvId:jobId (CV_SCORED), syncJobId (ATS_SYNC_FINISHED), slot:&lt;instant&gt; (SCHEDULE). */
+	/** cvId (CV_ADDED), cvId:jobId (CV_SCORED), reportId:&lt;statusChangedAt ms&gt; (REPORT_STATUS_CHANGED), syncJobId (ATS_SYNC_FINISHED), slot:&lt;instant&gt; (SCHEDULE). */
 	private String subjectKey;
 	private String runId;
 	private Instant firedAt;

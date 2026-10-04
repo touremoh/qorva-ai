@@ -52,6 +52,9 @@ public final class QorvaErrorCodes {
     public static final String REPORT_RESUME_MATCH_NOT_FOUND    = "error.report.resume_match_not_found";
     public static final String REPORT_NO_REPORTS_FOR_JOB        = "error.report.no_reports_for_job";
     public static final String REPORT_CSV_EXPORT_FAILED         = "error.report.csv_export_failed";
+    public static final String REPORT_NOT_FOUND                 = "error.report.not_found";
+    public static final String REPORT_STATUS_INVALID            = "error.report.status_invalid";
+    public static final String DASHBOARD_PERIOD_INVALID         = "error.dashboard.period_invalid";
 
     // chat
     public static final String CHAT_NOT_FOUND      = "error.chat.not_found";

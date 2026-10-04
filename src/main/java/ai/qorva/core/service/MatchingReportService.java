@@ -17,10 +17,13 @@ import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.DashboardData;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.MatchingReportDTO;
+import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.dto.common.CandidateInfo;
 import ai.qorva.core.dto.common.KeySkill;
 import ai.qorva.core.dto.common.MatchingReportDetails;
+import ai.qorva.core.dto.common.ReportStatusChange;
 import ai.qorva.core.enums.ApplicationStatusEnum;
+import ai.qorva.core.enums.ReportStatusChannel;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.mapper.MatchingReportMapper;
@@ -215,6 +218,88 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 		this.cascadeRegistry.parentsDeleted(CascadeResource.MATCHING_REPORT, tenantId, ids);
 		log.info("Deleted {} outdated reports of job {} (tenant={})", deleted, jobPostId, tenantId);
 		return deleted;
+	}
+
+	/** Who changed a status: a user (id + name at the time) or a Copilot run ({@code copilot:<runId>}). */
+	public record StatusActor(String id, String name) {
+		/** The signed-in user, or their email alone when the account can't be read. */
+		public static StatusActor of(UserDTO user, String email) {
+			if (user == null) {
+				return new StatusActor(email, email);
+			}
+			var name = ((user.getFirstName() == null ? "" : user.getFirstName()) + " "
+				+ (user.getLastName() == null ? "" : user.getLastName())).trim();
+			return new StatusActor(user.getId(), name.isEmpty() ? email : name);
+		}
+
+		public static StatusActor copilotRun(String runId) {
+			return new StatusActor("copilot:" + runId, "Copilot");
+		}
+
+		/** True for a change made by a rule run: it must never fire a status rule again (loop guard). */
+		public static boolean isCopilot(String by) {
+			return by != null && by.startsWith("copilot:");
+		}
+	}
+
+	/**
+	 * Moves the candidate to {@code status} on this job and records the move in the report's history (last
+	 * {@value MatchingReport#STATUS_HISTORY_SIZE}). A targeted update: re-scoring and outdated marking never touch
+	 * these fields. Setting the current status again changes nothing.
+	 */
+	public MatchingReportDTO changeStatus(String tenantId, String reportId, String status, StatusActor actor,
+	                                      ReportStatusChannel via) throws QorvaException {
+		var target = ApplicationStatusEnum.parse(status)
+			.orElseThrow(() -> QorvaErrors.badRequest(QorvaErrorCodes.REPORT_STATUS_INVALID));
+		var current = requireInTenant(tenantId, reportId);
+		if (!target.getStatus().equals(current.getStatus())) {
+			applyStatus(tenantId, reportId, current.getStatus(), target, actor, via);
+			current = requireInTenant(tenantId, reportId);
+		}
+		return this.mapper.map(current);
+	}
+
+	/**
+	 * An email went to the candidate from this report: New becomes Contacted. Any later status is kept (never
+	 * downgraded). Returns whether the status changed.
+	 */
+	public boolean markContacted(String tenantId, String reportId, StatusActor actor) {
+		if (!StringUtils.hasText(reportId) || !ObjectId.isValid(reportId)) {
+			return false;
+		}
+		return applyStatus(tenantId, reportId, ApplicationStatusEnum.NEW.getStatus(), ApplicationStatusEnum.CONTACTED,
+			actor, ReportStatusChannel.EMAIL);
+	}
+
+	/** Conditional on the status read before ({@code from}), so two concurrent moves can't both log the same "from". */
+	private boolean applyStatus(String tenantId, String reportId, String from, ApplicationStatusEnum to,
+	                            StatusActor actor, ReportStatusChannel via) {
+		var now = Instant.now();
+		var change = ReportStatusChange.builder()
+			.from(from).status(to.getStatus()).by(actor.id()).byName(actor.name()).via(via.name()).at(now)
+			.build();
+		var query = byIdInTenant(tenantId, reportId).addCriteria(Criteria.where("status").is(from));
+		var update = new Update()
+			.set("status", to.getStatus())
+			.set("statusChangedAt", now)
+			.set("statusChangedBy", actor.id());
+		update.push("statusHistory").slice(-MatchingReport.STATUS_HISTORY_SIZE).each(change);
+		boolean changed = mongoTemplate.updateFirst(query, update, MatchingReport.class).getModifiedCount() > 0;
+		if (changed) {
+			log.info("Report {} status {} -> {} by {} via {} (tenant={})", reportId, from, to, actor.id(), via, tenantId);
+		}
+		return changed;
+	}
+
+	private MatchingReport requireInTenant(String tenantId, String reportId) throws QorvaException {
+		if (!StringUtils.hasText(reportId) || !ObjectId.isValid(reportId)) {
+			throw QorvaErrors.notFound(QorvaErrorCodes.REPORT_NOT_FOUND);
+		}
+		var report = mongoTemplate.findOne(byIdInTenant(tenantId, reportId), MatchingReport.class);
+		if (report == null) {
+			throw QorvaErrors.notFound(QorvaErrorCodes.REPORT_NOT_FOUND);
+		}
+		return report;
 	}
 
 	private static Query byIdInTenant(String tenantId, String reportId) {

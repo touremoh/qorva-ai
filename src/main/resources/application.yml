@@ -47,6 +47,10 @@ qorva:
   tenancy:
     fail-closed: ${QORVA_TENANCY_FAIL_CLOSED:false}
   ai:
+    # Calls a user waits on (resume chat, Talent Intelligence, drafts, scoring-rule prefill): one retry, and the
+    # whole call within this many seconds — under the hosting's request limit. Background agents are unaffected.
+    interactive:
+      timeout-seconds: ${QORVA_AI_INTERACTIVE_TIMEOUT_SECONDS:50}
     extraction:
       # Text pass runs on every CV; switch to a nano-tier model after benchmarking —
       # the vision pass below catches what a smaller model fumbles.

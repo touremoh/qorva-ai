@@ -1,5 +1,7 @@
 package ai.qorva.core.service.orchestrators;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import ai.qorva.core.dto.InsightTexts;
 import ai.qorva.core.exception.QorvaException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -25,7 +27,7 @@ public class InsightTranslationAgent {
 	@Value("${qorva.ai.insight-translation.model:gpt-4.1-mini}")
 	private String model;
 
-	public InsightTranslationAgent(ChatClient chatClient, ObjectMapper objectMapper) throws QorvaException {
+	public InsightTranslationAgent(@Qualifier("interactiveChatClient") ChatClient chatClient, ObjectMapper objectMapper) throws QorvaException {
 		this.chatClient = chatClient;
 		this.objectMapper = objectMapper;
 		this.prompt = InsightSupport.readPrompt("Insight_translate_prompt.md");

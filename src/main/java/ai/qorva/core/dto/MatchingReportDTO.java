@@ -2,6 +2,7 @@ package ai.qorva.core.dto;
 
 import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.dto.common.CandidateInfo;
+import ai.qorva.core.dto.common.ReportStatusChange;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -13,6 +14,7 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.time.Instant;
+import java.util.List;
 
 @Getter
 @Setter
@@ -26,7 +28,19 @@ public class MatchingReportDTO extends AbstractQorvaDTO {
     private CandidateInfo candidateInfo;
     private String tenantId;
     private MatchingReportDetails matchingReportDetails;
+    /** Changed only through PATCH /matching-reports/{id}/status. */
+    @JsonProperty(access = Access.READ_ONLY)
     private String status;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private List<ReportStatusChange> statusHistory;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant statusChangedAt;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    private String statusChangedBy;
 
     @JsonProperty(access = Access.READ_ONLY)
     private Boolean outdated;

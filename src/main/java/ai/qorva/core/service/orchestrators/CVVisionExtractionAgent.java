@@ -1,5 +1,7 @@
 package ai.qorva.core.service.orchestrators;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+
 import ai.qorva.core.dto.CVOutputDTO;
 import ai.qorva.core.dto.QorvaPromptContextHolder;
 import ai.qorva.core.utils.CVPageImageRenderer;
@@ -52,6 +54,7 @@ public class CVVisionExtractionAgent {
 
 		try {
 			return chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "cv_vision_extraction"))
 				// GPT-5-family models only accept the default temperature (1).
 				.options(StructuredOutput.options(visionModel, "cv_parser", converter.getJsonSchema(), false, StructuredOutput.temperatureFor(visionModel, 0.1)))
 				.user(u -> u

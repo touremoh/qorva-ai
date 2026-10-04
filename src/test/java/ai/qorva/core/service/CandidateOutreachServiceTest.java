@@ -50,13 +50,14 @@ class CandidateOutreachServiceTest {
 	@Mock private SuppressedEmailRepository suppressedEmailRepository;
 	@Mock private MailboxConnectionService mailboxConnectionService;
 	@Mock private UserRepository userRepository;
+	@Mock private MatchingReportService matchingReportService;
 
 	private CandidateOutreachService service;
 
 	@BeforeEach
 	void setUp() {
 		service = new CandidateOutreachService(repository, Mappers.getMapper(CandidateOutreachMapper.class),
-			cvRepository, suppressedEmailRepository, mailboxConnectionService, userRepository);
+			cvRepository, suppressedEmailRepository, mailboxConnectionService, userRepository, matchingReportService);
 	}
 
 	private CV cvWithEmail(String email) {
@@ -156,6 +157,24 @@ class CandidateOutreachServiceTest {
 	}
 
 	@Test
+	void anExternalHandoffFromAReportAlsoMarksTheCandidateContacted() throws QorvaException {
+		when(cvRepository.findByIdInTenant(CV_ID, TENANT)).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
+		when(suppressedEmailRepository.existsByTenantIdAndEmail(anyString(), anyString())).thenReturn(false);
+		when(repository.save(any())).thenAnswer(inv -> inv.getArgument(0));
+		var request = new CandidateOutreachData.ExternalRequest();
+		request.setCvId(CV_ID);
+		request.setMatchingReportId("report-1");
+		request.setVia("gmail");
+		request.setTo("ada@example.com");
+		request.setSubject("Hello");
+		request.setBody("Body");
+
+		service.recordExternal(TENANT, USERNAME, request);
+
+		verify(matchingReportService).markContacted(TENANT, "report-1", new MatchingReportService.StatusActor(USERNAME, USERNAME));
+	}
+
+	@Test
 	void sendLogsSentRowWithProviderIds() throws QorvaException {
 		when(cvRepository.findByIdInTenant(CV_ID, TENANT)).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
 		when(suppressedEmailRepository.existsByTenantIdAndEmail(anyString(), anyString())).thenReturn(false);
@@ -176,6 +195,66 @@ class CandidateOutreachServiceTest {
 		assertThat(captor.getValue().getVia()).isEqualTo("CONNECTED_MICROSOFT");
 		assertThat(captor.getValue().getProviderMessageId()).isEqualTo("msg-1");
 		assertThat(response.providerWebLink()).isEqualTo("https://outlook.office.com/x");
+	}
+
+	@Test
+	void sendWithoutAReportLeavesStatusesAlone() throws QorvaException {
+		stubSuccessfulSend();
+
+		service.send(TENANT, USERNAME, sendRequest(null));
+
+		verify(matchingReportService, never()).markContacted(any(), any(), any());
+	}
+
+	@Test
+	void sendFromAReportMarksTheCandidateContactedAsTheSender() throws QorvaException {
+		stubSuccessfulSend();
+		var user = new User();
+		user.setId("user-1");
+		user.setFirstName("Jane");
+		user.setLastName("Doe");
+		when(userRepository.findByEmail(USERNAME)).thenReturn(user);
+
+		service.send(TENANT, USERNAME, sendRequest("report-1"));
+
+		verify(matchingReportService).markContacted(TENANT, "report-1", new MatchingReportService.StatusActor("user-1", "Jane Doe"));
+	}
+
+	@Test
+	void aCopilotSendIsRecordedAsTheRunSoItNeverFiresAStatusRule() throws QorvaException {
+		stubSuccessfulSend();
+
+		service.send(TENANT, USERNAME, sendRequest("report-1"), "run-9");
+
+		verify(matchingReportService).markContacted(TENANT, "report-1", MatchingReportService.StatusActor.copilotRun("run-9"));
+	}
+
+	@Test
+	void aFailedStatusUpdateDoesNotTurnTheSentEmailIntoAnError() throws QorvaException {
+		stubSuccessfulSend();
+		when(matchingReportService.markContacted(any(), any(), any())).thenThrow(new IllegalStateException("db down"));
+
+		var response = service.send(TENANT, USERNAME, sendRequest("report-1"));
+
+		assertThat(response.providerWebLink()).isEqualTo("https://outlook.office.com/x");
+	}
+
+	private void stubSuccessfulSend() throws QorvaException {
+		when(cvRepository.findByIdInTenant(CV_ID, TENANT)).thenReturn(Optional.of(cvWithEmail("ada@example.com")));
+		when(suppressedEmailRepository.existsByTenantIdAndEmail(anyString(), anyString())).thenReturn(false);
+		when(mailboxConnectionService.send(TENANT, USERNAME, "ada@example.com", "Hi", "Body"))
+			.thenReturn(new MailboxSender.SendResult("msg-1", "conv-1", "https://outlook.office.com/x"));
+		when(repository.save(any())).thenAnswer(inv -> inv.getArgument(0));
+	}
+
+	private static CandidateOutreachData.SendRequest sendRequest(String matchingReportId) {
+		var request = new CandidateOutreachData.SendRequest();
+		request.setCvId(CV_ID);
+		request.setMatchingReportId(matchingReportId);
+		request.setTo("ada@example.com");
+		request.setSubject("Hi");
+		request.setBody("Body");
+		return request;
 	}
 
 	@Test

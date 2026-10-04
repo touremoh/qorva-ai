@@ -1,5 +1,7 @@
 package ai.qorva.core.service.orchestrators;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+
 import ai.qorva.core.exception.QorvaErrors;
 import ai.qorva.core.exception.QorvaException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -34,6 +36,7 @@ final class InsightSupport {
 	                  String prompt, String schemaName, Class<T> type) throws Exception {
 		var converter = new BeanOutputConverter<>(type);
 		var content = chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "insight_" + schemaName))
 			.options(StructuredOutput.options(model, schemaName, converter.getJsonSchema(), false,
 				StructuredOutput.temperatureFor(model, 0.2)))
 			.messages(new UserMessage(prompt))

@@ -5,6 +5,7 @@ import ai.qorva.core.dao.entity.AgentRule;
 import ai.qorva.core.dao.repository.AgentRuleFiringRepository;
 import ai.qorva.core.dao.repository.AgentRuleRepository;
 import ai.qorva.core.dto.AgentData;
+import ai.qorva.core.enums.ApplicationStatusEnum;
 import ai.qorva.core.enums.JobPostStatusEnum;
 import ai.qorva.core.enums.MatchingStaleReasonEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -28,6 +29,7 @@ import java.time.LocalDate;
 import java.time.ZoneOffset;
 import java.time.ZoneId;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.List;
 import java.util.Objects;
 
@@ -245,6 +247,19 @@ public class AgentRuleService {
 					trigger.setJobTitle(job.getTitle());
 				}
 			}
+			case AgentRule.TRIGGER_REPORT_STATUS_CHANGED -> {
+				var statuses = request.getToStatuses() == null ? List.<String>of()
+					: request.getToStatuses().stream().filter(Objects::nonNull).map(s -> s.strip().toUpperCase(Locale.ROOT)).distinct().toList();
+				var known = Arrays.stream(ApplicationStatusEnum.values()).map(ApplicationStatusEnum::getStatus).toList();
+				if (!known.containsAll(statuses)) throw invalid();
+				trigger.setToStatuses(statuses.isEmpty() || statuses.containsAll(known) ? null : statuses);
+				var jobId = trim(request.getJobPostId());
+				if (jobId != null) {
+					var job = jobPostService.findOneById(validId(jobId));
+					trigger.setJobPostId(job.getId());
+					trigger.setJobTitle(job.getTitle());
+				}
+			}
 			default -> throw invalid();
 		}
 		return trigger;
@@ -317,7 +332,7 @@ public class AgentRuleService {
 	public static AgentData.TriggerView triggerView(AgentRule.Trigger t) {
 		return new AgentData.TriggerView(t.getType(), t.getSource(), t.getJobPostId(), t.getJobTitle(), t.getMinScore(),
 			t.getRecommendedOnly(), t.getFrequency(), t.getHour(), t.getWeekday(), t.getZoneId(), t.getConnectionId(),
-			t.getConnectionName(), t.getStaleReasons());
+			t.getConnectionName(), t.getStaleReasons(), t.getToStatuses());
 	}
 
 	static AgentData.RuleView view(AgentRule rule, String userEmail, boolean team) {

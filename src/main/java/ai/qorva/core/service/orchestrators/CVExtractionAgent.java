@@ -1,5 +1,7 @@
 package ai.qorva.core.service.orchestrators;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+
 import ai.qorva.core.dto.CVOutputDTO;
 import ai.qorva.core.dto.QorvaPromptContextHolder;
 import lombok.RequiredArgsConstructor;
@@ -31,6 +33,7 @@ public class CVExtractionAgent {
 
 		try {
 			return chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "cv_extraction"))
 				// Extraction wants determinism: the lowest temperature the model family accepts.
 				.options(StructuredOutput.options(extractionModel, "cv_parser", converter.getJsonSchema(), false, StructuredOutput.temperatureFor(extractionModel, 0.1)))
 				.user(u -> u

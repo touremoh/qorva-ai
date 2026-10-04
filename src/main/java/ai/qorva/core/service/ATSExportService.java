@@ -51,6 +51,9 @@ public class ATSExportService {
         "gdpr_consent_obtained", "data_source"
     };
 
+    /** Always the last column, in both formats, so ATS import mappings built on the earlier columns keep working. */
+    private static final String STATUS_HEADER = "qorva_status";
+
     private static final Map<String, Integer> DEGREE_RANK = Map.ofEntries(
         Map.entry("phd", 5), Map.entry("doctorate", 5),
         Map.entry("master", 4), Map.entry("msc", 4), Map.entry("mba", 4), Map.entry("ma", 4), Map.entry("meng", 4),
@@ -87,7 +90,8 @@ public class ATSExportService {
         String date = LocalDate.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         String filename = "qorva-" + jobTitle.replaceAll("[^a-zA-Z0-9-]", "-").toLowerCase() + "-" + date + ".csv";
 
-        String[] headers = euFormat ? concat(GLOBAL_HEADERS, EU_EXTRA_HEADERS) : GLOBAL_HEADERS;
+        String[] headers = concat(euFormat ? concat(GLOBAL_HEADERS, EU_EXTRA_HEADERS) : GLOBAL_HEADERS,
+            new String[]{STATUS_HEADER});
 
         try (StringWriter sw = new StringWriter();
              CSVPrinter printer = new CSVPrinter(sw, CSVFormat.DEFAULT.builder().setHeader(headers).build())) {
@@ -227,6 +231,7 @@ public class ATSExportService {
             row.add("N/A - verify with candidate");
             row.add("Qorva AI");
         }
+        row.add(nvl(report.getStatus()));
 
         return row;
     }

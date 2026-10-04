@@ -1,5 +1,8 @@
 package ai.qorva.core.service.orchestrators;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.entity.JobPost;
 import ai.qorva.core.dto.AnswerGenerationResult;
@@ -26,7 +29,7 @@ import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_1_MINI
 @RequiredArgsConstructor
 public class InsightAnswerGenerator {
 
-	private final ChatClient chatClient;
+	@Qualifier("interactiveChatClient") private final ChatClient chatClient;
 	private final QorvaPromptContextHolder promptContextHolder;
 	private final ObjectMapper objectMapper;
 
@@ -70,6 +73,7 @@ public class InsightAnswerGenerator {
 				.replace("{{mention_context}}", mentionContextJson);
 
 			String content = chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "insight_answer"))
 				.options(StructuredOutput.options(GPT_4_1_MINI, "insight_answer", converter.getJsonSchema(), false, 0.3))
 				.messages(new UserMessage(renderedPrompt))
 				.call()
