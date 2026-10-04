@@ -55,6 +55,8 @@ public final class QorvaErrorCodes {
     public static final String REPORT_NOT_FOUND                 = "error.report.not_found";
     public static final String REPORT_STATUS_INVALID            = "error.report.status_invalid";
     public static final String DASHBOARD_PERIOD_INVALID         = "error.dashboard.period_invalid";
+    public static final String REPORT_STATUS_CONFLICT           = "error.report.status_conflict";
+    public static final String PIPELINE_CURSOR_INVALID          = "error.pipeline.cursor_invalid";
 
     // chat
     public static final String CHAT_NOT_FOUND      = "error.chat.not_found";

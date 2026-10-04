@@ -249,11 +249,29 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 	 */
 	public MatchingReportDTO changeStatus(String tenantId, String reportId, String status, StatusActor actor,
 	                                      ReportStatusChannel via) throws QorvaException {
+		return changeStatus(tenantId, reportId, status, null, actor, via);
+	}
+
+	/**
+	 * Same, refused with 409 when {@code expectedStatus} is given and the candidate isn't there any more — someone
+	 * else moved them since the caller looked (the pipeline board sends where the card was dragged from).
+	 */
+	public MatchingReportDTO changeStatus(String tenantId, String reportId, String status, String expectedStatus,
+	                                      StatusActor actor, ReportStatusChannel via) throws QorvaException {
 		var target = ApplicationStatusEnum.parse(status)
 			.orElseThrow(() -> QorvaErrors.badRequest(QorvaErrorCodes.REPORT_STATUS_INVALID));
+		var expected = expectedStatus == null ? null : ApplicationStatusEnum.parse(expectedStatus)
+			.orElseThrow(() -> QorvaErrors.badRequest(QorvaErrorCodes.REPORT_STATUS_INVALID));
 		var current = requireInTenant(tenantId, reportId);
+		if (expected != null && !expected.getStatus().equals(current.getStatus())) {
+			throw QorvaErrors.conflict(QorvaErrorCodes.REPORT_STATUS_CONFLICT);
+		}
 		if (!target.getStatus().equals(current.getStatus())) {
-			applyStatus(tenantId, reportId, current.getStatus(), target, actor, via);
+			boolean moved = applyStatus(tenantId, reportId, current.getStatus(), target, actor, via);
+			if (!moved && expected != null) {
+				// Moved by someone else between the read and the write.
+				throw QorvaErrors.conflict(QorvaErrorCodes.REPORT_STATUS_CONFLICT);
+			}
 			current = requireInTenant(tenantId, reportId);
 		}
 		return this.mapper.map(current);
