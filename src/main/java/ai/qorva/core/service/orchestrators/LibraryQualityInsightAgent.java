@@ -1,5 +1,7 @@
 package ai.qorva.core.service.orchestrators;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import ai.qorva.core.dto.LibraryQualityInsight;
 import ai.qorva.core.dto.LibraryQualityReport;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -26,7 +28,7 @@ public class LibraryQualityInsightAgent {
 	@Value("${qorva.ai.library-quality-insight.model:gpt-4.1-mini}")
 	private String model;
 
-	public LibraryQualityInsightAgent(ChatClient chatClient, ObjectMapper objectMapper) throws QorvaException {
+	public LibraryQualityInsightAgent(@Qualifier("interactiveChatClient") ChatClient chatClient, ObjectMapper objectMapper) throws QorvaException {
 		this.chatClient = chatClient;
 		this.objectMapper = objectMapper;
 		this.prompt = InsightSupport.readPrompt("Library_quality_insight_prompt.md");

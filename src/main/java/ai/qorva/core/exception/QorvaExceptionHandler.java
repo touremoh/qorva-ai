@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import ai.qorva.core.service.ai.AiCallFailedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
@@ -72,6 +73,20 @@ public class QorvaExceptionHandler extends ResponseEntityExceptionHandler {
 			.build();
 
 		return ResponseEntity.status(httpStatus).body(response);
+	}
+
+	/** A model call failed or ran out of its time budget: a clear "try again", not an unexpected error. */
+	@ExceptionHandler(value = {AiCallFailedException.class})
+	protected ResponseEntity<Object> handleAiCallFailed(AiCallFailedException ex, HttpServletRequest request) {
+		log.warn("AI call failed on {}: {}", request.getRequestURI(), ex.getMessage());
+		var response = QorvaErrorResponse.builder()
+			.errorCode(QorvaErrorCodes.AI_REQUEST_FAILED)
+			.message(messageSource.getMessage(QorvaErrorCodes.AI_REQUEST_FAILED, null, resolveLocale(request)))
+			.status(HttpStatus.SERVICE_UNAVAILABLE)
+			.code(HttpStatus.SERVICE_UNAVAILABLE.value())
+			.timestamp(LocalDateTime.now())
+			.build();
+		return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(response);
 	}
 
 	@ExceptionHandler(value = {Exception.class})

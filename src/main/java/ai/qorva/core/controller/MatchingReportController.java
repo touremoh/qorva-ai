@@ -3,13 +3,16 @@ package ai.qorva.core.controller;
 import ai.qorva.core.dto.QorvaRequestResponse;
 import ai.qorva.core.dto.MatchingReportDTO;
 import ai.qorva.core.dto.MatchingRunData;
+import ai.qorva.core.enums.ReportStatusChannel;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.security.CrudPolicy;
 import ai.qorva.core.service.ATSExportService;
 import ai.qorva.core.service.MatchingReportService;
+import ai.qorva.core.service.UserService;
 import ai.qorva.core.utils.BuildApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,11 +26,16 @@ import static ai.qorva.core.security.CrudOperation.*;
 public class MatchingReportController extends AbstractQorvaController<MatchingReportDTO> {
 
 	private final ATSExportService atsExportService;
+	private final UserService userService;
 
 	@Autowired
-	public MatchingReportController(MatchingReportService service, ATSExportService atsExportService) {
+	public MatchingReportController(MatchingReportService service, ATSExportService atsExportService, UserService userService) {
 		super(service);
 		this.atsExportService = atsExportService;
+		this.userService = userService;
+	}
+
+	public record StatusRequest(String status) {
 	}
 
 	/*
@@ -55,6 +63,16 @@ public class MatchingReportController extends AbstractQorvaController<MatchingRe
 	public ResponseEntity<MatchingRunData.DeleteOutdatedResponse> deleteOutdated(@RequestParam String jobPostId) throws QorvaException {
 		return ResponseEntity.ok(new MatchingRunData.DeleteOutdatedResponse(
 			((MatchingReportService) this.service).deleteOutdated(currentTenantId(), jobPostId)));
+	}
+
+	/** Moves the candidate along the pipeline on this job (New → Contacted → … → Hired, or Rejected/Withdrawn). */
+	@PatchMapping("/{id}/status")
+	@PreAuthorize("@accessManager.hasPermission(authentication,'MODIFY_REPORT')")
+	public ResponseEntity<MatchingReportDTO> changeStatus(@PathVariable String id, @RequestBody StatusRequest request) throws QorvaException {
+		var email = SecurityContextHolder.getContext().getAuthentication().getName();
+		var actor = MatchingReportService.StatusActor.of(userService.findByEmail(email), email);
+		return ResponseEntity.ok(((MatchingReportService) this.service).changeStatus(
+			currentTenantId(), id, request == null ? null : request.status(), actor, ReportStatusChannel.APP));
 	}
 
 	@GetMapping("/export/csv")

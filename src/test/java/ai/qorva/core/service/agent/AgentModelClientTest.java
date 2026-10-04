@@ -2,6 +2,8 @@ package ai.qorva.core.service.agent;
 
 import ai.qorva.core.config.AgentProperties;
 import ai.qorva.core.enums.UserActionsEnum;
+import ai.qorva.core.service.ai.AiCallMetrics;
+import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -22,6 +24,8 @@ import static org.mockito.Mockito.when;
 
 class AgentModelClientTest {
 
+	private static final AiCallMetrics METRICS = new AiCallMetrics(new SimpleMeterRegistry());
+
 	private static final AgentTool SEARCH = new AgentTool() {
 		public String name() { return "search_cvs"; }
 		public String description() { return "Search"; }
@@ -37,7 +41,7 @@ class AgentModelClientTest {
 		when(chatModel.call(any(Prompt.class))).thenReturn(new ChatResponse(List.of()));
 		var properties = new AgentProperties();
 
-		new AgentModelClient(chatModel, properties).call(List.of(new UserMessage("hi")), List.of(SEARCH));
+		new AgentModelClient(chatModel, properties, METRICS).call(List.of(new UserMessage("hi")), List.of(SEARCH));
 
 		var prompt = ArgumentCaptor.forClass(Prompt.class);
 		verify(chatModel).call(prompt.capture());
@@ -54,7 +58,7 @@ class AgentModelClientTest {
 		var properties = new AgentProperties();
 		properties.setReasoningEffort(" ");
 
-		var options = new AgentModelClient(mock(ChatModel.class), properties).options(List.of());
+		var options = new AgentModelClient(mock(ChatModel.class), properties, METRICS).options(List.of());
 
 		assertThat(options.getReasoningEffort()).isNull();
 	}

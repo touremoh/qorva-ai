@@ -1,5 +1,7 @@
 package ai.qorva.core.service.orchestrators;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+
 import ai.qorva.core.config.ResumeChatProperties;
 import ai.qorva.core.dao.entity.ChatMessage;
 import lombok.RequiredArgsConstructor;
@@ -41,6 +43,7 @@ public class ChatSummarizerAgent {
 		}
 
 		String summary = chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "chat_summary"))
 			.options(OpenAiChatOptions.builder()
 				.model(properties.getSummaryModel())
 				.temperature(0.2)

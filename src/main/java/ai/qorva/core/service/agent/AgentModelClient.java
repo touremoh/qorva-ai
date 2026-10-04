@@ -1,6 +1,7 @@
 package ai.qorva.core.service.agent;
 
 import ai.qorva.core.config.AgentProperties;
+import ai.qorva.core.service.ai.AiCallMetrics;
 import ai.qorva.core.service.orchestrators.StructuredOutput;
 import org.springframework.ai.chat.messages.Message;
 import org.springframework.ai.chat.model.ChatModel;
@@ -24,14 +25,16 @@ public class AgentModelClient {
 
 	private final ChatModel chatModel;
 	private final AgentProperties properties;
+	private final AiCallMetrics metrics;
 
-	public AgentModelClient(ChatModel chatModel, AgentProperties properties) {
+	public AgentModelClient(ChatModel chatModel, AgentProperties properties, AiCallMetrics metrics) {
 		this.chatModel = chatModel;
 		this.properties = properties;
+		this.metrics = metrics;
 	}
 
 	public ChatResponse call(List<Message> messages, List<AgentTool> tools) {
-		return chatModel.call(new Prompt(messages, options(tools)));
+		return metrics.record("copilot", properties.getModel(), () -> chatModel.call(new Prompt(messages, options(tools))));
 	}
 
 	OpenAiChatOptions options(List<AgentTool> tools) {

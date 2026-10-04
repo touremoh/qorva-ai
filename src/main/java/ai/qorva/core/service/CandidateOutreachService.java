@@ -48,16 +48,19 @@ public class CandidateOutreachService {
 	private final SuppressedEmailRepository suppressedEmailRepository;
 	private final MailboxConnectionService mailboxConnectionService;
 	private final UserRepository userRepository;
+	private final MatchingReportService matchingReportService;
 
 	public CandidateOutreachService(CandidateOutreachRepository repository, CandidateOutreachMapper mapper,
 	                                CVRepository cvRepository, SuppressedEmailRepository suppressedEmailRepository,
-	                                MailboxConnectionService mailboxConnectionService, UserRepository userRepository) {
+	                                MailboxConnectionService mailboxConnectionService, UserRepository userRepository,
+	                                MatchingReportService matchingReportService) {
 		this.repository = repository;
 		this.mapper = mapper;
 		this.cvRepository = cvRepository;
 		this.suppressedEmailRepository = suppressedEmailRepository;
 		this.mailboxConnectionService = mailboxConnectionService;
 		this.userRepository = userRepository;
+		this.matchingReportService = matchingReportService;
 	}
 
 	public CandidateOutreachData.ContextResponse context(String tenantId, String username, String cvId) throws QorvaException {
@@ -93,6 +96,7 @@ public class CandidateOutreachService {
 			.status(CandidateOutreach.STATUS_EXTERNAL_OPENED)
 			.build());
 		log.info("Outreach handed off via {} for CV {} by {}", via, request.getCvId(), username);
+		markContacted(tenantId, username, request.getMatchingReportId(), null);
 		return mapper.map(saved);
 	}
 
@@ -120,6 +124,7 @@ public class CandidateOutreachService {
 				.providerWebLink(result.webLink())
 				.build());
 			log.info("Outreach sent via connected mailbox for CV {} by {}", request.getCvId(), username);
+			markContacted(tenantId, username, request.getMatchingReportId(), agentRunId);
 			return new CandidateOutreachData.SendResponse(request.getTo(), saved.getCreatedAt() != null
 				? saved.getCreatedAt() : Instant.now(), result.webLink(), mapper.map(saved));
 		} catch (QorvaException e) {
@@ -163,6 +168,30 @@ public class CandidateOutreachService {
 			.body(body)
 			.via(via.name())
 			.senderName(resolveSenderName(username));
+	}
+
+	/**
+	 * Writing to a candidate from their report moves them from New to Contacted (never downgrades a later
+	 * status). A change made inside a Copilot run is recorded as the run's, so it never fires a status rule.
+	 * Best-effort: the email is already out, a failure here must not turn the send into an error.
+	 */
+	private void markContacted(String tenantId, String username, String matchingReportId, String agentRunId) {
+		if (!StringUtils.hasText(matchingReportId)) {
+			return;
+		}
+		try {
+			var actor = StringUtils.hasText(agentRunId)
+				? MatchingReportService.StatusActor.copilotRun(agentRunId)
+				: new MatchingReportService.StatusActor(userIdOf(username), resolveSenderName(username));
+			matchingReportService.markContacted(tenantId, matchingReportId, actor);
+		} catch (RuntimeException e) {
+			log.warn("Report {} not marked Contacted after outreach: {}", matchingReportId, e.getMessage());
+		}
+	}
+
+	private String userIdOf(String email) {
+		var user = userRepository.findByEmail(email);
+		return user != null ? user.getId() : email;
 	}
 
 	private void assertNotSuppressed(String tenantId, String email) throws QorvaException {

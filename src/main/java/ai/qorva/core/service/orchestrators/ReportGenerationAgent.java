@@ -1,5 +1,7 @@
 package ai.qorva.core.service.orchestrators;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+
 import ai.qorva.core.dto.MatchingReportResponse;
 import ai.qorva.core.dto.QorvaPromptContextHolder;
 import ai.qorva.core.dto.common.MatchingReportDetails;
@@ -43,6 +45,7 @@ public class ReportGenerationAgent {
 		var scoringRulesJson = scoringRules != null ? QorvaUtils.toJSON(scoringRules) : "";
 
 		var apiResponse = chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "report_generation"))
 			.options(StructuredOutput.options(model, "report_generation", outputConverter.getJsonSchema(), true, 1.0))
 			.user(u -> u
 				.text(reportGenerationPrompt)

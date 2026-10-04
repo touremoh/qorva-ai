@@ -1,5 +1,7 @@
 package ai.qorva.core.service.orchestrators;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import ai.qorva.core.dto.UsageInsight;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
@@ -25,7 +27,7 @@ public class UsageInsightAgent {
 	@Value("${qorva.ai.usage-insight.model:gpt-4.1-mini}")
 	private String model;
 
-	public UsageInsightAgent(ChatClient chatClient, ObjectMapper objectMapper) throws QorvaException {
+	public UsageInsightAgent(@Qualifier("interactiveChatClient") ChatClient chatClient, ObjectMapper objectMapper) throws QorvaException {
 		this.chatClient = chatClient;
 		this.objectMapper = objectMapper;
 		this.prompt = InsightSupport.readPrompt("Usage_insight_prompt.md");

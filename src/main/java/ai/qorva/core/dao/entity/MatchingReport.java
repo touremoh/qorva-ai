@@ -2,6 +2,7 @@ package ai.qorva.core.dao.entity;
 
 import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.dto.common.CandidateInfo;
+import ai.qorva.core.dto.common.ReportStatusChange;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.time.Instant;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,6 +21,8 @@ import java.time.Instant;
 @AllArgsConstructor
 @Document(collection = "matching_reports")
 public class MatchingReport implements QorvaEntity {
+
+    public static final int STATUS_HISTORY_SIZE = 20;
 
     @Id
     private String id;
@@ -35,7 +39,16 @@ public class MatchingReport implements QorvaEntity {
 
     private MatchingReportDetails matchingReportDetails;
 
+    /** {@code ApplicationStatusEnum} name: where the candidate stands on this job. */
     private String status;
+
+    /** The last status moves, newest last (capped at {@link #STATUS_HISTORY_SIZE}). */
+    private List<ReportStatusChange> statusHistory;
+
+    private Instant statusChangedAt;
+
+    /** User id, or {@code copilot:<runId>} for a change made by a rule run. */
+    private String statusChangedBy;
 
     /** True once the candidate left the job's latest results; the report stays until the recruiter deletes it. */
     private Boolean outdated;

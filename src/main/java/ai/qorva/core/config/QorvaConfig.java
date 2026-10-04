@@ -10,6 +10,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
+import ai.qorva.core.service.ai.AiCallMetrics;
+import ai.qorva.core.service.ai.AiCallMetricsAdvisor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
@@ -36,10 +39,13 @@ public class QorvaConfig {
 			.build();
 	}
 
+	/** Background work (extraction, report generation, summaries): Spring AI's default timeouts and retries. */
 	@Bean
-	ChatClient chatClient(ChatClient.Builder builder) {
+	@Primary
+	ChatClient chatClient(ChatClient.Builder builder, AiCallMetrics aiCallMetrics) {
 		return builder
-			.defaultSystem("You are a CV screening expert that answer questions about screening CVs and candidates skills evaluation in different domains")
+			.defaultSystem(InteractiveAiConfig.DEFAULT_SYSTEM)
+			.defaultAdvisors(new AiCallMetricsAdvisor(aiCallMetrics))
 			.build();
 	}
 

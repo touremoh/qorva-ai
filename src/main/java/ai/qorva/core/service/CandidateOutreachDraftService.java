@@ -1,5 +1,8 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import ai.qorva.core.service.orchestrators.StructuredOutput;
 
 import ai.qorva.core.exception.QorvaErrors;
@@ -59,7 +62,7 @@ public class CandidateOutreachDraftService {
 	@Value("${qorva.ai.outreach.model:gpt-4.1-mini}")
 	private String model;
 
-	public CandidateOutreachDraftService(ChatClient chatClient,
+	public CandidateOutreachDraftService(@Qualifier("interactiveChatClient") ChatClient chatClient,
 	                                     CVService cvService,
 	                                     JobPostService jobPostService,
 	                                     MatchingReportService matchingReportService,
@@ -94,6 +97,7 @@ public class CandidateOutreachDraftService {
 			resolveSenderName(senderEmail), resolveCompanyName(tenantId), converter.getFormat());
 
 		var content = chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "outreach_draft"))
 			.options(OpenAiChatOptions.builder().model(model).temperature(temperatureFor(model)).build())
 			.user(prompt)
 			.call()

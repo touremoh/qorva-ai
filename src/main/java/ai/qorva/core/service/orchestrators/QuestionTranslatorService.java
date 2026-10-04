@@ -1,5 +1,8 @@
 package ai.qorva.core.service.orchestrators;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
@@ -14,7 +17,7 @@ import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_1_MINI
 @RequiredArgsConstructor
 public class QuestionTranslatorService {
 
-	private final ChatClient chatClient;
+	@Qualifier("interactiveChatClient") private final ChatClient chatClient;
 
 	private static final String TO_ENGLISH_PROMPT = """
 		If the following question is already in English, return it exactly as-is, unchanged.
@@ -39,6 +42,7 @@ public class QuestionTranslatorService {
 		}
 		try {
 			return chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "question_translation"))
 				.options(OpenAiChatOptions.builder()
 					.model(GPT_4_1_MINI)
 					.temperature(0.0)
@@ -59,6 +63,7 @@ public class QuestionTranslatorService {
 		}
 		try {
 			return chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "question_translation"))
 				.options(OpenAiChatOptions.builder()
 					.model(GPT_4_1_MINI)
 					.temperature(0.0)

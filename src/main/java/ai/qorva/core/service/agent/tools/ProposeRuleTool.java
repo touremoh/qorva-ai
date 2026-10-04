@@ -45,7 +45,9 @@ public class ProposeRuleTool implements AgentTool {
 			+ "interview), SCHEDULE (DAILY or WEEKLY at hour 0-23, weekday 1=Monday..7), ATS_SYNC_FINISHED (an ATS import "
 			+ "finished; connectionId from list_ats_connections, or any), JOB_NEEDS_MATCHING (an open job's matching results "
 			+ "became out of date — jobId or any job; staleReasons any of NEVER_RUN = new job, JOB_CHANGED, NEW_CANDIDATES, "
-			+ "CANDIDATE_CHANGED, all when omitted). The goal is what the task must do; it may use {{candidates}}, {{job}}, "
+			+ "CANDIDATE_CHANGED, all when omitted), REPORT_STATUS_CHANGED (a recruiter moved a candidate on a job — jobId or any "
+			+ "job; toStatuses any of NEW, CONTACTED, SHORTLISTED, INTERVIEWING, OFFERED, HIRED, REJECTED, WITHDRAWN, any when "
+			+ "omitted). The goal is what the task must do; it may use {{candidates}}, {{job}}, "
 			+ "{{count}} and {{sync}}, filled in when it fires — e.g. \"Run matching for {{job}} with the top 5 candidates\". "
 			+ "Matching normally waits for the recruiter's approval; set autoApproveMatching (with autoApproveMaxActions, the "
 			+ "most one matching may cost) only when the recruiter asks for it to run without asking. The recruiter approves "
@@ -59,7 +61,7 @@ public class ProposeRuleTool implements AgentTool {
 			  "name":{"type":"string","description":"Short name, e.g. Invite strong Java matches"},
 			  "goal":{"type":"string","description":"What each task does, e.g. Draft an interview invitation for {{candidates}} for {{job}}."},
 			  "trigger":{"type":"object","properties":{
-			    "type":{"type":"string","enum":["CV_ADDED","CV_SCORED","SCHEDULE","ATS_SYNC_FINISHED","JOB_NEEDS_MATCHING"]},
+			    "type":{"type":"string","enum":["CV_ADDED","CV_SCORED","SCHEDULE","ATS_SYNC_FINISHED","JOB_NEEDS_MATCHING","REPORT_STATUS_CHANGED"]},
 			    "source":{"type":"string","enum":["ANY","ATS","MANUAL"]},
 			    "jobId":{"type":"string"},
 			    "minScore":{"type":"integer","minimum":0,"maximum":100},
@@ -68,7 +70,8 @@ public class ProposeRuleTool implements AgentTool {
 			    "hour":{"type":"integer","minimum":0,"maximum":23},
 			    "weekday":{"type":"integer","minimum":1,"maximum":7},
 			    "connectionId":{"type":"string"},
-			    "staleReasons":{"type":"array","items":{"type":"string","enum":["NEVER_RUN","JOB_CHANGED","NEW_CANDIDATES","CANDIDATE_CHANGED"]}}},
+			    "staleReasons":{"type":"array","items":{"type":"string","enum":["NEVER_RUN","JOB_CHANGED","NEW_CANDIDATES","CANDIDATE_CHANGED"]}},
+			    "toStatuses":{"type":"array","items":{"type":"string","enum":["NEW","CONTACTED","SHORTLISTED","INTERVIEWING","OFFERED","HIRED","REJECTED","WITHDRAWN"]}}},
 			   "required":["type"],"additionalProperties":false},
 			  "dailyRunCap":{"type":"integer","minimum":1,"description":"Max tasks per day (default 20)"},
 			  "autoApproveMatching":{"type":"boolean","description":"Run matching without asking the recruiter"},
@@ -151,6 +154,8 @@ public class ProposeRuleTool implements AgentTool {
 		trigger.setConnectionId(ToolArgs.text(t, "connectionId"));
 		var reasons = ToolArgs.list(t, "staleReasons");
 		trigger.setStaleReasons(reasons.isEmpty() ? null : reasons);
+		var statuses = ToolArgs.list(t, "toStatuses");
+		trigger.setToStatuses(statuses.isEmpty() ? null : statuses);
 		request.setTrigger(trigger);
 		return request;
 	}

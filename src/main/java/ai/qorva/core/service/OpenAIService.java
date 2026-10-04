@@ -1,5 +1,8 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import ai.qorva.core.dto.ChatResult;
 import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.dto.common.ScoringRules;
@@ -28,7 +31,7 @@ public class OpenAIService {
 	private final CVExtractionAgent cvExtractionAgent;
 	private final CVVisionExtractionAgent cvVisionExtractionAgent;
 	private final ReportGenerationAgent reportGenerationAgent;
-	private final ChatClient chatClient;
+	@Qualifier("interactiveChatClient") private final ChatClient chatClient;
 
 	public String streamCVExtraction(String cvContent) {
 		return cvExtractionAgent.extract(cvContent);
@@ -53,6 +56,7 @@ public class OpenAIService {
 	 */
 	public ChatResult chatCompletions(List<Message> messages, String model) throws QorvaException {
 		var response = chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "resume_chat"))
 			.options(OpenAiChatOptions.builder()
 				.model(model)
 				// GPT-5.x only accepts the default temperature (1). Leaving it unset is not enough: Spring AI merges

@@ -16,7 +16,7 @@ final class ReportProjections {
 	}
 
 	static Map<String, Object> summary(String reportId, String jobId, String jobTitle, CandidateInfo candidate, MatchingReportDetails details,
-	                                   Boolean outdated) {
+	                                   Boolean outdated, String status) {
 		var out = new LinkedHashMap<String, Object>();
 		out.put("reportId", reportId);
 		out.put("jobId", jobId);
@@ -29,6 +29,8 @@ final class ReportProjections {
 		out.put("recommendation", decision != null ? decision.getRecommendation() : null);
 		// No longer in the job's latest top N: an older result, kept until the recruiter deletes it.
 		out.put("outdated", Boolean.TRUE.equals(outdated));
+		// Where the candidate stands on the job: NEW, CONTACTED, SHORTLISTED, INTERVIEWING, OFFERED, HIRED, REJECTED, WITHDRAWN.
+		out.put("status", status);
 		return out;
 	}
 }

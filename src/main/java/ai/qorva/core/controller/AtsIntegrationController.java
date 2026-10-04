@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * Tenant-facing ATS integration management. Every route requires the
- * MANAGE_INTEGRATIONS permission; connection ownership is always re-checked against
- * the tenant from the JWT.
+ * MANAGE_INTEGRATIONS permission, except the read-only sync status recruiters see;
+ * connection ownership is always re-checked against the tenant from the JWT.
  */
 @RestController
 @RequestMapping("/ats")
@@ -42,6 +42,13 @@ public class AtsIntegrationController {
 	@PreAuthorize("@accessManager.hasPermission(authentication,'MANAGE_INTEGRATIONS')")
 	public ResponseEntity<AtsIntegrationData.ProviderCatalog> providers() {
 		return ResponseEntity.ok(connectionService.catalog(TenantContextHolder.getTenantId()));
+	}
+
+	/** Last sync per connection, for the "last synced" line on the Jobs and Resumes pages. */
+	@GetMapping(path = "/sync-status", produces = "application/json")
+	@PreAuthorize("@accessManager.hasPermission(authentication,'VIEW_JOB') or @accessManager.hasPermission(authentication,'VIEW_CV')")
+	public ResponseEntity<AtsIntegrationData.SyncStatusList> syncStatus() {
+		return ResponseEntity.ok(connectionService.syncStatus(TenantContextHolder.getTenantId()));
 	}
 
 	@GetMapping(path = "/connections", produces = "application/json")

@@ -122,6 +122,8 @@ public final class AgentData {
 		private String connectionId;
 		/** JOB_NEEDS_MATCHING: stale reasons that fire it; null or empty = all. */
 		private List<String> staleReasons;
+		/** REPORT_STATUS_CHANGED: statuses that fire it; null or empty = any. */
+		private List<String> toStatuses;
 	}
 
 	@Getter
@@ -140,7 +142,8 @@ public final class AgentData {
 
 	public record TriggerView(String type, String source, String jobPostId, String jobTitle, Integer minScore,
 	                          Boolean recommendedOnly, String frequency, Integer hour, Integer weekday, String zoneId,
-	                          String connectionId, String connectionName, List<String> staleReasons) {}
+	                          String connectionId, String connectionName, List<String> staleReasons,
+	                          List<String> toStatuses) {}
 
 	public record RuleView(
 		String id,

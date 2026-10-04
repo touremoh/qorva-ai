@@ -1,5 +1,8 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.service.ai.AiCallMetrics;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import ai.qorva.core.dto.JobDescriptionData;
 import ai.qorva.core.dto.common.ScoringRules;
 import ai.qorva.core.exception.QorvaException;
@@ -37,7 +40,7 @@ public class JobDescriptionBuilderService {
 	@Value("${qorva.ai.job-description.model:gpt-5.6-terra}")
 	private String model;
 
-	public JobDescriptionBuilderService(ChatClient chatClient,
+	public JobDescriptionBuilderService(@Qualifier("interactiveChatClient") ChatClient chatClient,
 	                                    ScoringRulesPrefillService scoringRulesPrefillService,
 	                                    TenantService tenantService) throws QorvaException {
 		this.chatClient = chatClient;
@@ -65,6 +68,7 @@ public class JobDescriptionBuilderService {
 			.replace("{extra_notes}", orEmpty(request.getExtraNotes()));
 
 		var content = chatClient.prompt()
+			.advisors(a -> a.param(AiCallMetrics.AGENT, "job_description"))
 			// GPT-5-family models only accept the default temperature (1); leaving it unset
 			// would inherit Spring AI's 0.7 default and be rejected with HTTP 400.
 			.options(OpenAiChatOptions.builder().model(model).temperature(1.0).build())
