@@ -12,9 +12,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.List;
-import java.util.UUID;
 
+/**
+ * Talent Intelligence: answers a question about the resume library as a whole (counts, distributions,
+ * clusters, skill gaps, comparisons) with deterministic handlers, then words the answer. Called by
+ * Copilot's {@code analyze_library}; the conversation state between questions is the {@link ConversationFrame},
+ * which the caller keeps and passes back with the next question.
+ */
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -25,83 +31,68 @@ public class LibraryInsightsService {
 	private final InsightRouter insightRouter;
 	private final InsightAnswerGenerator answerGenerator;
 	private final UsageMonitoringService usageMonitoringService;
-	private final InsightConversationService conversationService;
 	private final QuestionTranslatorService questionTranslator;
 	private final MentionResolver mentionResolver;
 	private final FollowUpResolver followUpResolver;
 
-	public InsightResponseDTO  ask(InsightRequestDTO request, String tenantId, String userId) {
-		String conversationId = request.conversationId() != null
-			? request.conversationId()
-			: UUID.randomUUID().toString();
+	/**
+	 * The answer, and the frame to pass with the next question of the conversation. {@code clarification} is true
+	 * when the question was too broad and the answer asks for specifics; it counts no query.
+	 */
+	public record Analysis(InsightResponseDTO response, ConversationFrame frame, boolean clarification) {}
 
-		try {
-			ObjectId tenantObjectId = new ObjectId(tenantId);
+	/**
+	 * @param previousFrame the frame of the conversation's previous analysis, or null for a question that stands alone
+	 */
+	public Analysis analyse(String question, List<MentionDTO> mentions, String tenantId, ConversationFrame previousFrame) {
+		ObjectId tenantObjectId = new ObjectId(tenantId);
 
-			// Translate to English for classification and extraction; original kept for answer generation
-			String englishQuestion = questionTranslator.toEnglish(request.question());
+		// Translate to English for classification and extraction; original kept for answer generation
+		String englishQuestion = questionTranslator.toEnglish(question);
 
-			log.info("Translated question to English: {}. Original: {}", englishQuestion, request.question());
+		log.info("Translated question to English: {}. Original: {}", englishQuestion, question);
 
-			// Classification and extraction are single-shot, so an elliptical follow-up ("java development")
-			// has to be made self-contained first — from the previous turn's frame alone, never the transcript.
-			ConversationFrame previousFrame = conversationService.findLatestFrame(request.conversationId(), tenantId, userId);
-			FollowUpResolver.Resolution resolution = followUpResolver.resolve(englishQuestion, previousFrame);
-			String resolvedQuestion = resolution.question();
+		// Classification and extraction are single-shot, so an elliptical follow-up ("java development")
+		// has to be made self-contained first — from the previous turn's frame alone, never the transcript.
+		FollowUpResolver.Resolution resolution = followUpResolver.resolve(englishQuestion, previousFrame);
+		String resolvedQuestion = resolution.question();
 
-			InsightIntent intent = intentClassifier.classify(resolvedQuestion);
-			CVQueryParams params = resolveParams(resolvedQuestion, intent, resolution);
+		InsightIntent intent = intentClassifier.classify(resolvedQuestion);
+		CVQueryParams params = resolveParams(resolvedQuestion, intent, resolution);
 
-			if (params.needsClarification()) {
-				// Translate clarification back only when the original question wasn't English
-				boolean needsTranslation = !englishQuestion.trim().equalsIgnoreCase(request.question().trim());
-				String clarificationText = needsTranslation
-					? questionTranslator.matchLanguageOf(params.clarificationQuestion(), request.question())
-					: params.clarificationQuestion();
-				InsightResponseDTO clarification = new InsightResponseDTO(
-					conversationId, intent, clarificationText,
-					List.of(), 0, List.of(), List.of(), List.of(), null, null
-				);
-				// Flagged as awaiting clarification so the next utterance is read as the answer to it.
-				ConversationFrame frame = new ConversationFrame(resolvedQuestion, intent, params, true, null);
-				conversationService.saveTurn(conversationId, tenantId, userId, null, request.question(), frame, clarification);
-				return clarification;
-			}
-
-			MentionResolver.ResolvedMentions resolvedMentions = mentionResolver.resolve(request.mentionsOrEmpty(), tenantId);
-			InsightHandlerResult result = insightRouter.route(intent).handle(params, tenantObjectId, resolvedMentions);
-			AnswerGenerationResult answer = answerGenerator.generate(result, intent, request.question(), resolvedQuestion, resolvedMentions);
-
-			usageMonitoringService.incrementUsage(tenantId, UsageMonitoringService.FeatureKey.TALENT_INTELLIGENCE_QUERIES, 1);
-
-			InsightResponseDTO response = new InsightResponseDTO(
-				conversationId,
-				intent,
-				answer.answerText(),
-				result.candidates(),
-				result.totalCount(),
-				result.metrics(),
-				result.charts(),
-				answer.followUpQuestions() != null ? answer.followUpQuestions() : List.of(),
-				answer.disclaimer(),
-				result.rawData().isEmpty() ? null : result.rawData()
-			);
-
-			// Title is only set on the first turn of a new conversation
-			String title = request.conversationId() == null ? answer.conversationTitle() : null;
-			ConversationFrame frame = new ConversationFrame(resolvedQuestion, intent, params, false, null);
-			conversationService.saveTurn(conversationId, tenantId, userId, title, request.question(), frame, response);
-
-			return response;
-		} catch (Exception e) {
-			log.error("Error processing library insights request for tenant {}: {}", tenantId, e.getMessage(), e);
-			return new InsightResponseDTO(
-				conversationId,
-				InsightIntent.GENERAL_RECRUITING_QUESTION,
-				"I was unable to process your request at this time. Please try again.",
+		if (params.needsClarification()) {
+			// Translate clarification back only when the original question wasn't English
+			boolean needsTranslation = !englishQuestion.trim().equalsIgnoreCase(question.trim());
+			String clarificationText = needsTranslation
+				? questionTranslator.matchLanguageOf(params.clarificationQuestion(), question)
+				: params.clarificationQuestion();
+			InsightResponseDTO clarification = new InsightResponseDTO(
+				null, intent, clarificationText,
 				List.of(), 0, List.of(), List.of(), List.of(), null, null
 			);
+			// Flagged as awaiting clarification so the next utterance is read as the answer to it.
+			return new Analysis(clarification, new ConversationFrame(resolvedQuestion, intent, params, true, Instant.now()), true);
 		}
+
+		MentionResolver.ResolvedMentions resolvedMentions = mentionResolver.resolve(mentions, tenantId);
+		InsightHandlerResult result = insightRouter.route(intent).handle(params, tenantObjectId, resolvedMentions);
+		AnswerGenerationResult answer = answerGenerator.generate(result, intent, question, resolvedQuestion, resolvedMentions);
+
+		usageMonitoringService.incrementUsage(tenantId, UsageMonitoringService.FeatureKey.TALENT_INTELLIGENCE_QUERIES, 1);
+
+		InsightResponseDTO response = new InsightResponseDTO(
+			null,
+			intent,
+			answer.answerText(),
+			result.candidates(),
+			result.totalCount(),
+			result.metrics(),
+			result.charts(),
+			answer.followUpQuestions() != null ? answer.followUpQuestions() : List.of(),
+			answer.disclaimer(),
+			result.rawData().isEmpty() ? null : result.rawData()
+		);
+		return new Analysis(response, new ConversationFrame(resolvedQuestion, intent, params, false, Instant.now()), false);
 	}
 
 	/**

@@ -6,8 +6,38 @@
       "createdAt" : "<ts>",
       "failureReason" : null,
       "finishedAt" : "<ts>",
-      "goal" : "Who are our best Java candidates?",
+      "goal" : "How many senior backend engineers do we have?",
       "id" : "<id:1>",
+      "origin" : "CHAT",
+      "ruleId" : null,
+      "ruleName" : null,
+      "status" : "COMPLETED",
+      "stepCount" : 1,
+      "title" : "Best Java candidates",
+      "userEmail" : "owner@a.qorva.test"
+    }, {
+      "canCancel" : false,
+      "conversationId" : "<id:2>",
+      "createdAt" : "<ts>",
+      "failureReason" : null,
+      "finishedAt" : "<ts>",
+      "goal" : "What are this candidate's strongest skills for the role?",
+      "id" : "<id:3>",
+      "origin" : "CHAT",
+      "ruleId" : null,
+      "ruleName" : null,
+      "status" : "COMPLETED",
+      "stepCount" : 1,
+      "title" : "Best Java candidates",
+      "userEmail" : "owner@a.qorva.test"
+    }, {
+      "canCancel" : false,
+      "conversationId" : "<id:2>",
+      "createdAt" : "<ts>",
+      "failureReason" : null,
+      "finishedAt" : "<ts>",
+      "goal" : "Who are our best Java candidates?",
+      "id" : "<id:4>",
       "origin" : "CHAT",
       "ruleId" : null,
       "ruleName" : null,
@@ -18,7 +48,7 @@
     } ],
     "page" : 0,
     "size" : 20,
-    "total" : 1
+    "total" : 3
   },
   "status" : 200
 }

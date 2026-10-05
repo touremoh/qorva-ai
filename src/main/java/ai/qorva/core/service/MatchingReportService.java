@@ -368,7 +368,7 @@ public class MatchingReportService extends AbstractQorvaService<MatchingReportDT
 				searchCriteria.getCandidateInfo().getCandidateId()
 			);
 		if (response.isEmpty()) {
-			// Expected state (the resume-chat dialog probes for a report before creating a chat) — a 404, not a 500.
+			// Expected state (the app probes whether a candidate has a report for a job) — a 404, not a 500.
 			throw QorvaErrors.notFound(QorvaErrorCodes.REPORT_RESUME_MATCH_NOT_FOUND);
 		}
 		return this.mapper.map(response.get());

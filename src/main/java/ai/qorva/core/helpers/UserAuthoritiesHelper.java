@@ -37,15 +37,6 @@ public class UserAuthoritiesHelper {
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.MODIFY_REPORT.getValue(), ALLOWED.getValue()));
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.DELETE_REPORT.getValue(), ALLOWED.getValue()));
 
-		// Chat
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.START_CHAT.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_CHAT.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_MESSAGE.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.REPLY_MESSAGE.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.MODIFY_CHAT.getValue(), ALLOWED.getValue()));
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.DELETE_CHAT.getValue(), ALLOWED.getValue()));
-
-
 		// Users
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_USERS.getValue(), ALLOWED.getValue()));
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.MANAGE_USERS.getValue(), ALLOWED.getValue()));
@@ -60,22 +51,19 @@ public class UserAuthoritiesHelper {
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.UPDATE_SUBSCRIPTION.getValue(), ALLOWED.getValue()));
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.CANCEL_SUBSCRIPTION.getValue(), ALLOWED.getValue()));
 
-		// Library Insights
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_LIBRARY_INSIGHTS.getValue(), ALLOWED.getValue()));
-
 		// Candidate outreach
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.CONTACT_CANDIDATE.getValue(), ALLOWED.getValue()));
 
-		// Copilot
+		// Copilot: candidate questions, library analyses and actions
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.USE_AGENT.getValue(), ALLOWED.getValue()));
 
 		return authorities;
 	}
 
 	/**
-	 * Restricted authority set for demo users: read-only browsing plus matching-report generation.
-	 * Excludes any create/modify/delete of CVs and job posts, user management, chat, ATS export,
-	 * and all billing actions. Password change is not authority-gated so demo users can still do it.
+	 * Restricted authority set for demo users: read-only browsing, matching-report generation and Copilot.
+	 * Excludes any create/modify/delete of CVs and job posts, user management, ATS export and all billing
+	 * actions — so Copilot offers them its read tools, its answers and matching only. Password change is not authority-gated so demo users can still do it.
 	 */
 	public List<UserAuthority> createDemoAuthorities() {
 		var authorities = new ArrayList<UserAuthority>();
@@ -89,8 +77,8 @@ public class UserAuthoritiesHelper {
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.GENERATE_REPORT.getValue(), ALLOWED.getValue()));
 		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_REPORT.getValue(), ALLOWED.getValue()));
 
-		// Library insights (read-only)
-		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.VIEW_LIBRARY_INSIGHTS.getValue(), ALLOWED.getValue()));
+		// Copilot: its tools are filtered by the authorities above
+		authorities.add(createAuthority(ACCOUNT_OWNER.getValue(), UserActionsEnum.USE_AGENT.getValue(), ALLOWED.getValue()));
 
 		return authorities;
 	}

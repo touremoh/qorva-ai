@@ -30,6 +30,11 @@ public class AgentToolRegistry {
 		return tools.stream().filter(t -> t.name().equals(name)).findFirst().filter(t -> isAllowed(t, ctx));
 	}
 
+	/** Whether {@code name} is a terminal answer tool, whoever asks. */
+	public boolean isTerminal(String name) {
+		return tools.stream().anyMatch(t -> t.name().equals(name) && t.terminal());
+	}
+
 	private boolean isAllowed(AgentTool tool, AgentToolContext ctx) {
 		return tool.requiredActions().stream()
 			.allMatch(action -> accessManager.hasPermission(ctx.authentication(), action.getValue()))

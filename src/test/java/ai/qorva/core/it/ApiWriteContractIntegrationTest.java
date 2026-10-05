@@ -52,12 +52,11 @@ class ApiWriteContractIntegrationTest extends AbstractIntegrationTest {
 	}
 
 	@Test
-	void cvDelete_cascadesToReportsNotesAndChats() throws Exception {
+	void cvDelete_cascadesToReportsAndNotes() throws Exception {
 		snap("cvDelete.response", owner, delete("/cvs/" + a.cvId()));
 		snap("cvDelete.cvAfter", owner, get("/cvs/" + a.cvId()));
 		snap("cvDelete.reportsAfter", owner, get("/matching-reports").param("pageNumber", "0").param("pageSize", "10"));
 		snap("cvDelete.notesAfter", owner, get("/notes").param("targetType", "CV").param("targetId", a.cvId()));
-		snap("cvDelete.chatsAfter", owner, get("/chats").param("page", "0").param("size", "25"));
 		snap("cvDelete.dashboardCounts", owner, get("/cvs/clear-library/preflight"));
 		assertThat(OrphanCheck.find(mongo)).as("dangling references after a CV delete").isEmpty();
 	}
@@ -79,7 +78,6 @@ class ApiWriteContractIntegrationTest extends AbstractIntegrationTest {
 		snap("jobClose.jobAfter", owner, get("/jobs/" + a.jobId()));
 		snap("jobDelete.response", owner, delete("/jobs/" + a.jobId()));
 		snap("jobDelete.reportsAfter", owner, get("/matching-reports").param("pageNumber", "0").param("pageSize", "10"));
-		snap("jobDelete.chatsAfter", owner, get("/chats").param("page", "0").param("size", "25"));
 		assertThat(OrphanCheck.find(mongo)).as("dangling references after a job delete").isEmpty();
 	}
 
@@ -87,7 +85,6 @@ class ApiWriteContractIntegrationTest extends AbstractIntegrationTest {
 	void reportDelete() throws Exception {
 		snap("reportDelete.response", owner, delete("/matching-reports/" + a.reportId()));
 		snap("reportDelete.reportsAfter", owner, get("/matching-reports").param("pageNumber", "0").param("pageSize", "10"));
-		snap("reportDelete.chatsAfter", owner, get("/chats").param("page", "0").param("size", "25"));
 		assertThat(OrphanCheck.find(mongo)).as("dangling references after a report delete").isEmpty();
 	}
 
@@ -115,12 +112,9 @@ class ApiWriteContractIntegrationTest extends AbstractIntegrationTest {
 	}
 
 	@Test
-	void chatAndConversationLifecycle() throws Exception {
-		snap("chatClose.response", owner, patch("/chats/" + a.chatId() + "/status").param("status", "CLOSED"));
-		snap("chatDelete.response", owner, delete("/chats/" + a.chatId()));
-		snap("chats.after", owner, get("/chats").param("page", "0").param("size", "25"));
-		snap("conversationDelete.response", owner, delete("/library-insights/conversations/" + a.conversationId()));
-		snap("conversations.after", owner, get("/library-insights/conversations"));
+	void copilotConversationDelete() throws Exception {
+		snap("agentConversationDelete.response", owner, delete("/agent/conversations/" + a.agentConversationId()));
+		snap("agentConversations.after", owner, get("/agent/conversations"));
 	}
 
 	@Test

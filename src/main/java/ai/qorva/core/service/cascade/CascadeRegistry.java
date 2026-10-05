@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * The one place that knows what depends on what. A resource delete calls {@link #parentsDeleted}
  * after removing its own documents; deleting a CV removes its reports, which in turn removes the
- * reports' notes and chats, which removes the chats' messages. Tenant-wide wipes go through
+ * reports' notes. Tenant-wide wipes go through
  * {@link #purgeTenant} so the clear-library and demo-purge lists can no longer drift apart.
  */
 @Slf4j

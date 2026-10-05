@@ -163,12 +163,21 @@ class AgentApiIntegrationTest extends AbstractIntegrationTest {
 	}
 
 	@Test
-	void anEmptyGoalAndARunOverTheLimitAreRefused() throws Exception {
+	void anEmptyGoalAndARunOverEveryCopilotLimitAreRefused() throws Exception {
 		assertThat(mvc.perform(post("/agent/runs").header("Authorization", owner).contentType(JSON).content("{\"goal\":\"  \"}"))
 			.andReturn().getResponse().getStatus()).isEqualTo(400);
 
+		// Tasks spent: the run may still be a candidate question or a library analysis, so it starts.
 		mongo.updateMulti(Query.query(Criteria.where("tenantId").is(new ObjectId(a.tenantId()))),
-			new Update().set("features.agentRuns.consumed", 500), "usage_monitoring");
+			new Update().set("features.agentRuns.consumed", 100_000), "usage_monitoring");
+		var accepted = mvc.perform(post("/agent/runs").header("Authorization", owner).contentType(JSON)
+			.content("{\"goal\":\"How many Java developers?\"}")).andReturn().getResponse();
+		assertThat(accepted.getStatus()).isEqualTo(202);
+		awaitFinished(owner, json(accepted.getContentAsString()).path("id").asText());
+
+		mongo.updateMulti(Query.query(Criteria.where("tenantId").is(new ObjectId(a.tenantId()))),
+			new Update().set("features.aiResumeChats.consumed", 100_000).set("features.talentIntelligenceQueries.consumed", 100_000),
+			"usage_monitoring");
 		var response = mvc.perform(post("/agent/runs").header("Authorization", owner).contentType(JSON)
 			.content("{\"goal\":\"Anything\"}")).andReturn().getResponse();
 		assertThat(response.getStatus()).isEqualTo(403);
@@ -201,13 +210,61 @@ class AgentApiIntegrationTest extends AbstractIntegrationTest {
 		// The owner manages users: sees both runs, may read the viewer's but never approve for them.
 		var team = json(mvc.perform(get("/agent/runs").param("scope", "team").header("Authorization", owner))
 			.andReturn().getResponse().getContentAsString());
-		assertThat(team.path("total").asLong()).isEqualTo(2);
+		// The fixture's three runs of the owner's conversation, and the viewer's.
+		assertThat(team.path("total").asLong()).isEqualTo(4);
 		assertThat(team.path("items").findValuesAsText("userEmail")).contains(a.ownerEmail(), a.viewerEmail());
 		var seenByOwner = json(mvc.perform(get("/agent/runs/" + viewersRun.path("id").asText()).header("Authorization", owner))
 			.andReturn().getResponse().getContentAsString());
 		assertThat(seenByOwner.path("canApprove").asBoolean()).isFalse();
 		assertThat(json(mvc.perform(get("/agent/availability").header("Authorization", owner)).andReturn().getResponse().getContentAsString())
 			.path("canViewTeam").asBoolean()).isTrue();
+	}
+
+	private long consumed(String feature) {
+		var period = mongo.findOne(Query.query(Criteria.where("tenantId").is(new ObjectId(a.tenantId()))), Document.class, "usage_monitoring");
+		var metrics = period.get("features", Document.class).get(feature, Document.class);
+		return metrics.get("consumed") == null ? 0 : ((Number) metrics.get("consumed")).longValue();
+	}
+
+	@Test
+	void aFocusedQuestionIsAnsweredByTheCandidateEngineAsIsAndCountsACandidateQuestion() throws Exception {
+		// Copilot picks ask_about_candidate; the engine's own model call (its rules prompt) answers.
+		when(chatModel.call(any(Prompt.class))).thenAnswer(inv -> {
+			var messages = inv.<Prompt>getArgument(0).getInstructions();
+			if (messages.stream().anyMatch(m -> m.getText() != null && m.getText().contains("helping a recruiter evaluate one candidate"))) {
+				return new ChatResponse(List.of(new Generation(new AssistantMessage("The screening report scores this match at 64%."))));
+			}
+			return new ChatResponse(List.of(new Generation(new AssistantMessage("", Map.of(),
+				List.of(new AssistantMessage.ToolCall("call_1", "function", "ask_about_candidate", "{}"))))));
+		});
+		long chats = consumed("aiResumeChats");
+		long tasks = consumed("agentRuns");
+
+		var queued = start(owner, "{\"goal\":\"Is this candidate a fit?\",\"focus\":{\"cvId\":\"" + a.cvId()
+			+ "\",\"jobPostId\":\"" + a.jobId() + "\"}}");
+		assertThat(queued.path("focus").path("cvId").asText()).isEqualTo(a.cvId());
+		var run = awaitFinished(owner, queued.path("id").asText());
+
+		assertThat(run.path("status").asText()).isEqualTo("COMPLETED");
+		assertThat(run.path("finalAnswer").asText()).isEqualTo("The screening report scores this match at 64%.");
+		assertThat(run.path("steps").get(0).path("tool").asText()).isEqualTo("ask_about_candidate");
+		assertThat(consumed("aiResumeChats")).isEqualTo(chats + 1);
+		assertThat(consumed("agentRuns")).isEqualTo(tasks);
+
+		// A follow-up keeps the conversation's focus.
+		var followUp = start(owner, "{\"goal\":\"What should I ask her?\",\"conversationId\":\""
+			+ queued.path("conversationId").asText() + "\"}");
+		assertThat(followUp.path("focus").path("jobPostId").asText()).isEqualTo(a.jobId());
+		awaitFinished(owner, followUp.path("id").asText());
+	}
+
+	@Test
+	void aFocusOnAnUnknownCandidateIsRefused() throws Exception {
+		var response = mvc.perform(post("/agent/runs").header("Authorization", owner).contentType(JSON)
+			.content("{\"goal\":\"Is she a fit?\",\"focus\":{\"cvId\":\"" + b.cvId() + "\",\"jobPostId\":\"" + a.jobId() + "\"}}"))
+			.andReturn().getResponse();
+		assertThat(response.getStatus()).isEqualTo(400);
+		assertThat(response.getContentAsString()).contains("error.agent.focus_invalid");
 	}
 
 	@Test

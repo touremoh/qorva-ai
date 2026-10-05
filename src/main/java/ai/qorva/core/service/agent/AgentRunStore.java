@@ -14,6 +14,8 @@ import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * Every write to agent_runs outside creation. Field-level updates, never a whole-document save, so
@@ -164,12 +166,32 @@ public class AgentRunStore {
 			.and("leaseOwner").is(WorkerInstance.ID));
 	}
 
+	/** A run as stored, within its tenant. */
+	public Optional<AgentRun> find(String tenantId, String runId) {
+		if (!ObjectId.isValid(tenantId) || runId == null) return Optional.empty();
+		return Optional.ofNullable(mongoTemplate.findOne(Query.query(Criteria.where("_id").is(runId)
+			.and("tenantId").is(new ObjectId(tenantId))), AgentRun.class));
+	}
+
+	/** The completed runs of the same conversation (same tenant and user) created before {@code run}, oldest first. */
+	public List<AgentRun> earlierInConversation(AgentRun run) {
+		if (run.getConversationId() == null || run.getCreatedAt() == null) return List.of();
+		return mongoTemplate.find(Query.query(Criteria.where("tenantId").is(new ObjectId(run.getTenantId()))
+				.and("userEmail").is(run.getUserEmail())
+				.and("conversationId").is(run.getConversationId())
+				.and("status").is(AgentRun.STATUS_COMPLETED)
+				.and("createdAt").lt(run.getCreatedAt()))
+			.with(Sort.by(Sort.Direction.ASC, "createdAt")), AgentRun.class);
+	}
+
 	private static Update progress(AgentRun run) {
 		return new Update()
 			.set("status", run.getStatus())
 			.set("steps", run.getSteps())
 			.set("history", run.getHistory())
 			.set("finalAnswer", run.getFinalAnswer())
+			.set("blocks", run.getBlocks())
+			.set("insightFrame", run.getInsightFrame())
 			.set("failureReason", run.getFailureReason())
 			.set("stoppedEarly", run.getStoppedEarly())
 			.set("tokens", run.getTokens())

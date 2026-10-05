@@ -15,7 +15,9 @@ public final class AgentData {
 
 	private AgentData() {}
 
-	public record Availability(boolean enabled, boolean rulesEnabled, Integer runsRemaining, boolean canViewTeam) {}
+	/** Remaining counts are this period's, null when the plan has no limit for them. */
+	public record Availability(boolean enabled, boolean rulesEnabled, Integer runsRemaining, Integer candidateQuestionsRemaining,
+	                           Integer libraryAnalysesRemaining, boolean canViewTeam) {}
 
 	@Getter
 	@Setter
@@ -27,7 +29,19 @@ public final class AgentData {
 		private String conversationId;
 		/** IANA zone of the browser (e.g. Europe/Paris), used when the chat proposes a scheduled rule. */
 		private String timeZone;
+		/** The candidate and job the conversation is about; absent keeps the conversation's focus, if any. */
+		private FocusRequest focus;
 	}
+
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	public static class FocusRequest {
+		private String cvId;
+		private String jobPostId;
+	}
+
+	public record FocusView(String cvId, String cvName, String jobPostId, String jobTitle) {}
 
 	/** CV or JOB. */
 	public record MentionView(String type, String id, String name) {}
@@ -67,10 +81,13 @@ public final class AgentData {
 		String status,
 		String goal,
 		List<MentionView> mentions,
+		FocusView focus,
 		List<StepView> steps,
 		List<ActionView> pendingActions,
 		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC") Instant approvalExpiresAt,
 		String finalAnswer,
+		/** Charts, metrics and candidate cards of a library analysis; null for other answers. */
+		AnswerBlocks blocks,
 		String failureReason,
 		boolean stoppedEarly,
 		boolean canCancel,

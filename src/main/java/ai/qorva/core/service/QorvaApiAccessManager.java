@@ -55,15 +55,4 @@ public class QorvaApiAccessManager {
 		}
 	}
 
-	public boolean hasNotExceededChatLimit() {
-		var tenantId = TenantContextHolder.getTenantId();
-		if (tenantId == null) return false;
-		try {
-			return !usageMonitoringService.hasExceededLimit(tenantId, UsageMonitoringService.FeatureKey.AI_RESUME_CHATS);
-		} catch (Exception e) {
-			log.warn("Could not verify chat limit for tenantId={}", tenantId, e);
-			return true;
-		}
-	}
-
 }

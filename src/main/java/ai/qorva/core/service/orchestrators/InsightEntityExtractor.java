@@ -21,7 +21,7 @@ import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_1;
 @RequiredArgsConstructor
 public class InsightEntityExtractor {
 
-	@Qualifier("interactiveChatClient") private final ChatClient chatClient;
+	@Qualifier("copilotAnswerChatClient") private final ChatClient chatClient;
 	private final QorvaPromptContextHolder promptContextHolder;
 	private final ObjectMapper objectMapper;
 

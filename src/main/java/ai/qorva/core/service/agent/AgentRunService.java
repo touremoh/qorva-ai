@@ -5,6 +5,7 @@ import ai.qorva.core.dao.entity.AgentRule;
 import ai.qorva.core.dao.entity.AgentRun;
 import ai.qorva.core.dao.repository.AgentRunRepository;
 import ai.qorva.core.dto.AgentData;
+import ai.qorva.core.dto.common.UsageFeatureMetrics;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaErrors;
 import ai.qorva.core.exception.QorvaException;
@@ -37,6 +38,9 @@ public class AgentRunService {
 
 	/** Previous exchanges of a conversation replayed to the model, so follow-ups ("tag them") have context. */
 	static final int CONTEXT_RUNS = 3;
+	/** The meters a chat run can be charged to. */
+	static final List<UsageMonitoringService.FeatureKey> ANSWER_METERS = List.of(UsageMonitoringService.FeatureKey.AGENT_RUNS,
+		UsageMonitoringService.FeatureKey.AI_RESUME_CHATS, UsageMonitoringService.FeatureKey.TALENT_INTELLIGENCE_QUERIES);
 	static final int TITLE_LENGTH = 80;
 	static final int MAX_SUBJECT = 200;
 	static final int MAX_BODY = 8000;
@@ -66,13 +70,17 @@ public class AgentRunService {
 	}
 
 	public AgentData.Availability availability(String tenantId, boolean teamView) {
-		Integer remaining = usageMonitoringService.findCurrentPeriodByTenantId(tenantId)
-			.map(p -> p.getFeatures() != null ? p.getFeatures().getAgentRuns() : null)
-			.filter(m -> m != null && m.getLimit() != null)
-			.map(m -> Math.max(0, m.getLimit() - (m.getConsumed() != null ? m.getConsumed() : 0)))
-			.orElse(null);
+		var features = usageMonitoringService.findCurrentPeriodByTenantId(tenantId).map(p -> p.getFeatures()).orElse(null);
 		return new AgentData.Availability(properties.isEnabled(),
-			properties.isEnabled() && properties.getRules().isEnabled(), remaining, teamView);
+			properties.isEnabled() && properties.getRules().isEnabled(),
+			remaining(features == null ? null : features.getAgentRuns()),
+			remaining(features == null ? null : features.getAiResumeChats()),
+			remaining(features == null ? null : features.getTalentIntelligenceQueries()), teamView);
+	}
+
+	private static Integer remaining(UsageFeatureMetrics metrics) {
+		if (metrics == null || metrics.getLimit() == null) return null;
+		return Math.max(0, metrics.getLimit() - (metrics.getConsumed() != null ? metrics.getConsumed() : 0));
 	}
 
 	public AgentData.RunView start(String tenantId, String userEmail, String language, AgentData.StartRunRequest request)
@@ -89,12 +97,15 @@ public class AgentRunService {
 			.and("status").in(AgentRun.ACTIVE_STATUSES)), AgentRun.class)) {
 			throw QorvaErrors.conflict(QorvaErrorCodes.AGENT_RUN_ACTIVE);
 		}
-		if (!usageMonitoringService.hasCapacityFor(tenantId, UsageMonitoringService.FeatureKey.AGENT_RUNS, 1)) {
+		// A run is charged by what it uses (a task, a candidate question or a library analysis): it can start while any has room.
+		if (ANSWER_METERS.stream().noneMatch(key -> usageMonitoringService.hasCapacityFor(tenantId, key, 1))) {
 			throw QorvaErrors.forbidden(QorvaErrorCodes.USAGE_AGENT_LIMIT_EXCEEDED);
 		}
 
 		var mentions = resolveMentions(request.getMentions());
 		var previous = request.getConversationId() == null ? List.<AgentRun>of() : conversationRuns(tenantId, userEmail, request.getConversationId());
+		var focus = request.getFocus() != null ? resolveFocus(request.getFocus())
+			: previous.isEmpty() ? null : previous.getLast().getFocus();
 
 		var run = new AgentRun();
 		run.setTenantId(tenantId);
@@ -104,6 +115,7 @@ public class AgentRunService {
 		run.setTimeZone(validZone(request.getTimeZone()));
 		run.setGoal(goal);
 		run.setMentions(mentions);
+		run.setFocus(focus);
 		run.setStatus(AgentRun.STATUS_QUEUED);
 		if (previous.isEmpty()) {
 			run.setConversationId(UUID.randomUUID().toString());
@@ -112,7 +124,7 @@ public class AgentRunService {
 			run.setConversationId(request.getConversationId());
 			run.setTitle(previous.getFirst().getTitle());
 		}
-		run.setHistory(initialHistory(previous, goal, mentions));
+		run.setHistory(initialHistory(previous, goal, mentions, focus));
 
 		var saved = repository.save(run);
 		log.info("agent-run {} queued (tenant={} conversation={})", saved.getId(), tenantId, saved.getConversationId());
@@ -285,7 +297,8 @@ public class AgentRunService {
 		return resolved;
 	}
 
-	private static List<AgentRun.HistoryMessage> initialHistory(List<AgentRun> previous, String goal, List<AgentRun.Mention> mentions) {
+	private static List<AgentRun.HistoryMessage> initialHistory(List<AgentRun> previous, String goal, List<AgentRun.Mention> mentions,
+	                                                            AgentRun.Focus focus) {
 		var history = new ArrayList<AgentRun.HistoryMessage>();
 		var context = previous.stream().filter(r -> AgentRun.STATUS_COMPLETED.equals(r.getStatus()) && r.getFinalAnswer() != null).toList();
 		for (var prior : context.subList(Math.max(0, context.size() - CONTEXT_RUNS), context.size())) {
@@ -301,8 +314,29 @@ public class AgentRunService {
 					.append(" (").append("CV".equals(m.getType()) ? "cvId" : "jobId").append('=').append(m.getId()).append(')');
 			}
 		}
+		if (focus != null) {
+			text.append("\n\nConversation focus: candidate ").append(focus.getCvName() != null ? focus.getCvName() : "(unnamed)")
+				.append(" (cvId=").append(focus.getCvId()).append(") for the job ")
+				.append(focus.getJobTitle() != null ? focus.getJobTitle() : "(untitled)")
+				.append(" (jobId=").append(focus.getJobPostId()).append(").");
+		}
 		history.add(AgentHistory.user(text.toString()));
 		return history;
+	}
+
+	/** The focus is re-read from the tenant's data, like mentions; one that can't be found is refused. */
+	private AgentRun.Focus resolveFocus(AgentData.FocusRequest requested) throws QorvaException {
+		if (requested.getCvId() == null || requested.getJobPostId() == null) {
+			throw QorvaErrors.badRequest(QorvaErrorCodes.AGENT_FOCUS_INVALID);
+		}
+		try {
+			var cv = cvService.findOneById(requested.getCvId());
+			var job = jobPostService.findOneById(requested.getJobPostId());
+			var name = cv.getPersonalInformation() != null ? cv.getPersonalInformation().getName() : null;
+			return new AgentRun.Focus(cv.getId(), name, job.getId(), job.getTitle());
+		} catch (QorvaException e) {
+			throw QorvaErrors.badRequest(QorvaErrorCodes.AGENT_FOCUS_INVALID);
+		}
 	}
 
 	/**
@@ -352,6 +386,8 @@ public class AgentRunService {
 			run.getId(), run.getConversationId(), run.getTitle(), run.getOrigin(), run.getRuleId(), run.getRuleName(),
 			run.getUserEmail(), run.getStatus(), run.getGoal(),
 			run.getMentions().stream().map(m -> new AgentData.MentionView(m.getType(), m.getId(), m.getName())).toList(),
+			run.getFocus() == null ? null : new AgentData.FocusView(run.getFocus().getCvId(), run.getFocus().getCvName(),
+				run.getFocus().getJobPostId(), run.getFocus().getJobTitle()),
 			run.getSteps().stream().map(s -> new AgentData.StepView(s.getSeq(), s.getKind(), s.getTool(), s.getState(),
 				s.getSummaryKey(), s.getSummaryParams(),
 				s.getLinks().stream().map(l -> new AgentData.LinkView(l.getType(), l.getId(), l.getLabel())).toList(),
@@ -360,7 +396,7 @@ public class AgentRunService {
 			run.getPendingActions().stream().map(a -> new AgentData.ActionView(a.getActionId(), a.getStepSeq(), a.getTool(),
 				a.getStatus(), a.getArgsHash(), a.getPreview(), a.getReason())).toList(),
 			run.getApprovalExpiresAt(),
-			run.getFinalAnswer(), run.getFailureReason(), Boolean.TRUE.equals(run.getStoppedEarly()),
+			run.getFinalAnswer(), run.getBlocks(), run.getFailureReason(), Boolean.TRUE.equals(run.getStoppedEarly()),
 			mayCancel && active(run) && !run.isCancelRequested(),
 			// Only the run's own user decides: the action runs as them (their mailbox, their quota).
 			mayApprove && AgentRun.STATUS_AWAITING_APPROVAL.equals(run.getStatus()),

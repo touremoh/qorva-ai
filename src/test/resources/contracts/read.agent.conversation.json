@@ -1,6 +1,7 @@
 {
   "body" : [ {
     "approvalExpiresAt" : null,
+    "blocks" : null,
     "canApprove" : false,
     "canCancel" : false,
     "conversationId" : "<id:2>",
@@ -8,6 +9,7 @@
     "failureReason" : null,
     "finalAnswer" : "One strong Java candidate.",
     "finishedAt" : "<ts>",
+    "focus" : null,
     "goal" : "Who are our best Java candidates?",
     "id" : "<id:1>",
     "mentions" : [ ],
@@ -32,6 +34,123 @@
         "count" : "1"
       },
       "tool" : "search_cvs"
+    } ],
+    "stoppedEarly" : false,
+    "title" : "Best Java candidates",
+    "userEmail" : "owner@a.qorva.test"
+  }, {
+    "approvalExpiresAt" : null,
+    "blocks" : null,
+    "canApprove" : false,
+    "canCancel" : false,
+    "conversationId" : "<id:2>",
+    "createdAt" : "<ts>",
+    "failureReason" : null,
+    "finalAnswer" : "Kubernetes, Go and incident response stand out.",
+    "finishedAt" : "<ts>",
+    "focus" : {
+      "cvId" : "<id:3>",
+      "cvName" : "Candidate",
+      "jobPostId" : "<id:5>",
+      "jobTitle" : "Senior Backend Engineer (Java/Spring)"
+    },
+    "goal" : "What are this candidate's strongest skills for the role?",
+    "id" : "<id:4>",
+    "mentions" : [ ],
+    "origin" : "CHAT",
+    "pendingActions" : [ ],
+    "ruleId" : null,
+    "ruleName" : null,
+    "status" : "COMPLETED",
+    "steps" : [ {
+      "autoApproved" : false,
+      "draft" : null,
+      "kind" : "TOOL_CALL",
+      "links" : [ {
+        "id" : "<id:3>",
+        "label" : "Candidate",
+        "type" : "CV"
+      }, {
+        "id" : "<id:5>",
+        "label" : "Senior Backend Engineer (Java/Spring)",
+        "type" : "JOB"
+      }, {
+        "id" : "<id:6>",
+        "label" : "Senior Backend Engineer (Java/Spring)",
+        "type" : "REPORT"
+      } ],
+      "seq" : 1,
+      "state" : "OK",
+      "summaryKey" : "agent.step.ask_about_candidate",
+      "summaryParams" : {
+        "job" : "Senior Backend Engineer (Java/Spring)",
+        "name" : "Candidate"
+      },
+      "tool" : "ask_about_candidate"
+    } ],
+    "stoppedEarly" : false,
+    "title" : "Best Java candidates",
+    "userEmail" : "owner@a.qorva.test"
+  }, {
+    "approvalExpiresAt" : null,
+    "blocks" : {
+      "candidates" : [ {
+        "applicantNumber" : "A-1",
+        "currentRole" : "Backend engineer",
+        "id" : "<id:3>",
+        "locationHint" : "Paris",
+        "matchScore" : null,
+        "name" : "Candidate",
+        "seniorityLevel" : "senior",
+        "topSkills" : [ "Java", "Kubernetes" ]
+      } ],
+      "charts" : [ {
+        "chartType" : "bar",
+        "labels" : [ "senior", "mid" ],
+        "title" : "Seniority",
+        "values" : [ 4, 6 ]
+      } ],
+      "disclaimer" : null,
+      "followUpQuestions" : [ "Which of them are available now?" ],
+      "intent" : "TALENT_POOL_INTELLIGENCE",
+      "metrics" : [ {
+        "key" : "count",
+        "label" : "Senior backend engineers",
+        "percentage" : null,
+        "unit" : null,
+        "value" : "4"
+      } ],
+      "rawData" : null,
+      "totalCandidateCount" : 4
+    },
+    "canApprove" : false,
+    "canCancel" : false,
+    "conversationId" : "<id:2>",
+    "createdAt" : "<ts>",
+    "failureReason" : null,
+    "finalAnswer" : "You have 4 senior backend engineers.",
+    "finishedAt" : "<ts>",
+    "focus" : null,
+    "goal" : "How many senior backend engineers do we have?",
+    "id" : "<id:7>",
+    "mentions" : [ ],
+    "origin" : "CHAT",
+    "pendingActions" : [ ],
+    "ruleId" : null,
+    "ruleName" : null,
+    "status" : "COMPLETED",
+    "steps" : [ {
+      "autoApproved" : false,
+      "draft" : null,
+      "kind" : "TOOL_CALL",
+      "links" : [ ],
+      "seq" : 1,
+      "state" : "OK",
+      "summaryKey" : "agent.step.analyze_library",
+      "summaryParams" : {
+        "intent" : "TALENT_POOL_INTELLIGENCE"
+      },
+      "tool" : "analyze_library"
     } ],
     "stoppedEarly" : false,
     "title" : "Best Java candidates",

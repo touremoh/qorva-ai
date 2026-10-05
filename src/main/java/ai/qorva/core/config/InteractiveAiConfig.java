@@ -20,9 +20,9 @@ import org.springframework.web.client.RestClient;
 import java.time.Duration;
 
 /**
- * The model client for calls a user waits on in the browser (resume chat, Talent Intelligence, outreach and job
- * description drafts, scoring-rule prefill). The whole call — one retry included — fits in
- * {@code qorva.ai.interactive.timeout-seconds} (50 s by default), under the hosting's 60–120 s request limit, so a
+ * The model client for calls a browser request waits on (outreach and job description drafts, scoring-rule prefill,
+ * usage and data-health summaries); Copilot's answer engines run in the worker and use {@link CopilotAnswerAiConfig}.
+ * The whole call — one retry included — fits in {@code qorva.ai.interactive.timeout-seconds} (50 s by default), under the hosting's 60–120 s request limit, so a
  * slow model ends in a clear "AI request failed, retry" instead of a dropped connection while the backend keeps
  * working. Background agents keep the default client and its longer timeouts.
  */

@@ -40,7 +40,7 @@ import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_1_MINI
 @RequiredArgsConstructor
 public class FollowUpResolver {
 
-	@Qualifier("interactiveChatClient") private final ChatClient chatClient;
+	@Qualifier("copilotAnswerChatClient") private final ChatClient chatClient;
 	private final QorvaPromptContextHolder promptContextHolder;
 	private final ObjectMapper objectMapper;
 

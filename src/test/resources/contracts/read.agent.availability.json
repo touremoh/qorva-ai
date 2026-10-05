@@ -1,7 +1,9 @@
 {
   "body" : {
     "canViewTeam" : true,
+    "candidateQuestionsRemaining" : 1500,
     "enabled" : false,
+    "libraryAnalysesRemaining" : 3000,
     "rulesEnabled" : false,
     "runsRemaining" : 500
   },

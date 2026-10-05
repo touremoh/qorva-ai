@@ -295,7 +295,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         log.info("Moved {} notes from CV {} to CV {}", movedNotes, oldCvId, newCvId);
         var movedOutreach = this.candidateOutreachService.retarget(tenantId, oldCvId, newCvId);
         log.info("Moved {} outreach rows from CV {} to CV {}", movedOutreach, oldCvId, newCvId);
-        this.deleteOneById(oldCvId, tenantId);   // cascades reports/chats/S3 + evicts cache
+        this.deleteOneById(oldCvId, tenantId);   // cascades reports/notes/S3 + evicts cache
         return updated;
     }
 

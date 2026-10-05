@@ -87,6 +87,10 @@ qorva:
     credentials-key: test-ats-credentials-key
     scheduler-poll-delay-ms: 86400000
     outbound-poll-delay-ms: 86400000
+  # Copilot is on by default; off here so no worker calls a model — each test drives the agent code it checks.
+  ai:
+    agent:
+      enabled: false
   # Workers stay idle during tests: each test drives the code it checks.
   jobs:
     poll-delay-ms: 86400000

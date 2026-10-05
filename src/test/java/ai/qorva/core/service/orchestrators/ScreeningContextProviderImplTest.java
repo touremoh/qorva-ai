@@ -1,12 +1,10 @@
 package ai.qorva.core.service.orchestrators;
 
-import ai.qorva.core.dao.entity.Chat;
 import ai.qorva.core.dao.entity.MatchingReport;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.MatchingReportDTO;
-import ai.qorva.core.dto.common.ChatContext;
 import ai.qorva.core.dto.common.DecisionSummary;
 import ai.qorva.core.dto.common.MatchingReportDetails;
 import ai.qorva.core.exception.QorvaException;
@@ -25,8 +23,6 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -51,11 +47,6 @@ class ScreeningContextProviderImplTest {
 		when(jobPostService.findOneById(JOB)).thenReturn(JobPostDTO.builder().title("Backend").build());
 	}
 
-	private static Chat chat(String reportId) {
-		return Chat.builder().id("c1").tenantId(TENANT)
-			.context(ChatContext.builder().cvId(CV).jobPostId(JOB).matchingReportId(reportId).build()).build();
-	}
-
 	private static MatchingReportDTO reportDto(double score, Instant updatedAt) {
 		var summary = new DecisionSummary();
 		summary.setFinalScore(score);
@@ -65,13 +56,13 @@ class ScreeningContextProviderImplTest {
 	}
 
 	@Test
-	void findsAReportGeneratedAfterTheChatWasCreated() throws QorvaException {
+	void findsTheReportOfThePair() throws QorvaException {
 		var entity = new MatchingReport();
 		when(matchingReportRepository.findOneByTenantIdAndJobPostIdAndCandidateInfoCandidateId(new ObjectId(TENANT), new ObjectId(JOB), CV))
 			.thenReturn(Optional.of(entity));
 		when(matchingReportMapper.map(entity)).thenReturn(reportDto(64.0, Instant.parse("2026-09-10T00:00:00Z")));
 
-		var ctx = provider.load(chat(null));
+		var ctx = provider.load(TENANT, CV, JOB);
 
 		assertThat(ctx.hasReport()).isTrue();
 		assertThat(ctx.matchingReportId()).isEqualTo(REPORT);
@@ -79,14 +70,13 @@ class ScreeningContextProviderImplTest {
 		assertThat(ctx.reportStale()).isFalse();
 		assertThat(ctx.cvText()).contains("Java dev");
 		assertThat(ctx.jobText()).contains("Backend");
-		verify(matchingReportRepository, never()).findByIdInTenant(any(), any());
 	}
 
 	@Test
 	void reportsNothingWhenNoReportExists() throws QorvaException {
 		when(matchingReportRepository.findOneByTenantIdAndJobPostIdAndCandidateInfoCandidateId(any(), any(), any())).thenReturn(Optional.empty());
 
-		var ctx = provider.load(chat(null));
+		var ctx = provider.load(TENANT, CV, JOB);
 
 		assertThat(ctx.hasReport()).isFalse();
 		assertThat(ctx.matchingReportId()).isNull();
@@ -94,25 +84,15 @@ class ScreeningContextProviderImplTest {
 	}
 
 	@Test
-	void loadsALinkedReportByIdAndFlagsItStaleWhenTheCvIsNewer() throws QorvaException {
+	void flagsTheReportStaleWhenTheCvIsNewer() throws QorvaException {
 		var entity = new MatchingReport();
-		entity.setTenantId(TENANT);
-		when(matchingReportRepository.findByIdInTenant(REPORT, TENANT)).thenReturn(Optional.of(entity));
+		when(matchingReportRepository.findOneByTenantIdAndJobPostIdAndCandidateInfoCandidateId(new ObjectId(TENANT), new ObjectId(JOB), CV))
+			.thenReturn(Optional.of(entity));
 		when(matchingReportMapper.map(entity)).thenReturn(reportDto(50.0, Instant.parse("2026-08-01T00:00:00Z")));
 
-		var ctx = provider.load(chat(REPORT));
+		var ctx = provider.load(TENANT, CV, JOB);
 
 		assertThat(ctx.finalScore()).isEqualTo(50.0);
 		assertThat(ctx.reportStale()).isTrue();
-	}
-
-	@Test
-	void ignoresALinkedReportFromAnotherTenant() throws QorvaException {
-		// The report belongs to another tenant: looked up in the chat's tenant it is not found.
-		when(matchingReportRepository.findByIdInTenant(REPORT, TENANT)).thenReturn(Optional.empty());
-
-		var ctx = provider.load(chat(REPORT));
-
-		assertThat(ctx.hasReport()).isFalse();
 	}
 }

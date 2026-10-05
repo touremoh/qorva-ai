@@ -2,6 +2,10 @@ package ai.qorva.core.service.agent;
 
 import ai.qorva.core.config.AgentProperties;
 import ai.qorva.core.dao.entity.AgentRun;
+import ai.qorva.core.dto.AnswerBlocks;
+import ai.qorva.core.dto.ChartDataDTO;
+import ai.qorva.core.dto.ConversationFrame;
+import ai.qorva.core.dto.InsightIntent;
 import ai.qorva.core.enums.UserActionsEnum;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.service.UsageMonitoringService;
@@ -61,6 +65,7 @@ class AgentRunnerTest {
 		when(scope.call(any(), any())).thenAnswer(inv -> inv.<AgentExecutionScope.AgentWork<?>>getArgument(1).call(CTX));
 		when(store.saveProgress(any())).thenReturn(true);
 		when(store.finish(any())).thenReturn(true);
+		when(usageMonitoringService.hasCapacityFor(any(), any(), anyInt())).thenReturn(true);
 	}
 
 	private static AgentRun run() {
@@ -94,10 +99,29 @@ class AgentRunnerTest {
 		};
 	}
 
-	private void offer(AgentTool tool) {
-		when(registry.allowedFor(any())).thenReturn(List.of(tool));
-		when(registry.allowed(eq(tool.name()), any())).thenReturn(Optional.of(tool));
+	private void offer(AgentTool... tools) {
+		when(registry.allowedFor(any())).thenReturn(List.of(tools));
+		for (var tool : tools) {
+			when(registry.allowed(eq(tool.name()), any())).thenReturn(Optional.of(tool));
+			when(registry.isTerminal(tool.name())).thenReturn(tool.terminal());
+		}
 	}
+
+	/** A terminal answer tool, like ask_about_candidate or analyze_library. */
+	private static AgentTool answerTool(String name, AgentToolResult result) {
+		return new AgentTool() {
+			public String name() { return name; }
+			public String description() { return name; }
+			public String inputSchema() { return "{\"type\":\"object\"}"; }
+			public AgentRiskTier tier() { return AgentRiskTier.READ; }
+			public Set<UserActionsEnum> requiredActions() { return Set.of(); }
+			public boolean terminal() { return true; }
+			public AgentToolResult execute(JsonNode args, AgentToolContext ctx) { return result; }
+		};
+	}
+
+	private static final AnswerBlocks BLOCKS = new AnswerBlocks(InsightIntent.TALENT_POOL_INTELLIGENCE, List.of(), 4,
+		List.of(), List.of(new ChartDataDTO("bar", "Seniority", List.of("senior"), List.of(4))), List.of(), null, null);
 
 	@Test
 	void answersWithoutToolsInOneStepAndMetersTheRunOnce() {
@@ -324,5 +348,88 @@ class AgentRunnerTest {
 		assertThat(runner.systemPrompt(run)).contains("Always answer in French.");
 		assertThat(AgentRunner.languageName(null)).isEqualTo("English");
 		assertThat(AgentRunner.languageName("xx")).isEqualTo("English");
+	}
+
+	@Test
+	void anAnswerToolEndsTheRunWithItsOwnAnswerAndCountsNoTask() {
+		var frame = new ConversationFrame("How many seniors?", InsightIntent.TALENT_POOL_INTELLIGENCE, null, false, null);
+		offer(answerTool("analyze_library", AgentToolResult.answer(new AgentToolResult.AgentAnswer("You have 4 seniors.", BLOCKS, frame),
+			Map.of("answer", "You have 4 seniors."), "agent.step.analyze_library", Map.of(), List.of())));
+		when(modelClient.call(anyList(), anyList())).thenReturn(toolCall("c1", "analyze_library", "{}"));
+		var run = run();
+
+		runner.run(run);
+
+		assertThat(run.getStatus()).isEqualTo(AgentRun.STATUS_COMPLETED);
+		assertThat(run.getFinalAnswer()).isEqualTo("You have 4 seniors.");
+		assertThat(run.getBlocks()).isEqualTo(BLOCKS);
+		assertThat(run.getInsightFrame()).isEqualTo(frame);
+		assertThat(run.getSteps()).singleElement().satisfies(s -> assertThat(s.getState()).isEqualTo(AgentRun.Step.STATE_OK));
+		// The engine's answer is shown as is: no second model call rewords it.
+		verify(modelClient, times(1)).call(anyList(), anyList());
+		verify(usageMonitoringService, never()).incrementUsage(any(), eq(UsageMonitoringService.FeatureKey.AGENT_RUNS), anyInt());
+		assertThat(run.isMetered()).isFalse();
+	}
+
+	@Test
+	void aFailedAnswerToolLetsTheModelExplainWithoutCountingATask() {
+		offer(answerTool("ask_about_candidate", AgentToolResult.error("limit reached")));
+		when(modelClient.call(anyList(), anyList()))
+			.thenReturn(toolCall("c1", "ask_about_candidate", "{}"))
+			.thenReturn(text("Your plan's candidate questions are used up this month."));
+		var run = run();
+
+		runner.run(run);
+
+		assertThat(run.getFinalAnswer()).isEqualTo("Your plan's candidate questions are used up this month.");
+		verify(usageMonitoringService, never()).incrementUsage(any(), eq(UsageMonitoringService.FeatureKey.AGENT_RUNS), anyInt());
+	}
+
+	@Test
+	void anActionAfterAnAnswerToolStillCountsAsATask() {
+		offer(answerTool("ask_about_candidate", AgentToolResult.error("no job")),
+			tool("list_reports", AgentRiskTier.READ, AgentToolResult.ok(Map.of(), "k", Map.of(), List.of())));
+		when(modelClient.call(anyList(), anyList()))
+			.thenReturn(toolCall("c1", "ask_about_candidate", "{}"))
+			.thenReturn(toolCall("c2", "list_reports", "{}"))
+			.thenReturn(text("Which job?"));
+		var run = run();
+
+		runner.run(run);
+
+		verify(usageMonitoringService, times(1)).incrementUsage(TENANT, UsageMonitoringService.FeatureKey.AGENT_RUNS, 1);
+	}
+
+	@Test
+	void whenTheTaskQuotaIsSpentOnlyAnswerToolsAreOffered() {
+		when(usageMonitoringService.hasCapacityFor(TENANT, UsageMonitoringService.FeatureKey.AGENT_RUNS, 1)).thenReturn(false);
+		var answer = answerTool("analyze_library", AgentToolResult.error("unused"));
+		var search = tool("search_cvs", AgentRiskTier.READ, AgentToolResult.ok(Map.of(), "k", Map.of(), List.of()));
+		offer(answer, search);
+		when(modelClient.call(anyList(), anyList()))
+			.thenReturn(toolCall("c1", "search_cvs", "{}"))
+			.thenReturn(text("The Copilot task limit is reached."));
+		var run = run();
+
+		runner.run(run);
+
+		verify(modelClient, times(2)).call(anyList(), eq(List.of(answer)));
+		assertThat(run.getSteps()).singleElement().satisfies(s -> {
+			assertThat(s.getState()).isEqualTo(AgentRun.Step.STATE_ERROR);
+			assertThat(s.getError()).isEqualTo(AgentRunner.TASK_LIMIT);
+		});
+		verify(usageMonitoringService, never()).incrementUsage(any(), eq(UsageMonitoringService.FeatureKey.AGENT_RUNS), anyInt());
+	}
+
+	@Test
+	void aRuleRunCountsAsATaskOnceItsModelCallIsMade() {
+		offer(tool("search_cvs", AgentRiskTier.READ, AgentToolResult.ok(Map.of(), "k", Map.of(), List.of())));
+		when(modelClient.call(anyList(), anyList())).thenReturn(text("Nothing to do."));
+		var run = run();
+		run.setOrigin(AgentRun.ORIGIN_RULE);
+
+		runner.run(run);
+
+		verify(usageMonitoringService, times(1)).incrementUsage(TENANT, UsageMonitoringService.FeatureKey.AGENT_RUNS, 1);
 	}
 }
