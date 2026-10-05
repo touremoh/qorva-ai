@@ -101,14 +101,13 @@ public class SetPasswordService {
 		enqueue(user);
 	}
 
+	/** The link itself is minted when the email is sent ({@link #linkFor}): the queue never holds a credential. */
 	private void enqueue(User user) {
 		var lang = resolveLang(user);
-		var token = issueTokenForUser(user, jwtConfig.getSetPasswordTtlInMillis());
-		var url = buildLinkUrl(token, lang, "set-password");
 		String companyName = resolveCompanyName(user.getTenantId());
 		pendingEmailNotificationService.createPending(
 			user.getTenantId(), user.getId(), EmailNotificationType.DEMO_WELCOME, lang,
-			Map.of("setPasswordUrl", url, "companyName", companyName)
+			Map.of("companyName", companyName)
 		);
 	}
 
@@ -132,11 +131,9 @@ public class SetPasswordService {
 			return;
 		}
 		var lang = resolveLang(user);
-		var token = issueTokenForUser(user, jwtConfig.getPasswordResetTtlInMillis());
-		var url = buildLinkUrl(token, lang, "reset-password");
 		pendingEmailNotificationService.createPending(
 			user.getTenantId(), user.getId(), EmailNotificationType.PASSWORD_RESET, lang,
-			Map.of("resetPasswordUrl", url, "companyName", resolveCompanyName(user.getTenantId()))
+			Map.of("companyName", resolveCompanyName(user.getTenantId()))
 		);
 	}
 
@@ -174,8 +171,32 @@ public class SetPasswordService {
 
 		user.setEncryptedPassword(passwordEncoder.encode(newPassword));
 		user.setPasswordCredentialVersion(currentVersion + 1);
+		// An invite link used (or a reset done before the first sign-in): the user has joined.
+		if (user.isInvitePendingOrFalse()) {
+			user.setInvitePending(false);
+		}
 		userRepository.save(user);
 		log.info("Password set for userId={} (credential version {} -> {})", userId, currentVersion, currentVersion + 1);
+	}
+
+	/**
+	 * The link an email carries, minted at send time so it never sits in the email queue: set-password (72 h) for
+	 * an invite or a demo welcome, reset-password (1 h) for a reset. Bound to the user's current credential version,
+	 * so a later link — or a password set — makes it unusable.
+	 */
+	public String linkFor(User user, EmailNotificationType type) {
+		var lang = resolveLang(user);
+		return switch (type) {
+			case PASSWORD_RESET -> buildLinkUrl(issueTokenForUser(user, jwtConfig.getPasswordResetTtlInMillis()), lang, "reset-password");
+			case USER_ADDED, DEMO_WELCOME -> buildLinkUrl(issueTokenForUser(user, jwtConfig.getSetPasswordTtlInMillis()), lang, "set-password");
+			default -> throw new IllegalArgumentException("No link for " + type);
+		};
+	}
+
+	/** Where a company that signs in with Microsoft sends invitees: the login page. */
+	public String signInUrl() {
+		var base = appBaseUrl.endsWith("/") ? appBaseUrl.substring(0, appBaseUrl.length() - 1) : appBaseUrl;
+		return base + "/login";
 	}
 
 	private String issueTokenForUser(User user, long ttlInMillis) {

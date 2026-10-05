@@ -1,5 +1,11 @@
 package ai.qorva.core.service;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
+
 import ai.qorva.core.dao.entity.PendingEmailNotification;
 import ai.qorva.core.dao.querybuilder.PendingEmailNotificationQueryBuilder;
 import ai.qorva.core.dao.repository.PendingEmailNotificationRepository;
@@ -26,13 +32,17 @@ public class PendingEmailNotificationService extends AbstractQorvaService<Pendin
     static final int DEFAULT_MAX_ATTEMPTS = 3;
     private static final int MAX_ERROR_LENGTH = 500;
 
+    private final MongoTemplate mongoTemplate;
+
     @Autowired
     public PendingEmailNotificationService(
         PendingEmailNotificationRepository repository,
         PendingEmailNotificationMapper mapper,
-        PendingEmailNotificationQueryBuilder queryBuilder
+        PendingEmailNotificationQueryBuilder queryBuilder,
+        MongoTemplate mongoTemplate
     ) {
         super(repository, mapper, queryBuilder);
+        this.mongoTemplate = mongoTemplate;
     }
 
     @Override
@@ -89,6 +99,13 @@ public class PendingEmailNotificationService extends AbstractQorvaService<Pendin
         dto.setStatus(PendingEmailStatus.SENT.name());
         dto.setProcessedAt(Instant.now());
         updateOne(id, dto);
+        clearPayload(id);
+    }
+
+    /** Done with: nothing a payload held (names today, links or passwords in older rows) stays at rest. */
+    private void clearPayload(String id) {
+        mongoTemplate.updateFirst(Query.query(Criteria.where("_id").is(new ObjectId(id))),
+            new Update().unset("payload"), PendingEmailNotification.class);
     }
 
     public void markFailed(String id, String errorMessage) throws QorvaException {
@@ -102,6 +119,9 @@ public class PendingEmailNotificationService extends AbstractQorvaService<Pendin
                 dto.getAttempts(), id, dto.getNotificationType());
         }
         updateOne(id, dto);
+        if (PendingEmailStatus.FAILED.name().equals(dto.getStatus())) {
+            clearPayload(id);
+        }
     }
 
     private String truncate(String s) {

@@ -33,6 +33,8 @@ public final class QorvaErrorCodes {
     // user
     public static final String USER_ALREADY_EXISTS      = "error.user.already_exists";
     public static final String USER_NOT_FOUND           = "error.user.not_found";
+    public static final String USER_INVITE_NOT_PENDING  = "error.user.invite_not_pending";
+    public static final String USER_INVITE_RESEND_TOO_SOON = "error.user.invite_resend_too_soon";
     public static final String USER_PASSWORD_INCORRECT  = "error.user.password_incorrect";
     public static final String USER_SEAT_LIMIT_REACHED  = "error.user.seat_limit_reached";
     public static final String USER_COMPANY_ID_REQUIRED = "error.user.company_id_required";

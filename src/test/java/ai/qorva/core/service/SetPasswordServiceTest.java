@@ -101,7 +101,7 @@ class SetPasswordServiceTest {
 	}
 
 	@Test
-	void requestReset_activeUser_queuesResetEmailWithShortLivedSingleUseLink() throws QorvaException {
+	void requestReset_activeUser_queuesTheResetEmailWithoutTheLink() throws QorvaException {
 		var user = user(UserStatusEnum.ACTIVE, 3);
 		user.setCommunicationLanguage("fr");
 		when(userRepository.findByEmail(EMAIL)).thenReturn(user);
@@ -110,17 +110,24 @@ class SetPasswordServiceTest {
 		tenant.setTenantName("Acme");
 		when(tenantService.findOneById(TENANT)).thenReturn(tenant);
 
-		long before = System.currentTimeMillis();
 		service.requestReset(EMAIL);
 
 		@SuppressWarnings("unchecked")
 		ArgumentCaptor<Map<String, String>> payload = ArgumentCaptor.forClass(Map.class);
 		verify(pendingEmailNotificationService).createPending(eq(TENANT), eq(USER_ID), eq(EmailNotificationType.PASSWORD_RESET), eq("fr"), payload.capture());
+		// The link is minted when the email is sent: the queue holds no credential.
+		assertThat(payload.getValue()).containsExactly(Map.entry("companyName", "Acme"));
+	}
 
-		assertThat(payload.getValue()).containsEntry("companyName", "Acme");
-		var url = payload.getValue().get("resetPasswordUrl");
+	@Test
+	void theResetLinkIsShortLivedSingleUseAndInTheUsersLanguage() {
+		var user = user(UserStatusEnum.ACTIVE, 3);
+		user.setCommunicationLanguage("fr");
+
+		long before = System.currentTimeMillis();
+		var url = service.linkFor(user, EmailNotificationType.PASSWORD_RESET);
+
 		assertThat(url).startsWith("https://app.qorva.test/fr/reset-password?token=");
-
 		var claims = JwtUtils.extractAllClaims(url.substring(url.indexOf("token=") + 6), jwtConfig.getSecretKey());
 		assertThat(claims.getSubject()).isEqualTo(USER_ID);
 		assertThat(claims.get(JwtUtils.PURPOSE, String.class)).isEqualTo(JwtUtils.PURPOSE_SET_PASSWORD);
@@ -131,19 +138,15 @@ class SetPasswordServiceTest {
 	}
 
 	@Test
-	void requestReset_demoUserWithoutVersion_pinsVersionZero() throws QorvaException {
-		when(userRepository.findByEmail(EMAIL)).thenReturn(user(UserStatusEnum.DEMO, null));
-		when(pendingEmailNotificationService.existsRecent(eq(USER_ID), eq(EmailNotificationType.PASSWORD_RESET), any())).thenReturn(false);
-		when(tenantService.findOneById(TENANT)).thenReturn(new TenantDTO());
+	void anInviteLinkLastsThreeDaysAndAUserWithoutVersionIsPinnedToZero() {
+		long before = System.currentTimeMillis();
+		var url = service.linkFor(user(UserStatusEnum.ACTIVE, null), EmailNotificationType.USER_ADDED);
 
-		service.requestReset(EMAIL);
-
-		@SuppressWarnings("unchecked")
-		ArgumentCaptor<Map<String, String>> payload = ArgumentCaptor.forClass(Map.class);
-		verify(pendingEmailNotificationService).createPending(eq(TENANT), eq(USER_ID), eq(EmailNotificationType.PASSWORD_RESET), eq("en"), payload.capture());
-		var url = payload.getValue().get("resetPasswordUrl");
+		assertThat(url).startsWith("https://app.qorva.test/en/set-password?token=");
 		var claims = JwtUtils.extractAllClaims(url.substring(url.indexOf("token=") + 6), jwtConfig.getSecretKey());
 		assertThat(claims.get(JwtUtils.CREDENTIAL_VERSION, Integer.class)).isZero();
+		assertThat(claims.getExpiration().getTime() - before)
+			.isBetween(Duration.ofHours(71).toMillis(), Duration.ofHours(73).toMillis());
 	}
 
 	// --- setPassword (consume) ---
@@ -159,6 +162,18 @@ class SetPasswordServiceTest {
 		verify(userRepository).save(user);
 		assertThat(user.getEncryptedPassword()).isEqualTo("$hash");
 		assertThat(user.getPasswordCredentialVersion()).isEqualTo(4);
+	}
+
+	@Test
+	void usingTheInviteLinkMeansTheUserHasJoined() throws QorvaException {
+		var user = user(UserStatusEnum.ACTIVE, 1);
+		user.setInvitePending(true);
+		when(userRepository.findById(new ObjectId(USER_ID))).thenReturn(Optional.of(user));
+		when(passwordEncoder.encode(any())).thenReturn("$hash");
+
+		service.setPassword(token(1, Duration.ofHours(1)), "N3w-Passw0rd!");
+
+		assertThat(user.getInvitePending()).isFalse();
 	}
 
 	@Test

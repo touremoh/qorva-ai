@@ -2,6 +2,7 @@ package ai.qorva.core.dto;
 
 import ai.qorva.core.dto.common.UserAuthority;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import lombok.AllArgsConstructor;
@@ -41,6 +42,18 @@ public class UserDTO extends AbstractQorvaDTO {
     /** Read-only: switched only through /users/me/mfa with a verified code, never by a user update. */
     @JsonProperty(access = Access.READ_ONLY)
     private Boolean mfaEnabled;
+
+    /** Invited, not signed in yet: the Users tab offers "Re-send invite". */
+    @JsonProperty(access = Access.READ_ONLY)
+    private Boolean invitePending;
+
+    @JsonProperty(access = Access.READ_ONLY)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant invitedAt;
+
+    /** Internal: kept on the DTO so the generic user update doesn't erase it. */
+    @JsonIgnore
+    private String invitedBy;
 
     List<UserAuthority> authorities;
 

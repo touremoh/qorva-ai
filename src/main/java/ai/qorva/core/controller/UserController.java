@@ -58,8 +58,17 @@ public class UserController extends AbstractQorvaController<UserDTO> {
     @PostMapping("/invite")
     @PreAuthorize("@accessManager.hasPermission(authentication,'MANAGE_USERS')")
     public ResponseEntity<UserDTO> inviteUser(@RequestBody @Valid AddUserRequest request) throws QorvaException {
-        var created = userService.addUser(currentTenantId(), request);
+        var me = userService.findByEmail(SecurityContextHolder.getContext().getAuthentication().getName());
+        var created = userService.addUser(currentTenantId(), request, me != null ? me.getId() : null);
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
+    }
+
+    /** Re-sends a pending invite with a fresh link (the previous one stops working). */
+    @PostMapping("/{id}/invite/resend")
+    @PreAuthorize("@accessManager.hasPermission(authentication,'MANAGE_USERS')")
+    public ResponseEntity<Void> resendInvite(@PathVariable String id) throws QorvaException {
+        userService.resendInvite(currentTenantId(), id);
+        return ResponseEntity.accepted().build();
     }
 
     @PutMapping("/{id}/authorities")

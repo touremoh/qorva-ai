@@ -130,8 +130,10 @@ public class AccountCreationNotificationService extends AbstractEmailService imp
 			String wrapper = loadHtmlTemplate("templates/emails/user-added-template.html");
 			String content = loadHtmlTemplate("templates/emails/" + lang + "_user_added_content.html");
 
-			String tempPassword = payload != null ? payload.getOrDefault("temporaryPassword", "") : "";
 			String companyName = payload != null ? payload.getOrDefault("companyName", "") : "";
+			boolean sso = payload != null && "true".equals(payload.get("sso"));
+			// One template, two invites: set a password by link, or sign in with Microsoft when the company requires it.
+			content = keepSection(content, sso ? "SSO" : "SET_PASSWORD", sso ? "SET_PASSWORD" : "SSO");
 
 			content = content
 				.replace("{{logo_url}}", logoUrl)
@@ -139,7 +141,8 @@ public class AccountCreationNotificationService extends AbstractEmailService imp
 				.replace("{{app_name}}", "Qorva AI")
 				.replace("{{company_name}}", companyName)
 				.replace("{{user_email}}", receiver.getEmail())
-				.replace("{{temporary_password}}", tempPassword)
+				.replace("{{set_password_url}}", payload != null ? payload.getOrDefault("setPasswordUrl", "") : "")
+				.replace("{{sign_in_url}}", payload != null ? payload.getOrDefault("signInUrl", "") : "")
 				.replace("{{support_email}}", supportEmail())
 				.replace("{{current_year}}", String.valueOf(LocalDate.now().getYear()));
 
@@ -155,5 +158,11 @@ public class AccountCreationNotificationService extends AbstractEmailService imp
 				HttpStatus.INTERNAL_SERVER_ERROR
 			);
 		}
+	}
+
+	/** Keeps the {@code <!--keep-->…<!--/keep-->} block's content and removes the {@code drop} block entirely. */
+	static String keepSection(String html, String keep, String drop) {
+		var withoutDrop = html.replaceAll("(?s)\\s*<!--" + drop + "-->.*?<!--/" + drop + "-->", "");
+		return withoutDrop.replace("<!--" + keep + "-->", "").replace("<!--/" + keep + "-->", "");
 	}
 }
