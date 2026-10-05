@@ -33,6 +33,9 @@ public class Tenant implements QorvaEntity {
 
     private SubscriptionInfo subscriptionInfo;
 
+    /** Users must sign in with Microsoft; password sign-in is refused, except for the account owner (break-glass). */
+    private Boolean ssoRequired;
+
     @CreatedDate
     private Instant createdAt;
 

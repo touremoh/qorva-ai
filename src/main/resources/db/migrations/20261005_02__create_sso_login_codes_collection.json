@@ -1,0 +1,19 @@
+{
+  "collMod": "sso_login_codes",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "sso_login_codes",
+      "required": ["codeHash", "userId", "tenantId", "expiresAt", "createdAt"],
+      "properties": {
+        "codeHash": { "bsonType": "string", "description": "SHA-256 (hex) of the one-time code; the code itself is never stored" },
+        "userId": { "bsonType": "objectId" },
+        "tenantId": { "bsonType": "objectId" },
+        "expiresAt": { "bsonType": "date", "description": "one minute after creation; the TTL index removes unused codes" },
+        "createdAt": { "bsonType": "date" }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

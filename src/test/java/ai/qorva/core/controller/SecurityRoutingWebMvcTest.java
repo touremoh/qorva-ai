@@ -97,6 +97,7 @@ class SecurityRoutingWebMvcTest {
 	@MockitoBean private MatchingReportService matchingReportService;
 	@MockitoBean private ATSExportService atsExportService;
 	@MockitoBean private ai.qorva.core.service.PipelineBoardService pipelineBoardService;
+	@MockitoBean private ai.qorva.core.service.sso.MicrosoftSsoService microsoftSsoService;
 	@MockitoBean private LibraryInsightsService libraryInsightsService;
 	@MockitoBean private InsightConversationService insightConversationService;
 	@MockitoBean private LibraryQualityService libraryQualityService;

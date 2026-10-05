@@ -64,6 +64,7 @@ public class SecurityConfig {
 					"/auth/password/**",
 					"/auth/mfa/verify",
 					"/auth/mfa/resend",
+					"/auth/sso/**",
 					"/stripe/webhook",
 					"/stripe/checkout/success",
 					"/stripe/checkout/cancel",

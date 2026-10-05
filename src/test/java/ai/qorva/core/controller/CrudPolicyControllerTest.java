@@ -51,7 +51,7 @@ class CrudPolicyControllerTest {
 	void setUp() {
 		users = new UserController(userService, null);
 		users.setAccessManager(accessManager);
-		tenants = new TenantController(tenantService, s3StorageService);
+		tenants = new TenantController(tenantService, s3StorageService, org.mockito.Mockito.mock(ai.qorva.core.service.sso.MicrosoftSsoService.class));
 		tenants.setAccessManager(accessManager);
 		SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(ME, null, List.of()));
 	}
