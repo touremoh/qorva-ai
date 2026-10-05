@@ -30,6 +30,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -137,6 +138,13 @@ public class AuthenticationService {
 			// Add subscription status to the JWT
 			var authenticatedUserInfo = this.userMapper.map(user);
 			authenticatedUserInfo.setTenant(tenant);
+
+			// First sign-in of an invited user (password or Microsoft): the invite is no longer pending.
+			if (user.isInvitePendingOrFalse()) {
+				mongoTemplate.updateFirst(Query.query(Criteria.where("_id").is(new ObjectId(user.getId()))),
+					new Update().set("invitePending", false), User.class);
+				authenticatedUserInfo.setInvitePending(false);
+			}
 
 			// Build AuthResponse
 			return new AuthResponse(jwt, authenticatedUserInfo);

@@ -10,34 +10,29 @@
 
     <div class="email-content">
         <p class="greeting">Hallo {{first_name}},</p>
-        <p>Sie wurden eingeladen, <strong>{{company_name}}</strong> auf <strong>{{app_name}}</strong> beizutreten. Ihr Konto ist jetzt aktiv und einsatzbereit.</p>
+        <p>Sie wurden eingeladen, <strong>{{company_name}}</strong> auf <strong>{{app_name}}</strong> beizutreten.</p>
 
-        <table class="credentials-card" cellpadding="0" cellspacing="0">
-            <tr>
-                <td colspan="2" style="background-color: #72BB53; height: 4px; padding: 0; line-height: 4px; font-size: 0; mso-line-height-rule: exactly;"></td>
-            </tr>
-            <tr>
-                <td colspan="2" style="background-color: #0A1628; padding: 14px 20px;">
-                    <span style="color: #72BB53; font-size: 13px; margin-right: 8px;">&#9632;</span><span style="color: #FFFFFF; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px;">Ihre Anmeldedaten</span>
-                </td>
-            </tr>
-            <tbody class="credentials-card-body">
-                <tr><td class="cred-label">E-Mail</td><td class="cred-value">{{user_email}}</td></tr>
-                <tr><td class="cred-label">Vorläufiges Passwort</td><td class="cred-value cred-password">{{temporary_password}}</td></tr>
-            </tbody>
-        </table>
-
-        <div class="warning-notice" style="background-color: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 6px; padding: 14px 18px; margin: 24px 0;">
-            <p style="font-size: 13px; color: #92400E; margin: 0; line-height: 1.7;">Bitte ändern Sie aus Sicherheitsgründen Ihr Passwort <strong>unmittelbar nach dem ersten Login</strong>.</p>
-        </div>
-
+        <!--SET_PASSWORD-->
+        <p>Legen Sie Ihr Passwort fest, um Ihr Konto zu aktivieren und sich anzumelden.</p>
         <table width="100%" cellpadding="0" cellspacing="0" style="margin: 32px 0 28px;">
             <tr>
                 <td align="center">
-                    <a href="https://app.qorva.ai/login" style="display: inline-block; padding: 14px 44px; background-color: #72BB53; color: #FFFFFF; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 15px; letter-spacing: 0.3px; mso-padding-alt: 0; text-align: center;">Bei Qorva AI anmelden</a>
+                    <a href="{{set_password_url}}" style="display: inline-block; padding: 14px 44px; background-color: #72BB53; color: #FFFFFF; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 15px; letter-spacing: 0.3px; mso-padding-alt: 0; text-align: center;">Passwort festlegen</a>
                 </td>
             </tr>
         </table>
+        <p style="font-size: 13px; color: #64748B; line-height: 1.7;">Dieser Link ist 72 Stunden gültig und einmalig verwendbar. Nach Ablauf bitten Sie Ihren Administrator, die Einladung erneut zu senden.</p>
+        <!--/SET_PASSWORD-->
+        <!--SSO-->
+        <p>{{company_name}} meldet sich mit Microsoft an. Verwenden Sie Ihr geschäftliches Microsoft-Konto ({{user_email}}) – kein Passwort nötig.</p>
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin: 32px 0 28px;">
+            <tr>
+                <td align="center">
+                    <a href="{{sign_in_url}}" style="display: inline-block; padding: 14px 44px; background-color: #72BB53; color: #FFFFFF; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 15px; letter-spacing: 0.3px; mso-padding-alt: 0; text-align: center;">Mit Microsoft anmelden</a>
+                </td>
+            </tr>
+        </table>
+        <!--/SSO-->
 
         <p class="support-line">Fragen? Schreiben Sie uns an <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
     </div>

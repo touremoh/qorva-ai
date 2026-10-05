@@ -129,6 +129,8 @@
         "email" : "owner@a.qorva.test",
         "firstName" : "Olivia",
         "id" : "<id:1>",
+        "invitePending" : null,
+        "invitedAt" : null,
         "lastName" : "Owner-A",
         "lastUpdatedAt" : "<ts>",
         "lastUpdatedBy" : "owner@a.qorva.test",

@@ -54,6 +54,19 @@ public class User implements QorvaEntity {
     private Boolean mfaEnabled;
     private Instant mfaEnabledAt;
 
+    /**
+     * Invited and not signed in yet: the invite link (or Microsoft sign-in) hasn't been used. Cleared on the first
+     * sign-in of any kind; only then is "Re-send invite" gone. Absent on users invited before invites were links.
+     */
+    private Boolean invitePending;
+    private Instant invitedAt;
+    /** Id of the admin who sent the invite. */
+    private String invitedBy;
+
+    public boolean isInvitePendingOrFalse() {
+        return Boolean.TRUE.equals(invitePending);
+    }
+
     /** Legacy users have no flag yet: off. */
     public boolean isMfaEnabledOrFalse() {
         return Boolean.TRUE.equals(mfaEnabled);

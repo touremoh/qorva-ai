@@ -24,6 +24,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.security.SecureRandom;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Map;
 import java.util.Optional;
 
@@ -102,7 +104,15 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		}
 	}
 
-	public UserDTO addUser(String tenantId, AddUserRequest request) throws QorvaException {
+	/** Minimum gap between two invites to the same user. */
+	static final Duration INVITE_RESEND_COOLDOWN = Duration.ofMinutes(2);
+
+	/**
+	 * Invites a teammate: an active account whose password nobody knows (random, never shown) until they set
+	 * theirs through the emailed link — or sign in with Microsoft when the company requires it. The email is built
+	 * when sent; the queue holds only the company name.
+	 */
+	public UserDTO addUser(String tenantId, AddUserRequest request, String invitedBy) throws QorvaException {
 		String lang = StringUtils.hasText(request.getCommunicationLanguage())
 			? request.getCommunicationLanguage() : "en";
 
@@ -118,16 +128,41 @@ public class UserService extends AbstractQorvaService<UserDTO, User> {
 		userDTO.setAuthorities(request.getAuthorities());
 		userDTO.setUserAccountStatus(UserStatusEnum.ACTIVE.getValue());
 		userDTO.setCommunicationLanguage(lang);
+		userDTO.setInvitePending(true);
+		userDTO.setInvitedAt(Instant.now());
+		userDTO.setInvitedBy(invitedBy);
 
 		var created = createOne(userDTO);
 
 		pendingEmailNotificationService.createPending(
 			tenantId, created.getId(), EmailNotificationType.USER_ADDED, lang,
-			Map.of("temporaryPassword", tempPassword, "companyName", companyName)
+			Map.of("companyName", companyName)
 		);
 
 		log.info("User invited: tenantId={} email={}", tenantId, request.getEmail());
 		return created;
+	}
+
+	/**
+	 * Sends the invite again with a fresh link; the previous link stops working (the credential version moves on).
+	 * Only while the invite is pending — once the user has signed in, "Forgot password?" is the way back.
+	 */
+	public void resendInvite(String tenantId, String userId) throws QorvaException {
+		var user = ((UserRepository) repository).findByIdInTenant(userId, tenantId)
+			.orElseThrow(() -> QorvaErrors.notFound(QorvaErrorCodes.USER_NOT_FOUND));
+		if (!user.isInvitePendingOrFalse()) {
+			throw QorvaErrors.conflict(QorvaErrorCodes.USER_INVITE_NOT_PENDING);
+		}
+		if (pendingEmailNotificationService.existsRecent(user.getId(), EmailNotificationType.USER_ADDED, INVITE_RESEND_COOLDOWN)) {
+			throw new QorvaException(QorvaErrorCodes.USER_INVITE_RESEND_TOO_SOON, HttpStatus.TOO_MANY_REQUESTS.value(), HttpStatus.TOO_MANY_REQUESTS);
+		}
+		user.setPasswordCredentialVersion(user.getPasswordCredentialVersionOrZero() + 1);
+		user.setInvitedAt(Instant.now());
+		repository.save(user);
+		var lang = StringUtils.hasText(user.getCommunicationLanguage()) ? user.getCommunicationLanguage() : "en";
+		pendingEmailNotificationService.createPending(tenantId, user.getId(), EmailNotificationType.USER_ADDED, lang,
+			Map.of("companyName", resolveCompanyName(tenantId)));
+		log.info("Invite re-sent: tenantId={} userId={}", tenantId, user.getId());
 	}
 
 	private String resolveCompanyName(String tenantId) {
