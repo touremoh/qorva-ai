@@ -192,7 +192,7 @@ public class TwoTenantFixture {
 
 		var plan = productProperties.getPro();
 		usageMonitoringService.initializePeriod(tenantId, plan.getStripeProductName(),
-			BASE_TIME.minus(Duration.ofDays(10)), BASE_TIME.plus(Duration.ofDays(20)), plan.getFeatures());
+			periodStart(), periodEnd(), plan.getFeatures());
 
 		var noteId = insertNote(tenantId, cvIds.getFirst(), ownerEmail);
 		var templateId = insertTemplate(tenantId, ownerEmail);
@@ -213,8 +213,8 @@ public class TwoTenantFixture {
 		subscription.setPriceId("price_test_pro");
 		subscription.setPlanCode("price_test_pro");
 		subscription.setSubscriptionId("sub_test_" + name.hashCode());
-		subscription.setCurrentPeriodStart(BASE_TIME.minus(Duration.ofDays(10)));
-		subscription.setCurrentPeriodEnd(BASE_TIME.plus(Duration.ofDays(20)));
+		subscription.setCurrentPeriodStart(periodStart());
+		subscription.setCurrentPeriodEnd(periodEnd());
 		subscription.setCancelAtPeriodEnd(false);
 
 		var tenant = new Tenant();
@@ -366,6 +366,19 @@ public class TwoTenantFixture {
 	 * Rewrites every audit timestamp in insertion order (ObjectId order), one minute apart from
 	 * {@link #BASE_TIME}, so "newest first" lists and response bodies are the same on every run.
 	 */
+	/*
+	 * The billing period is looked up against the real clock (UsageMonitoringService.findCurrentPeriodByTenantId:
+	 * start <= now < end), so it is anchored on now, not on BASE_TIME — a fixed window expired on
+	 * 2026-10-05T08:00Z and took every quota test with it. Contract goldens normalise these dates to <ts>.
+	 */
+	private static Instant periodStart() {
+		return Instant.now().minus(Duration.ofDays(10)).truncatedTo(java.time.temporal.ChronoUnit.DAYS);
+	}
+
+	private static Instant periodEnd() {
+		return Instant.now().plus(Duration.ofDays(20)).truncatedTo(java.time.temporal.ChronoUnit.DAYS);
+	}
+
 	private void pinTimestamps() {
 		for (var name : mongo.getCollectionNames()) {
 			if (KEPT_COLLECTIONS.contains(name) || name.startsWith("system.")) continue;
