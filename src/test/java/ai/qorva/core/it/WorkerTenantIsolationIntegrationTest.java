@@ -113,6 +113,23 @@ class WorkerTenantIsolationIntegrationTest extends AbstractIntegrationTest {
 		assertThat(dispatched).hasSize(2)
 			.allSatisfy(pair -> assertThat(pair.get(1)).as("context of %s", pair.get(0)).isEqualTo(pair.get(0)));
 		assertThat(TenantContextHolder.getTenantId()).as("context restored after the run").isNull();
+		// Marked sent in the same tenant scope (fail-closed in tests): never left pending to be sent again.
+		assertThat(mongo.find(new Query(), Document.class, "pending_email_notifications"))
+			.hasSize(2).allSatisfy(row -> assertThat(row.getString("status")).isEqualTo("SENT"));
+	}
+
+	@Test
+	void aFailedPendingEmailIsCountedAsAnAttemptUnderItsOwnTenant() throws Exception {
+		pendingEmailNotificationService.createPending(a.tenantId(), a.ownerId(), EmailNotificationType.SUBSCRIPTION_WELCOME, "en");
+		doAnswer(call -> { throw new IllegalStateException("smtp down"); }).when(emailNotificationDispatcher).dispatch(any());
+
+		pendingEmailNotificationScheduler.processPendingNotifications();
+
+		var row = mongo.findOne(new Query(), Document.class, "pending_email_notifications");
+		assertThat(row.getString("status")).isEqualTo("PENDING");
+		assertThat(row.getInteger("attempts")).isEqualTo(1);
+		assertThat(row.getString("lastError")).contains("smtp down");
+		assertThat(TenantContextHolder.getTenantId()).isNull();
 	}
 
 	private void submitCampaign(TwoTenantFixture.SeededTenant tenant) throws Exception {
