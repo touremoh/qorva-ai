@@ -2,14 +2,17 @@ package ai.qorva.core.controller;
 
 import ai.qorva.core.dto.TenantDTO;
 import ai.qorva.core.dto.TenantProfileUpdateDTO;
+import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.security.CrudOperation;
 import ai.qorva.core.security.CrudPolicy;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.S3StorageService;
 import ai.qorva.core.service.TenantService;
+import ai.qorva.core.service.sso.MicrosoftSsoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.http.ResponseEntity;
@@ -25,11 +28,13 @@ public class TenantController extends AbstractQorvaController<TenantDTO> {
 
     private final TenantService tenantService;
     private final S3StorageService s3StorageService;
+    private final MicrosoftSsoService microsoftSsoService;
 
-    protected TenantController(TenantService tenantService, S3StorageService s3StorageService) {
+    protected TenantController(TenantService tenantService, S3StorageService s3StorageService, MicrosoftSsoService microsoftSsoService) {
         super(tenantService);
 		this.tenantService = tenantService;
 		this.s3StorageService = s3StorageService;
+		this.microsoftSsoService = microsoftSsoService;
     }
 
 
@@ -43,6 +48,22 @@ public class TenantController extends AbstractQorvaController<TenantDTO> {
         return CrudPolicy.builder()
             .allowAuthenticated(CrudOperation.GET_ONE)
             .build();
+    }
+
+    public record SsoRequest(Boolean ssoRequired) {
+    }
+
+    /** "Require Microsoft sign-in" for the whole company — an admin decision, like managing users. */
+    @PreAuthorize("@accessManager.hasPermission(authentication,'MANAGE_USERS')")
+    @PatchMapping(value = "/sso", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<TenantDTO> updateSso(@RequestBody SsoRequest request) throws QorvaException {
+        boolean required = request != null && Boolean.TRUE.equals(request.ssoRequired());
+        if (required && !microsoftSsoService.isAvailable()) {
+            throw new QorvaException(QorvaErrorCodes.AUTH_SSO_NOT_CONFIGURED, HttpStatus.SERVICE_UNAVAILABLE.value(), HttpStatus.SERVICE_UNAVAILABLE);
+        }
+        var dto = new TenantDTO();
+        dto.setSsoRequired(required);
+        return ResponseEntity.ok(tenantService.updateOne(TenantContextHolder.getTenantId(), dto));
     }
 
     // The company's public identity (name, logo, contact details) is an admin decision, like managing users.

@@ -19,6 +19,11 @@ public final class QorvaErrorCodes {
     public static final String AUTH_MFA_RESEND_TOO_SOON   = "error.auth.mfa_resend_too_soon";
     public static final String AUTH_MFA_TOO_MANY_CODES    = "error.auth.mfa_too_many_codes";
     public static final String AUTH_MFA_DELIVERY_FAILED   = "error.auth.mfa_delivery_failed";
+    public static final String AUTH_SSO_NOT_CONFIGURED    = "error.auth.sso_not_configured";
+    public static final String AUTH_SSO_FAILED            = "error.auth.sso_failed";
+    public static final String AUTH_SSO_NO_ACCOUNT        = "error.auth.sso_no_account";
+    public static final String AUTH_SSO_REQUIRED          = "error.auth.sso_required";
+    public static final String AUTH_SSO_CODE_INVALID      = "error.auth.sso_code_invalid";
     public static final String MFA_ALREADY_ENABLED        = "error.mfa.already_enabled";
     public static final String MFA_ALREADY_DISABLED       = "error.mfa.already_disabled";
 

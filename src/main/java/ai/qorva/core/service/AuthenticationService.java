@@ -24,6 +24,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.JwtException;
+import ai.qorva.core.service.sso.MicrosoftSsoService;
+import org.bson.types.ObjectId;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -38,13 +44,16 @@ public class AuthenticationService {
 	private final UserMapper userMapper;
 	private final TenantService tenantService;
 	private final MfaService mfaService;
+	private final MicrosoftSsoService microsoftSsoService;
+	private final MongoTemplate mongoTemplate;
 
 	@Autowired
 	public AuthenticationService(
 		QorvaUserDetailsService userDetailsService,
 		UserRepository userRepository,
 		AuthenticationManager authenticationManager,
-		JwtConfig jwtConfig, UserMapper userMapper, TenantService tenantService, MfaService mfaService) {
+		JwtConfig jwtConfig, UserMapper userMapper, TenantService tenantService, MfaService mfaService,
+		MicrosoftSsoService microsoftSsoService, MongoTemplate mongoTemplate) {
 		this.userDetailsService = userDetailsService;
 		this.userRepository = userRepository;
 		this.authenticationManager = authenticationManager;
@@ -52,6 +61,8 @@ public class AuthenticationService {
 		this.userMapper = userMapper;
 		this.tenantService = tenantService;
 		this.mfaService = mfaService;
+		this.microsoftSsoService = microsoftSsoService;
+		this.mongoTemplate = mongoTemplate;
 	}
 
 	/**
@@ -71,10 +82,35 @@ public class AuthenticationService {
 			throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_FAILED);
 		}
 
+		if (passwordRefused(user)) {
+			throw QorvaErrors.forbidden(QorvaErrorCodes.AUTH_SSO_REQUIRED);
+		}
 		if (user.isMfaEnabledOrFalse()) {
 			return AuthResponse.mfaRequired(this.mfaService.issueLogin(user));
 		}
 		return completeLogin(user);
+	}
+
+	/**
+	 * Microsoft sign-in, last step: the one-time code from the callback yields the same response as a password
+	 * sign-in. Qorva's email MFA is skipped — the organisation's Entra policies (MFA, conditional access) apply.
+	 */
+	public AuthResponse exchangeSsoCode(String code) throws QorvaException {
+		return completeLogin(this.microsoftSsoService.exchange(code));
+	}
+
+	/**
+	 * A company that requires Microsoft sign-in refuses passwords — except for its account owner (the first user,
+	 * who registered it), so an Entra outage or misconfiguration never locks the company out.
+	 */
+	boolean passwordRefused(User user) throws QorvaException {
+		var tenant = TenantScope.callAs(user.getTenantId(), () -> this.tenantService.findOneById(user.getTenantId()));
+		if (tenant == null || !Boolean.TRUE.equals(tenant.getSsoRequired())) {
+			return false;
+		}
+		var first = mongoTemplate.findOne(Query.query(Criteria.where("tenantId").is(new ObjectId(user.getTenantId())))
+			.with(Sort.by(Sort.Order.asc("createdAt"), Sort.Order.asc("_id"))).limit(1), User.class);
+		return first == null || !first.getId().equals(user.getId());
 	}
 
 	/** Second step of an MFA sign-in: a valid code yields exactly what a plain login returns. */

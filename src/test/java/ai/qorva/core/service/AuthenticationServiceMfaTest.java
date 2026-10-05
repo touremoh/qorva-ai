@@ -58,7 +58,9 @@ class AuthenticationServiceMfaTest {
 		jwtConfig.setSecret(Base64.getEncoder().encodeToString(keyBytes));
 		jwtConfig.setSecretKey(new SecretKeySpec(keyBytes, "HmacSHA512"));
 		service = new AuthenticationService(userDetailsService, userRepository, authenticationManager,
-			jwtConfig, userMapper, tenantService, mfaService);
+			jwtConfig, userMapper, tenantService, mfaService,
+			org.mockito.Mockito.mock(ai.qorva.core.service.sso.MicrosoftSsoService.class),
+			org.mockito.Mockito.mock(org.springframework.data.mongodb.core.MongoTemplate.class));
 	}
 
 	private UserDTO credentials() {

@@ -31,6 +31,10 @@ public class TenantDTO extends AbstractQorvaDTO {
     private String stripeCustomerId;
     private SubscriptionInfo subscriptionInfo;
 
+    /** Changed only through PATCH /tenants/sso. */
+    @JsonProperty(access = Access.READ_ONLY)
+    private Boolean ssoRequired;
+
     private String createdBy;
     private String lastUpdatedBy;
 

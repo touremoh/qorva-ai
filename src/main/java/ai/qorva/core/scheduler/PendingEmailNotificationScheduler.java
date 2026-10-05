@@ -40,8 +40,12 @@ public class PendingEmailNotificationScheduler {
 
         for (var notification : pending) {
             try {
-                TenantScope.runAs(notification.getTenantId(), () -> dispatcher.dispatch(notification));
-                pendingEmailService.markSent(notification.getId());
+                // Sent and marked sent in the notification's own tenant: the status update reads the notification
+                // through the tenant-scoped service, like the send.
+                TenantScope.runAs(notification.getTenantId(), () -> {
+                    dispatcher.dispatch(notification);
+                    pendingEmailService.markSent(notification.getId());
+                });
                 sent++;
                 log.info("Notification dispatched: id={} type={} userId={}",
                     notification.getId(), notification.getNotificationType(), notification.getUserId());
@@ -51,7 +55,8 @@ public class PendingEmailNotificationScheduler {
                     notification.getId(), notification.getNotificationType(),
                     notification.getAttempts() + 1, notification.getMaxAttempts(), e);
                 try {
-                    pendingEmailService.markFailed(notification.getId(), e.getMessage());
+                    TenantScope.runAs(notification.getTenantId(),
+                        () -> pendingEmailService.markFailed(notification.getId(), e.getMessage()));
                 } catch (Exception markEx) {
                     log.error("Failed to mark notification as failed: id={}", notification.getId(), markEx);
                 }
