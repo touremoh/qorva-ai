@@ -3,6 +3,7 @@ package ai.qorva.core.service;
 import ai.qorva.core.dao.repository.BackgroundJobRepository;
 import ai.qorva.core.dao.repository.AgentRunRepository;
 import ai.qorva.core.dao.repository.CVRepository;
+import ai.qorva.core.dao.repository.HelpConversationRepository;
 import ai.qorva.core.dao.repository.CandidateUpdateRequestRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dao.repository.CandidateOutreachRepository;
@@ -56,6 +57,7 @@ class LibraryClearServiceTest {
 
 	@Mock private JobPostRepository jobPostRepository;
 	@Mock private UsageMonitoringRepository usageMonitoringRepository;
+	@Mock private HelpConversationRepository helpConversationRepository;
 
 	private LibraryClearService service;
 
@@ -67,7 +69,7 @@ class LibraryClearServiceTest {
 			new NoteCascade(noteRepository),
 			new CandidateCascade(candidateOutreachRepository, candidateUpdateRequestRepository),
 			new TenantDataPurge(cvRepository, agentRunRepository, qualityIssueStateRepository,
-				jobPostRepository, usageMonitoringRepository)));
+				jobPostRepository, usageMonitoringRepository, helpConversationRepository)));
 		service = new LibraryClearService(cvRepository, matchingReportRepository, mongoTemplate,
 			backgroundJobRepository, cascadeRegistry, s3StorageService, cacheEvictor);
 	}

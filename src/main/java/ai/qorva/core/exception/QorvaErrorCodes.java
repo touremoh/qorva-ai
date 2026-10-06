@@ -202,4 +202,12 @@ public final class QorvaErrorCodes {
     public static final String AGENT_RULE_NOT_FOUND                     = "error.agent.rule_not_found";
     public static final String AGENT_RULE_INVALID                       = "error.agent.rule_invalid";
     public static final String AGENT_RULE_LIMIT_REACHED                 = "error.agent.rule_limit_reached";
+
+    // Qorva Help (in-app product help assistant)
+    public static final String HELP_DISABLED                            = "error.help.disabled";
+    public static final String HELP_MESSAGE_INVALID                     = "error.help.message_invalid";
+    public static final String HELP_RATE_LIMITED                        = "error.help.rate_limited";
+    public static final String HELP_UNAVAILABLE                         = "error.help.unavailable";
+    public static final String HELP_TICKET_INVALID                      = "error.help.ticket_invalid";
+    public static final String HELP_TICKET_RATE_LIMITED                 = "error.help.ticket_rate_limited";
 }

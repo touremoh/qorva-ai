@@ -1,0 +1,22 @@
+{
+  "collMod": "help_conversations",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "help_conversations",
+      "required": ["tenantId", "userEmail", "turns", "updatedAt", "expiresAt"],
+      "properties": {
+        "tenantId": { "bsonType": "objectId", "description": "owning tenant, required" },
+        "userEmail": { "bsonType": "string", "description": "the user the conversation belongs to" },
+        "language": { "bsonType": ["string", "null"] },
+        "turns": { "bsonType": "array", "description": "question/answer pairs, replayed to the model from here only" },
+        "kbVersion": { "bsonType": ["string", "null"] },
+        "createdAt": { "bsonType": ["date", "null"] },
+        "updatedAt": { "bsonType": "date" },
+        "expiresAt": { "bsonType": "date", "description": "TTL: deleted at this time" }
+      }
+    }
+  },
+  "validationLevel": "moderate",
+  "validationAction": "error"
+}

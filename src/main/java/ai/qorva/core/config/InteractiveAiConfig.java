@@ -55,7 +55,7 @@ public class InteractiveAiConfig {
 			.build();
 	}
 
-	private static ChatModel budgeted(OpenAiChatModel openAiChatModel, OpenAiApi openAiApi, CloseableHttpClient qorvaHttpClient,
+	static ChatModel budgeted(OpenAiChatModel openAiChatModel, OpenAiApi openAiApi, CloseableHttpClient qorvaHttpClient,
 	                                  int budgetSeconds) {
 		var requestFactory = new HttpComponentsClientHttpRequestFactory(qorvaHttpClient);
 		requestFactory.setReadTimeout(perAttemptTimeout(budgetSeconds));
