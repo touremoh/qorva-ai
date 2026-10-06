@@ -1,8 +1,6 @@
 package ai.qorva.core.service.orchestrators;
 
-import ai.qorva.core.dao.entity.ChatMessage;
 import ai.qorva.core.dto.ScreeningContext;
-import ai.qorva.core.enums.ChatUserRole;
 import lombok.experimental.UtilityClass;
 import org.springframework.ai.chat.messages.AssistantMessage;
 import org.springframework.ai.chat.messages.Message;
@@ -18,10 +16,9 @@ import java.util.List;
  * <pre>
  *   system : rules
  *   system : CONTEXT (CV / job / report JSON)          ← identical every turn → cacheable prefix
- *   system : CONVERSATION SUMMARY SO FAR (optional)    ← changes only after a compaction
- *   user / assistant … the recent-turns window
+ *   user / assistant … the recent-turns window of the Copilot conversation
+ *   user : the recruiter's question
  * </pre>
- * The stored SYSTEM seed row is deliberately not replayed; the rules message replaces it.
  */
 @UtilityClass
 public class ResumeChatPromptBuilder {
@@ -29,7 +26,7 @@ public class ResumeChatPromptBuilder {
     private static final String RULES = """
         You are Qorva AI, an assistant helping a recruiter evaluate one candidate for one job.
         Answer strictly from the CONTEXT (candidate CV, job description with its scoring rules, resume match analysis \
-        when present), the CONVERSATION SUMMARY and the recent messages. If the information is not there, say so — never invent facts.
+        when present) and the recent messages. If the information is not there, say so — never invent facts.
         Be concise and concrete; quote the CV or job description when it supports the answer.
 
         Fit scores: the only fit score you may state is the official screening score given in the RESUME MATCH ANALYSIS, \
@@ -49,21 +46,15 @@ public class ResumeChatPromptBuilder {
     private static final String LANGUAGE_RULE = "Answer in the language of the recruiter's latest message.";
     private static final String LANGUAGE_RULE_FIXED = "Answer in this language: %s.";
 
-    public List<Message> build(ScreeningContext ctx, String summary, List<ChatMessage> window, String language) {
+    public List<Message> build(ScreeningContext ctx, List<ConversationTurn> window, String question, String language) {
         List<Message> messages = new ArrayList<>();
         messages.add(new SystemMessage(RULES.formatted(
             StringUtils.hasText(language) ? LANGUAGE_RULE_FIXED.formatted(language) : LANGUAGE_RULE)));
         messages.add(new SystemMessage(contextBlock(ctx)));
-        if (StringUtils.hasText(summary)) {
-            messages.add(new SystemMessage("CONVERSATION SUMMARY SO FAR:\n" + summary));
+        for (ConversationTurn t : window) {
+            messages.add(t.fromRecruiter() ? new UserMessage(t.text()) : new AssistantMessage(t.text()));
         }
-        for (ChatMessage m : window) {
-            if (m.getRole() == ChatUserRole.USER) {
-                messages.add(new UserMessage(m.getContent()));
-            } else if (m.getRole() == ChatUserRole.ASSISTANT) {
-                messages.add(new AssistantMessage(m.getContent()));
-            }
-        }
+        messages.add(new UserMessage(question));
         return messages;
     }
 

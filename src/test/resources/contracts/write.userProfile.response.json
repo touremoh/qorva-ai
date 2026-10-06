@@ -55,30 +55,6 @@
         "permission" : "ALLOWED",
         "role" : "ACCOUNT_OWNER"
       }, {
-        "action" : "START_CHAT",
-        "permission" : "ALLOWED",
-        "role" : "ACCOUNT_OWNER"
-      }, {
-        "action" : "VIEW_CHAT",
-        "permission" : "ALLOWED",
-        "role" : "ACCOUNT_OWNER"
-      }, {
-        "action" : "VIEW_MESSAGE",
-        "permission" : "ALLOWED",
-        "role" : "ACCOUNT_OWNER"
-      }, {
-        "action" : "REPLY_MESSAGE",
-        "permission" : "ALLOWED",
-        "role" : "ACCOUNT_OWNER"
-      }, {
-        "action" : "MODIFY_CHAT",
-        "permission" : "ALLOWED",
-        "role" : "ACCOUNT_OWNER"
-      }, {
-        "action" : "DELETE_CHAT",
-        "permission" : "ALLOWED",
-        "role" : "ACCOUNT_OWNER"
-      }, {
         "action" : "VIEW_USERS",
         "permission" : "ALLOWED",
         "role" : "ACCOUNT_OWNER"
@@ -100,10 +76,6 @@
         "role" : "ACCOUNT_OWNER"
       }, {
         "action" : "CANCEL_SUBSCRIPTION",
-        "permission" : "ALLOWED",
-        "role" : "ACCOUNT_OWNER"
-      }, {
-        "action" : "VIEW_LIBRARY_INSIGHTS",
         "permission" : "ALLOWED",
         "role" : "ACCOUNT_OWNER"
       }, {

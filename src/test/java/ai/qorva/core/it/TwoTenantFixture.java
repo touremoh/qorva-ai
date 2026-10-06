@@ -3,28 +3,25 @@ package ai.qorva.core.it;
 import ai.qorva.core.config.JwtConfig;
 import ai.qorva.core.config.QorvaProductProperties;
 import ai.qorva.core.dao.entity.CandidateEmailTemplate;
-import ai.qorva.core.dao.entity.Chat;
-import ai.qorva.core.dao.entity.ChatMessage;
 import ai.qorva.core.dao.entity.AgentRun;
-import ai.qorva.core.dao.entity.InsightConversationTurn;
 import ai.qorva.core.dao.entity.Note;
 import ai.qorva.core.dao.entity.Tenant;
 import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dto.CVDTO;
+import ai.qorva.core.dto.AnswerBlocks;
+import ai.qorva.core.dto.CVQueryParams;
+import ai.qorva.core.dto.CandidateCardDTO;
+import ai.qorva.core.dto.ChartDataDTO;
+import ai.qorva.core.dto.ConversationFrame;
 import ai.qorva.core.dto.InsightIntent;
-import ai.qorva.core.dto.InsightResponseDTO;
+import ai.qorva.core.dto.InsightMetricDTO;
 import ai.qorva.core.dto.JobPostDTO;
 import ai.qorva.core.dto.TenantDTO;
-import ai.qorva.core.dto.common.ChatContext;
-import ai.qorva.core.dto.common.ChatMetadata;
 import ai.qorva.core.dto.common.DecisionSummary;
 import ai.qorva.core.dto.common.MatchingReportDetails;
-import ai.qorva.core.dto.common.Participant;
 import ai.qorva.core.dto.common.SkillsMatch;
 import ai.qorva.core.dto.common.SubscriptionInfo;
 import ai.qorva.core.dto.common.UserAuthority;
-import ai.qorva.core.enums.ChatStatus;
-import ai.qorva.core.enums.ChatUserRole;
 import ai.qorva.core.helpers.UserAuthoritiesHelper;
 import ai.qorva.core.security.TenantContextHolder;
 import ai.qorva.core.service.CVService;
@@ -103,8 +100,8 @@ public class TwoTenantFixture {
 		String ownerId, String ownerEmail,
 		String viewerId, String viewerEmail,
 		List<String> cvIds, List<String> jobIds, List<String> reportIds,
-		String noteId, String templateId, String chatId, String conversationId,
-		String agentRunId, String agentConversationId
+		String noteId, String templateId,
+		String agentRunId, String agentConversationId, String candidateAnswerRunId, String libraryAnswerRunId
 	) {
 		public String cvId() { return cvIds.getFirst(); }
 		public String jobId() { return jobIds.getFirst(); }
@@ -196,13 +193,13 @@ public class TwoTenantFixture {
 
 		var noteId = insertNote(tenantId, cvIds.getFirst(), ownerEmail);
 		var templateId = insertTemplate(tenantId, ownerEmail);
-		var chatId = insertChat(tenantId, ownerId, cvIds.getFirst(), jobs.getFirst().getId(), reportIds.getFirst());
-		var conversationId = insertConversation(tenantId, ownerEmail);
 		var agentRun = insertAgentRun(tenantId, ownerEmail, cvIds.getFirst());
+		var candidateRun = insertCandidateAnswerRun(agentRun, cvIds.getFirst(), jobs.getFirst(), reportIds.getFirst());
+		var libraryRun = insertLibraryAnswerRun(agentRun, cvIds.getFirst());
 
 		return new SeededTenant(tenantId, name, ownerId, ownerEmail, viewerId, viewerEmail,
 			List.copyOf(cvIds), jobs.stream().map(JobPostDTO::getId).toList(), List.copyOf(reportIds),
-			noteId, templateId, chatId, conversationId, agentRun.getId(), agentRun.getConversationId());
+			noteId, templateId, agentRun.getId(), agentRun.getConversationId(), candidateRun.getId(), libraryRun.getId());
 	}
 
 	private String insertTenant(String name) {
@@ -271,47 +268,6 @@ public class TwoTenantFixture {
 		return mongo.insert(template).getId();
 	}
 
-	private String insertChat(String tenantId, String ownerId, String cvId, String jobId, String reportId) {
-		var chat = new Chat();
-		chat.setTenantId(tenantId);
-		chat.setTitle("Screening follow-up");
-		chat.setStatus(ChatStatus.OPEN);
-		chat.setContext(ChatContext.builder().cvId(cvId).jobPostId(jobId).matchingReportId(reportId).build());
-		chat.setParticipants(List.of(Participant.builder().userId(ownerId).role(Participant.Role.OWNER).build()));
-		chat.setMetadata(ChatMetadata.builder().language("en").tags(List.of()).build());
-		var chatId = mongo.insert(chat).getId();
-
-		for (var turn : List.of(
-			Map.entry(ChatUserRole.USER, "What are this candidate's strongest skills for the role?"),
-			Map.entry(ChatUserRole.ASSISTANT, "Kubernetes, Go and incident response stand out."))) {
-			var message = new ChatMessage();
-			message.setTenantId(tenantId);
-			message.setChatId(chatId);
-			message.setRole(turn.getKey());
-			message.setParticipantId(turn.getKey() == ChatUserRole.USER ? ownerId : null);
-			message.setContent(turn.getValue());
-			mongo.insert(message);
-		}
-		return chatId;
-	}
-
-	private String insertConversation(String tenantId, String askedBy) {
-		var conversationId = new ObjectId().toHexString();
-		var turn = new InsightConversationTurn();
-		turn.setConversationId(conversationId);
-		turn.setTitle("Senior backend engineers");
-		turn.setTenantId(tenantId);
-		turn.setInitiatedBy(askedBy);
-		turn.setQuestion("How many senior backend engineers do we have?");
-		turn.setEnglishQuestion("How many senior backend engineers do we have?");
-		turn.setIntent(InsightIntent.TALENT_POOL_INTELLIGENCE);
-		turn.setResponse(new InsightResponseDTO(conversationId, InsightIntent.TALENT_POOL_INTELLIGENCE,
-			"You have 4 senior backend engineers.", List.of(), 4, List.of(), List.of(),
-			List.of("Which of them are available now?"), null, Map.of()));
-		mongo.insert(turn);
-		return conversationId;
-	}
-
 	private AgentRun insertAgentRun(String tenantId, String userEmail, String cvId) {
 		var run = new AgentRun();
 		run.setTenantId(tenantId);
@@ -338,6 +294,63 @@ public class TwoTenantFixture {
 		run.setCreatedAt(BASE_TIME);
 		run.setFinishedAt(BASE_TIME);
 		return mongo.insert(run);
+	}
+
+	/** A follow-up in the same conversation, focused on a candidate for a job and answered by ask_about_candidate. */
+	private AgentRun insertCandidateAnswerRun(AgentRun first, String cvId, JobPostDTO job, String reportId) {
+		var run = followUp(first, "What are this candidate's strongest skills for the role?");
+		run.setFocus(new AgentRun.Focus(cvId, "Candidate", job.getId(), job.getTitle()));
+		run.getSteps().add(answerStep("ask_about_candidate", "agent.step.ask_about_candidate",
+			Map.of("name", "Candidate", "job", job.getTitle()), List.of(new AgentRun.Link("CV", cvId, "Candidate"),
+				new AgentRun.Link("JOB", job.getId(), job.getTitle()), new AgentRun.Link("REPORT", reportId, job.getTitle()))));
+		run.setFinalAnswer("Kubernetes, Go and incident response stand out.");
+		return mongo.insert(run);
+	}
+
+	/** A library question in the same conversation, answered by analyze_library with its blocks and frame. */
+	private AgentRun insertLibraryAnswerRun(AgentRun first, String cvId) {
+		var run = followUp(first, "How many senior backend engineers do we have?");
+		run.getSteps().add(answerStep("analyze_library", "agent.step.analyze_library",
+			Map.of("intent", InsightIntent.TALENT_POOL_INTELLIGENCE.name()), List.of()));
+		run.setFinalAnswer("You have 4 senior backend engineers.");
+		run.setBlocks(new AnswerBlocks(InsightIntent.TALENT_POOL_INTELLIGENCE,
+			List.of(new CandidateCardDTO(cvId, "A-1", "Candidate", "Backend engineer", List.of("Java", "Kubernetes"), "senior", null, "Paris")),
+			4, List.of(new InsightMetricDTO("Senior backend engineers", "count", "4", null)),
+			List.of(new ChartDataDTO("bar", "Seniority", List.of("senior", "mid"), List.of(4, 6))),
+			List.of("Which of them are available now?"), null, null));
+		run.setInsightFrame(new ConversationFrame("How many senior backend engineers do we have?",
+			InsightIntent.TALENT_POOL_INTELLIGENCE, CVQueryParams.empty(), false, BASE_TIME));
+		return mongo.insert(run);
+	}
+
+	private static AgentRun followUp(AgentRun first, String goal) {
+		var run = new AgentRun();
+		run.setTenantId(first.getTenantId());
+		run.setUserEmail(first.getUserEmail());
+		run.setConversationId(first.getConversationId());
+		run.setTitle(first.getTitle());
+		run.setOrigin(AgentRun.ORIGIN_CHAT);
+		run.setLanguage("en");
+		run.setGoal(goal);
+		run.setStatus(AgentRun.STATUS_COMPLETED);
+		run.setStepCount(1);
+		run.setToolCallCount(1);
+		run.setCreatedAt(BASE_TIME);
+		run.setFinishedAt(BASE_TIME);
+		return run;
+	}
+
+	private static AgentRun.Step answerStep(String tool, String summaryKey, Map<String, String> params, List<AgentRun.Link> links) {
+		var step = new AgentRun.Step();
+		step.setSeq(1);
+		step.setKind(AgentRun.Step.KIND_TOOL_CALL);
+		step.setTool(tool);
+		step.setTier("READ");
+		step.setState(AgentRun.Step.STATE_OK);
+		step.setSummaryKey(summaryKey);
+		step.setSummaryParams(new java.util.LinkedHashMap<>(params));
+		step.setLinks(new ArrayList<>(links));
+		return step;
 	}
 
 	private static MatchingReportDetails reportDetails(double score) {

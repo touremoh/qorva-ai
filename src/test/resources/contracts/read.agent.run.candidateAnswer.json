@@ -1,0 +1,57 @@
+{
+  "body" : {
+    "approvalExpiresAt" : null,
+    "blocks" : null,
+    "canApprove" : false,
+    "canCancel" : false,
+    "conversationId" : "<id:2>",
+    "createdAt" : "<ts>",
+    "failureReason" : null,
+    "finalAnswer" : "Kubernetes, Go and incident response stand out.",
+    "finishedAt" : "<ts>",
+    "focus" : {
+      "cvId" : "<id:3>",
+      "cvName" : "Candidate",
+      "jobPostId" : "<id:4>",
+      "jobTitle" : "Senior Backend Engineer (Java/Spring)"
+    },
+    "goal" : "What are this candidate's strongest skills for the role?",
+    "id" : "<id:1>",
+    "mentions" : [ ],
+    "origin" : "CHAT",
+    "pendingActions" : [ ],
+    "ruleId" : null,
+    "ruleName" : null,
+    "status" : "COMPLETED",
+    "steps" : [ {
+      "autoApproved" : false,
+      "draft" : null,
+      "kind" : "TOOL_CALL",
+      "links" : [ {
+        "id" : "<id:3>",
+        "label" : "Candidate",
+        "type" : "CV"
+      }, {
+        "id" : "<id:4>",
+        "label" : "Senior Backend Engineer (Java/Spring)",
+        "type" : "JOB"
+      }, {
+        "id" : "<id:5>",
+        "label" : "Senior Backend Engineer (Java/Spring)",
+        "type" : "REPORT"
+      } ],
+      "seq" : 1,
+      "state" : "OK",
+      "summaryKey" : "agent.step.ask_about_candidate",
+      "summaryParams" : {
+        "job" : "Senior Backend Engineer (Java/Spring)",
+        "name" : "Candidate"
+      },
+      "tool" : "ask_about_candidate"
+    } ],
+    "stoppedEarly" : false,
+    "title" : "Best Java candidates",
+    "userEmail" : "owner@a.qorva.test"
+  },
+  "status" : 200
+}

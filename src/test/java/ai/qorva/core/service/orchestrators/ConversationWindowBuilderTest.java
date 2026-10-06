@@ -1,10 +1,7 @@
 package ai.qorva.core.service.orchestrators;
 
-import ai.qorva.core.dao.entity.ChatMessage;
-import ai.qorva.core.enums.ChatUserRole;
 import org.junit.jupiter.api.Test;
 
-import java.time.Instant;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -12,27 +9,25 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class ConversationWindowBuilderTest {
 
-	/** 400 chars ≈ 100 estimated tokens per message. */
-	private static ChatMessage msg(int i, ChatUserRole role) {
-		return ChatMessage.builder()
-			.id("m" + i)
-			.role(role)
-			.content(("x".repeat(399) + i).substring(0, 400))
-			.createdAt(Instant.ofEpochSecond(i))
-			.build();
+	/** 400 chars ≈ 100 estimated tokens per turn; the turn's number ends its text. */
+	private static ConversationTurn turn(int i) {
+		var text = ("x".repeat(399) + i).substring(0, 400 - String.valueOf(i).length()) + i;
+		return new ConversationTurn(i % 2 == 0, text);
 	}
 
-	private static List<ChatMessage> transcript(int n) {
-		return IntStream.range(0, n)
-			.mapToObj(i -> msg(i, i % 2 == 0 ? ChatUserRole.USER : ChatUserRole.ASSISTANT))
-			.toList();
+	private static List<ConversationTurn> transcript(int n) {
+		return IntStream.range(0, n).mapToObj(ConversationWindowBuilderTest::turn).toList();
+	}
+
+	private static List<String> numbers(List<ConversationTurn> turns) {
+		return turns.stream().map(t -> t.text().replaceAll("^x+", "")).toList();
 	}
 
 	@Test
-	void keepsNewestMessagesWithinTheBudget() {
+	void keepsNewestTurnsWithinTheBudget() {
 		var window = new ConversationWindowBuilder(350, 2).select(transcript(10));
 
-		assertThat(window.sent()).extracting(ChatMessage::getId).containsExactly("m7", "m8", "m9");
+		assertThat(numbers(window.sent())).containsExactly("7", "8", "9");
 		assertThat(window.dropped()).hasSize(7);
 		assertThat(window.sentTokens()).isEqualTo(300);
 	}
@@ -41,7 +36,7 @@ class ConversationWindowBuilderTest {
 	void alwaysKeepsTheRecentMinimumEvenWhenOverBudget() {
 		var window = new ConversationWindowBuilder(10, 4).select(transcript(10));
 
-		assertThat(window.sent()).extracting(ChatMessage::getId).containsExactly("m6", "m7", "m8", "m9");
+		assertThat(numbers(window.sent())).containsExactly("6", "7", "8", "9");
 	}
 
 	@Test
@@ -53,12 +48,10 @@ class ConversationWindowBuilderTest {
 	}
 
 	@Test
-	void ignoresSystemRowsAndHandlesEmptyHistory() {
-		var withSystem = List.of(msg(0, ChatUserRole.SYSTEM), msg(1, ChatUserRole.USER));
+	void ignoresBlankTurnsAndHandlesEmptyHistory() {
+		var withBlank = List.of(ConversationTurn.assistant(" "), turn(1));
 
-		assertThat(new ConversationWindowBuilder(1000, 2).select(withSystem).sent())
-			.extracting(ChatMessage::getId).containsExactly("m1");
+		assertThat(numbers(new ConversationWindowBuilder(1000, 2).select(withBlank).sent())).containsExactly("1");
 		assertThat(new ConversationWindowBuilder(1000, 2).select(List.of()).sent()).isEmpty();
-		assertThat(ConversationWindowBuilder.estimateTokens(withSystem)).isEqualTo(100);
 	}
 }

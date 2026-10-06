@@ -47,6 +47,14 @@ public interface AgentTool {
 		return execute(args, ctx);
 	}
 
+	/**
+	 * READ tools that answer the user directly: when one succeeds, its answer is the run's answer and the run ends,
+	 * without another model call. Such a tool counts against its own meter, not the agentRuns one.
+	 */
+	default boolean terminal() {
+		return false;
+	}
+
 	/** True for tools that send something to a candidate; they count against max-outbound-per-run. */
 	default boolean outbound() {
 		return false;

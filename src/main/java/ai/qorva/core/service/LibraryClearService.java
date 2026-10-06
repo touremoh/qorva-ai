@@ -5,10 +5,10 @@ import ai.qorva.core.exception.QorvaErrors;
 import ai.qorva.core.service.cascade.CascadeRegistry;
 import ai.qorva.core.service.cascade.PurgeScope;
 
+import ai.qorva.core.dao.entity.AgentRun;
 import ai.qorva.core.dao.entity.BackgroundJob;
 import ai.qorva.core.dao.repository.BackgroundJobRepository;
 import ai.qorva.core.dao.repository.CVRepository;
-import ai.qorva.core.dao.repository.ChatsRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dto.LibraryClearData;
 import ai.qorva.core.exception.QorvaErrorCodes;
@@ -18,12 +18,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+
 import java.util.List;
 
 /**
  * Tenant-scoped wipe of the resume library and everything derived from it: CVs (and
- * their S3 documents), matching reports, AI chats + messages, talent-intelligence
- * conversations, candidate-update requests (and their staged S3 files), and
+ * their S3 documents), matching reports, Copilot conversations, candidate-update requests (and their staged S3 files), and
  * quality-issue dismissals. Job posts and usage counters deliberately survive — jobs
  * are the recruiter's own work, usage is billing history.
  *
@@ -40,7 +44,7 @@ public class LibraryClearService {
 
 	private final CVRepository cvRepository;
 	private final MatchingReportRepository matchingReportRepository;
-	private final ChatsRepository chatsRepository;
+	private final MongoTemplate mongoTemplate;
 	private final BackgroundJobRepository backgroundJobRepository;
 	private final CascadeRegistry cascadeRegistry;
 	private final S3StorageService s3StorageService;
@@ -50,7 +54,7 @@ public class LibraryClearService {
 		return new LibraryClearData.Preflight(
 			cvRepository.countByTenantId(tenantId),
 			matchingReportRepository.countByTenantId(tenantId),
-			chatsRepository.countByTenantId(tenantId));
+			countConversations(tenantId));
 	}
 
 	public LibraryClearData.Result clear(String tenantId, String requestedBy) throws QorvaException {
@@ -64,6 +68,7 @@ public class LibraryClearService {
 
 		log.warn("Clearing resume library for tenant={} requested by {}", tenantId, requestedBy);
 
+		long conversations = countConversations(tenantId);
 		var deleted = cascadeRegistry.purgeTenant(tenantId, PurgeScope.LIBRARY, false);
 		s3StorageService.deleteCvDocumentsForTenant(tenantId);           // best-effort, never throws
 		s3StorageService.deleteCandidateSubmissionsForTenant(tenantId);  // best-effort, never throws
@@ -71,9 +76,14 @@ public class LibraryClearService {
 
 		log.info("Library cleared for tenant={}: {}", tenantId, deleted);
 		return new LibraryClearData.Result(
-			count(deleted, "cvs"), count(deleted, "matching_reports"), count(deleted, "chats"),
-			count(deleted, "chat_messages"), count(deleted, "insight_conversation_turns"),
+			count(deleted, "cvs"), count(deleted, "matching_reports"), conversations,
 			count(deleted, "candidate_update_requests"), count(deleted, "quality_issue_states"), count(deleted, "notes"));
+	}
+
+	private long countConversations(String tenantId) {
+		if (!ObjectId.isValid(tenantId)) return 0;
+		return mongoTemplate.findDistinct(Query.query(Criteria.where("tenantId").is(new ObjectId(tenantId))
+			.and("origin").is(AgentRun.ORIGIN_CHAT).and("conversationId").ne(null)), "conversationId", AgentRun.class, String.class).size();
 	}
 
 	private static long count(java.util.Map<String, Long> deleted, String collection) {

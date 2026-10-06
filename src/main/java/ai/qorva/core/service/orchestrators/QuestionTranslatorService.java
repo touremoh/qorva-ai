@@ -17,7 +17,7 @@ import static org.springframework.ai.openai.api.OpenAiApi.ChatModel.GPT_4_1_MINI
 @RequiredArgsConstructor
 public class QuestionTranslatorService {
 
-	@Qualifier("interactiveChatClient") private final ChatClient chatClient;
+	@Qualifier("copilotAnswerChatClient") private final ChatClient chatClient;
 
 	private static final String TO_ENGLISH_PROMPT = """
 		If the following question is already in English, return it exactly as-is, unchanged.

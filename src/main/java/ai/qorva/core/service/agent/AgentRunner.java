@@ -46,6 +46,8 @@ public class AgentRunner {
 	static final int MAX_CONSECUTIVE_ERRORS = 3;
 	private static final String PROMPT_FILE = "prompts/Agent_system_prompt.md";
 	private static final String INTERRUPTED = "Interrupted before completion; outcome unknown. Verify with a read tool before repeating.";
+	static final String TASK_LIMIT = "The plan's monthly limit of Copilot tasks is reached: only questions about one candidate "
+		+ "(ask_about_candidate) or the library (analyze_library) can be answered. Tell the recruiter.";
 
 	private final AgentRunStore store;
 	private final AgentModelClient modelClient;
@@ -109,7 +111,10 @@ public class AgentRunner {
 				return;
 			}
 
-			var tools = registry.allowedFor(ctx);
+			// A run that hasn't counted as a Copilot task yet can still answer questions when the task quota is spent.
+			boolean taskAllowed = run.isMetered() || hasTaskCapacity(run);
+			var tools = taskAllowed ? registry.allowedFor(ctx)
+				: registry.allowedFor(ctx).stream().filter(AgentTool::terminal).toList();
 			ChatResponse response;
 			try {
 				response = modelClient.call(AgentHistory.toMessages(systemPrompt(run), run.getHistory()), tools);
@@ -118,14 +123,21 @@ public class AgentRunner {
 				fail(run, QorvaErrorCodes.AGENT_MODEL_FAILED);
 				return;
 			}
-			// Only a run the model actually worked on counts against the plan.
-			meterOnce(run);
+			// Rule runs count once their model call is made; chat runs count by what they use (below).
+			if (AgentRun.ORIGIN_RULE.equals(run.getOrigin())) {
+				meterOnce(run);
+			}
 			recordTokens(run, response);
 			run.setStepCount(run.getStepCount() + 1);
 			AssistantMessage assistant = response.getResult().getOutput();
 			run.getHistory().add(AgentHistory.assistant(assistant));
 
 			if (!assistant.hasToolCalls()) {
+				// An answer in the model's own words is a Copilot task, unless an answer tool was tried (it has its own meter)
+				// or the task quota is spent (the model only explains what it could not do).
+				if (taskAllowed && !triedAnswerTool(run)) {
+					meterOnce(run);
+				}
 				run.setFinalAnswer(assistant.getText());
 				run.setStatus(AgentRun.STATUS_COMPLETED);
 				finish(run);
@@ -135,7 +147,19 @@ public class AgentRunner {
 			var results = new ArrayList<AgentRun.ToolResult>();
 			var pending = new ArrayList<AgentRun.PendingAction>();
 			int pendingOutbound = 0;
+			AgentToolResult.AgentAnswer answer = null;
+			if (taskAllowed && assistant.getToolCalls().stream().anyMatch(c -> !registry.isTerminal(c.name()))) {
+				meterOnce(run);
+			}
 			for (var call : assistant.getToolCalls()) {
+				if (!taskAllowed && !registry.isTerminal(call.name())) {
+					var step = startStep(run, call);
+					var refused = AgentToolResult.error(TASK_LIMIT);
+					completeStep(step, refused);
+					results.add(new AgentRun.ToolResult(call.id(), call.name(), toModelJson(refused)));
+					consecutiveErrors++;
+					continue;
+				}
 				var approvalTool = registry.allowed(call.name(), ctx).filter(t -> t.tier() == AgentRiskTier.APPROVAL);
 				if (approvalTool.isPresent()) {
 					var tool = approvalTool.get();
@@ -181,6 +205,23 @@ public class AgentRunner {
 					step.getTier(), step.getState(), System.currentTimeMillis() - t0);
 				results.add(new AgentRun.ToolResult(call.id(), call.name(), toModelJson(result)));
 				consecutiveErrors = result.ok() ? 0 : consecutiveErrors + 1;
+				if (result.ok() && result.answer() != null) {
+					if (result.answer().insightFrame() != null) {
+						run.setInsightFrame(result.answer().insightFrame());
+					}
+					if (answer == null) {
+						answer = result.answer();
+					}
+				}
+			}
+			if (answer != null && pending.isEmpty()) {
+				// The engine's answer is the run's answer, as is: no model call rewords it.
+				run.getHistory().add(AgentHistory.toolResults(results));
+				run.setFinalAnswer(answer.text());
+				run.setBlocks(answer.blocks());
+				run.setStatus(AgentRun.STATUS_COMPLETED);
+				finish(run);
+				return;
 			}
 			if (!pending.isEmpty()) {
 				// The turn's tool message is completed on resume, when every pending action has an outcome.
@@ -466,6 +507,16 @@ public class AgentRunner {
 		finish(run);
 	}
 
+	/** True when the run called a terminal answer tool: a fallback answer in the model's own words is then not a task. */
+	private boolean triedAnswerTool(AgentRun run) {
+		return run.getSteps().stream().anyMatch(s -> registry.isTerminal(s.getTool()));
+	}
+
+	private boolean hasTaskCapacity(AgentRun run) {
+		return AgentRun.ORIGIN_RULE.equals(run.getOrigin())
+			|| usageMonitoringService.hasCapacityFor(run.getTenantId(), UsageMonitoringService.FeatureKey.AGENT_RUNS, 1);
+	}
+
 	private void meterOnce(AgentRun run) {
 		if (!run.isMetered()) {
 			usageMonitoringService.incrementUsage(run.getTenantId(), UsageMonitoringService.FeatureKey.AGENT_RUNS, 1);
@@ -542,7 +593,7 @@ public class AgentRunner {
 	private static final Map<String, String> LANGUAGES = Map.of(
 		"en", "English", "fr", "French", "de", "German", "es", "Spanish", "it", "Italian", "nl", "Dutch", "pt", "Portuguese");
 
-	static String languageName(String code) {
+	public static String languageName(String code) {
 		if (code == null) return "English";
 		var primary = code.split("[-_,;]")[0].trim().toLowerCase(Locale.ROOT);
 		return LANGUAGES.getOrDefault(primary, "English");

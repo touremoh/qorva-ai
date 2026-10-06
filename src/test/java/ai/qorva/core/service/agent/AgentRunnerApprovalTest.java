@@ -25,6 +25,7 @@ import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.never;
@@ -88,6 +89,7 @@ class AgentRunnerApprovalTest {
 		when(store.saveProgress(any())).thenReturn(true);
 		when(store.pause(any())).thenReturn(true);
 		when(store.finish(any())).thenReturn(true);
+		when(usageMonitoringService.hasCapacityFor(any(), any(), anyInt())).thenReturn(true);
 		when(registry.allowedFor(any())).thenReturn(List.of(send, read));
 		when(registry.allowed(eq("send_outreach_email"), any())).thenReturn(Optional.of(send));
 		when(registry.allowed(eq("get_cv"), any())).thenReturn(Optional.of(read));

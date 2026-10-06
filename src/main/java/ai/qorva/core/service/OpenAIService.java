@@ -31,7 +31,7 @@ public class OpenAIService {
 	private final CVExtractionAgent cvExtractionAgent;
 	private final CVVisionExtractionAgent cvVisionExtractionAgent;
 	private final ReportGenerationAgent reportGenerationAgent;
-	@Qualifier("interactiveChatClient") private final ChatClient chatClient;
+	@Qualifier("copilotAnswerChatClient") private final ChatClient chatClient;
 
 	public String streamCVExtraction(String cvContent) {
 		return cvExtractionAgent.extract(cvContent);
@@ -51,8 +51,8 @@ public class OpenAIService {
 	}
 
 	/**
-	 * One resume-chat turn. Returns the answer text plus the usage the provider reported —
-	 * that number is what gets persisted on the message, so prompt growth is visible in the DB.
+	 * One candidate answer (Copilot's ask_about_candidate). Returns the answer text plus the usage the
+	 * provider reported, which the engine logs so prompt growth stays visible.
 	 */
 	public ChatResult chatCompletions(List<Message> messages, String model) throws QorvaException {
 		var response = chatClient.prompt()

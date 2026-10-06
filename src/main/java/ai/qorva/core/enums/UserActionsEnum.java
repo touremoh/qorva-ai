@@ -25,14 +25,6 @@ public enum UserActionsEnum {
 	MODIFY_REPORT("MODIFY_REPORT"),
 	DELETE_REPORT("DELETE_REPORT"),
 
-	// Chat
-	START_CHAT("START_CHAT"),
-	VIEW_CHAT("VIEW_CHAT"),
-	VIEW_MESSAGE("VIEW_MESSAGE"),
-	REPLY_MESSAGE("REPLY_MESSAGE"),
-	MODIFY_CHAT("MODIFY_CHAT"),
-	DELETE_CHAT("DELETE_CHAT"),
-
 	// Users
 	VIEW_USERS("VIEW_USERS"),
 	MANAGE_USERS("MANAGE_USERS"),
@@ -47,13 +39,10 @@ public enum UserActionsEnum {
 	UPDATE_SUBSCRIPTION("UPDATE_SUBSCRIPTION"),
 	CANCEL_SUBSCRIPTION("CANCEL_SUBSCRIPTION"),
 
-	// Library Insights
-	VIEW_LIBRARY_INSIGHTS("VIEW_LIBRARY_INSIGHTS"),
-
 	// Candidate outreach (email a candidate from the CV list / matching report)
 	CONTACT_CANDIDATE("CONTACT_CANDIDATE"),
 
-	// Copilot (AI agent that works on goals and acts on the user's behalf)
+	// Copilot (the assistant: answers about candidates and the library, and acts on the user's behalf)
 	USE_AGENT("USE_AGENT");
 
 	UserActionsEnum(String value) {

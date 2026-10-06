@@ -1,5 +1,7 @@
 package ai.qorva.core.dao.entity;
 
+import ai.qorva.core.dto.AnswerBlocks;
+import ai.qorva.core.dto.ConversationFrame;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -65,12 +67,18 @@ public class AgentRun implements QorvaEntity {
 
 	private String goal;
 	private List<Mention> mentions = new ArrayList<>();
+	/** The candidate and job the conversation is about (opened from a report or a CV); carried to its next runs. */
+	private Focus focus;
 
 	private String status;
 	private List<Step> steps = new ArrayList<>();
 	/** Model conversation, needed to continue the run; never exposed through the API. */
 	private List<HistoryMessage> history = new ArrayList<>();
 	private String finalAnswer;
+	/** Charts, metrics and candidate cards of a library analysis answer; null for other answers. */
+	private AnswerBlocks blocks;
+	/** Talent Intelligence state after this run's library analysis, read by the next one so follow-ups keep their filters. */
+	private ConversationFrame insightFrame;
 	/** Error key when the run FAILED, e.g. error.agent.* — shown translated by the app. */
 	private String failureReason;
 	/** True when a budget ended the run before the model finished. */
@@ -90,7 +98,10 @@ public class AgentRun implements QorvaEntity {
 	private int stepCount;
 	private int toolCallCount;
 	private long runningMillis;
-	/** The run counts once against the agentRuns meter, when its first model call is made. */
+	/**
+	 * The run counts once against the agentRuns meter when it uses a tool other than a terminal answer tool, or
+	 * answers in its own words. A run answered by a terminal tool counts against that tool's meter instead.
+	 */
 	private boolean metered;
 
 	private String leaseOwner;
@@ -117,6 +128,18 @@ public class AgentRun implements QorvaEntity {
 		private String type;
 		private String id;
 		private String name;
+	}
+
+	/** A candidate for a job: what "this candidate" means in the conversation. */
+	@Getter
+	@Setter
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class Focus {
+		private String cvId;
+		private String cvName;
+		private String jobPostId;
+		private String jobTitle;
 	}
 
 	@Getter

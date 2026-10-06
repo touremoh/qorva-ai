@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-/** Screening reports belong to a CV and a job post; they are parents of notes and chats themselves. */
+/** Screening reports belong to a CV and a job post; they are parents of notes themselves. */
 @Component
 public class MatchingReportCascade implements CascadeParticipant {
 
@@ -26,7 +26,7 @@ public class MatchingReportCascade implements CascadeParticipant {
 		var reportIds = new ArrayList<String>();
 		long count = 0;
 		for (var parentId : parentIds) {
-			// Report ids first: their notes and chats can only be found while the reports exist.
+			// Report ids first: their notes can only be found while the reports exist.
 			if (parent == CascadeResource.CV) {
 				repository.findByTenantIdAndCandidateInfoCandidateId(tenantId, parentId)
 					.forEach(r -> reportIds.add(r.getId()));

@@ -92,7 +92,7 @@ public class CVController extends AbstractQorvaController<CVDTO> {
             .build();
     }
 
-    /** Free-text lookup used by the resume-chat candidate picker and Talent Intelligence @mentions. */
+    /** Free-text lookup used by Copilot's @mentions. */
     @GetMapping("/search")
     @PreAuthorize("@accessManager.hasPermission(authentication,'VIEW_CV')")
     public ResponseEntity<QorvaRequestResponse> searchAll(

@@ -8,11 +8,9 @@ import ai.qorva.core.service.ATSExportService;
 import ai.qorva.core.service.BackgroundJobService;
 import ai.qorva.core.service.BulkCvUploadService;
 import ai.qorva.core.service.CVService;
-import ai.qorva.core.service.InsightConversationService;
 import ai.qorva.core.service.JobDescriptionBuilderService;
 import ai.qorva.core.service.JobPostService;
 import ai.qorva.core.service.LibraryClearService;
-import ai.qorva.core.service.LibraryInsightsService;
 import ai.qorva.core.service.LibraryQualityInsightService;
 import ai.qorva.core.service.LibraryQualityService;
 import ai.qorva.core.service.MatchingReportService;
@@ -63,7 +61,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @WebMvcTest(controllers = {
 	UserController.class, TenantController.class, StripeController.class,
-	CVController.class, JobPostController.class, MatchingReportController.class, LibraryInsightsController.class,
+	CVController.class, JobPostController.class, MatchingReportController.class,
 	LibraryQualityController.class, UsageMonitoringController.class
 })
 @Import({SecurityConfig.class, JwtConfig.class})
@@ -98,8 +96,6 @@ class SecurityRoutingWebMvcTest {
 	@MockitoBean private ATSExportService atsExportService;
 	@MockitoBean private ai.qorva.core.service.PipelineBoardService pipelineBoardService;
 	@MockitoBean private ai.qorva.core.service.sso.MicrosoftSsoService microsoftSsoService;
-	@MockitoBean private LibraryInsightsService libraryInsightsService;
-	@MockitoBean private InsightConversationService insightConversationService;
 	@MockitoBean private LibraryQualityService libraryQualityService;
 	@MockitoBean private BackgroundJobService backgroundJobService;
 	@MockitoBean private LibraryQualityInsightService libraryQualityInsightService;
@@ -178,13 +174,6 @@ class SecurityRoutingWebMvcTest {
 		when(accessManager.hasPermission(any(), anyString())).thenReturn(false);
 		mvc.perform(get("/cvs").header("Authorization", token)).andExpect(status().isForbidden());
 		verifyNoInteractions(cvService);
-	}
-
-	@Test
-	void libraryInsights_withoutPermission_isForbidden() throws Exception {
-		when(accessManager.hasPermission(any(), eq("VIEW_LIBRARY_INSIGHTS"))).thenReturn(false);
-		mvc.perform(get("/library-insights/conversations").header("Authorization", token)).andExpect(status().isForbidden());
-		verifyNoInteractions(insightConversationService);
 	}
 
 	@Test

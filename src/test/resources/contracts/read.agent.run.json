@@ -1,6 +1,7 @@
 {
   "body" : {
     "approvalExpiresAt" : null,
+    "blocks" : null,
     "canApprove" : false,
     "canCancel" : false,
     "conversationId" : "<id:2>",
@@ -8,6 +9,7 @@
     "failureReason" : null,
     "finalAnswer" : "One strong Java candidate.",
     "finishedAt" : "<ts>",
+    "focus" : null,
     "goal" : "Who are our best Java candidates?",
     "id" : "<id:1>",
     "mentions" : [ ],

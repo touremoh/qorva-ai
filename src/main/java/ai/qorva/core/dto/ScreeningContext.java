@@ -1,7 +1,7 @@
 package ai.qorva.core.dto;
 
 /**
- * What the resume chat knows about one candidate/job pair for a turn.
+ * What Copilot's candidate answers know about one candidate/job pair, loaded for each question.
  *
  * @param matchingReportId  id of the screening report found for the pair (by id or by lookup), null when none exists yet
  * @param finalScore        the report's official 0–100 fit score, null when there is no report

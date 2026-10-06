@@ -47,10 +47,14 @@ qorva:
   tenancy:
     fail-closed: ${QORVA_TENANCY_FAIL_CLOSED:false}
   ai:
-    # Calls a user waits on (resume chat, Talent Intelligence, drafts, scoring-rule prefill): one retry, and the
+    # Calls a browser request waits on (drafts, scoring-rule prefill, usage and data-health summaries): one retry, and the
     # whole call within this many seconds — under the hosting's request limit. Background agents are unaffected.
     interactive:
       timeout-seconds: ${QORVA_AI_INTERACTIVE_TIMEOUT_SECONDS:50}
+    # Copilot's answer engines (candidate answers, library analyses) run in the agent worker, not in a request: one long
+    # answer may take this long, and a read timeout is not retried.
+    copilot-answers:
+      timeout-seconds: ${QORVA_AI_COPILOT_ANSWER_TIMEOUT_SECONDS:120}
     extraction:
       # Text pass runs on every CV; switch to a nano-tier model after benchmarking —
       # the vision pass below catches what a smaller model fumbles.
@@ -79,13 +83,10 @@ qorva:
       model: ${QORVA_RESUME_CHAT_MODEL:gpt-5.6-sol}
       history-token-budget: ${QORVA_RESUME_CHAT_HISTORY_TOKEN_BUDGET:8000}
       keep-recent-messages: ${QORVA_RESUME_CHAT_KEEP_RECENT_MESSAGES:6}
-      summary-trigger-tokens: ${QORVA_RESUME_CHAT_SUMMARY_TRIGGER_TOKENS:6000}
-      summary-model: ${QORVA_RESUME_CHAT_SUMMARY_MODEL:gpt-4.1-mini}
-      summary-max-tokens: ${QORVA_RESUME_CHAT_SUMMARY_MAX_TOKENS:1200}
       context-token-warn: ${QORVA_RESUME_CHAT_CONTEXT_TOKEN_WARN:12000}
-    # Copilot (AI agent). Off until QORVA_AGENT_ENABLED=true; every run is bounded by the budgets below.
+    # Copilot (AI agent): the assistant for candidate questions, library analyses and actions. Every run is bounded by the budgets below.
     agent:
-      enabled: ${QORVA_AGENT_ENABLED:false}
+      enabled: ${QORVA_AGENT_ENABLED:true}
       model: ${QORVA_AGENT_MODEL:gpt-5.6-terra}
       # gpt-5.x refuses function tools on chat completions unless this is 'none'.
       reasoning-effort: ${QORVA_AGENT_REASONING_EFFORT:none}

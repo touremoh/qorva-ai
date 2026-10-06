@@ -4,9 +4,6 @@ import ai.qorva.core.dao.repository.BackgroundJobRepository;
 import ai.qorva.core.dao.repository.AgentRunRepository;
 import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.dao.repository.CandidateUpdateRequestRepository;
-import ai.qorva.core.dao.repository.ChatMessagesRepository;
-import ai.qorva.core.dao.repository.ChatsRepository;
-import ai.qorva.core.dao.repository.InsightConversationTurnRepository;
 import ai.qorva.core.dao.repository.MatchingReportRepository;
 import ai.qorva.core.dao.repository.CandidateOutreachRepository;
 import ai.qorva.core.dao.repository.NoteRepository;
@@ -16,11 +13,13 @@ import ai.qorva.core.dao.repository.UsageMonitoringRepository;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.service.cascade.CandidateCascade;
 import ai.qorva.core.service.cascade.CascadeRegistry;
-import ai.qorva.core.service.cascade.ChatCascade;
 import ai.qorva.core.service.cascade.MatchingReportCascade;
 import ai.qorva.core.service.cascade.NoteCascade;
 import ai.qorva.core.service.cascade.TenantDataPurge;
 import ai.qorva.core.exception.QorvaException;
+import ai.qorva.core.dao.entity.AgentRun;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Query;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -30,6 +29,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
@@ -44,9 +44,7 @@ class LibraryClearServiceTest {
 
 	@Mock private CVRepository cvRepository;
 	@Mock private MatchingReportRepository matchingReportRepository;
-	@Mock private ChatsRepository chatsRepository;
-	@Mock private ChatMessagesRepository chatMessagesRepository;
-	@Mock private InsightConversationTurnRepository insightConversationTurnRepository;
+	@Mock private MongoTemplate mongoTemplate;
 	@Mock private AgentRunRepository agentRunRepository;
 	@Mock private CandidateUpdateRequestRepository candidateUpdateRequestRepository;
 	@Mock private QualityIssueStateRepository qualityIssueStateRepository;
@@ -66,12 +64,11 @@ class LibraryClearServiceTest {
 		// The real registry and participants over mocked repositories: the test checks what actually gets deleted.
 		var cascadeRegistry = new CascadeRegistry(List.of(
 			new MatchingReportCascade(matchingReportRepository),
-			new ChatCascade(chatsRepository, chatMessagesRepository),
 			new NoteCascade(noteRepository),
 			new CandidateCascade(candidateOutreachRepository, candidateUpdateRequestRepository),
-			new TenantDataPurge(cvRepository, insightConversationTurnRepository, agentRunRepository, qualityIssueStateRepository,
+			new TenantDataPurge(cvRepository, agentRunRepository, qualityIssueStateRepository,
 				jobPostRepository, usageMonitoringRepository)));
-		service = new LibraryClearService(cvRepository, matchingReportRepository, chatsRepository,
+		service = new LibraryClearService(cvRepository, matchingReportRepository, mongoTemplate,
 			backgroundJobRepository, cascadeRegistry, s3StorageService, cacheEvictor);
 	}
 
@@ -79,13 +76,14 @@ class LibraryClearServiceTest {
 	void preflightReportsCounts() {
 		when(cvRepository.countByTenantId(TENANT)).thenReturn(1204L);
 		when(matchingReportRepository.countByTenantId(TENANT)).thenReturn(3410L);
-		when(chatsRepository.countByTenantId(TENANT)).thenReturn(89L);
+		when(mongoTemplate.findDistinct(any(Query.class), eq("conversationId"), eq(AgentRun.class), eq(String.class)))
+			.thenReturn(List.of("c1", "c2"));
 
 		var preflight = service.preflight(TENANT);
 
 		assertThat(preflight.cvs()).isEqualTo(1204);
 		assertThat(preflight.reports()).isEqualTo(3410);
-		assertThat(preflight.chats()).isEqualTo(89);
+		assertThat(preflight.conversations()).isEqualTo(2);
 	}
 
 	@Test
@@ -106,9 +104,9 @@ class LibraryClearServiceTest {
 			.thenReturn(false);
 		when(cvRepository.deleteByTenantId(TENANT)).thenReturn(1204L);
 		when(matchingReportRepository.deleteByTenantId(TENANT)).thenReturn(3410L);
-		when(chatsRepository.deleteByTenantId(TENANT)).thenReturn(89L);
-		when(chatMessagesRepository.deleteByTenantId(TENANT)).thenReturn(640L);
-		when(insightConversationTurnRepository.deleteByTenantId(TENANT)).thenReturn(12L);
+		when(mongoTemplate.findDistinct(any(Query.class), eq("conversationId"), eq(AgentRun.class), eq(String.class)))
+			.thenReturn(List.of("c1", "c2", "c3"));
+		when(agentRunRepository.deleteByTenantId(TENANT)).thenReturn(9L);
 		when(candidateUpdateRequestRepository.deleteByTenantId(TENANT)).thenReturn(7L);
 		when(qualityIssueStateRepository.deleteByTenantId(TENANT)).thenReturn(3L);
 
@@ -116,9 +114,8 @@ class LibraryClearServiceTest {
 
 		assertThat(result.cvs()).isEqualTo(1204);
 		assertThat(result.reports()).isEqualTo(3410);
-		assertThat(result.chats()).isEqualTo(89);
-		assertThat(result.chatMessages()).isEqualTo(640);
-		assertThat(result.insightTurns()).isEqualTo(12);
+		assertThat(result.conversations()).isEqualTo(3);
+		verify(agentRunRepository).deleteByTenantId(TENANT);
 		verify(s3StorageService).deleteCvDocumentsForTenant(TENANT);
 		verify(s3StorageService).deleteCandidateSubmissionsForTenant(TENANT);
 		verify(cacheEvictor).evict(TENANT);

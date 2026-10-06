@@ -69,8 +69,7 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 			get("/matching-reports").param("pageNumber", "0").param("pageSize", "100"),
 			get("/matching-reports/search").param("pageNumber", "0").param("pageSize", "100").param("searchTerms", "a"),
 			get("/dashboard/data"), get("/dashboard/top-candidates").param("pageNumber", "0").param("pageSize", "50"),
-			get("/chats").param("page", "0").param("size", "100"),
-			get("/library-insights/conversations"), get("/library-quality"), get("/library-quality/summary"),
+			get("/library-quality"), get("/library-quality/summary"),
 			get("/email-templates/candidate-update"), get("/users"), get("/usage-monitoring/current"),
 			get("/agent/conversations"), get("/agent/runs").param("scope", "team"), get("/agent/availability")
 		).map(request -> DynamicTest.dynamicTest(request.buildRequest(null).getRequestURI(), () -> {
@@ -78,17 +77,6 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 			assertThat(response.getStatus()).isBetween(200, 299);
 			assertNoIdentifierOfTenantA(request.toString(), response.getContentAsString());
 		}));
-	}
-
-	/** S11: a chat's context may only name the caller's own CV, job and report. */
-	@Test
-	void chatCannotBeCreatedOnTheOtherTenantsCandidate() throws Exception {
-		var response = mvc.perform(post("/chats").header("Authorization", attacker).contentType(MediaType.APPLICATION_JSON)
-			.content("""
-				{"title":"x","cvId":"%s","jobPostId":"%s","participants":[{"userId":"%s","role":"OWNER"}],"language":"en"}
-				""".formatted(a.cvId(), a.jobId(), b.ownerId()))).andReturn().getResponse();
-		assertThat(response.getStatus()).isIn(REFUSED);
-		assertThat(fixture.fingerprint(a.tenantId())).doesNotContain(b.ownerId());
 	}
 
 	private List<Attack> attacks() {
@@ -124,12 +112,6 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 			refused("notes.update", put("/notes/" + a.noteId()).contentType(json)
 				.content("{\"targetType\":\"CV\",\"targetId\":\"" + cv + "\",\"text\":\"pwned\"}")),
 			refused("notes.delete", delete("/notes/" + a.noteId())),
-			refused("chat.get", get("/chats/" + a.chatId())),
-			refused("chat.messages", get("/chats/" + a.chatId() + "/messages").param("page", "0").param("size", "50")),
-			refused("chat.status", patch("/chats/" + a.chatId() + "/status").param("status", "CLOSED")),
-			refused("chat.delete", delete("/chats/" + a.chatId())),
-			answersEmpty("insights.conversation", get("/library-insights/conversations/" + a.conversationId())),
-			answersEmpty("insights.conversationDelete", delete("/library-insights/conversations/" + a.conversationId())),
 			refused("template.update", put("/email-templates/candidate-update/" + a.templateId()).contentType(json)
 				.content("{\"name\":\"pwned\",\"subject\":\"pwned\",\"bodyText\":\"pwned\"}")),
 			refused("template.delete", delete("/email-templates/candidate-update/" + a.templateId())),
@@ -154,7 +136,10 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 			answersEmpty("agent.conversationDelete", delete("/agent/conversations/" + a.agentConversationId())),
 			// Mentions of another tenant's records are dropped, never resolved (the agent is off in tests: 503).
 			refused("agent.run.startMentioningForeignCv", post("/agent/runs").contentType(json)
-				.content("{\"goal\":\"Tell me about this candidate\",\"mentions\":[{\"type\":\"CV\",\"id\":\"" + cv + "\"}]}"), true)
+				.content("{\"goal\":\"Tell me about this candidate\",\"mentions\":[{\"type\":\"CV\",\"id\":\"" + cv + "\"}]}"), true),
+			// A conversation focus on another tenant's candidate is refused too.
+			refused("agent.run.startFocusedOnForeignCv", post("/agent/runs").contentType(json)
+				.content("{\"goal\":\"Is this candidate a fit?\",\"focus\":{\"cvId\":\"" + cv + "\",\"jobPostId\":\"" + job + "\"}}"), true)
 		);
 	}
 
@@ -184,8 +169,9 @@ class TenantIsolationIntegrationTest extends AbstractIntegrationTest {
 		identifiers.addAll(a.reportIds());
 		identifiers.add(a.noteId());
 		identifiers.add(a.templateId());
-		identifiers.add(a.chatId());
-		identifiers.add(a.conversationId());
+		identifiers.add(a.agentRunId());
+		identifiers.add(a.candidateAnswerRunId());
+		identifiers.add(a.libraryAnswerRunId());
 		assertThat(identifiers).as("tenant A identifiers leaked by %s", what)
 			.noneMatch(body::contains);
 	}

@@ -15,8 +15,8 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "qorva.ai.agent")
 public class AgentProperties {
 
-	/** Kill switch: off → the worker claims nothing, starting a run answers 503, the app hides Copilot. */
-	private boolean enabled = false;
+	/** Kill switch: off → the worker claims nothing, starting a run answers 503, the app hides Copilot. On by default. */
+	private boolean enabled = true;
 
 	/** Model that plans and calls tools. Must support tool calling. */
 	private String model = "gpt-5.6-terra";

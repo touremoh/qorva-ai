@@ -38,15 +38,18 @@ Write in **English**. Another step translates your answer.
 
 At the limit: uploads, ATS imports, matching runs and re-analyses stop until the period renews.
 
-**AI resume chats** (`aiResumeChats`) — one unit per message the recruiter sends in AI Resume Chat.
-At the limit: new messages are refused until renewal.
+Copilot is the one assistant; each answer counts against one of three allowances, by what it used:
 
-**Talent Intelligence** (`talentIntelligenceQueries`) — one unit per question asked.
+**Candidate questions** (`aiResumeChats`) — one unit per Copilot answer about one candidate for a job
+(read from the whole CV, the job and the screening report). At the limit: such questions are refused until renewal.
 
-**Copilot runs** (`agentRuns`) — one unit per task Copilot works on, whether the recruiter asked for
-it in chat or a standing rule started it. The actions Copilot takes during a run (for example a
-matching run) also count against their own allowance. At the limit: new Copilot tasks are refused
-until renewal.
+**Library analyses** (`talentIntelligenceQueries`) — one unit per Copilot answer about the library as a
+whole (counts, distributions, charts, comparisons). At the limit: such questions are refused until renewal.
+
+**Copilot tasks** (`agentRuns`) — one unit per other Copilot request: searching, tagging, drafting or
+sending emails, starting matching, and every run a standing rule starts. The actions Copilot takes during
+a task (for example a matching run) also count against their own allowance. At the limit: new tasks are
+refused until renewal, while candidate questions and library analyses still work.
 
 ## Levers the recruiter really has
 
@@ -58,11 +61,10 @@ Use only these, and only when they fit the numbers:
 - Avoid uploading duplicates or resumes already in the library.
 - Re-analyse only the Data Health issues that matter, not every flagged resume.
 - Ask the AI for scoring rules once per job, then edit them by hand.
-- In AI Resume Chat, ask fewer, more complete questions per candidate; use the matching report
-  first — it already answers most fit questions.
-- In Talent Intelligence, ask one precise question rather than several narrow ones; reuse answers
-  already given.
-- In Copilot, give one complete task per request rather than several small ones.
+- Ask Copilot fewer, more complete questions per candidate; read the matching report first — it
+  already answers most fit questions.
+- Ask one precise question about the library rather than several narrow ones; reuse answers already given.
+- Give Copilot one complete task per request rather than several small ones.
 
 ---
 

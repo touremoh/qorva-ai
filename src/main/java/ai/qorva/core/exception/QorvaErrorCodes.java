@@ -65,10 +65,6 @@ public final class QorvaErrorCodes {
     public static final String REPORT_STATUS_CONFLICT           = "error.report.status_conflict";
     public static final String PIPELINE_CURSOR_INVALID          = "error.pipeline.cursor_invalid";
 
-    // chat
-    public static final String CHAT_NOT_FOUND      = "error.chat.not_found";
-    public static final String CHAT_OWNER_REQUIRED = "error.chat.owner_required";
-    public static final String CHAT_ACTOR_NOT_FOUND = "error.chat.actor_not_found";
 
     // notes
     public static final String NOTE_TARGET_TYPE_INVALID = "error.note.target_type_invalid";
@@ -93,6 +89,7 @@ public final class QorvaErrorCodes {
 
     // ai
     public static final String AI_REQUEST_FAILED = "error.ai.request_failed";
+    public static final String AI_ANSWER_TOO_LONG = "error.ai.answer_too_long";
 
     // usage
     public static final String USAGE_SCREENING_LIMIT_EXCEEDED = "error.usage.screening_limit_exceeded";
@@ -192,6 +189,7 @@ public final class QorvaErrorCodes {
     public static final String AGENT_RUN_ACTIVE                         = "error.agent.run_active";
     public static final String AGENT_RUN_NOT_FOUND                      = "error.agent.run_not_found";
     public static final String AGENT_GOAL_INVALID                       = "error.agent.goal_invalid";
+    public static final String AGENT_FOCUS_INVALID                      = "error.agent.focus_invalid";
     public static final String AGENT_CONVERSATION_ACTIVE                = "error.agent.conversation_active";
     public static final String AGENT_TEAM_SCOPE_FORBIDDEN               = "error.agent.team_scope_forbidden";
     public static final String AGENT_USER_UNAVAILABLE                   = "error.agent.user_unavailable";

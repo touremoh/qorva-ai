@@ -39,9 +39,11 @@ class ResumeChatPromptBuilderTest {
 
 	@Test
 	void systemMessagesCarryTheScoringAndFormattingRules() {
-		var messages = ResumeChatPromptBuilder.build(new ScreeningContext("{cv}", "{job}", null), null, List.of(), "fr");
+		var messages = ResumeChatPromptBuilder.build(new ScreeningContext("{cv}", "{job}", null), List.of(), "Is she a fit?", "fr");
 
-		assertThat(messages).hasSize(2).allMatch(m -> m instanceof SystemMessage);
+		assertThat(messages).hasSize(3);
+		assertThat(messages.subList(0, 2)).allMatch(m -> m instanceof SystemMessage);
+		assertThat(messages.get(2).getText()).isEqualTo("Is she a fit?");
 		assertThat(messages.get(0).getText())
 			.contains("Never estimate, compute or invent a percentage")
 			.contains("Markdown is rendered")

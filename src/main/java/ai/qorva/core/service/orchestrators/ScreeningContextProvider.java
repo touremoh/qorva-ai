@@ -1,15 +1,13 @@
 package ai.qorva.core.service.orchestrators;
 
-import ai.qorva.core.dao.entity.Chat;
 import ai.qorva.core.dto.ScreeningContext;
 import ai.qorva.core.exception.QorvaException;
 
 public interface ScreeningContextProvider {
     /**
-     * Loads the CV, job post and — when one exists — the screening report for the chat's pair.
-     * The report is resolved on every turn: by id when the chat is linked to one, otherwise by
-     * (tenant, job, candidate) lookup, so a report generated after the chat was created is
-     * picked up on the next message.
+     * Loads the CV, job post and — when one exists — the screening report for the pair, all within
+     * the tenant. The report is looked up on every answer, so one generated after the conversation
+     * started is picked up by the next question.
      */
-    ScreeningContext load(Chat chat) throws QorvaException;
+    ScreeningContext load(String tenantId, String cvId, String jobPostId) throws QorvaException;
 }

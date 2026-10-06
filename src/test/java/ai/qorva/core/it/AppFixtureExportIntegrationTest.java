@@ -51,9 +51,8 @@ class AppFixtureExportIntegrationTest extends AbstractIntegrationTest {
 			get("/jobs").param("pageNumber", "0").param("pageSize", "25"),
 			get("/ai/matching-runs/options"), get("/ai/matching-runs").param("active", "true"),
 			get("/matching-reports").param("pageNumber", "0").param("pageSize", "10"), get("/matching-reports/pipeline"),
-			get("/chats").param("page", "0").param("size", "25"), get("/chats/allowed"),
 			get("/dashboard/data"), get("/dashboard/top-candidates").param("pageNumber", "0").param("pageSize", "5"), get("/dashboard/pipeline"),
-			get("/email-templates/candidate-update"), get("/library-insights/conversations"),
+			get("/email-templates/candidate-update"),
 			get("/library-quality"), get("/library-quality/summary"), get("/library-quality/jobs"),
 			get("/mailbox-connections/availability"), get("/usage-monitoring/current"), get("/users"), get("/users/me/mfa"),
 			get("/tenants/" + a.tenantId()), get("/ats/providers"), get("/ats/connections"), get("/ats/sync-status"),
@@ -61,8 +60,7 @@ class AppFixtureExportIntegrationTest extends AbstractIntegrationTest {
 			get("/candidate-outreach/context").param("cvId", a.cvId()),
 			get("/agent/availability"), get("/agent/conversations"), get("/agent/runs").param("scope", "mine"),
 			get("/agent/conversations/" + a.agentConversationId()), get("/agent/runs/" + a.agentRunId()),
-			get("/library-insights/conversations/" + a.conversationId()),
-			get("/chats/" + a.chatId()), get("/chats/" + a.chatId() + "/messages").param("page", "0").param("size", "50")));
+			get("/agent/runs/" + a.candidateAnswerRunId()), get("/agent/runs/" + a.libraryAnswerRunId())));
 		a.cvIds().forEach(id -> requests.add(get("/cvs/" + id)));
 		a.jobIds().forEach(id -> requests.add(get("/jobs/" + id)));
 
