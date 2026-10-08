@@ -2,6 +2,7 @@ package ai.qorva.core.service.cascade;
 
 import ai.qorva.core.dao.repository.AgentRunRepository;
 import ai.qorva.core.dao.repository.CVRepository;
+import ai.qorva.core.dao.repository.HelpConversationRepository;
 import ai.qorva.core.dao.repository.JobPostRepository;
 import ai.qorva.core.dao.repository.QualityIssueStateRepository;
 import ai.qorva.core.dao.repository.UsageMonitoringRepository;
@@ -13,7 +14,8 @@ import java.util.Map;
 /**
  * Collections that only ever go in a tenant-wide purge: the CVs themselves, and what is derived from
  * the library as a whole (Copilot runs, quality-issue states). Job posts and
- * usage periods survive a library clear and go only when all recruitment data does.
+ * usage periods survive a library clear and go only when all recruitment data does, with the users' Qorva Help
+ * conversations. Support tickets are kept: they are the support team's record.
  */
 @Component
 public class TenantDataPurge implements CascadeParticipant {
@@ -23,14 +25,17 @@ public class TenantDataPurge implements CascadeParticipant {
 	private final QualityIssueStateRepository qualityIssueStates;
 	private final JobPostRepository jobPosts;
 	private final UsageMonitoringRepository usage;
+	private final HelpConversationRepository helpConversations;
 
 	public TenantDataPurge(CVRepository cvs, AgentRunRepository agentRuns,
-	                QualityIssueStateRepository qualityIssueStates, JobPostRepository jobPosts, UsageMonitoringRepository usage) {
+	                QualityIssueStateRepository qualityIssueStates, JobPostRepository jobPosts, UsageMonitoringRepository usage,
+	                HelpConversationRepository helpConversations) {
 		this.cvs = cvs;
 		this.agentRuns = agentRuns;
 		this.qualityIssueStates = qualityIssueStates;
 		this.jobPosts = jobPosts;
 		this.usage = usage;
+		this.helpConversations = helpConversations;
 	}
 
 	@Override
@@ -43,6 +48,7 @@ public class TenantDataPurge implements CascadeParticipant {
 		if (scope == PurgeScope.RECRUITMENT) {
 			counts.put("job_posts", jobPosts.deleteByTenantId(tenantId));
 			counts.put("usage_monitoring", usage.deleteByTenantId(tenantId));
+			counts.put("help_conversations", helpConversations.deleteByTenantId(tenantId));
 		}
 		return counts;
 	}

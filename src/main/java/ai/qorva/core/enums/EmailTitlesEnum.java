@@ -61,7 +61,10 @@ public enum EmailTitlesEnum {
 	IT_AGENT_APPROVAL_DIGEST("it", "agent_approval_digest", "Copilot attende la tua approvazione"),
 	ES_AGENT_APPROVAL_DIGEST("es", "agent_approval_digest", "Copilot espera tu aprobación"),
 	PT_AGENT_APPROVAL_DIGEST("pt", "agent_approval_digest", "O Copilot aguarda a sua aprovação"),
-	NL_AGENT_APPROVAL_DIGEST("nl", "agent_approval_digest", "Copilot wacht op uw goedkeuring");
+	NL_AGENT_APPROVAL_DIGEST("nl", "agent_approval_digest", "Copilot wacht op uw goedkeuring"),
+
+	/** Internal: a support request from Qorva Help, sent to the support mailbox in English only. */
+	EN_SUPPORT_TICKET("en", "support_ticket", "Support request");
 
 	EmailTitlesEnum(String languageCode, String emailType, String emailTitle) {
 		this.languageCode = languageCode;

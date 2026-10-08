@@ -115,6 +115,22 @@ qorva:
         # recruiter has moved on and inherited filters would silently narrow a fresh question.
         frame-ttl-minutes: ${QORVA_INSIGHTS_FRAME_TTL_MINUTES:30}
         max-previous-question-length: ${QORVA_INSIGHTS_MAX_PREVIOUS_QUESTION_LENGTH:300}
+  # Qorva Help: in-app answers about using Qorva, from the curated help text only (no tools, no tenant data).
+  # Free for every signed-in user, so the limits below bound its cost. Off until QORVA_HELP_ENABLED=true.
+  help:
+    enabled: ${QORVA_HELP_ENABLED:false}
+    model: ${QORVA_HELP_MODEL:gpt-4.1-mini}
+    max-message-chars: 1000
+    history-turns: 6
+    stored-turns: 20
+    max-output-tokens: 700
+    conversation-ttl-days: ${QORVA_HELP_CONVERSATION_TTL_DAYS:90}
+    limits:
+      per-user-per-hour: ${QORVA_HELP_PER_USER_PER_HOUR:30}
+      per-user-per-day: ${QORVA_HELP_PER_USER_PER_DAY:150}
+      per-tenant-per-day: ${QORVA_HELP_PER_TENANT_PER_DAY:1000}
+      demo-per-user-per-day: ${QORVA_HELP_DEMO_PER_USER_PER_DAY:30}
+      tickets-per-user-per-day: ${QORVA_HELP_TICKETS_PER_USER_PER_DAY:5}
   # Smart flagging: a new or edited CV flags only the jobs whose top N it would enter. It is compared once
   # Atlas has (re)embedded it (≤ 10 s observed; the grace keeps an edit from being compared on its old
   # vector); a CV still without an embedding after the timeout flags every open job instead.

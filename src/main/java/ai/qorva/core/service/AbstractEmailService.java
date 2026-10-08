@@ -43,6 +43,11 @@ public abstract class AbstractEmailService {
 	}
 
 	public void sendEmail(String receiverEmail, String subject, String content) throws QorvaException {
+		sendEmail(receiverEmail, subject, content, null);
+	}
+
+	/** {@code replyTo} overrides the universal Reply-To (support) — e.g. a support request answered to its author. */
+	protected void sendEmail(String receiverEmail, String subject, String content, String replyTo) throws QorvaException {
 		try {
 			var recipient = new Recipient();
 			var emailAddress = new EmailAddress();
@@ -69,11 +74,11 @@ public abstract class AbstractEmailService {
 			message.setFrom(new Recipient());
 			Objects.requireNonNull(message.getFrom()).setEmailAddress(fromAddress);
 
-			// Replies always funnel to support, whatever the From category is.
-			var replyTo = this.senderResolver.replyTo();
-			if (replyTo != null) {
+			// Replies always funnel to support, whatever the From category is, unless the caller names someone.
+			var replyAddress = replyTo != null ? replyTo : this.senderResolver.replyTo();
+			if (replyAddress != null) {
 				var replyToAddress = new EmailAddress();
-				replyToAddress.setAddress(replyTo);
+				replyToAddress.setAddress(replyAddress);
 				var replyToRecipient = new Recipient();
 				replyToRecipient.setEmailAddress(replyToAddress);
 				message.setReplyTo(List.of(replyToRecipient));

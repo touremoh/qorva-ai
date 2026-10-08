@@ -27,8 +27,8 @@ import java.nio.charset.StandardCharsets;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneOffset;
+import ai.qorva.core.utils.SupportedLanguages;
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
@@ -590,12 +590,7 @@ public class AgentRunner {
 		- Finish with a short summary of what you did and what is waiting for approval.
 		""";
 
-	private static final Map<String, String> LANGUAGES = Map.of(
-		"en", "English", "fr", "French", "de", "German", "es", "Spanish", "it", "Italian", "nl", "Dutch", "pt", "Portuguese");
-
 	public static String languageName(String code) {
-		if (code == null) return "English";
-		var primary = code.split("[-_,;]")[0].trim().toLowerCase(Locale.ROOT);
-		return LANGUAGES.getOrDefault(primary, "English");
+		return SupportedLanguages.name(code);
 	}
 }

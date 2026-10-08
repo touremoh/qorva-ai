@@ -1,0 +1,29 @@
+{
+  "collMod": "support_tickets",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "support_tickets",
+      "required": ["tenantId", "reference", "userEmail", "subject", "description", "status", "emailStatus", "createdAt"],
+      "properties": {
+        "tenantId": { "bsonType": "objectId", "description": "owning tenant, required" },
+        "reference": { "bsonType": "string", "description": "QH-XXXXXX, shown to the user" },
+        "userEmail": { "bsonType": "string" },
+        "userName": { "bsonType": ["string", "null"] },
+        "companyName": { "bsonType": ["string", "null"] },
+        "subject": { "bsonType": "string", "maxLength": 150 },
+        "description": { "bsonType": "string", "maxLength": 4000 },
+        "page": { "bsonType": ["string", "null"] },
+        "language": { "bsonType": ["string", "null"] },
+        "transcript": { "bsonType": ["array", "null"] },
+        "status": { "bsonType": "string", "enum": ["OPEN"] },
+        "emailStatus": { "bsonType": "string", "enum": ["PENDING", "SENT", "FAILED"] },
+        "emailAttempts": { "bsonType": ["int", "long"] },
+        "emailedAt": { "bsonType": ["date", "null"] },
+        "createdAt": { "bsonType": "date" }
+      }
+    }
+  },
+  "validationLevel": "moderate",
+  "validationAction": "error"
+}

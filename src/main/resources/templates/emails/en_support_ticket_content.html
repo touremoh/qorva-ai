@@ -1,0 +1,23 @@
+<div class="email-container">
+    <div class="email-content">
+        <p class="greeting">New support request {{reference}}</p>
+        <p>Sent from Qorva Help. Reply to this email to answer the user directly.</p>
+
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin: 16px 0; font-size: 14px;">
+            <tr><td style="padding: 4px 12px 4px 0; color: #64748B; width: 140px;">Reference</td><td style="padding: 4px 0;">{{reference}}</td></tr>
+            <tr><td style="padding: 4px 12px 4px 0; color: #64748B;">From</td><td style="padding: 4px 0;">{{user_name}} &lt;{{user_email}}&gt;</td></tr>
+            <tr><td style="padding: 4px 12px 4px 0; color: #64748B;">Company</td><td style="padding: 4px 0;">{{company_name}} ({{tenant_id}})</td></tr>
+            <tr><td style="padding: 4px 12px 4px 0; color: #64748B;">Page</td><td style="padding: 4px 0;">{{page}}</td></tr>
+            <tr><td style="padding: 4px 12px 4px 0; color: #64748B;">Language</td><td style="padding: 4px 0;">{{language}}</td></tr>
+            <tr><td style="padding: 4px 12px 4px 0; color: #64748B;">Created</td><td style="padding: 4px 0;">{{created_at}}</td></tr>
+        </table>
+
+        <p style="font-weight: 700; margin: 20px 0 6px;">{{subject}}</p>
+        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{description}}</div>
+
+        {{transcript}}
+    </div>
+    <div class="email-footer">
+        <p>&copy; {{current_year}} {{app_name}}. Internal support notification.</p>
+    </div>
+</div>
