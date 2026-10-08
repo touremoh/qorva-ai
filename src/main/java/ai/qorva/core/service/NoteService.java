@@ -36,6 +36,8 @@ import java.util.Objects;
 public class NoteService {
 
 	static final int MAX_TEXT_LENGTH = 4000;
+	/** Copilot keeps whole answers (an interview plan runs long); longer ones are cut. */
+	static final int MAX_COPILOT_TEXT_LENGTH = 12000;
 	private static final int MAX_THREAD_SIZE = 200;
 
 	private final NoteRepository noteRepository;
@@ -77,6 +79,34 @@ public class NoteService {
 		var saved = noteRepository.save(note);
 		log.info("Note {} added on {} {} by {}", saved.getId(), type, request.getTargetId(), authorEmail);
 		return noteMapper.map(saved);
+	}
+
+	/**
+	 * A note Copilot writes for its user (who is the author, and may edit or delete it), from a task. Needs the same
+	 * write authority as a note the user adds by hand; the caller checks it with {@link #canWrite}.
+	 */
+	public NoteDTO createFromCopilot(String tenantId, String authorEmail, NoteTargetTypeEnum type, String targetId, String text,
+	                                 String agentRunId) throws QorvaException {
+		var cleaned = text == null ? "" : text.strip();
+		if (cleaned.isEmpty()) throw QorvaErrors.badRequest(QorvaErrorCodes.NOTE_TEXT_INVALID);
+		if (cleaned.length() > MAX_COPILOT_TEXT_LENGTH) cleaned = cleaned.substring(0, MAX_COPILOT_TEXT_LENGTH - 1) + "…";
+		assertTargetBelongsToTenant(tenantId, type, targetId);
+		var saved = noteRepository.save(Note.builder()
+			.tenantId(tenantId)
+			.targetType(type.name())
+			.targetId(targetId)
+			.text(cleaned)
+			.authorName(resolveAuthorName(authorEmail))
+			.source(Note.SOURCE_COPILOT)
+			.agentRunId(agentRunId)
+			.build());
+		log.info("Note {} added by Copilot run {} on {} {} for {}", saved.getId(), agentRunId, type, targetId, authorEmail);
+		return noteMapper.map(saved);
+	}
+
+	/** Whether the current user may write notes on this kind of record. */
+	public boolean canWrite(NoteTargetTypeEnum type) {
+		return noteAccess.canWrite(SecurityContextHolder.getContext().getAuthentication(), type);
 	}
 
 	public NoteDTO update(String tenantId, String authorEmail, String noteId, NoteRequest request) throws QorvaException {

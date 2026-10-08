@@ -10,6 +10,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.util.List;
 
@@ -28,20 +29,40 @@ public class CvAddedSource implements AgentTriggerSource {
 		return AgentRule.TRIGGER_CV_ADDED;
 	}
 
+	/**
+	 * A CV is looked at once it is a minute old: long enough for a candidate's own update (a newer CV replacing the old
+	 * one) to be marked as such, so it is not taken for a new candidate.
+	 */
+	static final Duration SETTLE = Duration.ofMinutes(1);
+
 	@Override
 	public List<RuleSubject> newSubjects(AgentRule rule, Instant since, Instant now, int limit) {
-		var criteria = Criteria.where("tenantId").is(new ObjectId(rule.getTenantId()))
-			.and("createdAt").gte(since).lte(now)
-			.and("archived").ne(true);
-		var source = rule.getTrigger().getSource();
-		if (AgentRule.Trigger.SOURCE_ATS.equals(source)) {
-			criteria = criteria.and("atsRefs.0").exists(true);
-		} else if (AgentRule.Trigger.SOURCE_MANUAL.equals(source)) {
-			criteria = criteria.and("atsRefs.0").exists(false);
-		}
+		var criteria = newCvs(new ObjectId(rule.getTenantId()), since, now, rule.getTrigger().getSource());
 		var query = Query.query(criteria).with(Sort.by("createdAt")).limit(limit);
 		query.fields().include("personalInformation.name", "createdAt", "tenantId");
 		return mongoTemplate.find(query, CV.class).stream().map(CvAddedSource::subject).toList();
+	}
+
+	/**
+	 * New, active CVs created in the window (less the settle time), from the chosen source. A CV a candidate uploaded
+	 * through a profile-update request replaces their old one: it is not a new candidate.
+	 */
+	static Criteria newCvs(ObjectId tenantId, Instant since, Instant now, String source) {
+		var criteria = Criteria.where("tenantId").is(tenantId)
+			.and("createdAt").gte(since.minus(SETTLE)).lte(now.minus(SETTLE))
+			.and("archived").ne(true)
+			.and("origin").ne(CV.ORIGIN_CANDIDATE_UPDATE);
+		return bySource(criteria, source);
+	}
+
+	static Criteria bySource(Criteria criteria, String source) {
+		if (AgentRule.Trigger.SOURCE_ATS.equals(source)) {
+			return criteria.and("atsRefs.0").exists(true);
+		}
+		if (AgentRule.Trigger.SOURCE_MANUAL.equals(source)) {
+			return criteria.and("atsRefs.0").exists(false);
+		}
+		return criteria;
 	}
 
 	private static RuleSubject subject(CV cv) {

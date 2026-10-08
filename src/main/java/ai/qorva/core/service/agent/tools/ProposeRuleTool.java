@@ -47,11 +47,18 @@ public class ProposeRuleTool implements AgentTool {
 			+ "became out of date — jobId or any job; staleReasons any of NEVER_RUN = new job, JOB_CHANGED, NEW_CANDIDATES, "
 			+ "CANDIDATE_CHANGED, all when omitted), REPORT_STATUS_CHANGED (a recruiter moved a candidate on a job — jobId or any "
 			+ "job; toStatuses any of NEW, CONTACTED, SHORTLISTED, INTERVIEWING, OFFERED, HIRED, REJECTED, WITHDRAWN, any when "
-			+ "omitted). The goal is what the task must do; it may use {{candidates}}, {{job}}, "
+			+ "omitted), REPORT_STATUS_IDLE (a candidate stayed idleDays 1-90 days in one of toStatuses — required — with no "
+			+ "status change; jobId or any job), CV_OUTDATED (a CV's content became staleMonths 6, 12, 18 or 24 months old; "
+			+ "source as CV_ADDED), JOB_CLOSED (a job was closed — jobId or any job), DUPLICATE_FOUND (a new candidate has the "
+			+ "same email or phone as an existing one; source as CV_ADDED), CANDIDATE_PROFILE_UPDATED (a candidate completed a "
+			+ "profile-update request). For CV_SCORED, recommendations (any of strong_interview, interview, may_be, reject) "
+			+ "and maxScore narrow it, e.g. recommendations [reject] for rejected candidates. "
+			+ "The goal is what the task must do; it may use {{candidates}}, {{job}}, "
 			+ "{{count}} and {{sync}}, filled in when it fires — e.g. \"Run matching for {{job}} with the top 5 candidates\". "
 			+ "Matching normally waits for the recruiter's approval; set autoApproveMatching (with autoApproveMaxActions, the "
-			+ "most one matching may cost) only when the recruiter asks for it to run without asking. The recruiter approves "
-			+ "the rule before it exists; it never acts on records that existed before.";
+			+ "most one matching may cost) only when the recruiter asks for it to run without asking. Likewise profile-update "
+			+ "requests: set autoApproveProfileUpdates (with autoApproveProfileUpdatesMax, the most candidates per request) only "
+			+ "when asked. The recruiter approves the rule before it exists; it never acts on records that existed before.";
 	}
 
 	@Override
@@ -61,11 +68,15 @@ public class ProposeRuleTool implements AgentTool {
 			  "name":{"type":"string","description":"Short name, e.g. Invite strong Java matches"},
 			  "goal":{"type":"string","description":"What each task does, e.g. Draft an interview invitation for {{candidates}} for {{job}}."},
 			  "trigger":{"type":"object","properties":{
-			    "type":{"type":"string","enum":["CV_ADDED","CV_SCORED","SCHEDULE","ATS_SYNC_FINISHED","JOB_NEEDS_MATCHING","REPORT_STATUS_CHANGED"]},
+			    "type":{"type":"string","enum":["CV_ADDED","CV_SCORED","SCHEDULE","ATS_SYNC_FINISHED","JOB_NEEDS_MATCHING","REPORT_STATUS_CHANGED","REPORT_STATUS_IDLE","CV_OUTDATED","JOB_CLOSED","DUPLICATE_FOUND","CANDIDATE_PROFILE_UPDATED"]},
 			    "source":{"type":"string","enum":["ANY","ATS","MANUAL"]},
 			    "jobId":{"type":"string"},
 			    "minScore":{"type":"integer","minimum":0,"maximum":100},
+			    "maxScore":{"type":"integer","minimum":0,"maximum":100},
 			    "recommendedOnly":{"type":"boolean"},
+			    "recommendations":{"type":"array","items":{"type":"string","enum":["strong_interview","interview","may_be","reject"]}},
+			    "idleDays":{"type":"integer","minimum":1,"maximum":90},
+			    "staleMonths":{"type":"integer","enum":[6,12,18,24]},
 			    "frequency":{"type":"string","enum":["DAILY","WEEKLY"]},
 			    "hour":{"type":"integer","minimum":0,"maximum":23},
 			    "weekday":{"type":"integer","minimum":1,"maximum":7},
@@ -75,7 +86,9 @@ public class ProposeRuleTool implements AgentTool {
 			   "required":["type"],"additionalProperties":false},
 			  "dailyRunCap":{"type":"integer","minimum":1,"description":"Max tasks per day (default 20)"},
 			  "autoApproveMatching":{"type":"boolean","description":"Run matching without asking the recruiter"},
-			  "autoApproveMaxActions":{"type":"integer","minimum":1,"maximum":500,"description":"Most matching actions one matching may cost without asking (default 50)"}},
+			  "autoApproveMaxActions":{"type":"integer","minimum":1,"maximum":500,"description":"Most matching actions one matching may cost without asking (default 50)"},
+			  "autoApproveProfileUpdates":{"type":"boolean","description":"Send profile-update requests without asking the recruiter"},
+			  "autoApproveProfileUpdatesMax":{"type":"integer","minimum":1,"maximum":25,"description":"Most candidates one request may cover without asking (default 10)"}},
 			 "required":["name","goal","trigger"],"additionalProperties":false}""";
 	}
 
@@ -113,6 +126,10 @@ public class ProposeRuleTool implements AgentTool {
 			card.put("autoApproveMatching", true);
 			card.put("autoApproveMaxActions", request.getAutoApproveMaxActions());
 		}
+		if (Boolean.TRUE.equals(request.getAutoApproveProfileUpdates())) {
+			card.put("autoApproveProfileUpdates", true);
+			card.put("autoApproveProfileUpdatesMax", request.getAutoApproveProfileUpdatesMax());
+		}
 		return AgentToolResult.ok(card, "agent.step.propose_rule", Map.of("name", request.getName().strip()), List.of());
 	}
 
@@ -139,13 +156,20 @@ public class ProposeRuleTool implements AgentTool {
 		request.setDailyRunCap(ToolArgs.optionalInteger(args, "dailyRunCap"));
 		request.setAutoApproveMatching(args.path("autoApproveMatching").asBoolean(false) ? Boolean.TRUE : null);
 		request.setAutoApproveMaxActions(ToolArgs.optionalInteger(args, "autoApproveMaxActions"));
+		request.setAutoApproveProfileUpdates(args.path("autoApproveProfileUpdates").asBoolean(false) ? Boolean.TRUE : null);
+		request.setAutoApproveProfileUpdatesMax(ToolArgs.optionalInteger(args, "autoApproveProfileUpdatesMax"));
 		var t = args.path("trigger");
 		var trigger = new AgentData.TriggerRequest();
 		trigger.setType(ToolArgs.text(t, "type"));
 		trigger.setSource(ToolArgs.text(t, "source"));
 		trigger.setJobPostId(ToolArgs.text(t, "jobId"));
 		trigger.setMinScore(ToolArgs.optionalInteger(t, "minScore"));
+		trigger.setMaxScore(ToolArgs.optionalInteger(t, "maxScore"));
 		trigger.setRecommendedOnly(t.path("recommendedOnly").asBoolean(false) ? Boolean.TRUE : null);
+		var verdicts = ToolArgs.list(t, "recommendations");
+		trigger.setRecommendations(verdicts.isEmpty() ? null : verdicts);
+		trigger.setIdleDays(ToolArgs.optionalInteger(t, "idleDays"));
+		trigger.setStaleMonths(ToolArgs.optionalInteger(t, "staleMonths"));
 		trigger.setFrequency(ToolArgs.text(t, "frequency"));
 		trigger.setHour(ToolArgs.optionalInteger(t, "hour"));
 		trigger.setWeekday(ToolArgs.optionalInteger(t, "weekday"));

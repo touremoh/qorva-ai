@@ -188,6 +188,10 @@ class CandidateUpdateServiceAsyncTest {
 
 		assertThat(req.getStatus()).isEqualTo(CandidateUpdateRequest.STATUS_COMPLETED);
 		assertThat(req.getPendingFileKey()).isNull();
+		// The request follows the candidate's newer CV, which is marked as their update (not a new candidate).
+		assertThat(req.getCvId()).isEqualTo("cv-new");
+		verify(mongoTemplate).updateFirst(any(org.springframework.data.mongodb.core.query.Query.class),
+			any(org.springframework.data.mongodb.core.query.Update.class), eq(ai.qorva.core.dao.entity.CV.class));
 		verify(requestRepository).save(req);
 		verify(cacheEvictor).evict(TENANT);
 	}

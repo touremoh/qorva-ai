@@ -1,10 +1,12 @@
 {
   "body" : [ {
+    "agentRunId" : null,
     "authorEmail" : "owner@a.qorva.test",
     "authorName" : "Olivia Owner",
     "createdAt" : "<ts>",
     "id" : "<id:1>",
     "lastUpdatedAt" : "<ts>",
+    "source" : null,
     "targetId" : "<id:2>",
     "targetType" : "CV",
     "text" : "Strong on distributed systems; ask about on-call experience."

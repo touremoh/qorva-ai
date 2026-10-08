@@ -301,6 +301,10 @@ public class AtsSyncService {
 			if (!JobPostService.matchingReportsNeededFor(status)) {
 				update.set("matchingReportsNeeded", false);
 			}
+			if (!Objects.equals(existing.getStatus(), status)) {
+				// What a JOB_CLOSED rule watches.
+				update.set("statusChangedAt", Instant.now());
+			}
 			boolean contentChanged = !Objects.equals(existing.getTitle(), atsJob.title());
 			if (StringUtils.hasText(atsJob.description())) {
 				var description = JobDescriptionHtml.sanitize(atsJob.description());

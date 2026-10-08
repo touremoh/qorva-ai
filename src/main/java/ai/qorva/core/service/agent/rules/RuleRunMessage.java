@@ -64,8 +64,9 @@ public record RuleRunMessage(String goal, String message, List<AgentRun.Mention>
 				: AgentRule.Trigger.SOURCE_MANUAL.equals(trigger.getSource()) ? " by upload" : "");
 			case AgentRule.TRIGGER_CV_SCORED -> "candidates were scored"
 				+ (trigger.getJobTitle() != null ? " on the job " + trigger.getJobTitle() : "")
-				+ (trigger.getMinScore() != null ? " at " + trigger.getMinScore() + " or more" : "")
-				+ (Boolean.TRUE.equals(trigger.getRecommendedOnly()) ? " and recommended for an interview" : "");
+				+ scoreRange(trigger.getMinScore(), trigger.getMaxScore())
+				+ (trigger.getRecommendations() != null ? " with the recommendation " + String.join(" or ", trigger.getRecommendations())
+				: Boolean.TRUE.equals(trigger.getRecommendedOnly()) ? " and recommended for an interview" : "");
 			case AgentRule.TRIGGER_ATS_SYNC_FINISHED -> "an ATS import finished";
 			case AgentRule.TRIGGER_SCHEDULE -> (AgentRule.Trigger.WEEKLY.equals(trigger.getFrequency()) ? "weekly" : "daily")
 				+ " schedule at " + trigger.getHour() + ":00 (" + trigger.getZoneId() + ")";
@@ -75,7 +76,33 @@ public record RuleRunMessage(String goal, String message, List<AgentRun.Mention>
 			case AgentRule.TRIGGER_REPORT_STATUS_CHANGED -> "a candidate's status changed"
 				+ (trigger.getToStatuses() != null ? " to " + String.join(" or ", trigger.getToStatuses()) : "")
 				+ (trigger.getJobTitle() != null ? " on the job " + trigger.getJobTitle() : "");
+			case AgentRule.TRIGGER_REPORT_STATUS_IDLE -> "candidates stayed in " + String.join(" or ", nullToEmpty(trigger.getToStatuses()))
+				+ " for " + trigger.getIdleDays() + " days without a status change"
+				+ (trigger.getJobTitle() != null ? " on the job " + trigger.getJobTitle() : "");
+			case AgentRule.TRIGGER_CV_OUTDATED -> "candidates' CVs became " + trigger.getStaleMonths() + " months old (outdated)"
+				+ sourceText(trigger.getSource());
+			case AgentRule.TRIGGER_JOB_CLOSED -> (trigger.getJobTitle() != null ? "the job " + trigger.getJobTitle() : "a job")
+				+ " was closed";
+			case AgentRule.TRIGGER_DUPLICATE_FOUND -> "new candidates have the same email or phone as an existing candidate"
+				+ sourceText(trigger.getSource());
+			case AgentRule.TRIGGER_CANDIDATE_PROFILE_UPDATED -> "candidates updated their own profile from a profile-update request";
 			default -> trigger.getType();
 		};
+	}
+
+	private static String scoreRange(Integer min, Integer max) {
+		if (min != null && max != null) return " between " + min + " and " + max;
+		if (min != null) return " at " + min + " or more";
+		if (max != null) return " at " + max + " or less";
+		return "";
+	}
+
+	private static String sourceText(String source) {
+		return AgentRule.Trigger.SOURCE_ATS.equals(source) ? " (imported from the ATS)"
+			: AgentRule.Trigger.SOURCE_MANUAL.equals(source) ? " (uploaded)" : "";
+	}
+
+	private static List<String> nullToEmpty(List<String> values) {
+		return values != null ? values : List.of();
 	}
 }

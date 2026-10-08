@@ -23,6 +23,13 @@ public class NoteDTO {
 	private String text;
 	private String authorName;
 
+	/** COPILOT when Copilot wrote it for its author; null for a person's own note. */
+	@JsonProperty(access = Access.READ_ONLY)
+	private String source;
+
+	@JsonProperty(access = Access.READ_ONLY)
+	private String agentRunId;
+
 	@JsonProperty(access = Access.READ_ONLY)
 	private String authorEmail;
 

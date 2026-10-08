@@ -11,6 +11,8 @@ import ai.qorva.core.exception.QorvaErrors;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.scheduler.AgentRunWorker;
 import ai.qorva.core.service.CVService;
+import ai.qorva.core.service.NoteService;
+import ai.qorva.core.enums.NoteTargetTypeEnum;
 import ai.qorva.core.service.JobPostService;
 import ai.qorva.core.service.UsageMonitoringService;
 import lombok.extern.slf4j.Slf4j;
@@ -19,6 +21,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -55,10 +58,11 @@ public class AgentRunService {
 	private final CVService cvService;
 	private final JobPostService jobPostService;
 	private final AgentRunWorker worker;
+	private final NoteService noteService;
 
 	public AgentRunService(AgentRunRepository repository, MongoTemplate mongoTemplate, AgentRunStore store,
 	                       AgentProperties properties, UsageMonitoringService usageMonitoringService,
-	                       CVService cvService, JobPostService jobPostService, AgentRunWorker worker) {
+	                       CVService cvService, JobPostService jobPostService, AgentRunWorker worker, NoteService noteService) {
 		this.repository = repository;
 		this.mongoTemplate = mongoTemplate;
 		this.store = store;
@@ -67,6 +71,7 @@ public class AgentRunService {
 		this.cvService = cvService;
 		this.jobPostService = jobPostService;
 		this.worker = worker;
+		this.noteService = noteService;
 	}
 
 	public AgentData.Availability availability(String tenantId, boolean teamView) {
@@ -147,6 +152,8 @@ public class AgentRunService {
 		run.setRuleName(rule.getName());
 		// The pre-approval as it is now: editing the rule later never changes a run already started.
 		run.setAutoApproveMaxActions(Boolean.TRUE.equals(rule.getAutoApproveMatching()) ? rule.getAutoApproveMaxActions() : null);
+		run.setAutoApproveProfileUpdatesMax(Boolean.TRUE.equals(rule.getAutoApproveProfileUpdates())
+			? rule.getAutoApproveProfileUpdatesMax() : null);
 		run.setGoal(goal);
 		run.setMentions(new ArrayList<>(mentions));
 		run.setStatus(AgentRun.STATUS_QUEUED);
@@ -400,7 +407,40 @@ public class AgentRunService {
 			mayCancel && active(run) && !run.isCancelRequested(),
 			// Only the run's own user decides: the action runs as them (their mailbox, their quota).
 			mayApprove && AgentRun.STATUS_AWAITING_APPROVAL.equals(run.getStatus()),
-			run.getCreatedAt(), run.getFinishedAt());
+			run.getCreatedAt(), run.getFinishedAt(),
+			mayApprove && run.getAnswerNoteId() == null && answerNoteTarget(run) != null, run.getAnswerNoteId());
+	}
+
+	/**
+	 * Where a run's answer would be kept as a note: a completed candidate answer (ask_about_candidate) not saved by the
+	 * tool already — on its match report when there is one, else on the candidate. Null for any other run.
+	 */
+	static AgentRun.Link answerNoteTarget(AgentRun run) {
+		if (!AgentRun.STATUS_COMPLETED.equals(run.getStatus()) || run.getFinalAnswer() == null || run.getFinalAnswer().isBlank()) return null;
+		var step = run.getSteps().stream()
+			.filter(s -> "ask_about_candidate".equals(s.getTool()) && AgentRun.Step.STATE_OK.equals(s.getState()))
+			.reduce((first, second) -> second).orElse(null);
+		if (step == null || "agent.step.ask_about_candidate_saved".equals(step.getSummaryKey())) return null;
+		var report = step.getLinks().stream().filter(l -> "REPORT".equals(l.getType())).findFirst();
+		return report.orElseGet(() -> step.getLinks().stream().filter(l -> "CV".equals(l.getType())).findFirst().orElse(null));
+	}
+
+	/**
+	 * "Save as note": keeps the run's own candidate answer — the text stored on the run, never one sent by the client —
+	 * as a Copilot note for its user. Once per run; needs the right to write notes on that record.
+	 */
+	public AgentData.RunView saveAnswerAsNote(String tenantId, String userEmail, String runId) throws QorvaException {
+		var run = visible(tenantId, userEmail, false, runId);
+		var target = answerNoteTarget(run);
+		if (target == null || run.getAnswerNoteId() != null) throw QorvaErrors.conflict(QorvaErrorCodes.AGENT_ACTION_STALE);
+		var type = "REPORT".equals(target.getType()) ? NoteTargetTypeEnum.MATCHING_REPORT : NoteTargetTypeEnum.CV;
+		if (!noteService.canWrite(type)) throw QorvaErrors.forbidden(QorvaErrorCodes.HTTP_FORBIDDEN);
+		var note = noteService.createFromCopilot(tenantId, userEmail, type, target.getId(), run.getFinalAnswer(), run.getId());
+		mongoTemplate.updateFirst(Query.query(Criteria.where("_id").is(new ObjectId(run.getId())).and("tenantId").is(new ObjectId(tenantId))),
+			new Update().set("answerNoteId", note.getId()), AgentRun.class);
+		run.setAnswerNoteId(note.getId());
+		log.info("agent-run {} answer saved as note {} by {}", run.getId(), note.getId(), userEmail);
+		return view(run, true);
 	}
 
 	private static AgentData.RunSummary summary(AgentRun run, boolean mayCancel) {

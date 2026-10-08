@@ -62,6 +62,8 @@ public class AgentRun implements QorvaEntity {
 	private String ruleName;
 	/** RULE runs: the rule's matching pre-approval at the time it fired — max actions per matching, null = none. */
 	private Integer autoApproveMaxActions;
+	/** RULE runs: the rule's profile-update pre-approval at the time it fired — max candidates per request, null = none. */
+	private Integer autoApproveProfileUpdatesMax;
 	/** The recruiter's time zone (from the browser), used when a chat proposes a scheduled rule. */
 	private String timeZone;
 
@@ -75,6 +77,8 @@ public class AgentRun implements QorvaEntity {
 	/** Model conversation, needed to continue the run; never exposed through the API. */
 	private List<HistoryMessage> history = new ArrayList<>();
 	private String finalAnswer;
+	/** The note the user saved this run's candidate answer as ("Save as note"); null until then. */
+	private String answerNoteId;
 	/** Charts, metrics and candidate cards of a library analysis answer; null for other answers. */
 	private AnswerBlocks blocks;
 	/** Talent Intelligence state after this run's library analysis, read by the next one so follow-ups keep their filters. */

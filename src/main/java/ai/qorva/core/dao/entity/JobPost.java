@@ -31,6 +31,9 @@ public class JobPost implements QorvaEntity {
     private String tenantId;
     private String status;
 
+    /** When {@code status} last changed (open ↔ closed); null for jobs never opened or closed since 2026-10-08. */
+    private Instant statusChangedAt;
+
     private ScoringRules scoringRules;
     private Boolean matchingReportsNeeded;
 

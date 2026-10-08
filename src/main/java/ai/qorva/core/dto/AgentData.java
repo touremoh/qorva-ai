@@ -93,7 +93,11 @@ public final class AgentData {
 		boolean canCancel,
 		boolean canApprove,
 		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC") Instant createdAt,
-		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC") Instant finishedAt) {}
+		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC") Instant finishedAt,
+		/** A candidate answer its user may keep as a note ("Save as note"), not saved yet. */
+		boolean canSaveAnswerAsNote,
+		/** The note it was saved as. */
+		String answerNoteId) {}
 
 	/** Activity row: a run without its steps and answer. */
 	public record RunSummary(
@@ -139,8 +143,16 @@ public final class AgentData {
 		private String connectionId;
 		/** JOB_NEEDS_MATCHING: stale reasons that fire it; null or empty = all. */
 		private List<String> staleReasons;
-		/** REPORT_STATUS_CHANGED: statuses that fire it; null or empty = any. */
+		/** REPORT_STATUS_CHANGED: statuses that fire it; REPORT_STATUS_IDLE: statuses watched; null or empty = any. */
 		private List<String> toStatuses;
+		/** CV_SCORED: highest final score that fires it. */
+		private Integer maxScore;
+		/** CV_SCORED: report verdicts that fire it; null or empty = any. */
+		private List<String> recommendations;
+		/** REPORT_STATUS_IDLE: days without a status change (1–90). */
+		private Integer idleDays;
+		/** CV_OUTDATED: content age in months (6, 12, 18 or 24). */
+		private Integer staleMonths;
 	}
 
 	@Getter
@@ -155,12 +167,16 @@ public final class AgentData {
 		/** Run matching without asking, up to {@code autoApproveMaxActions} actions per matching. */
 		private Boolean autoApproveMatching;
 		private Integer autoApproveMaxActions;
+		/** Send profile-update requests without asking, up to {@code autoApproveProfileUpdatesMax} candidates per request. */
+		private Boolean autoApproveProfileUpdates;
+		private Integer autoApproveProfileUpdatesMax;
 	}
 
 	public record TriggerView(String type, String source, String jobPostId, String jobTitle, Integer minScore,
 	                          Boolean recommendedOnly, String frequency, Integer hour, Integer weekday, String zoneId,
 	                          String connectionId, String connectionName, List<String> staleReasons,
-	                          List<String> toStatuses) {}
+	                          List<String> toStatuses, Integer maxScore, List<String> recommendations, Integer idleDays,
+	                          Integer staleMonths) {}
 
 	public record RuleView(
 		String id,
@@ -171,6 +187,8 @@ public final class AgentData {
 		int dailyRunCap,
 		boolean autoApproveMatching,
 		Integer autoApproveMaxActions,
+		boolean autoApproveProfileUpdates,
+		Integer autoApproveProfileUpdatesMax,
 		String status,
 		String pausedReason,
 		int runsToday,

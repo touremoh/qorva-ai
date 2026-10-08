@@ -87,6 +87,12 @@ public class AgentController {
 		return ResponseEntity.ok(agentRunService.get(currentTenantId(), currentUsername(), canViewTeam(), id));
 	}
 
+	/** "Save as note": keeps the run's candidate answer as a Copilot note on the report (or the candidate). */
+	@PostMapping("/runs/{id}/answer-note")
+	public ResponseEntity<AgentData.RunView> saveAnswerAsNote(@PathVariable String id) throws QorvaException {
+		return ResponseEntity.ok(agentRunService.saveAnswerAsNote(currentTenantId(), currentUsername(), id));
+	}
+
 	@PostMapping("/runs/{id}/cancel")
 	public ResponseEntity<AgentData.RunView> cancel(@PathVariable String id) throws QorvaException {
 		return ResponseEntity.ok(agentRunService.cancel(currentTenantId(), currentUsername(), canViewTeam(), id));

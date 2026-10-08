@@ -79,6 +79,7 @@
           } ]
         },
         "status" : "open",
+        "statusChangedAt" : null,
         "tenantId" : "<id:2>",
         "title" : "Junior Full-Stack Engineer (React/Node.js)"
       }, {
@@ -158,6 +159,7 @@
           } ]
         },
         "status" : "open",
+        "statusChangedAt" : null,
         "tenantId" : "<id:2>",
         "title" : "Technical Product Manager"
       }, {
@@ -243,6 +245,7 @@
           } ]
         },
         "status" : "open",
+        "statusChangedAt" : null,
         "tenantId" : "<id:2>",
         "title" : "DevOps / Site Reliability Engineer"
       }, {
@@ -328,6 +331,7 @@
           } ]
         },
         "status" : "open",
+        "statusChangedAt" : null,
         "tenantId" : "<id:2>",
         "title" : "Data Engineer (Python/Airflow)"
       }, {
@@ -407,6 +411,7 @@
           } ]
         },
         "status" : "open",
+        "statusChangedAt" : null,
         "tenantId" : "<id:2>",
         "title" : "Senior Backend Engineer (Java/Spring)"
       } ],

@@ -74,6 +74,11 @@ public class CV implements QorvaEntity {
     /** Archived CVs are excluded from quality reporting and matching. */
     private Boolean archived;
 
+    /** How the CV entered the library when it is not a plain upload or import: {@link #ORIGIN_CANDIDATE_UPDATE}, or null. */
+    private String origin;
+    /** A newer CV the candidate uploaded through a profile-update request; it replaced their old one. */
+    public static final String ORIGIN_CANDIDATE_UPDATE = "CANDIDATE_UPDATE";
+
     /** Source links when this CV was imported from an external ATS (see AtsRef). */
     private List<AtsRef> atsRefs;
 

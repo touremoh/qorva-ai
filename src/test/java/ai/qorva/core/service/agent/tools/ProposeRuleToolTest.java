@@ -79,7 +79,7 @@ class ProposeRuleToolTest {
 
 	@Test
 	void approvalCreatesTheRuleAsTheRecruiter() throws Exception {
-		var view = new AgentData.RuleView("r1", "Monday digest", "owner@a.test", null, "g", 20, false, null, "ACTIVE", null, 0, 0,
+		var view = new AgentData.RuleView("r1", "Monday digest", "owner@a.test", null, "g", 20, false, null, false, null, "ACTIVE", null, 0, 0,
 			null, null, null, null, true, true);
 		when(ruleService.create(eq(TENANT), eq("owner@a.test"), eq("en"), any())).thenReturn(view);
 		var result = new ProposeRuleTool(ruleService).execute(JSON.readTree(ARGS), CHAT, new AgentApproval(null, null));

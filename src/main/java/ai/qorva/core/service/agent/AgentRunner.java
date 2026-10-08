@@ -30,7 +30,6 @@ import java.time.ZoneOffset;
 import ai.qorva.core.utils.SupportedLanguages;
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * The agent loop for one claimed run: ask the model, execute the tools it calls, feed the results
@@ -359,20 +358,26 @@ public class AgentRunner {
 	}
 
 	/**
-	 * Whether a rule run may carry out this approval-tier call without asking: only matching (start_screening),
-	 * only when its rule pre-approved matching, and only when the preview says it costs no more than the rule's cap.
-	 * Anything else — another tool, a dearer matching, a chat run — waits for the recruiter as usual.
+	 * Whether a rule run may carry out this approval-tier call without asking. Only in rule runs whose rule pre-approved
+	 * that kind of action, and only within the rule's cap as the preview states it:
+	 * <ul>
+	 *   <li>matching (start_screening): at most {@code autoApproveMaxActions} matching actions;</li>
+	 *   <li>profile-update requests (request_profile_update): at most {@code autoApproveProfileUpdatesMax} candidates
+	 *   actually asked.</li>
+	 * </ul>
+	 * Anything else — another tool, a dearer call, a chat run — waits for the recruiter as usual.
 	 */
 	static boolean preApproved(AgentRun run, AgentTool tool, AgentToolResult preview) {
-		if (!AgentRun.ORIGIN_RULE.equals(run.getOrigin()) || run.getAutoApproveMaxActions() == null) return false;
-		if (!PRE_APPROVABLE_TOOLS.contains(tool.name())) return false;
-		return preview.data() instanceof Map<?, ?> card
-			&& card.get("estimatedActions") instanceof Number cost
-			&& cost.intValue() <= run.getAutoApproveMaxActions();
+		if (!AgentRun.ORIGIN_RULE.equals(run.getOrigin()) || !(preview.data() instanceof Map<?, ?> card)) return false;
+		return switch (tool.name()) {
+			case "start_screening" -> run.getAutoApproveMaxActions() != null
+				&& card.get("estimatedActions") instanceof Number cost && cost.intValue() <= run.getAutoApproveMaxActions();
+			case "request_profile_update" -> run.getAutoApproveProfileUpdatesMax() != null
+				&& card.get("toSend") instanceof Number count && count.intValue() <= run.getAutoApproveProfileUpdatesMax();
+			default -> false;
+		};
 	}
 
-	/** Tools a rule may pre-approve. Matching only: its cost is known up front and bounded by the plan's Top N. */
-	static final Set<String> PRE_APPROVABLE_TOOLS = Set.of("start_screening");
 
 	private AgentToolResult executePreApproved(AgentTool tool, AssistantMessage.ToolCall call, AgentToolContext ctx) {
 		try {
@@ -569,6 +574,9 @@ public class AgentRunner {
 			if (run.getAutoApproveMaxActions() != null) {
 				prompt += PRE_APPROVED_BLOCK.replace("{{max}}", String.valueOf(run.getAutoApproveMaxActions()));
 			}
+			if (run.getAutoApproveProfileUpdatesMax() != null) {
+				prompt += PRE_APPROVED_PROFILE_UPDATES_BLOCK.replace("{{max}}", String.valueOf(run.getAutoApproveProfileUpdatesMax()));
+			}
 		}
 		return prompt;
 	}
@@ -576,6 +584,11 @@ public class AgentRunner {
 	private static final String PRE_APPROVED_BLOCK = """
 		- The recruiter pre-approved matching for this rule: start_screening runs at once when it costs at most
 		  {{max}} matching actions (dearer ones wait for approval). Pass the Top N the goal asks for as topN.
+		""";
+
+	private static final String PRE_APPROVED_PROFILE_UPDATES_BLOCK = """
+		- The recruiter pre-approved profile-update requests for this rule: request_profile_update runs at once when it
+		  asks at most {{max}} candidates (larger batches wait for approval).
 		""";
 
 	private static final String RULE_BLOCK = """

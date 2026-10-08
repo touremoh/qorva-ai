@@ -25,6 +25,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.util.List;
 
@@ -101,6 +102,17 @@ class AgentRuleIntegrationTest extends AbstractIntegrationTest {
 	private void touch(String collection, String field, List<String> ids) {
 		mongo.updateMulti(Query.query(Criteria.where("_id").in(ids.stream().map(ObjectId::new).toList())),
 			new Update().set(field, Instant.now()), collection);
+	}
+
+	/** CVs created {@code age} ago: new CV triggers only look at CVs older than their settle time. */
+	private void touchSettled(List<String> cvIds, Duration age) {
+		mongo.updateMulti(Query.query(Criteria.where("_id").in(cvIds.stream().map(ObjectId::new).toList())),
+			new Update().set("createdAt", Instant.now().minus(age)), "cvs");
+	}
+
+	private void backdateWatermark(String ruleId, Duration by) {
+		mongo.updateFirst(Query.query(Criteria.where("_id").is(new ObjectId(ruleId))),
+			new Update().set("watermark", Instant.now().minus(by)), "agent_rules");
 	}
 
 	private List<AgentRun> ruleRuns() {
@@ -213,8 +225,10 @@ class AgentRuleIntegrationTest extends AbstractIntegrationTest {
 		var id = createRule(owner, """
 			{"name":"Tag new CVs","goalTemplate":"Tag {{count}} new candidates.","dailyRunCap":1,"trigger":{"type":"CV_ADDED"}}""")
 			.path("id").asText();
+		// New CVs are looked at once settled (a minute old): start the rule earlier and age the CVs past that.
+		backdateWatermark(id, Duration.ofMinutes(5));
 
-		touch("cvs", "createdAt", a.cvIds().subList(0, 2));
+		touchSettled(a.cvIds().subList(0, 2), Duration.ofMinutes(3));
 		tick();
 		var runs = ruleRuns();
 		assertThat(runs).hasSize(1);
@@ -223,7 +237,7 @@ class AgentRuleIntegrationTest extends AbstractIntegrationTest {
 
 		awaitRuleRunsIdle();
 		mongo.updateMulti(new Query(), new Update().set("status", AgentRun.STATUS_COMPLETED), AgentRun.class);
-		touch("cvs", "createdAt", a.cvIds().subList(2, 3));
+		touchSettled(a.cvIds().subList(2, 3), Duration.ofMinutes(2));
 		tick();
 		assertThat(ruleRuns()).hasSize(1);
 		assertThat(rule(id).getSkippedToday()).isEqualTo(1);

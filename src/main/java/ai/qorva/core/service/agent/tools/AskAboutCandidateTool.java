@@ -6,6 +6,8 @@ import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.service.JobPostService;
+import ai.qorva.core.service.NoteService;
+import ai.qorva.core.enums.NoteTargetTypeEnum;
 import ai.qorva.core.service.UsageMonitoringService;
 import ai.qorva.core.service.agent.AgentRiskTier;
 import ai.qorva.core.service.agent.AgentRunStore;
@@ -42,14 +44,16 @@ public class AskAboutCandidateTool implements AgentTool {
 	private final CVService cvService;
 	private final JobPostService jobPostService;
 	private final UsageMonitoringService usageMonitoringService;
+	private final NoteService noteService;
 
 	public AskAboutCandidateTool(CandidateAnswerEngine engine, AgentRunStore store, CVService cvService,
-	                             JobPostService jobPostService, UsageMonitoringService usageMonitoringService) {
+	                             JobPostService jobPostService, UsageMonitoringService usageMonitoringService, NoteService noteService) {
 		this.engine = engine;
 		this.store = store;
 		this.cvService = cvService;
 		this.jobPostService = jobPostService;
 		this.usageMonitoringService = usageMonitoringService;
+		this.noteService = noteService;
 	}
 
 	@Override
@@ -62,13 +66,19 @@ public class AskAboutCandidateTool implements AgentTool {
 		return "Answer the recruiter's question about one candidate, usually for one job: fit, strengths, gaps, red flags, "
 			+ "the screening score, interview questions. Reads the whole CV, the job with its scoring rules and the screening "
 			+ "report. Its answer goes to the recruiter as is and ends your work. cvId and jobId default to the conversation "
-			+ "focus, then to the mentioned candidate and job.";
+			+ "focus, then to the mentioned candidate and job. saveAsNote keeps the answer as a note on the candidate's match "
+			+ "report (e.g. an interview plan); in a task started by a rule, always set it — nobody reads the answer there — and "
+			+ "call this once per candidate: a saved answer does not end your work, you get a short confirmation instead. "
+			+ "question (rule tasks only) is what to ask about this candidate, taken from the rule's goal.";
 	}
 
 	@Override
 	public String inputSchema() {
 		return """
-			{"type":"object","properties":{"cvId":{"type":"string"},"jobId":{"type":"string"}},"additionalProperties":false}""";
+			{"type":"object","properties":{"cvId":{"type":"string"},"jobId":{"type":"string"},
+			  "saveAsNote":{"type":"boolean","description":"Keep the answer as a note on the candidate's match report"},
+			  "question":{"type":"string","maxLength":1000,"description":"Rule tasks only: the question about this candidate"}},
+			 "additionalProperties":false}""";
 	}
 
 	@Override
@@ -81,10 +91,10 @@ public class AskAboutCandidateTool implements AgentTool {
 		return Set.of(UserActionsEnum.VIEW_CV, UserActionsEnum.VIEW_JOB);
 	}
 
-	/** Chat only: a rule's run reports what it did, nobody reads an answer there. */
+	/** Chat, and rule tasks, which save the answer as a note (nobody reads a rule task's answer). */
 	@Override
 	public boolean available(AgentToolContext ctx) {
-		return AgentRun.ORIGIN_CHAT.equals(ctx.origin());
+		return AgentRun.ORIGIN_CHAT.equals(ctx.origin()) || AgentRun.ORIGIN_RULE.equals(ctx.origin());
 	}
 
 	@Override
@@ -104,13 +114,22 @@ public class AskAboutCandidateTool implements AgentTool {
 			return AgentToolResult.error(LIMIT_REACHED);
 		}
 
+		boolean fromRule = AgentRun.ORIGIN_RULE.equals(ctx.origin());
+		boolean save = args.path("saveAsNote").asBoolean(false) || fromRule;
+		if (save && !noteService.canWrite(NoteTargetTypeEnum.MATCHING_REPORT)) {
+			return AgentToolResult.error("The recruiter can't add notes to match reports, so the answer can't be saved.");
+		}
+		// The recruiter's own words in chat; in a rule task, the rule's question about this candidate.
+		var question = fromRule && ToolArgs.text(args, "question") != null
+			? ToolArgs.truncate(ToolArgs.text(args, "question"), 1000) : run.getGoal();
+
 		// Tenant-scoped lookups: an id from another tenant is simply not found.
 		var cv = cvService.findOneById(cvId);
 		var job = jobPostService.findOneById(jobId);
 		CandidateAnswerEngine.Answer answer;
 		try {
 			answer = engine.answer(ctx.tenantId(), cv.getId(), job.getId(), AgentRunner.languageName(ctx.language()),
-				earlierTurns(store.earlierInConversation(run)), run.getGoal());
+				fromRule ? List.of() : earlierTurns(store.earlierInConversation(run)), question);
 		} catch (QorvaException e) {
 			if (QorvaErrorCodes.AI_ANSWER_TOO_LONG.equals(e.getMessage())) return AgentToolResult.error(TOO_LONG);
 			throw e;
@@ -123,9 +142,21 @@ public class AskAboutCandidateTool implements AgentTool {
 		if (answer.matchingReportId() != null) {
 			links.add(new AgentRun.Link("REPORT", answer.matchingReportId(), job.getTitle()));
 		}
+		var params = Map.of("name", name != null ? name : "", "job", job.getTitle() != null ? job.getTitle() : "");
+		if (save) {
+			// The report when there is one (the answer is about this candidate for this job), else the candidate.
+			var type = answer.matchingReportId() != null ? NoteTargetTypeEnum.MATCHING_REPORT : NoteTargetTypeEnum.CV;
+			var targetId = answer.matchingReportId() != null ? answer.matchingReportId() : cv.getId();
+			noteService.createFromCopilot(ctx.tenantId(), ctx.userEmail(), type, targetId, answer.text(), ctx.runId());
+			if (fromRule) {
+				// Not the run's answer: the task goes on with the next candidate, and the model gets a confirmation only.
+				return AgentToolResult.ok(Map.of("savedAsNote", true, "on", type.name(), "excerpt", ToolArgs.truncate(answer.text(), 300)),
+					"agent.step.ask_about_candidate_saved", params, links);
+			}
+		}
 		return AgentToolResult.answer(new AgentToolResult.AgentAnswer(answer.text(), null, null),
-			Map.of("answer", answer.text()), "agent.step.ask_about_candidate",
-			Map.of("name", name != null ? name : "", "job", job.getTitle() != null ? job.getTitle() : ""), links);
+			Map.of("answer", answer.text(), "savedAsNote", save), save ? "agent.step.ask_about_candidate_saved" : "agent.step.ask_about_candidate",
+			params, links);
 	}
 
 	/** The argument, else the focus, else the only mentioned record of that type. */
