@@ -45,6 +45,13 @@ public class AgentRuleService {
 	/** Pre-approved matching: most actions one matching may cost without asking, and the default when unset. */
 	static final int MAX_AUTO_APPROVE_ACTIONS = 500;
 	static final int DEFAULT_AUTO_APPROVE_ACTIONS = 50;
+	/** Pre-approved profile-update requests: most candidates one request may cover without asking, and the default. */
+	static final int MAX_AUTO_APPROVE_PROFILE_UPDATES = 25;
+	static final int DEFAULT_AUTO_APPROVE_PROFILE_UPDATES = 10;
+	/** Report verdicts (Matching_report_response_format.json). */
+	public static final List<String> RECOMMENDATIONS = List.of("strong_interview", "interview", "may_be", "reject");
+	static final int MAX_IDLE_DAYS = 90;
+	public static final List<Integer> STALE_MONTHS = List.of(6, 12, 18, 24);
 
 	private final AgentRuleRepository repository;
 	private final AgentRuleFiringRepository firings;
@@ -182,8 +189,17 @@ public class AgentRuleService {
 		rule.setGoalTemplate(goal);
 		rule.setDailyRunCap(cap);
 		rule.setTrigger(trigger);
+		boolean autoProfileUpdates = Boolean.TRUE.equals(request.getAutoApproveProfileUpdates());
+		Integer maxProfileUpdates = null;
+		if (autoProfileUpdates) {
+			maxProfileUpdates = request.getAutoApproveProfileUpdatesMax() != null
+				? request.getAutoApproveProfileUpdatesMax() : DEFAULT_AUTO_APPROVE_PROFILE_UPDATES;
+			if (maxProfileUpdates < 1 || maxProfileUpdates > MAX_AUTO_APPROVE_PROFILE_UPDATES) throw invalid();
+		}
 		rule.setAutoApproveMatching(autoApprove ? Boolean.TRUE : null);
 		rule.setAutoApproveMaxActions(maxActions);
+		rule.setAutoApproveProfileUpdates(autoProfileUpdates ? Boolean.TRUE : null);
+		rule.setAutoApproveProfileUpdatesMax(maxProfileUpdates);
 	}
 
 	private AgentRule.Trigger trigger(AgentData.TriggerRequest request) throws QorvaException {
@@ -191,24 +207,26 @@ public class AgentRuleService {
 		var trigger = new AgentRule.Trigger();
 		trigger.setType(request.getType());
 		switch (request.getType()) {
-			case AgentRule.TRIGGER_CV_ADDED -> {
-				var source = request.getSource() == null ? AgentRule.Trigger.SOURCE_ANY : request.getSource();
-				if (!List.of(AgentRule.Trigger.SOURCE_ANY, AgentRule.Trigger.SOURCE_ATS, AgentRule.Trigger.SOURCE_MANUAL).contains(source)) {
+			case AgentRule.TRIGGER_CV_ADDED, AgentRule.TRIGGER_DUPLICATE_FOUND -> trigger.setSource(source(request.getSource()));
+			case AgentRule.TRIGGER_CV_SCORED -> {
+				var min = request.getMinScore();
+				var max = request.getMaxScore();
+				if ((min != null && (min < 0 || min > 100)) || (max != null && (max < 0 || max > 100))
+					|| (min != null && max != null && min > max)) {
 					throw invalid();
 				}
-				trigger.setSource(source);
-			}
-			case AgentRule.TRIGGER_CV_SCORED -> {
-				if (request.getMinScore() != null && (request.getMinScore() < 0 || request.getMinScore() > 100)) throw invalid();
-				trigger.setMinScore(request.getMinScore());
-				trigger.setRecommendedOnly(Boolean.TRUE.equals(request.getRecommendedOnly()) ? Boolean.TRUE : null);
-				var jobId = trim(request.getJobPostId());
-				if (jobId != null) {
-					var job = jobPostService.findOneById(validId(jobId));
-					if (!JobPostStatusEnum.OPEN.getStatus().equals(job.getStatus())) throw invalid();
-					trigger.setJobPostId(job.getId());
-					trigger.setJobTitle(job.getTitle());
+				trigger.setMinScore(min);
+				trigger.setMaxScore(max);
+				var verdicts = request.getRecommendations() == null ? List.<String>of()
+					: request.getRecommendations().stream().filter(Objects::nonNull).map(v -> v.strip().toLowerCase(Locale.ROOT)).distinct().toList();
+				if (!RECOMMENDATIONS.containsAll(verdicts)) throw invalid();
+				if (!verdicts.isEmpty()) {
+					// Every verdict picked is the same as none: store null, "any verdict".
+					trigger.setRecommendations(verdicts.containsAll(RECOMMENDATIONS) ? null : verdicts);
+				} else {
+					trigger.setRecommendedOnly(Boolean.TRUE.equals(request.getRecommendedOnly()) ? Boolean.TRUE : null);
 				}
+				openJob(trigger, request.getJobPostId());
 			}
 			case AgentRule.TRIGGER_SCHEDULE -> {
 				var frequency = request.getFrequency() == null ? AgentRule.Trigger.DAILY : request.getFrequency();
@@ -239,30 +257,71 @@ public class AgentRuleService {
 				if (!known.containsAll(reasons)) throw invalid();
 				// Every reason picked is the same as none picked: store null, "all of them".
 				trigger.setStaleReasons(reasons.isEmpty() || reasons.containsAll(known) ? null : reasons);
-				var jobId = trim(request.getJobPostId());
-				if (jobId != null) {
-					var job = jobPostService.findOneById(validId(jobId));
-					if (!JobPostStatusEnum.OPEN.getStatus().equals(job.getStatus())) throw invalid();
-					trigger.setJobPostId(job.getId());
-					trigger.setJobTitle(job.getTitle());
-				}
+				openJob(trigger, request.getJobPostId());
 			}
 			case AgentRule.TRIGGER_REPORT_STATUS_CHANGED -> {
-				var statuses = request.getToStatuses() == null ? List.<String>of()
-					: request.getToStatuses().stream().filter(Objects::nonNull).map(s -> s.strip().toUpperCase(Locale.ROOT)).distinct().toList();
+				var statuses = statuses(request.getToStatuses());
 				var known = Arrays.stream(ApplicationStatusEnum.values()).map(ApplicationStatusEnum::getStatus).toList();
-				if (!known.containsAll(statuses)) throw invalid();
 				trigger.setToStatuses(statuses.isEmpty() || statuses.containsAll(known) ? null : statuses);
-				var jobId = trim(request.getJobPostId());
-				if (jobId != null) {
-					var job = jobPostService.findOneById(validId(jobId));
-					trigger.setJobPostId(job.getId());
-					trigger.setJobTitle(job.getTitle());
-				}
+				anyJob(trigger, request.getJobPostId());
+			}
+			case AgentRule.TRIGGER_REPORT_STATUS_IDLE -> {
+				// The statuses watched must be named: "idle in any status" would sweep the whole pipeline.
+				var statuses = statuses(request.getToStatuses());
+				var days = request.getIdleDays();
+				if (statuses.isEmpty() || days == null || days < 1 || days > MAX_IDLE_DAYS) throw invalid();
+				trigger.setToStatuses(statuses);
+				trigger.setIdleDays(days);
+				anyJob(trigger, request.getJobPostId());
+			}
+			case AgentRule.TRIGGER_CV_OUTDATED -> {
+				var months = request.getStaleMonths() == null ? 18 : request.getStaleMonths();
+				if (!STALE_MONTHS.contains(months)) throw invalid();
+				trigger.setStaleMonths(months);
+				trigger.setSource(source(request.getSource()));
+			}
+			case AgentRule.TRIGGER_JOB_CLOSED -> anyJob(trigger, request.getJobPostId());
+			case AgentRule.TRIGGER_CANDIDATE_PROFILE_UPDATED -> {
+				// Nothing to choose: every completed profile update.
 			}
 			default -> throw invalid();
 		}
 		return trigger;
+	}
+
+	private static String source(String requested) throws QorvaException {
+		var source = requested == null ? AgentRule.Trigger.SOURCE_ANY : requested;
+		if (!List.of(AgentRule.Trigger.SOURCE_ANY, AgentRule.Trigger.SOURCE_ATS, AgentRule.Trigger.SOURCE_MANUAL).contains(source)) {
+			throw invalid();
+		}
+		return source;
+	}
+
+	private static List<String> statuses(List<String> requested) throws QorvaException {
+		var statuses = requested == null ? List.<String>of()
+			: requested.stream().filter(Objects::nonNull).map(s -> s.strip().toUpperCase(Locale.ROOT)).distinct().toList();
+		var known = Arrays.stream(ApplicationStatusEnum.values()).map(ApplicationStatusEnum::getStatus).toList();
+		if (!known.containsAll(statuses)) throw invalid();
+		return statuses;
+	}
+
+	/** One open job, when given (matching only ever runs on open jobs). */
+	private void openJob(AgentRule.Trigger trigger, String requestedJobId) throws QorvaException {
+		var jobId = trim(requestedJobId);
+		if (jobId == null) return;
+		var job = jobPostService.findOneById(validId(jobId));
+		if (!JobPostStatusEnum.OPEN.getStatus().equals(job.getStatus())) throw invalid();
+		trigger.setJobPostId(job.getId());
+		trigger.setJobTitle(job.getTitle());
+	}
+
+	/** One job, open or closed, when given. */
+	private void anyJob(AgentRule.Trigger trigger, String requestedJobId) throws QorvaException {
+		var jobId = trim(requestedJobId);
+		if (jobId == null) return;
+		var job = jobPostService.findOneById(validId(jobId));
+		trigger.setJobPostId(job.getId());
+		trigger.setJobTitle(job.getTitle());
 	}
 
 	/** The job or connection a paused rule points to must exist again before it can resume. */
@@ -293,13 +352,16 @@ public class AgentRuleService {
 		return id;
 	}
 
-	private static boolean sameTrigger(AgentRule.Trigger a, AgentRule.Trigger b) {
+	/** Whether an edit kept the rule watching the same thing; any watched field counts (names and titles do not). */
+	static boolean sameTrigger(AgentRule.Trigger a, AgentRule.Trigger b) {
 		return a != null && b != null && Objects.equals(a.getType(), b.getType()) && Objects.equals(a.getSource(), b.getSource())
 			&& Objects.equals(a.getJobPostId(), b.getJobPostId()) && Objects.equals(a.getMinScore(), b.getMinScore())
-			&& Objects.equals(a.getRecommendedOnly(), b.getRecommendedOnly()) && Objects.equals(a.getFrequency(), b.getFrequency())
+			&& Objects.equals(a.getMaxScore(), b.getMaxScore()) && Objects.equals(a.getRecommendedOnly(), b.getRecommendedOnly())
+			&& Objects.equals(a.getRecommendations(), b.getRecommendations()) && Objects.equals(a.getFrequency(), b.getFrequency())
 			&& Objects.equals(a.getHour(), b.getHour()) && Objects.equals(a.getWeekday(), b.getWeekday())
 			&& Objects.equals(a.getZoneId(), b.getZoneId()) && Objects.equals(a.getConnectionId(), b.getConnectionId())
-			&& Objects.equals(a.getStaleReasons(), b.getStaleReasons());
+			&& Objects.equals(a.getStaleReasons(), b.getStaleReasons()) && Objects.equals(a.getToStatuses(), b.getToStatuses())
+			&& Objects.equals(a.getIdleDays(), b.getIdleDays()) && Objects.equals(a.getStaleMonths(), b.getStaleMonths());
 	}
 
 	private AgentRule visible(String tenantId, String userEmail, boolean team, String id) throws QorvaException {
@@ -332,7 +394,8 @@ public class AgentRuleService {
 	public static AgentData.TriggerView triggerView(AgentRule.Trigger t) {
 		return new AgentData.TriggerView(t.getType(), t.getSource(), t.getJobPostId(), t.getJobTitle(), t.getMinScore(),
 			t.getRecommendedOnly(), t.getFrequency(), t.getHour(), t.getWeekday(), t.getZoneId(), t.getConnectionId(),
-			t.getConnectionName(), t.getStaleReasons(), t.getToStatuses());
+			t.getConnectionName(), t.getStaleReasons(), t.getToStatuses(), t.getMaxScore(), t.getRecommendations(), t.getIdleDays(),
+			t.getStaleMonths());
 	}
 
 	static AgentData.RuleView view(AgentRule rule, String userEmail, boolean team) {
@@ -341,7 +404,8 @@ public class AgentRuleService {
 		boolean countsToday = today.equals(rule.getCountersDay());
 		return new AgentData.RuleView(rule.getId(), rule.getName(), rule.getOwnerEmail(), triggerView(rule.getTrigger()),
 			rule.getGoalTemplate(), rule.getDailyRunCap(), Boolean.TRUE.equals(rule.getAutoApproveMatching()),
-			rule.getAutoApproveMaxActions(), rule.getStatus(), rule.getPausedReason(),
+			rule.getAutoApproveMaxActions(), Boolean.TRUE.equals(rule.getAutoApproveProfileUpdates()),
+			rule.getAutoApproveProfileUpdatesMax(), rule.getStatus(), rule.getPausedReason(),
 			countsToday ? rule.getRunsToday() : 0, countsToday ? rule.getSkippedToday() : 0, rule.getLastRunId(),
 			rule.getLastFiredAt(), rule.getNextRunAt(), rule.getCreatedAt(), mine, mine || team);
 	}

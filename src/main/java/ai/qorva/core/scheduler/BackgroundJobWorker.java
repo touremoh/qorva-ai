@@ -9,7 +9,7 @@ import ai.qorva.core.enums.QualityIssueKeyEnum;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.service.CVService;
 import ai.qorva.core.service.CandidateUpdateEmailService;
-import ai.qorva.core.service.CandidateUpdateService;
+import ai.qorva.core.service.CandidateUpdateRequestSender;
 import ai.qorva.core.service.MatchingRunService;
 import ai.qorva.core.service.LibraryQualityCacheEvictor;
 import ai.qorva.core.service.OpenAIService;
@@ -76,8 +76,7 @@ public class BackgroundJobWorker {
 	private final OpenAIResultMapper openAIResultMapper;
 	private final UsageMonitoringService usageMonitoringService;
 	private final LibraryQualityCacheEvictor cacheEvictor;
-	private final CandidateUpdateService candidateUpdateService;
-	private final CandidateUpdateEmailService candidateUpdateEmailService;
+	private final CandidateUpdateRequestSender requestSender;
 	private final TenantService tenantService;
 	private final UserService userService;
 	private final S3StorageService s3StorageService;
@@ -92,8 +91,7 @@ public class BackgroundJobWorker {
 		OpenAIResultMapper openAIResultMapper,
 		UsageMonitoringService usageMonitoringService,
 		LibraryQualityCacheEvictor cacheEvictor,
-		CandidateUpdateService candidateUpdateService,
-		CandidateUpdateEmailService candidateUpdateEmailService,
+		CandidateUpdateRequestSender requestSender,
 		TenantService tenantService,
 		UserService userService,
 		S3StorageService s3StorageService,
@@ -107,8 +105,7 @@ public class BackgroundJobWorker {
 		this.openAIResultMapper = openAIResultMapper;
 		this.usageMonitoringService = usageMonitoringService;
 		this.cacheEvictor = cacheEvictor;
-		this.candidateUpdateService = candidateUpdateService;
-		this.candidateUpdateEmailService = candidateUpdateEmailService;
+		this.requestSender = requestSender;
 		this.tenantService = tenantService;
 		this.userService = userService;
 		this.s3StorageService = s3StorageService;
@@ -431,23 +428,11 @@ public class BackgroundJobWorker {
 			processed++;
 			try {
 				var cv = cvService.findOneById(id.toHexString());
-				var contact = cv.getPersonalInformation() != null ? cv.getPersonalInformation().getContact() : null;
-				var email = contact != null ? contact.getEmail() : null;
-				if (!StringUtils.hasText(email)
-					|| candidateUpdateService.isSuppressed(tenantId, email)
-					|| candidateUpdateService.hasActiveRequest(tenantId, cv.getId())) {
+				var outcome = requestSender.send(tenantId, cv, tenantName, job.getLanguage(), customTemplate, senderName);
+				if (outcome != CandidateUpdateRequestSender.Outcome.SENT) {
 					skipped++;
 					continue;
 				}
-				var token = candidateUpdateService.createRequest(tenantId, cv.getId(), email, job.getLanguage());
-				candidateUpdateEmailService.sendUpdateInvitation(
-					email,
-					cv.getPersonalInformation() != null ? cv.getPersonalInformation().getName() : null,
-					tenantName,
-					candidateUpdateService.buildUpdateLink(token),
-					job.getLanguage(),
-					customTemplate,
-					senderName);
 				succeeded++;
 				Thread.sleep(SEND_PACE_MS);   // provider-friendly pacing
 			} catch (InterruptedException e) {

@@ -23,6 +23,7 @@ import org.springframework.stereotype.Service;
 import java.time.Instant;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.UUID;
 
 @Slf4j
@@ -52,6 +53,7 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
         dto.setMatchingReportsNeeded(matchingReportsNeededFor(dto.getStatus()));
         dto.setMatchingStaleReason(MatchingStaleReasonEnum.NEVER_RUN.name());
         dto.setMatchingStaleAt(Instant.now());
+        dto.setStatusChangedAt(null);
     }
 
     @Override
@@ -78,6 +80,9 @@ public class JobPostService extends AbstractQorvaService<JobPostDTO, JobPost> {
      * leaves them as they were. Closing always clears the flag (only open jobs are matched).
      */
     static void applyMatchingState(JobPostDTO existing, JobPostDTO updated) {
+        // When the job was last opened or closed: what a JOB_CLOSED rule watches. Server-written, never the client's.
+        boolean statusChanged = existing != null && updated.getStatus() != null && !Objects.equals(existing.getStatus(), updated.getStatus());
+        updated.setStatusChangedAt(statusChanged ? Instant.now() : existing != null ? existing.getStatusChangedAt() : null);
         boolean open = matchingReportsNeededFor(updated.getStatus());
         if (!open) {
             updated.setMatchingReportsNeeded(false);

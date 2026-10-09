@@ -120,6 +120,7 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
     protected void preProcessCreateOne(CVDTO dto) throws QorvaException {
         super.preProcessCreateOne(dto);
         dto.setApplicantNumber(UUID.randomUUID().toString().toUpperCase(Locale.ROOT));
+        dto.setOrigin(null);
 
         // Apply default availability settings
         if (dto.getPersonalInformation() == null) {
@@ -162,6 +163,8 @@ public class CVService extends AbstractQorvaService<CVDTO, CV> {
         // Before the merge: it shares nested objects between the two DTOs, and the resolvers below may mutate them.
         String matchingBefore = CvMatchingView.fingerprint(getExistingForUpdate());
         this.mapper.merge(newCV, getExistingForUpdate());
+        // Server-written: how the CV entered the library never comes from a client.
+        newCV.setOrigin(getExistingForUpdate() != null ? getExistingForUpdate().getOrigin() : null);
         // Flags must never drift from the data — recompute after every merge.
         CVContentDateResolver.resolve(newCV);
         CVQualityFlagResolver.resolve(newCV);

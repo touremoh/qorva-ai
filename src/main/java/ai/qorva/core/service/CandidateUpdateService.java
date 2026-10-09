@@ -6,6 +6,7 @@ import ai.qorva.core.exception.QorvaErrors;
 import ai.qorva.core.security.TenantScope;
 
 import ai.qorva.core.dao.entity.CandidateUpdateRequest;
+import ai.qorva.core.dao.entity.CV;
 import ai.qorva.core.dao.entity.SuppressedEmail;
 import ai.qorva.core.dao.repository.CandidateUpdateRequestRepository;
 import ai.qorva.core.dao.repository.SuppressedEmailRepository;
@@ -63,7 +64,7 @@ public class CandidateUpdateService {
 	private String appBaseUrl;
 
 	// SUBMIT_FAILED is deliberately "active": the token was never consumed, the candidate may retry.
-	private static final List<String> ACTIVE_STATUSES = List.of(
+	public static final List<String> ACTIVE_STATUSES = List.of(
 		CandidateUpdateRequest.STATUS_SENT,
 		CandidateUpdateRequest.STATUS_OPENED,
 		CandidateUpdateRequest.STATUS_SUBMITTED,
@@ -280,6 +281,14 @@ public class CandidateUpdateService {
 
 	private void applyInScope(CandidateUpdateRequest request, CandidateUpdateData.Submission submission, String cvId)
 		throws QorvaException {
+		if (!cvId.equals(request.getCvId())) {
+			// A newer CV the candidate uploaded replaced the old one: it is their update, not a new candidate (rules
+			// watching new CVs skip it), and the request follows it so its history stays attached to a live CV.
+			// Typed query: the mapping turns both ids into ObjectIds.
+			mongoTemplate.updateFirst(Query.query(Criteria.where("_id").is(cvId).and("tenantId").is(request.getTenantId())),
+				new Update().set("origin", CV.ORIGIN_CANDIDATE_UPDATE), CV.class);
+			request.setCvId(cvId);
+		}
 		var cv = cvService.findOneById(cvId);
 		applySubmission(cv, submission);
 		cv.setContentDate(Instant.now());

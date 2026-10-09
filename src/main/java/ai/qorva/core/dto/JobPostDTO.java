@@ -40,6 +40,8 @@ public class JobPostDTO extends AbstractQorvaDTO {
     @JsonProperty(access = Access.READ_ONLY)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
     private Instant matchingStaleAt;
+    /** When the job was last opened or closed (server-written). */
+    private Instant statusChangedAt;
 
     @JsonProperty(access = Access.READ_ONLY)
     private Integer matchingTopN;

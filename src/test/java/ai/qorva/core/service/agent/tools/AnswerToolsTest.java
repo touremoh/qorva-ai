@@ -1,6 +1,7 @@
 package ai.qorva.core.service.agent.tools;
 
 import ai.qorva.core.dao.entity.AgentRun;
+import ai.qorva.core.enums.NoteTargetTypeEnum;
 import ai.qorva.core.dto.CVDTO;
 import ai.qorva.core.dto.ConversationFrame;
 import ai.qorva.core.dto.InsightIntent;
@@ -53,6 +54,7 @@ class AnswerToolsTest {
 	private static final ObjectMapper JSON = new ObjectMapper();
 
 	@Mock private CandidateAnswerEngine engine;
+	@Mock private ai.qorva.core.service.NoteService noteService;
 	@Mock private LibraryInsightsService insightsService;
 	@Mock private AgentRunStore store;
 	@Mock private CVService cvService;
@@ -66,7 +68,7 @@ class AnswerToolsTest {
 
 	@BeforeEach
 	void setUp() throws QorvaException {
-		askAboutCandidate = new AskAboutCandidateTool(engine, store, cvService, jobPostService, usageMonitoringService);
+		askAboutCandidate = new AskAboutCandidateTool(engine, store, cvService, jobPostService, usageMonitoringService, noteService);
 		analyzeLibrary = new AnalyzeLibraryTool(insightsService, store, usageMonitoringService);
 
 		earlier = new AgentRun();
@@ -102,6 +104,46 @@ class AnswerToolsTest {
 		assertThat(result.answer().blocks()).isNull();
 		assertThat(result.links()).extracting(AgentRun.Link::getType).containsExactly("CV", "JOB", "REPORT");
 		assertThat(askAboutCandidate.terminal()).isTrue();
+	}
+
+	@Test
+	void inARuleTaskTheAnswerIsSavedOnTheReportAndTheTaskGoesOn() throws Exception {
+		when(noteService.canWrite(NoteTargetTypeEnum.MATCHING_REPORT)).thenReturn(true);
+		when(engine.answer(eq(TENANT), eq("cv-1"), eq("job-1"), eq("French"), eq(List.of()), eq("Prepare a technical interview plan")))
+			.thenReturn(new CandidateAnswerEngine.Answer("1. Java questions…", "rep-1", 64.0));
+
+		var result = askAboutCandidate.execute(JSON.readTree(
+			"{\"cvId\":\"cv-1\",\"jobId\":\"job-1\",\"question\":\"Prepare a technical interview plan\"}"), RULE_CTX);
+
+		assertThat(result.ok()).isTrue();
+		// Not the run's answer: the task continues with the next candidate.
+		assertThat(result.answer()).isNull();
+		assertThat(result.summaryKey()).isEqualTo("agent.step.ask_about_candidate_saved");
+		verify(noteService).createFromCopilot(TENANT, "owner@a.test", NoteTargetTypeEnum.MATCHING_REPORT, "rep-1",
+			"1. Java questions…", "run-2");
+	}
+
+	@Test
+	void inChatSavingIsAskedForAndTheAnswerStillEndsTheTask() throws Exception {
+		when(noteService.canWrite(NoteTargetTypeEnum.MATCHING_REPORT)).thenReturn(true);
+		when(engine.answer(any(), eq("cv-1"), eq("job-1"), any(), anyList(), any()))
+			.thenReturn(new CandidateAnswerEngine.Answer("Plan.", null, null));
+
+		var result = askAboutCandidate.execute(JSON.readTree("{\"cvId\":\"cv-1\",\"jobId\":\"job-1\",\"saveAsNote\":true}"), CTX);
+
+		assertThat(result.answer().text()).isEqualTo("Plan.");
+		// No report for the pair: the note goes on the candidate.
+		verify(noteService).createFromCopilot(TENANT, "owner@a.test", NoteTargetTypeEnum.CV, "cv-1", "Plan.", "run-2");
+	}
+
+	@Test
+	void withoutTheRightToAddNotesNothingIsAskedOrSaved() throws Exception {
+		when(noteService.canWrite(NoteTargetTypeEnum.MATCHING_REPORT)).thenReturn(false);
+
+		var result = askAboutCandidate.execute(JSON.readTree("{\"cvId\":\"cv-1\",\"jobId\":\"job-1\"}"), RULE_CTX);
+
+		assertThat(result.ok()).isFalse();
+		verify(engine, never()).answer(any(), any(), any(), any(), anyList(), any());
 	}
 
 	@Test
@@ -153,9 +195,10 @@ class AnswerToolsTest {
 	}
 
 	@Test
-	void answerToolsAreForChatsOnly() {
+	void candidateAnswersAreForChatsAndRulesLibraryAnalysesForChatsOnly() {
 		assertThat(askAboutCandidate.available(CTX)).isTrue();
-		assertThat(askAboutCandidate.available(RULE_CTX)).isFalse();
+		// A rule task keeps the answer as a note (nobody reads its answer).
+		assertThat(askAboutCandidate.available(RULE_CTX)).isTrue();
 		assertThat(analyzeLibrary.available(RULE_CTX)).isFalse();
 	}
 

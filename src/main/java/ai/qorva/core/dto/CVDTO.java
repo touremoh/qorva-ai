@@ -66,6 +66,8 @@ public class CVDTO extends AbstractQorvaDTO {
 
     @JsonProperty(access = Access.READ_ONLY)
     private Boolean archived;
+    /** {@code CV.ORIGIN_CANDIDATE_UPDATE} for a newer CV the candidate uploaded, else null (server-written). */
+    private String origin;
 
     /** Source links when the CV was imported from an external ATS. */
     @JsonProperty(access = Access.READ_ONLY)

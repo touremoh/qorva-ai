@@ -154,7 +154,7 @@ class AgentRunnerApprovalTest {
 		assertThat(java.time.Duration.between(chat.getApprovalExpiresAt(), rule.getApprovalExpiresAt()).toHours())
 			.isEqualTo(properties.getRules().getApprovalTtlHours() - properties.getApprovalTtlHours());
 		assertThat(runner.systemPrompt(rule)).contains("standing rule \"Invite strong matches\"").contains("72 hours");
-		assertThat(runner.systemPrompt(chat)).doesNotContain("standing rule");
+		assertThat(runner.systemPrompt(chat)).doesNotContain("Started by a standing rule");
 	}
 
 	@Test

@@ -4,8 +4,7 @@ import ai.qorva.core.dao.entity.BackgroundJob;
 import ai.qorva.core.dao.repository.CVRepository;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.service.CVService;
-import ai.qorva.core.service.CandidateUpdateEmailService;
-import ai.qorva.core.service.CandidateUpdateService;
+import ai.qorva.core.service.CandidateUpdateRequestSender;
 import ai.qorva.core.service.MatchingRunService;
 import ai.qorva.core.service.LibraryQualityCacheEvictor;
 import ai.qorva.core.service.OpenAIService;
@@ -52,8 +51,7 @@ class BackgroundJobWorkerBulkTest {
 	@Mock private OpenAIResultMapper openAIResultMapper;
 	@Mock private UsageMonitoringService usageMonitoringService;
 	@Mock private LibraryQualityCacheEvictor cacheEvictor;
-	@Mock private CandidateUpdateService candidateUpdateService;
-	@Mock private CandidateUpdateEmailService candidateUpdateEmailService;
+	@Mock private CandidateUpdateRequestSender requestSender;
 	@Mock private TenantService tenantService;
 	@Mock private UserService userService;
 	@Mock private S3StorageService s3StorageService;
@@ -65,8 +63,7 @@ class BackgroundJobWorkerBulkTest {
 	@BeforeEach
 	void setUp() {
 		worker = new BackgroundJobWorker(mongoTemplate, cvRepository, cvService, openAIService,
-			openAIResultMapper, usageMonitoringService, cacheEvictor, candidateUpdateService,
-			candidateUpdateEmailService, tenantService, userService, s3StorageService, matchingRunService, atsSyncService);
+			openAIResultMapper, usageMonitoringService, cacheEvictor, requestSender, tenantService, userService, s3StorageService, matchingRunService, atsSyncService);
 	}
 
 	private BackgroundJob bulkJob() {

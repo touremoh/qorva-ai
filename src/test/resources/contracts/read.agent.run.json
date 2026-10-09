@@ -1,9 +1,11 @@
 {
   "body" : {
+    "answerNoteId" : null,
     "approvalExpiresAt" : null,
     "blocks" : null,
     "canApprove" : false,
     "canCancel" : false,
+    "canSaveAnswerAsNote" : false,
     "conversationId" : "<id:2>",
     "createdAt" : "<ts>",
     "failureReason" : null,

@@ -45,10 +45,16 @@ public class CvScoredSource implements AgentTriggerSource {
 		if (trigger.getJobPostId() != null) {
 			criteria = criteria.and("jobPostId").is(new ObjectId(trigger.getJobPostId()));
 		}
-		if (trigger.getMinScore() != null) {
+		if (trigger.getMinScore() != null && trigger.getMaxScore() != null) {
+			criteria = criteria.and(SUMMARY + "finalScore").gte(trigger.getMinScore()).lte(trigger.getMaxScore());
+		} else if (trigger.getMinScore() != null) {
 			criteria = criteria.and(SUMMARY + "finalScore").gte(trigger.getMinScore());
+		} else if (trigger.getMaxScore() != null) {
+			criteria = criteria.and(SUMMARY + "finalScore").lte(trigger.getMaxScore());
 		}
-		if (Boolean.TRUE.equals(trigger.getRecommendedOnly())) {
+		if (trigger.getRecommendations() != null) {
+			criteria = criteria.and(SUMMARY + "recommendation").in(trigger.getRecommendations());
+		} else if (Boolean.TRUE.equals(trigger.getRecommendedOnly())) {
 			criteria = criteria.and(SUMMARY + "recommendation").in(INTERVIEW);
 		}
 		var query = Query.query(criteria).with(Sort.by("lastUpdatedAt")).limit(limit);
@@ -56,11 +62,15 @@ public class CvScoredSource implements AgentTriggerSource {
 			SUMMARY + "finalScore", SUMMARY + "recommendation", "lastUpdatedAt", "tenantId");
 		return mongoTemplate.find(query, MatchingReport.class).stream()
 			.filter(r -> r.getCandidateInfo() != null && r.getCandidateInfo().getCandidateId() != null)
-			.map(CvScoredSource::subject)
+			.map(r -> subject(r, trigger.getRecommendations() != null))
 			.toList();
 	}
 
-	private static RuleSubject subject(MatchingReport report) {
+	/**
+	 * {@code byVerdict}: a rule that filters on verdicts fires again when a re-score changes the verdict (key
+	 * {@code cvId:jobId:verdict}); other rules fire once per CV–job pair, as they always have.
+	 */
+	static RuleSubject subject(MatchingReport report, boolean byVerdict) {
 		var cvId = report.getCandidateInfo().getCandidateId();
 		var name = RuleText.name(report.getCandidateInfo().getCandidateName());
 		var job = RuleText.name(report.getJobPostTitle());
@@ -76,6 +86,10 @@ public class CvScoredSource implements AgentTriggerSource {
 		if (summary != null && summary.getRecommendation() != null) {
 			line.append(", recommendation ").append(summary.getRecommendation());
 		}
-		return new RuleSubject(cvId + ":" + report.getJobPostId(), report.getLastUpdatedAt(), mentions, line.toString());
+		var key = cvId + ":" + report.getJobPostId();
+		if (byVerdict && summary != null && summary.getRecommendation() != null) {
+			key += ":" + summary.getRecommendation();
+		}
+		return new RuleSubject(key, report.getLastUpdatedAt(), mentions, line.toString());
 	}
 }

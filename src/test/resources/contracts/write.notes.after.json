@@ -1,10 +1,12 @@
 {
   "body" : [ {
+    "agentRunId" : null,
     "authorEmail" : "owner@a.qorva.test",
     "authorName" : "Olivia Owner-A",
     "createdAt" : "<ts>",
     "id" : "<id:1>",
     "lastUpdatedAt" : "<ts>",
+    "source" : null,
     "targetId" : "<id:2>",
     "targetType" : "CV",
     "text" : "Call back on Monday."

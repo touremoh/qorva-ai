@@ -35,8 +35,19 @@ public class AgentRule implements QorvaEntity {
 	public static final String TRIGGER_JOB_NEEDS_MATCHING = "JOB_NEEDS_MATCHING";
 	/** A candidate's pipeline status on a job changed (by a person: Copilot's own changes never fire it). */
 	public static final String TRIGGER_REPORT_STATUS_CHANGED = "REPORT_STATUS_CHANGED";
+	/** A candidate stayed in the same pipeline status for {@code idleDays} days, once per idle period. */
+	public static final String TRIGGER_REPORT_STATUS_IDLE = "REPORT_STATUS_IDLE";
+	/** A CV's content became {@code staleMonths} old (Data Health freshness), once per content date. */
+	public static final String TRIGGER_CV_OUTDATED = "CV_OUTDATED";
+	/** A job was closed. */
+	public static final String TRIGGER_JOB_CLOSED = "JOB_CLOSED";
+	/** A new CV has the same email or phone as an older one. */
+	public static final String TRIGGER_DUPLICATE_FOUND = "DUPLICATE_FOUND";
+	/** A candidate completed a profile-update request. */
+	public static final String TRIGGER_CANDIDATE_PROFILE_UPDATED = "CANDIDATE_PROFILE_UPDATED";
 	public static final List<String> TRIGGERS = List.of(TRIGGER_CV_ADDED, TRIGGER_CV_SCORED, TRIGGER_SCHEDULE, TRIGGER_ATS_SYNC_FINISHED,
-		TRIGGER_JOB_NEEDS_MATCHING, TRIGGER_REPORT_STATUS_CHANGED);
+		TRIGGER_JOB_NEEDS_MATCHING, TRIGGER_REPORT_STATUS_CHANGED, TRIGGER_REPORT_STATUS_IDLE, TRIGGER_CV_OUTDATED,
+		TRIGGER_JOB_CLOSED, TRIGGER_DUPLICATE_FOUND, TRIGGER_CANDIDATE_PROFILE_UPDATED);
 
 	public static final String STATUS_ACTIVE = "ACTIVE";
 	public static final String STATUS_PAUSED = "PAUSED";
@@ -75,6 +86,12 @@ public class AgentRule implements QorvaEntity {
 	 */
 	private Boolean autoApproveMatching;
 	private Integer autoApproveMaxActions;
+	/**
+	 * Pre-approval by the owner: the rule's runs send profile-update requests (request_profile_update) without waiting,
+	 * up to {@code autoApproveProfileUpdatesMax} candidates per request; larger batches still wait.
+	 */
+	private Boolean autoApproveProfileUpdates;
+	private Integer autoApproveProfileUpdatesMax;
 
 	private String status;
 	private String pausedReason;
@@ -119,15 +136,19 @@ public class AgentRule implements QorvaEntity {
 		public static final String WEEKLY = "WEEKLY";
 
 		private String type;
-		/** CV_ADDED: ANY, ATS (imported) or MANUAL (uploaded). */
+		/** CV_ADDED, CV_OUTDATED and DUPLICATE_FOUND: ANY, ATS (imported) or MANUAL (uploaded). */
 		private String source;
-		/** CV_SCORED, JOB_NEEDS_MATCHING and REPORT_STATUS_CHANGED: one job, or any job when null. */
+		/** CV_SCORED, JOB_NEEDS_MATCHING, REPORT_STATUS_CHANGED, REPORT_STATUS_IDLE and JOB_CLOSED: one job, or any job when null. */
 		private String jobPostId;
 		private String jobTitle;
 		/** CV_SCORED: final score at or above this (0–100). */
 		private Integer minScore;
-		/** CV_SCORED: only reports recommending an interview (interview or strong_interview). */
+		/** CV_SCORED: final score at or below this (0–100). */
+		private Integer maxScore;
+		/** CV_SCORED: only reports recommending an interview (interview or strong_interview). Kept for older rules. */
 		private Boolean recommendedOnly;
+		/** CV_SCORED: the report verdicts that fire it (strong_interview, interview, may_be, reject); null = any. */
+		private List<String> recommendations;
 		/** SCHEDULE: DAILY or WEEKLY, at {@code hour} in {@code zoneId}; WEEKLY also on {@code weekday} (1 = Monday). */
 		private String frequency;
 		private Integer hour;
@@ -138,7 +159,11 @@ public class AgentRule implements QorvaEntity {
 		private String connectionName;
 		/** JOB_NEEDS_MATCHING: which stale reasons fire it (MatchingStaleReasonEnum names); null = all of them. */
 		private List<String> staleReasons;
-		/** REPORT_STATUS_CHANGED: the statuses that fire it (ApplicationStatusEnum names); null = any. */
+		/** REPORT_STATUS_CHANGED: the statuses that fire it; REPORT_STATUS_IDLE: the statuses watched (ApplicationStatusEnum names); null = any. */
 		private List<String> toStatuses;
+		/** REPORT_STATUS_IDLE: days without a status change. */
+		private Integer idleDays;
+		/** CV_OUTDATED: age of the CV's content, in months. */
+		private Integer staleMonths;
 	}
 }

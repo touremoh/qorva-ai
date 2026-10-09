@@ -1,9 +1,11 @@
 {
   "body" : [ {
+    "answerNoteId" : null,
     "approvalExpiresAt" : null,
     "blocks" : null,
     "canApprove" : false,
     "canCancel" : false,
+    "canSaveAnswerAsNote" : false,
     "conversationId" : "<id:2>",
     "createdAt" : "<ts>",
     "failureReason" : null,
@@ -39,10 +41,12 @@
     "title" : "Best Java candidates",
     "userEmail" : "owner@a.qorva.test"
   }, {
+    "answerNoteId" : null,
     "approvalExpiresAt" : null,
     "blocks" : null,
     "canApprove" : false,
     "canCancel" : false,
+    "canSaveAnswerAsNote" : true,
     "conversationId" : "<id:2>",
     "createdAt" : "<ts>",
     "failureReason" : null,
@@ -92,6 +96,7 @@
     "title" : "Best Java candidates",
     "userEmail" : "owner@a.qorva.test"
   }, {
+    "answerNoteId" : null,
     "approvalExpiresAt" : null,
     "blocks" : {
       "candidates" : [ {
@@ -125,6 +130,7 @@
     },
     "canApprove" : false,
     "canCancel" : false,
+    "canSaveAnswerAsNote" : false,
     "conversationId" : "<id:2>",
     "createdAt" : "<ts>",
     "failureReason" : null,

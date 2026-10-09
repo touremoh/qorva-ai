@@ -21,7 +21,9 @@ Examples: "Who are the 5 best-matched candidates for our newest open job, and wh
 Questions about your whole library return counts, charts (for example seniority, skill depth, leadership, learning velocity, top skills, rare skills) and candidate cards. Typical analyses: talent pool snapshot, clustering, ranking for a role, rediscovery of past candidates, skill gaps, skills distribution, candidate comparison, location and salary analysis.
 
 ## Tasks Copilot can do
-Tag or untag candidates; add a note to a profile; move candidates to a pipeline status; create or update a job post; draft an email (not sent until you approve); run matching (waits for approval, shows the cost); start an ATS import (waits for approval); create a standing rule (see Copilot rules).
+Tag or untag candidates; add a note to a profile; move candidates to a pipeline status; create or update a job post; draft an email (not sent until you approve); run matching (waits for approval, shows the cost); start an ATS import (waits for approval); ask candidates to update their own profile (waits for approval — the same request Data Health sends: a private link to a form); create a standing rule (see Copilot rules).
+
+**Save an answer as a note**: under an answer about a candidate, click **Save as note** to keep it on the candidate's match report, or ask Copilot to "save it as a note". Notes written by Copilot show **Copilot (for you)** as their author; you can edit or delete them like your own notes.
 
 ## How Copilot helps automate your workflow
 - After a bulk upload: "Tag every new candidate with Python and 5+ years as python-senior."

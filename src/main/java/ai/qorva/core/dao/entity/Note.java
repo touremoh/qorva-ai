@@ -47,6 +47,14 @@ public class Note implements QorvaEntity {
 	/** Display name captured at creation so readers never need VIEW_USERS to see who wrote it. */
 	private String authorName;
 
+	/** {@link #SOURCE_COPILOT} when Copilot wrote it on its user's behalf; null (a person wrote it) otherwise. */
+	private String source;
+
+	/** The Copilot task that wrote it, when {@code source} is COPILOT. */
+	private String agentRunId;
+
+	public static final String SOURCE_COPILOT = "COPILOT";
+
 	@CreatedBy
 	private String authorEmail;
 
