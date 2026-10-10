@@ -72,6 +72,8 @@ public class CandidateUpdateService {
 		CandidateUpdateRequest.STATUS_SUBMIT_FAILED);
 
 	@Autowired
+	private final TenantAccess tenantAccess;
+
 	public CandidateUpdateService(
 		CandidateUpdateRequestRepository requestRepository,
 		SuppressedEmailRepository suppressedEmailRepository,
@@ -79,9 +81,11 @@ public class CandidateUpdateService {
 		LibraryQualityCacheEvictor cacheEvictor,
 		S3StorageService s3StorageService,
 		ObjectMapper objectMapper,
-		MongoTemplate mongoTemplate
+		MongoTemplate mongoTemplate,
+		TenantAccess tenantAccess
 	) {
 		this.mongoTemplate = mongoTemplate;
+		this.tenantAccess = tenantAccess;
 		this.requestRepository = requestRepository;
 		this.suppressedEmailRepository = suppressedEmailRepository;
 		this.cvService = cvService;
@@ -238,7 +242,7 @@ public class CandidateUpdateService {
 	 * {@link #findValidRequest}, COMPLETED is visible here — the final poll must see DONE.
 	 */
 	public CandidateUpdateData.StatusView status(String token) throws QorvaException {
-		var request = findRequest(token);
+		var request = findUsableRequest(token);
 		var state = switch (request.getStatus()) {
 			case CandidateUpdateRequest.STATUS_SUBMITTED -> "SUBMITTED";
 			case CandidateUpdateRequest.STATUS_PROCESSING ->
@@ -351,7 +355,7 @@ public class CandidateUpdateService {
 	}
 
 	private CandidateUpdateRequest findValidRequest(String token) throws QorvaException {
-		var request = findRequest(token);
+		var request = findUsableRequest(token);
 		if (CandidateUpdateRequest.STATUS_COMPLETED.equals(request.getStatus())) {
 			throw notFound();   // single-use — completed links behave as gone
 		}
@@ -364,6 +368,18 @@ public class CandidateUpdateService {
 		if (request.getExpiresAt() != null && request.getExpiresAt().isBefore(Instant.now())) {
 			request.setStatus(CandidateUpdateRequest.STATUS_EXPIRED);
 			requestRepository.save(request);
+			throw notFound();
+		}
+		return request;
+	}
+
+	/**
+	 * A suspended, deleted or expired company's links answer like an unknown link: the candidate learns nothing about the
+	 * company. Unsubscribe deliberately skips this — a candidate can always opt out.
+	 */
+	private CandidateUpdateRequest findUsableRequest(String token) throws QorvaException {
+		var request = findRequest(token);
+		if (!tenantAccess.isUsable(request.getTenantId())) {
 			throw notFound();
 		}
 		return request;

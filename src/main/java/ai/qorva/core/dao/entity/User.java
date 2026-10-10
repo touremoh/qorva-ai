@@ -72,6 +72,9 @@ public class User implements QorvaEntity {
         return Boolean.TRUE.equals(mfaEnabled);
     }
 
+    /** Last successful sign-in (password, code or Microsoft). Absent before it was recorded. */
+    private Instant lastLoginAt;
+
     @Field(targetType = FieldType.OBJECT_ID)
     private String tenantId;
 

@@ -47,12 +47,14 @@ class ArchitectureRulesTest {
 	}
 
 	/**
-	 * Only the JWT filter (requests) and the Copilot execution scope (agent runs, with clean-up) act as a
-	 * user: anything else that installed an Authentication would bypass the token checks.
+	 * Only the JWT filter (requests), the admin JWT filter (admin console requests, admin tokens only) and the
+	 * Copilot execution scope (agent runs, with clean-up) act as a user: anything else that installed an
+	 * Authentication would bypass the token checks.
 	 */
 	@Test
-	void onlyTheJwtFilterAndTheAgentScopeAuthenticateAUser() {
+	void onlyTheJwtFiltersAndTheAgentScopeAuthenticateAUser() {
 		noClasses().that().doNotHaveSimpleName("JwtRequestFilter").and().doNotHaveSimpleName("AgentExecutionScope")
+			.and().doNotHaveSimpleName("AdminJwtFilter")
 			.should().callMethod(SecurityContextHolder.class, "setContext", SecurityContext.class)
 			.orShould().callMethod(SecurityContext.class, "setAuthentication", Authentication.class)
 			.check(production);
@@ -72,7 +74,9 @@ class ArchitectureRulesTest {
 			@Override
 			public boolean test(JavaMethodCall call) {
 				return byIdMethods.contains(call.getName())
-					&& call.getTargetOwner().getPackageName().startsWith("ai.qorva.core.dao.repository");
+					&& call.getTargetOwner().getPackageName().startsWith("ai.qorva.core.dao.repository")
+					// The admin console's own accounts, codes and audit log belong to no tenant.
+					&& !ADMIN_REPOSITORIES.contains(call.getTargetOwner().getSimpleName());
 			}
 		};
 		noClasses().that().doNotHaveSimpleName("AbstractQorvaService")
@@ -82,6 +86,28 @@ class ArchitectureRulesTest {
 			.and().doNotHaveSimpleName("StripeCheckoutSessionCompletedHandler")
 			.and().doNotHaveSimpleName("StripeEventDispatcher")
 			.should().callMethodWhere(onARepository)
+			.check(production);
+	}
+
+	private static final Set<String> ADMIN_REPOSITORIES =
+		Set.of("PlatformAdminRepository", "AdminMfaChallengeRepository", "AdminAuditLogRepository");
+
+	/**
+	 * The admin console's backend is a separate realm: the product never depends on it, so removing or moving it can
+	 * never break a tenant route.
+	 */
+	@Test
+	void theProductDoesNotDependOnTheAdminPackage() {
+		noClasses().that().resideOutsideOfPackage("ai.qorva.core.admin..")
+			.should().dependOnClassesThat().resideInAPackage("ai.qorva.core.admin..")
+			.check(production);
+	}
+
+	/** Admin controllers go through the admin services, like the product's controllers. */
+	@Test
+	void adminControllersDoNotUseRepositories() {
+		noClasses().that().resideInAPackage("ai.qorva.core.admin.controller..")
+			.should().dependOnClassesThat().resideInAPackage("ai.qorva.core.dao.repository..")
 			.check(production);
 	}
 

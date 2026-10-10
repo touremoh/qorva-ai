@@ -59,7 +59,8 @@ class CandidateUpdateServiceAsyncTest {
 	@BeforeEach
 	void setUp() {
 		service = new CandidateUpdateService(requestRepository, suppressedEmailRepository,
-			cvService, cacheEvictor, s3StorageService, new ObjectMapper(), mongoTemplate);
+			cvService, cacheEvictor, s3StorageService, new ObjectMapper(), mongoTemplate,
+			new TenantAccessStub());
 		// The atomic claim succeeds unless a test says another submission took the link first.
 		org.mockito.Mockito.lenient().when(mongoTemplate.findAndModify(
 				org.mockito.ArgumentMatchers.any(org.springframework.data.mongodb.core.query.Query.class),

@@ -2,6 +2,8 @@
   "body" : {
     "code" : 200,
     "data" : {
+      "accessExpiresAt" : null,
+      "accountType" : null,
       "companyAddress" : null,
       "companyLogoUrl" : null,
       "contactEmail" : "contact@acme-tech-talent.test",
@@ -15,6 +17,7 @@
       "phoneNumber" : null,
       "recruitmentType" : "AGENCY",
       "ssoRequired" : null,
+      "status" : null,
       "stripeCustomerId" : "cus_test_953546736",
       "subscriptionInfo" : {
         "accountManager" : null,

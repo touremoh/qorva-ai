@@ -5,6 +5,7 @@ import ai.qorva.core.service.agent.rules.AgentApprovalDigest;
 import ai.qorva.core.service.agent.rules.AgentRuleEngine;
 import ai.qorva.core.service.agent.rules.AgentRuleStore;
 import lombok.extern.slf4j.Slf4j;
+import ai.qorva.core.service.TenantAccess;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -27,8 +28,11 @@ public class AgentRuleScheduler {
 	private final AgentRuleEngine engine;
 	private final AgentApprovalDigest digest;
 	private final AgentProperties properties;
+	private final TenantAccess tenantAccess;
 
-	public AgentRuleScheduler(AgentRuleStore store, AgentRuleEngine engine, AgentApprovalDigest digest, AgentProperties properties) {
+	public AgentRuleScheduler(AgentRuleStore store, AgentRuleEngine engine, AgentApprovalDigest digest, AgentProperties properties,
+	                          TenantAccess tenantAccess) {
+		this.tenantAccess = tenantAccess;
 		this.store = store;
 		this.engine = engine;
 		this.digest = digest;
@@ -45,6 +49,10 @@ public class AgentRuleScheduler {
 			var rule = store.claimDue(Instant.now(), interval);
 			if (rule == null) break;
 			try {
+				// A suspended, deleted or expired company's rules wait; the claim already moved their next check.
+				if (!tenantAccess.isUsable(rule.getTenantId())) {
+					continue;
+				}
 				var tick = engine.check(rule);
 				if (tick.subjects() > 0 || tick.paused() != null) {
 					log.info("agent-rule {} tick subjects={} runs={} skipped={} paused={}", rule.getId(), tick.subjects(),

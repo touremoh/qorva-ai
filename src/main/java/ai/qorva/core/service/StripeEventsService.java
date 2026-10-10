@@ -1,5 +1,7 @@
 package ai.qorva.core.service;
 
+import ai.qorva.core.enums.TenantAccountTypeEnum;
+import ai.qorva.core.exception.QorvaErrors;
 import ai.qorva.core.config.StripeProperties;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.*;
@@ -60,6 +62,10 @@ public class StripeEventsService {
 		var user = Optional.ofNullable(userRepository.findByEmail(userDetails.getUsername()))
 			.orElseThrow(() -> new QorvaException("User not found"));
 		var tenant = tenantService.findOneById(user.getTenantId());
+		// A test account has no Stripe customer: nothing to manage.
+		if (TenantAccountTypeEnum.TESTER.name().equals(tenant.getAccountType())) {
+			throw QorvaErrors.conflict(QorvaErrorCodes.BILLING_TESTER_ACCOUNT);
+		}
 
 		SessionCreateParams params = SessionCreateParams.builder()
 			.setCustomer(tenant.getStripeCustomerId())

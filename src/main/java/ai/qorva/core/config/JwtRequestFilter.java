@@ -61,6 +61,13 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 		this.objectMapper = objectMapper;
 	}
 
+	/** The admin API has its own chain and tokens; no tenant may ever be set on an admin request. */
+	@Override
+	protected boolean shouldNotFilter(HttpServletRequest request) {
+		var path = request.getRequestURI().substring(request.getContextPath().length());
+		return path.equals("/admin") || path.startsWith("/admin/");
+	}
+
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
 		try {

@@ -38,7 +38,8 @@ class UsageMonitoringSchedulerTest {
 
 	@BeforeEach
 	void setUp() {
-		scheduler = new UsageMonitoringScheduler(tenantRepository, usageMonitoringService, productReferenceService, subscriptionSyncService);
+		scheduler = new UsageMonitoringScheduler(tenantRepository, usageMonitoringService, productReferenceService, subscriptionSyncService,
+			new ai.qorva.core.service.TenantAccessStub());
 		tenant = tenant(daysAgo(50), daysAgo(36)); // the 14-day trial on record is long over
 		when(tenantRepository.findAllBySubscriptionStatusIn(anyList())).thenReturn(List.of(tenant));
 		when(usageMonitoringService.findCurrentPeriodByTenantId("t1")).thenReturn(Optional.empty());

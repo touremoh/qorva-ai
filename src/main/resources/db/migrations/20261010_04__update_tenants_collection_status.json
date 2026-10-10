@@ -1,0 +1,203 @@
+{
+  "collMod": "tenants",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "tenants",
+      "required": [
+        "tenantName",
+        "createdAt",
+        "lastUpdatedAt",
+        "createdBy",
+        "lastUpdatedBy"
+      ],
+      "properties": {
+        "tenantName": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "organizationId": {
+          "bsonType": "string",
+          "description": "unique organisation identifier"
+        },
+        "recruitmentType": {
+          "bsonType": "string",
+          "description": "recruitment segment selected at signup (drives demo sample-data seeding)"
+        },
+        "organizationSize": {
+          "bsonType": "string",
+          "description": "self-reported organization size bucket"
+        },
+        "companyAddress": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "companyLogoUrl": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "phoneNumber": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "contactEmail": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "websiteUrl": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "stripeCustomerId": {
+          "bsonType": "string",
+          "description": "must be a string"
+        },
+        "subscriptionInfo": {
+          "bsonType": "object",
+          "description": "Subscription plan and billing details",
+          "properties": {
+            "subscriptionPlan": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "billingCycle": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "price": {
+              "bsonType": "decimal",
+              "description": "must be a decimal"
+            },
+            "priceId": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "planCode": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "subscriptionStatus": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "subscriptionId": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "accountManager": {
+              "bsonType": "string",
+              "description": "must be a string"
+            },
+            "subscriptionStartDate": {
+              "bsonType": "date",
+              "description": "must be a date"
+            },
+            "subscriptionEndDate": {
+              "bsonType": "date",
+              "description": "must be a date"
+            },
+            "currentPeriodStart": {
+              "bsonType": "date",
+              "description": "must be a date"
+            },
+            "currentPeriodEnd": {
+              "bsonType": "date",
+              "description": "must be a date"
+            },
+            "cancelAtPeriodEnd": {
+              "bsonType": "bool",
+              "description": "must be a boolean"
+            }
+          }
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "lastUpdatedAt": {
+          "bsonType": "date",
+          "description": "must be a date and is required"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "lastUpdatedBy": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "ssoRequired": {
+          "bsonType": [
+            "bool",
+            "null"
+          ],
+          "description": "users must sign in with Microsoft (account owner excepted)"
+        },
+        "status": {
+          "enum": [
+            "ACTIVE",
+            "SUSPENDED",
+            "DELETED",
+            null
+          ],
+          "description": "admin-set account status; absent = ACTIVE"
+        },
+        "statusReason": {
+          "bsonType": [
+            "string",
+            "null"
+          ]
+        },
+        "statusChangedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ]
+        },
+        "statusChangedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ]
+        },
+        "deletedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "soft delete time"
+        },
+        "purgeAfter": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "the data is purged once this has passed"
+        },
+        "accountType": {
+          "enum": [
+            "TESTER",
+            null
+          ],
+          "description": "absent = customer or demo"
+        },
+        "internal": {
+          "bsonType": [
+            "bool",
+            "null"
+          ],
+          "description": "left out of business statistics"
+        },
+        "accessExpiresAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "sign-in and tokens stop at this instant"
+        }
+      }
+    }
+  },
+  "validationAction": "error",
+  "validationLevel": "strict"
+}

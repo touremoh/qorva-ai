@@ -17,6 +17,8 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
+import ai.qorva.core.enums.TenantAccountTypeEnum;
+import ai.qorva.core.service.TenantAccess;
 import java.time.Instant;
 import java.util.List;
 import java.util.Set;
@@ -30,6 +32,7 @@ public class UsageMonitoringScheduler {
     private final UsageMonitoringService usageMonitoringService;
     private final ProductReferenceService productReferenceService;
     private final SubscriptionSyncService subscriptionSyncService;
+    private final TenantAccess tenantAccess;
     private final Set<String> warnedTenants = ConcurrentHashMap.newKeySet();
 
     @Autowired
@@ -37,8 +40,10 @@ public class UsageMonitoringScheduler {
         TenantRepository tenantRepository,
         UsageMonitoringService usageMonitoringService,
         ProductReferenceService productReferenceService,
-        SubscriptionSyncService subscriptionSyncService
+        SubscriptionSyncService subscriptionSyncService,
+        TenantAccess tenantAccess
     ) {
+        this.tenantAccess = tenantAccess;
         this.tenantRepository = tenantRepository;
         this.usageMonitoringService = usageMonitoringService;
         this.productReferenceService = productReferenceService;
@@ -61,6 +66,10 @@ public class UsageMonitoringScheduler {
         int failed = 0;
 
         for (var tenant : tenants) {
+            if (!tenantAccess.isUsable(tenant.getId())) {
+                skipped++;
+                continue;
+            }
             try {
                 if (TenantScope.callAs(tenant.getId(), () -> processForTenant(tenant))) {
                     initialized++;
@@ -91,10 +100,22 @@ public class UsageMonitoringScheduler {
         var now = Instant.now();
         var sub = tenant.getSubscriptionInfo();
 
+        // A test account has no Stripe subscription: its monthly period is rolled here, never asked of Stripe,
+        // and stops at its access end. Its limits come from the tier's price id like a customer's.
+        if (isTester(tenant) && sub != null && (sub.getCurrentPeriodEnd() == null || !sub.getCurrentPeriodEnd().isAfter(now))) {
+            var end = testerPeriodEnd(now, tenant.getAccessExpiresAt());
+            if (end == null) {
+                return false;
+            }
+            sub.setCurrentPeriodStart(now);
+            sub.setCurrentPeriodEnd(end);
+            tenantRepository.save(tenant);
+        }
+
         // The dates on the tenant are only as fresh as the last webhook. When the period they
         // describe is over (or missing), ask Stripe instead of inserting — every 5 minutes — a
         // period that is expired on arrival.
-        if (sub == null || sub.getCurrentPeriodEnd() == null || !sub.getCurrentPeriodEnd().isAfter(now)) {
+        if (!isTester(tenant) && (sub == null || sub.getCurrentPeriodEnd() == null || !sub.getCurrentPeriodEnd().isAfter(now))) {
             var refreshed = subscriptionSyncService.refreshFromStripe(tenant);
             if (refreshed.isEmpty()) {
                 warnOnce(tenant.getId(), "period on record is over or missing and Stripe could not be consulted");
@@ -106,7 +127,7 @@ public class UsageMonitoringScheduler {
                 return false;
             }
         }
-        if (sub.getCurrentPeriodStart() == null || sub.getCurrentPeriodEnd() == null) {
+        if (sub == null || sub.getCurrentPeriodStart() == null || sub.getCurrentPeriodEnd() == null) {
             warnOnce(tenant.getId(), "no currentPeriodStart/End in subscriptionInfo");
             return false;
         }
@@ -172,5 +193,18 @@ public class UsageMonitoringScheduler {
             .limits(scaledLimits)
             .overage(source.getOverage())
             .build();
+    }
+
+    public static boolean isTester(Tenant tenant) {
+        return TenantAccountTypeEnum.TESTER.name().equals(tenant.getAccountType());
+    }
+
+    /** One month from {@code now}, cut at the access end; null once access has ended (no new period). */
+    public static Instant testerPeriodEnd(Instant now, Instant accessExpiresAt) {
+        var monthLater = now.atZone(java.time.ZoneOffset.UTC).plusMonths(1).toInstant();
+        if (accessExpiresAt == null) {
+            return monthLater;
+        }
+        return accessExpiresAt.isAfter(now) ? (accessExpiresAt.isBefore(monthLater) ? accessExpiresAt : monthLater) : null;
     }
 }

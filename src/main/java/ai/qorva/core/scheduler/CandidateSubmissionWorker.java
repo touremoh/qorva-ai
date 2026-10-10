@@ -1,5 +1,6 @@
 package ai.qorva.core.scheduler;
 
+import ai.qorva.core.service.TenantAccess;
 import ai.qorva.core.security.TenantScope;
 
 import ai.qorva.core.dao.entity.CandidateUpdateRequest;
@@ -45,13 +46,16 @@ public class CandidateSubmissionWorker {
 	private final CVService cvService;
 	private final CandidateUpdateService candidateUpdateService;
 	private final S3StorageService s3StorageService;
+	private final TenantAccess tenantAccess;
 
 	public CandidateSubmissionWorker(
 		MongoTemplate mongoTemplate,
 		CVService cvService,
 		CandidateUpdateService candidateUpdateService,
-		S3StorageService s3StorageService
+		S3StorageService s3StorageService,
+		TenantAccess tenantAccess
 	) {
+		this.tenantAccess = tenantAccess;
 		this.mongoTemplate = mongoTemplate;
 		this.cvService = cvService;
 		this.candidateUpdateService = candidateUpdateService;
@@ -94,9 +98,12 @@ public class CandidateSubmissionWorker {
 		var claimed = new ArrayList<CandidateUpdateRequest>(CLAIM_BATCH);
 		for (int i = 0; i < CLAIM_BATCH; i++) {
 			var now = Instant.now();
-			var query = new Query(new Criteria().orOperator(
-				Criteria.where("status").is(CandidateUpdateRequest.STATUS_SUBMITTED),
-				Criteria.where("status").is(CandidateUpdateRequest.STATUS_PROCESSING).and("leaseExpiresAt").lt(now)
+			var query = new Query(new Criteria().andOperator(
+				new Criteria().orOperator(
+					Criteria.where("status").is(CandidateUpdateRequest.STATUS_SUBMITTED),
+					Criteria.where("status").is(CandidateUpdateRequest.STATUS_PROCESSING).and("leaseExpiresAt").lt(now)),
+				// Submissions of a suspended, deleted or expired company wait until it is usable again.
+				tenantAccess.usableTenantsOnly("tenantId")
 			)).limit(1);
 			var update = new Update()
 				.set("status", CandidateUpdateRequest.STATUS_PROCESSING)

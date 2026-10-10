@@ -194,6 +194,13 @@ public class S3StorageService {
         deleteObjectsByPrefix("candidate-submissions/" + tenantId + "/", "candidate submissions", tenantId);
     }
 
+    /** Best-effort removal of every file a tenant has (CVs, logo, staged imports, candidate submissions); never throws. */
+    public void deleteAllForTenant(String tenantId) {
+        deleteObjectsByPrefix("tenants/" + tenantId + "/", "tenant files", tenantId);
+        deleteObjectsByPrefix("staged-cv-uploads/" + tenantId + "/", "staged imports", tenantId);
+        deleteCandidateSubmissionsForTenant(tenantId);
+    }
+
     /** Best-effort bulk delete under a prefix; never throws. */
     private void deleteObjectsByPrefix(String prefix, String label, String tenantId) {
         try {

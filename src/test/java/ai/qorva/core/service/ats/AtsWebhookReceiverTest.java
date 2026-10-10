@@ -40,7 +40,8 @@ class AtsWebhookReceiverTest {
 
 	@BeforeEach
 	void setUp() {
-		receiver = new AtsWebhookReceiver(connectionRepository, registry, syncService, connectionService, webhookService);
+		receiver = new AtsWebhookReceiver(connectionRepository, registry, syncService, connectionService, webhookService,
+			new ai.qorva.core.service.TenantAccessStub());
 		connection = new AtsConnection();
 		connection.setId("c1");
 		connection.setTenantId(TENANT);

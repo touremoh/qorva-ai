@@ -6,6 +6,7 @@ import ai.qorva.core.scheduler.WorkerInstance;
 import org.bson.types.ObjectId;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.FindAndModifyOptions;
+import ai.qorva.core.service.TenantAccess;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -29,17 +30,22 @@ public class AgentRunStore {
 	static final Duration LEASE = Duration.ofMinutes(5);
 
 	private final MongoTemplate mongoTemplate;
+	private final TenantAccess tenantAccess;
 
-	public AgentRunStore(MongoTemplate mongoTemplate) {
+	public AgentRunStore(MongoTemplate mongoTemplate, TenantAccess tenantAccess) {
+		this.tenantAccess = tenantAccess;
 		this.mongoTemplate = mongoTemplate;
 	}
 
 	/** Oldest QUEUED run, or a RUNNING one whose worker died. Cross-tenant by nature. */
 	public AgentRun claimNext() {
 		var now = Instant.now();
-		var query = new Query(new Criteria().orOperator(
-			Criteria.where("status").is(AgentRun.STATUS_QUEUED),
-			Criteria.where("status").is(AgentRun.STATUS_RUNNING).and("leaseExpiresAt").lt(now)
+		var query = new Query(new Criteria().andOperator(
+			new Criteria().orOperator(
+				Criteria.where("status").is(AgentRun.STATUS_QUEUED),
+				Criteria.where("status").is(AgentRun.STATUS_RUNNING).and("leaseExpiresAt").lt(now)),
+			// Runs of a suspended, deleted or expired company wait until it is usable again.
+			tenantAccess.usableTenantsOnly("tenantId")
 		)).with(Sort.by("createdAt")).limit(1);
 		var update = new Update()
 			.set("status", AgentRun.STATUS_RUNNING)

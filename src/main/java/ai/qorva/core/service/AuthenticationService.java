@@ -11,6 +11,7 @@ import ai.qorva.core.dao.entity.User;
 import ai.qorva.core.dao.repository.UserRepository;
 import ai.qorva.core.dto.AuthResponse;
 import ai.qorva.core.dto.MfaData;
+import ai.qorva.core.dto.TenantDTO;
 import ai.qorva.core.dto.UserDTO;
 import ai.qorva.core.exception.QorvaErrorCodes;
 import ai.qorva.core.exception.QorvaException;
@@ -83,6 +84,8 @@ public class AuthenticationService {
 			throw QorvaErrors.unauthorized(QorvaErrorCodes.AUTH_FAILED);
 		}
 
+		// A suspended, deleted or expired company says so — after the password check, so it reveals nothing to a guesser.
+		TenantAccess.assertUsable(tenantOf(user));
 		if (passwordRefused(user)) {
 			throw QorvaErrors.forbidden(QorvaErrorCodes.AUTH_SSO_REQUIRED);
 		}
@@ -123,7 +126,13 @@ public class AuthenticationService {
 		return this.mfaService.resendLogin(challengeId);
 	}
 
+	private TenantDTO tenantOf(User user) throws QorvaException {
+		return TenantScope.callAs(user.getTenantId(), () -> this.tenantService.findOneById(user.getTenantId()));
+	}
+
 	private AuthResponse completeLogin(User user) throws QorvaException {
+		// Every way in ends here (password, MFA code, Microsoft): the company must still be usable.
+		TenantAccess.assertUsable(tenantOf(user));
 		try {
 			// Get the authenticated user's details
 			UserDetails userDetails = this.userDetailsService.loadUserByUsername(user.getEmail());
@@ -140,11 +149,12 @@ public class AuthenticationService {
 			authenticatedUserInfo.setTenant(tenant);
 
 			// First sign-in of an invited user (password or Microsoft): the invite is no longer pending.
+			var signedIn = new Update().set("lastLoginAt", java.time.Instant.now());
 			if (user.isInvitePendingOrFalse()) {
-				mongoTemplate.updateFirst(Query.query(Criteria.where("_id").is(new ObjectId(user.getId()))),
-					new Update().set("invitePending", false), User.class);
+				signedIn.set("invitePending", false);
 				authenticatedUserInfo.setInvitePending(false);
 			}
+			mongoTemplate.updateFirst(Query.query(Criteria.where("_id").is(new ObjectId(user.getId()))), signedIn, User.class);
 
 			// Build AuthResponse
 			return new AuthResponse(jwt, authenticatedUserInfo);
@@ -193,7 +203,8 @@ public class AuthenticationService {
 		var userDetails = this.userDetailsService.loadUserByUsername(email);
 		var user = Optional.ofNullable(this.userRepository.findByEmail(email))
 			.orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND));
-		var tenant = TenantScope.callAs(user.getTenantId(), () -> this.tenantService.findOneById(user.getTenantId()));
+		var tenant = tenantOf(user);
+		TenantAccess.assertUsable(tenant);
 		return JwtUtils.generateAndBuildToken(userDetails, this.jwtConfig, tenant);
 	}
 
@@ -224,6 +235,9 @@ public class AuthenticationService {
 				// Get the tenant status and subscription plan, in the user's own tenant scope
 				var tenant = TenantScope.callAs(user.getTenantId(), () -> Optional.ofNullable(this.tenantService.findOneById(user.getTenantId()))
 					                 .orElseThrow(() -> new QorvaException(QorvaErrorCodes.AUTH_USER_NOT_FOUND)));
+
+				// A company suspended, deleted or past its access end gets no new token.
+				TenantAccess.assertUsable(tenant);
 
 				// Add subscription status to the JWT
 				var authenticatedUserInfo = this.userMapper.map(user);

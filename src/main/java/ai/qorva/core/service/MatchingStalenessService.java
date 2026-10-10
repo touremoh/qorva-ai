@@ -52,9 +52,10 @@ public class MatchingStalenessService {
 	private final Duration grace;
 	private final Duration embeddingTimeout;
 	private final int batchSize;
+	private final TenantAccess tenantAccess;
 
 	public MatchingStalenessService(MongoTemplate mongoTemplate, CVMapper cvMapper, JobPostService jobPostService,
-	                                MatchingReportService matchingReportService,
+	                                MatchingReportService matchingReportService, TenantAccess tenantAccess,
 	                                @Value("${qorva.matching.staleness.grace-seconds:30}") long graceSeconds,
 	                                @Value("${qorva.matching.staleness.embedding-timeout-minutes:5}") long embeddingTimeoutMinutes,
 	                                @Value("${qorva.matching.staleness.batch-size:200}") int batchSize) {
@@ -65,6 +66,7 @@ public class MatchingStalenessService {
 		this.grace = Duration.ofSeconds(graceSeconds);
 		this.embeddingTimeout = Duration.ofMinutes(embeddingTimeoutMinutes);
 		this.batchSize = batchSize;
+		this.tenantAccess = tenantAccess;
 	}
 
 	public record Outcome(int checked, int jobsFlagged, int fallbacks) {
@@ -164,7 +166,8 @@ public class MatchingStalenessService {
 	private List<CV> pending(Instant before, boolean embedded) {
 		var criteria = Criteria.where("matchCheckPending").is(true).and("matchCheckPendingSince").lte(before);
 		criteria = embedded ? criteria.and("embedding").ne(null) : criteria.and("embedding").is(null);
-		var query = Query.query(criteria).with(Sort.by("matchCheckPendingSince")).limit(batchSize);
+		// A suspended, deleted or expired company's CVs stay queued until it is usable again.
+		var query = Query.query(new Criteria().andOperator(criteria, tenantAccess.usableTenantsOnly("tenantId"))).with(Sort.by("matchCheckPendingSince")).limit(batchSize);
 		if (!embedded) {
 			query.fields().include("_id", "tenantId", "matchCheckPendingSince");
 		}

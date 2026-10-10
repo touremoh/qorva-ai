@@ -45,7 +45,7 @@ public class TenantDataPurge implements CascadeParticipant {
 		// Runs quote CVs, reports and jobs in their steps and answers: they go with the library.
 		counts.put("agent_runs", agentRuns.deleteByTenantId(tenantId));
 		counts.put("quality_issue_states", qualityIssueStates.deleteByTenantId(tenantId));
-		if (scope == PurgeScope.RECRUITMENT) {
+		if (scope.covers(PurgeScope.RECRUITMENT)) {
 			counts.put("job_posts", jobPosts.deleteByTenantId(tenantId));
 			counts.put("usage_monitoring", usage.deleteByTenantId(tenantId));
 			counts.put("help_conversations", helpConversations.deleteByTenantId(tenantId));

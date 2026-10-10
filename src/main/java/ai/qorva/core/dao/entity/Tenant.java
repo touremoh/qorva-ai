@@ -36,6 +36,25 @@ public class Tenant implements QorvaEntity {
     /** Users must sign in with Microsoft; password sign-in is refused, except for the account owner (break-glass). */
     private Boolean ssoRequired;
 
+    /** {@link ai.qorva.core.enums.TenantStatusEnum}; absent = ACTIVE. Changed only from the admin console. */
+    private String status;
+    private String statusReason;
+    private Instant statusChangedAt;
+    private String statusChangedBy;
+
+    /** Soft delete: set with status DELETED; the data is purged once {@code purgeAfter} has passed. */
+    private Instant deletedAt;
+    private Instant purgeAfter;
+
+    /** {@link ai.qorva.core.enums.TenantAccountTypeEnum}; absent = customer or demo. */
+    private String accountType;
+
+    /** Test accounts and the like: left out of the business statistics. */
+    private Boolean internal;
+
+    /** Sign-in and tokens stop at this instant (test accounts); absent = no end. */
+    private Instant accessExpiresAt;
+
     @CreatedDate
     private Instant createdAt;
 

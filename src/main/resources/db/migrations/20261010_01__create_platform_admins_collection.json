@@ -1,0 +1,26 @@
+{
+  "collMod": "platform_admins",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "platform_admins",
+      "required": ["email", "role", "status", "credentialVersion", "createdAt"],
+      "properties": {
+        "email": { "bsonType": "string", "description": "lower-cased, unique" },
+        "firstName": { "bsonType": ["string", "null"] },
+        "lastName": { "bsonType": ["string", "null"] },
+        "encryptedPassword": { "bsonType": ["string", "null"], "description": "BCrypt; null until the set-password link is used" },
+        "role": { "enum": ["OWNER", "SUPPORT"] },
+        "status": { "enum": ["ACTIVE", "DISABLED"] },
+        "credentialVersion": { "bsonType": ["int", "long"], "description": "embedded in admin tokens and links; bumped on password, role or status change" },
+        "lastLoginAt": { "bsonType": ["date", "null"] },
+        "invitedAt": { "bsonType": ["date", "null"] },
+        "invitedBy": { "bsonType": ["string", "null"] },
+        "createdAt": { "bsonType": "date" },
+        "updatedAt": { "bsonType": ["date", "null"] }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

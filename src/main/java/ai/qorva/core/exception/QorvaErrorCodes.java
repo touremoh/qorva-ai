@@ -210,4 +210,37 @@ public final class QorvaErrorCodes {
     public static final String HELP_UNAVAILABLE                         = "error.help.unavailable";
     public static final String HELP_TICKET_INVALID                      = "error.help.ticket_invalid";
     public static final String HELP_TICKET_RATE_LIMITED                 = "error.help.ticket_rate_limited";
+
+    // Admin console and tenant status (guide 2026-10-10-feat-qorva-ai-admin-dashboard)
+    public static final String AUTH_TENANT_SUSPENDED                    = "error.auth.tenant_suspended";
+    public static final String AUTH_TENANT_DELETED                      = "error.auth.tenant_deleted";
+    public static final String AUTH_ACCOUNT_EXPIRED                     = "error.auth.account_expired";
+    public static final String BILLING_TESTER_ACCOUNT                   = "error.billing.tester_account";
+    public static final String ADMIN_PASSWORD_TOO_SHORT                 = "error.admin.password_too_short";
+    public static final String ADMIN_ADMIN_EXISTS                       = "error.admin.admin_exists";
+    public static final String ADMIN_ADMIN_NOT_FOUND                    = "error.admin.admin_not_found";
+    public static final String ADMIN_LAST_OWNER                         = "error.admin.last_owner";
+    public static final String ADMIN_INVALID_ROLE                       = "error.admin.invalid_role";
+    public static final String ADMIN_INVALID_STATUS                     = "error.admin.invalid_status";
+    public static final String ADMIN_TENANT_NOT_FOUND                   = "error.admin.tenant_not_found";
+    public static final String ADMIN_USER_NOT_FOUND                     = "error.admin.user_not_found";
+    public static final String ADMIN_EMAIL_IN_USE                       = "error.admin.email_in_use";
+    public static final String ADMIN_USE_TESTER_REACTIVATE              = "error.admin.use_tester_reactivate";
+    public static final String ADMIN_TENANT_DELETED                     = "error.admin.tenant_deleted";
+    public static final String ADMIN_TENANT_NOT_DELETED                 = "error.admin.tenant_not_deleted";
+    public static final String ADMIN_NO_STRIPE_SUBSCRIPTION             = "error.admin.no_stripe_subscription";
+    public static final String ADMIN_CONFIRM_NAME_MISMATCH              = "error.admin.confirm_name_mismatch";
+    public static final String ADMIN_PASSWORD_REQUIRED                  = "error.admin.password_required";
+    public static final String ADMIN_PASSWORD_UNCHANGED                 = "error.admin.password_unchanged";
+    public static final String ADMIN_EXPIRY_REQUIRED                    = "error.admin.expiry_required";
+    public static final String ADMIN_EXPIRY_IN_PAST                     = "error.admin.expiry_in_past";
+    public static final String ADMIN_UNKNOWN_TIER                       = "error.admin.unknown_tier";
+    public static final String ADMIN_NOT_A_TESTER                       = "error.admin.not_a_tester";
+    public static final String ADMIN_JOB_NOT_FOUND                      = "error.admin.job_not_found";
+    public static final String ADMIN_JOB_NOT_CANCELLABLE                = "error.admin.job_not_cancellable";
+    public static final String ADMIN_STATS_RANGE                        = "error.admin.stats_range";
+    public static final String ADMIN_UNKNOWN_ACTION                     = "error.admin.unknown_action";
+    public static final String ADMIN_STRIPE_FAILED                      = "error.admin.stripe_failed";
+    public static final String ADMIN_PURGE_IN_PROGRESS                  = "error.admin.purge_in_progress";
+    public static final String ADMIN_NAME_TOO_LONG                      = "error.admin.name_too_long";
 }
