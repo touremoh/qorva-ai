@@ -8,6 +8,8 @@ import ai.qorva.core.dto.CVOutputDTO;
 import ai.qorva.core.enums.QualityIssueKeyEnum;
 import ai.qorva.core.mapper.OpenAIResultMapper;
 import ai.qorva.core.service.CVService;
+import ai.qorva.core.service.TenantAccess;
+import ai.qorva.core.service.TenantPurgeService;
 import ai.qorva.core.service.CandidateUpdateEmailService;
 import ai.qorva.core.service.CandidateUpdateRequestSender;
 import ai.qorva.core.service.MatchingRunService;
@@ -82,6 +84,8 @@ public class BackgroundJobWorker {
 	private final S3StorageService s3StorageService;
 	private final MatchingRunService matchingRunService;
 	private final AtsSyncService atsSyncService;
+	private final TenantAccess tenantAccess;
+	private final TenantPurgeService tenantPurgeService;
 
 	public BackgroundJobWorker(
 		MongoTemplate mongoTemplate,
@@ -96,7 +100,9 @@ public class BackgroundJobWorker {
 		UserService userService,
 		S3StorageService s3StorageService,
 		MatchingRunService matchingRunService,
-		AtsSyncService atsSyncService
+		AtsSyncService atsSyncService,
+		TenantAccess tenantAccess,
+		TenantPurgeService tenantPurgeService
 	) {
 		this.mongoTemplate = mongoTemplate;
 		this.cvRepository = cvRepository;
@@ -111,6 +117,8 @@ public class BackgroundJobWorker {
 		this.s3StorageService = s3StorageService;
 		this.matchingRunService = matchingRunService;
 		this.atsSyncService = atsSyncService;
+		this.tenantAccess = tenantAccess;
+		this.tenantPurgeService = tenantPurgeService;
 	}
 
 	@Scheduled(fixedDelayString = "${qorva.jobs.poll-delay-ms:5000}")
@@ -142,7 +150,8 @@ public class BackgroundJobWorker {
 			BackgroundJob.TYPE_CANDIDATE_UPDATE_CAMPAIGN, this::runCampaign,
 			BackgroundJob.TYPE_BULK_CV_UPLOAD, this::runBulkUpload,
 			BackgroundJob.TYPE_ATS_SYNC, atsSyncService::executeSync,
-			BackgroundJob.TYPE_MATCHING, matchingRunService::execute);
+			BackgroundJob.TYPE_MATCHING, matchingRunService::execute,
+			BackgroundJob.TYPE_TENANT_PURGE, tenantPurgeService::execute);
 	}
 
 	private void run(BackgroundJob job) throws Exception {
@@ -157,9 +166,14 @@ public class BackgroundJobWorker {
 	/** Atomic claim: PENDING, or RUNNING with an expired lease (crashed worker). */
 	private BackgroundJob claimNextJob() {
 		var now = Instant.now();
-		var query = new Query(new Criteria().orOperator(
-			Criteria.where("status").is(BackgroundJob.STATUS_PENDING),
-			Criteria.where("status").is(BackgroundJob.STATUS_RUNNING).and("leaseExpiresAt").lt(now)
+		var query = new Query(new Criteria().andOperator(
+			new Criteria().orOperator(
+				Criteria.where("status").is(BackgroundJob.STATUS_PENDING),
+				Criteria.where("status").is(BackgroundJob.STATUS_RUNNING).and("leaseExpiresAt").lt(now)),
+			// A suspended, deleted or expired company's jobs wait (PENDING) until it is usable again — except its purge.
+			new Criteria().orOperator(
+				Criteria.where("type").is(BackgroundJob.TYPE_TENANT_PURGE),
+				tenantAccess.usableTenantsOnly("tenantId"))
 		)).limit(1);
 		var update = new Update()
 			.set("status", BackgroundJob.STATUS_RUNNING)

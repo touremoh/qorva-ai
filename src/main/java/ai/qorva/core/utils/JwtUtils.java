@@ -65,17 +65,22 @@ public class JwtUtils {
 			claims.put(SUBSCRIPTION_PLAN, subscriptionInfo.getSubscriptionPlan());
 			claims.put(SUBSCRIPTION_STATUS, subscriptionInfo.getSubscriptionStatus());
 		}
-		return createToken(claims, userDetails.getUsername(), jwtConfig);
+		// A test account's tokens never outlive its access end.
+		return createToken(claims, userDetails.getUsername(), jwtConfig, tenantDTO.getAccessExpiresAt());
 	}
 
-	private String createToken(Map<String, Object> claims, String subject, JwtConfig jwtConfig) {
+	private String createToken(Map<String, Object> claims, String subject, JwtConfig jwtConfig, java.time.Instant notAfter) {
+		var expiration = new Date(System.currentTimeMillis() + jwtConfig.getTimeToLiveInMillis());
+		if (notAfter != null && notAfter.isBefore(expiration.toInstant())) {
+			expiration = Date.from(notAfter);
+		}
 		// signWith(key) picks the strongest HMAC alg the key supports (>=64 bytes -> HS512),
 		// so existing secrets keep working; jjwt 0.12 rejects keys under 32 bytes outright.
 		return Jwts.builder()
 			.claims(claims)
 			.subject(subject)
 			.issuedAt(new Date(System.currentTimeMillis()))
-			.expiration(new Date(System.currentTimeMillis() + jwtConfig.getTimeToLiveInMillis()))
+			.expiration(expiration)
 			.signWith(jwtConfig.getSecretKey())
 			.compact();
 	}

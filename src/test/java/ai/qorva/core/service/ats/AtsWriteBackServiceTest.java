@@ -47,7 +47,8 @@ class AtsWriteBackServiceTest {
 	@BeforeEach
 	void setUp() {
 		service = new AtsWriteBackService(taskRepository, connectionRepository, connectionService,
-			registry, oauthService, mongoTemplate, "https://app.qorva.ai/");
+			registry, oauthService, mongoTemplate, "https://app.qorva.ai/",
+			new ai.qorva.core.service.TenantAccessStub());
 	}
 
 	private CVDTO linkedCv() {

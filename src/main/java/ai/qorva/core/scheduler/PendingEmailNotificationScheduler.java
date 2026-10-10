@@ -1,5 +1,6 @@
 package ai.qorva.core.scheduler;
 
+import ai.qorva.core.service.TenantAccess;
 import ai.qorva.core.security.TenantScope;
 
 import ai.qorva.core.service.EmailNotificationDispatcher;
@@ -17,12 +18,15 @@ public class PendingEmailNotificationScheduler {
 
     private final PendingEmailNotificationService pendingEmailService;
     private final EmailNotificationDispatcher dispatcher;
+    private final TenantAccess tenantAccess;
 
     @Autowired
     public PendingEmailNotificationScheduler(
         PendingEmailNotificationService pendingEmailService,
-        EmailNotificationDispatcher dispatcher
+        EmailNotificationDispatcher dispatcher,
+        TenantAccess tenantAccess
     ) {
+        this.tenantAccess = tenantAccess;
         this.pendingEmailService = pendingEmailService;
         this.dispatcher = dispatcher;
     }
@@ -39,6 +43,10 @@ public class PendingEmailNotificationScheduler {
         int failed = 0;
 
         for (var notification : pending) {
+            if (!tenantAccess.isUsable(notification.getTenantId())) {
+                // Held (still PENDING) while the company is suspended or expired; a purge deletes them.
+                continue;
+            }
             try {
                 // Sent and marked sent in the notification's own tenant: the status update reads the notification
                 // through the tenant-scoped service, like the send.

@@ -2,6 +2,7 @@ package ai.qorva.core.dto;
 
 import ai.qorva.core.dto.common.SubscriptionInfo;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import lombok.AllArgsConstructor;
@@ -34,6 +35,27 @@ public class TenantDTO extends AbstractQorvaDTO {
     /** Changed only through PATCH /tenants/sso. */
     @JsonProperty(access = Access.READ_ONLY)
     private Boolean ssoRequired;
+
+    /** Account status and test-account fields: changed only from the admin console, read-only for the app. */
+    @JsonProperty(access = Access.READ_ONLY)
+    private String status;
+    @JsonProperty(access = Access.READ_ONLY)
+    private String accountType;
+    @JsonProperty(access = Access.READ_ONLY)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Instant accessExpiresAt;
+    @JsonIgnore
+    private String statusReason;
+    @JsonIgnore
+    private Instant statusChangedAt;
+    @JsonIgnore
+    private String statusChangedBy;
+    @JsonIgnore
+    private Instant deletedAt;
+    @JsonIgnore
+    private Instant purgeAfter;
+    @JsonIgnore
+    private Boolean internal;
 
     private String createdBy;
     private String lastUpdatedBy;

@@ -1,5 +1,6 @@
 package ai.qorva.core.service.ats;
 
+import ai.qorva.core.service.TenantAccess;
 import ai.qorva.core.security.TenantScope;
 
 import ai.qorva.core.dao.entity.AtsConnection;
@@ -45,6 +46,7 @@ public class AtsWriteBackService {
 	private final AtsOauthService oauthService;
 	private final MongoTemplate mongoTemplate;
 	private final String appBaseUrl;
+	private final TenantAccess tenantAccess;
 
 	public AtsWriteBackService(
 		AtsOutboundTaskRepository taskRepository,
@@ -53,8 +55,10 @@ public class AtsWriteBackService {
 		AtsConnectorRegistry registry,
 		AtsOauthService oauthService,
 		MongoTemplate mongoTemplate,
-		@Value("${weblink.appBaseUrl:}") String appBaseUrl
+		@Value("${weblink.appBaseUrl:}") String appBaseUrl,
+		TenantAccess tenantAccess
 	) {
+		this.tenantAccess = tenantAccess;
 		this.taskRepository = taskRepository;
 		this.connectionRepository = connectionRepository;
 		this.connectionService = connectionService;
@@ -120,6 +124,12 @@ public class AtsWriteBackService {
 			List.of(AtsOutboundTask.STATUS_PENDING, AtsOutboundTask.STATUS_SENDING),
 			now, PageRequest.of(0, DRAIN_BATCH));
 		for (var candidate : due) {
+			if (!tenantAccess.isUsable(candidate.getTenantId())) {
+				// Pushed back without counting an attempt, so a suspended company's tasks never crowd out the others.
+				mongoTemplate.updateFirst(Query.query(Criteria.where("_id").is(candidate.getId())),
+					Update.update("nextAttemptAt", now.plus(java.time.Duration.ofHours(1))), AtsOutboundTask.class);
+				continue;
+			}
 			var claimed = claim(candidate.getId());
 			if (claimed != null) {
 				TenantScope.runAs(claimed.getTenantId(), () -> send(claimed));

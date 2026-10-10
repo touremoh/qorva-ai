@@ -63,6 +63,10 @@ aws:
     region: eu-west-1
 
 qorva:
+  # The admin API is on in the suite (its own test key, not a secret); AdminApiIntegrationTest drives it.
+  admin:
+    enabled: true
+    jwt-secret: YWRtaW4tdGVzdC1zZWNyZXQtYWRtaW4tdGVzdC1zZWNyZXQtYWRtaW4tdGVzdC1zZWNyZXQtYWRtaW4tdGVzdA==
   # The suite enforces tenant isolation: any tenant-scoped code running without a tenant fails the test.
   tenancy:
     fail-closed: true

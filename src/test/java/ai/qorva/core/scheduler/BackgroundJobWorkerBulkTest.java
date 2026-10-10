@@ -63,7 +63,8 @@ class BackgroundJobWorkerBulkTest {
 	@BeforeEach
 	void setUp() {
 		worker = new BackgroundJobWorker(mongoTemplate, cvRepository, cvService, openAIService,
-			openAIResultMapper, usageMonitoringService, cacheEvictor, requestSender, tenantService, userService, s3StorageService, matchingRunService, atsSyncService);
+			openAIResultMapper, usageMonitoringService, cacheEvictor, requestSender, tenantService, userService, s3StorageService, matchingRunService, atsSyncService,
+			new ai.qorva.core.service.TenantAccessStub(), org.mockito.Mockito.mock(ai.qorva.core.service.TenantPurgeService.class));
 	}
 
 	private BackgroundJob bulkJob() {

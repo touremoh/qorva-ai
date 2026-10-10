@@ -1,5 +1,6 @@
 package ai.qorva.core.service.ats;
 
+import ai.qorva.core.service.TenantAccess;
 import ai.qorva.core.dao.entity.AtsConnection;
 import ai.qorva.core.dao.repository.AtsConnectionRepository;
 import ai.qorva.core.enums.AtsProviderEnum;
@@ -27,9 +28,12 @@ public class AtsWebhookReceiver {
 	private final AtsConnectionService connectionService;
 	private final AtsWebhookService webhookService;
 
+	private final TenantAccess tenantAccess;
+
 	public AtsWebhookReceiver(AtsConnectionRepository connectionRepository, AtsConnectorRegistry registry,
 	                          AtsSyncService syncService, AtsConnectionService connectionService,
-	                          AtsWebhookService webhookService) {
+	                          AtsWebhookService webhookService, TenantAccess tenantAccess) {
+		this.tenantAccess = tenantAccess;
 		this.connectionRepository = connectionRepository;
 		this.registry = registry;
 		this.syncService = syncService;
@@ -41,6 +45,12 @@ public class AtsWebhookReceiver {
 		try {
 			var connection = connectionRepository.findById(connectionId).orElse(null);
 			if (connection == null || body == null) {
+				return;
+			}
+			// Still answered 200 by the controller, so the provider keeps the webhook; the next sync after
+			// reactivation catches up on whatever was dropped.
+			if (!tenantAccess.isUsable(connection.getTenantId())) {
+				log.info("ATS webhook for {} dropped: tenant {} is suspended, deleted or expired", connectionId, connection.getTenantId());
 				return;
 			}
 			TenantScope.runAs(connection.getTenantId(), () -> handle(connection, token, headers, body));

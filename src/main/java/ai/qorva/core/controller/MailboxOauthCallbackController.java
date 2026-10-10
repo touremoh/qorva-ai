@@ -1,5 +1,6 @@
 package ai.qorva.core.controller;
 
+import ai.qorva.core.service.TenantAccess;
 import ai.qorva.core.enums.MailboxProviderEnum;
 import ai.qorva.core.service.mailbox.MailboxConnectionService;
 import ai.qorva.core.service.mailbox.MailboxOauthService;
@@ -24,12 +25,15 @@ public class MailboxOauthCallbackController {
 	private final MailboxConnectionService connectionService;
 	private final MailboxOauthService oauthService;
 	private final String appBaseUrl;
+	private final TenantAccess tenantAccess;
 
 	public MailboxOauthCallbackController(
 		MailboxConnectionService connectionService,
 		MailboxOauthService oauthService,
-		@Value("${weblink.appBaseUrl:}") String appBaseUrl
+		@Value("${weblink.appBaseUrl:}") String appBaseUrl,
+		TenantAccess tenantAccess
 	) {
+		this.tenantAccess = tenantAccess;
 		this.connectionService = connectionService;
 		this.oauthService = oauthService;
 		this.appBaseUrl = appBaseUrl;
@@ -46,6 +50,10 @@ public class MailboxOauthCallbackController {
 			var claims = oauthService.validateState(state);
 			if (MailboxProviderEnum.fromValue(provider) != claims.provider()) {
 				throw new IllegalStateException("provider mismatch between callback path and state");
+			}
+			// A suspended, deleted or expired company connects nothing: the app gets the usual error redirect.
+			if (!tenantAccess.isUsable(claims.tenantId())) {
+				throw new IllegalStateException("tenant " + claims.tenantId() + " is not usable");
 			}
 			// The signed state names the tenant and user: the connection is created in that tenant's scope.
 			TenantScope.runAs(claims.tenantId(), () -> connectionService.createFromOauth(claims, code));

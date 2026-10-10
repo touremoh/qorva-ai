@@ -31,6 +31,8 @@ public class BackgroundJob implements QorvaEntity {
 	public static final String TYPE_BULK_CV_UPLOAD = "BULK_CV_UPLOAD";
 	public static final String TYPE_ATS_SYNC = "ATS_SYNC";
 	public static final String TYPE_MATCHING = "MATCHING";
+	/** Deletes every document and file of a soft-deleted tenant (admin console); runs although the tenant is unusable. */
+	public static final String TYPE_TENANT_PURGE = "TENANT_PURGE";
 
 	/** Collecting staged files; never claimed by the worker (claim query matches PENDING/RUNNING only). */
 	public static final String STATUS_DRAFT = "DRAFT";

@@ -26,7 +26,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 class PurgeContractIntegrationTest extends AbstractIntegrationTest {
 
 	/** Collections that never hold tenant data; per-tenant counts leave them out. */
-	private static final java.util.Set<String> GLOBAL_COLLECTIONS = java.util.Set.of("stripe_webhook_events", "stripe_product_references");
+	private static final java.util.Set<String> GLOBAL_COLLECTIONS = java.util.Set.of("stripe_webhook_events", "stripe_product_references",
+		"platform_admins", "admin_mfa_challenges", "admin_audit_logs");
 
 	@Autowired private TwoTenantFixture fixture;
 	@Autowired private MongoTemplate mongo;

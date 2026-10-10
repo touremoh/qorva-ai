@@ -49,7 +49,7 @@ public class AgentRuleCascade implements CascadeParticipant {
 	public Map<String, Long> onTenantPurge(String tenantId, PurgeScope scope) {
 		var counts = new LinkedHashMap<String, Long>();
 		counts.put("agent_rule_firings", firings.deleteByTenantId(tenantId));
-		if (scope == PurgeScope.RECRUITMENT) {
+		if (scope.covers(PurgeScope.RECRUITMENT)) {
 			counts.put("agent_rules", rules.deleteByTenantId(tenantId));
 		} else {
 			mongoTemplate.updateMulti(Query.query(Criteria.where("tenantId").is(new ObjectId(tenantId))),

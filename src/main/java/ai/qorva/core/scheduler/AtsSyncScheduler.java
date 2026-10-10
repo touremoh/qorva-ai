@@ -1,5 +1,6 @@
 package ai.qorva.core.scheduler;
 
+import ai.qorva.core.service.TenantAccess;
 import ai.qorva.core.security.TenantScope;
 
 import ai.qorva.core.config.AtsProperties;
@@ -27,9 +28,11 @@ public class AtsSyncScheduler {
 	private final AtsSyncService syncService;
 	private final AtsWebhookService webhookService;
 	private final AtsProperties properties;
+	private final TenantAccess tenantAccess;
 
 	public AtsSyncScheduler(AtsConnectionRepository connectionRepository, AtsSyncService syncService,
-		AtsWebhookService webhookService, AtsProperties properties) {
+		AtsWebhookService webhookService, AtsProperties properties, TenantAccess tenantAccess) {
+		this.tenantAccess = tenantAccess;
 		this.connectionRepository = connectionRepository;
 		this.syncService = syncService;
 		this.webhookService = webhookService;
@@ -41,6 +44,9 @@ public class AtsSyncScheduler {
 		var connections = connectionRepository.findByStatus(AtsConnection.STATUS_CONNECTED);
 		var due = Instant.now().minus(properties.getSyncIntervalMinutes(), ChronoUnit.MINUTES);
 		for (var connection : connections) {
+			if (!tenantAccess.isUsable(connection.getTenantId())) {
+				continue;
+			}
 			// Each connection belongs to one tenant: reconcile and enqueue in its scope.
 			TenantScope.runAs(connection.getTenantId(), () -> enqueueIfDue(connection, due));
 		}

@@ -41,6 +41,15 @@ mongock:
   migration-scan-package: ai.qorva.core.migrations
 
 qorva:
+  # Admin console API (/admin/**). Off = every admin route answers 404. Guide: docs/2026-10-10-feat-qorva-ai-admin-dashboard.md
+  admin:
+    enabled: ${QORVA_ADMIN_ENABLED:false}
+    jwt-secret: ${ADMIN_JWT_SECRET:}
+    session-ttl: ${ADMIN_SESSION_TTL:30m}
+    console-base-url: ${ADMIN_CONSOLE_BASE_URL:http://localhost:5175}
+    allowed-origins: ${ADMIN_ALLOWED_ORIGINS:}
+    bootstrap-email: ${QORVA_ADMIN_BOOTSTRAP_EMAIL:}
+    purge-grace-months: ${QORVA_TENANT_PURGE_GRACE_MONTHS:2}
   # Tenant isolation for code running without a tenant (TenantScope). false = log a warning with the
   # stack and allow (historical behaviour); true = refuse. Soak on tst with false, fix every warning
   # ("No tenant in scope for …"), then set QORVA_TENANCY_FAIL_CLOSED=true on tst, then prd.
