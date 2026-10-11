@@ -1,0 +1,100 @@
+name: Deploy
+
+# Every push to a release branch deploys to production once CI passes.
+# "Run workflow" on an older release branch redeploys it (rollback).
+on:
+  push:
+    branches: ['release/**']
+  workflow_dispatch:
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci.yml
+
+  deploy:
+    needs: ci
+    runs-on: ubuntu-latest
+    # Only release/* branches may use this environment, and only it may assume the AWS role.
+    environment:
+      name: production
+      url: ${{ vars.API_URL }}
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - id: ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build and push the image
+        id: image
+        env:
+          REGISTRY: ${{ steps.ecr.outputs.registry }}
+          REPOSITORY: ${{ vars.ECR_REPOSITORY }}
+        run: |
+          version="${GITHUB_REF_NAME#release/}"
+          image="$REGISTRY/$REPOSITORY"
+          # Tests ran in the ci job; the Dockerfile packages with -DskipTests.
+          docker build -t "$image:$version" -t "$image:sha-${GITHUB_SHA::7}" -t "$image:latest" .
+          docker push --all-tags "$image"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "digest=$(docker inspect --format '{{index .RepoDigests 0}}' "$image:latest")" >> "$GITHUB_OUTPUT"
+
+      # The service is an ECS Express Mode service whose tasks run in the private subnets (fixed NAT IP).
+      # Express Mode refuses updates once the subnets were changed, so releases use the plain ECS path:
+      # a new task definition revision with the new image, then update-service (canary deployment).
+      - name: Current task definition
+        env:
+          CLUSTER: ${{ vars.ECS_CLUSTER }}
+          SERVICE: ${{ vars.ECS_SERVICE }}
+        run: |
+          td=$(aws ecs describe-services --cluster "$CLUSTER" --services "$SERVICE" \
+            --query "services[0].deployments[?status=='PRIMARY'].taskDefinition | [0]" --output text)
+          echo "Current: $td"
+          aws ecs describe-task-definition --task-definition "$td" --query taskDefinition > task-definition.json
+
+      - id: render
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: task-definition.json
+          container-name: Main
+          image: ${{ steps.image.outputs.digest }}
+
+      - name: Deploy to ECS
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        with:
+          task-definition: ${{ steps.render.outputs.task-definition }}
+          cluster: ${{ vars.ECS_CLUSTER }}
+          service: ${{ vars.ECS_SERVICE }}
+          wait-for-service-stability: true
+          wait-for-minutes: 20
+
+      - name: Health check
+        env:
+          URL: ${{ vars.API_URL }}
+        run: |
+          for _ in $(seq 1 10); do
+            if curl -fsS "$URL/actuator/health" | grep -q '"status":"UP"'; then echo "UP"; exit 0; fi
+            sleep 10
+          done
+          echo "::error::$URL/actuator/health is not UP"
+          exit 1
+
+      - name: Summary
+        run: |
+          {
+            echo "### Backend deployed"
+            echo "- Version: \`${{ steps.image.outputs.version }}\` (${GITHUB_SHA::7})"
+            echo "- Image: \`${{ steps.image.outputs.digest }}\`"
+            echo "- Service: ${{ vars.API_URL }} (ECS ${{ vars.ECS_CLUSTER }}/${{ vars.ECS_SERVICE }})"
+          } >> "$GITHUB_STEP_SUMMARY"

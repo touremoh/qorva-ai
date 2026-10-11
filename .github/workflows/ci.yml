@@ -1,6 +1,11 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    # A release branch runs this through deploy.yml, which deploys when it passes.
+    branches-ignore: ['release/**']
+  pull_request:
+  workflow_call:
 
 jobs:
   test:
